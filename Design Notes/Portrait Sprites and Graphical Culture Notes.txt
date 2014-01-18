@@ -1,0 +1,290 @@
+PORTRAIT SPRITE/GRAPHICAL CULTURE DESIGN
+
+SOME DESIRED PORTRAIT ELEMENTS
+Backgrounds
+		Boardroom
+		Office
+		Opulent 40K-esque throne room
+		Metal cell
+		Cyberpunk city-scape
+		Starfighter cockpit, space
+		Spaceship bridge, space
+		Starfighter cockpit, hyperspace
+		Spaceship bridge, hyperspace
+		Command center in underground bunker
+		Research lab
+		Religious shrine
+		Religious shrine with a mechanical theme
+		Metal corridor with exposed pipes
+		Bar
+	
+	Hats
+		Red rose in hair
+		White rose in hair
+		Violet flower in hair
+		
+		Laurel wreath
+		
+		Various military hats, mostly peaked caps and berets, in color schemes matching the uniforms below
+		
+		Headband
+		Bandana
+		Eyepatch
+		Bandages encircling the head, covering one eye
+		
+		Black skinsuit helmet
+		Red skinsuit helmet
+		White skinsuit helmet
+		
+		Combat helmet w. scouter
+		
+	Body
+		Formal Wear
+			Black suit
+			Black suit with gold floral breast design
+			Black suit with gold dragon breast design
+			Navy blue suit
+			Navy blue suit with silver floral breast design
+			Navy blue suit with silver dragon breast design
+			White suit with high collar
+			Sky blue suit with high collar
+			Black suit with high collar and gold floral beast design
+			Green suit with high collar and gold floral breast design
+			Loose dark red cheongsam
+			Loose dark green cheongsam
+			Loose black cheongsam
+			High-collared white tunic with white one-shouldered cape
+			High-collared white tunic with blue one-shouldered cape
+			High-collared white tunic with black one-shouldered cape
+			High-collared black tunic with red one-shouldered cape
+			High-collared green tunic with white one-shouldered cape
+		
+		Casual Wear
+			Skintight cheongsam vest, red
+			Skintight cheongsam vest, green with gold flower pattern
+			Skintight cheongsam vest, sky blue with silver trimming
+			V-necked white tunic
+			V-necked green tunic
+			V-necked blue tunic
+			Blue mantle
+			Gold mantle
+			Rainbow mantle
+			
+		Outlaw Clothing
+			White shirt with brown overcoat
+			White shirt with black overcoat
+			White shirt with brown overcoat and bandolier
+			Brown poncho
+			Dark red poncho
+			Black leather jacket
+		
+		Science Clothing
+			Labcoat
+			Black suit with gold caduceus breast design
+			Black suit with silver caduceus breast design
+			Grey jumpsuit with visible pockets
+			Blue jumpsuit with visible pockets
+			Red jumpsuit with visible pockets
+			Orange jumpsuit with visible pockets
+		
+		Military Uniforms
+			For cuts, just Google Image Search "Gundam uniforms" and make things that'd fit in there.
+			Color schemes follow, each should have a different cut:
+				Blue and white
+				Blue and gold
+				Black and white
+				Black and gold
+				Black and red
+				Green and white
+				Green and gold
+				Red and gold
+				White and gold
+				White and black
+		
+		Combat Gear
+			Grey body armor
+			Camoflaged body armor
+			Black skinsuit
+			Red skinsuit
+			White skinsuit
+			
+		Religious Clothing
+			Black suit with clerical collar
+			Black suit with clerical collar and sunburst breast design
+			
+	Cybernetics
+		Hiver Implant
+			This implant has plot importance and should give the character an uncanny valley feel.
+			Current concept is a metal bolt above the right eyebrow, with both eyeballs replaced by a glossy pitch black
+			field.
+		DNI Implant
+			Small but obviously mechanical implant near the left temple.
+		IAEI Implant
+			Small pillbox-shaped computer replacing the right ear.
+		ODIN Implant
+			Obviously, an artificial eye. Replaces the left eye.
+		PLUTO Implant
+			An unobtrusive implant that looks almost like a tattoo, directly below the DNI's location.
+		THOTH Implant
+			Another tattoo-looking implant. This one goes over the right temple.
+		Cybernetic Arm
+			A robotic right shoulder.
+
+Each graphical culture is a combination of one of six ethnicities and one of ten culture groups.
+
+Ethnicity defines which genetically heritable sprites the graphical culture uses (e.g., faces, noses, etc.)
+Culture Group defines which non-genetically heritable sprites the graphical culture uses (e.g., clothing)
+
+Ethnicities
+	European
+	Hispanic
+	East Asian
+	Mesoamerican
+	Middle Eastern
+	African
+	
+Culture Groups
+	Terran
+	Xingjie
+	Cielian
+	Samawati
+	Angani
+	Frontiersman
+	Centauri
+	Avalonian
+	Jionese
+	Mukta
+	
+Each ethnicity will probably need its own genetic version of the mutations, should they be implemented
+
+Each Culture Group should have its own set of clothing and headgear sets. Notes for future consistency:
+	Clothing Slots
+		0	Formal Clothes A
+		1	Formal Clothes B
+		2	Formal Clothes C
+		3	Casual Clothes A
+		4	Casual Clothes B
+		5	Casual Clothes C
+		6	Science Clothes A
+		7	Science Clothes B
+		8	Spacesuit
+		9	Body Armor
+		10	Dress Uniform
+		11	Prison Uniform
+	Headgear Slots
+		0	Crown A
+		1	Crown B
+		2	Casual Headgear A
+		3	Casual Headgear B
+		4	Hair Accessory A
+		5	Hair Accessory B
+		6	Technical Headgear
+		7	Eyepatch	
+		8	Spacesuit Helmet
+		9	Body Armor Helmet
+		10	Dress Uniform Hat
+		11	No Headgear
+	
+	Dress uniform colors by culture group:
+		Terran: Blue and white
+		Xingjie: Red and gold
+		Cielian: White and gold
+		Samawati: Green and white
+		Angani: White and black
+		Frontiersman: Blue and gold
+		Centauri: Black and white
+		Avalonian: Black and gold
+		Jionese: Black and red
+		Mukta: Green and gold
+		
+	Spacesuit color by culture group:
+		Terran: White
+		Xingjie: Red
+		Cielian: White
+		Samawati: Black
+		Angani: White
+		Frontiersman: White
+		Centauri: Red
+		Avalonian: White
+		Jionese: Red
+		Mukta: Black
+		
+The following portrait sprites are shared across all cultures
+	Background
+		0	Boardroom
+		1	Office
+		2	Opulent Throne Room
+		3	Prison Cell
+		4	Cyberpunk City-Scape
+		5	Starship Bridge, Space
+		6	Starship Bridge, Hyperspace
+		7	Starfighter Cockpit, Space
+		8	Starfighter Cockpit, Hyperspace
+		9	Underground Command Center
+		10	Research Lab
+		11	Religious Shrine
+		12	Religious Shrine With Mechanical Theme
+		13	Spacecraft Service Corridor
+		14	Bar
+		15	??
+		16	??
+		17	??
+		18	??
+		19	??
+		20	??
+	Property 6 (Disease)
+		0	No Symptoms
+		1	Red Dots
+		2	Boils
+	Property 7	(Scars)
+		0	No Scars
+		1	Scar 1
+		2	Scar 2
+		3	Scar 3
+		4	Scar 4
+	Property 8 (Cybernetics 1)
+		0	No Implant
+		1	DNI Implant
+		2	IAEI Implant
+		3	ODIN Implant
+		4	DNI+IAEI
+		5	DNI+ODIN
+		6	IAEI+ODIN
+		7	DNI+IAEI+ODIN
+		8	Hive Implant
+		9	Hive+DNI
+		10	Hive+IAEI
+		11	Hive+ODIN
+		12	Hive+DNI+IAEI
+		13	Hive+DNI+ODIN
+		14	Hive+IAEI+ODIN
+		15	Hive+DNI+IAEI+ODIN
+	Property 9 (Cybernetics 2)
+		0	No Implant
+		1	PCI Implant
+		2	PLUTO Implant
+		3	THOTH Implant
+		4	PCI+PLUTO
+		5	PCI+THOTH
+		6	PLUTO+THOTH
+		7	PCI+PLUTO+THOTH
+		8	Cybernetic Arm
+		9	Arm+PCI
+		10	Arm+PLUTO
+		11	Arm+THOTH
+		12	Arm+PCI+PLUTO
+		13	Arm+PCI+THOTH
+		14	Arm+PLUTO+THOTH
+		15	Arm+PCI+PLUTO+THOTH
+Properties
+	0	Background
+	1	Hair
+	2	Base
+	3	Clothes
+	4	Beard
+	5	Headgear
+	6	Disease
+	7	Scars
+	8	Cybernetics 1
+	9	Cybernetics 2
+	10	Mutations

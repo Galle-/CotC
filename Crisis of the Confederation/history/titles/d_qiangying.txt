@@ -1,0 +1,11 @@
+2900.1.1={
+	liege = "k_xin_zizhiqu"
+	law = succ_patrician_elective
+	law = true_cognatic_succession
+}
+
+2990.6.3 = { holder = "13013370" } # Fan Běn Xióng
+
+2954.1.1 = {
+	law = succ_primogeniture
+}

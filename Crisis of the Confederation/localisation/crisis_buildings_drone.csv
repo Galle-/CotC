@@ -1,0 +1,21 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+DR_01_ca;Drone Workshop ;;;;;;;;;;;;;x
+DR_01_ct;Drone Workshop ;;;;;;;;;;;;;x
+DR_01_tp;Drone Workshop ;;;;;;;;;;;;;x
+DR_01_desc;A drone workshop allows for the fabrication of the components needed for AI controlled combat strike craft. ;;;;;;;;;;;;;x
+DR_02_ca;Drone Fabrication Plant;;;;;;;;;;;;;x
+DR_02_ct;Drone Fabrication Plant;;;;;;;;;;;;;x
+DR_02_tp;Drone Fabrication Plant;;;;;;;;;;;;;x
+DR_02_desc; A dedicated facility for the mass production of drones allows for more rapid deployment and shorter supply lines. ;;;;;;;;;;;;;x
+DR_03_ca;Drone Control Hub;;;;;;;;;;;;;x
+DR_03_ct;Drone Control Hub;;;;;;;;;;;;;x
+DR_03_tp;Drone Control Hub;;;;;;;;;;;;;x
+DR_03_desc; Drones require a substantial amount of computing power to effectively coordinate grouped actions. The control hub reduces computing power requirements for each drone by offloading the needed capacity to a centralized location. ;;;;;;;;;;;;;x
+DR_04_ca;Distributed Control Network;;;;;;;;;;;;;x
+DR_04_ct;Distributed Control Network;;;;;;;;;;;;;x
+DR_04_tp;Distributed Control Network;;;;;;;;;;;;;x
+DR_04_desc; Addressing the next bottleneck in drone deployment chains, the distributed control network allows localised coordination centers for larger drone actions. ;;;;;;;;;;;;;x
+DR_05_ca;Drone Aviary;;;;;;;;;;;;;x
+DR_05_ct;Drone Aviary;;;;;;;;;;;;;x
+DR_05_tp;Drone Aviary;;;;;;;;;;;;;x
+DR_05_desc; With self-replication now possible and development semi-automated, it is now possible to greatly increase the variety and number of potential of combat vectors utilized in combat. ;;;;;;;;;;;;;x

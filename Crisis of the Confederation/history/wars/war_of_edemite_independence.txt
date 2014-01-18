@@ -1,0 +1,13 @@
+name = "War of Edemite Independence"
+
+casus_belli={
+	casus_belli=bid_for_independence
+	actor=11011872 # Dmitriy Solomonov
+	recipient=11013974 # Morgan Afolayan
+	date=2998.1.1
+}
+
+2998.1.1 = {
+	add_attacker = 11011872 # Dmitriy Solomonov
+	add_defender = 11013974 # Morgan Afolayan
+}

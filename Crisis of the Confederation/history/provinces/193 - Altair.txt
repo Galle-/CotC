@@ -1,0 +1,60 @@
+# 193 - Altair
+
+# County Title
+title = c_altair
+
+# Settlements
+max_settlements = 4
+b_altair_iii = temple
+b_altair_iv = city
+b_altair_v = castle
+
+# Misc
+culture = hispanic_terran # Initial culture
+religion = terran_republican
+
+# History
+1.1.1 = {
+	b_altair_iii = tp_toxic_atmosphere
+	b_altair_iii = tp_no_water
+	b_altair_iii = tp_trace_water
+	b_altair_iii = tp_lakes
+	b_altair_iii = tp_burning
+	b_altair_iii = tp_hot
+	b_altair_iii = tp_warm
+	b_altair_iii = tp_planet_survey
+	
+	b_altair_iv = ct_toxic_atmosphere
+	b_altair_iv = ct_no_water
+	b_altair_iv = ct_trace_water
+	b_altair_iv = ct_lakes
+	b_altair_iv = ct_seas
+	b_altair_iv = ct_burning
+	b_altair_iv = ct_hot
+	b_altair_iv = ct_warm
+	b_altair_iv = ct_optimal_hot
+	b_altair_iv = ct_planet_survey
+	
+	b_altair_v = ca_toxic_atmosphere
+	b_altair_v = ca_no_water
+	b_altair_v = ca_trace_water
+	b_altair_v = ca_frozen
+	b_altair_v = ca_cold
+	b_altair_v = ca_cool
+	b_altair_v = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_altair_iii = tp_colony_0
+	b_altair_iii = tp_colony_1
+	
+	b_altair_iv = ct_toxic_atmosphere_domes
+	b_altair_iv = ct_colony_0
+	b_altair_iv = ct_colony_1
+	b_altair_iv = ct_colony_2
+	
+	b_altair_v = ca_colony_0
+	b_altair_v = ca_colony_1
+	
+	trade_post = b_salazar
+}

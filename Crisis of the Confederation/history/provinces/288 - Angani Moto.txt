@@ -1,0 +1,52 @@
+# 288 - Angani Moto
+
+# County Title
+title = c_angani_moto
+
+# Settlements
+max_settlements = 4
+b_angani_moto_iv = city
+b_angani_moto_iv_b = temple
+b_angani_moto_v = castle
+
+# Misc
+culture = east_afro_angani # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_angani_moto_iv = ct_clean_atmosphere
+	b_angani_moto_iv = ct_no_water
+	b_angani_moto_iv = ct_trace_water
+	b_angani_moto_iv = ct_lakes
+	b_angani_moto_iv = ct_seas
+	b_angani_moto_iv = ct_frozen
+	b_angani_moto_iv = ct_cold
+	b_angani_moto_iv = ct_planet_survey
+	
+	b_angani_moto_iv_b = tp_no_atmosphere
+	b_angani_moto_iv_b = tp_no_water
+	b_angani_moto_iv_b = tp_frozen
+	b_angani_moto_iv_b = tp_cold
+	b_angani_moto_iv_b = tp_planet_survey
+	
+	b_angani_moto_v = ca_toxic_atmosphere
+	b_angani_moto_v = ca_no_water
+	b_angani_moto_v = ca_trace_water
+	b_angani_moto_v = ca_lakes
+	b_angani_moto_v = ca_seas
+	b_angani_moto_v = ca_oceans
+	b_angani_moto_v = ca_frozen
+	b_angani_moto_v = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_angani_moto_iv = ct_colony_0
+	b_angani_moto_iv = ct_colony_1
+	b_angani_moto_iv = ct_colony_2
+	
+	b_angani_moto_iv_b = tp_colony_0
+	
+	b_angani_moto_v = ca_colony_0
+	b_angani_moto_v = ca_colony_1
+}

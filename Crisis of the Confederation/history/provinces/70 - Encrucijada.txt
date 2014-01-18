@@ -1,0 +1,60 @@
+# 70 - Encrucijada
+
+# County Title
+title = c_encrucijada
+
+# Settlements
+max_settlements = 7
+b_encrucijada_iv = city
+b_encrucijada_iv_b = temple
+b_encrucijada_vii_b = castle
+
+# Misc
+culture = hispanic_celestean # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+	# Encrucijada IV: Clean, Seas, Cool
+	b_encrucijada_iv = ct_clean_atmosphere
+	b_encrucijada_iv = ct_no_water
+	b_encrucijada_iv = ct_trace_water
+	b_encrucijada_iv = ct_lakes
+	b_encrucijada_iv = ct_seas
+	b_encrucijada_iv = ct_frozen
+	b_encrucijada_iv = ct_cold
+	b_encrucijada_iv = ct_cool
+	b_encrucijada_iv = ct_planet_survey
+	
+	# Encrucijada IV-B: None, None, Cool
+	b_encrucijada_iv_b = tp_no_atmosphere
+	b_encrucijada_iv_b = tp_no_water
+	b_encrucijada_iv_b = tp_frozen
+	b_encrucijada_iv_b = tp_cold
+	b_encrucijada_iv_b = tp_cool
+	b_encrucijada_iv_b = tp_planet_survey
+	
+	# Encrucijada VII-B: None, Oceans, Frozen
+	b_encrucijada_vii_b = ca_no_atmosphere
+	b_encrucijada_vii_b = ca_no_water
+	b_encrucijada_vii_b = ca_trace_water
+	b_encrucijada_vii_b = ca_lakes
+	b_encrucijada_vii_b = ca_seas
+	b_encrucijada_vii_b = ca_oceans
+	b_encrucijada_vii_b = ca_frozen
+	b_encrucijada_vii_b = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_encrucijada_iv = ct_colony_0
+	b_encrucijada_iv = ct_colony_1
+	b_encrucijada_iv = ct_colony_2
+	b_encrucijada_iv = ct_colony_3
+	
+	b_encrucijada_iv_b = tp_colony_0
+	b_encrucijada_iv_b = tp_colony_1
+	
+	b_encrucijada_vii_b = ca_colony_0
+	
+	trade_post = b_salazar
+}

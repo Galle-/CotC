@@ -1,0 +1,213 @@
+110695 = {
+	# President of the Frontier
+	name = "Jessica"
+	dynasty = 695 # Edwards
+	female = yes
+	
+	culture = anglo_frontiersman
+	religion = terran_federalist
+	
+	add_trait = proud
+	
+	2948.1.1 = { birth = "2948.1.1" }
+}
+
+111695 = {
+	# Commander of the Frontier Space Command
+	name = "Catherine"
+	dynasty = 695 # Edwards
+	female = yes
+	
+	culture = anglo_frontiersman
+	religion = terran_federalist
+	
+	add_trait = skilled_tactician
+	add_trait = warship_captain
+	add_trait = ambitious
+	add_trait = proud
+	
+	mother = 110695 # Jessica Edwards
+	
+	2978.1.1 = { birth = "2978.1.1" }
+}
+
+110823 = {
+	# Governor of Collins
+	name = "Duncan"
+	dynasty = 823 # Fisher
+	female = no
+	
+	culture = anglo_frontiersman
+	religion = terran_federalist
+	
+	2966.1.1 = { birth = "2966.1.1" }
+}
+
+11020016 = {
+	# Governor of Heartland
+	name = "Barbara"
+	dynasty = 20016 # Mbwana
+	female = yes
+	
+	culture = east_afro_frontiersman
+	religion = terran_federalist
+	
+	2967.1.1 = { birth = "2967.1.1" }
+}
+
+11020017 = {
+	# Governor-General of Apollo
+	name = "Michael"
+	dynasty = 20017 # Iskander
+	female = no
+	
+	culture = ethiopian_frontiersman
+	religion = terran_federalist
+	
+	2962.1.1 = { birth = "2962.1.1" }
+}
+
+110535 = {
+	# Governor of Beowulf
+	name = "Alice"
+	dynasty = 535 # Nelson
+	female = yes
+	
+	culture = anglo_frontiersman
+	religion = terran_federalist
+	
+	add_trait = homosexual
+	
+	2961.1.1 = { birth = "2961.1.1" }
+}
+
+1108757 = {
+	# Governor-General of Shepard
+	name = "Grace"
+	dynasty = 8757 # Nakano
+	female = yes
+	
+	culture = japanese_frontiersman
+	religion = terran_federalist
+	
+	add_trait = grey_eminence
+	add_trait = ambitious
+	
+	mother = 1208757
+	
+	2978.1.1 = { birth = "2978.1.1" }
+}
+
+1101927 = {
+	# Governor of Jemison
+	name = "Chloe"
+	dynasty = 1927 # Duncan
+	female = yes
+	
+	culture = anglo_frontiersman
+	religion = terran_federalist
+	
+	2967.1.1 = { birth = "2967.1.1" }
+}
+
+1101969 = {
+	# Governor-General of Ride
+	name = "Isabella"
+	dynasty = 1969 # MacTavish
+	female = yes
+	
+	culture = anglo_frontiersman
+	religion = terran_federalist
+	
+	2973.1.1 = { birth = "2973.1.1" }
+}
+
+1101479 = {
+	# Governor of Lincoln
+	name = "Charles"
+	dynasty = 1479 # Chrisholm
+	female = no
+	
+	culture = anglo_frontiersman
+	religion = terran_federalist
+	
+	2964.1.1 = { birth = "2964.1.1" }
+}
+
+1101703 = {
+	# Governor of Challenger
+	name = "Emma"
+	dynasty = 1703 # Shields
+	female = yes
+	
+	culture = anglo_frontiersman
+	religion = terran_federalist
+	
+	2960.1.1 = { birth = "2960.1.1" }
+}
+11014519 = {
+	# Governor of Liberty
+	name = "Daniel"
+	dynasty = 14519 # Okon
+	female = no
+	
+	culture = west_afro_frontiersman
+	religion = terran_federalist
+	
+	2954.1.1 = { birth = "2954.1.1" }
+}
+1101863 = {
+	# Commander of Gemini
+	name = "Joseph"
+	dynasty = 1863 # Murray
+	female = no
+	
+	culture = anglo_frontiersman
+	religion = terran_federalist
+	
+	add_trait = tough_soldier
+	add_trait = marine_colonel
+	
+	2967.1.1 = { birth = "2967.1.1" }
+}
+1108327 = {
+	# Commander of Touchstone
+	name = "Ruby"
+	dynasty = 8327 # Ikeda
+	female = yes
+	
+	culture = japanese_frontiersman
+	religion = terran_federalist
+	
+	add_trait = homosexual
+	add_trait = skilled_tactician
+	add_trait = warship_captain
+	
+	2972.1.1 = { birth = "2972.1.1" }
+}
+
+11014727 = {
+	# Governor of Glenn
+	name = "John"
+	dynasty = 14727 # Umeh
+	female = no
+	
+	culture = west_afro_frontiersman
+	religion = terran_federalist
+	
+	add_trait = homosexual
+	
+	2954.1.1 = { birth = "2954.1.1" }
+}
+
+1101015 = {
+	# Governor of John Henry
+	name = "Matthew"
+	dynasty = 1015 # Bennett
+	female = no
+	
+	culture = anglo_frontiersman
+	religion = terran_federalist
+	
+	2949.1.1 = { birth = "2949.1.1" }
+}

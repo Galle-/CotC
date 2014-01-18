@@ -1,0 +1,60 @@
+# 69 - Escudo
+
+# County Title
+title = c_escudo
+
+# Settlements
+max_settlements = 4
+b_escudo_iii_b = castle
+b_escudo_iii_c = temple
+b_escudo_iii_d = city
+
+# Misc
+culture = hispanic_celestean # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_escudo_iii_b = ca_no_atmosphere
+	b_escudo_iii_b = ca_no_water
+	b_escudo_iii_b = ca_trace_water
+	b_escudo_iii_b = ca_lakes
+	b_escudo_iii_b = ca_frozen
+	b_escudo_iii_b = ca_cold
+	b_escudo_iii_b = ca_cool
+	b_escudo_iii_b = ca_optimal_cold
+	b_escudo_iii_b = ca_planet_survey
+	
+	b_escudo_iii_c = tp_no_atmosphere
+	b_escudo_iii_c = tp_no_water
+	b_escudo_iii_c = tp_frozen
+	b_escudo_iii_c = tp_cold
+	b_escudo_iii_c = tp_cool
+	b_escudo_iii_c = tp_optimal_cold
+	b_escudo_iii_c = tp_planet_survey
+	
+	b_escudo_iii_d = ct_no_atmosphere
+	b_escudo_iii_d = ct_no_water
+	b_escudo_iii_d = ct_trace_water
+	b_escudo_iii_d = ct_lakes
+	b_escudo_iii_d = ct_seas
+	b_escudo_iii_d = ct_frozen
+	b_escudo_iii_d = ct_cold
+	b_escudo_iii_d = ct_cool
+	b_escudo_iii_d = ct_optimal_cold
+	b_escudo_iii_d = ct_planet_survey
+}
+
+2998.1.1 = {
+	b_escudo_iii_b = ca_no_atmosphere_domes
+	b_escudo_iii_b = ca_colony_0
+	b_escudo_iii_b = ca_colony_1
+	b_escudo_iii_b = ca_colony_2
+	
+	b_escudo_iii_c = tp_colony_0
+	
+	b_escudo_iii_d = ct_no_atmosphere_domes
+	b_escudo_iii_d = ct_colony_0
+	b_escudo_iii_d = ct_colony_1
+	b_escudo_iii_d = ct_colony_2
+}

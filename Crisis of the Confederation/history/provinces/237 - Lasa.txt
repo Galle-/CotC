@@ -1,0 +1,66 @@
+# 237 - Lasa
+
+# County Title
+title = c_lasa
+
+# Settlements
+max_settlements = 4
+				 							
+				b_lasa_prime = temple
+				b_lasa_ii = temple
+				b_lasa_iii = city
+				b_lasa_iv = castle
+# Misc
+culture = sino_xingjie # Initial culture
+religion = adoptionist
+
+# History
+1.1.1 = {
+		#Llhasa Prime, chilly, mostly frozen, mountain world with snowy peaks and possibly coniferous vegetation.
+		
+		b_lasa_prime = tp_planet_survey
+		b_lasa_prime = tp_cold
+		b_lasa_prime = tp_clean_atmosphere
+		b_lasa_prime = tp_no_water
+		b_lasa_prime = tp_trace_water
+		b_lasa_prime = tp_lakes
+		b_lasa_prime = tp_seas
+		b_lasa_prime = tp_oceans
+		
+		b_lasa_ii = tp_planet_survey
+		b_lasa_ii = tp_frozen
+		b_lasa_ii = tp_toxic_atmosphere
+		b_lasa_ii = tp_trace_water
+		b_lasa_ii = tp_lakes
+		b_lasa_ii = tp_seas
+		b_lasa_ii = tp_oceans
+		
+		b_lasa_iii = ct_planet_survey
+		b_lasa_iii = ct_frozen
+		b_lasa_iii = ct_clean_atmosphere
+		b_lasa_iii = ct_no_water
+		b_lasa_iii = ct_trace_water
+		b_lasa_iii = ct_lakes
+		b_lasa_iii = ct_seas
+		b_lasa_iii = ct_oceans
+		
+		b_lasa_iv = ca_planet_survey
+		b_lasa_iv = ca_frozen
+		b_lasa_iv = ca_toxic_atmosphere
+		b_lasa_iv = ca_no_water
+}
+
+2998.1.1 = {
+		b_lasa_prime = tp_colony_0
+		b_lasa_prime = tp_colony_1
+		
+		b_lasa_ii = tp_colony_0
+		b_lasa_ii = tp_toxic_atmosphere_domes
+		
+		b_lasa_iii = ct_colony_0
+		b_lasa_iii = ct_colony_1
+		b_lasa_iii = ct_colony_2
+		
+		b_lasa_iv = ca_colony_0
+			
+}

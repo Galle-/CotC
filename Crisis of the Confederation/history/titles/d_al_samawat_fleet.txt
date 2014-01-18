@@ -1,0 +1,7 @@
+# Modern era
+2489.1.1 = {
+	liege = "k_al_samawat"
+	law = true_cognatic_succession
+	law = succ_appointment
+}
+2998.1.1 = { holder = 1103461 } # Hosniya Mumani

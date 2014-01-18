@@ -1,0 +1,58 @@
+# 82 - Prosperidad
+
+# County Title
+title = c_prosperidad
+
+# Settlements
+max_settlements = 4
+b_prosperidad_prime = city
+b_prosperidad_iii = temple
+b_prosperidad_iv = castle
+
+# Misc
+culture = hispanic_celestean # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	# Prosperidad Prime is a mining colony - put some trade goods on it once they're implemented
+	b_prosperidad_prime = ct_toxic_atmosphere
+	b_prosperidad_prime = ct_no_water
+	b_prosperidad_prime = ct_trace_water
+	b_prosperidad_prime = ct_burning
+	b_prosperidad_prime = ct_planet_survey
+	
+	b_prosperidad_iii = tp_toxic_atmosphere
+	b_prosperidad_iii = tp_no_water
+	b_prosperidad_iii = tp_trace_water
+	b_prosperidad_iii = tp_lakes
+	b_prosperidad_iii = tp_burning
+	b_prosperidad_iii = tp_hot
+	b_prosperidad_iii = tp_warm
+	b_prosperidad_iii = tp_optimal_hot
+	b_prosperidad_iii = tp_planet_survey
+	
+	b_prosperidad_iv = ca_toxic_atmosphere
+	b_prosperidad_iv = ca_no_water
+	b_prosperidad_iv = ca_trace_water
+	b_prosperidad_iv = ca_frozen
+	b_prosperidad_iv = ca_cold
+	b_prosperidad_iv = ca_cool
+	b_prosperidad_iv = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_prosperidad_prime = ct_colony_0
+	b_prosperidad_prime = ct_colony_1
+	
+	b_prosperidad_iii = tp_toxic_atmosphere_domes
+	
+	b_prosperidad_iii = tp_colony_0
+	b_prosperidad_iii = tp_colony_1
+	b_prosperidad_iii = tp_colony_2
+	
+	b_prosperidad_iv = ca_colony_0
+	b_prosperidad_iv = ca_colony_1
+	
+	trade_post = b_salazar
+}

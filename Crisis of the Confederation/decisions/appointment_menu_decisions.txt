@@ -1,0 +1,25 @@
+decisions = {
+	close_appointment_nomination_menu = {
+		is_high_prio = yes
+		potential = {
+			ai = no
+			has_character_flag = flag_appointment_nomination_menu
+		}
+		effect = { clr_character_flag = flag_appointment_nomination_menu }
+		ai_will_do = { factor = 0 }
+	}
+	open_appointment_nomination_menu = {
+		potential = {
+			ai = no
+			NOT = { has_character_flag = flag_appointment_nomination_menu }
+		}
+		allow = {
+			OR = {
+				liege = { any_demesne_title = { has_law = succ_appointment } }
+				any_dynasty_member = { liege = { any_demesne_title = { has_law = succ_appointment } } }
+			}
+		}
+		effect = { set_character_flag = flag_appointment_nomination_menu }
+		ai_will_do = { factor = 0 }
+	}
+}

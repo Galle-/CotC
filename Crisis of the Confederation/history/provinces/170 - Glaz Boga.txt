@@ -1,0 +1,19 @@
+# 170 - Glaz Boga
+
+# County Title
+title = c_glaz_boga
+
+# Settlements
+max_settlements = 4
+b_glaz_boga_ii = castle
+
+# Misc
+culture = russo_edemite # Initial culture
+religion = astrist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

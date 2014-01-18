@@ -1,0 +1,7 @@
+2489.1.1={
+	liege="d_glenn"
+	law = succ_seniority
+	law = true_cognatic_succession
+}
+2952.1.1 = { holder = 120167 } # Jacob Weyland
+2989.1.1 = { holder = 110167 } # Owen Weyland

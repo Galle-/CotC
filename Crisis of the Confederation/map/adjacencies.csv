@@ -1,0 +1,557 @@
+From;To;Type;Through;-1;-1;-1;-1;Comment
+32;34;sea;946;-1;-1;-1;-1;Galahad-Virtue
+32;33;sea;946;-1;-1;-1;-1;Galahad-Shiverlight
+33;34;sea;946;-1;-1;-1;-1;Shiverlight-Virtue
+32;37;sea;;-1;-1;-1;-1;Galahad-Numenor
+34;37;sea;;-1;-1;-1;-1;Virtue-Numenor
+37;35;sea;947;-1;-1;-1;-1;Numenor-Henry's Star
+37;36;sea;947;-1;-1;-1;-1;Numenor-Lancelot
+35;36;sea;947;-1;-1;-1;-1;Henry's Star-Lancelot
+35;38;sea;947;-1;-1;-1;-1;Henry's Star-Robinson
+36;38;sea;947;-1;-1;-1;-1;Lancelot-Robinson
+36;30;sea;;-1;-1;-1;-1;Lancelot-Greywood
+34;30;sea;;-1;-1;-1;-1;Virtue-Greywood
+30;29;sea;945;-1;-1;-1;-1;Greywood-Caliburn
+30;31;sea;945;-1;-1;-1;-1;Greywood-Mary's Star
+31;29;sea;945;-1;-1;-1;-1;Mary's Star-Caliburn
+33;40;sea;;-1;-1;-1;-1;Shiverlight-Nelson
+40;41;sea;948;-1;-1;-1;-1;Nelson-Sherwood
+40;39;sea;948;-1;-1;-1;-1;Nelson-Chalice
+41;39;sea;948;-1;-1;-1;-1;Sherwood-Chalice
+39;29;sea;;-1;-1;-1;-1;Chalice-Caliburn
+39;27;sea;;-1;-1;-1;-1;Chalice-Merlin
+27;26;sea;944;-1;-1;-1;-1;Merlin-Camelot
+27;25;sea;944;-1;-1;-1;-1;Merlin-Avalon
+25;26;sea;944;-1;-1;-1;-1;Avalon-Camelot
+28;26;sea;944;-1;-1;-1;-1;Paladin-Camelot
+28;25;sea;944;-1;-1;-1;-1;Paladin-Avalon
+43;29;sea;;-1;-1;-1;-1;Garrison-Caliburn
+43;27;sea;;-1;-1;-1;-1;Garrison-Merlin
+43;25;sea;;-1;-1;-1;-1;Garrison-Avalon
+43;42;sea;949;-1;-1;-1;-1;Garrison-Endeavor
+43;315;sea;949;-1;-1;-1;-1;Garrison-Hawkwood
+42;315;sea;949;-1;-1;-1;-1;Endeavor-Hawkwood
+42;44;sea;949;-1;-1;-1;-1;Endeavor-Victoria
+315;44;sea;949;-1;-1;-1;-1;Hawkwood-Victoria
+315;31;sea;;-1;-1;-1;-1;Hawkwood-Mary's Star
+31;24;sea;;-1;-1;-1;-1;Mary's Star-Etherland
+24;23;sea;943;-1;-1;-1;-1;Etherland-Alfred
+23;38;sea;;-1;-1;-1;-1;Alfred-Robinson
+1;2;sea;936;-1;-1;-1;-1;328-329
+1;3;sea;936;-1;-1;-1;-1;328-330
+2;4;sea;936;-1;-1;-1;-1;329-331
+4;3;sea;936;-1;-1;-1;-1;331-330
+3;5;sea;;-1;-1;-1;-1;330-332
+5;9;sea;937;-1;-1;-1;-1;332-336
+5;7;sea;937;-1;-1;-1;-1;332-334
+9;6;sea;937;-1;-1;-1;-1;336-333
+9;8;sea;937;-1;-1;-1;-1;336-335
+9;7;sea;937;-1;-1;-1;-1;336-334
+7;8;sea;937;-1;-1;-1;-1;334-335
+8;6;sea;937;-1;-1;-1;-1;335-333
+6;18;sea;;-1;-1;-1;-1;333-340
+18;19;sea;941;-1;-1;-1;-1;340-341
+18;20;sea;941;-1;-1;-1;-1;340-342
+19;20;sea;941;-1;-1;-1;-1;341-342
+19;21;sea;;-1;-1;-1;-1;341-343
+21;22;sea;942;-1;-1;-1;-1;343-344
+8;10;sea;;-1;-1;-1;-1;335-337
+7;11;sea;;-1;-1;-1;-1;334-338
+10;11;sea;938;-1;-1;-1;-1;337-338
+10;12;sea;938;-1;-1;-1;-1;337-339
+11;12;sea;938;-1;-1;-1;-1;338-339
+12;21;sea;;-1;-1;-1;-1;339-343
+12;14;sea;;-1;-1;-1;-1;339-326
+14;15;sea;939;-1;-1;-1;-1;326-327
+14;13;sea;939;-1;-1;-1;-1;326-325
+13;15;sea;939;-1;-1;-1;-1;325-327
+15;16;sea;;-1;-1;-1;-1;327-345
+15;17;sea;;-1;-1;-1;-1;327-346
+16;17;sea;940;-1;-1;-1;-1;345-346
+135;134;sea;975;-1;-1;-1;-1;Goldenroad-Deadwood
+135;136;sea;975;-1;-1;-1;-1;Goldenroad-Roosevelt
+134;136;sea;975;-1;-1;-1;-1;Deadwood-Roosevelt
+136;143;sea;;-1;-1;-1;-1;Roosevelt-Jefferson
+144;143;sea;978;-1;-1;-1;-1;Miracle-Jefferson
+144;145;sea;978;-1;-1;-1;-1;Miracle-Stacker
+143;145;sea;978;-1;-1;-1;-1;Jefferson-Stacker
+143;146;sea;978;-1;-1;-1;-1;Jefferson-Winterstar
+145;146;sea;978;-1;-1;-1;-1;Stacker-Winterstar
+144;131;sea;;-1;-1;-1;-1;Miracle-Adams
+131;130;sea;974;-1;-1;-1;-1;Adams-Abigail
+131;132;sea;974;-1;-1;-1;-1;Adams-Delphi
+130;132;sea;974;-1;-1;-1;-1;Abigail-Delphi
+130;133;sea;974;-1;-1;-1;-1;Abigail-Eagle
+132;133;sea;974;-1;-1;-1;-1;Delphi-Eagle
+132;140;sea;;-1;-1;-1;-1;Delphi-Franklin
+145;140;sea;;-1;-1;-1;-1;Stacker-Franklin
+140;142;sea;977;-1;-1;-1;-1;Franklin-Touchdown
+140;141;sea;977;-1;-1;-1;-1;Franklin-Legacy
+142;141;sea;977;-1;-1;-1;-1;Touchdown-Legacy
+142;133;sea;;-1;-1;-1;-1;Touchdown-Eagle
+145;141;sea;;-1;-1;-1;-1;Stacker-Legacy
+142;152;sea;;-1;-1;-1;-1;Touchdown-Washington
+133;152;sea;;-1;-1;-1;-1;Eagle-Washington
+152;150;sea;980;-1;-1;-1;-1;Washington-Delaware
+152;151;sea;980;-1;-1;-1;-1;Washington-Shadow's Rim
+150;151;sea;980;-1;-1;-1;-1;Delaware-Shadow's Rim
+148;142;sea;;-1;-1;-1;-1;Lafayette-Touchdown
+148;141;sea;;-1;-1;-1;-1;Lafayette-Legacy
+148;147;sea;979;-1;-1;-1;-1;Lafayette-De Gaulle
+148;149;sea;979;-1;-1;-1;-1;Lafayette-Silhouette
+149;147;sea;979;-1;-1;-1;-1;Silhouette-De Gaulle
+147;138;sea;;-1;-1;-1;-1;De Gaulle-Farland
+138;145;sea;;-1;-1;-1;-1;Farland-Stacker
+138;146;sea;;-1;-1;-1;-1;Farland-Winterstar
+138;139;sea;976;-1;-1;-1;-1;Farland-Overlook
+138;137;sea;976;-1;-1;-1;-1;Farland-Douglas
+139;137;sea;976;-1;-1;-1;-1;Overlook-Douglas
+228;226;sea;1004;-1;-1;-1;-1;WH-253-WH-064
+228;227;sea;1004;-1;-1;-1;-1;WH-253-WH-229
+227;229;sea;1004;-1;-1;-1;-1;WH-229-WH-998
+226;225;sea;1004;-1;-1;-1;-1;WH-064-WH-021
+229;219;sea;;-1;-1;-1;-1;WH-998-WH-835
+219;218;sea;1002;-1;-1;-1;-1;WH-835-WH-732
+225;217;sea;;-1;-1;-1;-1;WH-021-WH-367
+214;215;sea;1002;-1;-1;-1;-1;256-257
+215;216;sea;1002;-1;-1;-1;-1;257-258
+216;214;sea;1002;-1;-1;-1;-1;258-256
+217;221;sea;;-1;-1;-1;-1;WH-367-WH-336
+218;220;sea;;-1;-1;-1;-1;WH-732-WH-178
+220;222;sea;1003;-1;-1;-1;-1;WH-178-WH-930
+221;222;sea;1003;-1;-1;-1;-1;WH-336-WH-930
+115;116;sea;970;-1;-1;-1;-1;263-264
+115;117;sea;970;-1;-1;-1;-1;263-265
+115;118;sea;970;-1;-1;-1;-1;263-266
+116;117;sea;970;-1;-1;-1;-1;264-265
+117;118;sea;970;-1;-1;-1;-1;265-266
+117;119;sea;970;-1;-1;-1;-1;265-267
+118;119;sea;970;-1;-1;-1;-1;266-267
+118;120;sea;;-1;-1;-1;-1;266-268
+119;124;sea;;-1;-1;-1;-1;267-215
+119;122;sea;;-1;-1;-1;-1;267-Iogi
+120;122;sea;971;-1;-1;-1;-1;268-Iogi
+120;121;sea;971;-1;-1;-1;-1;268-269
+121;122;sea;971;-1;-1;-1;-1;269-Iogi
+121;111;sea;;-1;-1;-1;-1;269-212
+121;122;sea;;-1;-1;-1;-1;269-Jion
+111;110;sea;968;-1;-1;-1;-1;212-211
+111;112;sea;968;-1;-1;-1;-1;212-213
+110;112;sea;968;-1;-1;-1;-1;211-213
+112;122;sea;;-1;-1;-1;-1;213-Jion
+112;125;sea;;-1;-1;-1;-1;213-Akasei
+122;124;sea;972;-1;-1;-1;-1;Jion-215
+122;123;sea;972;-1;-1;-1;-1;Jion-214
+122;125;sea;972;-1;-1;-1;-1;Jion-Akasei
+124;123;sea;972;-1;-1;-1;-1;215-214
+123;125;sea;972;-1;-1;-1;-1;214-Akasei
+123;113;sea;;-1;-1;-1;-1;214-218
+125;127;sea;;-1;-1;-1;-1;Akasei-Moegara
+113;114;sea;969;-1;-1;-1;-1;218-219
+127;129;sea;973;-1;-1;-1;-1;Moegara-Taikun
+127;128;sea;973;-1;-1;-1;-1;Moegara-Rasen
+129;128;sea;973;-1;-1;-1;-1;Taikun-Rasen
+190;189;sea;992;-1;-1;-1;-1;Raduga-237
+190;188;sea;992;-1;-1;-1;-1;Raduga-236
+190;187;sea;992;-1;-1;-1;-1;Raduga-235
+189;187;sea;992;-1;-1;-1;-1;237-235
+187;188;sea;992;-1;-1;-1;-1;235-236
+187;179;sea;;-1;-1;-1;-1;235-Ruzhena
+179;178;sea;989;-1;-1;-1;-1;Ruzhena-Pandora
+179;177;sea;989;-1;-1;-1;-1;Ruzhena-Arkanar
+179;185;sea;;-1;-1;-1;-1;Ruzhena-Novyy Sol
+178;180;sea;989;-1;-1;-1;-1;Pandora-Yalla
+178;177;sea;989;-1;-1;-1;-1;Pandora-Arkanar
+180;177;sea;989;-1;-1;-1;-1;Yalla-Arkanar
+177;185;sea;;-1;-1;-1;-1;Arkanar-Novyy Sol
+188;186;sea;;-1;-1;-1;-1;236-Vladislava
+186;185;sea;991;-1;-1;-1;-1;Vladislava-Novyy Sol
+186;184;sea;991;-1;-1;-1;-1;Vladislava-Nad'ezhda
+185;184;sea;991;-1;-1;-1;-1;Novyy Sol-Nad'ezhda
+185;183;sea;;-1;-1;-1;-1;Novyy Sol-Kovcheg
+180;183;sea;;-1;-1;-1;-1;Yalla-Kovcheg
+183;181;sea;990;-1;-1;-1;-1;Kovcheg-221
+183;182;sea;990;-1;-1;-1;-1;Kovcheg-222
+184;191;sea;;-1;-1;-1;-1;Nad'ezhda-225
+191;192;sea;993;-1;-1;-1;-1;225-Saula
+107;106;sea;967;-1;-1;-1;-1;HE-338-HE-219
+107;108;sea;967;-1;-1;-1;-1;HE-338-HE-702
+106;105;sea;;-1;-1;-1;-1;HE-219-HE-843
+109;102;sea;;-1;-1;-1;-1;Port Simon-Eye of God
+105;104;sea;966;-1;-1;-1;-1;HE-843-HE-794
+108;103;sea;;-1;-1;-1;-1;HE-702-HE-153
+104;103;sea;966;-1;-1;-1;-1;HE-794-HE-153
+165;164;sea;985;-1;-1;-1;-1;Vera-Tselostnost'
+165;163;sea;985;-1;-1;-1;-1;Vera-Pobeda
+164;163;sea;985;-1;-1;-1;-1;Tselostnost'-Pobeda
+163;158;sea;;-1;-1;-1;-1;Pobeda-Vynoslivost'
+163;157;sea;;-1;-1;-1;-1;Pobeda-Mir
+158;157;sea;983;-1;-1;-1;-1;Vynoslivost'-Mir
+157;160;sea;;-1;-1;-1;-1;Mir-Loyal'nost'
+157;167;sea;;-1;-1;-1;-1;Mir-Prochnost'
+164;173;sea;;-1;-1;-1;-1;Tselostnost'-Ad
+173;176;sea;988;-1;-1;-1;-1;Ad-Vozneseniye
+176;174;sea;988;-1;-1;-1;-1;Vozneseniye-Sashi Zvezdy
+174;175;sea;988;-1;-1;-1;-1;Sashi Zvezdy-Sovershenstvo
+175;170;sea;;-1;-1;-1;-1;Sovershenstvo-Giaz Boga
+175;172;sea;;-1;-1;-1;-1;Sovershenstvo-Shen Yan
+175;159;sea;;-1;-1;-1;-1;Sovershenstvo-Distsiplina
+173;159;sea;;-1;-1;-1;-1;Ad-Distsiplina
+164;159;sea;;-1;-1;-1;-1;Tselostnost'-Distsiplina
+170;172;sea;987;-1;-1;-1;-1;Glaz Boga-Shen Yan
+170;171;sea;987;-1;-1;-1;-1;Glaz Boga-Luoxuan
+172;171;sea;987;-1;-1;-1;-1;Shen Yan-Luoxuan
+172;161;sea;;-1;-1;-1;-1;Shen Yan-Muzhestvo
+159;161;sea;984;-1;-1;-1;-1;Distsiplina-Muzhestvo
+159;162;sea;984;-1;-1;-1;-1;Distsiplina-Novyy Edem
+161;162;sea;984;-1;-1;-1;-1;Muzhestvo-Novyy Edem
+162;160;sea;984;-1;-1;-1;-1;Novyy Edem-Loyal'nost'
+160;166;sea;;-1;-1;-1;-1;Loyal'nost'-Ostorozhnost'
+166;169;sea;986;-1;-1;-1;-1;Ostorozhnost'-Vernost'
+166;168;sea;986;-1;-1;-1;-1;Ostorozhnost'-Stabilnost'
+161;153;sea;;-1;-1;-1;-1;Muzhestvo-Almaz
+161;154;sea;;-1;-1;-1;-1;Muzhestvo-Zhemchuzhina
+153;154;sea;981;-1;-1;-1;-1;Almaz-Zhemchuzhina
+154;155;sea;;-1;-1;-1;-1;Zhemchuzhina-Maoxian
+155;156;sea;982;-1;-1;-1;-1;Maoxian-Pei Cheng
+156;168;sea;;-1;-1;-1;-1;Pei Cheng-Stabilnost'
+93;92;sea;963;-1;-1;-1;-1;Weyland-Touchstone
+93;90;sea;963;-1;-1;-1;-1;Weyland-Glenn
+92;90;sea;963;-1;-1;-1;-1;Touchstone-Glenn
+92;92;sea;963;-1;-1;-1;-1;Touchstone-John Henry
+90;92;sea;963;-1;-1;-1;-1;Glenn-John Henry
+90;101;sea;;-1;-1;-1;-1;Glenn-Shepard
+101;100;sea;965;-1;-1;-1;-1;Shepard-Sharman
+101;99;sea;965;-1;-1;-1;-1;Shepard-Jemison
+100;99;sea;965;-1;-1;-1;-1;Sharman-Jemison
+92;95;sea;;-1;-1;-1;-1;Touchstone-Gemini
+95;96;sea;964;-1;-1;-1;-1;Gemini-Liberty
+95;97;sea;964;-1;-1;-1;-1;Gemini-Lincoln
+95;98;sea;964;-1;-1;-1;-1;Gemini-Ride
+95;94;sea;964;-1;-1;-1;-1;Gemini-Challenger
+91;97;sea;;-1;-1;-1;-1;John Henry-Lincoln
+97;98;sea;964;-1;-1;-1;-1;Lincoln-Ride
+98;94;sea;964;-1;-1;-1;-1;Ride-Challenger
+94;96;sea;964;-1;-1;-1;-1;Challenger-Liberty
+89;98;sea;;-1;-1;-1;-1;Heartland-Ride
+89;91;sea;;-1;-1;-1;-1;Heartland-John Henry
+89;90;sea;;-1;-1;-1;-1;Heartland-Glenn
+89;86;sea;962;-1;-1;-1;-1;Heartland-Aldrin
+89;88;sea;962;-1;-1;-1;-1;Heartland-Collins
+89;87;sea;962;-1;-1;-1;-1;Heartland-Armstrong
+89;101;sea;;-1;-1;-1;-1;Heartland-Shepard
+88;87;sea;962;-1;-1;-1;-1;Collins-Armstrong
+87;86;sea;962;-1;-1;-1;-1;Armstrong-Aldrin
+86;84;sea;;-1;-1;-1;-1;Aldrin-Apollo
+84;85;sea;961;-1;-1;-1;-1;Apollo-Beowulf
+85;87;sea;;-1;-1;-1;-1;Beowulf-Armstrong
+210;209;sea;1000;-1;-1;-1;-1;Tengoku-Sotogawa no Ten
+209;211;sea;;-1;-1;-1;-1;Sotogawa nop Ten-Korolev
+212;213;sea;1001;-1;-1;-1;-1;Tannhauser Gate-Tereshkova
+213;211;sea;1001;-1;-1;-1;-1;Tereshkova-Korolev
+211;208;sea;;-1;-1;-1;-1;Korolev-Novyy Arkhangelsk
+208;206;sea;999;-1;-1;-1;-1;Novyy Arkhangelsk-Gagarin
+208;207;sea;999;-1;-1;-1;-1;Novyy Arkhangelsk-Hu Lao Gate
+206;207;sea;999;-1;-1;-1;-1;Gagarin-Hu Lao Gate
+199;200;sea;996;-1;-1;-1;-1;Procyon-Sirius
+200;203;sea;;-1;-1;-1;-1;Sirius-Epsilon Eridani
+203;205;sea;998;-1;-1;-1;-1;Epsilon Eridani-Tau Ceti
+203;204;sea;998;-1;-1;-1;-1;Epsilon Eridani-Eta Cassiopeia
+205;204;sea;998;-1;-1;-1;-1;Tau Ceti-Eta Cassiopeia
+202;200;sea;;-1;-1;-1;-1;Sol-Sirius
+202;204;sea;;-1;-1;-1;-1;Sol-Eta Cassiopeia
+202;201;sea;997;-1;-1;-1;-1;Sol-Alpha Centauri
+202;198;sea;;-1;-1;-1;-1;Sol-Sigma Draconis
+201;198;sea;;-1;-1;-1;-1;Alpha Centauri-Sigma Draconis
+204;197;sea;;-1;-1;-1;-1;Eta Cassiopeia-Epsilon Indi
+198;197;sea;995;-1;-1;-1;-1;Sigma Draconis-Epsilon Indi
+198;195;sea;995;-1;-1;-1;-1;Sigma Draconis-Beta Hydri
+198;196;sea;995;-1;-1;-1;-1;Sigma Draconis-Delta Pavonis
+195;197;sea;995;-1;-1;-1;-1;Beta Hydri-Epsilon Indi
+195;196;sea;995;-1;-1;-1;-1;Beta Hydri-Delta Pavonis
+196;194;sea;;-1;-1;-1;-1;Delta Pavonis-Cygni
+194;193;sea;994;-1;-1;-1;-1;Cygni-Altair
+280;282;sea;1020;-1;-1;-1;-1;Abbaba-Addis Saba
+280;284;sea;1020;-1;-1;-1;-1;Abbaba-Menelik
+284;282;sea;1020;-1;-1;-1;-1;Menelik-Addis Saba
+284;283;sea;1020;-1;-1;-1;-1;Menelik-Haile Selassie
+284;281;sea;1020;-1;-1;-1;-1;Menelik-Addis Adwa
+283;281;sea;1020;-1;-1;-1;-1;Haile Selassie-Addis Adwa
+282;281;sea;1020;-1;-1;-1;-1;Addis Saba-Addis Adwa
+286;282;sea;;-1;-1;-1;-1;Anansi-Addis Saba
+286;281;sea;;-1;-1;-1;-1;Anansi-Addis Adwa
+286;287;sea;1021;-1;-1;-1;-1;Anansi-Nyame
+286;285;sea;1021;-1;-1;-1;-1;Anansi-Afolayan
+287;285;sea;1021;-1;-1;-1;-1;Nyame-Afolayan
+286;292;sea;;-1;-1;-1;-1;Anansi-Ndia Panda
+286;291;sea;;-1;-1;-1;-1;Anansi-Kimbilio
+292;291;sea;1023;-1;-1;-1;-1;Ndia Panda-Kimbilio
+292;293;sea;1023;-1;-1;-1;-1;Ndia Panda-Tengemano
+291;293;sea;1023;-1;-1;-1;-1;Kimbilio-Tengemano
+281;292;sea;;-1;-1;-1;-1;Addis Adwa-Ndia Panda
+281;288;sea;;-1;-1;-1;-1;Addis Adwa-Angani Moto
+292;288;sea;;-1;-1;-1;-1;Ndia Panda-Angani Moto
+288;289;sea;1022;-1;-1;-1;-1;Angani Moto-Mpya ya Zanzibar
+288;290;sea;1022;-1;-1;-1;-1;Angani Moto-Upeo wa Macho
+289;290;sea;1022;-1;-1;-1;-1;Mpya ya Zanzibar-Upeo wa Macho
+294;293;sea;;-1;-1;-1;-1;Bandari-Tengemano
+294;289;sea;;-1;-1;-1;-1;Bandari-Mpya ya Zanzibar
+294;296;sea;1024;-1;-1;-1;-1;Bandari-Sisi Alifanya Hivyo
+294;295;sea;1024;-1;-1;-1;-1;Bandari-Nyota 'Mwisho
+295;289;sea;;-1;-1;-1;-1;Nyota 'Mwisho-Mpya ya Zanzibar
+295;296;sea;1024;-1;-1;-1;-1;Nyota 'Mwisho-Sisi Alifanya Hivyo
+309;310;sea;1028;-1;-1;-1;-1;al-Bawwaaba-al-Jaziira
+309;308;sea;1028;-1;-1;-1;-1;al-Bawwaaba-Izraa'iil
+310;308;sea;1028;-1;-1;-1;-1;al-Jaziira-Izra'iil
+310;311;sea;;-1;-1;-1;-1;al-Jaziira-Kathiib
+311;313;sea;1029;-1;-1;-1;-1;Kathiib-Shams Akhdar
+311;314;sea;1029;-1;-1;-1;-1;Kathiib-al-Hadd
+311;312;sea;1029;-1;-1;-1;-1;Kathiib-Qurtubat al-Jadiida
+312;298;sea;;-1;-1;-1;-1;Qurtubat al-Jadiida-Mixaa'iil
+308;297;sea;;-1;-1;-1;-1;Izra'iil-Amal
+298;297;sea;1025;-1;-1;-1;-1;Mixaa'iil-Amal
+298;299;sea;1025;-1;-1;-1;-1;Mixaa'iil-at-Taw'amayn
+299;297;sea;1025;-1;-1;-1;-1;at-Taw'amayn-Amal
+304;297;sea;;-1;-1;-1;-1;Farah-Amal
+304;303;sea;1027;-1;-1;-1;-1;Farah-Burj Najmii
+304;305;sea;1027;-1;-1;-1;-1;Farah-Israafiil
+303;305;sea;1027;-1;-1;-1;-1;Burj Najmii-Israafiil
+303;307;sea;1027;-1;-1;-1;-1;Burj Najmii-Makkat aj-Jadiida
+307;306;sea;1027;-1;-1;-1;-1;Makkat aj-Jadiida-Janna
+306;305;sea;1027;-1;-1;-1;-1;Janna-Israafiil
+305;301;sea;;-1;-1;-1;-1;Israafiil-Sakiina
+299;301;sea;;-1;-1;-1;-1;at-Taw'amay-Sakiina
+299;300;sea;;-1;-1;-1;-1;at-Taw'amay-Jabra'iil
+301;300;sea;1026;-1;-1;-1;-1;Sakiina-Jabra'iil
+301;302;sea;1026;-1;-1;-1;-1;Sakiina-al-Jisr
+300;302;sea;1026;-1;-1;-1;-1;Jabra'iil-al-Jisr
+78;80;sea;959;-1;-1;-1;-1;Nanti-Tlexochtii
+78;79;sea;959;-1;-1;-1;-1;Nanti-Tletlioh
+78;77;sea;959;-1;-1;-1;-1;Nanti-Nahui-Ahtle
+77;79;sea;959;-1;-1;-1;-1;Nahui-Ahtle-Tletioh
+77;80;sea;959;-1;-1;-1;-1;Nahui-Ahtle-Tlexochtii
+77;76;sea;959;-1;-1;-1;-1;Nahui-Ahtle-Huehca
+76;80;sea;959;-1;-1;-1;-1;Huehca-Tlexoctii
+76;75;sea;;-1;-1;-1;-1;Huehca-Puerto del Cielo
+76;72;sea;;-1;-1;-1;-1;Huehca-Nuevo Santuario
+76;70;sea;;-1;-1;-1;-1;Huehca-Encrucijada
+73;74;sea;958;-1;-1;-1;-1;Dom Frontera-Illuminacion
+73;75;sea;958;-1;-1;-1;-1;Dom Frontera-Puerto del Cielo
+74;75;sea;958;-1;-1;-1;-1;Iluminacion-Puerto del Cielo
+75;72;sea;;-1;-1;-1;-1;Puerto del Cielo-Nuevo Santuario
+72;70;sea;957;-1;-1;-1;-1;Nuevo Santuario-Encrucijada
+72;71;sea;957;-1;-1;-1;-1;Nuevo Santuario-Hermanes de Oro
+70;71;sea;957;-1;-1;-1;-1;Encrucijada-Hermanes de Oro
+71;69;sea;957;-1;-1;-1;-1;Hermanes de Oro-Escudo
+70;82;sea;;-1;-1;-1;-1;Encrucijada-Prosperidad
+82;83;sea;960;-1;-1;-1;-1;Prosperidad-Vega
+82;81;sea;960;-1;-1;-1;-1;Prosperidad-Nuevo Sol
+83;77;sea;;-1;-1;-1;-1;Vega-Nahui-Ahtle
+83;81;sea;960;-1;-1;-1;-1;Vega-Nuevo Sol
+81;68;sea;;-1;-1;-1;-1;Nuevo Sol-Santa Maria
+81;67;sea;;-1;-1;-1;-1;Nuevo Sol-Estrella de Bolivar
+68;67;sea;956;-1;-1;-1;-1;Santa Maria-Estrella de Bolivar
+67;66;sea;956;-1;-1;-1;-1;Estrella de Bolivar-Esperanza
+67;65;sea;956;-1;-1;-1;-1;Estrella de Bolivar-Ahora la Luz
+70;66;sea;;-1;-1;-1;-1;Ecrucijada-Esperanza
+276;274;sea;1018;-1;-1;-1;-1;Zhai Zhigang-Liu Boming
+276;275;sea;1018;-1;-1;-1;-1;Zhai Zhigang-Xuanwu
+275;274;sea;1018;-1;-1;-1;-1;Xuanwu-Liu Boming
+275;273;sea;1018;-1;-1;-1;-1;Xuanwu-Jing Haipeng
+274;273;sea;1018;-1;-1;-1;-1;Liu Boming-Jing Haipeng
+270;274;sea;;-1;-1;-1;-1;Fei Junlong-Liu Boming
+270;273;sea;;-1;-1;-1;-1;Fei Junlong-Jing Haipeng
+270;272;sea;1017;-1;-1;-1;-1;Fei Junlong-Qinglong
+270;271;sea;1017;-1;-1;-1;-1;Fei Junlong-Nie Haisheng
+272;271;sea;1017;-1;-1;-1;-1;Qinglong-Nie Haisheng
+267;273;sea;;-1;-1;-1;-1;Huangjing-Jing Haipeng
+267;268;sea;1016;-1;-1;-1;-1;Huangjing-Huanglong
+267;271;sea;;-1;-1;-1;-1;Huangjing-Nie Haisheng
+267;269;sea;1016;-1;-1;-1;-1;Huangjing-Yang Liwei
+268;269;sea;1016;-1;-1;-1;-1;Huanglong-Yang Liwei
+266;275;sea;;-1;-1;-1;-1;Liu Yang-Xuanwu
+266;264;sea;1015;-1;-1;-1;-1;Liu Yang-Baihu
+266;265;sea;1015;-1;-1;-1;-1;Liu Yang-Liu Wang
+264;265;sea;1015;-1;-1;-1;-1;Baihu-Liu Wang
+264;268;sea;;-1;-1;-1;-1;Baihu-Huanglong
+269;278;sea;;-1;-1;-1;-1;Yang Liwei-Zhang Xiaoguang
+269;279;sea;;-1;-1;-1;-1;Yang Liwei-Zhuque
+279;278;sea;1019;-1;-1;-1;-1;Zhuque-Zhang Xiaoguang
+279;277;sea;1019;-1;-1;-1;-1;Zhuque-Wang Yaping
+50;51;sea;952;-1;-1;-1;-1;416-417
+50;52;sea;952;-1;-1;-1;-1;416-418
+51;52;sea;952;-1;-1;-1;-1;417-418
+51;56;sea;;-1;-1;-1;-1;417-414
+56;53;sea;953;-1;-1;-1;-1;414-411
+56;54;sea;953;-1;-1;-1;-1;414-412
+55;53;sea;953;-1;-1;-1;-1;413-411
+55;54;sea;953;-1;-1;-1;-1;413-412
+55;57;sea;953;-1;-1;-1;-1;413-415
+54;57;sea;953;-1;-1;-1;-1;412-415
+53;49;sea;;-1;-1;-1;-1;411-420
+49;48;sea;951;-1;-1;-1;-1;420-419
+53;47;sea;;-1;-1;-1;-1;411-402
+47;45;sea;950;-1;-1;-1;-1;402-400
+47;46;sea;950;-1;-1;-1;-1;402-401
+45;46;sea;950;-1;-1;-1;-1;400-401
+46;61;sea;;-1;-1;-1;-1;401-404
+61;62;sea;955;-1;-1;-1;-1;404-405
+61;63;sea;955;-1;-1;-1;-1;404-406
+62;63;sea;955;-1;-1;-1;-1;405-406
+62;64;sea;955;-1;-1;-1;-1;405-407
+63;64;sea;955;-1;-1;-1;-1;406-407
+63;59;sea;;-1;-1;-1;-1;406-409
+59;58;sea;954;-1;-1;-1;-1;409-408
+59;53;sea;954;-1;-1;-1;-1;409-411
+58;53;sea;954;-1;-1;-1;-1;408-411
+58;55;sea;;-1;-1;-1;-1;408-413
+251;252;sea;1011;-1;-1;-1;-1;371-372
+251;253;sea;1011;-1;-1;-1;-1;371-373
+252;253;sea;1011;-1;-1;-1;-1;372-373
+230;253;sea;;-1;-1;-1;-1;381-373
+230;252;sea;;-1;-1;-1;-1;381-372
+230;232;sea;1005;-1;-1;-1;-1;381-383
+230;231;sea;1005;-1;-1;-1;-1;381-382
+231;233;sea;1005;-1;-1;-1;-1;382-384
+231;232;sea;1005;-1;-1;-1;-1;382-383
+232;249;sea;;-1;-1;-1;-1;383-361
+249;247;sea;1010;-1;-1;-1;-1;361-359
+249;248;sea;1010;-1;-1;-1;-1;361-360
+249;250;sea;1010;-1;-1;-1;-1;361-362
+250;249;sea;1010;-1;-1;-1;-1;362-361
+250;248;sea;1010;-1;-1;-1;-1;362-360
+248;247;sea;1010;-1;-1;-1;-1;360-359
+247;252;sea;;-1;-1;-1;-1;359-372
+250;234;sea;;-1;-1;-1;-1;362-386
+234;235;sea;1006;-1;-1;-1;-1;386-387
+234;236;sea;1006;-1;-1;-1;-1;386-388
+235;236;sea;1006;-1;-1;-1;-1;387-388
+235;233;sea;;-1;-1;-1;-1;387-384
+236;237;sea;;-1;-1;-1;-1;388-390
+237;238;sea;1007;-1;-1;-1;-1;390-391
+237;239;sea;1007;-1;-1;-1;-1;390-392
+238;240;sea;1007;-1;-1;-1;-1;391-393
+238;239;sea;1007;-1;-1;-1;-1;391-392
+238;240;sea;1007;-1;-1;-1;-1;391-393
+240;242;sea;;-1;-1;-1;-1;393-395
+242;243;sea;1008;-1;-1;-1;-1;395-396
+242;241;sea;1008;-1;-1;-1;-1;395-394
+243;241;sea;1008;-1;-1;-1;-1;396-394
+241;258;sea;;-1;-1;-1;-1;394-379
+258;257;sea;1013;-1;-1;-1;-1;379-378
+257;255;sea;;-1;-1;-1;-1;378-364
+255;256;sea;1012;-1;-1;-1;-1;364-365
+255;254;sea;1012;-1;-1;-1;-1;364-363
+256;254;sea;1012;-1;-1;-1;-1;365-363
+254;245;sea;;-1;-1;-1;-1;363-356
+245;244;sea;1009;-1;-1;-1;-1;356-355
+245;246;sea;1009;-1;-1;-1;-1;356-357
+244;246;sea;1009;-1;-1;-1;-1;355-357
+246;247;sea;;-1;-1;-1;-1;357-359
+260;248;sea;;-1;-1;-1;-1;367-360
+260;250;sea;;-1;-1;-1;-1;367-362
+260;259;sea;1014;-1;-1;-1;-1;367-366
+260;262;sea;1014;-1;-1;-1;-1;367-369
+260;263;sea;1014;-1;-1;-1;-1;367-Xin Qin
+259;255;sea;;-1;-1;-1;-1;366-364
+259;261;sea;1014;-1;-1;-1;-1;366-368
+259;263;sea;1014;-1;-1;-1;-1;366-Xin Qin
+261;258;sea;;-1;-1;-1;-1;368-379
+261;262;sea;1014;-1;-1;-1;-1;368-369
+261;263;sea;1014;-1;-1;-1;-1;368-Xin Qin
+262;238;sea;;-1;-1;-1;-1;369-391
+262;263;sea;1014;-1;-1;-1;-1;369-Xin Qin
+23;2;sea;;-1;-1;-1;-1;Afred-329
+23;4;sea;;-1;-1;-1;-1;Alfred-331
+24;280;sea;;-1;-1;-1;-1;Etherland-Abbaba
+44;280;sea;;-1;-1;-1;-1;Victoria-Abbaba
+42;96;sea;;-1;-1;-1;-1;Endeavor-Liberty
+42;95;sea;;-1;-1;-1;-1;Endeavor-Gemini
+28;92;sea;;-1;-1;-1;-1;Paladin-Touchstone
+26;134;sea;;-1;-1;-1;-1;Camelot-Deadwood
+41;135;sea;;-1;-1;-1;-1;Sherwood-Goldenroad
+139;93;sea;;-1;-1;-1;-1;Overlook-Weyland
+137;110;sea;;-1;-1;-1;-1;Douglas-211
+137;111;sea;;-1;-1;-1;-1;Douglas-212
+149;120;sea;;-1;-1;-1;-1;Silhouette-268
+151;226;sea;;-1;-1;-1;-1;Shadow's Rim-WH064
+150;228;sea;;-1;-1;-1;-1;Delaware-WH-253
+221;115;sea;;-1;-1;-1;-1;WH-336-263
+221;116;sea;;-1;-1;-1;-1;WH-336-264
+222;189;sea;;-1;-1;-1;-1;WH-930-237
+222;190;sea;;-1;-1;-1;-1;WH-930-Raduga
+180;114;sea;;-1;-1;-1;-1;Yaila-219
+181;114;sea;;-1;-1;-1;-1;221-219
+181;114;sea;;-1;-1;-1;-1;221-HE-219
+182;105;sea;;-1;-1;-1;-1;222-HE-843
+182;176;sea;;-1;-1;-1;-1;222-Vozneseniye
+192;176;sea;;-1;-1;-1;-1;Saula-Vozneseniye
+192;165;sea;;-1;-1;-1;-1;Saula-Vera
+174;104;sea;;-1;-1;-1;-1;Sashi Zvezdy-HE-794
+170;104;sea;;-1;-1;-1;-1;Glaz Boga-HE-794
+170;103;sea;;-1;-1;-1;-1;Glaz Boga-HE-153
+171;266;sea;;-1;-1;-1;-1;Luoxuan-Liu Yang
+155;265;sea;;-1;-1;-1;-1;Maoxian-Liu Wang
+155;244;sea;;-1;-1;-1;-1;Maoxian-355
+156;251;sea;;-1;-1;-1;-1;Pei Cheng-371
+168;251;sea;;-1;-1;-1;-1;Stabilnost'-371
+244;265;sea;;-1;-1;-1;-1;355-Liu Wang
+257;62;sea;;-1;-1;-1;-1;378-405
+45;277;sea;;-1;-1;-1;-1;400-Wang Yaping
+48;278;sea;;-1;-1;-1;-1;419-Zhang Xiaoguang
+50;65;sea;;-1;-1;-1;-1;416-Ahora la Luz
+68;278;sea;;-1;-1;-1;-1;Santa Maria-Zhang Xiaoguang
+81;193;sea;;-1;-1;-1;-1;Nuevo Sol-Altair
+83;193;sea;;-1;-1;-1;-1;Vega-Altair
+79;195;sea;;-1;-1;-1;-1;Tletlioh-Beta Hydri
+73;302;sea;;-1;-1;-1;-1;Dom Frontera-al-Jisr
+78;306;sea;;-1;-1;-1;-1;Nantii-Janna
+307;205;sea;;-1;-1;-1;-1;Makkat al-Jadiida-Tau Ceti
+307;203;sea;;-1;-1;-1;-1;Makkat al-Jadiida-Epsilon Eridani
+303;295;sea;;-1;-1;-1;-1;Burj Najmii-Nyota 'Mwisho
+304;295;sea;;-1;-1;-1;-1;Farah-Nyota 'Mwisho
+304;296;sea;;-1;-1;-1;-1;Farah-Sisi Alifanya Hivyo
+297;296;sea;;-1;-1;-1;-1;Amal-Sisi Alifanya Hivyo
+309;291;sea;;-1;-1;-1;-1;al-Bawwaba-Kimbilio
+309;285;sea;;-1;-1;-1;-1;al-Bawwaaba-Afolayan
+313;13;sea;;-1;-1;-1;-1;Shams Akhdar-325
+114;106;sea;;-1;-1;-1;-1;219-HE-219
+113;107;sea;;-1;-1;-1;-1;218-HE-338
+128;107;sea;;-1;-1;-1;-1;Rasen-HE-338
+129;210;sea;;-1;-1;-1;-1;Taikun-Tengoku
+110;100;sea;;-1;-1;-1;-1;211-Sharman
+108;206;sea;;-1;-1;-1;-1;HE-702-Gagarin
+103;276;sea;;-1;-1;-1;-1;HE-153-Zhai Zhigang
+272;193;sea;;-1;-1;-1;-1;Qinglong-Altair
+276;207;sea;;-1;-1;-1;-1;Zhai Zhigang-Hu Lao Gate
+284;94;sea;;-1;-1;-1;-1;Menelik-Challenger
+283;94;sea;;-1;-1;-1;-1;Haile Selassie-Challenger
+290;84;sea;;-1;-1;-1;-1;Upeo wa Macho-Apollo
+290;85;sea;;-1;-1;-1;-1;Upeo wa Macho-Beowulf
+290;203;sea;;-1;-1;-1;-1;Upeo wa Macho-Epsilon Eridani
+295;203;sea;;-1;-1;-1;-1;Nyota 'Mwisho-Epsilon Eridani
+88;212;sea;;-1;-1;-1;-1;Collins-Tannhauser Gate
+87;212;sea;;-1;-1;-1;-1;Armstrong-Tannhauser Gate
+87;199;sea;;-1;-1;-1;-1;Armstrong-Procyon
+85;199;sea;;-1;-1;-1;-1;Beowulf-Procyon
+213;199;sea;;-1;-1;-1;-1;Tereshkova-Procyon
+316;317;major_river;;-1;-1;-1;-1;316-317
+317;318;major_river;;-1;-1;-1;-1;317-318
+318;316;major_river;;-1;-1;-1;-1;318-316
+319;320;major_river;;-1;-1;-1;-1;319-320
+320;321;major_river;;-1;-1;-1;-1;320-321
+321;322;major_river;;-1;-1;-1;-1;321-322
+322;323;major_river;;-1;-1;-1;-1;322-323
+323;324;major_river;;-1;-1;-1;-1;323-324
+324;325;major_river;;-1;-1;-1;-1;324-325
+325;326;major_river;;-1;-1;-1;-1;325-326
+326;327;major_river;;-1;-1;-1;-1;326-327
+327;319;major_river;;-1;-1;-1;-1;327-319
+942;941;portage;;-1;-1;-1;-1;Group 92-Group 91
+942;938;portage;;-1;-1;-1;-1;Group 92-Group 88
+940;939;portage;;-1;-1;-1;-1;Group 90-Group 89
+333;332;sea;;-1;-1;-1;-1;VN-1241-VN-32
+332;331;sea;;-1;-1;-1;-1;VN-32-VN-381
+331;335;sea;;-1;-1;-1;-1;VN-381-VN-128
+335;337;sea;;-1;-1;-1;-1;VN-128-VN-732
+-1;-1;;-1;-1;-1;-1;-1;-1

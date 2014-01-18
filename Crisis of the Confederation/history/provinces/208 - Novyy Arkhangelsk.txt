@@ -1,0 +1,54 @@
+# 208 - Novyy Arkhangelsk
+
+# County Title
+title = c_novyy_arkhangelsk
+
+# Settlements
+max_settlements = 4
+b_novyy_arkhangelsk_iii = city
+b_novyy_arkhangelsk_iii_b = temple
+b_novyy_arkhangelsk_iv = castle
+
+# Misc
+culture = russo_centauri # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_novyy_arkhangelsk_iii = ct_toxic_atmosphere
+	b_novyy_arkhangelsk_iii = ct_no_water
+	b_novyy_arkhangelsk_iii = ct_trace_water
+	b_novyy_arkhangelsk_iii = ct_lakes
+	b_novyy_arkhangelsk_iii = ct_frozen
+	b_novyy_arkhangelsk_iii = ct_cold
+	b_novyy_arkhangelsk_iii = ct_planet_survey
+	
+	b_novyy_arkhangelsk_iii_b = tp_no_atmosphere
+	b_novyy_arkhangelsk_iii_b = tp_no_water
+	b_novyy_arkhangelsk_iii_b = tp_trace_water
+	b_novyy_arkhangelsk_iii_b = tp_frozen
+	b_novyy_arkhangelsk_iii_b = tp_cold
+	b_novyy_arkhangelsk_iii_b = tp_planet_survey
+	
+	b_novyy_arkhangelsk_iv = ca_clean_atmosphere
+	b_novyy_arkhangelsk_iv = ca_no_water
+	b_novyy_arkhangelsk_iv = ca_trace_water
+	b_novyy_arkhangelsk_iv = ca_lakes
+	b_novyy_arkhangelsk_iv = ca_seas
+	b_novyy_arkhangelsk_iv = ca_oceans
+	b_novyy_arkhangelsk_iv = ca_frozen
+	b_novyy_arkhangelsk_iv = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_novyy_arkhangelsk_iii = ct_toxic_atmosphere_domes
+	b_novyy_arkhangelsk_iii = ct_colony_0
+	b_novyy_arkhangelsk_iii = ct_colony_1
+	b_novyy_arkhangelsk_iii = ct_colony_2
+	
+	b_novyy_arkhangelsk_iii_b = tp_colony_0
+	b_novyy_arkhangelsk_iii_b = tp_colony_1
+	
+	b_novyy_arkhangelsk_iv = ca_colony_0
+	b_novyy_arkhangelsk_iv = ca_colony_1
+}

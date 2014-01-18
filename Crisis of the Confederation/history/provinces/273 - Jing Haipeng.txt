@@ -1,0 +1,58 @@
+# 273 - Jing Haipeng
+
+# County Title
+title = c_jing_haipeng
+
+# Settlements
+max_settlements = 4
+b_jing_haipeng_iii = temple
+b_jing_haipeng_iv = city
+b_jing_haipeng_v = castle
+
+# Misc
+culture = sino_xingjie # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_jing_haipeng_iii = tp_toxic_atmosphere
+	b_jing_haipeng_iii = tp_no_water
+	b_jing_haipeng_iii = tp_trace_water
+	b_jing_haipeng_iii = tp_burning
+	b_jing_haipeng_iii = tp_hot
+	b_jing_haipeng_iii = tp_warm
+	b_jing_haipeng_iii = tp_planet_survey
+	
+	b_jing_haipeng_iv = ct_toxic_atmosphere
+	b_jing_haipeng_iv = ct_no_water
+	b_jing_haipeng_iv = ct_trace_water
+	b_jing_haipeng_iv = ct_lakes
+	b_jing_haipeng_iv = ct_burning
+	b_jing_haipeng_iv = ct_hot
+	b_jing_haipeng_iv = ct_warm
+	b_jing_haipeng_iv = ct_optimal_hot
+	b_jing_haipeng_iv = ct_planet_survey
+	
+	b_jing_haipeng_v = ca_toxic_atmosphere
+	b_jing_haipeng_v = ca_no_water
+	b_jing_haipeng_v = ca_trace_water
+	b_jing_haipeng_v = ca_lakes
+	b_jing_haipeng_v = ca_seas
+	b_jing_haipeng_v = ca_oceans
+	b_jing_haipeng_v = ca_frozen
+	b_jing_haipeng_v = ca_cold
+	b_jing_haipeng_v = ca_cool
+	b_jing_haipeng_v = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_jing_haipeng_iii = tp_colony_0
+	b_jing_haipeng_iii = tp_colony_1
+	
+	b_jing_haipeng_iv = ct_colony_0
+	b_jing_haipeng_iv = ct_colony_1
+	b_jing_haipeng_iv = ct_colony_2
+	
+	b_jing_haipeng_v = ca_colony_0
+	b_jing_haipeng_v = ca_colony_1
+}

@@ -1,0 +1,53 @@
+# 72 - Nuevo Santuario
+
+# County Title
+title = c_nuevo_santuario
+
+# Settlements
+max_settlements = 4
+b_nuevo_santuario_prime = city
+b_nuevo_santuario_iii = temple
+b_nuevo_santuario_iii_b = castle
+
+# Misc
+culture = hispanic_celestean # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+	b_nuevo_santuario_prime = ct_toxic_atmosphere
+	b_nuevo_santuario_prime = ct_no_water
+	b_nuevo_santuario_prime = ct_trace_water
+	b_nuevo_santuario_prime = ct_lakes
+	b_nuevo_santuario_prime = ct_seas
+	b_nuevo_santuario_prime = ct_oceans
+	b_nuevo_santuario_prime = ct_burning
+	b_nuevo_santuario_prime = ct_hot
+	b_nuevo_santuario_prime = ct_warm
+	b_nuevo_santuario_prime = ct_planet_survey
+	
+	b_nuevo_santuario_iii = tp_toxic_atmosphere
+	b_nuevo_santuario_iii = tp_no_water
+	b_nuevo_santuario_iii = tp_trace_water
+	b_nuevo_santuario_iii = tp_frozen
+	b_nuevo_santuario_iii = tp_cold
+	b_nuevo_santuario_iii = tp_planet_survey
+	
+	b_nuevo_santuario_iii_b = ca_no_atmosphere
+	b_nuevo_santuario_iii_b = ca_no_water
+	b_nuevo_santuario_iii_b = ca_frozen
+	b_nuevo_santuario_iii_b = ca_cold
+	b_nuevo_santuario_iii_b = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_nuevo_santuario_prime = ct_toxic_atmosphere_domes
+	b_nuevo_santuario_prime = ct_colony_0
+	b_nuevo_santuario_prime = ct_colony_1
+	b_nuevo_santuario_prime = ct_colony_2
+	
+	b_nuevo_santuario_iii = tp_colony_0
+	b_nuevo_santuario_iii = tp_colony_1
+	
+	b_nuevo_santuario_iii_b = ca_colony_0
+}

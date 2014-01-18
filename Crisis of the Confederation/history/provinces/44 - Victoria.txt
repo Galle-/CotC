@@ -1,0 +1,21 @@
+# 44 - Victoria
+
+# County Title
+title = c_victoria
+
+# Settlements
+max_settlements = 5
+
+b_victoria_iii = castle
+b_victoria_iii_orbital = city
+
+# Misc
+culture = anglo_avalonian # Initial culture
+religion = bio_directionist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

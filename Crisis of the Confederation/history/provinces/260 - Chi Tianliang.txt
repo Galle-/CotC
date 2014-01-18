@@ -1,0 +1,72 @@
+# 260 - Chi Tianliang
+
+# County Title
+title = c_chi_tianliang
+
+# Settlements
+max_settlements = 4
+b_chi_tianliang_prime = city
+b_chi_tianliang_prime_b = temple
+b_chi_tianliang_iii = castle
+b_chi_tianliang_iv = city
+
+# Misc
+culture = sino_bianjiangese # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+# tianliang prime: Clean, Seas, warm
+	b_chi_tianliang_prime = ct_clean_atmosphere
+	b_chi_tianliang_prime = ct_no_water
+	b_chi_tianliang_prime = ct_trace_water
+	b_chi_tianliang_prime = ct_lakes
+	b_chi_tianliang_prime = ct_seas
+	b_chi_tianliang_prime = ct_burning
+	b_chi_tianliang_prime = ct_hot
+	b_chi_tianliang_prime = ct_warm
+	b_chi_tianliang_prime = ct_planet_survey
+	
+	b_chi_tianliang_prime_b = tp_no_atmosphere
+	b_chi_tianliang_prime_b = tp_no_water
+	b_chi_tianliang_prime_b = tp_burning
+	b_chi_tianliang_prime_b = tp_hot
+	b_chi_tianliang_prime_b = tp_warm
+	b_chi_tianliang_prime_b = tp_planet_survey
+	
+	b_chi_tianliang_iii = ca_no_atmosphere
+	b_chi_tianliang_iii = ca_no_water
+	b_chi_tianliang_iii = ca_trace_water
+	b_chi_tianliang_iii = ca_burning
+	b_chi_tianliang_iii = ca_hot
+	b_chi_tianliang_iii = ca_warm
+	b_chi_tianliang_iii = ca_planet_survey
+	
+	b_chi_tianliang_iv = ct_no_atmosphere
+	b_chi_tianliang_iv = ct_no_water
+	b_chi_tianliang_iv = ct_frozen
+	b_chi_tianliang_iv = ct_cold
+	b_chi_tianliang_iv = ct_cool
+	b_chi_tianliang_iv = ct_planet_survey
+}
+
+2510.4.2 = {b_chi_tianliang_prime = ct_colony_0}
+2540.5.3 = {b_chi_tianliang_prime = ct_colony_1}
+2632.7.3 = {b_chi_tianliang_prime = ct_colony_2}
+	
+2710.1.28 = { b_chi_tianliang_prime_b = tp_colony_0}
+2730.7.23 = {b_chi_tianliang_prime_b = tp_trace_water}
+2802.2.14 = {b_chi_tianliang_prime_b = tp_optimal_hot}
+2840.3.21 = {b_chi_tianliang_prime_b = tp_colony_1}
+	
+2760.3.17 = {b_chi_tianliang_iii = ca_colony_0}
+2810.5.11 = {b_chi_tianliang_iii = ca_colony_1}
+
+2780.2.12 = {b_chi_tianliang_iv = ct_colony_0}
+2820.7.17 = {b_chi_tianliang_iv = ct_no_atmosphere_domes}
+2793.7.16 = {b_chi_tianliang_iv = ct_trace_water}
+
+
+2712.3.1 = {
+	trade_post = b_zhang
+}

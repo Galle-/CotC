@@ -1,0 +1,45 @@
+# 96 - Liberty
+
+# County Title
+title = c_liberty
+
+# Settlements
+max_settlements = 4
+b_liberty_prime = city
+b_liberty_prime_b = temple
+b_liberty_iv = castle
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	# Liberty Prime is a mining colony
+	b_liberty_prime = ct_toxic_atmosphere
+	b_liberty_prime = ct_no_water
+	b_liberty_prime = ct_trace_water
+	b_liberty_prime = ct_burning
+	b_liberty_prime = ct_planet_survey
+	
+	b_liberty_prime_b = tp_no_atmosphere
+	b_liberty_prime_b = tp_no_water
+	b_liberty_prime_b = tp_burning
+	b_liberty_prime_b = tp_planet_survey
+	
+	b_liberty_iv = ca_toxic_atmosphere
+	b_liberty_iv = ca_no_water
+	b_liberty_iv = ca_burning
+	b_liberty_iv = ca_hot
+	b_liberty_iv = ca_warm
+	b_liberty_iv = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_liberty_prime = ct_colony_0
+	b_liberty_prime = ct_colony_1
+	
+	b_liberty_prime_b = tp_colony_0
+	
+	b_liberty_iv = ca_colony_0
+}

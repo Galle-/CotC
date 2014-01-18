@@ -1,0 +1,9 @@
+2900.1.1 = {
+	holding_dynasty = 2336
+	law = succ_seniority
+	law = true_cognatic_succession
+}
+2964.8.3 = { holder = "11012336" } # Rashid Khoury
+
+2965.1.1 = { liege = "d_tian_yuan" }
+

@@ -1,0 +1,50 @@
+# 301 - Sakina
+
+# County Title
+title = c_sakina
+
+# Settlements
+max_settlements = 4
+b_yaraaa = city
+b_yaraaa_b = temple
+b_sakina_iv = castle
+
+# Misc
+culture = arab_samawati # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+	b_yaraaa = ct_clean_atmosphere
+	b_yaraaa = ct_no_water
+	b_yaraaa = ct_trace_water
+	b_yaraaa = ct_lakes
+	b_yaraaa = ct_frozen
+	b_yaraaa = ct_cold
+	b_yaraaa = ct_cool
+	b_yaraaa = ct_planet_survey
+	
+	b_yaraaa_b = tp_no_atmosphere
+	b_yaraaa_b = tp_no_water
+	b_yaraaa_b = tp_frozen
+	b_yaraaa_b = tp_cold
+	b_yaraaa_b = tp_cool
+	b_yaraaa_b = tp_planet_survey
+	
+	b_sakina_iv = ca_toxic_atmosphere
+	b_sakina_iv = ca_no_water
+	b_sakina_iv = ca_trace_water
+	b_sakina_iv = ca_lakes
+	b_sakina_iv = ca_frozen
+	b_sakina_iv = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_yaraaa = ct_colony_0
+	b_yaraaa = ct_colony_1
+	b_yaraaa = ct_colony_2
+	
+	b_yaraaa_b = tp_colony_0
+	
+	b_sakina_iv = ca_colony_0
+}

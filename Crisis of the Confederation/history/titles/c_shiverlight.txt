@@ -1,0 +1,9 @@
+2671.1.1 = {
+	liege = "d_galahad"
+	law = true_cognatic_succession
+	law = succ_primogeniture
+}
+2705.1.1 = {
+	law = succ_ultimogeniture
+}
+2972.1.1 = { holder = "1109310" } # Eliza Sakurai

@@ -1,0 +1,45 @@
+# 257 - Jiu Wanguan
+
+#old gateway
+# County Title
+title = c_jiu_wanguan
+
+# Settlements
+max_settlements = 4
+				
+				b_jiu_wanguan_xi = castle
+				b_jiu_wanguan_xi_orbital_a = city
+				b_jiu_wanguan_xi_orbital_b = temple
+				b_jiu_wanguan_xi_orbital_c = castle
+
+# Misc
+culture = sino_bianjiangese # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+	
+	b_jiu_wanguan_xi = ca_planet_survey
+	b_jiu_wanguan_xi = ca_clean_atmosphere
+	b_jiu_wanguan_xi = ca_no_water
+	b_jiu_wanguan_xi = ca_trace_water
+	b_jiu_wanguan_xi = ca_lakes
+	b_jiu_wanguan_xi = ca_seas
+	b_jiu_wanguan_xi = ca_warm
+	
+	b_jiu_wanguan_xi_orbital_a = ct_asteroids
+
+}
+2642.7.3 = {b_jiu_wanguan_xi = ca_colony_0}
+2657.4.15 = {b_jiu_wanguan_xi_orbital_a = ct_space_station_0}
+2661.2.13 = {b_jiu_wanguan_xi_orbital_b = tp_space_station_0}
+2672.8.6 = {b_jiu_wanguan_xi_orbital_c = ca_space_station_0}
+2676.6.22 = {b_jiu_wanguan_xi_orbital_a = ct_space_station_1}
+2676.12.25 = {b_jiu_wanguan_xi_orbital_c = ca_space_station_1}
+2680.3.14 = {b_jiu_wanguan_xi = ca_colony_1}
+2690.7.21 = {b_jiu_wanguan_xi_orbital_a = ct_space_station_2}
+
+2998.1.1 = {
+
+				
+}

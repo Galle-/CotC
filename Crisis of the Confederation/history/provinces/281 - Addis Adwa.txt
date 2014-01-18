@@ -1,0 +1,59 @@
+# 281 - Addis Adwa
+
+# County Title
+title = c_addis_adwa
+
+# Settlements
+max_settlements = 4
+b_addis_adwa = city
+b_addis_adwa_b = temple
+b_addis_adwa_iii = castle
+
+# Misc
+culture = ethiopian_angani # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_addis_adwa = ct_clean_atmosphere
+	b_addis_adwa = ct_no_water
+	b_addis_adwa = ct_trace_water
+	b_addis_adwa = ct_lakes
+	b_addis_adwa = ct_seas
+	b_addis_adwa = ct_oceans
+	b_addis_adwa = ct_burning
+	b_addis_adwa = ct_hot
+	b_addis_adwa = ct_warm
+	b_addis_adwa = ct_planet_survey
+	
+	b_addis_adwa_b = tp_no_atmosphere
+	b_addis_adwa_b = tp_no_water
+	b_addis_adwa_b = tp_trace_water
+	b_addis_adwa_b = tp_burning
+	b_addis_adwa_b = tp_hot
+	b_addis_adwa_b = tp_warm
+	b_addis_adwa_b = tp_planet_survey
+	
+	b_addis_adwa_iii = ca_toxic_atmosphere
+	b_addis_adwa_iii = ca_no_water
+	b_addis_adwa_iii = ca_trace_water
+	b_addis_adwa_iii = ca_lakes
+	b_addis_adwa_iii = ca_seas
+	b_addis_adwa_iii = ca_frozen
+	b_addis_adwa_iii = ca_cold
+	b_addis_adwa_iii = ca_cool
+	b_addis_adwa_iii = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_addis_adwa = ct_colony_0
+	b_addis_adwa = ct_colony_1
+	b_addis_adwa = ct_colony_2
+	b_addis_adwa = ct_colony_3
+	
+	b_addis_adwa_b = tp_colony_0
+	b_addis_adwa_b = tp_colony_1
+	
+	b_addis_adwa_iii = ca_colony_0
+	b_addis_adwa_iii = ca_colony_1
+}

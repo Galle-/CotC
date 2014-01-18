@@ -1,0 +1,55 @@
+# 297 - Amal
+
+# County Title
+title = c_amal
+
+# Settlements
+max_settlements = 4
+b_amal_iii = city
+b_amal_iv = temple
+b_amal_v = castle
+
+# Misc
+culture = arab_samawati # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_amal_iii = ct_clean_atmosphere
+	b_amal_iii = ct_no_water
+	b_amal_iii = ct_trace_water
+	b_amal_iii = ct_lakes
+	b_amal_iii = ct_seas
+	b_amal_iii = ct_burning
+	b_amal_iii = ct_hot
+	b_amal_iii = ct_planet_survey
+	
+	b_amal_iv = tp_toxic_atmosphere
+	b_amal_iv = tp_no_water
+	b_amal_iv = tp_trace_water
+	b_amal_iv = tp_lakes
+	b_amal_iv = tp_burning
+	b_amal_iv = tp_hot
+	b_amal_iv = tp_warm
+	b_amal_iv = tp_planet_survey
+	
+	b_amal_v = ca_toxic_atmosphere
+	b_amal_v = ca_no_water
+	b_amal_v = ca_burning
+	b_amal_v = ca_hot
+	b_amal_v = ca_warm
+	b_amal_v = ca_optimal_hot
+	b_amal_v = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_amal_iii = ct_colony_0
+	b_amal_iii = ct_colony_1
+	b_amal_iii = ct_colony_2
+	b_amal_iii = ct_colony_3
+	
+	b_amal_iv = tp_colony_0
+	b_amal_iv = tp_colony_1
+	
+	b_amal_v = ca_colony_0
+}

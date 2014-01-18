@@ -1,0 +1,58 @@
+# 93 - Weyland
+
+# County Title
+title = c_weyland
+
+# Settlements
+max_settlements = 5
+b_weyland_ii = city
+b_weyland_ii_b = temple
+b_weyland_iii = castle
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_weyland_ii = ct_clean_atmosphere
+	b_weyland_ii = ct_no_water
+	b_weyland_ii = ct_trace_water
+	b_weyland_ii = ct_lakes
+	b_weyland_ii = ct_seas
+	b_weyland_ii = ct_oceans
+	b_weyland_ii = ct_frozen
+	b_weyland_ii = ct_cold
+	b_weyland_ii = ct_cool
+	b_weyland_ii = ct_planet_survey
+	
+	b_weyland_ii_b = tp_no_atmosphere
+	b_weyland_ii_b = tp_no_water
+	b_weyland_ii_b = tp_frozen
+	b_weyland_ii_b = tp_cold
+	b_weyland_ii_b = tp_cool
+	b_weyland_ii_b = tp_planet_survey
+	
+	b_weyland_iii = ca_toxic_atmosphere
+	b_weyland_iii = ca_no_water
+	b_weyland_iii = ca_trace_water
+	b_weyland_iii = ca_lakes
+	b_weyland_iii = ca_seas
+	b_weyland_iii = ca_oceans
+	b_weyland_iii = ca_frozen
+	b_weyland_iii = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_weyland_ii = ct_colony_0
+	b_weyland_ii = ct_colony_1
+	b_weyland_ii = ct_colony_2
+	b_weyland_ii = ct_colony_3
+	
+	b_weyland_ii_b = tp_colony_0
+	
+	b_weyland_iii = ca_colony_0
+	b_weyland_iii = ca_colony_1
+	
+	trade_post = b_weyland
+}

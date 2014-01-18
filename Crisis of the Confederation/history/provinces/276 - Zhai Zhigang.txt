@@ -1,0 +1,48 @@
+# 276 - Zhai Zhigang
+
+# County Title
+title = c_zhai_zhigang
+
+# Settlements
+max_settlements = 4
+b_zhai_zhigang_waystation = castle
+b_zhai_zhigang_iii = city
+b_zhai_zhigang_iii_b = temple
+
+# Misc
+culture = sino_xingjie # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_zhai_zhigang_waystation = ca_space_station_0
+	b_zhai_zhigang_waystation = ca_space_station_1
+	
+	b_zhai_zhigang_iii = ct_clean_atmosphere
+	b_zhai_zhigang_iii = ct_no_water
+	b_zhai_zhigang_iii = ct_trace_water
+	b_zhai_zhigang_iii = ct_lakes
+	b_zhai_zhigang_iii = ct_seas
+	b_zhai_zhigang_iii = ct_frozen
+	b_zhai_zhigang_iii = ct_cold
+	b_zhai_zhigang_iii = ct_cool
+	b_zhai_zhigang_iii = ct_planet_survey
+	
+	b_zhai_zhigang_iii_b = tp_no_atmosphere
+	b_zhai_zhigang_iii_b = tp_no_water
+	b_zhai_zhigang_iii_b = tp_frozen
+	b_zhai_zhigang_iii_b = tp_cold
+	b_zhai_zhigang_iii_b = tp_cool
+	b_zhai_zhigang_iii_b = tp_planet_survey
+}
+
+2998.1.1 = {
+	b_zhai_zhigang_waystation = ca_colony_0
+	b_zhai_zhigang_waystation = ca_colony_1
+	
+	b_zhai_zhigang_iii = ct_colony_0
+	b_zhai_zhigang_iii = ct_colony_1
+	b_zhai_zhigang_iii = ct_colony_2
+	
+	b_zhai_zhigang_iii_b = tp_colony_0
+}

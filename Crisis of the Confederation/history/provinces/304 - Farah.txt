@@ -1,0 +1,58 @@
+# 304 - Farah
+
+# County Title
+title = c_farah
+
+# Settlements
+max_settlements = 4
+b_farah_iii = city
+b_farah_iv = temple
+b_farah_v = castle
+
+# Misc
+culture = arab_samawati # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+	b_farah_iii = ct_toxic_atmosphere
+	b_farah_iii = ct_no_water
+	b_farah_iii = ct_trace_water
+	b_farah_iii = ct_lakes
+	b_farah_iii = ct_burning
+	b_farah_iii = ct_hot
+	b_farah_iii = ct_warm
+	b_farah_iii = ct_planet_survey
+	
+	b_farah_iv = tp_toxic_atmosphere
+	b_farah_iv = tp_no_water
+	b_farah_iv = tp_trace_water
+	b_farah_iv = tp_burning
+	b_farah_iv = tp_hot
+	b_farah_iv = tp_warm
+	b_farah_iv = tp_optimal_hot
+	b_farah_iv = tp_planet_survey
+	
+	b_farah_v = ca_toxic_atmosphere
+	b_farah_v = ca_no_water
+	b_farah_v = ca_trace_water
+	b_farah_v = ca_lakes
+	b_farah_v = ca_seas
+	b_farah_v = ca_frozen
+	b_farah_v = ca_cold
+	b_farah_v = ca_cool
+	b_farah_v = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_farah_iii = ct_toxic_atmosphere_domes
+	b_farah_iii = ct_colony_0
+	b_farah_iii = ct_colony_1
+	b_farah_iii = ct_colony_2
+	
+	b_farah_iv = tp_colony_0
+	b_farah_iv = tp_colony_1
+	
+	b_farah_v = ca_colony_0
+	b_farah_v = ca_colony_1
+}

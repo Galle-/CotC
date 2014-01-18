@@ -1,0 +1,20 @@
+# 169 - Vernost'
+
+# County Title
+title = c_vernost
+
+# Settlements
+max_settlements = 4
+b_vernost_iii = castle
+b_vernost_iii_b = temple
+
+# Misc
+culture = russo_edemite # Initial culture
+religion = astrist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

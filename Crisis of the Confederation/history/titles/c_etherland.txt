@@ -1,0 +1,9 @@
+2632.1.1 = {
+	liege = "d_alfred"
+	law = true_cognatic_succession
+	law = succ_feudal_elective
+	holder = "1801454" # Katherine Bywater
+}
+2643.1.1 = { law = succ_primogeniture }
+2705.1.1 = { law = succ_ultimogeniture }
+2988.1.1 = { holder = "110990" } # Jane Watson

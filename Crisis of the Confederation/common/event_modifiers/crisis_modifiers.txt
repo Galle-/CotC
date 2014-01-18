@@ -1,0 +1,40 @@
+successful_campaign = {
+	icon = 1
+	martial = 2
+	monthly_character_prestige = 0.1
+	general_opinion = 20
+}
+
+disastrous_campaign = {
+	icon = 19
+	martial = -2
+	monthly_character_prestige = -0.1
+	general_opinion = -20
+}
+
+constitutional_crisis = {
+	icon = 29
+	monthly_character_prestige = -0.5
+	monthly_character_piety = -0.5
+	general_opinion = -10
+	global_revolt_risk = 0.1
+}
+
+crisis_liege_for_ruler = {
+	icon = 19
+	liege_opinion = 10
+}
+crisis_liege_against_ruler = {
+	icon = 29
+	liege_opinion = -10
+}
+crisis_law_for_ruler = {
+	icon = 11
+	monthly_character_piety = 0.1
+	general_opinion = 10
+}
+crisis_law_against_ruler = {
+	icon = 29
+	monthly_character_piety = -0.1
+	general_opinion = -10
+}

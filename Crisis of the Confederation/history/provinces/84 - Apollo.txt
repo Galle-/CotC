@@ -1,0 +1,51 @@
+# 84 - Apollo
+
+# County Title
+title = c_apollo
+
+# Settlements
+max_settlements = 4
+b_apollo_ii = city
+b_apollo_iii = temple
+b_apollo_iv = castle
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_apollo_ii = ct_toxic_atmosphere
+	b_apollo_ii = ct_no_water
+	b_apollo_ii = ct_trace_water
+	b_apollo_ii = ct_lakes
+	b_apollo_ii = ct_seas
+	b_apollo_ii = ct_frozen
+	b_apollo_ii = ct_cold
+	b_apollo_ii = ct_cool
+	b_apollo_ii = ct_planet_survey
+	
+	b_apollo_iii = tp_toxic_atmosphere
+	b_apollo_iii = tp_no_water
+	b_apollo_iii = tp_frozen
+	b_apollo_iii = tp_cold
+	b_apollo_iii = tp_planet_survey
+	
+	b_apollo_iv = ca_no_atmosphere
+	b_apollo_iv = ca_no_water
+	b_apollo_iv = ca_trace_water
+	b_apollo_iv = ca_frozen
+	b_apollo_iv = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_apollo_ii = ct_toxic_atmosphere_domes
+	b_apollo_ii = ct_colony_0
+	b_apollo_ii = ct_colony_1
+	b_apollo_ii = ct_colony_2
+	
+	b_apollo_iii = tp_colony_0
+	
+	b_apollo_iv = ca_colony_0
+	b_apollo_iv = ca_colony_1
+}

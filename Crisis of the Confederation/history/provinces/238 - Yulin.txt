@@ -1,0 +1,69 @@
+# 238 - Yulin
+
+# County Title
+title = c_yulin
+
+# Settlements
+max_settlements = 4
+
+				b_yulin_ii = city
+				b_yulin_ii_b = castle
+				b_yulin_iii = temple
+				b_yulin_iv = city
+
+# Misc
+culture = sino_xingjie # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+	b_yulin_ii = ct_burning
+	b_yulin_ii = ct_hot
+	b_yulin_ii = ct_no_atmosphere
+	b_yulin_ii = ct_no_water
+	b_yulin_ii = ct_trace_water
+	b_yulin_ii = ct_lakes
+	b_yulin_ii = ct_seas
+	
+	b_yulin_ii_b = ca_burning
+	b_yulin_ii_b = ca_hot
+	b_yulin_ii_b = ca_toxic_atmosphere
+	b_yulin_ii_b = ca_no_water
+	b_yulin_ii_b = ca_trace_water
+	b_yulin_ii_b = ca_lakes
+	b_yulin_ii_b = ca_seas
+	b_yulin_ii_b = ca_oceans
+	
+	b_yulin_iii = tp_burning
+	b_yulin_iii = tp_hot
+	b_yulin_iii = tp_no_atmosphere
+	b_yulin_iii = tp_no_water
+	
+	b_yulin_iv = ct_burning
+	b_yulin_iv = ct_hot
+	b_yulin_iv = ct_warm
+	b_yulin_iv = ct_toxic_atmosphere
+	b_yulin_iv = ct_no_water
+	b_yulin_iv = ct_trace_water
+	b_yulin_iv = ct_lakes
+	b_yulin_iv = ct_seas
+}
+
+2998.1.1 = {
+	b_yulin_ii = ct_no_atmosphere_domes
+	b_yulin_ii = ct_colony_0
+	b_yulin_ii = ct_colony_1
+	b_yulin_ii = ct_colony_2
+	
+	b_yulin_ii_b = ca_toxic_atmosphere_domes
+	b_yulin_ii_b = ca_colony_0
+	b_yulin_ii_b = FL_01_ca
+	
+	b_yulin_iii = tp_no_atmosphere_domes
+	b_yulin_iii = tp_colony_0
+	
+	b_yulin_iv = ct_toxic_atmosphere_domes
+	b_yulin_iv = ct_colony_0
+	b_yulin_iv = ct_colony_1
+	b_yulin_iv = ct_colony_2
+}

@@ -1,0 +1,49 @@
+# 256 - Gāodà de shān - 高大的山(256)
+#mining_colony_established_three_years_before_deng_bao_and_rich_in-heavy-elements
+
+# County Title
+title = c_gaoda_de_shan
+
+# Settlements
+max_settlements = 4
+							
+				b_gaoda_de_shan_iii = city
+				b_gaoda_de_shan_iv = castle
+				b_gaoda_de_shan_iii_b = temple
+				b_gaoda_de_shan_iii_refinery = city #refinerystation
+
+# Misc
+culture = sino_bianjiangese # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+
+b_gaoda_de_shan_iii = ct_no_atmosphere_domes
+b_gaoda_de_shan_iii = ct_burning
+b_gaoda_de_shan_iii = ct_hot
+b_gaoda_de_shan_iii = ct_colony_0
+b_gaoda_de_shan_iii = ct_colony_1
+b_gaoda_de_shan_iii = ct_no_water
+
+b_gaoda_de_shan_iv = ca_no_atmosphere
+b_gaoda_de_shan_iv = ca_no_atmosphere_domes
+b_gaoda_de_shan_iv = ca_frozen
+b_gaoda_de_shan_iv = ca_no_water
+b_gaoda_de_shan_iv = ca_colony_0
+
+b_gaoda_de_shan_iii_b = tp_toxic_atmosphere
+b_gaoda_de_shan_iii_b = tp_toxic_atmosphere_domes
+b_gaoda_de_shan_iii_b = tp_burning
+b_gaoda_de_shan_iii_b = tp_trace_water
+b_gaoda_de_shan_iii_b = tp_colony_0
+
+b_gaoda_de_shan_iii_refinery = ct_space_station_0
+
+
+}
+
+	
+
+2998.1.1 = {
+	}

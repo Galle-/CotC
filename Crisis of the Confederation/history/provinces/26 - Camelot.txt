@@ -1,0 +1,21 @@
+# 26 - Camelot
+
+# County Title
+title = c_camelot
+
+# Settlements
+max_settlements = 4
+
+b_new_camelot = castle
+b_new_camelot_orbital = city
+
+# Misc
+culture = anglo_avalonian # Initial culture
+religion = bio_directionist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

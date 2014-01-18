@@ -1,0 +1,9 @@
+2532.1.1 = {
+	liege = "d_victoria"
+	law = true_cognatic_succession
+	law = succ_primogeniture
+}
+2705.1.1 = {
+	law = succ_ultimogeniture
+}
+2993.1.1 = { holder = "1105502" } # Duncan Gupta

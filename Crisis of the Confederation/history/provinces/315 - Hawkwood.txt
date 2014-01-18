@@ -1,0 +1,21 @@
+# 315 - Hawkwood
+
+# County Title
+title = c_hawkwood
+
+# Settlements
+max_settlements = 4
+
+b_hawkwood_ii = castle
+b_hawkwood_iii = city
+
+# Misc
+culture = anglo_avalonian # Initial culture
+religion = bio_directionist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

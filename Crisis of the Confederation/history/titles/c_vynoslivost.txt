@@ -1,0 +1,7 @@
+2900.1.1 = {
+	law = succ_feudal_elective # Should be appointment, but we're waiting on the patch for that
+	law = true_cognatic_succession
+	liege = "d_mir"
+}
+
+2998.1.1 = { holder = 1114736 } # Nikolai Ramos

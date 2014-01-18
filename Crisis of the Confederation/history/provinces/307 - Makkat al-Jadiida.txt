@@ -1,0 +1,57 @@
+# 307 - Makkat al_Jadiida
+
+# County Title
+title = c_makkat_al_jadiida
+
+# Settlements
+max_settlements = 7
+b_makkat_al_jadiida = city
+b_makkat_al_jadiida_b = temple
+b_makkat_al_jadiida_iii = castle
+
+# Misc
+culture = arab_samawati # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+	#Makkat al-Jadiida: Clean, Lakes, Warm
+	b_makkat_al_jadiida = ct_clean_atmosphere
+	b_makkat_al_jadiida = ct_no_water
+	b_makkat_al_jadiida = ct_trace_water
+	b_makkat_al_jadiida = ct_lakes
+	b_makkat_al_jadiida = ct_burning
+	b_makkat_al_jadiida = ct_hot
+	b_makkat_al_jadiida = ct_warm
+	b_makkat_al_jadiida = ct_planet_survey
+	
+	b_makkat_al_jadiida_b = tp_no_atmosphere
+	b_makkat_al_jadiida_b = tp_no_water
+	b_makkat_al_jadiida_b = tp_burning
+	b_makkat_al_jadiida_b = tp_hot
+	b_makkat_al_jadiida_b = tp_warm
+	b_makkat_al_jadiida_b = tp_planet_survey
+	
+	b_makkat_al_jadiida_iii = ca_toxic_atmosphere
+	b_makkat_al_jadiida_iii = ca_no_water
+	b_makkat_al_jadiida_iii = ca_trace_water
+	b_makkat_al_jadiida_iii = ca_burning
+	b_makkat_al_jadiida_iii = ca_hot
+	b_makkat_al_jadiida_iii = ca_warm
+	b_makkat_al_jadiida_iii = ca_optimal_hot
+	b_makkat_al_jadiida_iii = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_makkat_al_jadiida = ct_colony_0
+	b_makkat_al_jadiida = ct_colony_1
+	b_makkat_al_jadiida = ct_colony_2
+	b_makkat_al_jadiida = ct_colony_3
+	
+	b_makkat_al_jadiida_b = tp_colony_0
+	
+	b_makkat_al_jadiida_iii = ca_colony_0
+	b_makkat_al_jadiida_iii = ca_colony_1
+	
+	trade_post = b_nazari
+}

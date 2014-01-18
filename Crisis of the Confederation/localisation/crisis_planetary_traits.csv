@@ -1,0 +1,85 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+ca_planet_survey;Planetary Survey;;;;;;;;;;;;;x
+ct_planet_survey;Planetary Survey;;;;;;;;;;;;;x
+tp_planet_survey;Planetary Survey;;;;;;;;;;;;;x
+bu_planet_survey_desc;A full survey of this planet has been conducted, revealing its natural environmental features.;;;;;;;;;;;;;x
+ca_no_atmosphere;No Atmosphere;;;;;;;;;;;;;x
+ct_no_atmosphere;No Atmosphere;;;;;;;;;;;;;x
+tp_no_atmosphere;No Atmosphere;;;;;;;;;;;;;x
+bu_no_atmosphere_desc;This planet has no naturally retained atmosphere, making it extremely dangerous for human habitation. Colonists must live inside sealed structures, and cannot risk venturing outside without a full EVA suit.;;;;;;;;;;;;;x
+ca_toxic_atmosphere;Toxic Atmosphere;;;;;;;;;;;;;x
+ct_toxic_atmosphere;Toxic Atmosphere;;;;;;;;;;;;;x
+tp_toxic_atmosphere;Toxic Atmosphere;;;;;;;;;;;;;x
+bu_toxic_atmosphere_desc;This planet's atmosphere is naturally toxic to humans and most other forms of Terran life, due to either a lax of oxygen or a surplus of some poisonous gas. Colonists must live in sealed buildings, and dare only venture outside while wearing a gas mask or similar filter.;;;;;;;;;;;;;x
+ca_no_atmosphere_domes;Colony Domes;;;;;;;;;;;;;x
+ct_no_atmosphere_domes;Colony Domes;;;;;;;;;;;;;x
+tp_no_atmosphere_domes;Colony Domes;;;;;;;;;;;;;x
+ca_toxic_atmosphere_domes;Colony Domes;;;;;;;;;;;;;x
+ct_toxic_atmosphere_domes;Colony Domes;;;;;;;;;;;;;x
+tp_toxic_atmosphere_domes;Colony Domes;;;;;;;;;;;;;x
+bu_domes_desc;This planet has no natural breathable atmosphere, but the colonists have constructed a series of domes on the habitat domes and arcologies on the surface, in which humans can survive and crops can be grown, allowing the colony to survive even in this hostile environment.;;;;;;;;;;;;;x
+ca_artificial_atmosphere;Artificial Atmosphere;;;;;;;;;;;;;x
+ct_artificial_atmosphere;Artificial Atmosphere;;;;;;;;;;;;;x
+tp_artificial_atmosphere;Artificial Atmosphere;;;;;;;;;;;;;x
+bu_artificial_atmosphere_desc;This world would normally have no atmosphere, but due to a massive and complex terraforming project, this is no longer the case. The terraformers have been able to produce an artifical atmosphere using a large number of dedicated chemical factories and by using force fields to block some solar radiation and trap gasses that would normally escape the world's gravity well.;;;;;;;;;;;;;x
+ca_scrubbed_atmosphere;Scrubbed Atmosphere;;;;;;;;;;;;;x
+ct_scrubbed_atmosphere;Scrubbed Atmosphere;;;;;;;;;;;;;x
+tp_scrubbed_atmosphere;Scrubbed Atmosphere;;;;;;;;;;;;;x
+bu_scrubbed_atmosphere_desc;This planet's atmosphere would normally be toxic to humans, but the colonists have constructed a network of atmosphere scrubbers that drain it of its poisonous elements and fill it with sufficient oxygen for the planet's needs. The result is an atmosphere very similar to Earth's.;;;;;;;;;;;;;x
+ca_clean_atmosphere;Clean Atmosphere;;;;;;;;;;;;;x
+ct_clean_atmosphere;Clean Atmosphere;;;;;;;;;;;;;x
+tp_clean_atmosphere;Clean Atmosphere;;;;;;;;;;;;;x
+EVTDESCPLANETSURVEY0;Our explorers have completed a full survey of one the planets under our control, and have prepared a report on its natural characteristics and suitability for human habitation.;;;;;;;;;;;;;x
+bu_clean_atmosphere_desc;This planet has a natural atmosphere that contains a significant amount of oxygen, but no gasses naturally harmful to Terran life, making it perfect for human habitation.;;;;;;;;;;;;;x
+ca_no_water;No Water;;;;;;;;;;;;;x
+ct_no_water;No Water;;;;;;;;;;;;;x
+tp_no_water;No Water;;;;;;;;;;;;;x
+bu_no_water_desc;This planet has no natural hydrosphere.;;;;;;;;;;;;;x
+ca_trace_water;Trace Water;;;;;;;;;;;;;x
+ct_trace_water;Trace Water;;;;;;;;;;;;;x
+tp_trace_water;Trace Water;;;;;;;;;;;;;x
+bu_trace_water_desc;This planet has trace amounts of water.;;;;;;;;;;;;;x
+ca_lakes;Lakes;;;;;;;;;;;;;x
+ct_lakes;Lakes;;;;;;;;;;;;;x
+tp_lakes;Lakes;;;;;;;;;;;;;x
+bu_lakes_desc;This planet has small pockets of water.;;;;;;;;;;;;;x
+ca_seas;Seas;;;;;;;;;;;;;x
+ct_seas;Seas;;;;;;;;;;;;;x
+tp_seas;Seas;;;;;;;;;;;;;x
+bu_seas_desc;This planet has large pockets of water.;;;;;;;;;;;;;x
+ca_oceans;Oceans;;;;;;;;;;;;;x
+ct_oceans;Oceans;;;;;;;;;;;;;x
+tp_oceans;Oceans;;;;;;;;;;;;;x
+bu_oceans_desc;This planet has vast quantities of water.;;;;;;;;;;;;;x
+ca_frozen;Frozen;;;;;;;;;;;;;x
+ct_frozen;Frozen;;;;;;;;;;;;;x
+tp_frozen;Frozen;;;;;;;;;;;;;x
+bu_frozen_desc;This planet's surface temperature is far below the safe limits for human habitation, generally averaging in the double-digit Kelvins and never coming even close to the melting point of water. Colonists are completely dependent on heated buildings and travel across the surface is nearly impossible.;;;;;;;;;;;;;x
+ca_cold;Cold;;;;;;;;;;;;;x
+ct_cold;Cold;;;;;;;;;;;;;x
+tp_cold;Cold;;;;;;;;;;;;;x
+bu_cold_desc;This planet's surface temperature is just barely within or beyond the safe limits for human habitation. Colonists generally stay in sealed structures and put themselves at severe risk of hypothermia by venturing outside.;;;;;;;;;;;;;x
+ca_cool;Cool;;;;;;;;;;;;;x
+ct_cool;Cool;;;;;;;;;;;;;x
+tp_cool;Cool;;;;;;;;;;;;;x
+bu_cool_desc;This planet's surface temperature normally lies within the safe limits for human habitation, but is stil unnaturally and uncomfortably cold across much of the planet. Most of the population prefers to stay indoors, and wear winter gear when venturing outside.;;;;;;;;;;;;;x
+ca_optimal_cold;Optimal Temperature;;;;;;;;;;;;;x
+ct_optimal_cold;Optimal Temperature;;;;;;;;;;;;;x
+tp_optimal_cold;Optimal Temperature;;;;;;;;;;;;;x
+ca_burning;Burning;;;;;;;;;;;;;x
+ct_burning;Burning;;;;;;;;;;;;;x
+tp_burning;Burning;;;;;;;;;;;;;x
+bu_burning_desc;This planet's surface temperature is far above the safe limits of human habitation - exposure usually results in death within seconds. The colonists live in sealed, cooled structures and travel across the surface is almost impossible.;;;;;;;;;;;;;x
+ca_hot;Hot;;;;;;;;;;;;;x
+ct_hot;Hot;;;;;;;;;;;;;x
+tp_hot;Hot;;;;;;;;;;;;;x
+bu_hot_desc;This planet's surface temperature straddles the upper bounds of human habitation - an egg can be boiled simply by placing it outside a cooled environment. The majority of the population lives inside said cooled environments.;;;;;;;;;;;;;x
+ca_warm;Warm;;;;;;;;;;;;;x
+ct_warm;Warm;;;;;;;;;;;;;x
+tp_warm;Warm;;;;;;;;;;;;;x
+bu_warm_desc;This planet's average surface temperature lies within the safe limits for human habitation, but is still uncomfortably hot. Colonists generally prefer to stay indoors, and air conditioning bills are quite high.;;;;;;;;;;;;;x
+ca_optimal_hot;Optimal Temperature;;;;;;;;;;;;;x
+ct_optimal_hot;Optimal Temperature;;;;;;;;;;;;;x
+tp_optimal_hot;Optimal Temperature;;;;;;;;;;;;;x
+ct_asteroids;Asteroid Belt;;;;;;;;;;;;;x
+ct_asteroids_desc;The many asteroids near the station allow for mining to occur, resulting in increased income for the holder.;;;;;;;;;;;;;x

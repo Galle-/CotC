@@ -1,0 +1,22 @@
+# 32 - Galahad
+
+# County Title
+title = c_galahad
+
+# Settlements
+max_settlements = 6
+
+b_galahad_citadel = castle
+b_galahad_iii = city
+b_galahad_iii_b = temple
+
+# Misc
+culture = anglo_avalonian # Initial culture
+religion = neo_feudal
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

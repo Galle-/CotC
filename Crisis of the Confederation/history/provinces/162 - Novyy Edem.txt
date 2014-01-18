@@ -1,0 +1,21 @@
+# 162 - Novyy Edem
+
+# County Title
+title = c_novyy_edem
+
+# Settlements
+max_settlements = 6
+b_novyy_edem_prime = castle
+b_novyy_edem_prime_b = temple
+b_novyy_edem_prime_orbital = city
+
+# Misc
+culture = russo_edemite # Initial culture
+religion = astrist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

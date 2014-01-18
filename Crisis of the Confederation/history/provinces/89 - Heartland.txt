@@ -1,0 +1,56 @@
+# 89 - Heartland
+
+# County Title
+title = c_heartland
+
+# Settlements
+max_settlements = 4
+b_heartland_iii = city
+b_heartland_iv = temple
+b_heartland_v = castle
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_heartland_iii = ct_clean_atmosphere
+	b_heartland_iii = ct_no_water
+	b_heartland_iii = ct_trace_water
+	b_heartland_iii = ct_lakes
+	b_heartland_iii = ct_seas
+	b_heartland_iii = ct_burning
+	b_heartland_iii = ct_hot
+	b_heartland_iii = ct_warm
+	b_heartland_iii = ct_planet_survey
+	
+	b_heartland_iv = tp_toxic_atmosphere
+	b_heartland_iv = tp_no_water
+	b_heartland_iv = tp_trace_water
+	b_heartland_iv = tp_burning
+	b_heartland_iv = tp_hot
+	b_heartland_iv = tp_warm
+	b_heartland_iv = tp_optimal_hot
+	b_heartland_iv = tp_planet_survey
+	
+	b_heartland_v = ca_toxic_atmosphere
+	b_heartland_v = ca_no_water
+	b_heartland_v = ca_trace_water
+	b_heartland_v = ca_frozen
+	b_heartland_v = ca_cold
+	b_heartland_v = ca_cool
+	b_heartland_v = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_heartland_iii = ct_colony_0
+	b_heartland_iii = ct_colony_1
+	b_heartland_iii = ct_colony_2
+	
+	b_heartland_iv = tp_colony_0
+	b_heartland_iv = tp_colony_1
+	
+	b_heartland_v = ca_colony_0
+	b_heartland_v = ca_colony_1
+}

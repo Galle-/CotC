@@ -1,0 +1,63 @@
+# 198 - Sigma Draconis
+
+# County Title
+title = c_sigma_draconis
+
+# Settlements
+max_settlements = 5
+b_sigma_draconis_vi_c = temple
+b_sigma_draconis_vi_d = city
+b_sigma_draconis_vi_f = castle
+
+# Misc
+culture = arab_terran # Initial culture
+religion = terran_republican
+
+# History
+1.1.1 = {
+	b_sigma_draconis_vi_c = tp_no_atmosphere
+	b_sigma_draconis_vi_c = tp_no_water
+	b_sigma_draconis_vi_c = tp_trace_water
+	b_sigma_draconis_vi_c = tp_lakes
+	b_sigma_draconis_vi_c = tp_seas
+	b_sigma_draconis_vi_c = tp_oceans
+	b_sigma_draconis_vi_c = tp_frozen
+	b_sigma_draconis_vi_c = tp_cold
+	b_sigma_draconis_vi_c = tp_planet_survey
+	
+	# Sigma Draconis VI-D is a mining colony
+	b_sigma_draconis_vi_d = ct_toxic_atmosphere
+	b_sigma_draconis_vi_d = ct_no_water
+	b_sigma_draconis_vi_d = ct_trace_water
+	b_sigma_draconis_vi_d = ct_lakes
+	b_sigma_draconis_vi_d = ct_seas
+	b_sigma_draconis_vi_d = ct_oceans
+	b_sigma_draconis_vi_d = ct_frozen
+	b_sigma_draconis_vi_d = ct_cold
+	b_sigma_draconis_vi_d = ct_planet_survey
+	
+	b_sigma_draconis_vi_f = ca_no_atmosphere
+	b_sigma_draconis_vi_f = ca_no_water
+	b_sigma_draconis_vi_f = ca_trace_water
+	b_sigma_draconis_vi_f = ca_lakes
+	b_sigma_draconis_vi_f = ca_seas
+	b_sigma_draconis_vi_f = ca_oceans
+	b_sigma_draconis_vi_f = ca_frozen
+	b_sigma_draconis_vi_f = ca_cold
+	b_sigma_draconis_vi_f = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_sigma_draconis_vi_c = tp_colony_0
+	b_sigma_draconis_vi_c = tp_colony_1
+	
+	b_sigma_draconis_vi_d = ct_toxic_atmosphere_domes
+	b_sigma_draconis_vi_d = ct_colony_0
+	b_sigma_draconis_vi_d = ct_colony_1
+	b_sigma_draconis_vi_d = ct_colony_2
+	
+	b_sigma_draconis_vi_f = ca_colony_0
+	b_sigma_draconis_vi_f = ca_colony_1
+	
+	trade_post = b_nazari
+}

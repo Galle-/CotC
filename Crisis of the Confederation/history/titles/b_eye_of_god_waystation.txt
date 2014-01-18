@@ -1,0 +1,7 @@
+2900.1.1 = {
+	law = succ_feudal_elective
+	law = true_cognatic_succession
+	liege = "c_eye_of_god"
+}
+
+2986.1.1 = { holder = "11014392" } # Vladimir Obi

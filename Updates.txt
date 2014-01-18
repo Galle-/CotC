@@ -1,0 +1,129 @@
+Galle 01-09-2014
+	- Added basic framework for constitutional crises. At the moment, they are only triggered by refusing to hold elections at
+		the end of the ruler's term, and do nothing except permit the ruler's vassals to take or abandon sides.
+
+Galle 12-29-2013
+	- Added preliminary code for holding elections upon expiration of ruler's term.
+		Please clear-and-set the character flag flag_term_limit_timer whenever a historical character begins a new term in office.
+
+Fatrobo 2013-12-24/25/26
+	- Added province histories for 251 - Liuyang, 247 Tiantiang, 257 - Jiu Wanguan. also 241/242/243/249/250. 
+	- Ran validator and cleaned up most of the typos in the province histories
+
+Fatrobo 2013-12-23
+	- first rough pass with military unit values.
+	- retinues added. DD/BC/DN
+	- first pass on fighter, destroyer, and drone buildlings with localisation (english).
+Galle 12-22-2013
+	- Updated defines.lua for 2.0.2
+
+Galle 12-06-2013
+	- Added new Military Campaign CB, for military vassals to use against liege's enemies
+
+Galle 12-05-2013
+	- Merged some of Lord Kee's graphics
+		Note that at present this system assumes the player has the following DLCs:
+			- Mediterranean Portraits
+			- African Portraits
+			- Mongol Portraits
+			- Sunset Invasion
+		If the player does NOT have one of these DLCs, the result will likely be fucked-up
+		portraits. Still working on a long-term solution for this.
+	- Permanently enshrined Wei Luo's mustache.
+
+Galle 12-01-2013
+	- Fixed several major bugs in the appointment nomination system
+		Confirmed that the actual transfer now works in at least some cases, so woohoo!
+
+Galle 11-28-2013
+	- Added rough draft of the appointment nomination system
+
+Galle 11-18-2013
+	- Updated defines.lua and succession_laws.txt for 2.0. Compatibility still needs work.
+
+Galle 11-17-2013
+	- Added title data for the Witchhead Nebula
+	- Added character history data for the Witchhead Nebula (and some for Jion)
+
+Galle 11-11-2013
+	- Major overhaul of Avalon's history, it SHOULD theoretically be activate now
+	- Fixed some bugs in the various character files
+	- Fixed a bunch of title history bugs as well
+
+Fatrobo 11-8-2013
+	- Niú Cúnlán and QiangYing - history - (province, title, character)
+Galle 11-08-2013
+	- Uploaded character history for Avalon
+
+Galle 11-06-2013
+	- Uploaded new title data for Avalon
+
+Galle 11-05-2013
+	- Added full title history and partial province history for Novyy Edem. Province history still missing buildings.
+	- Merged Yann's minimap.
+	- Low-hanging fruit: Character, title, and province history data for the Helix Nebula (but not building data!)
+	- Novyy Edem now starts the game at war with Xin Zizhiqu over Maoxian (just the sytem at the moment, should be changed to the sector later) and the Confederation over independence
+
+Galle 11-04-2013
+	- Added full title definitions and character history for Novyy Edem
+	
+Fatrobo 11-03-2013
+	- Hexi, Xueyuan, Chi Tianliang history - (province, title, character)
+Galle 10-30-2013
+	- "crisis_landed_titles" now overwrites the vanilla landed titles file
+	- Title data added for much of Xin Zizhiqu
+	- Patrician titles added for Xin Zizhiqu, the Orion Reach, Mukta Duniya, and the New Frontier
+	- All province names fixed
+	- Several new ideology-specific ruler titles
+
+Galle 10-29-2013
+	- New employment decisions, an event for converting characters to a different culture group while keeping their subculture
+
+Galle 10-21-2013
+	- Lowborn courtiers should now be assigned a random last name
+
+Galle 10-19-2013
+	- Added historical trait and colony data for Xingjie, Zenye Nyota Angani, and al-Samawat
+
+Galle 10-15-2013
+	- Added historical trait and colony data for the Frontier, Centauri Reach, Terran Commonwealth and Tierra Celeste
+	- Updated map and interface to Yann's latest
+
+Galle 10-13-2013
+	- Added Planet Trait, Space Station Level, and Colony Level buildings
+	- Added automatic planet survey event for new colonies
+	- Added historical trait and colony data for Sol.
+
+Galle 10-04-2013
+	- Added history data for Xingjie, Tierra Celeste, al-Samawat, Zenye Nyota Angani, the Frontier, and the Centauri Reach
+
+Galle 09-27-2013
+	- Merged Kerfank's map changes with the main build
+
+Kerfank 09-27-2013
+	- Map font update
+	- Map update (provinces, naebules, textures)
+	- French localisation
+	
+Galle 09-27-2013
+	- Pretty much a complete overhaul, incorporating Kerfank's map
+
+Kerfank 09-25-2013
+	- First playable map
+	- Creation of the adjacencies file
+	- Creation of the localization file for provinces
+
+Galle 09-15-2013
+	- Prototype cloning decision added, seems to be basically working
+	- Expanded on the vanilla congenital traits. New genetic traits are Beautiful, Homely, Agile, and Clumsy.
+	- Switched most unit-type related vanilla military traits out for a Fighter Pilot/Warship Captain/Marine Colonel trifecta
+	- Added a list of dynasties
+
+Fatrobo 2013-09-13
+    - 1st pass on Crisis_education traits localization(english)
+
+Galle 08-31-2013
+	- Laid some of the basic ground work for succession law being controlled by crown laws.
+
+Galle 08-29-2013
+	- Created initial Dropbox setup

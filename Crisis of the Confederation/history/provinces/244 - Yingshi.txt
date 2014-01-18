@@ -1,0 +1,68 @@
+# 244 - Yingshi 
+
+# County Title
+title = c_yingshi
+
+# Settlements
+max_settlements = 5
+				b_ying_shi_viii = city
+				b_ying_shi_viii_orbital = castle
+				b_ying_shi_xii = temple
+				b_ying_shi_xii_orbital = city
+				b_ying_shi_xx = castle
+# Misc
+culture = sino_xingjie # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+		b_ying_shi_viii = ct_planet_survey
+		b_ying_shi_viii = ct_clean_atmosphere
+		b_ying_shi_viii = ct_cool
+		b_ying_shi_viii = ct_lakes
+		b_ying_shi_viii = ct_seas
+		
+		b_ying_shi_viii_orbital = ca_space_station_0
+		b_ying_shi_viii_orbital = ca_space_station_1
+		
+		b_ying_shi_xii = tp_planet_survey
+		b_ying_shi_xii = tp_toxic_atmosphere
+		b_ying_shi_xii = tp_hot
+		b_ying_shi_xii = tp_warm
+		b_ying_shi_xii = tp_no_water
+		b_ying_shi_xii = tp_trace_water
+		b_ying_shi_xii = tp_lakes
+		
+		b_ying_shi_xii_orbital = ct_space_station_0
+		b_ying_shi_xii_orbital = ct_space_station_1
+		
+		b_ying_shi_xx = ca_no_atmosphere
+		b_ying_shi_xx = ca_frozen
+		b_ying_shi_xx = ca_no_water
+		
+		
+	
+}
+
+2998.1.1 = {
+
+		b_ying_shi_viii = ct_colony_0
+		b_ying_shi_viii = ct_colony_1
+		b_ying_shi_viii = ct_colony_2
+
+		b_ying_shi_viii_orbital = ca_colony_0
+		b_ying_shi_viii_orbital = ca_colony_1
+		
+		b_ying_shi_xii = tp_colony_0
+		b_ying_shi_xii = tp_toxic_atmosphere_domes
+		b_ying_shi_xii = tp_colony_1
+		b_ying_shi_xii = tp_scrubbed_atmosphere
+		
+		
+		b_ying_shi_xii_orbital = ct_colony_0
+		b_ying_shi_xii_orbital = ct_colony_1
+		b_ying_shi_xii_orbital = ct_asteroids
+	
+		b_ying_shi_xx = ca_colony_0
+		
+}

@@ -1,0 +1,53 @@
+# 90 - Glenn
+
+# County Title
+title = c_glenn
+
+# Settlements
+max_settlements = 4
+b_glenn_ii = city
+b_glenn_iii = temple
+b_glenn_iii_b = castle
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_glenn_ii = ct_toxic_atmosphere
+	b_glenn_ii = ct_no_water
+	b_glenn_ii = ct_trace_water
+	b_glenn_ii = ct_lakes
+	b_glenn_ii = ct_frozen
+	b_glenn_ii = ct_cold
+	b_glenn_ii = ct_cool
+	b_glenn_ii = ct_planet_survey
+	
+	b_glenn_iii = tp_toxic_atmosphere
+	b_glenn_iii = tp_no_water
+	b_glenn_iii = tp_frozen
+	b_glenn_iii = tp_cold
+	b_glenn_iii = tp_planet_survey
+	
+	b_glenn_iii_b = ca_no_atmosphere
+	b_glenn_iii_b = ca_no_water
+	b_glenn_iii_b = ca_trace_water
+	b_glenn_iii_b = ca_frozen
+	b_glenn_iii_b = ca_cold
+	b_glenn_iii_b = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_glenn_ii = ct_toxic_atmosphere_domes
+	b_glenn_ii = ct_colony_0
+	b_glenn_ii = ct_colony_1
+	b_glenn_ii = ct_colony_2
+	
+	b_glenn_iii = tp_colony_0
+	
+	b_glenn_iii_b = ca_colony_0
+	b_glenn_iii_b = ca_colony_1
+	
+	trade_post = b_weyland
+}

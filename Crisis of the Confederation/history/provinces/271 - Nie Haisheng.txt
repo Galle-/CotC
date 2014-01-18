@@ -1,0 +1,58 @@
+# 271 - Nie Haisheng
+
+# County Title
+title = c_nie_haisheng
+
+# Settlements
+max_settlements = 4
+b_nie_haisheng_iv = temple
+b_nie_haisheng_vii_d = castle
+b_nie_haisheng_viii_c = city
+
+# Misc
+culture = sino_xingjie # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_nie_haisheng_iv = tp_toxic_atmosphere
+	b_nie_haisheng_iv = tp_no_water
+	b_nie_haisheng_iv = tp_trace_water
+	b_nie_haisheng_iv = tp_lakes
+	b_nie_haisheng_iv = tp_seas
+	b_nie_haisheng_iv = tp_frozen
+	b_nie_haisheng_iv = tp_cold
+	b_nie_haisheng_iv = tp_cool
+	b_nie_haisheng_iv = tp_planet_survey
+	
+	b_nie_haisheng_vii_d = ca_no_atmosphere
+	b_nie_haisheng_vii_d = ca_no_water
+	b_nie_haisheng_vii_d = ca_trace_water
+	b_nie_haisheng_vii_d = ca_lakes
+	b_nie_haisheng_vii_d = ca_seas
+	b_nie_haisheng_vii_d = ca_oceans
+	b_nie_haisheng_vii_d = ca_frozen
+	b_nie_haisheng_vii_d = ca_planet_survey
+	
+	b_nie_haisheng_viii_c = ct_no_atmosphere
+	b_nie_haisheng_viii_c = ct_no_water
+	b_nie_haisheng_viii_c = ct_trace_water
+	b_nie_haisheng_viii_c = ct_lakes
+	b_nie_haisheng_viii_c = ct_seas
+	b_nie_haisheng_viii_c = ct_oceans
+	b_nie_haisheng_viii_c = ct_frozen
+	b_nie_haisheng_viii_c = ct_planet_survey
+}
+
+2998.1.1 = {
+	b_nie_haisheng_iv = tp_toxic_atmosphere_domes
+	b_nie_haisheng_iv = tp_colony_0
+	b_nie_haisheng_iv = tp_colony_1
+	b_nie_haisheng_iv = tp_colony_2
+	
+	b_nie_haisheng_vii_d = ca_colony_0
+	b_nie_haisheng_vii_d = ca_colony_1
+	
+	b_nie_haisheng_viii_c = ct_colony_0
+	b_nie_haisheng_viii_c = ct_colony_1
+}

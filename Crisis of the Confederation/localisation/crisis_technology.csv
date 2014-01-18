@@ -1,0 +1,40 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+TECH_GROUP_MILITARY;Military Technology;Technologie militaire;;;;;;;;;;;;x
+TECH_LIGHT_INFANTRY;Propulsion;Propulsion;;;;;;;;;;;;x
+TECH_LIGHT_INFANTRY_DESC;While of minor important compared to hyperspace for most long voyages, conventional subluminal propulsion plays a vital role in combat, especially in preserving the survival of small ships such as fighters.;Bien que de moindre importance par rapport à l'hyperespace dans la majeur partie des voyages au long cours, la propulsion sousluminique conventionnelle joue un rôle vital au combat, spécialement pour préserver la survie de petits vaisseaux comme les chasseurs.;;;;;;;;;;;;x
+TECH_HEAVY_INFANTRY;Armor;Blindage;;;;;;;;;;;;x
+TECH_HEAVY_INFANTRY_DESC;Research into new forms of armor can improve the survivability of warships in combat.;La recherche de nouvelles formes de blindages peu améliorer les chances de survie au combat des vaisseaux de guerre.;;;;;;;;;;;;x
+TECH_CAVALRY;Energy Weapons;Armes à énergie;;;;;;;;;;;;x
+TECH_CAVALRY_DESC;Energy weapons, primarily lasers and particle cannons, are the single most common ship-to-ship combat weapon.;Les armes à énergie, principalement des laser et des cannons à particules, forment l'armement individuel de base pour les combats de vaisseau à vaisseau.;;;;;;;;;;;;x
+TECH_SIEGE_EQUIPMENT;Missiles;Missiles;;;;;;;;;;;;x
+TECH_SIEGE_EQUIPMENT_DESC;Missiles are an excellent weapon for use against large ships, and are most commonly mounted on small bombers.;Les missiles sont une armes parfaite contre les grands navires, et sont généralement installés sur de petits bombardiers.;;;;;;;;;;;;x
+TECH_NAVAL;Warship Doctrine;Doctrine des navires de guerre;;;;;;;;;;;;x
+TECH_NAVAL_DESC;Research into more advanced combat tactics for Destroyers, Battlecruisers, and Dreadnoughts.;Recherche de tactiques de combat plus avancées pour les destroyers, croiseurs de bataille, et cuirassés.;;;;;;;;;;;;x
+TECH_RECRUITMENT;Fighter Doctrine;Doctrine des chasseurs;;;;;;;;;;;;x
+TECH_RECRUITMENT_DESC;Research into more advanced combat tactics for Fighters and Bombers.;Recherche de tactiques de combat plus avancées pour les chasseurs et bombardiers.;;;;;;;;;;;;x
+TECH_GROUP_ECONOMY;Social Sciences;Sciences sociales;;;;;;;;;;;;x
+TECH_CASTLE_CONSTRUCTION;Civil Engineering;Ingénieurie civile;;;;;;;;;;;;x
+TECH_CASTLE_CONSTRUCTION_DESC;Research into new techniques for providing public services on a global scale.;Recherche de nouvelles techniques pour dispenser des services publiques à une échelle globale.;;;;;;;;;;;;x
+TECH_CITY_CONSTRUCTION;Education;Education;;;;;;;;;;;;x
+TECH_CITY_CONSTRUCTION_DESC;Research into superior teaching methods and academic organization.;Recherche de nouvelles méthodes d'enseignement supérieur et d'organisation académique.;;;;;;;;;;;;x
+TECH_TEMPLE_CONSTRUCTION;Interstellar Industrialism;Industrialisme interstellaire;;;;;;;;;;;;x
+TECH_TEMPLE_CONSTRUCTION_DESC;Research on how best to integrate and manage labor and industry on a global scale.;Recherche sur les meilleurs façons d'intégrer et d'organiser le travail et l'industrie à une échelle globale.;;;;;;;;;;;;x
+TECH_TRADE_PRACTICES;Interstellar Trade;Commerce interstellaire;;;;;;;;;;;;x
+TECH_TRADE_PRACTICES_DESC;Research into the effects of globalized economies, modern shipping technology, and time dilation on interstellar trade.;Recherche sur les effets des économies globalisées, les technologies logistiques modernes, et la dilatation du temps dans le commerce interstellaire.;;;;;;;;;;;;x
+TECH_FORTIFICATIONS_CONSTRUCTION;Economic Policy;Politique économique;;;;;;;;;;;;x
+TECH_FORTIFICATIONS_CONSTRUCTION_DESC;Research into the best means for extracting government revenue from interstellar economies.;Recherche sur les meilleurs moyens de relever les taxes dans les économies interstellaires.;;;;;;;;;;;;x
+TECH_CONSTRUCTION;Sociology;Sociologie;;;;;;;;;;;;x
+TECH_CONSTRUCTION_DESC;Research into modern social hierarchies and power structures, and the best methods for modern leadership.;Recherche sur les hiérarchies sociales modernes et les structures de pouvoir, et les meilleurs méthode pour affirmer sa supériorité.;;;;;;;;;;;;x
+TECH_GROUP_CULTURE;Hard Sciences;Sciences naturelles;;;;;;;;;;;;x
+TECH_NOBLE_CUSTOMS;Medicine;Médecine;;;;;;;;;;;;x
+TECH_NOBLE_CUSTOMS_DESC;Research into the effects of, and possible treatments for, extraterrestrial diseases.;Recherche sur les effets, et les traitements potentiels, des maladies extraterrestres.;;;;;;;;;;;;x
+TECH_POPULAR_CUSTOMS;Cybernetics;Cybernétique;;;;;;;;;;;;x
+TECH_POPULAR_CUSTOMS_DESC;Research into both techniques for and applications of human mechanical augmentation.;Recherche sur la théorie et les applications des augmentations mécaniques de l'Humain.;;;;;;;;;;;;x
+TECH_RELIGIOUS_CUSTOMS;Biotechnology;Biotechnologie;;;;;;;;;;;;x
+TECH_RELIGIOUS_CUSTOMS_DESC;Research into genetic manipulation and engineering, including human cloning and human genetic modification.;Recherche sur la manipulation et l'ingénieurie génétique, y compris le clônage et les modifications du génôme humain.;;;;;;;;;;;;x
+TECH_MAJESTY;Artificial Intelligence;Intellignece artificielle;;;;;;;;;;;;x
+TECH_MAJESTY_DESC;Research into the development of artificial intelligence, including more advanced combat techniques for Combat Drones.;Recherche dans le développement d'intelligences artificielles, comprenant l'étude de techniques de combat avancées pour les drônes militaires.;;;;;;;;;;;;x
+TECH_CULTURE_FLEX;Hyperspace Physics;Physique de l'hyperespace;;;;;;;;;;;;x
+TECH_CULTURE_FLEX_DESC;Much of hyperspace remains a mystery to us. Perhaps further research in this area could allow us to shorten jump times and construct superior navigation systems.;L'hyperespace reste un mystère presque total pour nous. Peu être que des recherches dans ce domaine nous permettraient de raccourcir les temps de saut et de concevoir de meilleurs systèmes de navigation.;;;;;;;;;;;;x
+TECH_LEGALISM;Xenobiology;Xénobiologie;;;;;;;;;;;;x
+TECH_LEGALISM_DESC;Research into life of extraterrestrial origin could vastly improve the survivability of our personnel in alien environments.;Recherche sur les origines de la vie extraterrestre, pouvant améliorer l'éspérance de vie de nos administrés dans les environements extraterrestres hostiles.;;;;;;;;;;;;x

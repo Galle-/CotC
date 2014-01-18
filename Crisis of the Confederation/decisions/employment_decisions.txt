@@ -1,0 +1,647 @@
+decisions = {
+	employ_new_diplomat = {
+		potential = {
+			is_ruler = yes
+		}
+		allow = {
+			wealth = 50
+			NOT = { num_of_courtiers = 10 }
+			custom_tooltip = {
+				text = TOOLTIP_EMPLOYMENT_COOLDOWN_EXPIRED # Must not have employed a new courtier in the past six months
+				OR = {
+					NOT = { has_character_flag = flag_employment_cooldown }
+					had_character_flag = { name = flag_employment_cooldown days = 180 }
+				}
+			}
+		}
+		effect = {
+			clr_character_flag = flag_employment_cooldown
+			set_character_flag = flag_employment_cooldown
+			wealth = -50
+			random_list = {
+				# 1: ROOT's culture and religion
+				# 2: ROOT's location's culture and religion
+				# 3: Random adjacent province's culture and religion
+				10 = {
+					create_random_diplomat = {
+						age = 30
+						female = no
+						culture = ROOT
+						religion = ROOT
+						dynasty = none
+						random_traits = yes
+					}
+					new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+				}
+				10 = {
+					create_random_diplomat = {
+						age = 30
+						female = yes
+						culture = ROOT
+						religion = ROOT
+						dynasty = none
+						random_traits = yes
+					}
+					new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+				}
+				20 = {
+					location = {
+						ROOT = {
+							create_random_diplomat = {
+								age = 30
+								female = no
+								culture = PREVPREV
+								religion = PREVPREV
+								dynasty = none
+								random_traits = yes
+							}
+							new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+						}
+					}
+				}
+				20 = {
+					location = {
+						ROOT = {
+							create_random_diplomat = {
+								age = 30
+								female = yes
+								culture = PREVPREV
+								religion = PREVPREV
+								dynasty = none
+								random_traits = yes
+							}
+							new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+						}
+					}
+				}
+				30 = {
+					location = {
+						random_neighbor_province = {
+							limit = { is_land = yes } # Must grab an actual inhabited province!
+							ROOT = {
+								create_random_diplomat = {
+									age = 30
+									female = no
+									culture = PREVPREV
+									religion = PREVPREV
+									dynasty = none
+									random_traits = yes
+								}
+								new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+							}
+						}
+					}
+				}
+				30 = {
+					location = {
+						random_neighbor_province = {
+							limit = { is_land = yes } # Must grab an actual inhabited province!
+							ROOT = {
+								create_random_diplomat = {
+									age = 30
+									female = yes
+									culture = PREVPREV
+									religion = PREVPREV
+									dynasty = none
+									random_traits = yes
+								}
+								new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				any_vassal = {
+					has_job_title = job_chancellor
+					diplomacy = 10
+				}
+			}
+			modifier = {
+				factor = 0
+				has_character_flag = flag_employment_cooldown
+				NOT = { had_character_flag = { name = flag_employment_cooldown days = 365 } }
+			}
+		}
+	}
+	employ_new_soldier = {
+		potential = {
+			is_ruler = yes
+		}
+		allow = {
+			wealth = 50
+			NOT = { num_of_courtiers = 10 }
+			custom_tooltip = {
+				text = TOOLTIP_EMPLOYMENT_COOLDOWN_EXPIRED # Must not have employed a new courtier in the past six months
+				OR = {
+					NOT = { has_character_flag = flag_employment_cooldown }
+					had_character_flag = { name = flag_employment_cooldown days = 180 }
+				}
+			}
+		}
+		effect = {
+			clr_character_flag = flag_employment_cooldown
+			set_character_flag = flag_employment_cooldown
+			wealth = -50
+			random_list = {
+				# 1: ROOT's culture and religion
+				# 2: ROOT's location's culture and religion
+				# 3: Random adjacent province's culture and religion
+				10 = {
+					create_random_soldier = {
+						age = 30
+						female = no
+						culture = ROOT
+						religion = ROOT
+						dynasty = none
+						random_traits = yes
+					}
+					new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+				}
+				10 = {
+					create_random_soldier = {
+						age = 30
+						female = yes
+						culture = ROOT
+						religion = ROOT
+						dynasty = none
+						random_traits = yes
+					}
+					new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+				}
+				20 = {
+					location = {
+						ROOT = {
+							create_random_soldier = {
+								age = 30
+								female = no
+								culture = PREVPREV
+								religion = PREVPREV
+								dynasty = none
+								random_traits = yes
+							}
+							new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+						}
+					}
+				}
+				20 = {
+					location = {
+						ROOT = {
+							create_random_soldier = {
+								age = 30
+								female = yes
+								culture = PREVPREV
+								religion = PREVPREV
+								dynasty = none
+								random_traits = yes
+							}
+							new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+						}
+					}
+				}
+				30 = {
+					location = {
+						random_neighbor_province = {
+							limit = { is_land = yes } # Must grab an actual inhabited province!
+							ROOT = {
+								create_random_soldier = {
+									age = 30
+									female = no
+									culture = PREVPREV
+									religion = PREVPREV
+									dynasty = none
+									random_traits = yes
+								}
+								new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+							}
+						}
+					}
+				}
+				30 = {
+					location = {
+						random_neighbor_province = {
+							limit = { is_land = yes } # Must grab an actual inhabited province!
+							ROOT = {
+								create_random_soldier = {
+									age = 30
+									female = yes
+									culture = PREVPREV
+									religion = PREVPREV
+									dynasty = none
+									random_traits = yes
+								}
+								new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				any_vassal = {
+					has_job_title = job_marshal
+					martial = 10
+				}
+			}
+			modifier = {
+				factor = 0
+				has_character_flag = flag_employment_cooldown
+				NOT = { had_character_flag = { name = flag_employment_cooldown days = 365 } }
+			}
+		}
+	}
+	employ_new_steward = {
+		potential = {
+			is_ruler = yes
+		}
+		allow = {
+			wealth = 50
+			NOT = { num_of_courtiers = 10 }
+			custom_tooltip = {
+				text = TOOLTIP_EMPLOYMENT_COOLDOWN_EXPIRED # Must not have employed a new courtier in the past six months
+				OR = {
+					NOT = { has_character_flag = flag_employment_cooldown }
+					had_character_flag = { name = flag_employment_cooldown days = 180 }
+				}
+			}
+		}
+		effect = {
+			clr_character_flag = flag_employment_cooldown
+			set_character_flag = flag_employment_cooldown
+			wealth = -50
+			random_list = {
+				# 1: ROOT's culture and religion
+				# 2: ROOT's location's culture and religion
+				# 3: Random adjacent province's culture and religion
+				10 = {
+					create_random_steward = {
+						age = 30
+						female = no
+						culture = ROOT
+						religion = ROOT
+						dynasty = none
+						random_traits = yes
+					}
+					new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+				}
+				10 = {
+					create_random_steward = {
+						age = 30
+						female = yes
+						culture = ROOT
+						religion = ROOT
+						dynasty = none
+						random_traits = yes
+					}
+					new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+				}
+				20 = {
+					location = {
+						ROOT = {
+							create_random_steward = {
+								age = 30
+								female = no
+								culture = PREVPREV
+								religion = PREVPREV
+								dynasty = none
+								random_traits = yes
+							}
+							new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+						}
+					}
+				}
+				20 = {
+					location = {
+						ROOT = {
+							create_random_steward = {
+								age = 30
+								female = yes
+								culture = PREVPREV
+								religion = PREVPREV
+								dynasty = none
+								random_traits = yes
+							}
+							new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+						}
+					}
+				}
+				30 = {
+					location = {
+						random_neighbor_province = {
+							limit = { is_land = yes } # Must grab an actual inhabited province!
+							ROOT = {
+								create_random_steward = {
+									age = 30
+									female = no
+									culture = PREVPREV
+									religion = PREVPREV
+									dynasty = none
+									random_traits = yes
+								}
+								new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+							}
+						}
+					}
+				}
+				30 = {
+					location = {
+						random_neighbor_province = {
+							limit = { is_land = yes } # Must grab an actual inhabited province!
+							ROOT = {
+								create_random_steward = {
+									age = 30
+									female = yes
+									culture = PREVPREV
+									religion = PREVPREV
+									dynasty = none
+									random_traits = yes
+								}
+								new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				any_vassal = {
+					has_job_title = job_treasurer
+					stewardship = 10
+				}
+			}
+			modifier = {
+				factor = 0
+				has_character_flag = flag_employment_cooldown
+				NOT = { had_character_flag = { name = flag_employment_cooldown days = 365 } }
+			}
+		}
+	}
+	employ_new_intriguer = {
+		potential = {
+			is_ruler = yes
+		}
+		allow = {
+			wealth = 50
+			NOT = { num_of_courtiers = 10 }
+			custom_tooltip = {
+				text = TOOLTIP_EMPLOYMENT_COOLDOWN_EXPIRED # Must not have employed a new courtier in the past six months
+				OR = {
+					NOT = { has_character_flag = flag_employment_cooldown }
+					had_character_flag = { name = flag_employment_cooldown days = 180 }
+				}
+			}
+		}
+		effect = {
+			clr_character_flag = flag_employment_cooldown
+			set_character_flag = flag_employment_cooldown
+			wealth = -50
+			random_list = {
+				# 1: ROOT's culture and religion
+				# 2: ROOT's location's culture and religion
+				# 3: Random adjacent province's culture and religion
+				10 = {
+					create_random_intriguer = {
+						age = 30
+						female = no
+						culture = ROOT
+						religion = ROOT
+						dynasty = none
+						random_traits = yes
+					}
+					new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+				}
+				10 = {
+					create_random_intriguer = {
+						age = 30
+						female = yes
+						culture = ROOT
+						religion = ROOT
+						dynasty = none
+						random_traits = yes
+					}
+					new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+				}
+				20 = {
+					location = {
+						ROOT = {
+							create_random_intriguer = {
+								age = 30
+								female = no
+								culture = PREVPREV
+								religion = PREVPREV
+								dynasty = none
+								random_traits = yes
+							}
+							new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+						}
+					}
+				}
+				20 = {
+					location = {
+						ROOT = {
+							create_random_intriguer = {
+								age = 30
+								female = yes
+								culture = PREVPREV
+								religion = PREVPREV
+								dynasty = none
+								random_traits = yes
+							}
+							new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+						}
+					}
+				}
+				30 = {
+					location = {
+						random_neighbor_province = {
+							limit = { is_land = yes } # Must grab an actual inhabited province!
+							ROOT = {
+								create_random_intriguer = {
+									age = 30
+									female = no
+									culture = PREVPREV
+									religion = PREVPREV
+									dynasty = none
+									random_traits = yes
+								}
+								new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+							}
+						}
+					}
+				}
+				30 = {
+					location = {
+						random_neighbor_province = {
+							limit = { is_land = yes } # Must grab an actual inhabited province!
+							ROOT = {
+								create_random_intriguer = {
+									age = 30
+									female = yes
+									culture = PREVPREV
+									religion = PREVPREV
+									dynasty = none
+									random_traits = yes
+								}
+								new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				any_vassal = {
+					has_job_title = job_spymaster
+					intrigue = 10
+				}
+			}
+			modifier = {
+				factor = 0
+				has_character_flag = flag_employment_cooldown
+				NOT = { had_character_flag = { name = flag_employment_cooldown days = 365 } }
+			}
+		}
+	}
+	employ_new_priest = {
+		potential = {
+			is_ruler = yes
+		}
+		allow = {
+			wealth = 50
+			NOT = { num_of_courtiers = 10 }
+			custom_tooltip = {
+				text = TOOLTIP_EMPLOYMENT_COOLDOWN_EXPIRED # Must not have employed a new courtier in the past six months
+				OR = {
+					NOT = { has_character_flag = flag_employment_cooldown }
+					had_character_flag = { name = flag_employment_cooldown days = 180 }
+				}
+			}
+		}
+		effect = {
+			clr_character_flag = flag_employment_cooldown
+			set_character_flag = flag_employment_cooldown
+			wealth = -50
+			random_list = {
+				# 1: ROOT's culture and religion
+				# 2: ROOT's location's culture and religion
+				# 3: Random adjacent province's culture and religion
+				10 = {
+					create_random_priest = {
+						age = 30
+						female = no
+						culture = ROOT
+						religion = ROOT
+						dynasty = none
+						random_traits = yes
+					}
+					new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+				}
+				10 = {
+					create_random_priest = {
+						age = 30
+						female = yes
+						culture = ROOT
+						religion = ROOT
+						dynasty = none
+						random_traits = yes
+					}
+					new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+				}
+				20 = {
+					location = {
+						ROOT = {
+							create_random_priest = {
+								age = 30
+								female = no
+								culture = PREVPREV
+								religion = PREVPREV
+								dynasty = none
+								random_traits = yes
+							}
+							new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+						}
+					}
+				}
+				20 = {
+					location = {
+						ROOT = {
+							create_random_priest = {
+								age = 30
+								female = yes
+								culture = PREVPREV
+								religion = PREVPREV
+								dynasty = none
+								random_traits = yes
+							}
+							new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+						}
+					}
+				}
+				30 = {
+					location = {
+						random_neighbor_province = {
+							limit = { is_land = yes } # Must grab an actual inhabited province!
+							ROOT = {
+								create_random_priest = {
+									age = 30
+									female = no
+									culture = PREVPREV
+									religion = PREVPREV
+									dynasty = none
+									random_traits = yes
+								}
+								new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+							}
+						}
+					}
+				}
+				30 = {
+					location = {
+						random_neighbor_province = {
+							limit = { is_land = yes } # Must grab an actual inhabited province!
+							ROOT = {
+								create_random_priest = {
+									age = 30
+									female = yes
+									culture = PREVPREV
+									religion = PREVPREV
+									dynasty = none
+									random_traits = yes
+								}
+								new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				any_vassal = {
+					has_job_title = job_scientist
+					learning = 10
+				}
+			}
+			modifier = {
+				factor = 0
+				has_character_flag = flag_employment_cooldown
+				NOT = { had_character_flag = { name = flag_employment_cooldown days = 365 } }
+			}
+		}
+	}
+}

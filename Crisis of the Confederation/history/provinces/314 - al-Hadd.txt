@@ -1,0 +1,56 @@
+# 314 - al-Hadd
+
+# County Title
+title = c_al_hadd
+
+# Settlements
+max_settlements = 4
+b_al_hadd_ii = city
+b_al_hadd_iii_b = temple
+b_al_hadd_iv = castle
+
+# Misc
+culture = arab_samawati # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+	b_al_hadd_ii = ct_clean_atmosphere
+	b_al_hadd_ii = ct_no_water
+	b_al_hadd_ii = ct_trace_water
+	b_al_hadd_ii = ct_lakes
+	b_al_hadd_ii = ct_seas
+	b_al_hadd_ii = ct_oceans
+	b_al_hadd_ii = ct_frozen
+	b_al_hadd_ii = ct_cold
+	b_al_hadd_ii = ct_cool
+	b_al_hadd_ii = ct_planet_survey
+	
+	b_al_hadd_iii_b = tp_toxic_atmosphere
+	b_al_hadd_iii_b = tp_no_water
+	b_al_hadd_iii_b = tp_trace_water
+	b_al_hadd_iii_b = tp_lakes
+	b_al_hadd_iii_b = tp_seas
+	b_al_hadd_iii_b = tp_frozen
+	b_al_hadd_iii_b = tp_cold
+	b_al_hadd_iii_b = tp_planet_survey
+	
+	b_al_hadd_iv = ca_toxic_atmosphere
+	b_al_hadd_iv = ca_no_water
+	b_al_hadd_iv = ca_trace_water
+	b_al_hadd_iv = ca_frozen
+	b_al_hadd_iv = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_al_hadd_ii = ct_colony_0
+	b_al_hadd_ii = ct_colony_1
+	b_al_hadd_ii = ct_colony_2
+	b_al_hadd_ii = ct_colony_3
+	
+	b_al_hadd_iii_b = tp_colony_0
+	b_al_hadd_iii_b = tp_colony_1
+	
+	b_al_hadd_iv = ca_colony_0
+	b_al_hadd_iv = ca_colony_1
+}

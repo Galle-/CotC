@@ -1,0 +1,6 @@
+2489.1.1 = {
+	liege="e_terran_confederation"
+	law = succ_catholic_bishopric
+	law = true_cognatic_succession
+}
+2989.1.1 = { holder = 1104849 } # Valentina Mendoza

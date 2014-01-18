@@ -1,0 +1,20 @@
+# 107 - HE-338
+
+# County Title
+title = c_he_338
+
+# Settlements
+max_settlements = 4
+
+b_he_338_station_alpha = castle
+
+# Misc
+culture = japanese_centauri # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

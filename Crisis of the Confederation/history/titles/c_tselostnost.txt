@@ -1,0 +1,7 @@
+2900.1.1 = {
+	law = succ_feudal_elective # Should be appointment, but we're waiting on the patch for that
+	law = true_cognatic_succession
+	liege = "d_probeda"
+}
+
+2989.1.1 = { holder = 1218560 } # Vasiliy Sakamoto

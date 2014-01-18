@@ -1,0 +1,53 @@
+# 98 - Ride
+
+# County Title
+title = c_ride
+
+# Settlements
+max_settlements = 4
+b_ride_iii = city
+b_ride_iii_b = temple
+b_ride_iv = castle
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_ride_iii = ct_clean_atmosphere
+	b_ride_iii = ct_no_water
+	b_ride_iii = ct_trace_water
+	b_ride_iii = ct_lakes
+	b_ride_iii = ct_frozen
+	b_ride_iii = ct_cold
+	b_ride_iii = ct_cool
+	b_ride_iii = ct_planet_survey
+	
+	b_ride_iii_b = tp_no_atmosphere
+	b_ride_iii_b = tp_no_water
+	b_ride_iii_b = tp_frozen
+	b_ride_iii_b = tp_cold
+	b_ride_iii_b = tp_cool
+	b_ride_iii_b = tp_planet_survey
+	
+	b_ride_iv = ca_clean_atmosphere
+	b_ride_iv = ca_no_water
+	b_ride_iv = ca_trace_water
+	b_ride_iv = ca_lakes
+	b_ride_iv = ca_seas
+	b_ride_iv = ca_oceans
+	b_ride_iv = ca_frozen
+	b_ride_iv = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_ride_iii = ct_colony_0
+	b_ride_iii = ct_colony_1
+	b_ride_iii = ct_colony_2
+	
+	b_ride_iii_b = tp_colony_0
+	
+	b_ride_iv = ca_colony_0
+	b_ride_iv = ca_colony_1
+}

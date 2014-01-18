@@ -1,0 +1,56 @@
+# 289 - Mpya ya Zanzibar
+
+# County Title
+title = c_mpya_ya_zanzibar
+
+# Settlements
+max_settlements = 7
+b_mpya_ya_zanzibar_prime = city
+b_mpya_ya_zanzibar_ii = temple
+b_mpya_ya_zanzibar_iii = castle
+
+# Misc
+culture = east_afro_angani # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	# Mpya ya Zanzibar Prime: Clean Atmosphere, Lakes, Hot
+	b_mpya_ya_zanzibar_prime = ct_clean_atmosphere
+	b_mpya_ya_zanzibar_prime = ct_no_water
+	b_mpya_ya_zanzibar_prime = ct_trace_water
+	b_mpya_ya_zanzibar_prime = ct_lakes
+	b_mpya_ya_zanzibar_prime = ct_burning
+	b_mpya_ya_zanzibar_prime = ct_hot
+	b_mpya_ya_zanzibar_prime = ct_planet_survey
+	
+	b_mpya_ya_zanzibar_ii = tp_toxic_atmosphere
+	b_mpya_ya_zanzibar_ii = tp_no_water
+	b_mpya_ya_zanzibar_ii = tp_burning
+	b_mpya_ya_zanzibar_ii = tp_hot
+	b_mpya_ya_zanzibar_ii = tp_warm
+	b_mpya_ya_zanzibar_ii = tp_planet_survey
+	
+	b_mpya_ya_zanzibar_iii = ca_no_atmosphere
+	b_mpya_ya_zanzibar_iii = ca_no_water
+	b_mpya_ya_zanzibar_iii = ca_trace_water
+	b_mpya_ya_zanzibar_iii = ca_burning
+	b_mpya_ya_zanzibar_iii = ca_hot
+	b_mpya_ya_zanzibar_iii = ca_warm
+	b_mpya_ya_zanzibar_iii = ca_optimal_hot
+	b_mpya_ya_zanzibar_iii = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_mpya_ya_zanzibar_prime = ct_colony_0
+	b_mpya_ya_zanzibar_prime = ct_colony_1
+	b_mpya_ya_zanzibar_prime = ct_colony_2
+	b_mpya_ya_zanzibar_prime = ct_colony_3
+	
+	b_mpya_ya_zanzibar_ii = tp_colony_0
+	
+	b_mpya_ya_zanzibar_iii = ca_colony_0
+	b_mpya_ya_zanzibar_iii = ca_colony_1
+	
+	trade_post = b_afolayan
+}

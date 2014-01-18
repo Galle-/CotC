@@ -1,0 +1,247 @@
+11020008 = {
+	# President of Zenye Nyota Angani
+	name = "Simba"
+	dynasty = 20008 # Taji
+	female = no
+	
+	culture = east_afro_angani
+	religion = terran_federalist
+	
+	2949.1.1 = {
+		birth = "2949.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+11020009 = {
+	# Commander of the Angani Armed Forces
+	name = "Azize"
+	dynasty = 20009 # Baraka
+	female = no
+	
+	culture = east_afro_angani
+	religion = terran_federalist
+	
+	add_trait = homosexual
+	add_trait = skilled_tactician
+	add_trait = warship_captain
+	
+	2960.1.1 = { birth = "2960.1.1" }
+}
+
+1102390 = {
+	# Governor of Angani Moto
+	name = "Sefu"
+	dynasty = 2390 # Semaan
+	female = no
+	
+	culture = arab_angani
+	religion = terran_federalist
+	
+	2954.1.1 = {
+		birth = "2954.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+11020010 = {
+	# Governor-General of Nyota 'Mwisho
+	name = "Salehe"
+	dynasty = 20010 # Ramadhani
+	female = no
+	
+	culture = east_afro_angani
+	religion = terran_federalist
+	
+	add_trait = homosexual
+	
+	2969.1.1 = {
+		birth = "2969.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+11020011 = {
+	# Governor of Bandari
+	name = "Abai"
+	dynasty = 20011 # Iskinder
+	female = no
+	
+	culture = ethiopian_angani
+	religion = terran_federalist
+	
+	2963.1.1 = {
+		birth = "2963.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+11014102 = {
+	# Governor of Sisi Alifanya Hivyo
+	name = "Zuwena"
+	dynasty = 14102 # Adesina
+	female = yes
+	
+	culture = west_afro_angani
+	religion = terran_federalist
+	
+	2958.1.1 = {
+		birth = "2958.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+11013990 = {
+	# Governor-General of Ndia Panda
+	name = "Nafissa"
+	dynasty = 13990 # Rabiu
+	female = yes
+	
+	culture = west_afro_angani
+	religion = terran_federalist
+	
+	2949.1.1 = {
+		birth = "2949.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+11020012 = {
+	# Governor of Kimbilio
+	name = "Sefu"
+	dynasty = 20012 # Azize
+	female = no
+	
+	culture = east_afro_angani
+	religion = terran_federalist
+	
+	2956.1.1 = {
+		birth = "2956.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+11020013 = {
+	# Governor of Tengemano
+	name = "Kondo"
+	dynasty = 20013 # Kitwana
+	female = no
+	
+	culture = east_afro_angani
+	religion = terran_federalist
+	
+	2952.1.1 = {
+		birth = "2952.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+11014278 = {
+	# Governor of Nyame
+	name = "Salimata"
+	dynasty = 14278 # Salami
+	female = yes
+	
+	culture = west_afro_angani
+	religion = terran_republican
+	
+	add_trait = homosexual
+	
+	2970.1.1 = {
+		birth = "2970.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+11013925 = {
+	# Governor of Anansi
+	name = "Sulayman"
+	dynasty = 13925 # Ademola
+	female = no
+	
+	culture = west_afro_angani
+	religion = terran_republican
+	
+	2957.1.1 = {
+		birth = "2957.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+11020014 = {
+	# Governor-General of Adwa
+	name = "Misrak"
+	dynasty = 20014 # Gebereal
+	female = yes
+	
+	culture = ethiopian_angani
+	religion = terran_federalist
+	
+	2968.1.1 = {
+		birth = "2968.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+11020015 = {
+	# Governor of Addis Saba
+	name = "Iyasu"
+	dynasty = 20014 # Mengesha
+	female = no
+	
+	culture = ethiopian_angani
+	religion = terran_federalist
+	
+	2953.1.1 = {
+		birth = "2953.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+1101526 = {
+	# Governor of Menelik
+	name = "Chiku"
+	dynasty = 1526 # Dawson
+	female = yes
+	
+	culture = anglo_angani
+	religion = terran_federalist
+	
+	2966.1.1 = {
+		birth = "2966.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+1101958 = {
+	# Governor of Haile Selassie
+	name = "Kijakazi"
+	dynasty = 1958 # MacLeod
+	female = yes
+	
+	culture = anglo_angani
+	religion = terran_federalist
+	
+	2957.1.1 = {
+		birth = "2957.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+11014566 = {
+	# Commander of Abbaba
+	name = "Ishaq"
+	dynasty = 14566 # Nnaji
+	female = no
+	
+	culture = west_afro_angani
+	religion = terran_federalist
+	
+	add_trait = tough_soldier
+	add_trait = marine_colonel
+	
+	2975.1.1 = {
+		birth = "2975.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}

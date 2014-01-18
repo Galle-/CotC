@@ -1,0 +1,6 @@
+2489.1.1 = {
+	liege="d_tau_ceti"
+	law = succ_seniority
+	law = true_cognatic_succession
+}
+2982.1.1 = { holder = 1107473 } # Salman Nazari

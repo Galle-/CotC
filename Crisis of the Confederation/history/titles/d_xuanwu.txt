@@ -1,0 +1,7 @@
+# Modern era
+2489.1.1 = {
+	liege = "k_xingjie"
+	law = true_cognatic_succession
+	law = succ_catholic_bishopric
+}
+2998.1.1 = { holder = 11012865 } # Ai Liang

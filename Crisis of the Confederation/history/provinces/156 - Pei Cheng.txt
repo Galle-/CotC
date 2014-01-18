@@ -1,0 +1,21 @@
+# 156 - Pei Cheng
+
+# County Title
+title = c_pei_cheng
+
+# Settlements
+max_settlements = 4
+b_pei_cheng_waystation = castle
+b_pei_cheng_observatory = temple
+b_pei_cheng_prime = city
+
+# Misc
+culture = sino_edemite # Initial culture
+religion = astrist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

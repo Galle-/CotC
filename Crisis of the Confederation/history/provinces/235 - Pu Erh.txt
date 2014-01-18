@@ -1,0 +1,24 @@
+# 235 - Pu-Erh
+
+# County Title
+title = c_pu_erh
+
+# Settlements
+max_settlements = 4
+	b_pu_erh = castle
+	b_pu_erh_b = temple
+	b_pu_erh_orbital = city
+	b_pu_erh_v = city
+
+# Misc
+culture = sino_bianjiangese # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+	
+}
+
+2998.1.1 = {
+
+}

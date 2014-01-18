@@ -1,0 +1,64 @@
+# 286 - Anansi
+
+# County Title
+title = c_anansi
+
+# Settlements
+max_settlements = 4
+b_anansi_prime_b = city
+b_anansi_prime_c = temple
+b_anansi_prime_d = castle
+
+# Misc
+culture = west_afro_angani # Initial culture
+religion = terran_republican
+
+# History
+1.1.1 = {
+	b_anansi_prime_b = ct_no_atmosphere
+	b_anansi_prime_b = ct_no_water
+	b_anansi_prime_b = ct_trace_water
+	b_anansi_prime_b = ct_lakes
+	b_anansi_prime_b = ct_seas
+	b_anansi_prime_b = ct_oceans
+	b_anansi_prime_b = ct_frozen
+	b_anansi_prime_b = ct_cold
+	b_anansi_prime_b = ct_cool
+	b_anansi_prime_b = ct_optimal_cold
+	b_anansi_prime_b = ct_planet_survey
+	
+	b_anansi_prime_c = tp_no_atmosphere
+	b_anansi_prime_c = tp_no_water
+	b_anansi_prime_c = tp_trace_water
+	b_anansi_prime_c = tp_lakes
+	b_anansi_prime_c = tp_seas
+	b_anansi_prime_c = tp_oceans
+	b_anansi_prime_c = tp_frozen
+	b_anansi_prime_c = tp_cold
+	b_anansi_prime_c = tp_cool
+	b_anansi_prime_c = tp_optimal_cold
+	b_anansi_prime_c = tp_planet_survey
+	
+	b_anansi_prime_d = ca_no_atmosphere
+	b_anansi_prime_d = ca_no_water
+	b_anansi_prime_d = ca_trace_water
+	b_anansi_prime_d = ca_lakes
+	b_anansi_prime_d = ca_seas
+	b_anansi_prime_d = ca_oceans
+	b_anansi_prime_d = ca_frozen
+	b_anansi_prime_d = ca_cold
+	b_anansi_prime_d = ca_cool
+	b_anansi_prime_d = ca_optimal_cold
+	b_anansi_prime_d = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_anansi_prime_b = ct_colony_0
+	b_anansi_prime_b = ct_colony_1
+	
+	b_anansi_prime_c = tp_colony_0
+	b_anansi_prime_c = tp_colony_1
+	
+	b_anansi_prime_d = ca_colony_0
+	b_anansi_prime_d = ca_colony_1
+}

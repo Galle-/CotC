@@ -1,0 +1,6 @@
+2996.1.1={
+	liege = "d_novyy_edem_fleet"
+	law = succ_feudal_elective # Should be appointment, but we're waiting on the patch for that
+	law = true_cognatic_succession
+	holder = "11111872" # Arkady Solomonov
+}

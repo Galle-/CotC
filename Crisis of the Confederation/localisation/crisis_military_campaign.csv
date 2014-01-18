@@ -1,0 +1,16 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+CB_NAME_MILITARY_CAMPAIGN;Military Campaign;;;;;;;;;;;;;x
+cb_military_campaign_desc;Conduct military operations against an enemy state. If successful, we will capture their leader, allowing our leaders to negotiate peace from a position of strength.;;;;;;;;;;;;;x
+WAR_NAME_MILITARY_CAMPAIGN;$ORDER$$FIRST_ADJ$ Campaign Against $SECOND$;;;;;;;;;;;;;x
+successful_campaign;Military Victory;;;;;;;;;;;;;x
+successful_campaign_desc;This character has recently won a major military victory, and as such is respected and admired by both their superiors and the soldiers under their command. They are given great respect, and their orders are trusted without question.;;;;;;;;;;;;;x
+disastrous_campaign;Military Disaster;;;;;;;;;;;;;x
+disastrous_campaign_desc;This character is still dealing with the legacy of a notorious military disaster suffered under their command, causing subordinates and superiors alike to constantly question their orders and ability.;;;;;;;;;;;;;x
+EVTDESCCAMPAIGN1;[From.GetTitle] [From.GetFullName] has successfully completed a military campaign and captured one of your enemies!;;;;;;;;;;;;;x
+EVTOPTACAMPAIGN1;Well done, [From.GetTitle].;;;;;;;;;;;;;x
+EVTDESCCAMPAIGN3;[From.GetTitle] [From.GetFullName] has ordered a strategic withdrawal from one of [From.GetHerHis] military campaigns against your enemies.;;;;;;;;;;;;;x
+EVTOPTACAMPAIGN3;Do I have to do everything myself?;;;;;;;;;;;;;x
+EVTDESCCAMPAIGN5;[From.GetTitle] [From.GetFullName] has suffered a humilitating defeat in the field, and abandoned one of [From.GetHerHis] military campaigns against your enemies.;;;;;;;;;;;;;x
+EVTOPTACAMPAIGN5;I'm surrounded by IDIOTS!;;;;;;;;;;;;;x
+opinion_successful_military_campaign;Conducted Successful Military Campaign;;;;;;;;;;;;;x
+opinion_failed_military_campaign;Conducted Failed Military Campaign;;;;;;;;;;;;;x

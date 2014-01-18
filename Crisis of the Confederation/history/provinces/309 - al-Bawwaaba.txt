@@ -1,0 +1,48 @@
+# 309 - al-Bawwaaba
+
+# County Title
+title = c_al_bawwaaba
+
+# Settlements
+max_settlements = 4
+b_al_bawwaaba_iii = city
+b_al_bawwaaba_iii_b = temple
+b_al_bawwaaba_waystation = castle
+
+# Misc
+culture = arab_samawati # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+	b_al_bawwaaba_iii = ct_toxic_atmosphere
+	b_al_bawwaaba_iii = ct_no_water
+	b_al_bawwaaba_iii = ct_trace_water
+	b_al_bawwaaba_iii = ct_lakes
+	b_al_bawwaaba_iii = ct_frozen
+	b_al_bawwaaba_iii = ct_cold
+	b_al_bawwaaba_iii = ct_cool
+	b_al_bawwaaba_iii = ct_optimal_cold
+	b_al_bawwaaba_iii = ct_planet_survey
+	
+	b_al_bawwaaba_iii_b = tp_no_atmosphere
+	b_al_bawwaaba_iii_b = tp_no_water
+	b_al_bawwaaba_iii_b = tp_frozen
+	b_al_bawwaaba_iii_b = tp_cold
+	b_al_bawwaaba_iii_b = tp_cool
+	b_al_bawwaaba_iii_b = tp_optimal_cold
+	b_al_bawwaaba_iii_b = tp_planet_survey
+	
+	b_al_bawwaaba_waystation = ca_space_station_0
+}
+
+2998.1.1 = {
+	b_al_bawwaaba_iii = ct_toxic_atmosphere_domes
+	b_al_bawwaaba_iii = ct_colony_0
+	b_al_bawwaaba_iii = ct_colony_1
+	b_al_bawwaaba_iii = ct_colony_2
+	
+	b_al_bawwaaba_iii_b = tp_colony_0
+	
+	b_al_bawwaaba_waystation = ca_colony_0
+}

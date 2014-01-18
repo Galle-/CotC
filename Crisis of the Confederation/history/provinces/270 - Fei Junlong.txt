@@ -1,0 +1,53 @@
+# 270 Fei Junglong
+
+# County Title
+title = c_fei_junlong
+
+# Settlements
+max_settlements = 4
+b_fei_junlong_ii = temple
+b_fei_junlong_ii_b = city
+b_fei_junlong_iii = castle
+
+# Misc
+culture = sino_xingjie # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_fei_junlong_ii = tp_toxic_atmosphere
+	b_fei_junlong_ii = tp_no_water
+	b_fei_junlong_ii = tp_trace_water
+	b_fei_junlong_ii = tp_lakes
+	b_fei_junlong_ii = tp_burning
+	b_fei_junlong_ii = tp_hot
+	b_fei_junlong_ii = tp_warm
+	b_fei_junlong_ii = tp_planet_survey
+	
+	b_fei_junlong_ii_b = ct_no_atmosphere
+	b_fei_junlong_ii_b = ct_no_water
+	b_fei_junlong_ii_b = ct_burning
+	b_fei_junlong_ii_b = ct_hot
+	b_fei_junlong_ii_b = ct_warm
+	b_fei_junlong_ii_b = ct_planet_survey
+	
+	b_fei_junlong_iii = ca_toxic_atmosphere
+	b_fei_junlong_iii = ca_no_water
+	b_fei_junlong_iii = ca_trace_water
+	b_fei_junlong_iii = ca_burning
+	b_fei_junlong_iii = ca_hot
+	b_fei_junlong_iii = ca_warm
+	b_fei_junlong_iii = ca_optimal_hot
+	b_fei_junlong_iii = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_fei_junlong_ii = tp_toxic_atmosphere_domes
+	b_fei_junlong_ii = tp_colony_0
+	b_fei_junlong_ii = tp_colony_1
+	b_fei_junlong_ii = tp_colony_2
+	
+	b_fei_junlong_ii_b = ct_colony_0
+	
+	b_fei_junlong_iii = ca_colony_0
+}

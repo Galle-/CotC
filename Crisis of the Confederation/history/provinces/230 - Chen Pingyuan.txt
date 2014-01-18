@@ -1,0 +1,28 @@
+# 230 - Chen Pingyuan
+# 
+# County Title
+title = c_chen_pingyuan
+
+# Settlements
+max_settlements = 4
+				
+
+				b_chen_pingyuan = ca_castle
+				
+# Misc
+culture = sino_bianjiangese # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+	b_chen_pingyuan = ca_toxic_atmosphere
+	b_chen_pingyuan = ca_frozen
+	b_chen_pingyuan = ca_lakes
+	b_chen_pingyuan = ca_seas
+	
+	}
+2998.1.1 = {
+	b_chen_pingyuan = ca_toxic_atmosphere_domes
+	b_chen_pingyuan = ca_colony_0
+	b_chen_pingyuwn = FL_01_ca
+	}

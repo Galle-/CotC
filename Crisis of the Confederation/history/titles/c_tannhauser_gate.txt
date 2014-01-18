@@ -1,0 +1,7 @@
+# Modern era
+2489.1.1 = {
+	liege = "d_tereshkova"
+	law = true_cognatic_succession
+	law = succ_feudal_elective
+}
+2998.1.1 = { holder = 1101992 } # Nikolai McCabe

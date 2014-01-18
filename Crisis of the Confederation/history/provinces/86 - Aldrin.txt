@@ -1,0 +1,48 @@
+# 86 - Aldrin
+
+# County Title
+title = c_aldrin
+
+# Settlements
+max_settlements = 4
+b_aldrin_prime = castle
+b_aldrin_prime_b = temple
+b_aldrin_ii = city
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_aldrin_prime = ca_clean_atmosphere
+	b_aldrin_prime = ca_no_water
+	b_aldrin_prime = ca_trace_water
+	b_aldrin_prime = ca_lakes
+	b_aldrin_prime = ca_seas
+	b_aldrin_prime = ca_oceans
+	b_aldrin_prime = ca_burning
+	b_aldrin_prime = ca_planet_survey
+	
+	b_aldrin_prime_b = tp_no_atmosphere
+	b_aldrin_prime_b = tp_no_water
+	b_aldrin_prime_b = tp_burning
+	b_aldrin_prime_b = tp_planet_survey
+	
+	b_aldrin_ii = ct_toxic_atmosphere
+	b_aldrin_ii = ct_no_water
+	b_aldrin_ii = ct_trace_water
+	b_aldrin_ii = ct_burning
+	b_aldrin_ii = ct_hot
+	b_aldrin_ii = ct_planet_survey
+}
+
+2998.1.1 = {
+	b_aldrin_prime = ca_colony_0
+	b_aldrin_prime = ca_colony_1
+	
+	b_aldrin_prime_b = tp_colony_0
+	
+	b_aldrin_ii = ct_colony_0
+	b_aldrin_ii = ct_colony_1
+}

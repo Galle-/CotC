@@ -1,0 +1,49 @@
+# 250 - Jiayuan
+# 
+# County Title
+title = c_jiayuan
+
+# Settlements
+max_settlements = 4
+			
+				b_jiayuan_prime = city
+				b_jiayuan_prime_a = castle #originalstation-nowmilsurplus
+				b_jiayuan_prime_e = temple
+				b_jiayuan_orbital = castle #properfortress
+			
+
+# Misc
+culture = sino_xingjie # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+	b_jiayuan_prime = ct_clean_atmosphere
+	b_jiayuan_prime = ct_seas
+	b_jiayuan_prime = ct_warm
+	b_jiayuan_prime = ct_planet_survey
+	
+	b_jiayuan_prime_a = ca_toxic_atmosphere_domes
+	b_jiayuan_prime_a = ca_lakes
+	b_jiayuan_prime_a = ca_warm
+	b_jiayuan_prime_a = ca_planet_survey
+	
+	b_jiayuan_prime_e = tp_clean_atmosphere
+	b_jiayuan_prime_e = tp_trace_water
+	b_jiayuan_prime_e = tp_cool
+	b_jiayuan_prime_e = tp_planet_survey
+	
+}
+
+2998.1.1 = {
+
+	b_jiayuan_prime = ct_colony_0
+	b_jiayuan_prime = ct_colony_1
+	
+	b_jiayuan_prime_a = ca_colony_0
+	
+	b_jiayuan_prime_e = tp_colony_0
+	
+	b_jiayuan_prime = ca_space_station_0
+	b_jiayuan_prime = ca_space_station_1
+}

@@ -1,0 +1,58 @@
+# 263 - Xin Qin
+
+# County Title
+title = c_xin_qin
+
+# Settlements
+max_settlements = 7
+b_xin_qin_iii = city
+b_xin_qin_iii_b = temple
+b_xin_qin_iv = castle
+
+# Misc
+culture = sino_bianjiangese # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+	b_xin_qin_iii = ct_clean_atmosphere
+	b_xin_qin_iii = ct_no_water
+	b_xin_qin_iii = ct_trace_water
+	b_xin_qin_iii = ct_lakes
+	b_xin_qin_iii = ct_seas
+	b_xin_qin_iii = ct_burning
+	b_xin_qin_iii = ct_hot
+	b_xin_qin_iii = ct_warm
+	b_xin_qin_iii = ct_optimal_hot
+	b_xin_qin_iii = ct_planet_survey
+	
+	b_xin_qin_iii_b = tp_no_atmosphere
+	b_xin_qin_iii_b = tp_no_water
+	b_xin_qin_iii_b = tp_burning
+	b_xin_qin_iii_b = tp_hot
+	b_xin_qin_iii_b = tp_warm
+	b_xin_qin_iii_b = tp_optimal_hot
+	b_xin_qin_iii_b = tp_planet_survey
+	
+	b_xin_qin_iv = ca_toxic_atmosphere
+	b_xin_qin_iv = ca_no_water
+	b_xin_qin_iv = ca_trace_water
+	b_xin_qin_iv = ca_frozen
+	b_xin_qin_iv = ca_cold
+	b_xin_qin_iv = ca_cool
+	b_xin_qin_iv = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_xin_qin_iii = ct_colony_0
+	b_xin_qin_iii = ct_colony_1
+	b_xin_qin_iii = ct_colony_2
+	b_xin_qin_iii = ct_colony_3
+	
+	b_xin_qin_iii_b = tp_colony_0
+	
+	b_xin_qin_iv = ca_colony_0
+	b_xin_qin_iv = ca_colony_1
+	
+	trade_post = b_zhang
+}

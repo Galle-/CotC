@@ -1,0 +1,50 @@
+# 207 - Hu Lao Gate
+
+# County Title
+title = c_hu_lao_gate
+
+# Settlements
+max_settlements = 4
+b_hu_lao_gate = castle
+b_hu_lao_iii = city
+b_hu_lao_iii_b = temple
+
+# Misc
+culture = sino_centauri # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_hu_lao_gate = ca_space_station_0
+	b_hu_lao_gate = ca_space_station_1
+	b_hu_lao_gate = ca_space_station_2
+	
+	b_hu_lao_iii = ct_toxic_atmosphere
+	b_hu_lao_iii = ct_no_water
+	b_hu_lao_iii = ct_trace_water
+	b_hu_lao_iii = ct_lakes
+	b_hu_lao_iii = ct_frozen
+	b_hu_lao_iii = ct_cold
+	b_hu_lao_iii = ct_cool
+	b_hu_lao_iii = ct_planet_survey
+	
+	b_hu_lao_iii_b = tp_no_atmosphere
+	b_hu_lao_iii_b = tp_no_water
+	b_hu_lao_iii_b = tp_frozen
+	b_hu_lao_iii_b = tp_cold
+	b_hu_lao_iii_b = tp_cool
+	b_hu_lao_iii_b = tp_planet_survey
+}
+
+2998.1.1 = {
+	b_hu_lao_gate = ca_colony_0
+	b_hu_lao_gate = ca_colony_1
+	b_hu_lao_gate = ca_colony_2
+	
+	b_hu_lao_iii = ct_toxic_atmosphere_domes
+	b_hu_lao_iii = ct_colony_0
+	b_hu_lao_iii = ct_colony_1
+	b_hu_lao_iii = ct_colony_2
+	
+	b_hu_lao_iii_b = tp_colony_0
+}

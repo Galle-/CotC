@@ -1,0 +1,44 @@
+# 197 - Epsilon Indi
+
+# County Title
+title = c_epsilon_indi
+
+# Settlements
+max_settlements = 4
+b_epsilon_indi_iii = temple
+b_epsilon_indi_iii_b = city
+
+# Misc
+culture = russo_terran # Initial culture
+religion = terran_republican
+
+# History
+1.1.1 = {
+	b_epsilon_indi_iii = tp_toxic_atmosphere
+	b_epsilon_indi_iii = tp_no_water
+	b_epsilon_indi_iii = tp_trace_water
+	b_epsilon_indi_iii = tp_lakes
+	b_epsilon_indi_iii = tp_seas
+	b_epsilon_indi_iii = tp_frozen
+	b_epsilon_indi_iii = tp_cold
+	b_epsilon_indi_iii = tp_cool
+	b_epsilon_indi_iii = tp_planet_survey
+	
+	b_epsilon_indi_iii_b = ct_no_atmosphere
+	b_epsilon_indi_iii_b = ct_no_water
+	b_epsilon_indi_iii_b = ct_trace_water
+	b_epsilon_indi_iii_b = ct_lakes
+	b_epsilon_indi_iii_b = ct_frozen
+	b_epsilon_indi_iii_b = ct_cold
+	b_epsilon_indi_iii_b = ct_cool
+	b_epsilon_indi_iii_b = ct_planet_survey
+}
+
+2998.1.1 = {
+	b_epsilon_indi_iii = tp_toxic_atmosphere_domes
+	b_epsilon_indi_iii = tp_colony_0
+	b_epsilon_indi_iii = tp_colony_1
+	b_epsilon_indi_iii = tp_colony_2
+	
+	b_epsilon_indi_iii_b = ct_colony_0
+}

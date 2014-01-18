@@ -1,0 +1,24 @@
+# 236 - Kantebolei
+
+# County Title
+title = c_kantebolei
+
+# Settlements
+max_settlements = 4
+	b_kantebolei_iii = city
+	b_kantebolei_iii_b = castle
+	b_kantebolei_iv = temple
+	b_kantebolei_v = city
+
+# Misc
+culture = sino_bianjiangese # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+	
+}
+
+2998.1.1 = {
+
+}

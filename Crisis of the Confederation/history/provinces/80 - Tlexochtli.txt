@@ -1,0 +1,52 @@
+# 80 - Tlexochtli
+
+# County Title
+title = c_tlexochtli
+
+# Settlements
+max_settlements = 4
+b_tlexochtli_prime = city
+b_tlexochtli_ii = temple
+b_tlexochtli_iii = castle
+
+# Misc
+culture = mesoamerican_sexto_solar # Initial culture
+religion = adoptionist_cultist
+
+# History
+1.1.1 = {
+	b_tlexochtli_prime = ct_clean_atmosphere
+	b_tlexochtli_prime = ct_no_water
+	b_tlexochtli_prime = ct_trace_water
+	b_tlexochtli_prime = ct_lakes
+	b_tlexochtli_prime = ct_burning
+	b_tlexochtli_prime = ct_hot
+	b_tlexochtli_prime = ct_planet_survey
+	
+	b_tlexochtli_ii = tp_toxic_atmosphere
+	b_tlexochtli_ii = tp_no_water
+	b_tlexochtli_ii = tp_burning
+	b_tlexochtli_ii = tp_hot
+	b_tlexochtli_ii = tp_warm
+	b_tlexochtli_ii = tp_planet_survey
+	
+	b_tlexochtli_iii = ca_toxic_atmosphere
+	b_tlexochtli_iii = ca_no_water
+	b_tlexochtli_iii = ca_trace_water
+	b_tlexochtli_iii = ca_burning
+	b_tlexochtli_iii = ca_hot
+	b_tlexochtli_iii = ca_warm
+	b_tlexochtli_iii = ca_optimal_hot
+	b_tlexochtli_iii = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_tlexochtli_prime = ct_colony_0
+	b_tlexochtli_prime = ct_colony_1
+	b_tlexochtli_prime = ct_colony_2
+	
+	b_tlexochtli_ii = tp_colony_0
+	
+	b_tlexochtli_iii = ca_colony_0
+	b_tlexochtli_iii = ca_colony_1
+}

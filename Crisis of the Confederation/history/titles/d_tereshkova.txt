@@ -1,0 +1,7 @@
+# Modern era
+2489.1.1 = {
+	liege = "e_terran_confederation"
+	law = true_cognatic_succession
+	law = succ_open_elective
+}
+2998.1.1 = { holder = 11011624 } # Izolda Preobrazhensky

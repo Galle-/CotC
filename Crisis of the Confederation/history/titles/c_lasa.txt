@@ -1,0 +1,6 @@
+2802.6.13 = {
+	liege = "d_tian_yuan"
+	law = succ_open_elective
+	law = true_cognatic_succession
+}
+2982.11.29 = { holder = 1101426 } # Edward Allen

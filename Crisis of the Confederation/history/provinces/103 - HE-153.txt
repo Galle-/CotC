@@ -1,0 +1,20 @@
+# 103 - HE-153
+
+# County Title
+title = c_he_153
+
+# Settlements
+max_settlements = 4
+
+b_he_153_station_alpha = castle
+
+# Misc
+culture = sino_centauri # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

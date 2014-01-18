@@ -1,0 +1,54 @@
+# 275 - Xuanwu
+
+# County Title
+title = c_xuanwu
+
+# Settlements
+max_settlements = 6
+b_xuanwu_prime = temple
+b_xuanwu_prime_b = city
+b_xuanwu_iii_b = castle
+
+# Misc
+culture = sino_xingjie # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_xuanwu_prime = tp_clean_atmosphere
+	b_xuanwu_prime = tp_no_water
+	b_xuanwu_prime = tp_trace_water
+	b_xuanwu_prime = tp_lakes
+	b_xuanwu_prime = tp_seas
+	b_xuanwu_prime = tp_oceans
+	b_xuanwu_prime = tp_frozen
+	b_xuanwu_prime = tp_cold
+	b_xuanwu_prime = tp_planet_survey
+	
+	b_xuanwu_prime_b = ct_clean_atmosphere
+	b_xuanwu_prime_b = ct_no_water
+	b_xuanwu_prime_b = ct_trace_water
+	b_xuanwu_prime_b = ct_lakes
+	b_xuanwu_prime_b = ct_seas
+	b_xuanwu_prime_b = ct_oceans
+	b_xuanwu_prime_b = ct_frozen
+	b_xuanwu_prime_b = ct_cold
+	b_xuanwu_prime_b = ct_planet_survey
+	
+	b_xuanwu_iii_b = ca_toxic_atmosphere
+	b_xuanwu_iii_b = ca_no_water
+	b_xuanwu_iii_b = ca_trace_water
+	b_xuanwu_iii_b = ca_frozen
+	b_xuanwu_iii_b = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_xuanwu_prime = tp_colony_0
+	b_xuanwu_prime = tp_colony_1
+	
+	b_xuanwu_prime_b = ct_colony_0
+	b_xuanwu_prime_b = ct_colony_1
+	b_xuanwu_prime_b = ct_colony_2
+	
+	b_xuanwu_iii_b = ca_colony_0
+}

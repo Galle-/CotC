@@ -1,0 +1,54 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+title_expected_successor;Expected Successor;;;;;;;;;;;;;x
+title_expected_successor_desc;This character is currently expected to succeed their superior upon their death or retirement.;;;;;;;;;;;;;x
+opinion_promised_me_appointment;Promised an Appointed Title;;;;;;;;;;;;;x
+opinion_refused_me_appointment;Refused an Appointed Title;;;;;;;;;;;;;x
+opinion_retracted_promised_appointment;Retracted a Promised Appointed Title;;;;;;;;;;;;;x
+opinion_stole_promised_appointment;Stole My Future Appointed Title;;;;;;;;;;;;;x
+opinion_attempted_appointment_theft;Tried to Steal My Future Appointed Title;;;;;;;;;;;;;x
+opinion_nominated_me_for_appointment;Nominated Me For Appointed Title;;;;;;;;;;;;;x
+opinion_promised_relative_appointment;Promised a Relative an Appointed Title;;;;;;;;;;;;;x
+opinion_refused_relative_appointment;Refused a Relative an Appointed Title;;;;;;;;;;;;;x
+opinion_retracted_relative_appointment;Retracted a Relative's Promised Appointed Title;;;;;;;;;;;;;x
+nominate_self_for_appointment;Nominate Yourself as [Root.Liege.GetTitle] [Root.Liege.GetOnlyDynastyName]'s Successor;;;;;;;;;;;;;x
+nominate_self_for_appointment_desc;[Root.Liege.GetTitle] [Root.Liege.GetOnlyDynastyName] currently controls an appointed office. You could approach [Root.Liege.Liege.GetTitle] [Root.Liege.Liege.GetOnlyDynastyName] and suggest that [Root.Liege.Liege.GetSheHe] appoint you as [Root.Liege.GetHerHis] successor.;;;;;;;;;;;;;x
+nominate_relative_for_appointment;Nominate [Root.GetFullName] as [Root.Liege.GetTitle] [Root.Liege.GetOnlyDynastyName]'s Successor;;;;;;;;;;;;;x
+nominate_relative_for_appointment_desc;[Root.GetFullName]'s superior, [Root.Liege.GetTitle] [Root.Liege.GetOnlyDynastyName], currently controls an appointed office. You could approach [Root.Liege.Liege.GetTitle] [Root.Liege.Liege.GetOnlyDynastyName] and suggest that [Root.Liege.Liege.GetSheHe] appoint [Root.GetFirstName] as [Root.Liege.GetOnlyDynastyName]'s successor.;;;;;;;;;;;;;x
+EVTDESCNEPOTISM3;You have appointed [From.GetFullName] to [FromFrom.GetFullName]'s former offices.;;;;;;;;;;;;;x
+EVTDESCNEPOTISM4;[From.GetTitle] [From.GetOnlyDynastyName] has appointed [FromFrom.GetFullName] to several of your former offices.;;;;;;;;;;;;;x
+EVTDESCNEPOTISM5;TO: [Root.GetTitle] [Root.GetFullName]\nFROM: [FromFrom.GetTitle] [FromFrom.GetFullName]\nRE: Appointment to Office\n[From.GetFullName]'s departure has left critical vacancies. As previously agreed, I am appointing you to fulfill those vacancies.;;;;;;;;;;;;;x
+EVTTOOLTIPNEPOTISM100;You will prepare to approach [Root.Liege.Liege.GetTitle] [Root.Liege.Liege.GetOnlyDynastyName].;;;;;;;;;;;;;x
+EVTDESCNEPOTISM100;You are considering nominating yourself as [Root.Liege.GetTitle] [Root.Liege.GetFullName]'s expected successor.;;;;;;;;;;;;;x
+EVTOPTBNEPOTISM100;I'll need to talk to [Root.Liege.Liege.GetTitle] [Root.Liege.Liege.GetOnlyDynastyName].;;;;;;;;;;;;;x
+EVTOPTCNEPOTISM100;I'll need to talk to the Regent.;;;;;;;;;;;;;x
+EVTOPTDNEPOTISM100;I'll need to talk to the Prime Minister.;;;;;;;;;;;;;x
+EVTTOOLTIPNEPOTISM101;will consider your nomination.;;;;;;;;;;;;;x
+EVTDESCNEPOTISM101;TO: [Root.GetTitle] [Root.GetFullName]\nFROM: [From.GetTitle] [From.GetFullName]\nRE: Future Office Appointments\nIt has come to my attention that you are in need of a successor in the event of [From.Liege.GetTitle] [From.Liege.GetFullName]'s eventual death or retirement. I wish to apply for a position as the next holder of [From.Liege.GetHerHis] appointed offices.;;;;;;;;;;;;;x
+EVTDESCNEPOTISM102;TO: [Root.GetTitle] [Root.GetFullName]\nFROM: [From.GetTitle] [From.GetFullName]\nRE: Future Office Appointments\nAfter considering your proposal, I have found your case most convincing. You may now consider yourself [Root.Liege.GetTitle] [Root.Liege.GetOnlyDynastyName]'s expected successor.;;;;;;;;;;;;;x
+EVTOPTANEPOTISM102;Mission accomplished.;;;;;;;;;;;;;x
+EVTDESCNEPOTISM103;[From.GetTitle] [From.GetOnlyDynastyName] is now expected to appoint [FromFrom.GetTitle] [FromFrom.GetFullName] as your successor.;;;;;;;;;;;;;x
+EVTOPTANEPOTISM104;[From.GetTitle] [From.GetOnlyDynastyName] is now apparently expected to appoint [FromFrom.GetTitle] [FromFrom.GetFullName] as [Root.Liege.GetTitle] [Root.Liege.GetOnlyDynastyName]'s successor.;;;;;;;;;;;;;x
+EVTOPTANEPOTISM104;Damn you, [FromFrom.GetOnlyDynastyName], we had a deal!;;;;;;;;;;;;;x
+EVTOPTANEPOTISM105;Your [GetFromRelation], [From.GetFullName], is apparently no longer [From.Liege.GetTitle] [From.Liege.GetOnlyDynastyName]'s expected successor.;;;;;;;;;;;;;x
+EVTOPTANEPOTISM105;You gave me your word, damn you!;;;;;;;;;;;;;x
+EVTDESCNEPOTISM106;TO: [Root.GetTitle] [Root.GetFullName]\nFROM: [From.GetTitle] [From.GetFullName]\nRE: Future Office Appointments\nAfter considering your proposal, I regret to inform you that I cannot accept your nomination at this time.;;;;;;;;;;;;;x
+EVTOPTANEPOTISM106;Well, it was worth a try.;;;;;;;;;;;;;x
+EVTDESCNEPOTISM107;[FromFrom.GetTitle] [FromFrom.GetFullName] nominated [FromFrom.GetHerselfHimself] as your successor, but did not receive [From.GetTitle] [From.GetOnlyDynastyName]'s approval.;;;;;;;;;;;;;x
+EVTDESCNEPOTISM108;[FromFrom.GetTitle] [FromFrom.GetFullName] tried to nominate [FromFrom.GetHerselfHimself] as [Root.Liege.GetTitle] [Root.Liege.GetOnlyDynastyName]'s successor, but did not receive [From.GetTitle] [From.GetOnlyDynastyName]'s approval.;;;;;;;;;;;;;x
+EVTDESCNEPOTISM200;You have decided to nominate one of your relatives as the successor to their current superior, and identified the individual currently responsible for handling such appointments.;;;;;;;;;;;;;x
+EVTOPTANEPOTISM200;Well, would you look at that, it's me!;;;;;;;;;;;;;x
+EVTOPTBNEPOTISM200;I'll need to talk to their superior's superiors.;;;;;;;;;;;;;x
+EVTOPTCNEPOTISM200;I'll need to talk to the Regent.;;;;;;;;;;;;;x
+EVTOPTDNEPOTISM200;I'll need to talk to the Prime Minister.;;;;;;;;;;;;;x
+EVTDESCNEPOTISM201;TO: [Root.GetFullName]\nFROM: [From.GetTitle] [From.GetFullName]\nRE: Future Office Appointments\nGiven your exemplary track record of service to both our family and the nation, I have decided to appoint you as [Root.Liege.GetTitle] [Root.Liege.GetOnlyDynastyName]'s successor upon [Root.Liege.GetHerHis] death or retirement.;;;;;;;;;;;;;x
+EVTOPTANEPOTISM201;Why, thank you, [GetFromRelation].;;;;;;;;;;;;;x
+EVTDESCNEPOTISM202;[From.GetTitle] [From.GetOnlyDynastyName] is now expected to appoint [FromFrom.GetFullName] as your successor.;;;;;;;;;;;;;x
+EVTDESCNEPOTISM203;[From.GetTitle] [From.GetOnlyDynastyName] is now expected to appoint [FromFrom.GetFullName] as [Root.Liege.GetTitle] [Root.Liege.GetFullName]'s successor.;;;;;;;;;;;;;x
+EVTOPTANEPOTISM203;You gave me your word, damn you!;;;;;;;;;;;;;x
+EVTDESCNEPOTISM204;[From.GetTitle] [From.GetOnlyDynastyName] now intends to appoint [FromFrom.GetFullName] as [FromFrom.Liege.GetTitle] [FromFrom.Liege.GetFullName]'s successor, rather than your chosen candidate.;;;;;;;;;;;;;x
+EVTOPTANEPOTISM204;You gave me your word, damn you!;;;;;;;;;;;;;x
+EVTDESCNEPOTISM205;Your [GetFromRelation], [From.GetTitle] [From.GetFullName], intends to suggest that you be appointed [Root.Liege.GetTitle] [Root.Liege.GetOnlyDynastyName]'s successor in the event of [Root.Liege.GetHerHis] death or retirement.;;;;;;;;;;;;;x
+EVTOPTANEPOTISM205;Why, thank you, [GetFromRelation].;;;;;;;;;;;;;x
+EVTDESCNEPOTISM206;TO: [Root.GetTitle] [Root.GetFullName]\nFROM: [FromFrom.GetTitle] [FromFrom.GetFullName]\nRE: Future Office Appointments\nIt has come to my attention that you are in need of a successor in the event of [From.Liege.GetTitle] [From.Liege.GetFullName]'s eventual death or retirement. I wish to nominate [From.GetFullName] as the future successor to [From.Liege.GetHerHis] appointed offices.;;;;;;;;;;;;;x
+EVTDESCNEPOTISM208;TO: [Root.GetTitle] [Root.GetFullName]\nFROM: [From.GetTitle] [From.GetFullName]\nRE: Future Office Appointments\nAfter considering your proposal, I have found your case most convincing. You may now consider [FromFrom.GetFullName] to be [FromFrom.Liege.GetTitle] [FromFrom.Liege.GetOnlyDynastyName]'s expected successor.;;;;;;;;;;;;;x
+EVTDESCNEPOTISM213;TO: [Root.GetTitle] [Root.GetFullName]\nFROM: [From.GetTitle] [From.GetFullName]\nRE: Future Office Appointments\nAfter considering your proposal, I regret to inform you that I cannot accept your nomination at this time.;;;;;;;;;;;;;x

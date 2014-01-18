@@ -1,0 +1,90 @@
+# New CotC Sprites
+spriteTypes = {
+	### CONFEDERATE MALE ###
+	spriteType = {
+		name = "GFX_confederate_male_clothes_behind"
+		texturefile = "gfx\\characters\\confederate_male_clothes_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_confederate_male_clothes"
+		texturefile = "gfx\\characters\\confederate_male_clothes.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_confederate_male_clothes_infront"
+		texturefile = "gfx\\characters\\confederate_male_clothes_infront.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_confederate_male_headgear_behind"
+		texturefile = "gfx\\characters\\confederate_male_headgear_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_confederate_male_headgear"
+		texturefile = "gfx\\characters\\confederate_male_headgear.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_confederate_male_headgear_mid"
+		texturefile = "gfx\\characters\\confederate_male_headgear_mid.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	
+	### CONFEDERATE FEMALE ###
+	spriteType = {
+		name = "GFX_confederate_female_clothes_behind"
+		texturefile = "gfx\\characters\\confederate_female_clothes_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_confederate_female_clothes"
+		texturefile = "gfx\\characters\\confederate_female_clothes.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_confederate_female_clothes_infront"
+		texturefile = "gfx\\characters\\confederate_female_clothes_infront.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_confederate_female_headgear_behind"
+		texturefile = "gfx\\characters\\confederate_female_headgear_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_confederate_female_headgear"
+		texturefile = "gfx\\characters\\confederate_female_headgear.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_confederate_female_headgear_mid"
+		texturefile = "gfx\\characters\\confederate_female_headgear_mid.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+}

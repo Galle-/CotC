@@ -1,0 +1,21 @@
+2557.1.1 = {
+	liege = "k_avalon"
+	law = true_cognatic_succession
+	law = succ_primogeniture
+	holder = "1906014" # Liam I Nelson
+}
+2594.1.1 = { holder = "1806014" } # Liam II Nelson
+2638.1.1 = { holder = "1706014" } # Liam III Nelson
+2660.1.1 = { holder = "1606014" } # Liam IV Nelson
+2687.1.1 = { holder = "1506014" } # Liam V Nelson
+2702.1.1 = { holder = "1406014" } # Liam VI Nelson
+2705.1.1 = { law = succ_ultimogeniture }
+2709.1.1 = { holder = "1306014" } # Liam VII Nelson
+2753.1.1 = { holder = "1206014" } # Liam VIII Nelson
+2773.1.1 = { holder = "1106014" } # Liam IX Nelson
+2815.1.1 = { holder = "16020019" } # Victoria IX executes the entire Nelson clone line for treason
+2816.1.1 = { holder = "1501566" } # Edward I Firestone
+2876.1.1 = { holder = "1401566" } # Edward II Firestone
+2937.1.1 = { holder = "1301566" } # Edward III Firestone
+2982.1.1 = { holder = "1201566" } # Edward IV Nelson
+2996.2.19 = { holder = "1101566" } # Edward V Nelson

@@ -1,0 +1,497 @@
+# SECTOR NOVYY EDEM
+11011872 = {
+	# Grand Admiral of the Military State of Novy Edem, 2987-2998
+	name = "Dmitriy"
+	dynasty = 11872 # Solomonov
+	female = no
+	
+	culture = russo_edemite
+	religion = astrist
+	
+	add_trait = misguided_warrior
+	add_trait = marine_colonel
+	add_trait = proud
+	add_trait = ambitious
+	add_trait = radical
+	add_trait = introverted
+	add_trait = neurotic
+	add_trait = close_minded
+	
+	2953.1.1 = { birth = "2953.1.1" }
+	2969.1.1 = { add_spouse = 12111424 } # Mariya Norin
+}
+
+11111872 = {
+	# Oldest son of Dmitriy Solomonov
+	# Commander of Distsiplina
+	name = "Arkady"
+	dynasty = 11872 # Solomonov
+	female = no
+	
+	culture = russo_edemite
+	religion = astrist
+	
+	father = 11011872 # Dmitriy Solomonov
+	mother = 12111424 # Mariya Norin
+	
+	add_trait = brilliant_strategist
+	add_trait = warship_captain
+	add_trait = proud
+	add_trait = ambitious
+	add_trait = pragmatic
+	add_trait = neurotic
+	add_trait = cold
+	
+	2976.1.1 = { birth = "2976.1.1" }
+}
+
+11211872 = {
+	# Second son of Dmitriy Solomonov
+	# Commander of Loyal'nost'
+	name = "Konstantin"
+	dynasty = 11872 # Solomonov
+	female = no
+	
+	culture = russo_edemite
+	religion = astrist
+	
+	father = 11011872 # Dmitriy Solomonov
+	mother = 12111424 # Mariya Norin
+	
+	add_trait = tough_soldier
+	add_trait = fighter_pilot
+	add_trait = carefree
+	add_trait = extraverted
+	add_trait = friendly
+	add_trait = proud
+	add_trait = content
+	
+	2979.1.1 = { birth = "2979.1.1" }
+}
+
+11311872 = {
+	# Youngest son of Dmitriy Solomonov
+	# Commander of Muzhestvo
+	name = "Alexei"
+	dynasty = 11872 # Solomonov
+	female = no
+	
+	culture = russo_edemite
+	religion = astrist
+	
+	father = 11011872 # Dmitriy Solomonov
+	mother = 12111424 # Mariya Norin
+	
+	add_trait = dutiful_academic
+	add_trait = open_minded
+	add_trait = friendly
+	add_trait = introverted
+	add_trait = neurotic
+	add_trait = humble
+	add_trait = homosexual
+	
+	2982.1.1 = { birth = "2982.1.1" }
+}
+
+11011424 = {
+	# Admiral of Prochnost', 2995 - Present
+	# Commander of Vernost', 2972 - 2995
+	name = "Gennady"
+	dynasty = 11424 # Norin
+	female = no
+	
+	culture = russo_edemite
+	religion = astrist
+	
+	father = 12011424 # Gavriil Norin
+	
+	2951.1.1 = { birth = "2951.1.1" }
+}
+
+11111424 = {
+	# Daughter of Gennady Norin
+	# Commander of Vernost', 2995 - Present
+	name = "Viktoriya"
+	dynasty = 11424 # Norin
+	female = yes
+	
+	culture = russo_edemite
+	religion = astrist
+	
+	father = 11011424 # Gennady Norin
+	
+	2977.1.1 = { birth = "2977.1.1" }
+}
+
+12111424 = {
+	# Wife of Dmitriy Solomonov
+	# Commander of Ostorozhnost'
+	name = "Mariya"
+	dynasty = 11424 # Norin
+	female = yes
+	
+	culture = russo_edemite
+	religion = astrist
+	
+	father = 12011424 # Gavriil Norin
+	
+	2953.1.1 = { birth = "2953.1.1" }
+}
+
+12211424 = {
+	# Second son of Gavriil Norin
+	# Commander of Stabil'nost', 2976 - Present
+	name = "Artyom"
+	dynasty = 11424 # Norin
+	female = no
+	
+	culture = russo_edemite
+	religion = astrist
+	
+	father = 12011424 # Gavriil Norin
+	
+	2958.1.1 = { birth = "2958.1.1" }
+}
+
+12011424 = {
+	# Admiral of Prochnost', 2972 - 2995
+	name = "Gavriil"
+	dynasty = 11424 # Norin
+	female = no
+	
+	culture = russo_edemite
+	religion = astrist
+	
+	add_trait = brilliant_strategist
+	add_trait = warship_captain
+	add_trait = radical
+	add_trait = humble
+	add_trait = content
+	add_trait = friendly
+	add_trait = close_minded
+	add_trait = brave
+	add_trait = homosexual
+	
+	2922.1.1 = { birth = "2922.1.1" }
+	2995.1.1 = { death = "2995.1.1" }
+}
+
+# SECTOR SOVERSHENSTVO
+11010240 = {
+	# Admiral of Sovershenstvo, 2988 - Present
+	# Commander of Sashi Zvezdy, 2965 - 2988
+	name = "Roman"
+	dynasty = 10240 # Volkov
+	female = no
+	
+	culture = russo_edemite
+	religion = astrist
+	
+	father = 12010240 # Pyotr Volkov
+	
+	2949.1.1 = { birth = "2949.1.1" }
+}
+
+11110240 = {
+	# Commander of Sashi Zvezdy, 2988 - Present
+	name = "Pyotr"
+	dynasty = 10240 # Volkov
+	female = no
+	
+	culture = russo_edemite
+	religion = astrist
+	
+	father = 11010240 # Roman Volkov
+	
+	2971.1.1 = { birth = "2971.1.1" }
+}
+
+12010240 = {
+	# Admiral of Sovershenstvo, 2956 - 2988
+	name = "Pyotr"
+	dynasty = 10240 # Volkov
+	female = no
+	
+	culture = russo_edemite
+	religion = astrist
+	
+	2929.1.1 = { birth = "2929.1.1" }
+}
+
+12110240 = {
+	# Commander of Ad, 2972 - Present
+	# Commander of Vozneseniye, 2972 - 2994
+	name = "Konstantin"
+	dynasty = 10240 # Volkov
+	female = no
+	
+	culture = russo_edemite
+	religion = astrist
+	
+	father = 12010240 # Pyotr Volkov
+	
+	2952.1.1 = { birth = "2952.1.1" }
+}
+
+12210240 = {
+	# Commander of Vozneseniye, 2994 - Present
+	name = "Valeriya"
+	dynasty = 10240 # Volkov
+	female = yes
+	
+	culture = russo_edemite
+	religion = astrist
+	
+	father = 12110240 # Konstantin Volkov
+	
+	2974.1.1 = { birth = "2974.1.1" }
+}
+
+# SECTOR SHEN YAN
+11011024 = {
+	# Admiral of Shen Yan, 2972 - Present
+	name = "Tatyana"
+	dynasty = 11024 # Kalashnik
+	female = yes
+	
+	culture = russo_edemite
+	religion = astrist
+	
+	2942.1.1 = { birth = "2942.1.1" }
+}
+
+11111024 = {
+	# Commander of Glaz Boga, 2985 - Present
+	name = "Tamara"
+	dynasty = 11024 # Kalashnik
+	female = yes
+	
+	culture = russo_edemite
+	religion = astrist
+	
+	add_trait = homosexual
+	
+	mother = 11011024 # Tatyana Kalashnik
+	
+	2963.1.1 = { birth = "2963.1.1" }
+}
+
+11211024 = {
+	# Commander of Luoxuan, 2992 - Present
+	name = "Rozalina"
+	dynasty = 11024 # Kalashnik
+	female = yes
+	
+	culture = russo_edemite
+	religion = astrist
+	
+	mother = 11011024 # Tatyana Kalashnik
+	
+	add_trait = fair
+	
+	2969.1.1 = { birth = "2969.1.1" }
+}
+
+# SECTOR ALMAZ
+11013056 = {
+	# Admiral of Almaz, 2994 - Present
+	name = "Timofei"
+	dynasty = 13056 # Tian
+	female = no
+	
+	culture = sino_edemite
+	religion = astrist
+	
+	2956.1.1 = { birth = "2956.1.1" }
+}
+
+11113056 = {
+	# Commander of Zhemchuzhina, 2994 - Present
+	name = "Nika"
+	dynasty = 13056 # Tian
+	female = yes
+	
+	culture = sino_edemite
+	religion = astrist
+	
+	2978.1.1 = { birth = "2978.1.1" }
+}
+
+# SECTOR MAOXIAN
+11013424 = {
+	# Admiral of Maoxian, 2996 - Present
+	# Rebellious admiral who has defected to Xin Zizhiqu
+	name = "Ekateirna"
+	dynasty = 13424 # Liao
+	female = yes
+	
+	culture = sino_edemite
+	religion = astrist
+	
+	add_trait = intricate_webweaver
+	add_trait = extraverted
+	add_trait = friendly
+	add_trait = pragmatic
+	add_trait = ambitious
+	
+	father = 12013424 # Viktor Liao
+	
+	2963.1.1 = { birth = "2963.1.1" }
+}
+
+12013424 = {
+	# Admiral of Maoxian, 2960 - 2996
+	name = "Viktor"
+	dynasty = 13424 # Liao
+	female = no
+	
+	culture = sino_edemite
+	religion = astrist
+	
+	2928.1.1 = { birth = "2928.1.1" }
+	2996.1.1 = { death = "2996.1.1" }
+}
+
+12113424 = {
+	# Commander of Pei Cheng, 2996 - Present
+	name = "Ulyana"
+	dynasty = 13424 # Liao
+	female = yes
+	
+	culture = sino_edemite
+	religion = astrist
+	
+	add_trait = tough_soldier
+	add_trait = marine_colonel
+	add_trait = disciplined
+	add_trait = close_minded
+	add_trait = radical
+	add_trait = ambitious
+	
+	father = 12013424 # Viktor Liao
+	
+	2967.1.1 = { birth = "2967.1.1" }
+}
+
+# SECTOR MIR
+1104736 = {
+	# Admiral of Mir, 2990 - Present
+	name = "Natalya"
+	dynasty = 4736 # Ramos
+	female = yes
+	
+	culture = hispanic_edemite
+	religion = astrist
+	
+	add_trait = brilliant_strategist
+	add_trait = fighter_pilot
+	add_trait = proud
+	add_trait = close_minded
+	add_trait = cold
+	add_trait = radical
+	add_trait = neurotic
+	
+	2960.1.1 = { birth = "2960.1.1" }
+}
+1114736 = {
+	# Commander of Vynoslivost', 2998 - Present
+	name = "Nikolai"
+	dynasty = 4736 # Ramos
+	female = no
+	
+	culture = hispanic_edemite
+	religion = astrist
+	
+	add_trait = charismatic_negotiator
+	add_trait = beautiful
+	add_trait = open_minded
+	add_trait = friendly
+	add_trait = introverted
+	add_trait = neurotic
+	add_trait = craven
+	
+	mother = 1104736 # Natalya Ramos
+	
+	2982.1.1 = { birth = "2982.1.1" }
+}
+
+# SECTOR PROBEDA
+1108560 = {
+	# Admiral of Probeda, 2994 - Present
+	# Commander of Vera, 2988 - 2994
+	name = "Izabella"
+	dynasty = 8560 # Sakamoto
+	female = yes
+	
+	culture = japanese_edemite
+	religion = astrist
+	
+	mother = 1208560 # Dominika Sakamoto
+	
+	add_trait = skilled_tactician
+	add_trait = fighter_pilot
+	add_trait = friendly
+	add_trait = disciplined
+	add_trait = close_minded
+	add_trait = neurotic
+	add_trait = brave
+	add_trait = content
+
+	2972.1.1 = { birth = "2972.1.1" }
+}
+
+1208560 = {
+	# Admiral of Probeda, 2986 - 2994
+	name = "Dominika"
+	dynasty = 8560 # Sakamoto
+	female = yes
+	
+	culture = japanese_edemite
+	religion = astrist
+	
+	2951.1.1 = { birth = "2951.1.1" }
+	2994.1.1 = {
+		death = {
+			death_reason = death_murder_unknown
+			killer = 1228560
+		}
+	}
+}
+
+1218560 = {
+	# Commander of Tselostnost', 2989 - Present
+	name = "Vasily"
+	dynasty = 8560 # Sakamoto
+	female = no
+	
+	culture = japanese_edemite
+	religion = astrist
+	
+	add_trait = intricate_webweaver
+	add_trait = introverted
+	add_trait = cold
+	add_trait = disciplined
+	add_trait = homosexual
+	
+	2973.1.1 = { birth = "2973.1.1" }
+}
+
+1228560 = {
+	# Commander of Vera, 2994 - Present
+	name = "Zoya"
+	dynasty = 8560 # Sakamoto
+	female = yes
+	
+	culture = japanese_edemite
+	religion = astrist
+	
+	add_trait = elusive_shadow
+	add_trait = extraverted
+	add_trait = cold
+	add_trait = carefree
+	add_trait = ambitious
+	add_trait = pragmatic
+	add_trait = homosexual
+	
+	2975.1.1 = { birth = "2975.1.1" }
+}

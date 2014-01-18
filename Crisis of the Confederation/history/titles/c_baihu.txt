@@ -1,0 +1,7 @@
+# Modern era
+2489.1.1 = {
+	liege = "d_baihu"
+	law = true_cognatic_succession
+	law = succ_catholic_bishopric
+}
+2998.1.1 = { holder = 11013026 } # Cheng Xiao

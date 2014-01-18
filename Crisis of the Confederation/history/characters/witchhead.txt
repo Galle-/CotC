@@ -1,0 +1,243 @@
+# PIRATE LORDS
+1108489 = {
+	# Pirate Queen of the Core Witchhead, 2995 - Present
+	name = "Kaoru"
+	dynasty = 8489 # Maeda
+	female = yes
+	
+	culture = japanese_tengoku
+	religion = space_pirate
+	
+	add_trait = brilliant_strategist
+	add_trait = fighter_pilot
+	add_trait = fair
+	add_trait = genius
+	add_trait = brave
+	add_trait = extroverted
+	add_trait = cold
+	add_trait = pragmatic
+	add_trait = carefree
+	add_trait = proud
+	
+	give_nickname = nick_the_black_tiger
+	
+	2977.1.1 = { birth = "2977.1.1" }
+}
+
+11010639 = {
+	# Pirate Lord of Trigorin
+	name = "Nikita"
+	dynasty = 10639 # Grebenshchikov
+	female = no
+	
+	culture = russo_strugatskite
+	religion = space_pirate
+	
+	add_trait = elusive_shadow
+	add_trait = ambitious
+	add_trait = quick
+	add_trait = introverted
+	add_trait = disciplined
+	
+	2956.1.1 = { birth = "2956.1.1" }
+}
+
+1105143 = {
+	# Pirate Lord of WH-998 and WH-229
+	name = "Malcolm"
+	dynasty = 5143 # Bhosle
+	female = no
+	
+	culture = indo_frontiersman
+	religion = space_pirate
+	
+	add_trait = skilled_tactician
+	add_trait = warship_captain
+	add_trait = ambitious
+	add_trait = proud
+	add_trait = cold
+	add_trait = pragmatic
+	add_trait = brave
+	
+	2957.1.1 = { birth = "2957.1.1" }
+}
+
+1118921 = {
+	# Pirate Lady of Alpha Sagitarii
+	name = "Junko"
+	dynasty = 8921 # Shibata
+	female = yes
+	
+	culture = japanese_tengoku
+	religion = space_pirate
+	
+	add_trait = twin
+	add_trait = intricate_webweaver
+	add_trait = pragmatic
+	add_trait = proud
+	add_trait = introverted
+	add_trait = open_minded
+	add_trait = disciplined
+	add_trait = skeptical
+	
+	father = 1108921 # Jiro Shibata (former Jionese military officer)
+	mother = 1318425 # Michiko Hasegawa
+	
+	2965.1.1 = { birth = "2965.1.1" }
+}
+
+1128921 = {
+	# Pirate Lady of Napata
+	name = "Chieko"
+	dynasty = 8921 # Shibata
+	female = yes
+	
+	culture = japanese_tengoku
+	religion = space_pirate
+	
+	add_trait = twin
+	add_trait = skilled_tactician
+	add_trait = marine_colonel
+	add_trait = brave
+	add_trait = carefree
+	add_trait = pragmatic
+	add_trait = proud
+	add_trait = spiritual
+	add_trait = extraverted
+	
+	father = 1108921 # Jiro Shibata
+	mother = 1318425 # Michiko Hasegawa
+	
+	2965.1.1 = { birth = "2965.1.1" }
+}
+
+# STRUGATSKITE ARMED FORCES
+11012047 = {
+	# Commander of WH-930
+	name = "Leonid"
+	dynasty = 12047 # Uspensky
+	female = no
+	
+	culture = russo_strugatskite
+	religion = neo_socialist
+	
+	add_trait = skilled_tactician
+	add_trait = warship_captain
+	
+	2954.1.1 = { birth = "2954.1.1" }
+}
+
+11013263 = {
+	# Commander of WH-178
+	name = "Vasilisa"
+	dynasty = 13263 # Ding
+	female = yes
+	
+	culture = sino_strugatskite
+	religion = neo_socialist
+	
+	add_trait = tough_soldier
+	add_trait = fighter_pilot
+	
+	2958.1.1 = { birth = "2958.1.1" }
+}
+
+11013135 = {
+	# Commander of WH-835
+	name = "Alexei"
+	dynasty = 13135 # Jiang
+	female = no
+	
+	culture = sino_strugatskite
+	religion = neo_socialist
+	
+	add_trait = skilled_tactician
+	add_trait = fighter_pilot
+	
+	2964.1.1 = { birth = "2964.1.1" }
+}
+
+11011615 = {
+	# Commander of WH-732
+	name = "Kirill"
+	dynasty = 11615 # Potyomkin
+	female = no
+	
+	culture = russo_strugatskite
+	religion = neo_socialist
+	
+	add_trait = skilled_tactician
+	add_trait = fighter_pilot
+	
+	2951.1.1 = { birth = "2951.1.1" }
+}
+
+# JION SPACE ATTACK FORCE
+1138921 = {
+	# Commander of WH-336
+	name = "Koji"
+	dynasty = 8921 # Shibata
+	female = no
+	
+	culture = japanese_tengoku
+	religion = colonial_seperatist
+	
+	add_trait = misguided_warrior
+	add_trait = fighter_pilot
+	add_trait = brave
+	add_trait = neurotic
+	add_trait = close_minded
+	add_trait = introverted
+	add_trait = friendly
+	add_trait = radical
+	
+	father = 1108921 # Jiro Shibata
+	mother = 1318425 # Michiko Hasegawa
+	
+	2957.1.1 = { birth = "2957.1.1" }
+}
+
+1102153 = {
+	# Commander of WH-367
+	name = "Noriko"
+	dynasty = 2153 # O'Reilly
+	female = yes
+	
+	culture = anglo_tengoku
+	religion = colonial_seperatist
+	
+	add_trait = tough_soldier
+	add_trait = warship_captain
+	
+	2968.1.1 = { birth = "2968.1.1" }
+}
+
+# NEW FRONTIER RANGERS
+1107959 = {
+	# Commander of WH-253
+	name = "Michael"
+	dynasty = 7959 # Suzuki
+	female = no
+	
+	culture = japanese_frontiersman
+	religion = colonial_seperatist
+	
+	add_trait = misguided_warrior
+	add_trait = warship_captain
+	
+	2960.1.1 = { birth = "2960.1.1" }
+}
+1101207 = {
+	# Commander of WH-064
+	name = "Lucas"
+	dynasty = 1207 # Russell
+	female = no
+	
+	culture = anglo_frontiersman
+	religion = colonial_seperatist
+	
+	add_trait = tough_soldier
+	add_trait = fighter_pilot
+	
+	2952.1.1 = { birth = "2952.1.1" }
+}

@@ -1,0 +1,46 @@
+# 65 - Ahora la Luz
+
+# County Title
+title = c_ahora_la_luz
+
+# Settlements
+max_settlements = 4
+b_ahora_la_luz_prime_b = castle
+b_ahora_la_luz_prime_c = temple
+b_ahora_la_luz_prime_d = city
+
+# Misc
+culture = hispanic_celestean # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_ahora_la_luz_prime_b = ca_toxic_atmosphere
+	b_ahora_la_luz_prime_b = ca_no_water
+	b_ahora_la_luz_prime_b = ca_trace_water
+	b_ahora_la_luz_prime_b = ca_burning
+	b_ahora_la_luz_prime_b = ca_planet_survey
+	
+	b_ahora_la_luz_prime_c = tp_no_atmosphere
+	b_ahora_la_luz_prime_c = tp_no_water
+	b_ahora_la_luz_prime_c = tp_burning
+	b_ahora_la_luz_prime_c = tp_planet_survey
+	
+	b_ahora_la_luz_prime_d = ct_clean_atmosphere
+	b_ahora_la_luz_prime_d = ct_no_water
+	b_ahora_la_luz_prime_d = ct_trace_water
+	b_ahora_la_luz_prime_d = ct_lakes
+	b_ahora_la_luz_prime_d = ct_seas
+	b_ahora_la_luz_prime_d = ct_oceans
+	b_ahora_la_luz_prime_d = ct_planet_survey
+}
+
+2998.1.1 = {
+	b_ahora_la_luz_prime_b = ca_colony_0
+	b_ahora_la_luz_prime_b = ca_colony_1
+	
+	b_ahora_la_luz_prime_c = tp_colony_0
+	
+	b_ahora_la_luz_prime_d = ct_colony_0
+	b_ahora_la_luz_prime_d = ct_colony_1
+}

@@ -1,0 +1,62 @@
+# 199 - Procyon
+
+# County Title
+title = c_procyon
+
+# Settlements
+max_settlements = 4
+b_procyon_iii_b = temple
+b_procyon_iii_c = city
+b_procyon_iii_d = castle
+
+# Misc
+culture = anglo_terran # Initial culture
+religion = terran_republican
+
+# History
+1.1.1 = {
+	b_procyon_iii_b = tp_no_atmosphere
+	b_procyon_iii_b = tp_no_water
+	b_procyon_iii_b = tp_trace_water
+	b_procyon_iii_b = tp_lakes
+	b_procyon_iii_b = tp_seas
+	b_procyon_iii_b = tp_oceans
+	b_procyon_iii_b = tp_frozen
+	b_procyon_iii_b = tp_cold
+	b_procyon_iii_b = tp_cool
+	b_procyon_iii_b = tp_planet_survey
+	
+	b_procyon_iii_c = ct_no_atmosphere
+	b_procyon_iii_c = ct_no_water
+	b_procyon_iii_c = ct_trace_water
+	b_procyon_iii_c = ct_lakes
+	b_procyon_iii_c = ct_seas
+	b_procyon_iii_c = ct_oceans
+	b_procyon_iii_c = ct_frozen
+	b_procyon_iii_c = ct_cold
+	b_procyon_iii_c = ct_cool
+	b_procyon_iii_c = ct_planet_survey
+	
+	b_procyon_iii_d = ca_no_atmosphere
+	b_procyon_iii_d = ca_no_water
+	b_procyon_iii_d = ca_trace_water
+	b_procyon_iii_d = ca_lakes
+	b_procyon_iii_d = ca_seas
+	b_procyon_iii_d = ca_oceans
+	b_procyon_iii_d = ca_frozen
+	b_procyon_iii_d = ca_cold
+	b_procyon_iii_d = ca_cool
+	b_procyon_iii_d = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_procyon_iii_b = tp_colony_0
+	
+	b_procyon_iii_c = ct_no_atmosphere_domes
+	b_procyon_iii_c = ct_colony_0
+	b_procyon_iii_c = ct_colony_1
+	b_procyon_iii_c = ct_colony_2
+	
+	b_procyon_iii_d = ca_colony_0
+	b_procyon_iii_d = ca_colony_1
+}

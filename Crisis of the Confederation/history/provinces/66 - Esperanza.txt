@@ -1,0 +1,53 @@
+# 66 - Esperanza
+
+# County Title
+title = c_esperanza
+
+# Settlements
+max_settlements = 4
+b_esperanza_ii = city
+b_esperanza_ii_b = temple
+b_esperanza_iii = castle
+
+# Misc
+culture = hispanic_celestean # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+	b_esperanza_ii = ct_toxic_atmosphere
+	b_esperanza_ii = ct_no_water
+	b_esperanza_ii = ct_trace_water
+	b_esperanza_ii = ct_lakes
+	b_esperanza_ii = ct_seas
+	b_esperanza_ii = ct_oceans
+	b_esperanza_ii = ct_burning
+	b_esperanza_ii = ct_hot
+	b_esperanza_ii = ct_planet_survey
+	
+	b_esperanza_ii_b = tp_toxic_atmosphere
+	b_esperanza_ii_b = tp_no_water
+	b_esperanza_ii_b = tp_trace_water
+	b_esperanza_ii_b = tp_burning
+	b_esperanza_ii_b = tp_hot
+	b_esperanza_ii_b = tp_planet_survey
+	
+	b_esperanza_iii = ca_no_atmosphere
+	b_esperanza_iii = ca_no_water
+	b_esperanza_iii = ca_burning
+	b_esperanza_iii = ca_hot
+	b_esperanza_iii = ca_warm
+	b_esperanza_iii = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_esperanza_ii = ct_toxic_atmosphere_domes
+	b_esperanza_ii = ct_colony_0
+	b_esperanza_ii = ct_colony_1
+	b_esperanza_ii = ct_colony_2
+	
+	b_esperanza_ii_b = tp_colony_0
+	b_esperanza_ii_b = tp_colony_1
+	
+	b_esperanza_iii = ca_colony_0
+}

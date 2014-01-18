@@ -1,0 +1,24 @@
+# 252 - Youli
+
+# County Title
+title = c_youli
+
+# Settlements
+max_settlements = 4
+	b_youli_prime = city
+	b_youli_prime_b = temple
+	b_youli_ii = castle
+	b_youli_ii_c = city
+
+# Misc
+culture = sino_bianjiangese # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+	
+}
+
+2998.1.1 = {
+
+}

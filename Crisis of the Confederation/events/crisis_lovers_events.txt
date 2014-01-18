@@ -1,0 +1,2402 @@
+namespace = lovers
+
+# Relationship developments
+# Character is attracted to another
+character_event = {
+	id = lovers.0
+	desc = "EVTDESCLOVERS0"
+	picture = GFX_evt_lovers
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				OR = {
+					AND = {
+						FROM = { is_female = yes }
+						is_female = no
+					}
+					AND = {
+						FROM = { is_female = no }
+						is_female = yes
+					}
+				}
+				NOT = { trait = homosexual }
+			}
+			AND = {
+				OR = {
+					AND = {
+						FROM = { is_female = yes }
+						is_female = yes
+					}
+					AND = {
+						FROM = { is_female = no }
+						is_female = no
+					}
+				}
+				trait = homosexual
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTALOVERS0"
+		opinion = { who = FROM modifier = opinion_in_love months = 120 }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				is_married = yes
+			}
+			modifier = {
+				factor = 0.5
+				is_married = yes
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 0.25
+				has_lover = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_lover = yes
+				opinion = { who = lover value = 50 }
+			}
+			modifier = {
+				factor = 0
+				has_lover = yes
+				opinion = { who = lover value = 100 }
+			}
+			modifier = {
+				factor = 0.1
+				is_close_relative = FROM
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 100 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -99 } }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBLOVERS0"
+	}
+}
+
+# Told about infatuation
+character_event = {
+	id = lovers.1
+	desc = "EVTDESCLOVERS1"
+	picture = GFX_evt_lovers
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			OR = {
+				AND = {
+					OR = {
+						AND = {
+							FROM = { is_female = yes }
+							is_female = no
+						}
+						AND = {
+							FROM = { is_female = no }
+							is_female = yes
+						}
+					}
+					NOT = { trait = homosexual }
+				}
+				AND = {
+					OR = {
+						AND = {
+							FROM = { is_female = yes }
+							is_female = yes
+						}
+						AND = {
+							FROM = { is_female = no }
+							is_female = no
+						}
+					}
+					trait = homosexual
+				}
+			}
+		}
+		name = "EVTOPTALOVERS1"
+		if = {
+			limit = { has_lover = yes }
+			character_event = { id = lovers.6 tooltip = "EVTTOOLTIPLOVERS6" }
+		}
+		FROM = { character_event = { id = lovers.2 tooltip = "EVTTOOLTIPLOVERS2" days = 1 } }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				is_close_relative = FROM
+			}
+			modifier = {
+				factor = 3
+				has_ambition = obj_find_love
+			}
+			modifier = {
+				factor = 3
+				has_opinion_modifier = { who = FROM modifier = opinion_in_love }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 100 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 0.5
+				is_married = yes
+				spouse = { NOT = { character = FROM } }
+				NOT = { trait = carefree }
+			}
+			modifier = {
+				factor = 0.5
+				is_married = yes
+				spouse = { NOT = { character = FROM } }
+				trait = disciplined
+			}
+			modifier = {
+				factor = 0.5
+				has_lover = yes
+				NOT = { trait = carefree }
+			}
+			modifier = {
+				factor = 0.5
+				has_lover = yes
+				trait = disciplined
+			}
+			modifier = {
+				factor = 0.8
+				has_lover = yes
+				lover = { reverse_opinion = { who = ROOT value = 10 } }
+			}
+			modifier = {
+				factor = 0.8
+				has_lover = yes
+				lover = { reverse_opinion = { who = ROOT value = 20 } }
+			}
+			modifier = {
+				factor = 0.8
+				has_lover = yes
+				lover = { reverse_opinion = { who = ROOT value = 30 } }
+			}
+			modifier = {
+				factor = 0.8
+				has_lover = yes
+				lover = { reverse_opinion = { who = ROOT value = 40 } }
+			}
+			modifier = {
+				factor = 0.8
+				has_lover = yes
+				lover = { reverse_opinion = { who = ROOT value = 50 } }
+			}
+			modifier = {
+				factor = 0.8
+				has_lover = yes
+				lover = { reverse_opinion = { who = ROOT value = 60 } }
+			}
+			modifier = {
+				factor = 0.8
+				has_lover = yes
+				lover = { reverse_opinion = { who = ROOT value = 70 } }
+			}
+			modifier = {
+				factor = 0.8
+				has_lover = yes
+				lover = { reverse_opinion = { who = ROOT value = 80 } }
+			}
+			modifier = {
+				factor = 0.8
+				has_lover = yes
+				lover = { reverse_opinion = { who = ROOT value = 90 } }
+			}
+			modifier = {
+				factor = 0.8
+				has_lover = yes
+				lover = { reverse_opinion = { who = ROOT value = 100 } }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTBLOVERS1"
+		FROM = { character_event = { id = lovers.3 tooltip = "EVTTOOLTIPLOVERS3" } }
+		ai_chance = { factor = 50 }
+	}
+}
+
+character_event = {
+	id = lovers.2
+	desc = "EVTDESCLOVERS2"
+	picture = GFX_evt_lovers
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTALOVERS2"
+		set_lover = FROM
+	}
+}
+
+character_event = {
+	id = lovers.3
+	desc = "EVTDESCLOVERS3"
+	picture = GFX_evt_quarrel
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTALOVERS3"
+		opinion = { who = FROM modifier = opinion_heartbroken months = 120 }
+		if = {
+			limit = { trait = confident }
+			random = {
+				chance = 10
+				add_trait = stressed
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = confident }
+				NOT = { trait = neurotic }
+			}
+			random = {
+				chance = 20
+				add_trait = stressed
+			}
+		}
+		if = {
+			limit = { trait = neurotic }
+			random = {
+				chance = 30
+				add_trait = stressed
+			}
+		}
+	}
+}
+
+# You have lost that loving feeling
+character_event = {
+	id = lovers.4
+	desc = "EVTDESCLOVERS4"
+	picture = GFX_evt_quarrel
+	
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		has_lover = yes
+		OR = {
+			lover = { NOT = { opinion = { who = ROOT value = 10 } } }
+			lover = { NOT = { reverse_opinion = { who = ROOT value = 10 } } }
+			has_character_flag = flag_lost_loving_feeling
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		modifier = {
+			factor = 0.8
+			trait = cold
+		}
+		modifier = {
+			factor = 1.25
+			trait = friendly
+		}
+	}
+	
+	option = {
+		name = "EVTOPTALOVERS4"
+		clr_character_flag = flag_lost_loving_feeling
+		lover = { character_event = { id = lovers.5 tooltip = "EVTTOOLTIPLOVERS5" } }
+		remove_lover = yes
+	}
+}
+
+#Lover is notified
+character_event = {
+	id = lovers.5
+	desc = "EVTDESCLOVERS5"
+	picture = GFX_evt_quarrel
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTALOVERS5"
+		opinion = { who = FROM modifier = opinion_heartbroken months = 120 }
+		if = {
+			limit = { trait = confident }
+			random = {
+				chance = 10
+				add_trait = stressed
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = confident }
+				NOT = { trait = neurotic }
+			}
+			random = {
+				chance = 20
+				add_trait = stressed
+			}
+		}
+		if = {
+			limit = { trait = neurotic }
+			random = {
+				chance = 30
+				add_trait = stressed
+			}
+		}
+	}
+}
+
+# Your lover has left you for another
+character_event = {
+	id = lovers.6
+	desc = "EVTDESCLOVERS6"
+	picture = GFX_evt_quarrel
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTALOVERS6"
+		opinion = { who = FROM modifier = opinion_heartbroken months = 120 }
+		opinion = { who = FROMFROM modifier = opinion_stole_my_love months = 120 }
+		if = {
+			limit = { trait = confident }
+			random = {
+				chance = 10
+				add_trait = stressed
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = confident }
+				NOT = { trait = neurotic }
+			}
+			random = {
+				chance = 20
+				add_trait = stressed
+			}
+		}
+		if = {
+			limit = { trait = neurotic }
+			random = {
+				chance = 30
+				add_trait = stressed
+			}
+		}
+		ai_chance = {
+			factor = 33
+			modifier = {
+				factor = 4
+				trait = friendly
+			}
+			modifier = {
+				factor = 0.25
+				trait = cold
+			}
+			modifier = {
+				factor = 2
+				trait = carefree
+			}
+			modifier = {
+				factor = 0.5
+				trait = disciplined
+			}
+			modifier = {
+				factor = 2
+				trait = neurotic
+			}
+			modifier = {
+				factor = 0.5
+				trait = confident
+			}
+			modifier = {
+				factor = 4
+				trait = humble
+			}
+			modifier = {
+				factor = 0.25
+				trait = proud
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBLOVERS6"
+		opinion = { who = FROM modifier = opinion_rival years = 100 }
+		FROM = { character_event = { id = 100042 tooltip = "EVTTOOLTIP100042" } }
+		opinion = { who = FROMFROM modifier = opinion_stole_my_love months = 120 }
+		if = {
+			limit = { trait = confident }
+			random = {
+				chance = 10
+				add_trait = stressed
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = confident }
+				NOT = { trait = neurotic }
+			}
+			random = {
+				chance = 20
+				add_trait = stressed
+			}
+		}
+		if = {
+			limit = { trait = neurotic }
+			random = {
+				chance = 30
+				add_trait = stressed
+			}
+		}
+		ai_chance = {
+			factor = 33
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 100 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCLOVERS6"
+		opinion = { who = FROM modifier = heartbroken months = 120 }
+		opinion = { who = FROMFROM modifier = opinion_rival years = 100 }
+		FROM = { FROM = { character_event = { id = 100042 tooltip = "EVTTOOLTIP100042" } } }
+		if = {
+			limit = { trait = confident }
+			random = {
+				chance = 10
+				add_trait = stressed
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = confident }
+				NOT = { trait = neurotic }
+			}
+			random = {
+				chance = 20
+				add_trait = stressed
+			}
+		}
+		if = {
+			limit = { trait = neurotic }
+			random = {
+				chance = 30
+				add_trait = stressed
+			}
+		}
+		ai_chance = {
+			factor = 33
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -99 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -89 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -79 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -69 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -59 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -49 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -39 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -29 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -19 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -9 } }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 10 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 20 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 30 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 40 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 50 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 60 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 70 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 80 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 90 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 100 }
+			}
+		}
+	}
+}
+
+# Various "character might be attractive to another character" events
+# Teenage students of the same guardian
+character_event = {
+	id = lovers.10
+	hide_window = yes
+	
+	min_age = 12
+	max_age = 16
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		has_guardian = yes
+		guardian = {
+			any_ward = {
+				NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+				NOT = { character = ROOT }
+				age = 12
+				NOT = { age = 16 }
+				NOT = { trait = incapable }
+				prisoner = no
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	
+	immediate = {
+		guardian = {
+			random_ward = {
+				limit = {
+					NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+					NOT = { character = ROOT }
+					age = 12
+					NOT = { age = 16 }
+					NOT = { trait = incapable }
+					prisoner = no
+				}
+				character_event = { id = lovers.0 }
+			}
+		}
+	}
+}
+
+# Teenagers in the same court
+character_event = {
+	id = lovers.11
+	hide_window = yes
+	
+	min_age = 12
+	max_age = 20
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		liege = { any_courtier = { character = ROOT } }
+		liege = {
+			any_courtier = {
+				NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+				NOT = { character = ROOT }
+				age = 12
+				NOT = { age = 20 }
+				NOT = { trait = incapable }
+				prisoner = no
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	immediate = {
+		liege = {
+			random_courtier = {
+				limit = {
+					NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+					NOT = { character = ROOT }
+					age = 12
+					NOT = { age = 20 }
+					NOT = { trait = incapable }
+					prisoner = no
+				}
+				character_event = { id = lovers.0 }
+			}
+		}
+	}
+}
+
+# Teenage friends
+character_event = {
+	id = lovers.12
+	hide_window = yes
+	
+	min_age = 12
+	max_age = 20
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		any_friend = {
+			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+			age = 12
+			NOT = { age = 20 }
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	immediate = {
+		random_friend = {
+			limit = {
+				NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+				age = 12
+				NOT = { age = 20 }
+				NOT = { trait = incapable }
+				prisoner = no
+			}
+			character_event = { id = lovers.0 }
+		}
+	}
+}
+
+# Teenage liege toward courtier
+character_event = {
+	id = lovers.13
+	hide_window = yes
+	
+	min_age = 12
+	max_age = 20
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		any_courtier = {
+			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+			age = 12
+			NOT = { age = 20 }
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	immediate = {
+		random_courtier = {
+			limit = {
+				NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+				age = 12
+				NOT = { age = 20 }
+				NOT = { trait = incapable }
+				prisoner = no
+			}
+			character_event = { id = lovers.0 }
+		}
+	}
+}
+# Teenage courtier toward liege
+character_event = {
+	id = lovers.14
+	hide_window = yes
+	
+	min_age = 12
+	max_age = 20
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		liege = {
+			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+			any_courtier = { character = ROOT }
+			age = 12
+			NOT = { age = 20 }
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	immediate = {
+		liege = { character_event = { id = lovers.0 } }
+	}
+}
+
+# Teenager toward spouse
+character_event = {
+	id = lovers.15
+	hide_window = yes
+	
+	min_age = 12
+	max_age = 20
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		spouse = {
+			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+			age = 12
+			NOT = { age = 20 }
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	immediate = {
+		spouse = { character_event = { id = lovers.0 } }
+	}
+}
+# Adults in the same court
+character_event = {
+	id = lovers.16
+	hide_window = yes
+	
+	min_age = 20
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		liege = { any_courtier = { character = ROOT } }
+		liege = {
+			any_courtier = {
+				NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+				NOT = { character = ROOT }
+				age = 20
+				NOT = { trait = incapable }
+				prisoner = no
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	immediate = {
+		liege = {
+			random_courtier = {
+				limit = {
+					NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+					NOT = { character = ROOT }
+					age = 20
+					NOT = { trait = incapable }
+					prisoner = no
+				}
+				character_event = { id = lovers.0 }
+			}
+		}
+	}
+}
+
+# Adult friends
+character_event = {
+	id = lovers.17
+	hide_window = yes
+	
+	min_age = 20
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		any_friend = {
+			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+			age = 20
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	immediate = {
+		random_friend = {
+			limit = {
+				NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+				age = 20
+				NOT = { trait = incapable }
+				prisoner = no
+			}
+			character_event = { id = lovers.0 }
+		}
+	}
+}
+
+# Adult liege toward courtier
+character_event = {
+	id = lovers.18
+	hide_window = yes
+	
+	min_age = 20
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		any_courtier = {
+			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+			age = 20
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	immediate = {
+		random_courtier = {
+			limit = {
+				NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+				age = 20
+				NOT = { trait = incapable }
+				prisoner = no
+			}
+			character_event = { id = lovers.0 }
+		}
+	}
+}
+# Adult courtier toward liege
+character_event = {
+	id = lovers.19
+	hide_window = yes
+	
+	min_age = 20
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		liege = {
+			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+			any_courtier = { character = ROOT }
+			age = 20
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	immediate = {
+		liege = { character_event = { id = lovers.0 } }
+	}
+}
+
+# Adult toward spouse
+character_event = {
+	id = lovers.20
+	hide_window = yes
+	
+	min_age = 20
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		spouse = {
+			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+			age = 20
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	immediate = {
+		spouse = { character_event = { id = lovers.0 } }
+	}
+}
+
+# Possibly confess love
+character_event = {
+	id = lovers.50
+	desc = "EVTDESCLOVERS50"
+	picture = GFX_evt_lovers
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTALOVERS50"
+		FROM = { character_event = { id = lovers.1 tooltip = "EVTTOOLTIPLOVRS1" } }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						FROM = {
+							is_female = no
+							trait = homosexual
+						}
+					}
+					AND = {
+						is_female = no
+						FROM = {
+							is_female = yes
+							trait = homosexual
+						}
+					}
+					AND = {
+						is_female = yes
+						FROM = {
+							is_female = yes
+							NOT = { trait = homosexual }
+						}
+					}
+					AND = {
+						is_female = no
+						FROM = {
+							is_female = no
+							NOT = { trait = homosexual }
+						}
+					}
+				}
+				NOT = { trait = imbecile }
+				NOT = { trait = slow }
+				NOT = { trait = lunatic }
+			}
+			modifier = {
+				factor = 4
+				trait = confident
+			}
+			modifier = {
+				factor = 0.25
+				trait = neurotic
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 100 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 1.25
+				is_married = yes
+				spouse = { NOT = { character = FROM } }
+				NOT = { opinion = { who = spouse value = -99 } }
+			}
+			modifier = {
+				factor = 1.25
+				is_married = yes
+				spouse = { NOT = { character = FROM } }
+				NOT = { opinion = { who = spouse value = -89 } }
+			}
+			modifier = {
+				factor = 1.25
+				is_married = yes
+				spouse = { NOT = { character = FROM } }
+				NOT = { opinion = { who = spouse value = -79 } }
+			}
+			modifier = {
+				factor = 1.25
+				is_married = yes
+				spouse = { NOT = { character = FROM } }
+				NOT = { opinion = { who = spouse value = -69 } }
+			}
+			modifier = {
+				factor = 1.25
+				is_married = yes
+				spouse = { NOT = { character = FROM } }
+				NOT = { opinion = { who = spouse value = -59 } }
+			}
+			modifier = {
+				factor = 1.25
+				is_married = yes
+				spouse = { NOT = { character = FROM } }
+				NOT = { opinion = { who = spouse value = -49 } }
+			}
+			modifier = {
+				factor = 1.25
+				is_married = yes
+				spouse = { NOT = { character = FROM } }
+				NOT = { opinion = { who = spouse value = -39 } }
+			}
+			modifier = {
+				factor = 1.25
+				is_married = yes
+				spouse = { NOT = { character = FROM } }
+				NOT = { opinion = { who = spouse value = -29 } }
+			}
+			modifier = {
+				factor = 1.25
+				is_married = yes
+				spouse = { NOT = { character = FROM } }
+				NOT = { opinion = { who = spouse value = -19 } }
+			}
+			modifier = {
+				factor = 1.25
+				is_married = yes
+				spouse = { NOT = { character = FROM } }
+				NOT = { opinion = { who = spouse value = -9 } }
+			}
+			modifier = {
+				factor = 0.8
+				is_married = yes
+				spouse = { NOT = { character = FROM } }
+				opinion = { who = spouse value = 10 }
+			}
+			modifier = {
+				factor = 0.8
+				is_married = yes
+				spouse = { NOT = { character = FROM } }
+				opinion = { who = spouse value = 20 }
+			}
+			modifier = {
+				factor = 0.8
+				is_married = yes
+				spouse = { NOT = { character = FROM } }
+				opinion = { who = spouse value = 30 }
+			}
+			modifier = {
+				factor = 0.8
+				is_married = yes
+				spouse = { NOT = { character = FROM } }
+				opinion = { who = spouse value = 40 }
+			}
+			modifier = {
+				factor = 0.8
+				is_married = yes
+				spouse = { NOT = { character = FROM } }
+				opinion = { who = spouse value = 50 }
+			}
+			modifier = {
+				factor = 0.8
+				is_married = yes
+				spouse = { NOT = { character = FROM } }
+				opinion = { who = spouse value = 60 }
+			}
+			modifier = {
+				factor = 0.8
+				is_married = yes
+				spouse = { NOT = { character = FROM } }
+				opinion = { who = spouse value = 70 }
+			}
+			modifier = {
+				factor = 0.8
+				is_married = yes
+				spouse = { NOT = { character = FROM } }
+				opinion = { who = spouse value = 80 }
+			}
+			modifier = {
+				factor = 0.8
+				is_married = yes
+				spouse = { NOT = { character = FROM } }
+				opinion = { who = spouse value = 90 }
+			}
+			modifier = {
+				factor = 0.8
+				is_married = yes
+				spouse = { NOT = { character = FROM } }
+				opinion = { who = spouse value = 100 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					is_married = yes
+					spouse = { NOT = { reverse_opinion = { who = ROOT value = -99 } } }
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					is_married = yes
+					spouse = { NOT = { reverse_opinion = { who = ROOT value = -89 } } }
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					is_married = yes
+					spouse = { NOT = { reverse_opinion = { who = ROOT value = -79 } } }
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					is_married = yes
+					spouse = { NOT = { reverse_opinion = { who = ROOT value = -69 } } }
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					is_married = yes
+					spouse = { NOT = { reverse_opinion = { who = ROOT value = -59 } } }
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					is_married = yes
+					spouse = { NOT = { reverse_opinion = { who = ROOT value = -49 } } }
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					is_married = yes
+					spouse = { NOT = { reverse_opinion = { who = ROOT value = -39 } } }
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					is_married = yes
+					spouse = { NOT = { reverse_opinion = { who = ROOT value = -29 } } }
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					is_married = yes
+					spouse = { NOT = { reverse_opinion = { who = ROOT value = -19 } } }
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					is_married = yes
+					spouse = { NOT = { reverse_opinion = { who = ROOT value = -9 } } }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					is_married = yes
+					spouse = { reverse_opinion = { who = ROOT value = 10 } }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					is_married = yes
+					spouse = { reverse_opinion = { who = ROOT value = 20 } }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					is_married = yes
+					spouse = { reverse_opinion = { who = ROOT value = 30 } }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					is_married = yes
+					spouse = { reverse_opinion = { who = ROOT value = 40 } }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					is_married = yes
+					spouse = { reverse_opinion = { who = ROOT value = 50 } }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					is_married = yes
+					spouse = { reverse_opinion = { who = ROOT value = 60 } }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					is_married = yes
+					spouse = { reverse_opinion = { who = ROOT value = 70 } }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					is_married = yes
+					spouse = { reverse_opinion = { who = ROOT value = 80 } }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					is_married = yes
+					spouse = { reverse_opinion = { who = ROOT value = 90 } }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					is_married = yes
+					spouse = { reverse_opinion = { who = ROOT value = 100 } }
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					has_lover = yes
+					lover = { NOT = { reverse_opinion = { who = ROOT value = -99 } } }
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					has_lover = yes
+					lover = { NOT = { reverse_opinion = { who = ROOT value = -89 } } }
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					has_lover = yes
+					lover = { NOT = { reverse_opinion = { who = ROOT value = -79 } } }
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					has_lover = yes
+					lover = { NOT = { reverse_opinion = { who = ROOT value = -69 } } }
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					has_lover = yes
+					lover = { NOT = { reverse_opinion = { who = ROOT value = -59 } } }
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					has_lover = yes
+					lover = { NOT = { reverse_opinion = { who = ROOT value = -49 } } }
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					has_lover = yes
+					lover = { NOT = { reverse_opinion = { who = ROOT value = -39 } } }
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					has_lover = yes
+					lover = { NOT = { reverse_opinion = { who = ROOT value = -29 } } }
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					has_lover = yes
+					lover = { NOT = { reverse_opinion = { who = ROOT value = -19 } } }
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					has_lover = yes
+					lover = { NOT = { reverse_opinion = { who = ROOT value = -9 } } }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					has_lover = yes
+					lover = { reverse_opinion = { who = ROOT value = 10 } }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					has_lover = yes
+					lover = { reverse_opinion = { who = ROOT value = 20 } }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					has_lover = yes
+					lover = { reverse_opinion = { who = ROOT value = 30 } }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					has_lover = yes
+					lover = { reverse_opinion = { who = ROOT value = 40 } }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					has_lover = yes
+					lover = { reverse_opinion = { who = ROOT value = 50 } }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					has_lover = yes
+					lover = { reverse_opinion = { who = ROOT value = 60 } }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					has_lover = yes
+					lover = { reverse_opinion = { who = ROOT value = 70 } }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					has_lover = yes
+					lover = { reverse_opinion = { who = ROOT value = 80 } }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					has_lover = yes
+					lover = { reverse_opinion = { who = ROOT value = 90 } }
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					has_lover = yes
+					lover = { reverse_opinion = { who = ROOT value = 100 } }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBLOVERS50"
+		remove_opinion_modifier = { who = FROM modifier = opinion_in_love }
+		ai_chance = { factor = 50 }
+	}
+}
+
+# Confession triggers
+# Courtier of same liege
+character_event = {
+	id = lovers.51
+	hide_window = yes
+	
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		liege = {
+			any_courtier = { character = ROOT }
+			any_courtier = {
+				has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+				has_lover = no
+				NOT = { trait = incapable }
+				prisoner = no
+			}
+		}
+	}
+	
+	mean_time_to_happen = { factor = 120 }
+	
+	immediate = {
+		liege = {
+			random_courtier = {
+				limit = {
+					has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+					has_lover = no
+					NOT = { trait = incapable }
+					prisoner = no
+				}
+				character_event = { id = lovers.50 }
+			}
+		}
+	}
+}
+
+# Friend
+character_event = {
+	id = lovers.52
+	hide_window = yes
+	
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		any_friend = {
+			has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+			has_lover = no
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+	}
+	
+	mean_time_to_happen = { factor = 120 }
+	
+	immediate = {
+		random_friend = {
+			limit = {
+				has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+				has_lover = no
+				NOT = { trait = incapable }
+				prisoner = no
+			}
+			character_event = { id = lovers.50 }
+		}
+	}
+}
+
+# Courtier
+character_event = {
+	id = lovers.53
+	hide_window = yes
+	
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		any_courtier = {
+			has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+			has_lover = no
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+	}
+	
+	mean_time_to_happen = { factor = 120 }
+	
+	immediate = {
+		random_courtier = {
+			limit = {
+				has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+				has_lover = no
+				NOT = { trait = incapable }
+				prisoner = no
+			}
+			character_event = { id = lovers.50 }
+		}
+	}
+}
+
+# Liege
+character_event = {
+	id = lovers.54
+	hide_window = yes
+	
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		liege = {
+			has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+			has_lover = no
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+	}
+	
+	mean_time_to_happen = { factor = 120 }
+	
+	immediate = { liege = { character_event = { id = lovers.50 } } }
+}
+
+# Spouse
+character_event = {
+	id = lovers.55
+	hide_window = yes
+	
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		spouse = {
+			has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+			has_lover = no
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+	}
+	
+	mean_time_to_happen = { factor = 120 }
+	
+	immediate = { spouse = { character_event = { id = lovers.50 } } }
+}
+
+# Propose to your lover
+
+# Love triangle - become an actual rival to a romantic rival
+character_event = {
+	id = lovers.200
+	desc = "EVTDESCLOVERS200" # You have a rival for FROM's affections
+	picture = GFX_evt_quarrel
+	show_from_from = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTALOVERS200" # Confront them!
+		FROM = { FROM = { character_event = { id = lovers.201 tooltip = "EVTTOOLTIPLOVERS201" } } }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = cold
+			}
+			modifier = {
+				factor = 0.5
+				trait = friendly
+			}
+			modifier = {
+				factor = 2
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				trait = humble
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 4
+				trait = pragmatic
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 100 }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -99 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -89 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -79 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -69 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -59 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -49 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -39 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -29 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -19 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -9 } }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 10 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 20 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 30 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 40 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 50 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 60 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 70 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 80 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 90 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 100 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBLOVERS200"
+		remove_opinion = { who = FROM modifier = opinion_in_love }
+		ai_chance = { factor = 50 }
+	}
+}
+
+character_event = {
+	id = lovers.201
+	desc = "EVTDESCLOVERS201"
+	picture = GFX_evt_quarrel
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTALOVERS201" # Refuse to back down
+		if = {
+			limit = { any_friend = { character = FROM } }
+			remove_opinion = { who = FROM modifier = opinion_friend }
+			reverse_remove_opinion = { who = FROM modifier = opinion_friend }
+		}
+		opinion = { who = FROM modifier = opinion_rival years = 100 }
+		FROM = { character_event = { id = lovers.202 tooltip = "EVTTOOLTIP100024" } }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = cold
+			}
+			modifier = {
+				factor = 0.5
+				trait = friendly
+			}
+			modifier = {
+				factor = 2
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				trait = humble
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 4
+				trait = pragmatic
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -99 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -9 } }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 100 }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 100 }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = lovers.200
+	hide_window = yes
+	
+	min_age = 16
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		independent = no
+		liege = { any_courtier = { character = ROOT } }
+		liege = {
+			any_courtier = {
+				has_lover = no
+				prisoner = no
+				NOT = { trait = incapable }
+				has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+				liege = {
+					any_courtier = {
+						NOT = { character = PREV }
+						NOT = { any_rival = { character = PREV } }
+						has_lover = no
+						prisoner = no
+						NOT = { trait = incapable }
+						has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		liege = {
+			random_courtier = {
+				limit = {
+					has_lover = no
+					prisoner = no
+					NOT = { trait = incapable }
+					has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+				}
+				character_event = { id = lovers.201 }
+			}
+		}
+	}
+}
+character_event = {
+	id = lovers.201
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		liege = {
+			random_courtier = {
+				limit = {
+					NOT = { character = ROOT }
+					NOT = { any_rival = { character = ROOT } }
+					has_lover = no
+					prisoner = no
+					NOT = { trait = incapable }
+					has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+				}
+				character_event = { id = lovers.202 }
+			}
+		}
+	}
+}

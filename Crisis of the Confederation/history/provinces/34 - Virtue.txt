@@ -1,0 +1,21 @@
+# 34 - Virtue
+
+# County Title
+title = c_virtue
+
+# Settlements
+max_settlements = 4
+
+b_virtue_iv = castle
+b_virtue_iv_b = city
+
+# Misc
+culture = anglo_avalonian # Initial culture
+religion = neo_feudal
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

@@ -1,0 +1,45 @@
+# 73 - Dom Frontera
+
+# County Title
+title = c_dom_frontera
+
+# Settlements
+max_settlements = 4
+b_dom_frontera_waystation = castle
+b_dom_frontera_ii = city
+b_dom_frontera_ii_b = temple
+
+# Misc
+culture = hispanic_celestean # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+	b_dom_frontera_waystation = ca_space_station_0
+	b_dom_frontera_waystation = ca_space_station_1
+	b_dom_frontera_waystation = ca_space_station_2
+	
+	b_dom_frontera_ii = ct_toxic_atmosphere
+	b_dom_frontera_ii = ct_no_water
+	b_dom_frontera_ii = ct_trace_water
+	b_dom_frontera_ii = ct_burning
+	b_dom_frontera_ii = ct_hot
+	b_dom_frontera_ii = ct_planet_survey
+	
+	b_dom_frontera_ii_b = tp_no_atmosphere
+	b_dom_frontera_ii_b = tp_no_water
+	b_dom_frontera_ii_b = tp_burning
+	b_dom_frontera_ii_b = tp_hot
+	b_dom_frontera_ii_b = tp_planet_survey
+}
+
+2998.1.1 = {
+	b_dom_frontera_waystation = ca_colony_0
+	b_dom_frontera_waystation = ca_colony_1
+	b_dom_frontera_waystation = ca_colony_2
+	
+	b_dom_frontera_ii = ct_colony_0
+	b_dom_frontera_ii = ct_colony_1
+	
+	b_dom_frontera_ii_b = tp_colony_0
+}

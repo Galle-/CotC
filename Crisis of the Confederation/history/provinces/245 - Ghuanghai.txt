@@ -1,0 +1,58 @@
+# 245 - Ghuanghai 
+
+# County Title
+title = c_ghuanghai
+
+# Settlements
+max_settlements = 4
+				 
+				b_ghuanghai_inner_belt = city
+				b_ghuanghai_vii = castle
+				b_ghuanghai_ii = temple
+				b_ghuanghai_outer_belt = city
+# Misc
+culture = sino_xingjie # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+		
+			b_ghuanghai_vii = ca_planet_survey
+			b_ghuanghai_vii = ca_no_atmosphere
+			b_ghuanghai_vii = ca_no_water
+			b_ghuanghai_vii = ca_trace_water
+			b_ghuanghai_vii = ca_frozen
+			
+			b_ghuanghai_inner_belt = ct_asteroids
+			b_ghuanghai_inner_belt = ct_space_station_0
+			b_ghuanghai_inner_belt = ct_space_station_1
+			b_ghuanghai_inner_belt = ct_space_station_2
+					
+			
+			b_ghuanghai_ii = tp_planet_survey
+			b_ghuanghai_ii = tp_no_atmosphere
+			b_ghuanghai_ii = tp_burning
+			b_ghuanghai_ii = tp_hot
+
+			b_ghuanghai_outer_belt = ct_asteroids
+			b_ghuanghai_outer_belt = ct_space_station_0
+			b_ghuanghai_outer_belt = ct_space_station_1
+}
+
+2998.1.1 = {
+
+
+		b_ghuanghai_inner_belt = ct_colony_0
+		b_ghuanghai_inner_belt = ct_colony_1
+		b_ghuanghai_inner_belt = ct_colony_2
+		
+		b_ghuanghai_vii = ca_no_atmosphere_domes
+		b_ghuanghai_vii = ca_colony_0
+		
+		b_ghuanghai_ii = tp_colony_0
+		b_ghuanghai_ii = tp_no_atmosphere_domes
+		
+		b_ghuanghai_outer_belt = ct_colony_0
+		b_ghuanghai_outer_belt = ct_colony_1
+		
+}

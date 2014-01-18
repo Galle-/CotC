@@ -1,0 +1,20 @@
+# 105 - HE-843
+
+# County Title
+title = c_he_843
+
+# Settlements
+max_settlements = 4
+
+b_he_843_station_alpha = temple
+
+# Misc
+culture = russo_centauri # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

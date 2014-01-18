@@ -1,0 +1,22 @@
+# 23 - Alfred
+
+# County Title
+title = c_alfred
+
+# Settlements
+max_settlements = 5
+
+b_alfred_prime_b = castle
+b_alfred_prime = city
+b_alfred_prime_c = temple
+
+# Misc
+culture = anglo_avalonian # Initial culture
+religion = bio_directionist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

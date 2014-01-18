@@ -1,0 +1,59 @@
+[persistent.cpp:40]: Error: "Unexpected token: archers, near line: 35
+" in file: "common/traits/crisis_traits.txt" near line: 37
+[persistent.cpp:40]: Error: "Unexpected token: clr_global_flag, near line: 8525
+Unexpected token: ROOT, near line: 8526
+Unexpected token: FROM, near line: 8533
+" in file: "common/cb_types/00_cb_types.txt" near line: 8536
+[persistent.cpp:40]: Error: "Unexpected token: custom_tooltip, near line: 8539
+" in file: "common/cb_types/00_cb_types.txt" near line: 8611
+[persistent.cpp:40]: Error: "Unexpected token: clr_global_flag, near line: 8614
+Unexpected token: FROM, near line: 8615
+Unexpected token: ROOT, near line: 8618
+" in file: "common/cb_types/00_cb_types.txt" near line: 8622
+[persistent.cpp:40]: Error: "Unexpected token: clr_global_flag, near line: 8625
+Unexpected token: ROOT, near line: 8626
+Unexpected token: FROM, near line: 8631
+Unexpected token: any_defender, near line: 8634
+Unexpected token: any_defender, near line: 8638
+" in file: "common/cb_types/00_cb_types.txt" near line: 8642
+[persistent.cpp:40]: Error: "Unexpected token: clr_global_flag, near line: 8645
+Unexpected token: ROOT, near line: 8646
+Unexpected token: end_war, near line: 8649
+" in file: "common/cb_types/00_cb_types.txt" near line: 8650
+[persistent.cpp:40]: Error: "Unexpected token: factor, near line: 8653
+" in file: "common/cb_types/00_cb_types.txt" near line: 8654
+[persistent.cpp:40]: Error: "Unexpected token: factor, near line: 8657
+" in file: "common/cb_types/00_cb_types.txt" near line: 8658
+[persistent.cpp:40]: Error: "Unexpected token: factor, near line: 8661
+" in file: "common/cb_types/00_cb_types.txt" near line: 8662
+[persistent.cpp:40]: Error: "Unexpected token: factor, near line: 8665
+" in file: "common/cb_types/00_cb_types.txt" near line: 8666
+[persistent.cpp:40]: Error: "Unexpected token: value, near line: 63
+" in file: "events/crisis_lovers_events.txt" near line: 63
+[persistent.cpp:40]: Error: "Unexpected token: value, near line: 68
+" in file: "events/crisis_lovers_events.txt" near line: 68
+[id.cpp:83]: Failed to create id 1500200 40. Already exists in game.
+[id.cpp:83]: Failed to create id 1500201 40. Already exists in game.
+[id.cpp:83]: Failed to create id 88017 40. Already exists in game.
+[id.cpp:83]: Failed to create id 88018 40. Already exists in game.
+[id.cpp:83]: Failed to create id 88016 40. Already exists in game.
+[id.cpp:83]: Failed to create id 88017 40. Already exists in game.
+[id.cpp:83]: Failed to create id 88018 40. Already exists in game.
+[id.cpp:83]: Failed to create id 8501 40. Already exists in game.
+[id.cpp:83]: Failed to create id 8506 40. Already exists in game.
+[id.cpp:83]: Failed to create id 8511 40. Already exists in game.
+[id.cpp:83]: Failed to create id 8516 40. Already exists in game.
+[id.cpp:83]: Failed to create id 8601 40. Already exists in game.
+[id.cpp:83]: Failed to create id 8606 40. Already exists in game.
+[id.cpp:83]: Failed to create id 8611 40. Already exists in game.
+[id.cpp:83]: Failed to create id 8616 40. Already exists in game.
+[id.cpp:83]: Failed to create id 1004000 40. Already exists in game.
+[id.cpp:83]: Failed to create id 1004005 40. Already exists in game.
+[id.cpp:83]: Failed to create id 1004015 40. Already exists in game.
+[id.cpp:83]: Failed to create id 1004025 40. Already exists in game.
+[id.cpp:83]: Failed to create id 1003125 40. Already exists in game.
+[id.cpp:83]: Failed to create id 1003127 40. Already exists in game.
+[id.cpp:83]: Failed to create id 1805343 40. Already exists in game.
+[id.cpp:83]: Failed to create id 1805347 40. Already exists in game.
+[gfx_dx9.cpp:1436]: Error create vertices -2005530516 8 0 28
+[gfx_dx9.cpp:1439]: managed

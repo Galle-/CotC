@@ -1,0 +1,21 @@
+# 153 - Almaz
+
+# County Title
+title = c_almaz
+
+# Settlements
+max_settlements = 4
+b_almaz_iii = castle
+b_almaz_iii_b = city
+b_almaz_iii_c = temple
+
+# Misc
+culture = sino_edemite # Initial culture
+religion = astrist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

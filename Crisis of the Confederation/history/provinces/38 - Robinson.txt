@@ -1,0 +1,21 @@
+# 38 - Robinson
+
+# County Title
+title = c_robinson
+
+# Settlements
+max_settlements = 5
+
+b_robinson_ii = castle
+b_robinson_ii_orbital = city
+
+# Misc
+culture = anglo_avalonian # Initial culture
+religion = neo_feudal
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

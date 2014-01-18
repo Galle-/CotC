@@ -1,0 +1,49 @@
+# 99 - Jemison
+
+# County Title
+title = c_jemison
+
+# Settlements
+max_settlements = 4
+b_jemison_prime = city
+b_jemison_prime_b = temple
+b_jemison_iii = castle
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_jemison_prime = ct_clean_atmosphere
+	b_jemison_prime = ct_no_water
+	b_jemison_prime = ct_trace_water
+	b_jemison_prime = ct_lakes
+	b_jemison_prime = ct_seas
+	b_jemison_prime = ct_burning
+	b_jemison_prime = ct_hot
+	b_jemison_prime = ct_planet_survey
+	
+	b_jemison_prime_b = tp_no_atmosphere
+	b_jemison_prime_b = tp_no_water
+	b_jemison_prime_b = tp_burning
+	b_jemison_prime_b = tp_hot
+	b_jemison_prime_b = tp_planet_survey
+	
+	b_jemison_iii = ca_toxic_atmosphere
+	b_jemison_iii = ca_no_water
+	b_jemison_iii = ca_burning
+	b_jemison_iii = ca_hot
+	b_jemison_iii = ca_warm
+	b_jemison_iii = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_jemison_prime = ct_colony_0
+	b_jemison_prime = ct_colony_1
+	b_jemison_prime = ct_colony_2
+	
+	b_jemison_prime_b = tp_colony_0
+	
+	b_jemison_iii = ca_colony_0
+}

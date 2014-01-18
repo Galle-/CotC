@@ -1,0 +1,20 @@
+# 168 - Stabil'nost'
+
+# County Title
+title = c_stabilnost
+
+# Settlements
+max_settlements = 4
+b_stabilnost_ii = castle
+b_stabilnost_ii_b = city
+
+# Misc
+culture = russo_edemite # Initial culture
+religion = astrist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

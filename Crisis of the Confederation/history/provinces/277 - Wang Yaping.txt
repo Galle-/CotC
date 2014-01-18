@@ -1,0 +1,50 @@
+# 277 - Wang Yaping
+
+# County Title
+title = c_wang_yaping
+
+# Settlements
+max_settlements = 4
+b_wang_yaping_waystation = castle
+b_wang_yaping_iv = temple
+b_wang_yaping_v = city
+
+# Misc
+culture = sino_xingjie # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_wang_yaping_waystation = ca_space_station_0
+	b_wang_yaping_waystation = ca_space_station_1
+	b_wang_yaping_waystation = ca_space_station_2
+	
+	b_wang_yaping_iv = tp_toxic_atmosphere
+	b_wang_yaping_iv = tp_no_water
+	b_wang_yaping_iv = tp_trace_water
+	b_wang_yaping_iv = tp_lakes
+	b_wang_yaping_iv = tp_burning
+	b_wang_yaping_iv = tp_hot
+	b_wang_yaping_iv = tp_warm
+	b_wang_yaping_iv = tp_planet_survey
+	
+	b_wang_yaping_v = ct_toxic_atmosphere
+	b_wang_yaping_v = ct_no_water
+	b_wang_yaping_v = ct_trace_water
+	b_wang_yaping_v = ct_burning
+	b_wang_yaping_v = ct_hot
+	b_wang_yaping_v = ct_warm
+	b_wang_yaping_v = ct_planet_survey
+}
+
+2998.1.1 = {
+	b_wang_yaping_waystation = ca_colony_0
+	b_wang_yaping_waystation = ca_colony_1
+	b_wang_yaping_waystation = ca_colony_2
+	
+	b_wang_yaping_iv = tp_colony_0
+	b_wang_yaping_iv = tp_colony_1
+	
+	b_wang_yaping_v = ct_colony_0
+	b_wang_yaping_v = ct_colony_1
+}

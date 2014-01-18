@@ -1,0 +1,117 @@
+GOVERNMENT TYPE DEFINITIONS
+Military State
+	AND = {
+		is_tribal_type_title = no
+		holder_scope = {
+			is_patrician = no
+			is_feudal = yes
+		}
+	}
+Republic
+	AND = {
+		is_tribal_type_title = no
+		holder_scope = {
+			is_patrician = no
+			is_republic = yes
+		}
+	}
+Administrative State
+	AND = {
+		is_tribal_type_title = no
+		holder_scope = {
+			is_patrician = no
+			is_theocracy = yes
+		}
+	}
+Megacorporation
+	AND = {
+		is_tribal_type_title = no
+		holder_scope = {
+			is_merchant_republic = no
+			is_patrician = yes
+		}
+	}
+Military Command
+	is_tribal_type_title = yes
+	
+SUCCESSION LAW CLASSES
+Inheritance
+	Gavelkind Inheritance
+	Seniority Inheritance
+	Primogeniture Inheritance
+	Ultimageniture Inheritance
+
+Elective
+	Dynastic Elective
+	Federal Elective
+	Oligarchic Elective
+	Democratic Elective
+	
+Appointment
+	Appointment
+	
+SUCCESSION LAW CLASSES, IDEOLOGY, AND GOVERNMENT TYPE
+The combination of government type and ideology determine which classes of succession law are permitted. Each government type/ideology
+combination has a default class. Some have secondary classes which can be enabled by special crown laws.
+
+VALID SUCCESSION LAWS BY GOVERNMENT TYPE
+Military State
+	- Gavelkind Inheritance
+	- Seniority Inheritance
+	- Primogeniture Inheritance
+	- Ultimageniture Inheritance
+	- Dynastic Elective
+	- Federal Elective
+	- Democratic Elective
+	- Appointment
+Republic
+	- Feudal Elective
+	- Dynastic Elective
+	- Federal Elective
+	- Democratic Elective
+	- Oligarchic Elective (Merchant Republics only)
+	- Appointment
+Administrative State/Technocracy/Theocracy
+	- Gavelkind Inheritance
+	- Seniority Inheritance
+	- Primogeniture Inheritance
+	- Ultimageniture Inheritance
+	- Dynastic Elective
+	- Federal Elective
+	- Democratic Elective
+	- Appointment
+Military Command
+	- Gavelkind Inheritance
+	- Seniority Inheritance
+	- Primogeniture Inheritance
+	- Ultimageniture Inheritance
+	- Dynastic Elective
+	- Federal Elective
+	- Democratic Elective
+	- Appointment
+Megacorporation
+	- Gavelkind Inheritance
+	- Seniority Inheritance
+	- Primogeniture Inheritance
+	- Ultimageniture Inheritance
+	- Feudal Elective
+	- Dynastic Elective
+	
+CROWN/CONSTITUTIONAL LAWS
+	Legitimacy: Changes Legitimacy Class
+		Inheritance
+		Elective
+		Appointment
+	Inheritance Law
+		Gavelkind
+		Seniority
+		Primogeniture
+		Ultimageniture
+	Election Law
+		Democratic
+		Oligarchic
+		Federal
+		Dynastic
+	Term Limits: Requires Dynastic, Federal, Oligarchic, or Democratic Elective. Determines time between elections.
+	Centralization: Vanilla crown authority, with some exceptions.
+	Public Order: Whether wars between vassals are allowed.

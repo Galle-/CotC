@@ -1,0 +1,21 @@
+BUG PRIORITIES
+High	-	The bug is a CTD, freeze, or similarly apocalyptic showstopper.
+Medium	-	The bug significantly weakens the game experience, but the game is still technically playable.
+Low		-	The bug has no real effect on the game experience.
+
+BUG REPORT TEMPLATE
+Number:
+Type:
+Priority:
+Status:
+Description:
+
+Other Comments:
+
+Number: 1
+Type: Succession, Republic, Patrician, Game Over
+Priority: High
+Status: Unresolved
+Description: Under certain conditions, the succession laws of a patrician title don't function properly, and the patrician will get a game over on death even if they have a viable heir.
+
+Other Comments:

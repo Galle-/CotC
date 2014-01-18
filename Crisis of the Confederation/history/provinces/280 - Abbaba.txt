@@ -1,0 +1,54 @@
+# 280 - Abbaba
+
+# County Title
+title = c_abbaba
+
+# Settlements
+max_settlements = 4
+b_abbaba_prime = castle
+b_abbaba_iii = temple
+b_abbaba_iv = city
+
+# Misc
+culture = ethiopian_angani # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_abbaba_prime = ca_toxic_atmosphere
+	b_abbaba_prime = ca_no_water
+	b_abbaba_prime = ca_trace_water
+	b_abbaba_prime = ca_lakes
+	b_abbaba_prime = ca_seas
+	b_abbaba_prime = ca_oceans
+	b_abbaba_prime = ca_burning
+	b_abbaba_prime = ca_planet_survey
+	
+	b_abbaba_iii = tp_toxic_atmosphere
+	b_abbaba_iii = tp_no_water
+	b_abbaba_iii = tp_burning
+	b_abbaba_iii = tp_hot
+	b_abbaba_iii = tp_warm
+	b_abbaba_iii = tp_planet_survey
+	
+	b_abbaba_iv = ct_toxic_atmosphere
+	b_abbaba_iv = ct_no_water
+	b_abbaba_iv = ct_trace_water
+	b_abbaba_iv = ct_lakes
+	b_abbaba_iv = ct_seas
+	b_abbaba_iv = ct_burning
+	b_abbaba_iv = ct_hot
+	b_abbaba_iv = ct_warm
+	b_abbaba_iv = ct_optimal_hot
+	b_abbaba_iv = ct_planet_survey
+}
+
+2998.1.1 = {
+	b_abbaba_prime = ca_colony_0
+	b_abbaba_prime = ca_colony_1
+	
+	b_abbaba_iii = tp_colony_0
+	
+	b_abbaba_iv = ct_colony_0
+	b_abbaba_iv = ct_colony_1
+}

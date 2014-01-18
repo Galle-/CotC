@@ -1,0 +1,13 @@
+2997.1.1={
+	liege = "e_terran_confederation"
+	holder = 11012570 # Zhen Zhang
+	law = legitimacy_law_1 # Elections
+	law = election_law_2 # Federal elections
+	law = succ_feudal_elective
+	law = true_cognatic_succession
+	law = centralization_0
+}
+
+2998.1.1 = {
+	liege = 0
+}

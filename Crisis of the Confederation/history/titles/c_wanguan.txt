@@ -1,0 +1,13 @@
+2900.1.1={
+	liege = "d_hua"
+	law = succ_patrician_elective
+	law = true_cognatic_succession
+}
+
+2948.6.13 = { holder = "90320025" } # Hai Lan Lim
+2999.3.14 = {holder = "100120025"} # Sinn Fun Lim
+
+2997.1.1 = {
+	liege = "k_xin_zizhiqu"
+	law = succ_seniority
+}

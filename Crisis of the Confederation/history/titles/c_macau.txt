@@ -1,0 +1,11 @@
+2900.1.1={
+	liege = "d_macau"
+	law = succ_patrician_elective
+	law = true_cognatic_succession
+}
+
+2994.1.1 = { holder = "1104666" } # Lan Madrigal
+
+2997.1.1 = {
+	law = succ_seniority
+}

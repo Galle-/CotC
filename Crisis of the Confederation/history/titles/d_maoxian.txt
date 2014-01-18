@@ -1,0 +1,9 @@
+2900.1.1 = {
+	law = succ_tanistry
+	law = true_cognatic_succession
+	liege = "k_novyy_edem"
+}
+
+2960.1.1 = { holder = 12013424 } # Viktor Liao
+2996.1.1 = { holder = 11013424 } # Ekateirna Liao
+2997.1.1 = { liege = "k_xin_zizhiqu" } # Ekateirna's defection

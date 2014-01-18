@@ -1,0 +1,66 @@
+# 239 - Yesushan
+
+# County Title
+title = c_yesushan
+
+# Settlements
+max_settlements = 4
+				 				
+				b_yesushan = temple
+				b_yesushan_b = city
+				b_yesushan_c = castle
+				b_yesushan_iv = city
+# Misc
+culture = sino_xingjie # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+		b_yesushan = tp_clean_atmosphere
+		b_yesushan = tp_frozen
+		b_yesushan = tp_cold
+		b_yesushan = tp_cool
+		b_yesushan = tp_no_water
+		b_yesushan = tp_trace_water
+		b_yesushan = tp_lakes
+		b_yesushan = tp_seas
+		b_yesushan = tp_oceans
+		
+		b_yesushan_b = ct_no_atmosphere
+		b_yesushan_b = ct_no_atmosphere_domes
+		b_yesushan_b = ct_frozen
+		b_yesushan_b = ct_cold
+		b_yesushan_b = ct_cool
+		b_yesushan_b = ct_no_water
+		b_yesushan_b = ct_trace_water
+		b_yesushan_b = ct_lakes
+		
+		b_yesushan_c = ca_no_atmosphere
+		b_yesushan_c = ca_no_atmosphere_domes
+		b_yesushan_c = ca_frozen
+		b_yesushan_c = ca_no_water
+		
+		b_yesushan_iv = ct_toxic_atmosphere
+		b_yesushan_iv = ct_toxic_atmosphere_domes
+		b_yesushan_iv = ct_frozen
+		b_yesushan_iv = ct_cold
+		b_yesushan_iv = ct_no_water
+		b_yesushan_iv = ct_trace_water
+		b_yesushan_iv = ct_lakes
+		b_yesushan_iv = ct_seas
+}
+
+2998.1.1 = {
+		b_yesushan = tp_colony_0
+		b_yesushan = tp_colony_1
+		b_yesushan = tp_colony_2
+		
+		b_yesushan_b = ct_colony_0
+		
+		b_yesushan_c = ca_colony_0
+		
+		b_yesushan_iv = ct_colony_0
+		b_yesushan_iv = ct_colony_1
+
+		
+}

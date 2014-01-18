@@ -1,0 +1,68 @@
+# 254 - Niú Cúnlán
+
+# County Title
+title = c_Niu_Cunlan
+
+# Settlements
+max_settlements = 4
+b_Niu_Cunlan_Prime = castle
+b_Niu_Cunlan_Moon_1 = city
+b_Niu_Cunlan_Moon_2 = temple
+b_Niu_Cunlan_Moon_7 = castle
+
+# Misc
+culture = sino_bianjiangese # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+
+	b_Niu_Cunlan_Prime = ca_no_water
+	b_Niu_Cunlan_Prime = ca_trace_water
+	b_Niu_Cunlan_Prime = ca_lakes
+	b_Niu_Cunlan_Prime = ca_clean_atmosphere
+	b_Niu_Cunlan_Prime = ca_burning
+	b_Niu_Cunlan_Prime = ca_hot
+	b_Niu_Cunlan_Prime = ca_warm
+	b_Niu_Cunlan_Prime = ca_planet_survey
+	
+	b_Niu_Cunlan_Moon_1 = ct_no_water
+	b_Niu_Cunlan_Moon_1 = ct_trace_water
+	b_Niu_Cunlan_Moon_1 = ct_lakes
+	b_Niu_Cunlan_Moon_1 = ct_seas
+	b_Niu_Cunlan_Moon_1 = ct_toxic_atmosphere
+	b_Niu_Cunlan_Moon_1 = ct_burning
+	b_Niu_Cunlan_Moon_1 = ct_hot
+	b_Niu_Cunlan_Moon_1 = ct_planet_survey
+	
+	b_Niu_Cunlan_Moon_2 = tp_no_water
+	b_Niu_Cunlan_Moon_2 = tp_trace_water
+	b_Niu_Cunlan_Moon_2 = tp_clean_atmosphere
+	b_Niu_Cunlan_Moon_2 = tp_frozen
+	b_Niu_Cunlan_Moon_2 = tp_cold
+	b_Niu_Cunlan_Moon_2 = tp_cool
+	b_Niu_Cunlan_Moon_2 = tp_planet_survey
+	
+	b_Niu_Cunlan_Moon_7 = ca_no_water
+	b_Niu_Cunlan_Moon_7 = ca_trace_water
+	b_Niu_Cunlan_Moon_7 = ca_lakes
+	b_Niu_Cunlan_Moon_7 = ca_clean_atmosphere
+	b_Niu_Cunlan_Moon_7 = ca_frozen
+	b_Niu_Cunlan_Moon_7 = ca_cold
+	b_Niu_Cunlan_Moon_7 = ca_planet_survey
+}
+
+2998.1.1 = {
+
+		b_Niu_Cunlan_Prime = ca_colony_0
+		b_Niu_Cunlan_Prime = ca_colony_1
+		b_Niu_Cunlan_Prime = ca_colony_2
+		
+		b_Niu_Cunlan_Moon_1 = ct_colony_0
+
+		b_Niu_Cunlan_Moon_2 = tp_colony_0
+		b_Niu_Cunlan_Moon_2 = tp_colony_1
+		
+		b_Niu_Cunlan_Moon_7 = ca_colony_0
+		
+}

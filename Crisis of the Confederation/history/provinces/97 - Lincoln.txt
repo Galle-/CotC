@@ -1,0 +1,57 @@
+# 97 - Lincoln
+
+# County Title
+title = c_lincoln
+
+# Settlements
+max_settlements = 4
+b_lincoln_prime = city
+b_lincoln_ii = temple
+b_lincoln_iii = castle
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_lincoln_prime = ct_clean_atmosphere
+	b_lincoln_prime = ct_no_water
+	b_lincoln_prime = ct_trace_water
+	b_lincoln_prime = ct_lakes
+	b_lincoln_prime = ct_seas
+	b_lincoln_prime = ct_burning
+	b_lincoln_prime = ct_hot
+	b_lincoln_prime = ct_warm
+	b_lincoln_prime = ct_planet_survey
+	
+	b_lincoln_ii = tp_toxic_atmosphere
+	b_lincoln_ii = tp_no_water
+	b_lincoln_ii = tp_trace_water
+	b_lincoln_ii = tp_burning
+	b_lincoln_ii = tp_hot
+	b_lincoln_ii = tp_warm
+	b_lincoln_ii = tp_optimal_hot
+	b_lincoln_ii = tp_planet_survey
+	
+	b_lincoln_iii = ca_no_atmosphere
+	b_lincoln_iii = ca_no_water
+	b_lincoln_iii = ca_trace_water
+	b_lincoln_iii = ca_lakes
+	b_lincoln_iii = ca_frozen
+	b_lincoln_iii = ca_cold
+	b_lincoln_iii = ca_cool
+	b_lincoln_iii = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_lincoln_prime = ct_colony_0
+	b_lincoln_prime = ct_colony_1
+	b_lincoln_prime = ct_colony_2
+	
+	b_lincoln_ii = tp_colony_0
+	b_lincoln_ii = tp_colony_1
+	
+	b_lincoln_iii = ca_colony_0
+	b_lincoln_iii = ca_colony_1
+}

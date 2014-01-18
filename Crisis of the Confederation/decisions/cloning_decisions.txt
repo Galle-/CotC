@@ -1,0 +1,58 @@
+decisions = {
+	clone_self_decision = {
+		potential = {
+			is_ruler = yes
+			demesne_size = 1 # Must actually have land somewhere
+			NOT = { has_character_flag = flag_cloning_decision_active }
+			# Tech requirement goes here
+		}
+		allow = {
+			# Cloning must be legal
+			NOT = { primary_title = { has_law = cloning_0 } }
+			NOT = { crownlaw_title = { has_law = cloning_0 } }
+			
+			# Clones are expensive
+			wealth = 500
+		}
+		effect = {
+			set_character_flag = flag_cloning_decision_active
+			character_event = { id = clone.0 tooltip = "EVTTOOLTIPCLONE0" }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_married = yes
+				NOT = {
+					AND = {
+						is_female = yes
+						age = 45
+					}
+				}
+				NOT = {
+					spouse = {
+						is_female = yes
+						age = 45
+					}
+				}
+				fertility = 0.5
+				spouse = { fertility = 0.5 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { age = 16 }
+			}
+			modifier = {
+				factor = 0
+				any_child = { reverse_opinion = { who = ROOT value = 50 } }
+				NOT = {
+					AND = {
+						is_female = no
+						has_ambition = obj_have_a_son
+					}
+				}
+				NOT = { has_ambition = obj_have_a_daughter }
+			}
+		}
+	}
+}

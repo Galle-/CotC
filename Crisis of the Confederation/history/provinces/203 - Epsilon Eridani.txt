@@ -1,0 +1,52 @@
+# 203 - Epsilon Eridani
+
+# County Title
+title = c_epsilon_eridani
+
+# Settlements
+max_settlements = 4
+b_epsilon_eridani_iii = temple
+b_epsilon_eridani_iv = city
+b_epsilon_eridani_iv_b = castle
+
+# Misc
+culture = russo_terran # Initial culture
+religion = terran_republican
+
+# History
+1.1.1 = {
+	b_epsilon_eridani_iii = tp_no_atmosphere
+	b_epsilon_eridani_iii = tp_no_water
+	b_epsilon_eridani_iii = tp_trace_water
+	b_epsilon_eridani_iii = tp_frozen
+	b_epsilon_eridani_iii = tp_cold
+	b_epsilon_eridani_iii = tp_cool
+	b_epsilon_eridani_iii = tp_planet_survey
+	
+	b_epsilon_eridani_iv = ct_toxic_atmosphere
+	b_epsilon_eridani_iv = ct_no_water
+	b_epsilon_eridani_iv = ct_trace_water
+	b_epsilon_eridani_iv = ct_lakes
+	b_epsilon_eridani_iv = ct_seas
+	b_epsilon_eridani_iv = ct_frozen
+	b_epsilon_eridani_iv = ct_cold
+	b_epsilon_eridani_iv = ct_planet_survey
+	
+	b_epsilon_eridani_iv_b = ca_no_atmosphere
+	b_epsilon_eridani_iv_b = ca_no_water
+	b_epsilon_eridani_iv_b = ca_frozen
+	b_epsilon_eridani_iv_b = ca_cold
+	b_epsilon_eridani_iv_b = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_epsilon_eridani_iii = tp_colony_0
+	b_epsilon_eridani_iii = tp_colony_1
+	
+	b_epsilon_eridani_iv = ct_toxic_atmosphere_domes
+	b_epsilon_eridani_iv = ct_colony_0
+	b_epsilon_eridani_iv = ct_colony_1
+	b_epsilon_eridani_iv = ct_colony_2
+	
+	b_epsilon_eridani_iv_b = ca_colony_0
+}

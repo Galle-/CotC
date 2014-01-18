@@ -1,0 +1,48 @@
+# 92 - Touchstone
+
+# County Title
+title = c_touchstone
+
+# Settlements
+max_settlements = 4
+b_touchstone_iii = castle
+b_touchstone_iii_b = temple
+b_touchstone_iv = city
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_touchstone_iii = ca_toxic_atmosphere
+	b_touchstone_iii = ca_no_water
+	b_touchstone_iii = ca_trace_water
+	b_touchstone_iii = ca_burning
+	b_touchstone_iii = ca_planet_survey
+	
+	b_touchstone_iii_b = tp_no_atmosphere
+	b_touchstone_iii_b = tp_no_water
+	b_touchstone_iii_b = tp_burning
+	b_touchstone_iii_b = tp_planet_survey
+	
+	# TOuchstone IV is a mining colony
+	b_touchstone_iv = ct_toxic_atmosphere
+	b_touchstone_iv = ct_no_water
+	b_touchstone_iv = ct_trace_water
+	b_touchstone_iv = ct_burning
+	b_touchstone_iv = ct_hot
+	b_touchstone_iv = ct_planet_survey
+}
+
+2998.1.1 = {
+	b_touchstone_iii = ca_colony_0
+	b_touchstone_iii = ca_colony_1
+	
+	b_touchstone_iii_b = tp_colony_0
+	
+	b_touchstone_iv = ct_colony_0
+	b_touchstone_iv = ct_colony_1
+	
+	trade_post = b_weyland
+}

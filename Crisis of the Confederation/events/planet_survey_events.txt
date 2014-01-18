@@ -1,0 +1,476 @@
+namespace = planet_survey
+
+character_event = {
+	id = planet_survey.0
+	desc = "PLANETSURVEYDESC0"
+	
+	trigger = {
+		any_demesne_title = {
+			tier = baron
+			is_patrician = no
+			OR = {
+				AND = {
+					is_feudal = yes
+					NOT = { has_building = ca_planet_survey }
+					NOT = { has_building = ca_space_station_0 }
+				}
+				AND = {
+					is_republic = yes
+					NOT = { has_building = ct_planet_survey }
+					NOT = { has_building = ct_space_station_0 }
+				}
+				AND = {
+					is_theocracy = yes
+					NOT = { has_building = tp_planet_survey }
+					NOT = { has_building = tp_space_station_0 }
+				}
+			}
+		}
+		NOT = { has_character_flag = flag_planet_survey } # Prevent multiple overlapping surveys
+	}
+	
+	immediate = {
+		set_character_flag = flag_planet_survey
+		random_list = {
+			30 = { set_character_flag = flag_no_atmosphere }
+			50 = { set_character_flag = flag_toxic_atmosphere }
+			20 = { set_character_flag = flag_clean_atmosphere }
+		}
+		random_list = {
+			10 = { set_character_flag = flag_no_water }
+			10 = { set_character_flag = flag_trace_water }
+			10 = { set_character_flag = flag_lakes }
+			10 = { set_character_flag = flag_seas }
+			10 = { set_character_flag = flag_oceans }
+		}
+		random_list = {
+			10 = { set_character_flag = flag_burning }
+			10 = { set_character_flag = flag_hot }
+			10 = { set_character_flag = flag_warm }
+			10 = { set_character_flag = flag_optimal }
+			10 = { set_character_flag = flag_cool }
+			10 = { set_character_flag = flag_cold }
+			10 = { set_character_flag = flag_frozen }
+		}
+	}
+	option = {
+		name = "OK"
+		random_demesne_title = {
+			limit = {
+				tier = baron
+				is_feudal = yes
+				NOT = { has_building = ca_planet_survey }
+			}
+			hidden_tooltip = {
+				remove_building = ca_scrubbed_atmosphere
+				remove_building = ca_toxic_atmosphere_domes
+				remove_building = ca_toxic_atmosphere
+				remove_building = ca_artificial_atmosphere
+				remove_building = ca_no_atmosphere_domes
+				remove_building = ca_no_atmosphere
+				remove_building = ca_clean_atmosphere
+				remove_building = ca_oceans
+				remove_building = ca_seas
+				remove_building = ca_lakes
+				remove_building = ca_trace_water
+				remove_building = ca_no_water
+				remove_building = ca_optimal_cold
+				remove_building = ca_cool
+				remove_building = ca_cold
+				remove_building = ca_frozen
+				remove_building = ca_optimal_hot
+				remove_building = ca_warm
+				remove_building = ca_hot
+				remove_building = ca_burning
+			}
+			add_building = ca_space_station_0
+			if = {
+				limit = { ROOT = { has_character_flag = flag_no_atmosphere } }
+				add_building = ca_no_atmosphere
+				ROOT = { clr_character_flag = flag_no_atmosphere }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_toxic_atmosphere } }
+				add_building = ca_toxic_atmosphere
+				ROOT = { clr_character_flag = flag_toxic_atmosphere }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_clean_atmosphere } }
+				add_building = ca_clean_atmosphere
+				ROOT = { clr_character_flag = flag_clean_atmosphere }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_no_water } }
+				add_building = ca_no_water
+				ROOT = { clr_character_flag = flag_no_water }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_trace_water } }
+				hidden_tooltip = { add_building = ca_no_water }
+				add_building = ca_trace_water
+				ROOT = { clr_character_flag = flag_trace_water }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_lakes } }
+				hidden_tooltip = {
+					add_building = ca_no_water
+					add_building = ca_trace_water
+				}
+				add_building = ca_lakes
+				ROOT = { clr_character_flag = flag_lakes }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_seas } }
+				hidden_tooltip = {
+					add_building = ca_no_water
+					add_building = ca_trace_water
+					add_building = ca_lakes
+				}
+				add_building = ca_seas
+				ROOT = { clr_character_flag = flag_seas }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_oceans } }
+				hidden_tooltip = {
+					add_building = ca_no_water
+					add_building = ca_trace_water
+					add_building = ca_lakes
+					add_building = ca_seas
+				}
+				add_building = ca_oceans
+				ROOT = { clr_character_flag = flag_oceans }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_frozen } }
+				add_building = ca_frozen
+				ROOT = { clr_character_flag = flag_frozen }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_cold } }
+				hidden_tooltip = { add_building = ca_frozen }
+				add_building = ca_cold
+				ROOT = { clr_character_flag = flag_cold }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_cool } }
+				hidden_tooltip = {
+					add_building = ca_frozen
+					add_building = ca_cold
+				}
+				add_building = ca_cool
+				ROOT = { clr_character_flag = flag_cool }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_optimal } }
+				hidden_tooltip = {
+					add_building = ca_frozen
+					add_building = ca_cold
+					add_building = ca_cool
+				}
+				add_building = ca_optimal_cold
+				ROOT = { clr_character_flag = flag_optimal }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_warm } }
+				hidden_tooltip = {
+					add_building = ca_burning
+					add_building = ca_hot
+				}
+				add_building = ca_warm
+				ROOT = { clr_character_flag = flag_warm }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_hot } }
+				hidden_tooltip = { add_building = ca_burning }
+				add_building = ca_hot
+				ROOT = { clr_character_flag = flag_hot }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_burning } }
+				add_building = ca_burning
+				ROOT = { clr_character_flag = flag_burning }
+			}
+			add_building = ca_planet_survey
+			ROOT = { clr_character_flag = flag_planet_survey }
+		}
+		random_demesne_title = {
+			limit = {
+				tier = baron
+				is_theocracy = yes
+				NOT = { has_building = tp_planet_survey }
+				ROOT = { has_character_flag = flag_planet_survey }
+			}
+			add_building = tp_space_station_0
+			hidden_tooltip = {
+				remove_building = tp_scrubbed_atmosphere
+				remove_building = tp_toxic_atmosphere_domes
+				remove_building = tp_toxic_atmosphere
+				remove_building = tp_artificial_atmosphere
+				remove_building = tp_no_atmosphere_domes
+				remove_building = tp_no_atmosphere
+				remove_building = tp_clean_atmosphere
+				remove_building = tp_oceans
+				remove_building = tp_seas
+				remove_building = tp_lakes
+				remove_building = tp_trace_water
+				remove_building = tp_no_water
+				remove_building = tp_optimal_cold
+				remove_building = tp_cool
+				remove_building = tp_cold
+				remove_building = tp_frozen
+				remove_building = tp_optimal_hot
+				remove_building = tp_warm
+				remove_building = tp_hot
+				remove_building = tp_burning
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_no_atmosphere } }
+				add_building = tp_no_atmosphere
+				ROOT = { clr_character_flag = flag_no_atmosphere }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_toxic_atmosphere } }
+				add_building = tp_toxic_atmosphere
+				ROOT = { clr_character_flag = flag_toxic_atmosphere }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_clean_atmosphere } }
+				add_building = tp_clean_atmosphere
+				ROOT = { clr_character_flag = flag_clean_atmosphere }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_no_water } }
+				add_building = tp_no_water
+				ROOT = { clr_character_flag = flag_no_water }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_trace_water } }
+				hidden_tooltip = { add_building = tp_no_water }
+				add_building = tp_trace_water
+				ROOT = { clr_character_flag = flag_trace_water }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_lakes } }
+				hidden_tooltip = {
+					add_building = tp_no_water
+					add_building = tp_trace_water
+				}
+				add_building = tp_lakes
+				ROOT = { clr_character_flag = flag_lakes }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_seas } }
+				hidden_tooltip = {
+					add_building = tp_no_water
+					add_building = tp_trace_water
+					add_building = tp_lakes
+				}
+				add_building = tp_seas
+				ROOT = { clr_character_flag = flag_seas }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_oceans } }
+				hidden_tooltip = {
+					add_building = tp_no_water
+					add_building = tp_trace_water
+					add_building = tp_lakes
+					add_building = tp_seas
+				}
+				add_building = tp_oceans
+				ROOT = { clr_character_flag = flag_oceans }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_frozen } }
+				add_building = tp_frozen
+				ROOT = { clr_character_flag = flag_frozen }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_cold } }
+				hidden_tooltip = { add_building = tp_frozen }
+				add_building = tp_cold
+				ROOT = { clr_character_flag = flag_cold }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_cool } }
+				hidden_tooltip = {
+					add_building = tp_frozen
+					add_building = tp_cold
+				}
+				add_building = tp_cool
+				ROOT = { clr_character_flag = flag_cool }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_optimal } }
+				hidden_tooltip = {
+					add_building = tp_frozen
+					add_building = tp_cold
+					add_building = tp_cool
+				}
+				add_building = tp_optimal_cold
+				ROOT = { clr_character_flag = flag_optimal }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_warm } }
+				hidden_tooltip = {
+					add_building = tp_burning
+					add_building = tp_hot
+				}
+				add_building = tp_warm
+				ROOT = { clr_character_flag = flag_warm }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_hot } }
+				hidden_tooltip = { add_building = tp_burning }
+				add_building = tp_hot
+				ROOT = { clr_character_flag = flag_hot }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_burning } }
+				add_building = tp_burning
+				ROOT = { clr_character_flag = flag_burning }
+			}
+			add_building = tp_planet_survey
+			ROOT = { clr_character_flag = flag_planet_survey }
+		}
+		random_demesne_title = {
+			limit = {
+				tier = baron
+				is_republic = yes
+				is_patrician = no
+				NOT = { has_building = ct_planet_survey }
+				ROOT = { has_character_flag = flag_planet_survey }
+			}
+			add_building = ct_space_station_0
+			hidden_tooltip = {
+				remove_building = ct_scrubbed_atmosphere
+				remove_building = ct_toxic_atmosphere_domes
+				remove_building = ct_toxic_atmosphere
+				remove_building = ct_artificial_atmosphere
+				remove_building = ct_no_atmosphere_domes
+				remove_building = ct_no_atmosphere
+				remove_building = ct_clean_atmosphere
+				remove_building = ct_oceans
+				remove_building = ct_seas
+				remove_building = ct_lakes
+				remove_building = ct_trace_water
+				remove_building = ct_no_water
+				remove_building = ct_optimal_cold
+				remove_building = ct_cool
+				remove_building = ct_cold
+				remove_building = ct_frozen
+				remove_building = ct_optimal_hot
+				remove_building = ct_warm
+				remove_building = ct_hot
+				remove_building = ct_burning
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_no_atmosphere } }
+				add_building = ct_no_atmosphere
+				ROOT = { clr_character_flag = flag_no_atmosphere }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_toxic_atmosphere } }
+				add_building = ct_toxic_atmosphere
+				ROOT = { clr_character_flag = flag_toxic_atmosphere }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_clean_atmosphere } }
+				add_building = ct_clean_atmosphere
+				ROOT = { clr_character_flag = flag_clean_atmosphere }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_no_water } }
+				add_building = ct_no_water
+				ROOT = { clr_character_flag = flag_no_water }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_trace_water } }
+				hidden_tooltip = { add_building = ct_no_water }
+				add_building = ct_trace_water
+				ROOT = { clr_character_flag = flag_trace_water }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_lakes } }
+				hidden_tooltip = {
+					add_building = ct_no_water
+					add_building = ct_trace_water
+				}
+				add_building = ct_lakes
+				ROOT = { clr_character_flag = flag_lakes }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_seas } }
+				hidden_tooltip = {
+					add_building = ct_no_water
+					add_building = ct_trace_water
+					add_building = ct_lakes
+				}
+				add_building = ct_seas
+				ROOT = { clr_character_flag = flag_seas }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_oceans } }
+				hidden_tooltip = {
+					add_building = ct_no_water
+					add_building = ct_trace_water
+					add_building = ct_lakes
+					add_building = ct_seas
+				}
+				add_building = ct_oceans
+				ROOT = { clr_character_flag = flag_oceans }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_frozen } }
+				add_building = ct_frozen
+				ROOT = { clr_character_flag = flag_frozen }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_cold } }
+				hidden_tooltip = { add_building = ct_frozen }
+				add_building = ct_cold
+				ROOT = { clr_character_flag = flag_cold }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_cool } }
+				hidden_tooltip = {
+					add_building = ct_frozen
+					add_building = ct_cold
+				}
+				add_building = ct_cool
+				ROOT = { clr_character_flag = flag_cool }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_optimal } }
+				hidden_tooltip = {
+					add_building = ct_frozen
+					add_building = ct_cold
+					add_building = ct_cool
+				}
+				add_building = ct_optimal_cold
+				ROOT = { clr_character_flag = flag_optimal }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_warm } }
+				hidden_tooltip = {
+					add_building = ct_burning
+					add_building = ct_hot
+				}
+				add_building = ct_warm
+				ROOT = { clr_character_flag = flag_warm }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_hot } }
+				hidden_tooltip = { add_building = ct_burning }
+				add_building = ct_hot
+				ROOT = { clr_character_flag = flag_hot }
+			}
+			if = {
+				limit = { ROOT = { has_character_flag = flag_burning } }
+				add_building = ct_burning
+				ROOT = { clr_character_flag = flag_burning }
+			}
+			add_building = ct_planet_survey
+			ROOT = { clr_character_flag = flag_planet_survey }
+		}
+	}
+}

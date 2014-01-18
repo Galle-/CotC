@@ -1,0 +1,55 @@
+# 201 - Alpha Centauri
+
+# County Title
+title = c_alpha_centauri
+
+# Settlements
+max_settlements = 4
+b_alpha_centauri_ii = temple
+b_alpha_centauri_iii = city
+b_alpha_centauri_iii_b = castle
+
+# Misc
+culture = japanese_terran # Initial culture
+religion = terran_republican
+
+# History
+1.1.1 = {
+	b_alpha_centauri_ii = tp_toxic_atmosphere
+	b_alpha_centauri_ii = tp_no_water
+	b_alpha_centauri_ii = tp_trace_water
+	b_alpha_centauri_ii = tp_burning
+	b_alpha_centauri_ii = tp_hot
+	b_alpha_centauri_ii = tp_planet_survey
+	
+	b_alpha_centauri_iii = ct_toxic_atmosphere
+	b_alpha_centauri_iii = ct_no_water
+	b_alpha_centauri_iii = ct_trace_water
+	b_alpha_centauri_iii = ct_lakes
+	b_alpha_centauri_iii = ct_seas
+	b_alpha_centauri_iii = ct_burning
+	b_alpha_centauri_iii = ct_hot
+	b_alpha_centauri_iii = ct_warm
+	b_alpha_centauri_iii = ct_planet_survey
+	
+	b_alpha_centauri_iii_b = ca_no_atmosphere
+	b_alpha_centauri_iii_b = ca_no_water
+	b_alpha_centauri_iii_b = ca_trace_water
+	b_alpha_centauri_iii_b = ca_burning
+	b_alpha_centauri_iii_b = ca_hot
+	b_alpha_centauri_iii_b = ca_warm
+	b_alpha_centauri_iii_b = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_alpha_centauri_ii = tp_colony_0
+	b_alpha_centauri_ii = tp_colony_1
+	
+	b_alpha_centauri_iii = ct_toxic_atmosphere_domes
+	b_alpha_centauri_iii = ct_colony_0
+	b_alpha_centauri_iii = ct_colony_1
+	b_alpha_centauri_iii = ct_colony_2
+	
+	b_alpha_centauri_iii_b = ca_colony_0
+	b_alpha_centauri_iii_b = ca_colony_1
+}

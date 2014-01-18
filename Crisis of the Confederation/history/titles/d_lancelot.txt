@@ -1,0 +1,11 @@
+2723.1.1 = {
+	liege = "k_avalon"
+	law = true_cognatic_succession
+	law = succ_ultimogeniture
+	holder = "1609086" # Victor I Miyamoto
+}
+2774.1.1 = { holder = "1509086" } # Victor II Miyamoto
+2835.1.1 = { holder = "1409086" } # Victor III Miyamoto
+2894.1.1 = { holder = "1309086" } # Victor IV Miyamoto
+2955.1.1 = { holder = "1209086" } # Victor V Miyamoto
+2990.7.24 = { holder = "1109086" } # Victor VI Miyamoto

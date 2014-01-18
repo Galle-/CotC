@@ -1,0 +1,27 @@
+# 231 - Yonghengde Anbian
+# 
+# County Title
+title = c_yonghengde_anbian
+
+# Settlements
+max_settlements = 4
+				
+
+				b_yonghende_anbian = ca_castle
+				
+# Misc
+culture = sino_bianjiangese # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+	b_yonghende_anbian = ca_no_amosphere
+	b_yonghende_anbian = ca_frozen
+	b_yonghende_anbian = ca_no_water
+	
+	}
+2998.1.1 = {
+	b_yonghende_anbian = ca_no_atmosphere_domes
+	b_yonghende_anbian = ca_colony_0
+	b_yonghende_anbian = FL_01_ca
+	}

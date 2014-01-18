@@ -1,0 +1,50 @@
+# 371 - Liuyang
+
+# County Title
+title = c_liuyang
+
+# Settlements
+max_settlements = 4
+	b_liuyang_iii = city
+	b_liuyang_iv = temple
+	b_liuyang_iii_b = castle
+	b_liuyang_vi = castle
+
+# Misc
+culture = sino_bianjiangese # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+
+b_liuyang_iii = ct_planet_survey
+b_liuyang_iii = ct_seas
+b_liuyang_iii = ct_clean_atmosphere
+b_liuyang_iii = ct_cool
+
+b_liuyang_iv = tp_planet_survey
+b_liuyang_iv = tp_trace_water
+b_liuyang_iv = tp_scrubbed_atmosphere
+b_liuyang_iv = tp_cool
+
+
+b_liuyang_iii_b = ca_planet_survey
+b_liuyang_iii_b = ca_toxic_atmosphere
+b_liuyang_iii_b = ca_trace_water
+b_liuyang_iii_b = ca_hot
+
+b_liuyang_vi = ca_planet_survey
+b_liuyang_vi = ca_lakes
+b_liuyang_vi = ca_clean_atmosphere
+b_liuyang_vi = ca_warm
+
+	
+}
+
+
+2712.3.28 = {b_liuyang_vi = ca_colony_0}
+2780.8.12 = {b_liuyang_iv = tp_colony_0}
+2793.1.1 = {b_liuyang_iii_b = ca_colony_0}
+2998.1.1 = {
+
+}

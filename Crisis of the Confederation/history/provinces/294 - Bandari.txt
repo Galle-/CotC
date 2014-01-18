@@ -1,0 +1,53 @@
+# 294 - Bandari
+
+# County Title
+title = c_bandari
+
+# Settlements
+max_settlements = 4
+b_bandari_prime = city
+b_bandari_prime_b = temple
+b_bandari_iii = castle
+
+# Misc
+culture = east_afro_angani # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_bandari_prime = ct_clean_atmosphere
+	b_bandari_prime = ct_no_water
+	b_bandari_prime = ct_trace_water
+	b_bandari_prime = ct_lakes
+	b_bandari_prime = ct_frozen
+	b_bandari_prime = ct_cold
+	b_bandari_prime = ct_cool
+	b_bandari_prime = ct_planet_survey
+	
+	b_bandari_prime_b = tp_no_atmosphere
+	b_bandari_prime_b = tp_no_water
+	b_bandari_prime_b = tp_frozen
+	b_bandari_prime_b = tp_cold
+	b_bandari_prime_b = tp_cool
+	b_bandari_prime_b = tp_planet_survey
+	
+	b_bandari_iii = ca_toxic_atmosphere
+	b_bandari_iii = ca_no_water
+	b_bandari_iii = ca_trace_water
+	b_bandari_iii = ca_lakes
+	b_bandari_iii = ca_seas
+	b_bandari_iii = ca_oceans
+	b_bandari_iii = ca_frozen
+	b_bandari_iii = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_bandari_prime = ct_colony_0
+	b_bandari_prime = ct_colony_1
+	b_bandari_prime = ct_colony_2
+	
+	b_bandari_prime_b = tp_colony_0
+	b_bandari_prime_b = tp_colony_1
+	
+	b_bandari_iii = ca_colony_0
+}

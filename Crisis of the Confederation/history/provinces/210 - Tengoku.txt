@@ -1,0 +1,53 @@
+# 209 - Tengoku
+
+# County Title
+title = c_tengoku
+
+# Settlements
+max_settlements = 5
+b_tengoku_iii = city
+b_tengoku_iii_b = temple
+b_orbital_station_alpha = castle
+
+# Misc
+culture = japanese_tengoku # Initial culture
+religion = terran_republican
+
+# History
+1.1.1 = {
+	b_tengoku_iii = ct_clean_atmosphere
+	b_tengoku_iii = ct_no_water
+	b_tengoku_iii = ct_trace_water
+	b_tengoku_iii = ct_lakes
+	b_tengoku_iii = ct_seas
+	b_tengoku_iii = ct_oceans
+	b_tengoku_iii = ct_frozen
+	b_tengoku_iii = ct_cold
+	b_tengoku_iii = ct_cool
+	b_tengoku_iii = ct_optimal_cold
+	
+	b_tengoku_iii_b = tp_no_atmosphere
+	b_tengoku_iii_b = tp_no_water
+	b_tengoku_iii_b = tp_frozen
+	b_tengoku_iii_b = tp_cold
+	b_tengoku_iii_b = tp_cool
+	b_tengoku_iii_b = tp_optimal_cold
+	b_tengoku_iii_b = tp_planet_survey
+	
+	b_orbital_station_alpha = ca_space_station_0
+	b_orbital_station_alpha = ca_space_station_1
+}
+
+2998.1.1 = {
+	b_tengoku_iii = ct_colony_0
+	b_tengoku_iii = ct_colony_1
+	b_tengoku_iii = ct_colony_2
+	b_tengoku_iii = ct_colony_3
+	
+	b_tengoku_iii_b = tp_colony_0
+	
+	b_orbital_station_alpha = ca_colony_0
+	b_orbital_station_alpha = ca_colony_1
+	
+	trade_post = b_kojima
+}

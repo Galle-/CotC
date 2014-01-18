@@ -1,0 +1,57 @@
+# 77 - Nahui-Ahtle
+
+# County Title
+title = c_nahui_ahtle
+
+# Settlements
+max_settlements = 6
+b_nahui_ahtle_ii = city
+b_nahui_ahtle_ii_b = temple
+b_nahui_ahtle_iii = castle
+
+# Misc
+culture = mesoamerican_sexto_solar # Initial culture
+religion = adoptionist_cultist
+
+# History
+1.1.1 = {
+	# Nahui-Ahtle II: Clean, Oceans, Hot
+	b_nahui_ahtle_ii = ct_clean_atmosphere
+	b_nahui_ahtle_ii = ct_no_water
+	b_nahui_ahtle_ii = ct_trace_water
+	b_nahui_ahtle_ii = ct_lakes
+	b_nahui_ahtle_ii = ct_seas
+	b_nahui_ahtle_ii = ct_oceans
+	b_nahui_ahtle_ii = ct_burning
+	b_nahui_ahtle_ii = ct_hot
+	b_nahui_ahtle_ii = ct_planet_survey
+	
+	# Nahui-Ahtle II-B: None, None, Hot
+	b_nahui_ahtle_ii_b = tp_no_atmosphere
+	b_nahui_ahtle_ii_b = tp_no_water
+	b_nahui_ahtle_ii_b = tp_burning
+	b_nahui_ahtle_ii_b = tp_hot
+	b_nahui_ahtle_ii_b = tp_planet_survey
+	
+	# Nahui-Ahtle III: Toxic, Trace, Warm
+	b_nahui_ahtle_iii = ca_toxic_atmosphere
+	b_nahui_ahtle_iii = ca_no_water
+	b_nahui_ahtle_iii = ca_trace_water
+	b_nahui_ahtle_iii = ca_burning
+	b_nahui_ahtle_iii = ca_hot
+	b_nahui_ahtle_iii = ca_warm
+	b_nahui_ahtle_iii = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_nahui_ahtle_ii = ct_colony_0
+	b_nahui_ahtle_ii = ct_colony_1
+	b_nahui_ahtle_ii = ct_colony_2
+	
+	b_nahui_ahtle_ii_b = tp_colony_0
+	b_nahui_ahtle_ii_b = tp_colony_1
+	
+	b_nahui_ahtle_iii = ca_toxic_atmosphere_domes
+	b_nahui_ahtle_iii = ca_colony_0
+	b_nahui_ahtle_iii = ca_colony_1
+}

@@ -1,0 +1,21 @@
+# 102 - Eye of God
+
+# County Title
+title = c_eye_of_god
+
+# Settlements
+max_settlements = 2
+
+b_eye_of_god = temple
+b_eye_of_god_waystation = castle
+
+# Misc
+culture = russo_centauri # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

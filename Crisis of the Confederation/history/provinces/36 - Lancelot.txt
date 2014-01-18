@@ -1,0 +1,22 @@
+# 36 - Lancelot
+
+# County Title
+title = c_lancelot
+
+# Settlements
+max_settlements = 5
+
+b_lancelot_iii_b = castle
+b_lancelot_iii = city
+b_lancelot_iii_c = temple
+
+# Misc
+culture = anglo_avalonian # Initial culture
+religion = neo_feudal
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

@@ -1,0 +1,47 @@
+# 313 - Shams Akhdar
+
+# County Title
+title = c_shams_akhdar
+
+# Settlements
+max_settlements = 4
+b_shams_akhdar_waystation = castle
+b_shams_akhdar_iii = city
+b_shams_akhdar_iii_b = temple
+
+# Misc
+culture = arab_samawati # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+	b_shams_akhdar_waystation = ca_space_station_0
+	b_shams_akhdar_waystation = ca_space_station_1
+	b_shams_akhdar_waystation = ca_space_station_2
+	
+	b_shams_akhdar_iii = ct_clean_atmosphere
+	b_shams_akhdar_iii = ct_no_water
+	b_shams_akhdar_iii = ct_trace_water
+	b_shams_akhdar_iii = ct_burning
+	b_shams_akhdar_iii = ct_hot
+	b_shams_akhdar_iii = ct_warm
+	b_shams_akhdar_iii = ct_planet_survey
+	
+	b_shams_akhdar_iii_b = tp_no_atmosphere
+	b_shams_akhdar_iii_b = tp_no_water
+	b_shams_akhdar_iii_b = tp_burning
+	b_shams_akhdar_iii_b = tp_hot
+	b_shams_akhdar_iii_b = tp_warm
+	b_shams_akhdar_iii_b = tp_planet_survey
+}
+
+2998.1.1 = {
+	b_shams_akhdar_waystation = ca_colony_0
+	b_shams_akhdar_waystation = ca_colony_1
+	b_shams_akhdar_waystation = ca_colony_2
+	
+	b_shams_akhdar_iii = ct_colony_0
+	b_shams_akhdar_iii = ct_colony_1
+	
+	b_shams_akhdar_iii_b = tp_colony_0
+}

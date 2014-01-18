@@ -1,0 +1,11 @@
+2900.1.1={
+	liege = "d_deng_biao"
+	law = succ_patrician_elective
+	law = true_cognatic_succession
+}
+
+2988.1.1 = { holder = "11011098" } # Kong Komissarov
+
+2997.1.1 = {
+	law = succ_seniority
+}

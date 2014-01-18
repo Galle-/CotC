@@ -1,0 +1,59 @@
+# 290 - Upeo wa Macho
+
+# County Title
+title = c_upeo_wa_macho
+
+# Settlements
+max_settlements = 4
+b_upeo_wa_macho_iii = castle
+b_upeo_wa_macho_iii_b = temple
+b_upeo_wa_macho_iv = city
+
+# Misc
+culture = east_afro_angani # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_upeo_wa_macho_iii = ca_toxic_atmosphere
+	b_upeo_wa_macho_iii = ca_no_water
+	b_upeo_wa_macho_iii = ca_trace_water
+	b_upeo_wa_macho_iii = ca_lakes
+	b_upeo_wa_macho_iii = ca_seas
+	b_upeo_wa_macho_iii = ca_burning
+	b_upeo_wa_macho_iii = ca_hot
+	b_upeo_wa_macho_iii = ca_warm
+	b_upeo_wa_macho_iii = ca_optimal_hot
+	b_upeo_wa_macho_iii = ca_planet_survey
+	
+	b_upeo_wa_macho_iii_b = tp_no_atmosphere
+	b_upeo_wa_macho_iii_b = tp_no_water
+	b_upeo_wa_macho_iii_b = tp_trace_water
+	b_upeo_wa_macho_iii_b = tp_lakes
+	b_upeo_wa_macho_iii_b = tp_burning
+	b_upeo_wa_macho_iii_b = tp_hot
+	b_upeo_wa_macho_iii_b = tp_warm
+	b_upeo_wa_macho_iii_b = tp_optimal_hot
+	b_upeo_wa_macho_iii_b = tp_planet_survey
+	
+	b_upeo_wa_macho_iv = ct_toxic_atmosphere
+	b_upeo_wa_macho_iv = ct_no_water
+	b_upeo_wa_macho_iv = ct_trace_water
+	b_upeo_wa_macho_iv = ct_frozen
+	b_upeo_wa_macho_iv = ct_cold
+	b_upeo_wa_macho_iv = ct_cool
+	b_upeo_wa_macho_iv = ct_planet_survey
+}
+
+2998.1.1 = {
+	b_upeo_wa_macho_iii = ca_toxic_atmosphere_domes
+	b_upeo_wa_macho_iii = ca_colony_0
+	b_upeo_wa_macho_iii = ca_colony_1
+	b_upeo_wa_macho_iii = ca_colony_2
+	
+	b_upeo_wa_macho_iii_b = tp_colony_0
+	b_upeo_wa_macho_iii_b = tp_colony_1
+	
+	b_upeo_wa_macho_iv = ct_colony_0
+	b_upeo_wa_macho_iv = ct_colony_1
+}

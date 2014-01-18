@@ -1,0 +1,63 @@
+# 85 - Beowulf
+
+# County Title
+title = c_beowulf
+
+# Settlements
+max_settlements = 4
+b_beowulf_iii_b = city
+b_beowulf_iii_c = temple
+b_beowulf_iii_d = castle
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_beowulf_iii_b = ct_no_atmosphere
+	b_beowulf_iii_b = ct_no_water
+	b_beowulf_iii_b = ct_trace_water
+	b_beowulf_iii_b = ct_lakes
+	b_beowulf_iii_b = ct_seas
+	b_beowulf_iii_b = ct_oceans
+	b_beowulf_iii_b = ct_burning
+	b_beowulf_iii_b = ct_hot
+	b_beowulf_iii_b = ct_warm
+	b_beowulf_iii_b = ct_planet_survey
+	
+	b_beowulf_iii_c = tp_no_atmosphere
+	b_beowulf_iii_c = tp_no_water
+	b_beowulf_iii_c = tp_trace_water
+	b_beowulf_iii_c = tp_lakes
+	b_beowulf_iii_c = tp_seas
+	b_beowulf_iii_c = tp_oceans
+	b_beowulf_iii_c = tp_burning
+	b_beowulf_iii_c = tp_hot
+	b_beowulf_iii_c = tp_warm
+	b_beowulf_iii_c = tp_planet_survey
+	
+	b_beowulf_iii_d = ca_no_atmosphere
+	b_beowulf_iii_d = ca_no_water
+	b_beowulf_iii_d = ca_trace_water
+	b_beowulf_iii_d = ca_lakes
+	b_beowulf_iii_d = ca_seas
+	b_beowulf_iii_d = ca_oceans
+	b_beowulf_iii_d = ca_burning
+	b_beowulf_iii_d = ca_hot
+	b_beowulf_iii_d = ca_warm
+	b_beowulf_iii_d = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_beowulf_iii_b = ct_no_atmosphere_domes
+	b_beowulf_iii_b = ct_colony_0
+	b_beowulf_iii_b = ct_colony_1
+	b_beowulf_iii_b = ct_colony_2
+	
+	b_beowulf_iii_c = tp_colony_0
+	b_beowulf_iii_c = tp_colony_1
+	
+	b_beowulf_iii_d = ca_colony_0
+	b_beowulf_iii_d = ca_colony_1
+}

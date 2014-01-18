@@ -1,0 +1,46 @@
+# 67 - Estrella de Bolivar
+
+# County Title
+title = c_estrella_de_bolivar
+
+# Settlements
+max_settlements = 4
+b_estrella_de_bolivar_iii = city
+b_estrella_de_bolivar_iv = temple
+b_estrella_de_bolivar_iv_b = castle
+
+# Misc
+culture = hispanic_celestean # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_estrella_de_bolivar_iii = ct_clean_atmosphere
+	b_estrella_de_bolivar_iii = ct_no_water
+	b_estrella_de_bolivar_iii = ct_trace_water
+	b_estrella_de_bolivar_iii = ct_lakes
+	b_estrella_de_bolivar_iii = ct_frozen
+	b_estrella_de_bolivar_iii = ct_cold
+	b_estrella_de_bolivar_iii = ct_planet_survey
+	
+	b_estrella_de_bolivar_iv = tp_toxic_atmosphere
+	b_estrella_de_bolivar_iv = tp_no_water
+	b_estrella_de_bolivar_iv = tp_trace_water
+	b_estrella_de_bolivar_iv = tp_frozen
+	b_estrella_de_bolivar_iv = tp_planet_survey
+	
+	b_estrella_de_bolivar_iv_b = ca_no_atmosphere
+	b_estrella_de_bolivar_iv_b = ca_no_water
+	b_estrella_de_bolivar_iv_b = ca_frozen
+	b_estrella_de_bolivar_iv_b = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_estrella_de_bolivar_iii = ct_colony_0
+	b_estrella_de_bolivar_iii = ct_colony_1
+	b_estrella_de_bolivar_iii = ct_colony_2
+	
+	b_estrella_de_bolivar_iv = tp_colony_0
+	
+	b_estrella_de_bolivar_iv_b = ca_colony_0
+}

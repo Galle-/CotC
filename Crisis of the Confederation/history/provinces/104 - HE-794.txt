@@ -1,0 +1,20 @@
+# 104 - HE-794
+
+# County Title
+title = c_he_794
+
+# Settlements
+max_settlements = 4
+
+b_he_794_station_alpha = temple
+
+# Misc
+culture = sino_centauri # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

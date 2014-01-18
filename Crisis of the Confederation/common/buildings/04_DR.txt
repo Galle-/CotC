@@ -1,0 +1,165 @@
+castle = {
+	DR_01_ca = {
+			desc = DR_01_desc
+			trigger = {	TECH_MAJESTY = 1}
+			build_cost = 75
+			build_time = 60
+			pikemen = 12
+		
+		
+		}
+		
+	DR_02_ca = {
+			desc = DR_02_desc
+			upgrades_from = DR_01_ca
+			trigger = {	TECH_MAJESTY = 2}
+			build_cost = 85
+			build_time = 120
+			pikemen = 72
+		
+		
+		}
+	DR_03_ca = {
+			desc = DR_03_desc
+			upgrades_from = DR_02_ca
+			trigger = {	TECH_MAJESTY = 3}
+			build_cost = 120
+			build_time = 365
+			pikemen = 72
+		}
+		
+		DR_04_ca = {
+			desc = DR_04_desc
+			upgrades_from = DR_03_ca
+			trigger = {TECH_MAJESTY = 4}
+			build_cost = 240
+			build_time = 805
+			pikemen = 154
+		
+		
+		}
+		DR_05_ca = {
+			desc = DR_05_desc
+			upgrades_from = DR_04_ca
+			trigger = {	TECH_MAJESTY = 5}
+			prerequisites = { ca_colony_3 }
+		
+		build_cost = 1200
+		build_time = 1084
+		pikemen = 600
+		
+		
+		}
+		
+	}
+	
+
+city = {
+	DR_01_ct = {
+			desc = DR_01_desc
+			trigger = {	TECH_MAJESTY = 1}
+			build_cost = 75
+			build_time = 60
+			pikemen = 12
+		
+		
+		}
+		
+	DR_02_ct = {
+			desc = DR_02_desc
+			upgrades_from = DR_01_ct
+			trigger = {	TECH_MAJESTY = 2}
+			build_cost = 85
+			build_time = 120
+			pikemen = 72
+		
+		
+		}
+	DR_03_ct = {
+			desc = DR_03_desc
+			upgrades_from = DR_02_ct
+			trigger = {	TECH_MAJESTY = 3}
+			build_cost = 120
+			build_time = 365
+			pikemen = 72
+		}
+		
+		DR_04_ct = {
+			desc = DR_04_desc
+			upgrades_from = DR_03_ct
+			trigger = {TECH_MAJESTY = 4}
+			build_cost = 240
+			build_time = 805
+			pikemen = 154
+		
+		
+		}
+		DR_05_ct = {
+			desc = DR_05_desc
+			upgrades_from = DR_04_ct
+			trigger = {	TECH_MAJESTY = 5}
+			prerequisites = { ct_colony_3 }
+		
+		build_cost = 1200
+		build_time = 1084
+		pikemen = 600
+		
+		
+		}
+		
+	}
+
+temple = {
+	DR_01_tp = {
+			desc = DR_01_desc
+			trigger = {	TECH_MAJESTY = 1}
+			build_cost = 75
+			build_time = 60
+			pikemen = 12
+		
+		
+		}
+		
+	DR_02_tp = {
+			desc = DR_02_desc
+			upgrades_from = DR_01_tp
+			trigger = {	TECH_MAJESTY = 2}
+			build_cost = 85
+			build_time = 120
+			pikemen = 72
+		
+		
+		}
+	DR_03_tp = {
+			desc = DR_03_desc
+			upgrades_from = DR_02_tp
+			trigger = {	TECH_MAJESTY = 3}
+			build_cost = 120
+			build_time = 365
+			pikemen = 72
+		}
+		
+		DR_04_tp = {
+			desc = DR_04_desc
+			upgrades_from = DR_03_tp
+			trigger = {TECH_MAJESTY = 4}
+			build_cost = 240
+			build_time = 805
+			pikemen = 154
+		
+		
+		}
+		DR_05_tp = {
+			desc = DR_05_desc
+			upgrades_from = DR_04_tp
+			trigger = {	TECH_MAJESTY = 5}
+			prerequisites = { ca_colony_3 }
+		
+		build_cost = 1200
+		build_time = 1084
+		pikemen = 600
+		
+		
+		}
+		
+	}	

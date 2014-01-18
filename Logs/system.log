@@ -1,0 +1,91 @@
+[systemsettings.cpp:202]: System memory:   0MB
+[systemsettings.cpp:204]: CPU speed:       2394MHz
+[systemsettings.cpp:211]: Number of processors: 8
+[systemsettings.cpp:222]: CPU type: x86
+[systemsettings.cpp:254]: OS: Unknown     Build: 9200
+[gfx_settings.cpp:22]: Loading settings for adapter 0, fullscreen=0, multisample=15
+[gfx_settings.cpp:50]: Graphic Adapters: 
+[gfx_settings.cpp:55]: 	0: Intel(R) HD Graphics 4000
+[gfx_settings.cpp:69]: Using Adapter [0] to check for multi-sampling support:
+[gfx_settings.cpp:80]: 	2 samples supported.
+[gfx_settings.cpp:80]: 	4 samples supported.
+[gfx_settings.cpp:80]: 	8 samples supported.
+[gfx_settings.cpp:95]: Using Adapter [0]:
+[gfx_settings.cpp:101]: Succeeded to create a device [D3DCREATE_HARDWARE_VERTEXPROCESSING].
+[gfx_settings.cpp:145]: Graphics device: Intel(R) HD Graphics 4000
+[gfx_settings.cpp:146]: Graphics driver: nvumdshim.dll
+[gfx_settings.cpp:147]: Driver version: 697
+[gfx_settings.cpp:162]: 
+
+
+Dumping all gfx info:
+DeviceIdentifier:	{D7B78E66-4226-11CF-A376-7A19B4C2C435}
+VendorId:	32902
+DeviceId:	358
+SubSysId:	964106154
+Revision:	9
+DriverVersion.HighPart:	589842
+DriverVersion.LowPart:	852665
+
+
+[gfx_settings.cpp:182]: Instancing supported.
+[gfx_settings.cpp:197]: Video memory amount: 4042MB
+[gfx_settings.cpp:198]: MaxSimultaneousTextures: 8
+[gfx_settings.cpp:199]: MaxVertexBlendMatrices: 4
+[gfx_settings.cpp:200]: MaxVertexBlendMatrixIndex: 8
+[gfx_settings.cpp:201]: MaxSimultaneousTextures: 8
+[gfx_settings.cpp:202]: MaxTextureBlendStages: 8
+[gfx_settings.cpp:203]: Support for Anisotropic filtering found.
+[gfx_settings.cpp:206]: 	Max Anisotropic filtering: 16
+[gfx_settings.cpp:207]: 	Anisotropic filtering set to: 0
+[gfx_settings.cpp:211]: Vertex Shader version: 3.0
+[gfx_settings.cpp:216]: Pixel Shader version: 3.0
+[main.cpp:493]: CK2 Version Nov 18 2013 : 12:49:18
+[main.cpp:494]: Commandline: -mod=mod/Crisis of the Confederation.mod 
+[internationalizedtext.cpp:1234]: Create table
+[internationalizedtext.cpp:1236]: Create text database
+[main.cpp:521]: Text database created
+[main.cpp:539]: Creating application...
+[main.cpp:572]: Initializing application...
+[ck_application.cpp:576]: Initializing application...
+[ck_application.cpp:580]: Done initializing application
+[ck_application.cpp:588]: Loading cursor...
+[ck_application.cpp:638]: Done loading cursor
+[ck_application.cpp:641]: Initializing sound...
+[ck_application.cpp:676]: Done initializing sound
+[ck_application.cpp:678]: Initializing graphics...
+[graphicssettings.cpp:422]: Not using multisampling.
+[graphics.cpp:169]: Creating device with: HARDWARE_VERTEXPROCESSING
+	Fullscreen=no
+	Resolution=1440x900
+[graphicssettings.cpp:387]: Usable res: 1024 768 59
+[graphicssettings.cpp:387]: Usable res: 1024 768 60
+[graphicssettings.cpp:387]: Usable res: 1152 864 59
+[graphicssettings.cpp:387]: Usable res: 1152 864 60
+[graphicssettings.cpp:387]: Usable res: 1280 720 59
+[graphicssettings.cpp:387]: Usable res: 1280 720 60
+[graphicssettings.cpp:387]: Usable res: 1280 768 59
+[graphicssettings.cpp:387]: Usable res: 1280 768 60
+[graphicssettings.cpp:387]: Usable res: 1280 800 59
+[graphicssettings.cpp:387]: Usable res: 1280 800 60
+[graphicssettings.cpp:387]: Usable res: 1280 960 59
+[graphicssettings.cpp:387]: Usable res: 1280 960 60
+[graphicssettings.cpp:387]: Usable res: 1280 1024 59
+[graphicssettings.cpp:387]: Usable res: 1280 1024 60
+[graphicssettings.cpp:387]: Usable res: 1360 768 59
+[graphicssettings.cpp:387]: Usable res: 1360 768 60
+[graphicssettings.cpp:387]: Usable res: 1366 768 59
+[graphicssettings.cpp:387]: Usable res: 1366 768 60
+[graphicssettings.cpp:387]: Usable res: 1400 1050 59
+[graphicssettings.cpp:387]: Usable res: 1400 1050 60
+[graphicssettings.cpp:387]: Usable res: 1440 900 59
+[graphicssettings.cpp:387]: Usable res: 1440 900 60
+[graphicssettings.cpp:387]: Usable res: 1600 900 59
+[graphicssettings.cpp:387]: Usable res: 1600 900 60
+[graphicssettings.cpp:387]: Usable res: 1680 1050 59
+[graphicssettings.cpp:387]: Usable res: 1680 1050 60
+[graphicssettings.cpp:387]: Usable res: 1920 1080 59
+[graphicssettings.cpp:387]: Usable res: 1920 1080 60
+[graphics.cpp:210]: Done creating device.
+[ck_application.cpp:708]: Done initializing graphics
+[main.cpp:575]: Running application...

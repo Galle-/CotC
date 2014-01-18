@@ -1,0 +1,218 @@
+##################################################
+#
+# STRATEGIC EFFECTS - A.K.A. "TRIGGERED MODIFIERS"
+#
+##################################################
+
+# Bankruptcy
+negative_money = {
+	potential = {
+		is_ruler = yes
+	}
+	
+	trigger = {
+		NOT = { wealth = 0 }
+	}
+	
+	icon = 24
+	
+	land_morale = -0.25
+	
+	active = no
+}
+
+###########################
+# MORAL AUTHORITY EFFECTS #
+###########################
+bad_moral_authority_9 = {
+	potential = { is_ruler = yes }
+	trigger = { NOT = { religion_authority = 0.05 } }
+	icon = 25
+	
+	monthly_character_prestige = -0.5
+	general_opinion = -25
+}
+bad_moral_authority_8 = {
+	potential = { is_ruler = yes }
+	trigger = {
+		religion_authority = 0.05
+		NOT = { religion_authority = 0.1 }
+	}
+	icon = 25
+	
+	monthly_character_prestige = -0.45
+	general_opinion = -20
+}
+bad_moral_authority_7 = {
+	potential = { is_ruler = yes }
+	trigger = {
+		religion_authority = 0.1
+		NOT = { religion_authority = 0.15 }
+	}
+	icon = 25
+	
+	monthly_character_prestige = -0.4
+	general_opinion = -20
+}
+bad_moral_authority_6 = {
+	potential = { is_ruler = yes }
+	trigger = {
+		religion_authority = 0.15
+		NOT = { religion_authority = 0.2 }
+	}
+	icon = 25
+	
+	monthly_character_prestige = -0.35
+	general_opinion = -15
+}
+bad_moral_authority_5 = {
+	potential = { is_ruler = yes }
+	trigger = {
+		religion_authority = 0.2
+		NOT = { religion_authority = 0.25 }
+	}
+	icon = 25
+	
+	monthly_character_prestige = -0.3
+	general_opinion = -15
+}
+bad_moral_authority_4 = {
+	potential = { is_ruler = yes }
+	trigger = {
+		religion_authority = 0.25
+		NOT = { religion_authority = 0.3 }
+	}
+	icon = 25
+	
+	monthly_character_prestige = -0.25
+	general_opinion = -10
+}
+bad_moral_authority_3 = {
+	potential = { is_ruler = yes }
+	trigger = {
+		religion_authority = 0.3
+		NOT = { religion_authority = 0.35 }
+	}
+	icon = 25
+	
+	monthly_character_prestige = -0.2
+	general_opinion = -10
+}
+bad_moral_authority_2 = {
+	potential = { is_ruler = yes }
+	trigger = {
+		religion_authority = 0.35
+		NOT = { religion_authority = 0.4 }
+	}
+	icon = 25
+	
+	monthly_character_prestige = -0.15
+	general_opinion = -5
+}
+bad_moral_authority_1 = {
+	potential = { is_ruler = yes }
+	trigger = {
+		religion_authority = 0.4
+		NOT = { religion_authority = 0.45 }
+	}
+	icon = 25
+	
+	monthly_character_prestige = -0.1
+	general_opinion = -5
+}
+good_moral_authority_1 = {
+	potential = { is_ruler = yes }
+	trigger = {
+		religion_authority = 0.55
+		NOT = { religion_authority = 0.6 }
+	}
+	icon = 7
+	
+	monthly_character_prestige = 0.1
+	general_opinion = 5
+}
+good_moral_authority_2 = {
+	potential = { is_ruler = yes }
+	trigger = {
+		religion_authority = 0.6
+		NOT = { religion_authority = 0.65 }
+	}
+	icon = 7
+	
+	monthly_character_prestige = 0.15
+	general_opinion = 5
+}
+good_moral_authority_3 = {
+	potential = { is_ruler = yes }
+	trigger = {
+		religion_authority = 0.65
+		NOT = { religion_authority = 0.7 }
+	}
+	icon = 7
+	
+	monthly_character_prestige = 0.2
+	general_opinion = 10
+}
+good_moral_authority_4 = {
+	potential = { is_ruler = yes }
+	trigger = {
+		religion_authority = 0.7
+		NOT = { religion_authority = 0.75 }
+	}
+	icon = 7
+	
+	monthly_character_prestige = 0.25
+	general_opinion = 10
+}
+good_moral_authority_5 = {
+	potential = { is_ruler = yes }
+	trigger = {
+		religion_authority = 0.75
+		NOT = { religion_authority = 0.8 }
+	}
+	icon = 7
+	
+	monthly_character_prestige = 0.3
+	general_opinion = 15
+}
+good_moral_authority_6 = {
+	potential = { is_ruler = yes }
+	trigger = {
+		religion_authority = 0.8
+		NOT = { religion_authority = 0.85 }
+	}
+	icon = 7
+	
+	monthly_character_prestige = 0.35
+	general_opinion = 15
+}
+good_moral_authority_7 = {
+	potential = { is_ruler = yes }
+	trigger = {
+		religion_authority = 0.85
+		NOT = { religion_authority = 0.9 }
+	}
+	icon = 7
+	
+	monthly_character_prestige = 0.4
+	general_opinion = 20
+}
+good_moral_authority_8 = {
+	potential = { is_ruler = yes }
+	trigger = {
+		religion_authority = 0.9
+		NOT = { religion_authority = 0.95 }
+	}
+	icon = 7
+	
+	monthly_character_prestige = 0.45
+	general_opinion = 20
+}
+good_moral_authority_9 = {
+	potential = { is_ruler = yes }
+	trigger = { religion_authority = 0.95 }
+	icon = 7
+	
+	monthly_character_prestige = 0.5
+	general_opinion = 25
+}

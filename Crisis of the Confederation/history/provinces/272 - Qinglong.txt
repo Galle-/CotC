@@ -1,0 +1,52 @@
+# 272 - Qinglong
+
+# County Title
+title = c_qinglong
+
+# Settlements
+max_settlements = 5
+b_qinglong_prime = temple
+b_qinglong_waystation = castle
+b_qinglong_iii = city
+
+# Misc
+culture = sino_xingjie # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_qinglong_prime = tp_clean_atmosphere
+	b_qinglong_prime = tp_no_water
+	b_qinglong_prime = tp_trace_water
+	b_qinglong_prime = tp_lakes
+	b_qinglong_prime = tp_burning
+	b_qinglong_prime = tp_hot
+	b_qinglong_prime = tp_warm
+	b_qinglong_prime = tp_planet_survey
+	
+	b_qinglong_waystation = ca_space_station_0
+	b_qinglong_waystation = ca_space_station_1
+	
+	b_qinglong_iii = ct_clean_atmosphere
+	b_qinglong_iii = ct_no_water
+	b_qinglong_iii = ct_trace_water
+	b_qinglong_iii = ct_lakes
+	b_qinglong_iii = ct_seas
+	b_qinglong_iii = ct_burning
+	b_qinglong_iii = ct_hot
+	b_qinglong_iii = ct_warm
+	b_qinglong_iii = ct_optimal_hot
+	b_qinglong_iii = ct_planet_survey
+}
+
+2998.1.1 = {
+	b_qinglong_prime = tp_colony_0
+	b_qinglong_prime = tp_colony_1
+	
+	b_qinglong_waystation = ca_colony_0
+	b_qinglong_waystation = ca_colony_1
+	
+	b_qinglong_iii = ct_colony_0
+	b_qinglong_iii = ct_colony_1
+	b_qinglong_iii = ct_colony_2
+}

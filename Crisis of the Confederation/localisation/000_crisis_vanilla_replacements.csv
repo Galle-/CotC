@@ -1,0 +1,39 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+COMBATVIEW_PHASE_DESC_SKIRMISH;During the Skirmish phase, the main fleets keep their distance while fighters engage in dogfights.\nSmall ships are at their most vulnerable during this phase, but only ï½§YFightersï½§W, ï½§YDestroyersï½§W, and ï½§YCombat Dronesï½§W are able to attack and exploit this.;Au cours de la phase de combat, les principales flottilles gardent leur distance tandis que les chasseurs engage l'ennemi.\nLes petits navires sont les plus vulnérables durant cette phase, mais seuls ï½§Yles chasseursï½§W, ï½§Yles estroyeursï½§W, et ï½§Yles drônes de combat½§W sont capables d'attaquer et d'exploiter cette faille.;;;;;;;;;;;;x
+COMBATVIEW_PHASE_DESC_MELEE;During the Melee phase, the fleets close to combat distance.\nï½§YBattlecruisersï½§W, ï½§YDreadnoughtsï½§W, and ï½§YBombersï½§W excel in the Melee Phase.;Pendant la phase de mélée, les flottilles entrent dans le combat à distance.\nï½§Yles croiseurs de batailleï½§W, ï½§Yles cuirasésï½§W, et ï½§Yles bombardiersï½§W excellent dans ces opérations.;;;;;;;;;;;;x
+COMBATVIEW_PHASE_DESC_PURSUE;During the Pursuit phase, one fleet is retreating, and the other is attempting to chase them down.\nï½§YBattlecruisersï½§W, ï½§YBombersï½§W, and ï½§YTroop Transportsï½§W excel in the Pursuit Phase.;Pendant la phase de poursuite, une flotille se replie, et les autres tentent de lui donner la chasse.\nï½§Yles croiseurs de batailleï½§W, ï½§Yles bombardiersï½§W, et ï½§Yles transport de troupesï½§W excellent dans ces opérations.;;;;;;;;;;;;x
+LIGHT_INFANTRY;Fighters;Chasseurs;;;;;;;;;;;;x
+LIGHT_INFANTRY_MORALE;Fighter Pilot Morale;Moral pilote de chasseur;;;;;;;;;;;;x
+LIGHT_INFANTRY_DISCIPLINE;Fighter Squadron Discipline;Discipline escadron de chasseurs;;;;;;;;;;;;x
+LIGHT_INFANTRY_OFFENSIVE_FIRE;Fighter Attack;Attaque chasseur;;;;;;;;;;;;x
+LIGHT_INFANTRY_DEFENSIVE_FIRE;Fighter Defense;Défense chasseur;;;;;;;;;;;;x
+HEAVY_INFANTRY;Bombers;Bombardiers;;;;;;;;;;;;x
+HEAVY_INFANTRY_MORALE;Bomber Pilot Morale;Moral pilote de bombardier;;;;;;;;;;;;x
+HEAVY_INFANTRY_DISCIPLINE;Bomber Squadron Discipline;Discipline escadron de bombardier;;;;;;;;;;;;x
+HEAVY_INFANTRY_OFFENSIVE_FIRE;Bomber Attack;Attaque bombardier;;;;;;;;;;;;x
+HEAVY_INFANTRY_DEFENSIVE_FIRE;Bomber Defense;Défense bombardier;;;;;;;;;;;;x
+PIKEMEN;Combat Drones;Drônes de combat;;;;;;;;;;;;x
+PIKEMEN_MORALE;Combat Drone Morale;Moral drône de combat;;;;;;;;;;;;x
+PIKEMEN_DISCIPLINE;Combat Drone Discipline;Discipline drône de combat;;;;;;;;;;;;x
+PIKEMEN_OFFENSIVE_FIRE;Combat Drone Attack;Attaque drône de combat;;;;;;;;;;;;x
+PIKEMEN_DEFENSIVE_FIRE;Combat Drone Defense;Défense drône de combat;;;;;;;;;;;;x
+LIGHT_CAVALRY;Destroyers;Destroyers;;;;;;;;;;;;x
+LIGHT_CAVALRY_MORALE;Destroyer Crew Morale;Moral équipage de destroyer;;;;;;;;;;;;x
+LIGHT_CAVALRY_DISCIPLINE;Destroyer Crew Discipline;Discipline équipage de destroyer;;;;;;;;;;;;x
+LIGHT_CAVALRY_OFFENSIVE_FIRE;Destroyer Attack;Attaque destroyer;;;;;;;;;;;;x
+LIGHT_CAVALRY_DEFENSIVE_FIRE;Destroyer Defense;Défense destroyer;;;;;;;;;;;;x
+KNIGHTS;Battlecruisers;Croiseurs de bataille;;;;;;;;;;;;x
+KNIGHTS_MORALE;Battlecruiser Crew Morale;Moral équipage croiseur de bataille;;;;;;;;;;;;x
+KNIGHTS_DISCIPLINE;Battlecruiser Crew Discipline;Discipline équipage croiseur de bataille;;;;;;;;;;;;x
+KNIGHTS_OFFENSIVE_FIRE;Battlecruiser Attack;Attaque croiseur de bataille;;;;;;;;;;;;x
+KNIGHTS_DEFENSIVE_FIRE;Battlecruiser Defense;Défense croiseur de bataille;;;;;;;;;;;;x
+HORSE_ARCHERS;Dreadnoughts;Cuirassés;;;;;;;;;;;;x
+HORSE_ARCHERS_MORALE;Dreadnought Crew Morale;Moral équipage de cuirassé;;;;;;;;;;;;x
+HORSE_ARCHERS_DISCIPLINE;Dreadnought Crew Discipline;Discipline équipage de cuirassé;;;;;;;;;;;;x
+HORSE_ARCHERS_OFFENSIVE_FIRE;Dreadnought Attack;Attaque cuirassé;;;;;;;;;;;;x
+HORSE_ARCHERS_DEFENSIVE_FIRE;Dreadnought Defense;Défense cuirassé;;;;;;;;;;;;x
+ARCHERS;Troop Transports;Transport de troupes;;;;;;;;;;;;x
+ARCHERS_MORALE;Marine Morale;Moral marines;;;;;;;;;;;;x
+ARCHERS_DISCIPLINE;Marine Discipline;Discipline marines;;;;;;;;;;;;x
+ARCHERS_OFFENSIVE_FIRE;Troop Transport Attack;Attaque transport de troupe;;;;;;;;;;;;x
+ARCHERS_DEFENSIVE_FIRE;Troop Transport Defense;Défense transport de troupe;;;;;;;;;;;;x

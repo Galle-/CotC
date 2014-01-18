@@ -1,0 +1,20 @@
+# 171 - Luoxuan
+
+# County Title
+title = c_luoxuan
+
+# Settlements
+max_settlements = 4
+b_luoxuan_ii = castle
+b_luoxuan_ii_b = temple
+
+# Misc
+culture = sino_edemite # Initial culture
+religion = astrist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

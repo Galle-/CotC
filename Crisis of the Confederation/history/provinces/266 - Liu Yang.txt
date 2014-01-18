@@ -1,0 +1,46 @@
+# 266 - Liu Yang
+
+# County Title
+title = c_liu_yang
+
+# Settlements
+max_settlements = 4
+b_liu_yang_waystation = castle
+b_liu_yang_ii = city
+b_liu_yang_observatory = temple
+
+# Misc
+culture = sino_xingjie # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_liu_yang_waystation = ca_space_station_0
+	b_liu_yang_waystation = ca_space_station_1
+	b_liu_yang_waystation = ca_space_station_2
+	
+	b_liu_yang_ii = ct_toxic_atmosphere
+	b_liu_yang_ii = ct_no_water
+	b_liu_yang_ii = ct_trace_water
+	b_liu_yang_ii = ct_lakes
+	b_liu_yang_ii = ct_seas
+	b_liu_yang_ii = ct_frozen
+	b_liu_yang_ii = ct_cold
+	b_liu_yang_ii = ct_cool
+	b_liu_yang_ii = ct_planet_survey
+	
+	b_liu_yang_observatory = tp_space_station_0
+}
+
+2998.1.1 = {
+	b_liu_yang_waystation = ca_colony_0
+	b_liu_yang_waystation = ca_colony_1
+	b_liu_yang_waystation = ca_colony_2
+	
+	b_liu_yang_ii = ct_toxic_atmosphere_domes
+	b_liu_yang_ii = ct_colony_0
+	b_liu_yang_ii = ct_colony_1
+	b_liu_yang_ii = ct_colony_2
+	
+	b_liu_yang_observatory = tp_colony_0
+}

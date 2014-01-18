@@ -1,0 +1,4 @@
+# These opinions are used to keep track of particular characters for dynasty
+# decisions and suchlike
+
+opinion_appointment_nominee = { opinion = 10 months = 2400 }

@@ -1,0 +1,53 @@
+# 308 - Izraa'iil
+
+# County Title
+title = c_izraaiil
+
+# Settlements
+max_settlements = 4
+b_izraaiil_iii = city
+b_izraaiil_iii_b = temple
+b_izraaiil_iv = castle
+
+# Misc
+culture = arab_samawati # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+	b_izraaiil_iii = ct_toxic_atmosphere
+	b_izraaiil_iii = ct_no_water
+	b_izraaiil_iii = ct_trace_water
+	b_izraaiil_iii = ct_lakes
+	b_izraaiil_iii = ct_seas
+	b_izraaiil_iii = ct_frozen
+	b_izraaiil_iii = ct_cold
+	b_izraaiil_iii = ct_cool
+	b_izraaiil_iii = ct_planet_survey
+	
+	b_izraaiil_iii_b = tp_no_atmosphere
+	b_izraaiil_iii_b = tp_no_water
+	b_izraaiil_iii_b = tp_trace_water
+	b_izraaiil_iii_b = tp_frozen
+	b_izraaiil_iii_b = tp_cold
+	b_izraaiil_iii_b = tp_cool
+	b_izraaiil_iii_b = tp_planet_survey
+	
+	b_izraaiil_iv = ca_toxic_atmosphere
+	b_izraaiil_iv = ca_no_water
+	b_izraaiil_iv = ca_frozen
+	b_izraaiil_iv = ca_cold
+	b_izraaiil_iv = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_izraaiil_iii = ct_toxic_atmosphere_domes
+	b_izraaiil_iii = ct_colony_0
+	b_izraaiil_iii = ct_colony_1
+	b_izraaiil_iii = ct_colony_2
+	
+	b_izraaiil_iii_b = tp_colony_0
+	b_izraaiil_iii_b = tp_colony_1
+	
+	b_izraaiil_iv = ca_colony_0
+}

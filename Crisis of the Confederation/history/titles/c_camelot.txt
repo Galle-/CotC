@@ -1,0 +1,10 @@
+2509.1.1 = {
+	liege = "d_avalon"
+	law = true_cognatic_succession
+	law = succ_primogeniture
+}
+2705.1.1 = {
+	law = succ_ultimogeniture
+}
+2982.1.1 = { holder = 120862 } # Grace ?? Bailey
+2996.2.15 = { holder = 110862 } # Grace ? Bailey

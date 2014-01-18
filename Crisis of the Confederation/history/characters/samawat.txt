@@ -1,0 +1,216 @@
+1106565 = {
+	# President of al-Samawat
+	name = "Ghazal"
+	dynasty = 6565 # Saatchi
+	female = yes
+	
+	culture = iranian_samawati
+	religion = terran_federalist
+	
+	2938.1.1 = { birth = "2938.1.1" }
+}
+
+1103461 = {
+	# Commander of the Samawati Guard
+	name = "Hosniya"
+	dynasty = 3461 # Mumani
+	female = yes
+	
+	culture = arab_samawati
+	religion = pilgrim
+	
+	add_trait = skilled_tactician
+	add_trait = warship_captain
+	
+	2966.1.1 = { birth = "2966.1.1" }
+}
+
+1103061 = {
+	# Governor of Janna
+	name = "Ammar"
+	dynasty = 3061 # Ababneh
+	female = no
+	
+	culture = arab_samawati
+	religion = pilgrim
+	
+	2951.1.1 = { birth = "2951.1.1" }
+}
+
+1104069 = {
+	# Governor of Israafiiil
+	name = "Fatima"
+	dynasty = 4069 # Nawaisheh
+	female = yes
+	
+	culture = arab_samawati
+	religion = pilgrim
+	
+	2972.1.1 = { birth = "2972.1.1" }
+}
+
+1104853 = {
+	# Governor of Farah
+	name = "Maryam"
+	dynasty = 4853 # Mendoza
+	female = yes
+	
+	culture = hispanic_samawati
+	religion = pilgrim
+	
+	2948.1.1 = { birth = "2948.1.1" }
+}
+
+1104821 = {
+	# Governor-General of Jabra'iil
+	name = "Gamalat"
+	dynasty = 4821 # Alvarado
+	female = yes
+	
+	culture = hispanic_samawati
+	religion = pilgrim
+	
+	2971.1.1 = { birth = "2971.1.1" }
+}
+
+1102677 = {
+	# Governor of Sakiina
+	name = "Hussein"
+	dynasty = 2677 # al-Shamari
+	female = no
+	
+	culture = arab_samawati
+	religion = pilgrim
+	
+	2959.1.1 = { birth = "2959.1.1" }
+}
+
+1104789 = {
+	# Commander of al-Jisr
+	name = "Rachida"
+	dynasty = 4789 # Romero
+	female = yes
+	
+	culture = hispanic_samawati
+	religion = pilgrim
+	
+	add_trait = brilliant_strategist
+	add_trait = fighter_pilot
+	
+	2966.1.1 = { birth = "2966.1.1" }
+}
+
+1102853 = {
+	# Governor-General of Amal
+	name = "Mahmud"
+	dynasty = 2853 # Odwan
+	female = no
+	
+	culture = arab_samawati
+	religion = terran_federalist
+	
+	2968.1.1 = { birth = "2968.1.1" }
+}
+
+1106117 = {
+	# Governor of Mixaa'iil
+	name = "Devansh"
+	dynasty = 6117 # Thakur
+	female = no
+	
+	culture = indo_samawati
+	religion = terran_federalist
+	
+	2954.1.1 = { birth = "2954.1.1" }
+}
+
+1103493 = {
+	# Governor of at-Taw'amayn
+	name = "Nadia"
+	dynasty = 3493 # Rawashdeh
+	female = yes
+	
+	culture = arab_samawati
+	religion = terran_federalist
+	
+	2958.1.1 = { birth = "2958.1.1" }
+}
+
+1106485 = {
+	# Governor-General of al-Bawwaaba
+	name = "Jahandar"
+	dynasty = 6485 # Haghighi
+	female = no
+	
+	culture = iranian_samawati
+	religion = cyberneticist
+	
+	2956.1.1 = { birth = "2956.1.1" }
+}
+
+1103045 = {
+	# Governor of al-Jaziira
+	name = "Mustafa"
+	dynasty = 3045 # Hourani
+	female = no
+	
+	culture = arab_samawati
+	religion = cyberneticist
+	
+	add_trait = grey_eminence
+	add_trait = ambitious
+	
+	2976.1.1 = { birth = "2976.1.1" }
+}
+
+1102789 = {
+	# Governor of Izraa'iil
+	name = "Ali"
+	dynasty = 2789 # al-Baldawi
+	female = no
+	
+	culture = arab_samawati
+	religion = cyberneticist
+	
+	2963.1.1 = { birth = "2963.1.1" }
+}
+
+1103173 = {
+	# Governor-General of al-Hadd
+	name = "Ahmed"
+	dynasty = 3173 # Hazaymeh
+	female = no
+	
+	culture = arab_samawati
+	religion = cyberneticist
+	
+	2960.1.1 = { birth = "2960.1.1" }
+}
+
+1103701 = {
+	# Commander of Shams Akhdar
+	name = "Abdulrahman"
+	dynasty = 3701 # Barqawi
+	female = no
+	
+	culture = arab_samawati
+	religion = cyberneticist
+	
+	add_trait = homosexual
+	add_trait = skilled_tactician
+	add_trait = marine_colonel
+	
+	2958.1.1 = { birth = "2958.1.1" }
+}
+
+1103237 = {
+	# Governor of Qurtubat al-Jadiida
+	name = "Farida"
+	dynasty = 3237 # Hatamleh
+	female = yes
+	
+	culture = arab_samawati
+	religion = cyberneticist
+	
+	2948.1.1 = { birth = "2948.1.1" }
+}

@@ -1,0 +1,20 @@
+# 43 - Garrison
+
+# County Title
+title = c_garrison
+
+# Settlements
+max_settlements = 5
+
+b_garrison_viii_c = castle
+
+# Misc
+culture = anglo_avalonian # Initial culture
+religion = bio_directionist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

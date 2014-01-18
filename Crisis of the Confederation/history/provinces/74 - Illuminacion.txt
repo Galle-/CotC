@@ -1,0 +1,52 @@
+# 74 - Illuminacion
+
+# County Title
+title = c_illuminacion
+
+# Settlements
+max_settlements = 4
+b_illuminacion_iii = city
+b_illuminacion_iii_b = temple
+b_illuminacion_iii_c = castle
+
+# Misc
+culture = hispanic_celestean # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+	b_illuminacion_iii = ct_clean_atmosphere
+	b_illuminacion_iii = ct_no_water
+	b_illuminacion_iii = ct_trace_water
+	b_illuminacion_iii = ct_lakes
+	b_illuminacion_iii = ct_seas
+	b_illuminacion_iii = ct_burning
+	b_illuminacion_iii = ct_hot
+	b_illuminacion_iii = ct_planet_survey
+	
+	b_illuminacion_iii_b = tp_clean_atmosphere
+	b_illuminacion_iii_b = tp_no_water
+	b_illuminacion_iii_b = tp_trace_water
+	b_illuminacion_iii_b = tp_burning
+	b_illuminacion_iii_b = tp_hot
+	b_illuminacion_iii_b = tp_planet_survey
+	
+	b_illuminacion_iii_c = ca_clean_atmosphere
+	b_illuminacion_iii_c = ca_no_water
+	b_illuminacion_iii_c = ca_trace_water
+	b_illuminacion_iii_c = ca_burning
+	b_illuminacion_iii_c = ca_hot
+	b_illuminacion_iii_c = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_illuminacion_iii = ct_colony_0
+	b_illuminacion_iii = ct_colony_1
+	b_illuminacion_iii = ct_colony_2
+	
+	b_illuminacion_iii_b = tp_colony_0
+	b_illuminacion_iii_b = tp_colony_1
+	
+	b_illuminacion_iii_c = ca_colony_0
+	b_illuminacion_iii_c = ca_colony_1
+}

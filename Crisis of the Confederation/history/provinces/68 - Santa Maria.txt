@@ -1,0 +1,43 @@
+# 68 - Santa Maria
+
+# County Title
+title = c_santa_maria
+
+# Settlements
+max_settlements = 4
+b_santa_maria_iii = city
+b_santa_maria_iii_b = temple
+b_santa_maria_waystation = castle
+
+# Misc
+culture = hispanic_celestean # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_santa_maria_iii = ct_clean_atmosphere
+	b_santa_maria_iii = ct_no_water
+	b_santa_maria_iii = ct_trace_water
+	b_santa_maria_iii = ct_burning
+	b_santa_maria_iii = ct_hot
+	b_santa_maria_iii = ct_warm
+	b_santa_maria_iii = ct_planet_survey
+	
+	b_santa_maria_iii_b = tp_no_atmosphere
+	b_santa_maria_iii_b = tp_no_water
+	b_santa_maria_iii_b = tp_burning
+	b_santa_maria_iii_b = tp_hot
+	b_santa_maria_iii_b = tp_warm
+	b_santa_maria_iii_b = tp_planet_survey
+	
+	b_santa_maria_waystation = ca_space_station_0
+}
+
+2998.1.1 = {
+	b_santa_maria_iii = ct_colony_0
+	b_santa_maria_iii = ct_colony_1
+	
+	b_santa_maria_iii_b = tp_colony_0
+	
+	b_santa_maria_waystation = ca_colony_0
+}

@@ -1,0 +1,151 @@
+1109208 = {
+	# Abbess of the Eye of God, 2994 - Present
+	name = "Natalya"
+	dynasty = 9208 # Otsuka
+	female = yes
+	
+	culture = sino_centauri
+	religion = pilgrim
+	
+	2961.1.1 = { birth = "2961.1.1" }
+}
+
+11014392 = {
+	# Commandant of the Eye of God Waystation, 2986 - Present
+	name = "Vladimir"
+	dynasty = 14392 # Obi
+	female = no
+	
+	culture = west_afro_centauri
+	religion = pilgrim
+	
+	add_trait = tough_soldier
+	add_trait = warship_captain
+	
+	2963.1.1 = { birth = "2963.1.1" }
+}
+
+11013816 = {
+	# Commandant of Port Simon, 2998 - Present
+	# Later, becomes pirate commander
+	name = "Galina"
+	dynasty = 13816 # Qian
+	female = yes
+	
+	culture = sino_centauri
+	religion = pilgrim
+	
+	add_trait = brilliant_strategist
+	add_trait = fighter_pilot
+	add_trait = ambitious
+	add_trait = brave
+	add_trait = pragmatic
+	add_trait = friendly
+	add_trait = open_minded
+	add_trait = skeptical
+	
+	2973.1.1 = { birth = "2973.1.1" }
+}
+
+11020018 = {
+	# Abbot of HE-843, 2998 - Present
+	name = "Daniil"
+	dynasty = 20018 # Teruworq
+	female = no
+	
+	culture = ethiopian_centauri
+	religion = pilgrim
+	
+	add_trait = homosexual
+	
+	2975.1.1 = { birth = "2975.1.1" }
+}
+
+1108152 = {
+	# Abbess of HE-794, 2996 - Present
+	name = "Anastasiya"
+	dynasty = 8152 # Yamaguchi
+	female = yes
+	
+	culture = japanese_centauri
+	religion = pilgrim
+	
+	2971.1.1 = { birth = "2971.1.1" }
+}
+
+1104689 = {
+	# Admiral of the Helix Rangers, 2992 - Present
+	# Commander of HE-338, 2992 - Present
+	name = "Andres"
+	dynasty = 4689 # Mejia
+	female = no
+	
+	culture = hispanic_terran
+	religion = terran_republican
+	
+	add_trait = tough_soldier
+	add_trait = fighter_pilot
+	add_trait = homosexual
+	add_trait = content
+	add_trait = brave
+	add_trait = carefree
+	add_trait = open_minded
+	
+	2965.1.1 = { birth = "2965.1.1" }
+}
+
+11013521 = {
+	# Commander of HE-219, 2998 - Present
+	name = "Yi"
+	dynasty = 13521 # Meng
+	female = no
+	
+	culture = sino_terran
+	religion = terran_republican
+	
+	add_trait = tough_soldier
+	add_trait = fighter_pilot
+	add_trait = fair
+	add_trait = brave
+	add_trait = friendly
+	
+	2980.1.1 = { birth = "2980.1.1" }
+}
+
+11014353 = {
+	# Commander of HE-153, 2998 - Present
+	name = "Barakissa"
+	dynasty = 14353 # Bakare
+	female = yes
+	
+	culture = west_afro_terran
+	religion = terran_republican
+	
+	add_trait = misguided_warrior
+	add_trait = marine_colonel
+	add_trait = brave
+	add_trait = strong
+	add_trait = cold
+	add_trait = disciplined
+	
+	2978.1.1 = { birth = "2978.1.1" }
+}
+
+1101464 = {
+	# Governor of HE-702, 2988 - Present
+	name = "Margarita"
+	dynasty = 1464 # Carrington
+	female = yes
+	
+	culture = anglo_centauri
+	religion = terran_federalist
+	
+	add_trait = midas_touched
+	add_trait = extraverted
+	add_trait = friendly
+	add_trait = pragmatic
+	add_trait = disciplined
+	add_trait = ambitious
+	
+	2965.1.1 = { birth = "2965.1.1" }
+}

@@ -1,0 +1,58 @@
+# 95 - Gemini
+
+# County Title
+title = c_gemini
+
+# Settlements
+max_settlements = 4
+b_gemini_ii_b = castle
+b_gemini_ii_c = temple
+b_gemini_iii = city
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_gemini_ii_b = ca_no_atmosphere
+	b_gemini_ii_b = ca_no_water
+	b_gemini_ii_b = ca_trace_water
+	b_gemini_ii_b = ca_lakes
+	b_gemini_ii_b = ca_seas
+	b_gemini_ii_b = ca_oceans
+	b_gemini_ii_b = ca_burning
+	b_gemini_ii_b = ca_hot
+	b_gemini_ii_b = ca_planet_survey
+	
+	b_gemini_ii_c = tp_no_atmosphere
+	b_gemini_ii_c = tp_no_water
+	b_gemini_ii_c = tp_trace_water
+	b_gemini_ii_c = tp_lakes
+	b_gemini_ii_c = tp_seas
+	b_gemini_ii_c = tp_oceans
+	b_gemini_ii_c = tp_burning
+	b_gemini_ii_c = tp_hot
+	b_gemini_ii_c = tp_planet_survey
+	
+	b_gemini_iii = ct_toxic_atmosphere
+	b_gemini_iii = ct_no_water
+	b_gemini_iii = ct_burning
+	b_gemini_iii = ct_hot
+	b_gemini_iii = ct_warm
+	b_gemini_iii = ct_planet_survey
+}
+
+2998.1.1 = {
+	b_gemini_ii_b = ca_no_atmosphere_domes
+	b_gemini_ii_b = ca_colony_0
+	b_gemini_ii_b = ca_colony_1
+	b_gemini_ii_b = ca_colony_2
+	
+	b_gemini_ii_c = tp_no_atmosphere_domes
+	b_gemini_ii_c = tp_colony_0
+	b_gemini_ii_c = tp_colony_1
+	b_gemini_ii_c = tp_colony_2
+	
+	b_gemini_iii = ct_colony_0
+}

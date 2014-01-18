@@ -1,0 +1,208 @@
+11012594 = {
+	# President of Xingjie
+	name = "Qian"
+	dynasty = 12594 # Chen
+	female = yes
+	
+	culture = sino_xingjie
+	religion = terran_federalist
+	
+	2954.1.1 = { birth = 2954.1.1 }
+}
+
+11012722 = {
+	# Commander of the Xingjie Armed Forces
+	name = "Hao"
+	dynasty = 12722 # Ma
+	female = no
+	
+	culture = sino_xingjie
+	religion = terran_federalist
+	
+	add_trait = homosexual
+	add_trait = skilled_tactician
+	add_trait = marine_colonel
+	
+	2954.1.1 = { birth = 2954.1.1 }
+	2976.1.1 = { add_spouse = 11012786 }
+	2976.1.1 = { effect = { spouse = { add_lover = ROOT } } }
+}
+
+11012786 = {
+	# Husband of Admiral Ma
+	name = "Bo"
+	dynasty = 12786 # He
+	female = no
+	
+	culture = sino_xingjie
+	religion = terran_federalist
+	
+	add_trait = homosexual
+	
+	2957.1.1 = { birth = 2957.1.1 }
+}
+
+11012818 = {
+	# Administrator of Yang Liwei
+	name = "Peng"
+	dynasty = 12818 # Lin
+	female = no
+	
+	culture = sino_xingjie
+	religion = terran_federalist
+	
+	2974.1.1 = { birth = 2974.1.1 }
+}
+
+11012866 = {
+	# Commissioner for Sector Xuanwu
+	name = "Ai"
+	dynasty = 12866 # Liang
+	female = yes
+	
+	culture = sino_xingjie
+	religion = terran_federalist
+	
+	2950.1.1 = { birth = 2950.1.1 }
+}
+
+11012898 = {
+	# Commander for System Zhai Zhigang
+	name = "Kang"
+	dynasty = 12898 # Song
+	female = no
+	
+	culture = sino_xingjie
+	religion = terran_federalist
+	
+	add_trait = tough_soldier
+	add_trait = fighter_pilot
+	
+	2959.1.1 = { birth = 2959.1.1 }
+}
+
+11012801 = {
+	# Administrator of Liu Boming
+	name = "Feng"
+	dynasty = 12801 # Gao
+	female = no
+	
+	culture = sino_xingjie
+	religion = terran_federalist
+	
+	2954.1.1 = { birth = 2954.1.1 }
+}
+
+11011362 = {
+	# Administrator of Jing Haipeng
+	name = "Tao"
+	dynasty = 11362 # Moskvin
+	female = no
+	
+	culture = russo_xingjie
+	religion = terran_federalist
+	
+	2965.1.1 = { birth = 2965.1.1 }
+}
+
+1104754 = {
+	# Commissioner for Sector Qinglong
+	name = "Jian"
+	dynasty = 4754 # Escobar
+	female = no
+	
+	culture = hispanic_xingjie
+	religion = terran_federalist
+	
+	2967.1.1 = { birth = 2967.1.1 }
+}
+
+11013394 = {
+	# Administrator of Fei Junlong
+	name = "Xiaomei"
+	dynasty = 13394 # Shi
+	female = yes
+	
+	culture = sino_xingjie
+	religion = terran_federalist
+	
+	2958.1.1 = { birth = 2958.1.1 }
+}
+
+11013426 = {
+	# Administrator of Nie Haisheng
+	name = "Fang"
+	dynasty = 13426 # Jia
+	female = yes
+	
+	culture = sino_xingjie
+	religion = terran_federalist
+	
+	2952.1.1 = { birth = 2952.1.1 }
+}
+
+1104578 = {
+	# Commissioner for Zhuque Sector
+	name = "Xinyi"
+	dynasty = 4578 # Vargas
+	female = yes
+	
+	culture = hispanic_xingjie
+	religion = terran_federalist
+	
+	2958.1.1 = { birth = 2958.1.1 }
+}
+
+1104706 = {
+	# Commander of Wang Yaping
+	name = "Lian"
+	dynasty = 4706 # Rivas
+	female = no
+	
+	culture = hispanic_xingjie
+	religion = terran_federalist
+	
+	add_trait = tough_soldier
+	add_trait = warship_captain
+	
+	2963.1.1 = { birth = 2963.1.1 }
+}
+
+11013346 = {
+	# Administrator of Zhang Xiaoguang
+	name = "Juan"
+	dynasty = 13346 # Tan
+	female = yes
+	
+	culture = sino_xingjie
+	religion = terran_federalist
+	
+	2952.1.1 = { birth = 2952.1.1 }
+}
+
+11013026 = {
+	# Commissioner for Sector Baihu
+	name = "Cheng"
+	dynasty = 13026 # Xiao
+	female = no
+	
+	culture = sino_xingjie
+	religion = terran_federalist
+	
+	2962.1.1 = { birth = 2962.1.1 }
+}
+
+11013490 = {
+	# Commander of Liu Yang
+	name = "Ai"
+	dynasty = 13490 # Bai
+	female = yes
+	
+	culture = sino_xingjie
+	religion = terran_federalist
+	
+	add_trait = brilliant_strategist
+	add_trait = fighter_pilot
+	
+	2958.1.1 = { birth = 2958.1.1 }
+}

@@ -1,0 +1,55 @@
+# 94 - Challenger
+
+# County Title
+title = c_challenger
+
+# Settlements
+max_settlements = 4
+b_challenger_ii = city
+b_challenger_ii_b = temple
+b_challenger_ii_c = castle
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_challenger_ii = ct_toxic_atmosphere
+	b_challenger_ii = ct_no_water
+	b_challenger_ii = ct_trace_water
+	b_challenger_ii = ct_lakes
+	b_challenger_ii = ct_frozen
+	b_challenger_ii = ct_cold
+	b_challenger_ii = ct_cool
+	b_challenger_ii = ct_planet_survey
+	
+	b_challenger_ii_b = tp_no_atmosphere
+	b_challenger_ii_b = tp_no_water
+	b_challenger_ii_b = tp_trace_water
+	b_challenger_ii_b = tp_frozen
+	b_challenger_ii_b = tp_cold
+	b_challenger_ii_b = tp_cool
+	b_challenger_ii_b = tp_planet_survey
+	
+	b_challenger_ii_c = ca_no_atmosphere
+	b_challenger_ii_c = ca_no_water
+	b_challenger_ii_c = ca_trace_water
+	b_challenger_ii_c = ca_frozen
+	b_challenger_ii_c = ca_cold
+	b_challenger_ii_c = ca_cool
+	b_challenger_ii_c = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_challenger_ii = ct_toxic_atmosphere_domes
+	b_challenger_ii = ct_colony_0
+	b_challenger_ii = ct_colony_1
+	b_challenger_ii = ct_colony_2
+	
+	b_challenger_ii_b = tp_colony_0
+	b_challenger_ii_b = tp_colony_1
+	
+	b_challenger_ii_c = ca_colony_0
+	b_challenger_ii_c = ca_colony_1
+}

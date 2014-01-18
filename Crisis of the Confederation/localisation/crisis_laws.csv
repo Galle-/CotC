@@ -1,0 +1,94 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+feudal_elective;Federal Elective;Fédération éléctive;;;;;;;;;;;;x
+succ_feudal_elective;Federal Elective;Fédération éléctive;;;;;;;;;;;;x
+succ_feudal_elective_desc;Rulers are elected by a federal council consisting of the previous ruler, their immediate superior, and all major regional governors. In practice, the new ruler will almost always be a member of the electoral council or a relative of the previous ruler.;Les dirigeants sont élus par un conseil fédérale composé du dirigeant précédent, son supérieur immédiat, et tous les principaux gouverneurs régionaux. En pratique, le nouveau dirigeant sera toujours un membre du conseil éléctoral du précédent dirigeant.;;;;;;;;;;;;x
+open_elective;Democratic Elective;Démocratie éléctive;;;;;;;;;;;;x
+succ_open_elective;Democratic Elective;Démocratie éléctive;;;;;;;;;;;;x
+succ_open_elective_desc;Rulers are elected by popular vote.;Les dirigeants sont élus par vote populaire.;;;;;;;;;;;;x
+patrician_elective;Oligarchic Elective;Oligarchie éléctive;;;;;;;;;;;;x
+succ_patrician_elective;Oligarchic Elective;Oligarchie éléctive;;;;;;;;;;;;x
+succ_patrician_elective_desc;Rulers are nominally elected by popular vote. In practice, a handful of wealthy families monopolize the political process.;Les dirigeants sont théoriquement élus par vote populaire. Dans la pratique, une poignée de riches familles monopolisent le milieu politique.;;;;;;;;;;;;x
+tanistry;Dynastic Elective;Dynastie éléctive;;;;;;;;;;;;x
+succ_tanistry;Dynastic Elective;Dynastie éléctive;;;;;;;;;;;;x
+succ_tanistry_desc;Rulers are elected by a federal council, but only members of a specific ruling family are eligible for election.;Les dirigeants sont élus par un conseil fédéral, mais seuls les membres d'une famille régnante spécifiques sont elligibles.;;;;;;;;;;;;x
+legitimacy_law;Legitimacy;Légitimité;;;;;;;;;;;;x
+legitimacy_law_desc;The legitimate source of power and authority, as perceived by your people. Legitimacy determines what succession laws you may use, and which legitimacy types are available depends on your ideology and government type.;La source légitime du pouvoir et de l'autorité, telle que perçue par votre peuple. La légitimité détermine quelles sont les lois de succession que vous pouvez utiliser, et quels types de légitimité sont disponibles en fonction de votre idéologie et type de gouvernement.;;;;;;;;;;;;x1
+legitimacy_law_0;Hereditary Succession;Succession héréditaire;;;;;;;;;;;;x
+legitimacy_law_0_option;Hereditary;Hérédité;;;;;;;;;;;;x
+legitimacy_law_0_desc;Political legitimacy is conferred by descent from previous rulers.;La légitimité politique est conférée par l'hérédité des dirigeants précédants.;;;;;;;;;;;;x
+legitimacy_law_1;Democractic Succession;Succession démocratique;;;;;;;;;;;;x
+legitimacy_law_1_option;Elective;Eléction;;;;;;;;;;;;x
+legitimacy_law_1_desc;Political legitimacy comes from the consent of the people.;La légimité politique provient du consentement du peuple.;;;;;;;;;;;;x
+legitimacy_law_2;Appointment;Nomination;;;;;;;;;;;;x
+legitimacy_law_2_option;Appointment;Nomination;;;;;;;;;;;;x
+legitimacy_law_2_desc;Political legitimacy comes from being appointed by a recognized authority - either one's predecessor or one's superior.;La légétimité politique provient du mandat délivré par une autorité reconnue.;;;;;;;;;;;;x
+inheritance_law;Inheritance Law;Lois de succession;;;;;;;;;;;;x
+inheritance_law_desc;The process by which the high offices are inherited.;Le processus par lequel les hautes fonctions sont héritées.;;;;;;;;;;;;x
+inheritance_law_0;No Inheritance;Pas d'héritage;;;;;;;;;;;;x
+inheritance_law_0_option;None;Rien;;;;;;;;;;;;x
+inheritance_law_0_desc;Our people regard hereditary succession to be the basis of political legitimacy, but our current constitution does not protect the right to inheritance. We should rectify this immediately, or risk revolution.;Notre peuple considère la succession héréditaire comme base de la légitimité politique, mais notre constitution actuelle ne protège pas le droit à l'héritage. Nous devons remédier à cette situation immédiatement ou nous risquons la révolution.;;;;;;;;;;;;x
+inheritance_law_1;Gavelkind Inheritance;Gavelkind;;;;;;;;;;;;x
+inheritance_law_1_option;Gavelkind;Gavelkind;;;;;;;;;;;;x
+inheritance_law_1_desc;Upon a ruler's death, their estate is divided even among their children.;A la mort d'un dirigeant, ses possessions sont divisées entre ses enfants.;;;;;;;;;;;;x
+inheritance_law_2;Seniority Inheritance;Ancienneté;;;;;;;;;;;;x
+inheritance_law_2_option;Seniority;Ancienneté;;;;;;;;;;;;x
+inheritance_law_2_desc;Upon a ruler's death, control of their estate passes to their oldest living relative.;A la mort du dirigeant, ses possessions vont à son parent le plus agé.;;;;;;;;;;;;x
+inheritance_law_3;Primogeniture Inheritance;Primogéniture;;;;;;;;;;;;x
+inheritance_law_3_option;Prim.;Prim.;;;;;;;;;;;;x
+inheritance_law_3_desc;Upon a ruler's death, control of their estate passes to their oldest child.;A la mort du dirigeant, ses possessions vont à son enfant le plus agé.;;;;;;;;;;;;x
+inheritance_law_4;Ultimogeniture Inheritance;Ultimogéniture;;;;;;;;;;;;x
+inheritance_law_4_option;Ultim.;Ultim.;;;;;;;;;;;;x
+inheritance_law_4_desc;Upon a ruler's death, control of their estate passes to their youngest child or most recent clone.;A la mort du dirigeant, ses possessions vont à son enfant le plus jeune, ou à son plus récent clône;;;;;;;;;;;;x
+election_law;Election Law;Lois électorales;;;;;;;;;;;;x
+election_law_desc;The process by which the state's leaders are elected.;Le processus par lequel les dirigeants des états sont élus.;;;;;;;;;;;;x
+election_law_0;No Elections;Pas d'éléction;;;;;;;;;;;;x
+election_law_0_option;None;Rien;;;;;;;;;;;;x
+election_law_0_desc;Our country regards government without the consent of the governed to be illegitimate, but our current constitution does not permit elections of any sort. We should rectify this immediately, or risk revolution.;Notre pays considère que gourvener sans le consentement des gouvernés est illégitime, mais notre constitution actuelle ne nous permet pas d'organiser des éléctions. Nous devons remédier à cette situation immédiatement ou nous risquons la révolution.;;;;;;;;;;;;x
+election_law_1;Popular Vote;Vote populaire;;;;;;;;;;;;x
+election_law_1_option;Free;Libre;;;;;;;;;;;;x
+election_law_1_desc;Each ruler is elected by popular vote, and the voting process is carefully protected from meddling by the rich and powerful.;Chaque dirigeant est élu par vote populaire, et le processus de vote est soigneusement protégé contre l'ingérences des riches et puissants.;;;;;;;;;;;;x
+election_law_2;Oligarchy;Oligarchie;;;;;;;;;;;;x
+election_law_2_option;Semi-Free;Semi-libre;;;;;;;;;;;;x
+election_law_2_desc;The ruler is nominally elected by popular vote, but active intervention and campaigning means that in practice, the government is monopolized by a few wealthy families.;Le dirigeant est théoriquement élu par vote populaire, mais un interventionisme actif et des campagnes de pressions signifient que dans la pratique, le gouvernement est monopolisé par quelques familles aisées.;;;;;;;;;;;;x
+election_law_3;Federal Elective;Fédération éléctive;;;;;;;;;;;;x
+election_law_3_option;Federal;Fédéral;;;;;;;;;;;;x
+election_law_3_desc;The ruler is elected by a federal council, consisting of both regional governors and the previous ruler.;Le dirigeant est élu par un conseil fédéral, composé à la fois des gouverneurs régionaux et du précédent dirigeant.;;;;;;;;;;;;x
+election_law_4;Dynastic Elections;Eléctions dynastiques;;;;;;;;;;;;x
+election_law_4_option;The ruler is elected by a federal council, but candidacy is restricted to members of a specific family.;Le dirigeant est élu par un conseil fédéral, mais les candidatures sont réservées aux membres d'une famille spécifique.;;;;;;;;;;;;x
+appointment_law_0;Unappointed;Non désigné;;;;;;;;;;;;x
+appointment_law_0_option;None;Rien;;;;;;;;;;;;x
+appointment_law_0_desc;The population believes that leaders should be appointed by another qualified authority, but currently they are selected through other means.;La population pense que les dirigeants devraient être nommés par une autre autorité qualifiée, bien qu'actuellement ils sont sélectionnés par d'autres moyens.;;;;;;;;;;;;x
+appointment_law_1;Appointed Office;Charge désignée;;;;;;;;;;;;x
+appointment_law_1_option;Appointment;Nomination;;;;;;;;;;;;x
+appointment_law_1_desc;Holders of this office are appointed, either by their superior or, if they do not have one, by their predecessor.;Les détenteurs de cette charge sont nommés, soit par leur supérieur soit, s'ils n'en n'ont pas, pas leurs prédécesseurs.;;;;;;;;;;;;x
+term_length;Term Length;Mandat;;;;;;;;;;;;x
+term_length_desc;The length of time each leader holds power between elections.;La durée pendant la quelle le dirigeant détient le pouvoir entre deux éléctions.;;;;;;;;;;;;x
+term_length_0;One Year Terms;Mandat de quatre ans;;;;;;;;;;;;x
+term_length_0_option;Annual;Court;;;;;;;;;;;;x
+term_length_0_desc;Elections are held every year.;Les dirigeants détiennent le pouvoir pendant quatre ans avant qu'un autre ne puisse être élu.;;;;;;;;;;;;x
+term_length_1;Four Year Terms;Mandat de quatre ans;;;;;;;;;;;;x
+term_length_1_option;Short;Court;;;;;;;;;;;;x
+term_length_1_desc;Leaders hold power for four years before a new leader must be elected.;Les dirigeants détiennent le pouvoir pendant quatre ans avant qu'un autre ne puisse être élu.;;;;;;;;;;;;x
+term_length_2;Six Year Terms;Mandat de six ans;;;;;;;;;;;;x
+term_length_2_option;Medium;Moyen;;;;;;;;;;;;x
+term_length_2_desc;Leaders hold power for six years before a new leader must be elected.;Les dirigeants détiennent le pouvoir pendant six ans avant qu'un autre ne puisse être élu.;;;;;;;;;;;;x
+term_length_3;Ten Year Terms;Mandat de dix ans;;;;;;;;;;;;x
+term_length_3_option;Long;Long;;;;;;;;;;;;x
+term_length_3_desc;Leaders hold power for ten years before a new leader must be elected.;Les dirigeants détiennent le pouvoir pendant dix ans avant qu'un autre ne puisse être élu.;;;;;;;;;;;;x
+term_length_4;No Term Limits;Pas de durée de mandat;;;;;;;;;;;;x
+term_length_4_option;Life;A vie;;;;;;;;;;;;x
+term_length_4_desc;Leaders hold power for life or until they are removed by a vote of no confidence..;Les dirigeants gardent le pouvoir à vie ou jusqu'à ce qu'ils soient démis de leurs fonctions…;;;;;;;;;;;;x
+EVTDESCLAWS100;Elections have been held to determine the next [Root.GetTitle] of the [Root.PrimaryTitle.GetFullName].;;;;;;;;;;;;;x
+EVTDESCLAWS112;Your current term as [Root.GetTitle] of the [Root.PrimaryTitle.GetFullName] has expired. The constitution demands that elections be held immediately.;;;;;;;;;;;;;x
+EVTOPTALAWS112;Hold Election;;;;;;;;;;;;;x
+EVTOPTBLAWS112;Refuse to Hold Election;;;;;;;;;;;;;x
+civil_unrest_0;Insignificant Civil Unrest;;;;;;;;;;;;;x
+civil_unrest_1;Trivial Civil Unrest;;;;;;;;;;;;;x
+civil_unrest_2;Mild Civil Unrest;;;;;;;;;;;;;x
+civil_unrest_3;Minor Civil Unrest;;;;;;;;;;;;;x
+civil_unrest_4;Moderate Civil Unrest;;;;;;;;;;;;;x
+civil_unrest_5;Worrying Civil Unrest;;;;;;;;;;;;;x
+civil_unrest_6;Major Civil Unrest;;;;;;;;;;;;;x
+civil_unrest_7;Rampant Civil Unrest;;;;;;;;;;;;;x
+civil_unrest_8;Massive Civil Unrest;;;;;;;;;;;;;x
+civil_unrest_9;Total Chaos;;;;;;;;;;;;;x

@@ -1,0 +1,21 @@
+# 163 - Probeda
+
+# County Title
+title = c_probeda
+
+# Settlements
+max_settlements = 5
+b_probeda_prime = castle
+b_probeda_orbital_alpha = city
+b_probeda_orbital_beta = temple
+
+# Misc
+culture = japanese_edemite # Initial culture
+religion = astrist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

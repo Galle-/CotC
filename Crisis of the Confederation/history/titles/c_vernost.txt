@@ -1,0 +1,8 @@
+2900.1.1 = {
+	law = succ_feudal_elective # Should really be Appointment, but we're waiting for the patch.
+	law = true_cognatic_succession
+	liege = "d_prochnost"
+}
+
+2972.1.1 = { holder = 11011424 } # Gennady Norin
+2995.2.1 = { holder = 11111424 } # Viktoriya Norin

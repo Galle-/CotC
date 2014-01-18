@@ -1,0 +1,21 @@
+# 155 - Maoxian
+
+# County Title
+title = c_maoxian
+
+# Settlements
+max_settlements = 6
+b_maoxian_iii = castle
+b_maoxian_iii_b = temple
+b_maoxian_iii_orbital = city
+
+# Misc
+culture = sino_edemite # Initial culture
+religion = astrist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

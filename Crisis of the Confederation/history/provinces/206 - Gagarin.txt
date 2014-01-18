@@ -1,0 +1,60 @@
+# 206 - Gagarin
+
+# County Title
+title = c_gagarin
+
+# Settlements
+max_settlements = 5
+b_gagarin_prime = city
+b_gagarin_prime_b = temple
+b_gagarin_vi_c = castle
+
+# Misc
+culture = russo_centauri # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	# Gagarin Prime: Clean Atmosphere, Oceans, Warm
+	b_gagarin_prime = ct_clean_atmosphere
+	b_gagarin_prime = ct_no_water
+	b_gagarin_prime = ct_trace_water
+	b_gagarin_prime = ct_lakes
+	b_gagarin_prime = ct_seas
+	b_gagarin_prime = ct_oceans
+	b_gagarin_prime = ct_burning
+	b_gagarin_prime = ct_hot
+	b_gagarin_prime = ct_warm
+	b_gagarin_prime = ct_planet_survey
+	
+	b_gagarin_prime_b = tp_no_atmosphere
+	b_gagarin_prime_b = tp_no_water
+	b_gagarin_prime_b = tp_burning
+	b_gagarin_prime_b = tp_hot
+	b_gagarin_prime_b = tp_warm
+	b_gagarin_prime_b = tp_planet_survey
+	
+	b_gagarin_vi_c = ca_no_atmosphere
+	b_gagarin_vi_c = ca_no_water
+	b_gagarin_vi_c = ca_trace_water
+	b_gagarin_vi_c = ca_lakes
+	b_gagarin_vi_c = ca_seas
+	b_gagarin_vi_c = ca_oceans
+	b_gagarin_vi_c = ca_frozen
+	b_gagarin_vi_c = ca_cold
+	b_gagarin_vi_c = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_gagarin_prime = ct_colony_0
+	b_gagarin_prime = ct_colony_1
+	b_gagarin_prime = ct_colony_2
+	b_gagarin_prime = ct_colony_3
+	
+	b_gagarin_prime_b = tp_colony_0
+	
+	b_gagarin_vi_c = ca_colony_0
+	b_gagarin_vi_c = ca_colony_1
+	
+	trade_post = b_kojima
+}

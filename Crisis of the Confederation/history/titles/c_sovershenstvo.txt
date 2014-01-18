@@ -1,0 +1,8 @@
+2900.1.1 = {
+	law = succ_tanistry
+	law = true_cognatic_succession
+	liege = "d_sovershenstvo"
+}
+
+2956.1.1 = { holder = 12010240 } # Pyotr Volkov
+2988.1.1 = { holder = 11010240 } # Roman Volkov

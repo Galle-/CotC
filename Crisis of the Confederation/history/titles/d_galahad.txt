@@ -1,0 +1,13 @@
+2671.1.1 = {
+	liege = "k_avalon"
+	law = true_cognatic_succession
+	law = succ_primogeniture
+	holder = "1701422" # Joseph I Blackburn
+}
+2705.1.1 = { law = succ_ultimogeniture }
+2715.1.1 = { holder = "1601422" } # Joseph II Blackburn
+2766.1.1 = { holder = "1501422" } # Joseph III Blackburn
+2847.1.1 = { holder = "1401422" } # Joseph IV Blackburn
+2902.1.1 = { holder = "1301422" } # Joseph V Blackburn
+2956.1.1 = { holder = "1201422" } # Joseph VI Blackburn
+2986.1.1 = { holder = "1101422" } # Joseph VII Blackburn

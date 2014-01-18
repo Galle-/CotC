@@ -1,0 +1,6 @@
+2723.1.1 = {
+	liege = "d_lancelot"
+	law = true_cognatic_succession
+	law = succ_ultimogeniture
+}
+2987.1.1 = { holder = "110638" } # Stephen Evans

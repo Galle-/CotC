@@ -1,0 +1,17 @@
+2599.1.1 = {
+	liege = "k_avalon"
+	law = true_cognatic_succession
+	law = succ_primogeniture
+	holder = "21020022" # Malcolm I Bekele
+}
+2632.1.1 = { holder = "20020022" } # Malcolm II Bekele
+2642.1.1 = { holder = "19020022" } # Malcolm III Bekele
+2647.1.1 = { holder = "18020022" } # Malcolm IV Bekele
+2685.1.1 = { holder = "17020022" } # Malcolm V Bekele
+2705.1.1 = { law = succ_ultimogeniture }
+2749.1.1 = { holder = "16020022" } # Malcolm VI Bekele
+2816.1.1 = { holder = "15020022" } # Malcolm VII Bekele
+2834.1.1 = { holder = "14020022" } # Malcolm VIII Bekele
+2879.1.1 = { holder = "13020022" } # Malcolm IX Bekele
+2947.1.1 = { holder = "12020022" } # Malcolm X Bekele
+2995.1.1 = { holder = "11020022" } # Malcolm XI Bekele

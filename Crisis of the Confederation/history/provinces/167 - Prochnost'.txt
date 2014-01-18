@@ -1,0 +1,21 @@
+# 167 = Prochnost'
+
+# County Title
+title = c_prochnost
+
+# Settlements
+max_settlements = 5
+b_prochnost_iii = castle
+b_prochnost_iv = city
+b_prochnost_iv_b = temple
+
+# Misc
+culture = russo_edemite # Initial culture
+religion = astrist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

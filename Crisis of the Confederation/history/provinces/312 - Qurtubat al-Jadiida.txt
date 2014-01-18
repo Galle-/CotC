@@ -1,0 +1,55 @@
+# 312 - Qurtubat al-Jadiida
+
+# County Title
+title = c_qurtubat_al_jadiida
+
+# Settlements
+max_settlements = 4
+b_qurtubat_al_jadiida = city
+b_qurtubat_al_jadiida_b = temple
+b_qurtubat_al_jadiida_iii = castle
+
+# Misc
+culture = arab_samawati # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+	b_qurtubat_al_jadiida = ct_clean_atmosphere
+	b_qurtubat_al_jadiida = ct_no_water
+	b_qurtubat_al_jadiida = ct_trace_water
+	b_qurtubat_al_jadiida = ct_lakes
+	b_qurtubat_al_jadiida = ct_seas
+	b_qurtubat_al_jadiida = ct_frozen
+	b_qurtubat_al_jadiida = ct_cold
+	b_qurtubat_al_jadiida = ct_cool
+	b_qurtubat_al_jadiida = ct_optimal_cold
+	b_qurtubat_al_jadiida = ct_planet_survey
+	
+	b_qurtubat_al_jadiida_b = tp_no_atmosphere
+	b_qurtubat_al_jadiida_b = tp_no_water
+	b_qurtubat_al_jadiida_b = tp_frozen
+	b_qurtubat_al_jadiida_b = tp_cold
+	b_qurtubat_al_jadiida_b = tp_cool
+	b_qurtubat_al_jadiida_b = tp_optimal_cold
+	b_qurtubat_al_jadiida_b = tp_planet_survey
+	
+	b_qurtubat_al_jadiida_iii = ca_toxic_atmosphere
+	b_qurtubat_al_jadiida_iii = ca_no_water
+	b_qurtubat_al_jadiida_iii = ca_trace_water
+	b_qurtubat_al_jadiida_iii = ca_frozen
+	b_qurtubat_al_jadiida_iii = ca_cold
+	b_qurtubat_al_jadiida_iii = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_qurtubat_al_jadiida = ct_colony_0
+	b_qurtubat_al_jadiida = ct_colony_1
+	b_qurtubat_al_jadiida = ct_colony_2
+	b_qurtubat_al_jadiida = ct_colony_3
+	
+	b_qurtubat_al_jadiida_b = tp_colony_0
+	
+	b_qurtubat_al_jadiida_iii = ca_colony_0
+	b_qurtubat_al_jadiida_iii = ca_colony_1
+}

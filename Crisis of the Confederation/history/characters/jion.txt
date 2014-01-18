@@ -1,0 +1,63 @@
+1208425 = {
+	# President of Jion, 2992 - 2998
+	name = "Yukio"
+	dynasty = 8425 # Hasegawa
+	female = no
+	
+	culture = japanese_tengoku
+	religion = terran_federalist
+	
+	father = 1308425 # Shiro Hasegawa
+	
+	2945.1.1 = { birth = "2945.1.1" }
+	2998.1.1 = { death = { death_reason = death_execution } } # Executed by Ryusei Sato
+}
+
+1308425 = {
+	# Tengoku military officer, loyalist
+	name = "Shiro"
+	dynasty = 8425 # Hasegawa
+	female = no
+	
+	culture = japanese_tengoku
+	religion = terran_republican
+	
+	add_trait = tough_soldier
+	add_trait = warship_captain
+	
+	2919.1.1 = { birth = "2919.1.1" }
+	2983.1.1 = { death = { death_reason = death_battle } } # Killed in Jionese rebellion
+}
+
+1318425 = {
+	# Daughter of Shiro Hasegawa
+	# Wife of Jiro Shibata
+	# Mother of the Shibata Twins
+	name = "Michiko"
+	dynasty = 8425 # Hasegawa
+	female = yes
+	
+	culture = japanese_tengoku
+	religion = terran_federalist
+	
+	father = 1308425 # Shiro Hasegawa
+	
+	2942.1.1 = { birth = "2942.1.1" }
+}
+
+1108921 = {
+	# Anti-Sato Jionese military officer
+	# Father of the Shibata Twins
+	name = "Jiro"
+	dynasty = 8921
+	female = no
+	
+	culture = japanese_tengoku
+	religion = terran_federalist
+	
+	2945.1.1 = { birth = 2945.1.1 }
+	2964.1.1 = {
+		spouse = 1318425
+		effect = { spouse = { add_lover = ROOT } }
+	}
+}

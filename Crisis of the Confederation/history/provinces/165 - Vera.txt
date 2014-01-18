@@ -1,0 +1,20 @@
+# 165 - Vera
+
+# County Title
+title = c_vera
+
+# Settlements
+max_settlements = 4
+b_vera_ii = castle
+b_vera_ii_b = city
+
+# Misc
+culture = japanese_edemite # Initial culture
+religion = astrist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

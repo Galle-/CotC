@@ -1,0 +1,54 @@
+# 196 - Delta Pavonis
+
+# County Title
+title = c_delta_pavonis
+
+# Settlements
+max_settlements = 4
+b_delta_pavonis_i = temple
+b_delta_pavonis_ii = city
+b_delta_pavonis_ii_b = castle
+
+# Misc
+culture = sino_terran # Initial culture
+religion = terran_republican
+
+# History
+1.1.1 = {
+	b_delta_pavonis_i = tp_clean_atmosphere
+	b_delta_pavonis_i = tp_no_water
+	b_delta_pavonis_i = tp_trace_water
+	b_delta_pavonis_i = tp_lakes
+	b_delta_pavonis_i = tp_seas
+	b_delta_pavonis_i = tp_oceans
+	b_delta_pavonis_i = tp_burning
+	b_delta_pavonis_i = tp_planet_survey
+	
+	b_delta_pavonis_ii = ct_toxic_atmosphere
+	b_delta_pavonis_ii = ct_no_water
+	b_delta_pavonis_ii = ct_trace_water
+	b_delta_pavonis_ii = ct_lakes
+	b_delta_pavonis_ii = ct_burning
+	b_delta_pavonis_ii = ct_hot
+	b_delta_pavonis_ii = ct_warm
+	b_delta_pavonis_ii = ct_planet_survey
+	
+	b_delta_pavonis_ii_b = ca_no_atmosphere
+	b_delta_pavonis_ii_b = ca_no_water
+	b_delta_pavonis_ii_b = ca_burning
+	b_delta_pavonis_ii_b = ca_hot
+	b_delta_pavonis_ii_b = ca_warm
+	b_delta_pavonis_ii_b = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_delta_pavonis_i = tp_colony_0
+	b_delta_pavonis_i = tp_colony_1
+	
+	b_delta_pavonis_ii = ct_toxic_atmosphere_domes
+	b_delta_pavonis_ii = ct_colony_0
+	b_delta_pavonis_ii = ct_colony_1
+	b_delta_pavonis_ii = ct_colony_2
+	
+	b_delta_pavonis_ii_b = ca_colony_0
+}

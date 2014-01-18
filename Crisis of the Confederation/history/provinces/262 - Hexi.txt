@@ -1,0 +1,63 @@
+# 262 - Hexi
+
+# County Title
+title = c_hexi
+
+# Settlements
+max_settlements = 4
+b_hexi_iii = castle
+b_hexi_iv = city
+b_hexi_iv_b = temple
+b_hexi_iv_c = city
+
+# Misc
+culture = sino_bianjiangese # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+
+	b_hexi_iii = ca_no_water
+	b_hexi_iii = ca_trace_water
+	b_hexi_iii = ca_no_atmosphere
+
+	b_hexi_iii = ca_burning
+	b_hexi_iii = ca_hot
+	b_hexi_iii = ca_warm
+	b_hexi_iii = ca_planet_survey
+	
+	b_hexi_iv = ct_no_water
+	b_hexi_iv = ct_trace_water
+	b_hexi_iv = ct_lakes
+	b_hexi_iv = ct_toxic_atmosphere
+	b_hexi_iv = ct_burning
+	b_hexi_iv = ct_hot
+	b_hexi_iv = ct_planet_survey
+	
+	b_hexi_iv_b = tp_no_water
+	b_hexi_iv_b = tp_trace_water
+	b_hexi_iv_b = tp_clean_atmosphere
+	b_hexi_iv_b = tp_frozen
+	b_hexi_iv_b = tp_cold
+	b_hexi_iv_b = tp_cool
+	b_hexi_iv_b = tp_planet_survey
+	
+	b_hexi_iv_c = ct_no_water
+	b_hexi_iv_c = ct_no_atmosphere
+	b_hexi_iv_c = ct_cold
+	b_hexi_iv_c = ct_frozen
+	b_hexi_iv_c = ct_planet_survey
+}
+
+2998.1.1 = {
+
+		b_hexi_iii = ca_colony_0
+		
+		b_hexi_iv = ct_colony_0
+		
+		b_hexi_iv_b = tp_colony_0
+		b_hexi_iv_b = tp_colony_1
+		b_hexi_iv_b = tp_colony_2
+		
+		b_hexi_iv_c = ct_colony_0
+}

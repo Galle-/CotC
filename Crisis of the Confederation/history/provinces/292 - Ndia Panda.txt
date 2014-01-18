@@ -1,0 +1,57 @@
+# 292 - Ndia Panda
+
+# County Title
+title = c_ndia_panda
+
+# Settlements
+max_settlements = 4
+b_ndia_panda_iii = city
+b_ndia_panda_iii_b = temple
+b_ndia_panda_iv = castle
+
+# Misc
+culture = east_afro_angani # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_ndia_panda_iii = ct_clean_atmosphere
+	b_ndia_panda_iii = ct_no_water
+	b_ndia_panda_iii = ct_trace_water
+	b_ndia_panda_iii = ct_lakes
+	b_ndia_panda_iii = ct_seas
+	b_ndia_panda_iii = ct_frozen
+	b_ndia_panda_iii = ct_cold
+	b_ndia_panda_iii = ct_cool
+	b_ndia_panda_iii = ct_planet_survey
+	
+	b_ndia_panda_iii_b = tp_no_atmosphere
+	b_ndia_panda_iii_b = tp_no_water
+	b_ndia_panda_iii_b = tp_frozen
+	b_ndia_panda_iii_b = tp_cold
+	b_ndia_panda_iii_b = tp_cool
+	b_ndia_panda_iii_b = tp_planet_survey
+	
+	b_ndia_panda_iv = ca_toxic_atmosphere
+	b_ndia_panda_iv = ca_no_water
+	b_ndia_panda_iv = ca_trace_water
+	b_ndia_panda_iv = ca_lakes
+	b_ndia_panda_iv = ca_seas
+	b_ndia_panda_iv = ca_frozen
+	b_ndia_panda_iv = ca_cold
+	b_ndia_panda_iv = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_ndia_panda_iii = ct_colony_0
+	b_ndia_panda_iii = ct_colony_1
+	b_ndia_panda_iii = ct_colony_2
+	b_ndia_panda_iii = ct_colony_3
+	
+	b_ndia_panda_iii_b = tp_colony_0
+	
+	b_ndia_panda_iv = ca_colony_0
+	b_ndia_panda_iv = ca_colony_1
+	
+	trade_post = b_afolayan
+}

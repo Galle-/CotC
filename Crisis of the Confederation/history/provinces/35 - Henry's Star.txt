@@ -1,0 +1,20 @@
+# 35 - Henry's Star
+
+# County Title
+title = c_henrys_star
+
+# Settlements
+max_settlements = 4
+
+b_henrys_star_waystation = castle
+
+# Misc
+culture = anglo_avalonian # Initial culture
+religion = neo_feudal
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

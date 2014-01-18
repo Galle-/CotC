@@ -1,0 +1,3114 @@
+e_rebels = {
+	rebel = yes
+	landless = yes
+	primary = yes
+
+	culture = anglo_terran
+	tribe = yes
+
+	color={ 0 0 0 }
+	color2={ 0 0 0 }
+}
+
+e_pirates = {
+	pirate = yes
+	landless = yes
+	primary = yes
+
+	culture = anglo_terran
+	tribe = yes
+
+	color={ 0 0 0 }
+	color2={ 0 0 0 }
+}
+
+# A dummy title used purely to work around Paradox's terrible programming
+b_dummy = {
+	color = { 0 0 0 }
+	color2 = { 0 0 0 }
+	landless = yes
+}
+
+d_pilgrimage = {
+	color = { 0 255 128 }
+	color2 = { 192 192 0 }
+	
+	capital = 202 # Sol
+	
+	short_name = yes
+	landless = yes
+	primary = yes
+	
+	controls_religion = pilgrim
+	controls_religion = orthodox
+	
+	dynasty_title_names = no
+	
+	title = "MASTER"
+	title_foa = "MASTERFOA"
+}
+
+
+# Bureaucracy
+k_terran_federal_authority = {
+	color = { 0 128 64 }
+	color2 = { 192 192 192 }
+	
+	capital = 202 # Sol
+	
+	short_name = yes
+	
+	landless = yes
+
+	controls_religion = terran_federalist
+}
+k_terran_republic_authority = {
+	color = { 0 128 64 }
+	color2 = { 192 192 192 }
+	
+	capital = 202 # Sol
+	
+	short_name = yes
+	
+	landless = yes
+
+	controls_religion = terran_republican
+}
+k_terran_imperial_authority = {
+	color = { 0 128 64 }
+	color2 = { 192 192 192 }
+	
+	capital = 202 # Sol
+	
+	short_name = yes
+	
+	landless = yes
+
+	controls_religion = terran_imperial
+}
+
+e_terran_confederation = {
+	color = { 0 128 255 }
+	color2 = { 192 192 192 }
+	
+	capital = 202 # Sol
+	
+	short_name = yes
+	
+	dynasty_title_names = no
+	
+	has_top_de_jure_capital = yes
+	
+	
+	# Navy
+	k_terran_navy = {
+		color = { 0 64 128 }
+		color2 = { 192 192 192 }
+		
+		short_name = yes
+		
+		title = "GRANDADMIRAL"
+		title_foa = "GRANDADMIRALFOA"
+		
+		religion = terran_federalist
+		
+		capital = 202 # Sol
+		
+		landless = yes
+		tribe = yes
+		
+		d_terran_first_fleet = {
+			color = { 0 64 132 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_foa = "FLEETADMIRALFOA"
+			religion = terran_federalist
+			capital = 202
+			landless = yes
+			tribe = yes
+		}
+		d_terran_second_fleet = {
+			color = { 0 64 136 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_foa = "FLEETADMIRALFOA"
+			religion = terran_federalist
+			capital = 202
+			landless = yes
+			tribe = yes
+		}
+		d_terran_third_fleet = {
+			color = { 0 64 140 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_foa = "FLEETADMIRALFOA"
+			religion = terran_federalist
+			capital = 202
+			landless = yes
+			tribe = yes
+		}
+		d_terran_fourth_fleet = {
+			color = { 0 64 144 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_foa = "FLEETADMIRALFOA"
+			religion = terran_federalist
+			capital = 202
+			landless = yes
+			tribe = yes
+		}
+		d_terran_fifth_fleet = {
+			color = { 0 64 148 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_foa = "FLEETADMIRALFOA"
+			religion = terran_federalist
+			capital = 202
+			landless = yes
+			tribe = yes
+		}
+	}
+	
+	k_terran_commonwealth = {
+		color = { 0 128 192 }
+		color2 = { 192 192 192 }
+		
+		capital = 202
+		
+		short_name = yes
+		dynasty_title_names = no
+		
+		d_terran_commonwealth_fleet = {
+			color = { 0 128 128 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_foa = "FLEETADMIRALFOA"
+			capital = 202
+			landless = yes
+			tribe = yes
+		}
+		
+		d_sol = {
+			color = { 0 128 160 }
+			color2 = { 192 192 192 }
+			capital = 202
+			
+			c_sol = {
+				color = { 0 64 128 }
+				color2 = { 192 192 192 }
+				top_de_jure_capital = yes
+				
+				b_earth = {
+					holy_site = terran_federalist
+					holy_site = terran_republican
+					holy_site = terran_imperial
+					holy_site = pilgrim
+					holy_site = solar_cultist
+					holy_site = orthodox
+					holy_site = solarian
+				}
+				b_moon = {
+					short_name = yes
+					holy_site = pilgrim
+					holy_site = solar_cultist
+					holy_site = orthodox
+					holy_site = solarian
+				}
+				b_mars = { }
+				b_ceres = { }
+				b_europa = { }
+				b_ganymede = { }
+				b_titan = { }
+			}
+			c_alpha_centauri = {
+				b_alpha_centauri_ii = { }
+				b_alpha_centauri_iii = { }
+				b_alpha_centauri_iii_b = { }
+				b_alpha_centauri_iv = { }
+			}
+		}
+		d_sirius = {
+			capital = 200 # Sirius
+			c_sirius = {
+				b_sirius_iii = { }
+				b_sirius_iii_b = { }
+				b_sirius_iii_c = { }
+				b_sirius_vii_b = { }
+				b_sirius_vii_c = { }
+			}
+			c_procyon = {
+				b_procyon_iii_b = { }
+				b_procyon_iii_c = { }
+				b_procyon_iii_d = { }
+				b_procyon_iv = { }
+			}
+		}
+		d_tau_ceti = {
+			capital = 205 # Tau Ceti
+			c_tau_ceti = {
+				b_tau_ceti_iv = { }
+				b_tau_ceti_iv_b = { }
+				b_tau_ceti_iv_c = { }
+				b_tau_ceti_v = { }
+				b_tau_ceti_v_c = { }
+				b_tau_ceti_v_d = { }
+			}
+			c_epsilon_eridani = {
+				b_epsilon_eridani_iii = { }
+				b_epsilon_eridani_iv = { }
+				b_epsilon_eridani_iv_b = { }
+				b_epsilon_eridani_v = { }
+			}
+			c_eta_cassiopeia = {
+				b_eta_cassiopeia_ii = { }
+				b_eta_cassiopeia_ii_b = { }
+				b_eta_cassiopeia_iii = { }
+				b_eta_cassiopeia_iii_b = { }
+			}
+		}
+		d_draconis = {
+			capital = 198 # Sigma Draconis
+			c_sigma_draconis = {
+				b_sigma_draconis_vi_c = { }
+				b_sigma_draconis_vi_d = { }
+				b_sigma_draconis_vi_f = { }
+				b_sigma_draconis_vii_b = { }
+				b_sigma_draconis_vii_d = { }
+			}
+			c_epsilon_indi = {
+				b_epsilon_indi_iii = { }
+				b_epsilon_indi_iii_b = { }
+				b_epsilon_indi_iv = { }
+				b_epsilon_indi_v = { }
+			}
+			c_beta_hydri = {
+				b_beta_hydri_iii = { }
+				b_beta_hydri_iv = { }
+				b_beta_hydri_v = { }
+				b_beta_hydri_v_b = { }
+			}
+			c_delta_pavonis = {
+				b_delta_pavonis_i = { }
+				b_delta_pavonis_ii = { }
+				b_delta_pavonis_ii_b = { }
+				b_delta_pavonis_iii = { }
+			}
+		}
+		d_altair = {
+			capital = 193 # Altair
+			c_altair = {
+				b_altair_iii = { }
+				b_altair_iv = { }
+				b_altair_v = { }
+				b_altair_v_b = { }
+			}
+			c_cygni = {
+				b_cygni_iii = { }
+				b_cygni_iii_b = { }
+				b_cygni_iv = { }
+				b_cygni_v = { }
+			}
+		}
+	}
+	
+	k_xingjie = {
+		color = { 128 0 0 }
+		color2 = { 200 200 0 }
+		
+		capital = 267
+		
+		d_xingjie_fleet = {
+			color = { 200 32 32 }
+			color2 = { 200 200 0 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_foa = "FLEETADMIRALFOA"
+			capital = 267
+			landless = yes
+			tribe = yes
+		}
+		
+		d_huangjing = {
+			color = { 128 16 0 }
+			color2 = { 200 200 0 }
+			
+			capital = 267 # Huangjing
+			
+			c_huangjing = {
+				color = { 128 16 16 }
+				color2 = { 200 200 0 }
+				
+				b_huangjing_iii = {
+					# Traditional regional capital
+					holy_site = terran_federalist
+					holy_site = terran_republican
+					holy_site = terran_imperial
+				}
+				b_huangjing_iii_b = { }
+				b_huangjing_iii_c = { }
+				b_huangjing_iv = { }
+				b_huangjing_vii_c = { }
+				b_huangjing_vii_d = { }
+				b_huangjing_vii_e = { }
+			}
+			c_huanglong = {
+				color = { 128 16 32 }
+				color2 = { 200 200 0 }
+				
+				b_huanglong_ii = { }
+				b_huanglong_iii = { }
+				b_huanglong_iii_b = { }
+				b_huanglong_iii_c = { }
+			}
+			c_yang_liwei = {
+				color = { 128 16 48 }
+				color2 = { 200 200 0 }
+				
+				b_yang_liwei_iii_b = { }
+				b_yang_liwei_iii_c = { }
+				b_yang_liwei_iii_d = { }
+				b_yang_liwei_iii_e = { }
+			}
+		}
+		
+		d_xuanwu = {
+			color = { 128 32 0 }
+			color2 = { 200 200 0 }
+			
+			capital = 275 # Xuanwu
+			
+			c_xuanwu = {
+				color = { 128 32 16 }
+				color2 = { 200 200 0 }
+				b_xuanwu_prime = { }
+				b_xuanwu_prime_b = { }
+				b_xuanwu_iii_b = { }
+				b_xuanwu_iv = { }
+				b_xuanwu_vii_c = { }
+				b_xuanwu_vii_d = { }
+			}
+			
+			c_jing_haipeng = {
+				color = { 128 32 32 }
+				color2 = { 200 200 0 }
+				
+				b_jing_haipeng_iii = { }
+				b_jing_haipeng_iv = { }
+				b_jing_haipeng_v = { }
+				b_jing_haipeing_vii_c = { }
+			}
+			
+			c_liu_boming = {
+				color = { 128 32 48 }
+				color2 = { 200 200 0 }
+				
+				b_liu_boming_prime = { }
+				b_liu_boming_prime_b = { }
+				b_liu_boming_prime_c = { }
+				b_liu_boming_prime_d = { }
+			}
+			
+			c_zhai_zhigang = {
+				color = { 128 32 64 }
+				color2 = { 200 200 0}
+				
+				b_zhai_zhigang_waystation = { }
+				b_zhai_zhigang_iii = { }
+				b_zhai_zhigang_iii_b = { }
+				b_zhai_zhigang_iv = { }
+			}
+		}
+		
+		d_baihu = {
+			color = { 128 48 0 }
+			color2 = { 200 200 0 }
+			
+			capital = 264
+			
+			c_baihu = {
+				color = { 128 48 16 }
+				color2 = { 200 200 0 }
+				
+				b_baihu_prime = { }
+				b_baihu_ii = { }
+				b_baihu_iii = { }
+				b_baihu_iv = { }
+			}
+			
+			c_liu_wang = {
+				color = { 128 48 32 }
+				color2 = { 200 200 0 }
+				
+				b_liu_wang_waystation = { }
+				b_liu_wang_iv = { }
+				b_liu_wang_iv_b = { }
+				b_liu_wang_iv_c = { }
+			}
+			
+			c_liu_yang = {
+				color = { 128 48 48 }
+				color2 = { 200 200 0 }
+				
+				b_liu_yang_waystation = { }
+				b_liu_yang_ii = { }
+				b_liu_yang_observatory = { }
+				b_liu_yang_ii_b = { }
+			}
+		}
+		
+		d_zhuque = {
+			color = { 128 64 0 }
+			color2 = { 200 200 0 }
+			
+			capital = 279
+			
+			c_zhuque = {
+				color = { 128 64 16 }
+				color2 = { 200 200 0 }
+				
+				b_zhuque_iii = { }
+				b_zhuque_iii_b = { }
+				b_zhuque_iv = { }
+				b_zhuque_iv_b = { }
+				b_zhuque_iv_c = { }
+			}
+			
+			c_zhang_xiaoguang = {
+				color = { 128 64 32 }
+				color2 = { 200 200 0 }
+				
+				b_zhang_xiaoguang_iii = { }
+				b_zhang_xiaoguang_iii_b = { }
+				b_zhang_xiaoguang_waystation = { }
+				b_zhang_xiaoguang_vii_d = { }
+			}
+			
+			c_wang_yaping = {
+				color = { 128 64 48 }
+				color2 = { 200 200 0 }
+				
+				b_wang_yaping_waystation = { }
+				b_wang_yaping_iv = { }
+				b_wang_yaping_v = { }
+				b_wang_yaping_v_b = { }
+			}
+		}
+		
+		d_qinglong = {
+			color = { 128 80 0 }
+			color2 = { 200 200 0 }
+			
+			capital = 272
+			
+			c_qinglong = {
+				color = { 128 80 16 }
+				color2 = { 200 200 0 }
+				
+				b_qinglong_prime = { }
+				b_qinglong_waystation = { }
+				b_qinglong_iii = { }
+				b_qinglong_iii_b = { }
+				b_qinglong_iii_c = { }
+			}
+			
+			c_fei_junlong = {
+				color = { 128 80 32 }
+				color2 = { 200 200 0 }
+				
+				b_fei_junlong_ii = { }
+				b_fei_junlong_ii_b = { }
+				b_fei_junlong_iii = { }
+				b_fei_junlong_iii_b = { }
+			}
+			c_nie_haisheng = {
+				color = { 128 80 32 }
+				color2 = { 200 200 0 }
+				b_nie_haisheng_iv = { }
+				b_nie_haisheng_vii_d = { }
+				b_nie_haisheng_viii_c = { }
+				b_nie_haisheng_viii_e = { }
+			}
+		}
+	}
+	
+	k_tierra_celeste = {
+		color = { 128 128 0 }
+		color2 = { 255 255 255 }
+		
+		capital = 70 # Encrucijada
+		
+		d_tierra_celeste_fleet = {
+			color = { 128 128 32 }
+			color2 = { 255 255 0 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_foa = "FLEETADMIRALFOA"
+			capital = 69 # Escudo
+			landless = yes
+			tribe = yes
+		}
+		
+		d_encrucijada = {
+			color = { 128 136 0 }
+			color2 = { 255 255 255 }
+			
+			capital = 70 # Encrucijada
+			
+			c_encrucijada = {
+				color = { 128 136 8 }
+				color2 = { 255 255 255 }
+				
+				b_encrucijada_iv = {
+					# Traditional regional capital
+					holy_site = terran_federalist
+					holy_site = terran_republican
+					holy_site = terran_imperial
+				}
+				b_encrucijada_iv_b = { }
+				b_encrucijada_vii_b = { }
+				b_encrucijada_vii_c = { }
+				b_encrucijada_vii_d = { }
+				b_encrucijada_viii_b = { }
+				b_encrucijada_viii_c = { }
+			}
+			
+			c_nuevo_santuario = {
+				color = { 128 136 16 }
+				color2 = { 255 255 255 }
+				
+				b_nuevo_santuario_prime = { }
+				b_nuevo_santuario_iii = { }
+				b_nuevo_santuario_iii_b = { }
+				b_nuevo_santuario_iii_c = { }
+			}
+			
+			c_hermanes_de_oro = {
+				color = { 128 136 24 }
+				color2 = { 255 255 255 }
+				
+				b_hermanes_de_oro_iii = { }
+				b_hermanes_de_oro_iii_b = { }
+				b_hermanes_de_oro_iv = { }
+				b_hermanes_de_oro_v = { }
+			}
+			
+			c_escudo = {
+				color = { 128 136 32 }
+				color2 = { 255 255 255 }
+				
+				b_escudo_iii_b = { }
+				b_escudo_iii_c = { }
+				b_escudo_iii_d = { }
+				b_escudo_iii_e = { }
+			}
+		}
+		
+		d_vega = {
+			color = { 128 142 0 }
+			color2 = { 255 255 255 }
+			
+			capital = 83 # Vega
+			
+			c_vega = {
+				color = { 128 142 8 }
+				color2 = { 255 255 255 }
+				
+				b_vega_prime = { }
+				b_vega_prime_b = { }
+				b_vega_prime_c = { }
+				b_vega_iv = { }
+				b_vega_iv_b = { }
+			}
+			
+			c_nuevo_sol = {
+				color = { 128 142 16 }
+				color2 = { 255 255 255 }
+				
+				b_nueva_tierra = {
+					holy_site = pilgrim
+					holy_site = orthodox
+					holy_site = solar_cultist
+					holy_site = solarian
+					holy_site = adoptionist
+				}
+				b_nueva_tierra_b = { }
+				b_nueva_tierra_c = { }
+				b_nuevo_sol_iv = { }
+			}
+			
+			c_prosperidad = {
+				color = { 128 142 24 }
+				color2 = { 255 255 255 }
+				
+				b_prosperidad_prime = { }
+				b_prosperidad_iii = { }
+				b_prosperidad_iv = { }
+				b_prosperidad_v = { }
+			}
+		}
+		
+		d_sexto_sol = {
+			color = { 128 150 0 }
+			color2 = { 255 255 255 }
+			
+			capital = 77 # Nahui-Ahtle
+			
+			# Native Name
+			anglo_sexto_solar = "Nahui-Ahtle"
+			arab_sexto_solar = "Nahui-Ahtle"
+			east_afro_sexto_solar = "Nahui-Ahtle"
+			ethiopian_sexto_solar = "Nahui-Ahtle"
+			hispanic_sexto_solar = "Nahui-Ahtle"
+			indo_sexto_solar = "Nahui-Ahtle"
+			iranian_sexto_solar = "Nahui-Ahtle"
+			japanese_sexto_solar = "Nahui-Ahtle"
+			mesoamerican_sexto_solar = "Nahui-Ahtle"
+			russo_sexto_solar = "Nahui-Ahtle"
+			sino_sexto_solar = "Nahui-Ahtle"
+			west_afro_sexto_solar = "Nahui-Ahtle"
+			
+			c_nahui_ahtle = {
+				color = { 128 150 8 }
+				color2 = { 255 255 255 }
+				
+				b_nahui_ahtle_ii = {
+					holy_site = adoptionist
+				}
+				b_nahui_ahtle_ii_b = { }
+				b_nahui_ahtle_iii = { }
+				b_nahui_ahtle_iii_b = { }
+				b_nahui_ahtle_iii_c = { }
+				b_nahui_ahtle_iv = { }
+			}
+			
+			c_nantli = {
+				color = { 128 150 16 }
+				color2 = { 255 255 255 }
+				
+				b_nantli_prime = { }
+				b_nantli_prime_b = { }
+				b_nantli_ii = { }
+				b_nantli_ii_b = { }
+			}
+			
+			c_tletlioh = {
+				color = { 128 150 24 }
+				color2 = { 255 255 255 }
+				
+				b_tletlioh_iii = { }
+				b_tletlioh_iii_b = { }
+				b_tletlioh_iv = { }
+				b_tletlioh_waystation = { }
+			}
+			
+			c_tlexochtli = {
+				color = { 128 150 32 }
+				color2 = { 255 255 255 }
+				
+				b_tlexochtli_prime = { }
+				b_tlexochtli_ii = { }
+				b_tlexochtli_iii = { }
+				b_tlexochtli_iv = { }
+			}
+			
+			c_huehca = {
+				color = { 128 150 40 }
+				color2 = { 255 255 255 }
+				
+				b_huehca_ii_b = { }
+				b_huehca_iii = { }
+				b_huehca_iii_b = { }
+				b_huehca_iii_c = { }
+			}
+		}
+		
+		d_bolivar = {
+			color = { 128 158 0 }
+			color2 = { 255 255 255 }
+			
+			capital = 67 # Estrella de Bolivar
+			
+			c_estrella_de_bolivar = {
+				color = { 128 158 8 }
+				color2 = { 255 255 255 }
+				
+				b_estrella_de_bolivar_iii = { }
+				b_estrella_de_bolivar_iv = { }
+				b_estrella_de_bolivar_iv_b = { }
+				b_estrella_de_bolivar_v = { }
+			}
+			
+			c_esperanza = {
+				color = { 128 158 16 }
+				color2 = { 255 255 255 }
+				
+				b_esperanza_ii = { }
+				b_esperanza_ii_b = { }
+				b_esperanza_iii = { }
+				b_esperanza_iii_b = { }
+			}
+			
+			c_santa_maria = {
+				color = { 128 158 24 }
+				color2 = { 255 255 255 }
+				
+				b_santa_maria_iii = { }
+				b_santa_maria_iii_b = { }
+				b_santa_maria_iv = { }
+				b_santa_maria_waystation = { }
+			}
+			
+			c_ahora_la_luz = {
+				color = { 128 158 32 }
+				color2 = { 255 255 255 }
+				
+				b_ahora_la_luz_prime_b = { }
+				b_ahora_la_luz_prime_c = { }
+				b_ahora_la_luz_prime_d = { }
+				b_ahora_la_luz_prime_e = { }
+			}
+		}
+		
+		d_frontera = {
+			color = { 128 166 0 }
+			color2 = { 255 255 255 }
+			
+			capital = 73 # Dom Frontera
+			
+			c_dom_frontera = {
+				color = { 128 166 8 }
+				color2 = { 255 255 255 }
+				
+				b_dom_frontera_ii = { }
+				b_dom_frontera_ii_b = { }
+				b_dom_frontera_ii_c = { }
+				b_dom_frontera_waystation = { }
+			}
+			
+			c_puerto_del_cielo = {
+				color = { 128 166 16 }
+				color2 = { 255 255 255 }
+				
+				b_puerto_del_cielo = { }
+				b_puerto_del_cielo_iii_b = { }
+				b_puerto_del_cielo_iii_c = { }
+				b_puerto_del_cielo_iii_d = { }
+			}
+			
+			c_illuminacion = {
+				color = { 128 166 24 }
+				color2 = { 255 255 255 }
+				
+				b_illuminacion_iii = { }
+				b_illuminacion_iii_b = { }
+				b_illuminacion_iii_c = { }
+				b_illuminacion_iv = { }
+			}
+		}
+	}
+	
+	k_al_samawat = {
+		color = { 0 64 0 }
+		color2 = { 255 255 255 }
+		
+		capital = 307 # Makkat al-Jadiida
+		
+		d_al_samawat_fleet = {
+			color = { 32 64 32 }
+			color2 = { 255 255 255 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_foa = "FLEETADMIRALFOA"
+			capital = 303 # Burj Najmii
+			landless = yes
+			tribe = yes
+		}
+		
+		d_makkat_al_jadiida = {
+			color = { 8 64 0 }
+			color2 = { 255 255 255 }
+			
+			capital = 307 # Makkat al-Jadiida
+			
+			c_makkat_al_jadiida = {
+				color = { 8 64 8 }
+				color2 = { 255 255 255 }
+				
+				b_makkat_al_jadiida = {
+					holy_site = pilgrim
+					holy_site = orthodox
+					holy_site = adoptionist
+					
+					# Traditional regional capital
+					holy_site = terran_federalist
+					holy_site = terran_republican
+					holy_site = terran_imperial
+				}
+				b_makkat_al_jadiida_b = { }
+				b_makkat_al_jadiida_iii = { }
+				b_makkat_al_jadiida_iii_b = { }
+				b_makkat_al_jadiida_iv_b = { }
+				b_makkat_al_jadiida_iv_c = { }
+				b_makkat_al_jadiida_iv_d = { }
+			}
+			
+			c_burj_najmii = {
+				color = { 8 64 16 }
+				color2 = { 255 255 255 }
+				
+				b_burj_najmii = { }
+				b_burj_vi_b = { }
+				b_burj_vi_c = { }
+				b_burj_vi_d = { }
+			}
+			
+			c_farah = {
+				color = { 8 64 24 }
+				color2 = { 255 255 255 }
+				
+				b_farah_iii = { }
+				b_farah_iv = { }
+				b_farah_v = { }
+				b_farah_v_b = { }
+			}
+			
+			c_israafiil = {
+				color = { 8 64 32 }
+				color2 = { 255 255 255 }
+				
+				b_israafiil_ii = { }
+				b_israafiil_ii_b = { }
+				b_israafiil_iii = { }
+				b_israafiil_iv = { }
+			}
+			
+			c_janna = {
+				color = { 8 64 40 }
+				color2 = { 255 255 255 }
+				
+				b_janna_ii = { }
+				b_janna_iv_b = { }
+				b_janna_iv_c = { }
+				b_janna_v = { }
+			}
+		}
+		
+		d_amal = {
+			color = { 16 64 0 }
+			color2 = { 255 255 255 }
+			
+			c_amal = {
+				color = { 16 64 8 }
+				color2 = { 255 255 255 }
+				
+				b_amal_iii = { }
+				b_amal_iv = { }
+				b_amal_v = { }
+				b_amal_vi = { }
+			}
+			c_at_tawamayn = {
+				color = { 16 64 16 }
+				color2 = { 255 255 255 }
+				
+				b_at_tawamayn_iii = { }
+				b_at_tawamayn_iv = { }
+				b_at_tawamayn_iv_b = { }
+				b_at_tawamayn_iv_c = { }
+			}
+			c_mixaaiil = {
+				color = { 16 64 24 }
+				color2 = { 255 255 255 }
+				
+				b_mixaaiil_prime = { }
+				b_mixaaiil_prime_b = { }
+				b_mixaaiil_iii = { }
+				b_mixaaiil_iv = { }
+			}
+		}
+		
+		d_jabraiil = {
+			color = { 24 64 0 }
+			color2 = { 255 255 255 }
+			
+			c_jabraiil = {
+				color = { 24 64 8 }
+				color2 = { 255 255 255 }
+				
+				b_jabraiil_iii = { }
+				b_jabraiil_iv_b = { }
+				b_jabraiil_iv_c = { }
+				b_jabraiil_v = { }
+			}
+			
+			c_al_jisr = {
+				color = { 24 64 16 }
+				color2 = { 255 255 255 }
+				
+				b_al_jisr_prime = { }
+				b_al_jisr_ii = { }
+				b_al_jisr_iii = { }
+				b_al_jisr_waystation = { }
+			}
+			
+			c_sakina = {
+				color = { 24 64 24 }
+				color2 = { 255 255 255 }
+				
+				b_yaraaa = { }
+				b_yaraaa_b = { }
+				b_sakina_iv = { }
+				b_sakina_v = { }
+			}
+		}
+		
+		d_al_bawwaaba = {
+			color = { 32 64 0 }
+			color2 = { 255 255 255 }
+			
+			c_al_bawwaaba = {
+				color = { 32 64 8 }
+				color2 = { 255 255 255 }
+				
+				b_al_bawwaaba_iii = { }
+				b_al_bawwaaba_iii_b = { }
+				b_al_bawwaaba_iv = { }
+				b_al_bawwaaba_waystation = { }
+			}
+			
+			c_al_jaziira = {
+				color = { 32 64 16 }
+				color2 = { 255 255 255 }
+				
+				b_al_jaziira_iv_b = { }
+				b_al_jaziira_iv_c = { }
+				b_al_jaziira_iv_d = { }
+				b_al_jaziira_iv_e = { }
+			}
+			
+			c_izraaiil = {
+				color = { 32 64 24 }
+				color2 = { 255 255 255 }
+				
+				b_izraaiil_iii = { }
+				b_izraaiil_iii_b = { }
+				b_izraaiil_iv = { }
+				b_izraaiil_iv_b = { }
+			}
+		}
+		
+		d_al_hadd = {
+			color = { 40 64 0 }
+			color2 = { 255 255 255 }
+			
+			c_al_hadd = {
+				color = { 40 64 8 }
+				color2 = { 255 255 255 }
+				
+				b_al_hadd_ii = { }
+				b_al_hadd_iii_b = { }
+				b_al_hadd_iv = { }
+				b_al_hadd_iv_b = { }
+			}
+			
+			c_kathiib = {
+				color = { 40 64 16 }
+				color2 = { 255 255 255 }
+				
+				b_kathiib_prime = { }
+				b_herbert = { }
+				b_kathiib_ii = { }
+				b_kathiiib_ii_b = { }
+			}
+			
+			c_shams_akhdar = {
+				color = { 40 64 24 }
+				color2 = { 255 255 255 }
+				
+				b_shams_akhdar_iii = { }
+				b_shams_akhdar_iii_b = { }
+				b_shams_akhdar_iii_c = { }
+				b_shams_akhdar_waystation = { }
+			}
+			
+			c_qurtubat_al_jadiida = {
+				color = { 40 64 32 }
+				color2 = { 255 255 255 }
+				
+				b_qurtubat_al_jadiida = { }
+				b_qurtubat_al_jadiida_b = { }
+				b_qurtubat_al_jadiida_iii = { }
+				b_qurtubat_al_jadiida_iv = { }
+			}
+		}
+	}
+	
+	k_zenye_nyota_angani = {
+		color = { 200 200 200 }
+		color2 = { 10 10 10 }
+		
+		capital = 289 # Mpya ya Zanzibar
+		
+		d_zenye_nyota_angani_fleet = {
+			color = { 225 225 225 }
+			color2 = { 10 10 10 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_foa = "FLEETADMIRALFOA"
+			capital = 290 # Upeo wa Macho
+			landless = yes
+			tribe = yes
+		}
+		
+		d_mpya_ya_zanzibar = {
+			color = { 255 200 200 }
+			color2 = { 10 10 10 }
+			
+			capital = 289 # Mpya ya Zanzibar
+			
+			c_mpya_ya_zanzibar = {
+				color = { 255 208 208 }
+				color2 = { 10 10 10 }
+				
+				b_mpya_ya_zanzibar_prime = {
+					# Traditional regional capital
+					holy_site = terran_federalist
+					holy_site = terran_republican
+					holy_site = terran_imperial
+				}
+				b_mpya_ya_zanzibar_ii = { }
+				b_mpya_ya_zanzibar_iii = { }
+				b_mpya_ya_zanzibar_iv = { }
+				b_mpya_ya_zanzibar_v = { }
+				b_mpya_ya_zanzibar_vi = { }
+				b_mpya_ya_zanzibar_vii = { }
+			}
+			
+			c_upeo_wa_macho = {
+				color = { 255 216 216 }
+				color2 = { 10 10 10 }
+				
+				b_upeo_wa_macho_iii = { }
+				b_upeo_wa_macho_iii_b = { }
+				b_upeo_wa_macho_iv = { }
+				b_upeo_wa_macho_iv_b = { }
+			}
+			
+			c_angani_moto = {
+				color = { 255 224 224 }
+				color2 = { 10 10 10 }
+				
+				b_angani_moto_iv = { }
+				b_angani_moto_iv_b = { }
+				b_angani_moto_v = { }
+				b_angani_moto_vi = { }
+			}
+		}
+		
+		d_nyota_mwisho = {
+			color = { 200 255 200 }
+			color2 = { 10 10 10 }
+			
+			c_nyota_mwisho = {
+				color = { 208 255 208 }
+				color2 = { 10 10 10 }
+				
+				b_nyota_mwisho_ii = { }
+				b_nyota_mwisho_iii = { }
+				b_nyota_mwisho_iv = { }
+				b_nyota_mwisho_iv_b = { }
+			}
+			
+			c_bandari = {
+				color = { 216 255 216 }
+				color2 = { 10 10 10 }
+				
+				b_bandari_prime = { }
+				b_bandari_prime_b = { }
+				b_bandari_iii = { }
+				b_bandari_iv = { }
+			}
+			
+			c_sisi_alifanya_hivyo = {
+				color = { 224 255 224 }
+				color2 = { 10 10 10 }
+				
+				b_sisi_alifanya_hivyo = { }
+				b_sisi_alifanya_hivyo_b = { }
+				b_sisi_alifanya_hivyo_c = { }
+				b_sisi_alifanya_hivyo_d = { }
+			}
+		}
+		
+		d_ndia_panda = {
+			color = { 200 200 255 }
+			color2 = { 10 10 10 }
+			
+			c_ndia_panda = {
+				color = { 208 208 255 }
+				color2 = { 10 10 10 }
+				
+				b_ndia_panda_iii = { }
+				b_ndia_panda_iii_b = { }
+				b_ndia_panda_iv = { }
+				b_ndia_panda_v_b = { }
+			}
+			
+			c_kimbilio = {
+				color = { 216 216 255 }
+				color2 = { 10 10 10 }
+				
+				b_kimbilio_ii = { }
+				b_kimbilio_iii_b = { }
+				b_kimbilio_iv_b = { }
+				b_kimbiilio_v = { }
+			}
+			
+			c_tengemano = {
+				color = { 224 224 255 }
+				color2 = { 10 10 10 }
+				
+				b_tengemano_iii = { }
+				b_tengemano_iii_b = { }
+				b_tengemano_iii_c = { }
+				b_tengemano_v = { }
+			}
+		}
+		
+		d_afolayan = {
+			color = { 255 255 200 }
+			color2 = { 10 10 10 }
+			
+			c_afolayan = {
+				color = { 255 255 208 }
+				color = { 10 10 10 }
+				
+				b_afolayan_iii = { }
+				b_afolayan_iii_b = { }
+				b_afolayan_iv_b = { }
+				b_afolayan_iv_c = { }
+				b_afolayan_v = { }
+			}
+			
+			c_anansi = {
+				color = { 255 255 216 }
+				color2 = { 10 10 10 }
+				
+				b_anansi_prime_b = { }
+				b_anansi_prime_c = { }
+				b_anansi_prime_d = { }
+				b_anansi_prime_e = { }
+			}
+			
+			c_nyame = {
+				color = { 255 255 224 }
+				color2 = { 10 10 10 }
+				
+				b_nyame_ii = { }
+				b_nyame_iii = { }
+				b_nyame_iii_b = { }
+				b_nyame_iv = { }
+			}
+		}
+		
+		d_adwa = {
+			color = { 255 200 255 }
+			color2 = { 10 10 10 }
+			
+			c_addis_adwa = {
+				color = { 255 208 255 }
+				color2 = { 10 10 10 }
+				
+				b_addis_adwa = { }
+				b_addis_adwa_b = { }
+				b_addis_adwa_iii = { }
+				b_addis_adwa_iv = { }
+			}
+			
+			c_menelik = {
+				color = { 255 216 255 }
+				color2 = { 10 10 10 }
+				
+				b_menelik_iii = { }
+				b_menelik_iii_b = { }
+				b_menelik_iii_c = { }
+				b_menelik_iv = { }
+			}
+			
+			c_addis_saba = {
+				color = { 255 224 255 }
+				color2 = { 10 10 10 }
+				
+				b_addis_saba_iii = { }
+				b_addis_saba_iii_b = { }
+				b_addis_saba_iv = { }
+				b_addis_saba_iv_b = { }
+			}
+			
+			c_haile_selassie = {
+				color = { 255 232 255 }
+				color2 = { 10 10 10 }
+				
+				b_haile_selassie_iii = { }
+				b_haile_selassie_iv = { }
+				b_haile_selassie_iv_b = { }
+				b_haile_selassie_v = { }
+			}
+			
+			c_abbaba = {
+				color = { 255 240 255 }
+				color2 = { 10 10 10 }
+				
+				b_abbaba_prime = { }
+				b_abbaba_iii = { }
+				b_abbaba_iv = { }
+				b_abbaba_v = { }
+			}
+		}
+	}
+	
+	k_frontier = {
+		color = { 0 0 255 }
+		color2 = { 255 255 0 }
+		
+		capital = 87 # Armstrong
+		
+		d_frontier_fleet = {
+			color = { 0 0 200 }
+			color2 = { 255 255 0 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_foa = "FLEETADMIRALFOA"
+			capital = 86 # Aldrin
+			landless = yes
+			tribe = yes
+		}
+		
+		d_armstrong = {
+			color = { 16 0 255 }
+			color2 = { 255 255 0 }
+			
+			capital = 87 # Armstrong
+			
+			c_armstrong = {
+				color = { 16 16 255 }
+				color2 = { 255 255 0 }
+				
+				b_armstrong_iii = {
+					# Traditional regional capital
+					holy_site = terran_federalist
+					holy_site = terran_republican
+					holy_site = terran_imperial
+				}
+				b_armstrong_iii_b = { }
+				b_armstrong_iv = { }
+				b_armstrong_iv_b = { }
+				b_armstrong_viii_b = { }
+				b_armstrong_viii_c = { }
+				b_armstrong_viii_d = { }
+			}
+			
+			c_aldrin = {
+				color = { 16 32 255 }
+				color2 = { 255 255 0 }
+				
+				b_aldrin_prime = { }
+				b_aldrin_prime_b = { }
+				b_aldrin_ii = { }
+				b_aldrin_iii = { }
+			}
+			
+			c_collins = {
+				color = { 16 48 255 }
+				color2 = { 255 255 0 }
+				
+				b_collins_iii = { }
+				b_collins_iii_b = { }
+				b_collins_iv = { }
+				b_collins_iv_b = { }
+			}
+			
+			c_heartland = {
+				color = { 16 64 255 }
+				color2 = { 255 255 0 }
+				
+				b_heartland_iii = { }
+				b_heartland_iv = { }
+				b_heartland_v = { }
+				b_heartland_v_b = { }
+			}
+		}
+		
+		d_apollo = {
+			color = { 32 0 255 }
+			color2 = { 255 255 0 }
+			
+			c_apollo = {
+				color = { 32 16 255 }
+				color2 = { 255 255 0 }
+				
+				b_apollo_ii = { }
+				b_apollo_iii = { }
+				b_apollo_iv = { }
+				b_apollo_v = { }
+			}
+			
+			c_beowulf = {
+				color = { 32 32 255 }
+				color2 = { 255 255 0 }
+				
+				b_beowulf_iii_b = { }
+				b_beowulf_iii_c = { }
+				b_beowulf_iii_d = { }
+				b_beowulf_iii_e = { }
+			}
+		}
+		
+		d_shepard = {
+			color = { 48 0 255 }
+			color2 = { 255 255 0 }
+			
+			c_shepard = {
+				color = { 48 16 255 }
+				color2 = { 255 255 0 }
+				
+				b_mindoir = { }
+				b_mindoir_b = { }
+				b_shepard_iii = { }
+				b_shepard_iv = { }
+			}
+			
+			c_sharman = {
+				color = { 48 32 255 }
+				color2 = { 255 255 0 }
+				
+				b_sharman_iii = { }
+				b_sharman_iv = { }
+				b_sharman_iv_b = { }
+				b_sharman_waystation = { }
+			}
+			
+			c_jemison = {
+				color = { 48 48 255 }
+				color2 = { 255 255 0 }
+				
+				b_jemison_prime = { }
+				b_jemison_prime_b = { }
+				b_jemison_iii = { }
+				b_jemison_iv = { }
+			}
+		}
+		
+		d_ride = {
+			color = { 64 0 255 }
+			color2 = { 255 255 0 }
+			
+			c_ride = {
+				color = { 64 16 255 }
+				color2 = { 255 255 0 }
+				
+				b_ride_iii = { }
+				b_ride_iii_b = { }
+				b_ride_iv = { }
+				b_ride_iv_b = { }
+			}
+			
+			c_lincoln = {
+				color = { 64 32 255 }
+				color2 = { 255 255 0 }
+				
+				b_lincoln_prime = { }
+				b_lincoln_ii = { }
+				b_lincoln_iii = { }
+				b_lincoln_iii_b = { }
+			}
+			
+			c_gemini = {
+				color = { 64 48 255 }
+				color2 = { 255 255 0 }
+				
+				b_gemini_ii_b = { }
+				b_gemini_ii_c = { }
+				b_gemini_iii = { }
+				b_gemini_iii_b = { }
+			}
+			
+			c_liberty = {
+				color = { 64 64 255 }
+				color2 = { 255 255 0 }
+				
+				b_liberty_prime = { }
+				b_liberty_prime_b = { }
+				b_liberty_iv = { }
+				b_liberty_v = { }
+			}
+			
+			c_challenger = {
+				color = { 64 80 255 }
+				color2 = { 255 255 0 }
+				
+				b_challenger_ii = { }
+				b_challenger_ii_b = { }
+				b_challenger_ii_c = { }
+				b_challenger_iii = { }
+			}
+		}
+		
+		d_glenn = {
+			color = { 80 0 255 }
+			color2 = { 255 255 0 }
+			
+			c_glenn = {
+				color = { 80 16 255 }
+				color2 = { 255 255 0 }
+				
+				b_glenn_ii = { }
+				b_glenn_iii = { }
+				b_glenn_iii_b = { }
+				b_glenn_iii_c = { }
+			}
+			
+			c_weyland = {
+				color = { 80 32 255 }
+				color2 = { 255 255 0 }
+				
+				b_weyland_ii = { }
+				b_weyland_ii_b = { }
+				b_weyland_iii = { }
+				b_weyland_vi_b = { }
+				b_weyland_vi_c = { }
+			}
+			
+			c_touchstone = {
+				color = { 80 48 255 }
+				color2 = { 255 255 0 }
+				
+				b_touchstone_iii = { }
+				b_touchstone_iii_b = { }
+				b_touchstone_iv = { }
+				b_touchstone_iv_b = { }
+			}
+			
+			c_john_henry = {
+				color = { 80 64 255 }
+				color2 = { 255 255 0 }
+				
+				b_john_henry_ii = { }
+				b_john_henry_iii = { }
+				b_john_henry_iii_b = { }
+				b_john_henry_iii_c = { }
+			}
+		}
+	}
+	
+	k_centauri_reach = {
+		color = { 32 32 32 }
+		color2 = { 200 200 200 }
+		
+		capital = 206 # Gagarin
+		
+		d_gagarin = {
+			color = { 36 36 36 }
+			color2 = { 200 200 200 }
+			
+			capital = 206
+			
+			c_gagarin = {
+				color = { 40 40 40 }
+				color2 = { 200 200 200 }
+				b_gagarin_prime = { }
+				b_gagarin_prime_b = { }
+				b_gagarin_vi_c = { }
+				b_gagarin_vi_d = { }
+				b_gagarin_vi_e = { }
+			}
+			c_hu_lao_gate = {
+				color = { 44 44 44 }
+				color2 = { 200 200 200 }
+				
+				b_hu_lao_gate = { }
+				b_hu_lao_iii = { }
+				b_hu_lao_iii_b = { }
+				b_hu_lao_iv = { }
+			}
+			c_novyy_arkhangelsk = {
+				color = { 48 48 48 }
+				color2 = { 200 200 200 }
+				b_novyy_arkhangelsk_iii = { }
+				b_novyy_arkhangelsk_iii_b = { }
+				b_novyy_arkhangelsk_iv = { }
+				b_novyy_arkhangelsk_v = { }
+			}
+		}
+		
+		d_tereshkova = {
+			color = { 28 28 28 }
+			color2 = { 200 200 200 }
+			
+			capital = 213 # Tereshkova
+			
+			c_tereshkova = {
+				color = { 24 24 24 }
+				color2 = { 200 200 200 }
+				
+				b_tereshkova_iii = { }
+				b_tereshkova_iv = { }
+				b_tereshkova_iv_b = { }
+				b_tereshkova_v = { }
+				b_tereshkova_v_b = { }
+			}
+			c_tannhauser_gate = {
+				color = { 20 20 20 }
+				color2 = { 200 200 200 }
+				
+				b_tannhauser_gate = { }
+				b_tannhauser_vii_b = { }
+				b_tannhauser_vii_c = { }
+				b_tannhauser_vii_d = { }
+			}
+			c_korolev = {
+				color = { 16 16 16 }
+				color2 = { 200 200 200 }
+				
+				b_korolev_iv = { }
+				b_korolev_iv_b = { }
+				b_korolev_v = { }
+				b_korolev_v_b = { }
+			}
+		}
+		
+		d_tengoku = {
+			color = { 64 64 64 }
+			color2 = { 200 200 200 }
+			
+			capital = 210 # Tengoku
+			
+			c_tengoku = {
+				color = { 60 60 60 }
+				color2 = { 200 200 200 }
+				
+				b_tengoku_iii = { }
+				b_tengoku_iii_b = { }
+				b_orbital_station_alpha = { }
+				b_orbital_station_beta = { }
+				b_orbital_station_gamma = { }
+			}
+			
+			c_sotogawa_no_ten = {
+				color = { 56 56 56 }
+				color2 = { 200 200 200 }
+				
+				b_heavens_gate = { }
+				b_tengoku_waystation = { }
+				b_sotogawa_no_ten_iii = { }
+				b_sotogoawa_no_ten_iii_b = { }
+			}
+		}
+	}
+}
+
+e_tianguo = {
+	color = { 128 0 0 }
+	color2 = { 255 255 0 }
+	
+	capital = 263 # Xin Qin
+	
+	culture = sino_bianjiangese # Default culture
+	
+	# Navy
+	k_tianguo_navy = {
+		color = { 128 64 0 }
+		color2 = { 255 255 0 }
+		
+		short_name = yes
+		
+		title = "GRANDADMIRAL"
+		title_foa = "GRANDADMIRALFOA"
+		
+		capital = 263 # Xin Qin
+		
+		landless = yes
+		tribe = yes
+		
+		d_tianguo_first_fleet = {
+			color = { 128 64 16 }
+			color2 = { 255 255 0 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_foa = "FLEETADMIRALFOA"
+			capital = 264
+			landless = yes
+			tribe = yes
+		}
+		d_tianguo_second_fleet = {
+			color = { 128 64 32 }
+			color2 = { 255 255 0 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_foa = "FLEETADMIRALFOA"
+			capital = 263
+			landless = yes
+			tribe = yes
+		}
+		d_tianguo_third_fleet = {
+			color = { 128 64 48 }
+			color2 = { 255 255 0 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_foa = "FLEETADMIRALFOA"
+			capital = 263
+			landless = yes
+			tribe = yes
+		}
+		d_tianguo_fourth_fleet = {
+			color = { 128 64 64 }
+			color2 = { 255 255 0 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_foa = "FLEETADMIRALFOA"
+			capital = 263
+			landless = yes
+			tribe = yes
+		}
+		d_tianguo_fifth_fleet = {
+			color = { 128 64 80 }
+			color2 = { 255 255 0 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_foa = "FLEETADMIRALFOA"
+			capital = 263
+			landless = yes
+			tribe = yes
+		}
+	}
+	
+	k_xin_zizhiqu = {
+		color = { 164 164 0 }
+		color2 = { 255 0 0 }
+		
+		capital = 263 # Xin Qin
+		
+		culture = sino_bianjiangese
+		
+		d_xin_zizhiqu_fleet = {
+			color = { 164 164 32 }
+			color2 = { 255 0 0 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_foa = "FLEETADMIRALFOA"
+			capital = 263
+			landless = yes
+			tribe = yes
+		}
+		
+		d_xin_qin = {
+			color = { 148 164 0 }
+			color2 = { 255 0 0 }
+			
+			capital = 263 # Xin Qin
+			
+			c_xin_qin = {
+				color = { 148 164 16 }
+				color2 = { 255 0 0 }
+				b_xin_qin_iii = { }
+				b_xin_qin_iii_b = { }
+				b_xin_qin_iv = { }
+				b_xin_qin_iv_b = { }
+				b_xin_qin_vi_b = { }
+				b_xin_qin_vi_c = { }
+				b_xin_qin_vi_d = { }
+			}
+			c_hexi = {
+				color = { 148 164 32 }
+				color2 = { 255 0 0 }
+				
+				b_hexi_iii = { }
+				b_hexi_iv = { }
+				b_hexi_iv_b = { }
+				b_hexi_iv_c = { }
+			}
+			c_xueyuan = {
+				color = { 148 164 48 }
+				color2 = { 255 0 0 }
+				
+				b_xueyuan_ii = { }
+				b_xueyuan_ii_b = { }
+				b_xueyuan_iii = { }
+				b_xueyuan_iii_b = { }
+			}
+			c_yang_wenli = {
+				color = { 148 164 64 }
+				color2 = { 255 0 0 }
+				
+				b_yang_wenli_prime = { }
+				b_yang_wenli_prime_b = { }
+				b_yang_wenli_iii = { }
+				b_yang_wenli_iv = { }
+			}
+			c_chi_tianliang = {
+				color = { 148 164 80 }
+				color2 = { 255 0 0 }
+				
+				b_chi_tianliang_prime = { }
+				b_chi_tianliang_prime_b = { }
+				b_chi_tianliang_iii = { }
+				b_chi_tianliang_iv = { }
+			}
+		}
+		
+		d_wu_ren_zhi_ah = {
+			color = { 164 148 0 }
+			color2 = { 255 0 0 }
+			
+			capital = 383 # Anquan Gang
+			
+			c_anquan_gang = {
+				color = { 164 148 16 }
+				color2 = { 255 0 0 }
+				
+				b_anquan_gang = { }
+				b_anquan_gang_b = { }
+				b_anquan_gang_c = { }
+				b_anquan_gang_iv = { }
+			}
+			c_chen_pingyuan = {
+				color = { 164 148 32 }
+				color2 = { 255 0 0 }
+				
+				b_chen_pingyuan = { }
+				b_chen_pingyuan_b = { }
+				b_chen_pingyuan_c = { }
+				b_chen_pingyuan_iv = { }
+			}
+			c_yonghengde_anbian = {
+				color = { 164 148 48 }
+				color2 = { 255 0 0 }
+				
+				b_yonghende_anbian = { }
+				b_yonghende_anbian_iii = { }
+				b_yonghende_anbian_iv = { }
+				b_yonghende_anbian_v = { }
+			}
+			c_da_dianhai = {
+				color = { 164 148 64 }
+				color2 = { 255 0 0 }
+				
+				b_da_dianhai_waystation = { }
+				b_da_dianhai_observatory = { }
+				b_da_dianhai_starport = { }
+				b_da_dianhai_prime = { }
+			}
+		}
+		
+		d_macau = {
+			color = { 148 148 0 }
+			color2 = { 255 0 0 }
+			
+			capital = 234 # Macau
+			
+			c_macau = {
+				color = { 148 148 16 }
+				color2 = { 255 0 0 }
+				
+				b_macau_station = { }
+				b_macau_prime = { }
+				b_macau_prime_b = { }
+				b_macau_iii = { }
+				b_macau_iv = { }
+			}
+			c_pu_erh = {
+				color = { 148 148 32 }
+				color2 = { 255 0 0 }
+				
+				b_pu_erh = { }
+				b_pu_erh_b = { }
+				b_pu_erh_orbital = { }
+				b_pu_erh_v = { }
+			}
+			c_kantebolei = {
+				color = { 148 148 48 }
+				color2 = { 255 0 0 }
+				
+				b_kantebolei_iii = { }
+				b_kantebolei_iii_b = { }
+				b_kantebolei_iv = { }
+				b_kantebolei_v = { }
+			}
+		}
+		
+		d_tian_yuan = {
+			color = { 132 148 0 }
+			color2 = { 255 0 0 }
+			capital = 240 # Tian Yuan
+			
+			c_tian_yuan = {
+				color = { 132 148 16 }
+				color2 = { 255 0 0 }
+				
+				b_tian_yuan_iv_b = city
+				b_tian_yuan_iv = temple
+				b_tian_yuan_v = temple
+				b_tian_yuan_v_b = castle
+			}
+			c_lasa = {
+				color = { 132 148 32 }
+				color2 = { 255 0 0 }
+				
+				b_lasa_prime = { }
+				b_lasa_ii = { }
+				b_lasa_iii = { }
+				b_lasa_iv = { }
+			}
+			c_yulin = {
+				color = { 132 148 48 }
+				color2 = { 255 0 0 }
+				
+				b_yulin_ii = { }
+				b_yulin_ii_b = { }
+				b_yulin_iii = { }
+				b_yulin_iv = { }
+			}
+			c_yesushan = {
+				color = { 132 148 64 }
+				color2 = { 255 0 0 }
+				
+				b_yesushan = { }
+				b_yesushan_b = { }
+				b_yesushan_c = { }
+				b_yesushan_iv = { }
+			}
+		}
+		
+		d_hua = {
+			color = { 148 132 0 }
+			color2 = { 255 0 0 }
+			capital = 241 # Hua
+			
+			c_hua = {
+				color = { 148 132 16 }
+				color2 = { 255 0 0 }
+				
+				b_hua_prime = { }
+				b_hua_prime_c = { }
+				b_hua_prime_f = { }
+				b_hua_prime_g = { }
+				b_hua_prime_orbital_a = { }
+				b_hua_prime_orbital_b = { }
+			}
+			c_fanxing_hai = {
+				color = { 148 132 32 }
+				color2 = { 255 0 0 }
+				
+				b_fanxing_hai_viii = { }
+				b_fanxing_hai_orbital = { }
+			}
+			c_wanguan = {
+				color = { 148 132 48 }
+				color2 = { 255 0 0 }
+				
+				b_wanguan_ii = { }
+				b_wanguan_orbital_a = { }
+				b_wanguan_orbital_b = { }
+			}
+		}
+		
+		d_yingshi = {
+			color = { 132 132 0 }
+			color2 = { 255 0 0 }
+			capital = 244 # Yingshi
+			
+			c_yingshi = {
+				color = { 132 132 16 }
+				color2 = { 255 0 0 }
+				
+				b_ying_shi_viii = { }
+				b_ying_shi_viii_orbital = { }
+				b_ying_shi_xii = { }
+				b_ying_shi_xii_orbital = { }
+				b_ying_shi_xx = { }
+			}
+			c_ghuanghai = {
+				color = { 132 132 32 }
+				color2 = { 255 0 0 }
+				
+				b_ghuanghai_inner_belt = { }
+				b_ghuanghai_vii = { }
+				b_ghuanghai_ii = { }
+				b_ghuanghai_outer_belt = { }
+			}
+			c_youfeng = {
+				color = { 132 132 48 }
+				color2 = { 255 0 0 }
+				
+				b_youfeng_vi_a = { }
+				b_youfeng_vi_orbital = { }
+				b_youfeng_inner_belt_a = { }
+				b_youfeng_inner_belt_b = { }
+			}
+		}
+		
+		d_hang_seng = {
+			color = { 128 132 0 }
+			color2 = { 255 0 0 }
+			capital = 248 # Xianggang Xin
+			
+			c_xianggang_xin = {
+				color = { 128 132 16 }
+				color2 = { 255 0 0 }
+				
+				b_xianggang_xin = { }
+				b_xianggang_xin_b = { }
+				b_xianggang_xin_orbital = { }
+				b_xianggang_xin_vii_b = { }
+				b_xianggang_xin_vii_c = { }
+				b_xianggang_xin_vii_d = { }
+			}
+			c_tiantiang = {
+				color = { 128 132 32 }
+				color2 = { 255 0 0 }
+				
+				b_tiantiang_ii = { }
+				b_tiantiang_iv = { }
+				b_tiantiang_vi_b = { }
+				b_tiantiang_iv_orbital = { }
+			}
+			c_leyuan = {
+				color = { 128 132 48 }
+				color2 = { 255 0 0 }
+				
+				b_leyuan_ii = { }
+				b_leyuan_v = { }
+				b_leyuan_vii = { }
+				b_leyuan_vii_a = { }
+				b_leyuan_vii_c = { }
+			}
+			c_jiayuan = {
+				color = { 128 132 64 }
+				color2 = { 255 0 0 }
+				
+				b_jiayuan_prime = { }
+				b_jiayuan_prime_a = { }
+				b_jiayuan_prime_e = { }
+				b_jiayuan_orbital = { }
+			}
+		}
+		
+		d_qiangying = {
+			color = { 132 128 0 }
+			color2 = { 255 0 0 }
+			capital = 253 # Qiangying
+			
+			c_qiangying = {
+				color = { 132 128 16 }
+				color2 = { 255 0 0 }
+				
+				b_qiangying_vii = { }
+				b_qianyging_station = { }
+				b_qiangying_vii_a = { }
+				b_qiangying_v = { }
+			}
+			c_liuyang = {
+				color = { 132 128 32 }
+				color2 = { 255 0 0 }
+				
+				b_liuyang_iii = { }
+				b_liuyang_iv = { }
+				b_liuyang_iii_b = { }
+				b_liuyang_vi = { }
+			}
+			c_youli = {
+				color = { 132 128 48 }
+				color2 = { 255 0 0 }
+				
+				b_youli_prime = { }
+				b_youli_prime_b = { }
+				b_youli_ii = { }
+				b_youli_ii_c = { }
+			}
+		}
+		
+		d_deng_biao = {
+			color = { 128 128 0 }
+			color2 = { 255 0 0 }
+			capital = 255 # Deng Biao
+			
+			c_deng_biao = {
+				color = { 128 128 16 }
+				color2 = { 255 0 0 }
+				
+				b_deng_biao_v_b = { }
+				b_deng_biao_v_c = { }
+				b_deng_biao_v_d = { }
+				b_deng_biao_v_e = { }
+			}
+			c_Niu_Cunlan = {
+				color = { 128 128 32 }
+				color2 = { 255 0 0 }
+				
+				b_Niu_Cunlan_Prime = { }
+				b_Niu_Cunlan_Moon_1 = { }
+				b_Niu_Cunlan_Moon_2 = { }
+				b_Niu_Cunlan_Moon_7 = { }
+			}
+			c_gaoda_de_shan = {
+				color = { 128 128 48 }
+				color2 = { 255 0 0 }
+				
+				b_gaoda_de_shan_iii = { }
+				b_gaoda_de_shan_iv = { }
+				b_gaoda_de_shan_iii_b = { }
+				b_gaoda_de_shan_iii_refinery = { }
+			}
+		}
+		
+		d_wei = {
+			color = { 164 128 0 }
+			color2 = { 255 0 0 }
+			capital = 248 # Wei
+			
+			c_wei = {
+				color = { 164 128 16 }
+				color2 = { 255 0 0 }
+				
+				b_wei_iii = { }
+				b_wei_iii_b = { }
+				b_wei_iii_c = { }
+				b_wei_iv = { }
+			}
+			
+			c_jiu_wanguan = {
+				color = { 164 128 32 }
+				color2 = { 255 0 0 }
+				
+				b_jiu_wanguan_xi = { }
+				b_jiu_wanguan_xi_orbital_a = { }
+				b_jiu_wanguan_xi_orbital_b = { }
+				b_jiu_wanguan_xi_orbital_c = { }
+			}
+		}
+	}
+}
+
+e_helix = {
+	color = { 128 0 255 }
+	color2 = { 128 0 128 }
+	
+	k_helix = {
+		color = { 200 0 200 }
+		color2 = { 0 200 200 }
+		
+		capital = 102 # Eye of God
+		
+		
+		d_helix_fleet = {
+			color = { 180 0 220 }
+			color2 = { 0 200 200 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_foa = "FLEETADMIRALFOA"
+			capital = 109 # Port Simon
+			landless = yes
+			tribe = yes
+		}
+		
+		d_lower_helix = {
+			color = { 180 0 180 }
+			color2 = { 0 200 200 }
+			
+			capital = 102 # Eye of God
+			
+			c_eye_of_god = {
+				color = { 180 16 180 }
+				color2 = { 0 200 200 }
+				
+				b_eye_of_god = { }
+				b_eye_of_god_waystation = { }
+			}
+			c_he_843 = {
+				color = { 180 32 180 }
+				color2 = { 0 200 200 }
+				
+				b_he_843_station_alpha = { }
+				b_he_843_station_beta = { }
+				b_he_843_station_gamma = { }
+				b_he_843_station_delta = { }
+			}
+			c_he_794 = {
+				color = { 180 48 180 }
+				color2 = { 0 200 200 }
+				
+				b_he_794_station_alpha = { }
+				b_he_794_station_beta = { }
+				b_he_794_station_gamma = { }
+				b_he_794_station_delta = { }
+			}
+			c_he_153 = {
+				color = { 180 64 180 }
+				color2 = { 0 200 200 }
+				
+				b_he_153_station_alpha = { }
+				b_he_153_station_beta = { }
+				b_he_153_station_gamma = { }
+				b_he_153_station_delta = { }
+			}
+		}
+		
+		d_upper_helix = {
+			color = { 220 0 220 }
+			color2 = { 0 200 200 }
+			
+			capital = 109 # Port Simon
+			
+			c_port_simon = {
+				color = { 220 16 220 }
+				color2 = { 0 200 200 }
+				
+				b_port_simon = { }
+				b_port_simon_observatory = { }
+			}
+			c_he_219 = {
+				color = { 220 32 220 }
+				color2 = { 0 200 200 }
+				
+				b_he_219_station_alpha = { }
+				b_he_219_station_beta = { }
+				b_he_219_station_gamma = { }
+				b_he_219_station_delta = { }
+			}
+			c_he_338 = {
+				color = { 220 48 220 }
+				color2 = { 0 200 200 }
+				
+				b_he_338_station_alpha = { }
+				b_he_338_station_beta = { }
+				b_he_338_station_gamma = { }
+				b_he_338_station_delta = { }
+			}
+			c_he_702 = {
+				color = { 220 64 220 }
+				color2 = { 0 200 200 }
+				
+				b_he_702_station_alpha = { }
+				b_he_702_station_beta = { }
+				b_he_702_station_gamma = { }
+				b_he_702_station_delta = { }
+			}
+		}
+	}
+	
+	k_novyy_edem = {
+		color = { 120 200 0 }
+		color2 = { 20 20 20 }
+		
+		capital = 162 # Novyy Edem
+		
+		culture = russo_edemite
+		
+		d_novyy_edem_fleet = {
+			color = { 100 180 0 }
+			color2 = { 20 20 20 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_foa = "FLEETADMIRALFOA"
+			capital = 162
+			landless = yes
+			tribe = yes
+		}
+		
+		d_novyy_edem = {
+			color = { 132 200 0 }
+			color2 = { 20 20 20 }
+			
+			capital = 162
+			
+			c_novyy_edem = {
+				color = { 132 200 16 }
+				color2 = { 20 20 20 }
+				
+				b_novyy_edem_prime = { }
+				b_novyy_edem_prime_b = { }
+				b_novyy_edem_prime_orbital = { }
+				b_novyy_edem_ii = { }
+				b_novyy_edem_iii = { }
+				b_novyy_edem_iv = { }
+			}
+			c_loyalnost = {
+				color = { 132 200 32 }
+				color2 = { 20 20 20 }
+				
+				b_loyalnost_ii = { }
+				b_loyalnost_iii = { }
+				b_loyalnost_iii_b = { }
+				b_loyalnost_iv = { }
+			}
+			c_muzhestvo = {
+				color = { 132 200 48 }
+				color2 = { 20 20 20 }
+				
+				b_muzhestvo_viii_b = { }
+				b_muzhestvo_viii_c = { }
+				b_muzhestvo_viii_d = { }
+				b_muzhestvo_viii_e = { }
+			}
+			c_distsiplina = {
+				color = { 132 200 64 }
+				color2 = { 20 20 20 }
+				
+				b_distsiplina_ii = { }
+				b_distsiplina_ii_b = { }
+				b_distsiplina_ii_c = { }
+				b_distsiplina_iii = { }
+			}
+		}
+		
+		d_prochnost = {
+			color = { 144 200 0 }
+			color2 = { 20 20 20 }
+			
+			capital = 167 # Prochnost'
+			
+			c_prochnost = {
+				color = { 144 200 16 }
+				color2 = { 20 20 20 }
+				
+				b_prochnost_iii = { }
+				b_prochnost_iv = { }
+				b_prochnost_iv_b = { }
+				b_prochnost_v = { }
+				b_prochnost_v_b = { }
+			}
+			c_vernost = {
+				color = { 144 200 32 }
+				color2 = { 20 20 20 }
+				
+				b_vernost_iii = { }
+				b_vernost_iii_b = { }
+				b_vernost_iv = { }
+				b_vernost_iv_b = { }
+			}
+			c_ostorozhnost = {
+				color = { 144 200 48 }
+				color2 = { 20 20 20 }
+				
+				b_ostorozhnost_iii = { }
+				b_ostorozhnost_iv = { }
+				b_ostorozhnost_iv_b = { }
+				b_ostorozhnost_iv_c = { }
+			}
+			c_stabilnost = {
+				color = { 144 200 64 }
+				color2 = { 20 20 20 }
+				
+				b_stabilnost_ii = { }
+				b_stabilnost_ii_b = { }
+				b_stabilnost_iii = { }
+				b_stabilnost_station = { }
+			}
+		}
+		
+		d_sovershenstvo = {
+			color = { 156 200 0 }
+			color2 = { 20 20 20 }
+			
+			capital = 175 # Sovershentsvo
+			
+			c_sovershenstvo = {
+				color = { 156 200 16 }
+				color2 = { 20 20 20 }
+				
+				b_sovershenstvo_prime = { }
+				b_sovershenstvo_prime_b = { }
+				b_sovershenstvo_ii = { }
+				b_sovershenstvo_iii = { }
+				b_sovershenstvo_iii_b = { }
+			}
+			c_ad = {
+				color = { 156 200 32 }
+				color2 = { 20 20 20 }
+				
+				b_ad_iii = { }
+				b_ad_iii_b = { }
+				b_ad_waystation = { }
+				b_ad_iv = { }
+			}
+			c_sashi_zvezdy = {
+				color = { 156 200 48 }
+				color2 = { 20 20 20 }
+				
+				b_sashi_zvezdy_ii = { }
+				b_sashi_zvezdy_iii = { }
+				b_sashi_zvezdy_iv = { }
+				b_sashi_zvezdy_iv_b = { }
+			}
+			c_vozneseniye = {
+				color = { 156 200 64 }
+				color2 = { 20 20 20 }
+				
+				b_vozneseniye_prime = { }
+				b_vozneseniye_prime_b = { }
+				b_vozneseniye_prime_c = { }
+				b_vozneseniye_iii = { }
+				b_vozeneseniye_iii_b = { }
+			}
+		}
+		
+		d_shen_yan = {
+			color = { 168 200 0 }
+			color2 = { 20 20 20 }
+			
+			capital = 172 # Shen Yan
+			
+			c_shen_yan = {
+				color = { 168 200 16 }
+				color2 = { 20 20 20 }
+				
+				b_shen_yan_iii = { }
+				b_shen_yan_iii_orbital = { }
+				b_shen_yan_iii_b = { }
+				b_shen_yan_iv = { }
+				b_shen_yan_v = { }
+			}
+			c_glaz_boga = {
+				color = { 168 200 32 }
+				color2 = { 20 20 20 }
+				
+				b_glaz_boga_ii = { }
+				b_glaz_boga_iii = { }
+				b_glaz_boga_iv = { }
+				b_glaz_boga_iv_b = { }
+			}
+			c_luoxuan = {
+				color = { 168 200 48 }
+				color2 = { 20 20 20 }
+				
+				b_luoxuan_ii = { }
+				b_luoxuan_ii_b = { }
+				b_luoxuan_iii = { }
+				b_luoxuan_iv = { }
+			}
+		}
+		
+		d_almaz = {
+			color = { 108 200 0 }
+			color2 = { 20 20 20 }
+			
+			capital = 153 # Almaz
+			
+			c_almaz = {
+				color = { 108 200 16 }
+				color2 = { 20 20 20 }
+				
+				b_almaz_iii = { }
+				b_almaz_iii_b = { }
+				b_almaz_iii_c = { }
+				b_almaz_iii_d = { }
+			}
+			c_zhemchuzhina = {
+				color = { 108 200 32 }
+				color2 = { 20 20 20 }
+				
+				b_zhemchuzhina_vi_b = { }
+				b_zhemchuzhina_vi_c = { }
+				b_zhemchuzhina_vii_b = { }
+				b_zhemchuzhina_vii_c = { }
+			}
+		}
+		
+		d_maoxian = {
+			color = { 96 200 0 }
+			color2 = { 20 20 20 }
+			
+			capital = 155 # Maoxian
+			
+			c_maoxian = {
+				color = { 96 200 16 }
+				color2 = { 20 20 20 }
+				
+				b_maoxian_iii = { }
+				b_maoxian_iii_b = { }
+				b_maoxian_iii_orbital = { }
+				b_maoxian_waystation = { }
+				b_maoxian_vi_b = { }
+				b_maoxian_vi_c = { }
+			}
+			c_pei_cheng = {
+				color = { 96 200 32 }
+				color2 = { 20 20 20 }
+				
+				b_pei_cheng_waystation = { }
+				b_pei_cheng_observatory = { }
+				b_pei_cheng_prime = { }
+				b_pei_cheng_prime_b = { }
+			}
+		}
+		
+		d_mir = {
+			color = { 84 200 0 }
+			color2 = { 20 20 20 }
+			
+			capital = 157 # Mir
+			
+			c_mir = {
+				color = { 84 200 16 }
+				color2 = { 20 20 20 }
+				
+				b_mir_citadel = { }
+				b_mir_iii = { }
+				b_mir_iii_b = { }
+				b_mir_iv = { }
+				b_mir_iv_b = { }
+			}
+			c_vynoslivost = {
+				color = { 84 200 32 }
+				color2 = { 20 20 20 }
+				
+				b_vynoslivost_waystation = { }
+				b_vynoslivost_vi_b = { }
+				b_vynoslivost_vi_c = { }
+				b_vynoslivost_vi_d = { }
+			}
+		}
+		
+		d_probeda = {
+			color = { 72 200 0 }
+			color2 = { 20 20 20 }
+			
+			capital = 163 # Probeda
+			
+			c_probeda = {
+				color = { 72 200 16 }
+				color2 = { 20 20 20 }
+				
+				b_probeda_prime = { }
+				b_probeda_orbital_alpha = { }
+				b_probeda_orbital_beta = { }
+				b_probeda_iii = { }
+				b_probeda_iii_b = { }
+			}
+			c_tselostnost = {
+				color = { 72 200 32 }
+				color2 = { 20 20 20 }
+				
+				b_tselostnost_ii = { }
+				b_tselostnost_iii = { }
+				b_tselostnost_iv = { }
+			}
+			c_vera = {
+				color = { 72 200 48 }
+				color2 = { 20 20 20 }
+				
+				b_vera_ii = { }
+				b_vera_ii_b = { }
+				b_vera_iii = { }
+				b_vera_iii_b = { }
+			}
+		}
+	}
+}
+
+e_witchhead = {
+	
+	k_witchhead_nebula = {
+		color = { 128 128 255 }
+		color2 = { 128 0 128 }
+		
+		capital = 215 # Fukuoka
+		
+		d_upper_witchhead = {
+			color = { 144 128 255 }
+			color2 = { 128 0 128 }
+			
+			capital = 224 # Alpha Sagitarii
+			
+			c_alpha_sagitarii = {
+				color = { 144 128 240 }
+				color2 = { 128 0 128 }
+				
+				b_alpha_sagitarii_prime = { }
+				b_alpha_sagitarii_prime_b = { }
+			}
+			c_napata = {
+				color = { 144 128 224 }
+				color2 = { 128 0 128 }
+				
+				b_napata_prime = { }
+				b_napata_observatory = { }
+			}
+			c_wh_998 = {
+				color = { 144 128 208 }
+				color2 = { 128 0 128 }
+				
+				b_wh_998_station_alpha = { }
+				b_wh_998_station_beta = { }
+				b_wh_998_station_gamma = { }
+				b_wh_998_station_delta = { }
+			}
+			c_wh_229 = {
+				color = { 144 128 192 }
+				color2 = { 128 0 128 }
+				
+				b_wh_228_station_alpha = { }
+				b_wh_229_station_beta = { }
+				b_wh_229_station_gamma = { }
+				b_wh_229_station_delta = { }
+			}
+			c_wh_253 = {
+				color = { 144 128 176 }
+				color2 = { 128 0 128 }
+				
+				b_wh_253_station_alpha = { }
+				b_wh_253_station_beta = { }
+				b_wh_253_station_gamma = { }
+				b_wh_253_station_delta = { }
+			}
+			c_wh_064 = {
+				color = { 144 128 160 }
+				color2 = { 128 0 128 }
+				
+				b_wh_064_station_alpha = { }
+				b_wh_064_station_beta = { }
+				b_wh_064_station_gamma = { }
+				b_wh_064_station_delta = { }
+			}
+			c_wh_021 = {
+				color = { 144 128 144 }
+				color2 = { 128 0 128 }
+				
+				b_wh_021_station_alpha = { }
+				b_wh_021_station_beta = { }
+				b_wh_021_station_gamma = { }
+				b_wh_021_station_delta = { }
+			}
+		}
+		d_core_witchhead = {
+			color = { 128 144 255 }
+			color2 = { 128 0 128 }
+			
+			capital = 215 # Fukuoka
+			
+			c_fukuoka = {
+				color = { 128 144 240 }
+				color2 = { 128 0 128 }
+				
+				# Asteroid, temple
+				b_fukuoka_prime = { }
+				# Pirate bases
+				b_fukuoka_station_alpha = { }
+				b_fukuoka_station_beta = { }
+				b_fukuoka_station_gamma = { }
+			}
+			c_trigorin = {
+				color = { 128 144 224 }
+				color2 = { 128 0 128 }
+				
+				b_freeport_trigorin = { }
+				b_trigorin_ii = { }
+			}
+			c_ariadne = {
+				color = { 128 144 208 }
+				color2 = { 128 0 128 }
+				
+				b_port_ariadne = { }
+				# Temples
+				b_ariadne_ii = { }
+				b_ariadne_iii = { }
+			}
+			c_wh_732 = {
+				color = { 128 144 192 }
+				color2 = { 128 0 128 }
+				
+				b_wh_732_station_alpha = { }
+				b_wh_732_station_beta = { }
+				b_wh_732_station_gamma = { }
+				b_wh_732_station_delta = { }
+			}
+			c_wh_835 = {
+				color = { 128 144 176 }
+				color2 = { 128 0 128 }
+				
+				b_wh_835_station_alpha = { }
+				b_wh_835_station_beta = { }
+				b_wh_835_station_gamma = { }
+				b_wh_835_station_delta = { }
+			}
+			c_wh_367 = {
+				color = { 128 144 160 }
+				color2 = { 128 0 128 }
+				
+				b_wh_367_drift = { } # Independent asteroid trade port, frequent target of pirate raids
+				b_wh_367_station_alpha = { }
+				b_wh_367_station_beta = { }
+				b_wh_367_station_gamma = { }
+				b_wh_367_station_delta = { }
+			}
+		}
+		d_lower_witchhead = {
+			color = { 144 144 255 }
+			color2 = { 128 0 128 }
+			
+			capital = 222 # WH-930
+			
+			c_wh_930 = {
+				color = { 144 144 240 }
+				color2 = { 128 0 128 }
+				
+				b_wh_930_station_alpha = { }
+				b_wh_930_station_beta = { }
+				b_wh_930_station_gamma = { }
+				b_wh_930_station_delta = { }
+			}
+			c_wh_178 = {
+				color = { 144 144 224 }
+				color2 = { 128 0 128 }
+				
+				b_wh_178_station_alpha = { }
+				b_wh_178_station_beta = { }
+				b_wh_178_station_gamma = { }
+				b_wh_178_station_delta = { }
+			}
+			c_wh_336 = {
+				color = { 144 144 208 }
+				color2 = { 128 0 128 }
+				
+				b_wh_336_station_alpha = { }
+				b_wh_336_station_beta = { }
+				b_wh_336_station_gamma = { }
+				b_wh_336_station_delta = { }
+			}
+		}
+	}
+	k_avalon = {
+		color = { 128 0 0 }
+		color2 = { 200 200 200 }
+		
+		capital = 25 # Avalon
+		
+		d_avalon_fleet = {
+			color = { 100 0 0 }
+			color2 = { 200 200 200 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_foa = "FLEETADMIRALFOA"
+			capital = 25
+			landless = yes
+			tribe = yes
+		}
+		
+		d_avalon = {
+			color = { 128 16 0 }
+			color2 = { 200 200 200 }
+			
+			capital = 25
+			
+			c_avalon = {
+				color = { 128 16 16 }
+				color2 = { 200 200 200 }
+				
+				b_avalon_iii = { }
+				b_avalon_iii_orbital = { }
+				b_avalon_iii_b = { }
+				b_avalon_vi_b = { }
+				b_avalon_vi_c = { }
+				b_avalon_vi_d = { }
+			}
+			c_merlin = {
+				color = { 128 16 32 }
+				color2 = { 200 200 200 }
+				
+				b_merlin_ii = { }
+				b_nimue = { } # Moon of Merlin II
+				b_merlin_iii = { }
+				b_merlin_iv = { }
+			}
+			c_camelot = {
+				color = { 128 16 48 }
+				color2 = { 200 200 200 }
+				
+				b_new_camelot = { }
+				b_new_camelot_orbital = { }
+				b_new_camelot_b = { }
+				b_camelot_iii = { }
+			}
+			c_paladin = {
+				color = { 128 16 64 }
+				color2 = { 200 200 200 }
+				
+				b_paladin_ii = { }
+				b_paladin_ii_b = { }
+				b_paladin_iii = { }
+				b_paladin_iii_b = { }
+			}
+		}
+		
+		d_victoria = {
+			color = { 128 32 0 }
+			color2 = { 200 200 200 }
+			
+			capital = 44 # Victoria
+			
+			c_victoria = {
+				color = { 128 32 16 }
+				color2 = { 200 200 200 }
+				
+				b_victoria_iii = { }
+				b_victoria_iii_orbital = { }
+				b_victoria_iii_b = { }
+				b_victoria_iii_c = { }
+				b_victoria_iv = { }
+			}
+			c_hawkwood = {
+				color = { 128 32 32 }
+				color2 = { 200 200 200 }
+				
+				b_hawkwood_ii = { }
+				b_hawkwood_iii = { }
+				b_hawkwood_iii_b = { }
+				b_hawkwood_iv = { }
+			}
+			c_garrison = {
+				color = { 128 32 48 }
+				color2 = { 200 200 200 }
+				
+				b_garrison_viii_b = { }
+				b_garrison_viii_c = { }
+				b_garrison_viii_d = { }
+				b_garrison_viii_e = { }
+				b_garrison_viii_f = { }
+			}
+			c_endeavour = { # Yes, using the Commonwealth spelling
+				color = { 128 32 64 }
+				color2 = { 200 200 200 }
+				
+				b_endeavour_prime = { }
+				b_endeavour_ii = { }
+				b_endeavour_ii_b = { }
+				b_endeavour_ii_c = { }
+			}
+		}
+		
+		d_nelson = {
+			color = { 128 48 0 }
+			color2 = { 200 200 200 }
+			
+			capital = 40 # Nelson
+			
+			c_nelson = {
+				color = { 128 48 16 }
+				color2 = { 200 200 200 }
+				
+				b_nelson_ii = { }
+				b_nelson_ii_b = { }
+				b_nelson_iii = { }
+				b_nelson_iv = { }
+				b_nelson_v = { }
+			}
+			c_sherwood = {
+				color = { 128 48 32 }
+				color2 = { 200 200 200 }
+				
+				b_sherwood_citadel = { }
+				b_sherwood_iii = { }
+				b_sherwood_iii_b = { }
+				b_sherwood_iv = { }
+			}
+			c_chalice = {
+				color = { 128 48 48 }
+				color2 = { 200 200 200 }
+				
+				b_chalice_prime = { }
+				b_chalice_ii = { }
+				b_chalice_iii = { }
+				b_chalice_iv = { }
+			}
+		}
+		
+		d_caliburn = {
+			color = { 128 64 0 }
+			color2 = { 200 200 200 }
+			
+			capital = 29 # Caliburn
+			
+			c_caliburn = {
+				color = { 128 64 16 }
+				color2 = { 200 200 200 }
+				
+				b_caliburn_iii = { }
+				b_caliburn_iii_b = { }
+				b_caliburn_iii_orbital = { }
+				b_caliburn_iv = { }
+				b_caliburn_v = { }
+			}
+			c_greywood = {
+				color = { 128 64 32 }
+				color2 = { 200 200 200 }
+				
+				b_greywood_iii = { }
+				b_greywood_iv = { }
+				b_greywood_iv_b = { }
+				b_greywood_iv_c = { }
+			}
+			c_marys_star = {
+				color = { 128 64 48 }
+				color2 = { 200 200 200 }
+				
+				b_marys_star_vi_b = { }
+				b_marys_star_vi_c = { }
+				b_marys_star_vi_d = { }
+				b_marys_star_vi_e = { }
+			}
+		}
+		
+		d_galahad = {
+			color = { 128 80 0 }
+			color2 = { 200 200 200 }
+			
+			capital = 32 # Galahad
+			
+			c_galahad = {
+				color = { 128 80 16 }
+				color2 = { 200 200 200 }
+				
+				b_galahad_citadel = { }
+				b_galahad_iii = { }
+				b_galahad_iii_b = { }
+				b_galahad_iv = { }
+				b_galahad_vii_b = { }
+				b_galahad_vii_c = { }
+			}
+			c_shiverlight = {
+				color = { 128 80 32 }
+				color2 = { 200 200 200 }
+				
+				b_shiverlight_prime = { }
+				b_shiverlight_prime_b = { }
+				b_shiverlight_ii = { }
+				b_shiverlight_ii_b = { }
+			}
+			c_virtue = {
+				color = { 128 80 48 }
+				color2 = { 200 200 200 }
+				
+				b_virtue_iv = { }
+				b_virtue_iv_b = { }
+				b_virtue_iv_c = { }
+				b_virtue_iv_d = { }
+			}
+		}
+		
+		d_lancelot = {
+			color = { 128 96 0 }
+			color2 = { 200 200 200 }
+			
+			capital = 36 # Lancelot
+			
+			c_lancelot = {
+				color = { 128 80 16 }
+				color2 = { 200 200 200 }
+				
+				b_lancelot_iii = { }
+				b_lancelot_iii_b = { }
+				b_lancelot_iii_c = { }
+				b_lancelot_iv = { }
+				b_lancelot_v = { }
+			}
+			c_numenor = {
+				color = { 128 80 32 }
+				color2 = { 200 200 200 }
+				
+				b_numenor_ii = { }
+				b_numenor_iii = { }
+				b_numenor_iv = { }
+				b_numenor_v = { }
+			}
+			c_henrys_star = {
+				color = { 128 80 48 }
+				color2 = { 200 200 200 }
+				
+				b_henrys_star_waystation = { }
+				b_henrys_star_iii = { }
+				b_henrys_star_iv = { }
+				b_henrys_star_v = { }
+			}
+			c_robinson = {
+				color = { 128 80 64 }
+				color2 = { 200 200 200 }
+				
+				b_robinson_ii = { }
+				b_robinson_ii_orbital = { }
+				b_robinson_iii = { }
+				b_robinson_iii_b = { }
+				b_robinson_iv = { }
+			}
+		}
+		
+		d_alfred = {
+			color = { 128 112 0 }
+			color2 = { 200 200 200 }
+			
+			capital = 23 # Alfred
+			
+			c_alfred = {
+				color = { 128 112 16 }
+				color2 = { 200 200 200 }
+				
+				b_alfred_prime = { }
+				b_alfred_prime_b = { }
+				b_alfred_prime_c = { }
+				b_alfred_ii = { }
+				b_alfred_iii = { }
+			}
+			c_etherland = {
+				color = { 128 112 32 }
+				color2 = { 200 200 200 }
+				
+				b_etherland_prime_b = { }
+				b_etherland_prime_c = { }
+				b_etherland_prime_d = { }
+				b_etherland_prime_e = { }
+			}
+		}
+	}
+}
+
+# Big Five Megacorps
+b_weyland = {
+	culture = anglo_terran
+	religion = terran_federalist
+}
+b_salazar = {
+	culture = hispanic_terran
+	religion = terran_federalist
+}
+b_nazari = {
+	culture = iranian_terran
+	religion = terran_federalist
+}
+b_kojima = {
+	culture = japanese_terran
+	religion = terran_republican
+}
+b_afolayan = {
+	culture = west_afro_terran
+	religion = terran_republican
+}
+
+# Xin Zizhiqu Megacorps
+b_zhang = {
+	culture = sino_bianjiangese
+	religion = colonial_seperatist
+}
+b_komissarov = {
+	culture = russo_bianjiangese
+	religion = colonial_seperatist
+}
+b_xiang = {
+	culture = sino_bianjiangese
+	religion = colonial_seperatist
+}
+b_cao = {
+	culture = sino_bianjiangese
+	religion = colonial_seperatist
+}
+b_madrigal = {
+	culture = hispanic_bianjiangese
+	religion = colonial_seperatist
+}
+
+# Xin ZiZhiqu - d_tian_yuan Megacorps
+b_bakare = {
+	culture = east_afro_bianjiangese
+	religion = colonial_seperatist
+}
+
+b_allen = {
+	culture = anglo_bianjiangese
+	religion = colonial_seperatist
+	}
+
+b_yudin = {
+		culture = sino_bianjiangese
+		religion = colonial_seperatist
+	}
+b_khoury = {
+		culture = sino_bianjiangese
+		religion = colonial_seperatist
+		}
+b_feng = {
+		culture = sino_bianjiangese
+		religion = colonial_seperatist
+		}
+#dynasty = 2336 #Khoury
+#dynasty = 12426 #Yudin
+#dynasty = 426 #Allen
+#dynasty = 12954 # Feng
+
+# Orion Reach Megacorps
+b_lebedev = {
+	culture = russo_orion
+	religion = colonial_seperatist
+}
+b_ramirez = {
+	culture = hispanic_orion
+	religion = colonial_seperatist
+}
+b_calderon = {
+	culture = hispanic_orion
+	religion = colonial_seperatist
+}
+b_ortiz = {
+	culture = hispanic_orion
+	religion = colonial_seperatist
+}
+b_abu_abed = {
+	culture = arab_orion
+	religion = colonial_seperatist
+}
+
+# Mukta Duniya Megacorps
+b_rizvi = {
+	culture = indo_mukta
+	religion = colonial_seperatist
+}
+b_singhal = {
+	culture = indo_mukta
+	religion = colonial_seperatist
+}
+b_trivedi = {
+	culture = indo_mukta
+	religion = colonial_seperatist
+}
+b_cruz = {
+	culture = hispanic_mukta
+	religion = colonial_seperatist
+}
+b_igwe = {
+	culture = west_afro_mukta
+	religion = colonial_seperatist
+}
+
+# New Frontier Megacorps
+b_hawking = {
+	culture = anglo_frontiersman
+	religion = colonial_seperatist
+}
+b_cameron = {
+	culture = anglo_frontiersman
+	religion = colonial_seperatist
+}
+b_davis = {
+	culture = anglo_frontiersman
+	religion = colonial_seperatist
+}
+b_ishikawa = {
+	culture = japanese_frontiersman
+	religion = colonial_seperatist
+}
+b_omosun = {
+	culture = west_afro_frontiersman
+	religion = colonial_seperatist
+}

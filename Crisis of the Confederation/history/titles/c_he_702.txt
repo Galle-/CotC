@@ -1,0 +1,7 @@
+2900.1.1 = {
+	law = succ_open_elective
+	law = true_cognatic_succession
+	liege = "e_terran_confederation"
+}
+
+2996.1.1 = { holder = "1101464" } # Margarita Carrington

@@ -1,0 +1,54 @@
+# 248 - Xianggang Xin
+
+# County Title
+title = c_xianggang_xin
+
+# Settlements
+max_settlements = 6
+b_xianggang_xin = city
+b_xianggang_xin_b = temple
+b_xianggang_xin_orbital = castle
+
+# Misc
+culture = sino_bianjiangese # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+	b_xianggang_xin = ct_clean_atmosphere
+	b_xianggang_xin = ct_no_water
+	b_xianggang_xin = ct_trace_water
+	b_xianggang_xin = ct_lakes
+	b_xianggang_xin = ct_seas
+	b_xianggang_xin = ct_oceans
+	b_xianggang_xin = ct_frozen
+	b_xianggang_xin = ct_cold
+	b_xianggang_xin = ct_cool
+	b_xianggang_xin = ct_planet_survey
+	
+	b_xianggang_xin_b = tp_no_atmosphere
+	b_xianggang_xin_b = tp_no_water
+	b_xianggang_xin_b = tp_frozen
+	b_xianggang_xin_b = tp_cold
+	b_xianggang_xin_b = tp_cool
+	b_xianggang_xin_b = tp_planet_survey
+	
+	b_xianggang_xin_orbital = ca_space_station_0
+	b_xianggang_xin_orbital = ca_space_station_1
+	b_xianggang_xin_orbital = ca_space_station_2
+}
+
+2998.1.1 = {
+	b_xianggang_xin = ct_colony_0
+	b_xianggang_xin = ct_colony_1
+	b_xianggang_xin = ct_colony_2
+	b_xianggang_xin = ct_colony_3
+	
+	b_xianggang_xin_b = tp_colony_0
+	
+	b_xianggang_xin_orbital = ca_colony_0
+	b_xianggang_xin_orbital = ca_colony_1
+	b_xianggang_xin_orbital = ca_colony_2
+	
+	trade_post = b_xiang
+}

@@ -1,0 +1,20 @@
+# 28 - Paladin
+
+# County Title
+title = c_paladin
+
+# Settlements
+max_settlements = 4
+
+b_paladin_ii = castle
+
+# Misc
+culture = anglo_avalonian # Initial culture
+religion = bio_directionist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

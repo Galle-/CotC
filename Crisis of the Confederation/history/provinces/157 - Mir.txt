@@ -1,0 +1,21 @@
+# 157 - Mir
+
+# County Title
+title = c_mir
+
+# Settlements
+max_settlements = 5
+b_mir_citadel = castle
+b_mir_iii = city
+b_mir_iii_b = temple
+
+# Misc
+culture = hispanic_edemite # Initial culture
+religion = astrist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

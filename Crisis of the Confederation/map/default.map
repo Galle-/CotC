@@ -1,0 +1,27 @@
+max_provinces = 1112
+sea_starts = 463
+definitions = "definition.csv"
+provinces = "provinces.bmp"
+positions = "positions.txt"
+terrain = "terrain.bmp"
+rivers = "rivers.bmp"
+terrain_definition = "terrain.txt"
+heightmap = "topology.bmp"
+tree_definition = "trees.bmp"
+continent = "continent.txt"
+adjacencies = "adjacencies.csv"
+climate = "climate.txt"
+region = "region.txt"
+static = "static.txt"
+
+# Define which indices in trees.bmp palette which should count as trees for automatic terrain assignment
+tree = { 3 4 7 10 }
+major_rivers = 
+{ 
+	316 317 318 #Witch head nebulae
+	319 320 321 322 323 324 325 326 327 #Helix nebulae
+	450 #Veil nebulae
+	451 452 453 454 #Horsehead nebulae
+	455 456 457 458 459 #Orion nebulae
+	460 461 462 #Fire nebulae
+}

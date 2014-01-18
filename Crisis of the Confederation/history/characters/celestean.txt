@@ -1,0 +1,407 @@
+1104499 = {
+	# President of Tierra Celeste, 2998
+	name = "Mateo"
+	dynasty = 4499 # Dia
+	female = no
+	
+	culture = hispanic_celestean
+	religion = terran_federalist
+	
+	2944.1.1 = {
+		birth = "2944.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+1104675 = {
+	# Commander of the Celestean Armada
+	name = "Alejandro"
+	dynasty = 4675 # Vasquez
+	female = no
+	
+	culture = hispanic_celestean
+	religion = pilgrim
+	
+	add_trait = homosexual
+	add_trait = skilled_tactician
+	add_trait = warship_captain
+	
+	2956.1.1 = {
+		birth = "2956.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+1104323 = {
+	# Governor of Nuevo Santuario
+	name = "Diego"
+	dynasty = 4323 # Ramirez
+	female = no
+	
+	culture = hispanic_celestean
+	religion = pilgrim
+	
+	add_trait = homosexual
+	
+	2951.1.1 = {
+		birth = "2951.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+1102803 = {
+	# Governor of Hermanes de Oro
+	name = "Agustina"
+	dynasty = 2803 # al-Zahawi
+	female = yes
+	
+	culture = arab_celestean
+	religion = pilgrim
+	
+	add_trait = homosexual
+	add_trait = grey_eminence
+	add_trait = ambitious
+	
+	2976.1.1 = {
+		birth = "2976.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+11012707 = {
+	# Governor of Prosperidad
+	name = "Felipe"
+	dynasty = 12707 # Sun
+	female = no
+	
+	culture = sino_celestean
+	religion = terran_federalist
+	
+	add_trait = homosexual
+	
+	2960.1.1 = {
+		birth = "2960.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+1104419 = {
+	# Governor of Nuevo Sol
+	name = "Amanda"
+	dynasty = 4419 # Reyes
+	female = yes
+	
+	culture = hispanic_celestean
+	religion = terran_federalist
+	
+	add_trait = grey_eminence
+	add_trait = ambitious
+	
+	2976.1.1 = {
+		birth = "2976.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+1104435 = {
+	# Governor-General of Bolivar
+	name = "Juan-Diego"
+	dynasty = 4435 # Cruz
+	female = no
+	
+	culture = hispanic_celestean
+	religion = terran_federalist
+	
+	2972.1.1 = {
+		birth = "2972.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+11012611 = {
+	# Governor of Santa Maria
+	name = "Catalina"
+	dynasty = 12611 # Yang
+	female = yes
+	
+	culture = sino_celestean
+	religion = terran_federalist
+	
+	2962.1.1 = {
+		birth = "2962.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+1105843 = {
+	# Governor of Esperanza
+	name = "Santiago"
+	dynasty = 5843 # Sarkar
+	female = no
+	
+	culture = indo_celestean
+	religion = pilgrim
+	
+	add_trait = homosexual
+	
+	2966.1.1 = {
+		birth = "2966.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+1104915 = {
+	# Commander of Dom Frontera
+	name = "Emmanuel"
+	dynasty = 4915 # Ruiz
+	female = no
+	
+	culture = hispanic_celestean
+	religion = pilgrim
+	
+	add_trait = tough_soldier
+	add_trait = marine_colonel
+	
+	2957.1.1 = {
+		birth = "2957.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+1105667 = {
+	# Governor-General of Frontera
+	name = "Sebastian"
+	dynasty = 5667 # Pradhan
+	female = no
+	
+	culture = indo_celestean
+	religion = pilgrim
+	
+	2965.1.1 = {
+		birth = "2965.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+1104243 = {
+	# Commander of Puerto del Cielo
+	name = "Mariana"
+	dynasty = 4243 # Gonzalez
+	female = yes
+	
+	culture = hispanic_celestean
+	religion = pilgrim
+	
+	add_trait = skilled_tactician
+	add_trait = fighter_pilot
+	
+	2959.1.1 = {
+		birth = "2959.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+1109796 = {
+	# Governor-General of Sexto Sol
+	name = "Eloxochitl"
+	dynasty = 9796 # Ocelotl
+	female = yes
+	
+	culture = mesoamerican_sexto_solar
+	religion = adoptionist_cultist
+	
+	2961.1.1 = {
+		birth = "2961.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+1104660 = {
+	# Governor of Tletlioh
+	name = "Axayacatl"
+	dynasty = 4660 # Madrigal
+	female = no
+	
+	culture = hispanic_sexto_solar
+	religion = adoptionist_cultist
+	
+	add_trait = homosexual
+	
+	2956.1.1 = {
+		birth = "2956.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+1109892 = {
+	# Commander of Nantli
+	name = "Tecocoltzin"
+	dynasty = 9892 #Quauhtli
+	female = no
+	
+	culture = mesoamerican_sexto_solar
+	religion = adoptionist_cultist
+	
+	add_trait = skilled_tactician
+	add_trait = fighter_pilot
+	
+	2954.1.1 = {
+		birth = "2954.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+1109828 = {
+	# Governor of Tlexochtli
+	name = "Teicuih"
+	dynasty = 9828 # Otli
+	female = yes
+	
+	culture = mesoamerican_sexto_solar
+	religion = adoptionist_cultist
+	
+	2956.1.1 = {
+		birth = "2956.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+1109972 = {
+	# Governor of Huehca
+	name = "Sacnite"
+	dynasty = 9972 # Tepetl
+	female = yes
+	
+	culture = mesoamerican_sexto_solar
+	religion = adoptionist_cultist
+	
+	add_trait = grey_eminence
+	add_trait = ambitious
+	
+	2978.1.1 = {
+		birth = "2978.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+# Minor Celestean Officials
+1104867 = {
+	# Administrator of Encrucijada IV-B
+	name = "Alejandra"
+	dynasty = 4867 # Castillo
+	female = yes
+	
+	culture = hispanic_celestean
+	religion = pilgrim
+	
+	add_trait = homosexual
+	
+	2962.1.1 = { birth = "2962.1.1" }
+}
+
+1104227 = {
+	# Commandant of Encrucijada VII-B
+	name = "Santiago"
+	dynasty = 4227 # Hernandez
+	female = no
+	
+	culture = hispanic_celestean
+	religion = pilgrim
+	
+	add_trait = brilliant_strategist
+	add_trait = fighter_pilot
+	
+	2964.1.1 = { birth = "2964.1.1" }
+}
+
+1104195 = {
+	# Administrator of Nuevo Santuario III
+	name = "Antonella"
+	dynasty = 4195 # Martinez
+	female = yes
+	
+	culture = hispanic_celestean
+	religion = pilgrim
+	
+	add_trait = homosexual
+	
+	2970.1.1 = { birth = "2970.1.1" }
+}
+
+1104787 = {
+	# Commandant of Nuevo Santuario III-B
+	name = "Emmanuel"
+	dynasty = 4787 # Romero
+	female = no
+	
+	culture = hispanic_celestean
+	religion = pilgrim
+	
+	add_trait = tough_soldier
+	add_trait = marine_colonel
+	
+	2955.1.1 = { birth = "2955.1.1" }
+}
+
+1104851 = {
+	# Administrator of Hermanes de Oro III-B
+	name = "Joaquin"
+	dynasty = 4851 # Mendoza
+	female = no
+	
+	culture = hispanic_celestean
+	religion = pilgrim
+	
+	2960.1.1 = { birth = "2960.1.1" }
+}
+
+1106547 = {
+	# Commandant of Hermanes de Oro IV
+	name = "Gabriel"
+	dynasty = 6547 # Rouhani
+	female = no
+	
+	culture = iranian_celestean
+	religion = pilgrim
+	
+	add_trait = skilled_tactician
+	add_trait = warship_captain
+	
+	2959.1.1 = { birth = "2959.1.1" }
+}
+
+1104291 = {
+	# Administrator of Escudo III-C
+	name = "Rodrigo"
+	dynasty = 4291 # Perez
+	female = no
+	
+	culture = hispanic_celestean
+	religion = pilgrim
+	
+	2956.1.1 = { birth = "2956.1.1" }
+}
+
+1102755 = {
+	# Governor of Escudo III-D
+	name = "Felipe"
+	dynasty = 2755 # al-Asadi
+	female = no
+	
+	culture = arab_celestean
+	religion = pilgrim
+	
+	2966.1.1 = { birth = "2966.1.1" }
+}
+
+1107267 = {
+	# Administrator of Estrella de Bolivar IV
+	name = "Diego"
+	dynasty = 7267 # Majidi
+	female = no
+	
+	culture = iranian_celestean
+	religion = terran_federalist
+	
+	2964.1.1 = { birth = "2964.1.1" }
+}

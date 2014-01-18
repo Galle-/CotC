@@ -1,0 +1,84 @@
+# 241 - Hua
+# 
+# County Title
+title = c_hua
+
+# Settlements
+max_settlements = 6
+				
+				
+				b_hua_prime = city
+				b_hua_prime_c = castle
+				b_hua_prime_f = temple
+				b_hua_prime_g = temple
+				b_hua_prime_orbital_a = city
+				b_hua_prime_orbital_b = castle
+			
+
+# Misc
+culture = sino_xingjie # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+
+	b_hua_prime = ct_clean_atmosphere
+	b_hua_prime = ct_frozen
+	b_hua_prime = ct_cold
+	b_hua_prime = ct_cool
+	b_hua_prime = ct_optimal_cold
+	b_hua_prime = ct_no_water
+	b_hua_prime = ct_trace_water
+	b_hua_prime = ct_lakes
+	b_hua_prime = ct_seas
+
+	b_hua_prime_c = ca_no_atmosphere
+	b_hua_prime_c = ca_frozen
+	b_hua_prime_c = ca_cold
+	b_hua_prime_c = ca_no_water
+	
+	b_hua_prime_f = tp_no_atmosphere
+	b_hua_prime_f = tp_burning
+	b_hua_prime_f = tp_hot
+	b_hua_prime_f = tp_warm
+	b_hua_prime_f = tp_no_water
+	b_hua_prime_f = tp_trace_water
+	b_hua_prime_f = tp_lakes
+	
+	b_hua_prime_g = tp_toxic_atmosphere
+	b_hua_prime_g = tp_frozen
+	b_hua_prime_g = tp_cold
+	b_hua_prime_g = tp_cool
+	b_hua_prime_g = tp_no_water
+	b_hua_prime_g = tp_trace_water
+	b_hua_prime_g = tp_lakes
+	b_hua_prime_g = tp_seas
+}
+
+2998.1.1 = {
+
+	b_hua_prime = ct_colony_0
+	b_hua_prime = ct_colony_1
+	b_hua_prime = ct_colony_2
+	b_hua_prime = ct_colony_3
+	b_hua_prime = FL_01_ct
+	
+	b_hua_prime_c = ca_no_atmosphere_domes
+	b_hua_prime_c = ca_colony_0
+	b_hua_prime_c = FL_01_ca
+
+	b_hua_prime_f = tp_no_atmosphere_domes
+	b_hua_prime_f = tp_colony_0
+	
+	b_hua_prime_g = tp_toxic_atmosphere_domes
+	b_hua_prime_g = tp_colony_0
+	
+	b_hua_prime_orbital_a = ct_space_station_0
+	b_hua_prime_orbital_a = ct_space_station_1
+	b_hua_prime_orbital_a = ct_space_station_2
+	b_hua_prime_orbital_a = FL_01_ct
+	
+	b_hua_prime_orbital_b = ca_space_station_0
+	b_hua_prime_orbital_b = ca_space_station_1
+	b_hua_prime_orbital_b = FL_01_ca
+	}

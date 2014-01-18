@@ -1,0 +1,10 @@
+2489.1.1 = {
+	liege = "e_terran_confederation"
+	law = legitimacy_law_2
+	law = appointment_law_1
+	law = succ_appointment
+	law = true_cognatic_succession
+}
+
+# Modern era
+2993.1.1 = { holder = 11012833 }	# Wei Luo

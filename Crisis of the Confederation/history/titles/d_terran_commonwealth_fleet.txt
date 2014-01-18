@@ -1,0 +1,8 @@
+2489.1.1 = {
+	liege = "e_terran_confederation"
+	law = succ_appointment
+	law = true_cognatic_succession
+}
+
+# Modern era
+2989.1.1 = { holder = 121167 }	# Abigail Weyland

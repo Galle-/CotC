@@ -1,0 +1,584 @@
+faction_no_confidence = {
+	type = liege_titles
+	potential = {
+		independent = no
+		is_adult = yes
+		NOT = { trait = incapable }
+		prisoner = no
+	}
+	allow = {
+		OR = {
+			is_primary_holder_title = yes
+			higher_tier_than = DUKE
+		}
+		OR = {
+			has_law = succ_feudal_elective
+			has_law = succ_tanistry
+			has_law = succ_open_elective
+			has_law = succ_patrician_elective
+		}
+		NOT = {
+			AND = {
+				has_law = succ_patrician_elective
+				current_heir = { ROOT = { holder_scope = { dynasty = PREVPREV } } }
+			}
+		}
+		crownlaw_title = { has_law = no_confidence_1 } # Votes of no confidence are not banned
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0.8
+			FROM = { opinion = { who = liege value = 100 } }
+		}
+		modifier = {
+			factor = 0.8
+			FROM = { opinion = { who = liege value = 90 } }
+		}
+		modifier = {
+			factor = 0.8
+			FROM = { opinion = { who = liege value = 80 } }
+		}
+		modifier = {
+			factor = 0.8
+			FROM = { opinion = { who = liege value = 70 } }
+		}
+		modifier = {
+			factor = 0.8
+			FROM = { opinion = { who = liege value = 60 } }
+		}
+		modifier = {
+			factor = 0.8
+			FROM = { opinion = { who = liege value = 50 } }
+		}
+		modifier = {
+			factor = 0.8
+			FROM = { opinion = { who = liege value = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			FROM = { opinion = { who = liege value = 30 } }
+		}
+		modifier = {
+			factor = 0.8
+			FROM = { opinion = { who = liege value = 20 } }
+		}
+		modifier = {
+			factor = 0.8
+			FROM = { opinion = { who = liege value = 10 } }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { NOT = { opinion = { who = liege value = -9 } } }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { NOT = { opinion = { who = liege value = -19 } } }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { NOT = { opinion = { who = liege value = -29 } } }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { NOT = { opinion = { who = liege value = -39 } } }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { NOT = { opinion = { who = liege value = -49 } } }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { NOT = { opinion = { who = liege value = -59 } } }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { NOT = { opinion = { who = liege value = -69 } } }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { NOT = { opinion = { who = liege value = -79 } } }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { NOT = { opinion = { who = liege value = -89 } } }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { NOT = { opinion = { who = liege value = -99 } } }
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				NOT = { character = FROM }
+				reverse_opinion = { who = FROM value = 100 as_if_liege = yes }
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				NOT = { character = FROM }
+				reverse_opinion = { who = FROM value = 90 as_if_liege = yes }
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				NOT = { character = FROM }
+				reverse_opinion = { who = FROM value = 80 as_if_liege = yes }
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				NOT = { character = FROM }
+				reverse_opinion = { who = FROM value = 70 as_if_liege = yes }
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				NOT = { character = FROM }
+				reverse_opinion = { who = FROM value = 60 as_if_liege = yes }
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				NOT = { character = FROM }
+				reverse_opinion = { who = FROM value = 50 as_if_liege = yes }
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				NOT = { character = FROM }
+				reverse_opinion = { who = FROM value = 40 as_if_liege = yes }
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				NOT = { character = FROM }
+				reverse_opinion = { who = FROM value = 30 as_if_liege = yes }
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				NOT = { character = FROM }
+				reverse_opinion = { who = FROM value = 20 as_if_liege = yes }
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				NOT = { character = FROM }
+				reverse_opinion = { who = FROM value = 10 as_if_liege = yes }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			current_heir = {
+				NOT = { character = FROM }
+				NOT = { reverse_opinion = { who = FROM value = -9 as_if_liege = yes } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			current_heir = {
+				NOT = { character = FROM }
+				NOT = { reverse_opinion = { who = FROM value = -19 as_if_liege = yes } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			current_heir = {
+				NOT = { character = FROM }
+				NOT = { reverse_opinion = { who = FROM value = -29 as_if_liege = yes } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			current_heir = {
+				NOT = { character = FROM }
+				NOT = { reverse_opinion = { who = FROM value = -39 as_if_liege = yes } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			current_heir = {
+				NOT = { character = FROM }
+				NOT = { reverse_opinion = { who = FROM value = -49 as_if_liege = yes } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			current_heir = {
+				NOT = { character = FROM }
+				NOT = { reverse_opinion = { who = FROM value = -59 as_if_liege = yes } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			current_heir = {
+				NOT = { character = FROM }
+				NOT = { reverse_opinion = { who = FROM value = -69 as_if_liege = yes } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			current_heir = {
+				NOT = { character = FROM }
+				NOT = { reverse_opinion = { who = FROM value = -79 as_if_liege = yes } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			current_heir = {
+				NOT = { character = FROM }
+				NOT = { reverse_opinion = { who = FROM value = -89 as_if_liege = yes } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			current_heir = {
+				NOT = { character = FROM }
+				NOT = { reverse_opinion = { who = FROM value = -99 as_if_liege = yes } }
+			}
+		}
+		modifier = {
+			factor = 0.1
+			current_heir = { character = FROM }
+			FROM = { trait = content }
+		}
+		modifier = {
+			factor = 2
+			current_heir = { character = FROM }
+			FROM = { NOT = { trait = content } }
+		}
+		modifier = {
+			factor = 2
+			current_heir = { character = FROM }
+			FROM = { trait = ambitious }
+		}
+	}
+	membership = {
+		factor = 1
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 100 }
+		}
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 90 }
+		}
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 80 }
+		}
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 70 }
+		}
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 60 }
+		}
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 50 }
+		}
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 40 }
+		}
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 30 }
+		}
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 20 }
+		}
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 10 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -9 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -19 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -29 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -39 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -49 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -59 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -69 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -79 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -89 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -99 } }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = {
+				FROM = {
+					current_heir = {
+						NOT = { character = ROOT }
+						reverse_opinion = { who = ROOT value = 100 as_if_liege = yes }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			FROM = {
+				FROM = {
+					current_heir = {
+						NOT = { character = ROOT }
+						reverse_opinion = { who = ROOT value = 90 as_if_liege = yes }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			FROM = {
+				FROM = {
+					current_heir = {
+						NOT = { character = ROOT }
+						reverse_opinion = { who = ROOT value = 80 as_if_liege = yes }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			FROM = {
+				FROM = {
+					current_heir = {
+						NOT = { character = ROOT }
+						reverse_opinion = { who = ROOT value = 70 as_if_liege = yes }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			FROM = {
+				FROM = {
+					current_heir = {
+						NOT = { character = ROOT }
+						reverse_opinion = { who = ROOT value = 60 as_if_liege = yes }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			FROM = {
+				FROM = {
+					current_heir = {
+						NOT = { character = ROOT }
+						reverse_opinion = { who = ROOT value = 50 as_if_liege = yes }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			FROM = {
+				FROM = {
+					current_heir = {
+						NOT = { character = ROOT }
+						reverse_opinion = { who = ROOT value = 40 as_if_liege = yes }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			FROM = {
+				FROM = {
+					current_heir = {
+						NOT = { character = ROOT }
+						reverse_opinion = { who = ROOT value = 30 as_if_liege = yes }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			FROM = {
+				FROM = {
+					current_heir = {
+						NOT = { character = ROOT }
+						reverse_opinion = { who = ROOT value = 20 as_if_liege = yes }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			FROM = {
+				FROM = {
+					current_heir = {
+						NOT = { character = ROOT }
+						reverse_opinion = { who = ROOT value = 10 as_if_liege = yes }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROM = {
+				FROM = {
+					current_heir = {
+						NOT = { character = ROOT }
+						NOT = { reverse_opinion = { who = ROOT value = -9 as_if_liege = yes } }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROM = {
+				FROM = {
+					current_heir = {
+						NOT = { character = ROOT }
+						NOT = { reverse_opinion = { who = ROOT value = -19 as_if_liege = yes } }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROM = {
+				FROM = {
+					current_heir = {
+						NOT = { character = ROOT }
+						NOT = { reverse_opinion = { who = ROOT value = -29 as_if_liege = yes } }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROM = {
+				FROM = {
+					current_heir = {
+						NOT = { character = ROOT }
+						NOT = { reverse_opinion = { who = ROOT value = -39 as_if_liege = yes } }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROM = {
+				FROM = {
+					current_heir = {
+						NOT = { character = ROOT }
+						NOT = { reverse_opinion = { who = ROOT value = -49 as_if_liege = yes } }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROM = {
+				FROM = {
+					current_heir = {
+						NOT = { character = ROOT }
+						NOT = { reverse_opinion = { who = ROOT value = -59 as_if_liege = yes } }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROM = {
+				FROM = {
+					current_heir = {
+						NOT = { character = ROOT }
+						NOT = { reverse_opinion = { who = ROOT value = -69 as_if_liege = yes } }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROM = {
+				FROM = {
+					current_heir = {
+						NOT = { character = ROOT }
+						NOT = { reverse_opinion = { who = ROOT value = -79 as_if_liege = yes } }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROM = {
+				FROM = {
+					current_heir = {
+						NOT = { character = ROOT }
+						NOT = { reverse_opinion = { who = ROOT value = -89 as_if_liege = yes } }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROM = {
+				FROM = {
+					current_heir = {
+						NOT = { character = ROOT }
+						NOT = { reverse_opinion = { who = ROOT value = -99 as_if_liege = yes } }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			trait = content
+			FROM = { FROM = { current_heir = { character = ROOT } } }
+		}
+		modifier = {
+			factor = 2
+			FROM = { FROM = { current_heir = { character = ROOT } } }
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 2
+			FROM = { FROM = { current_heir = { character = ROOT } } }
+			trait = ambitious
+		}
+	}
+}

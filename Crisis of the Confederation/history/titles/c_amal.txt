@@ -1,0 +1,7 @@
+# Modern era
+2489.1.1 = {
+	liege = "d_amal"
+	law = true_cognatic_succession
+	law = succ_feudal_elective
+}
+2998.1.1 = { holder = 1102853 } # Mahmud Odwan

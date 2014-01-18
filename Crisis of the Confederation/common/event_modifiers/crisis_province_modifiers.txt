@@ -1,0 +1,97 @@
+# Public Opinion in Constitutional Crisis
+public_for_count = {
+	icon = 18
+}
+public_against_count = {
+	icon = 36
+}
+public_for_duke = {
+	icon = 18
+}
+public_against_duke = {
+	icon = 36
+}
+public_for_king = {
+	icon = 18
+}
+public_against_king = {
+	icon = 36
+}
+public_for_emperor = {
+	icon = 18
+}
+public_against_emperor = {
+	icon = 36
+}
+
+# Civil Unrest
+civil_unrest_0 = {
+	icon = 36
+	local_revolt_risk = 0.05
+	local_tax_modifier = -0.1
+	local_build_time_modifier = 0.1
+	local_build_cost_modifier = 0.05
+}
+civil_unrest_1 = {
+	icon = 36
+	local_revolt_risk = 0.1
+	local_tax_modifier = -0.2
+	local_build_time_modifier = 0.2
+	local_build_cost_modifier = 0.1
+}
+civil_unrest_2 = {
+	icon = 36
+	local_revolt_risk = 0.15
+	local_tax_modifier = -0.3
+	local_build_time_modifier = 0.3
+	local_build_cost_modifier = 0.15
+}
+civil_unrest_3 = {
+	icon = 36
+	local_revolt_risk = 0.2
+	local_tax_modifier = -0.4
+	local_build_time_modifier = 0.4
+	local_build_cost_modifier = 0.2
+}
+civil_unrest_4 = {
+	icon = 36
+	local_revolt_risk = 0.25
+	local_tax_modifier = -0.5
+	local_build_time_modifier = 0.5
+	local_build_cost_modifier = 0.25
+}
+civil_unrest_5 = {
+	icon = 36
+	local_revolt_risk = 0.3
+	local_tax_modifier = -0.6
+	local_build_time_modifier = 0.6
+	local_build_cost_modifier = 0.3
+}
+civil_unrest_6 = {
+	icon = 36
+	local_revolt_risk = 0.35
+	local_tax_modifier = -0.7
+	local_build_time_modifier = 0.7
+	local_build_cost_modifier = 0.35
+}
+civil_unrest_7 = {
+	icon = 36
+	local_revolt_risk = 0.4
+	local_tax_modifier = -0.8
+	local_build_time_modifier = 0.8
+	local_build_cost_modifier = 0.4
+}
+civil_unrest_8 = {
+	icon = 36
+	local_revolt_risk = 0.45
+	local_tax_modifier = -0.9
+	local_build_time_modifier = 0.9
+	local_build_cost_modifier = 0.45
+}
+civil_unrest_9 = {
+	icon = 36
+	local_revolt_risk = 0.5
+	local_tax_modifier = -1
+	local_build_time_modifier = 1
+	local_build_cost_modifier = 0.5
+}

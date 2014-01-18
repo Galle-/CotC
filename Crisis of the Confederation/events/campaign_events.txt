@@ -1,0 +1,52 @@
+namespace = campaign
+
+character_event = {
+	id = campaign.0
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = { liege = { character_event = { id = campaign.1 } } }
+}
+
+# Inform liege of successful campaign
+character_event = {
+	id = campaign.1
+	desc = "EVTDESCCAMPAIGN1"
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACAMPAIGN1" }
+}
+
+character_event = {
+	id = campaign.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = { liege = { character_event = { id = campaign.3 } } }
+}
+
+# Inform liege of failed campaign
+character_event = {
+	id = campaign.3
+	desc = "EVTDESCCAMPAIGN3"
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACAMPAIGN3" }
+}
+
+character_event = {
+	id = campaign.4
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = { liege = { character_event = { id = campaign.5 } } }
+}
+
+# Inform liege of disastrous campaign
+character_event = {
+	id = campaign.5
+	desc = "EVTDESCCAMPAIGN5"
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACAMPAIGN5" }
+}

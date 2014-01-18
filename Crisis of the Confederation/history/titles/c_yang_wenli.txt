@@ -1,0 +1,11 @@
+2900.1.1={
+	liege = "d_xin_qin"
+	law = succ_feudal_elective
+	law = true_cognatic_succession
+}
+
+2980.1.1 = { holder = "11012746" } # Jian Zhu
+
+2997.1.1 = {
+	liege = "d_xin_zizhiqu_fleet"
+}

@@ -1,0 +1,433 @@
+castle = {
+	ca_colony_0 = {
+		desc = bu_colony_0_desc
+		trigger = { TECH_CONSTRUCTION = 0 }
+		potential = {
+			FROM = {
+				FROM = {
+					OR = {
+						has_building = ca_planet_survey
+						has_building = ca_space_station_0
+					}
+				}
+			}
+		}
+		build_cost = 0
+		build_time = 0
+		tax_income = 1
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	ca_colony_1 = {
+		desc = bu_colony_1_desc
+		trigger = {
+			TECH_CONSTRUCTION = 1
+			FROM = {
+				FROM = {
+					OR = {
+						AND = {
+							OR = {
+								has_building = ca_hot
+								has_building = ca_cold
+							}
+							has_building = ca_trace_water
+						}
+						has_building = ca_space_station_1
+					}
+				}
+			}
+		}
+		potential = { always = yes }
+		upgrades_from = ca_colony_0
+		build_cost = 100
+		build_time = 365
+		tax_income = 2
+		ai_creation_factor = 110
+		extra_tech_building_start = 10.0
+	}
+	ca_colony_2 = {
+		desc = bu_colony_2_desc
+		trigger = {
+			TECH_CONSTRUCTION = 2
+			FROM = {
+				FROM = {
+					OR = {
+						AND = {
+							OR = {
+								has_building = ca_clean_atmosphere
+								has_building = ca_toxic_atmosphere_domes
+								has_building = ca_no_atmosphere_domes
+							}
+							OR = {
+								has_building = ca_warm
+								has_building = ca_cool
+							}
+							has_building = ca_lakes
+						}
+						has_building = ca_space_station_2
+					}
+				}
+			}
+		}
+		potential = { always = yes }
+		upgrades_from = ca_colony_1
+		build_cost = 200
+		build_time = 730
+		tax_income = 4
+		ai_creation_factor = 109
+		extra_tech_building_start = 10.0
+	}
+	ca_colony_3 = {
+		desc = bu_colony_3_desc
+		trigger = {
+			TECH_CONSTRUCTION = 3
+			FROM = {
+				FROM = {
+					OR = {
+						AND = {
+							OR = {
+								has_building = ca_clean_atmosphere
+								has_building = ca_scrubbed_atmosphere
+								has_building = ca_artificial_atmosphere
+							}
+							OR = {
+								has_building = ca_warm
+								has_building = ca_cool
+							}
+							has_building = ca_seas
+						}
+						has_building = space_station_3
+					}
+				}
+			}
+		}
+		potential = { always = yes }
+		upgrades_from = ca_colony_2
+		build_cost = 400
+		build_time = 1460
+		tax_income = 8
+		ai_creation_factor = 108
+		extra_tech_building_start = 10.0
+	}
+	ca_colony_4 = {
+		desc = bu_colony_4_desc
+		trigger = {
+			TECH_CONSTRUCTION = 4
+			FROM = {
+				FROM = {
+					OR = {
+						AND = {
+							OR = {
+								has_building = ca_clean_atmosphere
+								has_building = ca_scrubbed_atmosphere
+								has_building = ca_artificial_atmosphere
+							}
+							OR = {
+								has_building = ca_optimal_hot
+								has_building = ca_optimal_cold
+							}
+							has_building = ca_oceans
+						}
+						has_building = ca_space_station_4
+					}
+				}
+			}
+		}
+		potential = { always = yes }
+		upgrades_from = ca_colony_3
+		build_cost = 800
+		build_time = 2920
+		tax_income = 16
+		ai_creation_factor = 107
+		extra_tech_building_start = 10.0
+	}
+	
+}
+city = {
+	ct_colony_0 = {
+		desc = bu_colony_0_desc
+		trigger = { TECH_CONSTRUCTION = 0 }
+		potential = {
+			FROM = {
+				FROM = {
+					OR = {
+						has_building = ct_planet_survey
+						has_building = ct_space_station_0
+					}
+				}
+			}
+		}
+		build_cost = 0
+		build_time = 0
+		tax_income = 1
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	ct_colony_1 = {
+		desc = bu_colony_1_desc
+		trigger = {
+			TECH_CONSTRUCTION = 1
+			FROM = {
+				FROM = {
+					OR = {
+						AND = {
+							OR = {
+								has_building = ct_hot
+								has_building = ct_cold
+							}
+							has_building = ct_trace_water
+						}
+						has_building = ct_space_station_1
+					}
+				}
+			}
+		}
+		potential = { always = yes }
+		upgrades_from = ct_colony_0
+		build_cost = 100
+		build_time = 365
+		tax_income = 2
+		ai_creation_factor = 110
+		extra_tech_building_start = 10.0
+	}
+	ct_colony_2 = {
+		desc = bu_colony_2_desc
+		trigger = {
+			TECH_CONSTRUCTION = 2
+			FROM = {
+				FROM = {
+					OR = {
+						AND = {
+							OR = {
+								has_building = ct_clean_atmosphere
+								has_building = ct_toxic_atmosphere_domes
+								has_building = ct_no_atmosphere_domes
+							}
+							OR = {
+								has_building = ct_warm
+								has_building = ct_cool
+							}
+							has_building = ct_lakes
+						}
+						has_building = ct_space_station_2
+					}
+				}
+			}
+		}
+		potential = { always = yes }
+		upgrades_from = ct_colony_1
+		build_cost = 200
+		build_time = 730
+		tax_income = 4
+		ai_creation_factor = 109
+		extra_tech_building_start = 10.0
+	}
+	ct_colony_3 = {
+		desc = bu_colony_3_desc
+		trigger = {
+			TECH_CONSTRUCTION = 3
+			FROM = {
+				FROM = {
+					OR = {
+						AND = {
+							OR = {
+								has_building = ct_clean_atmosphere
+								has_building = ct_scrubbed_atmosphere
+								has_building = ct_artificial_atmosphere
+							}
+							OR = {
+								has_building = ct_warm
+								has_building = ct_cool
+							}
+							has_building = ct_seas
+						}
+						has_building = space_station_3
+					}
+				}
+			}
+		}
+		potential = { always = yes }
+		upgrades_from = ct_colony_2
+		build_cost = 400
+		build_time = 1460
+		tax_income = 8
+		ai_creation_factor = 108
+		extra_tech_building_start = 10.0
+	}
+	ct_colony_4 = {
+		desc = bu_colony_4_desc
+		trigger = {
+			TECH_CONSTRUCTION = 4
+			FROM = {
+				FROM = {
+					OR = {
+						AND = {
+							OR = {
+								has_building = ct_clean_atmosphere
+								has_building = ct_scrubbed_atmosphere
+								has_building = ct_artificial_atmosphere
+							}
+							OR = {
+								has_building = ct_optimal_hot
+								has_building = ct_optimal_cold
+							}
+							has_building = ct_oceans
+						}
+						has_building = ct_space_station_4
+					}
+				}
+			}
+		}
+		potential = { always = yes }
+		upgrades_from = ct_colony_3
+		build_cost = 800
+		build_time = 2920
+		tax_income = 16
+		ai_creation_factor = 107
+		extra_tech_building_start = 10.0
+	}
+}
+temple = {
+	tp_colony_0 = {
+		desc = bu_colony_0_desc
+		trigger = { TECH_CONSTRUCTION = 0 }
+		potential = {
+			FROM = {
+				FROM = {
+					OR = {
+						has_building = tp_planet_survey
+						has_building = tp_space_station_0
+					}
+				}
+			}
+		}
+		build_cost = 0
+		build_time = 0
+		tax_income = 1
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	tp_colony_1 = {
+		desc = bu_colony_1_desc
+		trigger = {
+			TECH_CONSTRUCTION = 1
+			FROM = {
+				FROM = {
+					OR = {
+						AND = {
+							OR = {
+								has_building = tp_hot
+								has_building = tp_cold
+							}
+							has_building = tp_trace_water
+						}
+						has_building = tp_space_station_1
+					}
+				}
+			}
+		}
+		potential = { always = yes }
+		upgrades_from = tp_colony_0
+		build_cost = 100
+		build_time = 365
+		tax_income = 2
+		ai_creation_factor = 110
+		extra_tech_building_start = 10.0
+	}
+	tp_colony_2 = {
+		desc = bu_colony_2_desc
+		trigger = {
+			TECH_CONSTRUCTION = 2
+			FROM = {
+				FROM = {
+					OR = {
+						AND = {
+							OR = {
+								has_building = tp_clean_atmosphere
+								has_building = tp_toxic_atmosphere_domes
+								has_building = tp_no_atmosphere_domes
+							}
+							OR = {
+								has_building = tp_warm
+								has_building = tp_cool
+							}
+							has_building = tp_lakes
+						}
+						has_building = tp_space_station_2
+					}
+				}
+			}
+		}
+		potential = { always = yes }
+		upgrades_from = tp_colony_1
+		build_cost = 200
+		build_time = 730
+		tax_income = 4
+		ai_creation_factor = 109
+		extra_tech_building_start = 10.0
+	}
+	tp_colony_3 = {
+		desc = bu_colony_3_desc
+		trigger = {
+			TECH_CONSTRUCTION = 3
+			FROM = {
+				FROM = {
+					OR = {
+						AND = {
+							OR = {
+								has_building = tp_clean_atmosphere
+								has_building = tp_scrubbed_atmosphere
+								has_building = tp_artificial_atmosphere
+							}
+							OR = {
+								has_building = tp_warm
+								has_building = tp_cool
+							}
+							has_building = tp_seas
+						}
+						has_building = space_station_3
+					}
+				}
+			}
+		}
+		potential = { always = yes }
+		upgrades_from = tp_colony_2
+		build_cost = 400
+		build_time = 1460
+		tax_income = 8
+		ai_creation_factor = 108
+		extra_tech_building_start = 10.0
+	}
+	tp_colony_4 = {
+		desc = bu_colony_4_desc
+		trigger = {
+			TECH_CONSTRUCTION = 4
+			FROM = {
+				FROM = {
+					OR = {
+						AND = {
+							OR = {
+								has_building = tp_clean_atmosphere
+								has_building = tp_scrubbed_atmosphere
+								has_building = tp_artificial_atmosphere
+							}
+							OR = {
+								has_building = tp_optimal_hot
+								has_building = tp_optimal_cold
+							}
+							has_building = tp_oceans
+						}
+						has_building = tp_space_station_4
+					}
+				}
+			}
+		}
+		potential = { always = yes }
+		upgrades_from = tp_colony_3
+		build_cost = 800
+		build_time = 2920
+		tax_income = 16
+		ai_creation_factor = 107
+		extra_tech_building_start = 10.0
+	}
+}

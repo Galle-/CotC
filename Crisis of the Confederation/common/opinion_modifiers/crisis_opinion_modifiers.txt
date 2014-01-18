@@ -1,0 +1,3 @@
+opinion_in_love = { opinion = 50 }
+opinion_heartbroken = { opinion = -50 }
+opinion_stole_my_love = { opinion = -50 }

@@ -1,0 +1,53 @@
+# 194 - Cygni
+
+# County Title
+title = c_cygni
+
+# Settlements
+max_settlements = 4
+b_cygni_iii_b = castle
+b_cygni_iii = city
+b_cygni_iv = temple
+
+# Misc
+culture = iranian_terran # Initial culture
+religion = terran_republican
+
+# History
+1.1.1 = {
+	b_cygni_iii_b = ca_no_atmosphere
+	b_cygni_iii_b = ca_no_water
+	b_cygni_iii_b = ca_trace_water
+	b_cygni_iii_b = ca_lakes
+	b_cygni_iii_b = ca_frozen
+	b_cygni_iii_b = ca_cold
+	b_cygni_iii_b = ca_cool
+	b_cygni_iii_b = ca_planet_survey
+	
+	b_cygni_iii = ct_clean_atmosphere
+	b_cygni_iii = ct_no_water
+	b_cygni_iii = ct_trace_water
+	b_cygni_iii = ct_lakes
+	b_cygni_iii = ct_frozen
+	b_cygni_iii = ct_cold
+	b_cygni_iii = ct_cool
+	b_cygni_iii = ct_planet_survey
+	
+	b_cygni_iv = tp_toxic_atmosphere
+	b_cygni_iv = tp_no_water
+	b_cygni_iv = tp_trace_water
+	b_cygni_iv = tp_frozen
+	b_cygni_iv = tp_cold
+	b_cygni_iv = tp_planet_survey
+}
+
+2998.1.1 = {
+	b_cygni_iii_b = ca_no_atmosphere_domes
+	b_cygni_iii_b = ca_colony_0
+	b_cygni_iii_b = ca_colony_1
+	b_cygni_iii_b = ca_colony_2
+	
+	b_cygni_iii = ct_colony_0
+	b_cygni_iii = ct_colony_1
+	b_cygni_iii = ct_colony_2
+}

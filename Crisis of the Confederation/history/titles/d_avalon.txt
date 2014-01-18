@@ -1,0 +1,23 @@
+2509.1.1 = {
+	liege = "k_avalon"
+	law = true_cognatic_succession
+	law = succ_primogeniture
+	holder = 24020019 # Victoria I Locksley
+}
+2541.1.1 = { holder = "23020019" } # Victoria II Locksley
+2603.1.1 = { holder = "22020019" } # Victoria III Locksley
+2644.1.1 = { holder = "21020019" } # Victoria IV Locksley
+2680.1.1 = { holder = "20020019" } # Victoria V Locksley
+2699.1.1 = { holder = "19020019" } # Victoria VI Locksley
+2705.1.1 = {
+	holder = "18020019" # Victoria VII Locksley
+	law = succ_ultimogeniture
+}
+2764.1.1 = { holder = "17020019" } # Victoria VIII Locksley
+2796.1.1 = { holder = "16020019" } # Victoria IX Locksley
+2874.1.1 = { holder = "15020019" } # Victoria X Locksley
+2915.1.1 = { holder = "14020019" } # Victoria XI Locksley
+2949.1.1 = { holder = "13020019" } # Victoria XII Locksley
+2975.1.1 = { holder = "12020019" } # Victoria XIII Locksley
+2996.2.5 = { holder = "11020019" } # Victoria XIV Locksley
+2996.2.19 = { holder = "11020020" } # "Arthur Pendragon"

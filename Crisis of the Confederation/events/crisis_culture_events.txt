@@ -1,0 +1,4288 @@
+namespace = crisis_culture
+
+# Character assimilates to another character's culture
+# FROM is the character with the new culture group
+character_event = {
+	id = crisis_culture.0
+	desc = "EVTDESCRISISCULTURE0"
+	picture = GFX_evt_culture
+	is_triggered_only = yes
+	
+	trigger = { NOT = { culture_group = FROM } } # Must be in a different culture group from FROM
+	
+	option = {
+		name = "EVTOPTACRISISCULTURE0"
+		FROM = {
+			limit = { culture_group = terran_group }
+			ROOT = {
+				limit = {
+					OR = {
+						culture = anglo_xingjie
+						culture = anglo_celestean
+						culture = anglo_sexto_solar
+						culture = anglo_samawati
+						culture = anglo_angani
+						culture = anglo_frontiersman
+						culture = anglo_centauri
+						culture = anglo_tengoku
+						culture = anglo_bianjiangese
+						culture = anglo_orion
+						culture = anglo_mukta
+						culture = anglo_tarkan
+						culture = anglo_avalonian
+						culture = anglo_strugatskite
+						culture = anglo_edemite
+					}
+				}
+				culture = anglo_terran
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = arab_xingjie
+						culture = arab_celestean
+						culture = arab_sexto_solar
+						culture = arab_samawati
+						culture = arab_angani
+						culture = arab_frontiersman
+						culture = arab_centauri
+						culture = arab_tengoku
+						culture = arab_bianjiangese
+						culture = arab_orion
+						culture = arab_mukta
+						culture = arab_tarkan
+						culture = arab_avalonian
+						culture = arab_strugatskite
+						culture = arab_edemite
+					}
+				}
+				culture = arab_terran
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = east_afro_xingjie
+						culture = east_afro_celestean
+						culture = east_afro_sexto_solar
+						culture = east_afro_samawati
+						culture = east_afro_angani
+						culture = east_afro_frontiersman
+						culture = east_afro_centauri
+						culture = east_afro_tengoku
+						culture = east_afro_bianjiangese
+						culture = east_afro_orion
+						culture = east_afro_mukta
+						culture = east_afro_tarkan
+						culture = east_afro_avalonian
+						culture = east_afro_strugatskite
+						culture = east_afro_edemite
+					}
+				}
+				culture = east_afro_terran
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = ethiopian_xingjie
+						culture = ethiopian_celestean
+						culture = ethiopian_sexto_solar
+						culture = ethiopian_samawati
+						culture = ethiopian_angani
+						culture = ethiopian_frontiersman
+						culture = ethiopian_centauri
+						culture = ethiopian_tengoku
+						culture = ethiopian_bianjiangese
+						culture = ethiopian_orion
+						culture = ethiopian_mukta
+						culture = ethiopian_tarkan
+						culture = ethiopian_avalonian
+						culture = ethiopian_strugatskite
+						culture = ethiopian_edemite
+					}
+				}
+				culture = ethiopian_terran
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = hispanic_xingjie
+						culture = hispanic_celestean
+						culture = hispanic_sexto_solar
+						culture = hispanic_samawati
+						culture = hispanic_angani
+						culture = hispanic_frontiersman
+						culture = hispanic_centauri
+						culture = hispanic_tengoku
+						culture = hispanic_bianjiangese
+						culture = hispanic_orion
+						culture = hispanic_mukta
+						culture = hispanic_tarkan
+						culture = hispanic_avalonian
+						culture = hispanic_strugatskite
+						culture = hispanic_edemite
+					}
+				}
+				culture = hispanic_terran
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = indo_xingjie
+						culture = indo_celestean
+						culture = indo_sexto_solar
+						culture = indo_samawati
+						culture = indo_angani
+						culture = indo_frontiersman
+						culture = indo_centauri
+						culture = indo_tengoku
+						culture = indo_bianjiangese
+						culture = indo_orion
+						culture = indo_mukta
+						culture = indo_tarkan
+						culture = indo_avalonian
+						culture = indo_strugatskite
+						culture = indo_edemite
+					}
+				}
+				culture = indo_terran
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = iranian_xingjie
+						culture = iranian_celestean
+						culture = iranian_sexto_solar
+						culture = iranian_samawati
+						culture = iranian_angani
+						culture = iranian_frontiersman
+						culture = iranian_centauri
+						culture = iranian_tengoku
+						culture = iranian_bianjiangese
+						culture = iranian_orion
+						culture = iranian_mukta
+						culture = iranian_tarkan
+						culture = iranian_avalonian
+						culture = iranian_strugatskite
+						culture = iranian_edemite
+					}
+				}
+				culture = iranian_terran
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = japanese_xingjie
+						culture = japanese_celestean
+						culture = japanese_sexto_solar
+						culture = japanese_samawati
+						culture = japanese_angani
+						culture = japanese_frontiersman
+						culture = japanese_centauri
+						culture = japanese_tengoku
+						culture = japanese_bianjiangese
+						culture = japanese_orion
+						culture = japanese_mukta
+						culture = japanese_tarkan
+						culture = japanese_avalonian
+						culture = japanese_strugatskite
+						culture = japanese_edemite
+					}
+				}
+				culture = japanese_terran
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = mesoamerican_xingjie
+						culture = mesoamerican_celestean
+						culture = mesoamerican_sexto_solar
+						culture = mesoamerican_samawati
+						culture = mesoamerican_angani
+						culture = mesoamerican_frontiersman
+						culture = mesoamerican_centauri
+						culture = mesoamerican_tengoku
+						culture = mesoamerican_bianjiangese
+						culture = mesoamerican_orion
+						culture = mesoamerican_mukta
+						culture = mesoamerican_tarkan
+						culture = mesoamerican_avalonian
+						culture = mesoamerican_strugatskite
+						culture = mesoamerican_edemite
+					}
+				}
+				culture = mesoamerican_terran
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = russo_xingjie
+						culture = russo_celestean
+						culture = russo_sexto_solar
+						culture = russo_samawati
+						culture = russo_angani
+						culture = russo_frontiersman
+						culture = russo_centauri
+						culture = russo_tengoku
+						culture = russo_bianjiangese
+						culture = russo_orion
+						culture = russo_mukta
+						culture = russo_tarkan
+						culture = russo_avalonian
+						culture = russo_strugatskite
+						culture = russo_edemite
+					}
+				}
+				culture = russo_terran
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = sino_xingjie
+						culture = sino_celestean
+						culture = sino_sexto_solar
+						culture = sino_samawati
+						culture = sino_angani
+						culture = sino_frontiersman
+						culture = sino_centauri
+						culture = sino_tengoku
+						culture = sino_bianjiangese
+						culture = sino_orion
+						culture = sino_mukta
+						culture = sino_tarkan
+						culture = sino_avalonian
+						culture = sino_strugatskite
+						culture = sino_edemite
+					}
+				}
+				culture = sino_terran
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = west_afro_xingjie
+						culture = west_afro_celestean
+						culture = west_afro_sexto_solar
+						culture = west_afro_samawati
+						culture = west_afro_angani
+						culture = west_afro_frontiersman
+						culture = west_afro_centauri
+						culture = west_afro_tengoku
+						culture = west_afro_bianjiangese
+						culture = west_afro_orion
+						culture = west_afro_mukta
+						culture = west_afro_tarkan
+						culture = west_afro_avalonian
+						culture = west_afro_strugatskite
+						culture = west_afro_edemite
+					}
+				}
+				culture = west_afro_terran
+			}
+		}
+		FROM = {
+			limit = { culture_group = xingjie_group }
+			ROOT = {
+				limit = {
+					OR = {
+						culture = anglo_terran
+						culture = anglo_celestean
+						culture = anglo_sexto_solar
+						culture = anglo_samawati
+						culture = anglo_angani
+						culture = anglo_frontiersman
+						culture = anglo_centauri
+						culture = anglo_tengoku
+						culture = anglo_bianjiangese
+						culture = anglo_orion
+						culture = anglo_mukta
+						culture = anglo_tarkan
+						culture = anglo_avalonian
+						culture = anglo_strugatskite
+						culture = anglo_edemite
+					}
+				}
+				culture = anglo_xingjie
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = arab_terran
+						culture = arab_celestean
+						culture = arab_sexto_solar
+						culture = arab_samawati
+						culture = arab_angani
+						culture = arab_frontiersman
+						culture = arab_centauri
+						culture = arab_tengoku
+						culture = arab_bianjiangese
+						culture = arab_orion
+						culture = arab_mukta
+						culture = arab_tarkan
+						culture = arab_avalonian
+						culture = arab_strugatskite
+						culture = arab_edemite
+					}
+				}
+				culture = arab_xingjie
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = east_afro_terran
+						culture = east_afro_celestean
+						culture = east_afro_sexto_solar
+						culture = east_afro_samawati
+						culture = east_afro_angani
+						culture = east_afro_frontiersman
+						culture = east_afro_centauri
+						culture = east_afro_tengoku
+						culture = east_afro_bianjiangese
+						culture = east_afro_orion
+						culture = east_afro_mukta
+						culture = east_afro_tarkan
+						culture = east_afro_avalonian
+						culture = east_afro_strugatskite
+						culture = east_afro_edemite
+					}
+				}
+				culture = east_afro_xingjie
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = ethiopian_terran
+						culture = ethiopian_celestean
+						culture = ethiopian_sexto_solar
+						culture = ethiopian_samawati
+						culture = ethiopian_angani
+						culture = ethiopian_frontiersman
+						culture = ethiopian_centauri
+						culture = ethiopian_tengoku
+						culture = ethiopian_bianjiangese
+						culture = ethiopian_orion
+						culture = ethiopian_mukta
+						culture = ethiopian_tarkan
+						culture = ethiopian_avalonian
+						culture = ethiopian_strugatskite
+						culture = ethiopian_edemite
+					}
+				}
+				culture = ethiopian_xingjie
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = hispanic_terran
+						culture = hispanic_celestean
+						culture = hispanic_sexto_solar
+						culture = hispanic_samawati
+						culture = hispanic_angani
+						culture = hispanic_frontiersman
+						culture = hispanic_centauri
+						culture = hispanic_tengoku
+						culture = hispanic_bianjiangese
+						culture = hispanic_orion
+						culture = hispanic_mukta
+						culture = hispanic_tarkan
+						culture = hispanic_avalonian
+						culture = hispanic_strugatskite
+						culture = hispanic_edemite
+					}
+				}
+				culture = hispanic_xingjie
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = indo_terran
+						culture = indo_celestean
+						culture = indo_sexto_solar
+						culture = indo_samawati
+						culture = indo_angani
+						culture = indo_frontiersman
+						culture = indo_centauri
+						culture = indo_tengoku
+						culture = indo_bianjiangese
+						culture = indo_orion
+						culture = indo_mukta
+						culture = indo_tarkan
+						culture = indo_avalonian
+						culture = indo_strugatskite
+						culture = indo_edemite
+					}
+				}
+				culture = indo_xingjie
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = iranian_terran
+						culture = iranian_celestean
+						culture = iranian_sexto_solar
+						culture = iranian_samawati
+						culture = iranian_angani
+						culture = iranian_frontiersman
+						culture = iranian_centauri
+						culture = iranian_tengoku
+						culture = iranian_bianjiangese
+						culture = iranian_orion
+						culture = iranian_mukta
+						culture = iranian_tarkan
+						culture = iranian_avalonian
+						culture = iranian_strugatskite
+						culture = iranian_edemite
+					}
+				}
+				culture = iranian_xingjie
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = japanese_terran
+						culture = japanese_celestean
+						culture = japanese_sexto_solar
+						culture = japanese_samawati
+						culture = japanese_angani
+						culture = japanese_frontiersman
+						culture = japanese_centauri
+						culture = japanese_tengoku
+						culture = japanese_bianjiangese
+						culture = japanese_orion
+						culture = japanese_mukta
+						culture = japanese_tarkan
+						culture = japanese_avalonian
+						culture = japanese_strugatskite
+						culture = japanese_edemite
+					}
+				}
+				culture = japanese_xingjie
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = mesoamerican_terran
+						culture = mesoamerican_celestean
+						culture = mesoamerican_sexto_solar
+						culture = mesoamerican_samawati
+						culture = mesoamerican_angani
+						culture = mesoamerican_frontiersman
+						culture = mesoamerican_centauri
+						culture = mesoamerican_tengoku
+						culture = mesoamerican_bianjiangese
+						culture = mesoamerican_orion
+						culture = mesoamerican_mukta
+						culture = mesoamerican_tarkan
+						culture = mesoamerican_avalonian
+						culture = mesoamerican_strugatskite
+						culture = mesoamerican_edemite
+					}
+				}
+				culture = mesoamerican_xingjie
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = russo_terran
+						culture = russo_celestean
+						culture = russo_sexto_solar
+						culture = russo_samawati
+						culture = russo_angani
+						culture = russo_frontiersman
+						culture = russo_centauri
+						culture = russo_tengoku
+						culture = russo_bianjiangese
+						culture = russo_orion
+						culture = russo_mukta
+						culture = russo_tarkan
+						culture = russo_avalonian
+						culture = russo_strugatskite
+						culture = russo_edemite
+					}
+				}
+				culture = russo_xingjie
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = sino_terran
+						culture = sino_celestean
+						culture = sino_sexto_solar
+						culture = sino_samawati
+						culture = sino_angani
+						culture = sino_frontiersman
+						culture = sino_centauri
+						culture = sino_tengoku
+						culture = sino_bianjiangese
+						culture = sino_orion
+						culture = sino_mukta
+						culture = sino_tarkan
+						culture = sino_avalonian
+						culture = sino_strugatskite
+						culture = sino_edemite
+					}
+				}
+				culture = sino_xingjie
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = west_afro_terran
+						culture = west_afro_celestean
+						culture = west_afro_sexto_solar
+						culture = west_afro_samawati
+						culture = west_afro_angani
+						culture = west_afro_frontiersman
+						culture = west_afro_centauri
+						culture = west_afro_tengoku
+						culture = west_afro_bianjiangese
+						culture = west_afro_orion
+						culture = west_afro_mukta
+						culture = west_afro_tarkan
+						culture = west_afro_avalonian
+						culture = west_afro_strugatskite
+						culture = west_afro_edemite
+					}
+				}
+				culture = west_afro_xingjie
+			}
+		}
+		FROM = {
+			limit = { culture_group = celestean_group }
+			ROOT = {
+				limit = {
+					OR = {
+						culture = anglo_xingjie
+						culture = anglo_terran
+						culture = anglo_sexto_solar
+						culture = anglo_samawati
+						culture = anglo_angani
+						culture = anglo_frontiersman
+						culture = anglo_centauri
+						culture = anglo_tengoku
+						culture = anglo_bianjiangese
+						culture = anglo_orion
+						culture = anglo_mukta
+						culture = anglo_tarkan
+						culture = anglo_avalonian
+						culture = anglo_strugatskite
+						culture = anglo_edemite
+					}
+				}
+				culture = anglo_celestean
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = arab_xingjie
+						culture = arab_terran
+						culture = arab_sexto_solar
+						culture = arab_samawati
+						culture = arab_angani
+						culture = arab_frontiersman
+						culture = arab_centauri
+						culture = arab_tengoku
+						culture = arab_bianjiangese
+						culture = arab_orion
+						culture = arab_mukta
+						culture = arab_tarkan
+						culture = arab_avalonian
+						culture = arab_strugatskite
+						culture = arab_edemite
+					}
+				}
+				culture = arab_celestean
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = east_afro_xingjie
+						culture = east_afro_terran
+						culture = east_afro_sexto_solar
+						culture = east_afro_samawati
+						culture = east_afro_angani
+						culture = east_afro_frontiersman
+						culture = east_afro_centauri
+						culture = east_afro_tengoku
+						culture = east_afro_bianjiangese
+						culture = east_afro_orion
+						culture = east_afro_mukta
+						culture = east_afro_tarkan
+						culture = east_afro_avalonian
+						culture = east_afro_strugatskite
+						culture = east_afro_edemite
+					}
+				}
+				culture = east_afro_celestean
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = ethiopian_xingjie
+						culture = ethiopian_terran
+						culture = ethiopian_sexto_solar
+						culture = ethiopian_samawati
+						culture = ethiopian_angani
+						culture = ethiopian_frontiersman
+						culture = ethiopian_centauri
+						culture = ethiopian_tengoku
+						culture = ethiopian_bianjiangese
+						culture = ethiopian_orion
+						culture = ethiopian_mukta
+						culture = ethiopian_tarkan
+						culture = ethiopian_avalonian
+						culture = ethiopian_strugatskite
+						culture = ethiopian_edemite
+					}
+				}
+				culture = ethiopian_celestean
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = hispanic_xingjie
+						culture = hispanic_terran
+						culture = hispanic_sexto_solar
+						culture = hispanic_samawati
+						culture = hispanic_angani
+						culture = hispanic_frontiersman
+						culture = hispanic_centauri
+						culture = hispanic_tengoku
+						culture = hispanic_bianjiangese
+						culture = hispanic_orion
+						culture = hispanic_mukta
+						culture = hispanic_tarkan
+						culture = hispanic_avalonian
+						culture = hispanic_strugatskite
+						culture = hispanic_edemite
+					}
+				}
+				culture = hispanic_celestean
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = indo_xingjie
+						culture = indo_terran
+						culture = indo_sexto_solar
+						culture = indo_samawati
+						culture = indo_angani
+						culture = indo_frontiersman
+						culture = indo_centauri
+						culture = indo_tengoku
+						culture = indo_bianjiangese
+						culture = indo_orion
+						culture = indo_mukta
+						culture = indo_tarkan
+						culture = indo_avalonian
+						culture = indo_strugatskite
+						culture = indo_edemite
+					}
+				}
+				culture = indo_celestean
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = iranian_xingjie
+						culture = iranian_terran
+						culture = iranian_sexto_solar
+						culture = iranian_samawati
+						culture = iranian_angani
+						culture = iranian_frontiersman
+						culture = iranian_centauri
+						culture = iranian_tengoku
+						culture = iranian_bianjiangese
+						culture = iranian_orion
+						culture = iranian_mukta
+						culture = iranian_tarkan
+						culture = iranian_avalonian
+						culture = iranian_strugatskite
+						culture = iranian_edemite
+					}
+				}
+				culture = iranian_celestean
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = japanese_xingjie
+						culture = japanese_terran
+						culture = japanese_sexto_solar
+						culture = japanese_samawati
+						culture = japanese_angani
+						culture = japanese_frontiersman
+						culture = japanese_centauri
+						culture = japanese_tengoku
+						culture = japanese_bianjiangese
+						culture = japanese_orion
+						culture = japanese_mukta
+						culture = japanese_tarkan
+						culture = japanese_avalonian
+						culture = japanese_strugatskite
+						culture = japanese_edemite
+					}
+				}
+				culture = japanese_celestean
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = mesoamerican_xingjie
+						culture = mesoamerican_terran
+						culture = mesoamerican_sexto_solar
+						culture = mesoamerican_samawati
+						culture = mesoamerican_angani
+						culture = mesoamerican_frontiersman
+						culture = mesoamerican_centauri
+						culture = mesoamerican_tengoku
+						culture = mesoamerican_bianjiangese
+						culture = mesoamerican_orion
+						culture = mesoamerican_mukta
+						culture = mesoamerican_tarkan
+						culture = mesoamerican_avalonian
+						culture = mesoamerican_strugatskite
+						culture = mesoamerican_edemite
+					}
+				}
+				culture = mesoamerican_celestean
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = russo_xingjie
+						culture = russo_terran
+						culture = russo_sexto_solar
+						culture = russo_samawati
+						culture = russo_angani
+						culture = russo_frontiersman
+						culture = russo_centauri
+						culture = russo_tengoku
+						culture = russo_bianjiangese
+						culture = russo_orion
+						culture = russo_mukta
+						culture = russo_tarkan
+						culture = russo_avalonian
+						culture = russo_strugatskite
+						culture = russo_edemite
+					}
+				}
+				culture = russo_celestean
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = sino_xingjie
+						culture = sino_terran
+						culture = sino_sexto_solar
+						culture = sino_samawati
+						culture = sino_angani
+						culture = sino_frontiersman
+						culture = sino_centauri
+						culture = sino_tengoku
+						culture = sino_bianjiangese
+						culture = sino_orion
+						culture = sino_mukta
+						culture = sino_tarkan
+						culture = sino_avalonian
+						culture = sino_strugatskite
+						culture = sino_edemite
+					}
+				}
+				culture = sino_celestean
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = west_afro_xingjie
+						culture = west_afro_terran
+						culture = west_afro_sexto_solar
+						culture = west_afro_samawati
+						culture = west_afro_angani
+						culture = west_afro_frontiersman
+						culture = west_afro_centauri
+						culture = west_afro_tengoku
+						culture = west_afro_bianjiangese
+						culture = west_afro_orion
+						culture = west_afro_mukta
+						culture = west_afro_tarkan
+						culture = west_afro_avalonian
+						culture = west_afro_strugatskite
+						culture = west_afro_edemite
+					}
+				}
+				culture = west_afro_celestean
+			}
+		}
+		FROM = {
+			limit = { culture_group = sexto_solar_group }
+			ROOT = {
+				limit = {
+					OR = {
+						culture = anglo_xingjie
+						culture = anglo_celestean
+						culture = anglo_terran
+						culture = anglo_samawati
+						culture = anglo_angani
+						culture = anglo_frontiersman
+						culture = anglo_centauri
+						culture = anglo_tengoku
+						culture = anglo_bianjiangese
+						culture = anglo_orion
+						culture = anglo_mukta
+						culture = anglo_tarkan
+						culture = anglo_avalonian
+						culture = anglo_strugatskite
+						culture = anglo_edemite
+					}
+				}
+				culture = anglo_sexto_solar
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = arab_xingjie
+						culture = arab_celestean
+						culture = arab_terran
+						culture = arab_samawati
+						culture = arab_angani
+						culture = arab_frontiersman
+						culture = arab_centauri
+						culture = arab_tengoku
+						culture = arab_bianjiangese
+						culture = arab_orion
+						culture = arab_mukta
+						culture = arab_tarkan
+						culture = arab_avalonian
+						culture = arab_strugatskite
+						culture = arab_edemite
+					}
+				}
+				culture = arab_sexto_solar
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = east_afro_xingjie
+						culture = east_afro_celestean
+						culture = east_afro_terran
+						culture = east_afro_samawati
+						culture = east_afro_angani
+						culture = east_afro_frontiersman
+						culture = east_afro_centauri
+						culture = east_afro_tengoku
+						culture = east_afro_bianjiangese
+						culture = east_afro_orion
+						culture = east_afro_mukta
+						culture = east_afro_tarkan
+						culture = east_afro_avalonian
+						culture = east_afro_strugatskite
+						culture = east_afro_edemite
+					}
+				}
+				culture = east_afro_sexto_solar
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = ethiopian_xingjie
+						culture = ethiopian_celestean
+						culture = ethiopian_terran
+						culture = ethiopian_samawati
+						culture = ethiopian_angani
+						culture = ethiopian_frontiersman
+						culture = ethiopian_centauri
+						culture = ethiopian_tengoku
+						culture = ethiopian_bianjiangese
+						culture = ethiopian_orion
+						culture = ethiopian_mukta
+						culture = ethiopian_tarkan
+						culture = ethiopian_avalonian
+						culture = ethiopian_strugatskite
+						culture = ethiopian_edemite
+					}
+				}
+				culture = ethiopian_sexto_solar
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = hispanic_xingjie
+						culture = hispanic_celestean
+						culture = hispanic_terran
+						culture = hispanic_samawati
+						culture = hispanic_angani
+						culture = hispanic_frontiersman
+						culture = hispanic_centauri
+						culture = hispanic_tengoku
+						culture = hispanic_bianjiangese
+						culture = hispanic_orion
+						culture = hispanic_mukta
+						culture = hispanic_tarkan
+						culture = hispanic_avalonian
+						culture = hispanic_strugatskite
+						culture = hispanic_edemite
+					}
+				}
+				culture = hispanic_sexto_solar
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = indo_xingjie
+						culture = indo_celestean
+						culture = indo_terran
+						culture = indo_samawati
+						culture = indo_angani
+						culture = indo_frontiersman
+						culture = indo_centauri
+						culture = indo_tengoku
+						culture = indo_bianjiangese
+						culture = indo_orion
+						culture = indo_mukta
+						culture = indo_tarkan
+						culture = indo_avalonian
+						culture = indo_strugatskite
+						culture = indo_edemite
+					}
+				}
+				culture = indo_sexto_solar
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = iranian_xingjie
+						culture = iranian_celestean
+						culture = iranian_terran
+						culture = iranian_samawati
+						culture = iranian_angani
+						culture = iranian_frontiersman
+						culture = iranian_centauri
+						culture = iranian_tengoku
+						culture = iranian_bianjiangese
+						culture = iranian_orion
+						culture = iranian_mukta
+						culture = iranian_tarkan
+						culture = iranian_avalonian
+						culture = iranian_strugatskite
+						culture = iranian_edemite
+					}
+				}
+				culture = iranian_sexto_solar
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = japanese_xingjie
+						culture = japanese_celestean
+						culture = japanese_terran
+						culture = japanese_samawati
+						culture = japanese_angani
+						culture = japanese_frontiersman
+						culture = japanese_centauri
+						culture = japanese_tengoku
+						culture = japanese_bianjiangese
+						culture = japanese_orion
+						culture = japanese_mukta
+						culture = japanese_tarkan
+						culture = japanese_avalonian
+						culture = japanese_strugatskite
+						culture = japanese_edemite
+					}
+				}
+				culture = japanese_sexto_solar
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = mesoamerican_xingjie
+						culture = mesoamerican_celestean
+						culture = mesoamerican_terran
+						culture = mesoamerican_samawati
+						culture = mesoamerican_angani
+						culture = mesoamerican_frontiersman
+						culture = mesoamerican_centauri
+						culture = mesoamerican_tengoku
+						culture = mesoamerican_bianjiangese
+						culture = mesoamerican_orion
+						culture = mesoamerican_mukta
+						culture = mesoamerican_tarkan
+						culture = mesoamerican_avalonian
+						culture = mesoamerican_strugatskite
+						culture = mesoamerican_edemite
+					}
+				}
+				culture = mesoamerican_sexto_solar
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = russo_xingjie
+						culture = russo_celestean
+						culture = russo_terran
+						culture = russo_samawati
+						culture = russo_angani
+						culture = russo_frontiersman
+						culture = russo_centauri
+						culture = russo_tengoku
+						culture = russo_bianjiangese
+						culture = russo_orion
+						culture = russo_mukta
+						culture = russo_tarkan
+						culture = russo_avalonian
+						culture = russo_strugatskite
+						culture = russo_edemite
+					}
+				}
+				culture = russo_sexto_solar
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = sino_xingjie
+						culture = sino_celestean
+						culture = sino_terran
+						culture = sino_samawati
+						culture = sino_angani
+						culture = sino_frontiersman
+						culture = sino_centauri
+						culture = sino_tengoku
+						culture = sino_bianjiangese
+						culture = sino_orion
+						culture = sino_mukta
+						culture = sino_tarkan
+						culture = sino_avalonian
+						culture = sino_strugatskite
+						culture = sino_edemite
+					}
+				}
+				culture = sino_sexto_solar
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = west_afro_xingjie
+						culture = west_afro_celestean
+						culture = west_afro_terran
+						culture = west_afro_samawati
+						culture = west_afro_angani
+						culture = west_afro_frontiersman
+						culture = west_afro_centauri
+						culture = west_afro_tengoku
+						culture = west_afro_bianjiangese
+						culture = west_afro_orion
+						culture = west_afro_mukta
+						culture = west_afro_tarkan
+						culture = west_afro_avalonian
+						culture = west_afro_strugatskite
+						culture = west_afro_edemite
+					}
+				}
+				culture = west_afro_sexto_solar
+			}
+		}
+		FROM = {
+			limit = { culture_group = samawati_group }
+			ROOT = {
+				limit = {
+					OR = {
+						culture = anglo_xingjie
+						culture = anglo_celestean
+						culture = anglo_sexto_solar
+						culture = anglo_terran
+						culture = anglo_angani
+						culture = anglo_frontiersman
+						culture = anglo_centauri
+						culture = anglo_tengoku
+						culture = anglo_bianjiangese
+						culture = anglo_orion
+						culture = anglo_mukta
+						culture = anglo_tarkan
+						culture = anglo_avalonian
+						culture = anglo_strugatskite
+						culture = anglo_edemite
+					}
+				}
+				culture = anglo_samawati
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = arab_xingjie
+						culture = arab_celestean
+						culture = arab_sexto_solar
+						culture = arab_terran
+						culture = arab_angani
+						culture = arab_frontiersman
+						culture = arab_centauri
+						culture = arab_tengoku
+						culture = arab_bianjiangese
+						culture = arab_orion
+						culture = arab_mukta
+						culture = arab_tarkan
+						culture = arab_avalonian
+						culture = arab_strugatskite
+						culture = arab_edemite
+					}
+				}
+				culture = arab_samawati
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = east_afro_xingjie
+						culture = east_afro_celestean
+						culture = east_afro_sexto_solar
+						culture = east_afro_terran
+						culture = east_afro_angani
+						culture = east_afro_frontiersman
+						culture = east_afro_centauri
+						culture = east_afro_tengoku
+						culture = east_afro_bianjiangese
+						culture = east_afro_orion
+						culture = east_afro_mukta
+						culture = east_afro_tarkan
+						culture = east_afro_avalonian
+						culture = east_afro_strugatskite
+						culture = east_afro_edemite
+					}
+				}
+				culture = east_afro_samawati
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = ethiopian_xingjie
+						culture = ethiopian_celestean
+						culture = ethiopian_sexto_solar
+						culture = ethiopian_terran
+						culture = ethiopian_angani
+						culture = ethiopian_frontiersman
+						culture = ethiopian_centauri
+						culture = ethiopian_tengoku
+						culture = ethiopian_bianjiangese
+						culture = ethiopian_orion
+						culture = ethiopian_mukta
+						culture = ethiopian_tarkan
+						culture = ethiopian_avalonian
+						culture = ethiopian_strugatskite
+						culture = ethiopian_edemite
+					}
+				}
+				culture = ethiopian_samawati
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = hispanic_xingjie
+						culture = hispanic_celestean
+						culture = hispanic_sexto_solar
+						culture = hispanic_terran
+						culture = hispanic_angani
+						culture = hispanic_frontiersman
+						culture = hispanic_centauri
+						culture = hispanic_tengoku
+						culture = hispanic_bianjiangese
+						culture = hispanic_orion
+						culture = hispanic_mukta
+						culture = hispanic_tarkan
+						culture = hispanic_avalonian
+						culture = hispanic_strugatskite
+						culture = hispanic_edemite
+					}
+				}
+				culture = hispanic_samawati
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = indo_xingjie
+						culture = indo_celestean
+						culture = indo_sexto_solar
+						culture = indo_terran
+						culture = indo_angani
+						culture = indo_frontiersman
+						culture = indo_centauri
+						culture = indo_tengoku
+						culture = indo_bianjiangese
+						culture = indo_orion
+						culture = indo_mukta
+						culture = indo_tarkan
+						culture = indo_avalonian
+						culture = indo_strugatskite
+						culture = indo_edemite
+					}
+				}
+				culture = indo_samawati
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = iranian_xingjie
+						culture = iranian_celestean
+						culture = iranian_sexto_solar
+						culture = iranian_terran
+						culture = iranian_angani
+						culture = iranian_frontiersman
+						culture = iranian_centauri
+						culture = iranian_tengoku
+						culture = iranian_bianjiangese
+						culture = iranian_orion
+						culture = iranian_mukta
+						culture = iranian_tarkan
+						culture = iranian_avalonian
+						culture = iranian_strugatskite
+						culture = iranian_edemite
+					}
+				}
+				culture = iranian_samawati
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = japanese_xingjie
+						culture = japanese_celestean
+						culture = japanese_sexto_solar
+						culture = japanese_terran
+						culture = japanese_angani
+						culture = japanese_frontiersman
+						culture = japanese_centauri
+						culture = japanese_tengoku
+						culture = japanese_bianjiangese
+						culture = japanese_orion
+						culture = japanese_mukta
+						culture = japanese_tarkan
+						culture = japanese_avalonian
+						culture = japanese_strugatskite
+						culture = japanese_edemite
+					}
+				}
+				culture = japanese_samawati
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = mesoamerican_xingjie
+						culture = mesoamerican_celestean
+						culture = mesoamerican_sexto_solar
+						culture = mesoamerican_terran
+						culture = mesoamerican_angani
+						culture = mesoamerican_frontiersman
+						culture = mesoamerican_centauri
+						culture = mesoamerican_tengoku
+						culture = mesoamerican_bianjiangese
+						culture = mesoamerican_orion
+						culture = mesoamerican_mukta
+						culture = mesoamerican_tarkan
+						culture = mesoamerican_avalonian
+						culture = mesoamerican_strugatskite
+						culture = mesoamerican_edemite
+					}
+				}
+				culture = mesoamerican_samawati
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = russo_xingjie
+						culture = russo_celestean
+						culture = russo_sexto_solar
+						culture = russo_terran
+						culture = russo_angani
+						culture = russo_frontiersman
+						culture = russo_centauri
+						culture = russo_tengoku
+						culture = russo_bianjiangese
+						culture = russo_orion
+						culture = russo_mukta
+						culture = russo_tarkan
+						culture = russo_avalonian
+						culture = russo_strugatskite
+						culture = russo_edemite
+					}
+				}
+				culture = russo_samawati
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = sino_xingjie
+						culture = sino_celestean
+						culture = sino_sexto_solar
+						culture = sino_terran
+						culture = sino_angani
+						culture = sino_frontiersman
+						culture = sino_centauri
+						culture = sino_tengoku
+						culture = sino_bianjiangese
+						culture = sino_orion
+						culture = sino_mukta
+						culture = sino_tarkan
+						culture = sino_avalonian
+						culture = sino_strugatskite
+						culture = sino_edemite
+					}
+				}
+				culture = sino_samawati
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = west_afro_xingjie
+						culture = west_afro_celestean
+						culture = west_afro_sexto_solar
+						culture = west_afro_terran
+						culture = west_afro_angani
+						culture = west_afro_frontiersman
+						culture = west_afro_centauri
+						culture = west_afro_tengoku
+						culture = west_afro_bianjiangese
+						culture = west_afro_orion
+						culture = west_afro_mukta
+						culture = west_afro_tarkan
+						culture = west_afro_avalonian
+						culture = west_afro_strugatskite
+						culture = west_afro_edemite
+					}
+				}
+				culture = west_afro_samawati
+			}
+		}
+		FROM = {
+			limit = { culture_group = angani_group }
+			ROOT = {
+				limit = {
+					OR = {
+						culture = anglo_xingjie
+						culture = anglo_celestean
+						culture = anglo_sexto_solar
+						culture = anglo_samawati
+						culture = anglo_terran
+						culture = anglo_frontiersman
+						culture = anglo_centauri
+						culture = anglo_tengoku
+						culture = anglo_bianjiangese
+						culture = anglo_orion
+						culture = anglo_mukta
+						culture = anglo_tarkan
+						culture = anglo_avalonian
+						culture = anglo_strugatskite
+						culture = anglo_edemite
+					}
+				}
+				culture = anglo_angani
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = arab_xingjie
+						culture = arab_celestean
+						culture = arab_sexto_solar
+						culture = arab_samawati
+						culture = arab_terran
+						culture = arab_frontiersman
+						culture = arab_centauri
+						culture = arab_tengoku
+						culture = arab_bianjiangese
+						culture = arab_orion
+						culture = arab_mukta
+						culture = arab_tarkan
+						culture = arab_avalonian
+						culture = arab_strugatskite
+						culture = arab_edemite
+					}
+				}
+				culture = arab_angani
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = east_afro_xingjie
+						culture = east_afro_celestean
+						culture = east_afro_sexto_solar
+						culture = east_afro_samawati
+						culture = east_afro_terran
+						culture = east_afro_frontiersman
+						culture = east_afro_centauri
+						culture = east_afro_tengoku
+						culture = east_afro_bianjiangese
+						culture = east_afro_orion
+						culture = east_afro_mukta
+						culture = east_afro_tarkan
+						culture = east_afro_avalonian
+						culture = east_afro_strugatskite
+						culture = east_afro_edemite
+					}
+				}
+				culture = east_afro_angani
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = ethiopian_xingjie
+						culture = ethiopian_celestean
+						culture = ethiopian_sexto_solar
+						culture = ethiopian_samawati
+						culture = ethiopian_terran
+						culture = ethiopian_frontiersman
+						culture = ethiopian_centauri
+						culture = ethiopian_tengoku
+						culture = ethiopian_bianjiangese
+						culture = ethiopian_orion
+						culture = ethiopian_mukta
+						culture = ethiopian_tarkan
+						culture = ethiopian_avalonian
+						culture = ethiopian_strugatskite
+						culture = ethiopian_edemite
+					}
+				}
+				culture = ethiopian_angani
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = hispanic_xingjie
+						culture = hispanic_celestean
+						culture = hispanic_sexto_solar
+						culture = hispanic_samawati
+						culture = hispanic_terran
+						culture = hispanic_frontiersman
+						culture = hispanic_centauri
+						culture = hispanic_tengoku
+						culture = hispanic_bianjiangese
+						culture = hispanic_orion
+						culture = hispanic_mukta
+						culture = hispanic_tarkan
+						culture = hispanic_avalonian
+						culture = hispanic_strugatskite
+						culture = hispanic_edemite
+					}
+				}
+				culture = hispanic_angani
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = indo_xingjie
+						culture = indo_celestean
+						culture = indo_sexto_solar
+						culture = indo_samawati
+						culture = indo_terran
+						culture = indo_frontiersman
+						culture = indo_centauri
+						culture = indo_tengoku
+						culture = indo_bianjiangese
+						culture = indo_orion
+						culture = indo_mukta
+						culture = indo_tarkan
+						culture = indo_avalonian
+						culture = indo_strugatskite
+						culture = indo_edemite
+					}
+				}
+				culture = indo_angani
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = iranian_xingjie
+						culture = iranian_celestean
+						culture = iranian_sexto_solar
+						culture = iranian_samawati
+						culture = iranian_terran
+						culture = iranian_frontiersman
+						culture = iranian_centauri
+						culture = iranian_tengoku
+						culture = iranian_bianjiangese
+						culture = iranian_orion
+						culture = iranian_mukta
+						culture = iranian_tarkan
+						culture = iranian_avalonian
+						culture = iranian_strugatskite
+						culture = iranian_edemite
+					}
+				}
+				culture = iranian_angani
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = japanese_xingjie
+						culture = japanese_celestean
+						culture = japanese_sexto_solar
+						culture = japanese_samawati
+						culture = japanese_terran
+						culture = japanese_frontiersman
+						culture = japanese_centauri
+						culture = japanese_tengoku
+						culture = japanese_bianjiangese
+						culture = japanese_orion
+						culture = japanese_mukta
+						culture = japanese_tarkan
+						culture = japanese_avalonian
+						culture = japanese_strugatskite
+						culture = japanese_edemite
+					}
+				}
+				culture = japanese_angani
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = mesoamerican_xingjie
+						culture = mesoamerican_celestean
+						culture = mesoamerican_sexto_solar
+						culture = mesoamerican_samawati
+						culture = mesoamerican_terran
+						culture = mesoamerican_frontiersman
+						culture = mesoamerican_centauri
+						culture = mesoamerican_tengoku
+						culture = mesoamerican_bianjiangese
+						culture = mesoamerican_orion
+						culture = mesoamerican_mukta
+						culture = mesoamerican_tarkan
+						culture = mesoamerican_avalonian
+						culture = mesoamerican_strugatskite
+						culture = mesoamerican_edemite
+					}
+				}
+				culture = mesoamerican_angani
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = russo_xingjie
+						culture = russo_celestean
+						culture = russo_sexto_solar
+						culture = russo_samawati
+						culture = russo_terran
+						culture = russo_frontiersman
+						culture = russo_centauri
+						culture = russo_tengoku
+						culture = russo_bianjiangese
+						culture = russo_orion
+						culture = russo_mukta
+						culture = russo_tarkan
+						culture = russo_avalonian
+						culture = russo_strugatskite
+						culture = russo_edemite
+					}
+				}
+				culture = russo_angani
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = sino_xingjie
+						culture = sino_celestean
+						culture = sino_sexto_solar
+						culture = sino_samawati
+						culture = sino_terran
+						culture = sino_frontiersman
+						culture = sino_centauri
+						culture = sino_tengoku
+						culture = sino_bianjiangese
+						culture = sino_orion
+						culture = sino_mukta
+						culture = sino_tarkan
+						culture = sino_avalonian
+						culture = sino_strugatskite
+						culture = sino_edemite
+					}
+				}
+				culture = sino_angani
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = west_afro_xingjie
+						culture = west_afro_celestean
+						culture = west_afro_sexto_solar
+						culture = west_afro_samawati
+						culture = west_afro_terran
+						culture = west_afro_frontiersman
+						culture = west_afro_centauri
+						culture = west_afro_tengoku
+						culture = west_afro_bianjiangese
+						culture = west_afro_orion
+						culture = west_afro_mukta
+						culture = west_afro_tarkan
+						culture = west_afro_avalonian
+						culture = west_afro_strugatskite
+						culture = west_afro_edemite
+					}
+				}
+				culture = west_afro_angani
+			}
+		}
+		FROM = {
+			limit = { culture_group = frontiersman_group }
+			ROOT = {
+				limit = {
+					OR = {
+						culture = anglo_xingjie
+						culture = anglo_celestean
+						culture = anglo_sexto_solar
+						culture = anglo_samawati
+						culture = anglo_angani
+						culture = anglo_terran
+						culture = anglo_centauri
+						culture = anglo_tengoku
+						culture = anglo_bianjiangese
+						culture = anglo_orion
+						culture = anglo_mukta
+						culture = anglo_tarkan
+						culture = anglo_avalonian
+						culture = anglo_strugatskite
+						culture = anglo_edemite
+					}
+				}
+				culture = anglo_frontiersman
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = arab_xingjie
+						culture = arab_celestean
+						culture = arab_sexto_solar
+						culture = arab_samawati
+						culture = arab_angani
+						culture = arab_terran
+						culture = arab_centauri
+						culture = arab_tengoku
+						culture = arab_bianjiangese
+						culture = arab_orion
+						culture = arab_mukta
+						culture = arab_tarkan
+						culture = arab_avalonian
+						culture = arab_strugatskite
+						culture = arab_edemite
+					}
+				}
+				culture = arab_frontiersman
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = east_afro_xingjie
+						culture = east_afro_celestean
+						culture = east_afro_sexto_solar
+						culture = east_afro_samawati
+						culture = east_afro_angani
+						culture = east_afro_terran
+						culture = east_afro_centauri
+						culture = east_afro_tengoku
+						culture = east_afro_bianjiangese
+						culture = east_afro_orion
+						culture = east_afro_mukta
+						culture = east_afro_tarkan
+						culture = east_afro_avalonian
+						culture = east_afro_strugatskite
+						culture = east_afro_edemite
+					}
+				}
+				culture = east_afro_frontiersman
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = ethiopian_xingjie
+						culture = ethiopian_celestean
+						culture = ethiopian_sexto_solar
+						culture = ethiopian_samawati
+						culture = ethiopian_angani
+						culture = ethiopian_terran
+						culture = ethiopian_centauri
+						culture = ethiopian_tengoku
+						culture = ethiopian_bianjiangese
+						culture = ethiopian_orion
+						culture = ethiopian_mukta
+						culture = ethiopian_tarkan
+						culture = ethiopian_avalonian
+						culture = ethiopian_strugatskite
+						culture = ethiopian_edemite
+					}
+				}
+				culture = ethiopian_frontiersman
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = hispanic_xingjie
+						culture = hispanic_celestean
+						culture = hispanic_sexto_solar
+						culture = hispanic_samawati
+						culture = hispanic_angani
+						culture = hispanic_terran
+						culture = hispanic_centauri
+						culture = hispanic_tengoku
+						culture = hispanic_bianjiangese
+						culture = hispanic_orion
+						culture = hispanic_mukta
+						culture = hispanic_tarkan
+						culture = hispanic_avalonian
+						culture = hispanic_strugatskite
+						culture = hispanic_edemite
+					}
+				}
+				culture = hispanic_frontiersman
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = indo_xingjie
+						culture = indo_celestean
+						culture = indo_sexto_solar
+						culture = indo_samawati
+						culture = indo_angani
+						culture = indo_terran
+						culture = indo_centauri
+						culture = indo_tengoku
+						culture = indo_bianjiangese
+						culture = indo_orion
+						culture = indo_mukta
+						culture = indo_tarkan
+						culture = indo_avalonian
+						culture = indo_strugatskite
+						culture = indo_edemite
+					}
+				}
+				culture = indo_frontiersman
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = iranian_xingjie
+						culture = iranian_celestean
+						culture = iranian_sexto_solar
+						culture = iranian_samawati
+						culture = iranian_angani
+						culture = iranian_terran
+						culture = iranian_centauri
+						culture = iranian_tengoku
+						culture = iranian_bianjiangese
+						culture = iranian_orion
+						culture = iranian_mukta
+						culture = iranian_tarkan
+						culture = iranian_avalonian
+						culture = iranian_strugatskite
+						culture = iranian_edemite
+					}
+				}
+				culture = iranian_frontiersman
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = japanese_xingjie
+						culture = japanese_celestean
+						culture = japanese_sexto_solar
+						culture = japanese_samawati
+						culture = japanese_angani
+						culture = japanese_terran
+						culture = japanese_centauri
+						culture = japanese_tengoku
+						culture = japanese_bianjiangese
+						culture = japanese_orion
+						culture = japanese_mukta
+						culture = japanese_tarkan
+						culture = japanese_avalonian
+						culture = japanese_strugatskite
+						culture = japanese_edemite
+					}
+				}
+				culture = japanese_frontiersman
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = mesoamerican_xingjie
+						culture = mesoamerican_celestean
+						culture = mesoamerican_sexto_solar
+						culture = mesoamerican_samawati
+						culture = mesoamerican_angani
+						culture = mesoamerican_terran
+						culture = mesoamerican_centauri
+						culture = mesoamerican_tengoku
+						culture = mesoamerican_bianjiangese
+						culture = mesoamerican_orion
+						culture = mesoamerican_mukta
+						culture = mesoamerican_tarkan
+						culture = mesoamerican_avalonian
+						culture = mesoamerican_strugatskite
+						culture = mesoamerican_edemite
+					}
+				}
+				culture = mesoamerican_frontiersman
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = russo_xingjie
+						culture = russo_celestean
+						culture = russo_sexto_solar
+						culture = russo_samawati
+						culture = russo_angani
+						culture = russo_terran
+						culture = russo_centauri
+						culture = russo_tengoku
+						culture = russo_bianjiangese
+						culture = russo_orion
+						culture = russo_mukta
+						culture = russo_tarkan
+						culture = russo_avalonian
+						culture = russo_strugatskite
+						culture = russo_edemite
+					}
+				}
+				culture = russo_frontiersman
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = sino_xingjie
+						culture = sino_celestean
+						culture = sino_sexto_solar
+						culture = sino_samawati
+						culture = sino_angani
+						culture = sino_terran
+						culture = sino_centauri
+						culture = sino_tengoku
+						culture = sino_bianjiangese
+						culture = sino_orion
+						culture = sino_mukta
+						culture = sino_tarkan
+						culture = sino_avalonian
+						culture = sino_strugatskite
+						culture = sino_edemite
+					}
+				}
+				culture = sino_frontiersman
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = west_afro_xingjie
+						culture = west_afro_celestean
+						culture = west_afro_sexto_solar
+						culture = west_afro_samawati
+						culture = west_afro_angani
+						culture = west_afro_terran
+						culture = west_afro_centauri
+						culture = west_afro_tengoku
+						culture = west_afro_bianjiangese
+						culture = west_afro_orion
+						culture = west_afro_mukta
+						culture = west_afro_tarkan
+						culture = west_afro_avalonian
+						culture = west_afro_strugatskite
+						culture = west_afro_edemite
+					}
+				}
+				culture = west_afro_frontiersman
+			}
+		}
+		FROM = {
+			limit = { culture_group = centauri_group }
+			ROOT = {
+				limit = {
+					OR = {
+						culture = anglo_xingjie
+						culture = anglo_celestean
+						culture = anglo_sexto_solar
+						culture = anglo_samawati
+						culture = anglo_angani
+						culture = anglo_frontiersman
+						culture = anglo_terran
+						culture = anglo_tengoku
+						culture = anglo_bianjiangese
+						culture = anglo_orion
+						culture = anglo_mukta
+						culture = anglo_tarkan
+						culture = anglo_avalonian
+						culture = anglo_strugatskite
+						culture = anglo_edemite
+					}
+				}
+				culture = anglo_centauri
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = arab_xingjie
+						culture = arab_celestean
+						culture = arab_sexto_solar
+						culture = arab_samawati
+						culture = arab_angani
+						culture = arab_frontiersman
+						culture = arab_terran
+						culture = arab_tengoku
+						culture = arab_bianjiangese
+						culture = arab_orion
+						culture = arab_mukta
+						culture = arab_tarkan
+						culture = arab_avalonian
+						culture = arab_strugatskite
+						culture = arab_edemite
+					}
+				}
+				culture = arab_centauri
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = east_afro_xingjie
+						culture = east_afro_celestean
+						culture = east_afro_sexto_solar
+						culture = east_afro_samawati
+						culture = east_afro_angani
+						culture = east_afro_frontiersman
+						culture = east_afro_terran
+						culture = east_afro_tengoku
+						culture = east_afro_bianjiangese
+						culture = east_afro_orion
+						culture = east_afro_mukta
+						culture = east_afro_tarkan
+						culture = east_afro_avalonian
+						culture = east_afro_strugatskite
+						culture = east_afro_edemite
+					}
+				}
+				culture = east_afro_centauri
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = ethiopian_xingjie
+						culture = ethiopian_celestean
+						culture = ethiopian_sexto_solar
+						culture = ethiopian_samawati
+						culture = ethiopian_angani
+						culture = ethiopian_frontiersman
+						culture = ethiopian_terran
+						culture = ethiopian_tengoku
+						culture = ethiopian_bianjiangese
+						culture = ethiopian_orion
+						culture = ethiopian_mukta
+						culture = ethiopian_tarkan
+						culture = ethiopian_avalonian
+						culture = ethiopian_strugatskite
+						culture = ethiopian_edemite
+					}
+				}
+				culture = ethiopian_centauri
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = hispanic_xingjie
+						culture = hispanic_celestean
+						culture = hispanic_sexto_solar
+						culture = hispanic_samawati
+						culture = hispanic_angani
+						culture = hispanic_frontiersman
+						culture = hispanic_terran
+						culture = hispanic_tengoku
+						culture = hispanic_bianjiangese
+						culture = hispanic_orion
+						culture = hispanic_mukta
+						culture = hispanic_tarkan
+						culture = hispanic_avalonian
+						culture = hispanic_strugatskite
+						culture = hispanic_edemite
+					}
+				}
+				culture = hispanic_centauri
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = indo_xingjie
+						culture = indo_celestean
+						culture = indo_sexto_solar
+						culture = indo_samawati
+						culture = indo_angani
+						culture = indo_frontiersman
+						culture = indo_terran
+						culture = indo_tengoku
+						culture = indo_bianjiangese
+						culture = indo_orion
+						culture = indo_mukta
+						culture = indo_tarkan
+						culture = indo_avalonian
+						culture = indo_strugatskite
+						culture = indo_edemite
+					}
+				}
+				culture = indo_centauri
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = iranian_xingjie
+						culture = iranian_celestean
+						culture = iranian_sexto_solar
+						culture = iranian_samawati
+						culture = iranian_angani
+						culture = iranian_frontiersman
+						culture = iranian_terran
+						culture = iranian_tengoku
+						culture = iranian_bianjiangese
+						culture = iranian_orion
+						culture = iranian_mukta
+						culture = iranian_tarkan
+						culture = iranian_avalonian
+						culture = iranian_strugatskite
+						culture = iranian_edemite
+					}
+				}
+				culture = iranian_centauri
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = japanese_xingjie
+						culture = japanese_celestean
+						culture = japanese_sexto_solar
+						culture = japanese_samawati
+						culture = japanese_angani
+						culture = japanese_frontiersman
+						culture = japanese_terran
+						culture = japanese_tengoku
+						culture = japanese_bianjiangese
+						culture = japanese_orion
+						culture = japanese_mukta
+						culture = japanese_tarkan
+						culture = japanese_avalonian
+						culture = japanese_strugatskite
+						culture = japanese_edemite
+					}
+				}
+				culture = japanese_centauri
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = mesoamerican_xingjie
+						culture = mesoamerican_celestean
+						culture = mesoamerican_sexto_solar
+						culture = mesoamerican_samawati
+						culture = mesoamerican_angani
+						culture = mesoamerican_frontiersman
+						culture = mesoamerican_terran
+						culture = mesoamerican_tengoku
+						culture = mesoamerican_bianjiangese
+						culture = mesoamerican_orion
+						culture = mesoamerican_mukta
+						culture = mesoamerican_tarkan
+						culture = mesoamerican_avalonian
+						culture = mesoamerican_strugatskite
+						culture = mesoamerican_edemite
+					}
+				}
+				culture = mesoamerican_centauri
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = russo_xingjie
+						culture = russo_celestean
+						culture = russo_sexto_solar
+						culture = russo_samawati
+						culture = russo_angani
+						culture = russo_frontiersman
+						culture = russo_terran
+						culture = russo_tengoku
+						culture = russo_bianjiangese
+						culture = russo_orion
+						culture = russo_mukta
+						culture = russo_tarkan
+						culture = russo_avalonian
+						culture = russo_strugatskite
+						culture = russo_edemite
+					}
+				}
+				culture = russo_centauri
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = sino_xingjie
+						culture = sino_celestean
+						culture = sino_sexto_solar
+						culture = sino_samawati
+						culture = sino_angani
+						culture = sino_frontiersman
+						culture = sino_terran
+						culture = sino_tengoku
+						culture = sino_bianjiangese
+						culture = sino_orion
+						culture = sino_mukta
+						culture = sino_tarkan
+						culture = sino_avalonian
+						culture = sino_strugatskite
+						culture = sino_edemite
+					}
+				}
+				culture = sino_centauri
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = west_afro_xingjie
+						culture = west_afro_celestean
+						culture = west_afro_sexto_solar
+						culture = west_afro_samawati
+						culture = west_afro_angani
+						culture = west_afro_frontiersman
+						culture = west_afro_terran
+						culture = west_afro_tengoku
+						culture = west_afro_bianjiangese
+						culture = west_afro_orion
+						culture = west_afro_mukta
+						culture = west_afro_tarkan
+						culture = west_afro_avalonian
+						culture = west_afro_strugatskite
+						culture = west_afro_edemite
+					}
+				}
+				culture = west_afro_centauri
+			}
+		}
+		FROM = {
+			limit = { culture_group = tengoku_group }
+			ROOT = {
+				limit = {
+					OR = {
+						culture = anglo_xingjie
+						culture = anglo_celestean
+						culture = anglo_sexto_solar
+						culture = anglo_samawati
+						culture = anglo_angani
+						culture = anglo_frontiersman
+						culture = anglo_centauri
+						culture = anglo_terran
+						culture = anglo_bianjiangese
+						culture = anglo_orion
+						culture = anglo_mukta
+						culture = anglo_tarkan
+						culture = anglo_avalonian
+						culture = anglo_strugatskite
+						culture = anglo_edemite
+					}
+				}
+				culture = anglo_tengoku
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = arab_xingjie
+						culture = arab_celestean
+						culture = arab_sexto_solar
+						culture = arab_samawati
+						culture = arab_angani
+						culture = arab_frontiersman
+						culture = arab_centauri
+						culture = arab_terran
+						culture = arab_bianjiangese
+						culture = arab_orion
+						culture = arab_mukta
+						culture = arab_tarkan
+						culture = arab_avalonian
+						culture = arab_strugatskite
+						culture = arab_edemite
+					}
+				}
+				culture = arab_tengoku
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = east_afro_xingjie
+						culture = east_afro_celestean
+						culture = east_afro_sexto_solar
+						culture = east_afro_samawati
+						culture = east_afro_angani
+						culture = east_afro_frontiersman
+						culture = east_afro_centauri
+						culture = east_afro_terran
+						culture = east_afro_bianjiangese
+						culture = east_afro_orion
+						culture = east_afro_mukta
+						culture = east_afro_tarkan
+						culture = east_afro_avalonian
+						culture = east_afro_strugatskite
+						culture = east_afro_edemite
+					}
+				}
+				culture = east_afro_tengoku
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = ethiopian_xingjie
+						culture = ethiopian_celestean
+						culture = ethiopian_sexto_solar
+						culture = ethiopian_samawati
+						culture = ethiopian_angani
+						culture = ethiopian_frontiersman
+						culture = ethiopian_centauri
+						culture = ethiopian_terran
+						culture = ethiopian_bianjiangese
+						culture = ethiopian_orion
+						culture = ethiopian_mukta
+						culture = ethiopian_tarkan
+						culture = ethiopian_avalonian
+						culture = ethiopian_strugatskite
+						culture = ethiopian_edemite
+					}
+				}
+				culture = ethiopian_tengoku
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = hispanic_xingjie
+						culture = hispanic_celestean
+						culture = hispanic_sexto_solar
+						culture = hispanic_samawati
+						culture = hispanic_angani
+						culture = hispanic_frontiersman
+						culture = hispanic_centauri
+						culture = hispanic_terran
+						culture = hispanic_bianjiangese
+						culture = hispanic_orion
+						culture = hispanic_mukta
+						culture = hispanic_tarkan
+						culture = hispanic_avalonian
+						culture = hispanic_strugatskite
+						culture = hispanic_edemite
+					}
+				}
+				culture = hispanic_tengoku
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = indo_xingjie
+						culture = indo_celestean
+						culture = indo_sexto_solar
+						culture = indo_samawati
+						culture = indo_angani
+						culture = indo_frontiersman
+						culture = indo_centauri
+						culture = indo_terran
+						culture = indo_bianjiangese
+						culture = indo_orion
+						culture = indo_mukta
+						culture = indo_tarkan
+						culture = indo_avalonian
+						culture = indo_strugatskite
+						culture = indo_edemite
+					}
+				}
+				culture = indo_tengoku
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = iranian_xingjie
+						culture = iranian_celestean
+						culture = iranian_sexto_solar
+						culture = iranian_samawati
+						culture = iranian_angani
+						culture = iranian_frontiersman
+						culture = iranian_centauri
+						culture = iranian_terran
+						culture = iranian_bianjiangese
+						culture = iranian_orion
+						culture = iranian_mukta
+						culture = iranian_tarkan
+						culture = iranian_avalonian
+						culture = iranian_strugatskite
+						culture = iranian_edemite
+					}
+				}
+				culture = iranian_tengoku
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = japanese_xingjie
+						culture = japanese_celestean
+						culture = japanese_sexto_solar
+						culture = japanese_samawati
+						culture = japanese_angani
+						culture = japanese_frontiersman
+						culture = japanese_centauri
+						culture = japanese_terran
+						culture = japanese_bianjiangese
+						culture = japanese_orion
+						culture = japanese_mukta
+						culture = japanese_tarkan
+						culture = japanese_avalonian
+						culture = japanese_strugatskite
+						culture = japanese_edemite
+					}
+				}
+				culture = japanese_tengoku
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = mesoamerican_xingjie
+						culture = mesoamerican_celestean
+						culture = mesoamerican_sexto_solar
+						culture = mesoamerican_samawati
+						culture = mesoamerican_angani
+						culture = mesoamerican_frontiersman
+						culture = mesoamerican_centauri
+						culture = mesoamerican_terran
+						culture = mesoamerican_bianjiangese
+						culture = mesoamerican_orion
+						culture = mesoamerican_mukta
+						culture = mesoamerican_tarkan
+						culture = mesoamerican_avalonian
+						culture = mesoamerican_strugatskite
+						culture = mesoamerican_edemite
+					}
+				}
+				culture = mesoamerican_tengoku
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = russo_xingjie
+						culture = russo_celestean
+						culture = russo_sexto_solar
+						culture = russo_samawati
+						culture = russo_angani
+						culture = russo_frontiersman
+						culture = russo_centauri
+						culture = russo_terran
+						culture = russo_bianjiangese
+						culture = russo_orion
+						culture = russo_mukta
+						culture = russo_tarkan
+						culture = russo_avalonian
+						culture = russo_strugatskite
+						culture = russo_edemite
+					}
+				}
+				culture = russo_tengoku
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = sino_xingjie
+						culture = sino_celestean
+						culture = sino_sexto_solar
+						culture = sino_samawati
+						culture = sino_angani
+						culture = sino_frontiersman
+						culture = sino_centauri
+						culture = sino_terran
+						culture = sino_bianjiangese
+						culture = sino_orion
+						culture = sino_mukta
+						culture = sino_tarkan
+						culture = sino_avalonian
+						culture = sino_strugatskite
+						culture = sino_edemite
+					}
+				}
+				culture = sino_tengoku
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = west_afro_xingjie
+						culture = west_afro_celestean
+						culture = west_afro_sexto_solar
+						culture = west_afro_samawati
+						culture = west_afro_angani
+						culture = west_afro_frontiersman
+						culture = west_afro_centauri
+						culture = west_afro_terran
+						culture = west_afro_bianjiangese
+						culture = west_afro_orion
+						culture = west_afro_mukta
+						culture = west_afro_tarkan
+						culture = west_afro_avalonian
+						culture = west_afro_strugatskite
+						culture = west_afro_edemite
+					}
+				}
+				culture = west_afro_tengoku
+			}
+		}
+		FROM = {
+			limit = { culture_group = bianjiangese_group }
+			ROOT = {
+				limit = {
+					OR = {
+						culture = anglo_xingjie
+						culture = anglo_celestean
+						culture = anglo_sexto_solar
+						culture = anglo_samawati
+						culture = anglo_angani
+						culture = anglo_frontiersman
+						culture = anglo_centauri
+						culture = anglo_tengoku
+						culture = anglo_terran
+						culture = anglo_orion
+						culture = anglo_mukta
+						culture = anglo_tarkan
+						culture = anglo_avalonian
+						culture = anglo_strugatskite
+						culture = anglo_edemite
+					}
+				}
+				culture = anglo_bianjiangese
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = arab_xingjie
+						culture = arab_celestean
+						culture = arab_sexto_solar
+						culture = arab_samawati
+						culture = arab_angani
+						culture = arab_frontiersman
+						culture = arab_centauri
+						culture = arab_tengoku
+						culture = arab_terran
+						culture = arab_orion
+						culture = arab_mukta
+						culture = arab_tarkan
+						culture = arab_avalonian
+						culture = arab_strugatskite
+						culture = arab_edemite
+					}
+				}
+				culture = arab_bianjiangese
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = east_afro_xingjie
+						culture = east_afro_celestean
+						culture = east_afro_sexto_solar
+						culture = east_afro_samawati
+						culture = east_afro_angani
+						culture = east_afro_frontiersman
+						culture = east_afro_centauri
+						culture = east_afro_tengoku
+						culture = east_afro_terran
+						culture = east_afro_orion
+						culture = east_afro_mukta
+						culture = east_afro_tarkan
+						culture = east_afro_avalonian
+						culture = east_afro_strugatskite
+						culture = east_afro_edemite
+					}
+				}
+				culture = east_afro_bianjiangese
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = ethiopian_xingjie
+						culture = ethiopian_celestean
+						culture = ethiopian_sexto_solar
+						culture = ethiopian_samawati
+						culture = ethiopian_angani
+						culture = ethiopian_frontiersman
+						culture = ethiopian_centauri
+						culture = ethiopian_tengoku
+						culture = ethiopian_terran
+						culture = ethiopian_orion
+						culture = ethiopian_mukta
+						culture = ethiopian_tarkan
+						culture = ethiopian_avalonian
+						culture = ethiopian_strugatskite
+						culture = ethiopian_edemite
+					}
+				}
+				culture = ethiopian_bianjiangese
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = hispanic_xingjie
+						culture = hispanic_celestean
+						culture = hispanic_sexto_solar
+						culture = hispanic_samawati
+						culture = hispanic_angani
+						culture = hispanic_frontiersman
+						culture = hispanic_centauri
+						culture = hispanic_tengoku
+						culture = hispanic_terran
+						culture = hispanic_orion
+						culture = hispanic_mukta
+						culture = hispanic_tarkan
+						culture = hispanic_avalonian
+						culture = hispanic_strugatskite
+						culture = hispanic_edemite
+					}
+				}
+				culture = hispanic_bianjiangese
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = indo_xingjie
+						culture = indo_celestean
+						culture = indo_sexto_solar
+						culture = indo_samawati
+						culture = indo_angani
+						culture = indo_frontiersman
+						culture = indo_centauri
+						culture = indo_tengoku
+						culture = indo_terran
+						culture = indo_orion
+						culture = indo_mukta
+						culture = indo_tarkan
+						culture = indo_avalonian
+						culture = indo_strugatskite
+						culture = indo_edemite
+					}
+				}
+				culture = indo_bianjiangese
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = iranian_xingjie
+						culture = iranian_celestean
+						culture = iranian_sexto_solar
+						culture = iranian_samawati
+						culture = iranian_angani
+						culture = iranian_frontiersman
+						culture = iranian_centauri
+						culture = iranian_tengoku
+						culture = iranian_terran
+						culture = iranian_orion
+						culture = iranian_mukta
+						culture = iranian_tarkan
+						culture = iranian_avalonian
+						culture = iranian_strugatskite
+						culture = iranian_edemite
+					}
+				}
+				culture = iranian_bianjiangese
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = japanese_xingjie
+						culture = japanese_celestean
+						culture = japanese_sexto_solar
+						culture = japanese_samawati
+						culture = japanese_angani
+						culture = japanese_frontiersman
+						culture = japanese_centauri
+						culture = japanese_tengoku
+						culture = japanese_terran
+						culture = japanese_orion
+						culture = japanese_mukta
+						culture = japanese_tarkan
+						culture = japanese_avalonian
+						culture = japanese_strugatskite
+						culture = japanese_edemite
+					}
+				}
+				culture = japanese_bianjiangese
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = mesoamerican_xingjie
+						culture = mesoamerican_celestean
+						culture = mesoamerican_sexto_solar
+						culture = mesoamerican_samawati
+						culture = mesoamerican_angani
+						culture = mesoamerican_frontiersman
+						culture = mesoamerican_centauri
+						culture = mesoamerican_tengoku
+						culture = mesoamerican_terran
+						culture = mesoamerican_orion
+						culture = mesoamerican_mukta
+						culture = mesoamerican_tarkan
+						culture = mesoamerican_avalonian
+						culture = mesoamerican_strugatskite
+						culture = mesoamerican_edemite
+					}
+				}
+				culture = mesoamerican_bianjiangese
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = russo_xingjie
+						culture = russo_celestean
+						culture = russo_sexto_solar
+						culture = russo_samawati
+						culture = russo_angani
+						culture = russo_frontiersman
+						culture = russo_centauri
+						culture = russo_tengoku
+						culture = russo_terran
+						culture = russo_orion
+						culture = russo_mukta
+						culture = russo_tarkan
+						culture = russo_avalonian
+						culture = russo_strugatskite
+						culture = russo_edemite
+					}
+				}
+				culture = russo_bianjiangese
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = sino_xingjie
+						culture = sino_celestean
+						culture = sino_sexto_solar
+						culture = sino_samawati
+						culture = sino_angani
+						culture = sino_frontiersman
+						culture = sino_centauri
+						culture = sino_tengoku
+						culture = sino_terran
+						culture = sino_orion
+						culture = sino_mukta
+						culture = sino_tarkan
+						culture = sino_avalonian
+						culture = sino_strugatskite
+						culture = sino_edemite
+					}
+				}
+				culture = sino_bianjiangese
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = west_afro_xingjie
+						culture = west_afro_celestean
+						culture = west_afro_sexto_solar
+						culture = west_afro_samawati
+						culture = west_afro_angani
+						culture = west_afro_frontiersman
+						culture = west_afro_centauri
+						culture = west_afro_tengoku
+						culture = west_afro_terran
+						culture = west_afro_orion
+						culture = west_afro_mukta
+						culture = west_afro_tarkan
+						culture = west_afro_avalonian
+						culture = west_afro_strugatskite
+						culture = west_afro_edemite
+					}
+				}
+				culture = west_afro_bianjiangese
+			}
+		}
+		FROM = {
+			limit = { culture_group = orion_group }
+			ROOT = {
+				limit = {
+					OR = {
+						culture = anglo_xingjie
+						culture = anglo_celestean
+						culture = anglo_sexto_solar
+						culture = anglo_samawati
+						culture = anglo_angani
+						culture = anglo_frontiersman
+						culture = anglo_centauri
+						culture = anglo_tengoku
+						culture = anglo_bianjiangese
+						culture = anglo_terran
+						culture = anglo_mukta
+						culture = anglo_tarkan
+						culture = anglo_avalonian
+						culture = anglo_strugatskite
+						culture = anglo_edemite
+					}
+				}
+				culture = anglo_orion
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = arab_xingjie
+						culture = arab_celestean
+						culture = arab_sexto_solar
+						culture = arab_samawati
+						culture = arab_angani
+						culture = arab_frontiersman
+						culture = arab_centauri
+						culture = arab_tengoku
+						culture = arab_bianjiangese
+						culture = arab_terran
+						culture = arab_mukta
+						culture = arab_tarkan
+						culture = arab_avalonian
+						culture = arab_strugatskite
+						culture = arab_edemite
+					}
+				}
+				culture = arab_orion
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = east_afro_xingjie
+						culture = east_afro_celestean
+						culture = east_afro_sexto_solar
+						culture = east_afro_samawati
+						culture = east_afro_angani
+						culture = east_afro_frontiersman
+						culture = east_afro_centauri
+						culture = east_afro_tengoku
+						culture = east_afro_bianjiangese
+						culture = east_afro_terran
+						culture = east_afro_mukta
+						culture = east_afro_tarkan
+						culture = east_afro_avalonian
+						culture = east_afro_strugatskite
+						culture = east_afro_edemite
+					}
+				}
+				culture = east_afro_orion
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = ethiopian_xingjie
+						culture = ethiopian_celestean
+						culture = ethiopian_sexto_solar
+						culture = ethiopian_samawati
+						culture = ethiopian_angani
+						culture = ethiopian_frontiersman
+						culture = ethiopian_centauri
+						culture = ethiopian_tengoku
+						culture = ethiopian_bianjiangese
+						culture = ethiopian_terran
+						culture = ethiopian_mukta
+						culture = ethiopian_tarkan
+						culture = ethiopian_avalonian
+						culture = ethiopian_strugatskite
+						culture = ethiopian_edemite
+					}
+				}
+				culture = ethiopian_orion
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = hispanic_xingjie
+						culture = hispanic_celestean
+						culture = hispanic_sexto_solar
+						culture = hispanic_samawati
+						culture = hispanic_angani
+						culture = hispanic_frontiersman
+						culture = hispanic_centauri
+						culture = hispanic_tengoku
+						culture = hispanic_bianjiangese
+						culture = hispanic_terran
+						culture = hispanic_mukta
+						culture = hispanic_tarkan
+						culture = hispanic_avalonian
+						culture = hispanic_strugatskite
+						culture = hispanic_edemite
+					}
+				}
+				culture = hispanic_orion
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = indo_xingjie
+						culture = indo_celestean
+						culture = indo_sexto_solar
+						culture = indo_samawati
+						culture = indo_angani
+						culture = indo_frontiersman
+						culture = indo_centauri
+						culture = indo_tengoku
+						culture = indo_bianjiangese
+						culture = indo_terran
+						culture = indo_mukta
+						culture = indo_tarkan
+						culture = indo_avalonian
+						culture = indo_strugatskite
+						culture = indo_edemite
+					}
+				}
+				culture = indo_orion
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = iranian_xingjie
+						culture = iranian_celestean
+						culture = iranian_sexto_solar
+						culture = iranian_samawati
+						culture = iranian_angani
+						culture = iranian_frontiersman
+						culture = iranian_centauri
+						culture = iranian_tengoku
+						culture = iranian_bianjiangese
+						culture = iranian_terran
+						culture = iranian_mukta
+						culture = iranian_tarkan
+						culture = iranian_avalonian
+						culture = iranian_strugatskite
+						culture = iranian_edemite
+					}
+				}
+				culture = iranian_orion
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = japanese_xingjie
+						culture = japanese_celestean
+						culture = japanese_sexto_solar
+						culture = japanese_samawati
+						culture = japanese_angani
+						culture = japanese_frontiersman
+						culture = japanese_centauri
+						culture = japanese_tengoku
+						culture = japanese_bianjiangese
+						culture = japanese_terran
+						culture = japanese_mukta
+						culture = japanese_tarkan
+						culture = japanese_avalonian
+						culture = japanese_strugatskite
+						culture = japanese_edemite
+					}
+				}
+				culture = japanese_orion
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = mesoamerican_xingjie
+						culture = mesoamerican_celestean
+						culture = mesoamerican_sexto_solar
+						culture = mesoamerican_samawati
+						culture = mesoamerican_angani
+						culture = mesoamerican_frontiersman
+						culture = mesoamerican_centauri
+						culture = mesoamerican_tengoku
+						culture = mesoamerican_bianjiangese
+						culture = mesoamerican_terran
+						culture = mesoamerican_mukta
+						culture = mesoamerican_tarkan
+						culture = mesoamerican_avalonian
+						culture = mesoamerican_strugatskite
+						culture = mesoamerican_edemite
+					}
+				}
+				culture = mesoamerican_orion
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = russo_xingjie
+						culture = russo_celestean
+						culture = russo_sexto_solar
+						culture = russo_samawati
+						culture = russo_angani
+						culture = russo_frontiersman
+						culture = russo_centauri
+						culture = russo_tengoku
+						culture = russo_bianjiangese
+						culture = russo_terran
+						culture = russo_mukta
+						culture = russo_tarkan
+						culture = russo_avalonian
+						culture = russo_strugatskite
+						culture = russo_edemite
+					}
+				}
+				culture = russo_orion
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = sino_xingjie
+						culture = sino_celestean
+						culture = sino_sexto_solar
+						culture = sino_samawati
+						culture = sino_angani
+						culture = sino_frontiersman
+						culture = sino_centauri
+						culture = sino_tengoku
+						culture = sino_bianjiangese
+						culture = sino_terran
+						culture = sino_mukta
+						culture = sino_tarkan
+						culture = sino_avalonian
+						culture = sino_strugatskite
+						culture = sino_edemite
+					}
+				}
+				culture = sino_orion
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = west_afro_xingjie
+						culture = west_afro_celestean
+						culture = west_afro_sexto_solar
+						culture = west_afro_samawati
+						culture = west_afro_angani
+						culture = west_afro_frontiersman
+						culture = west_afro_centauri
+						culture = west_afro_tengoku
+						culture = west_afro_bianjiangese
+						culture = west_afro_terran
+						culture = west_afro_mukta
+						culture = west_afro_tarkan
+						culture = west_afro_avalonian
+						culture = west_afro_strugatskite
+						culture = west_afro_edemite
+					}
+				}
+				culture = west_afro_orion
+			}
+		}
+		FROM = {
+			limit = { culture_group = mukta_group }
+			ROOT = {
+				limit = {
+					OR = {
+						culture = anglo_xingjie
+						culture = anglo_celestean
+						culture = anglo_sexto_solar
+						culture = anglo_samawati
+						culture = anglo_angani
+						culture = anglo_frontiersman
+						culture = anglo_centauri
+						culture = anglo_tengoku
+						culture = anglo_bianjiangese
+						culture = anglo_orion
+						culture = anglo_terran
+						culture = anglo_tarkan
+						culture = anglo_avalonian
+						culture = anglo_strugatskite
+						culture = anglo_edemite
+					}
+				}
+				culture = anglo_mukta
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = arab_xingjie
+						culture = arab_celestean
+						culture = arab_sexto_solar
+						culture = arab_samawati
+						culture = arab_angani
+						culture = arab_frontiersman
+						culture = arab_centauri
+						culture = arab_tengoku
+						culture = arab_bianjiangese
+						culture = arab_orion
+						culture = arab_terran
+						culture = arab_tarkan
+						culture = arab_avalonian
+						culture = arab_strugatskite
+						culture = arab_edemite
+					}
+				}
+				culture = arab_mukta
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = east_afro_xingjie
+						culture = east_afro_celestean
+						culture = east_afro_sexto_solar
+						culture = east_afro_samawati
+						culture = east_afro_angani
+						culture = east_afro_frontiersman
+						culture = east_afro_centauri
+						culture = east_afro_tengoku
+						culture = east_afro_bianjiangese
+						culture = east_afro_orion
+						culture = east_afro_terran
+						culture = east_afro_tarkan
+						culture = east_afro_avalonian
+						culture = east_afro_strugatskite
+						culture = east_afro_edemite
+					}
+				}
+				culture = east_afro_mukta
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = ethiopian_xingjie
+						culture = ethiopian_celestean
+						culture = ethiopian_sexto_solar
+						culture = ethiopian_samawati
+						culture = ethiopian_angani
+						culture = ethiopian_frontiersman
+						culture = ethiopian_centauri
+						culture = ethiopian_tengoku
+						culture = ethiopian_bianjiangese
+						culture = ethiopian_orion
+						culture = ethiopian_terran
+						culture = ethiopian_tarkan
+						culture = ethiopian_avalonian
+						culture = ethiopian_strugatskite
+						culture = ethiopian_edemite
+					}
+				}
+				culture = ethiopian_mukta
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = hispanic_xingjie
+						culture = hispanic_celestean
+						culture = hispanic_sexto_solar
+						culture = hispanic_samawati
+						culture = hispanic_angani
+						culture = hispanic_frontiersman
+						culture = hispanic_centauri
+						culture = hispanic_tengoku
+						culture = hispanic_bianjiangese
+						culture = hispanic_orion
+						culture = hispanic_terran
+						culture = hispanic_tarkan
+						culture = hispanic_avalonian
+						culture = hispanic_strugatskite
+						culture = hispanic_edemite
+					}
+				}
+				culture = hispanic_mukta
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = indo_xingjie
+						culture = indo_celestean
+						culture = indo_sexto_solar
+						culture = indo_samawati
+						culture = indo_angani
+						culture = indo_frontiersman
+						culture = indo_centauri
+						culture = indo_tengoku
+						culture = indo_bianjiangese
+						culture = indo_orion
+						culture = indo_terran
+						culture = indo_tarkan
+						culture = indo_avalonian
+						culture = indo_strugatskite
+						culture = indo_edemite
+					}
+				}
+				culture = indo_mukta
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = iranian_xingjie
+						culture = iranian_celestean
+						culture = iranian_sexto_solar
+						culture = iranian_samawati
+						culture = iranian_angani
+						culture = iranian_frontiersman
+						culture = iranian_centauri
+						culture = iranian_tengoku
+						culture = iranian_bianjiangese
+						culture = iranian_orion
+						culture = iranian_terran
+						culture = iranian_tarkan
+						culture = iranian_avalonian
+						culture = iranian_strugatskite
+						culture = iranian_edemite
+					}
+				}
+				culture = iranian_mukta
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = japanese_xingjie
+						culture = japanese_celestean
+						culture = japanese_sexto_solar
+						culture = japanese_samawati
+						culture = japanese_angani
+						culture = japanese_frontiersman
+						culture = japanese_centauri
+						culture = japanese_tengoku
+						culture = japanese_bianjiangese
+						culture = japanese_orion
+						culture = japanese_terran
+						culture = japanese_tarkan
+						culture = japanese_avalonian
+						culture = japanese_strugatskite
+						culture = japanese_edemite
+					}
+				}
+				culture = japanese_mukta
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = mesoamerican_xingjie
+						culture = mesoamerican_celestean
+						culture = mesoamerican_sexto_solar
+						culture = mesoamerican_samawati
+						culture = mesoamerican_angani
+						culture = mesoamerican_frontiersman
+						culture = mesoamerican_centauri
+						culture = mesoamerican_tengoku
+						culture = mesoamerican_bianjiangese
+						culture = mesoamerican_orion
+						culture = mesoamerican_terran
+						culture = mesoamerican_tarkan
+						culture = mesoamerican_avalonian
+						culture = mesoamerican_strugatskite
+						culture = mesoamerican_edemite
+					}
+				}
+				culture = mesoamerican_mukta
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = russo_xingjie
+						culture = russo_celestean
+						culture = russo_sexto_solar
+						culture = russo_samawati
+						culture = russo_angani
+						culture = russo_frontiersman
+						culture = russo_centauri
+						culture = russo_tengoku
+						culture = russo_bianjiangese
+						culture = russo_orion
+						culture = russo_terran
+						culture = russo_tarkan
+						culture = russo_avalonian
+						culture = russo_strugatskite
+						culture = russo_edemite
+					}
+				}
+				culture = russo_mukta
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = sino_xingjie
+						culture = sino_celestean
+						culture = sino_sexto_solar
+						culture = sino_samawati
+						culture = sino_angani
+						culture = sino_frontiersman
+						culture = sino_centauri
+						culture = sino_tengoku
+						culture = sino_bianjiangese
+						culture = sino_orion
+						culture = sino_terran
+						culture = sino_tarkan
+						culture = sino_avalonian
+						culture = sino_strugatskite
+						culture = sino_edemite
+					}
+				}
+				culture = sino_mukta
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = west_afro_xingjie
+						culture = west_afro_celestean
+						culture = west_afro_sexto_solar
+						culture = west_afro_samawati
+						culture = west_afro_angani
+						culture = west_afro_frontiersman
+						culture = west_afro_centauri
+						culture = west_afro_tengoku
+						culture = west_afro_bianjiangese
+						culture = west_afro_orion
+						culture = west_afro_terran
+						culture = west_afro_tarkan
+						culture = west_afro_avalonian
+						culture = west_afro_strugatskite
+						culture = west_afro_edemite
+					}
+				}
+				culture = west_afro_mukta
+			}
+		}
+		FROM = {
+			limit = { culture_group = tarkan_group }
+			ROOT = {
+				limit = {
+					OR = {
+						culture = anglo_xingjie
+						culture = anglo_celestean
+						culture = anglo_sexto_solar
+						culture = anglo_samawati
+						culture = anglo_angani
+						culture = anglo_frontiersman
+						culture = anglo_centauri
+						culture = anglo_tengoku
+						culture = anglo_bianjiangese
+						culture = anglo_orion
+						culture = anglo_mukta
+						culture = anglo_terran
+						culture = anglo_avalonian
+						culture = anglo_strugatskite
+						culture = anglo_edemite
+					}
+				}
+				culture = anglo_tarkan
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = arab_xingjie
+						culture = arab_celestean
+						culture = arab_sexto_solar
+						culture = arab_samawati
+						culture = arab_angani
+						culture = arab_frontiersman
+						culture = arab_centauri
+						culture = arab_tengoku
+						culture = arab_bianjiangese
+						culture = arab_orion
+						culture = arab_mukta
+						culture = arab_terran
+						culture = arab_avalonian
+						culture = arab_strugatskite
+						culture = arab_edemite
+					}
+				}
+				culture = arab_tarkan
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = east_afro_xingjie
+						culture = east_afro_celestean
+						culture = east_afro_sexto_solar
+						culture = east_afro_samawati
+						culture = east_afro_angani
+						culture = east_afro_frontiersman
+						culture = east_afro_centauri
+						culture = east_afro_tengoku
+						culture = east_afro_bianjiangese
+						culture = east_afro_orion
+						culture = east_afro_mukta
+						culture = east_afro_terran
+						culture = east_afro_avalonian
+						culture = east_afro_strugatskite
+						culture = east_afro_edemite
+					}
+				}
+				culture = east_afro_tarkan
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = ethiopian_xingjie
+						culture = ethiopian_celestean
+						culture = ethiopian_sexto_solar
+						culture = ethiopian_samawati
+						culture = ethiopian_angani
+						culture = ethiopian_frontiersman
+						culture = ethiopian_centauri
+						culture = ethiopian_tengoku
+						culture = ethiopian_bianjiangese
+						culture = ethiopian_orion
+						culture = ethiopian_mukta
+						culture = ethiopian_terran
+						culture = ethiopian_avalonian
+						culture = ethiopian_strugatskite
+						culture = ethiopian_edemite
+					}
+				}
+				culture = ethiopian_tarkan
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = hispanic_xingjie
+						culture = hispanic_celestean
+						culture = hispanic_sexto_solar
+						culture = hispanic_samawati
+						culture = hispanic_angani
+						culture = hispanic_frontiersman
+						culture = hispanic_centauri
+						culture = hispanic_tengoku
+						culture = hispanic_bianjiangese
+						culture = hispanic_orion
+						culture = hispanic_mukta
+						culture = hispanic_terran
+						culture = hispanic_avalonian
+						culture = hispanic_strugatskite
+						culture = hispanic_edemite
+					}
+				}
+				culture = hispanic_tarkan
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = indo_xingjie
+						culture = indo_celestean
+						culture = indo_sexto_solar
+						culture = indo_samawati
+						culture = indo_angani
+						culture = indo_frontiersman
+						culture = indo_centauri
+						culture = indo_tengoku
+						culture = indo_bianjiangese
+						culture = indo_orion
+						culture = indo_mukta
+						culture = indo_terran
+						culture = indo_avalonian
+						culture = indo_strugatskite
+						culture = indo_edemite
+					}
+				}
+				culture = indo_tarkan
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = iranian_xingjie
+						culture = iranian_celestean
+						culture = iranian_sexto_solar
+						culture = iranian_samawati
+						culture = iranian_angani
+						culture = iranian_frontiersman
+						culture = iranian_centauri
+						culture = iranian_tengoku
+						culture = iranian_bianjiangese
+						culture = iranian_orion
+						culture = iranian_mukta
+						culture = iranian_terran
+						culture = iranian_avalonian
+						culture = iranian_strugatskite
+						culture = iranian_edemite
+					}
+				}
+				culture = iranian_tarkan
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = japanese_xingjie
+						culture = japanese_celestean
+						culture = japanese_sexto_solar
+						culture = japanese_samawati
+						culture = japanese_angani
+						culture = japanese_frontiersman
+						culture = japanese_centauri
+						culture = japanese_tengoku
+						culture = japanese_bianjiangese
+						culture = japanese_orion
+						culture = japanese_mukta
+						culture = japanese_terran
+						culture = japanese_avalonian
+						culture = japanese_strugatskite
+						culture = japanese_edemite
+					}
+				}
+				culture = japanese_tarkan
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = mesoamerican_xingjie
+						culture = mesoamerican_celestean
+						culture = mesoamerican_sexto_solar
+						culture = mesoamerican_samawati
+						culture = mesoamerican_angani
+						culture = mesoamerican_frontiersman
+						culture = mesoamerican_centauri
+						culture = mesoamerican_tengoku
+						culture = mesoamerican_bianjiangese
+						culture = mesoamerican_orion
+						culture = mesoamerican_mukta
+						culture = mesoamerican_terran
+						culture = mesoamerican_avalonian
+						culture = mesoamerican_strugatskite
+						culture = mesoamerican_edemite
+					}
+				}
+				culture = mesoamerican_tarkan
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = russo_xingjie
+						culture = russo_celestean
+						culture = russo_sexto_solar
+						culture = russo_samawati
+						culture = russo_angani
+						culture = russo_frontiersman
+						culture = russo_centauri
+						culture = russo_tengoku
+						culture = russo_bianjiangese
+						culture = russo_orion
+						culture = russo_mukta
+						culture = russo_terran
+						culture = russo_avalonian
+						culture = russo_strugatskite
+						culture = russo_edemite
+					}
+				}
+				culture = russo_tarkan
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = sino_xingjie
+						culture = sino_celestean
+						culture = sino_sexto_solar
+						culture = sino_samawati
+						culture = sino_angani
+						culture = sino_frontiersman
+						culture = sino_centauri
+						culture = sino_tengoku
+						culture = sino_bianjiangese
+						culture = sino_orion
+						culture = sino_mukta
+						culture = sino_terran
+						culture = sino_avalonian
+						culture = sino_strugatskite
+						culture = sino_edemite
+					}
+				}
+				culture = sino_tarkan
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = west_afro_xingjie
+						culture = west_afro_celestean
+						culture = west_afro_sexto_solar
+						culture = west_afro_samawati
+						culture = west_afro_angani
+						culture = west_afro_frontiersman
+						culture = west_afro_centauri
+						culture = west_afro_tengoku
+						culture = west_afro_bianjiangese
+						culture = west_afro_orion
+						culture = west_afro_mukta
+						culture = west_afro_terran
+						culture = west_afro_avalonian
+						culture = west_afro_strugatskite
+						culture = west_afro_edemite
+					}
+				}
+				culture = west_afro_tarkan
+			}
+		}
+		FROM = {
+			limit = { culture_group = avalonian_group }
+			ROOT = {
+				limit = {
+					OR = {
+						culture = anglo_xingjie
+						culture = anglo_celestean
+						culture = anglo_sexto_solar
+						culture = anglo_samawati
+						culture = anglo_angani
+						culture = anglo_frontiersman
+						culture = anglo_centauri
+						culture = anglo_tengoku
+						culture = anglo_bianjiangese
+						culture = anglo_orion
+						culture = anglo_mukta
+						culture = anglo_tarkan
+						culture = anglo_terran
+						culture = anglo_strugatskite
+						culture = anglo_edemite
+					}
+				}
+				culture = anglo_avalonian
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = arab_xingjie
+						culture = arab_celestean
+						culture = arab_sexto_solar
+						culture = arab_samawati
+						culture = arab_angani
+						culture = arab_frontiersman
+						culture = arab_centauri
+						culture = arab_tengoku
+						culture = arab_bianjiangese
+						culture = arab_orion
+						culture = arab_mukta
+						culture = arab_tarkan
+						culture = arab_terran
+						culture = arab_strugatskite
+						culture = arab_edemite
+					}
+				}
+				culture = arab_avalonian
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = east_afro_xingjie
+						culture = east_afro_celestean
+						culture = east_afro_sexto_solar
+						culture = east_afro_samawati
+						culture = east_afro_angani
+						culture = east_afro_frontiersman
+						culture = east_afro_centauri
+						culture = east_afro_tengoku
+						culture = east_afro_bianjiangese
+						culture = east_afro_orion
+						culture = east_afro_mukta
+						culture = east_afro_tarkan
+						culture = east_afro_terran
+						culture = east_afro_strugatskite
+						culture = east_afro_edemite
+					}
+				}
+				culture = east_afro_avalonian
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = ethiopian_xingjie
+						culture = ethiopian_celestean
+						culture = ethiopian_sexto_solar
+						culture = ethiopian_samawati
+						culture = ethiopian_angani
+						culture = ethiopian_frontiersman
+						culture = ethiopian_centauri
+						culture = ethiopian_tengoku
+						culture = ethiopian_bianjiangese
+						culture = ethiopian_orion
+						culture = ethiopian_mukta
+						culture = ethiopian_tarkan
+						culture = ethiopian_terran
+						culture = ethiopian_strugatskite
+						culture = ethiopian_edemite
+					}
+				}
+				culture = ethiopian_avalonian
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = hispanic_xingjie
+						culture = hispanic_celestean
+						culture = hispanic_sexto_solar
+						culture = hispanic_samawati
+						culture = hispanic_angani
+						culture = hispanic_frontiersman
+						culture = hispanic_centauri
+						culture = hispanic_tengoku
+						culture = hispanic_bianjiangese
+						culture = hispanic_orion
+						culture = hispanic_mukta
+						culture = hispanic_tarkan
+						culture = hispanic_terran
+						culture = hispanic_strugatskite
+						culture = hispanic_edemite
+					}
+				}
+				culture = hispanic_avalonian
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = indo_xingjie
+						culture = indo_celestean
+						culture = indo_sexto_solar
+						culture = indo_samawati
+						culture = indo_angani
+						culture = indo_frontiersman
+						culture = indo_centauri
+						culture = indo_tengoku
+						culture = indo_bianjiangese
+						culture = indo_orion
+						culture = indo_mukta
+						culture = indo_tarkan
+						culture = indo_terran
+						culture = indo_strugatskite
+						culture = indo_edemite
+					}
+				}
+				culture = indo_avalonian
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = iranian_xingjie
+						culture = iranian_celestean
+						culture = iranian_sexto_solar
+						culture = iranian_samawati
+						culture = iranian_angani
+						culture = iranian_frontiersman
+						culture = iranian_centauri
+						culture = iranian_tengoku
+						culture = iranian_bianjiangese
+						culture = iranian_orion
+						culture = iranian_mukta
+						culture = iranian_tarkan
+						culture = iranian_terran
+						culture = iranian_strugatskite
+						culture = iranian_edemite
+					}
+				}
+				culture = iranian_avalonian
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = japanese_xingjie
+						culture = japanese_celestean
+						culture = japanese_sexto_solar
+						culture = japanese_samawati
+						culture = japanese_angani
+						culture = japanese_frontiersman
+						culture = japanese_centauri
+						culture = japanese_tengoku
+						culture = japanese_bianjiangese
+						culture = japanese_orion
+						culture = japanese_mukta
+						culture = japanese_tarkan
+						culture = japanese_terran
+						culture = japanese_strugatskite
+						culture = japanese_edemite
+					}
+				}
+				culture = japanese_avalonian
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = mesoamerican_xingjie
+						culture = mesoamerican_celestean
+						culture = mesoamerican_sexto_solar
+						culture = mesoamerican_samawati
+						culture = mesoamerican_angani
+						culture = mesoamerican_frontiersman
+						culture = mesoamerican_centauri
+						culture = mesoamerican_tengoku
+						culture = mesoamerican_bianjiangese
+						culture = mesoamerican_orion
+						culture = mesoamerican_mukta
+						culture = mesoamerican_tarkan
+						culture = mesoamerican_terran
+						culture = mesoamerican_strugatskite
+						culture = mesoamerican_edemite
+					}
+				}
+				culture = mesoamerican_avalonian
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = russo_xingjie
+						culture = russo_celestean
+						culture = russo_sexto_solar
+						culture = russo_samawati
+						culture = russo_angani
+						culture = russo_frontiersman
+						culture = russo_centauri
+						culture = russo_tengoku
+						culture = russo_bianjiangese
+						culture = russo_orion
+						culture = russo_mukta
+						culture = russo_tarkan
+						culture = russo_terran
+						culture = russo_strugatskite
+						culture = russo_edemite
+					}
+				}
+				culture = russo_avalonian
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = sino_xingjie
+						culture = sino_celestean
+						culture = sino_sexto_solar
+						culture = sino_samawati
+						culture = sino_angani
+						culture = sino_frontiersman
+						culture = sino_centauri
+						culture = sino_tengoku
+						culture = sino_bianjiangese
+						culture = sino_orion
+						culture = sino_mukta
+						culture = sino_tarkan
+						culture = sino_terran
+						culture = sino_strugatskite
+						culture = sino_edemite
+					}
+				}
+				culture = sino_avalonian
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = west_afro_xingjie
+						culture = west_afro_celestean
+						culture = west_afro_sexto_solar
+						culture = west_afro_samawati
+						culture = west_afro_angani
+						culture = west_afro_frontiersman
+						culture = west_afro_centauri
+						culture = west_afro_tengoku
+						culture = west_afro_bianjiangese
+						culture = west_afro_orion
+						culture = west_afro_mukta
+						culture = west_afro_tarkan
+						culture = west_afro_terran
+						culture = west_afro_strugatskite
+						culture = west_afro_edemite
+					}
+				}
+				culture = west_afro_avalonian
+			}
+		}
+		FROM = {
+			limit = { culture_group = strugatskite_group }
+			ROOT = {
+				limit = {
+					OR = {
+						culture = anglo_xingjie
+						culture = anglo_celestean
+						culture = anglo_sexto_solar
+						culture = anglo_samawati
+						culture = anglo_angani
+						culture = anglo_frontiersman
+						culture = anglo_centauri
+						culture = anglo_tengoku
+						culture = anglo_bianjiangese
+						culture = anglo_orion
+						culture = anglo_mukta
+						culture = anglo_tarkan
+						culture = anglo_avalonian
+						culture = anglo_terran
+						culture = anglo_edemite
+					}
+				}
+				culture = anglo_strugatskite
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = arab_xingjie
+						culture = arab_celestean
+						culture = arab_sexto_solar
+						culture = arab_samawati
+						culture = arab_angani
+						culture = arab_frontiersman
+						culture = arab_centauri
+						culture = arab_tengoku
+						culture = arab_bianjiangese
+						culture = arab_orion
+						culture = arab_mukta
+						culture = arab_tarkan
+						culture = arab_avalonian
+						culture = arab_terran
+						culture = arab_edemite
+					}
+				}
+				culture = arab_strugatskite
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = east_afro_xingjie
+						culture = east_afro_celestean
+						culture = east_afro_sexto_solar
+						culture = east_afro_samawati
+						culture = east_afro_angani
+						culture = east_afro_frontiersman
+						culture = east_afro_centauri
+						culture = east_afro_tengoku
+						culture = east_afro_bianjiangese
+						culture = east_afro_orion
+						culture = east_afro_mukta
+						culture = east_afro_tarkan
+						culture = east_afro_avalonian
+						culture = east_afro_terran
+						culture = east_afro_edemite
+					}
+				}
+				culture = east_afro_strugatskite
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = ethiopian_xingjie
+						culture = ethiopian_celestean
+						culture = ethiopian_sexto_solar
+						culture = ethiopian_samawati
+						culture = ethiopian_angani
+						culture = ethiopian_frontiersman
+						culture = ethiopian_centauri
+						culture = ethiopian_tengoku
+						culture = ethiopian_bianjiangese
+						culture = ethiopian_orion
+						culture = ethiopian_mukta
+						culture = ethiopian_tarkan
+						culture = ethiopian_avalonian
+						culture = ethiopian_terran
+						culture = ethiopian_edemite
+					}
+				}
+				culture = ethiopian_strugatskite
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = hispanic_xingjie
+						culture = hispanic_celestean
+						culture = hispanic_sexto_solar
+						culture = hispanic_samawati
+						culture = hispanic_angani
+						culture = hispanic_frontiersman
+						culture = hispanic_centauri
+						culture = hispanic_tengoku
+						culture = hispanic_bianjiangese
+						culture = hispanic_orion
+						culture = hispanic_mukta
+						culture = hispanic_tarkan
+						culture = hispanic_avalonian
+						culture = hispanic_terran
+						culture = hispanic_edemite
+					}
+				}
+				culture = hispanic_strugatskite
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = indo_xingjie
+						culture = indo_celestean
+						culture = indo_sexto_solar
+						culture = indo_samawati
+						culture = indo_angani
+						culture = indo_frontiersman
+						culture = indo_centauri
+						culture = indo_tengoku
+						culture = indo_bianjiangese
+						culture = indo_orion
+						culture = indo_mukta
+						culture = indo_tarkan
+						culture = indo_avalonian
+						culture = indo_terran
+						culture = indo_edemite
+					}
+				}
+				culture = indo_strugatskite
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = iranian_xingjie
+						culture = iranian_celestean
+						culture = iranian_sexto_solar
+						culture = iranian_samawati
+						culture = iranian_angani
+						culture = iranian_frontiersman
+						culture = iranian_centauri
+						culture = iranian_tengoku
+						culture = iranian_bianjiangese
+						culture = iranian_orion
+						culture = iranian_mukta
+						culture = iranian_tarkan
+						culture = iranian_avalonian
+						culture = iranian_terran
+						culture = iranian_edemite
+					}
+				}
+				culture = iranian_strugatskite
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = japanese_xingjie
+						culture = japanese_celestean
+						culture = japanese_sexto_solar
+						culture = japanese_samawati
+						culture = japanese_angani
+						culture = japanese_frontiersman
+						culture = japanese_centauri
+						culture = japanese_tengoku
+						culture = japanese_bianjiangese
+						culture = japanese_orion
+						culture = japanese_mukta
+						culture = japanese_tarkan
+						culture = japanese_avalonian
+						culture = japanese_terran
+						culture = japanese_edemite
+					}
+				}
+				culture = japanese_strugatskite
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = mesoamerican_xingjie
+						culture = mesoamerican_celestean
+						culture = mesoamerican_sexto_solar
+						culture = mesoamerican_samawati
+						culture = mesoamerican_angani
+						culture = mesoamerican_frontiersman
+						culture = mesoamerican_centauri
+						culture = mesoamerican_tengoku
+						culture = mesoamerican_bianjiangese
+						culture = mesoamerican_orion
+						culture = mesoamerican_mukta
+						culture = mesoamerican_tarkan
+						culture = mesoamerican_avalonian
+						culture = mesoamerican_terran
+						culture = mesoamerican_edemite
+					}
+				}
+				culture = mesoamerican_strugatskite
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = russo_xingjie
+						culture = russo_celestean
+						culture = russo_sexto_solar
+						culture = russo_samawati
+						culture = russo_angani
+						culture = russo_frontiersman
+						culture = russo_centauri
+						culture = russo_tengoku
+						culture = russo_bianjiangese
+						culture = russo_orion
+						culture = russo_mukta
+						culture = russo_tarkan
+						culture = russo_avalonian
+						culture = russo_terran
+						culture = russo_edemite
+					}
+				}
+				culture = russo_strugatskite
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = sino_xingjie
+						culture = sino_celestean
+						culture = sino_sexto_solar
+						culture = sino_samawati
+						culture = sino_angani
+						culture = sino_frontiersman
+						culture = sino_centauri
+						culture = sino_tengoku
+						culture = sino_bianjiangese
+						culture = sino_orion
+						culture = sino_mukta
+						culture = sino_tarkan
+						culture = sino_avalonian
+						culture = sino_terran
+						culture = sino_edemite
+					}
+				}
+				culture = sino_strugatskite
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = west_afro_xingjie
+						culture = west_afro_celestean
+						culture = west_afro_sexto_solar
+						culture = west_afro_samawati
+						culture = west_afro_angani
+						culture = west_afro_frontiersman
+						culture = west_afro_centauri
+						culture = west_afro_tengoku
+						culture = west_afro_bianjiangese
+						culture = west_afro_orion
+						culture = west_afro_mukta
+						culture = west_afro_tarkan
+						culture = west_afro_avalonian
+						culture = west_afro_terran
+						culture = west_afro_edemite
+					}
+				}
+				culture = west_afro_strugatskite
+			}
+		}
+		FROM = {
+			limit = { culture_group = edemite_group }
+			ROOT = {
+				limit = {
+					OR = {
+						culture = anglo_xingjie
+						culture = anglo_celestean
+						culture = anglo_sexto_solar
+						culture = anglo_samawati
+						culture = anglo_angani
+						culture = anglo_frontiersman
+						culture = anglo_centauri
+						culture = anglo_tengoku
+						culture = anglo_bianjiangese
+						culture = anglo_orion
+						culture = anglo_mukta
+						culture = anglo_tarkan
+						culture = anglo_avalonian
+						culture = anglo_strugatskite
+						culture = anglo_terran
+					}
+				}
+				culture = anglo_edemite
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = arab_xingjie
+						culture = arab_celestean
+						culture = arab_sexto_solar
+						culture = arab_samawati
+						culture = arab_angani
+						culture = arab_frontiersman
+						culture = arab_centauri
+						culture = arab_tengoku
+						culture = arab_bianjiangese
+						culture = arab_orion
+						culture = arab_mukta
+						culture = arab_tarkan
+						culture = arab_avalonian
+						culture = arab_strugatskite
+						culture = arab_terran
+					}
+				}
+				culture = arab_edemite
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = east_afro_xingjie
+						culture = east_afro_celestean
+						culture = east_afro_sexto_solar
+						culture = east_afro_samawati
+						culture = east_afro_angani
+						culture = east_afro_frontiersman
+						culture = east_afro_centauri
+						culture = east_afro_tengoku
+						culture = east_afro_bianjiangese
+						culture = east_afro_orion
+						culture = east_afro_mukta
+						culture = east_afro_tarkan
+						culture = east_afro_avalonian
+						culture = east_afro_strugatskite
+						culture = east_afro_terran
+					}
+				}
+				culture = east_afro_edemite
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = ethiopian_xingjie
+						culture = ethiopian_celestean
+						culture = ethiopian_sexto_solar
+						culture = ethiopian_samawati
+						culture = ethiopian_angani
+						culture = ethiopian_frontiersman
+						culture = ethiopian_centauri
+						culture = ethiopian_tengoku
+						culture = ethiopian_bianjiangese
+						culture = ethiopian_orion
+						culture = ethiopian_mukta
+						culture = ethiopian_tarkan
+						culture = ethiopian_avalonian
+						culture = ethiopian_strugatskite
+						culture = ethiopian_terran
+					}
+				}
+				culture = ethiopian_edemite
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = hispanic_xingjie
+						culture = hispanic_celestean
+						culture = hispanic_sexto_solar
+						culture = hispanic_samawati
+						culture = hispanic_angani
+						culture = hispanic_frontiersman
+						culture = hispanic_centauri
+						culture = hispanic_tengoku
+						culture = hispanic_bianjiangese
+						culture = hispanic_orion
+						culture = hispanic_mukta
+						culture = hispanic_tarkan
+						culture = hispanic_avalonian
+						culture = hispanic_strugatskite
+						culture = hispanic_terran
+					}
+				}
+				culture = hispanic_edemite
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = indo_xingjie
+						culture = indo_celestean
+						culture = indo_sexto_solar
+						culture = indo_samawati
+						culture = indo_angani
+						culture = indo_frontiersman
+						culture = indo_centauri
+						culture = indo_tengoku
+						culture = indo_bianjiangese
+						culture = indo_orion
+						culture = indo_mukta
+						culture = indo_tarkan
+						culture = indo_avalonian
+						culture = indo_strugatskite
+						culture = indo_terran
+					}
+				}
+				culture = indo_edemite
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = iranian_xingjie
+						culture = iranian_celestean
+						culture = iranian_sexto_solar
+						culture = iranian_samawati
+						culture = iranian_angani
+						culture = iranian_frontiersman
+						culture = iranian_centauri
+						culture = iranian_tengoku
+						culture = iranian_bianjiangese
+						culture = iranian_orion
+						culture = iranian_mukta
+						culture = iranian_tarkan
+						culture = iranian_avalonian
+						culture = iranian_strugatskite
+						culture = iranian_terran
+					}
+				}
+				culture = iranian_edemite
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = japanese_xingjie
+						culture = japanese_celestean
+						culture = japanese_sexto_solar
+						culture = japanese_samawati
+						culture = japanese_angani
+						culture = japanese_frontiersman
+						culture = japanese_centauri
+						culture = japanese_tengoku
+						culture = japanese_bianjiangese
+						culture = japanese_orion
+						culture = japanese_mukta
+						culture = japanese_tarkan
+						culture = japanese_avalonian
+						culture = japanese_strugatskite
+						culture = japanese_terran
+					}
+				}
+				culture = japanese_edemite
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = mesoamerican_xingjie
+						culture = mesoamerican_celestean
+						culture = mesoamerican_sexto_solar
+						culture = mesoamerican_samawati
+						culture = mesoamerican_angani
+						culture = mesoamerican_frontiersman
+						culture = mesoamerican_centauri
+						culture = mesoamerican_tengoku
+						culture = mesoamerican_bianjiangese
+						culture = mesoamerican_orion
+						culture = mesoamerican_mukta
+						culture = mesoamerican_tarkan
+						culture = mesoamerican_avalonian
+						culture = mesoamerican_strugatskite
+						culture = mesoamerican_terran
+					}
+				}
+				culture = mesoamerican_edemite
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = russo_xingjie
+						culture = russo_celestean
+						culture = russo_sexto_solar
+						culture = russo_samawati
+						culture = russo_angani
+						culture = russo_frontiersman
+						culture = russo_centauri
+						culture = russo_tengoku
+						culture = russo_bianjiangese
+						culture = russo_orion
+						culture = russo_mukta
+						culture = russo_tarkan
+						culture = russo_avalonian
+						culture = russo_strugatskite
+						culture = russo_terran
+					}
+				}
+				culture = russo_edemite
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = sino_xingjie
+						culture = sino_celestean
+						culture = sino_sexto_solar
+						culture = sino_samawati
+						culture = sino_angani
+						culture = sino_frontiersman
+						culture = sino_centauri
+						culture = sino_tengoku
+						culture = sino_bianjiangese
+						culture = sino_orion
+						culture = sino_mukta
+						culture = sino_tarkan
+						culture = sino_avalonian
+						culture = sino_strugatskite
+						culture = sino_terran
+					}
+				}
+				culture = sino_edemite
+			}
+			ROOT = {
+				limit = {
+					OR = {
+						culture = west_afro_xingjie
+						culture = west_afro_celestean
+						culture = west_afro_sexto_solar
+						culture = west_afro_samawati
+						culture = west_afro_angani
+						culture = west_afro_frontiersman
+						culture = west_afro_centauri
+						culture = west_afro_tengoku
+						culture = west_afro_bianjiangese
+						culture = west_afro_orion
+						culture = west_afro_mukta
+						culture = west_afro_tarkan
+						culture = west_afro_avalonian
+						culture = west_afro_strugatskite
+						culture = west_afro_terran
+					}
+				}
+				culture = west_afro_edemite
+			}
+		}
+	}
+}

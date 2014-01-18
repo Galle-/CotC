@@ -1,0 +1,11 @@
+2900.1.1={
+	liege = "d_hang_seng"
+	law = succ_patrician_elective
+	law = true_cognatic_succession
+}
+
+2984.1.1 = { holder = "11013898" } # Xiamoei Xiang
+
+2997.1.1 = {
+	law = succ_seniority
+}

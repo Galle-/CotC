@@ -1,0 +1,307 @@
+CRISIS OF THE CONFEDERATION TITLE HIERARCHY
+TITLE TYPES
+	Landed Titles
+	Naval Titles
+		Naval Titles represent formal military organizations. They come in both Kingdom (Navy) and Duchy (Fleet) tiers.
+		They have the following special properties:
+			- Always titular
+			- No capital - they are created by decree
+			- Tribal Type (they dissolve if the owner gains control of a landed title of equivalent rank)
+			- Can be created at will by their de jure liege title
+			- Navies that become truly independent immediately dissolve
+			- Fleets that become truly independent become mercenaries
+			- Can use the Military Campaign CB against anyone at war with their liege.
+			- Succession law defaults to Appointment.
+	
+Empire
+	Kingdom
+		Duchy
+			County
+				Barony
+				
+Terran Confederation
+	NAVY
+	Confederate Space Command
+		FLEET
+		First Confederate Fleet
+		Second Confederate Fleet
+		Third Confederate Fleet
+		Fourth Confederate Fleet
+		Fifth Confederate Fleet
+	LANDED TITLES
+	The Terran Commonwealth
+		FLEET
+		Solar Guard
+		LANDED TITLES
+		Sol
+			Sol
+				Earth
+				Luna
+				Mars
+				Ceres
+				Europa
+				Ganymede
+				Io
+				Titan
+			Alpha Centauri
+		Sirius
+			Sirius
+			Procyon
+		Tau Ceti
+			Tau Ceti
+			Epsilon Eridani
+			Eta Cassiopeia
+		Draconis
+			Sigma Draconis
+			Delta Pavonis
+			Epsilon Indi
+			Beta Hydri
+		Altair
+			Altair
+			Cygni
+	Xingjie
+		FLEET
+		Xingjie Space Force
+		LANDED TITLES
+		Huangjing
+			Huangjing
+			Huanglong
+			Yang Liwei
+		Qinglong
+			Qinglong
+			Fei Junlong
+			Nie Haisheng
+		Xuanwu
+			Xuanwu
+			Zhai Zhigang
+			Liu Boming
+			Jing Haipeng
+		Baihu
+			Baihu
+			Liu Wang
+			Liu Yang
+	Cielia
+		FLEET
+		Cielian Armada
+		LANDED TITLES
+		Vega
+			Vega
+			Prosperidad
+			Nuevo Sol
+		Sexto Sol
+			Nahui-Ahtle
+			Tletlioh
+			Nantli
+			Tlexochtli
+			Huehca
+		Bolivar
+			Estrella de Bolivar
+			Esperanza
+			Santa Maria
+			Ahora la Luz
+		Encrucijada
+			Encrucijada
+			Nuevo Santuario
+			Hermanes de Oro
+			Escudo
+		Frontera
+			Dom Frontera
+			Puerto del Cielo
+			Illuminacion
+	al-Samawat
+		FLEET
+		Samawati Guard
+		LANDED TITLES
+		Jadiid Makkah
+			Jadiid Makkah
+			Burj Najma
+			Farah
+			Israfil
+			Ginaynat
+		Amal
+			Amal
+			Taw'am Shams
+			Mikhail
+		Jibril
+			Jibrail
+			Sakinat al-Ruh
+			al-Jisr
+		al-Hadd
+			al-Hadd
+			Kathiib
+			Jadiid Qurtuba
+			Xadra Shams
+		al-Bawaba
+			al-Bawaba
+			Izra'il
+			al-Jazira
+	Zenye Nyota Angani
+		FLEET
+		Angani Armed Forces
+		LANDED TITLES
+		Mpya Zanzibar
+			Mpya ya Zanzibar
+			Angani Moto
+			Upeo wa Macho
+		Nyota 'Mwisho
+			Nyota 'Mwisho
+			Bandari
+			Sisi Alifanya Hivyo
+		Ndia Panda
+			Ndia Panda
+			Kimbilio
+			Tengemano
+		Afolayan
+			Afolayan
+			Anansi
+			Nyame
+		Adwa
+			Addis Adwa
+			Addis Saba
+			Abbaba
+			Menelik
+			Haile Selassie
+	Frontier
+		FLEET
+		Frontier Space Command
+		LANDED TITLES
+		Armstrong
+			Armstrong
+			Heartland
+			Collins
+			Aldrin
+		Shepard
+			Shepard
+			Sharman
+			Jemison
+		Glenn
+			Glenn
+			John Henry
+			Touchstone
+			Weyland
+		Ride
+			Ride
+			Lincoln
+			Gemini
+			Liberty
+			Challenger
+		Apollo
+			Apollo
+			Beowulf
+	Centauri Reach
+		FLEET
+		Centauri Guard
+		LANDED TITLES
+		Gagarin
+			Gagarin
+			Novyy Arkhangelsk
+			Hu Lao Gate
+		Tereshkova
+			Tereshkova
+			Korolev
+			Tanhauser Gate
+		Tengoku
+			Tengoku
+			Sotogawa no Ten
+Helix Empire
+	NAVY
+	Helix Navy
+		FLEET
+		First Helix Fleet
+		Second Helix Fleet
+		Third Helix Fleet
+		Fourth Helix Fleet
+		Fifth Helix Fleet
+	NEBULA
+	The Helix Nebula
+		FLEET
+		Helix Rangers
+	LANDED TITLES
+	Strugatsky
+		FLEET
+		Strugatsky Armed Forces
+	Novyy Edem
+		FLEET
+		Novyy Edem Guard
+Tianguo
+	NAVY
+	Tianguo Navy
+		FLEET
+		First Tianguo Fleet
+		Second Tianguo Fleet
+		Third Tianguo Fleet
+		Fourth Tianguo Fleet
+		Fifth Tianguo Fleet
+	LANDED TITLES
+	Xin Zizhiqu
+		FLEET
+			Xin Zizhiqu Peacekeepers
+	Bianjing
+		FLEET
+		Bianjiang People's Militia
+Orion Empire
+	NAVY
+	Orion Navy
+		FLEET
+		First Orion Fleet
+		Second Orion Fleet
+		Third Orion Fleet
+		Fourth Orion Fleet
+		Fifth Orion Fleet
+	NEBULA
+	The Orion Nebula
+		FLEET
+		Orion Rangers
+	The Flame Nebula
+		FLEET
+		Flame Rangers
+	The Horsehead Nebula
+		FLEET
+		Horsehead Rangers
+	LANDED TITLES
+	The Orion Reach
+		FLEET
+		Orion Armada
+Veil Empire
+	NAVY
+	The Veil Navy
+		FLEET
+		First Veil Fleet
+		Second Veil Fleet
+		Third Veil Fleet
+		Fourth Veil Fleet
+		Fifth Veil Fleet
+	NEBULA
+	The Veil Nebula
+		FLEET
+		Veil Rangers
+	LANDED TITLES
+	Mukta Duniya
+		FLEET
+		Mukta Peacekeepers
+	Tarka
+		FLEET
+		Tarkan Armed Forces
+Witch Head Empire
+	NAVY
+	Witchhead Navy
+		FLEET
+		First Witchhead Fleet
+		Second Witchhead Fleet
+		Third Witchhead Fleet
+		Fourth Witchhead Fleet
+		Fifth Witchhead Fleet
+	NEBULA
+	The Witchhead Nebula
+		FLEET
+		Witchhead Rangers
+	LANDED TITLES
+	Avalon
+		FLEET
+		Military Order of Avalon
+	New Frontier
+		FLEET
+		New Frontier Rangers
+	Jion
+		FLEET
+		Jion Space Attack Force

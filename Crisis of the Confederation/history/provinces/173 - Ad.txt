@@ -1,0 +1,21 @@
+# 173 - Ad
+
+# County Title
+title = c_ad
+
+# Settlements
+max_settlements = 4
+b_ad_waystation = castle
+b_ad_iii = city
+b_ad_iii_b = temple
+
+# Misc
+culture = russo_edemite # Initial culture
+religion = astrist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

@@ -1,0 +1,62 @@
+# 255 - Deng Biao
+
+# County Title
+title = c_deng_biao
+
+# Settlements
+max_settlements = 4
+b_deng_biao_v_b = city
+b_deng_biao_v_c = temple
+b_deng_biao_v_d = castle
+
+# Misc
+culture = sino_bianjiangese # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+	b_deng_biao_v_b = ct_no_atmosphere
+	b_deng_biao_v_b = ct_no_water
+	b_deng_biao_v_b = ct_trace_water
+	b_deng_biao_v_b = ct_lakes
+	b_deng_biao_v_b = ct_seas
+	b_deng_biao_v_b = ct_oceans
+	b_deng_biao_v_b = ct_frozen
+	b_deng_biao_v_b = ct_cold
+	b_deng_biao_v_b = ct_planet_survey
+	
+	b_deng_biao_v_c = tp_no_atmosphere
+	b_deng_biao_v_c = tp_no_water
+	b_deng_biao_v_c = tp_trace_water
+	b_deng_biao_v_c = tp_lakes
+	b_deng_biao_v_c = tp_seas
+	b_deng_biao_v_c = tp_oceans
+	b_deng_biao_v_c = tp_frozen
+	b_deng_biao_v_c = tp_cold
+	b_deng_biao_v_c = tp_planet_survey
+	
+	b_deng_biao_v_d = ca_no_atmosphere
+	b_deng_biao_v_d = ca_no_water
+	b_deng_biao_v_d = ca_trace_water
+	b_deng_biao_v_d = ca_lakes
+	b_deng_biao_v_d = ca_seas
+	b_deng_biao_v_d = ca_oceans
+	b_deng_biao_v_d = ca_frozen
+	b_deng_biao_v_d = ca_cold
+	b_deng_biao_v_d = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_deng_biao_v_b = ct_no_atmosphere_domes
+	b_deng_biao_v_b = ct_colony_0
+	b_deng_biao_v_b = ct_colony_1
+	b_deng_biao_v_b = ct_colony_2
+	
+	b_deng_biao_v_c = tp_colony_0
+	b_deng_biao_v_c = tp_colony_1
+	
+	b_deng_biao_v_d = ca_colony_0
+	b_deng_biao_v_d = ca_colony_1
+	
+	trade_post = b_komissarov
+}

@@ -1,0 +1,58 @@
+# 296 - Sisi Alifanya Hivyo
+
+# County Title
+title = c_sisi_alifanya_hivyo
+
+# Settlements
+max_settlements = 4
+b_sisi_alifanya_hivyo = city
+b_sisi_alifanya_hivyo_b = temple
+b_sisi_alifanya_hivyo_c = castle
+
+# Misc
+culture = east_afro_angani # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_sisi_alifanya_hivyo = ct_toxic_atmosphere
+	b_sisi_alifanya_hivyo = ct_no_water
+	b_sisi_alifanya_hivyo = ct_trace_water
+	b_sisi_alifanya_hivyo = ct_lakes
+	b_sisi_alifanya_hivyo = ct_seas
+	b_sisi_alifanya_hivyo = ct_oceans
+	b_sisi_alifanya_hivyo = ct_frozen
+	b_sisi_alifanya_hivyo = ct_cold
+	b_sisi_alifanya_hivyo = ct_cool
+	b_sisi_alifanya_hivyo = ct_planet_survey
+	
+	b_sisi_alifanya_hivyo_b = tp_no_atmosphere
+	b_sisi_alifanya_hivyo_b = tp_no_water
+	b_sisi_alifanya_hivyo_b = tp_trace_water
+	b_sisi_alifanya_hivyo_b = tp_lakes
+	b_sisi_alifanya_hivyo_b = tp_seas
+	b_sisi_alifanya_hivyo_b = tp_oceans
+	b_sisi_alifanya_hivyo_b = tp_frozen
+	b_sisi_alifanya_hivyo_b = tp_cold
+	b_sisi_alifanya_hivyo_b = tp_cool
+	b_sisi_alifanya_hivyo_b = tp_planet_survey
+	
+	b_sisi_alifanya_hivyo_c = ca_no_atmosphere
+	b_sisi_alifanya_hivyo_c = ca_no_water
+	b_sisi_alifanya_hivyo_c = ca_frozen
+	b_sisi_alifanya_hivyo_c = ca_cold
+	b_sisi_alifanya_hivyo_c = ca_cool
+	b_sisi_alifanya_hivyo_c = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_sisi_alifanya_hivyo = ct_toxic_atmosphere_domes
+	b_sisi_alifanya_hivyo = ct_colony_0
+	b_sisi_alifanya_hivyo = ct_colony_1
+	b_sisi_alifanya_hivyo = ct_colony_2
+	
+	b_sisi_alifanya_hivyo_b = tp_colony_0
+	b_sisi_alifanya_hivyo_b = tp_colony_1
+	
+	b_sisi_alifanya_hivyo_c = ca_colony_0
+}

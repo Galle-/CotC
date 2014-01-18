@@ -1,0 +1,6 @@
+2489.1.1 = {
+	liege="d_sexto_sol"
+	law = succ_open_elective
+	law = true_cognatic_succession
+}
+2998.1.1 = { holder = 1109796 } # Eloxochitl Ocelotl

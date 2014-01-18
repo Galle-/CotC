@@ -1,0 +1,50 @@
+# 247 - Tiangtiang
+
+# County Title
+title = c_tiantiang
+
+# Settlements
+max_settlements = 4
+				
+				b_tiantiang_ii = castle
+				b_tiantiang_iv = city
+				b_tiantiang_vi_b = temple
+				b_tiantiang_iv_orbital = castle
+
+# Misc
+culture = sino_bianjiangese # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+
+	b_tiantiang_ii = ca_no_atmosphere
+	b_tiantiang_ii = ca_lakes
+	b_tiantiang_ii = ca_cool
+	
+	b_tiantiang_iv = ct_toxic_atmosphere
+	b_tiantiang_iv = ct_no_water
+	b_tiantiang_iv = ct_hot
+	
+	b_tiantiang_vi_b = tp_clean_atmosphere
+	b_tiantiang_vi_b = tp_no_water
+	b_tiantiang_vi_b = tp_cool
+	
+	b_tiantiang_iv_orbital = ca_space_station_0
+	
+	}
+
+	
+2653.6.6 ={ b_tiantiang_ii = ca_colony_0 }
+2653.6.14 = {b_tiantiang_ii = ca_no_atmosphere_domes} 
+2712.3.11 = {b_tiantiang_iv = ct_colony_0}
+2712.6.12 = {b_tiantiang_iv = ct_toxic_atmosphere_domes}
+2735.9.17 = {b_tiantiang_vi_b = tp_colony_0}
+2741.8.26 = {b_tiantiang_iv_orbital = ca_colony_0}
+2790.8.1 = {b_tiantiang_iv = ct_trace_water}
+2810.5.16 = {b_tiantiang_iv = ct_lakes}
+
+
+
+2998.1.1 = {
+	}

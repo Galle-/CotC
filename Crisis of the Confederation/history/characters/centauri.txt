@@ -1,0 +1,120 @@
+11010888 = {
+	# Governor-General of Gagarin
+	name = "Anastasiya"
+	dynasty = 10888 # Zhukov
+	female = yes
+	
+	culture = russo_centauri
+	religion = terran_federalist
+	
+	2960.1.1 = {
+		birth = "2960.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+11010312 = {
+	# Commander of Hu Lao Gate
+	name = "Vasily"
+	dynasty = 10312 # Semyonov
+	female = no
+	
+	culture = russo_centauri
+	religion = terran_federalist
+	
+	add_trait = tough_soldier
+	add_trait = marine_colonel
+	
+	2967.1.1 = {
+		birth = "2977.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+1108008 = {
+	# Governor of Novyy Arkhangelsk
+	name = "Yulian"
+	dynasty = 8008 # Watanabe
+	female = no
+	
+	culture = japanese_centauri
+	religion = terran_federalist
+	
+	2970.1.1 = {
+		birth = "2970.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+11011624 = {
+	# Governor-General of Tereshkova
+	name = "Izolda"
+	dynasty = 11624 # Preobrazhensky
+	female = yes
+	
+	culture = russo_centauri
+	religion = terran_federalist
+	
+	2954.1.1 = {
+		birth = "2954.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+11010792 = {
+	# Governor of Korolev
+	name = "Pyotr"
+	dynasty = 10792 # Yozhikov
+	female = no
+	
+	culture = russo_centauri
+	religion = terran_federalist
+	
+	2970.1.1 = {
+		birth = "2970.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+1101992 = {
+	# Commander of Tannhauser Gate
+	name = "Nikolai"
+	dynasty = 1992 # McCabe
+	female = no
+	
+	culture = anglo_centauri
+	religion = terran_federalist
+	
+	add_trait = tough_soldier
+	add_trait = fighter_pilot
+	
+	2967.1.1 = {
+		birth = "2967.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}
+
+1109049 = {
+	# Commander of Sotogawa no Ten
+	name = "Kazuko"
+	dynasty = 9049 # Shimada
+	female = yes
+	
+	culture = japanese_tengoku
+	religion = terran_republican
+	
+	add_trait = brilliant_strategist
+	add_trait = marine_colonel
+	add_trait = brave
+	add_trait = proud
+	add_trait = content
+	add_trait = radical
+	add_trait = skeptical
+	add_trait = close_minded
+	add_trait = disciplined
+	
+	2965.1.1 = {
+		birth = "2965.1.1"
+		effect = { set_dynasty_flag = flag_dynasty_processed }
+	}
+}

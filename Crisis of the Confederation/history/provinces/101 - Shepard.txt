@@ -1,0 +1,50 @@
+# 101 - Shepard
+
+# County Title
+title = c_shepard
+
+# Settlements
+max_settlements = 4
+b_mindoir = city
+b_mindoir_b = temple
+b_shepard_iii = castle
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_mindoir = ct_clean_atmosphere
+	b_mindoir = ct_no_water
+	b_mindoir = ct_trace_water
+	b_mindoir = ct_lakes
+	b_mindoir = ct_frozen
+	b_mindoir = ct_cold
+	b_mindoir = ct_cool
+	b_mindoir = ct_planet_survey
+	
+	b_mindoir_b = tp_no_atmosphere
+	b_mindoir_b = tp_no_water
+	b_mindoir_b = tp_frozen
+	b_mindoir_b = tp_cold
+	b_mindoir_b = tp_cool
+	b_mindoir_b = tp_planet_survey
+	
+	b_shepard_iii = ca_toxic_atmosphere
+	b_shepard_iii = ca_no_water
+	b_shepard_iii = ca_trace_water
+	b_shepard_iii = ca_frozen
+	b_shepard_iii = ca_cold
+	b_shepard_iii = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_mindoir = ct_colony_0
+	b_mindoir = ct_colony_1
+	b_mindoir = ct_colony_2
+	
+	b_mindoir_b = tp_colony_0
+	
+	b_shepard_iii = ca_colony_0
+}

@@ -1,0 +1,52 @@
+# 71 - Hermanes de Oro
+
+# County Title
+title = c_hermanes_de_oro
+
+# Settlements
+max_settlements = 4
+b_hermanes_de_oro_iii = city
+b_hermanes_de_oro_iii_b = temple
+b_hermanes_de_oro_iv = castle
+
+# Misc
+culture = hispanic_celestean # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+	b_hermanes_de_oro_iii = ct_clean_atmosphere
+	b_hermanes_de_oro_iii = ct_no_water
+	b_hermanes_de_oro_iii = ct_trace_water
+	b_hermanes_de_oro_iii = ct_lakes
+	b_hermanes_de_oro_iii = ct_frozen
+	b_hermanes_de_oro_iii = ct_cold
+	b_hermanes_de_oro_iii = ct_cool
+	b_hermanes_de_oro_iii = ct_planet_survey
+	
+	b_hermanes_de_oro_iii_b = tp_no_atmosphere
+	b_hermanes_de_oro_iii_b = tp_no_water
+	b_hermanes_de_oro_iii_b = tp_frozen
+	b_hermanes_de_oro_iii_b = tp_cold
+	b_hermanes_de_oro_iii_b = tp_cool
+	b_hermanes_de_oro_iii_b = tp_planet_survey
+	
+	b_hermanes_de_oro_iv = ca_clean_atmosphere
+	b_hermanes_de_oro_iv = ca_no_water
+	b_hermanes_de_oro_iv = ca_trace_water
+	b_hermanes_de_oro_iv = ca_lakes
+	b_hermanes_de_oro_iv = ca_seas
+	b_hermanes_de_oro_iv = ca_frozen
+	b_hermanes_de_oro_iv = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_hermanes_de_oro_iii = ct_colony_0
+	b_hermanes_de_oro_iii = ct_colony_1
+	b_hermanes_de_oro_iii = ct_colony_2
+	
+	b_hermanes_de_oro_iii_b = tp_colony_0
+	
+	b_hermanes_de_oro_iv = ca_colony_0
+	b_hermanes_de_oro_iv = ca_colony_1
+}

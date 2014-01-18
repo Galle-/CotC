@@ -1,0 +1,59 @@
+# 81 - Nuevo Sol
+
+# County Title
+title = c_nuevo_sol
+
+# Settlements
+max_settlements = 4
+b_nueva_tierra = city
+b_nueva_tierra_b = temple
+b_nueva_tierra_c = castle
+
+# Misc
+culture = hispanic_celestean # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	# Nueva Tierra: Clean, Seas, Optimal
+	b_nueva_tierra = ct_clean_atmosphere
+	b_nueva_tierra = ct_no_water
+	b_nueva_tierra = ct_trace_water
+	b_nueva_tierra = ct_lakes
+	b_nueva_tierra = ct_seas
+	b_nueva_tierra = ct_frozen
+	b_nueva_tierra = ct_cold
+	b_nueva_tierra = ct_cool
+	b_nueva_tierra = ct_optimal_cold
+	b_nueva_tierra = ct_planet_survey
+	
+	# Nueva Tierra B: None, None, Optimal
+	b_nueva_tierra_b = tp_no_atmosphere
+	b_nueva_tierra_b = tp_no_water
+	b_nueva_tierra_b = tp_frozen
+	b_nueva_tierra_b = tp_cold
+	b_nueva_tierra_b = tp_cool
+	b_nueva_tierra_b = tp_optimal_cold
+	b_nueva_tierra_b = tp_planet_survey
+	
+	# Nueva Tierra C: None, None, Optimal
+	b_nueva_tierra_c = ca_no_atmosphere
+	b_nueva_tierra_c = ca_no_water
+	b_nueva_tierra_c = ca_frozen
+	b_nueva_tierra_c = ca_cold
+	b_nueva_tierra_c = ca_cool
+	b_nueva_tierra_c = ca_optimal_cold
+	b_nueva_tierra_c = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_nueva_tierra = ct_colony_0
+	b_nueva_tierra = ct_colony_1
+	b_nueva_tierra = ct_colony_2
+	
+	b_nueva_tierra_b = tp_colony_0
+	b_nueva_tierra_b = tp_colony_1
+	
+	b_nueva_tierra_c = ca_colony_0
+	b_nueva_tierra_c = ca_colony_1
+}

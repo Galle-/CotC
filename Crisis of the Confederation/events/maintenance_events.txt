@@ -1,0 +1,44 @@
+namespace = maintenance
+
+# Terran multiculturalism
+province_event = {
+	id = maintenance.1
+	hide_window = yes
+	
+	trigger = { culture_group = terran_group }
+	mean_time_to_happen = { months = 60 }
+	immediate = {
+		random_list = {
+			30 = { culture = sino_terran }
+			30 = { culture = indo_terran }
+			20 = { culture = anglo_terran }
+			20 = { culture = hispanic_terran }
+			20 = { culture = arab_terran }
+			10 = { culture = russo_terran }
+			10 = { culture = iranian_terran }
+			10 = { culture = mesoamerican_terran }
+			10 = { culture = japanese_terran }
+			10 = { culture = ethiopian_terran }
+			10 = { culture = west_afro_terran }
+			10 = { culture = east_afro_terran }
+		}
+	}
+}
+
+character_event = {
+	id = maintenance.2
+	hide_window = yes
+	
+	trigger = {
+		is_landed = no
+		dynasty = none
+	}
+	
+	immediate = {
+		liege = {
+			e_rebels = { holder_scope = { reverse_banish = ROOT } }
+			ROOT = { dynasty = father_bastard }
+			reverse_banish = ROOT
+		}
+	}
+}

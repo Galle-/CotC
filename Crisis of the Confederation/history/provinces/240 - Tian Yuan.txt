@@ -1,0 +1,62 @@
+# 240 - Tian Yuan
+
+# County Title
+title = c_tian_yuan
+
+# Settlements
+max_settlements = 4
+				 				
+				b_tian_yuan_iv_b = city
+				b_tian_yuan_iv = temple
+				b_tian_yuan_v = temple
+				b_tian_yuan_v_b = castle
+# Misc
+culture = sino_xingjie # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+		b_tian_yuan_iv = tp_planet_survey
+		b_tian_yuan_iv = tp_hot
+		b_tian_yuan_iv = tp_trace_water
+		b_tian_yuan_iv = tp_lakes
+		b_tian_yuan_iv = tp_seas
+		b_tian_yuan_iv = tp_clean_atmosphere
+		
+		b_tian_yuan_iv_b = ct_planet_survey
+		b_tian_yuan_iv_b = ct_hot
+		b_tian_yuan_iv_b = ct_no_water
+		b_tian_yuan_iv_b = ct_trace_water
+		b_tian_yuan_iv_b = ct_lakes
+		b_tian_yuan_iv_b = ct_seas
+
+		#Tian Yuan 5 bears more than a passing resemblence to Tatooine. Hate that place.
+		b_tian_yuan_v = tp_planet_survey
+		b_tian_yuan_v = tp_hot
+		b_tian_yuan_v = tp_no_water
+		b_tian_yuan_v = tp_trace_water
+		b_tian_yuan_v = tp_clean_atmosphere
+		
+		b_tian_yuan_v_b = ca_planet_survey
+		b_tian_yuan_v_b = ca_hot
+		b_tian_yuan_v_b = ca_no_water
+		b_tian_yuan_v_b = ca_trace_water
+		b_tian_yuan_v_b = ca_lakes
+		b_tian_yuan_v_b = ca_no_atmosphere
+		b_tian_yuan_v_b = ca_no_atmosphere_domes
+}
+
+2998.1.1 = {
+		b_tian_yuan_iv = tp_colony_0
+		b_tian_yuan_iv = tp_colony_1
+		b_tian_yuan_iv = tp_colony_2
+		
+		b_tian_yuan_iv_b = ct_colony_0
+		b_tian_yuan_iv_b = ct_colony_1
+		
+		b_tian_yuan_v = tp_colony_0
+		
+		b_tian_yuan_v_b = tp_colony_0
+		b_tian_yuan_v_b = tp_colony_1
+			
+}

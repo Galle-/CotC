@@ -1,0 +1,10 @@
+2900.1.1 = {
+	law = legitimacy_law_1
+	law = election_law_3
+	law = succ_feudal_elective
+	law = true_cognatic_succession
+	law = centralization_2
+	liege = "e_terran_confederation"
+}
+
+2987.1.1 = { holder = "11011872" } # Dmitri Solomonov

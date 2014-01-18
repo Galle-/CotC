@@ -1,0 +1,8 @@
+2489.1.1 = {
+	liege = "d_terran_fourth_fleet"
+	law = succ_feudal_elective
+	law = true_cognatic_succession
+}
+
+# Modern era
+2993.1.1 = { holder = 11065 }	# Vincent Martin

@@ -1,0 +1,60 @@
+# 83 - Vega
+
+# County Title
+title = c_vega
+
+# Settlements
+max_settlements = 5
+b_vega_prime = city
+b_vega_prime_b = temple
+b_vega_prime_c = castle
+
+
+# Misc
+culture = hispanic_celestean # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_vega_prime = ct_clean_atmosphere
+	b_vega_prime = ct_no_water
+	b_vega_prime = ct_trace_water
+	b_vega_prime = ct_lakes
+	b_vega_prime = ct_seas
+	b_vega_prime = ct_oceans
+	b_vega_prime = ct_burning
+	b_vega_prime = ct_hot
+	b_vega_prime = ct_warm
+	b_vega_prime = ct_planet_survey
+	
+	b_vega_prime_b = tp_toxic_atmosphere
+	b_vega_prime_b = tp_no_water
+	b_vega_prime_b = tp_trace_water
+	b_vega_prime_b = tp_burning
+	b_vega_prime_b = tp_hot
+	b_vega_prime_b = tp_warm
+	b_vega_prime_b = tp_planet_survey
+	
+	b_vega_prime_c = ca_no_atmosphere
+	b_vega_prime_c = ca_no_water
+	b_vega_prime_c = ca_trace_water
+	b_vega_prime_c = ca_lakes
+	b_vega_prime_c = ca_burning
+	b_vega_prime_c = ca_hot
+	b_vega_prime_c = ca_warm
+	b_vega_prime_c = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_vega_prime = ct_colony_0
+	b_vega_prime = ct_colony_1
+	b_vega_prime = ct_colony_2
+	b_vega_prime = ct_colony_3
+	
+	b_vega_prime_b = tp_colony_0
+	
+	b_vega_prime_c = ca_colony_0
+	b_vega_prime_c = ca_colony_1
+	
+	trade_post = b_salazar
+}

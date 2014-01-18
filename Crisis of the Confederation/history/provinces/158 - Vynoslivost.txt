@@ -1,0 +1,20 @@
+# 158 - Vynoslivost'
+
+# County Title
+title = c_vynoslivost
+
+# Settlements
+max_settlements = 4
+b_vynoslivost_waystation = castle
+b_vynoslivost_vi_b = city
+
+# Misc
+culture = hispanic_edemite # Initial culture
+religion = astrist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

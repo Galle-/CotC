@@ -1,0 +1,186 @@
+castle = {
+		B_01_ca = {
+			desc = B_01_desc
+			trigger = {
+			has_building = FL_01_ca
+				}
+		
+
+		build_cost = 75
+		build_time = 30
+		heavy_infantry = 36
+		
+		}	
+
+		
+		B_02_ca = {
+			upgrades_from = B_01_ca
+			desc = B_02_desc
+					
+		build_cost = 100
+		build_time = 30
+		heavy_infantry = 36
+		}
+		
+		
+		B_03_ca = {
+			upgrades_from = B_02_ca
+			desc = B_03_desc
+			trigger = {TECH_CASTLE_CONSTRUCTION = 3}
+		
+		build_cost = 125
+		build_time = 60
+		heavy_infantry = 48
+		}
+		
+		
+		B_04_ca = {
+			upgrades_from = B_03_ca
+			desc = B_04_desc
+			trigger = {TECH_RECRUITMENT = 5}
+		build_cost = 150
+		build_time = 60
+		heavy_infantry = 36
+		}
+		
+		
+		B_05_ca = {
+			upgrades_from = B_04_ca
+			desc = B_05_desc
+			trigger = {	TECH_CASTLE_CONSTRUCTION = 3
+						FROM = {has_building = FL_05_ca}
+			}
+		build_cost = 300
+		build_time = 1125
+		heavy_infantry = 96
+
+		}
+		
+}		
+	
+	
+city = {
+		B_01_ct = {
+			desc = B_01_desc
+			trigger = {
+			has_building = FL_01_ct
+				}
+		
+
+		build_cost = 75
+		build_time = 30
+		heavy_infantry = 36
+		
+		}	
+
+		
+		B_02_ct = {
+			upgrades_from = B_01_ct
+			desc = B_02_desc
+					
+		build_cost = 100
+		build_time = 30
+		heavy_infantry = 36
+		}
+		
+		
+		B_03_ct = {
+			upgrades_from = B_02_ct
+			desc = B_03_desc
+			trigger = {TECH_CASTLE_CONSTRUCTION = 3}
+		
+		build_cost = 125
+		build_time = 60
+		heavy_infantry = 48
+		}
+		
+		
+		B_04_ct = {
+			upgrades_from = B_03_ct
+			desc = B_04_desc
+			trigger = {TECH_RECRUITMENT = 5}
+		build_cost = 150
+		build_time = 60
+		heavy_infantry = 36
+		}
+		
+		
+		B_05_ct = {
+			upgrades_from = B_04_ct
+			desc = B_05_desc
+			potential = {
+				FROMFROM = {
+					has_building = FL_05_ct
+					has_building = DR_01_ct
+						}
+				}
+			trigger = {	TECH_CASTLE_CONSTRUCTION = 3}
+			
+		build_cost = 300
+		build_time = 1125
+		heavy_infantry = 96
+
+		}
+		
+}
+
+
+temple = {
+		B_01_tp = {
+			desc = B_01_desc
+			trigger = {
+			has_building = FL_01_tp
+				}
+		
+
+		build_cost = 75
+		build_time = 30
+		heavy_infantry = 36
+		
+		}	
+
+		
+		B_02_tp = {
+			upgrades_from = B_01_tp
+			desc = B_02_desc
+					
+		build_cost = 100
+		build_time = 30
+		heavy_infantry = 36
+		}
+		
+		
+		B_03_tp = {
+			upgrades_from = B_02_tp
+			desc = B_03_desc
+			trigger = {TECH_CASTLE_CONSTRUCTION = 3}
+		
+		build_cost = 125
+		build_time = 60
+		heavy_infantry = 48
+		}
+		
+		
+		B_04_tp = {
+			upgrades_from = B_03_tp
+			desc = B_04_desc
+			trigger = {TECH_RECRUITMENT = 5}
+		build_cost = 150
+		build_time = 60
+		heavy_infantry = 36
+		}
+		
+		
+		B_05_tp = {
+			upgrades_from = B_04_tp
+			desc = B_05_desc
+			trigger = {	TECH_CASTLE_CONSTRUCTION = 3
+						FROM = {has_building = FL_05_tp}
+			}
+		build_cost = 300
+		build_time = 1125
+		heavy_infantry = 96
+
+		}
+		
+}		

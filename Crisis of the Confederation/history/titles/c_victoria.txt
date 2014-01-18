@@ -1,0 +1,16 @@
+2532.1.1 = {
+	liege = "d_victoria"
+	law = true_cognatic_succession
+	law = succ_primogeniture
+	holder = "20014158" # Elizabeth I Okafor
+}
+2593.1.1 = { holder = "19014158" } # Elizabeth II Okafor
+2662.1.1 = { holder = "18014158" } # Elizabeth III Okafor
+2703.1.1 = { holder = "17014158" } # Elizabeth IV Okafor
+2705.1.1 = { law = succ_ultimogeniture }
+2787.1.1 = { holder = "16014158" } # Elizabeth V Okafor
+2845.1.1 = { holder = "15014158" } # Elizabeth VI Okafor
+2872.1.1 = { holder = "14014158" } # Elizabeth VII Okafor
+2897.1.1 = { holder = "13014158" } # Elizabeth VIII Okafor
+2953.1.1 = { holder = "12014158" } # Elizabeth IX Okafor
+2993.1.1 = { holder = "11014158" } # Elizabeth X Okafor

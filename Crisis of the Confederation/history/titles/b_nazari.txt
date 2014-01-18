@@ -1,0 +1,7 @@
+2489.1.1 = {
+	holding_dynasty = 7473
+	liege="e_terran_confederation"
+	law = succ_seniority
+	law = true_cognatic_succession
+}
+2982.1.1 = { holder = 1107473 } # Salman Nazari

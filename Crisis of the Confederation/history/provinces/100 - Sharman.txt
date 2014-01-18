@@ -1,0 +1,62 @@
+# 100 - Sharman
+
+# County Title
+title = c_sharman
+
+# Settlements
+max_settlements = 4
+b_sharman_iii = castle
+b_sharman_iv = temple
+b_sharman_iv_b = city
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_sharman_iii = ca_toxic_atmosphere
+	b_sharman_iii = ca_no_water
+	b_sharman_iii = ca_trace_water
+	b_sharman_iii = ca_lakes
+	b_sharman_iii = ca_seas
+	b_sharman_iii = ca_oceans
+	b_sharman_iii = ca_burning
+	b_sharman_iii = ca_hot
+	b_sharman_iii = ca_warm
+	b_sharman_iii = ca_planet_survey
+	
+	b_sharman_iv = tp_no_atmosphere
+	b_sharman_iv = tp_no_water
+	b_sharman_iv = tp_trace_water
+	b_sharman_iv = tp_burning
+	b_sharman_iv = tp_hot
+	b_sharman_iv = tp_warm
+	b_sharman_iv = tp_optimal_hot
+	b_sharman_iv = tp_planet_survey
+	
+	b_sharman_iv_b = ct_no_atmosphere
+	b_sharman_iv_b = ct_no_water
+	b_sharman_iv_b = ct_trace_water
+	b_sharman_iv_b = ct_lakes
+	b_sharman_iv_b = ct_seas
+	b_sharman_iv_b = ct_oceans
+	b_sharman_iv_b = ct_burning
+	b_sharman_iv_b = ct_hot
+	b_sharman_iv_b = ct_warm
+	b_sharman_iv_b = ct_optimal_hot
+	b_sharman_iv_b = ct_planet_survey
+}
+
+2998.1.1 = {
+	b_sharman_iii = ca_toxic_atmosphere_domes
+	b_sharman_iii = ca_colony_0
+	b_sharman_iii = ca_colony_1
+	b_sharman_iii = ca_colony_2
+	
+	b_sharman_iv = tp_colony_0
+	
+	b_sharman_iv_b = ct_no_atmosphere_domes
+	b_sharman_iv_b = ct_colony_0
+	b_sharman_iv_b = ct_colony_1
+}

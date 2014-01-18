@@ -1,0 +1,10 @@
+2489.1.1={
+	holding_dynasty = 13974
+	liege="e_terran_confederation"
+	law = succ_seniority
+	law = true_cognatic_succession
+}
+2952.1.1 = { holder = 13013974 } # Bintou Afolayan
+2979.1.1 = { holder = 12013974 } # Maghan Afolayan
+2993.1.1 = { holder = 11013974 } # Morgan Afolayan
+2998.1.1 = { law = succ_seniority } # Just to make EXTRA sure

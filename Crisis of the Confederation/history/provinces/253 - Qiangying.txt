@@ -1,0 +1,61 @@
+# 253 - Qiangying
+
+# County Title
+title = c_qiangying
+
+# Settlements
+max_settlements = 4
+b_qiangying_vii = castle
+b_qianyging_station = castle
+b_qiangying_vii_a = city
+b_qiangying_v = temple
+
+# Misc
+culture = sino_bianjiangese # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+
+	b_qiangying_vii = ca_no_water
+	b_qiangying_vii = ca_trace_water
+	b_qiangying_vii = ca_lakes
+	b_qiangying_vii = ca_clean_atmosphere
+	b_qiangying_vii = ca_frozen
+	b_qiangying_vii = ca_cold
+	b_qiangying_vii = ca_planet_survey
+	
+	b_qianyging_station = ca_space_station_0
+	b_qianyging_station = ca_space_station_1
+	b_qianyging_station = ca_space_station_2
+	
+	b_qiangying_vii_a = ct_no_water
+	b_qiangying_vii_a = ct_trace_water
+	b_qiangying_vii_a = ct_clean_atmosphere
+	b_qiangying_vii_a = ct_frozen
+	b_qiangying_vii_a = ct_planet_survey
+	
+	b_qiangying_v = ca_no_water
+	b_qiangying_v = ca_trace_water
+	b_qiangying_v = ca_lakes
+	b_qiangying_v = ca_clean_atmosphere
+	b_qiangying_v = ca_frozen
+	b_qiangying_v = ca_cold
+	b_qiangying_v = ca_planet_survey
+}
+
+2998.1.1 = {
+
+		b_qiangying_vii = ca_colony_0
+		b_qiangying_vii = ca_colony_1
+		b_qiangying_vii = ca_colony_2
+		
+		b_qianyging_station = ca_colony_0
+		b_qianyging_station = ca_colony_1
+
+		b_qiangying_vii_a = ct_colony_0
+		b_qiangying_vii_a = ct_colony_1
+		
+		b_qiangying_v = tp_colony_0
+		
+}

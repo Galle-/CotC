@@ -1,0 +1,19 @@
+# 164 - Tselostnost'
+
+# County Title
+title = c_tselostnost
+
+# Settlements
+max_settlements = 3
+b_tselostnost_ii = castle
+
+# Misc
+culture = japanese_edemite # Initial culture
+religion = astrist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

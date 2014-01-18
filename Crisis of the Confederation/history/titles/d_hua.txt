@@ -1,0 +1,12 @@
+2900.1.1={
+	liege = "e_terran_confederation"
+	law = succ_gavelkind
+	law = true_cognatic_succession
+}
+
+2948.6.13 = { holder = "90320025" } # Hai Lan Lim
+2999.3.14 = {holder = "100220025"} # Wan Fung Lim
+
+2997.1.1 = {
+	liege = "k_xin_zizhiqu"
+}

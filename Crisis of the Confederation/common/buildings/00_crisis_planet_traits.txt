@@ -1,0 +1,1244 @@
+castle = {
+	ca_planet_survey = {
+		desc = bu_planet_survey_desc
+		trigger = { always = no }
+		potential = {
+			FROM = {
+				FROM = {
+					# List of space station titles
+					NOT = { title = b_zhai_zhigang_waystation }
+					NOT = { title = b_liu_wang_waystation }
+					NOT = { title = b_liu_yang_waystation }
+					NOT = { title = b_zhang_xiaoguang_waystation }
+					NOT = { title = b_wang_yaping_waystation }
+					NOT = { title = b_qinglong_waystation }
+					NOT = { title = b_tletlioh_waystation }
+					NOT = { title = b_santa_maria_waystation }
+					NOT = { title = b_dom_frontera_waystation }
+					NOT = { title = b_al_jisr_waystation }
+					NOT = { title = b_al_bawwaaba_waystation }
+					NOT = { title = b_shams_akhdar_waystation }
+					NOT = { title = b_sharman_waystation }
+					NOT = { title = b_orbital_station_alpha }
+					NOT = { title = b_orbital_station_beta }
+					NOT = { title = b_orbital_station_gamma }
+					NOT = { title = b_heavens_gate }
+					NOT = { title = b_tengoku_waystation }
+					NOT = { title = b_hu_lao_gate }
+					NOT = { title = b_tannhauser_gate }
+					NOT = { title = b_liu_yang_observatory }
+					NOT = { title = b_macau_station }
+					NOT = { title = b_xianggang_xin_orbital }
+					NOT = {	title = b_xianggang_xin_orbital }
+					NOT = { title = b_jiu_wanguan_xi_orbital}
+					NOT = {	title = b_wanguan_orbital_b }
+					NOT = {	title = b_jiayuan_orbital }
+					NOT = {	title = b_ying_shi_viii_orbital }
+				}
+			}
+		}
+		build_cost = 0
+		build_time = 0
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	# Space Station Core Buildings
+	ca_space_station_0 = {
+		desc = bu_space_station_0_desc
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+		potential = {
+			FROM = {
+				FROM = {
+					OR = {
+						# Space Station title
+						title = b_zhai_zhigang_waystation
+						title = b_liu_wang_waystation
+						title = b_liu_yang_waystation
+						title = b_zhang_xiaoguang_waystation
+						title = b_wang_yaping_waystation
+						title = b_qinglong_waystation
+						title = b_tletlioh_waystation
+						title = b_santa_maria_waystation
+						title = b_dom_frontera_waystation
+						title = b_al_jisr_waystation
+						title = b_al_bawwaaba_waystation
+						title = b_shams_akhdar_waystation
+						title = b_sharman_waystation
+						title = b_orbital_station_alpha
+						title = b_orbital_station_beta
+						title = b_orbital_station_gamma
+						title = b_heavens_gate
+						title = b_tengoku_waystation
+						title = b_hu_lao_gate
+						title = b_tannhauser_gate
+						title = b_liu_yang_observatory
+						title = b_macau_station
+						title = b_xianggang_xin_orbital
+						title = b_jiu_wanguan_xi_orbital_c
+						title = b_wanguan_orbital_b
+						title = b_jiayuan_orbital
+						title = b_ying_shi_viii_orbital
+					}
+				}
+			}
+		}
+		build_cost = 0
+		build_time = 0
+		levy_size = -0.8
+		garrison_size = -0.8
+		ai_creation_factor = 0
+	}
+	ca_space_station_1 = {
+		desc = bu_space_station_1_desc
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 2 }
+		potential = { }
+		upgrades_from = ca_space_station_0
+		build_cost = 200
+		build_time = 730
+		levy_size = 0.2
+		garrison_size = 0.2
+		ai_creation_factor = 200
+	}
+	ca_space_station_2 = {
+		desc = bu_space_station_2_desc
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 4 }
+		potential = { }
+		upgrades_from = ca_space_station_1
+		build_cost = 400
+		build_time = 1460
+		levy_size = 0.2
+		garrison_size = 0.2
+		ai_creation_fctor = 199
+	}
+	ca_space_station_3 = {
+		desc = bu_space_station_3_desc
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 6 }
+		potential = { }
+		upgrades_from = ca_space_station_2
+		build_cost = 800
+		build_time = 2920
+		levy_size = 0.2
+		garrison_size = 0.2
+		ai_creation_factor = 198
+	}
+	ca_space_station_4 = {
+		desc = bu_space_station_4_desc
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 8 }
+		potential = { }
+		upgrades_from = ca_space_station_3
+		build_cost = 1600
+		build_time = 5840
+		levy_size = 0.2
+		garrison_size = 0.2
+		ai_creation_factor = 197
+	}
+	# Atmosphere
+	ca_no_atmosphere = {
+		desc = bu_no_atmosphere_desc
+		trigger = { always = no }
+		potential = {
+			FROM = {
+				FROM = {
+					NOT = { has_building = ca_space_station_0 }
+					OR = {
+						NOT = { has_building = ca_planet_survey }
+						has_building = ca_no_atmosphere
+					}
+				}
+			}
+		}
+		build_cost = 0
+		build_time = 0
+		levy_size = -0.5
+		garrison_size = -0.5
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	ca_no_atmosphere_domes = {
+		desc = bu_domes_desc
+		trigger = { TECH_LEGALISM = 1 }
+		upgrades_from = ca_no_atmosphere
+		build_cost = 100
+		build_time = 365
+		levy_size = 0.25
+		garrison_size = 0.25
+		ai_creation_factor = 200
+		extra_tech_building_start = 10.0
+	}
+	ca_artificial_atmosphere = {
+		desc = bu_artificial_atmosphere_desc
+		trigger = { TECH_LEGALISM = 6 }
+		upgrades_from = ca_no_atmosphere_domes
+		build_cost = 1000
+		build_time = 3650
+		levy_size = 0.25
+		garrison_size = 0.25
+		ai_creation_factor = 199
+		extra_tech_building_start = 10.0
+	}
+	ca_toxic_atmosphere = {
+		desc = bu_toxic_atmosphere_desc
+		trigger = { always = no }
+		potential = {
+			FROM = {
+				FROM = {
+					NOT = { has_building = ca_space_station_0 }
+					OR = {
+						NOT = { has_building = ca_planet_survey }
+						has_building = ca_toxic_atmosphere
+					}
+				}
+			}
+		}
+		build_cost = 0
+		build_time = 0
+		levy_size = -0.2
+		garrison_size = -0.2
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	ca_toxic_atmosphere_domes = {
+		desc = bu_domes_desc
+		trigger = { TECH_LEGALISM = 1 }
+		upgrades_from = ca_toxic_atmosphere
+		build_cost = 100
+		build_time = 365
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 200
+		extra_tech_building_start = 10.0
+	}
+	ca_scrubbed_atmosphere = {
+		desc = bu_scrubbed_atmosphere_desc
+		trigger = { TECH_LEGALISM = 3 }
+		upgrades_from = ca_toxic_atmosphere_domes
+		build_cost = 500
+		build_time = 1825
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 199
+		extra_tech_building_start = 10.0
+	}
+	ca_clean_atmosphere = {
+		desc = bu_clean_atmosphere_desc
+		trigger = { always = no }
+		potential = {
+			FROM = {
+				FROM = {
+					NOT = { has_building = ca_space_station_0 }
+					OR = {
+						NOT = { has_building = ca_planet_survey }
+						has_building = ca_clean_atmosphere
+					}
+				}
+			}
+		}
+		build_cost = 0
+		build_time = 0
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	# Hydrosphere
+	ca_no_water = {
+		desc = bu_no_water_desc
+		trigger = { always = yes }
+		potential = { NOT = { FROM = { FROM = { has_building = ca_space_station_0 } } } }
+		build_cost = 0
+		build_time = 0
+		levy_size = -0.4
+		garrison_size = -0.4
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	ca_trace_water = {
+		desc = bu_trace_water_desc
+		trigger = { TECH_LEGALISM = 1 }
+		upgrades_from = ca_no_water
+		build_cost = 100
+		build_time = 365
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 198
+		extra_tech_building_start = 10.0
+	}
+	ca_lakes = {
+		desc = bu_lakes_desc
+		trigger = { TECH_LEGALISM = 3 }
+		upgrades_from = ca_trace_water
+		build_cost = 200
+		build_time = 730
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 197
+		extra_tech_building_start = 10.0
+	}
+	ca_seas = {
+		desc = bu_seas_desc
+		trigger = { TECH_LEGALISM = 5 }
+		upgrades_from = ca_lakes
+		build_cost = 400
+		build_time = 1460
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 196
+		extra_tech_building_start = 10.0
+	}
+	ca_oceans = {
+		desc = bu_oceans_desc
+		trigger = { TECH_LEGALISM = 7 }
+		upgrades_from = ca_seas
+		build_cost = 800
+		build_time = 2920
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 195
+		extra_tech_building_start = 10.0
+	}
+	# Temperature
+	ca_frozen = {
+		desc = bu_frozen_desc
+		trigger = { always = no }
+		potential = {
+			FROM = {
+				FROM = {
+					NOT = { has_building = ca_space_station_0 }
+					OR = {
+						NOT = { has_building = ca_planet_survey }
+						has_building = ca_frozen
+					}
+				}
+			}
+		}
+		build_cost = 0
+		build_time = 0
+		levy_size = -0.3
+		garrison_size = -0.3
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	ca_cold = {
+		desc = bu_cold_desc
+		trigger = { TECH_LEGALISM = 2 }
+		upgrades_from = ca_frozen
+		build_cost = 100
+		build_time = 365
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 194
+		extra_tech_building_start = 10.0
+	}
+	ca_cool = {
+		desc = bu_cool_desc
+		trigger = { TECH_LEGALISM = 4 }
+		upgrades_from = ca_cold
+		build_cost = 200
+		build_time = 730
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 193
+		extra_tech_building_start = 10.0
+	}
+	ca_optimal_cold = {
+		desc = bu_optimal_desc
+		trigger = { TECH_LEGALISM = 6 }
+		upgrades_from = ca_cool
+		build_cost = 400
+		build_time = 1460
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 192
+		extra_tech_building_start = 10.0
+	}
+	ca_burning = {
+		desc = bu_burning_desc
+		trigger = { always = no }
+		potential = {
+			FROM = {
+				FROM = {
+					NOT = { has_building = ca_space_station_0 }
+					OR = {
+						NOT = { has_building = ca_planet_survey }
+						has_building = ca_burning
+					}
+				}
+			}
+		}
+		build_cost = 0
+		build_time = 0
+		levy_size = -0.3
+		garrison_size = -0.3
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	ca_hot = {
+		desc = bu_hot_desc
+		trigger = { TECH_LEGALISM = 2 }
+		upgrades_from = ca_burning
+		build_cost = 100
+		build_time = 365
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 194
+		extra_tech_building_start = 10.0
+	}
+	ca_warm = {
+		desc = bu_warm_desc
+		trigger = { TECH_LEGALISM = 4 }
+		upgrades_from = ca_hot
+		build_cost = 200
+		build_time = 730
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 193
+		extra_tech_building_start = 10.0
+	}
+	ca_optimal_hot = {
+		desc = bu_optimal_desc
+		trigger = { TECH_LEGALISM = 6 }
+		upgrades_from = ca_warm
+		build_cost = 400
+		build_time = 1460
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 192
+		extra_tech_building_start = 10.0
+	}
+}
+temple = {
+	tp_planet_survey = {
+		desc = bu_planet_survey_desc
+		trigger = { always = no }
+		potential = {
+			FROM = {
+				FROM = {
+					# List of space station titles
+					NOT = { title = b_zhai_zhigang_waystation }
+					NOT = { title = b_liu_wang_waystation }
+					NOT = { title = b_liu_yang_waystation }
+					NOT = { title = b_zhang_xiaoguang_waystation }
+					NOT = { title = b_wang_yaping_waystation }
+					NOT = { title = b_qinglong_waystation }
+					NOT = { title = b_tletlioh_waystation }
+					NOT = { title = b_santa_maria_waystation }
+					NOT = { title = b_dom_frontera_waystation }
+					NOT = { title = b_al_jisr_waystation }
+					NOT = { title = b_al_bawwaaba_waystation }
+					NOT = { title = b_shams_akhdar_waystation }
+					NOT = { title = b_sharman_waystation }
+					NOT = { title = b_orbital_station_alpha }
+					NOT = { title = b_orbital_station_beta }
+					NOT = { title = b_orbital_station_gamma }
+					NOT = { title = b_heavens_gate }
+					NOT = { title = b_tengoku_waystation }
+					NOT = { title = b_hu_lao_gate }
+					NOT = { title = b_tannhauser_gate }
+					NOT = { title = b_liu_yang_observatory }
+					NOT = { title = b_macau_station }
+					NOT = { title = b_xianggang_xin_orbital }
+					NOT = { title = b_jiu_wanguan_xi_orbital_b }
+				}
+			}
+		}
+		build_cost = 0
+		build_time = 0
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	# Space Station Core Buildings
+	tp_space_station_0 = {
+		desc = bu_space_station_0_desc
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+		potential = {
+			FROM = {
+				FROM = {
+					OR = {
+						# Space Station title
+						title = b_zhai_zhigang_waystation
+						title = b_liu_wang_waystation
+						title = b_liu_yang_waystation
+						title = b_zhang_xiaoguang_waystation
+						title = b_wang_yaping_waystation
+						title = b_qinglong_waystation
+						title = b_tletlioh_waystation
+						title = b_santa_maria_waystation
+						title = b_dom_frontera_waystation
+						title = b_al_jisr_waystation
+						title = b_al_bawwaaba_waystation
+						title = b_shams_akhdar_waystation
+						title = b_sharman_waystation
+						title = b_orbital_station_alpha
+						title = b_orbital_station_beta
+						title = b_orbital_station_gamma
+						title = b_heavens_gate
+						title = b_tengoku_waystation
+						title = b_hu_lao_gate
+						title = b_tannhauser_gate
+						title = b_liu_yang_observatory
+						title = b_macau_station
+						title = b_jiu_wanguan_xi_orbital_b
+						title = b_xianggang_xin_orbital
+					}
+				}
+			}
+		}
+		build_cost = 0
+		build_time = 0
+		levy_size = -0.8
+		garrison_size = -0.8
+		ai_creation_factor = 0
+	}
+	tp_space_station_1 = {
+		desc = bu_space_station_1_desc
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 2 }
+		potential = { }
+		upgrades_from = tp_space_station_0
+		build_cost = 200
+		build_time = 730
+		levy_size = 0.2
+		garrison_size = 0.2
+		ai_creation_factor = 200
+	}
+	tp_space_station_2 = {
+		desc = bu_space_station_2_desc
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 4 }
+		potential = { }
+		upgrades_from = tp_space_station_1
+		build_cost = 400
+		build_time = 1460
+		levy_size = 0.2
+		garrison_size = 0.2
+		ai_creation_fctor = 199
+	}
+	tp_space_station_3 = {
+		desc = bu_space_station_3_desc
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 6 }
+		potential = { }
+		upgrades_from = tp_space_station_2
+		build_cost = 800
+		build_time = 2920
+		levy_size = 0.2
+		garrison_size = 0.2
+		ai_creation_factor = 198
+	}
+	tp_space_station_4 = {
+		desc = bu_space_station_4_desc
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 8 }
+		potential = { }
+		upgrades_from = tp_space_station_3
+		build_cost = 1600
+		build_time = 5840
+		levy_size = 0.2
+		garrison_size = 0.2
+		ai_creation_factor = 197
+	}
+	# Atmosphere
+	tp_no_atmosphere = {
+		desc = bu_no_atmosphere_desc
+		trigger = { always = no }
+		potential = {
+			FROM = {
+				FROM = {
+					NOT = { has_building = tp_space_station_0 }
+					OR = {
+						NOT = { has_building = tp_planet_survey }
+						has_building = tp_no_atmosphere
+					}
+				}
+			}
+		}
+		build_cost = 0
+		build_time = 0
+		levy_size = -0.5
+		garrison_size = -0.5
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	tp_no_atmosphere_domes = {
+		desc = bu_domes_desc
+		trigger = { TECH_LEGALISM = 1 }
+		upgrades_from = tp_no_atmosphere
+		build_cost = 100
+		build_time = 365
+		levy_size = 0.25
+		garrison_size = 0.25
+		ai_creation_factor = 200
+		extra_tech_building_start = 10.0
+	}
+	tp_artificial_atmosphere = {
+		desc = bu_artificial_atmosphere_desc
+		trigger = { TECH_LEGALISM = 6 }
+		upgrades_from = tp_no_atmosphere_domes
+		build_cost = 1000
+		build_time = 3650
+		levy_size = 0.25
+		garrison_size = 0.25
+		ai_creation_factor = 199
+		extra_tech_building_start = 10.0
+	}
+	tp_toxic_atmosphere = {
+		desc = bu_toxic_atmosphere_desc
+		trigger = { always = no }
+		potential = {
+			FROM = {
+				FROM = {
+					NOT = { has_building = tp_space_station_0 }
+					OR = {
+						NOT = { has_building = tp_planet_survey }
+						has_building = tp_toxic_atmosphere
+					}
+				}
+			}
+		}
+		build_cost = 0
+		build_time = 0
+		levy_size = -0.2
+		garrison_size = -0.2
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	tp_toxic_atmosphere_domes = {
+		desc = bu_domes_desc
+		trigger = { TECH_LEGALISM = 1 }
+		upgrades_from = tp_toxic_atmosphere
+		build_cost = 100
+		build_time = 365
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 200
+		extra_tech_building_start = 10.0
+	}
+	tp_scrubbed_atmosphere = {
+		desc = bu_scrubbed_atmosphere_desc
+		trigger = { TECH_LEGALISM = 3 }
+		upgrades_from = tp_toxic_atmosphere_domes
+		build_cost = 500
+		build_time = 1825
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 199
+		extra_tech_building_start = 10.0
+	}
+	tp_clean_atmosphere = {
+		desc = bu_clean_atmosphere_desc
+		trigger = { always = no }
+		potential = {
+			FROM = {
+				FROM = {
+					NOT = { has_building = tp_space_station_0 }
+					OR = {
+						NOT = { has_building = tp_planet_survey }
+						has_building = tp_clean_atmosphere
+					}
+				}
+			}
+		}
+		build_cost = 0
+		build_time = 0
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	# Hydrosphere
+	tp_no_water = {
+		desc = bu_no_water_desc
+		trigger = { always = yes }
+		potential = { NOT = { FROM = { FROM = { has_building = tp_space_station_0 } } } }
+		build_cost = 0
+		build_time = 0
+		levy_size = -0.4
+		garrison_size = -0.4
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	tp_trace_water = {
+		desc = bu_trace_water_desc
+		trigger = { TECH_LEGALISM = 1 }
+		upgrades_from = tp_no_water
+		build_cost = 100
+		build_time = 365
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 198
+		extra_tech_building_start = 10.0
+	}
+	tp_lakes = {
+		desc = bu_lakes_desc
+		trigger = { TECH_LEGALISM = 3 }
+		upgrades_from = tp_trace_water
+		build_cost = 200
+		build_time = 730
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 197
+		extra_tech_building_start = 10.0
+	}
+	tp_seas = {
+		desc = bu_seas_desc
+		trigger = { TECH_LEGALISM = 5 }
+		upgrades_from = tp_lakes
+		build_cost = 400
+		build_time = 1460
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 196
+		extra_tech_building_start = 10.0
+	}
+	tp_oceans = {
+		desc = bu_oceans_desc
+		trigger = { TECH_LEGALISM = 7 }
+		upgrades_from = tp_seas
+		build_cost = 800
+		build_time = 2920
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 195
+		extra_tech_building_start = 10.0
+	}
+	# Temperature
+	tp_frozen = {
+		desc = bu_frozen_desc
+		trigger = { always = no }
+		potential = {
+			FROM = {
+				FROM = {
+					NOT = { has_building = tp_space_station_0 }
+					OR = {
+						NOT = { has_building = tp_planet_survey }
+						has_building = tp_frozen
+					}
+				}
+			}
+		}
+		build_cost = 0
+		build_time = 0
+		levy_size = -0.3
+		garrison_size = -0.3
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	tp_cold = {
+		desc = bu_cold_desc
+		trigger = { TECH_LEGALISM = 2 }
+		upgrades_from = tp_frozen
+		build_cost = 100
+		build_time = 365
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 194
+		extra_tech_building_start = 10.0
+	}
+	tp_cool = {
+		desc = bu_cool_desc
+		trigger = { TECH_LEGALISM = 4 }
+		upgrades_from = tp_cold
+		build_cost = 200
+		build_time = 730
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 193
+		extra_tech_building_start = 10.0
+	}
+	tp_optimal_cold = {
+		desc = bu_optimal_desc
+		trigger = { TECH_LEGALISM = 6 }
+		upgrades_from = tp_cool
+		build_cost = 400
+		build_time = 1460
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 192
+		extra_tech_building_start = 10.0
+	}
+	tp_burning = {
+		desc = bu_burning_desc
+		trigger = { always = no }
+		potential = {
+			FROM = {
+				FROM = {
+					NOT = { has_building = tp_space_station_0 }
+					OR = {
+						NOT = { has_building = tp_planet_survey }
+						has_building = tp_burning
+					}
+				}
+			}
+		}
+		build_cost = 0
+		build_time = 0
+		levy_size = -0.3
+		garrison_size = -0.3
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	tp_hot = {
+		desc = bu_hot_desc
+		trigger = { TECH_LEGALISM = 2 }
+		upgrades_from = tp_burning
+		build_cost = 100
+		build_time = 365
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 194
+		extra_tech_building_start = 10.0
+	}
+	tp_warm = {
+		desc = bu_warm_desc
+		trigger = { TECH_LEGALISM = 4 }
+		upgrades_from = tp_hot
+		build_cost = 200
+		build_time = 730
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 193
+		extra_tech_building_start = 10.0
+	}
+	tp_optimal_hot = {
+		desc = bu_optimal_desc
+		trigger = { TECH_LEGALISM = 6 }
+		upgrades_from = tp_warm
+		build_cost = 400
+		build_time = 1460
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 192
+		extra_tech_building_start = 10.0
+	}
+}
+city = {
+	ct_planet_survey = {
+		desc = bu_planet_survey_desc
+		trigger = { always = no }
+		potential = {
+			FROM = {
+				FROM = {
+					# List of space station titles
+					NOT = { title = b_zhai_zhigang_waystation }
+					NOT = { title = b_liu_wang_waystation }
+					NOT = { title = b_liu_yang_waystation }
+					NOT = { title = b_zhang_xiaoguang_waystation }
+					NOT = { title = b_wang_yaping_waystation }
+					NOT = { title = b_qinglong_waystation }
+					NOT = { title = b_tletlioh_waystation }
+					NOT = { title = b_santa_maria_waystation }
+					NOT = { title = b_dom_frontera_waystation }
+					NOT = { title = b_al_jisr_waystation }
+					NOT = { title = b_al_bawwaaba_waystation }
+					NOT = { title = b_shams_akhdar_waystation }
+					NOT = { title = b_sharman_waystation }
+					NOT = { title = b_orbital_station_alpha }
+					NOT = { title = b_orbital_station_beta }
+					NOT = { title = b_orbital_station_gamma }
+					NOT = { title = b_heavens_gate }
+					NOT = { title = b_tengoku_waystation }
+					NOT = { title = b_hu_lao_gate }
+					NOT = { title = b_tannhauser_gate }
+					NOT = { title = b_liu_yang_observatory }
+					NOT = { title = b_macau_station }
+					NOT = { title = b_xianggang_xin_orbital }
+					NOT = { title = b_jiu_wanguan_xi_orbital_a}
+					NOT = {	title = b_wanguan_orbital_a }
+					NOT = {	title = b_gaoda_de_shan_iii_refinery }
+					NOT = {	title = b_ying_shi_xii_orbital }
+					NOT = {	title = b_ghuanghai_inner_belt }
+					NOT = {	title = b_ghuanghai_outer_belt }
+				}
+			}
+		}
+		build_cost = 0
+		build_time = 0
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	# Space Station Core Buildings
+	ct_space_station_0 = {
+		desc = bu_space_station_0_desc
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+		potential = {
+			FROM = {
+				FROM = {
+					OR = {
+						# Space Station title
+						title = b_zhai_zhigang_waystation
+						title = b_liu_wang_waystation
+						title = b_liu_yang_waystation
+						title = b_zhang_xiaoguang_waystation
+						title = b_wang_yaping_waystation
+						title = b_qinglong_waystation
+						title = b_tletlioh_waystation
+						title = b_santa_maria_waystation
+						title = b_dom_frontera_waystation
+						title = b_al_jisr_waystation
+						title = b_al_bawwaaba_waystation
+						title = b_shams_akhdar_waystation
+						title = b_sharman_waystation
+						title = b_orbital_station_alpha
+						title = b_orbital_station_beta
+						title = b_orbital_station_gamma
+						title = b_heavens_gate
+						title = b_tengoku_waystation
+						title = b_hu_lao_gate
+						title = b_tannhauser_gate
+						title = b_liu_yang_observatory
+						title = b_macau_station
+						title = b_xianggang_xin_orbital
+						title = b_wanguan_orbital_a
+						title = b_gaoda_de_shan_iii_refinery
+						title = b_ying_shi_xii_orbital
+						title = b_ghuanghai_inner_belt
+						title = b_ghuanghai_outer_belt
+					}
+				}
+			}
+		}
+		build_cost = 0
+		build_time = 0
+		levy_size = -0.8
+		garrison_size = -0.8
+		ai_creation_factor = 0
+	}
+	ct_space_station_1 = {
+		desc = bu_space_station_1_desc
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 2 }
+		potential = { }
+		upgrades_from = ct_space_station_0
+		build_cost = 200
+		build_time = 730
+		levy_size = 0.2
+		garrison_size = 0.2
+		ai_creation_factor = 200
+	}
+	ct_space_station_2 = {
+		desc = bu_space_station_2_desc
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 4 }
+		potential = { }
+		upgrades_from = ct_space_station_1
+		build_cost = 400
+		build_time = 1460
+		levy_size = 0.2
+		garrison_size = 0.2
+		ai_creation_fctor = 199
+	}
+	ct_space_station_3 = {
+		desc = bu_space_station_3_desc
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 6 }
+		potential = { }
+		upgrades_from = ct_space_station_2
+		build_cost = 800
+		build_time = 2920
+		levy_size = 0.2
+		garrison_size = 0.2
+		ai_creation_factor = 198
+	}
+	ct_space_station_4 = {
+		desc = bu_space_station_4_desc
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 8 }
+		potential = { }
+		upgrades_from = ct_space_station_3
+		build_cost = 1600
+		build_time = 5840
+		levy_size = 0.2
+		garrison_size = 0.2
+		ai_creation_factor = 197
+	}
+	# Atmosphere
+	ct_no_atmosphere = {
+		desc = bu_no_atmosphere_desc
+		trigger = { always = no }
+		potential = {
+			FROM = {
+				FROM = {
+					NOT = { has_building = ct_space_station_0 }
+					OR = {
+						NOT = { has_building = ct_planet_survey }
+						has_building = ct_no_atmosphere
+					}
+				}
+			}
+		}
+		build_cost = 0
+		build_time = 0
+		levy_size = -0.5
+		garrison_size = -0.5
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	ct_no_atmosphere_domes = {
+		desc = bu_domes_desc
+		trigger = { TECH_LEGALISM = 1 }
+		upgrades_from = ct_no_atmosphere
+		build_cost = 100
+		build_time = 365
+		levy_size = 0.25
+		garrison_size = 0.25
+		ai_creation_factor = 200
+		extra_tech_building_start = 10.0
+	}
+	ct_artificial_atmosphere = {
+		desc = bu_artificial_atmosphere_desc
+		trigger = { TECH_LEGALISM = 6 }
+		upgrades_from = ct_no_atmosphere_domes
+		build_cost = 1000
+		build_time = 3650
+		levy_size = 0.25
+		garrison_size = 0.25
+		ai_creation_factor = 199
+		extra_tech_building_start = 10.0
+	}
+	ct_toxic_atmosphere = {
+		desc = bu_toxic_atmosphere_desc
+		trigger = { always = no }
+		potential = {
+			FROM = {
+				FROM = {
+					NOT = { has_building = ct_space_station_0 }
+					OR = {
+						NOT = { has_building = ct_planet_survey }
+						has_building = ct_toxic_atmosphere
+					}
+				}
+			}
+		}
+		build_cost = 0
+		build_time = 0
+		levy_size = -0.2
+		garrison_size = -0.2
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	ct_toxic_atmosphere_domes = {
+		desc = bu_domes_desc
+		trigger = { TECH_LEGALISM = 1 }
+		upgrades_from = ct_toxic_atmosphere
+		build_cost = 100
+		build_time = 365
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 200
+		extra_tech_building_start = 10.0
+	}
+	ct_scrubbed_atmosphere = {
+		desc = bu_scrubbed_atmosphere_desc
+		trigger = { TECH_LEGALISM = 3 }
+		upgrades_from = ct_toxic_atmosphere_domes
+		build_cost = 500
+		build_time = 1825
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 199
+		extra_tech_building_start = 10.0
+	}
+	ct_clean_atmosphere = {
+		desc = bu_clean_atmosphere_desc
+		trigger = { always = no }
+		potential = {
+			FROM = {
+				FROM = {
+					NOT = { has_building = ct_space_station_0 }
+					OR = {
+						NOT = { has_building = ct_planet_survey }
+						has_building = ct_clean_atmosphere
+					}
+				}
+			}
+		}
+		build_cost = 0
+		build_time = 0
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	# Hydrosphere
+	ct_no_water = {
+		desc = bu_no_water_desc
+		trigger = { always = yes }
+		potential = { NOT = { FROM = { FROM = { has_building = ct_space_station_0 } } } }
+		build_cost = 0
+		build_time = 0
+		levy_size = -0.4
+		garrison_size = -0.4
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	ct_trace_water = {
+		desc = bu_trace_water_desc
+		trigger = { TECH_LEGALISM = 1 }
+		upgrades_from = ct_no_water
+		build_cost = 100
+		build_time = 365
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 198
+		extra_tech_building_start = 10.0
+	}
+	ct_lakes = {
+		desc = bu_lakes_desc
+		trigger = { TECH_LEGALISM = 3 }
+		upgrades_from = ct_trace_water
+		build_cost = 200
+		build_time = 730
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 197
+		extra_tech_building_start = 10.0
+	}
+	ct_seas = {
+		desc = bu_seas_desc
+		trigger = { TECH_LEGALISM = 5 }
+		upgrades_from = ct_lakes
+		build_cost = 400
+		build_time = 1460
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 196
+		extra_tech_building_start = 10.0
+	}
+	ct_oceans = {
+		desc = bu_oceans_desc
+		trigger = { TECH_LEGALISM = 7 }
+		upgrades_from = ct_seas
+		build_cost = 800
+		build_time = 2920
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 195
+		extra_tech_building_start = 10.0
+	}
+	# Temperature
+	ct_frozen = {
+		desc = bu_frozen_desc
+		trigger = { always = no }
+		potential = {
+			FROM = {
+				FROM = {
+					NOT = { has_building = ct_space_station_0 }
+					OR = {
+						NOT = { has_building = ct_planet_survey }
+						has_building = ct_frozen
+					}
+				}
+			}
+		}
+		build_cost = 0
+		build_time = 0
+		levy_size = -0.3
+		garrison_size = -0.3
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	ct_cold = {
+		desc = bu_cold_desc
+		trigger = { TECH_LEGALISM = 2 }
+		upgrades_from = ct_frozen
+		build_cost = 100
+		build_time = 365
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 194
+		extra_tech_building_start = 10.0
+	}
+	ct_cool = {
+		desc = bu_cool_desc
+		trigger = { TECH_LEGALISM = 4 }
+		upgrades_from = ct_cold
+		build_cost = 200
+		build_time = 730
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 193
+		extra_tech_building_start = 10.0
+	}
+	ct_optimal_cold = {
+		desc = bu_optimal_desc
+		trigger = { TECH_LEGALISM = 6 }
+		upgrades_from = ct_cool
+		build_cost = 400
+		build_time = 1460
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 192
+		extra_tech_building_start = 10.0
+	}
+	ct_burning = {
+		desc = bu_burning_desc
+		trigger = { always = no }
+		potential = {
+			FROM = {
+				FROM = {
+					NOT = { has_building = ct_space_station_0 }
+					OR = {
+						NOT = { has_building = ct_planet_survey }
+						has_building = ct_burning
+					}
+				}
+			}
+		}
+		build_cost = 0
+		build_time = 0
+		levy_size = -0.3
+		garrison_size = -0.3
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	ct_hot = {
+		desc = bu_hot_desc
+		trigger = { TECH_LEGALISM = 2 }
+		upgrades_from = ct_burning
+		build_cost = 100
+		build_time = 365
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 194
+		extra_tech_building_start = 10.0
+	}
+	ct_warm = {
+		desc = bu_warm_desc
+		trigger = { TECH_LEGALISM = 4 }
+		upgrades_from = ct_hot
+		build_cost = 200
+		build_time = 730
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 193
+		extra_tech_building_start = 10.0
+	}
+	ct_optimal_hot = {
+		desc = bu_optimal_desc
+		trigger = { TECH_LEGALISM = 6 }
+		upgrades_from = ct_warm
+		build_cost = 400
+		build_time = 1460
+		levy_size = 0.1
+		garrison_size = 0.1
+		ai_creation_factor = 192
+		extra_tech_building_start = 10.0
+	}
+	
+	ct_asteroids = {
+		desc = ct_asteroids_desc
+		trigger = { always = no }
+		potential = {
+			FROM = {
+				FROM = {
+					OR = {
+						# Space stations with asteroid belts
+						title = b_sharman_waystation
+						title = b_orbital_station_alpha
+						title = b_orbital_station_beta
+						title = b_orbital_station_gamma
+						title = b_heavens_gate
+						title = b_tengoku_waystation
+						title = b_macau_station
+						title = b_xianggang_xin_orbital
+						title = b_gaoda_de_shan_iii_refinery
+						title = b_jiu_wanguan_xi_orbital_a
+						title = b_ying_shi_xii_orbital
+						title = b_ghuanghai_inner_belt
+						title = b_ghuanghai_outer_belt
+					}
+				}
+			}
+		}
+		build_cost = 0
+		build_time = 0
+		tax_income = 2
+		ai_creation_factor = 0
+	}
+}

@@ -1,0 +1,21 @@
+# 31 - Mary's Star
+
+# County Title
+title = c_marys_star
+
+# Settlements
+max_settlements = 4
+
+b_marys_star_vi_b = castle
+b_marys_star_vi_c = temple
+
+# Misc
+culture = anglo_avalonian # Initial culture
+religion = bio_directionist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

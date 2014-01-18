@@ -1,0 +1,21 @@
+# 166 - Ostorozhnost'
+
+# County Title
+title = c_ostorozhnost
+
+# Settlements
+max_settlements = 4
+b_ostorozhnost_iii = castle
+b_ostorozhnost_iv = city
+b_ostorozhnost_iv_b = temple
+
+# Misc
+culture = russo_edemite # Initial culture
+religion = astrist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

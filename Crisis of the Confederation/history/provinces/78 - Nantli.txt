@@ -1,0 +1,54 @@
+# 78 - Nantli
+
+# County Title
+title = c_nantli
+
+# Settlements
+max_settlements = 4
+b_nantli_prime = castle
+b_nantli_prime_b = temple
+b_nantli_ii = city
+
+# Misc
+culture = mesoamerican_sexto_solar # Initial culture
+religion = adoptionist_cultist
+
+# History
+1.1.1 = {
+	b_nantli_prime = ca_toxic_atmosphere
+	b_nantli_prime = ca_no_water
+	b_nantli_prime = ca_trace_water
+	b_nantli_prime = ca_lakes
+	b_nantli_prime = ca_burning
+	b_nantli_prime = ca_hot
+	b_nantli_prime = ca_planet_survey
+	
+	b_nantli_prime_b = tp_no_atmosphere
+	b_nantli_prime_b = tp_no_water
+	b_nantli_prime_b = tp_burning
+	b_nantli_prime_b = tp_hot
+	b_nantli_prime_b = tp_planet_survey
+	
+	b_nantli_ii = ct_toxic_atmosphere
+	b_nantli_ii = ct_no_water
+	b_nantli_ii = ct_trace_water
+	b_nantli_ii = ct_lakes
+	b_nantli_ii = ct_seas
+	b_nantli_ii = ct_burning
+	b_nantli_ii = ct_hot
+	b_nantli_ii = ct_warm
+	b_nantli_ii = ct_planet_survey
+}
+
+2998.1.1 = {
+	b_nantli_prime = ca_toxic_atmosphere_domes
+	b_nantli_prime = ca_colony_0
+	b_nantli_prime = ca_colony_1
+	
+	b_nantli_prime_b = tp_colony_0
+	
+	b_nantli_ii = ct_toxic_atmosphere_domes
+	b_nantli_ii = ct_colony_0
+	b_nantli_ii = ct_colony_1
+	b_nantli_ii = ct_colony_2
+}

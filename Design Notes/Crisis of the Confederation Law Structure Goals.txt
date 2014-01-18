@@ -1,0 +1,128 @@
+LAW STRUCTURE DESIGN GOALS
+The ultimate goals for our demesne law/crown law/succession law conglomeration (henceforth "law structure") are as follows:
+
+	- Allow for political maneuvering in a wide variety of different systems. Advancing the cause of your dynasty in a
+		democratic republic should be very different from doing so in a neo-feudal empire. It also probably shouldn't be
+		very good for said republic's democraticness.
+	- Let the player "customize" their faction's government some extent, creating potentially bizarre societies.
+	- Create a tug-of-war power struggle between central governments and their subdivisions. This is already present to a
+		large degree in vanilla, but we can still expand on it.
+	- Allow for true "powers behind the throne" - vassals who have more power over their liege than their liege has over
+		them.
+	- Finally, and most importantly, model the slow break down of law and order as a society collapses.
+	
+At the moment, the intermediate goals that best serve the above, in my opinion, are:
+
+	- Find ways to let the player survive under succession laws like Catholic Bishopric or Appointment by rigging the
+		system, using money and connections to put their relatives in positions of power.
+	- Use a combination of factions, law voting, and possibly even the new College of Cardinals, depending on how it works
+		out, to simulate national legislatures. The battle for power between these legislatures and the executive (that is,
+		the actual holder of the title) should get at least SOME attention.
+	- When the legislature is powerful, there should be fierce politicking for leadership of it. This is the intended purpose
+		of the "Prime Minister" minor title. This leader should have considerable power, possibly more than the actual holder
+		of the title in extreme cases.
+	- Succession law changes should never be made by decree so long as there's a legislature to object to them.
+	- Have at least one law that represents the national government's ability to enforce its power. This differes from crown
+		authority in being a de facto measure, rather than a de jure one. If the national government can't enforce its laws,
+		then Very Bad Things should happen - most notably, vassal infighting should be allowed. Restoring order should be a
+		difficult process.
+	- It should be theoretically possible for a government to have at least SOME control over its vassals' succession laws.
+		Exactly how much should depend on both crown authority and the above "public order" measurement.
+		
+CURRENT PROPOSED LAW STRUCTURE
+	Centralization
+		- Autonomous States
+			Can Assign Commanders: No
+			Can Revoke Titles: No
+			Free Title Revokations: None
+			Protected Inheritance: No
+			Governance Laws Apply To: None
+		- Low Centralization
+			Can Assign Commanders: Yes
+			Can Revoke Titles: No
+			Free Title Revokations: None
+			Protected Inheritance: No
+			Governance Laws Apply To: Non-Primary Governments
+		- Medium Centralization
+			Can Assign Commanders: Yes
+			Can Revoke Titles: Yes
+			Free Title Revokations: None
+			Protected Inheritance: No
+			Governance Laws Apply To: Non-Primary Governments
+		- High Centralization
+			Can Assign Commanders: Yes
+			Can Revoke Titles: Yes
+			Free Title Revokations: Outsiders Only
+			Protected Inheritance: Yes
+			Governance Laws Apply To: All
+		- Complete Centralization
+			Can Assign Commanders: Yes
+			Can Revoke Titles: Yes
+			Free Title Revokations: All
+			Protected Inheritance: Yes
+			Governance Laws Apply to: All
+	Public Order
+		- No Public Order
+		- Public Order Enforced
+	Legitimacy
+		Inheritance Law
+			- No Inheritance Law
+			- Gavelkind Inheritance
+			- Seniority Inheritance
+			- Primogeniture Inheritance
+			- Ultimogeniture Inheritance
+		Election Law
+			- No Election Law
+			- Democratic Elections
+			- Oligarchic Elections
+			- Federal Elections
+			- Dynastic Elections
+		Appointment Law
+			- No Appointments
+			- Appointments
+	Term Limits
+		- 1-Year Terms (Yearly)
+		- 4-Year Terms (Short)
+		- 6-Year Terms (Medium)
+		- 10-Year Terms (Long)
+		- Life Terms (Life)
+	Executive Authority
+		- Parliamentary Supremacy (Low)
+			Crown Laws: By parliamentary vote
+			Civil Laws: By parliamentary vote
+			Votes of No Confidence: Enabled
+			Parliamentary Factions: Enabled
+		- Emergency Powers (Medium)
+			Crown Laws: By parliamentary vote
+			Civil Laws: By executive decision
+			Votes of No Confidence: Enabled
+			Parliamentary Factions: Enabled
+		- Executive Supremacy (High)
+			Crown Laws: By executive decision
+			Civil Laws: By executive decision
+			Votes of No Confidence: Enabled
+			Parliamentary Factions: Enabled
+		- Dictatorship (Absolute)
+			Crown Laws: By executive decision
+			Civil Laws: By executive decision
+			Votes of No Confidence: Disabled
+			Parliamentary Factions: Disabled
+	Premiership
+		- No Prime Minister (None)
+		- Appointed Prime Minister (Appointed)
+		- Elected Prime Minister (Elected)
+	Military Governance
+		- Free Military Governance
+		- Hereditary Commanders
+		- Elected Commanders
+		- Appointed Commanders
+	Administrative Governance
+		- Free Administrative Governance
+		- Hereditary Administrators
+		- Elected Administrators
+		- Appointed Administrators
+	Civil Governance
+		- Free Civil Governance
+		- Hereditary Governors
+		- Elected Governors
+		- Appointed Governors

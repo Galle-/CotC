@@ -1,0 +1,21 @@
+# 27 - Merlin
+
+# County Title
+title = c_merlin
+
+# Settlements
+max_settlements = 4
+
+b_merlin_ii = castle
+b_nimue = temple
+
+# Misc
+culture = anglo_avalonian # Initial culture
+religion = bio_directionist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

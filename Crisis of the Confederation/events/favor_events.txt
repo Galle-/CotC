@@ -1,0 +1,40 @@
+namespace = favor
+
+# favor.100
+#	This event is called whenever a favor is 'fulfilled' in some capacity
+letter_event = {
+	id = favor.100
+	desc = "EVTDESCFAVOR100"
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTAFAVOR100" }
+}
+
+# favor.200
+# This event is called whenever a favor is failed to be granted, or an ongoing
+# favor is cancelled. The exact outcome depends on the type of favor.
+
+character_event = {
+	id = favor.200
+	desc = "EVTDESCFAVOR200"
+	is_triggered_only = yes
+	
+	option = {
+		# Favor was political
+		trigger = { has_opinion_modifier = { who = FROM modifier = opinion_favor_type_political } }
+		name = "EVTOPTAFAVOR200"
+		FROM = {
+			custom_tooltip = {
+				text = "UNTRUSTWORTHY"
+				hidden_tooltip = {
+					reverse_remove_opinion = { who = ROOT modifier = opinion_owes_me_a_favor }
+					reverse_remove_opinion = { who = ROOT modifier = opinion_favor_ongoing }
+					reverse_remove_opinion = { who = ROOT modifier = opinion_favor_type_political }
+					reverse_opinion = { who = ROOT modifier = opinion_defaulted_favor }
+					clr_character_flag = flag_defaulted_favor
+					set_character_flag = flag_defaulted_favor
+				}
+			}
+		}
+	}
+}

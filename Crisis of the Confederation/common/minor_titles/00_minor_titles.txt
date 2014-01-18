@@ -1,0 +1,242 @@
+########################################################
+# MINOR TITLES
+# Characters can have any number of these
+########################################################
+#	grant_limit: Max number of holders.
+#	realm_in_name: Append the name of the country after the title (Queen [of Sweden])
+#	allow: conditions for the character to hold the title
+#	regent: This is the title for regents (not really "minor")
+#	gain_effect: fires when the title is granted
+#	lose_effect: fires when a title is lost if dismissal_trigger evaluates to false
+#	message: should fire a message to the its owner when set
+#	The other fields are all character modifiers.
+
+#######################################
+# HARD: AUTO-GRANTED - DO NOT REMOVE!
+#######################################
+
+title_regent = {
+	realm_in_name = yes
+	dignity = 0.9
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.02
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+title_ruler_consort = {
+	dignity = 0.88
+	show_as_title = yes
+	realm_in_name = yes
+	spouse_context = no # Title name as if the other gender version of the spouse's ruler title
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.02
+	
+	gain_effect = {
+	}
+	
+	lose_effect = {
+	}
+
+	message = no
+}
+
+title_tanist = {
+	dignity = 0.86
+	show_as_title = yes
+	realm_in_name = yes
+	
+	monthly_salary = 0.07
+	monthly_prestige = 0.02
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = no
+}
+
+title_queen_mother = {
+	dignity = 0.85
+	show_as_title = yes
+	realm_in_name = yes
+	
+	monthly_salary = 0.05
+	monthly_prestige = 0.01
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = no
+}
+
+title_prince = {
+	dignity = 0.8
+	show_as_title = yes
+	realm_in_name = yes
+	
+	monthly_salary = 0.05
+	monthly_prestige = 0.01
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = no
+}
+
+# Pagan consort
+title_courtesan = {
+	dignity = 0.05
+	realm_in_name = yes
+	
+	monthly_salary = 0.02
+	monthly_prestige = 0.01
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = no
+}
+
+#######################################
+# SOFT: GRANTABLE - FULLY MODDABLE
+#######################################
+
+# Political Titles - these all theoretically affect the politics of their realm
+title_prime_minister = {
+	dignity = 0.99
+	realm_in_name = yes
+	show_as_title = yes
+	grant_limit = 1
+	opinion_effect = 100
+	
+	monthly_salary = 1
+	monthly_prestige = 1
+	
+	# Granted only by event or under grantable premiership
+	allow = {
+		FROM = {
+			any_demesne_title = {
+				OR = {
+					tier = emperor
+					tier = king
+				}
+				NOT = { has_law = premiership_0 }
+			}
+		}
+		OR = {
+			has_character_flag = flag_prime_minister
+			has_minor_title = title_prime_minister
+			FROM = {
+				any_demesne_title = {
+					OR = {
+						tier = emperor
+						tier = king
+					}
+					has_law = premiership_1
+				}
+			}
+		}
+	}
+	
+	gain_effect = { clr_character_flag = flag_prime_minister }
+	lose_effect = { }
+}
+title_expected_successor = {
+	dignity = 0.1
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 20
+	
+	monthly_salary = 0
+	monthly_prestige = 0.1
+	
+	# Granted only by event
+	allow = {
+		OR = {
+			has_character_flag = flag_expected_successor
+			has_minor_title = title_expected_successor
+		}
+		age = 16
+		NOT = { trait = incapable }
+		NOT = {
+			AND = {
+				is_feudal = yes
+				liege = {
+					OR = {
+						is_republic = yes
+						is_theocracy = yes
+					}
+				}
+			}
+		}
+		NOT = {
+			AND = {
+				is_republic = yes
+				liege = {
+					OR = {
+						is_feudal = yes
+						is_theocracy = yes
+					}
+				}
+			}
+		}
+		NOT = {
+			AND = {
+				is_theocracy = yes
+				liege = {
+					OR = {
+						is_republic = yes
+						is_feudal = yes
+					}
+				}
+			}
+		}
+	}
+	
+	gain_effect = { clr_character_flag = flag_expected_successor }
+	lose_effect = { }
+}
+
+# Special - This title determines the heir of a Patrician
+title_patrician_heir = {
+	dignity = 0.05
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 50
+	
+	patrician_heir = yes
+	
+	monthly_salary = 0.01
+	monthly_prestige = 0.002
+	
+	allow = {
+		is_female = no
+		dynasty = FROM
+		NOT = { trait = bastard }
+		FROM = {
+			is_patrician = yes
+		}
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}

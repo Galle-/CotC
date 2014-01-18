@@ -1,0 +1,47 @@
+# 209 - Sotogawa no Ten
+
+# County Title
+title = c_sotogawa_no_ten
+
+# Settlements
+max_settlements = 4
+b_heavens_gate = castle
+b_tengoku_waystation = temple
+b_sotogawa_no_ten_iii = city
+
+# Misc
+culture = japanese_tengoku # Initial culture
+religion = terran_republican
+
+# History
+1.1.1 = {
+	b_heavens_gate = ca_space_station_0
+	b_heavens_gate = ca_space_station_1
+	b_heavens_gate = ca_space_station_2
+	b_heavens_gate = ca_space_station_3
+	
+	b_tengoku_waystation = tp_space_station_0
+	b_tengoku_waystation = tp_space_station_1
+	
+	b_sotogawa_no_ten_iii = ct_toxic_atmosphere
+	b_sotogawa_no_ten_iii = ct_no_water
+	b_sotogawa_no_ten_iii = ct_trace_water
+	b_sotogawa_no_ten_iii = ct_burning
+	b_sotogawa_no_ten_iii = ct_hot
+	b_sotogawa_no_ten_iii = ct_planet_survey
+}
+
+2998.1.1 = {
+	b_heavens_gate = ca_colony_0
+	b_heavens_gate = ca_colony_1
+	b_heavens_gate = ca_colony_2
+	b_heavens_gate = ca_colony_3
+	
+	b_tengoku_waystation = tp_colony_0
+	b_tengoku_waystation = tp_colony_1
+	
+	b_sotogawa_no_ten_iii = ct_colony_0
+	b_sotogawa_no_ten_iii = ct_colony_1
+	
+	trade_post = b_kojima
+}

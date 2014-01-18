@@ -1,0 +1,492 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+EVTDESCFACTIONNAMES0;Due to changes in ideology and its form of government, the [e_terran_confederation.GetName] has been renamed the Terran Confederation.;En raison de changements idéologiques et gouvernementaux, le [e_terran_confederation.GetName] a été rennomé Confédération Terrienne.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES1;Due to changes in ideology and its form of government, the Terran state has been renamed the Terran Confederation.;En raison de changements idéologiques et gouvernementaux, l'état terrien a été rennomé Confédération Terrienne.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES2;You have decreed that the [e_terran_confederation.GetName] be renamed the Terran Empire.;Vous avez décrêté que [e_terran_confederation.GetName] serait rennomé Empire terrien.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES3;By decree of [From.GetTitle] [From.GetFullName], the Terran state has been renamed the Terran Empire.;Par décrêt de [From.GetTitle] [From.GetFullName], l'état terrien a été rennomé Empire terrien.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES4;You have decreed that the [e_terran_confederation.GetName] be renamed the Terran Hegemony.;Vous avez décrêté que [e_terran_confederation.GetName] serait rennomé Hégémonie terrienne.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES5;By decree of [From.GetTitle] [From.GetFullName], the Terran state has been renamed the Terran Hegemony.;Par décrêt de [From.GetTitle] [From.GetFullName], l'état terrien a été rennomé Hégémonie terrienne.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES6;Due to changes in ideology and its form of government, the [e_terran_confederation.GetName] has been renamed the Terran Republic.;En raison de changements idéologiques et gouvernementaux, le [e_terran_confederation.GetName] a été rennomé République terrienne.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES7;Due to changes in ideology and its form of government, the Terran state has been renamed the Terran Republic.;En raison de changements idéologiques et gouvernementaux, l'état terrien a été rennomé République terrienne.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES8;Due to changes in ideology and its form of government, the [e_terran_confederation.GetName] has been renamed the Terran Directorate.;En raison de changements idéologiques et gouvernementaux, le [e_terran_confederation.GetName] a été rennomé Directorat terrien;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES9;Due to changes in ideology and its form of government, the Terran state has been renamed the Terran Directorate.;En raison de changements idéologiques et gouvernementaux, l'état terrien a été rennomé Directorat terrien.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES10;You have decreed that the [e_terran_confederation.GetName] be renamed the Holy Terran Empire.;You have decreed that the [e_terran_confederation.GetName] be renamed the Holy Terran Empire.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES11;By decree of [From.GetTitle] [From.GetFullName], the Terran state has been renamed the Holy Terran Empire.;Par décrêt de [From.GetTitle] [From.GetFullName], l'état terrien a été rennomé Saint Empire terrien.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES12;Due to changes in ideology and its form of government, the [e_terran_confederation.GetName] has been renamed the Terran People's Union.;En raison de changements idéologiques et gouvernementaux, le [e_terran_confederation.GetName] a été rennomé Union des peuples terriens.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES13;Due to changes in ideology and its form of government, the Terran state has been renamed the Terran People's Union.;En raison de changements idéologiques et gouvernementaux, l'état terrien a été rennomé Union des peuples terriens.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES14;Due to changes in ideology and its form of government, the [e_terran_confederation.GetName] has been renamed the Terran People's Republic.;En raison de changements idéologiques et gouvernementaux, le [e_terran_confederation.GetName] a été rennomé République populaire terrienne.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES15;Due to changes in ideology and its form of government, the Terran state has been renamed the Terran People's Republic.;En raison de changements idéologiques et gouvernementaux, l'état terrien a été rennomé République populaire terrienne.;;;;;;;;;;;;x
+e_terran_confederation;Terran Confederation;Confédération terrienne;;;;;;;;;;;;x
+e_terran_confederation_ADJ;Confederate;Confédéré;;;;;;;;;;;;x
+k_terran_federal_authority;Terran State Authority;Autorité nationale terrienne;;;;;;;;;;;;x
+k_terran_federal_authority_ADJ;Terran State Authority;Autorité nationale terrienne;;;;;;;;;;;;x
+k_terran_republic_authority;Terran State Authority;Autorité nationale terrienne;;;;;;;;;;;;x
+k_terran_republic_authority_ADJ;Terran State Authority;Autorité nationale terrienne;;;;;;;;;;;;x
+k_terran_imperial_authority;Terran State Authority;Autorité nationale terrienne;;;;;;;;;;;;x
+k_terran_imperial_authority_ADJ;Terran State Authority;Autorité nationale terrienne;;;;;;;;;;;;x
+k_terran_navy_ADJ;Confederate Naval;naval confédéré;;;;;;;;;;;;x
+k_terran_navy;Confederate Space Command;Commandement spatial confédéré;;;;;;;;;;;;x
+k_terran_navy_ADJ;Confederate Naval;naval confédéré;;;;;;;;;;;;x
+d_terran_first_fleet;First Confederate Fleet;Première flotte confédérée;;;;;;;;;;;;x
+d_terran_first_fleet_ADJ;First Confederate Fleet;Première flotte confédérée;;;;;;;;;;;;x
+d_terran_second_fleet;Second Confederate Fleet;Seconde flotte confédérée;;;;;;;;;;;;x
+d_terran_second_fleet_ADJ;Second Confederate Fleet;Seconde flotte confédérée;;;;;;;;;;;;x
+d_terran_third_fleet;Third Confederate Fleet;Troisième flotte confédérée;;;;;;;;;;;;x
+d_terran_third_fleet_ADJ;Third Confederate Fleet;Troisième flotte confédérée;;;;;;;;;;;;x
+d_terran_fourth_fleet;Fourth Confederate Fleet;Quatrième flotte confédérée;;;;;;;;;;;;x
+d_terran_fourth_fleet_ADJ;Fourth Confederate Fleet;Quatrième flotte confédérée;;;;;;;;;;;;x
+d_terran_fifth_fleet;Fifth Confederate Fleet;Cinquième flotte confédérée;;;;;;;;;;;;x
+d_terran_fifth_fleet_ADJ;Fifth Confederate Fleet;Cinquième flotte confédérée;;;;;;;;;;;;x
+k_terran_commonwealth;Terran Commonwealth;Commonwealth terrien;;;;;;;;;;;;x
+k_terran_commonwealth_ADJ;Terran Commonwealth;Commonwealth terrien;;;;;;;;;;;;x
+d_terran_commonwealth_fleet;Solar Guard;Garde Solaire;;;;;;;;;;;;x
+d_terran_commonwealth_fleet_ADJ;Solar Guard;Garde Solaire;;;;;;;;;;;;x
+d_sol;Sol;Sol;;;;;;;;;;;;x
+d_sol_ADJ;Solar;Solaire;;;;;;;;;;;;x
+c_sol;Sol;Sol;;;;;;;;;;;;x
+c_sol_ADJ;Solar;Solaire;;;;;;;;;;;;x
+b_earth;Earth;Terre;;;;;;;;;;;;x
+b_earth_ADJ;Terran;Terrien;;;;;;;;;;;;x
+b_moon;The Moon;La Lune;;;;;;;;;;;;x
+b_moon_ADJ;Lunar;Lunaire;;;;;;;;;;;;x
+b_mars;Mars;Mars;;;;;;;;;;;;x
+b_mars_ADJ;Martian;Martien;;;;;;;;;;;;x
+b_ceres;Ceres;Ceres;;;;;;;;;;;;x
+b_ceres_ADJ;Cerean;Céréen;;;;;;;;;;;;x
+b_europa;Europa;Europa;;;;;;;;;;;;x
+b_europa_ADJ;Europan;Europarien;;;;;;;;;;;;x
+b_ganymede;Ganymede;Ganymede;;;;;;;;;;;;x
+b_ganymede_ADJ;Ganymedian;Ganymèdien;;;;;;;;;;;;x
+b_titan;Titan;Titan;;;;;;;;;;;;x
+b_titan_ADJ;Titanic;Titanien;;;;;;;;;;;;x
+c_alpha_centauri;Alpha Centauri;Alpha Centauri;;;;;;;;;;;;x
+c_alpha_centauri_ADJ;Centauri;Centauri;;;;;;;;;;;;x
+b_alpha_centauri_ii;Alpha Centauri II;Alpha Centauri II;;;;;;;;;;;;x
+b_alpha_centauri_ii_ADJ;Alpha Centauri II;Alpha Centauri II;;;;;;;;;;;;x
+b_alpha_centauri_iii;Alpha Centauri III;Alpha Centauri III;;;;;;;;;;;;x
+b_alpha_centauri_iii_ADJ;Alpha Centauri III;Alpha Centauri III;;;;;;;;;;;;x
+b_alpha_centauri_iii_b;Alpha Centauri III-B;Alpha Centauri III-B;;;;;;;;;;;;x
+b_alpha_centauri_iii_b_ADJ;Alpha Centauri III-B;Alpha Centauri III-B;;;;;;;;;;;;x
+b_alpha_centauri_iv;Alpha Centauri IV;Alpha Centauri IV;;;;;;;;;;;;x
+b_alpha_centauri_iv_ADJ;Alpha Centauri IV;Alpha Centauri IV;;;;;;;;;;;;x
+d_sirius;Sirius;Sirius;;;;;;;;;;;;x
+d_sirius_ADJ;Sirian;Siriusien;;;;;;;;;;;;x
+c_sirius;Sirius;Sirius;;;;;;;;;;;;x
+c_sirius_ADJ;Sirian;Siriusien;;;;;;;;;;;;x
+b_sirius_iii;Sirius III;Sirius III;;;;;;;;;;;;x
+b_sirius_iii_ADJ;Sirius III;Sirius III;;;;;;;;;;;;x
+b_sirius_iii_b;Sirius III-B;Sirius III-B;;;;;;;;;;;;x
+b_sirius_iii_b_ADJ;Sirius III-B;Sirius III-B;;;;;;;;;;;;x
+b_sirius_iii_c;Sirius III-C;Sirius III-C;;;;;;;;;;;;x
+b_sirius_iii_c_ADJ;Sirius III-C;Sirius III-C;;;;;;;;;;;;x
+b_sirius_vii_b;Sirius VII-B;Sirius VII-B;;;;;;;;;;;;x
+b_sirius_vii_b_ADJ;Sirius VII-B;Sirius VII-B;;;;;;;;;;;;x
+b_sirius_vii_c;Sirius VII-C;Sirius VII-C;;;;;;;;;;;;x
+b_sirius_vii_c_ADJ;Sirius VII-C;Sirius VII-C;;;;;;;;;;;;x
+c_procyon;Procyon;Procyon;;;;;;;;;;;;x
+c_procyon_ADJ;Procyonic;Procyonique;;;;;;;;;;;;x
+b_procyon_iii_b;Procyon III-B;Procyon III-B;;;;;;;;;;;;x
+b_procyon_iii_b_ADJ;Procyon III-B;Procyon III-B;;;;;;;;;;;;x
+b_procyon_iii_c;Procyon III-C;Procyon III-C;;;;;;;;;;;;x
+b_procyon_iii_c_ADJ;Procyon III-C;Procyon III-C;;;;;;;;;;;;x
+b_procyon_iii_d;Procyon III-D;Procyon III-D;;;;;;;;;;;;x
+b_procyon_iii_d_ADJ;Procyon III-D;Procyon III-D;;;;;;;;;;;;x
+b_procyon_iv;Procyon IV;Procyon IV;;;;;;;;;;;;x
+b_procyon_iv_ADJ;Procyon IV;Procyon IV;;;;;;;;;;;;x
+d_tau_ceti;Tau Ceti;Tau Ceti;;;;;;;;;;;;x
+d_tau_ceti_ADJ;Ceti;Ceti;;;;;;;;;;;;x
+c_tau_ceti;Tau Ceti;Tau Ceti;;;;;;;;;;;;x
+c_tau_ceti_ADJ;Ceti;Ceti;;;;;;;;;;;;x
+b_tau_ceti_iv;Tau Ceti IV;Tau Ceti IV;;;;;;;;;;;;x
+b_tau_ceti_iv_ADJ;Tau Ceti IV;Tau Ceti IV;;;;;;;;;;;;x
+b_tau_ceti_iv_b;Tau Ceti IV-B;Tau Ceti IV-B;;;;;;;;;;;;x
+b_tau_ceti_iv_b_ADJ;Tau Ceti IV-B;Tau Ceti IV-B;;;;;;;;;;;;x
+b_tau_ceti_iv_c;Tau Ceti IV-C;Tau Ceti IV-C;;;;;;;;;;;;x
+b_tau_ceti_iv_c_ADJ;Tau Ceti IV-C;Tau Ceti IV-C;;;;;;;;;;;;x
+b_tau_ceti_v;Tau Ceti V;Tau Ceti V;;;;;;;;;;;;x
+b_tau_ceti_v_ADJ;Tau Ceti V;Tau Ceti V;;;;;;;;;;;;x
+b_tau_ceti_v_c;Tau Ceti V-C;Tau Ceti V-C;;;;;;;;;;;;x
+b_tau_ceti_v_c_ADJ;Tau Ceti V-C;Tau Ceti V-C;;;;;;;;;;;;x
+b_tau_ceti_v_d;Tau Ceti V-D;Tau Ceti V-D;;;;;;;;;;;;x
+b_tau_ceti_v_d_ADJ;Tau Ceti V-D;Tau Ceti V-D;;;;;;;;;;;;x
+c_epsilon_eridani;Epsilon Eridani;Epsilon Eridani;;;;;;;;;;;;x
+c_epsilon_eridani_ADJ;Eridani;Eridani;;;;;;;;;;;;x
+b_epsilon_eridani_iii;Epsilon Eridani III;Epsilon Eridani III;;;;;;;;;;;;x
+b_epsilon_eridani_iii_ADJ;Epsilon Eridani III;Epsilon Eridani III;;;;;;;;;;;;x
+b_epsilon_eridani_iv;Epsilon Eridani IV;Epsilon Eridani IV;;;;;;;;;;;;x
+b_epsilon_eridani_iv_ADJ;Epsilon Eridani IV;Epsilon Eridani IV;;;;;;;;;;;;x
+b_epsilon_eridani_iv_b;Epsilon Eridani IV-B;Epsilon Eridani IV-B;;;;;;;;;;;;x
+b_epsilon_eridani_iv_b_ADJ;Epsilon Eridani IV-B;Epsilon Eridani IV-B;;;;;;;;;;;;x
+b_epsilon_eridani_v;Epsilon Eridani V;Epsilon Eridani V;;;;;;;;;;;;x
+b_epsilon_eridani_v_ADJ;Epsilon Eridani V;Epsilon Eridani V;;;;;;;;;;;;x
+c_eta_cassiopeia;Eta Cassiopeia;Eta Cassiopeia;;;;;;;;;;;;x
+c_eta_cassiopeia_ADJ;Cassiopeian;Cassiopéen;;;;;;;;;;;;x
+b_eta_cassiopeia_ii;Eta Cassiopeia II;Eta Cassiopeia II;;;;;;;;;;;;x
+b_eta_cassiopeia_ii_ADJ;Eta Cassiopeia II;Eta Cassiopeia II;;;;;;;;;;;;x
+b_eta_cassiopeia_ii_b;Eta Cassiopeia II-B;Eta Cassiopeia II-B;;;;;;;;;;;;x
+b_eta_cassiopeia_ii_b_ADJ;Eta Cassiopeia II-B;Eta Cassiopeia II-B;;;;;;;;;;;;x
+b_eta_cassiopeia_iii;Eta Cassiopeia III;Eta Cassiopeia III;;;;;;;;;;;;x
+b_eta_cassiopeia_iii_ADJ;Eta Cassiopeia III;Eta Cassiopeia III;;;;;;;;;;;;x
+b_eta_cassiopeia_iii_b;Eta Cassiopeia III-B;Eta Cassiopeia III-B;;;;;;;;;;;;x
+b_eta_cassiopeia_iii_b_ADJ;Eta Cassiopeia III-B;Eta Cassiopeia III-B;;;;;;;;;;;;x
+d_draconis;Draconis;Draconis;;;;;;;;;;;;x
+d_draconis_ADJ;Draconic;Draconique;;;;;;;;;;;;x
+c_sigma_draconis;Sigma Draconis;Sigma Draconis;;;;;;;;;;;;x
+c_sigma_draconis_ADJ;Draconic;Draconique;;;;;;;;;;;;x
+b_sigma_draconis_vi_c;Sigma Draconis VI-C;Sigma Draconis VI-C;;;;;;;;;;;;x
+b_sigma_draconis_vi_c_ADJ;Sigma Draconis VI-C;Sigma Draconis VI-C;;;;;;;;;;;;x
+b_sigma_draconis_vi_d;Sigma Draconis VI-D;Sigma Draconis VI-D;;;;;;;;;;;;x
+b_sigma_draconis_vi_d_ADJ;Sigma Draconis VI-D;Sigma Draconis VI-D;;;;;;;;;;;;x
+b_sigma_draconis_vi_f;Sigma Draconis VI-F;Sigma Draconis VI-F;;;;;;;;;;;;x
+b_sigma_draconis_vi_f_ADJ;Sigma Draconis VI-F;Sigma Draconis VI-F;;;;;;;;;;;;x
+b_sigma_draconis_vii_b;Sigma Draconis VII-B;Sigma Draconis VII-B;;;;;;;;;;;;x
+b_sigma_draconis_vii_b_ADJ;Sigma Draconis VII-B;Sigma Draconis VII-B;;;;;;;;;;;;x
+b_sigma_draconis_vii_d;Sigma Draconis VII-D;Sigma Draconis VII-D;;;;;;;;;;;;x
+b_sigma_draconis_vii_d_ADJ;Sigma Draconis VII-D;Sigma Draconis VII-D;;;;;;;;;;;;x
+c_epsilon_indi;Epsilon Indi;Epsilon Indi;;;;;;;;;;;;x
+c_epsilon_indi_ADJ;Indi;Indi;;;;;;;;;;;;x
+b_epsilon_indi_iii;Epsilon Indi III;Epsilon Indi III;;;;;;;;;;;;x
+b_epsilon_indi_iii_ADJ;Epsilon Indi III;Epsilon Indi III;;;;;;;;;;;;x
+b_epsilon_indi_iii_b;Epsilon Indi III-B;Epsilon Indi III-B;;;;;;;;;;;;x
+b_epsilon_indi_iii_b_ADJ;Epsilon Indi III-B;Epsilon Indi III-B;;;;;;;;;;;;x
+b_epsilon_indi_iv;Epsilon Indi IV;Epsilon Indi IV;;;;;;;;;;;;x
+b_epsilon_indi_iv_ADJ;Epsilon Indi IV;Epsilon Indi IV;;;;;;;;;;;;x
+b_epsilon_indi_v;Epsilon Indi V;Epsilon Indi V;;;;;;;;;;;;x
+b_epsilon_indi_v_ADJ;Epsilon Indi V;Epsilon Indi V;;;;;;;;;;;;x
+c_beta_hydri;Beta Hydri;Beta Hydri;;;;;;;;;;;;x
+c_beta_hydri_ADJ;Hydri;Hydri;;;;;;;;;;;;x
+b_beta_hydri_iii;Beta Hydri III;Beta Hydri III;;;;;;;;;;;;x
+b_beta_hydri_iii_ADJ;Beta Hydri III;Beta Hydri III;;;;;;;;;;;;x
+b_beta_hydri_iv;Beta Hydri IV;Beta Hydri IV;;;;;;;;;;;;x
+b_beta_hydri_iv_ADJ;Beta Hydri IV;Beta Hydri IV;;;;;;;;;;;;x
+b_beta_hydri_v;Beta Hydri V;Beta Hydri V;;;;;;;;;;;;x
+b_beta_hydri_v_ADJ;Beta Hydri V;Beta Hydri V;;;;;;;;;;;;x
+b_beta_hydri_v_b;Beta Hydri V-B;Beta Hydri V-B;;;;;;;;;;;;x
+b_beta_hydri_v_b_ADJ;Beta Hydri V-B;Beta Hydri V-B;;;;;;;;;;;;x
+c_delta_pavonis;Delta Pavonis;Delta Pavonis;;;;;;;;;;;;x
+c_delta_pavonis_ADJ;Pavonian;Pavonien;;;;;;;;;;;;x
+b_delta_pavonis_i;Delta Pavonis Prime;Delta Pavonis Prime;;;;;;;;;;;;x
+b_delta_pavonis_i_ADJ;Delta Pavonis Prime;Delta Pavonis Prime;;;;;;;;;;;;x
+b_delta_pavonis_ii;Delta Pavonis II;Delta Pavonis II;;;;;;;;;;;;x
+b_delta_pavonis_ii_ADJ;Delta Pavonis II;Delta Pavonis II;;;;;;;;;;;;x
+b_delta_pavonis_ii_b;Delta Pavonis II-B;Delta Pavonis II-B;;;;;;;;;;;;x
+b_delta_pavonis_ii_b_ADJ;Delta Pavonis II-B;Delta Pavonis II-B;;;;;;;;;;;;x
+b_delta_pavonis_iii;Delta Pavonis III;Delta Pavonis III;;;;;;;;;;;;x
+b_delta_pavonis_iii_ADJ;Delta Pavonis III;Delta Pavonis III;;;;;;;;;;;;x
+d_altair;Altair;Altair;;;;;;;;;;;;x
+d_altair_ADJ;Altairian;Altairien;;;;;;;;;;;;x
+c_altair;Altair;Altair;;;;;;;;;;;;x
+c_altair_ADJ;Altairian;Altairien;;;;;;;;;;;;x
+b_altair_iii;Altair III;Altair III;;;;;;;;;;;;x
+b_altair_iii_ADJ;Altair III;Altair III;;;;;;;;;;;;x
+b_altair_iv;Altair IV;Altair IV;;;;;;;;;;;;x
+b_altair_iv_ADJ;Altair IV;Altair IV;;;;;;;;;;;;x
+b_altair_v;Altair V;Altair V;;;;;;;;;;;;x
+b_altair_v_ADJ;Altair V;Altair V;;;;;;;;;;;;x
+b_altair_v_b;Altair V-B;Altair V-B;;;;;;;;;;;;x
+b_altair_v_b_ADJ;Altair V-B;Altair V-B;;;;;;;;;;;;x
+c_cygni;Cygni;Cygni;;;;;;;;;;;;x
+c_cygni_ADJ;Cygni;Cygni;;;;;;;;;;;;x
+b_cygni_iii;Cygni III;Cygni III;;;;;;;;;;;;x
+b_cygni_iii_ADJ;Cygni III;Cygni III;;;;;;;;;;;;x
+b_cygni_iii_b;Cygni III-B;Cygni III-B;;;;;;;;;;;;x
+b_cygni_iii_b_ADJ;Cygni III-B;Cygni III-B;;;;;;;;;;;;x
+b_cygni_iv;Cygni IV;Cygni IV;;;;;;;;;;;;x
+b_cygni_iv_ADJ;Cygni IV;Cygni IV;;;;;;;;;;;;x
+b_cygni_v;Cygni V;Cygni V;;;;;;;;;;;;x
+b_cygni_v_ADJ;Cygni V;Cygni V;;;;;;;;;;;;x
+k_xingjie;Xingjie;Xingjie;;;;;;;;;;;;x
+k_xingjie_ADJ;Xingjie;Xingjie;;;;;;;;;;;;x
+d_xingjie_fleet;Xingjie Space Force;Force Spatiale Xingjie;;;;;;;;;;;;x
+d_xingjie_fleet_ADJ;Xingjie Space Force;Force Spatiale Xingjie;;;;;;;;;;;;x
+d_huangjing;Huangjing;Huangjing;;;;;;;;;;;;x
+d_huangjing_ADJ;Huangjing;Huangjing;;;;;;;;;;;;x
+c_huangjing;Huangjing;Huangjing;;;;;;;;;;;;x
+c_huangjing_ADJ;Huangjing;Huangjing;;;;;;;;;;;;x
+b_huangjing_iii;Huangjing III;;;;;;;;;;;;;x
+b_huangjing_iii_ADJ;Huangjing III;;;;;;;;;;;;;x
+b_huangjing_iii_b;Huangjing III-B;;;;;;;;;;;;;x
+b_huangjing_iii_b_ADJ;Huangjing III-B;;;;;;;;;;;;;x
+b_huangjing_iii_c;Huangjing III-C;;;;;;;;;;;;;x
+b_huangjing_iii_c_ADJ;Huangjing III-C;;;;;;;;;;;;;x
+b_huangjing_iv;Huangjing IV;;;;;;;;;;;;;x
+b_huangjing_iv_ADJ;Huangjing IV;;;;;;;;;;;;;x
+b_huangjing_vii_c;Huangjing VII-C;;;;;;;;;;;;;x
+b_huangjing_vii_c_ADJ;Huangjing VII-C;;;;;;;;;;;;;x
+b_huangjing_vii_d;Huangjing VII-D;;;;;;;;;;;;;x
+b_huangjing_vii_d_ADJ;Huangjing VII-D;;;;;;;;;;;;;x
+b_huangjing_vii_e;Huangjing VII-E;;;;;;;;;;;;;x
+b_huangjing_vii_e_ADJ;Huangjing VII-E;;;;;;;;;;;;;x
+c_huanglong;Huanglong;Huanglong;;;;;;;;;;;;x
+c_huanglong_ADJ;Huanglong;Huanglong;;;;;;;;;;;;x
+b_huanglong_ii;Huanglong II;;;;;;;;;;;;;x
+b_huanglong_ii_ADJ;Huanglong II;;;;;;;;;;;;;x
+b_huanglong_iii;Huanglong III;;;;;;;;;;;;;x
+b_huanglong_iii_ADJ;Huanglong III;;;;;;;;;;;;;x
+b_huanglong_iii_b;Huanglong III-B;;;;;;;;;;;;;x
+b_huanglong_iii_b_ADJ;Huanglong III-B;;;;;;;;;;;;;x
+b_huanglong_iii_c;Huanglong III-C;;;;;;;;;;;;;x
+b_huanglong_iii_c_ADJ;Huanglong III-C;;;;;;;;;;;;;x
+c_yang_liwei;Yang Liwei;Yang Liwei;;;;;;;;;;;;x
+c_yang_liwei_ADJ;Yang Liwei;Yang Liwei;;;;;;;;;;;;x
+b_yang_liwei_iii_b;Yang Liwei III-B;;;;;;;;;;;;;x
+b_yang_liwei_iii_b_ADJ;Yang Liwei III-B;;;;;;;;;;;;;x
+b_yang_liwei_iii_c;Yang Liwei III-C;;;;;;;;;;;;;x
+b_yang_liwei_iii_c_ADJ;Yang Liwei III-C;;;;;;;;;;;;;x
+b_yang_liwei_iii_d;Yang Liwei III-D;;;;;;;;;;;;;x
+b_yang_liwei_iii_d_ADJ;Yang Liwei III-D;;;;;;;;;;;;;x
+b_yang_liwei_iii_e;Yang Liwei III-E;;;;;;;;;;;;;x
+b_yang_liwei_iii_e_ADJ;Yang Liwei III-E;;;;;;;;;;;;;x
+d_xuanwu;Xuanwu;Xuanwu;;;;;;;;;;;;x
+d_xuanwu_ADJ;Xuanwu;Xuanwu;;;;;;;;;;;;x
+c_xuanwu;Xuanwu;Xuanwu;;;;;;;;;;;;x
+c_xuanwu_ADJ;Xuanwu;Xuanwu;;;;;;;;;;;;x
+b_xuanwu_prime;Xuanwu Prime;;;;;;;;;;;;;x
+b_xuanwu_prime_ADJ;Xuanwu Prime;;;;;;;;;;;;;x
+b_xuanwu_prime_b;Xuanwu Prime-B;;;;;;;;;;;;;x
+b_xuanwu_prime_b_ADJ;Xuanwu Prime-B;;;;;;;;;;;;;x
+b_xuanwu_iii_b;Xuanwu III-B;;;;;;;;;;;;;x
+b_xuanwu_iii_b_ADJ;Xuanwu III-B;;;;;;;;;;;;;x
+b_xuanwu_iv;Xuanwu IV;;;;;;;;;;;;;x
+b_xuanwu_iv_ADJ;Xuanwu IV;;;;;;;;;;;;;x
+b_xuanwu_vii_c;Xuanwu VII-C;;;;;;;;;;;;;x
+b_xuanwu_vii_c_ADJ;Xuanwu VII-C;;;;;;;;;;;;;x
+b_xuanwu_vii_d;Xuanwu VII-D;;;;;;;;;;;;;x
+b_xuanwu_vii_d_ADJ;Xuanwu VII-D;;;;;;;;;;;;;x
+c_jing_haipeng;Jing Haipeng;Jing Haipeng;;;;;;;;;;;;x
+c_jing_haipeng_ADJ;Jing Haipeng;Jing Haipeng;;;;;;;;;;;;x
+b_jing_haipeng_iii;Jing Haipeng III;;;;;;;;;;;;;x
+b_jing_haipeng_iii_ADJ;Jing Haipeng III;;;;;;;;;;;;;x
+b_jing_haipeng_iv;Jing Haipeng IV;;;;;;;;;;;;;x
+b_jing_haipeng_iv_ADJ;Jing Haipeng IV;;;;;;;;;;;;;x
+b_jing_haipeng_v;Jing Haipeng V;;;;;;;;;;;;;x
+b_jing_haipeng_v_ADJ;Jing Haipeng V;;;;;;;;;;;;;x
+b_jing_haipeng_vii_c;Jing Haipeng VII-C;;;;;;;;;;;;;x
+b_jing_haipeng_vii_c_ADJ;Jing Haipeng VII-C;;;;;;;;;;;;;x
+c_liu_boming;Liu Boming;;;;;;;;;;;;;x
+c_liu_boming_ADJ;Liu Boming;;;;;;;;;;;;;x
+b_liu_boming_prime;Liu Boming Prime;;;;;;;;;;;;;x
+b_liu_boming_prime_ADJ;Liu Boming Prime;;;;;;;;;;;;;x
+b_liu_boming_prime_b;Liu Boming Prime-B;;;;;;;;;;;;;x
+b_liu_boming_prime_b_ADJ;Liu Boming Prime-B;;;;;;;;;;;;;x
+b_liu_boming_prime_c;Liu Boming Prime-C;;;;;;;;;;;;;x
+b_liu_boming_prime_c_ADJ;Liu Boming Prime-C;;;;;;;;;;;;;x
+b_liu_boming_prime_d;Liu Boming Prime-D;;;;;;;;;;;;;x
+b_liu_boming_prime_d_ADJ;Liu Boming Prime-D;;;;;;;;;;;;;x
+c_zhai_zhigang;Zhai Zhigang;;;;;;;;;;;;;x
+c_zhai_zhigang_ADJ;Zhai Zhigang;;;;;;;;;;;;;x
+b_zhai_zhigang_waystation;Zhai Zhigang Waystation;;;;;;;;;;;;;x
+b_zhai_zhigang_waystation_ADJ;Zhai Zhigang Waystation;;;;;;;;;;;;;x
+b_zhai_zhigang_iii;Zhai Zhigang III;;;;;;;;;;;;;x
+b_zhai_zhigang_iii_ADJ;Zhai Zhigang III;;;;;;;;;;;;;x
+b_zhai_zhigang_iii_b;Zhai Zhigang III-B;;;;;;;;;;;;;x
+b_zhai_zhigang_iii_b_ADJ;Zhai Zhigang III-B;;;;;;;;;;;;;x
+b_zhai_zhigang_iv;Zhai Zhigang IV;;;;;;;;;;;;;x
+b_zhai_zhigang_iv_ADJ;Zhai Zhigang IV;;;;;;;;;;;;;x
+d_baihu;Baihu;;;;;;;;;;;;;x
+d_baihu_ADJ;Baihu;;;;;;;;;;;;;x
+c_baihu;Baihu;;;;;;;;;;;;;x
+c_baihu_ADJ;Baihu;;;;;;;;;;;;;x
+d_zhuque;Zhuque;;;;;;;;;;;;;x
+d_zhuque_ADJ;Zhuque;;;;;;;;;;;;;x
+c_zhuque;Zhuque;;;;;;;;;;;;;x
+c_zhuque_ADJ;Zhuque;;;;;;;;;;;;;x
+d_qinglong;Qinglong;;;;;;;;;;;;;x
+d_qinglong_ADJ;Qinglong;;;;;;;;;;;;;x
+c_qinglong;Qinglong;;;;;;;;;;;;;x
+c_qinglong_ADJ;Qinglong;;;;;;;;;;;;;x
+k_tierra_celeste;Tierra Celeste;Cielia;;;;;;;;;;;;x
+k_tierra_celeste_ADJ;Celestean;Cielien;;;;;;;;;;;;x
+d_cielia_fleet;Celestean Armada;Armada Cielienne;;;;;;;;;;;;x
+d_tierra_celeste_fleet_ADJ;Celestean Armada;Armada Cielienne;;;;;;;;;;;;x
+d_encrucijada;Encrucijada;;;;;;;;;;;;;x
+d_encrucijada_ADJ;Encrucijadan;;;;;;;;;;;;;x
+c_encrucijada;Encrucijada;;;;;;;;;;;;;x
+c_encrucijada_ADJ;Encrucijadan;;;;;;;;;;;;;x
+d_vega;Vega;;;;;;;;;;;;;x
+d_vega_ADJ;Vegan;;;;;;;;;;;;;x
+c_vega;Vega;;;;;;;;;;;;;x
+c_vega_ADJ;Vegan;;;;;;;;;;;;;x
+d_sexto_sol;Sexto Sol;;;;;;;;;;;;;x
+d_sexto_sol_ADJ;Sexto Solar;;;;;;;;;;;;;x
+d_bolivar;Bolivar;;;;;;;;;;;;;x
+d_bolivar_ADJ;Bolivian;;;;;;;;;;;;;x
+d_frontera;Frontera;;;;;;;;;;;;;x
+d_frontera_ADJ;Fronteran;;;;;;;;;;;;;x
+c_dom_frontera;Dom Frontera;;;;;;;;;;;;;x
+c_dom_frontera_ADJ;Dom Fronteran;;;;;;;;;;;;;x
+k_al_samawat;al-Samawat;al-Samawat;;;;;;;;;;;;x
+k_al_samawat_ADJ;Samawati;Samawati;;;;;;;;;;;;x
+d_al_samawat_fleet;Samawati Guard;Garde Samawati;;;;;;;;;;;;x
+d_al_samawat_fleet_ADJ;Samawati Guard;Garde Samawati;;;;;;;;;;;;x
+d_makkat_al_jadiida;Makkat al-Jadiida;;;;;;;;;;;;;x
+d_makkat_al_jadiida_ADJ;Makkat al-Jadiida;;;;;;;;;;;;;x
+c_makkat_al_jadiida;Makkat al-Jadiida;;;;;;;;;;;;;x
+c_makkat_al_jadiida_ADJ;Makkat al-Jadiida;;;;;;;;;;;;;x
+d_amal;Amal;;;;;;;;;;;;;x
+d_amal_ADJ;Amali;;;;;;;;;;;;;x
+c_amal;Amal;;;;;;;;;;;;;x
+c_amal_ADJ;Amali;;;;;;;;;;;;;x
+d_jabraiil;Jabra'iil;;;;;;;;;;;;;x
+d_jabraiil_ADJ;Jabra'iili;;;;;;;;;;;;;x
+c_jabraiil;Jabra'iil;;;;;;;;;;;;;x
+c_jabraiil_ADJ;Jabra'iili;;;;;;;;;;;;;x
+d_al_bawwaaba;al-Bawwaaba;;;;;;;;;;;;;x
+d_al_bawwaaba_ADJ;al-Bawwaaba;;;;;;;;;;;;;x
+c_al_bawwaaba;al-Bawwaaba;;;;;;;;;;;;;x
+c_al_bawwaaba_ADJ;al-Bawwaaba;;;;;;;;;;;;;x
+d_al_hadd;al-Hadd;;;;;;;;;;;;;x
+d_al_hadd_ADJ;al-Haddi;;;;;;;;;;;;;x
+c_al_hadd;al-Hadd;;;;;;;;;;;;;x
+c_al_hadd_ADJ;al-Haddi;;;;;;;;;;;;;x
+k_zenye_nyota_angani;Zenye Nyota Angani;Zenye Nyota Angani;;;;;;;;;;;;x
+k_zenye_nyota_angani_ADJ;Angani;Angani;;;;;;;;;;;;x
+d_zenye_nyota_angani_fleet;Angani Armed Forces;Forces armées Angani;;;;;;;;;;;;x
+d_zenye_nyota_angani_fleet_ADJ;Angani Armed Forces;Forces armées Angani;;;;;;;;;;;;x
+d_mpya_ya_zanzibar;Mpya Zanzibar;;;;;;;;;;;;;x
+d_mpya_ya_zanzibar_ADJ;Mpya Zanzibar;;;;;;;;;;;;;x
+c_mpya_ya_zanzibar;Mpya ya Zanzibar;;;;;;;;;;;;;x
+c_mpya_ya_zanzibar_ADJ;Mpya ya Zanzibar;;;;;;;;;;;;;x
+d_nyota_mwisho;Nyota 'Mwisho;;;;;;;;;;;;;x
+d_nyota_mwisho_ADJ;Nyota 'Mwisho;;;;;;;;;;;;;x
+c_nyota_mwisho;Nyota 'Mwisho;;;;;;;;;;;;;x
+c_nyota_mwisho_ADJ;Nyota 'Mwisho;;;;;;;;;;;;;x
+d_ndia_panda;Ndia Panda;;;;;;;;;;;;;x
+d_ndia_panda_ADJ;Ndia Panda;;;;;;;;;;;;;x
+c_ndia_panda;Ndia Panda;;;;;;;;;;;;;x
+c_ndia_panda_ADJ;Ndia Panda;;;;;;;;;;;;;x
+d_afolayan;Afolayan;;;;;;;;;;;;;x
+d_afolayan_ADJ;Afolayan;;;;;;;;;;;;;x
+c_afolayan;Afolayan;;;;;;;;;;;;;x
+c_afolayan_ADJ;Afolayan;;;;;;;;;;;;;x
+d_adwa;Adwa;;;;;;;;;;;;;x
+d_adwa_ADJ;Adwan;;;;;;;;;;;;;x
+k_frontier;Frontier;Bordure;;;;;;;;;;;;x
+k_frontier_ADJ;Frontier;Bordure;;;;;;;;;;;;x
+d_frontier_fleet;Frontier Space Command;Commandement Spatial de la Bordure;;;;;;;;;;;;x
+d_frontier_fleet_ADJ;Frontier Space Command;Commandement Spatial de la Bordure;;;;;;;;;;;;x
+d_armstrong;Armstrong;;;;;;;;;;;;;x
+d_armstrong_ADJ;Armstrong;;;;;;;;;;;;;x
+c_armstrong;Armstrong;;;;;;;;;;;;;x
+c_armstrong_ADJ;Armstrong;;;;;;;;;;;;;x
+d_apollo;Apollo;;;;;;;;;;;;;x
+d_apollo_ADJ;Apollan;;;;;;;;;;;;;x
+c_apollo;Apollo;;;;;;;;;;;;;x
+c_apollo_ADJ;Apollan;;;;;;;;;;;;;x
+d_shepard;Shepard;;;;;;;;;;;;;x
+d_shepard_ADJ;Shepardian;;;;;;;;;;;;;x
+c_shepard;Shepard;;;;;;;;;;;;;x
+c_shepard_ADJ;Shepardian;;;;;;;;;;;;;x
+d_ride;Ride;;;;;;;;;;;;;x
+d_ride_ADJ;Rider;;;;;;;;;;;;;x
+c_ride;Ride;;;;;;;;;;;;;x
+c_ride_ADJ;Rider;;;;;;;;;;;;;x
+d_glenn;Glenn;;;;;;;;;;;;;x
+d_glenn_ADJ;Glenn;;;;;;;;;;;;;x
+c_glenn;Glenn;;;;;;;;;;;;;x
+c_glenn_ADJ;Glenn;;;;;;;;;;;;;x
+k_centauri;Centauri Reach;Centauri Reach;;;;;;;;;;;;x
+k_centauri_ADJ;Centauri;Centauri;;;;;;;;;;;;x
+d_centauri_fleet;Centauri Rangers;Rangers Centauri;;;;;;;;;;;;x
+d_centauri_fleet_ADJ;Centauri Rangers;Rangers Centauri;;;;;;;;;;;;x
+d_gagarin;Gagarin;;;;;;;;;;;;;x
+d_gagarin_ADJ;Gagarin;;;;;;;;;;;;;x
+c_gagarin;Gagarin;;;;;;;;;;;;;x
+c_gagarin_ADJ;Gagarin;;;;;;;;;;;;;x
+d_tereshkova;Tereshkova;;;;;;;;;;;;;x
+d_tereshkova_ADJ;Tereshkovan;;;;;;;;;;;;;x
+c_tereshkova;Tereshkova;;;;;;;;;;;;;x
+c_tereshkova_ADJ;Tereshkovan;;;;;;;;;;;;;x
+d_tengoku;Tengoku;;;;;;;;;;;;;x
+d_tengoku_ADJ;Tengoku;;;;;;;;;;;;;x
+c_tengoku;Tengoku;;;;;;;;;;;;;x
+c_tengoku_ADJ;Tengoku;;;;;;;;;;;;;x
+b_weyland;Weyland Industries;Industries Weyland;;;;;;;;;;;;x
+b_weyland_ADJ;Weyland;Weyland;;;;;;;;;;;;x
+b_salazar;Salazar Shipping;Transports Salazar;;;;;;;;;;;;x
+b_salazar_ADJ;Salazar;Salazar;;;;;;;;;;;;x
+b_nazari;Nazari Industries;IndustriesNazari ;;;;;;;;;;;;x
+b_nazari_ADJ;Nazari;Nazari;;;;;;;;;;;;x
+b_kojima;Kojima Robotics;Kojima Robotique;;;;;;;;;;;;x
+b_kojima_ADJ;Kojima;Kojima;;;;;;;;;;;;x
+b_afolayan;Afolayan Corporation;Corporation Afolayan ;;;;;;;;;;;;x
+b_afolayan_ADJ;Afolayan;Afolayan;;;;;;;;;;;;x
+e_tiangguo;Tiangguo;;;;;;;;;;;;;x
+e_tiangguo_ADJ;Tiangguo;;;;;;;;;;;;;x
+k_xin_zizhiqu;Xin Zizhiqu;;;;;;;;;;;;;x
+k_xin_zizhiqu_ADJ;Xin Zizhiqu;;;;;;;;;;;;;x
+d_xin_zizhiqu_fleet;Xin Zizhiqu Peacekeepers;;;;;;;;;;;;;x
+d_xin_zizhiqu_fleet_ADJ;Xin Zizhiqu Peacekeeper;;;;;;;;;;;;;x
+d_xin_qin;Xin Qin;;;;;;;;;;;;;x
+d_xin_qin_ADJ;Xin Qin;;;;;;;;;;;;;x
+d_hang_seng;Hang Seng;;;;;;;;;;;;;x
+d_hang_seng_ADJ;Hang Seng;;;;;;;;;;;;;x
+d_qiangying;Qiangying;;;;;;;;;;;;;x
+d_qiangying_ADJ;Qiangying;;;;;;;;;;;;;x
+d_wu_ren_zhi_an;Wu Ren Zhi An;;;;;;;;;;;;;x
+d_wu_ren_zhi_an_ADJ;Wu Ren Zhi An;;;;;;;;;;;;;x
+d_macau;Macau;;;;;;;;;;;;;x
+d_macau_ADJ;Macau;;;;;;;;;;;;;x
+d_yingshi;Yingshi;;;;;;;;;;;;;x
+d_yingshi_ADJ;Yingshi;;;;;;;;;;;;;x
+d_deng_biao;Deng Biao;;;;;;;;;;;;;x
+d_deng_biao_ADJ;Deng Biao;;;;;;;;;;;;;x
+d_wei;Wei;;;;;;;;;;;;;x
+d_wei_ADJ;Wei;;;;;;;;;;;;;x
+d_hua;Hua;;;;;;;;;;;;;x
+d_hua_ADJ;Hua;;;;;;;;;;;;;x
+d_tian_yuan;Tian Yuan;;;;;;;;;;;;;x
+d_tian_yuan_ADJ;Tian Yuan;;;;;;;;;;;;;x
+k_novyy_edem;Novyy Edem;;;;;;;;;;;;;x
+k_novyy_edem_ADJ;Edemite;;;;;;;;;;;;;x
+d_novyy_edem;Novyy Edem;;;;;;;;;;;;;x
+d_novyy_edem_ADJ;Edemite;;;;;;;;;;;;;x
+c_novyy_edem;Novyy Edem;;;;;;;;;;;;;x
+c_novyy_edem_ADJ;Edemite;;;;;;;;;;;;;x
+d_novyy_edem_fleet;Edemite National Guard;;;;;;;;;;;;;x
+d_novyy_edem_fleet_ADJ;Edemite National Guard;;;;;;;;;;;;;x
+d_prochnost;Prochnost';;;;;;;;;;;;;x
+d_prochnost_ADJ;Prochnost';;;;;;;;;;;;;x
+d_sovershenstvo;Sovershenstvo;;;;;;;;;;;;;x
+d_sovershenstvo_ADJ;Sovershenstvo;;;;;;;;;;;;;x
+d_shen_yan;Shen Yan;;;;;;;;;;;;;x
+d_shen_yan_ADJ;Shen Yan;;;;;;;;;;;;;x
+d_almaz;Almaz;;;;;;;;;;;;;x
+d_almaz_ADJ;Almaz;;;;;;;;;;;;;x
+d_maoxian;Maoxian;;;;;;;;;;;;;x
+d_maoxian_ADJ;Maoxian;;;;;;;;;;;;;x
+d_mir;Mir;;;;;;;;;;;;;x
+d_mir_ADJ;Mir;;;;;;;;;;;;;x
+d_probeda;Probeda;;;;;;;;;;;;;x
+d_probeda_ADJ;Probeda;;;;;;;;;;;;;x
+k_avalon;Avalon;;;;;;;;;;;;;x
+k_avalon_ADJ;Avalonian;;;;;;;;;;;;;x
+d_avalon_fleet;Order of Avalon;;;;;;;;;;;;;x
+d_avalon_fleet_ADJ;Avalonian Military;;;;;;;;;;;;;x
+d_avalon;Avalon;;;;;;;;;;;;;x
+d_avalon_ADJ;Avalonian;;;;;;;;;;;;;x
+c_avalon;Avalon;;;;;;;;;;;;;x
+c_avalon_ADJ;Avalonian;;;;;;;;;;;;;x
+d_galahad;Galahad;;;;;;;;;;;;;x
+d_galahad_ADJ;Galean;;;;;;;;;;;;;x
+c_galahad;Galahad;;;;;;;;;;;;;x
+c_galahad_ADJ;Galean;;;;;;;;;;;;;x
+d_victoria;Victoria;;;;;;;;;;;;;x
+d_victoria_ADJ;Victorian;;;;;;;;;;;;;x
+c_victoria;Victoria;;;;;;;;;;;;;x
+c_victoria_ADJ;Victorian;;;;;;;;;;;;;x
+d_nelson;Nelson;;;;;;;;;;;;;x
+d_nelson_ADJ;Nelsonian;;;;;;;;;;;;;x
+c_nelson;Nelson;;;;;;;;;;;;;x
+c_nelson_ADJ;Nelsonian;;;;;;;;;;;;;x
+d_caliburn;Caliburn;;;;;;;;;;;;;x
+d_caliburn_ADJ;Caliburnian;;;;;;;;;;;;;x
+c_caliburn;Caliburn;;;;;;;;;;;;;x
+c_caliburn_ADJ;Caliburnian;;;;;;;;;;;;;x
+d_alfred;Alfred;;;;;;;;;;;;;x
+d_alfred_ADJ;Alfredian;;;;;;;;;;;;;x
+c_alfred;Alfred;;;;;;;;;;;;;x
+c_alfred_ADJ;Alfredian;;;;;;;;;;;;;x
+d_lancelot;Lancelot;;;;;;;;;;;;;x
+d_lancelot_ADJ;Lancelotian;;;;;;;;;;;;;x
+c_lancelot;Lancelot;;;;;;;;;;;;;x
+c_lancelot_ADJ;Lancelotian;;;;;;;;;;;;;x

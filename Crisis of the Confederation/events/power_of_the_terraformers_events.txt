@@ -1,0 +1,102 @@
+namespace = terraformers
+
+# THE POWER OF THE TERRAFORMERS #
+# A late-game megaplot
+# Totally not a ripoff of a certain lost Doctor Who serial
+# Gregory Hayes (Galle), with some help from cyaziris
+
+# Basic Overview:
+# An ancient alien race, like most ancient alien races, forgot to clean up
+# some of their toys. Specifically, a fleet of autonomous terraforming ships.
+# These ships are driven by an extremely powerful AI to reorganize the galaxy
+# to better suit their creators, whose preferred environment is NOT the same
+# as humanity's.
+#
+# In order to spread throughout human space, the terraformers masquerade as
+# being helpful to humanity. First for peaceful purposes, later for military
+# ones. Eventually, as they are given more resources and autonomy, they reveal
+# their true goal: to wipe humanity from existence and make room for their long-
+# dead creators.
+
+# Event List
+################
+# Introduction - the terraformers are discovered
+################
+# terraformers.0	Province	Alien Artifacts Discovered in ROOT System
+# There's some potential here for more alien artifact plots, so leave room
+#
+# terraformers.100 can be initiated by Researcher job action in the correct province
+# terraformers.100	Narrative	Artifact research uncovers alien terraformer!
+# terraformers.101	Letter		Artifact researcher recommends activating terraformers
+# terraformers.102	Letter		Artifact researcher recommends deactivating terraformers
+# terraformers.103	Narrative	Meeting with the terraformers (pro-terraforming researcher)
+# terraformers.104	Narrative	Meeting with the terraformers (anti-terraforming researcher)
+# terraformers.105	Narrative	Meeting with the terraformers (pro-terraforming researcher's perspective)
+# terraformers.106	Narrative	Meeting with the terraformers (anti-terraforming researcher's perspective)
+# terraformers.107	Province	Terraformers Activated
+# terraformers.108	Character	Terraformers Activated (pro-terraforming researcher's perspective)
+# terraformers.109	Character	Terraformers Activated (anti-terraforming researcher's perspective)
+# terraformers.110	Province	Terraformers Destroyed
+# terraformers.111	Character	Terraformers Destroyed (pro-terraforming researcher's perspective)
+# terraformers.112	Character	Terraformers Destroyed (anti-terraforming researcher's perspective)
+# terraformers.113	Province	Terraformers Left Alone
+# terraformers.114	Character	Terraformers Left Alone (pro-terraforming researcher's perspective)
+# terraformers.115	Character	Terraformers Left Alone (anti-terraforming researcher's perspective)
+# terraformers.116	Character	Liege Has Activated Terraformers
+# terraformers.117	Character	Liege Has Destroyed Terraformers
+# terraformers.118	Character	Liege Has Left Terraformers Alone
+# terraformers.119	Character	Vassal Has Activated Terraformers
+# terraformers.120	Character	Vassal Has Destroyed Terraformers
+# terraformers.121	Character	Vassal Has Left Terraformers Alone
+#
+# Other things to explore here:
+#	Lieges overriding vassal decisions
+#	Researchers going rogue and overriding liege decisions
+#	Dormant terraformers being activated by decision
+################
+# Terraformer Spread (legal)
+################
+# terraformers.200	Province	Terraformers request materials for duplication
+# terraformers.201	Province	Terraformer duplication materials granted
+# terraformers.202	Province	Duplicated terraformers spread from neighboring system
+# terraformers.203	Character	Duplicated terraformers have spread into your realm!
+# terraformers.204	Character	Duplicated terraformers have spread into your enemy's realm!
+# terraformers.205	Character	YOUR duplicated terraformers have spread into your enemy's realm!
+################
+# Terraformer Spread (illegal/plot)
+################
+#
+################
+# Potential Applications - the terraformers are used for terraforming
+################
+# These event are initially far more common than the 'glitches'
+# The more widespread the terraformers are, the rarer they become
+#
+# terraformers.500	Province	Terraformers improve atmosphere on a random planet
+# terraformers.501	Province	Terraformers improve hydrosphere on a random planet
+# terraformers.502	Province	Terraformers improve temperature on a random planet
+#
+# These three events will actually tend toward the following planet combination, which
+# was ideal for the terraformers' creators:
+# Toxic Atmosphere
+# No Water
+# Burning Temperature
+# They become more frequent relative to the 'correct' events the more powerful the
+# terraformers are.
+#
+# terraformers.503	Province	Terraformers degrade atmosphere
+# terraformers.504	Province	Terraformers degrade hydrosphere
+# terraformers.505	Province	Terraformers degrade temperature
+#
+################
+# Military Applications - armed terraformers
+################
+#
+################
+# Terraformers Reveal True Goals
+################
+#
+################
+# Removing terraformers
+################
+#

@@ -1,0 +1,20 @@
+2632.1.1 = {
+	# Reign of the Pirate Queen, Kolonkan Akinwale
+	law = true_cognatic_succession
+	law = succ_feudal_elective
+	holder = "11014662" # Kolonkan Akinwale
+}
+2643.1.1 = {
+	liege = "k_avalon"
+	law = true_cognatic_succession
+	law = succ_primogeniture
+	holder = "1801454" # Katherine I Bywater
+}
+2683.1.1 = { holder = "1701454" } # Katherine II Bywater
+2705.1.1 = { law = succ_ultimogeniture }
+2732.1.1 = { holder = "1601454" } # Katherine III Bywater
+2794.1.1 = { holder = "1501454" } # Katherine IV Bywater
+2815.1.1 = { holder = "1401454" } # Katherine V Bywater
+2869.1.1 = { holder = "1301454" } # Katherine VI Bywater
+2921.1.1 = { holder = "1201454" } # Katherine VII Bywater
+2989.1.1 = { holder = "1101454" } # Katherine VIII Bywater

@@ -1,0 +1,1859 @@
+namespace = clone
+
+# Character commissions a clone of themselves
+character_event = {
+	id = clone.0
+	desc = "EVTDESCCLONE0"
+	picture = GFX_evt_laboratory
+	is_triggered_only = yes
+	
+	option = { # Male clone
+		name = "EVTOPTACLONE0"
+		trigger = { is_female = no } # Male clones need a Y chromosome
+		wealth = -500
+		custom_tooltip = {
+			name = "MALECLONETOOLTIP"
+			set_character_flag = flag_cloning_in_progress
+			clr_character_flag = flag_cloning_decision_active
+			hidden_tooltip = { capital_scope = { province_event = { id = clone.1 days = 270 random = 60 } } }
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5
+				has_ambition = obj_have_a_son
+			}
+		}
+	}
+	option = { # Female clone
+		name = "EVTOPTBCLONE0"
+		wealth = -500
+		custom_tooltip = {
+			name = "FEMALECLONETOOLTIP"
+			set_character_flag = flag_cloning_in_progress
+			clr_character_flag = flag_cloning_decision_active
+			hidden_tooltip = { capital_scope = { province_event = { id = clone.2 days = 270 random = 60 } } }
+		}
+		if = {
+			limit = { is_female = no }
+			custom_tooltip = { name = "FEMALECLONEWARNINGTOOLTIP" }
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_female = no
+				NOT = { has_ambition = obj_have_a_daughter }
+			}
+			modifier = {
+				factor = 5
+				has_ambition = obj_have_a_daughter
+			}
+		}
+	}
+	option = { # Nevermind
+		name = "EVTOPTCCLONE0"
+		clr_character_flag = flag_cloning_decision_active
+		ai_chance = { factor = 0 }
+	}
+}
+province_event = {
+	id = clone.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { any_province_lord = { character = FROM } }
+			FROM = { character_event = { id = clone.3 } }
+		}
+		if = {
+			limit = { NOT = { any_province_lord = { character = FROM } } }
+			owner = { character_event = { id = clone.5 } }
+		}
+	}
+}
+province_event = {
+	id = clone.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { any_province_lord = { character = FROM } }
+			FROM = { character_event = { id = clone.4 } }
+		}
+		if = {
+			limit = { NOT = { any_province_lord = { character = FROM } } }
+			owner = { character_event = { id = clone.6 } }
+		}
+	}
+}
+# Male clone is decanted
+character_event = {
+	id = clone.3
+	desc = "EVTDESCCLONE3"
+	picture = GFX_evt_laboratory
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACLONE3"
+		create_character = {
+			female = no
+			age = 0
+			dna = ROOT
+		}
+		new_character = {
+			set_father = ROOT
+			dynasty = ROOT
+			add_trait = clone
+			# Copy genetic traits
+			if = {
+				limit = { ROOT = { trait = genius } }
+				random_list = {
+					70 = { add_trait = genius }
+					20 = { add_trait = quick }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = quick } }
+				random_list = {
+					70 = { add_trait = quick }
+					15 = { add_trait = genius }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = slow } }
+				random_list = {
+					70 = { add_trait = slow }
+					15 = { add_trait = imbecile }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = imbecile } }
+				random_list = {
+					70 = { add_trait = imbecile }
+					20 = { add_trait = slow }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = beautiful } }
+				random_list = {
+					70 = { add_trait = beautiful }
+					20 = { add_trait = fair }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = fair } }
+				random_list = {
+					70 = { add_trait = fair }
+					15 = { add_trait = beautiful }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = homely } }
+				random_list = {
+					70 = { add_trait = homely }
+					15 = { add_trait = ugly }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = ugly } }
+				random_list = {
+					70 = { add_trait = ugly }
+					20 = { add_trait = homely }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = strong } }
+				random = {
+					chance = 90
+					add_trait = strong
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = weak } }
+				random = {
+					chance = 90
+					add_trait = weak
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = agile } }
+				random = {
+					chance = 90
+					add_trait = agile
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = clumsy } }
+				random = {
+					chance = 90
+					add_trait = clumsy
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = dwarf } }
+				random = {
+					chance = 90
+					add_trait = dwarf
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = harelip } }
+				random = {
+					chance = 90
+					add_trait = harelip
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = clubfooted } }
+				random = {
+					chance = 90
+					add_trait = clubfooted
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = hunchback } }
+				random = {
+					chance = 90
+					add_trait = hunchback
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = lisp } }
+				random = {
+					chance = 90
+					add_trait = lisp
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = stutter } }
+				random = {
+					chance = 90
+					add_trait = stutter
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = inbred } }
+				random = {
+					chance = 90
+					add_trait = inbred
+				}
+			}
+			# Send to parent's court
+			ROOT = { reverse_banish = PREV }
+		}
+	}
+}
+# Female clone is decanted
+character_event = {
+	id = clone.4
+	desc = "EVTDESCCLONE4"
+	picture = GFX_evt_laboratory
+	is_triggered_only = yes
+	
+	option = {
+		limit = { is_female = yes }
+		name = "EVTOPTACLONE4"
+		create_character = {
+			female = yes
+			age = 0
+			dna = ROOT
+		}
+		new_character = {
+			set_mother = ROOT
+			dynasty = ROOT
+			add_trait = clone
+			# Copy genetic traits
+			if = {
+				limit = { ROOT = { trait = genius } }
+				random_list = {
+					70 = { add_trait = genius }
+					20 = { add_trait = quick }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = quick } }
+				random_list = {
+					70 = { add_trait = quick }
+					15 = { add_trait = genius }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = slow } }
+				random_list = {
+					70 = { add_trait = slow }
+					15 = { add_trait = imbecile }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = imbecile } }
+				random_list = {
+					70 = { add_trait = imbecile }
+					20 = { add_trait = slow }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = beautiful } }
+				random_list = {
+					70 = { add_trait = beautiful }
+					20 = { add_trait = fair }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = fair } }
+				random_list = {
+					70 = { add_trait = fair }
+					15 = { add_trait = beautiful }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = homely } }
+				random_list = {
+					70 = { add_trait = homely }
+					15 = { add_trait = ugly }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = ugly } }
+				random_list = {
+					70 = { add_trait = ugly }
+					20 = { add_trait = homely }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = strong } }
+				random = {
+					chance = 90
+					add_trait = strong
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = weak } }
+				random = {
+					chance = 90
+					add_trait = weak
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = agile } }
+				random = {
+					chance = 90
+					add_trait = agile
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = clumsy } }
+				random = {
+					chance = 90
+					add_trait = clumsy
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = dwarf } }
+				random = {
+					chance = 90
+					add_trait = dwarf
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = harelip } }
+				random = {
+					chance = 90
+					add_trait = harelip
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = clubfooted } }
+				random = {
+					chance = 90
+					add_trait = clubfooted
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = hunchback } }
+				random = {
+					chance = 90
+					add_trait = hunchback
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = lisp } }
+				random = {
+					chance = 90
+					add_trait = lisp
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = stutter } }
+				random = {
+					chance = 90
+					add_trait = stutter
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = inbred } }
+				random = {
+					chance = 90
+					add_trait = inbred
+				}
+			}
+			# Send to parent's court
+			ROOT = { reverse_banish = PREV }
+		}
+	}
+	
+	option = {
+		limit = { is_female = no }
+		name = "EVTOPTACLONE4"
+		create_character = {
+			female = yes
+			age = 0
+			dna = ROOT
+		}
+		new_character = {
+			set_father = ROOT
+			dynasty = ROOT
+			add_trait = clone
+			# Chance of genetic defects due to identical chromosomes
+			random = {
+				chance = 33
+				add_trait = inbred
+			}
+			# Copy genetic traits
+			if = {
+				limit = { ROOT = { trait = genius } }
+				random_list = {
+					70 = { add_trait = genius }
+					20 = { add_trait = quick }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = quick } }
+				random_list = {
+					70 = { add_trait = quick }
+					15 = { add_trait = genius }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = slow } }
+				random_list = {
+					70 = { add_trait = slow }
+					15 = { add_trait = imbecile }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = imbecile } }
+				random_list = {
+					70 = { add_trait = imbecile }
+					20 = { add_trait = slow }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = beautiful } }
+				random_list = {
+					70 = { add_trait = beautiful }
+					20 = { add_trait = fair }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = fair } }
+				random_list = {
+					70 = { add_trait = fair }
+					15 = { add_trait = beautiful }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = homely } }
+				random_list = {
+					70 = { add_trait = homely }
+					15 = { add_trait = ugly }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = ugly } }
+				random_list = {
+					70 = { add_trait = ugly }
+					20 = { add_trait = homely }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = strong } }
+				random = {
+					chance = 90
+					add_trait = strong
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = weak } }
+				random = {
+					chance = 90
+					add_trait = weak
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = agile } }
+				random = {
+					chance = 90
+					add_trait = agile
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = clumsy } }
+				random = {
+					chance = 90
+					add_trait = clumsy
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = dwarf } }
+				random = {
+					chance = 90
+					add_trait = dwarf
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = harelip } }
+				random = {
+					chance = 90
+					add_trait = harelip
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = clubfooted } }
+				random = {
+					chance = 90
+					add_trait = clubfooted
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = hunchback } }
+				random = {
+					chance = 90
+					add_trait = hunchback
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = lisp } }
+				random = {
+					chance = 90
+					add_trait = lisp
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = stutter } }
+				random = {
+					chance = 90
+					add_trait = stutter
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = inbred } }
+				random = {
+					chance = 90
+					add_trait = inbred
+				}
+			}
+			# Send to parent's court
+			ROOT = { reverse_banish = PREV }
+		}
+	}
+}
+
+# A former ruler's male clone is decanted
+character_event = {
+	id = clone.5
+	desc = "EVTDESCCLONE5"
+	picture = GFX_evt_laboratory
+	show_from_from = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACLONE5"
+		trigger = {
+			FROM = {
+				FROM = {
+					is_alive = yes
+					is_landed = yes
+					demesne_size = 1
+				}
+			}
+		}
+		create_character = {
+			female = no
+			age = 0
+			dna = FROMFROM
+		}
+		new_character = {
+			set_father = FROMFROM
+			dynasty = FROMFROM
+			add_trait = clone
+			# Copy genetic traits
+			if = {
+				limit = { FROM = { FROM = { trait = genius } } }
+				random_list = {
+					70 = { add_trait = genius }
+					20 = { add_trait = quick }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = quick } } }
+				random_list = {
+					70 = { add_trait = quick }
+					15 = { add_trait = genius }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = slow } } }
+				random_list = {
+					70 = { add_trait = slow }
+					15 = { add_trait = imbecile }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = imbecile } } }
+				random_list = {
+					70 = { add_trait = imbecile }
+					20 = { add_trait = slow }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = beautiful } } }
+				random_list = {
+					70 = { add_trait = beautiful }
+					20 = { add_trait = fair }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = fair } } }
+				random_list = {
+					70 = { add_trait = fair }
+					15 = { add_trait = beautiful }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = homely } } }
+				random_list = {
+					70 = { add_trait = homely }
+					15 = { add_trait = ugly }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = ugly } } }
+				random_list = {
+					70 = { add_trait = ugly }
+					20 = { add_trait = homely }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = strong } } }
+				random = {
+					chance = 90
+					add_trait = strong
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = weak } } }
+				random = {
+					chance = 90
+					add_trait = weak
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = agile } } }
+				random = {
+					chance = 90
+					add_trait = agile
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = clumsy } } }
+				random = {
+					chance = 90
+					add_trait = clumsy
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = dwarf } } }
+				random = {
+					chance = 90
+					add_trait = dwarf
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = harelip } } }
+				random = {
+					chance = 90
+					add_trait = harelip
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = clubfooted } } }
+				random = {
+					chance = 90
+					add_trait = clubfooted
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = hunchback } } }
+				random = {
+					chance = 90
+					add_trait = hunchback
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = lisp } } }
+				random = {
+					chance = 90
+					add_trait = lisp
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = stutter } } }
+				random = {
+					chance = 90
+					add_trait = stutter
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = inbred } } }
+				random = {
+					chance = 90
+					add_trait = inbred
+				}
+			}
+			# Send to parent's court
+			FROM = { FROM = { reverse_banish = PREV } }
+			FROM = { FROM = { character_event = { id = clone.7 tooltip = "EVTTOOLTIPCLONE7" } } }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 100 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 10 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -9 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -99 } }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTBCLONE5"
+		create_character = {
+			female = no
+			age = 0
+			dna = FROMFROM
+		}
+		new_character = {
+			set_father = FROMFROM
+			dynasty = FROMFROM
+			add_trait = clone
+			# Copy genetic traits
+			if = {
+				limit = { FROM = { FROM = { trait = genius } } }
+				random_list = {
+					70 = { add_trait = genius }
+					20 = { add_trait = quick }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = quick } } }
+				random_list = {
+					70 = { add_trait = quick }
+					15 = { add_trait = genius }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = slow } } }
+				random_list = {
+					70 = { add_trait = slow }
+					15 = { add_trait = imbecile }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = imbecile } } }
+				random_list = {
+					70 = { add_trait = imbecile }
+					20 = { add_trait = slow }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = beautiful } } }
+				random_list = {
+					70 = { add_trait = beautiful }
+					20 = { add_trait = fair }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = fair } } }
+				random_list = {
+					70 = { add_trait = fair }
+					15 = { add_trait = beautiful }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = homely } } }
+				random_list = {
+					70 = { add_trait = homely }
+					15 = { add_trait = ugly }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = ugly } } }
+				random_list = {
+					70 = { add_trait = ugly }
+					20 = { add_trait = homely }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = strong } } }
+				random = {
+					chance = 90
+					add_trait = strong
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = weak } } }
+				random = {
+					chance = 90
+					add_trait = weak
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = agile } } }
+				random = {
+					chance = 90
+					add_trait = agile
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = clumsy } } }
+				random = {
+					chance = 90
+					add_trait = clumsy
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = dwarf } } }
+				random = {
+					chance = 90
+					add_trait = dwarf
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = harelip } } }
+				random = {
+					chance = 90
+					add_trait = harelip
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = clubfooted } } }
+				random = {
+					chance = 90
+					add_trait = clubfooted
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = hunchback } } }
+				random = {
+					chance = 90
+					add_trait = hunchback
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = lisp } } }
+				random = {
+					chance = 90
+					add_trait = lisp
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = stutter } } }
+				random = {
+					chance = 90
+					add_trait = stutter
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = inbred } } }
+				random = {
+					chance = 90
+					add_trait = inbred
+				}
+			}
+			# Send to ROOT's court
+			ROOT = { reverse_banish = PREV }
+			FROM = { FROM = { character_event = { id = clone.8 tooltip = "EVTTOOLTIPCLONE8" } } }
+		}
+		ai_chance = { factor = 50 }
+	}
+}
+
+# A former ruler's female clone is decanted
+character_event = {
+	id = clone.6
+	desc = "EVTDESCCLONE6"
+	picture = GFX_evt_laboratory
+	show_from_from = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACLONE6"
+		trigger = {
+			FROM = {
+				FROM = {
+					is_female = yes
+					is_alive = yes
+					is_landed = yes
+					demesne_size = 1
+				}
+			}
+		}
+		create_character = {
+			female = no
+			age = 0
+			dna = FROMFROM
+		}
+		new_character = {
+			set_mother = FROMFROM
+			dynasty = FROMFROM
+			add_trait = clone
+			# Copy genetic traits
+			if = {
+				limit = { FROM = { FROM = { trait = genius } } }
+				random_list = {
+					70 = { add_trait = genius }
+					20 = { add_trait = quick }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = quick } } }
+				random_list = {
+					70 = { add_trait = quick }
+					15 = { add_trait = genius }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = slow } } }
+				random_list = {
+					70 = { add_trait = slow }
+					15 = { add_trait = imbecile }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = imbecile } } }
+				random_list = {
+					70 = { add_trait = imbecile }
+					20 = { add_trait = slow }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = beautiful } } }
+				random_list = {
+					70 = { add_trait = beautiful }
+					20 = { add_trait = fair }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = fair } } }
+				random_list = {
+					70 = { add_trait = fair }
+					15 = { add_trait = beautiful }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = homely } } }
+				random_list = {
+					70 = { add_trait = homely }
+					15 = { add_trait = ugly }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = ugly } } }
+				random_list = {
+					70 = { add_trait = ugly }
+					20 = { add_trait = homely }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = strong } } }
+				random = {
+					chance = 90
+					add_trait = strong
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = weak } } }
+				random = {
+					chance = 90
+					add_trait = weak
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = agile } } }
+				random = {
+					chance = 90
+					add_trait = agile
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = clumsy } } }
+				random = {
+					chance = 90
+					add_trait = clumsy
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = dwarf } } }
+				random = {
+					chance = 90
+					add_trait = dwarf
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = harelip } } }
+				random = {
+					chance = 90
+					add_trait = harelip
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = clubfooted } } }
+				random = {
+					chance = 90
+					add_trait = clubfooted
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = hunchback } } }
+				random = {
+					chance = 90
+					add_trait = hunchback
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = lisp } } }
+				random = {
+					chance = 90
+					add_trait = lisp
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = stutter } } }
+				random = {
+					chance = 90
+					add_trait = stutter
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = inbred } } }
+				random = {
+					chance = 90
+					add_trait = inbred
+				}
+			}
+			# Send to parent's court
+			FROM = { FROM = { reverse_banish = PREV } }
+			FROM = { FROM = { character_event = { id = clone.7 tooltip = "EVTTOOLTIPCLONE7" } } }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 100 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 10 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -9 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -99 } }
+			}
+		}
+	}
+	option = {
+		trigger = { FROM = { FROM = { is_female = yes } } }
+		name = "EVTOPTBCLONE6"
+		create_character = {
+			female = no
+			age = 0
+			dna = FROMFROM
+		}
+		new_character = {
+			set_mother = FROMFROM
+			dynasty = FROMFROM
+			add_trait = clone
+			# Copy genetic traits
+			if = {
+				limit = { FROM = { FROM = { trait = genius } } }
+				random_list = {
+					70 = { add_trait = genius }
+					20 = { add_trait = quick }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = quick } } }
+				random_list = {
+					70 = { add_trait = quick }
+					15 = { add_trait = genius }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = slow } } }
+				random_list = {
+					70 = { add_trait = slow }
+					15 = { add_trait = imbecile }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = imbecile } } }
+				random_list = {
+					70 = { add_trait = imbecile }
+					20 = { add_trait = slow }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = beautiful } } }
+				random_list = {
+					70 = { add_trait = beautiful }
+					20 = { add_trait = fair }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = fair } } }
+				random_list = {
+					70 = { add_trait = fair }
+					15 = { add_trait = beautiful }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = homely } } }
+				random_list = {
+					70 = { add_trait = homely }
+					15 = { add_trait = ugly }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = ugly } } }
+				random_list = {
+					70 = { add_trait = ugly }
+					20 = { add_trait = homely }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = strong } } }
+				random = {
+					chance = 90
+					add_trait = strong
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = weak } } }
+				random = {
+					chance = 90
+					add_trait = weak
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = agile } } }
+				random = {
+					chance = 90
+					add_trait = agile
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = clumsy } } }
+				random = {
+					chance = 90
+					add_trait = clumsy
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = dwarf } } }
+				random = {
+					chance = 90
+					add_trait = dwarf
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = harelip } } }
+				random = {
+					chance = 90
+					add_trait = harelip
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = clubfooted } } }
+				random = {
+					chance = 90
+					add_trait = clubfooted
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = hunchback } } }
+				random = {
+					chance = 90
+					add_trait = hunchback
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = lisp } } }
+				random = {
+					chance = 90
+					add_trait = lisp
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = stutter } } }
+				random = {
+					chance = 90
+					add_trait = stutter
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = inbred } } }
+				random = {
+					chance = 90
+					add_trait = inbred
+				}
+			}
+			# Send to ROOT's court
+			ROOT = { reverse_banish = PREV }
+			FROM = { FROM = { character_event = { id = clone.8 tooltip = "EVTTOOLTIPCLONE8" } } }
+		}
+		ai_chance = { factor = 50 }
+	}
+	option = {
+		name = "EVTOPTCCLONE6"
+		trigger = {
+			FROM = {
+				FROM = {
+					is_female = no
+					is_alive = yes
+					is_landed = yes
+					demesne_size = 1
+				}
+			}
+		}
+		create_character = {
+			female = no
+			age = 0
+			dna = FROMFROM
+		}
+		new_character = {
+			set_mother = FROMFROM
+			dynasty = FROMFROM
+			add_trait = clone
+			# Copy genetic traits
+			if = {
+				limit = { FROM = { FROM = { trait = genius } } }
+				random_list = {
+					70 = { add_trait = genius }
+					20 = { add_trait = quick }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = quick } } }
+				random_list = {
+					70 = { add_trait = quick }
+					15 = { add_trait = genius }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = slow } } }
+				random_list = {
+					70 = { add_trait = slow }
+					15 = { add_trait = imbecile }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = imbecile } } }
+				random_list = {
+					70 = { add_trait = imbecile }
+					20 = { add_trait = slow }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = beautiful } } }
+				random_list = {
+					70 = { add_trait = beautiful }
+					20 = { add_trait = fair }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = fair } } }
+				random_list = {
+					70 = { add_trait = fair }
+					15 = { add_trait = beautiful }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = homely } } }
+				random_list = {
+					70 = { add_trait = homely }
+					15 = { add_trait = ugly }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = ugly } } }
+				random_list = {
+					70 = { add_trait = ugly }
+					20 = { add_trait = homely }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = strong } } }
+				random = {
+					chance = 90
+					add_trait = strong
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = weak } } }
+				random = {
+					chance = 90
+					add_trait = weak
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = agile } } }
+				random = {
+					chance = 90
+					add_trait = agile
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = clumsy } } }
+				random = {
+					chance = 90
+					add_trait = clumsy
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = dwarf } } }
+				random = {
+					chance = 90
+					add_trait = dwarf
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = harelip } } }
+				random = {
+					chance = 90
+					add_trait = harelip
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = clubfooted } } }
+				random = {
+					chance = 90
+					add_trait = clubfooted
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = hunchback } } }
+				random = {
+					chance = 90
+					add_trait = hunchback
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = lisp } } }
+				random = {
+					chance = 90
+					add_trait = lisp
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = stutter } } }
+				random = {
+					chance = 90
+					add_trait = stutter
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = inbred } } }
+				random = {
+					chance = 90
+					add_trait = inbred
+				}
+			}
+			# Send to parent's court
+			FROM = { FROM = { reverse_banish = PREV } }
+			FROM = { FROM = { character_event = { id = clone.7 tooltip = "EVTTOOLTIPCLONE7" } } }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 100 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 10 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -9 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROMFROM value = -99 } }
+			}
+		}
+	}
+	option = {
+		trigger = { FROM = { FROM = { is_female = yes } } }
+		name = "EVTOPTDCLONE6"
+		create_character = {
+			female = no
+			age = 0
+			dna = FROMFROM
+		}
+		new_character = {
+			set_mother = FROMFROM
+			dynasty = FROMFROM
+			add_trait = clone
+			# Copy genetic traits
+			if = {
+				limit = { FROM = { FROM = { trait = genius } } }
+				random_list = {
+					70 = { add_trait = genius }
+					20 = { add_trait = quick }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = quick } } }
+				random_list = {
+					70 = { add_trait = quick }
+					15 = { add_trait = genius }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = slow } } }
+				random_list = {
+					70 = { add_trait = slow }
+					15 = { add_trait = imbecile }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = imbecile } } }
+				random_list = {
+					70 = { add_trait = imbecile }
+					20 = { add_trait = slow }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = beautiful } } }
+				random_list = {
+					70 = { add_trait = beautiful }
+					20 = { add_trait = fair }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = fair } } }
+				random_list = {
+					70 = { add_trait = fair }
+					15 = { add_trait = beautiful }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = homely } } }
+				random_list = {
+					70 = { add_trait = homely }
+					15 = { add_trait = ugly }
+					15 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = ugly } } }
+				random_list = {
+					70 = { add_trait = ugly }
+					20 = { add_trait = homely }
+					10 = { }
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = strong } } }
+				random = {
+					chance = 90
+					add_trait = strong
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = weak } } }
+				random = {
+					chance = 90
+					add_trait = weak
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = agile } } }
+				random = {
+					chance = 90
+					add_trait = agile
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = clumsy } } }
+				random = {
+					chance = 90
+					add_trait = clumsy
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = dwarf } } }
+				random = {
+					chance = 90
+					add_trait = dwarf
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = harelip } } }
+				random = {
+					chance = 90
+					add_trait = harelip
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = clubfooted } } }
+				random = {
+					chance = 90
+					add_trait = clubfooted
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = hunchback } } }
+				random = {
+					chance = 90
+					add_trait = hunchback
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = lisp } } }
+				random = {
+					chance = 90
+					add_trait = lisp
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = stutter } } }
+				random = {
+					chance = 90
+					add_trait = stutter
+				}
+			}
+			if = {
+				limit = { FROM = { FROM = { trait = inbred } } }
+				random = {
+					chance = 90
+					add_trait = inbred
+				}
+			}
+			# Send to ROOT's court
+			ROOT = { reverse_banish = PREV }
+			FROM = { FROM = { character_event = { id = clone.8 tooltip = "EVTTOOLTIPCLONE8" } } }
+		}
+		ai_chance = { factor = 50 }
+	}
+}
+
+character_event = {
+	id = clone.7
+	desc = "EVTDESCCLONE7"
+	picture = GFX_evt_laboratory
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVOPTACLONE7"
+	}
+}
+
+character_event = {
+	id = clone.8
+	desc = "EVTDESCCLONE8"
+	picture = GFX_evt_laboratory
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVOPTACLONE8"
+	}
+}

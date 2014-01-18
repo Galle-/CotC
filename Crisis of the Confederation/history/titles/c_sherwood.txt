@@ -1,0 +1,9 @@
+2557.1.1 = {
+	liege = "d_nelson"
+	law = true_cognatic_succession
+	law = succ_primogeniture
+}
+2705.1.1 = {
+	law = succ_ultimogeniture
+}
+2994.1.1 = { holder = "1102126" } # Richard O'Brien

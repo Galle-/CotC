@@ -1,0 +1,115 @@
+CODING TASKS
+	BUILDINGS
+		Custom buildings need to be defined. City, castle, and temple holdings
+		will each need to have several new buildings defined. The basic concepts
+		I want to hit are as follows:
+			1.	Planetary traits, including Atmosphere, Hydrosphere, and
+				Temperature. I'm currently working on this myself, so you can
+				probably afford to ignore it.
+			2.	A main colony building, that limits the maximum level other
+				buildings on the planet can be raised to. For simplicity, these
+				will be named xy_colony_n, where xy is the two-letter code for
+				the holding type and n is the building size from 0 to 4.
+			3.	Militia buildings. These should provide some levies, but only
+				for smaller ships like fighters and bombers. POSSIBLY also troop
+				transports.
+			4.	Medical infrastructure. This should improve province disease
+				resistance. There should also be some spinoff buildings that
+				allow for interesting biotech options, like cloning or genetic
+				modification.
+			5.	Education infrastructure. This should improve tech growth. There
+				should also be some spinoff buildings that allow for interesting
+				cybernetics options, like getting specific cybernetic implants.
+			6.	Assorted standard CK2 buildings that improve things like tax revenue
+				and fort level.
+	TECHNOLOGY
+		Closely related to the above, technology needs to be overhauled to fit the
+		new, space-age paradigm. I'm currently working on this as well. It may help
+		you to know what the different techs have been redefined as, so that you can
+		set your prereqs more logically:
+			- TECH_LIGHT_INFANTRY is now Propulsion
+			- TECH_HEAVY_INFANTRY is now Armor
+			- TECH_CAVALRY is now Lasers
+			- TECH_SIEGE_EQUIPMENT is now Missiles
+			- TECH_NAVAL is now Warship Doctrine
+			- TECH_RECRUITMENT is now Fighter Doctrine
+			- TECH_CASTLE_CONSTRUCTION is now Civil Engineering
+			- TECH_CITY_CONSTRUCTION is now Education
+			- TECH_TEMPLE_CONSTRUCTION is now Interstellar Industrialism
+			- TECH_TRADE_PRACTICES is now Interstellar Trade, but otherwise unchanged
+			- TECH_FORTIFICATIONS_CONSTRUCTION is now Economic Policy
+			- TECH_CONSTRUCTION is now Sociology
+			- TECH_NOBLE_CUSTOMS is now Medicine
+			- TECH_POPULAR_CUSTOMS is now Cybernetics
+			- TECH_RELIGIOUS_CUSTOMS is now Biotechnology
+			- TECH_MAJESTY is now Artificial Intelligence
+			- TECH_CULTURE_FLEX is now Hyperspace Physics
+			- TECH_LEGALISM is now Xenobiology
+		You should continue to use the old tags for these techs, but understand that
+		their flavor and workings has been radically altered.
+	MILITARY
+		Closely related with BOTH the above. The new military system needs adaptation
+		in several areas:
+			1.	New military units. At present, the current plan is as follows:
+					LIGHT_INFANTRY are Fighters
+						Skirmish: Good Attack, Weak Defense
+						Melee: Weak Attack, Weak Defense
+						Pursuit: Weak Attack, Good Defense
+					HEAVY_INFANTRY are Bombers
+						Skirmish: Weak Attack, Weak Defense
+						Melee: Great Attack, Weak Defense
+						Pursuit: Excellent Attack, Good Defense
+					PIKEMEN are Combat Drones
+						Weak in all phases, but have amazing morale.
+					ARCHERS are Troop Transports
+						Weak in all phases (except possibly pursuit).
+						Used for sieges.
+					LIGHT_CAVALRY are Destroyers
+						Skirmish: Good Attack, Excellent Defense
+						Melee: Weak Attack, Good Defense
+						Pursuit: Weak Attack, Weak Defense
+					KNIGHTS are Battlecruisers
+						Skirmish: No Attack, Excellent Defense
+						Melee: Good Attack, Good Defense
+						Pursuit: Good Attack, Good Defense
+					HORSE_ARCHERS are Dreadnoughts
+						Skirmish: No Attack, Excellent Defense
+						Melee: Great Attack, Great Defense
+						Pursuit: No Attack, Good Defense
+			2.	Understand the new logic behind the combat phases:
+					THE SKIRMISH PHASE: Dogfights between fighters and screening by
+										Destroyers.
+					THE MELEE PHASE: 	Big slug-fights, mostly between capital ships.
+					THE PURSUIT PHASE:	Loser tries to escape, winner tries to destroy
+										or capture escaping ships.
+			3.	New combat tactics. These should reflect the new units. New tactics for
+				the different unit types should be unlocked by the corresponding Doctrine
+				tech (Fighter Doctrine for fighters and bombers, Warship Doctrine for
+				Destroyers, Battlecruisers, and Dreadnoughts, Artificial Intelligence for
+				Combat Drones).
+			4.	Siege tactics. Generally speaking, the standard Siege Tactics should be
+				completely reliant on Troop Transports. More advanced Siege Tactics should
+				be enable-able by decision, which allow other units to help, but at greater
+				risk of destroying buildings in the holding.
+			5.	Retinues. Ideally, retinues are going to be the main military force in
+				CotC (Legacy of Rome will be required, alas). Try to work out the best mix
+				of Retinue types and coax the AI into using them.
+			7.	Campaign CBs. Military vassals should be able to use special Campaign CBs
+				on anyone at war with their liege. Lieges should also be able to compel their
+				Fleet and Navy vassals to declare Campaigns. Victory in a campaign should
+				automatically mean a victory in the liege's war.
+	PLOTS, AMBITIONS, AND FACTIONS
+		These need a massive overhaul. Particular plots I'd like to see include coup d'tats
+		and plots to replace specific cabinet members (I've already made something similar to
+		the latter for AGOT). Factions should include political parties. Terran Federalists
+		should probably stop declaring independence from Earth. It would be nice if it was
+		possible for someone launching a coup against a vassal to convince the vassal's liege
+		to look the other way, at the cost of a moral authority hit for said liege's ideology.
+	IDEOLOGIES AND MORAL AUTHORITY
+		This ties into absolutely EVERYTHING. The moral authority of your ideology is going
+		to be a big deal - at the moment, it will just affect the popularity of that ideology's
+		followers, but other effects could be thought of, I'm sure. Moral authority of an
+		ideology should be affected by its actions, successes, and failures.
+	VANILLA EVENT CONVERSION
+		Vanilla events must be converted to use the new trait system. Some of them may be too
+		medieval for CotC - these events should be identified and discarded.

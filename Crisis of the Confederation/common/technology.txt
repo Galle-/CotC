@@ -1,0 +1,385 @@
+TECH_GROUP_MILITARY = {
+	TECH_LIGHT_INFANTRY = { # Propulsion
+		modifier = {
+			LIGHT_INFANTRY_DEFENSIVE = 0.3
+			HEAVY_INFANTRY_DEFENSIVE = 0.3
+			PIKEMEN_DEFENSIVE = 0.2
+		}	
+	}
+	TECH_HEAVY_INFANTRY = { # Armor
+		modifier = {
+			ARCHERS_OFFENSIVE = 0.3
+			LIGHT_CAVALRY_DEFENSIVE = 0.3
+			KNIGHTS_DEFENSIVE = 0.3
+			HORSE_ARCHERS_DEFENSIVE = 0.3
+		}		
+	}
+	TECH_CAVALRY = { # Energy Weapons
+		modifier = {
+			LIGHT_INFANTRY_OFFENSIVE = 0.3
+			ARCHERS_OFFENSIVE = 0.3
+			LIGHT_CAVALRY_OFFENSIVE = 0.3
+			KNIGHTS_OFFENSIVE = 0.2
+			HORSE_ARCHERS_OFFENSIVE = 0.2
+			SIEGE_SPEED = 0.2
+			SIEGE_DEFENSE = 0.2
+		}
+	}
+	TECH_SIEGE_EQUIPMENT = { # Missiles
+		modifier = {
+			HEAVY_INFANTRY_OFFENSIVE = 0.3
+			KNIGHTS_OFFENSIVE = 0.1
+			HORSE_ARCHERS_OFFENSIVE = 0.1
+			SIEGE_SPEED = 0.2
+			SIEGE_DEFENCE = 0.2
+		}
+	}
+	TECH_NAVAL = { # Warship Doctrine - unlocks new warship tactics
+		modifier = {
+			LIGHT_CAVALRY_MORALE = 0.3
+			KNIGHTS_MORALE = 0.3
+			HORSE_ARCHERS_MORALE = 0.3
+		}
+	}
+	TECH_RECRUITMENT = { # Fighter Doctrine - unlocks new fighter tactics
+		modifier = {
+			LIGHT_INFANTRY_MORALE = 0.3
+			HEAVY_INFANTRY_MORALE = 0.3
+		}
+	}
+}
+
+TECH_GROUP_ECONOMY = {
+	TECH_CASTLE_CONSTRUCTION = { # Civil Engineering  - Infrastructure Buildings
+		modifier = {
+		}
+		1 = {
+			add_building = ca_militia_barracks_2
+			add_building = ca_barracks_3
+			add_building = <CULTURE>2
+		}
+		2 = {
+			add_building = ca_stable_3
+			add_building = ca_town_3
+			add_building = <CULTURE>3
+		}
+		3 = {
+			add_building = ca_barracks_4
+			add_building = ca_training_grounds_2
+		}
+		4 = {
+			add_building = ca_stable_4
+			add_building = ca_town_4
+			add_building = <CULTURE>4
+		}
+		5 = {
+			add_building = ca_barracks_5
+			add_building = ca_militia_barracks_3
+		}
+		6 = {
+			add_building = ca_stable_5
+			add_building = ca_town_5
+			add_building = ca_training_grounds_3
+		}
+		7 = {
+			add_building = ca_barracks_6
+			add_building = ca_militia_barracks_4
+		}
+		8 = {
+			add_building = ca_stable_6
+			add_building = ca_town_6
+		}
+	}
+	TECH_CITY_CONSTRUCTION = { # Education - Tech Buildings
+		modifier = {
+		}
+		1 = {
+			add_building = ct_marketplace_3
+			add_building = ct_barracks_3
+		}
+		2 = {
+			add_building = ct_guard_2
+			add_building = ct_university_1
+			add_building = ct_training_grounds_3
+		}
+		3 = {
+			add_building = ct_marketplace_4
+			add_building = ct_barracks_4
+		}
+		4 = {
+			add_building = ct_guard_3
+			add_building = ct_university_2
+			add_building = ct_training_grounds_4
+		}
+		5 = {
+			add_building = ct_marketplace_5
+			add_building = ct_barracks_5
+		}
+		6 = {
+			add_building = ct_guard_4
+			add_building = ct_training_grounds_5
+		}
+		7 = {
+			add_building = ct_marketplace_6
+			add_building = ct_barracks_6
+		}
+		8 = {
+			add_building = ct_guard_5
+			add_building = ct_university_3
+			add_building = ct_training_grounds_6
+		}
+	}
+	TECH_TEMPLE_CONSTRUCTION = { # Interstellar Industrialism - Construction Bonuses, Military Buildings
+		modifier = {
+			LOCAL_BUILD_TIME_MODIFIER = -0.25
+			LOCAL_BUILD_COST_MODIFIER = -0.25
+		}
+		1 = { 
+			add_building = tp_barracks_3
+			add_building = tp_town_3
+		}
+		2 = {
+			add_building = tp_monastery_3
+			add_building = tp_elite_barracks_3
+		}
+		3 = {
+			add_building = tp_barracks_4
+			add_building = tp_town_4
+			add_building = tp_school_1
+		}
+		4 = {
+			add_building = tp_monastery_4
+			add_building = tp_elite_barracks_4
+		}
+		5 = {
+			add_building = tp_barracks_5
+			add_building = tp_town_5
+		}
+		6 = {
+			add_building = tp_monastery_5
+			add_building = tp_elite_barracks_5
+			add_building = tp_school_2
+		}
+		7 = {
+			add_building = tp_barracks_6
+			add_building = tp_town_6
+		}
+		8 = {
+			add_building = tp_monastery_6
+			add_building = tp_elite_barracks_6
+		}
+	}
+	TECH_FORTIFICATIONS_CONSTRUCTION = { # - Economic Policy - Tax Revenue
+		modifier = {
+			CASTLE_TAX_MODIFIER = 0.5
+			CITY_TAX_MODIFIER = 0.5
+			TEMPLE_TAX_MODIFIER = 0.5
+		}
+		1 = {
+			add_building = ca_wall_q_2
+			add_building = ct_wall_q_2
+			add_building = tp_wall_q_2
+		}
+		2 = {
+			add_building = ca_keep_3
+			add_building = ca_wall_2
+			add_building = ct_wall_2
+			add_building = tp_wall_2
+		}
+		3 = {
+			add_building = ca_wall_q_3
+			add_building = ct_wall_q_3
+			add_building = tp_wall_q_3
+		}
+		4 = {
+			add_building = ca_keep_4
+			add_building = ca_wall_3
+			add_building = ct_wall_3
+			add_building = tp_wall_3
+		}
+		5 = {
+			add_building = ca_wall_q_4
+			add_building = ct_wall_q_4
+			add_building = tp_wall_q_4
+		}
+		6 = {
+			add_building = ca_keep_5
+			add_building = ca_wall_4
+			add_building = ct_wall_4
+			add_building = tp_wall_4
+		}
+		7 = {
+			add_building = ca_wall_q_5
+			add_building = ct_wall_q_5
+			add_building = tp_wall_q_5
+		}
+		8 = {
+			add_building = ca_keep_6
+			add_building = ca_wall_5
+			add_building = ct_wall_5
+			add_building = tp_wall_5
+		}
+	}
+	TECH_TRADE_PRACTICES = { # Interstellar Trade
+		modifier = {
+			TRADEVALUE_MULT = 0.6
+		}
+		1 = {
+			add_building = ct_port_2
+		}
+		2 = {
+		}
+		3 = {
+			add_building = ct_port_3
+		}
+		4 = {
+			add_building = ct_port_4
+		}
+		5 = {
+		}
+		6 = {
+			add_building = ct_port_5
+		}
+	}
+	TECH_CONSTRUCTION = { # Sociology - Vassal loyalty, retinues, militia
+		modifier = {
+			CASTLE_OPINION = 8
+			TOWN_OPINION = 8
+			CHURCH_OPINION = 8
+		}
+		1 = {
+			add_building = ca_colony_1
+			add_building = ct_colony_1
+			add_building = tp_colony_1
+		}
+		2 = {
+			add_building = ca_colony_2
+			add_building = ct_colony_2
+			add_building = tp_colony_2
+		}
+		3 = {
+			add_building = ca_colony_3
+			add_building = ct_colony_3
+			add_building = tp_colony_3
+		}
+		4 = {
+			add_building = ca_colony_4
+			add_building = ct_colony_4
+			add_building = tp_colony_4
+		}
+	}
+}
+
+TECH_GROUP_CULTURE = {
+	TECH_NOBLE_CUSTOMS = { # Medicine - Disease Prevention Buildings
+		modifier = {
+		}
+	}
+	TECH_POPULAR_CUSTOMS = { # Cybernetics - Cybernetics Labs
+		modifier = {
+		}
+	}
+	TECH_RELIGIOUS_CUSTOMS = { # Biotech - Biotech Labs
+		modifier = {
+		}
+	}
+	TECH_MAJESTY = { # Artifical Intelligence - Combat Drone Buildings, Doctrine
+		modifier = {
+			PIKEMEN_OFFENSIVE = 0.1
+			PIKEMEN_DEFENSIVE = 0.1
+			PIKEMEN_MORALE = 0.3
+			# ADD_PRESTIGE_MODIFIER = 0.5
+			# ADD_PIETY_MODIFIER = 0.5
+		}
+	}
+	TECH_CULTURE_FLEX = { # Hyperspace Physics - Movement at Sea
+		modifier = {
+			GALLEYS_PERC = 0.8
+			# CULTURE_FLEX = -0.5
+			# RELIGION_FLEX = -0.5
+		}
+		1 = {
+			add_building = ct_shipyard_1
+			add_building = tp_shipyard_1
+			add_building = ca_shipyard_1
+		}
+		2 = {
+			add_building = ct_shipyard_2
+			add_building = tp_shipyard_2
+			add_building = ca_shipyard_2
+		}
+		3 = {
+			add_building = ct_shipyard_3
+			add_building = tp_shipyard_3
+			add_building = ca_shipyard_3
+		}
+		4 = {
+			add_building = ct_shipyard_4
+			add_building = tp_shipyard_4
+			add_building = ca_shipyard_4
+		}
+	}
+	TECH_LEGALISM = { # Xenobiology - Attrition, Siege offensive?
+		modifier = {
+			GLOBAL_SUPPLY_LIMIT = 1.0
+			# LAND_MORALE = 0.5
+			# SHORT_REIGN_LENGTH = -5
+		}
+		1 = {
+			add_building = ca_no_atmosphere_domes
+			add_building = ca_toxic_atmosphere_domes
+			add_building = ct_no_atmosphere_domes
+			add_building = ct_toxic_atmosphere_domes
+			add_building = tp_no_atmosphere_domes
+			add_building = tp_toxic_atmosphere_domes
+			add_building = ca_trace_water
+			add_building = ct_trace_water
+			add_building = tp_trace_water
+		}
+		2 = {
+			add_building = ca_hot
+			add_building = ct_hot
+			add_building = tp_hot
+			add_building = ca_cold
+			add_building = ct_cold
+			add_building = tp_cold
+		}
+		3 = {
+			add_building = ca_scrubbed_atmosphere
+			add_building = ct_scrubbed_atmosphere
+			add_building = tp_scrubbed_atmosphere
+			add_building = ca_lakes
+			add_building = ct_lakes
+			add_building = tp_lakes
+		}
+		4 = {
+			add_building = ca_warm
+			add_building = ct_warm
+			add_building = tp_warm
+			add_building = ca_cool
+			add_building = ct_cool
+			add_building = tp_cool
+		}
+		5 = {
+			add_building = ca_seas
+			add_building = ct_seas
+			add_building = tp_seas
+		}
+		6 = {
+			add_building = ca_artificial_atmosphere
+			add_building = ct_artificial_atmosphere
+			add_building = tp_artificial_atmosphere
+			add_building = ca_optimal_hot
+			add_building = ct_optimal_hot
+			add_building = tp_optimal_hot
+			add_building = ca_optimal_cold
+			add_building = ct_optimal_cold
+			add_building = tp_optimal_cold
+		}
+		7 = {
+			add_building = ca_oceans
+			add_building = ct_oceans
+			add_building = tp_oceans
+		}
+	}
+}

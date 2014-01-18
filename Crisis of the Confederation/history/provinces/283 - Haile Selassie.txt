@@ -1,0 +1,53 @@
+# 283 - Haile Selassie
+
+# County Title
+title = c_haile_selassie
+
+# Settlements
+max_settlements = 4
+b_haile_selassie_iii = city
+b_haile_selassie_iv = temple
+b_haile_selassie_iv_b = castle
+
+# Misc
+culture = ethiopian_angani # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_haile_selassie_iii = ct_clean_atmosphere
+	b_haile_selassie_iii = ct_no_water
+	b_haile_selassie_iii = ct_trace_water
+	b_haile_selassie_iii = ct_lakes
+	b_haile_selassie_iii = ct_burning
+	b_haile_selassie_iii = ct_hot
+	b_haile_selassie_iii = ct_warm
+	b_haile_selassie_iii = ct_optimal_hot
+	b_haile_selassie_iii = ct_planet_survey
+	
+	b_haile_selassie_iv = tp_toxic_atmosphere
+	b_haile_selassie_iv = tp_no_water
+	b_haile_selassie_iv = tp_trace_water
+	b_haile_selassie_iv = tp_frozen
+	b_haile_selassie_iv = tp_cold
+	b_haile_selassie_iv = tp_cool
+	b_haile_selassie_iv = tp_planet_survey
+	
+	b_haile_selassie_iv_b = ca_no_atmosphere
+	b_haile_selassie_iv_b = ca_no_water
+	b_haile_selassie_iv_b = ca_frozen
+	b_haile_selassie_iv_b = ca_cold
+	b_haile_selassie_iv_b = ca_cool
+	b_haile_selassie_iv_b = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_haile_selassie_iii = ct_colony_0
+	b_haile_selassie_iii = ct_colony_1
+	b_haile_selassie_iii = ct_colony_2
+	
+	b_haile_selassie_iv = tp_colony_0
+	b_haile_selassie_iv = tp_colony_1
+	
+	b_haile_selassie_iv_b = ca_colony_0
+}

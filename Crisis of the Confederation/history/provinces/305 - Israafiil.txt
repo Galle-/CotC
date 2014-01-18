@@ -1,0 +1,59 @@
+# 305 - Israafiil
+
+# County Title
+title = c_israafiil
+
+# Settlements
+max_settlements = 4
+b_israafiil_ii = city
+b_israafiil_ii_b = temple
+b_israafiil_iii = castle
+
+# Misc
+culture = arab_samawati # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+	b_israafiil_ii = ct_toxic_atmosphere
+	b_israafiil_ii = ct_no_water
+	b_israafiil_ii = ct_trace_water
+	b_israafiil_ii = ct_lakes
+	b_israafiil_ii = ct_seas
+	b_israafiil_ii = ct_burning
+	b_israafiil_ii = ct_hot
+	b_israafiil_ii = ct_warm
+	b_israafiil_ii = ct_planet_survey
+	
+	b_israafiil_ii_b = tp_no_atmosphere
+	b_israafiil_ii_b = tp_no_water
+	b_israafiil_ii_b = tp_trace_water
+	b_israafiil_ii_b = tp_lakes
+	b_israafiil_ii_b = tp_seas
+	b_israafiil_ii_b = tp_oceans
+	b_israafiil_ii_b = tp_burning
+	b_israafiil_ii_b = tp_hot
+	b_israafiil_ii_b = tp_warm
+	b_israafiil_ii_b = tp_planet_survey
+	
+	b_israafiil_iii = ca_toxic_atmosphere
+	b_israafiil_iii = ca_no_water
+	b_israafiil_iii = ca_trace_water
+	b_israafiil_iii = ca_burning
+	b_israafiil_iii = ca_hot
+	b_israafiil_iii = ca_warm
+	b_israafiil_iii = ca_optimal_hot
+	b_israafiil_iii = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_israafiil_ii = ct_colony_0
+	b_israafiil_ii = ct_colony_1
+	b_israafiil_ii = ct_colony_2
+	
+	b_israafiil_ii_b = tp_colony_0
+	b_israafiil_ii_b = tp_colony_1
+	
+	b_israafiil_iii = ca_colony_0
+	b_israafiil_iii = ca_colony_1
+}

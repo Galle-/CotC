@@ -1,0 +1,49 @@
+# 274 - Liu Boming
+
+# County Title
+title = c_liu_boming
+
+# Settlements
+max_settlements = 4
+b_liu_boming_prime = temple
+b_liu_boming_prime_b = city
+b_liu_boming_prime_c = castle
+
+# Misc
+culture = sino_xingjie # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_liu_boming_prime = tp_toxic_atmosphere
+	b_liu_boming_prime = tp_no_water
+	b_liu_boming_prime = tp_trace_water
+	b_liu_boming_prime = tp_burning
+	b_liu_boming_prime = tp_hot
+	b_liu_boming_prime = tp_warm
+	b_liu_boming_prime = tp_planet_survey
+	
+	b_liu_boming_prime_b = ct_no_atmosphere
+	b_liu_boming_prime_b = ct_no_water
+	b_liu_boming_prime_b = ct_trace_water
+	b_liu_boming_prime_b = ct_burning
+	b_liu_boming_prime_b = ct_hot
+	b_liu_boming_prime_b = ct_warm
+	b_liu_boming_prime_b = ct_planet_survey
+	
+	b_liu_boming_prime_c = ca_no_atmosphere
+	b_liu_boming_prime_c = ca_no_water
+	b_liu_boming_prime_c = ca_burning
+	b_liu_boming_prime_c = ca_hot
+	b_liu_boming_prime_c = ca_warm
+	b_liu_boming_prime_c = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_liu_boming_prime = tp_colony_0
+	
+	b_liu_boming_prime_b = ct_colony_0
+	b_liu_boming_prime_b = ct_colony_1
+	
+	b_liu_boming_prime_c = ca_colony_0
+}

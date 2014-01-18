@@ -1,0 +1,232 @@
+Most of these just need their localisation updated to fit with new sci-fi mileau. Also, in terms of coding efficiency, the programmers have shifted to using scopes to quickly reduce the number of applicable characters for a event.
+#######################
+****On actions - intrigue, exiles, holy wars, intrigue and diplo event screens, law approvals, royal marrage, embargos, rebellions
+1(t) - dummy 
+2(t) - dummy
+150(t) -  avoid imprision, declare independence(FIRES 40000)
+40000(t) - inform liege of rebellious lord (c150)
+151(t) - sets relation hit for imprisonment. (FIRES 40001)
+40001(t) - informs liege of capture of rebellious lord(c151)
+152(t) -  arrest attempt, rebel lord flees(c40002)
+40002(t) - informs liege of where rebel lord has fled.
+153(t) - on release FROM prison, updates relations
+154(t)- character is executed. cleanup after execution (if same dynasty as root, kinslayer)(spouseslayer if applicable for ROOT)optionA confirmation of death.
+155(t) - exile confirmation text.
+
+156(t) - notifcation of failed assasination attempt T40003
+40003(t) - assasination attempt failed, but I was undiscovered. 
+157(t) - I'm attacked by three pages. AHH.(T40004)
+40004(t) - They didn't kill him, but hahaha my target was wounded. calls 40003DESC. 
+158(t) - ack, I'm maimed due to assassins or wound or something?(T40005)
+40005(t) - inform instigator that target was wounded.(FIRE158)
+159(t) - rep change fire for botched attempt with target. no physical harm. Damned cook. All of ROOT's dynasty members don't like FROM. (t40006)(f40020)(40020 fires from spymaster)
+40006(t) - mod relationship for people in FROM's realm and religious head., and the piety hit.
+160(t) - ah I'm wounded by an assassin through the window! relationship changes everywhereeee.(t40007)
+40007(t) - well at least he got wounded. People in FROM's country hate you., religious head hate you. if SAME REALM
+161(t) - ah maimed! Damned Chambermaid! 3x super effective if already wounded. (t40008) and standard family rep changes.
+40008(t) - assassins revealed. whelp maimed target.
+
+162(t) - oh dios mio. I'm dying. death_murder_unknown(t40009)
+40009(t) - yay assassins are sucessful.
+163(t) target's dynasty hates FROM. target's employer hates FROM. target's direct family really hates FROM. +Retribution
+40010(t) - people from realm of FROM hate you. religious head hate you. if SAME REALM
+
+40020(t) - super big huge retribution mechanics
+40021(t) - yo liege settle this shit.(t40020)
+40022 - inform murderer that target now has claim.
+40023 - inform hurt party that he now has claim.
+40024 - inform hurt party that liege will attempt to imprison
+40025 - inform hurt  party that liege is lazy arbi douchbag.
+40026 - damn liege, you're a bastard. remove(kind just honest)(apply black honor towards vassals)
+
+200(t) - CRUSADE christian to muslim, and let everyone know
+201(t) - christian to pagan
+321(t) - christian v heretics
+320(t) - muslim v christians
+322(t)- muslim v pagan
+323(t) - muslim v heretics
+324(t) - pagan v christians
+325(t) -pagan v muslims
+326(t) - pagan v pagan
+
+**Diplomatic responses to player
+202(t) - demand religious conversion accept
+203(t) - demand religious conversion no
+204(t) - revokte title accept
+205(t) - revoke title - no
+206(t) - offer peace - yes (accept peace)
+207(t) - offerpeac - no (reject your peace)
+208(t) - send gift accept itplease
+209(t) - send gift decline
+210(t) - accept vassalization offer
+211(t) - decline vassalation offer
+212(t) - accept betrothal you've offered
+213(t) - decline betrothal you've offered
+214(t) - accept matralineal marriage offer you've offered on 
+215(t) - offer martilineal marrage interaction declined
+216(t) - accept a marriage of x and y
+217(t) decline marriage proposal of x and y
+218(t) - sure I'll take your ransom offer
+219(t) - what? why would I pay a ransom for x? - I don't recall ever seeing this.
+220(t) - I accept guardianship of ward.
+221(t) - I cannot accept guardianship of ward - I don't recall seeing this.
+222(t) - your demand is just I'll stop my scheming
+223(t) -  I won't stop my scheming - I don't recall seeing this.
+224(t) -  Sure I'll stop plotting for X person's scheme. - note figure out how they're getting root for this function call.
+225(t) - nah not stopping to back x - I don't recall seeing this.
+226(t) - sure I'll back your plot.
+227(t) - you're crazy bitch won't back plot.
+.228(t) - sure have this land.
+229(t) - DEScriptions say this is removed, maybe the game doesn't call a declining of   a request for land? or it just works different.
+230(t) - I accept your council position - probrably doesn't fire for me because it's a minor event.
+231(t) - I can't take your council position
+232(t) - Yes, invade that guy.
+233(t) - this is a bad idea, don't invade that guy.
+234(t) - yes you can divorce.
+235(t) - no divorce for you.
+236(t) - exommunicate YESS.
+237(t) - no excommunication.
+238(t) - sure I'll help you guys in war.
+239(t) - nope can't help you with your (wars)
+240(t) -  declaration of war between independent powers.
+241(t) -  declaration of war from vassl to liege.
+274(t) - accept removal of vassal from my control msg to liege
+275(t) - I love my vassal, screw you liege.
+330(t) - sure I'll accept that matrilineal betrothal for x and y.
+331(t) - no, X and y will never be betrothed(mat)
+280(t) - sure I'll join your court.
+281(t) - sorry, I won't join your court. I like it here.
+282(t) - sure I'll accept your oath of fealthy.
+283(t) - nah, I won't accept your oath.
+284(t) - sure I'll lift the exommunication.
+285(t) - nah he or she is too depraved to take back.
+286t)  - sure, I'll give back X for that much money.
+287(t)  - sorry, can't accept your offer.
+500(t) - marriage ROYAL MARRIAGE AID DUTY  - no muslims or zorostrians or (you're marrying your cousin), get scaled wealth or get prestige. (no negatives)
+501(t) - close blood marriage like Zoroaastrian Xwedodah kinda thing. wut?
+290(t) - defacto liege is instituting a law, do you approve or not? 
+291(t) -  dejure liege is instituting a law, do you approve or not.
+292(t) - dejure liege (emp or king) is instuting a law, do you approve or not?
+294(t) - no I kick ass. I don't need help in my war.
+295(t) - sure, I'll embargo x republic's traders out of y primary title.
+296(t) - your embargo suggest is stupid. why should I favor one republic over another?
+297(t) - this accepts your request to make X person your concubine.
+298(t) - no, x person will never be your concubine.
+600(t) -  old vanilla ck2 rebel army creation in x province(F601)
+601(t) - says that it informs barons about rebellion in x county. fired for any_province_lord) that doesn't know.
+610(t) - says that province defects. (is controlled sucessfully by rebels) - scaled wealth is -.2 due to looting.
+615(t) - rebels dispersed. yay.
+620(t) - lets rulers know that ROOT title has been taken by FROM religion. with two options for those of FROM and those of not FROM.
+612(t) - informs ruler that the crusade by FROM for ROOT has failed. OPTA - those of religion FROM. OPTB - those not of FROM.
+650(t) - not shown, hid window. - if you're a faction lead, and you've died - clear diplomatic_immunity tag.
+
+660(t) - forced consort rep changes for forced consort's and their relations(f 662,661)
+661(t) - rep update for bastard FROMFROM who forced my relation to be a consort.
+662(t) - That bastard FROMFROM took my wife. GRRRR.
+
+670(t) -  reformation of X religion in face of christianity and muslims. Creates schism between old reigion and new. also special provisions for norse reformation.
+
+
+
+####################################################################
+****Births
+event 450 -  female courtier eyes a liege(male)
+event 451(t) - liege chooses to respond yay/nay(90/10)
+event 452(t)- fem courtier responds yes-fert/yes-lowfert/no-sad/no-emb(50/90/5/5)
+event 453(t) -  they're lovers (452 calls this)
+event 454(t) - ruler spurnned and disp (452 calls this)
+event 455(t) - ruler spurned and emb (452 calls this)
+450-455 - descripts found in text1
+
+event 400 (OA)(t) -  triggered for any spouse of a father unborn, prest +10 for wife.. FIRE 403
+event 401 (OA)(t) - triggered for any non-married woman who's pregnant -50piety -50prestige.
+event 402(OA)(t) - married and pregnant with someone else as father
+event 403(t) - yay dad gets +5 prestige. (400 calls this)
+event 404(t) - triggers if father of unborn is known - modifer anger over potential cuckold
+***text 1 arround line 2434
+
+event 410(t) - consort wife is pregger +10prestige
+event 412(t) - consort is preg with another father
+event 413(t) - consort liege is proud +5prestige
+event 414(t) - consort liege suspectts
+***1_10.csv
+
+event300(OA)(t) - was_concieved_a_bastard = yes (fire301)
+event 301(OA)(t) - father response to 301. (legit(302 303 304 305)/acknow(306 307 308)/denou(309 310 311)
+event 302(OA)(t) - legit kid. piss off wife.fire 305
+event 303(OA)(t) - child mom pleased .modifier legit child.
+event 304(OA)(t) - mom's husband is pissed off.
+event 305(OA)(t) - father's wife is angry. works because it triggers in 301.
+event 306(OA)(t) - ack kid founds new dynasty - father's wife is mad.
+event 307(OA)(t) - ack kid's mom is happy.
+event 308(OA)(t) - ack kid's father's wife is angry.
+event 309(OA)(t) - denounced kid
+event 310(OA)(t).- denounced kid mom is shamed.
+event 311(OA)(t) - father's wife displeased.
+event 312(OA)(t) - consort's kid is born
+event 318(OA)(t) - seems to be notification for mother in case where her spouse doesn't realize.
+event 319(OA)(t) - seems to be notification for real father of bastard kid.
+***line 2403
+
+#######################
+Bastard events
+76000(t) -  capable male rulers (16-25) - tumble with someone. (chance lust/chaste)
+76005(t) - for rulers with a 16year old daughter, has kid. What do you do ruler?(F76006)
+76006(t)- spymaster asks what you want to do about kid.
+76007(t)- Occurs when Liege entrusts the spymaster with the decision.. spymaster must choose.
+76008(t) - Liege must decide spymaster fate after spymaster lets daughter and kid go.
+76009(t) - priestige hit for spymaster for letting kid go.
+76010(t) - bastard child is taken care of.
+
+76015(t) - bastard male child, at age 16 asks for legitimacy. (denounce 33%changewroth/maybe 33%stressed/ legitimize)
+76020(t)- bastard kid with no sinful traits and not content asks father to be included in the sucession.or not. (f76021)
+76021(t) - father gets kid's request. (Deny or legitimize, regardless f760222)
+76022(t)- depending on father_legitimize or father_didnt_legitimize, child reacts.
+76025(t) - single female bemoans tough life of raising a 5yr old bastard. (suffer in silence or ask dadf76026)
+76026(t) - father is reminded of his daughter's indiscretion.
+76027(t) - bastard's father (not a ruler) is shocked by the anger of the father of his one night stand. (prestige or piety hit)
+76028(t) - irresponsible son's father decides to help or not.
+76030(t) - a unambitious bastard gains ambitious, or a 6/6/6/6/6 gets ambitious.
+76035(t) - bastard is bullied, depending on reaction, negative status.
+76040(t) - 11 year old bastard wonder, what am I?
+76041(t) - the guardian of the bastard is aked "what is a bastard?" and sets the bastard's traits.
+
+#######################
+lovers_events
+
+64000(t) - non-muslim person confronts their non-muslim spouse or their suspected lover.
+64001(t) - spouse responds to accusation about having a lover. (keep lover or dump)
+64002(t) - spouse's lover responds to demand to stop. <- this can lead to wounds and infrimity (f64002AB/64003/64004)
+64003(t)- confronting person gets hurt due to spouse's lover's martial ability.
+64004(t)- confronting person is wounded or made infirm
+64005(t) - capable, non-prisoner has their lover ill or pneumonic. capable non--prisoner
+64006(t) - lover has been wounded. NOO. - two of theses events have 10% chance to cure their lover. Or just drop the lover.
+64010(t) - start of long infatuation chain - non-married nor (ill, pregnant, homosexual, celibate) finds a courtier attractive (not same family nor celibate,18, or of the same gender)
+65011(t) - courtier replies to teenager's advances. yay(f64012)/nay(f64013)
+64012(t) - teenager recieves a positive reply
+64013(t) - teenager recieves a negative reply and deals with it.
+
+64015(t) - male ruler contemplates taking a mistress due to  (old wife/illll wife)
+64016(t) - female spouse has a 50% chance of noticing their spouse's wandering eye. This event fires when spouse notices, and (f64020)
+64017(t) - courtier accepts or refuses offer f 64018/64019 depending
+64018(t) - liege is notified of courtier's acceptance
+64019(t) - liege is refused.
+64020(t) - spouse yells for hours at ruler for wandering eye.
+64025(t) - ruler falls in lover with spouse.
+64030(t)- lover's retreat, with 64045 if you choose not to spend time with lover.
+64035(t) - eh? only triggers for straight male rulers if lover is female so female lover can complain about how lover never spends any time. srsly paradox? won't trigger for your own wife.
+
+64040(t) Ruler confronts lover about wife.
+64041(t) spouse recieves notice of confrontation.
+64045(t) - breaks bonds of love if relation is low enough.
+64046(t) - lover is notified of broken relationship
+
+64050(t) - continuation of teenage infatuation series continuation 64051y 64052n
+64051(t) - teen and their courtier become lovers.
+64052(t) - courtier isn't interested. Teen is informed and can either become nostalgic or scornful.
+
+64055(t) - ruler is belatedly informed of child's infatuation.
+
+64060(t) - single guy is confronted with the fact that he has a married lover.(humble/drunkard/zealous/endofrelationship)
+64065(t) cynical/25%failure/stressed
+64070 - seeing another woman aside from wife is a pain in the butt. depending on choice (64045& random32 38274/ try / ignore wife

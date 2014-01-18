@@ -1,0 +1,56 @@
+# 300 - Jabra'iil
+
+# County Title
+title = c_jabraiil
+
+# Settlements
+max_settlements = 4
+b_jabraiil_iii = city
+b_jabraiil_iv_b = temple
+b_jabraiil_iv_c = castle
+
+# Misc
+culture = arab_samawati # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+	b_jabraiil_iii = ct_toxic_atmosphere
+	b_jabraiil_iii = ct_no_water
+	b_jabraiil_iii = ct_trace_water
+	b_jabraiil_iii = ct_lakes
+	b_jabraiil_iii = ct_seas
+	b_jabraiil_iii = ct_oceans
+	b_jabraiil_iii = ct_frozen
+	b_jabraiil_iii = ct_cold
+	b_jabraiil_iii = ct_planet_survey
+	
+	b_jabraiil_iv_b = tp_no_atmosphere
+	b_jabraiil_iv_b = tp_no_water
+	b_jabraiil_iv_b = tp_trace_water
+	b_jabraiil_iv_b = tp_lakes
+	b_jabraiil_iv_b = tp_seas
+	b_jabraiil_iv_b = tp_oceans
+	b_jabraiil_iv_b = tp_frozen
+	b_jabraiil_iv_b = tp_planet_survey
+	
+	b_jabraiil_iv_c = ca_no_atmosphere
+	b_jabraiil_iv_c = ca_no_water
+	b_jabraiil_iv_c = ca_trace_water
+	b_jabraiil_iv_c = ca_lakes
+	b_jabraiil_iv_c = ca_seas
+	b_jabraiil_iv_c = ca_oceans
+	b_jabraiil_iv_c = ca_frozen
+	b_jabraiil_iv_c = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_jabraiil_iii = ct_toxic_atmosphere_domes
+	b_jabraiil_iii = ct_colony_0
+	b_jabraiil_iii = ct_colony_1
+	b_jabraiil_iii = ct_colony_2
+	
+	b_jabraiil_iv_b = tp_colony_0
+	
+	b_jabraiil_iv_c = ca_colony_0
+}

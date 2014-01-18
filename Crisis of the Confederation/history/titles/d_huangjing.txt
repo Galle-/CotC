@@ -1,0 +1,9 @@
+# Modern era
+2489.1.1 = {
+	liege = "k_xingjie"
+	law = succ_open_elective
+	law = true_cognatic_succession
+}
+2998.1.1 = {
+	holder = 11012594	# Qian Chen
+}

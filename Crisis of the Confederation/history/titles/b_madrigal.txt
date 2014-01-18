@@ -1,0 +1,9 @@
+2900.1.1={
+	holding_dynasty = 4666
+	law = succ_seniority
+	law = true_cognatic_succession
+}
+
+2992.1.1 = { holder = "1104666" } # Lan Madrigal
+
+2997.1.1 = { liege = "k_xin_zizhiqu" }

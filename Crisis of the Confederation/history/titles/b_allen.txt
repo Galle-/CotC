@@ -1,0 +1,9 @@
+2900.1.1 = {
+	holding_dynasty = 426
+	law = succ_seniority
+	law = true_cognatic_succession
+}
+2973.10.16 = { holder = "1101426" } # Edward Allen
+
+2965.1.1 = { liege = "d_tian_yuan" }
+

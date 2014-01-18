@@ -1,0 +1,6 @@
+2489.1.1 = {
+	liege="e_terran_confederation"
+	law = succ_catholic_bishopric
+	law = true_cognatic_succession
+}
+2993.1.1 = { holder = 11014273 } # Kodama Salami

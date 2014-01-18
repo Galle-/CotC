@@ -1,0 +1,21 @@
+# 41 - Sherwood
+
+# County Title
+title = c_sherwood
+
+# Settlements
+max_settlements = 4
+
+b_sherwood_citadel = castle
+b_sherwood_iii = city
+
+# Misc
+culture = anglo_avalonian # Initial culture
+religion = bio_directionist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

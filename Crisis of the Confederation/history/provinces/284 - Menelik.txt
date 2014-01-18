@@ -1,0 +1,46 @@
+# 284 - Menelik
+
+# County Title
+title = c_menelik
+
+# Settlements
+max_settlements = 4
+b_menelik_iii = city
+b_menelik_iii_b = temple
+b_menelik_iii_c = castle
+
+# Misc
+culture = ethiopian_angani # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	# Menelik III is a mining colony
+	b_menelik_iii = ct_toxic_atmosphere
+	b_menelik_iii = ct_no_water
+	b_menelik_iii = ct_trace_water
+	b_menelik_iii = ct_burning
+	b_menelik_iii = ct_hot
+	b_menelik_iii = ct_planet_survey
+	
+	b_menelik_iii_b = tp_no_atmosphere
+	b_menelik_iii_b = tp_no_water
+	b_menelik_iii_b = tp_burning
+	b_menelik_iii_b = tp_hot
+	b_menelik_iii_b = tp_planet_survey
+	
+	b_menelik_iii_c = ca_no_atmosphere
+	b_menelik_iii_c = ca_no_water
+	b_menelik_iii_c = ca_burning
+	b_menelik_iii_c = ca_hot
+	b_menelik_iii_c = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_menelik_iii = ct_colony_0
+	b_menelik_iii = ct_colony_1
+	
+	b_menelik_iii_b = tp_colony_0
+	
+	b_menelik_iii_c = ca_colony_0
+}

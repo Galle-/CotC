@@ -1,0 +1,498 @@
+political_group = {
+	has_coa_on_barony_only = yes
+	graphical_culture = westerngfx
+	playable = yes
+	
+	terran_federalist = {
+		graphical_culture = westerngfx
+		icon = 1
+		heresy_icon = 6
+		
+		color = { 0.2 0.2 0.8 }
+		crusade_name = "UNIFICATION"
+		
+		# Defaults to the Pilgrimage
+		scripture_name = THE_LAW
+		god_names = { GOD_GOD GOD_HOLY_TERRA GOD_THE_LORD }
+		
+		investiture = yes
+		can_excommunicate = no
+		can_grant_divorce = yes
+		can_grant_invasion_cb = police_action
+		can_grant_claim = yes
+		can_call_crusade = no
+		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		
+		short_reign_opinion_year_mult = 0.5
+		
+		psc_marriage = no
+	}
+	terran_republican = {
+		graphical_culture = westerngfx
+		icon = 1
+		heresy_icon = 6
+		
+		color = { 0.4 0.4 0.8 }
+		crusade_name = "UNIFICATION"
+		
+		# Defaults to the Pilgrimage
+		scripture_name = THE_LAW
+		god_names = { GOD_GOD GOD_HOLY_TERRA GOD_THE_LORD }
+		
+		investiture = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = police_action
+		can_grant_claim = yes
+		can_call_crusade = yes
+		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		
+		short_reign_opinion_year_mult = 0.5
+		
+		psc_marriage = no
+	}
+	terran_imperial = {
+		graphical_culture = westerngfx
+		icon = 1
+		heresy_icon = 6
+		
+		color = { 0.8 0.2 0.8 }
+		crusade_name = "UNIFICATION"
+		
+		# Defaults to the Pilgrimage
+		scripture_name = THE_LAW
+		god_names = { GOD_GOD GOD_HOLY_TERRA GOD_THE_LORD }
+		
+		investiture = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = imperial_invasion
+		can_grant_claim = yes
+		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		
+		psc_marriage = no
+	}
+	colonial_seperatist = {
+		graphical_culture = westerngfx
+		icon = 1
+		heresy_icon = 6
+		
+		parent = terran_federalist
+		
+		color = { 0.8 0.2 0.2 }
+		
+		# Defaults to the Pilgrimage
+		scripture_name = THE_LAW
+		god_names = { GOD_GOD GOD_THE_LORD }
+		
+		autocephaly = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_claim = yes
+		can_grant_invasion_cb = no
+		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		
+		short_reign_opinion_year_mult = 0.5
+		
+		psc_marriage = no
+	}
+	neo_feudal = {
+		graphical_culture = westerngfx
+		icon = 1
+		heresy_icon = 6
+		
+		parent = terran_imperial
+		
+		color = { 0.8 0.2 0.2 }
+		
+		# Defaults to the Pilgrimage
+		scripture_name = THE_LAW
+		god_names = { GOD_GOD GOD_THE_LORD }
+		
+		investiture = yes
+		autocephaly = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_claim = yes
+		can_grant_invasion_cb = no
+		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		
+		psc_marriage = no
+	}
+	neo_socialist = {
+		graphical_culture = westerngfx
+		icon = 1
+		heresy_icon = 6
+		
+		parent = terran_republican
+		
+		color = { 0.8 0.2 0.2 }
+		
+		# Defaults to the Pilgrimage
+		scripture_name = THE_LAW
+		god_names = { GOD_THE_GREATER_GOOD GOD_THE_CAUSE }
+		
+		investiture = yes
+		autocephaly = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_claim = yes
+		can_grant_invasion_cb = no
+		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		
+		psc_marriage = no
+	}
+	astrist = {
+		graphical_culture = westerngfx
+		icon = 1
+		heresy_icon = 6
+		
+		parent = terran_republican
+		
+		color = { 0.8 0.2 0.2 }
+		
+		# Defaults to the Pilgrimage
+		scripture_name = THE_LAW
+		god_names = { GOD_THE_GREATER_GOOD GOD_THE_CAUSE }
+		
+		investiture = yes
+		autocephaly = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_claim = yes
+		can_grant_invasion_cb = no
+		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		
+		psc_marriage = no
+	}
+}
+
+religious_group = {
+	has_coa_on_barony_only = yes
+	graphical_culture = muslimgfx
+	playable = yes
+	
+	orthodox = {
+		graphical_culture = muslimgfx
+		icon = 2
+		heresy_icon = 7
+		color = { 0.8 0.8 0.8 }
+		crusade_name = CRUSADE
+		scripture_name = THE_SCRIPTURES
+		god_names = { GOD_GOD GOD_HOLY_TERRA GOD_THE_LORD }
+		
+		investiture = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = holy_invasion
+		can_call_crusade = yes
+		can_grant_claim = yes
+		
+		priests_can_marry = no
+		female_temple_holders = yes
+		
+		psc_marriage = no
+	}
+	solarian = {
+		graphical_culture = muslimgfx
+		icon = 2
+		heresy_icon = 7
+		parent = orthodox
+		color = { 0.8 0.8 0.2 }
+		crusade_name = CRUSADE
+		scripture_name = THE_SCRIPTURES
+		god_names = { GOD_GOD GOD_SOL GOD_UNCONQUERED_SUN GOD_THE_LORD }
+		
+		investiture = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = holy_invasion
+		can_call_crusade = yes
+		can_grant_claim = yes
+		
+		priests_can_marry = no
+		female_temple_holders = yes
+		
+		psc_marriage = no
+	}
+	adoptionist = {
+		graphical_culture = muslimgfx
+		icon = 2
+		heresy_icon = 7
+		parent = orthodox
+		
+		color = { 0.3 0.9 0.5 }
+		god_names = { GOD_GOD GOD_HOLY_TERRA GOD_THE_HOMEWORLD GOD_THE_LORD }
+		
+		investiture = no
+		autocephaly = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = holy_invasion
+		can_call_crusade = yes
+		can_grant_claim = yes
+		
+		priests_can_marry = no
+		female_temple_holders = yes
+		
+		psc_marriage = no
+	}
+	pilgrim = {
+		graphical_culture = muslimgfx
+		icon = 2
+		heresy_icon = 7
+		reformed = orthodox
+		color = { 0.6 0.6 0.6 }
+		scripture_name = THE_SCRIPTURES
+		god_names = { GOD_GOD GOD_HOLY_TERRA GOD_THE_LORD }
+		
+		investiture = no
+		can_excommunicate = no
+		can_grant_divorce = no
+		can_grant_invasion_cb = no
+		can_call_crusade = no
+		can_grant_claim = no
+		
+		priests_can_marry = no
+		female_temple_holders = yes
+		
+		psc_marriage = no
+	}
+	solar_cultist = {
+		graphical_culture = muslimgfx
+		icon = 2
+		heresy_icon = 7
+		parent = pilgrimage
+		
+		color = { 0.8 0.4 0.2 }
+		god_names = { GOD_GOD GOD_SOL GOD_UNCONQUERED_SUN GOD_THE_LORD }
+		
+		priests_can_marry = no
+		female_temple_holders = yes
+		
+		psc_marriage = no
+	}
+	xenoterran = {
+		graphical_culture = muslimgfx
+		icon = 2
+		heresy_icon = 7
+		parent = pilgrimage
+		
+		color = { 0.2 0.8 0.8 }
+		god_names = { GOD_GOD GOD_THE_HOMEWORLD GOD_THE_LORD }
+		
+		priests_can_marry = no
+		female_temple_holders = yes
+		
+		psc_marriage = no
+	}
+	adoptionist_cultist = {
+		graphical_culture = muslimgfx
+		icon = 2
+		heresy_icon = 7
+		parent = pilgrimage
+		
+		color = { 0.2 0.8 0.4 }
+		god_names = { GOD_GOD GOD_THE_HOMEWORLD GOD_THE_LORD }
+		
+		priests_can_marry = no
+		female_temple_holders = yes
+		
+		psc_marriage = no
+	}
+	mother_gaia_cultist = {
+		graphical_culture = muslimgfx
+		icon = 2
+		heresy_icon = 7
+		parent = pilgrimage
+		
+		color = { 0.9 0.6 0.6 }
+		god_names = { GOD_GODDESS GOD_HOLY_TERRA GOD_MOTHER_GAIA GOD_THE_LADY }
+		
+		priests_can_marry = no
+		female_temple_holders = yes
+		
+		psc_marriage = no
+	}
+	father_earth_cultist = {
+		graphical_culture = muslimgfx
+		icon = 2
+		heresy_icon = 7
+		parent = pilgrimage
+		
+		color = { 0.6 0.6 0.9 }
+		god_names = { GOD_GOD GOD_HOLY_TERRA GOD_HOLY_FATHER GOD_THE_LORD }
+		
+		priests_can_marry = no
+		female_temple_holders = no
+		
+		psc_marriage = no
+	}
+}
+
+transhumanist_group = {
+	has_coa_on_barony_only = yes
+	graphical_culture = westerngfx
+	playable = yes
+	
+	cyberneticist = {
+		graphical_culture = westerngfx
+		icon = 3
+		heresy_icon = 8
+		
+		color = { 0.5 0.5 0.5 }
+		
+		scripture_name = THE_LAW
+		god_names = { THE_CAUSE }
+		
+		investiture = yes
+		autocephaly = yes
+		can_excommunicate = no
+		can_grant_divorce = yes
+		can_grant_invasion_cb = no
+		can_call_crusade = no
+		can_grant_claim = no
+		
+		can_hold_temples = yes
+		priests_can_marry = yes
+		female_temple_holders = yes
+	}
+	machine_cultist = {
+		graphical_culture = westerngfx
+		icon = 3
+		heresy_icon = 8
+		
+		parent = cyberneticist
+		
+		color = { 0.8 0.8 0.8 }
+		
+		scripture_name = THE_LAW
+		god_names = { THE_SACRED_ENGINE THE_MACHINE }
+		
+		investiture = yes
+		autocephaly = no
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = no
+		can_call_crusade = yes
+		can_grant_claim = no
+		
+		can_hold_temples = yes
+		priests_can_marry = yes
+		female_temple_holders = yes
+	}
+	hiver = {
+		graphical_culture = westerngfx
+		icon = 3
+		heresy_icon = 8
+		
+		parent = cyberneticist
+		
+		color = { 0.1 0.1 0.1 }
+		
+		crusade_name = ASSIMILATION
+		scripture_name = THE_CODE
+		god_names = { THE_HIVE THE_VOICE THE_CODE }
+		
+		investiture = no
+		autocephaly = no
+		can_excommunicate = no
+		can_grant_divorce = yes
+		can_grant_invasion_cb = no
+		can_call_crusade = yes
+		can_grant_claim = no
+		
+		can_hold_temples = yes
+		priests_can_marry = yes
+		female_temple_holders = yes
+		
+		raised_vassal_opinion_loss = no
+		short_reign_opinion_year_mult = 0
+		
+		aggression = 10
+	}
+	bio_directionist = {
+		graphical_culture = westerngfx
+		icon = 3
+		
+		color = { 0.1 0.5 0.1 }
+		
+		scripture_name = THE_LAW
+		god_names = { THE_CAUSE }
+		
+		investiture = yes
+		autocephaly = yes
+		can_excommunicate = no
+		can_grant_divorce = yes
+		can_grant_invasion_cb = yes
+		can_call_crusade = no
+		can_grant_claim = yes
+		
+		can_hold_temples = yes
+		priests_can_marry = yes
+		female_temple_holders = yes
+		
+		divine_blood = yes
+		psc_marriage = yes
+		pc_marriage = yes
+		bs_marriage = yes
+		max_consorts = 4
+	}
+}
+
+outlaw_group = {
+	has_coa_on_barony_only = no
+	graphical_culture = norsegfx
+	playable = yes
+	
+	space_pirate = {
+		graphical_culture = norsegfx
+		icon = 4
+		heresy_icon = 8
+		
+		color = { 0.3 0.3 0.3 }
+		
+		# Default to the Pilgrimage
+		scripture_name = THE_SCRIPTURES
+		god_names = { GOD_GOD GOD_HOLY_TERRA GOD_THE_LORD }
+		
+		investiture = no
+		autocephaly = no
+		can_excommunicate = no
+		can_grant_divorce = no
+		can_grant_invasion_cb = no
+		can_call_crusade = no
+		can_grant_claim = no
+		
+		can_hold_temples = yes
+		priests_can_marry = yes
+		female_temple_holders = yes
+		
+		allow_looting = yes
+		
+		peace_prestige_loss = yes
+		short_reign_opinion_year_mult = 5
+		raised_vassal_opinion_loss = no
+		
+		psc_marriage = yes
+		pc_marriage = yes
+		bs_marriage = yes
+		max_consorts = 4
+		
+		aggression = 5
+	}
+}

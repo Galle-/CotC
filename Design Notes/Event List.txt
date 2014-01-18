@@ -1,0 +1,221 @@
+A major event overhaul is necessary to move CK2 into a more modern setting.
+
+EVENT CHAINS BY CONTEXT
+-Childhood-
+	EARLY CHILDHOOD - (childhood personality traits list takes care of most of this. events will need to be localized for new time period.
+		- Slow to learn to talk (Extraverted/Introverted? - Fb) (1900 38200)
+		- Afraid of the dark  (1902 and 38202) god, the random percentages suck for the kid. whelp.
+		- Getting into fights (%neurotic/%carefree/%brave vs %confident/%discplined/%craven ? - Fb add in random new traits, regardless.)(mod 1903 and 38203 for this?) EVTOPTD38203 will need to be adjusted.
+	LATE CHILDHOOD
+		- Child makes lots of friends (1935 and 38235)
+		- Child doesn't make lots of friends (*1906 deals with a lonely child. goes to guardian 38206 where the guardian chooses between three options.)(50proud30shy20sloth/60greg40honest/60deciet40greg)
+		- Child doesn't want to go to school (*1907 is similar to this, except is playing with friends vs studying. found in childhood events)
+	ADOLESCENCE
+		- Sexuality develops (gain or don't gain Homosexual)  (38234 and 1934 for early life. (1980 1985 for young men) (1986 for muslim removal) (1990 1995 for women) really 1980 paradox? yay inside jokes.
+		- Teenager becomes infatuated 64010->64011 64012yay64013nay...continues to 64050 after 18 years old.
+	EDUCATION
+		- Neurotic
+		- Confident
+		- Open Minded
+		- Close Minded
+		- Extraverted
+		- Introverted
+		- Disciplined
+		- Carefree
+		- Friendly
+		- Cold
+		- Spiritual
+		- Skeptical
+		- Radical
+		- Pragmatic
+		- Proud
+		- Humble
+		- Ambitious
+		- Content
+		- Brave
+		- Craven
+
+-Birth-
+	PREGNANCY
+	- Married woman is pregnant (husband's child) *event 400 (OA)(t) 
+	- Married woman is pregnant (someone else's child) *event 402(OA)(t)
+	- Unmarried woman is pregnant *event 401 (OA)(t)
+	- Future child's parents have genetic modification done (*need some elaboration fb)
+	- Pregnancy aborted - (* do I have religion and culture flags to reserve for in conditions? - fb)
+	
+	NATURAL BIRTH
+	- Legitimate child is born
+	- Secretly illegitimate child is born - (*event 318 and 319)
+	- Openly illegitimate child is born (*event 300-312 should cover this with some describ modding)
+	
+	CLONING
+	- Cloning initiated
+		( I'm guessing we want to pull the same dna.and since the person may not married we'll need a container for the kid. - fb)
+	- Clone decanted 
+	
+-Family-
+	CHILDREN
+		- Child wants a job or title (I'll try to figure out how to expand event 37000 under family chain. 37000 is primarily concerned with a landed title. And it can fire for any male family member. By Jobs, I assume you mean council positions? It also may be worth creating a static vaiable for the age of majority in each culture under the cultural modifier section, if you mean for them to be different. I can just do a function call to a variable - fb)
+	SIBLINGS
+	PARENTS
+	OTHERS
+
+-Romance-
+	FALLING IN LOVE
+	LOVERS' RELATIONSHIP
+	AFFAIRS
+	MARRIAGE
+		- Two lovers get married
+		-
+	Polyamorous relationships - cyaziris wondered if this was posssible.
+		- polyandry
+		-polygamy
+			- suspect five event triggered opinion modifiers to show love/love -> deep dislike between different partners?
+			- as opposed to true spouses, we may be limited to a mutual consort status as such.
+			- introduction of a new member in a relationship would likely require a event to intergrate a new member, with decision trees with random result modifiers for new spouse and old spouse(s).
+			- I suspect it would be fairly easy to intergrate some of the lover feud events from lovers_events.txt given the rivalry and sick spouse event chains.
+			- might be a neat idea, but obviously a lower priority. I'm curious if any events from the sword of islam deal with this dynamic - fb.
+-Friendships-
+
+-Rivalries-
+
+-Health-
+	BASIC ILLNESSES - health events cover most of the get sick and get well events for simple infections and mental disorders. will need to adjust localisation accordingly)
+		- Character gets sick
+		- Character recovers from being sick
+		- child sick is covered in (1933 38233)
+	SPECIAL DISEASES - SYSTEMS
+		- [Disease] breakout in system 
+			(might be best to have this be on a five year or decade pulse in the standard scenario? - fb)
+		- Local government institutes quarantine
+		- Higher government forces quarantine
+		- Smugglers break quarantine (chance of disease to spread randomly one province over? fb)
+		- Public objects to quarantine (local revolt risk increase and what else? - fb)
+		- [Disease] spreads
+		- Quarantine on system lifted
+	
+		- Character catches [disease]
+		- Illness worsens into [disease]
+	WOUNDS
+	MENTAL HEALTH
+		- Character is stressed out
+
+-Ideology-
+	CONVERSION
+		- Ruler gives ideological speech in province
+		- Wave of [ideology] in province
+		- Friends discuss ideology
+		
+-Government-
+	POLITICS AND FACTIONS
+		- Vote of no confidence in current Head of State
+		- Vote of no confidence in current Prime Minister
+		- Term expires
+		- Political party demands [Law]
+		- Character asks Head of State for cabinet office
+		- Characters asks Executor for cabinet office
+		- Character asks Prime Minister for cabinet office
+		- Faction demands claimant installation
+		- Faction demands independence
+	EXECUTORS/REGENTS
+	PLOTS AND COUPS
+		- Various assassination events 
+			(vanilla has lots of ideas in ### Murder Plot Events ### section of plot_events.txt refer to text1 and v1.06 for plot text.) 
+			lots of good comments in that section so it's easy to figure out. -fb)
+		- Whistleblower reveals plot
+		- Coup preparation: Military forces in the capital
+		- Coup preparation: Security forces in the capital
+		- Coup preparation: Evidence against head of state
+		- Plotter initiates attempted coup
+	PUBLIC ACTIONS
+		- Assassination attempt!
+		- Public demands prisoner's release
+		- Public demands vassal's arrest
+		- Public demands lifting of quarantine
+		- Public demands [reform]
+		- Anti-war protests
+		- Riots
+	POPULAR REBELLION
+		- Ideological revolution
+		- System declares independence
+		
+-Jobs-
+	GENERAL
+		- Cabinet member at center of sex scandal
+		- Cabinet member at center of drug scandal
+		- Cabinet member embezzles
+	CHANCELLOR
+		- A chance to improve diplomatic relations
+		- Diplomatic relations accidentally lowered
+		- A chance to sabotage liege-vassal relations
+		- Relationship sabotage discovered
+		- A chance to fabricate a claim
+		- Claim fabrication attempt discovered
+	MARSHAL
+	STEWARD
+	SPYMASTER
+		- Spymaster uncovers plot
+		- Spymaster uncovers spy
+		- Spymaster busts spy ring
+		- Spymaster dissuades faction membership
+		- Spymaster encourages faction membership
+		- Spymaster converts new spy
+		- Spymaster creates new spy ring
+		- Spymaster blows cover
+	SCIENTIST
+		- Military tech breakthrough
+		- Military tech setback
+		- Social sciences breakthrough
+		- Social sciences setback
+		- Hard sciences breakthrough
+		- Hard sciences setback
+		- Requests more funding
+	CHAPLAIN
+	
+-War-
+	MILITARY CAMPAIGNS
+		- Superior at war, begin campaign against the enemy
+	CIVIL WAR
+		- Civil war vs Head of State: Choose side
+		- Superior sides vs Head of State
+		- Superior sides for Head of State
+		- Superior stays neutral
+		- Civil war vs Executor: Choose side
+		- Superior sides vs Executor
+		- Superior sides for Executor
+		- Superior stays neutral
+	ON CAMPAIGN
+		- Made friend on the campaign
+		- Made enemy on the campaign
+	MID-BATTLE
+	UPON BATTLE VICTORY
+	UPON BATTLE DEFEAT
+	MID-INVASION (ATTACKER)
+		- Supply shortages
+		- Chance to take ammunition dump
+		- War crimes by subordinates
+		- Attacked by insurgents
+		- Riots in occupied territory
+		- Defense of critical target too strong
+		- Bombing destroys infrastructure
+		- Bombing friendly-fire
+		- Orbital artillery destroys infrastructure
+		- Orbital artillery friendly-fire
+		- Orbital bombardment destroys infrastructure
+		- Orbital bombardment friendly-fire
+		- Orbital bombardment: Oops.
+	UPON INVASION VICTORY (ATTACKER)
+	UPON INVASION DEFEAT (ATTACKER)
+	MID-INVASION (DEFENDER)
+		- Chance to lay trap
+		- Highly populated city under siege
+		- Supply shortages on small colony
+		- Scorched Earth tactics
+	UPON INVASION VICTORY (DEFENDER)
+	UPON INVASION DEFEAT (DEFENDER)
+	HOME FRONT - PROVINCES
+		- Anti-war protests
+		- Labor shortages
+		- Industrial sabotage!
+		- Suspected spy ring
+	HOME FRONT - CHARACTERS

@@ -1,0 +1,293 @@
+##########################################
+# COUNCILLOR ACTIONS
+##########################################
+# attribute = [diplomacy/stewardship/intrigue/martial/learning] - Character attribute is multiplied with the modifiers
+# trigger = Province scope trigger to determine if the action is meaningful in a province (the player character is FROM)
+# Events that can trigger off this action. This info is only used by the GUI.
+# All modifiers (like 'local_build_time_modifier') are multiplied by the attribute
+
+# Chancellor
+action_improve_relations = {
+	attribute = diplomacy
+	trigger = {
+		FROM = { capital_scope = { NOT = { province_id = ROOT } } }
+		any_province_lord = { NOT = { character = FROM } }
+	}
+	
+	events = { 910 911 }
+}
+
+action_sabotage_relations = {
+	attribute = diplomacy
+	
+	trigger = {
+		FROM = { capital_scope = { NOT = { province_id = ROOT } } }
+		any_province_lord = {
+			NOT = { character = FROM }
+			NOT = { is_liege_or_above = FROM }
+		}
+	}
+	
+	events = { 916 917 }
+}
+
+action_fabricate_claims = {
+	attribute = diplomacy
+	
+	trigger = {
+		FROM = { capital_scope = { NOT = { province_id = ROOT } } }
+		any_province_lord = { NOT = { character = FROM } }
+	}
+	
+	events = { 913 914 }
+}
+
+# Marshal
+action_distribute_mil_tech = {
+	attribute = martial
+
+	trigger = {
+		FROM = { capital_scope = { NOT = { province_id = ROOT } } }
+		any_province_lord = {
+			OR = {
+				character = FROM
+				is_liege_or_above = FROM
+			}
+		}
+	}
+	
+	tech_growth_modifier_military = 0.05
+	
+	events = { 938 939 }
+}
+
+action_recruiting_drive = {
+	attribute = martial
+
+	trigger = { any_province_lord = { character = FROM } }
+	
+	levy_size = 0.025
+	levy_reinforce_rate = 0.05
+	
+	events = { 941 942 }
+}
+
+action_suppress_revolts = {
+	attribute = martial
+	
+	trigger = {
+		any_province_lord = {
+			OR = {
+				character = FROM
+				is_liege_or_above = FROM
+			}
+		}
+	}
+	
+	arrest_chance_modifier = 0.01
+	local_revolt_risk = -0.01
+	
+	events = {  }
+}
+
+# Steward
+
+action_oversee_construction = {
+	attribute = stewardship
+
+	trigger = { any_province_lord = { character = FROM } }
+	
+	local_build_time_modifier = -0.025
+	
+	events = { 923 924 }
+}
+action_improve_education = {
+	attribute = stewardship
+
+	trigger = {
+		FROM = { capital_scope = { NOT = { province_id = ROOT } } }
+		any_province_lord = {
+			OR = {
+				character = FROM
+				is_liege_or_above = FROM
+			}
+		}
+	}
+	
+	tech_growth_modifier_economy = 0.05
+	tech_growth_modifier_culture = 0.05
+	
+	events = { }
+}
+action_maintain_infrastructure = {
+	attribute = stewardship
+
+	trigger = { any_province_lord = { character = FROM } }
+	
+	events = { 920 921 }
+}
+
+# Spymaster
+action_counterintelligence = {
+	attribute = intrigue
+	
+	trigger = {
+		any_province_lord = {
+			OR = {
+				is_liege_or_above = FROM
+				same_liege = FROM
+			}
+		}
+	}
+	
+	plot_discovery_chance = 0.01
+	
+	events = { 929 931 9000 9020}
+}
+
+action_organize_spies = {
+	attribute = intrigue
+	
+	trigger = { any_province_lord = { NOT = { character = FROM } } }
+	
+	assassinate_chance_modifier = 0.005
+	
+	events = { 935 936 }
+}
+
+action_spread_propaganda = {
+	attribute = intrigue
+	
+	trigger = {
+		any_province_lord = {
+			NOT = { is_liege_or_above = FROM }
+			NOT = { character = FROM }
+		}
+	}
+	local_revolt_risk = 0.01
+	
+	events = { }
+}
+
+# Scientist
+action_research_mil_tech = {
+	attribute = learning
+	
+	trigger = { FROM = { capital_scope = { province_id = ROOT } } }
+	
+	tech_growth_modifier_military = 0.1
+	
+	events = { 932 933 }
+}
+action_research_eco_tech = {
+	attribute = learning
+	
+	trigger = { FROM = { capital_scope = { province_id = ROOT } } }
+	
+	tech_growth_modifier_economy = 0.1
+	
+	events = { 932 933 }
+}
+action_research_cul_tech = {
+	attribute = learning
+	
+	trigger = { FROM = { capital_scope = { province_id = ROOT } } }
+	
+	tech_growth_modifier_culture = 0.1
+	
+	events = { 932 933 }
+}
+
+# Lord Spiritual
+# action_inquisition = {
+	# attribute = learning
+	
+	# trigger = {
+		# OR = {
+			# owner = {
+				# FROM = { NOT = { religion_group = pagan_group } }
+				# independent = yes
+				# NOT = { religion = FROM }
+				# religion_group = pagan_group
+				# is_reformed_religion = no
+				# capital_scope = {
+					# province = ROOT
+				# }
+				# controls_religion = no
+				# FROM = {
+					# higher_tier_than = COUNT
+					# OR = {
+						# independent = yes
+						# higher_tier_than = DUKE
+					# }
+				# }
+				# NOT = {
+					# has_opinion_modifier = { who = FROM modifier = opinion_sent_preacher }
+				# }
+			# }
+			# any_province_lord = {
+				# OR = {
+					# character = FROM
+					# is_liege_or_above = FROM
+				# }
+			# }
+		# }
+	# }
+	
+	# events = { 900 901 902 903 }
+# }
+
+# action_improve_rel_relations = {
+	# attribute = learning
+	
+	# potential = {
+		# FROM = {
+			# NOT = { religion_group = muslim }
+		# }
+	# }
+	
+	# trigger = {
+		# any_province_lord = {
+			# religion = FROM
+			# is_theocracy = yes
+		# }
+	# }
+	
+	# events = { 906 907 }
+# }
+
+# action_advance_cul_tech = {
+	# attribute = learning
+	
+	# trigger = {
+		# any_province_lord = {
+			# OR = {
+				# character = FROM
+				# is_liege_or_above = FROM
+			# }
+		# }
+	# }
+	
+	# tech_growth_modifier_culture = 0.05
+	
+	# events = { 926 927 }
+# }
+
+# # Lord Spiritual (Muslim only)
+# action_charity = {
+	# attribute = learning
+	
+	# potential = {
+		# FROM = { religion_group = muslim }
+	# }
+	
+	# trigger = {
+		# any_province_lord = {
+			# character = FROM
+		# }
+	# }
+	
+	# local_revolt_risk = -0.01
+	
+	# events = { 20040 20043 20048 20050 }
+# }

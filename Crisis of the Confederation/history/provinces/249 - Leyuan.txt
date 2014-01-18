@@ -1,0 +1,64 @@
+# 249 - Leyuan
+# 
+# County Title
+title = c_leyuan
+
+# Settlements
+max_settlements = 5
+				
+				b_leyuan_ii = city
+				b_leyuan_v = castle
+				b_leyuan_vii = city
+				b_leyuan_vii_a = temple
+				b_leyuan_vii_c = temple
+			
+
+# Misc
+culture = sino_xingjie # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+	b_leyuan_ii = ct_toxic_atmosphere
+	b_leyuan_ii = ct_toxic_atmosphere_domes
+	b_leyuan_ii = ct_warm
+	b_leyuan_ii = ct_seas
+	
+	b_leyuan_v = ca_no_atmosphere
+	b_leyuan_v = ca_no_atmosphere_domes
+	b_leyuan_v = ca_cool
+	b_leyuan_v = ca_no_water
+	b_leyuan_v = ca_trace_water
+	
+	b_leyuan_vii = ct_toxic_atmosphere
+	b_leyuan_vii = ct_toxic_atmosphere_domes
+	b_leyuan_vii = ct_burning
+	b_leyuan_vii = ct_hot
+	b_leyuan_vii = ct_warm
+	b_leyuan_vii = ct_oceans
+	
+	b_leyuan_vii_a = tp_clean_atmosphere
+	b_leyuan_vii_a = tp_hot
+	b_leyuan_vii_a = tp_lakes
+
+	b_leyuan_vii_c = tp_clean_atmosphere
+	b_leyuan_vii_c = tp_frozen
+	b_leyuan_vii_c = tp_cold
+	b_leyuan_vii_c = tp_lakes
+	b_leyuan_vii_c = tp_seas}
+
+2998.1.1 = {
+
+	b_leyuan_ii = ct_colony_0
+	b_leyuan_ii = ct_colony_1
+	
+	b_leyuan_v = ca_colony_0
+	b_leyuan_v = ca_colony_1
+	
+	b_leyuan_vii = ct_colony_0
+	b_leyuan_vii = ct_colony_1
+	b_leyuan_vii = ct_colony_2
+	
+	b_leyuan_vii_a = tp_colony_0
+	b_leyuan_vii_c = tp_colony_0
+	}

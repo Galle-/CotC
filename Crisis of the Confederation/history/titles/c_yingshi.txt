@@ -1,0 +1,8 @@
+2465.1.1={
+	liege = "d_yingshi"
+	law = succ_patrician_elective
+	law = true_cognatic_succession
+}
+
+2989.6.3 = { holder = "11016538" } # Vali Parande
+

@@ -1,0 +1,124 @@
+# 202 - Sol
+
+# County Title
+title = c_sol
+
+# Settlements
+max_settlements = 7
+b_earth = city
+b_moon = temple
+b_mars = castle
+b_ceres = temple
+b_europa = city
+b_ganymede = castle
+b_titan = city
+
+# Misc
+culture = iranian_terran # Initial culture
+religion = terran_republican
+
+# History
+1.1.1 = {
+	# Planetary Environments
+	# Earth: Clean, Oceans, Optimal
+	b_earth = ct_clean_atmosphere
+	b_earth = ct_no_water
+	b_earth = ct_trace_water
+	b_earth = ct_lakes
+	b_earth = ct_seas
+	b_earth = ct_oceans
+	b_earth = ct_frozen
+	b_earth = ct_cold
+	b_earth = ct_cool
+	b_earth = ct_optimal_cold
+	b_earth = ct_planet_survey
+	
+	# The Moon: None, None, Optimal
+	b_moon = tp_no_atmosphere
+	b_moon = tp_no_water
+	b_moon = tp_frozen
+	b_moon = tp_cold
+	b_moon = tp_cool
+	b_moon = tp_optimal_cold
+	b_moon = tp_planet_survey
+	
+	# Mars: Toxic, Trace Water, Cool
+	b_mars = ca_toxic_atmosphere
+	b_mars = ca_no_water
+	b_mars = ca_trace_water
+	b_mars = ca_frozen
+	b_mars = ca_cold
+	b_mars = ca_cool
+	b_mars = ca_planet_survey
+	
+	# Ceres: None, None, Cool
+	b_ceres = tp_no_atmosphere
+	b_ceres = tp_no_water
+	b_ceres = tp_frozen
+	b_ceres = tp_cold
+	b_ceres = tp_cool
+	b_ceres = tp_planet_survey
+	
+	# Europa: None, Oceans, Cold
+	b_europa = ct_no_atmosphere
+	b_europa = ct_no_water
+	b_europa = ct_trace_water
+	b_europa = ct_lakes
+	b_europa = ct_seas
+	b_europa = ct_oceans
+	b_europa = ct_frozen
+	b_europa = ct_cold
+	b_europa = ct_planet_survey
+	
+	# Ganymede: None, Oceans, Cold
+	b_ganymede = ca_no_atmosphere
+	b_ganymede = ca_no_water
+	b_ganymede = ca_trace_water
+	b_ganymede = ca_lakes
+	b_ganymede = ca_seas
+	b_ganymede = ca_oceans
+	b_ganymede = ca_frozen
+	b_ganymede = ca_cold
+	b_ganymede = ca_planet_survey
+	
+	# Titan: Toxic, Seas, Frozen
+	b_titan = ct_toxic_atmosphere
+	b_titan = ct_no_water
+	b_titan = ct_trace_water
+	b_titan = ct_lakes
+	b_titan = ct_seas
+	b_titan = ct_frozen
+	b_titan = ct_planet_survey
+}
+
+2998.1.1 = {
+	b_earth = ct_colony_0
+	b_earth = ct_colony_1
+	b_earth = ct_colony_2
+	b_earth = ct_colony_3
+	b_earth = ct_colony_4
+	
+	b_moon = tp_colony_0
+	b_moon = tp_colony_1
+	
+	b_mars = ca_toxic_atmosphere_domes
+	b_mars = ca_colony_0
+	b_mars = ca_colony_1
+	b_mars = ca_colony_2
+	
+	b_ceres = tp_no_atmosphere_domes
+	b_ceres = tp_colony_0
+	b_ceres = tp_colony_1
+	
+	b_europa = ct_no_atmosphere_domes
+	b_europa = ct_colony_0
+	b_europa = ct_colony_1
+	
+	b_ganymede = ca_no_atmosphere_domes
+	b_ganymede = ca_colony_0
+	b_ganymede = ca_colony_1
+	
+	b_titan = ct_toxic_atmosphere_domes
+	b_titan = ct_colony_0
+	b_titan = ct_colony_1
+}

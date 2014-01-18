@@ -1,0 +1,295 @@
+### At the moment we have a pretty basic icon system for combat tactics showing
+### the uniticon which has the biggest bonus value in the tactic.
+### This is the sprite number for each unit:
+### 1=LI 2=HI 3=PIKE 4=LC 5=KNIGHTS 6=ARCHERS 7=HORSE ARCH.
+
+# Must be first in file. This tactic will be set if anything goes wrong
+no_tactic = {
+	days = 1 # tactic lasts one day
+	sprite = 1 # index of icon
+
+	trigger = {
+		always = no # never use unless set explicitly by code
+	}
+}
+
+# Skirmish Tactics
+# All skirmish tactics should change phase to melee
+generic_skirmish_tactic = {
+	days = 5
+	sprite = 4
+	group = skirmish
+
+	trigger = { phase = skirmish }
+
+	mean_time_to_happen = { days = 3 }
+	
+	change_phase_to = melee
+}
+
+dogfighting_tactic = {
+	days = 5
+	sprite = 1
+	group = skirmish
+	
+	light_infantry_offensive = 2
+	
+	trigger = {
+		phase = skirmish
+		light_infantry = 0.01
+	}
+	
+	mean_time_to_happen = {
+		days = 3
+		modifier = {
+			factor = 3
+			flank_has_leader = yes
+			leader = { trait = fighter_pilot }
+		}
+	}
+	
+	change_phase_to = melee
+}
+
+evasive_action_tactic = {
+	days = 5
+	sprite = 1
+	group = skirmish
+	
+	light_infantry_defensive = 2
+	heavy_infantry_defensive = 2
+	
+	trigger = {
+		phase = skirmish
+		OR = {
+			light_infantry = 0.01
+			heavy_infantry = 0.01
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 3
+		modifier = {
+			factor = 3
+			flank_has_leader = yes
+			leader = { trait = fighter_pilot }
+		}
+	}
+	
+	change_phase_to = melee
+}
+
+destroyer_screen_tactic = {
+	days = 5
+	sprite = 1
+	group = skirmish
+	
+	light_cavalry_offensive = 2
+	
+	trigger = {
+		phase = skirmish
+		light_cavalry = 0.01
+	}
+	
+	mean_time_to_happen = {
+		days = 3
+		modifier = {
+			factor = 3
+			flank_has_leader = yes
+			leader = { trait = warship_captain }
+		}
+	}
+	
+	change_phase_to = melee
+}
+
+# Melee Tactics
+# All melee tactics should change phase to skirmish
+generic_melee_tactic = {
+	days = 3 # tactic lasts one day
+	sprite = 4 # index of icon
+	group = stand_fast
+	
+	trigger = {
+		phase = melee
+	}
+	
+	mean_time_to_happen = { days = 3 }
+	
+	change_phase_to = skirmish
+}
+
+bombing_run_tactic = {
+	days = 3
+	sprite = 2
+	group = swarm
+	
+	heavy_infantry_offensive = 5
+	light_cavalry_offensive = -2
+	knights_offensive = -2
+	horse_archers_offensive = -10
+	
+	trigger = {
+		phase = melee
+		heavy_infantry = 0.01
+	}
+	
+	mean_time_to_happen = {
+		days = 3
+		modifier = {
+			factor = 3
+			has_flank_leader = yes
+			leader = { trait = fighter_pilot }
+		}
+	}
+	
+	change_phase_to = skirmish
+}
+
+cruiser_raid_tactic = {
+	days = 3
+	sprite = 5
+	group = harass
+	
+	knights_offensive = 4
+	knights_defensive = 4
+	horse_archers_offensive = -3
+	
+	trigger = {
+		phase = melee
+		knights = 0.01
+	}
+	
+	mean_time_to_happen = {
+		days = 3
+		modifier = {
+			factor = 3
+			has_flank_leader = yes
+			leader = { trait = warship_captain }
+		}
+	}
+	
+	change_phase_to = skirmish
+}
+
+wall_of_battle_tactic = {
+	days = 3
+	sprite = 6
+	group = defensive
+	
+	horse_archers_offensive = 3
+	horse_archers_defensive = 5
+	
+	trigger = {
+		phase = melee
+		horse_archers = 0.01
+	}
+	
+	mean_time_to_happen = {
+		days = 3
+		modifier = {
+			factor = 3
+			has_flank_leader = yes
+			leader = { trait = warship_captain }
+		}
+	}
+	
+	change_phase_to = skirmish
+}
+
+# Pursuit Tactic
+pursue_tactic = {
+	days = 15
+	sprite = 4
+	group = charge
+	
+	trigger = {
+		phase = pursue
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+}
+
+
+##########################################################################
+# Siege offensive tactics
+##########################################################################
+# Must be first "siege = attacker"
+no_siege_offense_tactic = {
+	days = 1 # tactic lasts one day
+	sprite = 1 # index of icon
+	
+	siege = attacker	
+	
+	trigger = {
+		always = no # never use unless set explicitly by code
+	}
+}
+
+default_siege_offense_tactic = {
+	days = 5
+	sprite = 1
+
+	siege = attacker	
+
+	trigger = {
+		always = yes
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+}
+
+
+##########################################################################
+# Siege defensive tactics
+##########################################################################
+
+# Must be first "siege = defender"
+no_siege_defense_tactic = {
+	days = 1 # tactic lasts one day
+	sprite = 1 # index of icon
+	siege = defender	
+	trigger = {
+		always = no # never use unless set explicitly by code
+	}
+}
+
+default_siege_defense_tactic = {
+	days = 5
+	sprite = 1
+
+	siege = defender
+	
+	trigger = {
+		always = yes
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+}
+
+
+##########################################################################
+# Combat MTTH definitions(do not remove)
+##########################################################################
+
+flank_retreat_odds =
+{
+	# MTTH range is 0-100, if flank morale is below MTTH, flank will retreat
+	mean_time_to_happen = {
+		days = 25
+	}
+}
+
+flank_pursue_odds =
+{
+	# MTTH range is 0-100, chance (in %) of pursuing a fleeing flank
+	mean_time_to_happen = {
+		days = 25
+	}
+}

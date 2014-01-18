@@ -1,0 +1,21 @@
+# 109 - Port Simon
+
+# County Title
+title = c_port_simon
+
+# Settlements
+max_settlements = 2
+
+b_port_simon_observatory = temple
+b_port_simon = castle
+
+# Misc
+culture = japanese_centauri # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

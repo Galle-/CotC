@@ -1,0 +1,53 @@
+# 282 - Addis Saba
+
+# County Title
+title = c_addis_saba
+
+# Settlements
+max_settlements = 4
+b_addis_saba_iii = city
+b_addis_saba_iii_b = temple
+b_addis_saba_iv = castle
+
+# Misc
+culture = ethiopian_angani # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_addis_saba_iii = ct_toxic_atmosphere
+	b_addis_saba_iii = ct_no_water
+	b_addis_saba_iii = ct_trace_water
+	b_addis_saba_iii = ct_lakes
+	b_addis_saba_iii = ct_seas
+	b_addis_saba_iii = ct_frozen
+	b_addis_saba_iii = ct_cold
+	b_addis_saba_iii = ct_cool
+	b_addis_saba_iii = ct_planet_survey
+	
+	b_addis_saba_iii_b = tp_no_atmosphere
+	b_addis_saba_iii_b = tp_no_water
+	b_addis_saba_iii_b = tp_frozen
+	b_addis_saba_iii_b = tp_cold
+	b_addis_saba_iii_b = tp_cool
+	b_addis_saba_iii_b = tp_planet_survey
+	
+	b_addis_saba_iv = ca_toxic_atmosphere
+	b_addis_saba_iv = ca_no_water
+	b_addis_saba_iv = ca_trace_water
+	b_addis_saba_iv = ca_frozen
+	b_addis_saba_iv = ca_cold
+	b_addis_saba_iv = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_addis_saba_iii = ct_toxic_atmosphere_domes
+	b_addis_saba_iii = ct_colony_0
+	b_addis_saba_iii = ct_colony_1
+	b_addis_saba_iii = ct_colony_2
+	
+	b_addis_saba_iii_b = tp_colony_0
+	
+	b_addis_saba_iv = ca_colony_0
+	b_addis_saba_iv = ca_colony_1
+}

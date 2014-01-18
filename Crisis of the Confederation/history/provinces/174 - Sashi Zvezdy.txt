@@ -1,0 +1,21 @@
+# 174 - Sashi Zvezdy
+
+# County Title
+title = c_sashi_zvezdy
+
+# Settlements
+max_settlements = 4
+
+b_sashi_zvezdy_ii = castle
+b_sashi_zvezdy_iii = city
+
+# Misc
+culture = russo_edemite # Initial culture
+religion = astrist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

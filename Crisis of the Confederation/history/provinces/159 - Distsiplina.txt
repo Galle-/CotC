@@ -1,0 +1,20 @@
+# 159 - Distsiplina
+
+# County Title
+title = c_distsiplina
+
+# Settlements
+max_settlements = 4
+b_distsiplina_ii_b = castle
+b_distsiplina_ii = city
+
+# Misc
+culture = russo_edemite # Initial culture
+religion = astrist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

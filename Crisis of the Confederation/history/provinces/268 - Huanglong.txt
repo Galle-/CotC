@@ -1,0 +1,53 @@
+# 268 - Huanglong 
+
+# County Title
+title = c_huanglong
+
+# Settlements
+max_settlements = 4
+b_huanglong_ii = castle
+b_huanglong_iii = city
+b_huanglong_iii_b = temple
+
+# Misc
+culture = sino_xingjie # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_huanglong_ii = ca_toxic_atmosphere
+	b_huanglong_ii = ca_no_water
+	b_huanglong_ii = ca_trace_water
+	b_huanglong_ii = ca_hot
+	b_huanglong_ii = ca_warm
+	b_huanglong_ii = ca_planet_survey
+	
+	b_huanglong_iii = ct_toxic_atmosphere
+	b_huanglong_iii = ct_no_water
+	b_huanglong_iii = ct_trace_water
+	b_huanglong_iii = ct_lakes
+	b_huanglong_iii = ct_seas
+	b_huanglong_iii = ct_burning
+	b_huanglong_iii = ct_hot
+	b_huanglong_iii = ct_warm
+	b_huanglong_iii = ct_optimal_hot
+	b_huanglong_iii = ct_planet_survey
+	
+	b_huanglong_iii_b = tp_no_atmosphere
+	b_huanglong_iii_b = tp_no_water
+	b_huanglong_iii_b = tp_burning
+	b_huanglong_iii_b = tp_hot
+	b_huanglong_iii_b = tp_warm
+	b_huanglong_iii_b = tp_planet_survey
+}
+
+2998.1.1 = {
+	b_huanglong_ii = ca_colony_0
+	b_huanglong_ii = ca_colony_1
+	
+	b_huanglong_iii = ct_colony_0
+	b_huanglong_iii = ct_colony_1
+	b_huanglong_iii = ct_colony_2
+	
+	b_huanglong_iii_b = tp_colony_0
+}

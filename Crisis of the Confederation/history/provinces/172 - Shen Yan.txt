@@ -1,0 +1,21 @@
+# 172 - Shen Yan
+
+# County Title
+title = c_shen_yan
+
+# Settlements
+max_settlements = 5
+b_shen_yan_iii = castle
+b_shen_yan_iii_orbital = city
+b_shen_yan_iii_b = temple
+
+# Misc
+culture = sino_edemite # Initial culture
+religion = astrist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

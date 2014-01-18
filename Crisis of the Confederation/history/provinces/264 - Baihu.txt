@@ -1,0 +1,56 @@
+# 264 - Baihu
+
+# County Title
+title = c_baihu
+
+# Settlements
+max_settlements = 4
+b_baihu_prime = temple
+b_baihu_ii = city
+b_baihu_iii = castle
+
+# Misc
+culture = sino_xingjie # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_baihu_prime = tp_toxic_atmosphere
+	b_baihu_prime = tp_no_water
+	b_baihu_prime = tp_trace_water
+	b_baihu_prime = tp_lakes
+	b_baihu_prime = tp_burning
+	b_baihu_prime = tp_hot
+	b_baihu_prime = tp_warm
+	b_baihu_prime = tp_planet_survey
+	
+	b_baihu_ii = ct_toxic_atmosphere
+	b_baihu_ii = ct_no_water
+	b_baihu_ii = ct_trace_water
+	b_baihu_ii = ct_burning
+	b_baihu_ii = ct_hot
+	b_baihu_ii = ct_warm
+	b_baihu_ii = ct_optimal_hot
+	b_baihu_ii = ct_planet_survey
+	
+	b_baihu_iii = ca_no_atmosphere
+	b_baihu_iii = ca_no_water
+	b_baihu_iii = ca_trace_water
+	b_baihu_iii = ca_frozen
+	b_baihu_iii = ca_cold
+	b_baihu_iii = ca_cool
+	b_baihu_iii = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_baihu_prime = tp_toxic_atmosphere_domes
+	b_baihu_prime = tp_colony_0
+	b_baihu_prime = tp_colony_1
+	b_baihu_prime = tp_colony_2
+	
+	b_baihu_ii = ct_colony_0
+	b_baihu_ii = ct_colony_1
+	
+	b_baihu_iii = ca_colony_0
+	b_baihu_iii = ca_colony_1
+}

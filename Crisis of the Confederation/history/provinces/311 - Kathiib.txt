@@ -1,0 +1,57 @@
+# 311 - Kathiib
+
+# County Title
+title = c_kathiib
+
+# Settlements
+max_settlements = 4
+b_kathiib_prime = castle
+b_herbert = temple
+b_kathiib_ii = city
+
+# Misc
+culture = arab_samawati # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+	# Kathiib Prime: Clean, Trace, Warm
+	b_kathiib_prime = ca_clean_atmosphere
+	b_kathiib_prime = ca_no_water
+	b_kathiib_prime = ca_trace_water
+	b_kathiib_prime = ca_burning
+	b_kathiib_prime = ca_hot
+	b_kathiib_prime = ca_warm
+	b_kathiib_prime = ca_planet_survey
+	
+	# Herbert: None, None, Warm
+	b_herbert = tp_no_atmosphere
+	b_herbert = tp_no_water
+	b_herbert = tp_burning
+	b_herbert = tp_hot
+	b_herbert = tp_warm
+	b_herbert = tp_planet_survey
+	
+	# Kathiib II: Toxic, Lakes, Optimal
+	b_kathiib_ii = ct_toxic_atmosphere
+	b_kathiib_ii = ct_no_water
+	b_kathiib_ii = ct_trace_water
+	b_kathiib_ii = ct_lakes
+	b_kathiib_ii = ct_frozen
+	b_kathiib_ii = ct_cold
+	b_kathiib_ii = ct_cool
+	b_kathiib_ii = ct_optimal_cold
+	b_kathiib_ii = ct_planet_survey
+}
+
+2998.1.1 = {
+	b_kathiib_prime = ca_colony_0
+	b_kathiib_prime = ca_colony_1
+	
+	b_herbert = tp_colony_0
+	
+	b_kathiib_ii = ct_toxic_atmosphere_domes
+	b_kathiib_ii = ct_colony_0
+	b_kathiib_ii = ct_colony_1
+	b_kathiib_ii = ct_colony_2
+}

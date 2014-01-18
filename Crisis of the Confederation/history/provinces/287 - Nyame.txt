@@ -1,0 +1,54 @@
+# 287 - Nyame
+
+# County Title
+title = c_nyame
+
+# Settlements
+max_settlements = 4
+b_nyame_ii = city
+b_nyame_iii = temple
+b_nyame_iii_b = castle
+
+# Misc
+culture = west_afro_angani # Initial culture
+religion = terran_republican
+
+# History
+1.1.1 = {
+	b_nyame_ii = ct_toxic_atmosphere
+	b_nyame_ii = ct_no_water
+	b_nyame_ii = ct_trace_water
+	b_nyame_ii = ct_lakes
+	b_nyame_ii = ct_frozen
+	b_nyame_ii = ct_cold
+	b_nyame_ii = ct_cool
+	b_nyame_ii = ct_optimal_cold
+	b_nyame_ii = ct_planet_survey
+	
+	b_nyame_iii = tp_toxic_atmosphere
+	b_nyame_iii = tp_no_water
+	b_nyame_iii = tp_trace_water
+	b_nyame_iii = tp_frozen
+	b_nyame_iii = tp_cold
+	b_nyame_iii = tp_cool
+	b_nyame_iii = tp_planet_survey
+	
+	b_nyame_iii_b = ca_no_atmosphere
+	b_nyame_iii_b = ca_no_water
+	b_nyame_iii_b = ca_frozen
+	b_nyame_iii_b = ca_cold
+	b_nyame_iii_b = ca_cool
+	b_nyame_iii_b = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_nyame_ii = ct_toxic_atmosphere_domes
+	b_nyame_ii = ct_colony_0
+	b_nyame_ii = ct_colony_1
+	b_nyame_ii = ct_colony_2
+	
+	b_nyame_iii = tp_colony_0
+	b_nyame_iii = tp_colony_1
+	
+	b_nyame_iii_b = ca_colony_0
+}

@@ -1,0 +1,42 @@
+# 278 - Zhang Xiaoguang
+
+# County Title
+title = c_zhang_xiaoguang
+
+# Settlements
+max_settlements = 4
+b_zhang_xiaoguang_iii = temple
+b_zhang_xiaoguang_iii_b = city
+b_zhang_xiaoguang_waystation = castle
+
+# Misc
+culture = sino_xingjie # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_zhang_xiaoguang_iii = tp_toxic_atmosphere
+	b_zhang_xiaoguang_iii = tp_no_water
+	b_zhang_xiaoguang_iii = tp_frozen
+	b_zhang_xiaoguang_iii = tp_planet_survey
+	
+	# Zhang Xiaoguang III-B is a mining colony
+	b_zhang_xiaoguang_iii_b = ct_no_atmosphere
+	b_zhang_xiaoguang_iii_b = ct_no_water
+	b_zhang_xiaoguang_iii_b = ct_trace_water
+	b_zhang_xiaoguang_iii_b = ct_frozen
+	b_zhang_xiaoguang_iii_b = ct_planet_survey
+	
+	b_zhang_xiaoguang_waystation = ca_space_station_0
+	b_zhang_xiaoguang_waystation = ca_space_station_1
+}
+
+2998.1.1 = {
+	b_zhang_xiaoguang_iii = tp_colony_0
+	
+	b_zhang_xiaoguang_iii_b = ct_colony_0
+	b_zhang_xiaoguang_iii_b = ct_colony_1
+	
+	b_zhang_xiaoguang_waystation = ca_colony_0
+	b_zhang_xiaoguang_waystation = ca_colony_1
+}

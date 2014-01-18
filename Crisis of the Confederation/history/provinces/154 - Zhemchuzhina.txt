@@ -1,0 +1,20 @@
+# 154 - Zhemchuzhina
+
+# County Title
+title = c_zhemchuzhina
+
+# Settlements
+max_settlements = 4
+b_zhemchuzhina_vi_b = castle
+b_zhemchuzhina_vi_c = city
+
+# Misc
+culture = sino_edemite # Initial culture
+religion = astrist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

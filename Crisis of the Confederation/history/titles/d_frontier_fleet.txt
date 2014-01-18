@@ -1,0 +1,6 @@
+2489.1.1={
+	liege="k_frontier"
+	law = succ_appointment
+	law = true_cognatic_succession
+}
+2998.1.1 = { holder = 111695 } # Catherine Edwards

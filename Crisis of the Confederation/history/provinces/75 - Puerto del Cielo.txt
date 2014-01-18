@@ -1,0 +1,44 @@
+# 75 - Puerto del Cielo
+
+# County Title
+title = c_puerto_del_cielo
+
+# Settlements
+max_settlements = 4
+b_puerto_del_cielo = castle
+b_puerto_del_cielo_iii_b = city
+b_puerto_del_cielo_iii_c = temple
+
+# Misc
+culture = hispanic_celestean # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+	b_puerto_del_cielo = ca_space_station_0
+	b_puerto_del_cielo = ca_space_station_1
+	
+	b_puerto_del_cielo_iii_b = ct_toxic_atmosphere
+	b_puerto_del_cielo_iii_b = ct_no_water
+	b_puerto_del_cielo_iii_b = ct_trace_water
+	b_puerto_del_cielo_iii_b = ct_frozen
+	b_puerto_del_cielo_iii_b = ct_cold
+	b_puerto_del_cielo_iii_b = ct_planet_survey
+	
+	b_puerto_del_cielo_iii_c = tp_no_atmosphere
+	b_puerto_del_cielo_iii_c = tp_no_water
+	b_puerto_del_cielo_iii_c = tp_trace_water
+	b_puerto_del_cielo_iii_c = tp_frozen
+	b_puerto_del_cielo_iii_c = tp_cold
+	b_puerto_del_cielo_iii_c = tp_planet_survey
+}
+
+2998.1.1 = {
+	b_puerto_del_cielo = ca_colony_0
+	b_puerto_del_cielo = ca_colony_1
+	
+	b_puerto_del_cielo_iii_b = ct_colony_0
+	b_puerto_del_cielo_iii_b = ct_colony_1
+	
+	b_puerto_del_cielo_iii_c = tp_colony_0
+}

@@ -1,0 +1,54 @@
+# 213 - Tereshkova
+
+# County Title
+title = c_tereshkova
+
+# Settlements
+max_settlements = 5
+b_tereshkova_iii = city
+b_tereshkova_iv = temple
+b_tereshkova_iv_b = castle
+
+# Misc
+culture = russo_centauri # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	# Tereshkova III: Toxic, Lakes, Cool
+	b_tereshkova_iii = ct_toxic_atmosphere
+	b_tereshkova_iii = ct_no_water
+	b_tereshkova_iii = ct_trace_water
+	b_tereshkova_iii = ct_lakes
+	b_tereshkova_iii = ct_frozen
+	b_tereshkova_iii = ct_cold
+	b_tereshkova_iii = ct_cool
+	b_tereshkova_iii = ct_planet_survey
+	
+	b_tereshkova_iv = tp_toxic_atmosphere
+	b_tereshkova_iv = tp_no_water
+	b_tereshkova_iv = tp_trace_water
+	b_tereshkova_iv = tp_frozen
+	b_tereshkova_iv = tp_cold
+	b_tereshkova_iv = tp_planet_survey
+	
+	b_tereshkova_iv_b = ca_no_atmosphere
+	b_tereshkova_iv_b = ca_no_water
+	b_tereshkova_iv_b = ca_frozen
+	b_tereshkova_iv_b = ca_cold
+	b_tereshkova_iv_b = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_tereshkova_iii = ct_toxic_atmosphere_domes
+	b_tereshkova_iii = ct_colony_0
+	b_tereshkova_iii = ct_colony_1
+	b_tereshkova_iii = ct_colony_2
+	
+	b_tereshkova_iv = tp_colony_0
+	b_tereshkova_iv = tp_colony_1
+	
+	b_tereshkova_iv_b = ca_colony_0
+	
+	trade_post = b_kojima
+}

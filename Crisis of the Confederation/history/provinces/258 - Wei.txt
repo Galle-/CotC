@@ -1,0 +1,51 @@
+# 258 - Wei
+
+# County Title
+title = c_wei
+
+# Settlements
+max_settlements = 4
+b_wei_iii = city
+b_wei_iii_b = temple
+b_wei_iii_c = castle
+
+# Misc
+culture = sino_bianjiangese # Initial culture
+religion = astrist
+
+# History
+1.1.1 = {
+	b_wei_iii = ct_clean_atmosphere
+	b_wei_iii = ct_no_water
+	b_wei_iii = ct_trace_water
+	b_wei_iii = ct_lakes
+	b_wei_iii = ct_seas
+	b_wei_iii = ct_frozen
+	b_wei_iii = ct_cold
+	b_wei_iii = ct_planet_survey
+	
+	b_wei_iii_b = tp_no_atmosphere
+	b_wei_iii_b = tp_no_water
+	b_wei_iii_b = tp_trace_water
+	b_wei_iii_b = tp_frozen
+	b_wei_iii_b = tp_cold
+	b_wei_iii_b = tp_planet_survey
+	
+	b_wei_iii_c = ca_no_atmosphere
+	b_wei_iii_c = ca_no_water
+	b_wei_iii_c = ca_frozen
+	b_wei_iii_c = ca_cold
+	b_wei_iii_c = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_wei_iii = ct_colony_0
+	b_wei_iii = ct_colony_1
+	b_wei_iii = ct_colony_2
+	
+	b_wei_iii_b = tp_colony_0
+	
+	b_wei_iii_c = tp_colony_0
+	
+	trade_post = b_cao
+}

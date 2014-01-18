@@ -1,0 +1,14 @@
+name = "Maoxian War"
+
+casus_belli = {
+	casus_belli = dejure_county_claim # Should be de jure claim on the whole sector, CB to be added
+	actor = 11011872 # Dmitriy Solomonov
+	recipient = 11012570 # Zhen Zhang
+	landed_title = c_maoxian
+	date = 2998.1.1
+}
+
+2998.1.1 = {
+	add_attacker = 11011872 # Dmitriy Solomonov
+	add_defender = 11012570 # Zhen Zhang
+}

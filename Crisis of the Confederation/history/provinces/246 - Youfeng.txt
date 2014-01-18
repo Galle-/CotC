@@ -1,0 +1,57 @@
+# 246 - Youfeng
+
+# County Title
+title = c_youfeng
+
+# Settlements
+max_settlements = 4
+				
+				
+				b_youfeng_vi_a = city
+				b_youfeng_vi_orbital = castle
+				b_youfeng_inner_belt_a = city
+				b_youfeng_inner_belt_b = city
+# Misc
+culture = sino_xingjie # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+		b_youfeng_vi_a = ct_planet_survey
+		b_youfeng_vi_a = ct_clean_atmosphere
+		b_youfeng_vi_a = ct_cold
+		b_youfeng_vi_a = ct_cool
+		
+		b_youfeng_vi_orbital = ca_space_station_0
+		b_youfeng_vi_orbital = ca_space_station_1
+		b_youfeng_vi_orbital = ca_space_station_2
+		
+		b_youfeng_inner_belt_a = ct_space_station_0
+		b_youfeng_inner_belt_a = ct_space_station_1
+		
+		b_youfeng_inner_belt_b = ct_space_station_0
+		b_youfeng_inner_belt_b = ct_space_station_1
+		b_youfeng_inner_belt_b = ct_space_station_2
+}
+
+2998.1.1 = {
+
+	b_youfeng_vi_a = ct_colony_0
+	b_youfeng_vi_a = ct_colony_1
+	b_youfeng_vi_a = ct_colony_2
+	
+	b_youfeng_vi_orbital = ca_colony_0
+	b_youfeng_vi_orbital = ca_colony_1
+	b_youfeng_vi_orbital = ca_colony_2
+	b_youfeng_vi_orbital = FL_01_ca
+	b_youfeng_vi_orbital = FL_02_ca
+	b_youfeng_vi_orbital = DD_01
+	b_youfeng_vi_orbital = DD_02
+	
+	b_youfeng_inner_belt_a = ct_colony_0
+	b_youfeng_inner_belt_a = ct_colony_1
+	
+	b_youfeng_inner_belt_b = ct_colony_0
+	b_youfeng_inner_belt_b = ct_colony_1
+	
+}

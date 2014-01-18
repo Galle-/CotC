@@ -1,0 +1,59 @@
+# 291 - Kimbilio
+
+# County Title
+title = c_kimbilio
+
+# Settlements
+max_settlements = 4
+b_kimbilio_ii = city
+b_kimbilio_iii_b = temple
+b_kimbilio_iv_b = castle
+
+# Misc
+culture = east_afro_angani # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+	b_kimbilio_ii = ct_toxic_atmosphere
+	b_kimbilio_ii = ct_no_water
+	b_kimbilio_ii = ct_trace_water
+	b_kimbilio_ii = ct_lakes
+	b_kimbilio_ii = ct_seas
+	b_kimbilio_ii = ct_burning
+	b_kimbilio_ii = ct_hot
+	b_kimbilio_ii = ct_planet_survey
+	
+	b_kimbilio_iii_b = tp_no_atmosphere
+	b_kimbilio_iii_b = tp_no_water
+	b_kimbilio_iii_b = tp_trace_water
+	b_kimbilio_iii_b = tp_burning
+	b_kimbilio_iii_b = tp_hot
+	b_kimbilio_iii_b = tp_warm
+	b_kimbilio_iii_b = tp_planet_survey
+	
+	b_kimbilio_iv_b = ca_no_atmosphere
+	b_kimbilio_iv_b = ca_no_water
+	b_kimbilio_iv_b = ca_trace_water
+	b_kimbilio_iv_b = ca_lakes
+	b_kimbilio_iv_b = ca_seas
+	b_kimbilio_iv_b = ca_oceans
+	b_kimbilio_iv_b = ca_burning
+	b_kimbilio_iv_b = ca_hot
+	b_kimbilio_iv_b = ca_warm
+	b_kimbilio_iv_b = ca_optimal_hot
+	b_kimbilio_iv_b = ca_planet_survey
+}
+
+2998.1.1 = {
+	b_kimbilio_ii = ct_toxic_atmosphere_domes
+	b_kimbilio_ii = ct_colony_0
+	b_kimbilio_ii = ct_colony_1
+	b_kimbilio_ii = ct_colony_2
+	
+	b_kimbilio_iii_b = tp_colony_0
+	b_kimbilio_iii_b = tp_colony_1
+	
+	b_kimbilio_iv_b = ca_colony_0
+	b_kimbilio_iv_b = ca_colony_1
+}

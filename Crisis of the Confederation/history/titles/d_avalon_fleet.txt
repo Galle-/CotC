@@ -1,0 +1,8 @@
+2923.1.1 = {
+	liege = "k_avalon"
+	law = succ_appointment
+	law = true_cognatic_succession
+	holder = "1301422" # Joseph ??? Blackburn
+}
+2956.1.1 = { holder = "1209086" } # Victor ?? Miyamoto
+2990.7.24 = { holder = "1101422" } # Joseph ? Blackburn

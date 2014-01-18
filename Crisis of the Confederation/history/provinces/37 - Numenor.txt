@@ -1,0 +1,21 @@
+# 37 - Numenor
+
+# County Title
+title = c_numenor
+
+# Settlements
+max_settlements = 4
+
+b_numenor_ii = castle
+b_numenor_iii = temple
+
+# Misc
+culture = anglo_avalonian # Initial culture
+religion = neo_feudal
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

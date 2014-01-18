@@ -1,0 +1,5847 @@
+namespace = childhood_education
+
+# NEUROTIC
+character_event = {
+	id = childhood_education.0
+	desc = "EVTDESCCHILDHOODEDUCATION0"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	min_age = 6
+	max_age = 16
+	
+	trigger = {
+		OR = {
+			AND = {
+				NOT = { trait = neurotic }
+				NOT = { trait = confident }
+			}
+			AND = {
+				has_guardian = yes
+				guardian = { character = FROM }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION0"
+		add_trait = neurotic
+		hidden_tooltip = { guardian = { character_event = { id = childhood_education.1 } } }
+	}
+}
+
+character_event = {
+	id = childhood_education.1
+	desc = "EVTDESCCHILDHOODEDUCATION1"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION1"
+		FROM = { add_trait = neurotic }
+	}
+}
+
+# OPEN-MINDED
+character_event = {
+	id = childhood_education.10
+	desc = "EVTDESCCHILDHOODEDUCATION10"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	min_age = 6
+	max_age = 16
+	
+	trigger = {
+		NOT = { trait = open_minded }
+		NOT = { trait = close_minded }
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 2
+			guardian = { trait = open_minded }
+		}
+		modifier = {
+			factor = 2
+			father = { trait = open_minded }
+		}
+		modifier = {
+			factor = 2
+			mother = { trait = open_minded }
+		}
+		modifier = {
+			factor = 2
+			any_sibling = { trait = open_minded }
+		}
+		modifier = {
+			factor = 2
+			any_friend = { trait = open_minded }
+		}
+		modifier = {
+			factor = 0.5
+			guardian = { trait = close_minded }
+		}
+		modifier = {
+			factor = 0.5
+			father = { trait = close_minded }
+		}
+		modifier = {
+			factor = 0.5
+			mother = { trait = close_minded }
+		}
+		modifier = {
+			factor = 0.5
+			any_sibling = { trait = close_minded }
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = { trait = close_minded }
+		}
+	}
+	
+	option = {
+		trigger = { has_guardian = no }
+		name = "EVTOPTACHILDHOODEDUCATION10"
+		add_trait = open_minded
+	}
+	option = {
+		trigger = { has_guardian = yes }
+		name = "EVTOPTBCHILDHOODEDUCATION10"
+		add_trait = open_minded
+		guardian = { character_event = { id = childhood_education.11 tooltip = "EVTTOOLTIPCHILDHOODEDUCATION11" days = 5 } }
+	}
+}
+
+character_event = {
+	id = childhood_education.11
+	desc = "EVTDESCCHILDHOODEDUCATION11"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION11" # Encourage behavior
+		FROM = {
+			add_trait = open_minded
+			hidden_tooltip = { character_event = { id = childhood_education.12 } }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0.5
+				trait = spiritual
+			}
+			modifier = {
+				factor = 0
+				trait = close_minded
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTBCHILDHOODEDUCATION11" # Try to persuade otherwise
+		if = {
+			limit = { FROM = { opinion = { who = ROOT value = 0 } } }
+			FROM = {
+				random_list = {
+					60 = {
+						add_trait = close_minded
+						hidden_tooltip = { character_event = { id = childhood_education.13 } }
+					}
+					30 = {
+						remove_trait = open_minded
+						hidden_tooltip = { character_event = { id = childhood_education.14 } }
+					}
+					10 = { hidden_tooltip = { character_event = { id = childhood_education.15 } } }
+				}
+			}
+		}
+		if = {
+			limit = { FROM = { NOT = { opinion = { who = ROOT value = 0 } } } }
+			FROM = {
+				random_list = {
+					20 = {
+						add_trait = close_minded
+						hidden_tooltip = { character_event = { id = childhood_education.13 } }
+					}
+					30 = {
+						remove_trait = open_minded
+						hidden_tooltip = { character_event = { id = childhood_education.14 } }
+					}
+					50 = { hidden_tooltip = { character_event = { id = childhood_education.15 } } }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				trait = open_minded
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTCCHILDHOODEDUCATION11" # Punish for misbehavior
+		FROM = {
+			random_list = {
+				40 = {
+					add_trait = close_minded
+					hidden_tooltip = { character_event = { id = childhood_education.16 } }
+				}
+				60 = { hidden_tooltip = { character_event = { id = childhood_education.17 } } }
+			}
+			random = {
+				chance = 10
+				add_trait = neurotic
+				hidden_tooltip = { character_event = { id = childhood_education.0 } }
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 3
+				trait = cold
+			}
+			modifier = {
+				factor = 3
+				trait = neurotic
+			}
+			modifier = {
+				factor = 0
+				trait = friendly
+			}
+			modifier = {
+				factor = 0
+				trait = open_minded
+			}
+			modifier = {
+				factor = 0
+				NOT = { trait = neurotic }
+				NOT = { trait = close_minded }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = childhood_education.12
+	desc = "EVTDESCCHILDHOODEDUCATION12"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACHILDHOODEDUCATION12" }
+}
+character_event = {
+	id = childhood_education.13
+	desc = "EVTDESCCHILDHOODEDUCATION13"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION13"
+		add_trait = close_minded
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.18 } } }
+	}
+}
+character_event = {
+	id = childhood_education.14
+	desc = "EVTDESCCHILDHOODEDUCATION14"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION14"
+		remove_trait = open_minded
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.18 } } }
+	}
+}
+character_event = {
+	id = childhood_education.15
+	desc = "EVTDESCCHILDHOODEDUCATION15"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION15"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.19 } } }
+	}
+}
+character_event = {
+	id = childhood_education.16
+	desc = "EVTDESCCHILDHOODEDUCATION16"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION16"
+		add_trait = close_minded
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.18 } } }
+	}
+}
+character_event = {
+	id = childhood_education.17
+	desc = "EVTDESCCHILDHOODEDUCATION17"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION17"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.19 } } }
+	}
+}
+character_event = {
+	id = childhood_education.18
+	desc = "EVTDESCCHILDHOODEDUCATION18"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { FROM = { trait = close_minded } }
+		name = "EVTOPTACHILDHOODEDUCATION18"
+		FROM = { add_trait = close_minded }
+	}
+	option = {
+		trigger = { FROM = { NOT = { trait = close_minded } } }
+		name = "EVTOPTBCHILDHOODEDUCATION18"
+		FROM = { remove_trait = open_minded }
+	}
+}
+character_event = {
+	id = childhood_education.19
+	desc = "EVTDESCCHILDHOODEDUCATION19"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION19"
+		FROM = { add_trait = open_minded }
+	}
+}
+
+# CLOSE-MINDED
+character_event = {
+	id = childhood_education.20
+	desc = "EVTDESCCHILDHOODEDUCATION20"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	min_age = 6
+	max_age = 16
+	
+	trigger = {
+		NOT = { trait = open_minded }
+		NOT = { trait = close_minded }
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 2
+			guardian = { trait = close_minded }
+		}
+		modifier = {
+			factor = 2
+			father = { trait = close_minded }
+		}
+		modifier = {
+			factor = 2
+			mother = { trait = close_minded }
+		}
+		modifier = {
+			factor = 2
+			any_sibling = { trait = close_minded }
+		}
+		modifier = {
+			factor = 2
+			any_friend = { trait = close_minded }
+		}
+		modifier = {
+			factor = 0.5
+			guardian = { trait = open_minded }
+		}
+		modifier = {
+			factor = 0.5
+			father = { trait = open_minded }
+		}
+		modifier = {
+			factor = 0.5
+			mother = { trait = open_minded }
+		}
+		modifier = {
+			factor = 0.5
+			any_sibling = { trait = open_minded }
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = { trait = open_minded }
+		}
+	}
+	
+	option = {
+		trigger = { has_guardian = no }
+		name = "EVTOPTACHILDHOODEDUCATION20"
+		add_trait = close_minded
+	}
+	option = {
+		trigger = { has_guardian = yes }
+		name = "EVTOPTBCHILDHOODEDUCATION20"
+		add_trait = close_minded
+		guardian = { character_event = { id = childhood_education.21 tooltip = "EVTTOOLTIPCHILDHOODEDUCATION21" days = 5 } }
+	}
+}
+
+character_event = {
+	id = childhood_education.21
+	desc = "EVTDESCCHILDHOODEDUCATION21"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION21" # Encourage behavior
+		FROM = {
+			add_trait = close_minded
+			hidden_tooltip = { character_event = { id = childhood_education.12 } }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = spiritual
+			}
+			modifier = {
+				factor = 0.5
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0
+				trait = open_minded
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTBCHILDHOODEDUCATION21" # Try to persuade otherwise
+		if = {
+			limit = { FROM = { opinion = { who = ROOT value = 0 } } }
+			FROM = {
+				random_list = {
+					60 = {
+						add_trait = open_minded
+						hidden_tooltip = { character_event = { id = childhood_education.23 } }
+					}
+					30 = {
+						remove_trait = close_minded
+						hidden_tooltip = { character_event = { id = childhood_education.24 } }
+					}
+					10 = { hidden_tooltip = { character_event = { id = childhood_education.25 } } }
+				}
+			}
+		}
+		if = {
+			limit = { FROM = { NOT = { opinion = { who = ROOT value = 0 } } } }
+			FROM = {
+				random_list = {
+					20 = {
+						add_trait = open_minded
+						hidden_tooltip = { character_event = { id = childhood_education.23 } }
+					}
+					30 = {
+						remove_trait = close_minded
+						hidden_tooltip = { character_event = { id = childhood_education.24 } }
+					}
+					50 = { hidden_tooltip = { character_event = { id = childhood_education.25 } } }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				trait = close_minded
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTCCHILDHOODEDUCATION21" # Punish for misbehavior
+		FROM = {
+			random_list = {
+				40 = {
+					add_trait = open_minded
+					hidden_tooltip = { character_event = { id = childhood_education.26 } }
+				}
+				60 = { hidden_tooltip = { character_event = { id = childhood_education.27 } } }
+			}
+			random = {
+				chance = 10
+				add_trait = neurotic
+				hidden_tooltip = { character_event = { id = childhood_education.0 } }
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 3
+				trait = cold
+			}
+			modifier = {
+				factor = 3
+				trait = neurotic
+			}
+			modifier = {
+				factor = 0
+				trait = friendly
+			}
+			modifier = {
+				factor = 0
+				trait = close_minded
+			}
+			modifier = {
+				factor = 0
+				NOT = { trait = neurotic }
+				NOT = { trait = open_minded }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = childhood_education.22
+	desc = "EVTDESCCHILDHOODEDUCATION22"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACHILDHOODEDUCATION22" }
+}
+character_event = {
+	id = childhood_education.23
+	desc = "EVTDESCCHILDHOODEDUCATION23"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION23"
+		add_trait = open_minded
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.28 } } }
+	}
+}
+character_event = {
+	id = childhood_education.24
+	desc = "EVTDESCCHILDHOODEDUCATION24"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION24"
+		remove_trait = close_minded
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.28 } } }
+	}
+}
+character_event = {
+	id = childhood_education.25
+	desc = "EVTDESCCHILDHOODEDUCATION25"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION25"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.29 } } }
+	}
+}
+character_event = {
+	id = childhood_education.26
+	desc = "EVTDESCCHILDHOODEDUCATION26"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION26"
+		add_trait = open_minded
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.28 } } }
+	}
+}
+character_event = {
+	id = childhood_education.27
+	desc = "EVTDESCCHILDHOODEDUCATION27"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION27"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.29 } } }
+	}
+}
+character_event = {
+	id = childhood_education.28
+	desc = "EVTDESCCHILDHOODEDUCATION28"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { FROM = { trait = open_minded } }
+		name = "EVTOPTACHILDHOODEDUCATION28"
+		FROM = { add_trait = open_minded }
+	}
+	option = {
+		trigger = { FROM = { NOT = { trait = open_minded } } }
+		name = "EVTOPTBCHILDHOODEDUCATION28"
+		FROM = { remove_trait = close_minded }
+	}
+}
+character_event = {
+	id = childhood_education.29
+	desc = "EVTDESCCHILDHOODEDUCATION29"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION29"
+		FROM = { add_trait = close_minded }
+	}
+}
+
+# DISCIPLINED
+character_event = {
+	id = childhood_education.30
+	desc = "EVTDESCCHILDHOODEDUCATION30"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	min_age = 6
+	max_age = 16
+	
+	trigger = {
+		NOT = { trait = disciplined }
+		NOT = { trait = carefree }
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 2
+			guardian = { trait = disciplined }
+		}
+		modifier = {
+			factor = 2
+			father = { trait = disciplined }
+		}
+		modifier = {
+			factor = 2
+			mother = { trait = disciplined }
+		}
+		modifier = {
+			factor = 2
+			any_sibling = { trait = disciplined }
+		}
+		modifier = {
+			factor = 2
+			any_friend = { trait = disciplined }
+		}
+		modifier = {
+			factor = 0.5
+			guardian = { trait = carefree }
+		}
+		modifier = {
+			factor = 0.5
+			father = { trait = carefree }
+		}
+		modifier = {
+			factor = 0.5
+			mother = { trait = carefree }
+		}
+		modifier = {
+			factor = 0.5
+			any_sibling = { trait = carefree }
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = { trait = carefree }
+		}
+	}
+	
+	option = {
+		trigger = { has_guardian = no }
+		name = "EVTOPTACHILDHOODEDUCATION30"
+		add_trait = disciplined
+	}
+	option = {
+		trigger = { has_guardian = yes }
+		name = "EVTOPTBCHILDHOODEDUCATION30"
+		add_trait = disciplined
+		guardian = { character_event = { id = childhood_education.31 tooltip = "EVTTOOLTIPCHILDHOODEDUCATION31" days = 5 } }
+	}
+}
+
+character_event = {
+	id = childhood_education.31
+	desc = "EVTDESCCHILDHOODEDUCATION31"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION31" # Encourage behavior
+		FROM = {
+			add_trait = disciplined
+			hidden_tooltip = { character_event = { id = childhood_education.32 } }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				trait = carefree
+			}
+			modifier = {
+				factor = 0
+				trait = carefree
+				opinion = { who = FROM value = 50 }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTBCHILDHOODEDUCATION31" # Try to persuade otherwise
+		if = {
+			limit = { FROM = { opinion = { who = ROOT value = 0 } } }
+			FROM = {
+				random_list = {
+					60 = {
+						add_trait = carefree
+						hidden_tooltip = { character_event = { id = childhood_education.33 } }
+					}
+					30 = {
+						remove_trait = disciplined
+						hidden_tooltip = { character_event = { id = childhood_education.34 } }
+					}
+					10 = { hidden_tooltip = { character_event = { id = childhood_education.35 } } }
+				}
+			}
+		}
+		if = {
+			limit = { FROM = { NOT = { opinion = { who = ROOT value = 0 } } } }
+			FROM = {
+				random_list = {
+					20 = {
+						add_trait = carefree
+						hidden_tooltip = { character_event = { id = childhood_education.33 } }
+					}
+					30 = {
+						remove_trait = disciplined
+						hidden_tooltip = { character_event = { id = childhood_education.34 } }
+					}
+					50 = { hidden_tooltip = { character_event = { id = childhood_education.35 } } }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				trait = disciplined
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTCCHILDHOODEDUCATION31" # Punish for misbehavior
+		FROM = {
+			random_list = {
+				40 = {
+					add_trait = carefree
+					hidden_tooltip = { character_event = { id = childhood_education.36 } }
+				}
+				60 = { hidden_tooltip = { character_event = { id = childhood_education.37 } } }
+			}
+			random = {
+				chance = 10
+				add_trait = neurotic
+				hidden_tooltip = { character_event = { id = childhood_education.0 } }
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 3
+				trait = cold
+			}
+			modifier = {
+				factor = 3
+				trait = neurotic
+			}
+			modifier = {
+				factor = 0
+				trait = friendly
+			}
+			modifier = {
+				factor = 0
+				trait = disciplined
+			}
+			modifier = {
+				factor = 0
+				NOT = { trait = neurotic }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = childhood_education.32
+	desc = "EVTDESCCHILDHOODEDUCATION32"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACHILDHOODEDUCATION32" }
+}
+character_event = {
+	id = childhood_education.33
+	desc = "EVTDESCCHILDHOODEDUCATION33"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION33"
+		add_trait = carefree
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.38 } } }
+	}
+}
+character_event = {
+	id = childhood_education.34
+	desc = "EVTDESCCHILDHOODEDUCATION34"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION34"
+		remove_trait = disciplined
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.38 } } }
+	}
+}
+character_event = {
+	id = childhood_education.35
+	desc = "EVTDESCCHILDHOODEDUCATION35"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION35"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.39 } } }
+	}
+}
+character_event = {
+	id = childhood_education.36
+	desc = "EVTDESCCHILDHOODEDUCATION36"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION36"
+		add_trait = carefree
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.38 } } }
+	}
+}
+character_event = {
+	id = childhood_education.37
+	desc = "EVTDESCCHILDHOODEDUCATION37"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION37"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.39 } } }
+	}
+}
+character_event = {
+	id = childhood_education.38
+	desc = "EVTDESCCHILDHOODEDUCATION38"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { FROM = { trait = carefree } }
+		name = "EVTOPTACHILDHOODEDUCATION38"
+		FROM = { add_trait = carefree }
+	}
+	option = {
+		trigger = { FROM = { NOT = { trait = carefree } } }
+		name = "EVTOPTBCHILDHOODEDUCATION38"
+		FROM = { remove_trait = disciplined }
+	}
+}
+character_event = {
+	id = childhood_education.39
+	desc = "EVTDESCCHILDHOODEDUCATION39"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION39"
+		FROM = { add_trait = disciplined }
+	}
+}
+
+# CAREFREE
+character_event = {
+	id = childhood_education.40
+	desc = "EVTDESCCHILDHOODEDUCATION40"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	min_age = 6
+	max_age = 16
+	
+	trigger = {
+		NOT = { trait = disciplined }
+		NOT = { trait = carefree }
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 2
+			guardian = { trait = carefree }
+		}
+		modifier = {
+			factor = 2
+			father = { trait = carefree }
+		}
+		modifier = {
+			factor = 2
+			mother = { trait = carefree }
+		}
+		modifier = {
+			factor = 2
+			any_sibling = { trait = carefree }
+		}
+		modifier = {
+			factor = 2
+			any_friend = { trait = carefree }
+		}
+		modifier = {
+			factor = 0.5
+			guardian = { trait = disciplined }
+		}
+		modifier = {
+			factor = 0.5
+			father = { trait = disciplined }
+		}
+		modifier = {
+			factor = 0.5
+			mother = { trait = disciplined }
+		}
+		modifier = {
+			factor = 0.5
+			any_sibling = { trait = disciplined }
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = { trait = disciplined }
+		}
+	}
+	
+	option = {
+		trigger = { has_guardian = no }
+		name = "EVTOPTACHILDHOODEDUCATION40"
+		add_trait = carefree
+	}
+	option = {
+		trigger = { has_guardian = yes }
+		name = "EVTOPTBCHILDHOODEDUCATION40"
+		add_trait = carefree
+		guardian = { character_event = { id = childhood_education.41 tooltip = "EVTTOOLTIPCHILDHOODEDUCATION41" days = 5 } }
+	}
+}
+
+character_event = {
+	id = childhood_education.41
+	desc = "EVTDESCCHILDHOODEDUCATION41"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION41" # Encourage behavior
+		FROM = {
+			add_trait = carefree
+			hidden_tooltip = { character_event = { id = childhood_education.32 } }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				trait = disciplined
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTBCHILDHOODEDUCATION41" # Try to persuade otherwise
+		if = {
+			limit = { FROM = { opinion = { who = ROOT value = 0 } } }
+			FROM = {
+				random_list = {
+					60 = {
+						add_trait = disciplined
+						hidden_tooltip = { character_event = { id = childhood_education.43 } }
+					}
+					30 = {
+						remove_trait = carefree
+						hidden_tooltip = { character_event = { id = childhood_education.44 } }
+					}
+					10 = { hidden_tooltip = { character_event = { id = childhood_education.45 } } }
+				}
+			}
+		}
+		if = {
+			limit = { FROM = { NOT = { opinion = { who = ROOT value = 0 } } } }
+			FROM = {
+				random_list = {
+					20 = {
+						add_trait = disciplined
+						hidden_tooltip = { character_event = { id = childhood_education.43 } }
+					}
+					30 = {
+						remove_trait = carefree
+						hidden_tooltip = { character_event = { id = childhood_education.44 } }
+					}
+					50 = { hidden_tooltip = { character_event = { id = childhood_education.45 } } }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				trait = carefree
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTCCHILDHOODEDUCATION41" # Punish for misbehavior
+		FROM = {
+			random_list = {
+				40 = {
+					add_trait = disciplined
+					hidden_tooltip = { character_event = { id = childhood_education.46 } }
+				}
+				60 = { hidden_tooltip = { character_event = { id = childhood_education.47 } } }
+			}
+			random = {
+				chance = 10
+				add_trait = neurotic
+				hidden_tooltip = { character_event = { id = childhood_education.0 } }
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 3
+				trait = cold
+			}
+			modifier = {
+				factor = 3
+				trait = neurotic
+			}
+			modifier = {
+				factor = 0
+				trait = friendly
+			}
+			modifier = {
+				factor = 0
+				trait = carefree
+			}
+			modifier = {
+				factor = 0
+				NOT = { trait = neurotic }
+				NOT = { trait = disciplined }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = childhood_education.42
+	desc = "EVTDESCCHILDHOODEDUCATION42"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACHILDHOODEDUCATION42" }
+}
+character_event = {
+	id = childhood_education.43
+	desc = "EVTDESCCHILDHOODEDUCATION43"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION43"
+		add_trait = disciplined
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.48 } } }
+	}
+}
+character_event = {
+	id = childhood_education.44
+	desc = "EVTDESCCHILDHOODEDUCATION44"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION44"
+		remove_trait = carefree
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.48 } } }
+	}
+}
+character_event = {
+	id = childhood_education.45
+	desc = "EVTDESCCHILDHOODEDUCATION45"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION45"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.49 } } }
+	}
+}
+character_event = {
+	id = childhood_education.46
+	desc = "EVTDESCCHILDHOODEDUCATION46"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION46"
+		add_trait = disciplined
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.48 } } }
+	}
+}
+character_event = {
+	id = childhood_education.47
+	desc = "EVTDESCCHILDHOODEDUCATION47"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION47"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.49 } } }
+	}
+}
+character_event = {
+	id = childhood_education.48
+	desc = "EVTDESCCHILDHOODEDUCATION48"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { FROM = { trait = disciplined } }
+		name = "EVTOPTACHILDHOODEDUCATION48"
+		FROM = { add_trait = disciplined }
+	}
+	option = {
+		trigger = { FROM = { NOT = { trait = disciplined } } }
+		name = "EVTOPTBCHILDHOODEDUCATION48"
+		FROM = { remove_trait = carefree }
+	}
+}
+character_event = {
+	id = childhood_education.49
+	desc = "EVTDESCCHILDHOODEDUCATION49"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION49"
+		FROM = { add_trait = carefree }
+	}
+}
+
+# EXTRAVERTED
+character_event = {
+	id = childhood_education.50
+	desc = "EVTDESCCHILDHOODEDUCATION50"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	min_age = 6
+	max_age = 16
+	
+	trigger = {
+		NOT = { trait = extraverted }
+		NOT = { trait = introverted }
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 2
+			guardian = { trait = extraverted }
+		}
+		modifier = {
+			factor = 2
+			father = { trait = extraverted }
+		}
+		modifier = {
+			factor = 2
+			mother = { trait = extraverted }
+		}
+		modifier = {
+			factor = 2
+			any_sibling = { trait = extraverted }
+		}
+		modifier = {
+			factor = 2
+			any_friend = { trait = extraverted }
+		}
+		modifier = {
+			factor = 0.5
+			guardian = { trait = introverted }
+		}
+		modifier = {
+			factor = 0.5
+			father = { trait = introverted }
+		}
+		modifier = {
+			factor = 0.5
+			mother = { trait = introverted }
+		}
+		modifier = {
+			factor = 0.5
+			any_sibling = { trait = introverted }
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = { trait = introverted }
+		}
+		modifier = {
+			factor = 2
+			trait = open_minded
+		}
+		modifier = {
+			factor = 0.5
+			trait = close_minded
+		}
+	}
+	
+	option = {
+		trigger = { has_guardian = no }
+		name = "EVTOPTACHILDHOODEDUCATION50"
+		add_trait = extraverted
+	}
+	option = {
+		trigger = { has_guardian = yes }
+		name = "EVTOPTBCHILDHOODEDUCATION50"
+		add_trait = extraverted
+		guardian = { character_event = { id = childhood_education.51 tooltip = "EVTTOOLTIPCHILDHOODEDUCATION51" days = 5 } }
+	}
+}
+
+character_event = {
+	id = childhood_education.51
+	desc = "EVTDESCCHILDHOODEDUCATION51"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION51" # Encourage behavior
+		FROM = {
+			add_trait = extraverted
+			hidden_tooltip = { character_event = { id = childhood_education.52 } }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				trait = introverted
+				NOT = { trait = open_minded }
+			}
+			modifier = {
+				factor = 0.5
+				trait = introverted
+				NOT = { trait = carefree }
+			}
+			modifier = {
+				factor = 0
+				trait = introverted
+				NOT = { trait = open_minded }
+				NOT = { trait = carefree }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTBCHILDHOODEDUCATION51" # Try to persuade otherwise
+		if = {
+			limit = { FROM = { opinion = { who = ROOT value = 0 } } }
+			FROM = {
+				random_list = {
+					60 = {
+						add_trait = introverted
+						hidden_tooltip = { character_event = { id = childhood_education.53 } }
+					}
+					30 = {
+						remove_trait = extraverted
+						hidden_tooltip = { character_event = { id = childhood_education.54 } }
+					}
+					10 = { hidden_tooltip = { character_event = { id = childhood_education.55 } } }
+				}
+			}
+		}
+		if = {
+			limit = { FROM = { NOT = { opinion = { who = ROOT value = 0 } } } }
+			FROM = {
+				random_list = {
+					20 = {
+						add_trait = introverted
+						hidden_tooltip = { character_event = { id = childhood_education.53 } }
+					}
+					30 = {
+						remove_trait = extraverted
+						hidden_tooltip = { character_event = { id = childhood_education.54 } }
+					}
+					50 = { hidden_tooltip = { character_event = { id = childhood_education.55 } } }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				trait = extraverted
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTCCHILDHOODEDUCATION51" # Punish for misbehavior
+		FROM = {
+			random_list = {
+				40 = {
+					add_trait = introverted
+					hidden_tooltip = { character_event = { id = childhood_education.56 } }
+				}
+				60 = { hidden_tooltip = { character_event = { id = childhood_education.57 } } }
+			}
+			random = {
+				chance = 10
+				add_trait = neurotic
+				hidden_tooltip = { character_event = { id = childhood_education.0 } }
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 3
+				trait = cold
+			}
+			modifier = {
+				factor = 3
+				trait = neurotic
+			}
+			modifier = {
+				factor = 0
+				trait = friendly
+			}
+			modifier = {
+				factor = 0
+				trait = extraverted
+			}
+			modifier = {
+				factor = 0
+				NOT = { trait = neurotic }
+				NOT = { trait = introverted }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = childhood_education.52
+	desc = "EVTDESCCHILDHOODEDUCATION52"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACHILDHOODEDUCATION52" }
+}
+character_event = {
+	id = childhood_education.53
+	desc = "EVTDESCCHILDHOODEDUCATION53"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION53"
+		add_trait = introverted
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.58 } } }
+	}
+}
+character_event = {
+	id = childhood_education.54
+	desc = "EVTDESCCHILDHOODEDUCATION54"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION54"
+		remove_trait = extraverted
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.58 } } }
+	}
+}
+character_event = {
+	id = childhood_education.55
+	desc = "EVTDESCCHILDHOODEDUCATION55"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION55"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.59 } } }
+	}
+}
+character_event = {
+	id = childhood_education.56
+	desc = "EVTDESCCHILDHOODEDUCATION56"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION56"
+		add_trait = introverted
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.58 } } }
+	}
+}
+character_event = {
+	id = childhood_education.57
+	desc = "EVTDESCCHILDHOODEDUCATION57"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION57"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.59 } } }
+	}
+}
+character_event = {
+	id = childhood_education.58
+	desc = "EVTDESCCHILDHOODEDUCATION58"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { FROM = { trait = introverted } }
+		name = "EVTOPTACHILDHOODEDUCATION58"
+		FROM = { add_trait = introverted }
+	}
+	option = {
+		trigger = { FROM = { NOT = { trait = introverted } } }
+		name = "EVTOPTBCHILDHOODEDUCATION58"
+		FROM = { remove_trait = extraverted }
+	}
+}
+character_event = {
+	id = childhood_education.59
+	desc = "EVTDESCCHILDHOODEDUCATION59"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION59"
+		FROM = { add_trait = extraverted }
+	}
+}
+
+# INTROVERTED
+character_event = {
+	id = childhood_education.60
+	desc = "EVTDESCCHILDHOODEDUCATION60"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	min_age = 6
+	max_age = 16
+	
+	trigger = {
+		NOT = { trait = extraverted }
+		NOT = { trait = introverted }
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 2
+			guardian = { trait = introverted }
+		}
+		modifier = {
+			factor = 2
+			father = { trait = introverted }
+		}
+		modifier = {
+			factor = 2
+			mother = { trait = introverted }
+		}
+		modifier = {
+			factor = 2
+			any_sibling = { trait = introverted }
+		}
+		modifier = {
+			factor = 2
+			any_friend = { trait = introverted }
+		}
+		modifier = {
+			factor = 0.5
+			guardian = { trait = extraverted }
+		}
+		modifier = {
+			factor = 0.5
+			father = { trait = extraverted }
+		}
+		modifier = {
+			factor = 0.5
+			mother = { trait = extraverted }
+		}
+		modifier = {
+			factor = 0.5
+			any_sibling = { trait = extraverted }
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = { trait = extraverted }
+		}
+		modifier = {
+			factor = 2
+			trait = ill
+		}
+		modifier = {
+			factor = 2
+			trait = weak
+		}
+		modifier = {
+			factor = 3
+			trait = ugly
+		}
+		modifier = {
+			factor = 3
+			trait = dwarf
+		}
+		modifier = {
+			factor = 3
+			trait = hunchback
+		}
+		modifier = {
+			factor = 3
+			trait = harelip
+		}
+		modifier = {
+			factor = 2
+			trait = stutter
+		}
+		modifier = {
+			factor = 2
+			trait = lisp
+		}
+		modifier = {
+			factor = 2
+			trait = clubfooted
+		}
+	}
+	
+	option = {
+		trigger = { has_guardian = no }
+		name = "EVTOPTACHILDHOODEDUCATION60"
+		add_trait = introverted
+	}
+	option = {
+		trigger = { has_guardian = yes }
+		name = "EVTOPTBCHILDHOODEDUCATION60"
+		add_trait = introverted
+		guardian = { character_event = { id = childhood_education.61 tooltip = "EVTTOOLTIPCHILDHOODEDUCATION61" days = 5 } }
+	}
+}
+
+character_event = {
+	id = childhood_education.61
+	desc = "EVTDESCCHILDHOODEDUCATION61"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION61" # Encourage behavior
+		FROM = {
+			add_trait = introverted
+			hidden_tooltip = { character_event = { id = childhood_education.52 } }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				trait = extraverted
+			}
+			modifier = {
+				factor = 0
+				trait = extraverted
+				NOT = { trait = open_minded }
+				NOT = { trait = carefree }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTBCHILDHOODEDUCATION61" # Try to persuade otherwise
+		if = {
+			limit = { FROM = { opinion = { who = ROOT value = 0 } } }
+			FROM = {
+				random_list = {
+					60 = {
+						add_trait = extraverted
+						hidden_tooltip = { character_event = { id = childhood_education.63 } }
+					}
+					30 = {
+						remove_trait = introverted
+						hidden_tooltip = { character_event = { id = childhood_education.64 } }
+					}
+					10 = { hidden_tooltip = { character_event = { id = childhood_education.65 } } }
+				}
+			}
+		}
+		if = {
+			limit = { FROM = { NOT = { opinion = { who = ROOT value = 0 } } } }
+			FROM = {
+				random_list = {
+					20 = {
+						add_trait = extraverted
+						hidden_tooltip = { character_event = { id = childhood_education.63 } }
+					}
+					30 = {
+						remove_trait = introverted
+						hidden_tooltip = { character_event = { id = childhood_education.64 } }
+					}
+					50 = { hidden_tooltip = { character_event = { id = childhood_education.65 } } }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				trait = introverted
+			}
+			modifier = {
+				factor = 0
+				trait = introverted
+				NOT = { trait = neurotic }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTCCHILDHOODEDUCATION61" # Punish for misbehavior
+		FROM = {
+			random_list = {
+				40 = {
+					add_trait = extraverted
+					hidden_tooltip = { character_event = { id = childhood_education.66 } }
+				}
+				60 = { hidden_tooltip = { character_event = { id = childhood_education.67 } } }
+			}
+			random = {
+				chance = 10
+				add_trait = neurotic
+				hidden_tooltip = { character_event = { id = childhood_education.0 } }
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 3
+				trait = cold
+			}
+			modifier = {
+				factor = 3
+				trait = neurotic
+			}
+			modifier = {
+				factor = 0
+				trait = friendly
+			}
+			modifier = {
+				factor = 0.5
+				trait = introverted
+			}
+			modifier = {
+				factor = 0
+				trait = introverted
+				NOT = { trait = neurotic }
+			}
+			modifier = {
+				factor = 0
+				NOT = { trait = neurotic }
+				NOT = { trait = extraverted }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = childhood_education.62
+	desc = "EVTDESCCHILDHOODEDUCATION62"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACHILDHOODEDUCATION62" }
+}
+character_event = {
+	id = childhood_education.63
+	desc = "EVTDESCCHILDHOODEDUCATION63"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION63"
+		add_trait = extraverted
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.68 } } }
+	}
+}
+character_event = {
+	id = childhood_education.64
+	desc = "EVTDESCCHILDHOODEDUCATION64"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION64"
+		remove_trait = introverted
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.68 } } }
+	}
+}
+character_event = {
+	id = childhood_education.65
+	desc = "EVTDESCCHILDHOODEDUCATION65"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION65"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.69 } } }
+	}
+}
+character_event = {
+	id = childhood_education.66
+	desc = "EVTDESCCHILDHOODEDUCATION66"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION66"
+		add_trait = extraverted
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.68 } } }
+	}
+}
+character_event = {
+	id = childhood_education.67
+	desc = "EVTDESCCHILDHOODEDUCATION67"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION67"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.69 } } }
+	}
+}
+character_event = {
+	id = childhood_education.68
+	desc = "EVTDESCCHILDHOODEDUCATION68"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { FROM = { trait = extraverted } }
+		name = "EVTOPTACHILDHOODEDUCATION68"
+		FROM = { add_trait = extraverted }
+	}
+	option = {
+		trigger = { FROM = { NOT = { trait = extraverted } } }
+		name = "EVTOPTBCHILDHOODEDUCATION68"
+		FROM = { remove_trait = introverted }
+	}
+}
+character_event = {
+	id = childhood_education.69
+	desc = "EVTDESCCHILDHOODEDUCATION69"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION69"
+		FROM = { add_trait = introverted }
+	}
+}
+
+# FRIENDLY
+character_event = {
+	id = childhood_education.70
+	desc = "EVTDESCCHILDHOODEDUCATION70"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	min_age = 6
+	max_age = 16
+	
+	trigger = {
+		NOT = { trait = friendly }
+		NOT = { trait = cold }
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 2
+			guardian = { trait = friendly }
+		}
+		modifier = {
+			factor = 2
+			father = { trait = friendly }
+		}
+		modifier = {
+			factor = 2
+			mother = { trait = friendly }
+		}
+		modifier = {
+			factor = 2
+			any_sibling = { trait = friendly }
+		}
+		modifier = {
+			factor = 2
+			any_friend = { trait = friendly }
+		}
+		modifier = {
+			factor = 0.5
+			guardian = { trait = cold }
+		}
+		modifier = {
+			factor = 0.5
+			father = { trait = cold }
+		}
+		modifier = {
+			factor = 0.5
+			mother = { trait = cold }
+		}
+		modifier = {
+			factor = 0.5
+			any_sibling = { trait = cold }
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = { trait = cold }
+		}
+	}
+	
+	option = {
+		trigger = { has_guardian = no }
+		name = "EVTOPTACHILDHOODEDUCATION70"
+		add_trait = friendly
+	}
+	option = {
+		trigger = { has_guardian = yes }
+		name = "EVTOPTBCHILDHOODEDUCATION70"
+		add_trait = friendly
+		guardian = { character_event = { id = childhood_education.71 tooltip = "EVTTOOLTIPCHILDHOODEDUCATION71" days = 5 } }
+	}
+}
+
+character_event = {
+	id = childhood_education.71
+	desc = "EVTDESCCHILDHOODEDUCATION71"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION71" # Encourage behavior
+		FROM = {
+			add_trait = friendly
+			hidden_tooltip = { character_event = { id = childhood_education.72 } }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				trait = cold
+			}
+			modifier = {
+				factor = 0.5
+				trait = pragmatic
+			}
+			modifier = {
+				factor = 0
+				trait = cold
+				NOT = { trait = carefree }
+				NOT = { trait = open_minded }
+				opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 0.5
+				trait = pragmatic
+				NOT = { trait = carefree }
+				NOT = { trait = open_minded }
+				opinion = { who = FROM value = 50 }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTBCHILDHOODEDUCATION71" # Try to persuade otherwise
+		if = {
+			limit = { FROM = { opinion = { who = ROOT value = 0 } } }
+			FROM = {
+				random_list = {
+					60 = {
+						add_trait = cold
+						hidden_tooltip = { character_event = { id = childhood_education.73 } }
+					}
+					30 = {
+						remove_trait = friendly
+						hidden_tooltip = { character_event = { id = childhood_education.74 } }
+					}
+					10 = { hidden_tooltip = { character_event = { id = childhood_education.75 } } }
+				}
+			}
+		}
+		if = {
+			limit = { FROM = { NOT = { opinion = { who = ROOT value = 0 } } } }
+			FROM = {
+				random_list = {
+					20 = {
+						add_trait = cold
+						hidden_tooltip = { character_event = { id = childhood_education.73 } }
+					}
+					30 = {
+						remove_trait = friendly
+						hidden_tooltip = { character_event = { id = childhood_education.74 } }
+					}
+					50 = { hidden_tooltip = { character_event = { id = childhood_education.75 } } }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				trait = friendly
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTCCHILDHOODEDUCATION71" # Punish for misbehavior
+		FROM = {
+			random_list = {
+				40 = {
+					add_trait = cold
+					hidden_tooltip = { character_event = { id = childhood_education.76 } }
+				}
+				60 = { hidden_tooltip = { character_event = { id = childhood_education.77 } } }
+			}
+			random = {
+				chance = 10
+				add_trait = neurotic
+				hidden_tooltip = { character_event = { id = childhood_education.0 } }
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 3
+				trait = cold
+			}
+			modifier = {
+				factor = 3
+				trait = neurotic
+			}
+			modifier = {
+				factor = 0
+				trait = friendly
+			}
+			modifier = {
+				factor = 0
+				NOT = { trait = cold }
+				NOT = { trait = neurotic }
+				NOT = { trait = pragmatic }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = childhood_education.72
+	desc = "EVTDESCCHILDHOODEDUCATION72"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACHILDHOODEDUCATION72" }
+}
+character_event = {
+	id = childhood_education.73
+	desc = "EVTDESCCHILDHOODEDUCATION73"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION73"
+		add_trait = cold
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.78 } } }
+	}
+}
+character_event = {
+	id = childhood_education.74
+	desc = "EVTDESCCHILDHOODEDUCATION74"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION74"
+		remove_trait = friendly
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.78 } } }
+	}
+}
+character_event = {
+	id = childhood_education.75
+	desc = "EVTDESCCHILDHOODEDUCATION75"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION75"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.79 } } }
+	}
+}
+character_event = {
+	id = childhood_education.76
+	desc = "EVTDESCCHILDHOODEDUCATION76"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION76"
+		add_trait = cold
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.78 } } }
+	}
+}
+character_event = {
+	id = childhood_education.77
+	desc = "EVTDESCCHILDHOODEDUCATION77"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION77"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.79 } } }
+	}
+}
+character_event = {
+	id = childhood_education.78
+	desc = "EVTDESCCHILDHOODEDUCATION78"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { FROM = { trait = cold } }
+		name = "EVTOPTACHILDHOODEDUCATION78"
+		FROM = { add_trait = cold }
+	}
+	option = {
+		trigger = { FROM = { NOT = { trait = cold } } }
+		name = "EVTOPTBCHILDHOODEDUCATION78"
+		FROM = { remove_trait = friendly }
+	}
+}
+character_event = {
+	id = childhood_education.79
+	desc = "EVTDESCCHILDHOODEDUCATION79"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION79"
+		FROM = { add_trait = friendly }
+	}
+}
+
+# COLD
+character_event = {
+	id = childhood_education.80
+	desc = "EVTDESCCHILDHOODEDUCATION80"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	min_age = 6
+	max_age = 16
+	
+	trigger = {
+		NOT = { trait = friendly }
+		NOT = { trait = cold }
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 2
+			guardian = { trait = cold }
+		}
+		modifier = {
+			factor = 2
+			father = { trait = cold }
+		}
+		modifier = {
+			factor = 2
+			mother = { trait = cold }
+		}
+		modifier = {
+			factor = 2
+			any_sibling = { trait = cold }
+		}
+		modifier = {
+			factor = 2
+			any_friend = { trait = cold }
+		}
+		modifier = {
+			factor = 0.5
+			guardian = { trait = friendly }
+		}
+		modifier = {
+			factor = 0.5
+			father = { trait = friendly }
+		}
+		modifier = {
+			factor = 0.5
+			mother = { trait = friendly }
+		}
+		modifier = {
+			factor = 0.5
+			any_sibling = { trait = friendly }
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = { trait = friendly }
+		}
+	}
+	
+	option = {
+		trigger = { has_guardian = no }
+		name = "EVTOPTACHILDHOODEDUCATION80"
+		add_trait = cold
+	}
+	option = {
+		trigger = { has_guardian = yes }
+		name = "EVTOPTBCHILDHOODEDUCATION80"
+		add_trait = cold
+		guardian = { character_event = { id = childhood_education.81 tooltip = "EVTTOOLTIPCHILDHOODEDUCATION81" days = 5 } }
+	}
+}
+
+character_event = {
+	id = childhood_education.81
+	desc = "EVTDESCCHILDHOODEDUCATION81"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION81" # Encourage behavior
+		FROM = {
+			add_trait = cold
+			hidden_tooltip = { character_event = { id = childhood_education.72 } }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				NOT = { trait = cold }
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 0
+				trait = friendly
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTBCHILDHOODEDUCATION81" # Try to persuade otherwise
+		if = {
+			limit = { FROM = { opinion = { who = ROOT value = 0 } } }
+			FROM = {
+				random_list = {
+					60 = {
+						add_trait = friendly
+						hidden_tooltip = { character_event = { id = childhood_education.83 } }
+					}
+					30 = {
+						remove_trait = cold
+						hidden_tooltip = { character_event = { id = childhood_education.84 } }
+					}
+					10 = { hidden_tooltip = { character_event = { id = childhood_education.85 } } }
+				}
+			}
+		}
+		if = {
+			limit = { FROM = { NOT = { opinion = { who = ROOT value = 0 } } } }
+			FROM = {
+				random_list = {
+					20 = {
+						add_trait = friendly
+						hidden_tooltip = { character_event = { id = childhood_education.83 } }
+					}
+					30 = {
+						remove_trait = cold
+						hidden_tooltip = { character_event = { id = childhood_education.84 } }
+					}
+					50 = { hidden_tooltip = { character_event = { id = childhood_education.85 } } }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				trait = cold
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTCCHILDHOODEDUCATION81" # Punish for misbehavior
+		FROM = {
+			random_list = {
+				40 = {
+					add_trait = friendly
+					hidden_tooltip = { character_event = { id = childhood_education.86 } }
+				}
+				60 = { hidden_tooltip = { character_event = { id = childhood_education.87 } } }
+			}
+			random = {
+				chance = 10
+				add_trait = neurotic
+				hidden_tooltip = { character_event = { id = childhood_education.0 } }
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = {
+					AND = {
+						trait = neurotic
+						trait = friendly
+					}
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = childhood_education.82
+	desc = "EVTDESCCHILDHOODEDUCATION82"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACHILDHOODEDUCATION82" }
+}
+character_event = {
+	id = childhood_education.83
+	desc = "EVTDESCCHILDHOODEDUCATION83"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION83"
+		add_trait = friendly
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.88 } } }
+	}
+}
+character_event = {
+	id = childhood_education.84
+	desc = "EVTDESCCHILDHOODEDUCATION84"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION84"
+		remove_trait = cold
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.88 } } }
+	}
+}
+character_event = {
+	id = childhood_education.85
+	desc = "EVTDESCCHILDHOODEDUCATION85"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION85"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.89 } } }
+	}
+}
+character_event = {
+	id = childhood_education.86
+	desc = "EVTDESCCHILDHOODEDUCATION86"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION86"
+		add_trait = friendly
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.88 } } }
+	}
+}
+character_event = {
+	id = childhood_education.87
+	desc = "EVTDESCCHILDHOODEDUCATION87"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION87"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.89 } } }
+	}
+}
+character_event = {
+	id = childhood_education.88
+	desc = "EVTDESCCHILDHOODEDUCATION88"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { FROM = { trait = friendly } }
+		name = "EVTOPTACHILDHOODEDUCATION88"
+		FROM = { add_trait = friendly }
+	}
+	option = {
+		trigger = { FROM = { NOT = { trait = friendly } } }
+		name = "EVTOPTBCHILDHOODEDUCATION88"
+		FROM = { remove_trait = cold }
+	}
+}
+character_event = {
+	id = childhood_education.89
+	desc = "EVTDESCCHILDHOODEDUCATION89"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION89"
+		FROM = { add_trait = cold }
+	}
+}
+
+# SPIRITUAL
+character_event = {
+	id = childhood_education.90
+	desc = "EVTDESCCHILDHOODEDUCATION90"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	min_age = 6
+	max_age = 16
+	
+	trigger = {
+		NOT = { trait = spiritual }
+		NOT = { trait = skeptical }
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 2
+			guardian = { trait = spiritual }
+		}
+		modifier = {
+			factor = 2
+			father = { trait = spiritual }
+		}
+		modifier = {
+			factor = 2
+			mother = { trait = spiritual }
+		}
+		modifier = {
+			factor = 2
+			any_sibling = { trait = spiritual }
+		}
+		modifier = {
+			factor = 2
+			any_friend = { trait = spiritual }
+		}
+		modifier = {
+			factor = 0.5
+			guardian = { trait = skeptical }
+		}
+		modifier = {
+			factor = 0.5
+			father = { trait = skeptical }
+		}
+		modifier = {
+			factor = 0.5
+			mother = { trait = skeptical }
+		}
+		modifier = {
+			factor = 0.5
+			any_sibling = { trait = skeptical }
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = { trait = skeptical }
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				religion_group = religious_group
+				religion = machine_cult
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				religion_group = religious_group
+				religion = machine_cult
+			}
+			trait = radical
+		}
+		modifier = {
+			factor = 0.5
+			religion_group = transhumanist_group
+			NOT = { religion = machine_cult }
+		}
+		modifier = {
+			factor = 0.5
+			religion_group = transhumanist_group
+			NOT = { religion = machine_cult }
+			trait = radical
+		}
+	}
+	
+	option = {
+		trigger = { has_guardian = no }
+		name = "EVTOPTACHILDHOODEDUCATION90"
+		add_trait = spiritual
+	}
+	option = {
+		trigger = { has_guardian = yes }
+		name = "EVTOPTBCHILDHOODEDUCATION90"
+		add_trait = spiritual
+		guardian = { character_event = { id = childhood_education.91 tooltip = "EVTTOOLTIPCHILDHOODEDUCATION91" days = 5 } }
+	}
+}
+
+character_event = {
+	id = childhood_education.91
+	desc = "EVTDESCCHILDHOODEDUCATION91"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION91" # Encourage behavior
+		FROM = {
+			add_trait = spiritual
+			hidden_tooltip = { character_event = { id = childhood_education.92 } }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				OR = {
+					religion_group = religious_group
+					religion = machine_cult
+				}
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion_group = religious_group
+					religion = machine_cult
+				}
+				trait = radical
+			}
+			modifier = {
+				factor = 0.5
+				religion_group = transhumanist_group
+				NOT = { religion = machine_cult }
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 0.5
+				religion_group = transhumanist_group
+				NOT = { religion = machine_cult }
+				trait = radical
+			}
+			modifier = {
+				factor = 0
+				trait = skeptical
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTBCHILDHOODEDUCATION91" # Try to persuade otherwise
+		if = {
+			limit = { FROM = { opinion = { who = ROOT value = 0 } } }
+			FROM = {
+				random_list = {
+					60 = {
+						add_trait = skeptical
+						hidden_tooltip = { character_event = { id = childhood_education.93 } }
+					}
+					30 = {
+						remove_trait = spiritual
+						hidden_tooltip = { character_event = { id = childhood_education.94 } }
+					}
+					10 = { hidden_tooltip = { character_event = { id = childhood_education.95 } } }
+				}
+			}
+		}
+		if = {
+			limit = { FROM = { NOT = { opinion = { who = ROOT value = 0 } } } }
+			FROM = {
+				random_list = {
+					20 = {
+						add_trait = skeptical
+						hidden_tooltip = { character_event = { id = childhood_education.93 } }
+					}
+					30 = {
+						remove_trait = spiritual
+						hidden_tooltip = { character_event = { id = childhood_education.94 } }
+					}
+					50 = { hidden_tooltip = { character_event = { id = childhood_education.95 } } }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				trait = spiritual
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTCCHILDHOODEDUCATION91" # Punish for misbehavior
+		FROM = {
+			random_list = {
+				40 = {
+					add_trait = skeptical
+					hidden_tooltip = { character_event = { id = childhood_education.96 } }
+				}
+				60 = { hidden_tooltip = { character_event = { id = childhood_education.97 } } }
+			}
+			random = {
+				chance = 10
+				add_trait = neurotic
+				hidden_tooltip = { character_event = { id = childhood_education.0 } }
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 3
+				trait = cold
+			}
+			modifier = {
+				factor = 3
+				trait = neurotic
+			}
+			modifier = {
+				factor = 0
+				trait = friendly
+			}
+			modifier = {
+				factor = 0
+				trait = spiritual
+			}
+		}
+	}
+}
+
+character_event = {
+	id = childhood_education.92
+	desc = "EVTDESCCHILDHOODEDUCATION92"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACHILDHOODEDUCATION92" }
+}
+character_event = {
+	id = childhood_education.93
+	desc = "EVTDESCCHILDHOODEDUCATION93"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION93"
+		add_trait = skeptical
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.98 } } }
+	}
+}
+character_event = {
+	id = childhood_education.94
+	desc = "EVTDESCCHILDHOODEDUCATION94"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION94"
+		remove_trait = spiritual
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.98 } } }
+	}
+}
+character_event = {
+	id = childhood_education.95
+	desc = "EVTDESCCHILDHOODEDUCATION95"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION95"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.99 } } }
+	}
+}
+character_event = {
+	id = childhood_education.96
+	desc = "EVTDESCCHILDHOODEDUCATION96"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION96"
+		add_trait = skeptical
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.98 } } }
+	}
+}
+character_event = {
+	id = childhood_education.97
+	desc = "EVTDESCCHILDHOODEDUCATION97"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION97"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.99 } } }
+	}
+}
+character_event = {
+	id = childhood_education.98
+	desc = "EVTDESCCHILDHOODEDUCATION98"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { FROM = { trait = skeptical } }
+		name = "EVTOPTACHILDHOODEDUCATION98"
+		FROM = { add_trait = skeptical }
+	}
+	option = {
+		trigger = { FROM = { NOT = { trait = skeptical } } }
+		name = "EVTOPTBCHILDHOODEDUCATION98"
+		FROM = { remove_trait = spiritual }
+	}
+}
+character_event = {
+	id = childhood_education.99
+	desc = "EVTDESCCHILDHOODEDUCATION99"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION99"
+		FROM = { add_trait = spiritual }
+	}
+}
+
+# SKEPTICAL
+character_event = {
+	id = childhood_education.100
+	desc = "EVTDESCCHILDHOODEDUCATION100"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	min_age = 6
+	max_age = 16
+	
+	trigger = {
+		NOT = { trait = spiritual }
+		NOT = { trait = skeptical }
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 2
+			guardian = { trait = skeptical }
+		}
+		modifier = {
+			factor = 2
+			father = { trait = skeptical }
+		}
+		modifier = {
+			factor = 2
+			mother = { trait = skeptical }
+		}
+		modifier = {
+			factor = 2
+			any_sibling = { trait = skeptical }
+		}
+		modifier = {
+			factor = 2
+			any_friend = { trait = skeptical }
+		}
+		modifier = {
+			factor = 0.5
+			guardian = { trait = spiritual }
+		}
+		modifier = {
+			factor = 0.5
+			father = { trait = spiritual }
+		}
+		modifier = {
+			factor = 0.5
+			mother = { trait = spiritual }
+		}
+		modifier = {
+			factor = 0.5
+			any_sibling = { trait = spiritual }
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = { trait = spiritual }
+		}
+		modifier = {
+			factor = 2
+			trait = open_minded
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				religion_group = religious_group
+				religion = machine_cult
+			}
+			NOT = { trait = open_minded }
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				religion_group = religious_group
+				religion = machine_cult
+			}
+			trait = radical
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				religion_group = religious_group
+				religion = machine_cult
+			}
+			trait = close_minded
+		}
+		modifier = {
+			factor = 2
+			religion_group = transhumanist_group
+			NOT = { religion = machine_cult }
+		}
+		modifier = {
+			factor = 2
+			religion_group = transhumanist_group
+			NOT = { religion = machine_cult }
+			trait = radical
+		}
+	}
+	
+	option = {
+		trigger = { has_guardian = no }
+		name = "EVTOPTACHILDHOODEDUCATION100"
+		add_trait = skeptical
+	}
+	option = {
+		trigger = { has_guardian = yes }
+		name = "EVTOPTBCHILDHOODEDUCATION100"
+		add_trait = skeptical
+		guardian = { character_event = { id = childhood_education.101 tooltip = "EVTTOOLTIPCHILDHOODEDUCATION101" days = 5 } }
+	}
+}
+
+character_event = {
+	id = childhood_education.101
+	desc = "EVTDESCCHILDHOODEDUCATION101"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION101" # Encourage behavior
+		FROM = {
+			add_trait = skeptical
+			hidden_tooltip = { character_event = { id = childhood_education.92 } }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				OR = {
+					religion_group = religious_group
+					religion = machine_cult
+				}
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					religion_group = religious_group
+					religion = machine_cult
+				}
+				trait = radical
+			}
+			modifier = {
+				factor = 2
+				religion_group = transhumanist_group
+				NOT = { religion = machine_cult }
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 2
+				religion_group = transhumanist_group
+				NOT = { religion = machine_cult }
+				trait = radical
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					religion_group = religious_group
+					religion = machine_cult
+				}
+				trait = close_minded
+			}
+			modifier = {
+				factor = 0
+				trait = spiritual
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTBCHILDHOODEDUCATION101" # Try to persuade otherwise
+		if = {
+			limit = { FROM = { opinion = { who = ROOT value = 0 } } }
+			FROM = {
+				random_list = {
+					60 = {
+						add_trait = spiritual
+						hidden_tooltip = { character_event = { id = childhood_education.103 } }
+					}
+					30 = {
+						remove_trait = skeptical
+						hidden_tooltip = { character_event = { id = childhood_education.104 } }
+					}
+					10 = { hidden_tooltip = { character_event = { id = childhood_education.105 } } }
+				}
+			}
+		}
+		if = {
+			limit = { FROM = { NOT = { opinion = { who = ROOT value = 0 } } } }
+			FROM = {
+				random_list = {
+					20 = {
+						add_trait = spiritual
+						hidden_tooltip = { character_event = { id = childhood_education.103 } }
+					}
+					30 = {
+						remove_trait = skeptical
+						hidden_tooltip = { character_event = { id = childhood_education.104 } }
+					}
+					50 = { hidden_tooltip = { character_event = { id = childhood_education.105 } } }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				trait = skeptical
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTCCHILDHOODEDUCATION101" # Punish for misbehavior
+		FROM = {
+			random_list = {
+				40 = {
+					add_trait = spiritual
+					hidden_tooltip = { character_event = { id = childhood_education.106 } }
+				}
+				60 = { hidden_tooltip = { character_event = { id = childhood_education.107 } } }
+			}
+			random = {
+				chance = 10
+				add_trait = neurotic
+				hidden_tooltip = { character_event = { id = childhood_education.0 } }
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 3
+				trait = cold
+			}
+			modifier = {
+				factor = 3
+				trait = neurotic
+			}
+			modifier = {
+				factor = 2
+			}
+			modifier = {
+				factor = 0
+				trait = friendly
+			}
+			modifier = {
+				factor = 0
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0
+				NOT = { trait = neurotic }
+				NOT = { trait = spiritual }
+				NOT = {
+					AND = {
+						OR = {
+							religion_group = religious_group
+							religion = machine_cult
+						}
+						OR = {
+							trait = radical
+							trait = close_minded
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = childhood_education.102
+	desc = "EVTDESCCHILDHOODEDUCATION102"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACHILDHOODEDUCATION102" }
+}
+character_event = {
+	id = childhood_education.103
+	desc = "EVTDESCCHILDHOODEDUCATION103"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION103"
+		add_trait = spiritual
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.108 } } }
+	}
+}
+character_event = {
+	id = childhood_education.104
+	desc = "EVTDESCCHILDHOODEDUCATION104"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION104"
+		remove_trait = skeptical
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.108 } } }
+	}
+}
+character_event = {
+	id = childhood_education.105
+	desc = "EVTDESCCHILDHOODEDUCATION105"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION105"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.109 } } }
+	}
+}
+character_event = {
+	id = childhood_education.106
+	desc = "EVTDESCCHILDHOODEDUCATION106"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION106"
+		add_trait = spiritual
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.108 } } }
+	}
+}
+character_event = {
+	id = childhood_education.107
+	desc = "EVTDESCCHILDHOODEDUCATION107"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION107"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.109 } } }
+	}
+}
+character_event = {
+	id = childhood_education.108
+	desc = "EVTDESCCHILDHOODEDUCATION108"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { FROM = { trait = spiritual } }
+		name = "EVTOPTACHILDHOODEDUCATION108"
+		FROM = { add_trait = spiritual }
+	}
+	option = {
+		trigger = { FROM = { NOT = { trait = spiritual } } }
+		name = "EVTOPTBCHILDHOODEDUCATION108"
+		FROM = { remove_trait = skeptical }
+	}
+}
+character_event = {
+	id = childhood_education.109
+	desc = "EVTDESCCHILDHOODEDUCATION109"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION109"
+		FROM = { add_trait = skeptical }
+	}
+}
+
+# RADICAL
+character_event = {
+	id = childhood_education.110
+	desc = "EVTDESCCHILDHOODEDUCATION110"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	min_age = 6
+	max_age = 16
+	
+	trigger = {
+		NOT = { trait = radical }
+		NOT = { trait = pragmatic }
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 2
+			guardian = {
+				religion = ROOT
+				trait = radical
+			}
+		}
+		modifier = {
+			factor = 2
+			father = {
+				religion = ROOT
+				trait = radical
+			}
+		}
+		modifier = {
+			factor = 2
+			mother = {
+				religion = ROOT
+				trait = radical
+			}
+		}
+		modifier = {
+			factor = 2
+			any_sibling = {
+				religion = ROOT
+				trait = radical
+			}
+		}
+		modifier = {
+			factor = 2
+			any_friend = {
+				religion = ROOT
+				trait = radical
+			}
+		}
+		modifier = {
+			factor = 0.5
+			guardian = {
+				OR = {
+					trait = pragmatic
+					NOT = { religion = ROOT }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			father = {
+				OR = {
+					trait = pragmatic
+					NOT = { religion = ROOT }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			mother = {
+				OR = {
+					trait = pragmatic
+					NOT = { religion = ROOT }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_sibling = {
+				OR = {
+					trait = pragmatic
+					NOT = { religion = ROOT }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = {
+				OR = {
+					trait = pragmatic
+					NOT = { religion = ROOT }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { religion_authority = 0.05 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { religion_authority = 0.1 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { religion_authority = 0.15 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { religion_authority = 0.2 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { religion_authority = 0.25 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { religion_authority = 0.3 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { religion_authority = 0.35 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { religion_authority = 0.4 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { religion_authority = 0.45 }
+		}
+		modifier = {
+			factor = 1.25
+			religion_authority = 0.5
+		}
+		modifier = {
+			factor = 1.25
+			religion_authority = 0.55
+		}
+		modifier = {
+			factor = 1.25
+			religion_authority = 0.6
+		}
+		modifier = {
+			factor = 1.25
+			religion_authority = 0.65
+		}
+		modifier = {
+			factor = 1.25
+			religion_authority = 0.7
+		}
+		modifier = {
+			factor = 1.25
+			religion_authority = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			religion_authority = 0.8
+		}
+		modifier = {
+			factor = 1.25
+			religion_authority = 0.85
+		}
+		modifier = {
+			factor = 1.25
+			religion_authority = 0.9
+		}
+		modifier = {
+			factor = 1.25
+			religion_authority = 0.95
+		}
+		modifier = {
+			factor = 4
+			trait = close_minded
+		}
+		modifier = {
+			factor = 0.25
+			trait = open_minded
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				religion_group = religious_group
+				religion = machine_cult
+			}
+			trait = spiritual
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				religion_group = religious_group
+				religion = machine_cult
+			}
+			trait = skeptical
+		}
+		modifier = {
+			factor = 0.5
+			religion_group = transhumanist_group
+			NOT = { religion = machine_cult }
+			trait = spiritual
+		}
+		modifier = {
+			factor = 2
+			religion_group = transhumanist_group
+			NOT = { religion = machine_cult }
+			trait = skeptical
+		}
+	}
+	
+	option = {
+		trigger = { has_guardian = no }
+		name = "EVTOPTACHILDHOODEDUCATION110"
+		add_trait = radical
+	}
+	option = {
+		trigger = { has_guardian = yes }
+		name = "EVTOPTBCHILDHOODEDUCATION110"
+		add_trait = radical
+		guardian = { character_event = { id = childhood_education.111 tooltip = "EVTTOOLTIPCHILDHOODEDUCATION111" days = 5 } }
+	}
+}
+
+character_event = {
+	id = childhood_education.111
+	desc = "EVTDESCCHILDHOODEDUCATION111"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION111" # Encourage behavior
+		FROM = {
+			add_trait = radical
+			hidden_tooltip = { character_event = { id = childhood_education.112 } }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				trait = pragmatic
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = FROM }
+			}
+			modifier = {
+				factor = 0
+				trait = radical
+				NOT = { religion = FROM }
+			}
+			modifier = {
+				factor = 0
+				trait = pragmatic
+				NOT = { trait = carefree }
+				opinion = { who = FROM value = 50 }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTBCHILDHOODEDUCATION111" # Try to persuade otherwise
+		if = {
+			limit = { FROM = { opinion = { who = ROOT value = 0 } } }
+			FROM = {
+				random_list = {
+					60 = {
+						add_trait = pragmatic
+						hidden_tooltip = { character_event = { id = childhood_education.113 } }
+					}
+					30 = {
+						remove_trait = radical
+						hidden_tooltip = { character_event = { id = childhood_education.114 } }
+					}
+					10 = { hidden_tooltip = { character_event = { id = childhood_education.115 } } }
+				}
+			}
+		}
+		if = {
+			limit = { FROM = { NOT = { opinion = { who = ROOT value = 0 } } } }
+			FROM = {
+				random_list = {
+					20 = {
+						add_trait = pragmatic
+						hidden_tooltip = { character_event = { id = childhood_education.113 } }
+					}
+					30 = {
+						remove_trait = radical
+						hidden_tooltip = { character_event = { id = childhood_education.114 } }
+					}
+					50 = { hidden_tooltip = { character_event = { id = childhood_education.115 } } }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				trait = radical
+				religion = FROM
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTCCHILDHOODEDUCATION111" # Punish for misbehavior
+		FROM = {
+			random_list = {
+				40 = {
+					add_trait = pragmatic
+					hidden_tooltip = { character_event = { id = childhood_education.116 } }
+				}
+				60 = { hidden_tooltip = { character_event = { id = childhood_education.117 } } }
+			}
+			random = {
+				chance = 10
+				add_trait = neurotic
+				hidden_tooltip = { character_event = { id = childhood_education.0 } }
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 3
+				trait = cold
+			}
+			modifier = {
+				factor = 3
+				trait = neurotic
+			}
+			modifier = {
+				factor = 0
+				trait = friendly
+			}
+			modifier = {
+				factor = 0
+				trait = radical
+				religion = FROM
+			}
+			modifier = {
+				factor = 0
+				religion = FROM
+				NOT = { trait = neurotic }
+				NOT = { trait = pragmatic }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = childhood_education.112
+	desc = "EVTDESCCHILDHOODEDUCATION112"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACHILDHOODEDUCATION112" }
+}
+character_event = {
+	id = childhood_education.113
+	desc = "EVTDESCCHILDHOODEDUCATION113"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION113"
+		add_trait = pragmatic
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.118 } } }
+	}
+}
+character_event = {
+	id = childhood_education.114
+	desc = "EVTDESCCHILDHOODEDUCATION114"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION114"
+		remove_trait = radical
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.118 } } }
+	}
+}
+character_event = {
+	id = childhood_education.115
+	desc = "EVTDESCCHILDHOODEDUCATION115"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION115"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.119 } } }
+	}
+}
+character_event = {
+	id = childhood_education.116
+	desc = "EVTDESCCHILDHOODEDUCATION116"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION116"
+		add_trait = pragmatic
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.118 } } }
+	}
+}
+character_event = {
+	id = childhood_education.117
+	desc = "EVTDESCCHILDHOODEDUCATION117"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION117"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.119 } } }
+	}
+}
+character_event = {
+	id = childhood_education.118
+	desc = "EVTDESCCHILDHOODEDUCATION118"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { FROM = { trait = pragmatic } }
+		name = "EVTOPTACHILDHOODEDUCATION118"
+		FROM = { add_trait = pragmatic }
+	}
+	option = {
+		trigger = { FROM = { NOT = { trait = pragmatic } } }
+		name = "EVTOPTBCHILDHOODEDUCATION118"
+		FROM = { remove_trait = radical }
+	}
+}
+character_event = {
+	id = childhood_education.119
+	desc = "EVTDESCCHILDHOODEDUCATION119"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION119"
+		FROM = { add_trait = radical }
+	}
+}
+
+# PRAGMATIC
+character_event = {
+	id = childhood_education.120
+	desc = "EVTDESCCHILDHOODEDUCATION120"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	min_age = 6
+	max_age = 16
+	
+	trigger = {
+		NOT = { trait = radical }
+		NOT = { trait = pragmatic }
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 2
+			guardian = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 2
+			father = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 2
+			mother = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 2
+			any_sibling = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 2
+			any_friend = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 0.5
+			guardian = {
+				trait = radical
+				religion = ROOT
+			}
+		}
+		modifier = {
+			factor = 0.5
+			father = {
+				trait = radical
+				religion = ROOT
+			}
+		}
+		modifier = {
+			factor = 0.5
+			mother = {
+				trait = radical
+				religion = ROOT
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_sibling = {
+				trait = radical
+				religion = ROOT
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = {
+				trait = radical
+				religion = ROOT
+			}
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { religion_authority = 0.05 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { religion_authority = 0.1 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { religion_authority = 0.15 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { religion_authority = 0.2 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { religion_authority = 0.25 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { religion_authority = 0.3 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { religion_authority = 0.35 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { religion_authority = 0.4 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { religion_authority = 0.45 }
+		}
+		modifier = {
+			factor = 0.8
+			religion_authority = 0.55
+		}
+		modifier = {
+			factor = 0.8
+			religion_authority = 0.6
+		}
+		modifier = {
+			factor = 0.8
+			religion_authority = 0.65
+		}
+		modifier = {
+			factor = 0.8
+			religion_authority = 0.7
+		}
+		modifier = {
+			factor = 0.8
+			religion_authority = 0.75
+		}
+		modifier = {
+			factor = 0.8
+			religion_authority = 0.8
+		}
+		modifier = {
+			factor = 0.8
+			religion_authority = 0.85
+		}
+		modifier = {
+			factor = 0.8
+			religion_authority = 0.9
+		}
+		modifier = {
+			factor = 0.8
+			religion_authority = 0.95
+		}
+		modifier = {
+			factor = 4
+			trait = close_minded
+		}
+		modifier = {
+			factor = 0.25
+			trait = open_minded
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				religion_group = religious_group
+				religion = machine_cult
+			}
+			trait = spiritual
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				religion_group = religious_group
+				religion = machine_cult
+			}
+			trait = skeptical
+		}
+		modifier = {
+			factor = 2
+			religion_group = transhumanist_group
+			NOT = { religion = machine_cult }
+			trait = spiritual
+		}
+		modifier = {
+			factor = 0.5
+			religion_group = transhumanist_group
+			NOT = { religion = machine_cult }
+			trait = skeptical
+		}
+	}
+	
+	option = {
+		trigger = { has_guardian = no }
+		name = "EVTOPTACHILDHOODEDUCATION120"
+		add_trait = pragmatic
+	}
+	option = {
+		trigger = { has_guardian = yes }
+		name = "EVTOPTBCHILDHOODEDUCATION120"
+		add_trait = pragmatic
+		guardian = { character_event = { id = childhood_education.121 tooltip = "EVTTOOLTIPCHILDHOODEDUCATION121" days = 5 } }
+	}
+}
+
+character_event = {
+	id = childhood_education.121
+	desc = "EVTDESCCHILDHOODEDUCATION121"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION121" # Encourage behavior
+		FROM = {
+			add_trait = pragmatic
+			hidden_tooltip = { character_event = { id = childhood_education.112 } }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				trait = radical
+				religion = FROM
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTBCHILDHOODEDUCATION121" # Try to persuade otherwise
+		if = {
+			limit = { FROM = { opinion = { who = ROOT value = 0 } } }
+			FROM = {
+				random_list = {
+					60 = {
+						add_trait = radical
+						hidden_tooltip = { character_event = { id = childhood_education.123 } }
+					}
+					30 = {
+						remove_trait = pragmatic
+						hidden_tooltip = { character_event = { id = childhood_education.124 } }
+					}
+					10 = { hidden_tooltip = { character_event = { id = childhood_education.125 } } }
+				}
+			}
+		}
+		if = {
+			limit = { FROM = { NOT = { opinion = { who = ROOT value = 0 } } } }
+			FROM = {
+				random_list = {
+					20 = {
+						add_trait = radical
+						hidden_tooltip = { character_event = { id = childhood_education.123 } }
+					}
+					30 = {
+						remove_trait = pragmatic
+						hidden_tooltip = { character_event = { id = childhood_education.124 } }
+					}
+					50 = { hidden_tooltip = { character_event = { id = childhood_education.125 } } }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				trait = pragmatic
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTCCHILDHOODEDUCATION121" # Punish for misbehavior
+		FROM = {
+			random_list = {
+				40 = {
+					add_trait = radical
+					hidden_tooltip = { character_event = { id = childhood_education.126 } }
+				}
+				60 = { hidden_tooltip = { character_event = { id = childhood_education.127 } } }
+			}
+			random = {
+				chance = 10
+				add_trait = neurotic
+				hidden_tooltip = { character_event = { id = childhood_education.0 } }
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 3
+				trait = cold
+			}
+			modifier = {
+				factor = 3
+				trait = neurotic
+			}
+			modifier = {
+				factor = 0
+				trait = friendly
+			}
+			modifier = {
+				factor = 0
+				trait = pragmatic
+			}
+			modifier = {
+				factor = 0
+				NOT = { trait = neurotic }
+				NOT = {
+					AND = {
+						trait = radical
+						religion = FROM
+					}
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = childhood_education.122
+	desc = "EVTDESCCHILDHOODEDUCATION122"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACHILDHOODEDUCATION122" }
+}
+character_event = {
+	id = childhood_education.123
+	desc = "EVTDESCCHILDHOODEDUCATION123"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION123"
+		add_trait = radical
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.128 } } }
+	}
+}
+character_event = {
+	id = childhood_education.124
+	desc = "EVTDESCCHILDHOODEDUCATION124"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION124"
+		remove_trait = pragmatic
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.128 } } }
+	}
+}
+character_event = {
+	id = childhood_education.125
+	desc = "EVTDESCCHILDHOODEDUCATION125"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION125"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.129 } } }
+	}
+}
+character_event = {
+	id = childhood_education.126
+	desc = "EVTDESCCHILDHOODEDUCATION126"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION126"
+		add_trait = radical
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.128 } } }
+	}
+}
+character_event = {
+	id = childhood_education.127
+	desc = "EVTDESCCHILDHOODEDUCATION127"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION127"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.129 } } }
+	}
+}
+character_event = {
+	id = childhood_education.128
+	desc = "EVTDESCCHILDHOODEDUCATION128"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { FROM = { trait = radical } }
+		name = "EVTOPTACHILDHOODEDUCATION128"
+		FROM = { add_trait = radical }
+	}
+	option = {
+		trigger = { FROM = { NOT = { trait = radical } } }
+		name = "EVTOPTBCHILDHOODEDUCATION128"
+		FROM = { remove_trait = pragmatic }
+	}
+}
+character_event = {
+	id = childhood_education.129
+	desc = "EVTDESCCHILDHOODEDUCATION129"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION129"
+		FROM = { add_trait = pragmatic }
+	}
+}
+
+# HUMBLE
+character_event = {
+	id = childhood_education.130
+	desc = "EVTDESCCHILDHOODEDUCATION130"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	min_age = 6
+	max_age = 16
+	
+	trigger = {
+		NOT = { trait = humble }
+		NOT = { trait = proud }
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 2
+			guardian = { trait = humble }
+		}
+		modifier = {
+			factor = 2
+			father = { trait = humble }
+		}
+		modifier = {
+			factor = 2
+			mother = { trait = humble }
+		}
+		modifier = {
+			factor = 2
+			any_sibling = { trait = humble }
+		}
+		modifier = {
+			factor = 2
+			any_friend = { trait = humble }
+		}
+		modifier = {
+			factor = 0.5
+			guardian = { trait = proud }
+		}
+		modifier = {
+			factor = 0.5
+			father = { trait = proud }
+		}
+		modifier = {
+			factor = 0.5
+			mother = { trait = proud }
+		}
+		modifier = {
+			factor = 0.5
+			any_sibling = { trait = proud }
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = { trait = proud }
+		}
+		modifier = {
+			factor = 4
+			NOT = { prestige = 0 }
+		}
+		modifier = {
+			factor = 0.5
+			prestige = 100
+		}
+		modifier = {
+			factor = 0.5
+			prestige = 200
+		}
+		modifier = {
+			factor = 0.5
+			prestige = 300
+		}
+		modifier = {
+			factor = 0.5
+			prestige = 400
+		}
+		modifier = {
+			factor = 0.5
+			prestige = 500
+		}
+		modifier = {
+			factor = 0.5
+			prestige = 600
+		}
+		modifier = {
+			factor = 0.5
+			prestige = 700
+		}
+		modifier = {
+			factor = 0.5
+			prestige = 800
+		}
+		modifier = {
+			factor = 0.5
+			prestige = 900
+		}
+		modifier = {
+			factor = 0.5
+			prestige = 1000
+		}
+	}
+	
+	option = {
+		trigger = { has_guardian = no }
+		name = "EVTOPTACHILDHOODEDUCATION130"
+		add_trait = humble
+	}
+	option = {
+		trigger = { has_guardian = yes }
+		name = "EVTOPTBCHILDHOODEDUCATION130"
+		add_trait = humble
+		guardian = { character_event = { id = childhood_education.131 tooltip = "EVTTOOLTIPCHILDHOODEDUCATION131" days = 5 } }
+	}
+}
+
+character_event = {
+	id = childhood_education.131
+	desc = "EVTDESCCHILDHOODEDUCATION131"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION131" # Encourage behavior
+		FROM = {
+			add_trait = humble
+			hidden_tooltip = { character_event = { id = childhood_education.132 } }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 3
+				trait = proud
+				NOT = { opinion = { who = FROM value = 0 } }
+				NOT = { dynasty = FROM }
+				NOT = { is_close_relative = FROM }
+			}
+			modifier = {
+				factor = 0
+				trait = proud
+				OR = {
+					opinion = { who = FROM value = 0 }
+					dynasty = FROM
+					is_close_relative = FROM
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTBCHILDHOODEDUCATION131" # Try to persuade otherwise
+		if = {
+			limit = { FROM = { opinion = { who = ROOT value = 0 } } }
+			FROM = {
+				random_list = {
+					60 = {
+						add_trait = proud
+						hidden_tooltip = { character_event = { id = childhood_education.133 } }
+					}
+					30 = {
+						remove_trait = humble
+						hidden_tooltip = { character_event = { id = childhood_education.134 } }
+					}
+					10 = { hidden_tooltip = { character_event = { id = childhood_education.135 } } }
+				}
+			}
+		}
+		if = {
+			limit = { FROM = { NOT = { opinion = { who = ROOT value = 0 } } } }
+			FROM = {
+				random_list = {
+					20 = {
+						add_trait = proud
+						hidden_tooltip = { character_event = { id = childhood_education.133 } }
+					}
+					30 = {
+						remove_trait = humble
+						hidden_tooltip = { character_event = { id = childhood_education.134 } }
+					}
+					50 = { hidden_tooltip = { character_event = { id = childhood_education.135 } } }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				trait = humble
+			}
+			modifier = {
+				factor = 0
+				trait = proud
+				NOT = { opinion = { who = FROM value = 0 } }
+				NOT = { dynasty = FROM }
+				NOT = { is_close_relative = FROM }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTCCHILDHOODEDUCATION131" # Punish for misbehavior
+		FROM = {
+			random_list = {
+				40 = {
+					add_trait = proud
+					hidden_tooltip = { character_event = { id = childhood_education.136 } }
+				}
+				60 = { hidden_tooltip = { character_event = { id = childhood_education.137 } } }
+			}
+			random = {
+				chance = 10
+				add_trait = neurotic
+				hidden_tooltip = { character_event = { id = childhood_education.0 } }
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 3
+				trait = cold
+			}
+			modifier = {
+				factor = 3
+				trait = neurotic
+			}
+			modifier = {
+				factor = 0
+				trait = friendly
+			}
+			modifier = {
+				factor = 0
+				trait = humble
+			}
+			modifier = {
+				factor = 0
+				trait = proud
+				NOT = { opinion = { who = FROM value = 0 } }
+				NOT = { dynasty = FROM }
+				NOT = { is_close_relative = FROM }
+			}
+			modifier = {
+				factor = 0
+				NOT = { trait = neurotic }
+				NOT = {
+					AND = {
+						trait = proud
+						OR = {
+							opinion = { who = FROM value = 0 }
+							dynasty = FROM
+							is_close_relative = FROM
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = childhood_education.132
+	desc = "EVTDESCCHILDHOODEDUCATION132"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACHILDHOODEDUCATION132" }
+}
+character_event = {
+	id = childhood_education.133
+	desc = "EVTDESCCHILDHOODEDUCATION133"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION133"
+		add_trait = proud
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.138 } } }
+	}
+}
+character_event = {
+	id = childhood_education.134
+	desc = "EVTDESCCHILDHOODEDUCATION134"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION134"
+		remove_trait = humble
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.138 } } }
+	}
+}
+character_event = {
+	id = childhood_education.135
+	desc = "EVTDESCCHILDHOODEDUCATION135"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION135"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.139 } } }
+	}
+}
+character_event = {
+	id = childhood_education.136
+	desc = "EVTDESCCHILDHOODEDUCATION136"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION136"
+		add_trait = proud
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.138 } } }
+	}
+}
+character_event = {
+	id = childhood_education.137
+	desc = "EVTDESCCHILDHOODEDUCATION137"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION137"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.139 } } }
+	}
+}
+character_event = {
+	id = childhood_education.138
+	desc = "EVTDESCCHILDHOODEDUCATION138"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { FROM = { trait = proud } }
+		name = "EVTOPTACHILDHOODEDUCATION138"
+		FROM = { add_trait = proud }
+	}
+	option = {
+		trigger = { FROM = { NOT = { trait = proud } } }
+		name = "EVTOPTBCHILDHOODEDUCATION138"
+		FROM = { remove_trait = humble }
+	}
+}
+character_event = {
+	id = childhood_education.139
+	desc = "EVTDESCCHILDHOODEDUCATION139"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION139"
+		FROM = { add_trait = humble }
+	}
+}
+
+# PROUD
+character_event = {
+	id = childhood_education.140
+	desc = "EVTDESCCHILDHOODEDUCATION140"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	min_age = 6
+	max_age = 16
+	
+	trigger = {
+		NOT = { trait = humble }
+		NOT = { trait = proud }
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 2
+			guardian = { trait = proud }
+		}
+		modifier = {
+			factor = 2
+			father = { trait = proud }
+		}
+		modifier = {
+			factor = 2
+			mother = { trait = proud }
+		}
+		modifier = {
+			factor = 2
+			any_sibling = { trait = proud }
+		}
+		modifier = {
+			factor = 2
+			any_friend = { trait = proud }
+		}
+		modifier = {
+			factor = 0.5
+			guardian = { trait = humble }
+		}
+		modifier = {
+			factor = 0.5
+			father = { trait = humble }
+		}
+		modifier = {
+			factor = 0.5
+			mother = { trait = humble }
+		}
+		modifier = {
+			factor = 0.5
+			any_sibling = { trait = humble }
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = { trait = humble }
+		}
+		modifier = {
+			factor = 0
+			NOT = { prestige = 0 }
+		}
+		modifier = {
+			factor = 2
+			prestige = 100
+		}
+		modifier = {
+			factor = 2
+			prestige = 200
+		}
+		modifier = {
+			factor = 2
+			prestige = 300
+		}
+		modifier = {
+			factor = 2
+			prestige = 400
+		}
+		modifier = {
+			factor = 2
+			prestige = 500
+		}
+		modifier = {
+			factor = 2
+			prestige = 600
+		}
+		modifier = {
+			factor = 2
+			prestige = 700
+		}
+		modifier = {
+			factor = 2
+			prestige = 800
+		}
+		modifier = {
+			factor = 2
+			prestige = 900
+		}
+		modifier = {
+			factor = 2
+			prestige = 1000
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				trait = neurotic
+				trait = confident
+			}
+		}
+	}
+	
+	option = {
+		trigger = { has_guardian = no }
+		name = "EVTOPTACHILDHOODEDUCATION140"
+		add_trait = proud
+	}
+	option = {
+		trigger = { has_guardian = yes }
+		name = "EVTOPTBCHILDHOODEDUCATION140"
+		add_trait = proud
+		guardian = { character_event = { id = childhood_education.141 tooltip = "EVTTOOLTIPCHILDHOODEDUCATION141" days = 5 } }
+	}
+}
+
+character_event = {
+	id = childhood_education.141
+	desc = "EVTDESCCHILDHOODEDUCATION141"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION141" # Encourage behavior
+		FROM = {
+			add_trait = proud
+			hidden_tooltip = { character_event = { id = childhood_education.132 } }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 3
+				trait = proud
+			}
+			modifier = {
+				factor = 0
+				trait = proud
+				NOT = { opinion = { who = FROM value = 0 } }
+				NOT = { dynasty = FROM }
+				NOT = { is_close_relative = FROM }
+			}
+			modifier = {
+				factor = 0
+				trait = humble
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTBCHILDHOODEDUCATION141" # Try to persuade otherwise
+		if = {
+			limit = { FROM = { opinion = { who = ROOT value = 0 } } }
+			FROM = {
+				random_list = {
+					60 = {
+						add_trait = humble
+						hidden_tooltip = { character_event = { id = childhood_education.143 } }
+					}
+					30 = {
+						remove_trait = proud
+						hidden_tooltip = { character_event = { id = childhood_education.144 } }
+					}
+					10 = { hidden_tooltip = { character_event = { id = childhood_education.145 } } }
+				}
+			}
+		}
+		if = {
+			limit = { FROM = { NOT = { opinion = { who = ROOT value = 0 } } } }
+			FROM = {
+				random_list = {
+					20 = {
+						add_trait = humble
+						hidden_tooltip = { character_event = { id = childhood_education.143 } }
+					}
+					30 = {
+						remove_trait = proud
+						hidden_tooltip = { character_event = { id = childhood_education.144 } }
+					}
+					50 = { hidden_tooltip = { character_event = { id = childhood_education.145 } } }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				trait = proud
+				OR = {
+					opinion = { who = FROM value = 0 }
+					dynasty = FROM
+					is_close_relative = FROM
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTCCHILDHOODEDUCATION141" # Punish for misbehavior
+		FROM = {
+			random_list = {
+				40 = {
+					add_trait = humble
+					hidden_tooltip = { character_event = { id = childhood_education.146 } }
+				}
+				60 = { hidden_tooltip = { character_event = { id = childhood_education.147 } } }
+			}
+			random = {
+				chance = 10
+				add_trait = neurotic
+				hidden_tooltip = { character_event = { id = childhood_education.0 } }
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 3
+				trait = cold
+			}
+			modifier = {
+				factor = 3
+				trait = neurotic
+			}
+			modifier = {
+				factor = 0
+				trait = friendly
+			}
+			modifier = {
+				factor = 0
+				trait = proud
+			}
+			modifier = {
+				factor = 0
+				NOT = { trait = neurotic }
+				NOT = {
+					AND = {
+						trait = proud
+						NOT = { opinion = { who = FROM value = 0 } }
+						NOT = { dynasty = FROM }
+						NOT = { is_close_relative = FROM }
+					}
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = childhood_education.142
+	desc = "EVTDESCCHILDHOODEDUCATION142"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACHILDHOODEDUCATION142" }
+}
+character_event = {
+	id = childhood_education.143
+	desc = "EVTDESCCHILDHOODEDUCATION143"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION143"
+		add_trait = humble
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.148 } } }
+	}
+}
+character_event = {
+	id = childhood_education.144
+	desc = "EVTDESCCHILDHOODEDUCATION144"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION144"
+		remove_trait = proud
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.148 } } }
+	}
+}
+character_event = {
+	id = childhood_education.145
+	desc = "EVTDESCCHILDHOODEDUCATION145"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION145"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.149 } } }
+	}
+}
+character_event = {
+	id = childhood_education.146
+	desc = "EVTDESCCHILDHOODEDUCATION146"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION146"
+		add_trait = humble
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.148 } } }
+	}
+}
+character_event = {
+	id = childhood_education.147
+	desc = "EVTDESCCHILDHOODEDUCATION147"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION147"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.149 } } }
+	}
+}
+character_event = {
+	id = childhood_education.148
+	desc = "EVTDESCCHILDHOODEDUCATION148"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { FROM = { trait = humble } }
+		name = "EVTOPTACHILDHOODEDUCATION148"
+		FROM = { add_trait = humble }
+	}
+	option = {
+		trigger = { FROM = { NOT = { trait = humble } } }
+		name = "EVTOPTBCHILDHOODEDUCATION148"
+		FROM = { remove_trait = proud }
+	}
+}
+character_event = {
+	id = childhood_education.149
+	desc = "EVTDESCCHILDHOODEDUCATION149"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION149"
+		FROM = { add_trait = proud }
+	}
+}
+
+# CONTENT
+character_event = {
+	id = childhood_education.150
+	desc = "EVTDESCCHILDHOODEDUCATION150"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	trigger = {
+		age = 6
+		NOT = { age = 16 }
+		
+		NOT = { trait = content }
+		NOT = { trait = ambitious }
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 2
+			guardian = { trait = content }
+		}
+		modifier = {
+			factor = 2
+			father = { trait = content }
+		}
+		modifier = {
+			factor = 2
+			mother = { trait = content }
+		}
+		modifier = {
+			factor = 2
+			any_sibling = { trait = content }
+		}
+		modifier = {
+			factor = 2
+			any_friend = { trait = content }
+		}
+		modifier = {
+			factor = 0.5
+			guardian = { trait = ambitious }
+		}
+		modifier = {
+			factor = 0.5
+			father = { trait = ambitious }
+		}
+		modifier = {
+			factor = 0.5
+			mother = { trait = ambitious }
+		}
+		modifier = {
+			factor = 0.5
+			any_sibling = { trait = ambitious }
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = { trait = ambitious }
+		}
+	}
+	
+	option = {
+		trigger = { has_guardian = no }
+		name = "EVTOPTACHILDHOODEDUCATION150"
+		add_trait = content
+	}
+	option = {
+		trigger = { has_guardian = yes }
+		name = "EVTOPTBCHILDHOODEDUCATION150"
+		add_trait = content
+		guardian = { character_event = { id = childhood_education.151 tooltip = "EVTTOOLTIPCHILDHOODEDUCATION151" days = 5 } }
+	}
+}
+
+character_event = {
+	id = childhood_education.151
+	desc = "EVTDESCCHILDHOODEDUCATION151"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION151" # Encourage behavior
+		FROM = {
+			add_trait = content
+			hidden_tooltip = { character_event = { id = childhood_education.152 } }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 4
+				OR = {
+					FROM = { any_pretender_title = { holder_scope = { character = ROOT } } }
+					FROM = { any_heir_title = { holder_scope = { liege = { character = ROOT } } } }
+					FROM = {
+						is_landed = yes
+						liege = { character = ROOT }
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					trait = proud
+					trait = ambitious
+				}
+				FROM = { any_heir_title = { holder_scope = { character = ROOT } } }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTBCHILDHOODEDUCATION151" # Try to persuade otherwise
+		if = {
+			limit = { FROM = { opinion = { who = ROOT value = 0 } } }
+			FROM = {
+				random_list = {
+					60 = {
+						add_trait = ambitious
+						hidden_tooltip = { character_event = { id = childhood_education.153 } }
+					}
+					30 = {
+						remove_trait = content
+						hidden_tooltip = { character_event = { id = childhood_education.154 } }
+					}
+					10 = { hidden_tooltip = { character_event = { id = childhood_education.155 } } }
+				}
+			}
+		}
+		if = {
+			limit = { FROM = { NOT = { opinion = { who = ROOT value = 0 } } } }
+			FROM = {
+				random_list = {
+					20 = {
+						add_trait = ambitious
+						hidden_tooltip = { character_event = { id = childhood_education.153 } }
+					}
+					30 = {
+						remove_trait = content
+						hidden_tooltip = { character_event = { id = childhood_education.154 } }
+					}
+					50 = { hidden_tooltip = { character_event = { id = childhood_education.155 } } }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				trait = content
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTCCHILDHOODEDUCATION151" # Punish for misbehavior
+		FROM = {
+			random_list = {
+				40 = {
+					add_trait = ambitious
+					hidden_tooltip = { character_event = { id = childhood_education.156 } }
+				}
+				60 = { hidden_tooltip = { character_event = { id = childhood_education.157 } } }
+			}
+			random = {
+				chance = 10
+				add_trait = neurotic
+				hidden_tooltip = { character_event = { id = childhood_education.0 } }
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 3
+				trait = cold
+			}
+			modifier = {
+				factor = 3
+				trait = neurotic
+			}
+			modifier = {
+				factor = 0
+				trait = friendly
+			}
+			modifier = {
+				factor = 0
+				trait = content
+			}
+			modifier = {
+				factor = 0
+				NOT = { trait = neurotic }
+				NOT = {
+					AND = {
+						OR = {
+							trait = proud
+							trait = ambitious
+						}
+						FROM = { any_heir_title = { holder_scope = { character = ROOT } } }
+					}
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = childhood_education.152
+	desc = "EVTDESCCHILDHOODEDUCATION152"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACHILDHOODEDUCATION152" }
+}
+character_event = {
+	id = childhood_education.153
+	desc = "EVTDESCCHILDHOODEDUCATION153"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION153"
+		add_trait = ambitious
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.158 } } }
+	}
+}
+character_event = {
+	id = childhood_education.154
+	desc = "EVTDESCCHILDHOODEDUCATION154"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION154"
+		remove_trait = content
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.158 } } }
+	}
+}
+character_event = {
+	id = childhood_education.155
+	desc = "EVTDESCCHILDHOODEDUCATION155"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION155"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.159 } } }
+	}
+}
+character_event = {
+	id = childhood_education.156
+	desc = "EVTDESCCHILDHOODEDUCATION156"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION156"
+		add_trait = ambitious
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.158 } } }
+	}
+}
+character_event = {
+	id = childhood_education.157
+	desc = "EVTDESCCHILDHOODEDUCATION157"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION157"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.159 } } }
+	}
+}
+character_event = {
+	id = childhood_education.158
+	desc = "EVTDESCCHILDHOODEDUCATION158"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { FROM = { trait = ambitious } }
+		name = "EVTOPTACHILDHOODEDUCATION158"
+		FROM = { add_trait = ambitious }
+	}
+	option = {
+		trigger = { FROM = { NOT = { trait = ambitious } } }
+		name = "EVTOPTBCHILDHOODEDUCATION158"
+		FROM = { remove_trait = content }
+	}
+}
+character_event = {
+	id = childhood_education.159
+	desc = "EVTDESCCHILDHOODEDUCATION159"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION159"
+		FROM = { add_trait = content }
+	}
+}
+
+# AMBITIOUS
+character_event = {
+	id = childhood_education.160
+	desc = "EVTDESCCHILDHOODEDUCATION160"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	min_age = 6
+	max_age = 16
+	
+	trigger = {
+		NOT = { trait = content }
+		NOT = { trait = ambitious }
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 2
+			guardian = { trait = ambitious }
+		}
+		modifier = {
+			factor = 2
+			father = { trait = ambitious }
+		}
+		modifier = {
+			factor = 2
+			mother = { trait = ambitious }
+		}
+		modifier = {
+			factor = 2
+			any_sibling = { trait = ambitious }
+		}
+		modifier = {
+			factor = 2
+			any_friend = { trait = ambitious }
+		}
+		modifier = {
+			factor = 0.5
+			guardian = { trait = content }
+		}
+		modifier = {
+			factor = 0.5
+			father = { trait = content }
+		}
+		modifier = {
+			factor = 0.5
+			mother = { trait = content }
+		}
+		modifier = {
+			factor = 0.5
+			any_sibling = { trait = content }
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = { trait = content }
+		}
+		modifier = {
+			factor = 2
+			trait = proud
+		}
+		modifier = {
+			factor = 0.5
+			trait = humble
+		}
+		modifier = {
+			factor = 2
+			trait = confident
+		}
+		modifier = {
+			factor = 4
+			any_claim = {
+				NOT = { holder_scope = { character = ROOT } }
+				NOT = { current_heir = { character = ROOT } }
+			}
+		}
+	}
+	
+	option = {
+		trigger = { has_guardian = no }
+		name = "EVTOPTACHILDHOODEDUCATION160"
+		add_trait = ambitious
+	}
+	option = {
+		trigger = { has_guardian = yes }
+		name = "EVTOPTBCHILDHOODEDUCATION160"
+		add_trait = ambitious
+		guardian = { character_event = { id = childhood_education.161 tooltip = "EVTTOOLTIPCHILDHOODEDUCATION161" days = 5 } }
+	}
+}
+
+character_event = {
+	id = childhood_education.161
+	desc = "EVTDESCCHILDHOODEDUCATION161"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION161" # Encourage behavior
+		FROM = {
+			add_trait = ambitious
+			hidden_tooltip = { character_event = { id = childhood_education.152 } }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				trait = content
+			}
+			modifier = {
+				factor = 0
+				NOT = { primary_title = { current_heir = { character = FROM } } }
+				NOT = {
+					OR = {
+						trait = proud
+						trait = ambitious
+					}
+					OR = {
+						is_close_relative = FROM
+						dynasty = FROM
+					}
+				}
+				FROM = {
+					OR = {
+						any_pretender_title = { holder_scope = { character = ROOT } }
+						any_heir_title = { holder_scope = { liege = { character = ROOT } } }
+						AND = {
+							is_landed = yes
+							liege = { character = ROOT }
+						}
+						AND = {
+							any_claim = {
+								holder_scope = { character = ROOT }
+								NOT = { current_heir = { character = FROM } }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTBCHILDHOODEDUCATION161" # Try to persuade otherwise
+		if = {
+			limit = { FROM = { opinion = { who = ROOT value = 0 } } }
+			FROM = {
+				random_list = {
+					60 = {
+						add_trait = content
+						hidden_tooltip = { character_event = { id = childhood_education.163 } }
+					}
+					30 = {
+						remove_trait = ambitious
+						hidden_tooltip = { character_event = { id = childhood_education.164 } }
+					}
+					10 = { hidden_tooltip = { character_event = { id = childhood_education.165 } } }
+				}
+			}
+		}
+		if = {
+			limit = { FROM = { NOT = { opinion = { who = ROOT value = 0 } } } }
+			FROM = {
+				random_list = {
+					20 = {
+						add_trait = content
+						hidden_tooltip = { character_event = { id = childhood_education.163 } }
+					}
+					30 = {
+						remove_trait = ambitious
+						hidden_tooltip = { character_event = { id = childhood_education.164 } }
+					}
+					50 = { hidden_tooltip = { character_event = { id = childhood_education.165 } } }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+						trait = proud
+						trait = ambitious
+				}
+				OR = {
+					is_close_relative = FROM
+					dynasty = FROM
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTCCHILDHOODEDUCATION161" # Punish for misbehavior
+		FROM = {
+			random_list = {
+				40 = {
+					add_trait = content
+					hidden_tooltip = { character_event = { id = childhood_education.166 } }
+				}
+				60 = { hidden_tooltip = { character_event = { id = childhood_education.167 } } }
+			}
+			random = {
+				chance = 10
+				add_trait = neurotic
+				hidden_tooltip = { character_event = { id = childhood_education.0 } }
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 3
+				trait = cold
+			}
+			modifier = {
+				factor = 3
+				trait = neurotic
+			}
+			modifier = {
+				factor = 0
+				trait = friendly
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					trait = proud
+					trait = ambitious
+				}
+				OR = {
+					is_close_relative = FROM
+					dynasty = FROM
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = { trait = neurotic }
+				NOT = {
+					AND = {
+						NOT = { primary_title = { current_heir = { character = FROM } } }
+						FROM = {
+							OR = {
+								any_pretender_title = { holder_scope = { character = ROOT } }
+								any_heir_title = { holder_scope = { liege = { character = ROOT } } }
+								AND = {
+									is_landed = yes
+									liege = { character = ROOT }
+								}
+								AND = {
+									any_claim = {
+										holder_scope = { character = ROOT }
+										NOT = { current_heir = { character = FROM } }
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = childhood_education.162
+	desc = "EVTDESCCHILDHOODEDUCATION162"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACHILDHOODEDUCATION162" }
+}
+character_event = {
+	id = childhood_education.163
+	desc = "EVTDESCCHILDHOODEDUCATION163"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION163"
+		add_trait = content
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.168 } } }
+	}
+}
+character_event = {
+	id = childhood_education.164
+	desc = "EVTDESCCHILDHOODEDUCATION164"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION164"
+		remove_trait = ambitious
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.168 } } }
+	}
+}
+character_event = {
+	id = childhood_education.165
+	desc = "EVTDESCCHILDHOODEDUCATION165"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION165"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.169 } } }
+	}
+}
+character_event = {
+	id = childhood_education.166
+	desc = "EVTDESCCHILDHOODEDUCATION166"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION166"
+		add_trait = content
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.168 } } }
+	}
+}
+character_event = {
+	id = childhood_education.167
+	desc = "EVTDESCCHILDHOODEDUCATION167"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION167"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.169 } } }
+	}
+}
+character_event = {
+	id = childhood_education.168
+	desc = "EVTDESCCHILDHOODEDUCATION168"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { FROM = { trait = content } }
+		name = "EVTOPTACHILDHOODEDUCATION168"
+		FROM = { add_trait = content }
+	}
+	option = {
+		trigger = { FROM = { NOT = { trait = content } } }
+		name = "EVTOPTBCHILDHOODEDUCATION168"
+		FROM = { remove_trait = ambitious }
+	}
+}
+character_event = {
+	id = childhood_education.169
+	desc = "EVTDESCCHILDHOODEDUCATION169"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION169"
+		FROM = { add_trait = ambitious }
+	}
+}
+
+# BRAVE
+character_event = {
+	id = childhood_education.170
+	desc = "EVTDESCCHILDHOODEDUCATION170"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	min_age = 6
+	max_age = 16
+	
+	trigger = {
+		NOT = { trait = brave }
+		NOT = { trait = craven }
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 2
+			guardian = { trait = brave }
+		}
+		modifier = {
+			factor = 2
+			father = { trait = brave }
+		}
+		modifier = {
+			factor = 2
+			mother = { trait = brave }
+		}
+		modifier = {
+			factor = 2
+			any_sibling = { trait = brave }
+		}
+		modifier = {
+			factor = 2
+			any_friend = { trait = brave }
+		}
+		modifier = {
+			factor = 0.5
+			guardian = { trait = craven }
+		}
+		modifier = {
+			factor = 0.5
+			father = { trait = craven }
+		}
+		modifier = {
+			factor = 0.5
+			mother = { trait = craven }
+		}
+		modifier = {
+			factor = 0.5
+			any_sibling = { trait = craven }
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = { trait = craven }
+		}
+		
+		modifier = {
+			factor = 5
+			trait = confident
+		}
+		modifier = {
+			factor = 0.2
+			trait = neurotic
+		}
+		
+		modifier = {
+			factor = 2
+			trait = open_minded
+		}
+		modifier = {
+			factor = 0.5
+			trait = close_minded
+		}
+	}
+	
+	option = {
+		trigger = { has_guardian = no }
+		name = "EVTOPTACHILDHOODEDUCATION170"
+		add_trait = brave
+	}
+	option = {
+		trigger = { has_guardian = yes }
+		name = "EVTOPTBCHILDHOODEDUCATION170"
+		add_trait = brave
+		guardian = { character_event = { id = childhood_education.171 tooltip = "EVTTOOLTIPCHILDHOODEDUCATION171" days = 5 } }
+	}
+}
+
+character_event = {
+	id = childhood_education.171
+	desc = "EVTDESCCHILDHOODEDUCATION171"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION171" # Encourage behavior
+		FROM = {
+			add_trait = brave
+			hidden_tooltip = { character_event = { id = childhood_education.172 } }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 0.1
+				OR = {
+					trait = craven
+					trait = neurotic
+				}
+				is_close_relative = FROM
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					trait = craven
+					trait = neurotic
+				}
+				FROM = {
+					OR = {
+						is_close_relative = ROOT
+						trait = wounded
+						trait = scarred
+						trait = maimed
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTBCHILDHOODEDUCATION171" # Try to persuade otherwise
+		if = {
+			limit = { FROM = { opinion = { who = ROOT value = 0 } } }
+			FROM = {
+				random_list = {
+					60 = {
+						add_trait = craven
+						hidden_tooltip = { character_event = { id = childhood_education.173 } }
+					}
+					30 = {
+						remove_trait = brave
+						hidden_tooltip = { character_event = { id = childhood_education.174 } }
+					}
+					10 = { hidden_tooltip = { character_event = { id = childhood_education.175 } } }
+				}
+			}
+		}
+		if = {
+			limit = { FROM = { NOT = { opinion = { who = ROOT value = 0 } } } }
+			FROM = {
+				random_list = {
+					20 = {
+						add_trait = craven
+						hidden_tooltip = { character_event = { id = childhood_education.173 } }
+					}
+					30 = {
+						remove_trait = brave
+						hidden_tooltip = { character_event = { id = childhood_education.174 } }
+					}
+					50 = { hidden_tooltip = { character_event = { id = childhood_education.175 } } }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				trait = brave
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTCCHILDHOODEDUCATION171" # Punish for misbehavior
+		FROM = {
+			random_list = {
+				40 = {
+					add_trait = craven
+					hidden_tooltip = { character_event = { id = childhood_education.176 } }
+				}
+				60 = { hidden_tooltip = { character_event = { id = childhood_education.177 } } }
+			}
+			random = {
+				chance = 10
+				add_trait = neurotic
+				hidden_tooltip = { character_event = { id = childhood_education.0 } }
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 3
+				trait = cold
+			}
+			modifier = {
+				factor = 3
+				trait = neurotic
+			}
+			modifier = {
+				factor = 0
+				trait = friendly
+			}
+			modifier = {
+				factor = 0
+				NOT = { trait = neurotic }
+				NOT = { trait = craven }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = childhood_education.172
+	desc = "EVTDESCCHILDHOODEDUCATION172"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACHILDHOODEDUCATION172" }
+}
+character_event = {
+	id = childhood_education.173
+	desc = "EVTDESCCHILDHOODEDUCATION173"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION173"
+		add_trait = craven
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.178 } } }
+	}
+}
+character_event = {
+	id = childhood_education.174
+	desc = "EVTDESCCHILDHOODEDUCATION174"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION174"
+		remove_trait = brave
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.178 } } }
+	}
+}
+character_event = {
+	id = childhood_education.175
+	desc = "EVTDESCCHILDHOODEDUCATION175"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION175"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.179 } } }
+	}
+}
+character_event = {
+	id = childhood_education.176
+	desc = "EVTDESCCHILDHOODEDUCATION176"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION176"
+		add_trait = craven
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.178 } } }
+	}
+}
+character_event = {
+	id = childhood_education.177
+	desc = "EVTDESCCHILDHOODEDUCATION177"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION177"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.179 } } }
+	}
+}
+character_event = {
+	id = childhood_education.178
+	desc = "EVTDESCCHILDHOODEDUCATION178"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { FROM = { trait = craven } }
+		name = "EVTOPTACHILDHOODEDUCATION178"
+		FROM = { add_trait = craven }
+	}
+	option = {
+		trigger = { FROM = { NOT = { trait = craven } } }
+		name = "EVTOPTBCHILDHOODEDUCATION178"
+		FROM = { remove_trait = brave }
+	}
+}
+character_event = {
+	id = childhood_education.179
+	desc = "EVTDESCCHILDHOODEDUCATION179"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION179"
+		FROM = { add_trait = brave }
+	}
+}
+
+# CRAVEN
+character_event = {
+	id = childhood_education.180
+	desc = "EVTDESCCHILDHOODEDUCATION180"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	min_age = 6
+	max_age = 16
+	
+	trigger = {
+		NOT = { trait = brave }
+		NOT = { trait = craven }
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 2
+			guardian = { trait = craven }
+		}
+		modifier = {
+			factor = 2
+			father = { trait = craven }
+		}
+		modifier = {
+			factor = 2
+			mother = { trait = craven }
+		}
+		modifier = {
+			factor = 2
+			any_sibling = { trait = craven }
+		}
+		modifier = {
+			factor = 2
+			any_friend = { trait = craven }
+		}
+		modifier = {
+			factor = 0.5
+			guardian = { trait = brave }
+		}
+		modifier = {
+			factor = 0.5
+			father = { trait = brave }
+		}
+		modifier = {
+			factor = 0.5
+			mother = { trait = brave }
+		}
+		modifier = {
+			factor = 0.5
+			any_sibling = { trait = brave }
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = { trait = brave }
+		}
+	}
+	
+	option = {
+		trigger = { has_guardian = no }
+		name = "EVTOPTACHILDHOODEDUCATION180"
+		add_trait = craven
+	}
+	option = {
+		trigger = { has_guardian = yes }
+		name = "EVTOPTBCHILDHOODEDUCATION180"
+		add_trait = craven
+		guardian = { character_event = { id = childhood_education.181 tooltip = "EVTTOOLTIPCHILDHOODEDUCATION181" days = 5 } }
+	}
+}
+
+character_event = {
+	id = childhood_education.181
+	desc = "EVTDESCCHILDHOODEDUCATION181"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION181" # Encourage behavior
+		FROM = {
+			add_trait = craven
+			hidden_tooltip = { character_event = { id = childhood_education.172 } }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				OR = {
+					trait = misguided_warrior
+					trait = tough_soldier
+					trait = skilled_tactician
+					trait = brilliant_strategist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { trait = open_minded }
+				OR = {
+					trait = misguided_warrior
+					trait = tough_soldier
+					trait = skilled_tactician
+					trait = brilliant_strategist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				trait = close_minded
+				OR = {
+					trait = misguided_warrior
+					trait = tough_soldier
+					trait = skilled_tactician
+					trait = brilliant_strategist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				trait = proud
+				is_close_relative = FROM
+				OR = {
+					trait = misguided_warrior
+					trait = tough_soldier
+					trait = skilled_tactician
+					trait = brilliant_strategist
+				}
+			}
+			modifier = {
+				factor = 0
+				trait = brave
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTBCHILDHOODEDUCATION181" # Try to persuade otherwise
+		if = {
+			limit = { FROM = { opinion = { who = ROOT value = 0 } } }
+			FROM = {
+				random_list = {
+					60 = {
+						add_trait = brave
+						hidden_tooltip = { character_event = { id = childhood_education.183 } }
+					}
+					30 = {
+						remove_trait = craven
+						hidden_tooltip = { character_event = { id = childhood_education.184 } }
+					}
+					10 = { hidden_tooltip = { character_event = { id = childhood_education.185 } } }
+				}
+			}
+		}
+		if = {
+			limit = { FROM = { NOT = { opinion = { who = ROOT value = 0 } } } }
+			FROM = {
+				random_list = {
+					20 = {
+						add_trait = brave
+						hidden_tooltip = { character_event = { id = childhood_education.183 } }
+					}
+					30 = {
+						remove_trait = craven
+						hidden_tooltip = { character_event = { id = childhood_education.184 } }
+					}
+					50 = { hidden_tooltip = { character_event = { id = childhood_education.185 } } }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					trait = craven
+					trait = neurotic
+				}
+				FROM = {
+					OR = {
+						is_close_relative = ROOT
+						trait = wounded
+						trait = scarred
+						trait = maimed
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTCCHILDHOODEDUCATION181" # Punish for misbehavior
+		FROM = {
+			random_list = {
+				40 = {
+					add_trait = brave
+					hidden_tooltip = { character_event = { id = childhood_education.186 } }
+				}
+				60 = { hidden_tooltip = { character_event = { id = childhood_education.187 } } }
+			}
+			random = {
+				chance = 10
+				add_trait = neurotic
+				hidden_tooltip = { character_event = { id = childhood_education.0 } }
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 3
+				trait = cold
+			}
+			modifier = {
+				factor = 3
+				trait = neurotic
+			}
+			modifier = {
+				factor = 0
+				trait = friendly
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					trait = craven
+					trait = neurotic
+				}
+				FROM = {
+					OR = {
+						is_close_relative = ROOT
+						trait = wounded
+						trait = scarred
+						trait = maimed
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = { trait = neurotic }
+				NOT = {
+					AND = {
+						NOT = { trait = open_minded }
+						OR = {
+							trait = brave
+							trait = misguided_warrior
+							trait = tough_soldier
+							trait = skilled_tactician
+							trait = brilliant_strategist
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = childhood_education.182
+	desc = "EVTDESCCHILDHOODEDUCATION182"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACHILDHOODEDUCATION182" }
+}
+character_event = {
+	id = childhood_education.183
+	desc = "EVTDESCCHILDHOODEDUCATION183"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION183"
+		add_trait = brave
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.188 } } }
+	}
+}
+character_event = {
+	id = childhood_education.184
+	desc = "EVTDESCCHILDHOODEDUCATION184"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION184"
+		remove_trait = craven
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.188 } } }
+	}
+}
+character_event = {
+	id = childhood_education.185
+	desc = "EVTDESCCHILDHOODEDUCATION185"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION185"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.189 } } }
+	}
+}
+character_event = {
+	id = childhood_education.186
+	desc = "EVTDESCCHILDHOODEDUCATION186"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION186"
+		add_trait = brave
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.188 } } }
+	}
+}
+character_event = {
+	id = childhood_education.187
+	desc = "EVTDESCCHILDHOODEDUCATION187"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION187"
+		hidden_tooltip = { FROM = { character_event = { id = childhood_education.189 } } }
+	}
+}
+character_event = {
+	id = childhood_education.188
+	desc = "EVTDESCCHILDHOODEDUCATION188"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { FROM = { trait = brave } }
+		name = "EVTOPTACHILDHOODEDUCATION188"
+		FROM = { add_trait = brave }
+	}
+	option = {
+		trigger = { FROM = { NOT = { trait = brave } } }
+		name = "EVTOPTBCHILDHOODEDUCATION188"
+		FROM = { remove_trait = craven }
+	}
+}
+character_event = {
+	id = childhood_education.189
+	desc = "EVTDESCCHILDHOODEDUCATION189"
+	picture = GFX_evt_child
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION189"
+		FROM = { add_trait = craven }
+	}
+}
