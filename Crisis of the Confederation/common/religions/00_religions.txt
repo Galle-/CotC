@@ -25,14 +25,14 @@ political_group = {
 		priests_can_marry = yes
 		female_temple_holders = yes
 		
-		short_reign_opinion_year_mult = 0.5
-		
 		psc_marriage = no
 	}
 	terran_republican = {
 		graphical_culture = westerngfx
 		icon = 1
 		heresy_icon = 6
+		
+		parent = terran_federalist
 		
 		color = { 0.4 0.4 0.8 }
 		crusade_name = "UNIFICATION"
@@ -42,7 +42,7 @@ political_group = {
 		god_names = { GOD_GOD GOD_HOLY_TERRA GOD_THE_LORD }
 		
 		investiture = yes
-		can_excommunicate = yes
+		can_excommunicate = no
 		can_grant_divorce = yes
 		can_grant_invasion_cb = police_action
 		can_grant_claim = yes
@@ -51,14 +51,14 @@ political_group = {
 		priests_can_marry = yes
 		female_temple_holders = yes
 		
-		short_reign_opinion_year_mult = 0.5
-		
 		psc_marriage = no
 	}
 	terran_imperial = {
 		graphical_culture = westerngfx
 		icon = 1
 		heresy_icon = 6
+		
+		parent = terran_federalist
 		
 		color = { 0.8 0.2 0.8 }
 		crusade_name = "UNIFICATION"
@@ -91,6 +91,7 @@ political_group = {
 		scripture_name = THE_LAW
 		god_names = { GOD_GOD GOD_THE_LORD }
 		
+		investiture = yes
 		autocephaly = yes
 		can_excommunicate = yes
 		can_grant_divorce = yes
@@ -100,16 +101,14 @@ political_group = {
 		priests_can_marry = yes
 		female_temple_holders = yes
 		
-		short_reign_opinion_year_mult = 0.5
-		
 		psc_marriage = no
 	}
-	neo_feudal = {
+	colonial_seperatist = {
 		graphical_culture = westerngfx
 		icon = 1
 		heresy_icon = 6
 		
-		parent = terran_imperial
+		parent = terran_federalist
 		
 		color = { 0.8 0.2 0.2 }
 		
@@ -129,18 +128,18 @@ political_group = {
 		
 		psc_marriage = no
 	}
-	neo_socialist = {
+	colonial_neo_feudal = {
 		graphical_culture = westerngfx
 		icon = 1
 		heresy_icon = 6
 		
-		parent = terran_republican
+		parent = terran_federalist
 		
 		color = { 0.8 0.2 0.2 }
 		
 		# Defaults to the Pilgrimage
 		scripture_name = THE_LAW
-		god_names = { GOD_THE_GREATER_GOOD GOD_THE_CAUSE }
+		god_names = { GOD_GOD GOD_THE_LORD }
 		
 		investiture = yes
 		autocephaly = yes
@@ -154,12 +153,12 @@ political_group = {
 		
 		psc_marriage = no
 	}
-	astrist = {
+	colonial_utopian = {
 		graphical_culture = westerngfx
 		icon = 1
 		heresy_icon = 6
 		
-		parent = terran_republican
+		parent = terran_federalist
 		
 		color = { 0.8 0.2 0.2 }
 		
@@ -251,7 +250,7 @@ religious_group = {
 		
 		psc_marriage = no
 	}
-	pilgrim = {
+	pilgrimage = {
 		graphical_culture = muslimgfx
 		icon = 2
 		heresy_icon = 7
@@ -272,7 +271,7 @@ religious_group = {
 		
 		psc_marriage = no
 	}
-	solar_cultist = {
+	solar_sect = {
 		graphical_culture = muslimgfx
 		icon = 2
 		heresy_icon = 7
@@ -300,7 +299,7 @@ religious_group = {
 		
 		psc_marriage = no
 	}
-	adoptionist_cultist = {
+	adoptionist_sect = {
 		graphical_culture = muslimgfx
 		icon = 2
 		heresy_icon = 7
@@ -314,7 +313,7 @@ religious_group = {
 		
 		psc_marriage = no
 	}
-	mother_gaia_cultist = {
+	mother_gaia_sect = {
 		graphical_culture = muslimgfx
 		icon = 2
 		heresy_icon = 7
@@ -328,7 +327,7 @@ religious_group = {
 		
 		psc_marriage = no
 	}
-	father_earth_cultist = {
+	father_earth_sect = {
 		graphical_culture = muslimgfx
 		icon = 2
 		heresy_icon = 7
@@ -371,7 +370,7 @@ transhumanist_group = {
 		priests_can_marry = yes
 		female_temple_holders = yes
 	}
-	machine_cultist = {
+	machine_cult = {
 		graphical_culture = westerngfx
 		icon = 3
 		heresy_icon = 8
@@ -395,7 +394,7 @@ transhumanist_group = {
 		priests_can_marry = yes
 		female_temple_holders = yes
 	}
-	hiver = {
+	the_hive = {
 		graphical_culture = westerngfx
 		icon = 3
 		heresy_icon = 8
@@ -408,7 +407,7 @@ transhumanist_group = {
 		scripture_name = THE_CODE
 		god_names = { THE_HIVE THE_VOICE THE_CODE }
 		
-		investiture = no
+		investiture = yes
 		autocephaly = no
 		can_excommunicate = no
 		can_grant_divorce = yes
@@ -421,11 +420,10 @@ transhumanist_group = {
 		female_temple_holders = yes
 		
 		raised_vassal_opinion_loss = no
-		short_reign_opinion_year_mult = 0
 		
 		aggression = 10
 	}
-	bio_directionist = {
+	eugenicist = {
 		graphical_culture = westerngfx
 		icon = 3
 		

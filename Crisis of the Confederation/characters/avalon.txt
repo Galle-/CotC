@@ -1,0 +1,124 @@
+11020018 = {
+	# Grand Admiral of Avalon, 2993 - 2996
+	# Admiral-in-Exile, 2996 - Present
+	name = "Victoria"
+	dynasty = 20018 # Locksley
+	female = yes
+	
+	culture = anglo_avalonian
+	religion = biodirectionist
+
+	add_trait = skilled_tactician
+	add_trait = marine_colonel
+	add_trait = genius
+	add_trait = fair
+	add_trait = strong
+	add_trait = close_minded
+	add_trait = introverted
+	add_trait = friendly
+	add_trait = radical
+	add_trait = proud
+	add_trait = ambitious
+	add_trait = clone
+	
+	mother = 12020018 # Victoria XVII Locksley
+	2971.1.1 = { birth = "2971.1.1" }
+}
+
+12020018 = {
+	# Grand Admiral of Avalon, 2975 - 2993
+	name = "Victoria"
+	dynasty = 20018
+	female = yes
+	
+	culture = anglo_avalonian
+	religion = biodirectionist
+	
+	add_trait = skilled_tactician
+	add_trait = marine_colonel
+	add_trait = genius
+	add_trait = fair
+	add_trait = strong
+	add_trait = close_minded
+	add_trait = extraverted
+	add_trait = friendly
+	add_trait = radical
+	add_trait = proud
+	add_trait = content
+	add_trait = clone
+	
+	2922.1.1 = { birth = "2942.1.1" }
+	2993.1.1 = { death = "2993.1.1" }
+}
+
+1101422 = {
+	# Fleet Admiral of Galahad, 2972 - Present
+	name = "Joseph"
+	dynasty = 1422 # Blackburn
+	female = no
+	
+	culture = anglo_avalonian
+	religion = neo_feudalist
+	
+	add_trait = brilliant_strategist
+	add_trait = fighter_pilot
+	add_trait = quick
+	add_trait = agile
+	add_trait = introverted
+	add_trait = friendly
+	add_trait = humble
+	add_trait = radical
+	add_trait = spiritual
+	add_trait = clone
+	
+	father = 1201422 # Joseph XV Blackburn
+	2963.1.1 = { birth = "2963.1.1" }
+	2996.2.5 = {
+		effect = {
+			grant_job_title = job_chancellor
+			grant_minor_title = title_regent
+			grant_minor_title = title_prime_minister
+		}
+	}
+}
+
+1201422 = {
+	# Fleet Admiral of Galahad, 2961 - 2972
+	name = "Joseph"
+	dynasty = 1422 # Blackburn
+	female = no
+	
+	culture = anglo_avalonian
+	religion = biodirectionist
+	
+	add_trait = brilliant_strategist
+	add_trait = fighter_pilot
+	add_trait = quick
+	add_trait = agile
+	add_trait = introverted
+	add_trait = friendly
+	add_trait = humble
+	add_trait = brave
+	add_trait = clone
+	
+	2925.1.1 = { birth = "2925.1.1" }
+	2972.1.1 = { death = { death_reason = death_accident } }
+}
+
+11020019 = {
+	# Boy-King of Avalon, 2996 - Present
+	name = "Arthur"
+	dynasty = 20019 # Pendragon
+	female = no
+	
+	culture = anglo_avalonian
+	religion = neo_feudalist
+	
+	add_trait = genius
+	add_trait = beautiful
+	add_trait = agile
+	add_trait = weak
+	add_trait = clone
+	
+	2994.1.1 = { birth = "2994.1.1" }
+}

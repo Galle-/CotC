@@ -2,708 +2,516 @@
 # Laws ending with 0 will be default laws at game start
 
 de_jure_laws = {
-# legitimacy_law
-	legitimacy_law_0 = { # Inheritance
-		show_as_title = yes
-		group = legitimacy_law
-		default = no
-		
-		potential = { always = yes }
-		allow = { always = no } # Will be changed once proper ideologies are implemented
-		revoke_allowed = { always = no }
-		ai_will_do = { factor = 0 }
-		effect = {
-			if = {
-				limit = {
-					OR = {
-						has_law = election_law_1
-						has_law = election_law_2
-						has_law = election_law_3
-						has_law = election_law_4
-						has_law = appointment_law_1
-					}
-				}
-				add_law = inheritance_law_0
-			}
-			hidden_tooltip = {
-				revoke_law = election_law_0
-				revoke_law = appointment_law_0
-				revoke_law = legitimacy_law_1
-				revoke_law = legitimacy_law_2
-			}
-		}
-	}
-	legitimacy_law_1 = { # Elective
-		show_as_title = yes
-		group = legitimacy_law
-		default = yes
-		
-		potential = { always = yes }
-		allow = { always = yes } # Will be changed once proper ideologies are implemented
-		revoke_allowed = { always = no }
-		ai_will_do = { factor = 0 }
-		effect = {
-			if = {
-				limit = {
-					OR = {
-						has_law = inheritance_law_1
-						has_law = inheritance_law_2
-						has_law = inheritance_law_3
-						has_law = inheritance_law_4
-						has_law = appointment_law_1
-					}
-				}
-				add_law = election_law_0
-			}
-			hidden_tooltip = {
-				revoke_law = inheritance_law_0
-				revoke_law = appointment_law_0
-				revoke_law = legitimacy_law_0
-				revoke_law = legitimacy_law_2
-			}
-		}
-	}
-	legitimacy_law_2 = { # Appointment
-		show_as_title = yes
-		group = legitimacy_law
-		default = no
-		
-		potential = { always = yes }
-		allow = { always = no } # Will be changed once proper ideologies are implemented
-		revoke_allowed = { always = no }
-		ai_will_do = { factor = 0 }
-		effect = {
-			if = {
-				limit = {
-					OR = {
-						has_law = inheritance_law_1
-						has_law = inheritance_law_2
-						has_law = inheritance_law_3
-						has_law = inheritance_law_4
-						has_law = appointment_law_1
-					}
-				}
-				add_law = appointment_law_0
-			}
-			hidden_tooltip = {
-				revoke_law = inheritance_law_0
-				revoke_law = election_law_0
-				revoke_law = legitimacy_law_0
-				revoke_law = legitimacy_law_2
-			}
-		}
-	}
-	
-# INHERITANCE LAW
-	inheritance_law_0 = { # Non-Hereditary
-		show_as_title = yes
-		group = inheritance_law
-		default = yes
-		
-		# People don't like having an outside-class succession law
-		feudal_opinion = -20
-		city_opinion = -20
-		temple_opinion = -20
-		
-		potential = {
-			has_law = legitimacy_law_0
-			OR = {
-				has_law = election_law_1
-				has_law = election_law_2
-				has_law = election_law_3
-				has_law = election_law_4
-				has_law = appointment_law_1
-			}
-		}
-		allow = {
-			has_law = legitimacy_law_0
-			OR = {
-				has_law = election_law_1
-				has_law = election_law_2
-				has_law = election_law_3
-				has_law = election_law_4
-				has_law = appointment_law_1
-			}
-		}
-		revoke_allowed = { always = no }
-		ai_will_do = { factor = 0 }
-		effect = {
-			hidden_tooltip = {
-				revoke_law = inheritance_law_1
-				revoke_law = inheritance_law_2
-				revoke_law = inheritance_law_3
-				revoke_law = inheritance_law_4
-			}
-		}
-	}
-	inheritance_law_1 = { # Gavelkind
-		show_as_title = yes
-		group = inheritance_law
-		default = no
-		
-		potential = {
-			OR = {
-				has_law = legitimacy_law_0
-				has_law = inheritance_law_1
-			}
-		}
-		allow = { always = yes }
-		revoke_allowed = { always = no }
-		ai_will_do = { factor = 0 }
-		effect = {
-			add_law = succ_gavelkind
-			hidden_tooltip = {
-				revoke_law = inheritance_law_0
-				revoke_law = inheritance_law_2
-				revoke_law = inheritance_law_3
-				revoke_law = inheritance_law_4
-				revoke_law = election_law_1
-				revoke_law = election_law_2
-				revoke_law = election_law_3
-				revoke_law = election_law_4
-				revoke_law = appointment_law_1
-			}
-		}
-	}
-	inheritance_law_2 = { # Seniority
-		show_as_title = yes
-		group = inheritance_law
-		default = no
-		
-		potential = {
-			OR = {
-				has_law = legitimacy_law_0
-				has_law = inheritance_law_2
-			}
-		}
-		allow = { always = yes }
-		revoke_allowed = { always = no }
-		ai_will_do = { factor = 0 }
-		effect = {
-			add_law = succ_seniority
-			hidden_tooltip = {
-				revoke_law = inheritance_law_0
-				revoke_law = inheritance_law_1
-				revoke_law = inheritance_law_3
-				revoke_law = inheritance_law_4
-				revoke_law = election_law_1
-				revoke_law = election_law_2
-				revoke_law = election_law_3
-				revoke_law = election_law_4
-				revoke_law = appointment_law_1
-			}
-		}
-	}
-	inheritance_law_3 = { # Primogeniture
-		show_as_title = yes
-		group = inheritance_law
-		default = no
-		
-		potential = {
-			OR = {
-				has_law = legitimacy_law_0
-				has_law = inheritance_law_3
-			}
-		}
-		allow = { always = yes }
-		revoke_allowed = { always = no }
-		ai_will_do = { factor = 0 }
-		effect = {
-			add_law = succ_primogeniture
-			hidden_tooltip = {
-				revoke_law = inheritance_law_0
-				revoke_law = inheritance_law_1
-				revoke_law = inheritance_law_2
-				revoke_law = inheritance_law_4
-				revoke_law = election_law_1
-				revoke_law = election_law_2
-				revoke_law = election_law_3
-				revoke_law = election_law_4
-				revoke_law = appointment_law_1
-			}
-		}
-	}
-	inheritance_law_4 = { # Ultimogeniture
-		show_as_title = yes
-		group = inheritance_law
-		default = no
-		
-		potential = {
-			OR = {
-				has_law = legitimacy_law_0
-				has_law = inheritance_law_4
-			}
-		}
-		allow = { always = yes }
-		revoke_allowed = { always = no }
-		ai_will_do = { factor = 0 }
-		effect = {
-			add_law = succ_ultimogeniture
-			hidden_tooltip = {
-				revoke_law = inheritance_law_0
-				revoke_law = inheritance_law_1
-				revoke_law = inheritance_law_2
-				revoke_law = inheritance_law_3
-				revoke_law = election_law_1
-				revoke_law = election_law_2
-				revoke_law = election_law_3
-				revoke_law = election_law_4
-				revoke_law = appointment_law_1
-			}
-		}
-	}
-	
-# ELECTION LAW
-	election_law_0 = { # No Elections
-		show_as_title = yes
-		group = election_law
-		default = yes
-		
-		# People don't like having an outside-class succession law
-		feudal_opinion = -20
-		city_opinion = -20
-		temple_opinion = -20
-		
-		potential = {
-			has_law = legitimacy_law_1
-			OR = {
-				has_law = inheritance_law_1
-				has_law = inheritance_law_2
-				has_law = inheritance_law_3
-				has_law = inheritance_law_4
-				has_law = appointment_law_1
-			}
-		}
-		allow = {
-			has_law = legitimacy_law_1
-			OR = {
-				has_law = inheritance_law_1
-				has_law = inheritance_law_2
-				has_law = inheritance_law_3
-				has_law = inheritance_law_4
-				has_law = appointment_law_1
-			}
-		}
-		revoke_allowed = { always = no }
-		ai_will_do = { factor = 0 }
-		effect = {
-			hidden_tooltip = {
-				revoke_law = election_law_1
-				revoke_law = election_law_2
-				revoke_law = election_law_3
-				revoke_law = election_law_4
-			}
-		}
-	}
-	election_law_1 = { # Democratic
-		show_as_title = yes
-		group = election_law
-		default = no
-		
-		potential = {
-			OR = {
-				has_law = legitimacy_law_1
-				has_law = election_law_1
-			}
-		}
-		allow = { always = yes }
-		revoke_allowed = { always = no }
-		ai_will_do = { factor = 0 }
-		effect = {
-			add_law = succ_open_elective
-			hidden_tooltip = {
-				revoke_law = election_law_0
-				revoke_law = election_law_2
-				revoke_law = election_law_3
-				revoke_law = election_law_4
-				revoke_law = inheritance_law_1
-				revoke_law = inheritance_law_2
-				revoke_law = inheritance_law_3
-				revoke_law = inheritance_law_4
-				revoke_law = appointment_law_1
-			}
-		}
-	}
-	election_law_2 = { # Oligarchic
-		show_as_title = yes
-		group = election_law
-		default = no
-		
-		potential = {
-			holder_scope = { is_merchant_republic = yes } # Only such check in the game, since patrician won't work for other government types
-			OR = {
-				has_law = legitimacy_law_1
-				has_law = election_law_2
-			}
-		}
-		allow = { is_merchant_republic = yes }
-		revoke_allowed = { always = no }
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				holder_scope = { is_patrician = no }
-			}
-			modifier = {
-				factor = 0
-				has_law = succ_tanistry
-			}
-			modifier = {
-				factor = 10
-				has_law = succ_open_elective
-			}
-		}
-		effect = {
-			add_law = succ_patrician_elective
-			hidden_tooltip = {
-				revoke_law = election_law_0
-				revoke_law = election_law_1
-				revoke_law = election_law_3
-				revoke_law = election_law_4
-				revoke_law = inheritance_law_1
-				revoke_law = inheritance_law_2
-				revoke_law = inheritance_law_3
-				revoke_law = inheritance_law_4
-				revoke_law = appointment_law_1
-			}
-		}
-	}
-	election_law_3 = { # Federal
-		show_as_title = yes
-		group = election_law
-		default = no
-		
-		potential = {
-			OR = {
-				has_law = legitimacy_law_1
-				has_law = election_law_3
-			}
-		}
-		allow = { always = yes }
-		revoke_allowed = { always = no }
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				has_law = succ_patrician_elective
-			}
-			modifier = {
-				factor = 0
-				has_law = succ_tanistry
-			}
-			modifier = {
-				factor = 10
-				has_law = succ_open_elective
-			}
-		}
-		effect = {
-			add_law = succ_feudal_elective
-			hidden_tooltip = {
-				revoke_law = election_law_0
-				revoke_law = election_law_1
-				revoke_law = election_law_2
-				revoke_law = election_law_4
-				revoke_law = inheritance_law_1
-				revoke_law = inheritance_law_2
-				revoke_law = inheritance_law_3
-				revoke_law = inheritance_law_4
-				revoke_law = appointment_law_1
-			}
-		}
-	}
-	election_law_4 = { # Dynastic
-		show_as_title = yes
-		group = election_law
-		default = no
-		
-		potential = {
-			OR = {
-				has_law = legitimacy_law_1
-				has_law = election_law_4
-			}
-		}
-		allow = {
-			current_heir = { ROOT = { holder_scope = { is_close_relative = PREVPREV } } }
-			OR = {
-				has_law = open_elective
-				has_law = feudal_elective
-				has_law = patrician_elective
-			}
-		}
-		revoke_allowed = { always = no }
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 10
-				has_law = succ_open_elective
-			}
-		}
-		effect = {
-			add_law = succ_tanistry
-			hidden_tooltip = {
-				revoke_law = election_law_0
-				revoke_law = election_law_1
-				revoke_law = election_law_2
-				revoke_law = election_law_3
-				revoke_law = inheritance_law_1
-				revoke_law = inheritance_law_2
-				revoke_law = inheritance_law_3
-				revoke_law = inheritance_law_4
-				revoke_law = appointment_law_1
-			}
-		}
-	}
 
-# APPOINTMENT LAW
-	appointment_law_0 = { # Not Appointed
+# ELECTION LAW
+	election_law_0 = {
 		show_as_title = yes
-		group = appointment_law
+		group = election_law
 		default = yes
 		
-		# People don't like having an outside-class succession law
-		feudal_opinion = -20
-		city_opinion = -20
-		temple_opinion = -20
-		
 		potential = {
-			has_law = legitimacy_law_2
-			OR = {
-				has_law = election_law_1
-				has_law = election_law_2
-				has_law = election_law_3
-				has_law = election_law_4
-				has_law = inheritance_law_1
-				has_law = inheritance_law_2
-				has_law = inheritance_law_3
-				has_law = inheritance_law_4
-			}
+			holder_scope = { is_republic = yes }
+			is_primary_holder_title = yes
 		}
+		
 		allow = {
-			has_law = legitimacy_law_2
-			OR = {
-				has_law = election_law_1
-				has_law = election_law_2
-				has_law = election_law_3
-				has_law = election_law_4
-				has_law = inheritance_law_1
-				has_law = inheritance_law_2
-				has_law = inheritance_law_3
-				has_law = inheritance_law_4
-			}
+			always = yes
 		}
-		revoke_allowed = { always = no }
-		ai_will_do = { factor = 0 }
-		effect = { hidden_tooltip = { revoke_law = appointment_law_1 } }
-	}
-	appointment_law_1 = { # Appointment
-		show_as_title = yes
-		group = appointment_law
-		default = no
 		
-		potential = {
-			OR = {
-				has_law = legitimacy_law_2
-				has_law = inheritance_law_1
-			}
+		revoke_allowed = {
+			always = no
 		}
-		allow = { always = yes }
-		revoke_allowed = { always = no }
-		ai_will_do = { factor = 0 }
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
 		effect = {
-			add_law = succ_catholic_bishopric
+			holder_scope = {
+				any_demesne_title = {
+					limit = { higher_tier_than = DUKE }
+					add_law = succ_open_elective
+				}
+			}
 			hidden_tooltip = {
-				revoke_law = inheritance_law_1
-				revoke_law = inheritance_law_2
-				revoke_law = inheritance_law_3
-				revoke_law = inheritance_law_4
 				revoke_law = election_law_1
 				revoke_law = election_law_2
 				revoke_law = election_law_3
-				revoke_law = election_law_4
-				revoke_law = appointment_law_0
 			}
 		}
 	}
-	
-# TERM LENGTH
-	term_length_0 = { # 1 Year
+	election_law_1 = {
 		show_as_title = yes
-		group = term_limits
+		group = election_law
 		default = no
 		
 		potential = {
+			holder_scope = { is_merchant_republic = yes }
 			is_primary_holder_title = yes
-			OR = {
-				has_law = succ_patrician_elective
-				has_law = succ_open_elective
-				has_law = succ_feudal_elective
-			}
 		}
 		
 		allow = {
-			has_law = term_length_1
+			always = yes
 		}
 		
-		revoke_allowed = { always = no }
-		ai_will_do = { factor = 0 }
-		ai_will_revoke = { factor = 0 }
-	}
-	
-	term_length_1 = { # 4 Years
-		show_as_title = yes
-		group = term_limits
-		default = yes # Because 'MURICA
-		
-		potential = {
-			is_primary_holder_title = yes
-			OR = {
-				has_law = succ_patrician_elective
-				has_law = succ_open_elective
-				has_law = succ_feudal_elective
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			holder_scope = {
+				any_demesne_title = {
+					limit = { higher_tier_than = DUKE }
+					add_law = succ_patrician_elective
+				}
+			}
+			hidden_tooltip = {
+				revoke_law = election_law_0
+				revoke_law = election_law_2
+				revoke_law = election_law_3
 			}
 		}
-		
-		allow = {
-			OR = {
-				has_law = term_length_0
-				has_law = term_length_2
-			}
-		}
-		
-		revoke_allowed = { always = no }
-		ai_will_do = { factor = 0 }
-		ai_will_revoke = { factor = 0 }
 	}
-	
-	term_length_2 = { # 6 Years
+	election_law_2 = {
 		show_as_title = yes
-		group = term_limits
+		group = election_law
 		default = no
 		
 		potential = {
+			holder_scope = { is_republic = yes }
 			is_primary_holder_title = yes
-			OR = {
-				has_law = succ_patrician_elective
-				has_law = succ_open_elective
-				has_law = succ_feudal_elective
-			}
 		}
 		
 		allow = {
-			OR = {
-				has_law = term_length_1
-				has_law = term_length_3
-			}
+			always = yes
 		}
 		
-		revoke_allowed = { always = no }
-		ai_will_do = { factor = 0 }
-		ai_will_revoke = { factor = 0 }
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			holder_scope = {
+				any_demesne_title = {
+					limit = { higher_tier_than = DUKE }
+					add_law = succ_feudal_elective
+				}
+			}
+			hidden_tooltip = {
+				revoke_law = election_law_0
+				revoke_law = election_law_1
+				revoke_law = election_law_3
+			}
+		}
 	}
-	
-	term_length_3 = { # 10 Years
+	election_law_3 = {
 		show_as_title = yes
-		group = term_limits
-		default = no
+		group = election_law
+		default = yes
 		
 		potential = {
+			holder_scope = { is_republic = yes }
 			is_primary_holder_title = yes
-			OR = {
-				has_law = succ_patrician_elective
-				has_law = succ_open_elective
-				has_law = succ_feudal_elective
-			}
 		}
 		
 		allow = {
-			OR = {
-				has_law = term_length_2
-				has_law = term_length_4
-			}
+			always = yes
 		}
 		
-		revoke_allowed = { always = no }
-		ai_will_do = { factor = 0 }
-		ai_will_revoke = { factor = 0 }
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			holder_scope = {
+				any_demesne_title = {
+					limit = { higher_tier_than = DUKE }
+					add_law = succ_tanistry
+				}
+			}
+			hidden_tooltip = {
+				revoke_law = election_law_0
+				revoke_law = election_law_1
+				revoke_law = election_law_2
+			}
+		}
 	}
 	
-	term_length_4 = { # For Life
+# EXECUTIVE AUTHORITY
+# executive_authority_0		All laws must be voted on
+# executive_authority_1		Minor laws by decree, wartime only
+# executive_authority_2		Minor laws by decree, permanent
+# executive_authority_3		All laws by decree, political parties illegal, wartime only
+# executive_authority_4		All laws by decree, political parties illegal, permanent
+
+	executive_authority_0 = {
 		show_as_title = yes
-		group = term_limits
-		default = no
+		group = executive_authority
+		default = yes
 		
-		potential = {
-			is_primary_holder_title = yes
-			OR = {
-				has_law = succ_patrician_elective
-				has_law = succ_open_elective
-				has_law = succ_feudal_elective
+		potential = { is_primary_holder_title = yes }
+		allow = { always = yes }
+		revoke_allowed = { always = no }
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = executive_authority_1
+				revoke_law = executive_authority_2
+				revoke_law = executive_authority_3
+				revoke_law = executive_authority_4
 			}
 		}
+	}
+	executive_authority_1 = {
+		show_as_title = yes
+		group = executive_authority
+		default = no
 		
+		potential = { is_primary_holder_title = yes }
 		allow = {
-			has_law = term_length_3
+			has_law = centralization_1
+			has_law = executive_authority_0
+			holder_scope = { war = yes }
 		}
-		
 		revoke_allowed = { always = no }
-		ai_will_do = { factor = 0 }
-		ai_will_revoke = { factor = 0 }
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = executive_authority_0
+				revoke_law = executive_authority_2
+				revoke_law = executive_authority_3
+				revoke_law = executive_authority_4
+			}
+		}
+	}
+	executive_authority_2 = {
+		show_as_title = yes
+		group = executive_authority
+		default = no
+		
+		potential = { is_primary_holder_title = yes }
+		allow = {
+			has_law = centralization_2
+			has_law = executive_authority_1
+		}
+		revoke_allowed = { always = no }
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = executive_authority_0
+				revoke_law = executive_authority_1
+				revoke_law = executive_authority_3
+				revoke_law = executive_authority_4
+			}
+		}
+	}
+	executive_authority_3 = {
+		show_as_title = yes
+		group = executive_authority
+		default = no
+		
+		potential = { is_primary_holder_title = yes }
+		allow = {
+			has_law = centralization_3
+			OR = {
+				has_law = executive_authority_0
+				has_law = executive_authority_2
+			}
+			holder_scope = { war = yes }
+		}
+		revoke_allowed = { always = no }
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = executive_authority_0
+				revoke_law = executive_authority_1
+				revoke_law = executive_authority_2
+				revoke_law = executive_authority_4
+			}
+		}
+	}
+	executive_authority_4 = {
+		show_as_title = yes
+		group = executive_authority
+		default = no
+		
+		potential = { is_primary_holder_title = yes }
+		allow = {
+			has_law = centralization_4
+			has_law = executive_authority_3
+		}
+		revoke_allowed = { always = no }
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = executive_authority_0
+				revoke_law = executive_authority_1
+				revoke_law = executive_authority_2
+				revoke_law = executive_authority_3
+			}
+		}
 	}
 	
 # PREMIERSHIP
-	premiership_0 = { # No prime minister
+	premiership_0 = {
+		# No premiership
 		show_as_title = yes
 		group = premiership
 		default = yes
 		
+		potential = {
+			is_primary_holder_title = yes
+			OR = {
+				has_law = executive_authority_0
+				has_law = executive_authority_1
+				has_law = executive_authority_2
+				has_law = executive_authority_3
+			}
+		}
 		allow = { always = yes }
 		revoke_allowed = { always = no }
 		ai_will_do = {
 			factor = 0
 		}
+		ai_will_revoke = {
+			factor = 0
+		}
 		effect = {
 			hidden_tooltip = {
-				remove_law = premiership_1
-				remove_law = premiership_2
+				revoke_law = premiership_1
+				revoke_law = premiership_2
 			}
 		}
 	}
-	premiership_1 = { # Appointed prime minister
+	premiership_1 = {
+		# Appointed Premier
 		show_as_title = yes
 		group = premiership
 		default = no
 		
+		potential = {
+			is_primary_holder_title = yes
+			OR = {
+				has_law = executive_authority_0
+				has_law = executive_authority_1
+				has_law = executive_authority_2
+				has_law = executive_authority_3
+			}
+		}
 		allow = { always = yes }
 		revoke_allowed = { always = no }
 		ai_will_do = {
 			factor = 0
 		}
+		ai_will_revoke = {
+			factor = 0
+		}
 		effect = {
 			hidden_tooltip = {
-				remove_law = premiership_0
-				remove_law = premiership_1
+				revoke_law = premiership_0
+				revoke_law = premiership_2
 			}
 		}
 	}
-	premiership_2 = { # Elected prime minister
+	premiership_2 = {
+		# Elected Premier
 		show_as_title = yes
 		group = premiership
 		default = no
 		
+		potential = {
+			is_primary_holder_title = yes
+			OR = {
+				has_law = executive_authority_0
+				has_law = executive_authority_1
+				has_law = executive_authority_2
+				has_law = executive_authority_3
+			}
+		}
 		allow = { always = yes }
 		revoke_allowed = { always = no }
 		ai_will_do = {
 			factor = 0
 		}
+		ai_will_revoke = {
+			factor = 0
+		}
 		effect = {
 			hidden_tooltip = {
-				remove_law = premiership_0
-				remove_law = premiership_1
+				revoke_law = premiership_0
+				revoke_law = premiership_1
+			}
+		}
+	}
+	
+# TERM LIMITS
+	term_limits_0 = {
+		show_as_title = yes
+		group = term_limits
+		default = yes
+		
+		potential = {
+			holder_scope = { is_republic = yes }
+			is_primary_holder_title = yes
+		}
+		
+		allow = {
+			has_law = term_limits_1
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = term_limits_1
+				revoke_law = term_limits_2
+				revoke_law = term_limits_3
+			}
+		}
+	}
+	term_limits_1 = {
+		show_as_title = yes
+		group = term_limits
+		
+		potential = {
+			holder_scope = { is_republic = yes }
+			is_primary_holder_title = yes
+		}
+		
+		allow = {
+			OR = {
+				has_law = term_limits_0
+				has_law = term_limits_2
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = term_limits_0
+				revoke_law = term_limits_2
+				revoke_law = term_limits_3
+			}
+		}
+	}
+	term_limits_2 = {
+		show_as_title = yes
+		group = term_limits
+		
+		potential = {
+			holder_scope = { is_republic = yes }
+			is_primary_holder_title = yes
+		}
+		
+		allow = {
+			OR = {
+				has_law = term_limits_1
+				has_law = term_limits_3
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = term_limits_0
+				revoke_law = term_limits_1
+				revoke_law = term_limits_3
+			}
+		}
+	}
+	term_limits_3 = {
+		show_as_title = yes
+		group = term_limits
+		
+		potential = {
+			holder_scope = { is_republic = yes }
+			is_primary_holder_title = yes
+		}
+		
+		allow = {
+			has_law = term_limits_2
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = term_limits_0
+				revoke_law = term_limits_1
+				revoke_law = term_limits_2
 			}
 		}
 	}
 
 # CENTRALIZATION
+
 	centralization_0 = {
 		show_as_title = yes
 		group = centralization
@@ -1087,6 +895,7 @@ de_jure_laws = {
 	}
 	
 # INVESTITURE
+
 	investiture_law_0 = {
 		show_as_title = yes
 		group = investiture_law
@@ -1173,7 +982,13 @@ de_jure_laws = {
 		}
 		
 		allow = {
-			always = yes
+			NOT = {
+				any_de_jure_vassal = {
+					any_current_enemy = {
+						OR = {  }
+					}
+				}
+			}
 		}
 		
 		revoke_allowed = { always = no }

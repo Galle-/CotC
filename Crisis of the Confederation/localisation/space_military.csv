@@ -1,0 +1,49 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+CANNOT_CHANGE_LEADER_AT_SEA;Cannot change leader in hyperspace;;;;;;;;;;;;;x
+LOADSHIP_UNIT;Follow Navigator;;;;;;;;;;;;;x
+LOADSHIP_UNIT_DRO;Orders the selected Standard Fleet to join a Navigator Fleet in port.;;;;;;;;;;;;;x
+NUM_SUBUNITS;Number of squadrons in this wing;;;;;;;;;;;;;x
+NUM_SHIPS_IN_SUBUNIT;Number of navigators in this squadron;;;;;;;;;;;;;x
+LOAD_CAPACITY;Wake Capacity;;;;;;;;;;;;;x
+LOAD_CAPACITY_DESC;The number of standard ships that this Navigator Fleet's wake can safely guide through hyperspace.;;;;;;;;;;;;;x
+LIGHT_INFANTRY;Fighters;;;;;;;;;;;;;x
+LIGHT_INFANTRY_MORALE;Fighter Morale;;;;;;;;;;;;;x
+LIGHT_INFANTRY_DISCIPLINE;Fighter Discipline;;;;;;;;;;;;;x
+LIGHT_INFANTRY_OFFENSIVE_FIRE;Fighter Attack;;;;;;;;;;;;;x
+LIGHT_INFANTRY_DEFENSIVE_FIRE;Fighter Defense;;;;;;;;;;;;;x
+HEAVY_INFANTRY;Bomber;;;;;;;;;;;;;x
+HEAVY_INFANTRY_MORALE;Bombers Morale;;;;;;;;;;;;;x
+HEAVY_INFANTRY_DISCIPLINE;Bombers Discipline;;;;;;;;;;;;;x
+HEAVY_INFANTRY_OFFENSIVE_FIRE;Bombers Attack;;;;;;;;;;;;;x
+HEAVY_INFANTRY_DEFENSIVE_FIRE;Bombers Defense;;;;;;;;;;;;;x
+PIKEMEN;Combat Drones;;;;;;;;;;;;;x
+PIKEMEN_MORALE;Drone Morale;;;;;;;;;;;;;x
+PIKEMEN_DISCIPLINE;Drone Discipline;;;;;;;;;;;;;x
+PIKEMEN_OFFENSIVE_FIRE;Drone Attack;;;;;;;;;;;;;x
+PIKEMEN_DEFENSIVE_FIRE;Drone Defense;;;;;;;;;;;;;x
+LIGHT_CAVALRY;Destroyers;;;;;;;;;;;;;x
+LIGHT_CAVALRY_MORALE;Destroyer Morale;;;;;;;;;;;;;x
+LIGHT_CAVALRY_DISCIPLINE;Destroyer Discipline;;;;;;;;;;;;;x
+LIGHT_CAVALRY_OFFENSIVE_FIRE;Destroyer Attack;;;;;;;;;;;;;x
+LIGHT_CAVALRY_DEFENSIVE_FIRE;Destroyer Defense;;;;;;;;;;;;;x
+KNIGHTS;Battlecruisers;;;;;;;;;;;;;x
+KNIGHTS_MORALE;Battlecruiser Morale;;;;;;;;;;;;;x
+KNIGHTS_DISCIPLINE;Battlecruiser Discipline;;;;;;;;;;;;;x
+KNIGHTS_OFFENSIVE_FIRE;Battlecruiser Attack;;;;;;;;;;;;;x
+KNIGHTS_DEFENSIVE_FIRE;Battlecruiser Defense;;;;;;;;;;;;;x
+ARCHERS;Troop Transports;;;;;;;;;;;;;x
+ARCHERS_MORALE;Transport Morale;;;;;;;;;;;;;x
+ARCHERS_DISCIPLINE;Transport Discipline;;;;;;;;;;;;;x
+ARCHERS_OFFENSIVE_FIRE;Transport Attack;;;;;;;;;;;;;x
+ARCHERS_DEFENSIVE_FIRE;Transport Defense;;;;;;;;;;;;;x
+HORSE_ARCHERS;Dreadnoughts;;;;;;;;;;;;;x
+HORSE_ARCHERS_MORALE;Dreadnought Morale;;;;;;;;;;;;;x
+HORSE_ARCHERS_DISCIPLINE;Dreadnought Discipline;;;;;;;;;;;;;x
+HORSE_ARCHERS_OFFENSIVE_FIRE;Dreadnought Attack;;;;;;;;;;;;;x
+HORSE_ARCHERS_DEFENSIVE_FIRE;Dreadnought Defense;;;;;;;;;;;;;x
+GALLEYS;Navigators;;;;;;;;;;;;;x
+GALLEYS_MORALE;Navigator Morale;;;;;;;;;;;;;x
+GALLEYS_DISCIPLINE;Navigator Discipline;;;;;;;;;;;;;x
+GALLEYS_OFFENSIVE_FIRE;Navigator Attack;;;;;;;;;;;;;x
+GALLEYS_DEFENSIVE_FIRE;Navigator Defense;;;;;;;;;;;;;x
+CODE;ENGLISH;;;;;;;;;;;;;x

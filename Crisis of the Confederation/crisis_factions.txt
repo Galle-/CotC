@@ -1,0 +1,315 @@
+# Faction tags need to start with 'faction_'
+
+# Supported types:
+# liege_titles, liege_titles_w_claimant, character
+
+# The succession law factions have hard coded elements to ensure that the correct heir is shown in Plot and 
+# Faction interfaces and that AI faction members vote for laws in accordance with the faction goal.
+# The valid tags correspond to the law name: faction_succ_seniority, faction_succ_primogeniture, etc.
+# (faction_succ_ultimogeniture is fully supported by the code, but not currently implemented)
+
+###############
+# FACTIONS
+###############
+
+# Vote of No Confidence (Ruler)
+faction_no_confidence_ruler = {
+	type = liege_titles
+	
+	# Plotter scope
+	potential = {
+		is_ruler = yes
+		independent = no
+		is_adult = yes
+		NOT = { trait = incapable }
+	}
+	
+	allow = {
+		has_law = accountability_1
+	}
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			holder_scope = { reverse_opinion = { who = FROM value = 1 } }
+			OR = {
+				NOT = { current_heir = { character = FROM } }
+				FROM = {
+					NOT = { trait = ambitious }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				FROM = {
+					opinion_diff = {
+						first = PREV
+						second = LIEGE
+						value = 10
+						as_if_liege = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				FROM = {
+					opinion_diff = {
+						first = PREV
+						second = LIEGE
+						value = 20
+						as_if_liege = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				FROM = {
+					opinion_diff = {
+						first = PREV
+						second = LIEGE
+						value = 30
+						as_if_liege = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				FROM = {
+					opinion_diff = {
+						first = PREV
+						second = LIEGE
+						value = 40
+						as_if_liege = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				FROM = {
+					opinion_diff = {
+						first = PREV
+						second = LIEGE
+						value = 50
+						as_if_liege = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				FROM = {
+					opinion_diff = {
+						first = PREV
+						second = LIEGE
+						value = 60
+						as_if_liege = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				FROM = {
+					opinion_diff = {
+						first = PREV
+						second = LIEGE
+						value = 70
+						as_if_liege = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				FROM = {
+					opinion_diff = {
+						first = PREV
+						second = LIEGE
+						value = 80
+						as_if_liege = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				FROM = {
+					opinion_diff = {
+						first = PREV
+						second = LIEGE
+						value = 90
+						as_if_liege = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				FROM = {
+					opinion_diff = {
+						first = PREV
+						second = LIEGE
+						value = 100
+						as_if_liege = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				FROM = {
+					opinion_diff = {
+						first = PREV
+						second = LIEGE
+						value = 110
+						as_if_liege = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				FROM = {
+					opinion_diff = {
+						first = PREV
+						second = LIEGE
+						value = 120
+						as_if_liege = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				FROM = {
+					opinion_diff = {
+						first = PREV
+						second = LIEGE
+						value = 130
+						as_if_liege = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				FROM = {
+					opinion_diff = {
+						first = PREV
+						second = LIEGE
+						value = 140
+						as_if_liege = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				FROM = {
+					opinion_diff = {
+						first = PREV
+						second = LIEGE
+						value = 150
+						as_if_liege = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				FROM = {
+					opinion_diff = {
+						first = PREV
+						second = LIEGE
+						value = 160
+						as_if_liege = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				FROM = {
+					opinion_diff = {
+						first = PREV
+						second = LIEGE
+						value = 170
+						as_if_liege = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				FROM = {
+					opinion_diff = {
+						first = PREV
+						second = LIEGE
+						value = 180
+						as_if_liege = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				FROM = {
+					opinion_diff = {
+						first = PREV
+						second = LIEGE
+						value = 190
+						as_if_liege = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			current_heir = {
+				FROM = {
+					opinion_diff = {
+						first = PREV
+						second = LIEGE
+						value = 200
+						as_if_liege = yes
+					}
+				}
+			}
+		}
+	}
+	
+	membership = {
+	}
+	
+	success = {
+		FROM = { has_character_flag = flag_no_confidence_successful }
+	}
+	
+	effect = {
+		FROM = { clr_character_flag = flag_no_confidence_successful }
+	}
+}

@@ -1,0 +1,65 @@
+namespace = constitution
+
+character_event = {
+	id = constitution.0
+	desc = "EVTDESCCONSTITUTION0"
+	
+	trigger = {
+		primary_title = {
+			OR = {
+				AND = {
+					has_law = term_limits_0
+					ruled_years = 4
+				}
+				AND = {
+					has_law = term_limits_1
+					ruled_years = 5
+				}
+				AND = {
+					has_law = term_limits_2
+					ruled_years = 6
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTACONSTITUTION0"
+		abdicate = yes
+		
+		hidden_tooltip = {
+			random_dynasty_member = {
+				limit = {
+					is_patrician = yes
+					is_merchant_republic = no
+				}
+				abidcate_to = ROOT
+				ROOT = { reverse_banish = PREV }
+			}
+		}
+	}
+}
+
+# Federal Councillor title
+character_event = {
+	id = constitution.100
+	desc = OK
+	hide_window = yes
+	
+	only_rulers = yes
+	
+	trigger = {
+		any_demesne_title = {
+			higher_tier_than = COUNT
+			crownlaw_title = {
+				has_law = succ_feudal_elective
+				NOT = { title = prev }
+				holder_scope = { any_vassal = { character = ROOT } }
+			}
+		}
+	}
+	
+	immediate = {
+		give_minor_title = title_federal_councillor
+	}
+}

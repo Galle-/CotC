@@ -1,0 +1,246 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+job_chancellor;Secretary of State;;;;;;;;;;;;;x
+job_marshal;Secretary of Defense;;;;;;;;;;;;;x
+job_treasurer;Secretary of Development;;;;;;;;;;;;;x
+job_spymaster;Secretary of Intelligence;;;;;;;;;;;;;x
+job_spiritual;Secretary of Research;;;;;;;;;;;;;x
+emperor;Emperor;;;;;;;;;;;;;x
+emperor_female;Empress;;;;;;;;;;;;;x
+emperor_foa;Your Majesty;;;;;;;;;;;;;x
+empire_of;Empire of;;;;;;;;;;;;;x
+empire;Empire;;;;;;;;;;;;;x
+empires;Empires;;;;;;;;;;;;;x
+king;Grand Admiral;;;;;;;;;;;;;x
+king_female;Grand Admiral;;;;;;;;;;;;;x
+king_foa;Sir;;;;;;;;;;;;;x
+king_foa_female;Ma'am;;;;;;;;;;;;;x
+kingdom_of;Military State of;;;;;;;;;;;;;x
+kingdom;Military State;;;;;;;;;;;;;x
+kingdoms;Military States;;;;;;;;;;;;;x
+duke;Fleet Admiral;;;;;;;;;;;;;x
+duke_female;Fleet Admiral;;;;;;;;;;;;;x
+duke_foa;Sir;;;;;;;;;;;;;x
+duke_foa_female;Ma'am;;;;;;;;;;;;;x
+duchy_of;Sector Command;;;;;;;;;;;;;x
+duchy;Sector Command;;;;;;;;;;;;;x
+duchies;Sector Commands;;;;;;;;;;;;;x
+count;Admiral;;;;;;;;;;;;;x
+count_female;Admiral;;;;;;;;;;;;;x
+count_foa;Sir;;;;;;;;;;;;;x
+count_foa_female;Ma'am;;;;;;;;;;;;;x
+county_of;Star System;;;;;;;;;;;;;x
+county;Star System;;;;;;;;;;;;;x
+counties;Star Systems;;;;;;;;;;;;;x
+baron;Commander;;;;;;;;;;;;;x
+baron_female;Commander;;;;;;;;;;;;;x
+baron_foa;Sir;;;;;;;;;;;;;x
+baron_foa_female;Ma'am;;;;;;;;;;;;;x
+barony_of;Fortress World;;;;;;;;;;;;;x
+barony;Fortress World;;;;;;;;;;;;;x
+baronies;Fortress Worlds;;;;;;;;;;;;;x
+city_emperor;President;;;;;;;;;;;;;x
+city_emperor_female;President;;;;;;;;;;;;;x
+city_emperor_foa;Mister President;;;;;;;;;;;;;x
+city_emperor_foa_female;Madam President;;;;;;;;;;;;;x
+city_empire_of;Confederation of;;;;;;;;;;;;;x
+city_empire;Confederation;;;;;;;;;;;;;x
+city_empires;Confederations;;;;;;;;;;;;;x
+city_king;President;;;;;;;;;;;;;x
+city_king_female;President;;;;;;;;;;;;;x
+city_king_foa;Mister President;;;;;;;;;;;;;x
+city_king_foa_female;Madam President;;;;;;;;;;;;;x
+city_kingdom_of;Republic of;;;;;;;;;;;;;x
+city_kingdom;Republic;;;;;;;;;;;;;x
+city_kingdoms;Republics;;;;;;;;;;;;;x
+city_duke;Sector Governor;;;;;;;;;;;;;x
+city_duke_female;Sector Governor;;;;;;;;;;;;;x
+city_duke_foa;Mister Governor;;;;;;;;;;;;;x
+city_duke_foa_female;Madam Governor;;;;;;;;;;;;;x
+city_duchy_of;Sector;;;;;;;;;;;;;x
+city_duchy;Sector;;;;;;;;;;;;;x
+city_duchies;Sectors;;;;;;;;;;;;;x
+city_count;Governor;;;;;;;;;;;;;x
+city_count_female;Governor;;;;;;;;;;;;;x
+city_count_foa;Sir;;;;;;;;;;;;;x
+city_count_foa_female;Ma'am;;;;;;;;;;;;;x
+city_county_of;Star System;;;;;;;;;;;;;x
+city_county;Star System;;;;;;;;;;;;;x
+city_counties;Star Systems;;;;;;;;;;;;;x
+city_baron;Governor;;;;;;;;;;;;;x
+city_baron_female;Governor;;;;;;;;;;;;;x
+city_baron_foa;Sir;;;;;;;;;;;;;x
+city_baron_foa_female;Ma'am;;;;;;;;;;;;;x
+city_barony_of;Planet;;;;;;;;;;;;;x
+city_barony;Planet;;;;;;;;;;;;;x
+city_baronies;Planets;;;;;;;;;;;;;x
+temple_emperor;Director-General;;;;;;;;;;;;;x
+temple_emperor_female;Director-General;;;;;;;;;;;;;x
+temple_emperor_foa;Mister Director;;;;;;;;;;;;;x
+temple_emperor_foa_female;Madam Director;;;;;;;;;;;;;x
+temple_empire_of;Grand Directorate of;;;;;;;;;;;;;x
+temple_empire;Grand Directorate;;;;;;;;;;;;;x
+temple_empires;Grand Directorates;;;;;;;;;;;;;x
+temple_king;Director-General;;;;;;;;;;;;;x
+temple_king_female;Director-General;;;;;;;;;;;;;x
+temple_king_foa;Mister Director;;;;;;;;;;;;;x
+temple_king_foa_female;Madam Director;;;;;;;;;;;;;x
+temple_kingdom_of;Directorate of;;;;;;;;;;;;;x
+temple_kingdom;Directorate;;;;;;;;;;;;;x
+temple_kingdoms;Directorates;;;;;;;;;;;;;x
+temple_duke;Sector Administrator;;;;;;;;;;;;;x
+temple_duke_female;Sector Administrator;;;;;;;;;;;;;x
+temple_duke_foa;Mister Administrator;;;;;;;;;;;;;x
+temple_duke_foa_female;Madam Administrator;;;;;;;;;;;;;x
+temple_duchy_of;Sector;;;;;;;;;;;;;x
+temple_duchy;Sector;;;;;;;;;;;;;x
+temple_duchies;Sectors;;;;;;;;;;;;;x
+temple_count;System Administrator;;;;;;;;;;;;;x
+temple_count_female;System Administrator;;;;;;;;;;;;;x
+temple_count_foa;Sir;;;;;;;;;;;;;x
+temple_count_foa_female;Ma'am;;;;;;;;;;;;;x
+temple_county_of;Star System;;;;;;;;;;;;;x
+temple_county;Star System;;;;;;;;;;;;;x
+temple_counties;Star Systems;;;;;;;;;;;;;x
+temple_baron;Administrator;;;;;;;;;;;;;x
+temple_baron_female;Administrator;;;;;;;;;;;;;x
+temple_baron_foa;Sir;;;;;;;;;;;;;x
+temple_baron_foa_female;Ma'am;;;;;;;;;;;;;x
+temple_barony_of;Administrative World;;;;;;;;;;;;;x
+temple_barony;Administrative World;;;;;;;;;;;;;x
+temple_baronies;Administrative Worlds;;;;;;;;;;;;;x
+#IMPERIAL;;;;;;;;;;;;;;x
+job_chancellor_imperial;Minister of State;;;;;;;;;;;;;x
+job_marshal_imperial;Minister of War;;;;;;;;;;;;;x
+job_treasurer_imperial;Minister of Development;;;;;;;;;;;;;x
+job_spymaster_imperial;Minister of Intelligence;;;;;;;;;;;;;x
+job_spiritual_imperial;Minister of Research;;;;;;;;;;;;;x
+castle_king_imperial;Lord High Admiral;;;;;;;;;;;;;x
+castle_king_imperial_female;Lady High Admiral;;;;;;;;;;;;;x
+castle_king_foa_imperial;My Lord;;;;;;;;;;;;;x
+castle_king_foa_imperial_female;My Lady;;;;;;;;;;;;;x
+castle_kingdom_of_imperial;Imperial State of;;;;;;;;;;;;;x
+castle_kingdom_imperial;Imperial State;;;;;;;;;;;;;x
+castle_kingdoms_imperial;Imperial States;;;;;;;;;;;;;x
+castle_duke_imperial;Lord Commissioner;;;;;;;;;;;;;x
+castle_duke_imperial_female;Lady Commissioner;;;;;;;;;;;;;x
+castle_duke_foa_imperial;My Lord;;;;;;;;;;;;;x
+castle_duke_foa_imperial_female;My Lady;;;;;;;;;;;;;x
+castle_duchy_of_imperial;Sector;;;;;;;;;;;;;x
+castle_duchy_imperial;Sector;;;;;;;;;;;;;x
+castle_duchies_imperial;Sectors;;;;;;;;;;;;;x
+castle_count_imperial;Lord Admiral;;;;;;;;;;;;;x
+castle_count_imperial_female;Lady Admiral;;;;;;;;;;;;;x
+castle_count_foa_imperial;My Lord;;;;;;;;;;;;;x
+castle_count_foa_imperial_female;My Lady;;;;;;;;;;;;;x
+castle_baron_imperial;Lord Commander;;;;;;;;;;;;;x
+castle_baron_imperial_female;Lady Commander;;;;;;;;;;;;;x
+castle_baron_foa_imperial;My Lord;;;;;;;;;;;;;x
+castle_baron_foa_imperial_female;My Lady;;;;;;;;;;;;;x
+#HIVER;;;;;;;;;;;;;;x
+job_chancellor_hiver;Interface Node;;;;;;;;;;;;;x
+job_marshal_hiver;Security Node A;;;;;;;;;;;;;x
+job_treasurer_hiver;Infrastructure Node;;;;;;;;;;;;;x
+job_spymaster_hiver;Security Node B;;;;;;;;;;;;;x
+job_spiritual_hiver;Optimization Node;;;;;;;;;;;;;x
+emperor_hiver;M0 Node;;;;;;;;;;;;;x
+emperor_hiver_female;M0 Node;;;;;;;;;;;;;x
+emperor_foa_hiver;M0;;;;;;;;;;;;;x
+empire_of_hiver;M0 Network;;;;;;;;;;;;;x
+empire_hiver;M0 Network;;;;;;;;;;;;;x
+empires_hiver;M0 Networks;;;;;;;;;;;;;x
+king_hiver;M1 Node;;;;;;;;;;;;;x
+king_hiver_female;M1 Node;;;;;;;;;;;;;x
+king_foa_hiver;M1;;;;;;;;;;;;;x
+king_foa_hiver_female;M1;;;;;;;;;;;;;x
+kingdom_of_hiver;M1 Network;;;;;;;;;;;;;x
+kingdom_hiver;M1 Network;;;;;;;;;;;;;x
+kingdoms_hiver;M1 Networks;;;;;;;;;;;;;x
+duke_hiver;M2 Node;;;;;;;;;;;;;x
+duke_hiver_female;M2 Node;;;;;;;;;;;;;x
+duke_foa_hiver;M2;;;;;;;;;;;;;x
+duke_foa_hiver_female;M2;;;;;;;;;;;;;x
+duchy_of_hiver;M2 Network;;;;;;;;;;;;;x
+duchy_hiver;M2 Network;;;;;;;;;;;;;x
+duchy_hiver;M2 Networks;;;;;;;;;;;;;x
+count_hiver;MS Node;;;;;;;;;;;;;x
+count_hiver_female;MS Node;;;;;;;;;;;;;x
+count_foa_hiver;MS;;;;;;;;;;;;;x
+count_foa_hiver_female;MS;;;;;;;;;;;;;x
+county_of_hiver;Military System;;;;;;;;;;;;;x
+county_hiver;Military System;;;;;;;;;;;;;x
+counties_hiver;Military Systems;;;;;;;;;;;;;x
+baron_hiver;MP Node;;;;;;;;;;;;;x
+baron_hiver_female;MP Node;;;;;;;;;;;;;x
+baron_foa_hiver;MP;;;;;;;;;;;;;x
+baron_foa_hiver_female;MP;;;;;;;;;;;;;x
+barony_of_hiver;Military Planet;;;;;;;;;;;;;x
+barony_hiver;Military Planet;;;;;;;;;;;;;x
+baronies_hiver;Military Planets;;;;;;;;;;;;;x
+city_emperor_hiver;C0 Node;;;;;;;;;;;;;x
+city_emperor_hiver_female;C0 Node;;;;;;;;;;;;;x
+city_emperor_foa_hiver;C0;;;;;;;;;;;;;x
+city_empire_of_hiver;C0 Network;;;;;;;;;;;;;x
+city_empire_hiver;C0 Network;;;;;;;;;;;;;x
+city_empires_hiver;C0 Networks;;;;;;;;;;;;;x
+city_king_hiver;C1 Node;;;;;;;;;;;;;x
+city_king_hiver_female;C1 Node;;;;;;;;;;;;;x
+city_king_foa_hiver;C1;;;;;;;;;;;;;x
+city_king_foa_hiver_female;C1;;;;;;;;;;;;;x
+city_kingdom_of_hiver;C1 Network;;;;;;;;;;;;;x
+city_kingdom_hiver;C1 Network;;;;;;;;;;;;;x
+city_kingdoms_hiver;C1 Networks;;;;;;;;;;;;;x
+city_duke_hiver;C2 Node;;;;;;;;;;;;;x
+city_duke_hiver_female;C2 Node;;;;;;;;;;;;;x
+city_duke_foa_hiver;C2;;;;;;;;;;;;;x
+city_duke_foa_hiver_female;C2;;;;;;;;;;;;;x
+city_duchy_of_hiver;C2 Network;;;;;;;;;;;;;x
+city_duchy_hiver;C2 Network;;;;;;;;;;;;;x
+city_duchy_hiver;C2 Networks;;;;;;;;;;;;;x
+city_count_hiver;CS Node;;;;;;;;;;;;;x
+city_count_hiver_female;CS Node;;;;;;;;;;;;;x
+city_count_foa_hiver;CS;;;;;;;;;;;;;x
+city_count_foa_hiver_female;CS;;;;;;;;;;;;;x
+city_county_of_hiver;Civil System;;;;;;;;;;;;;x
+city_county_hiver;Civil System;;;;;;;;;;;;;x
+city_counties_hiver;Civil Systems;;;;;;;;;;;;;x
+city_baron_hiver;CP Node;;;;;;;;;;;;;x
+city_baron_hiver_female;CP Node;;;;;;;;;;;;;x
+city_baron_foa_hiver;CP;;;;;;;;;;;;;x
+city_baron_foa_hiver_female;CP;;;;;;;;;;;;;x
+city_barony_of_hiver;Civil Planet;;;;;;;;;;;;;x
+city_barony_hiver;Civil Planet;;;;;;;;;;;;;x
+city_baronies_hiver;Civil Planets;;;;;;;;;;;;;x
+temple_emperor_hiver;A0 Node;;;;;;;;;;;;;x
+temple_emperor_hiver_female;A0 Node;;;;;;;;;;;;;x
+temple_emperor_foa_hiver;A0;;;;;;;;;;;;;x
+temple_empire_of_hiver;A0 Network;;;;;;;;;;;;;x
+temple_empire_hiver;A0 Network;;;;;;;;;;;;;x
+temple_empires_hiver;A0 Networks;;;;;;;;;;;;;x
+temple_king_hiver;A1 Node;;;;;;;;;;;;;x
+temple_king_hiver_female;A1 Node;;;;;;;;;;;;;x
+temple_king_foa_hiver;A1;;;;;;;;;;;;;x
+temple_king_foa_hiver_female;A1;;;;;;;;;;;;;x
+temple_kingdom_of_hiver;A1 Network;;;;;;;;;;;;;x
+temple_kingdom_hiver;A1 Network;;;;;;;;;;;;;x
+temple_kingdoms_hiver;A1 Networks;;;;;;;;;;;;;x
+temple_duke_hiver;A2 Node;;;;;;;;;;;;;x
+temple_duke_hiver_female;A2 Node;;;;;;;;;;;;;x
+temple_duke_foa_hiver;A2;;;;;;;;;;;;;x
+temple_duke_foa_hiver_female;A2;;;;;;;;;;;;;x
+temple_duchy_of_hiver;A2 Network;;;;;;;;;;;;;x
+temple_duchy_hiver;A2 Network;;;;;;;;;;;;;x
+temple_duchy_hiver;A2 Networks;;;;;;;;;;;;;x
+temple_count_hiver;AS Node;;;;;;;;;;;;;x
+temple_count_hiver_female;AS Node;;;;;;;;;;;;;x
+temple_count_foa_hiver;AS;;;;;;;;;;;;;x
+temple_count_foa_hiver_female;AS;;;;;;;;;;;;;x
+temple_county_of_hiver;Administrative System;;;;;;;;;;;;;x
+temple_county_hiver;Administrative System;;;;;;;;;;;;;x
+temple_counties_hiver;Administrative Systems;;;;;;;;;;;;;x
+temple_baron_hiver;AP Node;;;;;;;;;;;;;x
+temple_baron_hiver_female;AP Node;;;;;;;;;;;;;x
+temple_baron_foa_hiver;AP;;;;;;;;;;;;;x
+temple_baron_foa_hiver_female;AP;;;;;;;;;;;;;x
+temple_barony_of_hiver;Administrative Planet;;;;;;;;;;;;;x
+temple_barony_hiver;Administrative Planet;;;;;;;;;;;;;x
+temple_baronies_hiver;Administrative Planets;;;;;;;;;;;;;x

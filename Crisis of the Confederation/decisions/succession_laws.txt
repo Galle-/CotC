@@ -9,17 +9,25 @@ succession_laws = {
 		vassal_opinion = 5
 	
 		potential = {
-			is_patrician = no
-			is_tribal_type_title = no
-			OR = {
-				holder_scope = { is_theocracy = no }
-				independent = yes
+			holder_scope = {
+				NOT = { religion_group = muslim }
+				is_merchant_republic = no
+				is_patrician = no
 			}
 			OR = {
-				has_law = inheritance_law_1
-				NOT = { higher_tier_than = DUKE }
-				independent = no
+				is_landless_type_title = no
+				is_tribal_type_title = yes
+				temporary = yes
 			}
+			rebel = no
+			OR = {
+				AND = {
+					tier = baron
+					is_feudal = yes
+				}
+				holder_scope = { is_feudal = yes }
+			}
+			is_primary_type_title = no
 		}
 		effect = {
 			succession = gavelkind
@@ -36,16 +44,39 @@ succession_laws = {
 		dynasty_opinion = 10
 	
 		potential = {
-			is_tribal_type_title = no
-			OR = {
-				holder_scope = { is_theocracy = no }
-				independent = yes
+			holder_scope = {
+				NOT = { religion_group = muslim }
+				is_merchant_republic = no
+				
+				OR = {
+					NOT = { religion_group = pagan_group }
+					is_reformed_religion = yes
+					religion = hellenic_pagan
+					is_patrician = yes
+				}
+				
+				OR = {
+					is_republic = no
+					is_patrician = yes
+				}
 			}
 			OR = {
-				is_patrician = yes
-				has_law = inheritance_law_2
-				NOT = { higher_tier_than = DUKE }
-				independent = no
+				is_landless_type_title = no
+				is_tribal_type_title = yes
+			}
+			OR = {
+				AND = {
+					tier = baron
+					is_feudal = yes
+				}
+				holder_scope = { is_feudal = yes }
+			}
+			
+			is_primary_type_title = no
+			
+			OR = {
+				NOT = { tier = baron }
+				holder_scope = { is_patrician = yes }
 			}
 		}
 		
@@ -79,20 +110,42 @@ succession_laws = {
 		child_opinion = -20
 		dynasty_opinion = -5
 		potential = {
-			is_patrician = no
-			is_tribal_type_title = no
-			OR = {
-				holder_scope = { is_theocracy = no }
-				independent = yes
+			holder_scope = {
+				NOT = { religion_group = muslim }
+				OR = {
+					NOT = { religion_group = pagan_group }
+					is_reformed_religion = yes
+					religion = hellenic_pagan
+				}
+				
+				is_merchant_republic = no
+				is_patrician = no
 			}
 			OR = {
-				has_law = inheritance_law_3
-				NOT = { higher_tier_than = DUKE }
-				independent = no
+				is_landless_type_title = no
+				is_tribal_type_title = yes
+			}
+			is_primary_type_title = no
+			OR = {
+				AND = {
+					tier = baron
+					is_feudal = yes
+				}
+				holder_scope = { is_feudal = yes }
 			}
 		}
 		allow = {
-			always = no
+			OR = {
+				hidden_tooltip = {
+					has_crown_law_title = no
+				}
+				crownlaw_title = {
+					OR = {
+						has_law = centralization_3
+						has_law = centralization_4
+					}
+				}
+			}
 		}
 		
 		effect = {
@@ -109,16 +162,20 @@ succession_laws = {
 		dynasty_opinion = -5
 		vassal_opinion = 20
 		potential = {
-			is_patrician = no
+			NOT = { tier = baron }
 			OR = {
-				has_law = election_law_3
-				NOT = { higher_tier_than = DUKE }
-				independent = no
-				is_tribal_type_title = yes
+				AND = {
+					tier = baron
+					is_feudal = yes
+				}
+				holder_scope = { is_feudal = yes }
 			}
 		}
 		allow = {
-			always = yes
+			holder_scope = {
+				is_merchant_republic = no
+				is_patrician = no
+			}
 		}
 		effect = {
 			succession = feudal_elective
@@ -134,20 +191,20 @@ succession_laws = {
 		dynasty_opinion = 10
 		vassal_opinion = 5
 		potential = {
-			is_patrician = no
-			is_tribal_type_title = no
+			NOT = { tier = baron }
 			OR = {
-				holder_scope = { is_theocracy = no }
-				independent = yes
-			}
-			OR = {
-				has_law = election_law_4
-				NOT = { higher_tier_than = DUKE }
-				independent = no
+				AND = {
+					tier = baron
+					is_feudal = yes
+				}
+				holder_scope = { is_feudal = yes }
 			}
 		}
 		allow = {
-			always = yes
+			OR = {
+				NOT = { higher_tier_than = DUKE }
+				holder_scope = { is_merchant_republic = no }
+			}
 		}
 		effect = {
 			succession = tanistry
@@ -163,20 +220,46 @@ succession_laws = {
 		child_opinion = -20
 		dynasty_opinion = -5
 		potential = {
-			is_patrician = no
-			is_tribal_type_title = no
-			OR = {
-				holder_scope = { is_theocracy = no }
-				independent = yes
+			holder_scope = {
+				OR = {
+					culture = mongol
+					AND = {
+						NOT = { religion = norse_pagan }
+						NOT = { religion = tengri_pagan }
+						NOT = { religion = baltic_pagan }
+						NOT = { religion = finnish_pagan }
+						NOT = { religion = aztec }
+						NOT = { religion = pagan }
+						NOT = { religion = slavic_pagan }
+					}
+				}
+				
+				NOT = { religion_group = muslim }
+				is_merchant_republic = no
+				is_patrician = no
 			}
 			OR = {
-				has_law = inheritance_law_4
-				NOT = { higher_tier_than = DUKE }
-				independent = no
+				is_landless_type_title = no
+				is_tribal_type_title = yes
+			}
+			is_primary_type_title = no
+			OR = {
+				AND = {
+					tier = baron
+					is_feudal = yes
+				}
+				holder_scope = { is_feudal = yes }
 			}
 		}
 		allow = {
-			always = yes
+			OR = {
+				hidden_tooltip = {
+					has_crown_law_title = no
+				}
+				crownlaw_title = {
+					NOT = { has_law = centralization_0 }
+				}
+			}
 		}
 		
 		effect = {
@@ -192,7 +275,16 @@ succession_laws = {
 #		child_opinion = 30
 #		dynasty_opinion = 10
 		potential = {
-			always = no
+			OR = {
+				is_landless_type_title = no
+				is_tribal_type_title = yes
+			}
+			holder_scope = {
+				is_republic = no
+				is_merchant_republic = no
+				religion_group = muslim
+			}
+			is_primary_type_title = no
 		}
 		effect = {
 			succession = turkish_succession
@@ -201,52 +293,46 @@ succession_laws = {
 			always = no
 		}			
 	}
-	succ_papal_succession = {
-		potential = {
-			title = k_papal_state
-		}
-		
-		effect = {
-			succession = papal_succession
-		}
-		revoke_allowed = {
-			always = no
-		}		
-	}
-	
-	# Titles revert back to the liege on death
-	succ_appointment = {
-		potential = {
-			is_patrician = no
-			OR = {
-				has_law = appointment_law_1
-				NOT = { higher_tier_than = DUKE }
-				independent = no
-				# Special case - certain religious leadership titles should always use this
-				title = k_terran_federal_authority
-				title = k_terran_republic_authority
-				title = k_terran_imperial_authority
-			}
-		}
-		effect = {
-			succession = appointment
-		}
-		revoke_allowed = {
-			always = no
-		}		
-	}
 	succ_open_elective = {
 		potential = {
-			is_patrician = no
-			is_tribal_type_title = no
 			OR = {
-				holder_scope = { is_theocracy = no }
-				independent = yes
+				is_primary_type_title = yes
+				AND = {
+					is_landless_type_title = yes
+					is_tribal_type_title = no
+				}
+				AND = {
+					tier = baron
+					OR = {
+						is_republic = yes
+						AND = {
+							is_theocracy = yes
+							NOT = { holder_scope = { religion_group = muslim } }
+						}
+					}
+				}
+				holder_scope = { 
+					OR = {
+						is_republic = yes
+						AND = {
+							is_theocracy = yes
+							NOT = { religion_group = muslim }
+						}
+					}
+				}
 			}
 			OR = {
-				has_law = election_law_1
-				NOT = { higher_tier_than = DUKE }
-				independent = no
+				is_landless_type_title = yes
+				holder_scope = { is_theocracy = no }
+				holder_scope = { 
+					NOT = { religion = catholic } 
+				}
+			}
+		}
+		allow = {
+			holder_scope = {
+				is_merchant_republic = no
+				is_patrician = no
 			}
 		}
 		effect = {
@@ -254,11 +340,25 @@ succession_laws = {
 		}
 		revoke_allowed = {
 			always = no
-		}
+		}			
 	}
 	succ_catholic_bishopric = {
 		potential = {
-			always = no
+			is_landless_type_title = no
+			
+			OR = {
+				AND = {
+					tier = baron
+					is_theocracy = yes
+				}
+				holder_scope = { is_theocracy = yes }
+			}
+			
+			holder_scope = { 
+				religion = catholic 
+				is_merchant_republic = no
+			}
+			is_primary_type_title = no
 		}
 		effect = {
 			succession = catholic_bishopric
@@ -270,15 +370,9 @@ succession_laws = {
 	
 	succ_patrician_elective = {
 		potential = {
-			is_patrician = no
 			holder_scope = { is_merchant_republic = yes }
-			OR = {
-				has_law = election_law_2
-				NOT = { higher_tier_than = DUKE }
-				independent = no
-			}
 		}
-		allow = { always = yes }
+		allow = { always = no }
 		effect = {
 			succession = patrician_elective
 		}

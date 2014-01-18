@@ -1,0 +1,44 @@
+# Law and order and so on
+opinion_criminal = { opinion = -25 months = 2400 imprison = yes }
+
+# This has extremely powerful effects
+opinion_owes_me_a_favor = { opinion = 40 months = 2400 }
+opinion_favor_ongoing_appointment = { opinion = 10 months = 2400 }
+opinion_favor_ongoing_crisis_support = { opinion = 10 months = 2400 }
+opinion_favor_type_political = { opinion = 10 months = 2400 }
+opinion_defaulted_favor = { opinion = -50 months = 120 }
+
+# This is largely to prevent spamming the AI from working
+opinion_recent_request = { opinion = -10 months = 60 }
+
+# And this is to keep the AI from doing any spamming
+opinion_recently_denied_favor_repayment_0 = { opinion = -10 months = 12 }
+opinion_recently_denied_favor_repayment_1 = { opinion = -10 months = 24 }
+opinion_recently_denied_favor_repayment_2 = { opinion = -10 months = 48 }
+opinion_recently_rejected_favor_offer_0 = { opinion = -10 months = 12 }
+opinion_recently_rejected_favor_offer_1 = { opinion = -10 months = 24 }
+opinion_recently_rejected_favor_offer_2 = { opinion = -10 months = 48 }
+
+# Constitutional Crisis stuff
+opinion_supported_my_faction = { opinion = 35 months = 2400 }
+opinion_opposed_my_faction = { opinion = -35 months = 2400 }
+
+# Premiership
+opinion_voted_for_me = { opinion = 10 months = 1200 }
+opinion_appointed_me_prime_minister = { opinion = 25 months = 120 }
+opinion_revoked_premiership = { opinion = -30 months = 120 }
+
+# Parliamentary actions
+opinion_supported_my_proposal = { opinion = 10 months = 60 }
+opinion_opposed_my_proposal = { opinion = -10 months = 60 }
+
+# Appointment nominations and nepotism
+opinion_promised_me_appointment = { opinion = 40 months = 240 }
+opinion_refused_me_appointment = { opinion = -10 months = 120 }
+opinion_retracted_promised_appointment = { opinion = -50 months = 240 }
+opinion_stole_promised_appointment = { opinion = -50 months = 240 }
+opinion_attempted_appointment_theft = { opinion = -50 months = 120 }
+opinion_nominated_me_for_appointment = { opinion = 20 months = 240 }
+opinion_promised_relative_appointment = { opinion = 20 months = 240 }
+opinion_refused_relative_appointment = { opinion = -10 months = 120 }
+opinion_retracted_relative_appointment = { opinion = -30 months = 240 }
