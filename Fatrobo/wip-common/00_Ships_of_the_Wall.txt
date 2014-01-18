@@ -1,0 +1,45 @@
+# Types:
+# 0 - Light Infantry/Fighters
+# 1 - Heavy Infantry/Bombers
+# 2 - Pikemen/Drones
+# 3 - Light Cavalry/DD
+# 4 - Heavy Cavalry/BC
+# 5 - Archers/TT
+# 6 - Horse Archers/DN
+
+RETTYPE_INF1 = #destroyer
+{
+	first_type = 3
+	first_amount = 1
+		
+	modifier = {
+		light_cavalry_offensive = 0.4
+		light_cavalry_defensive = 0.2
+	}
+}
+
+RETTYPE_INF2 = #BC
+{
+	first_type = 4
+	first_amount = 1
+	
+	
+	modifier = {
+		knights_offensive = 0.4
+		knights_defensive = 0.2
+	}
+}
+
+RETTYPE_CAV1 = #DN
+{
+	first_type = 6
+	first_amount = 1
+	
+	
+	modifier = {
+		horse_archers_offensive = 0.3
+		horse_archers_defensive = 0.3
+	}
+}
+
+

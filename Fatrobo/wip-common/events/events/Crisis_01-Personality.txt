@@ -1,0 +1,5 @@
+#using this block for gaining and losing traits. The reason why I'm making new blocks is that the evtdescript for most of the vanilla stuff seems to be hidden.
+
+#event block Cotc.1-> Cotc.40 for basic adult personality gain/lose
+#event block Cotc.41 ->Cotc.100 for basic child gain lose chains
+# reserve through 999 just to be safe.

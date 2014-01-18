@@ -1,0 +1,38 @@
+castle = {
+	DR_01 = {
+			desc = DR_01_desc
+			trigger = {
+			TECH_MAJESTY = 1
+				FROM = {
+					FROM = {
+						OR = {
+							has_building = ca_colony_0
+							has_building = ca_space_station_0
+							}
+					}
+				}
+			}
+		
+
+		build_cost = 75
+		build_time = 60
+		pikemen = 12
+		
+		
+		}
+		
+	DR_02 = {
+			desc = DR_02_desc
+			upgrades_from = DR_01
+			trigger = {
+			TECH_MAJESTY = 2
+				}
+		
+
+		build_cost = 85
+		build_time = 120
+		pikemen = 72
+		
+		
+		}	
+	}

@@ -1,0 +1,230 @@
+castle = {
+	FL_01 = {
+			desc = FL_01_desc
+			trigger = {
+			TECH_LIGHT_INFANTRY = 0
+				FROM = {
+					FROM = {
+						OR = {
+							has_building = ca_colony_0
+							has_building = ca_space_station_0
+							}
+					}
+				}
+			}
+		
+
+		build_cost = 50
+		build_time = 30
+		light_infantry = 72
+		
+		}	
+
+		
+		FL_02 = {
+			upgrades_from = FL_01
+			desc = FL_02_desc
+			trigger = {TECH_RECRUITMENT = 1}
+		
+		build_cost = 75
+		build_time = 60
+		light_infantry = 36
+		}
+		
+		
+		FL_03 = {
+			upgrades_from = FL_02
+			desc = FL_03_desc
+			trigger = {TECH_RECRUITMENT = 2}
+		
+		build_cost = 90
+		build_time = 60
+		light_infantry = 72
+		}
+		
+		
+		FL_04 = {
+			upgrades_from = FL_03
+			desc = FL_04_desc
+			trigger = {TECH_RECRUITMENT = 2
+			FROM = {
+					FROM = {
+						OR = {
+							has_building = ca_colony_1
+							has_building = ca_space_station_1
+							}
+					}
+				}
+			}
+		build_cost = 90
+		build_time = 60
+		light_infantry = 72
+		}
+		
+		
+		FL_05 = {
+			upgrades_from = FL_04
+			desc = FL_05_desc
+			prequisites = {TECH_RECRUITMENT = 5
+						TECH_CASTLE_CONSTRUCTION = 3}
+			
+		build_cost = 300
+		build_time = 1084
+		light_infantry = 192
+
+		}
+	}
+	
+city = {
+	FL_01 = {
+			desc = FL_01_desc
+			trigger = {
+			TECH_LIGHT_INFANTRY = 0
+				FROM = {
+					FROM = {
+						OR = {
+							has_building = ct_colony_0
+							has_building = ct_space_station_0
+							}
+					}
+				}
+			}
+		
+
+		build_cost = 50
+		build_time = 30
+		light_infantry = 72
+		
+		}	
+
+		
+		FL_02 = {
+			upgrades_from = FL_01
+			desc = FL_02_desc
+			trigger = {TECH_RECRUITMENT = 1}
+		
+		build_cost = 75
+		build_time = 60
+		light_infantry = 36
+		}
+		
+		
+		FL_03 = {
+			upgrades_from = FL_02
+			desc = FL_03_desc
+			trigger = {TECH_RECRUITMENT = 2}
+		
+		build_cost = 90
+		build_time = 60
+		light_infantry = 72
+		}
+		
+		
+		FL_04 = {
+			upgrades_from = FL_03
+			desc = FL_04_desc
+			trigger = {TECH_RECRUITMENT = 2
+			FROM = {
+					FROM = {
+						OR = {
+							has_building = ct_colony_1
+							has_building = ct_space_station_1
+							}
+					}
+				}
+			}
+		build_cost = 90
+		build_time = 60
+		light_infantry = 72
+		}
+		
+		
+		FL_05 = {
+			upgrades_from = FL_04
+			desc = FL_05_desc
+			prequisites = {TECH_RECRUITMENT = 5
+						TECH_CASTLE_CONSTRUCTION = 3}
+			
+		build_cost = 300
+		build_time = 1084
+		light_infantry = 192
+
+		}
+	}
+	
+temple = {
+	FL_01 = {
+			desc = FL_01_desc
+			trigger = {
+			TECH_LIGHT_INFANTRY = 0
+				FROM = {
+					FROM = {
+						OR = {
+							has_building = tp_colony_0
+							has_building = tp_space_station_0
+							}
+					}
+				}
+			}
+		
+
+		build_cost = 50
+		build_time = 30
+		light_infantry = 72
+		
+		}	
+
+		
+		FL_02 = {
+			upgrades_from = FL_01
+			desc = FL_02_desc
+			trigger = {TECH_RECRUITMENT = 1}
+		
+		build_cost = 75
+		build_time = 60
+		light_infantry = 36
+		}
+		
+		
+		FL_03 = {
+			upgrades_from = FL_02
+			desc = FL_03_desc
+			trigger = {TECH_RECRUITMENT = 2}
+		
+		build_cost = 90
+		build_time = 60
+		light_infantry = 72
+		}
+		
+		
+		FL_04 = {
+			upgrades_from = FL_03
+			desc = FL_04_desc
+			trigger = {TECH_RECRUITMENT = 2
+			FROM = {
+					FROM = {
+						OR = {
+							has_building = tp_colony_1
+							has_building = tp_space_station_1
+							}
+					}
+				}
+			}
+		build_cost = 90
+		build_time = 60
+		light_infantry = 72
+		}
+		
+		
+		FL_05 = {
+			upgrades_from = FL_04
+			desc = FL_05_desc
+			prequisites = {TECH_RECRUITMENT = 5
+						TECH_CASTLE_CONSTRUCTION = 3}
+			
+		build_cost = 300
+		build_time = 1084
+		light_infantry = 192
+
+		}
+	}

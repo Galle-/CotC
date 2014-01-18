@@ -1,0 +1,44 @@
+castle = {
+	DD_01 = {
+			desc = DD_01_desc
+			trigger = {
+			TECH_NAVAL = 1
+				FROM = {
+					FROM = {
+						OR = {
+							has_building = ca_colony_1
+							has_building = ca_space_station_1
+							}
+					}
+				}
+			}
+		
+
+		build_cost = 120
+		build_time = 365
+		light_cavalry = 5
+		
+		}	
+
+		DD_02 = {
+			upgrades_from = DD_01
+			desc = DD_02_desc
+			trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 2
+						}
+		
+		build_cost = 240
+		build_time = 180
+		light_cavalry = 5
+		}
+		
+		DD_03 = {
+			upgrades_from = DD_02
+			desc = DD_03_desc
+			trigger = {TECH_NAVAL = 2}
+		
+		build_cost = 350
+		build_time = 600
+		light_cavalry = 10
+		}
+	}
