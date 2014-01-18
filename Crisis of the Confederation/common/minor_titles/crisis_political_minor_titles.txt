@@ -1,0 +1,75 @@
+########################################################
+# MINOR TITLES
+# Characters can have any number of these
+########################################################
+#	grant_limit: Max number of holders.
+#	realm_in_name: Append the name of the country after the title (Queen [of Sweden])
+#	allow: conditions for the character to hold the title
+#	regent: This is the title for regents (not really "minor")
+#	gain_effect: fires when the title is granted
+#	lose_effect: fires when a title is lost if dismissal_trigger evaluates to false
+#	message: should fire a message to the its owner when set
+#	The other fields are all character modifiers.
+
+title_prime_minister = {
+	realm_in_name = yes
+	show_as_title = yes
+	grant_limit = 1
+	dignity = 1
+	
+	allow = {
+		crownlaw_title = {
+			OR = {
+				has_law = parliamentary_authority_1
+				has_law = parliamentary_authority_2
+			}
+		}
+		OR = {
+			leads_faction = faction_conservative_party
+			leads_faction = faction_liberal_party
+			leads_faction = faction_socialist_party
+		}
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+	
+	message = yes
+}
+
+title_revoke_premiership = {
+	realm_in_name = yes
+	show_as_title = yes
+	grant_limit = 1
+	dignity = 0
+	
+	allow = {
+		has_minor_title = title_prime_minister
+		crownlaw_title = { has_law = parliamentary_authority_1 }
+	}
+}
+
+title_federal_councillor = {
+	realm_in_name = yes
+	grant_limit = 100
+	dignity = 0.5
+	
+	allow = {
+		is_landed = yes
+		any_demesne_title = {
+			higher_tier_than = COUNT
+			crownlaw_title = {
+				NOT = { title = PREV }
+				has_law = succ_feudal_elective
+				holder_scope = { character = FROM }
+			}
+		}
+	}
+	
+	gain_efect = {
+	}
+	lose_effect = {
+	}
+}

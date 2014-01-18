@@ -1,0 +1,40 @@
+11011872 = {
+	# Grand Admiral of Novyy Edem, 2988 - Present
+	name = "Dmitriy"
+	dynasty = 11872 # Solomonov
+	female = no
+	
+	add_trait = misguided_warrior
+	add_trait = close_minded
+	add_trait = disciplined
+	add_trait = neurotic
+	add_trait = proud
+	add_trait = ambitious
+	add_trait = warship_captain
+	
+	culture = russo_edemite
+	religion = astrist
+	
+	2969.1.1 = { birth = "2969.1.1" }
+}
+
+11013416 = {
+	# Fleet Admiral of Sector Maoxian, 2994 - Present
+	name = "Yekaterina"
+	dynasty = 13416 # Liao
+	female = yes
+	
+	culture = sino_bianjiangese
+	religion = astrist
+	
+	add_trait = tough_soldier
+	add_trait = open_minded
+	add_trait = carefree
+	add_trait = friendly
+	add_trait = proud
+	add_trait = ambitious
+	add_trait = pragmatic
+	add_trait = marine_colonel
+	
+	2972.1.1 = { birth = "2972.1.1" }
+}

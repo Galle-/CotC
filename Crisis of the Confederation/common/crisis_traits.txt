@@ -1,0 +1,135 @@
+clone = {
+	# Really doesn't do anything at the moment
+}
+
+known_murderer = {
+	general_opinion = -50
+}
+
+# Used to tag, e.g., murdered presidents
+famous_assassination_victim = {
+	cached = yes
+	customizer = no
+}
+
+# The two factions that form in a constitutional crisis, handled using traits for now because of the complexity
+pro_ruler = {
+	potential = { liege = { primary_title = { has_title_flag = flag_constitutional_crisis } } }
+	opposites = { anti_ruler }
+	
+	cached = yes
+	customizer = no
+	
+	liege_opinion = 20
+	opposite_opinion = -25
+}
+
+anti_ruler = {
+	potential = { liege = { primary_title = { has_title_flag = flag_constitutional_crisis } } }
+	opposites = { pro_ruler }
+	
+	cached = yes
+	customizer = no
+	
+	liege_opinion = -20
+	opposite_opinion = -25
+}
+
+#### Military Traits ####
+# Core Military Traits
+fighter_pilot = {
+	leader = yes
+	opposites = {
+		warship_captain
+		marine_colonel
+	}
+	command_modifier = {
+		light_infantry = 0.2
+		heavy_infantry = 0.2
+	}
+}
+warship_captain = {
+	leader = yes
+	opposites = {
+		fighter_pilot
+		marine_colonel
+	}
+	command_modifier = {
+		cavalry = 0.1
+	}
+}
+marine_colonel = {
+	leader = yes
+	opposites = {
+		fighter_pilot
+		warship_captain
+	}
+	command_modifier = {
+		archers = 0.5
+		siege = 0.5
+	}
+}
+
+# Additional Military Traits
+inspiring_leader = {
+	leader = yes
+	
+	command_modifier = {
+		morale_defence = 0.1
+		center = 0.1
+	}
+}
+
+trickster = {
+	leader = yes
+	
+	command_modifier = {
+		morale_offence = 0.1
+		defence = -0.2
+	}
+}
+
+organizer = {
+	leader = yes
+	
+	command_modifier = {
+		speed = 0.2
+		retreat = 0.1
+	}
+}
+
+defensive_leader = {
+	leader = yes
+	
+	command_modifier = {
+		defence = 0.1
+		damage = -0.2
+	}
+}
+
+experimenter = {
+	leader = yes
+	
+	command_modifier = {
+		random = 0.3
+	}
+}
+
+flanker = {
+	leader = yes
+	
+	command_modifier = {
+		flank = 0.2
+		center = -0.2
+	}
+}
+
+aggressive_leader = {
+	leader = yes
+	
+	command_modifier = {
+		pursue = 0.2
+		damage = 0.1
+		defence = -0.2
+	}
+}
