@@ -143,7 +143,7 @@ guiTypes = {
 				name = "text"
 				position = { x = -348 y = 20 }
 				textureFile = ""
-				font = "vic_36"
+				font = "headline"
 				borderSize = {x = 0 y = 0}
 				text = ""	
 				maxWidth = 760
@@ -171,14 +171,14 @@ guiTypes = {
 			iconType = {
 				name ="bg_load_screen"
 				spriteType = "GFX_loadingtip_bg"
-				position = { x= -512 y = -174 }
+				position = { x= -512 y = -180 }
 			}		
 
 			instantTextBoxType = {
 				name = "text"
-				position = { x = -425 y = -125 }
+				position = { x = -425 y = -120 }
 				textureFile = ""
-				font = "vic_36"
+				font = "headline"
 				borderSize = {x = 0 y = 0}
 				text = ""	
 				maxWidth = 850

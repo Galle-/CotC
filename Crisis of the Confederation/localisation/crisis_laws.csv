@@ -61,34 +61,28 @@ appointment_law_0_desc;The population believes that leaders should be appointed 
 appointment_law_1;Appointed Office;Charge désignée;;;;;;;;;;;;x
 appointment_law_1_option;Appointment;Nomination;;;;;;;;;;;;x
 appointment_law_1_desc;Holders of this office are appointed, either by their superior or, if they do not have one, by their predecessor.;Les détenteurs de cette charge sont nommés, soit par leur supérieur soit, s'ils n'en n'ont pas, pas leurs prédécesseurs.;;;;;;;;;;;;x
-term_length;Term Length;Mandat;;;;;;;;;;;;x
-term_length_desc;The length of time each leader holds power between elections.;La durée pendant la quelle le dirigeant détient le pouvoir entre deux éléctions.;;;;;;;;;;;;x
-term_length_0;One Year Terms;Mandat de quatre ans;;;;;;;;;;;;x
-term_length_0_option;Annual;Court;;;;;;;;;;;;x
-term_length_0_desc;Elections are held every year.;Les dirigeants détiennent le pouvoir pendant quatre ans avant qu'un autre ne puisse être élu.;;;;;;;;;;;;x
-term_length_1;Four Year Terms;Mandat de quatre ans;;;;;;;;;;;;x
-term_length_1_option;Short;Court;;;;;;;;;;;;x
-term_length_1_desc;Leaders hold power for four years before a new leader must be elected.;Les dirigeants détiennent le pouvoir pendant quatre ans avant qu'un autre ne puisse être élu.;;;;;;;;;;;;x
-term_length_2;Six Year Terms;Mandat de six ans;;;;;;;;;;;;x
-term_length_2_option;Medium;Moyen;;;;;;;;;;;;x
-term_length_2_desc;Leaders hold power for six years before a new leader must be elected.;Les dirigeants détiennent le pouvoir pendant six ans avant qu'un autre ne puisse être élu.;;;;;;;;;;;;x
-term_length_3;Ten Year Terms;Mandat de dix ans;;;;;;;;;;;;x
-term_length_3_option;Long;Long;;;;;;;;;;;;x
-term_length_3_desc;Leaders hold power for ten years before a new leader must be elected.;Les dirigeants détiennent le pouvoir pendant dix ans avant qu'un autre ne puisse être élu.;;;;;;;;;;;;x
-term_length_4;No Term Limits;Pas de durée de mandat;;;;;;;;;;;;x
-term_length_4_option;Life;A vie;;;;;;;;;;;;x
-term_length_4_desc;Leaders hold power for life or until they are removed by a vote of no confidence..;Les dirigeants gardent le pouvoir à vie ou jusqu'à ce qu'ils soient démis de leurs fonctions…;;;;;;;;;;;;x
-EVTDESCLAWS100;Elections have been held to determine the next [Root.GetTitle] of the [Root.PrimaryTitle.GetFullName].;;;;;;;;;;;;;x
-EVTDESCLAWS112;Your current term as [Root.GetTitle] of the [Root.PrimaryTitle.GetFullName] has expired. The constitution demands that elections be held immediately.;;;;;;;;;;;;;x
-EVTOPTALAWS112;Hold Election;;;;;;;;;;;;;x
-EVTOPTBLAWS112;Refuse to Hold Election;;;;;;;;;;;;;x
-civil_unrest_0;Insignificant Civil Unrest;;;;;;;;;;;;;x
-civil_unrest_1;Trivial Civil Unrest;;;;;;;;;;;;;x
-civil_unrest_2;Mild Civil Unrest;;;;;;;;;;;;;x
-civil_unrest_3;Minor Civil Unrest;;;;;;;;;;;;;x
-civil_unrest_4;Moderate Civil Unrest;;;;;;;;;;;;;x
-civil_unrest_5;Worrying Civil Unrest;;;;;;;;;;;;;x
-civil_unrest_6;Major Civil Unrest;;;;;;;;;;;;;x
-civil_unrest_7;Rampant Civil Unrest;;;;;;;;;;;;;x
-civil_unrest_8;Massive Civil Unrest;;;;;;;;;;;;;x
-civil_unrest_9;Total Chaos;;;;;;;;;;;;;x
+term_limits;Term Limits;Mandat;;;;;;;;;;;;x
+term_limits_desc;The length of time each leader holds power between elections.;La durée pendant la quelle le dirigeant détient le pouvoir entre deux éléctions.;;;;;;;;;;;;x
+term_limits_0;Four Year Terms;Mandat de quatre ans;;;;;;;;;;;;x
+term_limits_0_option;Short;Court;;;;;;;;;;;;x
+term_limits_0_desc;Leaders hold power for four years before a new leader must be elected.;Les dirigeants détiennent le pouvoir pendant quatre ans avant qu'un autre ne puisse être élu.;;;;;;;;;;;;x
+term_limits_1;Five Year Terms;Mandat de cinq ans;;;;;;;;;;;;x
+term_limits_1_option;Medium;Moyen;;;;;;;;;;;;x
+term_limits_1_desc;Leaders hold power for five years before a new leader must be elected.;Les dirigeants détiennent le pouvoir pendant cinq ans avant qu'un autre ne puisse être élu.;;;;;;;;;;;;x
+term_limits_2;Six Year Terms;Mandat de six ans;;;;;;;;;;;;x
+term_limits_2_option;Long;Long;;;;;;;;;;;;x
+term_limits_2_desc;Leaders hold power for six years before a new leader must be elected.;Les dirigeants détiennent le pouvoir pendant six ans avant qu'un autre ne puisse être élu.;;;;;;;;;;;;x
+term_limits_3;No Term Limits;Pas de durée de mandat;;;;;;;;;;;;x
+term_limits_3_option;Life;A vie;;;;;;;;;;;;x
+term_limits_3_desc;Leaders hold power for life or until they are removed by a vote of no confidence..;Les dirigeants gardent le pouvoir à vie ou jusqu'à ce qu'ils soient démis de leurs fonctions…;;;;;;;;;;;;x
+EVTDESCCONSTITUTION0;Your current term of office as [Root.PrimaryTitle.GetRulerTitle] of the [Root.PrimaryTitle.GetFullName] has come to an end, and a new election has been held.;Votre mandat actuel pour la charge de [Root.PrimaryTitle.GetRulerTitle] de [Root.PrimaryTitle.GetFullName] est arrivé à son terme, et une nouvelle éléction va se tenir.;;;;;;;;;;;;x
+EVTOPTACONSTITUTION0;You have been re-elected!;Vous avez été réélu!;;;;;;;;;;;;x
+EVTOPTBCONSTITUTION0;You have not been re-elected.;Vous n'avez pas été réélu.;;;;;;;;;;;;x
+EVTDESCCONSTITUTION1;[From.GetBestName] has been re-elected.;[From.GetBestName] a été réélu.;;;;;;;;;;;;x
+EVTOPTACONSTITUTION1;Okay;D'accord;;;;;;;;;;;;x
+EVTDESCCONSTITUTION2;[From.GetBestName] has lost the election. [Root.Liege.GetFullName] is now [Root.Liege.PrimaryTitle.GetRulerTitle] of the [Root.Liege.PrimaryTitle.GetFullName].;[From.GetBestName] a perdu les éléctions. [Root.Liege.GetFullName] est désormais [Root.Liege.PrimaryTitle.GetRulerTitle] de [Root.Liege.PrimaryTitle.GetFullName].;;;;;;;;;;;;x
+EVTOPTACONSTITUTION2;Okay;D'accord;;;;;;;;;;;;x
+EVTDESCCONSTITUTION3;You are now beginning the final year of your current term as [Root.PrimaryTitle.GetRulerTitle] of the [Root.PrimaryTitle.GetFullName]. An election will be held in one year.;Vous entamer désormais la dernière année de votre mandat de [Root.PrimaryTitle.GetRulerTitle] de [Root.PrimaryTitle.GetFullName]. Une éléction se tiendra dans un an.;;;;;;;;;;;;x
+EVTOPTACONSTITUTION3;Time to start up my re-election campaign.;Il est temps de lancer ma campagne de réélection.;;;;;;;;;;;;x
+EVTDESCCONSTITUTION4;[From.GetBestName] has just begun the final year of [From.GetHerHis] current term of office. An election will be held in one year.;[From.GetBestName] entame la dernière année de son mandat de [From.GetHerHis]. Une éléction se tiendras dans un an.;;;;;;;;;;;;x
+EVTOPTACONSTITUTION4;Okay;D'accord;;;;;;;;;;;;x

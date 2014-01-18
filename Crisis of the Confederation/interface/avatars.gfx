@@ -1,0 +1,463 @@
+objectTypes = {
+
+	#LIGHT_INFANTRY			Fighters			Lightcruiser
+	#HEAVY_INFANTRY			Bombers				Submarine
+	#PIKEMEN				Drones				GenericTank
+	#LIGHT_CAVALRY			Destroyers			Destroyer
+	#KNIGHTS				Battlecruisers		Battleship
+	#ARCHERS				Dreadnoughts		Heavycruiser
+	#HORSE_ARCHERS			...					...
+	#GALLEYS				Transports			Carrier
+
+	EMFXActorType = {
+		name = "westerngfx_LIGHT_INFANTRY"
+		actorfile = "gfx\models\Lightcruiser.xac"
+		
+		idle   = "gfx\models\ShipBigIdle.xsm"
+		move   = "gfx\models\ShipBigIdle.xsm"
+		attack = "gfx\models\ShipBigIdle.xsm"
+		
+		scale = 0.60f
+	}
+	EMFXActorType = {
+		name = "westerngfx_PIKEMEN"
+		actorfile = "gfx\models\GenericTank.xac"
+		
+		idle   = "gfx\models\TankIdleA.xsm"
+		move   = "gfx\models\TankMove.xsm"
+		attack = "gfx\models\TankAttackB.xsm"
+		
+		scale = 0.6f
+	}
+	
+	EMFXActorType = {
+		name = "westerngfx_ARCHERS"
+		actorfile = "gfx\models\Heavycruiser.xac"
+		
+		idle   = "gfx\models\ShipBigIdle.xsm"
+		move   = "gfx\models\ShipBigIdle.xsm"
+		attack = "gfx\models\ShipBigIdle.xsm"
+		
+		scale = 1.0f
+	}
+	EMFXActorType = {
+		name = "westerngfx_HEAVY_INFANTRY"
+		actorfile = "gfx\models\Submarine.xac"
+		
+		idle   = "gfx\models\SubmarineMove.xsm"
+		move   = "gfx\models\SubmarineMove.xsm"
+		attack = "gfx\models\SubmarineMove.xsm"
+		
+		scale = 1.0f
+	}
+	
+	EMFXActorType = {
+		name = "westerngfx_LIGHT_CAVALRY"
+		actorfile = "gfx\models\Destroyer.xac"
+		
+		idle   = "gfx\models\ShipBigIdle.xsm"
+		move   = "gfx\models\ShipBigIdle.xsm"
+		attack = "gfx\models\ShipBigIdle.xsm"
+		
+		scale = 0.9f
+	}
+	EMFXActorType = {
+		name = "westerngfx_HORSE_ARCHERS"
+		actorfile = "gfx\models\GenericTank.xac"
+		
+		idle   = "gfx\models\TankIdleA.xsm"
+		move   = "gfx\models\TankMove.xsm"
+		attack = "gfx\models\TankAttackB.xsm"
+		
+		scale = 0.9f
+	}
+	EMFXActorType = {
+		name = "westerngfx_KNIGHTS"
+		actorfile = "gfx\models\Battleship.xac"
+		
+		idle   = "gfx\models\ShipBigIdle.xsm"
+		move   = "gfx\models\ShipBigIdle.xsm"
+		attack = "gfx\models\ShipBigIdle.xsm"
+		
+		scale = 0.9f
+	}
+	EMFXActorType = {
+		name = "westerngfx_job_chancellor"
+		actorfile = "gfx\models\Mapindicators\Western_Chancellor.xac"
+		
+		idle   = "gfx\models\Mapindicators\Western_Chancellor_Idle.xsm"
+		scale = 1.0f
+	}
+	
+	EMFXActorType = {
+		name = "westerngfx_job_treasurer"
+		actorfile = "gfx\models\Mapindicators\Western_treasurer.xac"
+		
+		idle   = "gfx\models\Mapindicators\Western_treasurer_idle.xsm"
+		scale = 1.0f
+	}
+	
+	EMFXActorType = {
+		name = "westerngfx_job_spymaster"
+		actorfile = "gfx\models\Mapindicators\Western_spymaster.xac"
+		
+		idle   = "gfx\models\Mapindicators\Western_spymaster_idle.xsm"
+		scale = 1.0f
+	}
+	
+	EMFXActorType = {
+		name = "westerngfx_job_spiritual"
+		actorfile = "gfx\models\Mapindicators\Western_lord_spiritual.xac"
+		
+		idle   = "gfx\models\Mapindicators\Western_lord_spiritual_idle.xsm"
+		scale = 1.0f
+	}
+	
+	EMFXActorType = {
+		name = "westerngfx_job_marshal"
+		actorfile = "gfx\models\Mapindicators\Western_Marshal.xac"
+		
+		idle   = "gfx\models\Mapindicators\Western_Marshal_Idle.xsm"
+		scale = 1.0f
+	}
+
+	#######################################################
+	#######################################################
+	#####											  #####
+	#####					Eastern					  #####
+	#####											  #####
+	#######################################################
+	#######################################################
+ 
+ 	EMFXActorType = {
+		name = "easterngfx_LIGHT_INFANTRY"
+		actorfile = "gfx\models\Western_Light_Infantry.xac"
+		
+		idle   = "gfx\models\Infantry_Sword_and_Shield_Idle.xsm"
+		move   = "gfx\models\Infantry_Sword_and_Shield_Moving.xsm"
+		attack = "gfx\models\Infantry_Sword_and_Shield_Attack.xsm"
+		
+		scale = 4.0f
+	}
+	
+	EMFXActorType = {
+		name = "easterngfx_PIKEMEN"
+		actorfile = "gfx\models\Western_Pikeman.xac"
+		
+		idle   = "gfx\models\Infantry_Sword_and_Shield_Idle.xsm"
+		move   = "gfx\models\Infantry_Sword_and_Shield_Moving.xsm"
+		attack = "gfx\models\Infantry_Sword_and_Shield_Attack.xsm"
+		
+		scale = 1.0f
+	}
+
+	EMFXActorType = {
+		name = "easterngfx_HEAVY_INFANTRY"
+		actorfile = "gfx\models\Western_Heavy_Infantry.xac"
+		
+		idle   = "gfx\models\Infantry_Sword_and_Shield_Idle.xsm"
+		move   = "gfx\models\Infantry_Sword_and_Shield_Moving.xsm"
+		attack = "gfx\models\Infantry_Sword_and_Shield_Attack.xsm"
+		
+		scale = 1.0f
+	}
+	EMFXActorType = {
+		name = "easterngfx_LIGHT_INFANTRY"
+		actorfile = "gfx\models\Norse_Light_Infantry.xac"
+		
+		idle   = "gfx\models\Infantry_Sword_and_Shield_Idle.xsm"
+		move   = "gfx\models\Infantry_Sword_and_Shield_Moving.xsm"
+		attack = "gfx\models\Infantry_Sword_and_Shield_Attack.xsm"
+		
+		scale = 1.0f
+	}
+	EMFXActorType = {
+		name = "easterngfx_PIKEMEN"
+		actorfile = "gfx\models\Norse_Light_Infantry.xac"
+		
+		idle   = "gfx\models\Spear_and_Shield_Idle.xsm"
+		move   = "gfx\models\Spear_and_Shield_Moving.xsm"
+		attack = "gfx\models\Spear_and_Shield_Attack.xsm"
+		
+		scale = 1.0f
+	}
+	EMFXActorType = {
+		name = "easterngfx_ARCHERS"
+		actorfile = "gfx\models\Norse_Archer.xac"
+		
+		idle   = "gfx\models\Archer_Idle.xsm"
+		move   = "gfx\models\Archer_Moving.xsm"
+		attack = "gfx\models\Archer_Attack.xsm"
+		
+		scale = 1.0f
+	}
+	EMFXActorType = {
+		name = "easterngfx_HEAVY_INFANTRY"
+		actorfile = "gfx\models\Western_Heavy_Infantry.xac"
+		
+		idle   = "gfx\models\Infantry_Sword_and_Shield_Idle.xsm"
+		move   = "gfx\models\Infantry_Sword_and_Shield_Moving.xsm"
+		attack = "gfx\models\Infantry_Sword_and_Shield_Attack.xsm"
+		
+		scale = 1.0f
+	}
+	EMFXActorType = {
+		name = "easterngfx_LIGHT_CAVALRY"
+		actorfile = "gfx\models\Horse.xac"
+		
+		idle   = "gfx\models\Horse_Idle.xsm"
+		move   = "gfx\models\Horse_Moving.xsm"
+		attack = "gfx\models\Horse_Attack.xsm"
+		
+		scale = 0.9f
+	}
+	EMFXActorType = {
+		name = "easterngfx_HORSE_ARCHERS"
+		actorfile = "gfx\models\Horse.xac"
+		
+		idle   = "gfx\models\Horse_Idle.xsm"
+		move   = "gfx\models\Horse_Moving.xsm"
+		attack = "gfx\models\Horse_Running.xsm"
+		
+		scale = 0.9f
+	}
+	EMFXActorType = {
+		name = "easterngfx_KNIGHTS"
+		actorfile = "gfx\models\Horse.xac"
+		
+		idle   = "gfx\models\Horse_Idle.xsm"
+		move   = "gfx\models\Horse_Moving.xsm"
+		attack = "gfx\models\Horse_Attack.xsm"
+		
+		scale = 0.9f
+	}
+	EMFXActorType = {
+		name = "easterngfx_job_chancellor"
+		actorfile = "gfx\models\Mapindicators\Western_Chancellor.xac"
+		
+		idle   = "gfx\models\Mapindicators\Western_Chancellor_Idle.xsm"
+		scale = 1.0f
+	}
+	
+	EMFXActorType = {
+		name = "easterngfx_job_treasurer"
+		actorfile = "gfx\models\Mapindicators\Western_treasurer.xac"
+		
+		idle   = "gfx\models\Mapindicators\Western_treasurer_idle.xsm"
+		scale = 1.0f
+	}
+	
+	EMFXActorType = {
+		name = "easterngfx_job_spymaster"
+		actorfile = "gfx\models\Mapindicators\Western_spymaster.xac"
+		
+		idle   = "gfx\models\Mapindicators\Western_spymaster_idle.xsm"
+		scale = 1.0f
+	}
+	
+	EMFXActorType = {
+		name = "easterngfx_job_spiritual"
+		actorfile = "gfx\models\Mapindicators\Western_lord_spiritual.xac"
+		
+		idle   = "gfx\models\Mapindicators\Western_lord_spiritual_idle.xsm"
+		scale = 1.0f
+	}
+	
+	EMFXActorType = {
+		name = "easterngfx_job_marshal"
+		actorfile = "gfx\models\Mapindicators\Western_Marshal.xac"
+		
+		idle   = "gfx\models\Mapindicators\Western_Marshal_Idle.xsm"
+		scale = 1.0f
+	}
+
+	#######################################################
+	#######################################################
+	#####											  #####
+	#####					Muslim					  #####
+	#####											  #####
+	#######################################################
+	#######################################################
+
+	EMFXActorType = {
+		name = "muslimgfx_LIGHT_INFANTRY"
+		actorfile = "gfx\models\Muslim_Light_Infantry.xac"
+		
+		idle   = "gfx\models\Infantry_Sword_and_Shield_Idle.xsm"
+		move   = "gfx\models\Infantry_Sword_and_Shield_Moving.xsm"
+		attack = "gfx\models\Infantry_Sword_and_Shield_Attack.xsm"
+		
+		scale = 1.0f
+	}
+	EMFXActorType = {
+		name = "muslimgfx_ARCHERS"
+		actorfile = "gfx\models\Muslim_Archer.xac"
+		
+		idle   = "gfx\models\Archer_Idle.xsm"
+		move   = "gfx\models\Archer_Moving.xsm"
+		attack = "gfx\models\Archer_Attack.xsm"
+		
+		scale = 1.0f
+	}
+	EMFXActorType = {
+		name = "muslimgfx_PIKEMEN"
+		actorfile = "gfx\models\Muslim_pikeman.xac"
+		
+		idle   = "gfx\models\Spear_and_Shield_Idle.xsm"
+		move   = "gfx\models\Spear_and_Shield_Moving.xsm"
+		attack = "gfx\models\Spear_and_Shield_Attack.xsm"
+		
+		scale = 1.0f
+	}
+	EMFXActorType = {
+		name = "muslimgfx_HEAVY_INFANTRY"
+		actorfile = "gfx\models\Muslim_Heavy_Infantry.xac"
+		
+		idle   = "gfx\models\Infantry_Sword_and_Shield_Idle.xsm"
+		move   = "gfx\models\Infantry_Sword_and_Shield_Moving.xsm"
+		attack = "gfx\models\Infantry_Sword_and_Shield_Attack.xsm"
+		
+		scale = 1.0f
+	}
+	EMFXActorType = {
+		name = "muslimgfx_LIGHT_CAVALRY"
+		actorfile = "gfx\models\Muslim_Horse.xac"
+		
+		idle   = "gfx\models\Horse_Idle.xsm"
+		move   = "gfx\models\Horse_Moving.xsm"
+		attack = "gfx\models\Horse_Attack.xsm"
+		
+		scale = 0.9f
+	}
+		EMFXActorType = {
+		name = "muslimgfx_HORSE_ARCHERS"
+		actorfile = "gfx\models\Muslim_Horse.xac"
+		
+		idle   = "gfx\models\Horse_Idle.xsm"
+		move   = "gfx\models\Horse_Moving.xsm"
+		attack = "gfx\models\Horse_Running.xsm"
+		
+		scale = 0.9f
+	}
+	EMFXActorType = {
+		name = "muslimgfx_KNIGHTS"
+		actorfile = "gfx\models\Muslim_Heavy_Horse.xac"
+		
+		idle   = "gfx\models\Horse_Idle.xsm"
+		move   = "gfx\models\Horse_Moving.xsm"
+		attack = "gfx\models\Horse_Attack.xsm"
+		
+		scale = 0.9f
+	}
+	EMFXActorType = {
+		name = "muslimgfx_job_chancellor"
+		actorfile = "gfx\models\Mapindicators\Western_Chancellor.xac"
+		
+		idle   = "gfx\models\Mapindicators\Western_Chancellor_Idle.xsm"
+		scale = 1.0f
+	}
+	
+	EMFXActorType = {
+		name = "muslimgfx_job_treasurer"
+		actorfile = "gfx\models\Mapindicators\Western_treasurer.xac"
+		
+		idle   = "gfx\models\Mapindicators\Western_treasurer_idle.xsm"
+		scale = 1.0f
+	}
+	
+	EMFXActorType = {
+		name = "muslimgfx_job_spymaster"
+		actorfile = "gfx\models\Mapindicators\Western_spymaster.xac"
+		
+		idle   = "gfx\models\Mapindicators\Western_spymaster_idle.xsm"
+		scale = 1.0f
+	}
+	
+	EMFXActorType = {
+		name = "muslimgfx_job_spiritual"
+		actorfile = "gfx\models\Mapindicators\Western_lord_spiritual.xac"
+		
+		idle   = "gfx\models\Mapindicators\Western_lord_spiritual_idle.xsm"
+		scale = 1.0f
+	}
+	
+	EMFXActorType = {
+		name = "muslimgfx_job_marshal"
+		actorfile = "gfx\models\Mapindicators\Western_Marshal.xac"
+		
+		idle   = "gfx\models\Mapindicators\Western_Marshal_Idle.xsm"
+		scale = 1.0f
+	}	
+	
+	EMFXActorType = {
+		name = "norsegfx_LIGHT_INFANTRY"
+		actorfile = "gfx\models\Norse_Light_Infantry.xac"
+		
+		idle   = "gfx\models\Infantry_Sword_and_Shield_Idle.xsm"
+		move   = "gfx\models\Infantry_Sword_and_Shield_Moving.xsm"
+		attack = "gfx\models\Infantry_Sword_and_Shield_Attack.xsm"
+		
+		scale = 1.0f
+	}
+	EMFXActorType = {
+		name = "norsegfx_PIKEMEN"
+		actorfile = "gfx\models\Norse_Light_Infantry.xac"
+		
+		idle   = "gfx\models\Spear_and_Shield_Idle.xsm"
+		move   = "gfx\models\Spear_and_Shield_Moving.xsm"
+		attack = "gfx\models\Spear_and_Shield_Attack.xsm"
+		
+		scale = 1.0f
+	}
+	EMFXActorType = {
+		name = "norsegfx_ARCHERS"
+		actorfile = "gfx\models\Norse_Archer.xac"
+		
+		idle   = "gfx\models\Archer_Idle.xsm"
+		move   = "gfx\models\Archer_Moving.xsm"
+		attack = "gfx\models\Archer_Attack.xsm"
+		
+		scale = 1.0f
+	}
+	EMFXActorType = {
+		name = "norsegfx_HEAVY_INFANTRY"
+		actorfile = "gfx\models\Western_Heavy_Infantry.xac"
+		
+		idle   = "gfx\models\Infantry_Sword_and_Shield_Idle.xsm"
+		move   = "gfx\models\Infantry_Sword_and_Shield_Moving.xsm"
+		attack = "gfx\models\Infantry_Sword_and_Shield_Attack.xsm"
+		
+		scale = 1.0f
+	}
+	EMFXActorType = {
+		name = "norsegfx_LIGHT_CAVALRY"
+		actorfile = "gfx\models\Horse.xac"
+		
+		idle   = "gfx\models\Horse_Idle.xsm"
+		move   = "gfx\models\Horse_Moving.xsm"
+		attack = "gfx\models\Horse_Attack.xsm"
+		
+		scale = 0.9f
+	}
+	EMFXActorType = {
+		name = "norsegfx_HORSE_ARCHERS"
+		actorfile = "gfx\models\Horse.xac"
+		
+		idle   = "gfx\models\Horse_Idle.xsm"
+		move   = "gfx\models\Horse_Moving.xsm"
+		attack = "gfx\models\Horse_Running.xsm"
+		
+		scale = 0.9f
+	}
+	EMFXActorType = {
+		name = "norsegfx_KNIGHTS"
+		actorfile = "gfx\models\Horse.xac"
+		
+		idle   = "gfx\models\Horse_Idle.xsm"
+		move   = "gfx\models\Horse_Moving.xsm"
+		attack = "gfx\models\Horse_Idle.xsm"
+		
+		scale = 0.9f
+	}
+	
+}

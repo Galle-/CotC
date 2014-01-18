@@ -1,0 +1,30 @@
+objectTypes = {
+
+	#GALLEYS
+
+	#######################################################
+	#######################################################
+	#####											  #####
+	#####					GALLEYS 				  #####
+	#####											  #####
+	#######################################################
+	#######################################################
+	
+#	EMFXActorType = {
+#		name = "westerngfx_GALLEYS"
+#		actorfile = "gfx\models\Cog.xac"
+#		
+#		idle   = "gfx\models\Cog_Moving.xsm"
+#		scale = 1.5f
+#	}
+#
+
+	EMFXActorType = {
+		name = "westerngfx_GALLEYS"
+		actorfile = "gfx\models\Carrier.xac"
+		
+		idle   = "gfx\models\ShipBigIdle.xsm"
+		scale = 9.0f
+	}
+
+}
