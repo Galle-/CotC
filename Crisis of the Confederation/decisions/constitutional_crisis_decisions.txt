@@ -7,19 +7,16 @@ decisions = {
 		potential = {
 			# Must actually be someone important
 			OR = {
-				AND = {
-					demesne_size = 1
-					OR = {
-						any_demesne_title = { higher_tier_than = BARON }
-						liege = { primary_title = { tier = COUNT } }
-					}
-				}
+				is_landed = yes
 				is_councillor = yes
 			}
-			liege = { has_character_modifier = constitutional_crisis }
+			liege = { any_demesne_title = { has_title_flag = flag_constitutional_crisis } }
 			NOT = { trait = pro_ruler }
 			NOT = { trait = anti_ruler }
 			NOT = { has_character_flag = flag_making_crisis_decision }
+		}
+		allow = {
+			always = yes
 		}
 		effect = {
 			set_character_flag = flag_making_crisis_decision
@@ -32,19 +29,16 @@ decisions = {
 		potential = {
 			# Must actually be someone important
 			OR = {
-				AND = {
-					demesne_size = 1
-					OR = {
-						any_demesne_title = { higher_tier_than = BARON }
-						liege = { primary_title = { tier = COUNT } }
-					}
-				}
+				is_landed = yes
 				is_councillor = yes
 			}
-			liege = { has_character_modifier = constitutional_crisis }
+			liege = { any_demesne_title = { has_title_flag = flag_constitutional_crisis } }
 			NOT = { trait = pro_ruler }
 			NOT = { trait = anti_ruler }
 			NOT = { has_character_flag = flag_making_crisis_decision }
+		}
+		allow = {
+			always = yes
 		}
 		effect = {
 			set_character_flag = flag_making_crisis_decision
@@ -82,7 +76,7 @@ decisions = {
 	back_down_decision = {
 		is_high_prio = yes
 		potential = {
-			has_character_modifier = constitutional_crisis
+			any_demesne_title = { has_title_flag = flag_constitutional_crisis }
 			NOT = { has_character_flag = flag_making_crisis_decision }
 		}
 		effect = {
@@ -130,6 +124,10 @@ decisions = {
 			modifier = {
 				factor = 0.5
 				any_vassal = {
+					OR = {
+						any_demesne_title = { higher_tier_than = BARON }
+						is_councillor = yes
+					}
 					trait = pro_ruler
 					count = 2
 				}
@@ -140,6 +138,10 @@ decisions = {
 			modifier = {
 				factor = 0.5
 				any_vassal = {
+					OR = {
+						any_demesne_title = { higher_tier_than = BARON }
+						is_councillor = yes
+					}
 					trait = pro_ruler
 					count = 4
 				}
@@ -150,6 +152,10 @@ decisions = {
 			modifier = {
 				factor = 0.5
 				any_vassal = {
+					OR = {
+						any_demesne_title = { higher_tier_than = BARON }
+						is_councillor = yes
+					}
 					trait = pro_ruler
 					count = 6
 				}
@@ -160,6 +166,10 @@ decisions = {
 			modifier = {
 				factor = 0.5
 				any_vassal = {
+					OR = {
+						any_demesne_title = { higher_tier_than = BARON }
+						is_councillor = yes
+					}
 					trait = pro_ruler
 					count = 8
 				}
@@ -169,6 +179,10 @@ decisions = {
 			modifier = {
 				factor = 0.5
 				any_vassal = {
+					OR = {
+						any_demesne_title = { higher_tier_than = BARON }
+						is_councillor = yes
+					}
 					trait = pro_ruler
 					count = 10
 				}
@@ -178,6 +192,10 @@ decisions = {
 			modifier = {
 				factor = 0.5
 				any_vassal = {
+					OR = {
+						any_demesne_title = { higher_tier_than = BARON }
+						is_councillor = yes
+					}
 					trait = pro_ruler
 					count = 12
 				}
@@ -187,6 +205,10 @@ decisions = {
 			modifier = {
 				factor = 0.5
 				any_vassal = {
+					OR = {
+						any_demesne_title = { higher_tier_than = BARON }
+						is_councillor = yes
+					}
 					trait = pro_ruler
 					count = 14
 				}
@@ -196,6 +218,10 @@ decisions = {
 			modifier = {
 				factor = 0.5
 				any_vassal = {
+					OR = {
+						any_demesne_title = { higher_tier_than = BARON }
+						is_councillor = yes
+					}
 					trait = pro_ruler
 					count = 16
 				}
@@ -204,6 +230,10 @@ decisions = {
 			modifier = {
 				factor = 0.5
 				any_vassal = {
+					OR = {
+						any_demesne_title = { higher_tier_than = BARON }
+						is_councillor = yes
+					}
 					trait = pro_ruler
 					count = 18
 				}
@@ -212,6 +242,10 @@ decisions = {
 			modifier = {
 				factor = 0.5
 				any_vassal = {
+					OR = {
+						any_demesne_title = { higher_tier_than = BARON }
+						is_councillor = yes
+					}
 					trait = pro_ruler
 					count = 20
 				}
@@ -220,7 +254,7 @@ decisions = {
 			modifier = {
 				factor = 0.5
 				any_vassal = {
-					power_relative_to_liege = 0.1
+					relative_power_to_liege = 0.1
 					trait = pro_ruler
 				}
 				NOT = { trait = lunatic }
@@ -230,7 +264,7 @@ decisions = {
 			modifier = {
 				factor = 0.5
 				any_vassal = {
-					power_relative_to_liege = 0.2
+					relative_power_to_liege = 0.2
 					trait = pro_ruler
 				}
 				NOT = { trait = lunatic }
@@ -240,7 +274,7 @@ decisions = {
 			modifier = {
 				factor = 0.5
 				any_vassal = {
-					power_relative_to_liege = 0.3
+					relative_power_to_liege = 0.3
 					trait = pro_ruler
 				}
 				NOT = { trait = lunatic }
@@ -250,7 +284,7 @@ decisions = {
 			modifier = {
 				factor = 0.5
 				any_vassal = {
-					power_relative_to_liege = 0.4
+					relative_power_to_liege = 0.4
 					trait = pro_ruler
 				}
 				NOT = { trait = lunatic }
@@ -259,7 +293,7 @@ decisions = {
 			modifier = {
 				factor = 0.5
 				any_vassal = {
-					power_relative_to_liege = 0.5
+					relative_power_to_liege = 0.5
 					trait = pro_ruler
 				}
 				NOT = { trait = lunatic }
@@ -268,7 +302,7 @@ decisions = {
 			modifier = {
 				factor = 0.5
 				any_vassal = {
-					power_relative_to_liege = 0.6
+					relative_power_to_liege = 0.6
 					trait = pro_ruler
 				}
 				NOT = { trait = lunatic }
@@ -277,7 +311,7 @@ decisions = {
 			modifier = {
 				factor = 0.5
 				any_vassal = {
-					power_relative_to_liege = 0.7
+					relative_power_to_liege = 0.7
 					trait = pro_ruler
 				}
 				NOT = { trait = lunatic }
@@ -285,7 +319,7 @@ decisions = {
 			modifier = {
 				factor = 0.5
 				any_vassal = {
-					power_relative_to_liege = 0.8
+					relative_power_to_liege = 0.8
 					trait = pro_ruler
 				}
 				NOT = { trait = lunatic }
@@ -293,7 +327,7 @@ decisions = {
 			modifier = {
 				factor = 0.5
 				any_vassal = {
-					power_relative_to_liege = 0.9
+					relative_power_to_liege = 0.9
 					trait = pro_ruler
 				}
 				NOT = { trait = lunatic }
@@ -303,6 +337,10 @@ decisions = {
 			modifier = {
 				factor = 2
 				any_vassal = {
+					OR = {
+						any_demesne_title = { higher_tier_than = BARON }
+						is_councillor = yes
+					}
 					trait = anti_ruler
 					count = 2
 				}
@@ -313,6 +351,10 @@ decisions = {
 			modifier = {
 				factor = 2
 				any_vassal = {
+					OR = {
+						any_demesne_title = { higher_tier_than = BARON }
+						is_councillor = yes
+					}
 					trait = anti_ruler
 					count = 4
 				}
@@ -323,6 +365,10 @@ decisions = {
 			modifier = {
 				factor = 2
 				any_vassal = {
+					OR = {
+						any_demesne_title = { higher_tier_than = BARON }
+						is_councillor = yes
+					}
 					trait = anti_ruler
 					count = 6
 				}
@@ -333,6 +379,10 @@ decisions = {
 			modifier = {
 				factor = 2
 				any_vassal = {
+					OR = {
+						any_demesne_title = { higher_tier_than = BARON }
+						is_councillor = yes
+					}
 					trait = anti_ruler
 					count = 8
 				}
@@ -342,6 +392,10 @@ decisions = {
 			modifier = {
 				factor = 2
 				any_vassal = {
+					OR = {
+						any_demesne_title = { higher_tier_than = BARON }
+						is_councillor = yes
+					}
 					trait = anti_ruler
 					count = 10
 				}
@@ -351,6 +405,10 @@ decisions = {
 			modifier = {
 				factor = 2
 				any_vassal = {
+					OR = {
+						any_demesne_title = { higher_tier_than = BARON }
+						is_councillor = yes
+					}
 					trait = anti_ruler
 					count = 12
 				}
@@ -360,6 +418,10 @@ decisions = {
 			modifier = {
 				factor = 2
 				any_vassal = {
+					OR = {
+						any_demesne_title = { higher_tier_than = BARON }
+						is_councillor = yes
+					}
 					trait = anti_ruler
 					count = 14
 				}
@@ -369,6 +431,10 @@ decisions = {
 			modifier = {
 				factor = 2
 				any_vassal = {
+					OR = {
+						any_demesne_title = { higher_tier_than = BARON }
+						is_councillor = yes
+					}
 					trait = anti_ruler
 					count = 16
 				}
@@ -377,6 +443,10 @@ decisions = {
 			modifier = {
 				factor = 2
 				any_vassal = {
+					OR = {
+						any_demesne_title = { higher_tier_than = BARON }
+						is_councillor = yes
+					}
 					trait = anti_ruler
 					count = 18
 				}
@@ -385,6 +455,10 @@ decisions = {
 			modifier = {
 				factor = 2
 				any_vassal = {
+					OR = {
+						any_demesne_title = { higher_tier_than = BARON }
+						is_councillor = yes
+					}
 					trait = anti_ruler
 					count = 20
 				}
@@ -393,7 +467,7 @@ decisions = {
 			modifier = {
 				factor = 2
 				any_vassal = {
-					power_relative_to_liege = 0.1
+					relative_power_to_liege = 0.1
 					trait = anti_ruler
 				}
 				NOT = { trait = lunatic }
@@ -403,7 +477,7 @@ decisions = {
 			modifier = {
 				factor = 2
 				any_vassal = {
-					power_relative_to_liege = 0.2
+					relative_power_to_liege = 0.2
 					trait = anti_ruler
 				}
 				NOT = { trait = lunatic }
@@ -413,7 +487,7 @@ decisions = {
 			modifier = {
 				factor = 2
 				any_vassal = {
-					power_relative_to_liege = 0.3
+					relative_power_to_liege = 0.3
 					trait = anti_ruler
 				}
 				NOT = { trait = lunatic }
@@ -423,7 +497,7 @@ decisions = {
 			modifier = {
 				factor = 2
 				any_vassal = {
-					power_relative_to_liege = 0.4
+					relative_power_to_liege = 0.4
 					trait = anti_ruler
 				}
 				NOT = { trait = lunatic }
@@ -432,7 +506,7 @@ decisions = {
 			modifier = {
 				factor = 2
 				any_vassal = {
-					power_relative_to_liege = 0.5
+					relative_power_to_liege = 0.5
 					trait = anti_ruler
 				}
 				NOT = { trait = lunatic }
@@ -441,7 +515,7 @@ decisions = {
 			modifier = {
 				factor = 2
 				any_vassal = {
-					power_relative_to_liege = 0.6
+					relative_power_to_liege = 0.6
 					trait = anti_ruler
 				}
 				NOT = { trait = lunatic }
@@ -450,7 +524,7 @@ decisions = {
 			modifier = {
 				factor = 2
 				any_vassal = {
-					power_relative_to_liege = 0.7
+					relative_power_to_liege = 0.7
 					trait = anti_ruler
 				}
 				NOT = { trait = lunatic }
@@ -458,7 +532,7 @@ decisions = {
 			modifier = {
 				factor = 2
 				any_vassal = {
-					power_relative_to_liege = 0.8
+					relative_power_to_liege = 0.8
 					trait = anti_ruler
 				}
 				NOT = { trait = lunatic }
@@ -466,7 +540,7 @@ decisions = {
 			modifier = {
 				factor = 2
 				any_vassal = {
-					power_relative_to_liege = 0.9
+					relative_power_to_liege = 0.9
 					trait = anti_ruler
 				}
 				NOT = { trait = lunatic }
@@ -637,7 +711,7 @@ decisions = {
 			# Key crisis advantages
 			modifier = {
 				factor = 2
-				has_character_modifier = crisis_law_against_ruler
+				any_demesne_title = { has_title_flag = flag_constitutional_crisis_law_against_ruler }
 				OR = {
 					religion_authority = 0.25
 					trait = radical
@@ -645,18 +719,18 @@ decisions = {
 			}
 			modifier = {
 				factor = 2
-				has_character_modifier = crisis_law_against_ruler
+				any_demesne_title = { has_title_flag = flag_constitutional_crisis_law_against_ruler }
 				religion_authority = 0.5
 				NOT = { trait = pragmatic }
 			}
 			modifier = {
 				factor = 2
-				has_character_modifier = crisis_law_against_ruler
+				any_demesne_title = { has_title_flag = flag_constitutional_crisis_law_against_ruler }
 				religion_authority = 0.75
 			}
 			modifier = {
 				factor = 0.5
-				has_character_modifier = crisis_law_for_ruler
+				any_demesne_title = { has_title_flag = flag_constitutional_crisis_law_for_ruler }
 				OR = {
 					religion_authority = 0.25
 					trait = radical
@@ -664,59 +738,25 @@ decisions = {
 			}
 			modifier = {
 				factor = 0.5
-				has_character_modifier = crisis_law_for_ruler
+				any_demesne_title = { has_title_flag = flag_constitutional_crisis_law_for_ruler }
 				religion_authority = 0.5
 				NOT = { trait = pragmatic }
 			}
 			modifier = {
 				factor = 0.5
-				has_character_modifier = crisis_law_for_ruler
+				any_demesne_title = { has_title_flag = flag_constitutional_crisis_law_for_ruler }
 				religion_authority = 0.75
 			}
 			modifier = {
 				factor = 2
-				OR = {
-					AND = {
-						has_character_flag = flag_crisis_emperor
-						capital_scope = { has_province_modifier = public_against_emperor }
-					}
-					AND = {
-						has_character_flag = flag_crisis_king
-						capital_scope = { has_province_modifier = public_against_king }
-					}
-					AND = {
-						has_character_flag = flag_crisis_duke
-						capital_scope = { has_province_modifier = public_against_duke }
-					}
-					AND = {
-						has_character_flag = flag_crisis_count
-						capital_scope = { has_province_modifier = public_against_count }
-					}
-				}
+				any_demesne_title = { has_title_flag = flag_constitutional_crisis_public_against_ruler }
 				NOT = { religion = terran_imperial }
 				NOT = { religion = neo_feudal }
 				NOT = { religion = astrist }
 			}
 			modifier = {
 				factor = 2
-				OR = {
-					AND = {
-						has_character_flag = flag_crisis_emperor
-						capital_scope = { has_province_modifier = public_against_emperor }
-					}
-					AND = {
-						has_character_flag = flag_crisis_king
-						capital_scope = { has_province_modifier = public_against_king }
-					}
-					AND = {
-						has_character_flag = flag_crisis_duke
-						capital_scope = { has_province_modifier = public_against_duke }
-					}
-					AND = {
-						has_character_flag = flag_crisis_count
-						capital_scope = { has_province_modifier = public_against_count }
-					}
-				}
+				any_demesne_title = { has_title_flag = flag_constitutional_crisis_public_against_ruler }
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
@@ -729,24 +769,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 2
-				OR = {
-					AND = {
-						has_character_flag = flag_crisis_emperor
-						capital_scope = { has_province_modifier = public_against_emperor }
-					}
-					AND = {
-						has_character_flag = flag_crisis_king
-						capital_scope = { has_province_modifier = public_against_king }
-					}
-					AND = {
-						has_character_flag = flag_crisis_duke
-						capital_scope = { has_province_modifier = public_against_duke }
-					}
-					AND = {
-						has_character_flag = flag_crisis_count
-						capital_scope = { has_province_modifier = public_against_count }
-					}
-				}
+				any_demesne_title = { has_title_flag = flag_constitutional_crisis_public_against_ruler }
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
@@ -757,24 +780,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 2
-				OR = {
-					AND = {
-						has_character_flag = flag_crisis_emperor
-						capital_scope = { has_province_modifier = public_against_emperor }
-					}
-					AND = {
-						has_character_flag = flag_crisis_king
-						capital_scope = { has_province_modifier = public_against_king }
-					}
-					AND = {
-						has_character_flag = flag_crisis_duke
-						capital_scope = { has_province_modifier = public_against_duke }
-					}
-					AND = {
-						has_character_flag = flag_crisis_count
-						capital_scope = { has_province_modifier = public_against_count }
-					}
-				}
+				any_demesne_title = { has_title_flag = flag_constitutional_crisis_public_against_ruler }
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
@@ -784,48 +790,14 @@ decisions = {
 			}
 			modifier = {
 				factor = 0.5
-				OR = {
-					AND = {
-						has_character_flag = flag_crisis_emperor
-						capital_scope = { has_province_modifier = public_for_emperor }
-					}
-					AND = {
-						has_character_flag = flag_crisis_king
-						capital_scope = { has_province_modifier = public_for_king }
-					}
-					AND = {
-						has_character_flag = flag_crisis_duke
-						capital_scope = { has_province_modifier = public_for_duke }
-					}
-					AND = {
-						has_character_flag = flag_crisis_count
-						capital_scope = { has_province_modifier = public_for_count }
-					}
-				}
+				any_demesne_title = { has_title_flag = flag_constitutional_crisis_public_for_ruler }
 				NOT = { religion = terran_imperial }
 				NOT = { religion = neo_feudal }
 				NOT = { religion = astrist }
 			}
 			modifier = {
 				factor = 0.5
-				OR = {
-					AND = {
-						has_character_flag = flag_crisis_emperor
-						capital_scope = { has_province_modifier = public_for_emperor }
-					}
-					AND = {
-						has_character_flag = flag_crisis_king
-						capital_scope = { has_province_modifier = public_for_king }
-					}
-					AND = {
-						has_character_flag = flag_crisis_duke
-						capital_scope = { has_province_modifier = public_for_duke }
-					}
-					AND = {
-						has_character_flag = flag_crisis_count
-						capital_scope = { has_province_modifier = public_for_count }
-					}
-				}
+				any_demesne_title = { has_title_flag = flag_constitutional_crisis_public_for_ruler }
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
@@ -838,24 +810,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 0.5
-				OR = {
-					AND = {
-						has_character_flag = flag_crisis_emperor
-						capital_scope = { has_province_modifier = public_for_emperor }
-					}
-					AND = {
-						has_character_flag = flag_crisis_king
-						capital_scope = { has_province_modifier = public_for_king }
-					}
-					AND = {
-						has_character_flag = flag_crisis_duke
-						capital_scope = { has_province_modifier = public_for_duke }
-					}
-					AND = {
-						has_character_flag = flag_crisis_count
-						capital_scope = { has_province_modifier = public_for_count }
-					}
-				}
+				any_demesne_title = { has_title_flag = flag_constitutional_crisis_public_for_ruler }
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
@@ -866,24 +821,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 0.5
-				OR = {
-					AND = {
-						has_character_flag = flag_crisis_emperor
-						capital_scope = { has_province_modifier = public_for_emperor }
-					}
-					AND = {
-						has_character_flag = flag_crisis_king
-						capital_scope = { has_province_modifier = public_for_king }
-					}
-					AND = {
-						has_character_flag = flag_crisis_duke
-						capital_scope = { has_province_modifier = public_for_duke }
-					}
-					AND = {
-						has_character_flag = flag_crisis_count
-						capital_scope = { has_province_modifier = public_for_count }
-					}
-				}
+				any_demesne_title = { has_title_flag = flag_constitutional_crisis_public_for_ruler }
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
