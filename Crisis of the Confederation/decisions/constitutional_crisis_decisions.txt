@@ -16,7 +16,10 @@ decisions = {
 				}
 				is_councillor = yes
 			}
-			liege = { has_character_modifier = constitutional_crisis }
+			liege = {
+				NOT = { character = ROOT } # Apparently I do, in fact, have to specify this
+				has_character_modifier = constitutional_crisis
+			}
 			NOT = { trait = pro_ruler }
 			NOT = { trait = anti_ruler }
 			NOT = { has_character_flag = flag_making_crisis_decision }
@@ -27,7 +30,7 @@ decisions = {
 		}
 		ai_will_do = { factor = 0 } # The AI uses a different interface to trigger the faction joining/leaving events.
 	}
-	side_against_liege_decision = {
+	side_against_ruler_decision = {
 		is_high_prio = yes
 		potential = {
 			# Must actually be someone important
@@ -41,7 +44,10 @@ decisions = {
 				}
 				is_councillor = yes
 			}
-			liege = { has_character_modifier = constitutional_crisis }
+			liege = {
+				NOT = { character = ROOT } # Apparently I do, in fact, have to specify this
+				has_character_modifier = constitutional_crisis
+			}
 			NOT = { trait = pro_ruler }
 			NOT = { trait = anti_ruler }
 			NOT = { has_character_flag = flag_making_crisis_decision }
@@ -54,7 +60,7 @@ decisions = {
 	}
 	
 	# Leaving Factions Once In Them
-	withdraw_support_for_liege_decision = {
+	withdraw_support_for_ruler_decision = {
 		is_high_prio = yes
 		potential = {
 			trait = pro_ruler
@@ -77,6 +83,440 @@ decisions = {
 			character_event = { id = laws.321 tooltip = "EVTTOOLTIP321" }
 		}
 		ai_will_do = { factor = 0 } # The AI uses a different interface to trigger the faction joining/leaving events.
+	}
+	
+	# Pro-ruler and anti-ruler speeches
+	make_pro_ruler_speech = {
+		is_high_prio = yes
+		potential = {
+			trait = pro_ruler
+			NOT = { has_character_flag = flag_making_crisis_decision }
+		}
+		allow = {
+			prisoner = no
+			NOT = { trait = incapable }
+			age = 16
+			liege = {
+				ROOT = { location = { any_province_lord = { character = PREVPREVPREV } } }
+				OR = {
+					AND = {
+						primary_title = { tier = EMPEROR }
+						ROOT = {
+							location = {
+								NOT = { has_province_modifier = public_for_emperor }
+								NOT = { has_province_modifier = recent_failed_pro_emperor_speech }
+							}
+						}
+					}
+					AND = {
+						primary_title = { tier = KING }
+						ROOT = {
+							location = {
+								NOT = { has_province_modifier = public_for_king }
+								NOT = { has_province_modifier = recent_failed_pro_king_speech }
+							}
+						}
+					}
+					AND = {
+						primary_title = { tier = DUKE }
+						ROOT = {
+							location = {
+								NOT = { has_province_modifier = public_for_duke }
+								NOT = { has_province_modifier = recent_failed_pro_duke_speech }
+							}
+						}
+					}
+					AND = {
+						primary_title = { tier = COUNT }
+						ROOT = {
+							location = {
+								NOT = { has_province_modifier = public_for_count }
+								NOT = { has_province_modifier = recent_failed_pro_count_speech }
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			set_character_flag = flag_making_crisis_decision
+			character_event = { id = politics.250 tooltip = "EVTTOOLTIPPOLITICS250" }
+		}
+		ai_will_do = {
+			factor = 0.1
+			
+			# Personality
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = neurotic
+			}
+			modifier = {
+				factor = 2
+				trait = confident
+			}
+			modifier = {
+				factor = 0.8
+				trait = introverted
+			}
+			modifier = {
+				factor = 1.25
+				trait = extraverted
+			}
+			
+			# Chance of Success
+			modifier = {
+				factor = 1.25
+				diplomacy = 2
+			}
+			modifier = {
+				factor = 1.25
+				diplomacy = 4
+			}
+			modifier = {
+				factor = 1.25
+				diplomacy = 6
+			}
+			modifier = {
+				factor = 1.25
+				diplomacy = 8
+			}
+			modifier = {
+				factor = 1.25
+				diplomacy = 10
+			}
+			modifier = {
+				factor = 1.25
+				diplomacy = 12
+			}
+			modifier = {
+				factor = 1.25
+				diplomacy = 14
+			}
+			modifier = {
+				factor = 1.25
+				diplomacy = 16
+			}
+			modifier = {
+				factor = 1.25
+				diplomacy = 18
+			}
+			modifier = {
+				factor = 1.25
+				diplomacy = 20
+			}
+			
+			# Ideological effects
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_seperatist
+				}
+				OR = {
+					religion_authority = 0.25
+					trait = radical
+				}
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_seperatist
+				}
+				religion_authority = 0.5
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_seperatist
+				}
+				religion_authority = 0.75
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					religion = terran_imperial
+					religion = neo_feudal
+					religion = astrist
+				}
+				OR = {
+					religion_authority = 0.25
+					trait = radical
+				}
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					religion = terran_imperial
+					religion = neo_feudal
+					religion = astrist
+				}
+				religion_authority = 0.5
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					religion = terran_imperial
+					religion = neo_feudal
+					religion = astrist
+				}
+				religion_authority = 0.75
+			}
+			
+			# Revolt risk effects
+			modifier = {
+				factor = 2
+				location = { revolt_risk = 0.1 }
+			}
+			modifier = {
+				factor = 2
+				location = { revolt_risk = 0.2 }
+			}
+			modifier = {
+				factor = 2
+				location = { revolt_risk = 0.3 }
+			}
+			modifier = {
+				factor = 2
+				location = { revolt_risk = 0.4 }
+			}
+			modifier = {
+				factor = 2
+				location = { revolt_risk = 0.5 }
+			}
+		}
+	}
+	make_anti_ruler_speech = {
+		is_high_prio = yes
+		potential = {
+			trait = anti_ruler
+			NOT = { has_character_flag = flag_making_crisis_decision }
+		}
+		allow = {
+			prisoner = no
+			NOT = { trait = incapable }
+			age = 16
+			liege = {
+				ROOT = { location = { any_province_lord = { character = PREVPREVPREV } } }
+				OR = {
+					AND = {
+						primary_title = { tier = EMPEROR }
+						ROOT = {
+							location = {
+								NOT = { has_province_modifier = public_against_emperor }
+								NOT = { has_province_modifier = recent_failed_anti_emperor_speech }
+							}
+						}
+					}
+					AND = {
+						primary_title = { tier = KING }
+						ROOT = {
+							location = {
+								NOT = { has_province_modifier = public_against_king }
+								NOT = { has_province_modifier = recent_failed_anti_king_speech }
+							}
+						}
+					}
+					AND = {
+						primary_title = { tier = DUKE }
+						ROOT = {
+							location = {
+								NOT = { has_province_modifier = public_against_duke }
+								NOT = { has_province_modifier = recent_failed_anti_duke_speech }
+							}
+						}
+					}
+					AND = {
+						primary_title = { tier = COUNT }
+						ROOT = {
+							location = {
+								NOT = { has_province_modifier = public_against_count }
+								NOT = { has_province_modifier = recent_failed_anti_count_speech }
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			set_character_flag = flag_making_crisis_decision
+			character_event = { id = politics.260 tooltip = "EVTTOOLTIPPOLITICS260" }
+		}
+		ai_will_do = {
+			factor = 0.1
+			
+			# Personality
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = neurotic
+			}
+			modifier = {
+				factor = 2
+				trait = confident
+			}
+			modifier = {
+				factor = 0.8
+				trait = introverted
+			}
+			modifier = {
+				factor = 1.25
+				trait = extraverted
+			}
+			
+			# Chance of Success
+			modifier = {
+				factor = 1.25
+				diplomacy = 2
+			}
+			modifier = {
+				factor = 1.25
+				diplomacy = 4
+			}
+			modifier = {
+				factor = 1.25
+				diplomacy = 6
+			}
+			modifier = {
+				factor = 1.25
+				diplomacy = 8
+			}
+			modifier = {
+				factor = 1.25
+				diplomacy = 10
+			}
+			modifier = {
+				factor = 1.25
+				diplomacy = 12
+			}
+			modifier = {
+				factor = 1.25
+				diplomacy = 14
+			}
+			modifier = {
+				factor = 1.25
+				diplomacy = 16
+			}
+			modifier = {
+				factor = 1.25
+				diplomacy = 18
+			}
+			modifier = {
+				factor = 1.25
+				diplomacy = 20
+			}
+			
+			# Ideological effects
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_seperatist
+				}
+				OR = {
+					religion_authority = 0.25
+					trait = radical
+				}
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_seperatist
+				}
+				religion_authority = 0.5
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_seperatist
+				}
+				religion_authority = 0.75
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					religion = terran_imperial
+					religion = neo_feudal
+					religion = astrist
+				}
+				OR = {
+					religion_authority = 0.25
+					trait = radical
+				}
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					religion = terran_imperial
+					religion = neo_feudal
+					religion = astrist
+				}
+				religion_authority = 0.5
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					religion = terran_imperial
+					religion = neo_feudal
+					religion = astrist
+				}
+				religion_authority = 0.75
+			}
+			
+			# Revolt risk effects
+			modifier = {
+				factor = 2
+				location = { revolt_risk = 0.1 }
+			}
+			modifier = {
+				factor = 2
+				location = { revolt_risk = 0.2 }
+			}
+			modifier = {
+				factor = 2
+				location = { revolt_risk = 0.3 }
+			}
+			modifier = {
+				factor = 2
+				location = { revolt_risk = 0.4 }
+			}
+			modifier = {
+				factor = 2
+				location = { revolt_risk = 0.5 }
+			}
+		}
 	}
 	# Non-Vassal Based Decisions Ruler Can Make
 	back_down_decision = {

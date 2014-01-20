@@ -8,7 +8,14 @@ de_jure_laws = {
 		group = legitimacy_law
 		default = no
 		
-		potential = { always = yes }
+		potential = {
+			# Merchant republics have to use the same succession law for all their top-tier
+			# titles because otherwise major problems might occur
+			OR = {
+				holder_scope = { is_merchant_republic = no }
+				is_primary_holder_title = yes
+			}
+		}
 		allow = { always = no } # Will be changed once proper ideologies are implemented
 		revoke_allowed = { always = no }
 		ai_will_do = { factor = 0 }
@@ -38,7 +45,14 @@ de_jure_laws = {
 		group = legitimacy_law
 		default = yes
 		
-		potential = { always = yes }
+		potential = {
+			# Merchant republics have to use the same succession law for all their top-tier
+			# titles because otherwise major problems might occur
+			OR = {
+				holder_scope = { is_merchant_republic = no }
+				is_primary_holder_title = yes
+			}
+		}
 		allow = { always = yes } # Will be changed once proper ideologies are implemented
 		revoke_allowed = { always = no }
 		ai_will_do = { factor = 0 }
@@ -68,7 +82,14 @@ de_jure_laws = {
 		group = legitimacy_law
 		default = no
 		
-		potential = { always = yes }
+		potential = {
+			# Merchant republics have to use the same succession law for all their top-tier
+			# titles because otherwise major problems might occur
+			OR = {
+				holder_scope = { is_merchant_republic = no }
+				is_primary_holder_title = yes
+			}
+		}
 		allow = { always = no } # Will be changed once proper ideologies are implemented
 		revoke_allowed = { always = no }
 		ai_will_do = { factor = 0 }

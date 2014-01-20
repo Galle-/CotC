@@ -10,8 +10,8 @@ character_event = {
 	trigger = {
 		NOT = { liege = { has_character_modifier = constitutional_crisis } }
 		OR = {
-			has_trait = pro_ruler
-			has_trait = anti_ruler
+			trait = pro_ruler
+			trait = anti_ruler
 		}
 	}
 	
@@ -105,7 +105,7 @@ character_event = {
 		
 		hidden_tooltip = {
 			any_realm_character = {
-				limit = { liege = ROOT }
+				limit = { liege = { character = ROOT } }
 				character_event = { id = laws.0 }
 			}
 			any_realm_province = {
@@ -279,7 +279,7 @@ character_event = {
 	desc = "EVTDESCLAWS7"
 	hide_window = yes
 	
-	rulers_only = yes
+	only_rulers = yes
 	
 	trigger = {
 		independent = yes
@@ -357,7 +357,7 @@ character_event = {
 	desc = "EVTDESCLAWS20"
 	picture = GFX_evt_scandal
 	
-	rulers_only = yes
+	only_rulers = yes
 	
 	trigger = {
 		NOT = { has_character_modifier = constitutional_crisis }
@@ -401,10 +401,8 @@ character_event = {
 				character_event = { id = laws.0 }
 			}
 			any_realm_province = {
-				limit = {
-					any_province_lord = { character = ROOT }
-					province_event = { id = laws.1 }
-				}
+				limit = { any_province_lord = { character = ROOT } }
+				province_event = { id = laws.1 }
 			}
 		}
 	}
@@ -416,7 +414,7 @@ character_event = {
 	desc = "EVTDESCLAWS30"
 	picture = GFX_evt_scandal
 	
-	rulers_only = yes
+	only_rulers = yes
 	
 	trigger = {
 		NOT = { has_character_modifier = constitutional_crisis }
@@ -543,521 +541,6 @@ character_event = {
 	}
 }
 
-character_event = {
-	id = laws.100 # Election event
-	desc = "EVTDESCLAWS100"
-	is_triggered_only = yes
-	
-	option = { # Hold Imperial elections
-		trigger = { primary_title = { tier = emperor } }
-		name = "EVTOPTALAWS100"
-		if = {
-			limit = { is_merchant_republic = no }
-			any_demesne_title = {
-				limit = {
-					tier = emperor
-					NOT = { current_heir = { same_dynasty = ROOT } }
-					OR = {
-						has_law = succ_feudal_elective
-						has_law = succ_open_elective
-						has_law = succ_tanistry
-					}
-				}
-				current_heir = { grant_title = PREV }
-			}
-		}
-		if = {
-			limit = { is_merchant_republic = yes }
-			any_demesne_title = {
-				limit = {
-					tier = emperor
-					OR = {
-						has_law = succ_feudal_elective
-						has_law = succ_open_elective
-						has_law = succ_patrician_elective
-						has_law = succ_tanistry
-					}
-				}
-				hold_election = yes
-			}
-		}
-	}
-	
-	option = { # Hold Kingdom elections 
-		trigger = { primary_title = { tier = king } }
-		name = "EVTOPTALAWS100"
-		if = {
-			limit = { is_merchant_republic = no }
-			any_demesne_title = {
-				limit = {
-					tier = king
-					NOT = { current_heir = { same_dynasty = ROOT } }
-					OR = {
-						has_law = succ_feudal_elective
-						has_law = succ_open_elective
-						has_law = succ_tanistry
-					}
-				}
-				current_heir = { grant_title = PREV }
-			}
-		}
-		if = {
-			limit = { is_merchant_republic = yes }
-			any_demesne_title = {
-				limit = {
-					tier = king
-					OR = {
-						has_law = succ_feudal_elective
-						has_law = succ_open_elective
-						has_law = succ_patrician_elective
-						has_law = succ_tanistry
-					}
-				}
-				hold_election = yes
-			}
-		}
-	}
-	
-	option = { # Hold Duchy elections 
-		trigger = { primary_title = { tier = duke } }
-		name = "EVTOPTALAWS100"
-		if = {
-			limit = { is_merchant_republic = no }
-			any_demesne_title = {
-				limit = {
-					tier = duke
-					NOT = { current_heir = { same_dynasty = ROOT } }
-					OR = {
-						has_law = succ_feudal_elective
-						has_law = succ_open_elective
-						has_law = succ_tanistry
-					}
-				}
-				current_heir = { grant_title = PREV }
-			}
-		}
-		if = {
-			limit = { is_merchant_republic = yes }
-			any_demesne_title = {
-				limit = {
-					tier = duke
-					OR = {
-						has_law = succ_feudal_elective
-						has_law = succ_open_elective
-						has_law = succ_patrician_elective
-						has_law = succ_tanistry
-					}
-				}
-				hold_election = yes
-			}
-		}
-	}
-	
-	option = { # Hold County elections 
-		trigger = { primary_title = { tier = count } }
-		name = "EVTOPTALAWS100"
-		if = {
-			limit = { is_merchant_republic = no }
-			any_demesne_title = {
-				limit = {
-					tier = count
-					NOT = { current_heir = { same_dynasty = ROOT } }
-					OR = {
-						has_law = succ_feudal_elective
-						has_law = succ_open_elective
-						has_law = succ_tanistry
-					}
-				}
-				current_heir = { grant_title = PREV }
-			}
-		}
-		if = {
-			limit = { is_merchant_republic = yes }
-			any_demesne_title = {
-				limit = {
-					tier = count
-					OR = {
-						has_law = succ_feudal_elective
-						has_law = succ_open_elective
-						has_law = succ_patrician_elective
-						has_law = succ_tanistry
-					}
-				}
-				hold_election = yes
-			}
-		}
-	}
-	
-	option = { # Hold Barony elections 
-		trigger = { primary_title = { tier = baron } }
-		name = "EVTOPTALAWS100"
-		if = {
-			limit = { is_merchant_republic = no }
-			any_demesne_title = {
-				limit = {
-					tier = baron
-					NOT = { current_heir = { same_dynasty = ROOT } }
-					OR = {
-						has_law = succ_feudal_elective
-						has_law = succ_open_elective
-						has_law = succ_tanistry
-					}
-				}
-				current_heir = { grant_title = PREV }
-			}
-		}
-		if = {
-			limit = { is_merchant_republic = yes }
-			any_demesne_title = {
-				limit = {
-					tier = baron
-					OR = {
-						has_law = succ_feudal_elective
-						has_law = succ_open_elective
-						has_law = succ_patrician_elective
-						has_law = succ_tanistry
-					}
-				}
-				hold_election = yes
-			}
-		}
-	}
-}
-
-# Timer begins for newly-elected character
-character_event = {
-	id = laws.110
-	hide_window = yes
-	
-	only_rulers = yes
-	
-	trigger = {
-		any_demesne_title = {
-			OR = {
-				has_law = term_length_0
-				has_law = term_length_1
-				has_law = term_length_2
-				has_law = term_length_3
-				has_law = local_term_length_0
-				has_law = local_term_length_1
-				has_law = local_term_length_2
-				has_law = local_term_length_3
-			}
-		}
-		NOT = { has_character_flag = flag_term_limit_timer }
-	}
-	
-	immediate = { set_character_flag = flag_term_limit_timer }
-}
-
-# Remove timer on a character who no longer needs it
-character_event = {
-	id = laws.111
-	hide_window = yes
-	
-	trigger = {
-		NOT = {
-			any_demesne_title = {
-				OR = {
-					has_law = term_length_0
-					has_law = term_length_1
-					has_law = term_length_2
-					has_law = term_length_3
-					has_law = local_term_length_0
-					has_law = local_term_length_1
-					has_law = local_term_length_2
-					has_law = local_term_length_3
-				}
-			}
-		}
-		has_character_flag = flag_term_limit_timer
-	}
-	
-	immediate = { clr_character_flag = flag_term_limit_timer }
-}
-
-# Election triggered by term limit expiring
-character_event = {
-	id = laws.112
-	desc = "EVTDESCLAWS112"
-	
-	trigger = {
-		NOT = { has_character_modifier =  }
-		OR = {
-			AND = {
-				had_character_flag = { flag = flag_term_limit_timer days = 365 }
-				primary_title = {
-					OR = {
-						has_law = term_length_0
-						has_law = local_term_length_0
-					}
-				}
-			}
-			AND = {
-				had_character_flag = { flag = flag_term_limit_timer days = 1460 }
-				primary_title = {
-					OR = {
-						has_law = term_length_1
-						has_law = local_term_length_1
-					}
-				}
-			}
-			AND = {
-				had_character_flag = { flag = flag_term_limit_timer days = 2920 }
-				primary_title = {
-					OR = {
-						has_law = term_length_2
-						has_law = local_term_length_2
-					}
-				}
-			}
-			AND = {
-				had_character_flag = { flag = flag_term_limit_timer days = 3650 }
-				primary_title = {
-					OR = {
-						has_law = term_length_3
-						has_law = local_term_length_3
-					}
-				}
-			}
-		}
-	}
-	
-	immediate = {
-		# Reset term timer
-		if = {
-			limit = { has_character_flag = flag_term_limit_timer }
-			clr_character_flag = flag_term_limit_timer
-			set_character_flag = flag_term_limit_timer
-		}
-	}
-	
-	option = {
-		name = "EVTOPTALAWS112" # Hold new elections
-		character_event = { id = laws.100 tooltip = "EVTTOOLTIPLAWS100" }
-		ai_chance = { factor = 100 }
-	}
-	
-	option = {
-		trigger = { primary_title = { higher_tier_than = BARON } } # Barons can't do anything that would start a crisis
-		name = "EVTOPTBLAWS112" # Refuse to hold elections
-		# Add relevant modifiers
-		add_character_modifier = { name = constitutional_crisis duration = -1 }
-		add_character_modifier = { name = crisis_law_against_ruler duration = -1 }
-		
-		# Flag crisis rank and type
-		set_character_flag = flag_crisis_term_limit_defied
-		if = {
-			limit = { primary_title = { tier = EMPEROR } }
-			set_character_flag = flag_crisis_emperor
-		}
-		if = {
-			limit = { primary_title = { tier = KING } }
-			set_character_flag = flag_crisis_king
-		}
-		if = {
-			limit = { primary_title = { tier = DUKE } }
-			set_character_flag = flag_crisis_duke
-		}
-		if = {
-			limit = { primary_title = { tier = COUNT } }
-			set_character_flag = flag_crisis_count
-		}
-		religion_authority = { modifier = legal_demand_refused }
-		if = {
-			limit = {
-				NOT = { religion = terran_imperial }
-				NOT = { religion = neo_feudal }
-				NOT = { religion = astrist }
-			}
-			piety = -200
-		}
-		if = {
-			limit = {
-				OR = {
-					religion = terran_federalist
-					religion = terran_republican
-					religion = colonial_seperatist
-				}
-			}
-			piety = -300
-		}
-		hidden_tooltip = {
-			any_realm_character = {
-				limit = { liege = ROOT }
-				character_event = { id = laws.113 } # Inform vassals
-				character_event = { id = laws.500 days = 30 random = 15 } # AI takes sides for or against
-			}
-			liege = { character_event = { id = laws.114 } } # Liege may take sides
-			any_realm_character = {
-				limit = {
-					NOT = { liege = ROOT }
-					ROOT = { liege = { NOT = { character = PREVPREV } } }
-				}
-				character_event = { id = laws.115 } # Inform bystanders
-			}
-		}
-		ai_chance = {
-			factor = 100
-			
-			# Personality Effects
-			modifier = {
-				factor = 4
-				trait = ambitious
-			}
-			modifier = {
-				factor = 0.25
-				trait = content
-			}
-			modifier = {
-				factor = 2
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
-				trait = humble
-			}
-			
-			# Ideological authority effects
-			# Only applicable for non-autocratic ideologies
-			modifier = {
-				factor = 0.5
-				NOT = { religion = terran_imperial }
-				NOT = { religion = neo_feudal }
-				NOT = { religion = astrist }
-				religion_authority = 0.1
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { religion = terran_imperial }
-				NOT = { religion = neo_feudal }
-				NOT = { religion = astrist }
-				religion_authority = 0.2
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { religion = terran_imperial }
-				NOT = { religion = neo_feudal }
-				NOT = { religion = astrist }
-				religion_authority = 0.3
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { religion = terran_imperial }
-				NOT = { religion = neo_feudal }
-				NOT = { religion = astrist }
-				religion_authority = 0.4
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { religion = terran_imperial }
-				NOT = { religion = neo_feudal }
-				NOT = { religion = astrist }
-				religion_authority = 0.5
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { religion = terran_imperial }
-				NOT = { religion = neo_feudal }
-				NOT = { religion = astrist }
-				religion_authority = 0.6
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { religion = terran_imperial }
-				NOT = { religion = neo_feudal }
-				NOT = { religion = astrist }
-				religion_authority = 0.7
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { religion = terran_imperial }
-				NOT = { religion = neo_feudal }
-				NOT = { religion = astrist }
-				religion_authority = 0.8
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { religion = terran_imperial }
-				NOT = { religion = neo_feudal }
-				NOT = { religion = astrist }
-				religion_authority = 0.9
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { religion = terran_imperial }
-				NOT = { religion = neo_feudal }
-				NOT = { religion = astrist }
-				religion_authority = 1
-			}
-			
-			# Risk of reprisal
-			modifier = {
-				factor = 0.1
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-				any_vassal = {
-					OR = {
-						religion = terran_federalist
-						religion = terran_republican
-						religion = colonial_seperatist
-					}
-					relative_power_to_liege = 0.25
-					religion_authority = 0.5
-				}
-			}
-			modifier = {
-				factor = 0.1
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-				NOT = {
-					any_vassal = {
-						OR = {
-							AND = {
-								NOT = { religion = terran_federalist }
-								NOT = { religion = terran_republican }
-								NOT = { religion = colonial_seperatist }
-							}
-							NOT = { religion_authority = 0.25 }
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.1
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-				NOT = { relative_power_to_liege = 0.25 }
-				liege = {
-					OR = {
-						religion = terran_federalist
-						religion = terran_republican
-						religion = colonial_seperatist
-					}
-					religion_authority = 0.5
-				}
-			}
-			
-			# Can't afford a crisis
-			modifier = {
-				factor = 0.1
-				at_war = yes
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-			}
-		}
-	}
-}
-
-# Constitutional Crisis triggered by refusing to hold elections - inform vassals
-character_event = {
-	id = laws.113
-	desc = "EVTDESCLAWS113"
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
-}
-
 # Civil Unrest Events
 # Growth of civil unrest
 province_event = {
@@ -1078,7 +561,7 @@ province_event = {
 		modifier = {
 			factor = 4
 			has_province_modifier = public_for_emperor
-			owner_scope = {
+			owner = {
 				OR = {
 					has_character_flag = flag_crisis_emperor
 					AND = {
@@ -1091,7 +574,7 @@ province_event = {
 		modifier = {
 			factor = 0.25
 			has_province_modifier = public_for_emperor
-			owner_scope = {
+			owner = {
 				has_character_flag = flag_cache_crisis_emperor
 				trait = anti_ruler
 			}
@@ -1099,7 +582,7 @@ province_event = {
 		modifier = {
 			factor = 4
 			has_province_modifier = public_for_king
-			owner_scope = {
+			owner = {
 				OR = {
 					has_character_flag = flag_crisis_king
 					AND = {
@@ -1112,7 +595,7 @@ province_event = {
 		modifier = {
 			factor = 0.25
 			has_province_modifier = public_for_king
-			owner_scope = {
+			owner = {
 				has_character_flag = flag_cache_crisis_king
 				trait = anti_ruler
 			}
@@ -1120,7 +603,7 @@ province_event = {
 		modifier = {
 			factor = 4
 			has_province_modifier = public_for_duke
-			owner_scope = {
+			owner = {
 				OR = {
 					has_character_flag = flag_crisis_duke
 					AND = {
@@ -1133,7 +616,7 @@ province_event = {
 		modifier = {
 			factor = 0.25
 			has_province_modifier = public_for_duke
-			owner_scope = {
+			owner = {
 				has_character_flag = flag_cache_crisis_duke
 				trait = anti_ruler
 			}
@@ -1145,7 +628,7 @@ province_event = {
 		modifier = {
 			factor = 0.25
 			has_province_modifier = public_against_emperor
-			owner_scope = {
+			owner = {
 				OR = {
 					has_character_flag = flag_crisis_emperor
 					AND = {
@@ -1158,7 +641,7 @@ province_event = {
 		modifier = {
 			factor = 4
 			has_province_modifier = public_against_emperor
-			owner_scope = {
+			owner = {
 				has_character_flag = flag_cache_crisis_emperor
 				trait = anti_ruler
 			}
@@ -1166,7 +649,7 @@ province_event = {
 		modifier = {
 			factor = 0.25
 			has_province_modifier = public_against_king
-			owner_scope = {
+			owner = {
 				OR = {
 					has_character_flag = flag_crisis_king
 					AND = {
@@ -1179,7 +662,7 @@ province_event = {
 		modifier = {
 			factor = 4
 			has_province_modifier = public_against_king
-			owner_scope = {
+			owner = {
 				has_character_flag = flag_cache_crisis_king
 				trait = anti_ruler
 			}
@@ -1187,7 +670,7 @@ province_event = {
 		modifier = {
 			factor = 0.25
 			has_province_modifier = public_against_duke
-			owner_scope = {
+			owner = {
 				OR = {
 					has_character_flag = flag_crisis_duke
 					AND = {
@@ -1200,7 +683,7 @@ province_event = {
 		modifier = {
 			factor = 4
 			has_province_modifier = public_against_duke
-			owner_scope = {
+			owner = {
 				has_character_flag = flag_cache_crisis_duke
 				trait = anti_ruler
 			}
@@ -1242,6 +725,96 @@ province_event = {
 		modifier = {
 			factor = 1.25
 			religion_authority = 0.9
+		}
+		
+		# Natural resistance
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_province_modifier = civil_unrest_0
+				has_province_modifier = civil_unrest_1
+				has_province_modifier = civil_unrest_2
+				has_province_modifier = civil_unrest_3
+				has_province_modifier = civil_unrest_4
+				has_province_modifier = civil_unrest_5
+				has_province_modifier = civil_unrest_6
+				has_province_modifier = civil_unrest_7
+				has_province_modifier = civil_unrest_8
+			}
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_province_modifier = civil_unrest_1
+				has_province_modifier = civil_unrest_2
+				has_province_modifier = civil_unrest_3
+				has_province_modifier = civil_unrest_4
+				has_province_modifier = civil_unrest_5
+				has_province_modifier = civil_unrest_6
+				has_province_modifier = civil_unrest_7
+				has_province_modifier = civil_unrest_8
+			}
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_province_modifier = civil_unrest_2
+				has_province_modifier = civil_unrest_3
+				has_province_modifier = civil_unrest_4
+				has_province_modifier = civil_unrest_5
+				has_province_modifier = civil_unrest_6
+				has_province_modifier = civil_unrest_7
+				has_province_modifier = civil_unrest_8
+			}
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_province_modifier = civil_unrest_3
+				has_province_modifier = civil_unrest_4
+				has_province_modifier = civil_unrest_5
+				has_province_modifier = civil_unrest_6
+				has_province_modifier = civil_unrest_7
+				has_province_modifier = civil_unrest_8
+			}
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_province_modifier = civil_unrest_4
+				has_province_modifier = civil_unrest_5
+				has_province_modifier = civil_unrest_6
+				has_province_modifier = civil_unrest_7
+				has_province_modifier = civil_unrest_8
+			}
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_province_modifier = civil_unrest_5
+				has_province_modifier = civil_unrest_6
+				has_province_modifier = civil_unrest_7
+				has_province_modifier = civil_unrest_8
+			}
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_province_modifier = civil_unrest_6
+				has_province_modifier = civil_unrest_7
+				has_province_modifier = civil_unrest_8
+			}
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_province_modifier = civil_unrest_7
+				has_province_modifier = civil_unrest_8
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_province_modifier = civil_unrest_8
 		}
 		
 		# Other Factors
@@ -1351,7 +924,7 @@ province_event = {
 		modifier = {
 			factor = 0.25
 			has_province_modifier = public_for_emperor
-			owner_scope = {
+			owner = {
 				OR = {
 					has_character_flag = flag_crisis_emperor
 					AND = {
@@ -1364,7 +937,7 @@ province_event = {
 		modifier = {
 			factor = 4
 			has_province_modifier = public_for_emperor
-			owner_scope = {
+			owner = {
 				has_character_flag = flag_cache_crisis_emperor
 				trait = anti_ruler
 			}
@@ -1372,7 +945,7 @@ province_event = {
 		modifier = {
 			factor = 0.25
 			has_province_modifier = public_for_king
-			owner_scope = {
+			owner = {
 				OR = {
 					has_character_flag = flag_crisis_king
 					AND = {
@@ -1385,7 +958,7 @@ province_event = {
 		modifier = {
 			factor = 4
 			has_province_modifier = public_for_king
-			owner_scope = {
+			owner = {
 				has_character_flag = flag_cache_crisis_king
 				trait = anti_ruler
 			}
@@ -1393,7 +966,7 @@ province_event = {
 		modifier = {
 			factor = 0.25
 			has_province_modifier = public_for_duke
-			owner_scope = {
+			owner = {
 				OR = {
 					has_character_flag = flag_crisis_duke
 					AND = {
@@ -1406,7 +979,7 @@ province_event = {
 		modifier = {
 			factor = 4
 			has_province_modifier = public_for_duke
-			owner_scope = {
+			owner = {
 				has_character_flag = flag_cache_crisis_duke
 				trait = anti_ruler
 			}
@@ -1418,7 +991,7 @@ province_event = {
 		modifier = {
 			factor = 4
 			has_province_modifier = public_against_emperor
-			owner_scope = {
+			owner = {
 				OR = {
 					has_character_flag = flag_crisis_emperor
 					AND = {
@@ -1431,7 +1004,7 @@ province_event = {
 		modifier = {
 			factor = 0.25
 			has_province_modifier = public_against_emperor
-			owner_scope = {
+			owner = {
 				has_character_flag = flag_cache_crisis_emperor
 				trait = anti_ruler
 			}
@@ -1439,7 +1012,7 @@ province_event = {
 		modifier = {
 			factor = 4
 			has_province_modifier = public_against_king
-			owner_scope = {
+			owner = {
 				OR = {
 					has_character_flag = flag_crisis_king
 					AND = {
@@ -1452,7 +1025,7 @@ province_event = {
 		modifier = {
 			factor = 0.25
 			has_province_modifier = public_against_king
-			owner_scope = {
+			owner = {
 				has_character_flag = flag_cache_crisis_king
 				trait = anti_ruler
 			}
@@ -1460,7 +1033,7 @@ province_event = {
 		modifier = {
 			factor = 4
 			has_province_modifier = public_against_duke
-			owner_scope = {
+			owner = {
 				OR = {
 					has_character_flag = flag_crisis_duke
 					AND = {
@@ -1473,7 +1046,7 @@ province_event = {
 		modifier = {
 			factor = 0.25
 			has_province_modifier = public_against_duke
-			owner_scope = {
+			owner = {
 				has_character_flag = flag_cache_crisis_duke
 				trait = anti_ruler
 			}
@@ -1605,11 +1178,11 @@ province_event = {
 		# Recent successful speeches
 		modifier = {
 			factor = 5
-			has_province_modifier = { recent_speech_against_emperor }
+			has_province_modifier = recent_speech_against_emperor
 		}
 		modifier = {
 			factor = 0.2
-			has_province_modifier = { recent_speech_for_emperor }
+			has_province_modifier = recent_speech_for_emperor
 		}
 		
 		# Specific issues vs province ideology
@@ -1796,11 +1369,11 @@ province_event = {
 		# Recent successful speeches
 		modifier = {
 			factor = 5
-			has_province_modifier = { recent_speech_for_emperor }
+			has_province_modifier = recent_speech_for_emperor
 		}
 		modifier = {
 			factor = 0.2
-			has_province_modifier = { recent_speech_against_emperor }
+			has_province_modifier = recent_speech_against_emperor
 		}
 		
 		# Specific issues vs province ideology
@@ -1988,11 +1561,11 @@ province_event = {
 		# Recent successful speeches
 		modifier = {
 			factor = 5
-			has_province_modifier = { recent_speech_against_king }
+			has_province_modifier = recent_speech_against_king
 		}
 		modifier = {
 			factor = 0.2
-			has_province_modifier = { recent_speech_for_king }
+			has_province_modifier = recent_speech_for_king
 		}
 		
 		# Specific issues vs province ideology
@@ -2179,11 +1752,11 @@ province_event = {
 		# Recent successful speeches
 		modifier = {
 			factor = 5
-			has_province_modifier = { recent_speech_for_king }
+			has_province_modifier = recent_speech_for_king
 		}
 		modifier = {
 			factor = 0.2
-			has_province_modifier = { recent_speech_against_king }
+			has_province_modifier = recent_speech_against_king
 		}
 		
 		# Specific issues vs province ideology
@@ -2371,11 +1944,11 @@ province_event = {
 		# Recent successful speeches
 		modifier = {
 			factor = 5
-			has_province_modifier = { recent_speech_against_duke }
+			has_province_modifier = recent_speech_against_duke
 		}
 		modifier = {
 			factor = 0.2
-			has_province_modifier = { recent_speech_for_duke }
+			has_province_modifier = recent_speech_for_duke
 		}
 		
 		# Specific issues vs province ideology
@@ -2562,11 +2135,11 @@ province_event = {
 		# Recent successful speeches
 		modifier = {
 			factor = 5
-			has_province_modifier = { recent_speech_for_duke }
+			has_province_modifier = recent_speech_for_duke
 		}
 		modifier = {
 			factor = 0.2
-			has_province_modifier = { recent_speech_against_duke }
+			has_province_modifier = recent_speech_against_duke
 		}
 		
 		# Specific issues vs province ideology
@@ -2735,7 +2308,7 @@ province_event = {
 	desc = "EVTDESCLAWS240"
 	
 	trigger = {
-		owner_scope = {
+		owner = {
 			has_character_modifier = constitutional_crisis
 			has_character_flag = flag_crisis_count
 		}
@@ -2754,17 +2327,17 @@ province_event = {
 		# Recent successful speeches
 		modifier = {
 			factor = 5
-			has_province_modifier = { recent_speech_against_count }
+			has_province_modifier = recent_speech_against_count
 		}
 		modifier = {
 			factor = 0.2
-			has_province_modifier = { recent_speech_for_count }
+			has_province_modifier = recent_speech_for_count
 		}
 		
 		# Specific issues vs province ideology
 		modifier = {
 			factor = 0.5
-			owner_scope = { has_character_flag = flag_term_limit_defied }
+			owner = { has_character_flag = flag_term_limit_defied }
 			religion_authority = 0.25
 			OR = {
 				religion = terran_imperial
@@ -2774,7 +2347,7 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.5
-			owner_scope = { has_character_flag = flag_term_limit_defied }
+			owner = { has_character_flag = flag_term_limit_defied }
 			religion_authority = 0.5
 			OR = {
 				religion = terran_imperial
@@ -2784,7 +2357,7 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.5
-			owner_scope = { has_character_flag = flag_term_limit_defied }
+			owner = { has_character_flag = flag_term_limit_defied }
 			religion_authority = 0.75
 			OR = {
 				religion = terran_imperial
@@ -2794,7 +2367,7 @@ province_event = {
 		}
 		modifier = {
 			factor = 2
-			owner_scope = { has_character_flag = flag_term_limit_defied }
+			owner = { has_character_flag = flag_term_limit_defied }
 			religion_authority = 0.25
 			OR = {
 				religion = terran_republican
@@ -2804,7 +2377,7 @@ province_event = {
 		}
 		modifier = {
 			factor = 2
-			owner_scope = { has_character_flag = flag_term_limit_defied }
+			owner = { has_character_flag = flag_term_limit_defied }
 			religion_authority = 0.5
 			OR = {
 				religion = terran_republican
@@ -2814,7 +2387,7 @@ province_event = {
 		}
 		modifier = {
 			factor = 2
-			owner_scope = { has_character_flag = flag_term_limit_defied }
+			owner = { has_character_flag = flag_term_limit_defied }
 			religion_authority = 0.75
 			OR = {
 				religion = terran_republican
@@ -2861,17 +2434,17 @@ province_event = {
 		# Recent successful speeches
 		modifier = {
 			factor = 5
-			has_province_modifier = { recent_speech_for_count }
+			has_province_modifier = recent_speech_for_count
 		}
 		modifier = {
 			factor = 0.2
-			has_province_modifier = { recent_speech_against_count }
+			has_province_modifier = recent_speech_against_count
 		}
 		
 		# Specific issues vs province ideology
 		modifier = {
 			factor = 2
-			owner_scope = { has_character_flag = flag_term_limit_defied }
+			owner = { has_character_flag = flag_term_limit_defied }
 			religion_authority = 0.25
 			OR = {
 				religion = terran_imperial
@@ -2881,7 +2454,7 @@ province_event = {
 		}
 		modifier = {
 			factor = 2
-			owner_scope = { has_character_flag = flag_term_limit_defied }
+			owner = { has_character_flag = flag_term_limit_defied }
 			religion_authority = 0.5
 			OR = {
 				religion = terran_imperial
@@ -2891,7 +2464,7 @@ province_event = {
 		}
 		modifier = {
 			factor = 2
-			owner_scope = { has_character_flag = flag_term_limit_defied }
+			owner = { has_character_flag = flag_term_limit_defied }
 			religion_authority = 0.75
 			OR = {
 				religion = terran_imperial
@@ -2901,7 +2474,7 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.5
-			owner_scope = { has_character_flag = flag_term_limit_defied }
+			owner = { has_character_flag = flag_term_limit_defied }
 			religion_authority = 0.25
 			OR = {
 				religion = terran_republican
@@ -2911,7 +2484,7 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.5
-			owner_scope = { has_character_flag = flag_term_limit_defied }
+			owner = { has_character_flag = flag_term_limit_defied }
 			religion_authority = 0.5
 			OR = {
 				religion = terran_republican
@@ -2921,7 +2494,7 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.5
-			owner_scope = { has_character_flag = flag_term_limit_defied }
+			owner = { has_character_flag = flag_term_limit_defied }
 			religion_authority = 0.75
 			OR = {
 				religion = terran_republican
@@ -2940,6 +2513,380 @@ province_event = {
 		if = {
 			limit = { has_province_modifier = public_for_count }
 			remove_province_modifier = public_for_count
+		}
+	}
+}
+
+# Pro-ruler vassal makes pro-ruler speech
+character_event = {
+	id = laws.250
+	desc = "EVTDESCLAWS250"
+	picture = GFX_evt_speech
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		custom_tooltip = {
+			text = "EVTTOOLTIPGIVESPEECH"
+			hidden_tooltip = { e_rebels = { holder_scope = { character_event = { id = laws.251 } } } } # Resolve speech
+		}
+	}
+	
+	option = {
+		name = "EVTOPTNEVERMIND"
+		clr_character_flag = flag_making_crisis_decision
+		ai_chance = { factor = 0 }
+	}
+}
+
+# Judge effectiveness of speech
+character_event = {
+	id = laws.251
+	hide_window = yes
+	is_triggered_only = yes
+	
+	option = {
+		# Successful pro-ruler speech
+		FROM = { character_event = { id = laws.252 } } # Inform speechgiver speech was successful
+		# Increment opinion of ruler by one
+		if = {
+			limit = { FROM = { has_character_flag = flag_cached_crisis_emperor } }
+			FROM = { location = { province_event = { id = laws.210 } } }
+		}
+		if = {
+			limit = { FROM = { has_character_flag = flag_cached_crisis_king } }
+			FROM = { location = { province_event = { id = laws.220 } } }
+		}
+		if = {
+			limit = { FROM = { has_character_flag = flag_cached_crisis_duke } }
+			FROM = { location = { province_event = { id = laws.230 } } }
+		}
+		if = {
+			limit = { FROM = { has_character_flag = flag_cached_crisis_count } }
+			FROM = { location = { province_event = { id = laws.240 } } }
+		}
+		
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 2 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 4 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 6 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 8 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 12 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 14 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 16 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 18 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 20 }
+			}
+			
+			modifier = {
+				factor = 0.25
+				FROM = { location = { NOT = { religion = PREV } } }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					location = { religion = PREV }
+					NOT = { religion_authority = 0.25 }
+				}
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					location = { religion = PREV }
+					religion_authority = 0.75
+				}
+			}
+			
+			modifier = {
+				factor = 2
+				FROM = { liege = { has_character_modifier = law_for_ruler } }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { liege = { has_character_modifier = law_against_ruler } }
+			}
+		}
+	}
+	
+	option = {
+		# Failed pro-ruler speech
+		FROM = { character_event = { id = laws.253 } } # Inform speechgiver that speech failed
+	}
+}
+
+character_event = {
+	id = laws.252
+	desc = "EVTDESCLAWS252"
+	picture = GFX_evt_speech
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		prestige = 50
+		clr_character_flag = flag_making_crisis_decision
+		# Add appropriate successful speech modifier
+		if = {
+			limit = { has_character_flag = flag_cached_crisis_emperor }
+			location = { add_province_modifier = { name = recent_speech_for_emperor duration = 50 } }
+		}
+		if = {
+			limit = { has_character_flag = flag_cached_crisis_king }
+			location = { add_province_modifier = { name = recent_speech_for_king duration = 50 } }
+		}
+		if = {
+			limit = { has_character_flag = flag_cached_crisis_duke }
+			location = { add_province_modifier = { name = recent_speech_for_duke duration = 50 } }
+		}
+		if = {
+			limit = { has_character_flag = flag_cached_crisis_count }
+			location = { add_province_modifier = { name = recent_speech_for_count duration = 50 } }
+		}
+	}
+}
+character_event = {
+	id = laws.253
+	desc = "EVTDESCLAWS253"
+	picture = GFX_evt_speech
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		prestige = -50
+		clr_character_flag = flag_making_crisis_decision
+		# Add appropriate failed speech modifier
+		if = {
+			limit = { has_character_flag = flag_cached_crisis_emperor }
+			location = { add_province_modifier = { name = recent_failed_pro_emperor_speech duration = 50 } }
+		}
+		if = {
+			limit = { has_character_flag = flag_cached_crisis_king }
+			location = { add_province_modifier = { name = recent_failed_pro_king_speech duration = 50 } }
+		}
+		if = {
+			limit = { has_character_flag = flag_cached_crisis_duke }
+			location = { add_province_modifier = { name = recent_failed_pro_duke_speech duration = 50 } }
+		}
+		if = {
+			limit = { has_character_flag = flag_cached_crisis_count }
+			location = { add_province_modifier = { name = recent_failed_pro_count_speech duration = 50 } }
+		}
+	}
+}
+
+# Anti-ruler vassal makes anti-ruler speech
+character_event = {
+	id = laws.260
+	desc = "EVTDESCLAWS260"
+	picture = GFX_evt_speech
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		custom_tooltip = {
+			text = "EVTTOOLTIPGIVESPEECH"
+			hidden_tooltip = { e_rebels = { holder_scope = { character_event = { id = laws.261 } } } } # Resolve speech
+		}
+	}
+	
+	option = {
+		name = "EVTOPTNEVERMIND"
+		clr_character_flag = flag_making_crisis_decision
+		ai_chance = { factor = 0 }
+	}
+}
+
+# Judge effectiveness of speech
+character_event = {
+	id = laws.261
+	hide_window = yes
+	is_triggered_only = yes
+	
+	option = {
+		# Successful anti-ruler speech
+		FROM = { character_event = { id = laws.262 } } # Inform speechgiver speech was successful
+		# Increment opinion of ruler by one
+		if = {
+			limit = { FROM = { has_character_flag = flag_cached_crisis_emperor } }
+			FROM = { location = { province_event = { id = laws.211 } } }
+		}
+		if = {
+			limit = { FROM = { has_character_flag = flag_cached_crisis_king } }
+			FROM = { location = { province_event = { id = laws.221 } } }
+		}
+		if = {
+			limit = { FROM = { has_character_flag = flag_cached_crisis_duke } }
+			FROM = { location = { province_event = { id = laws.231 } } }
+		}
+		if = {
+			limit = { FROM = { has_character_flag = flag_cached_crisis_count } }
+			FROM = { location = { province_event = { id = laws.241 } } }
+		}
+		
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 2 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 4 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 6 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 8 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 12 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 14 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 16 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 18 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 20 }
+			}
+			
+			modifier = {
+				factor = 0.25
+				FROM = { location = { NOT = { religion = PREV } } }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					location = { religion = PREV }
+					NOT = { religion_authority = 0.25 }
+				}
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					location = { religion = PREV }
+					religion_authority = 0.75
+				}
+			}
+			
+			modifier = {
+				factor = 0.5
+				FROM = { liege = { has_character_modifier = law_for_ruler } }
+			}
+			modifier = {
+				factor = 2
+				FROM = { liege = { has_character_modifier = law_against_ruler } }
+			}
+		}
+	}
+	
+	option = {
+		# Failed anti-ruler speech
+		FROM = { character_event = { id = laws.263 } } # Inform speechgiver that speech failed
+	}
+}
+
+character_event = {
+	id = laws.262
+	desc = "EVTDESCLAWS262"
+	picture = GFX_evt_speech
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		prestige = 50
+		clr_character_flag = flag_making_crisis_decision
+		# Add appropriate successful speech modifier
+		if = {
+			limit = { has_character_flag = flag_cached_crisis_emperor }
+			location = { add_province_modifier = { name = recent_speech_against_emperor duration = 50 } }
+		}
+		if = {
+			limit = { has_character_flag = flag_cached_crisis_king }
+			location = { add_province_modifier = { name = recent_speech_against_king duration = 50 } }
+		}
+		if = {
+			limit = { has_character_flag = flag_cached_crisis_duke }
+			location = { add_province_modifier = { name = recent_speech_against_duke duration = 50 } }
+		}
+		if = {
+			limit = { has_character_flag = flag_cached_crisis_count }
+			location = { add_province_modifier = { name = recent_speech_against_count duration = 50 } }
+		}
+	}
+}
+character_event = {
+	id = laws.263
+	desc = "EVTDESC263"
+	picture = GFX_evt_speech
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		prestige = -50
+		clr_character_flag = flag_making_crisis_decision
+		# Add appropriate failed speech modifier
+		if = {
+			limit = { has_character_flag = flag_cached_crisis_emperor }
+			location = { add_province_modifier = { name = recent_failed_anti_emperor_speech duration = 50 } }
+		}
+		if = {
+			limit = { has_character_flag = flag_cached_crisis_king }
+			location = { add_province_modifier = { name = recent_failed_anti_king_speech duration = 50 } }
+		}
+		if = {
+			limit = { has_character_flag = flag_cached_crisis_duke }
+			location = { add_province_modifier = { name = recent_failed_anti_duke_speech duration = 50 } }
+		}
+		if = {
+			limit = { has_character_flag = flag_cached_crisis_count }
+			location = { add_province_modifier = { name = recent_failed_anti_count_speech duration = 50 } }
 		}
 	}
 }
@@ -3189,8 +3136,8 @@ character_event = {
 				factor = 0.5
 				has_job_title = job_spiritual
 				liege = {
-					NOT = { has_character_modifier = crisis_law_for_liege }
-					NOT = { has_character_modifier = crisis_law_against_liege }
+					NOT = { has_character_modifier = crisis_law_for_ruler }
+					NOT = { has_character_modifier = crisis_law_against_ruler }
 				}
 				NOT = { religion_authority = 0.25 }
 				NOT = { trait = content }
@@ -3199,8 +3146,8 @@ character_event = {
 				factor = 0.5
 				has_job_title = job_spiritual
 				liege = {
-					NOT = { has_character_modifier = crisis_law_for_liege }
-					NOT = { has_character_modifier = crisis_law_against_liege }
+					NOT = { has_character_modifier = crisis_law_for_ruler }
+					NOT = { has_character_modifier = crisis_law_against_ruler }
 				}
 				NOT = { religion_authority = 0.5 }
 				NOT = { trait = radical }
@@ -3210,8 +3157,8 @@ character_event = {
 				factor = 0.5
 				has_job_title = job_spiritual
 				liege = {
-					NOT = { has_character_modifier = crisis_law_for_liege }
-					NOT = { has_character_modifier = crisis_law_against_liege }
+					NOT = { has_character_modifier = crisis_law_for_ruler }
+					NOT = { has_character_modifier = crisis_law_against_ruler }
 				}
 				OR = {
 					NOT = { religion_authority = 0.75 }
@@ -3241,7 +3188,7 @@ character_event = {
 						NOT = {
 							ROOT = {
 								any_dynasty_member = {
-									liege = ROOT
+									liege = { character = ROOT }
 									has_minor_title = title_expected_successor
 								}
 							}
@@ -3260,7 +3207,7 @@ character_event = {
 						NOT = {
 							ROOT = {
 								any_dynasty_member = {
-									liege = ROOT
+									liege = { character = ROOT }
 									has_minor_title = title_expected_successor
 								}
 							}
@@ -3279,7 +3226,7 @@ character_event = {
 						NOT = {
 							ROOT = {
 								any_dynasty_member = {
-									liege = ROOT
+									liege = { character = ROOT }
 									has_minor_title = title_expected_successor
 								}
 							}
@@ -3306,7 +3253,7 @@ character_event = {
 		# Offer to repay an owed favor
 		trigger = { reverse_has_opinion_modifier = { who = liege modifier = opinion_owes_me_a_favor } }
 		name = "EVTOPTREPAYFAVOR"
-		liege = { letter_event = { } }
+		liege = { letter_event = { id = laws.304 tooltip = "EVTTOOLTIPLAWS304" } }
 		ai_chance = {
 			factor = 100
 			# Avoid spamming favor repayment requests
@@ -3722,7 +3669,7 @@ character_event = {
 	
 	immediate = {
 		any_realm_character = {
-			limit = { liege = ROOT }
+			limit = { liege = { character = ROOT } }
 			character_event = { id = laws.401 } # Inform vassals
 		}
 	}
@@ -3785,7 +3732,7 @@ character_event = {
 	
 	immediate = {
 		any_realm_character = {
-			limit = { liege = ROOT }
+			limit = { liege = { character = ROOT } }
 			character_event = { id = laws.403 } # Inform vassals
 		}
 	}
@@ -4131,7 +4078,10 @@ character_event = {
 			}
 			is_councillor = yes
 		}
-		liege = { has_character_modifier = constitutional_crisis }
+		liege = {
+			NOT = { character = ROOT }
+			has_character_modifier = constitutional_crisis
+		}
 	}
 	
 	immediate = {
@@ -4202,10 +4152,10 @@ character_event = {
 							NOT = {
 								any_dynasty_member = {
 									has_minor_title = title_expected_successor
-									liege = ROOT
+									liege = { character = ROOT }
 								}
 							}
-							any_dynasty_member = { liege = ROOT }
+							any_dynasty_member = { liege = { character = ROOT } }
 						}
 					}
 					# Assorted other reasons to want a favor
@@ -4224,10 +4174,10 @@ character_event = {
 							NOT = {
 								any_dynasty_member = {
 									has_minor_title = title_expected_successor
-									liege = ROOT
+									liege = { character = ROOT }
 								}
 							}
-							any_dynasty_member = { liege = ROOT }
+							any_dynasty_member = { liege = { character = ROOT } }
 						}
 					}
 					# Assorted other reasons to want a favor
@@ -4247,10 +4197,10 @@ character_event = {
 							NOT = {
 								any_dynasty_member = {
 									has_minor_title = title_expected_successor
-									liege = ROOT
+									liege = { character = ROOT }
 								}
 							}
-							any_dynasty_member = { liege = ROOT }
+							any_dynasty_member = { liege = { character = ROOT } }
 						}
 					}
 					# Assorted other reasons to want a favor
@@ -6987,7 +6937,10 @@ character_event = {
 	ai = yes
 	
 	trigger = {
-		liege = { has_character_modifier = constitutional_crisis }
+		liege = {
+			NOT = { character = ROOT }
+			has_character_modifier = constitutional_crisis
+		}
 		OR = {
 			NOT = { has_character_flag = flag_ai_constitutional_crisis_loop }
 			had_character_flag = { flag = flag_ai_constitutional_crisis_loop days = 120 }
@@ -7014,13 +6967,14 @@ character_event = {
 	desc = "EVTDESCLAWS1000"
 	picture = GFX_evt_speech
 	
-	rulers_only = yes
+	only_rulers = yes
 	
 	trigger = {
 		has_character_modifier = constitutional_crisis
 		OR = {
 			had_character_flag = { flag = flag_crisis_timer days = 60 } # Must allow time for AI to take sides
-			has_character_flag = flag_purge_attempt # Or have run a purge
+			has_character_flag = flag_successful_purge
+			has_character_flag = flag_civil_war_victory
 		}
 		NOT = {
 			anti_ruler = {
@@ -7028,6 +6982,11 @@ character_event = {
 				prisoner = no
 			}
 		}
+	}
+	
+	immediate = {
+		clr_character_flag = flag_successful_purge
+		clr_character_flag = flag_civil_war_victory
 	}
 	
 	option = {

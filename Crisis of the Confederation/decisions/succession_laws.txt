@@ -17,6 +17,10 @@ succession_laws = {
 			}
 			OR = {
 				has_law = inheritance_law_1
+				holder_scope = {
+					is_merchant_republic = yes
+					primary_title = { has_law = inheritance_law_1 }
+				}
 				NOT = { higher_tier_than = DUKE }
 				independent = no
 			}
@@ -44,6 +48,10 @@ succession_laws = {
 			OR = {
 				is_patrician = yes
 				has_law = inheritance_law_2
+				holder_scope = {
+					is_merchant_republic = yes
+					primary_title = { has_law = inheritance_law_2 }
+				}
 				NOT = { higher_tier_than = DUKE }
 				independent = no
 			}
@@ -87,6 +95,10 @@ succession_laws = {
 			}
 			OR = {
 				has_law = inheritance_law_3
+				holder_scope = {
+					is_merchant_republic = yes
+					primary_title = { has_law = inheritance_law_3 }
+				}
 				NOT = { higher_tier_than = DUKE }
 				independent = no
 			}
@@ -109,9 +121,14 @@ succession_laws = {
 		dynasty_opinion = -5
 		vassal_opinion = 20
 		potential = {
+			higher_tier_than = BARON
 			is_patrician = no
 			OR = {
 				has_law = election_law_3
+				holder_scope = {
+					is_merchant_republic = yes
+					primary_title = { has_law = election_law_3 }
+				}
 				NOT = { higher_tier_than = DUKE }
 				independent = no
 				is_tribal_type_title = yes
@@ -134,6 +151,7 @@ succession_laws = {
 		dynasty_opinion = 10
 		vassal_opinion = 5
 		potential = {
+			higher_tier_than = BARON
 			is_patrician = no
 			is_tribal_type_title = no
 			OR = {
@@ -142,6 +160,10 @@ succession_laws = {
 			}
 			OR = {
 				has_law = election_law_4
+				holder_scope = {
+					is_merchant_republic = yes
+					primary_title = { has_law = election_law_4 }
+				}
 				NOT = { higher_tier_than = DUKE }
 				independent = no
 			}
@@ -171,6 +193,10 @@ succession_laws = {
 			}
 			OR = {
 				has_law = inheritance_law_4
+				holder_scope = {
+					is_merchant_republic = yes
+					primary_title = { has_law = inheritance_law_4 }
+				}
 				NOT = { higher_tier_than = DUKE }
 				independent = no
 			}
@@ -220,6 +246,10 @@ succession_laws = {
 			is_patrician = no
 			OR = {
 				has_law = appointment_law_1
+				holder_scope = {
+					is_merchant_republic = yes
+					primary_title = { has_law = appointment_law_1 }
+				}
 				NOT = { higher_tier_than = DUKE }
 				independent = no
 				# Special case - certain religious leadership titles should always use this
@@ -245,6 +275,10 @@ succession_laws = {
 			}
 			OR = {
 				has_law = election_law_1
+				holder_scope = {
+					is_merchant_republic = yes
+					primary_title = { has_law = election_law_1 }
+				}
 				NOT = { higher_tier_than = DUKE }
 				independent = no
 			}
@@ -274,6 +308,10 @@ succession_laws = {
 			holder_scope = { is_merchant_republic = yes }
 			OR = {
 				has_law = election_law_2
+				holder_scope = {
+					is_merchant_republic = yes
+					primary_title = { has_law = election_law_2 }
+				}
 				NOT = { higher_tier_than = DUKE }
 				independent = no
 			}

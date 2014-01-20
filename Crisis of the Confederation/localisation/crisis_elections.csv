@@ -1,0 +1,20 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+EVTDESCLAWS100;You have agreed to hold elections to potentially determine the next [Root.GetTitle] of the [Root.PrimaryTitle.GetFullName].;;;;;;;;;;;;;x
+EVTDESCLAWS101;Elections are being held in the [From.PrimaryTitle.GetFullName], and you are considered to be [From.GetTitle] [From.GetFullName]'s chief challenger. The electoral council is expected to deliver its verdicts in a few days time.;;;;;;;;;;;;;x
+EVTDESCLAWS102;Elections are being held in the [From.PrimaryTitle.GetFullName], and you are considered to be [From.GetTitle] [From.GetFullName]'s chief challenger. It will take a few days for the popular vote to be fully tallied.;;;;;;;;;;;;;x
+EVTDESCLAWS103;The electoral council has completed their deliberations and announced the winner of the ongoing election.;;;;;;;;;;;;;x
+EVTOPTALAWS103;You won!;;;;;;;;;;;;;x
+EVTOPTBLAWS103;[FromFrom.GetTitle] [FromFrom.GetFullName] was re-elected.;;;;;;;;;;;;;x
+EVTDESCLAWS104;The full vote has been tallied, and the electoral commission has announced the outcome of the election.;;;;;;;;;;;;;x
+EVTOPTALAWS104;You won!;;;;;;;;;;;;;x
+EVTOPTBLAWS104;[FromFrom.GetTitle] [FromFrom.GetFullName] was re-elected.;;;;;;;;;;;;;x
+EVTDESCLAWS105;You lost a federal election to [From.GetTitle] [From.GetFullName].;;;;;;;;;;;;;x
+EVTDESCLAWS106;You were re-elected in your race against [From.GetTitle] [From.GetFullName].;;;;;;;;;;;;;x
+EVTDESCLAWS107;[From.GetTitle] [From.GetFullName] has won an election and is now your superior.;;;;;;;;;;;;;x
+EVTDESCLAWS108;[From.GetTitle] [From.GetFullName] has been re-elected.;;;;;;;;;;;;;x
+EVTDESCLAWS109;An election has been called, and you are entitled to vote in the race between challenger [From.GetFullName] and incumbent [From.GetTitle] [FromFrom.GetFullName].;;;;;;;;;;;;;x
+EVTOPTALAWS109;Vote for [From.GetFullName];;;;;;;;;;;;;x
+EVTOPTBLAWS109;Vote for [From.GetTitle] [FromFrom.GetFullName];;;;;;;;;;;;;x
+EVTDESCLAWS122;Your current term as [Root.GetTitle] of the [Root.PrimaryTitle.GetFullName] has expired. The constitution demands that elections be held immediately.;;;;;;;;;;;;;x
+EVTOPTALAWS122;Hold Election;;;;;;;;;;;;;x
+EVTOPTBLAWS122;Refuse to Hold Election;;;;;;;;;;;;;x

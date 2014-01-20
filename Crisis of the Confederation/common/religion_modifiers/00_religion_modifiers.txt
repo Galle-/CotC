@@ -8,6 +8,28 @@ allowed_major_rebellion = {
 	years = 30
 }
 
+allowed_civil_war_county = {
+	authority = -1
+	years = 30
+}
+allowed_civil_war_duchy = {
+	authority = -3
+	years = 30
+}
+allowed_civil_war_kingdom = {
+	authority = -5
+	years = 30
+}
+allowed_civil_war_empire = {
+	authority = -15
+	years = 30
+}
+
+legal_demand_refused = {
+	authority = -3
+	years = 10
+}
+
 won_crusade = {
 	authority = 10
 	years = 30

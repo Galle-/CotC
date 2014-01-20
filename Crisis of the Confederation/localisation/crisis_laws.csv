@@ -78,10 +78,6 @@ term_length_3_desc;Leaders hold power for ten years before a new leader must be 
 term_length_4;No Term Limits;Pas de durée de mandat;;;;;;;;;;;;x
 term_length_4_option;Life;A vie;;;;;;;;;;;;x
 term_length_4_desc;Leaders hold power for life or until they are removed by a vote of no confidence..;Les dirigeants gardent le pouvoir à vie ou jusqu'à ce qu'ils soient démis de leurs fonctions…;;;;;;;;;;;;x
-EVTDESCLAWS100;Elections have been held to determine the next [Root.GetTitle] of the [Root.PrimaryTitle.GetFullName].;;;;;;;;;;;;;x
-EVTDESCLAWS112;Your current term as [Root.GetTitle] of the [Root.PrimaryTitle.GetFullName] has expired. The constitution demands that elections be held immediately.;;;;;;;;;;;;;x
-EVTOPTALAWS112;Hold Election;;;;;;;;;;;;;x
-EVTOPTBLAWS112;Refuse to Hold Election;;;;;;;;;;;;;x
 civil_unrest_0;Insignificant Civil Unrest;;;;;;;;;;;;;x
 civil_unrest_1;Trivial Civil Unrest;;;;;;;;;;;;;x
 civil_unrest_2;Mild Civil Unrest;;;;;;;;;;;;;x
