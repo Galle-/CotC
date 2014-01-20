@@ -40,7 +40,7 @@ def random_name(gender, culture=None):
     pool = names[culture][gender]
     return pool[randint(0,len(pool))] + append_culture
 
-f = open("crisis_cultures.txt", 'r')
+f = open("..\Crisis of the Confederation\common\cultures\crisis_cultures.txt", 'r')
 lines = f.readlines()
 f.close()
 names = parse_names()
