@@ -44,8 +44,10 @@ f = open("..\Crisis of the Confederation\common\cultures\crisis_cultures.txt", '
 lines = f.readlines()
 f.close()
 names = parse_names()
-print(names["anglo_terran"])
-print(random_name("F", "anglo_terran"))
-print(random_name("M", "anglo_terran"))
-print(random_name("F"))
-print(random_name("M"))
+
+if __name__ == "__main__":
+    print(names["anglo_terran"])
+    print(random_name("F", "anglo_terran"))
+    print(random_name("M", "anglo_terran"))
+    print(random_name("F"))
+    print(random_name("M"))
