@@ -1,16 +1,6 @@
 # Decisions for people involved in constitutional crises
 
 decisions = {
-	instant_usurp_decision = {
-		is_high_prio = yes
-		potential = {
-			independent = no
-			ai = no
-		}
-		allow = { always = yes }
-		effect = { character_event = { id = usurpation.100 } }
-		ai_will_do = { factor = 0 }
-	}
 	# Undecided Vassals
 	side_with_liege_decision = {
 		is_high_prio = yes
