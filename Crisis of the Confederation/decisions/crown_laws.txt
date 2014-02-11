@@ -1183,6 +1183,11 @@ de_jure_laws = {
 			hidden_tooltip = { revoke_law = public_order_1 }
 			set_the_kings_peace = no
 		}
+		
+		# The military can't be relied on to take orders
+		city_vassal_minimum_levy = -10
+		castle_vassal_minimum_levy = -10
+		temple_vassal_minimum_levy = -10
 	}
 	public_order_1 = {
 		show_as_title = yes

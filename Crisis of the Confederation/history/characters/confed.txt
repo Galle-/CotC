@@ -1030,6 +1030,7 @@
 	2967.1.1 = { birth = "2967.1.1" }
 	2994.1.1 = { add_spouse = 11013073 } # Shan Yuan
 	2994.1.1 = { effect = { spouse = { add_lover = ROOT } } }
+	2997.1.1 = { effect = { grant_minor_title = title_expected_successor } } # Character flagged for future canonical importance, shouldn't be allowed to disappear.
 }
 
 11013073 = {
