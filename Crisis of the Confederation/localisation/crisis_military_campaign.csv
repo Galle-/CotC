@@ -1,7 +1,7 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
 CB_NAME_MILITARY_CAMPAIGN;Military Campaign;;;;;;;;;;;;;x
 cb_military_campaign_desc;Conduct military operations against an enemy state. If successful, we will capture their leader, allowing our leaders to negotiate peace from a position of strength.;;;;;;;;;;;;;x
-WAR_NAME_MILITARY_CAMPAIGN;$ORDER$$FIRST_ADJ$ Campaign Against $SECOND$;;;;;;;;;;;;;x
+WAR_NAME_MILITARY_CAMPAIGN;$ORDER$Operation [Actor.Religion.GetRandomEvilGodName];;;;;;;;;;;;;x
 successful_campaign;Military Victory;;;;;;;;;;;;;x
 successful_campaign_desc;This character has recently won a major military victory, and as such is respected and admired by both their superiors and the soldiers under their command. They are given great respect, and their orders are trusted without question.;;;;;;;;;;;;;x
 disastrous_campaign;Military Disaster;;;;;;;;;;;;;x
