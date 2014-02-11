@@ -2815,7 +2815,7 @@ letter_event = {
 	option = {
 		# Reject Demands
 		name = "EVTOPTREFUSE"
-		FROM = { letter_event = { id = coup.5203 tooltip = "EVTTOOLTIP5202" } }
+		FROM = { letter_event = { id = coup.5202 tooltip = "EVTTOOLTIP5202" } }
 		ai_chance = { factor = 100 }
 	}
 }
