@@ -1365,7 +1365,7 @@ character_event = {
 		}
 		name = "EVTOPTCONFIRM"
 		custom_tooltip = {
-			text "ABDICATETOOLTIP"
+			text = "ABDICATETOOLTIP"
 			hidden_tooltip = {
 				random_dynasty_member = {
 					limit = {

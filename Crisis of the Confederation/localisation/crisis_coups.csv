@@ -1,0 +1,78 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+CB_NAME_CIVIL_WAR;Civil War;;;;;;;;;;;;;x
+WAR_NAME_CIVIL_WAR;$ORDER$[From.PrimaryTitle.GetAdjective] Civil War;;;;;;;;;;;;;x
+plot_coup_title;Depose [This.GetTitle] [This.GetFullName];;;;;;;;;;;;;x
+plot_coup_desc;[From.GetFullName] and [From.GetHerHis] conspirators believe that [This.GetFullName] can no longer be permitted to remain [This.PrimaryTitle.GetTitle] of the [This.PrimaryTitle.GetFullName], and intend to take drastic measures to remove [This.GetHerHim] by any means necessary. A coup would currently be considered unjustified.;;;;;;;;;;;;;x
+plot_justified_coup_title;Depose [This.GetTitle] [This.GetFullName];;;;;;;;;;;;;x
+plot_justified_coup_desc;[From.GetFullName] and [From.GetHerHis] conspirators believe that [This.GetFullName] can no longer be permitted to remain [This.PrimaryTitle.GetTitle] of the [This.PrimaryTitle.GetFullName], and intend to take drastic measures to remove [This.GetHerHim] by any means necessary. A coup would currently be considered justified.;;;;;;;;;;;;;x
+EVTDESCCOUP5000;You peer over an intelligence report, fingers drumming idly on your desk. You have prepared carefully, but the fall of a [Root.PlotTarget.GetTitle] is no small matter. Has the time truly come to strike?;;;;;;;;;;;;;x
+EVTTOOLTIPCOUP5001;Your plans will be set in motion.;;;;;;;;;;;;;x
+EVTDESCCOUP5001;You fold dismiss the intelligence report with a wave of your hand, and turn to the comm center. You are more full of conviction now then you have ever been before. Tonight, [Root.PlotTarget.GetFullName] falls.;;;;;;;;;;;;;x
+EVTOPTACOUP5001;Send [Root.PlotTarget.GetHerHim] your ultimatum.;;;;;;;;;;;;;x
+EVTOPTBCOUP5001;Contact your allies in the military.;;;;;;;;;;;;;x
+EVTDESCCOUP5101;Something stirs in the darkness. You blink, and the world begins to come back into focus. Your head is pounding, and you can feel a sharp pain in your side, but you're alive, at least. As you finally start to get your bearings, it hits you with a shock - you're in the brig aboard your own flagship, the [Root.Religion.GetRandomEvilGodName] - although you're beginning to suspect you won't be calling it your flagship again any time soon. You look down, and see that you've been placed in handcuffs. It seems that your enemies have won.;;;;;;;;;;;;;x
+EVTTOOLTIPCOUP5200;receives your ultimatum.;;;;;;;;;;;;;x
+EVTDESCCOUP5200;TO: [Root.GetFullName]\nFROM: [FROM.GetFullName]\nRE: New management\nIt's time we brought this farce to a close. You are no longer fit to serve as [Root.GetTitle]. We demand that you tender your immediate resignation. If you've any love left for the people you've betrayed, you'll stand down, and spare them death at the hands of your butchers.;;;;;;;;;;;;;x
+EVTTOOLTIPCOUP5201;will take you prisoner and usurp the [Root.PrimaryTitle.GetFullName] and all other titles of its tier!;;;;;;;;;;;;;x
+EVTTOOLTIPBACKSCOUP;has already declared [This.GetHerHis] support for the coup.;;;;;;;;;;;;;x
+EVTDESCCOUP5201;TO: [Root.GetFullName]\nFROM: [From.GetFullName]\nRE: New management\nYou win, you snake. For the sake of peace, I hereby surrender the [From.PrimaryTitle.GetFullName] to you. May its people forgive me.;;;;;;;;;;;;;x
+EVTTOOLTIPCOUP5202;and [This.GetHerHis] supporters might start a civil war!;;;;;;;;;;;;;x
+EVTDESCCOUP5202;TO: [Root.GetFullName]\nFROM: [From.GetFullName]\nRE: New management\nNever! Even if you tear [From.PrimaryTitle.GetName] asunder, you'll never be able to do as much damage to my people with missiles as you could with my title. You and your followers are traitors, and will be dealt with as such.;;;;;;;;;;;;;x
+EVTOPTACOUP5202;Then war it is!;;;;;;;;;;;;;x
+EVTOPTBCOUP5202;...damn, I was really hoping that would work.;;;;;;;;;;;;;x
+EVTDESCCOUP5300;You march, triumphantly, into [Root.PlotTarget.GetFullName]'s palace. [Root.PlotTarget.GetHerHis] former palace, at any rate. Scum though [Root.PlotTarget.GetSheHe] was, [Root.PlotTarget.GetSheHe] at least had good sense in interior decorators. You think you're going to like it here.;;;;;;;;;;;;;x
+EVTOPTACOUP5300;Victory is ours!;;;;;;;;;;;;;x
+EVTOPTBCOUP5300;Victory is mine! ...I mean ours. Victory is ours. Yes.;;;;;;;;;;;;;x
+EVTTOOLTIPCOUP5301;will surrender the [This.PrimaryTitle.GetFullName] and all other titles of its tier to you.;;;;;;;;;;;;;x
+EVTDESCCOUP5301;It's over. [From.GetFullName] has beaten you. Your last remaining supporters have surrendered, and you remain [From.GetOnlyDynastyName]'s prisoner. Your title has been stripped from you, though you have been permitted to keep nominal control over some of your family holdings.;;;;;;;;;;;;;x
+EVTDESCCOUP100;At your request, your chief-of-staff has prepared several reports for you documenting security arrangements at [Root.Liege.GetTitle] [Root.Liege.GetFullName]'s estate, as well as the best ways a team of marines could be deployed to the capital on less than a day's notice. A swift attack on the palace could be all it takes to capture the [Root.Liege.GetTitle] and bring [Root.Liege.GetHerHis] regime to an end.;;;;;;;;;;;;;x
+EVTOPTACOUP100;A brilliant plan!;;;;;;;;;;;;;x
+EVTTOOLTIPCOUP101;will be informed of your plan;;;;;;;;;;;;;x
+EVTDESCCOUP101;TO: [Root.GetTitle] [Root.GetFullName]\nFROM: [From.GetTitle] [From.GetFullName]\nRE: Prior arrangements\nSeveral of my friends and I are all within easy reach of the capital, once you have seen to matters on your end. I await only your invitation.;;;;;;;;;;;;;x
+EVTOPTACOUP101;The [Root.PlotTarget.GetTitle] will never see it coming.;;;;;;;;;;;;;x
+EVTDESCCOUP102;Due to a change in circumstances, you are no longer able to carry out your planned military coup.;;;;;;;;;;;;;x
+EVTTOOLTIPCOUP103;will be informed that your plans have been called off.;;;;;;;;;;;;;x
+EVTDESCCOUP103;Due to a change in circumstances, [From.GetTitle] [From.GetFullName] is no longer able to carry out [From.GetHerHis] planned military coup.;;;;;;;;;;;;;x
+EVTDESCCOUP104;The time has come. [Root.Liege.GetTitle] [Root.Liege.GetFullName] has ruled the [Root.Liege.PrimaryTitle.GetFullName] for too long! You have been given the honor of carrying out the first blow in the struggle that will mark the end of [Root.Liege.GetHerHis] reign. As night settles over the capital, you give the order, and your forces begin to move to their positions. The dawn will bring with it a new regime.;;;;;;;;;;;;;x
+EVTOPTACOUP104;You have your orders, marines. Move out!;;;;;;;;;;;;;x
+EVTTOOLTIPCOUP105;will be attacked by your forces.;;;;;;;;;;;;;x
+EVTDESCCOUP130;Something's wrong. You'd had your suspicions for a while now - it was just little things at first, [From.GetTitle] [From.GetFullName] returning to the capital more frequently than was usual, some unusual troop movements, that sort of thing, but tonight your own personnel are reporting something very strange indeed. [From.GetOnlyDynastyName]'s forces are moving out, in force. It's almost as if they're converging on the [Root.Liege.GetTitle]'s palace, but that can't be right, could it?;;;;;;;;;;;;;x
+EVTOPTACOUP130;[Root.job_marshal.GetOnlyDynastyName], prepare our forces to intercept them.;;;;;;;;;;;;;x
+EVTOPTBCOUP130;It's nothing, let them go.;;;;;;;;;;;;;x
+EVTDESCCOUP107;You stand in your command center, leaning over a holotank console, listening to reports filter in from the capital. You could cut the tension with a knife. Early combat reports were only sporadic, but it's only a matter of time before someone realizes what your marines are up to. That is, until you finally hear the report from the palace.\n'[Root.GetFOA], we've got [FromFrom.GetHerHim].';;;;;;;;;;;;;x
+EVTOPTACOUP107;Well done, captain, mission accomplished.;;;;;;;;;;;;;x
+EVTDESCCOUP108;You awaken in the middle of the night to the sound of gunfire. For a moment, you wonder if it's just a dream, until two marines in full combat gear burst through your door and into your bedroom. You can hear more gunfire, now, and explosions. You blink your bleary eyes, trying to process what's happening, as one marine pulls you from your bed and the other taps his comlink. '[From.GetFOA],' he says, 'We've got [Root.GetHerHim].';;;;;;;;;;;;;x
+EVTOPTACOUP108;This... this is treason! I'll have your head for this, [From.GetOnlyDynastyName]!;;;;;;;;;;;;;x
+EVTTOOLTIPCOUP109;is pleased with your success.;;;;;;;;;;;;;x
+EVTDESCCOUP109;TO: [Root.PlotTarget.GetTitle] [Root.GetFullName]\nFROM:[From.GetTitle] [From.GetFullName]\nRE: Operation [Root.Religion.GetRandomEvilGodName]\nMy forces have secured the package. [Root.PlotTarget.GetOnlyDynastyName] is in custody and being transferred to your custody now.;;;;;;;;;;;;;x
+EVTOPTACOUP109;Victory is ours!;;;;;;;;;;;;;x
+EVTDESCCOUP110;It seems [From.GetTitle] [From.GetOnlyDynastyName] was a useful ally after all - last night, [From.GetHerHis] forces stormed the capital, and captured the [From.Liege.GetTitle].;;;;;;;;;;;;;x
+EVTOPTACOUP110;Victory is ours!;;;;;;;;;;;;;x
+EVTDESCCOUP111;You awake to find the world upside-down. It seems that in the night, forces under [From.GetTitle] [From.GetOnlyDynastyName]'s command infiltrated the capital and captured the [From.Liege.GetTitle]!;;;;;;;;;;;;;x
+EVTDESCCOUP132;You order your troops to mobilize and defend the [Root.Liege.GetTitle] - but in the end, you were too late. By the time your forces could reinforce the capital, [From.GetTitle] [From.GetOnlyDynastyName]'s attack force had already seized the palace and captured the [Root.Liege.GetTitle].;;;;;;;;;;;;;x
+EVTOPTACOUP132;We were too late!;;;;;;;;;;;;;x
+EVTDESCCOUP112;You stand in your command center, leaning over a holotank console, listening to reports filter in from the capital. You could cut the tension with a knife. Early combat reports were only sporadic, but it's only a matter of time before someone realizes what your marines are up to. That is, until you finally hear the report from the palace.\n'[Root.GetFOA]! [Root.GetFOA], [FromFrom.GetSheHe]'s not here! [FromFrom.GetSheCap] got away!';;;;;;;;;;;;;x
+EVTOPTACOUP112;Then FIND [FromFrom.GetHerHim]! NOW!;;;;;;;;;;;;;x
+EVTTOOLTIPCOUP113;escapes to a secure location!;;;;;;;;;;;;;x
+EVTDESCCOUP113;An aide wakes you in the middle of the night. 'It's important, [Root.GetFOA],' she says, 'it's... it's [From.GetTitle] [From.GetFullName]. [From.GetHerHisCap] forces are converging on the palace right now, we think they intend to capture you. We need to get you to a secure location, right away!';;;;;;;;;;;;;x
+EVTOPTACOUP113;So it's come to this...;;;;;;;;;;;;;x
+EVTTOOLTIPCOUP114;is disappointed with your failure.;;;;;;;;;;;;;x
+EVTDESCCOUP114;TO: [Root.PlotTarget.GetTitle] [Root.GetFullName]\nFROM: [From.GetTitle] [From.GetFullName]\nRE: Operation [Root.Religion.GetRandomEvilGodName]\nI regret to inform you that our efforts to capture [Root.PlotTarget.GetTitle] [Root.PlotTarget.GetOnlyDynastyName] have ended in failure. [Root.PlotTarget.GetSheHeCap] has escaped our sweep of the capital and retreated to a secure location.;;;;;;;;;;;;;x
+EVTOPTACOUP114;Damn!;;;;;;;;;;;;;x
+EVTDESCCOUP115;Last night, [From.GetTitle] [From.GetOnlyDynastyName]'s forces stormed the capital in an attempt to capture [From.Liege.GetTitle] [From.Liege.GetFullName], but they have failed, and [From.Liege.GetOnlyDynastyName] has retreated to a secure location.;;;;;;;;;;;;;x
+EVTDESCCOUP133;You enter your war room, ready to assume full command of your forces in the hunt for [Root.Liege.GetTitle] [Root.Liege.GetFullName]. Unfortunately, your command staff are in disarray, and barely even notice your arrival. You track down your chief-of-staff and demand a situation report: '[Root.GetFOA]!' [Root.job_marshal.GetSheHe] stammers, 'Bad news, [Root.GetFOA]! The marines you called for, they... they were intercepted on their way to the capital! We're trying to break through, but...';;;;;;;;;;;;;x
+EVTOPTACOUP133;WHAT?!;;;;;;;;;;;;;x
+EVTTOOLTIPCOUP134;'s forces have intercepted yours!;;;;;;;;;;;;;x
+EVTDESCCOUP134;It takes less than an hour before you get results. 'We performed a thorough investigation, [Root.GetFOA],' a flickering hologram of a marine captain informs you, 'and we found several explosive charges and a datapad with a map and the security details of the [Root.Liege.GetTitle]'s palace. I... I think they were planning to kidnap the [Root.Liege.GetTitle], [Root.GetFOA]. There could be more.';;;;;;;;;;;;;x
+EVTOPTACOUP134;All units, secure the capital! We must defend the [Root.Liege.GetTitle]!;;;;;;;;;;;;;x
+EVTDESCCOUP135;An aide wakes you in the middle of the night. 'It's important, [Root.Liege.GetFOA],' she says, 'it's... it's [FromFrom.GetTitle] [FromFrom.GetFullName]. [FromFrom.GetHerHisCap] troops have landed on-world and they're marching on the capital right now! [From.GetTitle] [From.GetFullName]'s forces are holding them off, but we need to get you to a secure location, right now!';;;;;;;;;;;;;x
+EVTOPTACOUP135;It's too damn early for this...;;;;;;;;;;;;;x
+EVTDESCCOUP136;TO: [Root.GetTitle] [Root.GetFullName]\nFROM: [FromFrom.GetTitle] [FromFrom.GetFullName]\nRE: Operation [Root.Religion.GetRandomEvilGodName]\nMy forces have entered the capital, but we've been intercepted by loyalists under [From.GetTitle] [From.GetOnlyDynastyName]. I don't think we're going to make it in time.;;;;;;;;;;;;;x
+EVTOPTACOUP136;Damn!;;;;;;;;;;;;;x
+EVTDESCCOUP137;Last night, [FromFrom.GetTitle] [FromFrom.GetOnlyDynastyName]'s forces stormed the capital in an attempt to capture [FromFrom.Liege.GetTitle] [FromFrom.Liege.GetFullName], but they were thwarted by the intervention of [From.GetTitle] [From.GetOnlyDynastyName] and the [From.PrimaryTitle.GetFullName]. The [FromFrom.Liege.GetTitle] has retreated to a secure location.;;;;;;;;;;;;;x
+EVTDESCCOUP117;Thus far, your coup has not been a resounding success. The [Root.Liege.GetTitle] has retreated to a secure location, and all attempts to penetrate the bunker have failed. At the moment, however, you hold a key advantage - the [Root.Liege.GetTitle] still believes you and your forces are loyal. The time has come to disabuse [Root.Liege.HerHim] of that notion.;;;;;;;;;;;;;x
+EVTDESCCOUP139;The [Root.Liege.GetTitle] is secure in [Root.Liege.HerHis] bunker, but the battle is not over yet. Pouring over the formation of troops defending the bunker, you realize that several units from the [From.PrimaryTitle.GetFullName] appear to be falling back - and as far as you know, there's been no combat in [From.GetTitle] [From.GetOnlyDynastyName]'s sector.;;;;;;;;;;;;;x
+EVTOPTACOUP139;[From.GetOnlyDynastyName]'s a traitor! Stop them, now!;;;;;;;;;;;;;x
+EVTDESCCOUP120;Your forces pull back from the front lines, with the other defense commanders none the wiser. As an [Root.GetTitle], you personally possess the security clearance to access the [Root.Liege.GetTitle]'s bunker. A few comments about your security duties allay any suspicions as you march through the halls and enter into the [Root.Liege.GetTitle]'s chambers. [Root.Liege.GetSheHeCap] seems to be about to say something when you level your sidearm, and your marines raise their rifles.;;;;;;;;;;;;;x
+EVTOPTACOUP120;You'll be coming with me now, [Root.Liege.GetFOA].;;;;;;;;;;;;;x
+EVTDESCCOUP121;You pace the war-room, becoming increasingly concerned at the possibility ;;;;;;;;;;;;;x

@@ -1,3 +1,24 @@
 opinion_in_love = { opinion = 50 }
 opinion_heartbroken = { opinion = -50 }
 opinion_stole_my_love = { opinion = -50 }
+opinion_attempted_coup = {
+	value = -50
+	months = 320
+	imprison_reason = yes
+}
+opinion_captured_coup_target = {
+	value = 25
+	months = 120
+}
+opinion_failed_to_capture_coup_target = {
+	value = -25
+	months = 60
+}
+opinion_thwarted_coup = {
+	value = 50
+	months = 120
+}
+opinion_foiled_my_plans = {
+	value = -50
+	months = 120
+}

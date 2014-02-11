@@ -30,7 +30,7 @@ character_event = {
 	hide_window = yes
 	
 	trigger = {
-		is_landed = no
+		NOT = { any_demesne_title = { always = yes } }
 		dynasty = none
 	}
 	
