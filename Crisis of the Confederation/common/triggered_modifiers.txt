@@ -21,6 +21,30 @@ negative_money = {
 	active = no
 }
 
+# Ruling from permanent capital
+kingdom_capital_bonus = {
+	potential = { is_ruler = yes }
+	trigger = {
+		capital_scope = {
+			has_province_modifier = kingdom_capital_system
+			kingdom = { holder_scope = { character = ROOT } }
+		}
+	}
+	stewardship = 2
+	vassal_opinion = 10
+}
+empire_capital_bonus = {
+	potential = { is_ruler = yes }
+	trigger = {
+		capital_scope = {
+			has_province_modifier = empire_capital_system
+			empire = { holder_scope = { character = ROOT } }
+		}
+	}
+	stewardship = 2
+	vassal_opinion = 10
+}
+
 ###########################
 # MORAL AUTHORITY EFFECTS #
 ###########################
