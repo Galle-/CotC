@@ -42,3 +42,25 @@ character_event = {
 		}
 	}
 }
+
+# Reset crown law timer
+character_event = {
+	id = maintenance.3
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		create_character = {
+			name = "Cabinet Meeting"
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			age = 20
+		}
+		new_character = {
+			ROOT = { abdicate_to = PREV }
+			abdicate_to = ROOT
+			death = { death_reason = death_sacrifice }
+		}
+	}
+}
