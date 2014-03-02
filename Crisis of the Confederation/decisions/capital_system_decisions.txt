@@ -1,0 +1,96 @@
+decisions = {
+	set_kingdom_capital_system = {
+		potential = {
+			capital_scope = {
+				kingdom = { holder_scope = { character = ROOT } }
+				NOT = { has_province_modifier = kingdom_capital_system }
+			}
+		}
+		
+		allow = {
+			capital_scope = { kingdom = { NOT = { has_law = centralization_0 } } }
+			custom_tooltip = {
+				text = "NOVASSALNEGATIVEOPINION"
+				hidden_tooltip = {
+					NOT = {
+						any_vassal = {
+							any_demesne_province = { kingdom = { ROOT = { capital_scope = { kingdom = { title = PREVPREVPREV } } } } }
+							NOT = { opinion = { who = ROOT value = 0 } }
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+				text = "HASNOTDECLAREDKINGDOMCAPITAL"
+				hidden_tooltip = { NOT = { has_character_flag = flag_declared_kingdom_capital } }
+			}
+			# Earth must always be the capital of the Terran Commonwealth
+			capital_scope = {
+				OR = {
+					NOT = { kingdom = { title = k_terran_commonwealth } }
+					province_id = 202
+					# Earth has been rendered uninhabitable
+					b_earth = { has_building = ct_no_atmosphere }
+					b_earth = { has_building = ct_toxic_atmosphere }
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 500
+			set_character_flag = flag_declared_kingdom_capital
+			capital_scope = { province_event = { id = capital.100 tooltip = "EVTTOOLTIPCAPITAL100" } }
+		}
+		
+		ai_will_do = {
+			factor = 1 # Always do this if possible
+		}
+	}
+	set_empire_capital_system = {
+		potential = {
+			capital_scope = {
+				empire = { holder_scope = { character = ROOT } }
+				NOT = { has_province_modifier = empire_capital_system }
+			}
+		}
+		
+		allow = {
+			capital_scope = { empire = { NOT = { has_law = centralization_0 } } }
+			custom_tooltip = {
+				text = "NOVASSALNEGATIVEOPINION"
+				hidden_tooltip = {
+					NOT = {
+						any_vassal = {
+							any_demesne_province = { empire = { ROOT = { capital_scope = { empire = { title = PREVPREVPREV } } } } }
+							NOT = { opinion = { who = ROOT value = 0 } }
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+				text = "HASNOTDECLAREDEMPIRECAPITAL"
+				hidden_tooltip = { NOT = { has_character_flag = flag_declared_empire_capital } }
+			}
+			# Earth must always be the capital of the Terran Confederation
+			capital_scope = {
+				OR = {
+					NOT = { empire = { title = e_terran_confederation } }
+					province_id = 202
+					# Earth has been rendered uninhabitable
+					b_earth = { has_building = ct_no_atmosphere }
+					b_earth = { has_building = ct_toxic_atmosphere }
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 1000
+			set_character_flag = flag_declared_empire_capital
+			capital_scope = { province_event = { id = capital.101 tooltip = "EVTTOOLTIPCAPITAL101" } }
+		}
+		
+		ai_will_do = {
+			factor = 1 # Always do this if possible
+		}
+	}
+}

@@ -1,0 +1,149 @@
+namespace = capital
+
+##############################
+# Designated Capital Systems #
+##############################
+# These events handle the capital systems of kingdoms and empires.
+# They are important primarily for federal kingdoms and empires, but also have some
+# implications for unitary states.
+
+# Dealing with bad province modifiers
+# Kingdom capital system is no longer valid
+province_event = {
+	id = capital.0
+	desc = "EVTDESCCAPITAL0"
+	picture = GFX_evt_city
+	
+	trigger = {
+		has_province_modifier = kingdom_capital_system
+		OR = {
+			NOT = { kingdom = { holder_scope = { any_realm_province = { province_id = ROOT } } } }
+			kingdom = { has_law = centralization_0 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		remove_province_modifier = kingdom_capital_system
+		hidden_tooltip = { kingdom = { holder_scope = { character_event = { id = capital.1 } } } }
+	}
+}
+character_event = {
+	id = capital.1
+	desc = "EVTDESCCAPITAL1"
+	picture = GFX_evt_city
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+# Empire capital system is no longer part of the empire!
+province_event = {
+	id = capital.2
+	desc = "EVTDESCCAPITAL2"
+	picture = GFX_evt_city
+	
+	trigger = {
+		has_province_modifier = empire_capital_system
+		OR = {
+			NOT = { empire = { holder_scope = { any_realm_province = { province_id = ROOT } } } }
+			empire = { has_law = centralization_0 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		remove_province_modifier = empire_capital_system
+		county = { top_de_jure_capital = no }
+		if = {
+			limit = {
+				empire = {
+					holder_scope = {
+						NOT = {
+							any_realm_province = {
+								empire = { title = PREVPREVPREV }
+								has_province_modifier = empire_capital_system
+							}
+						}
+					}
+				}
+			}
+			empire = { has_top_de_jure_capital = no }
+		}
+		hidden_tooltip = { empire = { holder_scope = { character_event = { id = capital.1 } } } }
+	}
+}
+character_event = {
+	id = capital.3
+	desc = "EVTDESCCAPITAL3"
+	picture = GFX_evt_city
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+# Designating a new kingdom capital
+province_event = {
+	id = capital.100
+	desc = "EVTDESCCAPITAL100"
+	picture = GFX_evt_city
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		# Get rid of the old capital if necessary
+		kingdom = {
+			ROOT = {
+				holder_scope = {
+					any_realm_province = {
+						limit = {
+							kingdom = { title = PREVPREVPREVPREV }
+							has_province_modifier = kingdom_capital_system
+						}
+						remove_province_modifier = kingdom_capital_system
+					}
+				}
+			}
+		}
+		
+		# Assign the new capital
+		add_province_modifier = {
+			name = kingdom_capital_system
+			duration = -1
+		}
+		kingdom = { capital = ROOT }
+	}
+}
+# Designating a new imperial capital
+province_event = {
+	id = capital.101
+	desc = "EVTDESCCAPITAL101"
+	picture = GFX_evt_city
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		# Get rid of the old capital if necessary
+		empire = {
+			ROOT = {
+				holder_scope = {
+					any_realm_province = {
+						limit = {
+							empire = { title = PREVPREVPREVPREV }
+							has_province_modifier = empire_capital_system
+						}
+						remove_province_modifier = empire_capital_system
+						county = { top_de_jure_capital = no }
+					}
+				}
+			}
+		}
+		
+		# Assign the new capital
+		add_province_modifier = {
+			name = empire_capital_system
+			duration = -1
+		}
+		top_de_jure_capital = yes
+		empire = { has_top_de_jure_capital = yes }
+		empire = { capital = ROOT }
+	}
+}

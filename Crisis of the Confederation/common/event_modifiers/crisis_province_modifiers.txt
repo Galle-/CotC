@@ -1,3 +1,13 @@
+# Designated capital systems for kingdoms and empires
+kingdom_capital_system = {
+	icon = 9
+	local_revolt_risk = -0.25
+}
+empire_capital_system = {
+	icon = 9
+	local_revolt_risk = -0.5
+}
+
 # Public Opinion in Constitutional Crisis
 public_for_count = {
 	icon = 18

@@ -457,12 +457,54 @@ character_event = {
 					}
 					any_demesne_title = {
 						limit = {
-							is_primary_holder_title_tier = yes
 							OR = {
-								has_law = succ_feudal_elective
-								has_law = succ_tanistry
+								# Actual elected title
+								AND = {
+									is_primary_holder_title_tier = yes
+									OR = {
+										has_law = succ_feudal_elective
+										has_law = succ_tanistry
+									}
+									current_heir = { character = ROOT }
+								}
+								# Kingdom federal capital district
+								holder_scope = {
+									any_demesne_province = {
+										has_province_modifier = kingdom_capital_system
+										kingdom = {
+											is_primary_holder_title_tier = yes
+											OR = {
+												has_law = succ_feudal_elective
+												has_law = succ_tanistry
+											}
+											current_heir = { character = ROOT }
+										}
+										OR = {
+											county = { title = PREVPREVPREV }
+											duchy = { title = PREVPREVPREV }
+										}
+									}
+								}
+								# Empire federal capital district
+								holder_scope = {
+									any_demesne_province = {
+										has_province_modifier = empire_capital_system
+										empire = {
+											is_primary_holder_title_tier = yes
+											OR = {
+												has_law = succ_feudal_elective
+												has_law = succ_tanistry
+											}
+											current_heir = { character = ROOT }
+										}
+										OR = {
+											county = { title = PREVPREVPREV }
+											duchy = { title = PREVPREVPREV }
+											kingdom = { title = PREVPREVPREV }
+										}
+									}
+								}
 							}
-							current_heir = { character = ROOT }
 						}
 						grant_title = ROOT # Give title to ROOT immediately
 					}
@@ -538,9 +580,44 @@ character_event = {
 					}
 					any_demesne_title = {
 						limit = {
-							is_primary_holder_title_tier = yes
-							has_law = open_elective
-							current_heir = { character = ROOT }
+							OR = {
+								AND = {
+									is_primary_holder_title_tier = yes
+									has_law = open_elective
+									current_heir = { character = ROOT }
+								}
+								# Kingdom capital systems
+								holder_scope = {
+									any_demesne_province = {
+										has_province_modifier = kingdom_capital_system
+										kingdom = {
+											is_primary_holder_title_tier = yes
+											has_law = open_elective
+											current_heir = { character = ROOT }
+										}
+										OR = {
+											county = { title = PREVPREVPREV }
+											duchy = { title = PREVPREVPREV }
+										}
+									}
+								}
+								# Empire capital system
+								holder_scope = {
+									any_demesne_province = {
+										has_province_modifier = empire_capital_system
+										empire = {
+											is_primary_holder_title_tier = yes
+											has_law = open_elective
+											current_heir = { character = ROOT }
+										}
+										OR = {
+											county = { title = PREVPREVPREV }
+											duchy = { title = PREVPREVPREV }
+											kingdom = { title = PREVPREVPREV }
+										}
+									}
+								}
+							}
 						}
 						grant_title = ROOT # Give title to ROOT immediately
 					}

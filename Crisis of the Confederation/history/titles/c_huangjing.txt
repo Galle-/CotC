@@ -3,6 +3,7 @@
 	liege = "d_huangjing"
 	law = succ_open_elective
 	law = true_cognatic_succession
+	effect = { location = { add_province_modifier = { name = kingdom_capital_system duration = -1 } } }
 }
 2998.1.1 = {
 	holder = 11012594	# Qian Chen
