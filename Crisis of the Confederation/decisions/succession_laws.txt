@@ -17,12 +17,17 @@ succession_laws = {
 			}
 			OR = {
 				has_law = inheritance_law_1
+				has_law = local_inheritance_law_1
 				holder_scope = {
 					is_merchant_republic = yes
-					primary_title = { has_law = inheritance_law_1 }
+					primary_title = {
+						OR = {
+							has_law = inheritance_law_1
+							has_law = local_inheritance_law_1
+						}
+					}
 				}
-				NOT = { higher_tier_than = DUKE }
-				independent = no
+				tier = BARON
 			}
 		}
 		effect = {
@@ -48,12 +53,17 @@ succession_laws = {
 			OR = {
 				is_patrician = yes
 				has_law = inheritance_law_2
+				has_law = local_inheritance_law_2
 				holder_scope = {
 					is_merchant_republic = yes
-					primary_title = { has_law = inheritance_law_2 }
+					primary_title = {
+						OR = {
+							has_law = inheritance_law_2
+							has_law = local_inheritance_law_2
+						}
+					}
 				}
-				NOT = { higher_tier_than = DUKE }
-				independent = no
+				tier = BARON
 			}
 		}
 		
@@ -90,17 +100,18 @@ succession_laws = {
 			is_patrician = no
 			is_tribal_type_title = no
 			OR = {
-				holder_scope = { is_theocracy = no }
-				independent = yes
-			}
-			OR = {
 				has_law = inheritance_law_3
+				has_law = local_inheritance_law_3
 				holder_scope = {
 					is_merchant_republic = yes
-					primary_title = { has_law = inheritance_law_3 }
+					primary_title = {
+						OR = {
+							has_law = inheritance_law_3
+							has_law = local_inheritance_law_3
+						}
+					}
 				}
-				NOT = { higher_tier_than = DUKE }
-				independent = no
+				tier = BARON
 			}
 		}
 		allow = {
@@ -125,13 +136,16 @@ succession_laws = {
 			is_patrician = no
 			OR = {
 				has_law = election_law_3
+				has_law = local_election_law_3
 				holder_scope = {
 					is_merchant_republic = yes
-					primary_title = { has_law = election_law_3 }
+					primary_title = {
+						OR = {
+							has_law = election_law_3
+							has_law = local_election_law_3
+						}
+					}
 				}
-				NOT = { higher_tier_than = DUKE }
-				independent = no
-				is_tribal_type_title = yes
 			}
 		}
 		allow = {
@@ -153,19 +167,18 @@ succession_laws = {
 		potential = {
 			higher_tier_than = BARON
 			is_patrician = no
-			is_tribal_type_title = no
-			OR = {
-				holder_scope = { is_theocracy = no }
-				independent = yes
-			}
 			OR = {
 				has_law = election_law_4
+				has_law = local_election_law_4
 				holder_scope = {
 					is_merchant_republic = yes
-					primary_title = { has_law = election_law_4 }
+					primary_title = {
+						OR = {
+							has_law = election_law_4
+							has_law = local_election_law_4
+						}
+					}
 				}
-				NOT = { higher_tier_than = DUKE }
-				independent = no
 			}
 		}
 		allow = {
@@ -186,19 +199,19 @@ succession_laws = {
 		dynasty_opinion = -5
 		potential = {
 			is_patrician = no
-			is_tribal_type_title = no
-			OR = {
-				holder_scope = { is_theocracy = no }
-				independent = yes
-			}
 			OR = {
 				has_law = inheritance_law_4
+				has_law = local_inheritance_law_4
 				holder_scope = {
 					is_merchant_republic = yes
-					primary_title = { has_law = inheritance_law_4 }
+					primary_title = {
+						OR = {
+							has_law = inheritance_law_4
+							has_law = local_inheritance_law_4
+						}
+					}
 				}
-				NOT = { higher_tier_than = DUKE }
-				independent = no
+				tier = BARON
 			}
 		}
 		allow = {
@@ -245,13 +258,122 @@ succession_laws = {
 		potential = {
 			is_patrician = no
 			OR = {
-				has_law = appointment_law_1
+				has_law = legitimacy_law_2
+				has_law = local_legitimacy_law_2
+				AND = {
+					holder_scope = { is_feudal = yes }
+					OR = {
+						crownlaw_title = {
+							holder_scope = { any_vassal = { any_demesne_title = { title = ROOT } } }
+							has_law = military_vassal_legitimacy_2
+							OR = {
+								ROOT = { is_tribal_type_title = yes }
+								has_law = centralization_2
+								has_law = centralization_3
+								has_law = centralization_4
+							}
+						}
+						AND = {
+							NOT = { crownlaw_title = { holder_scope = { any_vassal = { any_demesne_title = { title = ROOT } } } } }
+							holder_scope = {
+								top_liege = {
+									primary_title = {
+										OR = {
+											has_law = military_vassal_legitimacy_2
+											has_law = local_military_vassal_legitimacy_2
+										}
+										OR = {
+											ROOT = { is_tribal_type_title = yes }
+											has_law = centralization_2
+											has_law = centralization_3
+											has_law = centralization_4
+											NOT = { higher_tier_than = DUKE }
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				AND = {
+					holder_scope = { is_republic = yes }
+					OR = {
+						crownlaw_title = {
+							holder_scope = { any_vassal = { any_demesne_title = { title = ROOT } } }
+							has_law = republic_vassal_legitimacy_2
+							OR = {
+								ROOT = { is_tribal_type_title = yes }
+								has_law = centralization_2
+								has_law = centralization_3
+								has_law = centralization_4
+							}
+						}
+						AND = {
+							NOT = { crownlaw_title = { holder_scope = { any_vassal = { any_demesne_title = { title = ROOT } } } } }
+							holder_scope = {
+								top_liege = {
+									primary_title = {
+										OR = {
+											has_law = republic_vassal_legitimacy_2
+											has_law = local_republic_vassal_legitimacy_2
+										}
+										OR = {
+											ROOT = { is_tribal_type_title = yes }
+											has_law = centralization_2
+											has_law = centralization_3
+											has_law = centralization_4
+											NOT = { higher_tier_than = DUKE }
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				AND = {
+					holder_scope = { is_theocracy = yes }
+					OR = {
+						crownlaw_title = {
+							holder_scope = { any_vassal = { any_demesne_title = { title = ROOT } } }
+							has_law = theocracy_vassal_legitimacy_2
+							OR = {
+								ROOT = { is_tribal_type_title = yes }
+								has_law = centralization_2
+								has_law = centralization_3
+								has_law = centralization_4
+							}
+						}
+						AND = {
+							NOT = { crownlaw_title = { holder_scope = { any_vassal = { any_demesne_title = { title = ROOT } } } } }
+							holder_scope = {
+								top_liege = {
+									primary_title = {
+										OR = {
+											has_law = theocracy_vassal_legitimacy_2
+											has_law = local_theocracy_vassal_legitimacy_2
+										}
+										OR = {
+											ROOT = { is_tribal_type_title = yes }
+											has_law = centralization_2
+											has_law = centralization_3
+											has_law = centralization_4
+											NOT = { higher_tier_than = DUKE }
+										}
+									}
+								}
+							}
+						}
+					}
+				}
 				holder_scope = {
 					is_merchant_republic = yes
-					primary_title = { has_law = appointment_law_1 }
+					primary_title = {
+						OR = {
+							has_law = legitimacy_law_2
+							has_law = local_legitimacy_law_2
+						}
+					}
 				}
-				NOT = { higher_tier_than = DUKE }
-				independent = no
 				# Special case - certain religious leadership titles should always use this
 				title = k_terran_federal_authority
 				title = k_terran_republic_authority
@@ -263,24 +385,24 @@ succession_laws = {
 		}
 		revoke_allowed = {
 			always = no
-		}		
+		}
 	}
 	succ_open_elective = {
 		potential = {
 			is_patrician = no
-			is_tribal_type_title = no
-			OR = {
-				holder_scope = { is_theocracy = no }
-				independent = yes
-			}
 			OR = {
 				has_law = election_law_1
+				has_law = local_election_law_1
 				holder_scope = {
 					is_merchant_republic = yes
-					primary_title = { has_law = election_law_1 }
+					primary_title = {
+						OR = {
+							has_law = election_law_1
+							has_law = local_election_law_1
+						}
+					}
 				}
-				NOT = { higher_tier_than = DUKE }
-				independent = no
+				tier = BARON
 			}
 		}
 		effect = {
@@ -306,14 +428,11 @@ succession_laws = {
 		potential = {
 			is_patrician = no
 			holder_scope = { is_merchant_republic = yes }
-			OR = {
-				has_law = election_law_2
-				holder_scope = {
-					is_merchant_republic = yes
-					primary_title = { has_law = election_law_2 }
+			holder_scope = {
+				OR = {
+					has_law = election_law_2
+					has_law = local_election_law_2
 				}
-				NOT = { higher_tier_than = DUKE }
-				independent = no
 			}
 		}
 		allow = { always = yes }
@@ -330,9 +449,8 @@ gender_laws = {
 	cognatic_succession = {
 		male_dynasty_opinion = 10
 		female_dynasty_opinion = -10
-		potential = {
-			always = no
-		}
+		potential = { always = yes }
+		allow = { holder_scope = { religion = father_earth_cultist } }
 		effect = {
 			gender_succ = cognatic
 		}
@@ -344,9 +462,8 @@ gender_laws = {
 		male_dynasty_opinion = 20
 		female_dynasty_opinion = -20
 	
-		potential = {
-			always = no
-		}
+		potential = { always = yes }
+		allow = { holder_scope = { religion = father_earth_cultist } }
 		effect = {
 			gender_succ = agnatic
 		}
@@ -371,9 +488,8 @@ gender_laws = {
 		male_dynasty_opinion = -20
 		female_dynasty_opinion = 20
 		
-		potential = {
-			always = no # For modders only
-		}
+		potential = { always = yes }
+		allow = { holder_scope = { religion = mother_gaia_cultist } }
 		allow = {
 			always = yes
 		}
@@ -389,12 +505,8 @@ gender_laws = {
 		male_dynasty_opinion = -10
 		female_dynasty_opinion = 10
 		
-		potential = {
-			always = no # For modders only
-		}
-		allow = {
-			always = yes
-		}
+		potential = { always = yes }
+		allow = { holder_scope = { religion = mother_gaia_cultist } }
 		effect = {
 			gender_succ = enatic_cognatic
 		}

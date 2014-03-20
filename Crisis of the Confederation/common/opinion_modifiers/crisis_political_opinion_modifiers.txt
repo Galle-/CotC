@@ -1,3 +1,9 @@
+# Reactions to constitutional changes
+opinion_loves_reform = { opinion = 100 months = 240 }
+opinion_approves_of_reform = { opinion = 25 months = 240 }
+opinion_disapproves_of_reform = { opinion = -25 months = 240 }
+opinion_hates_reform = { opinion = -100 months = 240 }
+
 # Law and order and so on
 opinion_criminal = { opinion = -25 months = 2400 imprison = yes }
 

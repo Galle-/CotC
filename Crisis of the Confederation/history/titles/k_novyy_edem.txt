@@ -4,6 +4,9 @@
 	law = succ_feudal_elective
 	law = true_cognatic_succession
 	law = centralization_2
+	law = military_vassal_legitimacy_1
+	law = republic_vassal_legitimacy_2
+	law = theocracy_vassal_legitimacy_2
 	liege = "e_terran_confederation"
 }
 

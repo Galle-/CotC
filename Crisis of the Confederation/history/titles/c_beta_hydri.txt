@@ -1,6 +1,6 @@
 2489.1.1 = {
 	liege="d_draconis"
-	law = succ_catholic_bishopric
+	law = succ_appointment
 	law = true_cognatic_succession
 }
 2991.1.1 = { holder = 1105185 } # Rhea Bose
