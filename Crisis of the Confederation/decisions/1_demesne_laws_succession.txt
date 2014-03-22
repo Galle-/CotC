@@ -648,8 +648,6 @@ laws = {
 						}
 						opinion = { who = PREV modifier = opinion_hates_reform }
 					}
-					character_event = { id = maintenance.3 } # Reboot the in-game crown law timer
-					# Changing legitimacy law does NOT add a timer, since you need to be able to change succession law straight away
 				}
 			}
 		}
@@ -1338,8 +1336,6 @@ laws = {
 						}
 						opinion = { who = PREV modifier = opinion_hates_reform }
 					}
-					character_event = { id = maintenance.3 } # Reboot the in-game crown law timer
-					# Changing legitimacy law does NOT add a timer, since you need to be able to change succession law straight away
 				}
 			}
 		}
@@ -2039,10 +2035,7 @@ laws = {
 					}
 				}
 			}
-			holder_scope = {
-				hidden_tooltip = { character_event = { id = maintenance.3 } } # Reboot the in-game crown law timer
-				add_character_modifier = { name = changed_crown_law_timer duration = 1825 }
-			}
+			holder_scope = { add_character_modifier = { name = changed_crown_law_timer duration = 1825 } }
 		}
 	}
 	
@@ -3374,10 +3367,7 @@ laws = {
 			}
 		}
 		pass_effect = {
-			holder_scope = {
-				hidden_tooltip = { character_event = { id = maintenance.3 } } # Reboot the in-game crown law timer
-				add_character_modifier = { name = changed_crown_law_timer duration = 1825 }
-			}
+			holder_scope = { add_character_modifier = { name = changed_crown_law_timer duration = 1825 } }
 			holder_scope = {
 				any_dynasty_member = {
 					limit = {
@@ -4116,10 +4106,7 @@ laws = {
 			}
 		}
 		pass_effect = {
-			holder_scope = {
-				hidden_tooltip = { character_event = { id = maintenance.3 } } # Reboot the in-game crown law timer
-				add_character_modifier = { name = changed_crown_law_timer duration = 1825 }
-			}
+			holder_scope = { add_character_modifier = { name = changed_crown_law_timer duration = 1825 } }
 			holder_scope = {
 				any_dynasty_member = {
 					limit = {
@@ -4858,10 +4845,7 @@ laws = {
 			}
 		}
 		pass_effect = {
-			holder_scope = {
-				hidden_tooltip = { character_event = { id = maintenance.3 } } # Reboot the in-game crown law timer
-				add_character_modifier = { name = changed_crown_law_timer duration = 1825 }
-			}
+			holder_scope = { add_character_modifier = { name = changed_crown_law_timer duration = 1825 } }
 			holder_scope = {
 				any_dynasty_member = {
 					limit = {
@@ -5455,10 +5439,7 @@ laws = {
 			}
 		}
 		pass_effect = {
-			holder_scope = {
-				hidden_tooltip = { character_event = { id = maintenance.3 } } # Reboot the in-game crown law timer
-				add_character_modifier = { name = changed_crown_law_timer duration = 1825 }
-			}
+			holder_scope = { add_character_modifier = { name = changed_crown_law_timer duration = 1825 } }
 			hidden_tooltip = {
 				# Reactions common to all former government types
 				holder_scope = {
@@ -5989,10 +5970,7 @@ laws = {
 			}
 		}
 		pass_effect = {
-			holder_scope = {
-				hidden_tooltip = { character_event = { id = maintenance.3 } } # Reboot the in-game crown law timer
-				add_character_modifier = { name = changed_crown_law_timer duration = 1825 }
-			}
+			holder_scope = { add_character_modifier = { name = changed_crown_law_timer duration = 1825 } }
 			hidden_tooltip = {
 				# Reactions common to all former government types
 				holder_scope = {
@@ -6626,10 +6604,7 @@ laws = {
 			}
 		}
 		pass_effect = {
-			holder_scope = {
-				hidden_tooltip = { character_event = { id = maintenance.3 } } # Reboot the in-game crown law timer
-				add_character_modifier = { name = changed_crown_law_timer duration = 1825 }
-			}
+			holder_scope = { add_character_modifier = { name = changed_crown_law_timer duration = 1825 } }
 			hidden_tooltip = {
 				# Reactions common to all former government types
 				holder_scope = {
@@ -7183,10 +7158,7 @@ laws = {
 			}
 		}
 		pass_effect = {
-			holder_scope = {
-				hidden_tooltip = { character_event = { id = maintenance.3 } } # Reboot the in-game crown law timer
-				add_character_modifier = { name = changed_crown_law_timer duration = 1825 }
-			}
+			holder_scope = { add_character_modifier = { name = changed_crown_law_timer duration = 1825 } }
 			hidden_tooltip = {
 				# Reactions common to all former government types
 				holder_scope = {
@@ -7472,12 +7444,7 @@ laws = {
 				revoke_law = local_military_vassal_legitimacy_2
 			}
 		}
-		pass_effect = {
-			holder_scope = {
-				hidden_tooltip = { character_event = { id = maintenance.3 } } # Reboot the in-game crown law timer
-				add_character_modifier = { name = changed_crown_law_timer duration = 1825 }
-			}
-		}
+		pass_effect = { holder_scope = { add_character_modifier = { name = changed_crown_law_timer duration = 1825 } } }
 	}
 	local_military_vassal_legitimacy_1 = { # Elective
 		show_as_title = yes
@@ -7592,12 +7559,7 @@ laws = {
 				revoke_law = local_military_vassal_legitimacy_2
 			}
 		}
-		pass_effect = {
-			holder_scope = {
-				hidden_tooltip = { character_event = { id = maintenance.3 } } # Reboot the in-game crown law timer
-				add_character_modifier = { name = changed_crown_law_timer duration = 1825 }
-			}
-		}
+		pass_effect = { holder_scope = { add_character_modifier = { name = changed_crown_law_timer duration = 1825 } } }
 	}
 	local_military_vassal_legitimacy_2 = { # Appointment
 		show_as_title = yes
@@ -7740,12 +7702,7 @@ laws = {
 				revoke_law = military_vassal_legitimacy_1
 			}
 		}
-		pass_effect = {
-			holder_scope = {
-				hidden_tooltip = { character_event = { id = maintenance.3 } } # Reboot the in-game crown law timer
-				add_character_modifier = { name = changed_crown_law_timer duration = 1825 }
-			}
-		}
+		pass_effect = { holder_scope = { add_character_modifier = { name = changed_crown_law_timer duration = 1825 } } }
 	}
 # LOCAL GOVERNMENTS - REPUBLICS
 	local_republic_vassal_legitimacy_0 = { # Inheritance
@@ -7881,12 +7838,7 @@ laws = {
 				revoke_law = local_republic_vassal_legitimacy_2
 			}
 		}
-		pass_effect = {
-			holder_scope = {
-				hidden_tooltip = { character_event = { id = maintenance.3 } } # Reboot the in-game crown law timer
-				add_character_modifier = { name = changed_crown_law_timer duration = 1825 }
-			}
-		}
+		pass_effect = { holder_scope = { add_character_modifier = { name = changed_crown_law_timer duration = 1825 } } }
 	}
 	local_republic_vassal_legitimacy_1 = { # Elective
 		show_as_title = yes
@@ -8021,12 +7973,7 @@ laws = {
 				revoke_law = local_republic_vassal_legitimacy_2
 			}
 		}
-		pass_effect = {
-			holder_scope = {
-				hidden_tooltip = { character_event = { id = maintenance.3 } } # Reboot the in-game crown law timer
-				add_character_modifier = { name = changed_crown_law_timer duration = 1825 }
-			}
-		}
+		pass_effect = { holder_scope = { add_character_modifier = { name = changed_crown_law_timer duration = 1825 } } }
 	}
 	local_republic_vassal_legitimacy_2 = { # Appointment
 		show_as_title = yes
@@ -8179,12 +8126,7 @@ laws = {
 				revoke_law = local_republic_vassal_legitimacy_1
 			}
 		}
-		pass_effect = {
-			holder_scope = {
-				hidden_tooltip = { character_event = { id = maintenance.3 } } # Reboot the in-game crown law timer
-				add_character_modifier = { name = changed_crown_law_timer duration = 1825 }
-			}
-		}
+		pass_effect = { holder_scope = { add_character_modifier = { name = changed_crown_law_timer duration = 1825 } } }
 	}
 # LOCAL GOVERNMENTS - THEOCRACIES
 	local_theocracy_vassal_legitimacy_0 = { # Inheritance
@@ -8316,12 +8258,7 @@ laws = {
 				revoke_law = local_theocracy_vassal_legitimacy_2
 			}
 		}
-		pass_effect = {
-			holder_scope = {
-				hidden_tooltip = { character_event = { id = maintenance.3 } } # Reboot the in-game crown law timer
-				add_character_modifier = { name = changed_crown_law_timer duration = 1825 }
-			}
-		}
+		pass_effect = { holder_scope = { add_character_modifier = { name = changed_crown_law_timer duration = 1825 } } }
 	}
 	local_theocracy_vassal_legitimacy_1 = { # Elective
 		show_as_title = yes
@@ -8452,12 +8389,7 @@ laws = {
 				revoke_law = local_theocracy_vassal_legitimacy_2
 			}
 		}
-		pass_effect = {
-			holder_scope = {
-				hidden_tooltip = { character_event = { id = maintenance.3 } } # Reboot the in-game crown law timer
-				add_character_modifier = { name = changed_crown_law_timer duration = 1825 }
-			}
-		}
+		pass_effect = { holder_scope = { add_character_modifier = { name = changed_crown_law_timer duration = 1825 } } }
 	}
 	local_theocracy_vassal_legitimacy_2 = { # Appointment
 		show_as_title = yes
@@ -8598,11 +8530,6 @@ laws = {
 				revoke_law = local_theocracy_vassal_legitimacy_1
 			}
 		}
-		pass_effect = {
-			holder_scope = {
-				hidden_tooltip = { character_event = { id = maintenance.3 } } # Reboot the in-game crown law timer
-				add_character_modifier = { name = changed_crown_law_timer duration = 1825 }
-			}
-		}
+		pass_effect = { holder_scope = { add_character_modifier = { name = changed_crown_law_timer duration = 1825 } } }
 	}
 }

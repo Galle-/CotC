@@ -67,72 +67,92 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_federalist
-				religion_authority = 0.1
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 0.1
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_federalist
-				religion_authority = 0.2
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 0.2
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_federalist
-				religion_authority = 0.3
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 0.3
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_federalist
-				religion_authority = 0.4
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 0.4
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_federalist
-				religion_authority = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 0.5
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_federalist
-				religion_authority = 0.6
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 0.6
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_federalist
-				religion_authority = 0.7
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 0.7
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_federalist
-				religion_authority = 0.8
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 0.8
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_federalist
-				religion_authority = 0.9
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 0.9
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_federalist
-				religion_authority = 1
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 1
+				}
 			}
 		}
 		# Existing ideological similarities/differences
@@ -187,8 +207,8 @@ province_event = {
 			factor = 0.25
 			NOT = { religion = terran_republican }
 			NOT = { religion = colonial_seperatist }
-			NOT = { religious_group = outlaw_group }
-			owner_scope = { is_republic = yes }
+			NOT = { religion_group = outlaw_group }
+			owner = { is_republic = yes }
 		}
 		
 		# Neighboring Province Effects
@@ -325,72 +345,92 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_republican
-				religion_authority = 0.1
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 0.1
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_republican
-				religion_authority = 0.2
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 0.2
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_republican
-				religion_authority = 0.3
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 0.3
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_republican
-				religion_authority = 0.4
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 0.4
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_republican
-				religion_authority = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 0.5
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_republican
-				religion_authority = 0.6
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 0.6
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_republican
-				religion_authority = 0.7
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 0.7
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_republican
-				religion_authority = 0.8
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 0.8
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_republican
-				religion_authority = 0.9
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 0.9
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_republican
-				religion_authority = 1
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 1
+				}
 			}
 		}
 		# Existing ideological similarities/differences
@@ -444,8 +484,8 @@ province_event = {
 			factor = 0.25
 			NOT = { religion = terran_federalist }
 			NOT = { religion = colonial_seperatist }
-			NOT = { religious_group = outlaw_group }
-			owner_scope = { is_republic = yes }
+			NOT = { religion_group = outlaw_group }
+			owner = { is_republic = yes }
 		}
 		
 		# Neighboring Province Effects
@@ -582,72 +622,92 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_imperial
-				religion_authority = 0.1
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 0.1
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_imperial
-				religion_authority = 0.2
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 0.2
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_imperial
-				religion_authority = 0.3
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 0.3
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_imperial
-				religion_authority = 0.4
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 0.4
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_imperial
-				religion_authority = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 0.5
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_imperial
-				religion_authority = 0.6
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 0.6
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_imperial
-				religion_authority = 0.7
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 0.7
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_imperial
-				religion_authority = 0.8
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 0.8
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_imperial
-				religion_authority = 0.9
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 0.9
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = terran_imperial
-				religion_authority = 1
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 1
+				}
 			}
 		}
 		# Existing ideological similarities/differences
@@ -703,8 +763,8 @@ province_event = {
 			factor = 0.25
 			NOT = { religion = astrist }
 			NOT = { religion = neo_feudal }
-			NOT = { religious_group = outlaw_group }
-			owner_scope = { is_republic = yes }
+			NOT = { religion_group = outlaw_group }
+			owner = { is_republic = yes }
 		}
 		
 		# Neighboring Province Effects
@@ -842,72 +902,92 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = colonial_seperatist
-				religion_authority = 0.1
+			any_province_lord = {
+				any_realm_character = {
+					religion = colonial_seperatist
+					religion_authority = 0.1
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = colonial_seperatist
-				religion_authority = 0.2
+			any_province_lord = {
+				any_realm_character = {
+					religion = colonial_seperatist
+					religion_authority = 0.2
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = colonial_seperatist
-				religion_authority = 0.3
+			any_province_lord = {
+				any_realm_character = {
+					religion = colonial_seperatist
+					religion_authority = 0.3
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = colonial_seperatist
-				religion_authority = 0.4
+			any_province_lord = {
+				any_realm_character = {
+					religion = colonial_seperatist
+					religion_authority = 0.4
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = colonial_seperatist
-				religion_authority = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = colonial_seperatist
+					religion_authority = 0.5
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = colonial_seperatist
-				religion_authority = 0.6
+			any_province_lord = {
+				any_realm_character = {
+					religion = colonial_seperatist
+					religion_authority = 0.6
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = colonial_seperatist
-				religion_authority = 0.7
+			any_province_lord = {
+				any_realm_character = {
+					religion = colonial_seperatist
+					religion_authority = 0.7
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = colonial_seperatist
-				religion_authority = 0.8
+			any_province_lord = {
+				any_realm_character = {
+					religion = colonial_seperatist
+					religion_authority = 0.8
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = colonial_seperatist
-				religion_authority = 0.9
+			any_province_lord = {
+				any_realm_character = {
+					religion = colonial_seperatist
+					religion_authority = 0.9
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = colonial_seperatist
-				religion_authority = 1
+			any_province_lord = {
+				any_realm_character = {
+					religion = colonial_seperatist
+					religion_authority = 1
+				}
 			}
 		}
 		# Existing ideological similarities/differences
@@ -955,7 +1035,7 @@ province_event = {
 			factor = 0.25
 			NOT = { religion = terran_federalist }
 			NOT = { religion = terran_republican }
-			owner_scope = { is_republic = yes }
+			owner = { is_republic = yes }
 		}
 		
 		# Neighboring Province Effects
@@ -1091,72 +1171,92 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = neo_feudal
-				religion_authority = 0.1
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 0.1
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = neo_feudal
-				religion_authority = 0.2
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 0.2
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = neo_feudal
-				religion_authority = 0.3
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 0.3
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = neo_feudal
-				religion_authority = 0.4
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 0.4
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = neo_feudal
-				religion_authority = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 0.5
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = neo_feudal
-				religion_authority = 0.6
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 0.6
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = neo_feudal
-				religion_authority = 0.7
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 0.7
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = neo_feudal
-				religion_authority = 0.8
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 0.8
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = neo_feudal
-				religion_authority = 0.9
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 0.9
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = neo_feudal
-				religion_authority = 1
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 1
+				}
 			}
 		}
 		# Existing ideological similarities/differences
@@ -1191,7 +1291,7 @@ province_event = {
 			factor = 0.25
 			NOT = { religion = terran_federalist }
 			NOT = { religion = terran_republican }
-			owner_scope = { is_feudal = yes }
+			owner = { is_feudal = yes }
 		}
 		
 		# Neighboring Province Effects
@@ -1328,72 +1428,92 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = neo_socialist
-				religion_authority = 0.1
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 0.1
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = neo_socialist
-				religion_authority = 0.2
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 0.2
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = neo_socialist
-				religion_authority = 0.3
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 0.3
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = neo_socialist
-				religion_authority = 0.4
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 0.4
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = neo_socialist
-				religion_authority = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 0.5
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = neo_socialist
-				religion_authority = 0.6
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 0.6
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = neo_socialist
-				religion_authority = 0.7
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 0.7
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = neo_socialist
-				religion_authority = 0.8
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 0.8
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = neo_socialist
-				religion_authority = 0.9
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 0.9
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = neo_socialist
-				religion_authority = 1
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 1
+				}
 			}
 		}
 		# Existing ideological similarities/differences
@@ -1424,52 +1544,52 @@ province_event = {
 		# Revolutionary fervor goes well with space communism
 		modifier = {
 			factor = 0.5
-			owner_scope = { NOT = { religion = neo_socialist } }
+			owner = { NOT = { religion = neo_socialist } }
 			revolt_risk = 0.1
 		}
 		modifier = {
 			factor = 0.5
-			owner_scope = { NOT = { religion = neo_socialist } }
+			owner = { NOT = { religion = neo_socialist } }
 			revolt_risk = 0.2
 		}
 		modifier = {
 			factor = 0.5
-			owner_scope = { NOT = { religion = neo_socialist } }
+			owner = { NOT = { religion = neo_socialist } }
 			revolt_risk = 0.3
 		}
 		modifier = {
 			factor = 0.5
-			owner_scope = { NOT = { religion = neo_socialist } }
+			owner = { NOT = { religion = neo_socialist } }
 			revolt_risk = 0.4
 		}
 		modifier = {
 			factor = 0.5
-			owner_scope = { NOT = { religion = neo_socialist } }
+			owner = { NOT = { religion = neo_socialist } }
 			revolt_risk = 0.5
 		}
 		modifier = {
 			factor = 0.5
-			owner_scope = { NOT = { religion = neo_socialist } }
+			owner = { NOT = { religion = neo_socialist } }
 			revolt_risk = 0.6
 		}
 		modifier = {
 			factor = 0.5
-			owner_scope = { NOT = { religion = neo_socialist } }
+			owner = { NOT = { religion = neo_socialist } }
 			revolt_risk = 0.7
 		}
 		modifier = {
 			factor = 0.5
-			owner_scope = { NOT = { religion = neo_socialist } }
+			owner = { NOT = { religion = neo_socialist } }
 			revolt_risk = 0.8
 		}
 		modifier = {
 			factor = 0.5
-			owner_scope = { NOT = { religion = neo_socialist } }
+			owner = { NOT = { religion = neo_socialist } }
 			revolt_risk = 0.9
 		}
 		modifier = {
 			factor = 0.5
-			owner_scope = { NOT = { religion = neo_socialist } }
+			owner = { NOT = { religion = neo_socialist } }
 			revolt_risk = 1
 		}
 		
@@ -1607,72 +1727,92 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = astrist
-				religion_authority = 0.1
+			any_province_lord = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 0.1
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = astrist
-				religion_authority = 0.2
+			any_province_lord = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 0.2
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = astrist
-				religion_authority = 0.3
+			any_province_lord = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 0.3
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = astrist
-				religion_authority = 0.4
+			any_province_lord = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 0.4
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = astrist
-				religion_authority = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 0.5
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = astrist
-				religion_authority = 0.6
+			any_province_lord = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 0.6
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = astrist
-				religion_authority = 0.7
+			any_province_lord = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 0.7
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = astrist
-				religion_authority = 0.8
+			any_province_lord = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 0.8
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = astrist
-				religion_authority = 0.9
+			any_province_lord = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 0.9
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = astrist
-				religion_authority = 1
+			any_province_lord = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 1
+				}
 			}
 		}
 		# Existing ideological similarities/differences
@@ -1705,58 +1845,58 @@ province_event = {
 			factor = 0.25
 			NOT = { religion = terran_imperial }
 			NOT = { religion = neo_feudal }
-			owner_scope = { is_feudal = yes }
+			owner = { is_feudal = yes }
 		}
 		
 		# Revolutionary fervor ALSO goes well with space fascism
 		modifier = {
 			factor = 0.5
-			owner_scope = { NOT = { religion = astrist } }
+			owner = { NOT = { religion = astrist } }
 			revolt_risk = 0.1
 		}
 		modifier = {
 			factor = 0.5
-			owner_scope = { NOT = { religion = astrist } }
+			owner = { NOT = { religion = astrist } }
 			revolt_risk = 0.2
 		}
 		modifier = {
 			factor = 0.5
-			owner_scope = { NOT = { religion = astrist } }
+			owner = { NOT = { religion = astrist } }
 			revolt_risk = 0.3
 		}
 		modifier = {
 			factor = 0.5
-			owner_scope = { NOT = { religion = astrist } }
+			owner = { NOT = { religion = astrist } }
 			revolt_risk = 0.4
 		}
 		modifier = {
 			factor = 0.5
-			owner_scope = { NOT = { religion = astrist } }
+			owner = { NOT = { religion = astrist } }
 			revolt_risk = 0.5
 		}
 		modifier = {
 			factor = 0.5
-			owner_scope = { NOT = { religion = astrist } }
+			owner = { NOT = { religion = astrist } }
 			revolt_risk = 0.6
 		}
 		modifier = {
 			factor = 0.5
-			owner_scope = { NOT = { religion = astrist } }
+			owner = { NOT = { religion = astrist } }
 			revolt_risk = 0.7
 		}
 		modifier = {
 			factor = 0.5
-			owner_scope = { NOT = { religion = astrist } }
+			owner = { NOT = { religion = astrist } }
 			revolt_risk = 0.8
 		}
 		modifier = {
 			factor = 0.5
-			owner_scope = { NOT = { religion = astrist } }
+			owner = { NOT = { religion = astrist } }
 			revolt_risk = 0.9
 		}
 		modifier = {
 			factor = 0.5
-			owner_scope = { NOT = { religion = astrist } }
+			owner = { NOT = { religion = astrist } }
 			revolt_risk = 1
 		}
 		
@@ -1844,14 +1984,6 @@ province_event = {
 			religion_group = transhumanist_group
 			any_province_lord = { religion = cyberneticist }
 			any_neighbor_province = { religion = cyberneticist }
-			# any_province_title = {
-				# tier = BARON
-				# or = {
-					# has_building = ca_cyber_lab_0
-					# has_building = ct_cyber_lab_0
-					# has_building = tp_cyber_lab_0
-				# }
-			# }
 		}
 	}
 	
@@ -1901,72 +2033,92 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = cyberneticist
-				religion_authority = 0.1
+			any_province_lord = {
+				any_realm_character = {
+					religion = cyberneticist
+					religion_authority = 0.1
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = cyberneticist
-				religion_authority = 0.2
+			any_province_lord = {
+				any_realm_character = {
+					religion = cyberneticist
+					religion_authority = 0.2
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = cyberneticist
-				religion_authority = 0.3
+			any_province_lord = {
+				any_realm_character = {
+					religion = cyberneticist
+					religion_authority = 0.3
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = cyberneticist
-				religion_authority = 0.4
+			any_province_lord = {
+				any_realm_character = {
+					religion = cyberneticist
+					religion_authority = 0.4
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = cyberneticist
-				religion_authority = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = cyberneticist
+					religion_authority = 0.5
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = cyberneticist
-				religion_authority = 0.6
+			any_province_lord = {
+				any_realm_character = {
+					religion = cyberneticist
+					religion_authority = 0.6
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = cyberneticist
-				religion_authority = 0.7
+			any_province_lord = {
+				any_realm_character = {
+					religion = cyberneticist
+					religion_authority = 0.7
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = cyberneticist
-				religion_authority = 0.8
+			any_province_lord = {
+				any_realm_character = {
+					religion = cyberneticist
+					religion_authority = 0.8
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = cyberneticist
-				religion_authority = 0.9
+			any_province_lord = {
+				any_realm_character = {
+					religion = cyberneticist
+					religion_authority = 0.9
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = cyberneticist
-				religion_authority = 1
+			any_province_lord = {
+				any_realm_character = {
+					religion = cyberneticist
+					religion_authority = 1
+				}
 			}
 		}
 		# Existing ideological similarities/differences
@@ -1974,7 +2126,7 @@ province_event = {
 			factor = 0.25
 			OR = {
 				religion = hiver
-				religion = machine_cult
+				religion = machine_cultist
 			}
 		}
 		modifier = {
@@ -2156,7 +2308,7 @@ province_event = {
 	trigger = {
 		or = {
 			religion = cyberneticist
-			religion = machine_cult
+			religion = machine_cultist
 		}
 		OR = {
 			any_province_lord = { religion = hiver }
@@ -2210,72 +2362,92 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = hiver
-				religion_authority = 0.1
+			any_province_lord = {
+				any_realm_character = {
+					religion = hiver
+					religion_authority = 0.1
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = hiver
-				religion_authority = 0.2
+			any_province_lord = {
+				any_realm_character = {
+					religion = hiver
+					religion_authority = 0.2
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = hiver
-				religion_authority = 0.3
+			any_province_lord = {
+				any_realm_character = {
+					religion = hiver
+					religion_authority = 0.3
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = hiver
-				religion_authority = 0.4
+			any_province_lord = {
+				any_realm_character = {
+					religion = hiver
+					religion_authority = 0.4
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = hiver
-				religion_authority = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = hiver
+					religion_authority = 0.5
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = hiver
-				religion_authority = 0.6
+			any_province_lord = {
+				any_realm_character = {
+					religion = hiver
+					religion_authority = 0.6
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = hiver
-				religion_authority = 0.7
+			any_province_lord = {
+				any_realm_character = {
+					religion = hiver
+					religion_authority = 0.7
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = hiver
-				religion_authority = 0.8
+			any_province_lord = {
+				any_realm_character = {
+					religion = hiver
+					religion_authority = 0.8
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = hiver
-				religion_authority = 0.9
+			any_province_lord = {
+				any_realm_character = {
+					religion = hiver
+					religion_authority = 0.9
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = hiver
-				religion_authority = 1
+			any_province_lord = {
+				any_realm_character = {
+					religion = hiver
+					religion_authority = 1
+				}
 			}
 		}
 		
@@ -2371,18 +2543,10 @@ province_event = {
 				OR = {
 					any_province_lord = { religion = cyberneticist }
 					any_neighbor_province = { religion = cyberneticist }
-					any_province_title = {
-						tier = BARON
-						or = {
-							has_building = ca_cyber_lab_0
-							has_building = ct_cyber_lab_0
-							has_building = tp_cyber_lab_0
-						}
-					}
 				}
 			}
-			any_province_lord = { religion = machine_cult }
-			any_neighbor_province = { religion = machine_cult }
+			any_province_lord = { religion = machine_cultist }
+			any_neighbor_province = { religion = machine_cultist }
 		}
 		OR = {
 			any_province_lord = { religion = hiver }
@@ -2436,137 +2600,157 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = machine_cult
-				religion_authority = 0.1
+			any_province_lord = {
+				any_realm_character = {
+					religion = machine_cultist
+					religion_authority = 0.1
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = machine_cult
-				religion_authority = 0.2
+			any_province_lord = {
+				any_realm_character = {
+					religion = machine_cultist
+					religion_authority = 0.2
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = machine_cult
-				religion_authority = 0.3
+			any_province_lord = {
+				any_realm_character = {
+					religion = machine_cultist
+					religion_authority = 0.3
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = machine_cult
-				religion_authority = 0.4
+			any_province_lord = {
+				any_realm_character = {
+					religion = machine_cultist
+					religion_authority = 0.4
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = machine_cult
-				religion_authority = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = machine_cultist
+					religion_authority = 0.5
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = machine_cult
-				religion_authority = 0.6
+			any_province_lord = {
+				any_realm_character = {
+					religion = machine_cultist
+					religion_authority = 0.6
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = machine_cult
-				religion_authority = 0.7
+			any_province_lord = {
+				any_realm_character = {
+					religion = machine_cultist
+					religion_authority = 0.7
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = machine_cult
-				religion_authority = 0.8
+			any_province_lord = {
+				any_realm_character = {
+					religion = machine_cultist
+					religion_authority = 0.8
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = machine_cult
-				religion_authority = 0.9
+			any_province_lord = {
+				any_realm_character = {
+					religion = machine_cultist
+					religion_authority = 0.9
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = machine_cult
-				religion_authority = 1
+			any_province_lord = {
+				any_realm_character = {
+					religion = machine_cultist
+					religion_authority = 1
+				}
 			}
 		}
 		
 		# Neighboring Province Effects
 		modifier = {
 			factor = 2
-			any_neighbor_province = { NOT = { religion = machine_cult } }
+			any_neighbor_province = { NOT = { religion = machine_cultist } }
 		}
 		modifier = {
 			factor = 2
 			any_neighbor_province = {
-				NOT = { religion = machine_cult }
+				NOT = { religion = machine_cultist }
 				count = 2
 			}
 		}
 		modifier = {
 			factor = 2
 			any_neighbor_province = {
-				NOT = { religion = machine_cult }
+				NOT = { religion = machine_cultist }
 				count = 3
 			}
 		}
 		modifier = {
 			factor = 2
 			any_neighbor_province = {
-				NOT = { religion = machine_cult }
+				NOT = { religion = machine_cultist }
 				count = 4
 			}
 		}
 		modifier = {
 			factor = 2
 			any_neighbor_province = {
-				NOT = { religion = machine_cult }
+				NOT = { religion = machine_cultist }
 				count = 5
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_neighbor_province = { religion = machine_cult }
+			any_neighbor_province = { religion = machine_cultist }
 		}
 		modifier = {
 			factor = 0.5
 			any_neighbor_province = {
-				religion = machine_cult
+				religion = machine_cultist
 				count = 2
 			}
 		}
 		modifier = {
 			factor = 0.5
 			any_neighbor_province = {
-				religion = machine_cult
+				religion = machine_cultist
 				count = 3
 			}
 		}
 		modifier = {
 			factor = 0.5
 			any_neighbor_province = {
-				religion = machine_cult
+				religion = machine_cultist
 				count = 4
 			}
 		}
 		modifier = {
 			factor = 0.5
 			any_neighbor_province = {
-				religion = machine_cult
+				religion = machine_cultist
 				count = 5
 			}
 		}
@@ -2574,7 +2758,7 @@ province_event = {
 	
 	option = {
 		name = "EVTOPTCONFIRM"
-		religion = machine_cult
+		religion = machine_cultist
 	}
 }
 # Bio-Directionist
@@ -2589,14 +2773,6 @@ province_event = {
 			religion_group = transhumanist_group
 			any_province_lord = { religion = bio_directionist }
 			any_neighbor_province = { religion = bio_directionist }
-			# any_province_title = {
-				# tier = BARON
-				# or = {
-					# has_building = ca_bio_lab_0
-					# has_building = ct_bio_lab_0
-					# has_building = tp_bio_lab_0
-				# }
-			# }
 		}
 	}
 	
@@ -2646,72 +2822,92 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = bio_directionist
-				religion_authority = 0.1
+			any_province_lord = {
+				any_realm_character = {
+					religion = bio_directionist
+					religion_authority = 0.1
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = bio_directionist
-				religion_authority = 0.2
+			any_province_lord = {
+				any_realm_character = {
+					religion = bio_directionist
+					religion_authority = 0.2
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = bio_directionist
-				religion_authority = 0.3
+			any_province_lord = {
+				any_realm_character = {
+					religion = bio_directionist
+					religion_authority = 0.3
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = bio_directionist
-				religion_authority = 0.4
+			any_province_lord = {
+				any_realm_character = {
+					religion = bio_directionist
+					religion_authority = 0.4
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = bio_directionist
-				religion_authority = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = bio_directionist
+					religion_authority = 0.5
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = bio_directionist
-				religion_authority = 0.6
+			any_province_lord = {
+				any_realm_character = {
+					religion = bio_directionist
+					religion_authority = 0.6
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = bio_directionist
-				religion_authority = 0.7
+			any_province_lord = {
+				any_realm_character = {
+					religion = bio_directionist
+					religion_authority = 0.7
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = bio_directionist
-				religion_authority = 0.8
+			any_province_lord = {
+				any_realm_character = {
+					religion = bio_directionist
+					religion_authority = 0.8
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = bio_directionist
-				religion_authority = 0.9
+			any_province_lord = {
+				any_realm_character = {
+					religion = bio_directionist
+					religion_authority = 0.9
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = bio_directionist
-				religion_authority = 1
+			any_province_lord = {
+				any_realm_character = {
+					religion = bio_directionist
+					religion_authority = 1
+				}
 			}
 		}
 		# Existing ideological similarities/differences
@@ -2948,72 +3144,92 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = orthodox
-				religion_authority = 0.1
+			any_province_lord = {
+				any_realm_character = {
+					religion = orthodox
+					religion_authority = 0.1
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = orthodox
-				religion_authority = 0.2
+			any_province_lord = {
+				any_realm_character = {
+					religion = orthodox
+					religion_authority = 0.2
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = orthodox
-				religion_authority = 0.3
+			any_province_lord = {
+				any_realm_character = {
+					religion = orthodox
+					religion_authority = 0.3
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = orthodox
-				religion_authority = 0.4
+			any_province_lord = {
+				any_realm_character = {
+					religion = orthodox
+					religion_authority = 0.4
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = orthodox
-				religion_authority = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = orthodox
+					religion_authority = 0.5
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = orthodox
-				religion_authority = 0.6
+			any_province_lord = {
+				any_realm_character = {
+					religion = orthodox
+					religion_authority = 0.6
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = orthodox
-				religion_authority = 0.7
+			any_province_lord = {
+				any_realm_character = {
+					religion = orthodox
+					religion_authority = 0.7
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = orthodox
-				religion_authority = 0.8
+			any_province_lord = {
+				any_realm_character = {
+					religion = orthodox
+					religion_authority = 0.8
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = orthodox
-				religion_authority = 0.9
+			any_province_lord = {
+				any_realm_character = {
+					religion = orthodox
+					religion_authority = 0.9
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = orthodox
-				religion_authority = 1
+			any_province_lord = {
+				any_realm_character = {
+					religion = orthodox
+					religion_authority = 1
+				}
 			}
 		}
 		
@@ -3175,72 +3391,92 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = pilgrim
-				religion_authority = 0.1
+			any_province_lord = {
+				any_realm_character = {
+					religion = pilgrim
+					religion_authority = 0.1
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = pilgrim
-				religion_authority = 0.2
+			any_province_lord = {
+				any_realm_character = {
+					religion = pilgrim
+					religion_authority = 0.2
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = pilgrim
-				religion_authority = 0.3
+			any_province_lord = {
+				any_realm_character = {
+					religion = pilgrim
+					religion_authority = 0.3
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = pilgrim
-				religion_authority = 0.4
+			any_province_lord = {
+				any_realm_character = {
+					religion = pilgrim
+					religion_authority = 0.4
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = pilgrim
-				religion_authority = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = pilgrim
+					religion_authority = 0.5
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = pilgrim
-				religion_authority = 0.6
+			any_province_lord = {
+				any_realm_character = {
+					religion = pilgrim
+					religion_authority = 0.6
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = pilgrim
-				religion_authority = 0.7
+			any_province_lord = {
+				any_realm_character = {
+					religion = pilgrim
+					religion_authority = 0.7
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = pilgrim
-				religion_authority = 0.8
+			any_province_lord = {
+				any_realm_character = {
+					religion = pilgrim
+					religion_authority = 0.8
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = pilgrim
-				religion_authority = 0.9
+			any_province_lord = {
+				any_realm_character = {
+					religion = pilgrim
+					religion_authority = 0.9
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = pilgrim
-				religion_authority = 1
+			any_province_lord = {
+				any_realm_character = {
+					religion = pilgrim
+					religion_authority = 1
+				}
 			}
 		}
 		
@@ -3401,72 +3637,92 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = adoptionist_cultist
-				religion_authority = 0.1
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist_cultist
+					religion_authority = 0.1
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = adoptionist_cultist
-				religion_authority = 0.2
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist_cultist
+					religion_authority = 0.2
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = adoptionist_cultist
-				religion_authority = 0.3
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist_cultist
+					religion_authority = 0.3
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = adoptionist_cultist
-				religion_authority = 0.4
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist_cultist
+					religion_authority = 0.4
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = adoptionist_cultist
-				religion_authority = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist_cultist
+					religion_authority = 0.5
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = adoptionist_cultist
-				religion_authority = 0.6
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist_cultist
+					religion_authority = 0.6
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = adoptionist_cultist
-				religion_authority = 0.7
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist_cultist
+					religion_authority = 0.7
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = adoptionist_cultist
-				religion_authority = 0.8
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist_cultist
+					religion_authority = 0.8
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = adoptionist_cultist
-				religion_authority = 0.9
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist_cultist
+					religion_authority = 0.9
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = adoptionist_cultist
-				religion_authority = 1
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist_cultist
+					religion_authority = 1
+				}
 			}
 		}
 		
@@ -3628,72 +3884,92 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = adoptionist
-				religion_authority = 0.1
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist
+					religion_authority = 0.1
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = adoptionist
-				religion_authority = 0.2
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist
+					religion_authority = 0.2
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = adoptionist
-				religion_authority = 0.3
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist
+					religion_authority = 0.3
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = adoptionist
-				religion_authority = 0.4
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist
+					religion_authority = 0.4
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = adoptionist
-				religion_authority = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist
+					religion_authority = 0.5
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = adoptionist
-				religion_authority = 0.6
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist
+					religion_authority = 0.6
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = adoptionist
-				religion_authority = 0.7
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist
+					religion_authority = 0.7
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = adoptionist
-				religion_authority = 0.8
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist
+					religion_authority = 0.8
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = adoptionist
-				religion_authority = 0.9
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist
+					religion_authority = 0.9
+				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_realm_character = {
-				religion = adoptionist
-				religion_authority = 1
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist
+					religion_authority = 1
+				}
 			}
 		}
 		
