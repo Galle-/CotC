@@ -37,6 +37,7 @@ NDiplomacy = {
 	DEMESNE_BONUS_MAX_TECH_COUNT = 2,
 	DEMESNE_BONUS_MAX_TECH_BARON = 1,
 	GAVELKIND_MAX_SIZE_BONUS = 0.30,			-- Max demesne size bonus from Gavelkind
+	DEMESNE_MAX_SIZE_JAIN_BONUS = 3,			-- Followers of the Jain religion have extra demesne
 	DIPLO_FRIEND_OPINION_THRESHOLD = 40,		-- OBSOLETE
 	DIPLO_RIVAL_OPINION_THRESHOLD = -40,		-- OBSOLETE
 	OBJECTIVE_DISCARD_WEIGHT_THRESHOLD = 0.05,	-- AI will not pick ambitions or plots below this evaluated weight
@@ -62,289 +63,397 @@ NDiplomacy = {
 	MAX_PREP_INV_ATTACKER_HOLDINGS = 40,		-- The attacker must have fewer Holdings than this in the realm (disallow Prepared Invasions for rulers who are already very powerful)
 	PREP_INV_REQ_PRESTIGE = 1000,				-- Need to have this much Prestige to prepare an invasion
 	BASE_REVOLT_CHANCE_MOD = 500,				-- Pre Old Gods rebel spawn chance modifier (fires on_rebel_revolt) : lower means fewer revolts. MUST NOT BE ZERO.
-	TOG_REVOLT_CHANCE_MOD = 200,				-- Old Gods rebel spawn chance modifier (fires on_rebel_revolt) : lower means fewer revolts. MUST NOT BE ZERO.
-
+	TOG_REVOLT_CHANCE_MOD = 200,				-- Old Gods rebel spawn chance modifier (fires on_rebel_revolt) : lower means fewer revolts. MUST NOT BE ZERO. 
+	JAIN_LIEGE_OPINION_BONUS = 30,				-- Jain Lieges Get Vassal Opinion Bonus
+	MAX_DIPLO_DISTANCE = 700,					-- Most diplomacy is disallowed if two rulers are too distant
+	MAX_DIPLO_DISTANCE_SAME_RELIGION = 100,		-- Bonus to max diplo distance for being of the same religion
+	MAX_DIPLO_DISTANCE_SAME_RELIGION_GROUP = 0, -- Bonus to max diplo distance for being of the same religion group
+	MAX_DIPLO_DISTANCE_SAME_CULTURE = 100, 		-- Bonus to max diplo distance for being of the same culture
+	MAX_DIPLO_DISTANCE_SAME_CULTURE_GROUP = 100, -- Bonus to max diplo distance for being of the same culture group
+	
 	IMPRISON_CHARACTER_INTERACTION_MONEY = 0,
 	IMPRISON_CHARACTER_INTERACTION_PIETY = 10,
 	IMPRISON_CHARACTER_INTERACTION_PRESTIGE = 0,
 	IMPRISON_CHARACTER_INTERACTION_THRESHOLD_FOR_NO = 0,
 	IMPRISON_CHARACTER_INTERACTION_THRESHOLD_FOR_YES = 0,
+	IMPRISON_CHARACTER_INTERACTION_MUST_HAVE_COST = 0,				-- Is having prestige/piety >= cost required for this action?
+	IMPRISON_CHARACTER_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 	
 	RELEASE_FROM_PRISON_INTERACTION_MONEY = 0,
 	RELEASE_FROM_PRISON_INTERACTION_PIETY = 0,
 	RELEASE_FROM_PRISON_INTERACTION_PRESTIGE = 0,
 	RELEASE_FROM_PRISON_INTERACTION_THRESHOLD_FOR_NO = 0,
 	RELEASE_FROM_PRISON_INTERACTION_THRESHOLD_FOR_YES = 0,
+	RELEASE_FROM_PRISON_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	RELEASE_FROM_PRISON_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 	
 	EXECUTE_IMPRISONED_INTERACTION_MONEY = 0,
 	EXECUTE_IMPRISONED_INTERACTION_PIETY = 20,
 	EXECUTE_IMPRISONED_INTERACTION_PRESTIGE = 0,
 	EXECUTE_IMPRISONED_INTERACTION_THRESHOLD_FOR_NO = 0,
 	EXECUTE_IMPRISONED_INTERACTION_THRESHOLD_FOR_YES = 0,
+	EXECUTE_IMPRISONED_INTERACTION_MUST_HAVE_COST = 0,				-- Is having prestige/piety >= cost required for this action?
+	EXECUTE_IMPRISONED_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 	
 	EXILE_IMPRISONED_INTERACTION_MONEY = 0,
 	EXILE_IMPRISONED_INTERACTION_PIETY = 10,
 	EXILE_IMPRISONED_INTERACTION_PRESTIGE = 0,
 	EXILE_IMPRISONED_INTERACTION_THRESHOLD_FOR_NO = 0,
 	EXILE_IMPRISONED_INTERACTION_THRESHOLD_FOR_YES = 0,
+	EXILE_IMPRISONED_INTERACTION_MUST_HAVE_COST = 0,				-- Is having prestige/piety >= cost required for this action?
+	EXILE_IMPRISONED_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 	
 	RETIRE_TO_MONASTERY_INTERACTION_MONEY = 0,
 	RETIRE_TO_MONASTERY_INTERACTION_PIETY = 0,
 	RETIRE_TO_MONASTERY_INTERACTION_PRESTIGE = 0,
 	RETIRE_TO_MONASTERY_INTERACTION_THRESHOLD_FOR_NO = 0,
 	RETIRE_TO_MONASTERY_INTERACTION_THRESHOLD_FOR_YES = 0,
+	RETIRE_TO_MONASTERY_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	RETIRE_TO_MONASTERY_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 	
 	DEMAND_RELIGIOUS_CONVERSION_INTERACTION_MONEY = 0,
 	DEMAND_RELIGIOUS_CONVERSION_INTERACTION_PIETY = 0,
 	DEMAND_RELIGIOUS_CONVERSION_INTERACTION_PRESTIGE = 0,
 	DEMAND_RELIGIOUS_CONVERSION_INTERACTION_THRESHOLD_FOR_NO = 0,
 	DEMAND_RELIGIOUS_CONVERSION_INTERACTION_THRESHOLD_FOR_YES = 0,
+	DEMAND_RELIGIOUS_CONVERSION_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	DEMAND_RELIGIOUS_CONVERSION_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 	
 	INVITE_TO_COURT_INTERACTION_MONEY = 0,
 	INVITE_TO_COURT_INTERACTION_PIETY = 0,
 	INVITE_TO_COURT_INTERACTION_PRESTIGE = 0,
 	INVITE_TO_COURT_INTERACTION_THRESHOLD_FOR_NO = 0,
 	INVITE_TO_COURT_INTERACTION_THRESHOLD_FOR_YES = 0,
+	INVITE_TO_COURT_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	INVITE_TO_COURT_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 	
 	TRANSFER_VASSAL_INTERACTION_MONEY = 0,
 	TRANSFER_VASSAL_INTERACTION_PIETY = 0,
 	TRANSFER_VASSAL_INTERACTION_PRESTIGE = 0,
 	TRANSFER_VASSAL_INTERACTION_THRESHOLD_FOR_NO = 0,
 	TRANSFER_VASSAL_INTERACTION_THRESHOLD_FOR_YES = 0,
+	TRANSFER_VASSAL_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	TRANSFER_VASSAL_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 		
 	CLAIM_TITLE_INTERACTION_MONEY = 0,
 	CLAIM_TITLE_INTERACTION_PIETY = 0,
 	CLAIM_TITLE_INTERACTION_PRESTIGE = 0,
 	CLAIM_TITLE_INTERACTION_THRESHOLD_FOR_NO = 0,
 	CLAIM_TITLE_INTERACTION_THRESHOLD_FOR_YES = 0,
+	CLAIM_TITLE_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	CLAIM_TITLE_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 	
 	REVOKE_TITLE_INTERACTION_MONEY = 0,
 	REVOKE_TITLE_INTERACTION_PIETY = 0,
 	REVOKE_TITLE_INTERACTION_PRESTIGE = 0,
 	REVOKE_TITLE_INTERACTION_THRESHOLD_FOR_NO = 25,
 	REVOKE_TITLE_INTERACTION_THRESHOLD_FOR_YES = 75,
+	REVOKE_TITLE_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	REVOKE_TITLE_INTERACTION_ENABLED = 1,						-- Should this action be used at all?	
 	
 	AWARD_HONORARY_TITLE_INTERACTION_MONEY = 0,
 	AWARD_HONORARY_TITLE_INTERACTION_PIETY = 0,
 	AWARD_HONORARY_TITLE_INTERACTION_PRESTIGE = 0,
 	AWARD_HONORARY_TITLE_INTERACTION_THRESHOLD_FOR_NO = 0,
 	AWARD_HONORARY_TITLE_INTERACTION_THRESHOLD_FOR_YES = 0,
+	AWARD_HONORARY_TITLE_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	AWARD_HONORARY_TITLE_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
+	
+	REVOKE_HONORARY_TITLE_INTERACTION_MONEY = 0,
+	REVOKE_HONORARY_TITLE_INTERACTION_PIETY = 0,
+	REVOKE_HONORARY_TITLE_INTERACTION_PRESTIGE = 0,
+	REVOKE_HONORARY_TITLE_INTERACTION_THRESHOLD_FOR_NO = 0,
+	REVOKE_HONORARY_TITLE_INTERACTION_THRESHOLD_FOR_YES = 0,
+	REVOKE_HONORARY_TITLE_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	REVOKE_HONORARY_TITLE_INTERACTION_ENABLED = 1,						-- Should this action be used at all?	
 	
 	SEND_ASSASSIN_INTERACTION_MONEY = 50,
 	SEND_ASSASSIN_INTERACTION_PIETY = 0,
 	SEND_ASSASSIN_INTERACTION_PRESTIGE = 0,
 	SEND_ASSASSIN_INTERACTION_THRESHOLD_FOR_NO = 0,
 	SEND_ASSASSIN_INTERACTION_THRESHOLD_FOR_YES = 0,
+	SEND_ASSASSIN_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	SEND_ASSASSIN_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 	
 	DECLARE_WAR_INTERACTION_MONEY = 0,
 	DECLARE_WAR_INTERACTION_PIETY = 0,
 	DECLARE_WAR_INTERACTION_PRESTIGE = 0,
 	DECLARE_WAR_INTERACTION_THRESHOLD_FOR_NO = 0,
 	DECLARE_WAR_INTERACTION_THRESHOLD_FOR_YES = 0,
+	DECLARE_WAR_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	DECLARE_WAR_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 	
 	OFFER_PEACE_INTERACTION_MONEY = 0,
 	OFFER_PEACE_INTERACTION_PIETY = 0,
 	OFFER_PEACE_INTERACTION_PRESTIGE = 0,
 	OFFER_PEACE_INTERACTION_THRESHOLD_FOR_NO = 0,
 	OFFER_PEACE_INTERACTION_THRESHOLD_FOR_YES = 0,
+	OFFER_PEACE_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	OFFER_PEACE_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 	
 	SEND_GIFT_INTERACTION_MONEY = 0,
 	SEND_GIFT_INTERACTION_PIETY = 0,
 	SEND_GIFT_INTERACTION_PRESTIGE = 0,
 	SEND_GIFT_INTERACTION_THRESHOLD_FOR_NO = 0,
 	SEND_GIFT_INTERACTION_THRESHOLD_FOR_YES = 0,
+	SEND_GIFT_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	SEND_GIFT_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 		
 	OFFER_VASSALIZATION_INTERACTION_MONEY = 0,
 	OFFER_VASSALIZATION_INTERACTION_PIETY = 0,
 	OFFER_VASSALIZATION_INTERACTION_PRESTIGE = 0,
 	OFFER_VASSALIZATION_INTERACTION_THRESHOLD_FOR_NO = 0,
 	OFFER_VASSALIZATION_INTERACTION_THRESHOLD_FOR_YES = 0,
+	OFFER_VASSALIZATION_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	OFFER_VASSALIZATION_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 	
 	ASK_FOR_VASSALIZATION_INTERACTION_MONEY = 0,
 	ASK_FOR_VASSALIZATION_INTERACTION_PIETY = 0,
 	ASK_FOR_VASSALIZATION_INTERACTION_PRESTIGE = 0,
 	ASK_FOR_VASSALIZATION_INTERACTION_THRESHOLD_FOR_NO = 0,
 	ASK_FOR_VASSALIZATION_INTERACTION_THRESHOLD_FOR_YES = 0,
+	ASK_FOR_VASSALIZATION_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	ASK_FOR_VASSALIZATION_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 	
 	ARRANGE_BETROTHAL_INTERACTION_MONEY = 0,
 	ARRANGE_BETROTHAL_INTERACTION_PIETY = 0,
 	ARRANGE_BETROTHAL_INTERACTION_PRESTIGE = 0,
 	ARRANGE_BETROTHAL_INTERACTION_THRESHOLD_FOR_NO = 0,
 	ARRANGE_BETROTHAL_INTERACTION_THRESHOLD_FOR_YES = 0,
+	ARRANGE_BETROTHAL_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	ARRANGE_BETROTHAL_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 	
 	BREAK_BETROTHAL_INTERACTION_MONEY = 0,
 	BREAK_BETROTHAL_INTERACTION_PIETY = 0,
 	BREAK_BETROTHAL_INTERACTION_PRESTIGE = 0,
 	BREAK_BETROTHAL_INTERACTION_THRESHOLD_FOR_NO = 0,
 	BREAK_BETROTHAL_INTERACTION_THRESHOLD_FOR_YES = 0,
+	BREAK_BETROTHAL_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	BREAK_BETROTHAL_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 	
 	OFFER_SUCCESSION_MARRIGE_INTERACTION_MONEY = 0,
 	OFFER_SUCCESSION_MARRIGE_INTERACTION_PIETY = 0,
 	OFFER_SUCCESSION_MARRIGE_INTERACTION_PRESTIGE = 0,
 	OFFER_SUCCESSION_MARRIGE_INTERACTION_THRESHOLD_FOR_NO = 0,
 	OFFER_SUCCESSION_MARRIGE_INTERACTION_THRESHOLD_FOR_YES = 0,
+	OFFER_SUCCESSION_MARRIGE_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	OFFER_SUCCESSION_MARRIGE_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 	
 	OFFER_MARRIGE_INTERACTION_MONEY = 0,
 	OFFER_MARRIGE_INTERACTION_PIETY = 0,
 	OFFER_MARRIGE_INTERACTION_PRESTIGE = 0,
 	OFFER_MARRIGE_INTERACTION_THRESHOLD_FOR_NO = 0,
 	OFFER_MARRIGE_INTERACTION_THRESHOLD_FOR_YES = 0,
+	OFFER_MARRIGE_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	OFFER_MARRIGE_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 	
 	RANSOM_CHARACTER_INTERACTION_MONEY = 0,
 	RANSOM_CHARACTER_INTERACTION_PIETY = 0,
 	RANSOM_CHARACTER_INTERACTION_PRESTIGE = 0,
 	RANSOM_CHARACTER_INTERACTION_THRESHOLD_FOR_NO = 0,
 	RANSOM_CHARACTER_INTERACTION_THRESHOLD_FOR_YES = 0,
+	RANSOM_CHARACTER_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	RANSOM_CHARACTER_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 	
 	EDUCATE_CHARACTER_INTERACTION_MONEY = 0,
 	EDUCATE_CHARACTER_INTERACTION_PIETY = 0,
 	EDUCATE_CHARACTER_INTERACTION_PRESTIGE = 0,
 	EDUCATE_CHARACTER_INTERACTION_THRESHOLD_FOR_NO = 0,
 	EDUCATE_CHARACTER_INTERACTION_THRESHOLD_FOR_YES = 0,
+	EDUCATE_CHARACTER_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	EDUCATE_CHARACTER_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 
 	ABANDON_AMBITION_INTERACTION_MONEY = 0,
 	ABANDON_AMBITION_INTERACTION_PIETY = 0,
 	ABANDON_AMBITION_INTERACTION_PRESTIGE = 0,
 	ABANDON_AMBITION_INTERACTION_THRESHOLD_FOR_NO = 0,
 	ABANDON_AMBITION_INTERACTION_THRESHOLD_FOR_YES = 0,
+	ABANDON_AMBITION_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	ABANDON_AMBITION_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 
 	STOP_BACKING_AMBITION_INTERACTION_MONEY = 0,
 	STOP_BACKING_AMBITION_INTERACTION_PIETY = 0,
 	STOP_BACKING_AMBITION_INTERACTION_PRESTIGE = 0,
 	STOP_BACKING_AMBITION_INTERACTION_THRESHOLD_FOR_NO = 25,
 	STOP_BACKING_AMBITION_INTERACTION_THRESHOLD_FOR_YES = 75,
+	STOP_BACKING_AMBITION_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	STOP_BACKING_AMBITION_INTERACTION_ENABLED = 1,						-- Should this action be used at all?	
 
 	JOIN_AMBITION_INTERACTION_MONEY = 0,
 	JOIN_AMBITION_INTERACTION_PIETY = 0,
 	JOIN_AMBITION_INTERACTION_PRESTIGE = 0,
 	JOIN_AMBITION_INTERACTION_THRESHOLD_FOR_NO = 0,
 	JOIN_AMBITION_INTERACTION_THRESHOLD_FOR_YES = 0,
+	JOIN_AMBITION_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	JOIN_AMBITION_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 
 	GRANT_LANDED_TITLE_INTERACTION_MONEY = 0,
 	GRANT_LANDED_TITLE_INTERACTION_PIETY = 0,
 	GRANT_LANDED_TITLE_INTERACTION_PRESTIGE = 0,
 	GRANT_LANDED_TITLE_INTERACTION_THRESHOLD_FOR_NO = 0,
 	GRANT_LANDED_TITLE_INTERACTION_THRESHOLD_FOR_YES = 0,
+	GRANT_LANDED_TITLE_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	GRANT_LANDED_TITLE_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 
 	APPOINT_TO_OFFICE_INTERACTION_MONEY = 0,
 	APPOINT_TO_OFFICE_INTERACTION_PIETY = 0,
 	APPOINT_TO_OFFICE_INTERACTION_PRESTIGE = 0,
 	APPOINT_TO_OFFICE_INTERACTION_THRESHOLD_FOR_NO = 0,
 	APPOINT_TO_OFFICE_INTERACTION_THRESHOLD_FOR_YES = 0,
+	APPOINT_TO_OFFICE_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	APPOINT_TO_OFFICE_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 	
 	RESIGN_FROM_OFFICE_INTERACTION_MONEY = 0,
 	RESIGN_FROM_OFFICE_INTERACTION_PIETY = 0,
 	RESIGN_FROM_OFFICE_INTERACTION_PRESTIGE = 0,
 	RESIGN_FROM_OFFICE_INTERACTION_THRESHOLD_FOR_NO = 0,
 	RESIGN_FROM_OFFICE_INTERACTION_THRESHOLD_FOR_YES = 0,
+	RESIGN_FROM_OFFICE_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	RESIGN_FROM_OFFICE_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 
 	ASK_FOR_INVASION_INTERACTION_MONEY = 0,
 	ASK_FOR_INVASION_INTERACTION_PIETY = 500,
 	ASK_FOR_INVASION_INTERACTION_PRESTIGE = 0,
 	ASK_FOR_INVASION_INTERACTION_THRESHOLD_FOR_NO = 50,
 	ASK_FOR_INVASION_INTERACTION_THRESHOLD_FOR_YES = 150,
+	ASK_FOR_INVASION_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	ASK_FOR_INVASION_INTERACTION_ENABLED = 1,						-- Should this action be used at all?	
 
 	ASK_FOR_DIVORCE_INTERACTION_MONEY = 0,
 	ASK_FOR_DIVORCE_INTERACTION_PIETY = 100,
 	ASK_FOR_DIVORCE_INTERACTION_PRESTIGE = 0,
 	ASK_FOR_DIVORCE_INTERACTION_THRESHOLD_FOR_NO = 35,
 	ASK_FOR_DIVORCE_INTERACTION_THRESHOLD_FOR_YES = 75,
+	ASK_FOR_DIVORCE_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	ASK_FOR_DIVORCE_INTERACTION_ENABLED = 1,						-- Should this action be used at all?	
 	
 	DIVORCE_INTERACTION_MONEY = 1.0, 										-- Multiplier of yearly income
 	DIVORCE_INTERACTION_PIETY = 0,
 	DIVORCE_INTERACTION_PRESTIGE = 0,
 	DIVORCE_INTERACTION_THRESHOLD_FOR_NO = 0,
 	DIVORCE_INTERACTION_THRESHOLD_FOR_YES = 0,
+	DIVORCE_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	DIVORCE_INTERACTION_ENABLED = 1,						-- Should this action be used at all?
 	
 	ASK_FOR_EXCOMMUNICATION_INTERACTION_MONEY = 0,
 	ASK_FOR_EXCOMMUNICATION_INTERACTION_PIETY = 100,
 	ASK_FOR_EXCOMMUNICATION_INTERACTION_PRESTIGE = 0,
 	ASK_FOR_EXCOMMUNICATION_INTERACTION_THRESHOLD_FOR_NO = 60,
 	ASK_FOR_EXCOMMUNICATION_INTERACTION_THRESHOLD_FOR_YES = 150,
+	ASK_FOR_EXCOMMUNICATION_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	ASK_FOR_EXCOMMUNICATION_INTERACTION_ENABLED = 1,						-- Should this action be used at all?		
 
 	CALL_ALLY_INTERACTION_MONEY = 0,
 	CALL_ALLY_INTERACTION_PIETY = 0,
 	CALL_ALLY_INTERACTION_PRESTIGE = 0,
 	CALL_ALLY_INTERACTION_THRESHOLD_FOR_NO = 0,
 	CALL_ALLY_INTERACTION_THRESHOLD_FOR_YES = 75,
+	CALL_ALLY_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	CALL_ALLY_INTERACTION_ENABLED = 1,						-- Should this action be used at all?		
 	
 	ASK_TO_LIFT_EXCOMMUNICATION_INTERACTION_MONEY = 0,
 	ASK_TO_LIFT_EXCOMMUNICATION_INTERACTION_PIETY = 50,
 	ASK_TO_LIFT_EXCOMMUNICATION_INTERACTION_PRESTIGE = 0,
 	ASK_TO_LIFT_EXCOMMUNICATION_INTERACTION_THRESHOLD_FOR_NO = 50,
 	ASK_TO_LIFT_EXCOMMUNICATION_INTERACTION_THRESHOLD_FOR_YES = 150,
+	ASK_TO_LIFT_EXCOMMUNICATION_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	ASK_TO_LIFT_EXCOMMUNICATION_INTERACTION_ENABLED = 1,						-- Should this action be used at all?		
 	
 	ASK_TO_RANSOM_CHARACTER_INTERACTION_MONEY = 0,
 	ASK_TO_RANSOM_CHARACTER_INTERACTION_PIETY = 0,
 	ASK_TO_RANSOM_CHARACTER_INTERACTION_PRESTIGE = 0,
 	ASK_TO_RANSOM_CHARACTER_INTERACTION_THRESHOLD_FOR_NO = 0,
 	ASK_TO_RANSOM_CHARACTER_INTERACTION_THRESHOLD_FOR_YES = 0,
+	ASK_TO_RANSOM_CHARACTER_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	ASK_TO_RANSOM_CHARACTER_INTERACTION_ENABLED = 1,						-- Should this action be used at all?		
 	
 	ASK_TO_JOIN_WAR_INTERACTION_MONEY = 0,
 	ASK_TO_JOIN_WAR_INTERACTION_PIETY = 0,
 	ASK_TO_JOIN_WAR_INTERACTION_PRESTIGE = 0,
 	ASK_TO_JOIN_WAR_INTERACTION_THRESHOLD_FOR_NO = 0,
 	ASK_TO_JOIN_WAR_INTERACTION_THRESHOLD_FOR_YES = 0,
+	ASK_TO_JOIN_WAR_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	ASK_TO_JOIN_WAR_INTERACTION_ENABLED = 1,						-- Should this action be used at all?		
 	
 	RELEASE_VASSAL_INTERACTION_MONEY = 0,
 	RELEASE_VASSAL_INTERACTION_PIETY = 0,
 	RELEASE_VASSAL_INTERACTION_PRESTIGE = 0,
 	RELEASE_VASSAL_INTERACTION_THRESHOLD_FOR_NO = 0,
 	RELEASE_VASSAL_INTERACTION_THRESHOLD_FOR_YES = 0,
+	RELEASE_VASSAL_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	RELEASE_VASSAL_INTERACTION_ENABLED = 1,						-- Should this action be used at all?		
 	
 	ASK_TO_EMBARGO_INTERACTION_MONEY = 0,
 	ASK_TO_EMBARGO_INTERACTION_PIETY = 0,
 	ASK_TO_EMBARGO_INTERACTION_PRESTIGE = 0,
 	ASK_TO_EMBARGO_INTERACTION_THRESHOLD_FOR_NO = 0,
 	ASK_TO_EMBARGO_INTERACTION_THRESHOLD_FOR_YES = 0,
+	ASK_TO_EMBARGO_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	ASK_TO_EMBARGO_INTERACTION_ENABLED = 1,						-- Should this action be used at all?		
 	
 	PREPARE_INVASION_INTERACTION_MONEY = 0,
 	PREPARE_INVASION_INTERACTION_PIETY = 0,
 	PREPARE_INVASION_INTERACTION_PRESTIGE = 500,
 	PREPARE_INVASION_INTERACTION_THRESHOLD_FOR_NO = 0,
 	PREPARE_INVASION_INTERACTION_THRESHOLD_FOR_YES = 0,
+	PREPARE_INVASION_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	PREPARE_INVASION_INTERACTION_ENABLED = 1,						-- Should this action be used at all?		
 	
 	MAKE_CONSORT_INTERACTION_MONEY = 0,
 	MAKE_CONSORT_INTERACTION_PIETY = 0,
 	MAKE_CONSORT_INTERACTION_PRESTIGE = 0,
 	MAKE_CONSORT_INTERACTION_THRESHOLD_FOR_NO = 0,
 	MAKE_CONSORT_INTERACTION_THRESHOLD_FOR_YES = 0,
+	MAKE_CONSORT_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	MAKE_CONSORT_INTERACTION_ENABLED = 1,						-- Should this action be used at all?		
 	
 	DISMISS_CONSORT_INTERACTION_MONEY = 0,
 	DISMISS_CONSORT_INTERACTION_PIETY = 0,
 	DISMISS_CONSORT_INTERACTION_PRESTIGE = 0,
 	DISMISS_CONSORT_INTERACTION_THRESHOLD_FOR_NO = 0,
 	DISMISS_CONSORT_INTERACTION_THRESHOLD_FOR_YES = 0,
+	DISMISS_CONSORT_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	DISMISS_CONSORT_INTERACTION_ENABLED = 1,						-- Should this action be used at all?		
 	
 	RETRACT_VASSAL_INTERACTION_MONEY = 0,
 	RETRACT_VASSAL_INTERACTION_PIETY = 0,
 	RETRACT_VASSAL_INTERACTION_PRESTIGE = 0,
 	RETRACT_VASSAL_INTERACTION_THRESHOLD_FOR_NO = 25,
 	RETRACT_VASSAL_INTERACTION_THRESHOLD_FOR_YES = 75,
+	RETRACT_VASSAL_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	RETRACT_VASSAL_INTERACTION_ENABLED = 1,						-- Should this action be used at all?		
 	
 	ASK_FOR_MONEY_INTERACTION_MONEY = 0,
 	ASK_FOR_MONEY_INTERACTION_PIETY = 100,
 	ASK_FOR_MONEY_INTERACTION_PRESTIGE = 0,
 	ASK_FOR_MONEY_INTERACTION_THRESHOLD_FOR_NO = 50,
 	ASK_FOR_MONEY_INTERACTION_THRESHOLD_FOR_YES = 150,
+	ASK_FOR_MONEY_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	ASK_FOR_MONEY_INTERACTION_ENABLED = 1,						-- Should this action be used at all?		
 	
 	ASK_FOR_CLAIM_INTERACTION_MONEY = 0,
 	ASK_FOR_CLAIM_INTERACTION_PIETY = 100,
 	ASK_FOR_CLAIM_INTERACTION_PRESTIGE = 0,
 	ASK_FOR_CLAIM_INTERACTION_THRESHOLD_FOR_NO = 50,
 	ASK_FOR_CLAIM_INTERACTION_THRESHOLD_FOR_YES = 150,
+	ASK_FOR_CLAIM_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	ASK_FOR_CLAIM_INTERACTION_ENABLED = 1,						-- Should this action be used at all?		
 	
 	ASK_FOR_CRUSADE_INTERACTION_MONEY = 0,
 	ASK_FOR_CRUSADE_INTERACTION_PIETY = 500,
 	ASK_FOR_CRUSADE_INTERACTION_PRESTIGE = 0,
 	ASK_FOR_CRUSADE_INTERACTION_THRESHOLD_FOR_NO = 50,
 	ASK_FOR_CRUSADE_INTERACTION_THRESHOLD_FOR_YES = 150,
+	ASK_FOR_CRUSADE_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	ASK_FOR_CRUSADE_INTERACTION_ENABLED = 1,						-- Should this action be used at all?		
 	
 	NOMINATE_BISHOP_TO_POPE_INTERACTION_MONEY = 50,
 	NOMINATE_BISHOP_TO_POPE_INTERACTION_PIETY = 30,
 	NOMINATE_BISHOP_TO_POPE_INTERACTION_PRESTIGE = 0,
 	NOMINATE_BISHOP_TO_POPE_INTERACTION_THRESHOLD_FOR_NO = 50,
-	NOMINATE_BISHOP_TO_POPE_INTERACTION_THRESHOLD_FOR_YES = 150
+	NOMINATE_BISHOP_TO_POPE_INTERACTION_THRESHOLD_FOR_YES = 150,
+	NOMINATE_BISHOP_TO_POPE_INTERACTION_MUST_HAVE_COST = 1,				-- Is having prestige/piety >= cost required for this action?
+	NOMINATE_BISHOP_TO_POPE_INTERACTION_ENABLED = 1,						-- Should this action be used at all?	
 },
 
 NCharacter = {
@@ -354,8 +463,8 @@ NCharacter = {
 	WRONG_GOV_FORM_TAX_MOD = -0.75,
 	CHANGE_SUCC_LAW_YEARS = 10,						-- Rulers must have reigned this long before they can change succession laws
 	CHANGE_AMBITION_YEARS = 3,						-- Delay between being able to pick a new ambition of plot after cancelling
-	PRESTIGE_FROM_DYNASTY_ON_BIRTH_DIV = 10, 		-- Newly born characters get the dynasty prestige of their mother and father divided by this as their starting prestige
-	PRESTIGE_FROM_DYNASTY_ON_MARRIAGE_DIV = 20, 	-- Characters get the dynasty prestige of the spouse divided by this on marriage
+	PRESTIGE_FROM_DYNASTY_ON_BIRTH_DIV = 5, 		-- Newly born characters get the dynasty prestige of their mother and father divided by this as their starting prestige
+	PRESTIGE_FROM_DYNASTY_ON_MARRIAGE_DIV = 10, 	-- Characters get the dynasty prestige of the spouse divided by this on marriage
 	NEED_GUARDIAN_AT_AGE = 6, 						-- The age at which children should be appointed a mentor/guardian
 	ASSIGN_ACTION_DAYS = 183, 						-- Days before a Councillor can be assigned a new job in a county
 	MARRIAGE_TIER_DIFF_PRESTIGE_MULT = 100, 		-- Prestige multiplier from marrying below or above your rank.
@@ -369,6 +478,7 @@ NCharacter = {
 	INBRED_DIVINE_BLOOD_TRAIT_CHANCE_FACTOR = 0.2,	-- Inbreeding: Multiplier to the base chance
 	LUNATIC_DIVINE_BLOOD_TRAIT_CHANCE_FACTOR = 1.0,	-- Inbreeding: Multiplier to the base chance
 	MAX_LED_FACTIONS = 2,							-- Maximum number of led Factions
+	MAX_JOINED_FACTIONS = 2,						-- Maximum number of Factions a character can be a member of (including led factions)
 	PORTRAIT_ADULT_MALE_AGE_THRESHOLD = 16,			-- Male child to adult age portrait switch
 	PORTRAIT_ADULT_FEMALE_AGE_THRESHOLD = 16,		-- Female child to adult age portrait switch
 	PORTRAIT_MID_AGE_THRESHOLD = 30,				-- Middle age switch for character portraits
@@ -377,6 +487,10 @@ NCharacter = {
 	AGE_OF_ADULTHOOD_FEMALE = 16,					-- Female can rule at this age.
 	AGE_OF_MARRIAGE_MALE = 16,						-- Male allowed to marry at this age.
 	AGE_OF_MARRIAGE_FEMALE = 16,					-- Female allowed to marry at this age.
+	AGE_YOUNG = 20,									-- Non-child characters below this age have the 'teen' static modifier applied
+	AGE_ADULT = 30,									-- Non-child characters below this age have the 'young' static modifier applied
+	AGE_OLD = 50,									-- Non-child characters below this age have the 'adult' static modifier applied
+	AGE_VERY_OLD = 70,								-- Non-child characters below this age have the 'old' static modifier applied
 	MAX_CHILD_BIRTH_AGE = 45,						-- Female menopause age.
 	CHILD_BIRTH_TO_PREGNANCY_WAIT = 3,
 	BASE_NR_OF_CHILDREN_PER_COUPLE = 2,
@@ -392,15 +506,16 @@ NCharacter = {
 	NATURAL_DEATH_CHANCE_AGE_30 = 20,				-- Natural deaths per decade out of 10000 people: Age 30-39
 	NATURAL_DEATH_CHANCE_AGE_40 = 51,				-- Natural deaths per decade out of 10000 people: Age 40-49
 	NATURAL_DEATH_CHANCE_AGE_50 = 100,				-- Natural deaths per decade out of 10000 people: Age 50-59
-	NATURAL_DEATH_CHANCE_AGE_60 = 320,				-- Natural deaths per decade out of 10000 people: Age 60-69
-	NATURAL_DEATH_CHANCE_AGE_70 = 734,				-- Natural deaths per decade out of 10000 people: Age 70-79
-	NATURAL_DEATH_CHANCE_AGE_80 = 1728,				-- Natural deaths per decade out of 10000 people: Age 80-90
-	NATURAL_DEATH_CHANCE_AGE_90 = 4000,				-- Natural deaths per decade out of 10000 people: Age 90-99
-	NATURAL_DEATH_CHANCE_AGE_100 = 8160,			-- Natural deaths per decade out of 10000 people: Age 100+
+	NATURAL_DEATH_CHANCE_AGE_60 = 400,				-- Natural deaths per decade out of 10000 people: Age 60-69
+	NATURAL_DEATH_CHANCE_AGE_70 = 1400,				-- Natural deaths per decade out of 10000 people: Age 70-79
+	NATURAL_DEATH_CHANCE_AGE_80 = 3500,				-- Natural deaths per decade out of 10000 people: Age 80-90
+	NATURAL_DEATH_CHANCE_AGE_90 = 7000,				-- Natural deaths per decade out of 10000 people: Age 90-99
+	NATURAL_DEATH_CHANCE_AGE_100 = 9000,			-- Natural deaths per decade out of 10000 people: Age 100+
 	FERTILITY_BASE_MULT = 0.50,						-- Base fertility multiplier to adjust the base chance of impregnation
-	SECONDARY_SPOUSE_FERTILITY_MULT = 0.5,				-- Applied to fertility of secondary spouses and concubines
-	MATERNITY_DEATH_CHANCE = 0.02,					-- Chance of the mother dying in labor
-	INFANT_DEATH_CHANCE = 0.00						-- Chance of stillbirth / death at birth
+	SECONDARY_SPOUSE_FERTILITY_MULT = 0.50,			-- Applied to fertility of secondary spouses and concubines
+	NOT_SPOUSE_FERTILITY_MULT = 0.25,				-- Applied to fertility when the two characters are not married
+	MARRIED_LOVERS_FERTILITY_MULT = 1.5,			-- Applied to fertility when lovers are married
+	INFANT_DEATH_CHANCE = 0.0,						-- Chance of stillbirth / death at birth
 },
 
 NTitle = {
@@ -536,7 +651,7 @@ NReligion = {
 	ELECTOR_TITLE_PIETY_FACTOR = 0.1,
 	ELECTOR_TITLE_AGE_FACTOR = 2,
 	ELECTOR_TITLE_AT_CAPITAL_FACTOR = 100,
-	ELECTOR_FAMOUS_DYNASTY_FACTOR = 1,
+	ELECTOR_FAMOUS_DYNASTY_FACTOR = 0.025,
 	ELECTOR_TRAITS_FACTOR = 1.0,					-- Effect of personality traits that the church likes
 	HERESY_TAKEOVER_PROVINCES = 5					-- The number of provinces a heresy needs MORE than the current norm for it to become the new Orthodoxy
 },
@@ -574,10 +689,10 @@ NEconomy = {
 	PATRICIAN_INHERITANCE_FROM_RELATIVE_MULT = 0.5,	-- When a Patrician inherits the wealth of a non-Patrician relative, this multiplier determines the part he actually gets
 	PATRICIAN_GOLD_TO_MONTHLY_PRESTIGE = 0.0005,	-- Prestige that Patricians get each month from their treasury (CFixedPoint64 to support such small numbers)
 	PATRICIAN_CITY_TAX_MULT = 0.5,					-- Patricians don't pay normal City Tax to their liege... (CFixedPoint64)
-	OVER_MAX_DEMESNE_TAX_PENALTY = 0.25,			-- Percent penalty per county over the limit
+	OVER_MAX_DEMESNE_TAX_PENALTY = 0.20,			-- Percent penalty per county over the limit
 	TAX_TO_LOOT_MULTIPLIER = 1.0,					-- Lootable gold per tax 
 	FORT_LOOT_DEFENCE_MULTIPLIER = 4.0,				-- Loot protected gold per fortlevel
-	LOOTABLE_GOLD_REGROWTH = 0.025,					-- Percent of max lootable gold that regrows every month
+	LOOTABLE_GOLD_REGROWTH = 0.015,					-- Percent of max lootable gold that regrows every month
 	LOOT_PERCENT_PER_LOOTTICK = 0.04,				-- Percent of max lootable gold that is looted each loot tick
 	TPC_TO_LOOT_MULTIPLIER = 0.1,					-- Max loot in a navy is max troops * this
 	LOOTER_SHIP_MAINT_MULT = 0.1,					-- Religions that have looting have lower ship maintenance costs
@@ -588,19 +703,12 @@ NEconomy = {
 },
 
 NDecadence = {
-	BASE_EMPEROR_GAIN = 0.1,
-	BASE_KING_GAIN = 0.08,
-	BASE_DUKE_GAIN = 0.06,
-	BASE_COUNT_GAIN = 0.04,
-	BASE_BARON_GAIN = 0.02,
-	BASE_UNLANDED_GAIN = 0.01,
-	EMPEROR_HOLDING_REDUCTION = -0.1,
-	KING_HOLDING_REDUCTION = -0.08,
-	DUKE_HOLDING_REDUCTION = -0.06,
-	COUNT_HOLDING_REDUCTION = -0.04,
-	BARON_HOLDING_REDUCTION = -0.02,
-	HAS_JOB_REDUCTION = -0.2,
-	ON_JOB_REDUCTION = -0.2,
+	BASE_EMPEROR_GAIN = 0.32,
+	BASE_KING_GAIN = 0.24,
+	BASE_DUKE_GAIN = 0.16,
+	BASE_COUNT_GAIN = 0.08,
+	BASE_BARON_GAIN = 0.04,
+	BASE_UNLANDED_GAIN = 0.02,
 	REALM_SIZE_MULTIPLIER = 0.005,
 	DEMESNE_FRACTION_MULT_POS = 0.5,
 	DEMESNE_FRACTION_MULT_NEG = -0.8,
@@ -651,7 +759,7 @@ NMilitary = {
 	MERC_REINFORCE_RATE_WHEN_IDLE = 0.03,			-- The rate at which mercenaries and holy orders reinforce when not hired
 	GARRISON_REINFORCE_RATE_MULTIPLIER = 5,			-- The rate at which the garrison reinforce
 	LEVY_RAISED_REINFORCE_RATE_MULTIPLIER = 0.5,	-- The rate at which the garrison/levy reinforce when the levy is raised
-	BATTLE_PIETY_MULTIPLIER = 1.5,					-- Piety gain/loss multiplier. This is based on the prestige value, so a value of 1 gives a leader as much piety as he gains prestige from combat
+	BATTLE_PIETY_MULTIPLIER = 0.5,					-- Piety gain/loss multiplier. This is based on the prestige value, so a value of 1 gives a leader as much piety as he gains prestige from combat
 	SIEGE_PIETY_MULTIPLIER = 0.2,					-- Piety gain/loss multiplier for sieges
 	SIEGE_WEALTH_MULTIPLIER = 1,					-- Wealth gain/loss multiplier for sieges
 	CAPITAL_WARSCORE_MULTIPLIER = 1,				-- Warscore multiplier for capital(this is scaled with SETTLEMENT_WARSCORE_MULTIPLIER)
@@ -790,15 +898,15 @@ NMilitary = {
 	ARCHERS_PHASE_PURSUE_DEFENSE = 3,
 	ARCHERS_GRAPHICAL_FACTOR = 1,
 	
-	HORSE_ARCHERS_MORALE = 80,
-	HORSE_ARCHERS_MAINTENANCE = 8,
-	HORSE_ARCHERS_PHASE_SKIRMISH_ATTACK = .5,
-	HORSE_ARCHERS_PHASE_MELEE_ATTACK = 12,
-	HORSE_ARCHERS_PHASE_PURSUE_ATTACK = 15,
-	HORSE_ARCHERS_PHASE_SKIRMISH_DEFENSE = 10,
-	HORSE_ARCHERS_PHASE_MELEE_DEFENSE = 7,
-	HORSE_ARCHERS_PHASE_PURSUE_DEFENSE = 7,
-	HORSE_ARCHERS_GRAPHICAL_FACTOR = 1.5,
+	SPECIAL_TROOPS_MORALE = 80,
+	SPECIAL_TROOPS_MAINTENANCE = 8,
+	SPECIAL_TROOPS_PHASE_SKIRMISH_ATTACK = .5,
+	SPECIAL_TROOPS_PHASE_MELEE_ATTACK = 12,
+	SPECIAL_TROOPS_PHASE_PURSUE_ATTACK = 15,
+	SPECIAL_TROOPS_PHASE_SKIRMISH_DEFENSE = 10,
+	SPECIAL_TROOPS_PHASE_MELEE_DEFENSE = 7,
+	SPECIAL_TROOPS_PHASE_PURSUE_DEFENSE = 7,
+	SPECIAL_TROOPS_GRAPHICAL_FACTOR = 1.5,
 
 	GALLEYS_MORALE = 1,
 	GALLEYS_MAINTENANCE = 300,
@@ -820,6 +928,7 @@ NMilitary = {
 	BOTTLENECK_CHANCE_MAX = 100,
 	BOTTLENECK_CHOKE_TROOP_CAP = 300,		-- THIS IS SPARTAAAAAAAAA!!!!
 	
+	REBEL_LEADER_MINIMUM_LIEGE_LEVY_MULT = 1, 	-- Leader of a civil war will always get at least this multiplier of levies from fellow rebels
 	CAPITAL_COUNTY_VASSAL_COUNT_LEVY_MULT = 1,	-- Used instead of CAPITAL_COUNTY_LEVY_MULT for vassal counts
 	CAPITAL_COUNTY_VASSAL_LEVY_MULT = 1.25,		-- Used instead of CAPITAL_COUNTY_LEVY_MULT for non-count vassals
 	CAPITAL_COUNTY_LEVY_MULT = 1.5,				-- Multiplier to direct levies in the capital county
@@ -832,7 +941,13 @@ NMilitary = {
 	CAPITAL_EMPIRE_LEVY_MULT = 1,
 	CAPITAL_EMPIRE_LIEGE_LEVY_MULT = 0.35,
 	OUTSIDE_LEVY_MULT = 1,						-- Multiplier to direct levies outside all capital regions
-	OUTSIDE_LIEGE_LEVY_MULT = 0.25				-- Multiplier to liege levies outside all capital regions
+	OUTSIDE_LIEGE_LEVY_MULT = 0.25,				-- Multiplier to liege levies outside all capital regions
+	
+	SUPPLY_CAPACITY = 31,						-- Amount of days of worth supply that a unit can hold.
+	OUT_OF_SUPPLY_ATTRITION_BASE = 0.001,		-- The attrition a unit that is out of supply takes.
+	OUT_OF_SUPPLY_ATTRITION_INCREASE = 0.0001,	-- The increase per tick of attrition a unit that is out of supply takes.
+	OUT_OF_SUPPLY_ATTRITION_TICK = 1,			-- The amount of days per tick for increase of attrition.
+	FORAGING_PILLAGE_MODIFIER = 0.15			-- Modifies how much loot the army takes when re-supplying itself in enemy territory},
 },
 
 NTechnology = {
@@ -870,6 +985,12 @@ NTechnology = {
 	END_MIL_MUSLIM      = 4.5,
 	END_ECO_MUSLIM      = 4.5,
 	END_CUL_MUSLIM      = 4.5,
+	START_MIL_INDIAN    = 0.5,
+	START_ECO_INDIAN    = 1.0,
+	START_CUL_INDIAN    = 1.0,
+	END_MIL_INDIAN   		= 4.0,
+	END_ECO_INDIAN    	= 4.0,
+	END_CUL_INDIAN    	= 4.0,
 	START_MIL_OTHER     = 0.1,
 	START_ECO_OTHER     = 0.1,
 	START_CUL_OTHER     = 0.1,

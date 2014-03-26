@@ -3,6 +3,9 @@ political_group = {
 	graphical_culture = westerngfx
 	playable = yes
 	
+	ai_convert_same_group = 2
+	ai_convert_other_group = 1
+	
 	terran_federalist = {
 		graphical_culture = westerngfx
 		icon = 1
@@ -13,6 +16,7 @@ political_group = {
 		
 		# Defaults to the Pilgrimage
 		scripture_name = THE_LAW
+		piety_name = CREDIBILITY
 		god_names = { GOD_GOD GOD_HOLY_TERRA GOD_THE_LORD }
 		# Actually randomly-generated names for military operations and science projects
 		evil_god_names = {
@@ -46,6 +50,7 @@ political_group = {
 		
 		# Defaults to the Pilgrimage
 		scripture_name = THE_LAW
+		piety_name = CREDIBILITY
 		god_names = { GOD_GOD GOD_HOLY_TERRA GOD_THE_LORD }
 		evil_god_names = {
 			OP_ALACRITY OP_CHAPTER OP_CORKSCREW OP_DEADLIGHT OP_DERVISH OP_DYNAMO OP_MATADOR OP_MERIDIAN OP_OVERLORD OP_SABRE OP_VICTORY # Generic operation names
@@ -78,6 +83,7 @@ political_group = {
 		
 		# Defaults to the Pilgrimage
 		scripture_name = THE_LAW
+		piety_name = LEGITIMACY
 		god_names = { GOD_GOD GOD_HOLY_TERRA GOD_THE_LORD }
 		evil_god_names = {
 			OP_ALACRITY OP_CHAPTER OP_CORKSCREW OP_DEADLIGHT OP_DERVISH OP_DYNAMO OP_MATADOR OP_MERIDIAN OP_OVERLORD OP_SABRE OP_VICTORY # Generic operation names
@@ -108,6 +114,7 @@ political_group = {
 		
 		# Defaults to the Pilgrimage
 		scripture_name = THE_LAW
+		piety_name = CREDIBILITY
 		god_names = { GOD_GOD GOD_THE_LORD }
 		evil_god_names = {
 			OP_ALACRITY OP_CHAPTER OP_CORKSCREW OP_DEADLIGHT OP_DERVISH OP_DYNAMO OP_MATADOR OP_MERIDIAN OP_OVERLORD OP_SABRE OP_VICTORY # Generic operation names
@@ -140,6 +147,7 @@ political_group = {
 		
 		# Defaults to the Pilgrimage
 		scripture_name = THE_LAW
+		piety_name = LEGITIMACY
 		god_names = { GOD_GOD GOD_THE_LORD }
 		evil_god_names = {
 			OP_ALACRITY OP_CHAPTER OP_CORKSCREW OP_DEADLIGHT OP_DERVISH OP_DYNAMO OP_MATADOR OP_MERIDIAN OP_OVERLORD OP_SABRE OP_VICTORY # Generic operation names
@@ -171,6 +179,7 @@ political_group = {
 		
 		# Defaults to the Pilgrimage
 		scripture_name = THE_LAW
+		piety_name = CREDIBILITY
 		god_names = { GOD_THE_GREATER_GOOD GOD_THE_CAUSE }
 		evil_god_names = {
 			OP_ALACRITY OP_CHAPTER OP_CORKSCREW OP_DEADLIGHT OP_DERVISH OP_DYNAMO OP_MATADOR OP_MERIDIAN OP_OVERLORD OP_SABRE OP_VICTORY # Generic operation names
@@ -201,6 +210,7 @@ political_group = {
 		
 		# Defaults to the Pilgrimage
 		scripture_name = THE_LAW
+		piety_name = CREDIBILITY
 		god_names = { GOD_THE_GREATER_GOOD GOD_THE_CAUSE }
 		evil_god_names = {
 			OP_ALACRITY OP_CHAPTER OP_CORKSCREW OP_DEADLIGHT OP_DERVISH OP_DYNAMO OP_MATADOR OP_MERIDIAN OP_OVERLORD OP_SABRE OP_VICTORY # Generic operation names
@@ -226,6 +236,9 @@ religious_group = {
 	has_coa_on_barony_only = yes
 	graphical_culture = muslimgfx
 	playable = yes
+	
+	ai_convert_same_group = 2
+	ai_convert_other_group = 1
 	
 	orthodox = {
 		graphical_culture = muslimgfx
@@ -439,6 +452,9 @@ transhumanist_group = {
 	graphical_culture = westerngfx
 	playable = yes
 	
+	ai_convert_same_group = 2
+	ai_convert_other_group = 1
+	
 	cyberneticist = {
 		graphical_culture = westerngfx
 		icon = 3
@@ -447,6 +463,7 @@ transhumanist_group = {
 		color = { 0.5 0.5 0.5 }
 		
 		scripture_name = THE_LAW
+		piety_name = RESPECT
 		god_names = { THE_CAUSE }
 		evil_god_names = {
 			OP_ALACRITY OP_CHAPTER OP_CORKSCREW OP_DEADLIGHT OP_DERVISH OP_DYNAMO OP_MATADOR OP_MERIDIAN OP_OVERLORD OP_SABRE OP_VICTORY # Generic operation names
@@ -546,6 +563,7 @@ transhumanist_group = {
 		}
 		
 		scripture_name = THE_LAW
+		piety_name = RESPECT
 		god_names = { THE_CAUSE }
 		
 		investiture = yes
@@ -573,6 +591,9 @@ outlaw_group = {
 	graphical_culture = norsegfx
 	playable = yes
 	
+	ai_convert_same_group = 0
+	ai_convert_other_group = 0
+	
 	space_pirate = {
 		graphical_culture = norsegfx
 		icon = 4
@@ -582,6 +603,7 @@ outlaw_group = {
 		
 		# Default to the Pilgrimage
 		scripture_name = THE_SCRIPTURES
+		piety_name = RESPECT
 		god_names = { GOD_GOD GOD_HOLY_TERRA GOD_THE_LORD }
 		evil_god_names = {
 			OP_ALACRITY OP_CHAPTER OP_CORKSCREW OP_DEADLIGHT OP_DERVISH OP_DYNAMO OP_MATADOR OP_MERIDIAN OP_OVERLORD OP_SABRE OP_VICTORY # Generic operation names
