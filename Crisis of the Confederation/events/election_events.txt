@@ -1,0 +1,1520 @@
+namespace = laws
+
+###################
+# Election Events #
+###################
+# Event ID Index
+# ACTUAL ELECTION MECHANICS
+# laws.100	Main Election Event
+# laws.101	Start Federal Election (call for challenger from incumbent)
+# laws.102	Start Popular Election ( call for challenger from incumbent)
+# laws.103	Resolve Federal Election
+# laws.104	Resolve Popular Election
+# laws.105	Inform Incumbent of Lost Election
+# laws.106	Inform Incumbent of Re-Election
+# laws.107	Inform Realm Characters of Elected Challenger
+# laws.108	Inform Realm Characters of Re-Election
+# laws.109	Character Votes in Election
+# laws.110	Province Votes in Election
+#
+# REGULARLY SCHEDULED ELECTIONS
+# laws.120	Start Election Timer
+# laws.121	Remove Unneeded Election Timer
+# laws.122	Term Expires, Call New Elections
+# laws.123	Refused to Hold Election - Inform Vassals
+#
+# MERCHANT REPUBLIC BUG WORKAROUNDS
+# laws.150	Abdicate (and generate a temporary male relative if necessary)
+# laws.155	On-death trigger for doges with female heirs
+
+# Handling individual elections
+character_event = { # An election has been called on your titles for some reason
+	id = laws.100 # Election event
+	desc = "EVTDESCLAWS100"
+	is_triggered_only = yes
+	
+	option = { # Hold Imperial elections
+		trigger = { primary_title = { tier = emperor } }
+		name = "EVTOPTALAWS100"
+		any_demesne_title = {
+			limit = {
+				tier = emperor
+				has_law = succ_patrician_elective
+			}
+			hold_election = yes
+		}
+		# Non-patrician-elective merchant republics
+		# All elections need to be done simultaneously and have the same outcome,
+		# bsed on the primary title's succession law. Otherwise the republic will
+		# get broken.
+		if = {
+			limit = {
+				is_merchant_republic = yes
+				primary_title = {
+					OR = {
+						has_law = succ_feudal_elective
+						has_law = succ_tanistry
+					}
+				}
+			}
+			primary_title = { current_heir = { character_event = { id = laws.101 tooltip = "EVTTOOLTIPLAWS101" } } } # Begin federal election
+		}
+		if = {
+			limit = {
+				is_merchant_republic = yes
+				primary_title = { has_law = succ_open_elective }
+			}
+			primary_title = { current_heir = { character_event = { id = laws.102 tooltip = "EVTTOOLTIPLAWS102" } } } # Begin popular election
+		}
+		# Non merchant republics
+		# These are free to hold elections for each top-level title individually
+		if = {
+			limit = { is_merchant_republic = no }
+			any_demesne_title = {
+				limit = {
+					tier = emperor
+					OR = {
+						has_law = succ_feudal_elective
+						has_law = succ_tanistry
+					}
+				}
+				current_heir = { character_event = { id = laws.101 tooltip = "EVTTOOLTIPLAWS101" } } # Begin federal election
+			}
+			any_demesne_title = {
+				limit = {
+					tier = emperor
+					has_law = succ_open_elective
+				}
+				current_heir = { character_event = { id = laws.102 tooltip = "EVTTOOLTIPLAWS102" } } # Begin popular election
+			}
+		}
+	}
+	option = { # Hold regional elections
+		trigger = { primary_title = { tier = king } }
+		name = "EVTOPTALAWS100"
+		any_demesne_title = {
+			limit = {
+				tier = king
+				has_law = succ_patrician_elective
+			}
+			hold_election = yes
+		}
+		# Non-patrician-elective merchant republics
+		# All elections need to be done simultaneously and have the same outcome,
+		# bsed on the primary title's succession law. Otherwise the republic will
+		# get broken.
+		if = {
+			limit = {
+				is_merchant_republic = yes
+				primary_title = {
+					OR = {
+						has_law = succ_feudal_elective
+						has_law = succ_tanistry
+					}
+				}
+			}
+			primary_title = { current_heir = { character_event = { id = laws.101 tooltip = "EVTTOOLTIPLAWS101" } } } # Begin federal election
+		}
+		if = {
+			limit = {
+				is_merchant_republic = yes
+				primary_title = { has_law = succ_open_elective }
+			}
+			primary_title = { current_heir = { character_event = { id = laws.102 tooltip = "EVTTOOLTIPLAWS102" } } } # Begin popular election
+		}
+		# Non merchant republics
+		# These are free to hold elections for each top-level title individually
+		if = {
+			limit = { is_merchant_republic = no }
+			limit = { is_merchant_republic = no }
+			any_demesne_title = {
+				limit = {
+					tier = king
+					OR = {
+						has_law = succ_feudal_elective
+						has_law = succ_tanistry
+					}
+				}
+				current_heir = { character_event = { id = laws.101 tooltip = "EVTTOOLTIPLAWS101" } } # Begin federal election
+			}
+			any_demesne_title = {
+				limit = {
+					tier = king
+					has_law = succ_open_elective
+				}
+				current_heir = { character_event = { id = laws.102 tooltip = "EVTTOOLTIPLAWS102" } } # Begin popular election
+			}
+		}
+	}
+	option = { # Hold sector elections
+		trigger = { primary_title = { tier = duke } }
+		name = "EVTOPTALAWS100"
+		any_demesne_title = {
+			limit = {
+				tier = duke
+				has_law = succ_patrician_elective
+			}
+			hold_election = yes
+		}
+		# Non-patrician-elective merchant republics
+		# All elections need to be done simultaneously and have the same outcome,
+		# bsed on the primary title's succession law. Otherwise the republic will
+		# get broken.
+		if = {
+			limit = {
+				is_merchant_republic = yes
+				primary_title = {
+					OR = {
+						has_law = succ_feudal_elective
+						has_law = succ_tanistry
+					}
+				}
+			}
+			primary_title = { current_heir = { character_event = { id = laws.101 tooltip = "EVTTOOLTIPLAWS101" } } } # Begin federal election
+		}
+		if = {
+			limit = {
+				is_merchant_republic = yes
+				primary_title = { has_law = succ_open_elective }
+			}
+			primary_title = { current_heir = { character_event = { id = laws.102 tooltip = "EVTTOOLTIPLAWS102" } } } # Begin popular election
+		}
+		# Non merchant republics
+		# These are free to hold elections for each top-level title individually
+		if = {
+			limit = { is_merchant_republic = no }
+			any_demesne_title = {
+				limit = {
+					tier = duke
+					OR = {
+						has_law = succ_feudal_elective
+						has_law = succ_tanistry
+					}
+				}
+				current_heir = { character_event = { id = laws.101 tooltip = "EVTTOOLTIPLAWS101" } } # Begin federal election
+			}
+			any_demesne_title = {
+				limit = {
+					tier = duke
+					has_law = succ_open_elective
+				}
+				current_heir = { character_event = { id = laws.102 tooltip = "EVTTOOLTIPLAWS102" } } # Begin popular election
+			}
+		}
+	}
+	option = { # Hold system elections
+		trigger = { primary_title = { tier = count } }
+		name = "EVTOPTALAWS100"
+		any_demesne_title = {
+			limit = {
+				tier = count
+				OR = {
+					has_law = succ_feudal_elective
+					has_law = succ_tanistry
+				}
+			}
+			current_heir = { character_event = { id = laws.101 tooltip = "EVTTOOLTIPLAWS101" } } # Begin federal election
+		}
+		any_demesne_title = {
+			limit = {
+				tier = count
+				has_law = succ_open_elective
+			}
+			current_heir = { character_event = { id = laws.102 tooltip = "EVTTOOLTIPLAWS102" } } # Begin popular election
+		}
+	}
+	option = { # Hold planet elections
+		trigger = { primary_title = { tier = baron } }
+		name = "EVTOPTALAWS100"
+		any_demesne_title = {
+			limit = {
+				tier = baron
+				has_law = succ_open_elective
+			}
+			current_heir = { character_event = { id = laws.102 tooltip = "EVTTOOLTIPLAWS102" } } # Begin popular election
+		}
+	}
+}
+
+# FEDERAL AND POPULAR ELECTIONS
+character_event = { # START FEDERAL ELECTION
+	id = laws.101
+	desc = "EVTDESCLAWS101"
+	picture = GFX_evt_speech
+	is_triggered_only = yes
+	
+	# At least in theory, prevent this from firing multiple times at once
+	trigger = { NOT = { has_character_flag = flag_federal_election_throttle } }
+	immediate = { set_character_flag = flag_federal_election_throttle }
+	
+	option = {
+		trigger = { FROM = { is_merchant_republic = no } } # Federal elections by region
+		name = "EVTOPTACONFIRM"
+		# Set initial federal vote count for this character
+		hidden_tooltip = { set_variable = { which = "federal_vote_count" value = 0 } }
+		
+		# Ask all electors for their vote
+		FROM = {
+			any_demesne_title = {
+				limit = {
+					is_primary_holder_title_tier = yes
+					OR = {
+						has_law = succ_feudal_elective
+						has_law = succ_tanistry
+					}
+					current_heir = { character = ROOT }
+				}
+				custom_tooltip = {
+					text = "HOLDELECTION"
+					hidden_tooltip = { any_de_jure_vassal_title = {
+							holder_scope = {
+								limit = { liege = { character = FROM } }
+								character_event = { id = laws.109 } # Get character's vote
+							}
+						}
+					}
+				}
+			}
+		}
+		# Get federal election results in two ticks
+		hidden_tooltip = { character_event = { id = laws.103 days = 2 } }
+	}
+	option = {
+		trigger = { FROM = { is_merchant_republic = yes } } # Realm-wide federal elections
+		name = "EVTOPTACONFIRM"
+		# Set initial federal vote count for this character
+		hidden_tooltip = { set_variable = { which = "federal_vote_count" value = 0 } }
+		
+		# Ask all electors for their vote
+		FROM = {
+			any_demesne_title = {
+				limit = {
+					is_primary_holder_title_tier = yes
+					OR = {
+						has_law = succ_feudal_elective
+						has_law = succ_tanistry
+					}
+					current_heir = { character = ROOT }
+				}
+				custom_tooltip = { text = "HOLDELECTION" }
+			}
+			hidden_tooltip = {
+				any_vassal = {
+					limit = {
+						# Must be one step blow liege
+						OR = {
+							primary_title = { tier = king }
+							AND = {
+								primary_title = { tier = duke }
+								liege = { primary_title = { tier = king } }
+							}
+							AND = {
+								primary_title = { tier = count }
+								liege = { primary_title = { tier = duke } }
+							}
+							liege = { primary_title = { tier = count } }
+						}
+					}
+				}
+				character_event = { id = laws.109 } # Get character's vote
+			}
+		}
+		# Get federal election results in two ticks
+		hidden_tooltip = { character_event = { id = laws.103 days = 2 } }
+	}
+}
+character_event = {
+	id = laws.102 # START POPULAR ELECTION
+	desc = "EVTDESCLAWS102"
+	picture = GFX_evt_speech
+	is_triggered_only = yes
+	
+	# At least in theory, prevent this from firing multiple times at once
+	trigger = { NOT = { has_character_flag = flag_popular_election_throttle } }
+	immediate = { set_character_flag = flag_popular_election_throttle }
+	
+	option = {
+		trigger = { FROM = { is_merchant_republic = no } } # Popular-elections-by-region
+		name = "EVTOPTACONFIRM"
+		# Set initial popular vote count for this character
+		hidden_tooltip = { set_variable = { which = "popular_vote_count" value = 0 } }
+		
+		# Ask all citizens for their vote
+		FROM = {
+			any_demesne_title = {
+				limit = {
+					is_primary_holder_title_tier = yes
+					has_law = succ_open_elective
+					current_heir = { character = ROOT }
+				}
+				custom_tooltip = { text = "HOLDPOPULARELECTION" }
+			}
+			# Get all provinces within the relevant de jure realms
+			hidden_tooltip = {
+				any_realm_province = {
+					limit = {
+						any_province_lord = { character = FROM }
+						OR = {
+							empire = {
+								holder = FROM
+								is_primary_holder_title_tier = yes
+								has_law = succ_open_elective
+								current_heir = { character = ROOT }
+							}
+							kingdom = {
+								holder = FROM
+								is_primary_holder_title_tier = yes
+								has_law = succ_open_elective
+								current_heir = { character = ROOT }
+							}
+							duchy = {
+								holder = FROM
+								is_primary_holder_title_tier = yes
+								has_law = succ_open_elective
+								current_heir = { character = ROOT }
+							}
+							county = {
+								holder = FROM
+								is_primary_holder_title_tier = yes
+								has_law = succ_open_elective
+								current_heir = { character = ROOT }
+							}
+						}
+					}
+					province_event = { id = laws.110 }
+					any_province_character = {
+						limit = { is_liege_or_above = FROM }
+						character_event = { id = laws.109 }
+					}
+				}
+			}
+		}
+		hidden_tooltip = { character_event = { id = laws.104 days = 2 } }
+	}
+	
+	option = {
+		trigger = { FROM = { is_merchant_republic = yes } } # Popular election for entire realm
+		# Set initial popular vote count for this character
+		name = "EVTOPTCONFIRM"
+		hidden_tooltip = { set_variable = { which = "popular_vote_count" value = 0 } }
+		FROM = {
+			primary_title = { custom_tooltip = { text = "HOLDELECTION" } }
+			hidden_tooltip = {
+				any_realm_province = {
+					limit = { any_province_lord = { character = FROM } }
+					province_event = { id = laws.110 }
+					any_province_character = {
+						limit = { is_liege_or_above = FROM }
+						character_event = { id = laws.109 }
+					}
+				}
+			}
+		}
+		# Check election results in two ticks
+		hidden_tooltip = { character_event = { id = laws.104 days = 2 } }
+	}
+}
+
+# Resolve federal election
+character_event = {
+	id = laws.103
+	desc = "EVTDESCLAWS103"
+	picture = GFX_evt_speech
+	is_triggered_only = yes
+	
+	immediate = { clr_character_flag = flag_federal_election_throttle }
+	
+	option = {
+		# Glorious Victory!
+		trigger = { check_variable = { which = "federal_vote_count" value = 1 } }
+		name = "EVTOPTALAWS103"
+		if = {
+			limit = { FROM = { FROM = { is_merchant_republic = yes } } }
+			FROM = {
+				FROM = {
+					# Inform incumbent that they lost and must transfer control
+					character_event = { id = laws.150 tooltip = "EVTTOOLTIPLAWS150" }
+					character_event = { id = laws.105 tooltip = "EVTTOOLTIPLAWS105" }
+					hidden_tooltip = {
+						any_realm_character = {
+							limit = { is_liege_or_above = FROMFROM }
+							character_event = { id = laws.107 } # Inform voters
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = { FROM = { FROM = { is_merchant_republic = no } } }
+			FROM = {
+				FROM = {
+					character_event = { id = laws.105 tooltip = "EVTTOOLTIPLAWS105" } # Inform incumbent they lost
+					hidden_tooltip = {
+						any_realm_character = {
+							limit = { is_liege_or_above = FROMFROM }
+							character_event = { id = laws.107 } # Inform voters
+						}
+					}
+					any_demesne_title = {
+						limit = {
+							OR = {
+								# Actual elected title
+								AND = {
+									is_primary_holder_title_tier = yes
+									OR = {
+										has_law = succ_feudal_elective
+										has_law = succ_tanistry
+									}
+									current_heir = { character = ROOT }
+								}
+								# Kingdom federal capital district
+								holder_scope = {
+									any_demesne_province = {
+										has_province_modifier = kingdom_capital_system
+										kingdom = {
+											is_primary_holder_title_tier = yes
+											OR = {
+												has_law = succ_feudal_elective
+												has_law = succ_tanistry
+											}
+											current_heir = { character = ROOT }
+										}
+										OR = {
+											county = { title = PREVPREVPREV }
+											duchy = { title = PREVPREVPREV }
+										}
+									}
+								}
+								# Empire federal capital district
+								holder_scope = {
+									any_demesne_province = {
+										has_province_modifier = empire_capital_system
+										empire = {
+											is_primary_holder_title_tier = yes
+											OR = {
+												has_law = succ_feudal_elective
+												has_law = succ_tanistry
+											}
+											current_heir = { character = ROOT }
+										}
+										OR = {
+											county = { title = PREVPREVPREV }
+											duchy = { title = PREVPREVPREV }
+											kingdom = { title = PREVPREVPREV }
+										}
+									}
+								}
+							}
+						}
+						grant_title = ROOT # Give title to ROOT immediately
+					}
+				}
+			}
+		}
+	}
+	option = {
+		# Crushing Defeat!
+		trigger = { NOT = { check_variable = { which = "federal_vote_count" value = 1 } } }
+		name = "EVTOPTBLAWS103"
+		if = {
+			limit = { check_variable = { which = "federal_vote_count" value = -1 } }
+			FROM = {
+				FROM = {
+					any_demesne_title = {
+						limit = {
+							is_primary_holder_title_tier = yes
+							OR = {
+								has_law = succ_feudal_elective
+								has_law = succ_tanistry
+							}
+							current_heir = { character = ROOT }
+						}
+						add_weak_claim = ROOT
+					}
+				}
+			}
+		}
+		FROM = { FROM = { character_event = { id = laws.106 tooltip = "EVTTOOLTIPLAWS106" } } } # Inform incumbent they won
+	}
+}
+
+# Resolve popular election
+character_event = {
+	id = laws.104
+	desc = "EVTDESCLAWS104"
+	picture = GFX_evt_speech
+	is_triggered_only = yes
+	
+	immediate = { clr_character_flag = flag_popular_election_throttle }
+	
+	option = {
+		# Glorious Victory!
+		trigger = { check_variable = { which = "popular_vote_count" value = 1 } }
+		name = "EVTOPTALAWS104"
+		if = {
+			limit = { FROM = { FROM = { is_merchant_republic = yes } } }
+			FROM = {
+				FROM = {
+					# Inform incumbent that they lost and must transfer control
+					character_event = { id = laws.150 tooltip = "EVTTOOLTIPLAWS150" }
+					character_event = { id = laws.105 tooltip = "EVTTOOLTIPLAWS105" }
+					hidden_tooltip = {
+						any_realm_character = {
+							limit = { is_liege_or_above = FROMFROM }
+							character_event = { id = laws.107 } # Inform voters
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = { FROM = { FROM = { is_merchant_republic = no } } }
+			FROM = {
+				FROM = {
+					character_event = { id = laws.105 tooltip = "EVTTOOLTIPLAWS105" } # Inform incumbent they lost
+					hidden_tooltip = {
+						any_realm_character = {
+							limit = { is_liege_or_above = FROMFROM }
+							character_event = { id = laws.107 } # Inform voters
+						}
+					}
+					any_demesne_title = {
+						limit = {
+							OR = {
+								AND = {
+									is_primary_holder_title_tier = yes
+									has_law = open_elective
+									current_heir = { character = ROOT }
+								}
+								# Kingdom capital systems
+								holder_scope = {
+									any_demesne_province = {
+										has_province_modifier = kingdom_capital_system
+										kingdom = {
+											is_primary_holder_title_tier = yes
+											has_law = open_elective
+											current_heir = { character = ROOT }
+										}
+										OR = {
+											county = { title = PREVPREVPREV }
+											duchy = { title = PREVPREVPREV }
+										}
+									}
+								}
+								# Empire capital system
+								holder_scope = {
+									any_demesne_province = {
+										has_province_modifier = empire_capital_system
+										empire = {
+											is_primary_holder_title_tier = yes
+											has_law = open_elective
+											current_heir = { character = ROOT }
+										}
+										OR = {
+											county = { title = PREVPREVPREV }
+											duchy = { title = PREVPREVPREV }
+											kingdom = { title = PREVPREVPREV }
+										}
+									}
+								}
+							}
+						}
+						grant_title = ROOT # Give title to ROOT immediately
+					}
+				}
+			}
+		}
+	}
+	option = {
+		# Crushing Defeat!
+		trigger = { NOT = { check_variable = { which = "popular_vote_count" value = 1 } } }
+		name = "EVTOPTBLAWS104"
+		if = {
+			limit = { check_variable = { which = "popular_vote_count" value = -25 } }
+			FROM = {
+				FROM = {
+					any_demesne_title = {
+						limit = {
+							is_primary_holder_title_tier = yes
+							OR = {
+								has_law = succ_feudal_elective
+								has_law = succ_tanistry
+							}
+							current_heir = { character = ROOT }
+						}
+						add_weak_claim = ROOT
+					}
+				}
+			}
+		}
+		FROM = { FROM = { character_event = { id = laws.106 tooltip = "EVTTOOLTIPLAWS106" } } } # Inform incumbent they won
+	}
+}
+
+# Inform incumbent they lost an election
+character_event = {
+	id = laws.105
+	desc = "EVTDESCLAWS105"
+	picture = GFX_evt_speech
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+
+# Inform incumbent they won an election
+character_event = {
+	id = laws.106
+	desc = "EVTDESCLAWS106"
+	picture = GFX_evt_speech
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		hidden_tooltip = {
+			any_realm_character = {
+				limit = { is_liege_or_above = ROOT }
+				character_event = { id = laws.108 }
+			}
+		}
+	}
+}
+
+# Inform citizens who won
+character_event = {
+	id = laws.107
+	desc = "EVTDESCLAWS107"
+	notification = yes
+	is_triggered_only = yes
+}
+character_event = {
+	id = laws.108
+	desc = "EVTDESCLAWS108"
+	notification = yes
+	is_triggered_only = yes
+}
+
+# Vote in federal or popular election
+character_event = {
+	id = laws.109
+	desc = "EVTDESCLAWS109"
+	picture = GFX_evt_speech
+	is_triggered_only = yes
+	
+	option = {
+		# Vote for challenger
+		name = "EVTOPTALAWS109"
+		FROM = {
+			custom_tooltip = {
+				text = "RECEIVESVOTE"
+				hidden_tooltip = {
+					change_variable = { which = "federal_vote_count" value = 1 }
+					change_variable = { which = "popular_vote_count" value = 1 }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				character = FROMFROM
+			}
+			modifier = {
+				factor = 0
+				NOT = { character = FROM }
+				opinion_diff = {
+					first = FROM
+					second = FROMFROM
+					value = 0
+					as_if_liege = yes
+				}
+			}
+		}
+	}
+	
+	option = {
+		# Vote for incumbent
+		name = "EVTOPTBLAWS109"
+		FROM = {
+			FROM = { custom_tooltip = { text = "RECEIVESVOTE" } }
+			hidden_tooltip = {
+				change_variable = { which = "federal_vote_count" value = -1 }
+				change_variable = { which = "popular_vote_count" value = -1 }
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				character = FROM
+			}
+			modifier = {
+				factor = 0
+				NOT = { character = FROMFROM }
+				NOT = {
+					opinion_diff = {
+						first = FROM
+						second = FROMFROM
+						value = 0
+						as_if_liege = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+province_event = {
+	id = laws.110
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		# VOTES FOR CHALLENGER
+		# Challenger's charisma
+		if = {
+			limit = { FROM = { diplomacy = 1 } }
+			FROM = { change_variable = { which = "popular_vote_count" value = 1 } }
+		}
+		if = {
+			limit = { FROM = { diplomacy = 2 } }
+			FROM = { change_variable = { which = "popular_vote_count" value = 1 } }
+		}
+		if = {
+			limit = { FROM = { diplomacy = 3 } }
+			FROM = { change_variable = { which = "popular_vote_count" value = 1 } }
+		}
+		if = {
+			limit = { FROM = { diplomacy = 4 } }
+			FROM = { change_variable = { which = "popular_vote_count" value = 1 } }
+		}
+		if = {
+			limit = { FROM = { diplomacy = 5 } }
+			FROM = { change_variable = { which = "popular_vote_count" value = 1 } }
+		}
+		if = {
+			limit = { FROM = { diplomacy = 6 } }
+			FROM = { change_variable = { which = "popular_vote_count" value = 1 } }
+		}
+		if = {
+			limit = { FROM = { diplomacy = 7 } }
+			FROM = { change_variable = { which = "popular_vote_count" value = 1 } }
+		}
+		if = {
+			limit = { FROM = { diplomacy = 8 } }
+			FROM = { change_variable = { which = "popular_vote_count" value = 1 } }
+		}
+		if = {
+			limit = { FROM = { diplomacy = 9 } }
+			FROM = { change_variable = { which = "popular_vote_count" value = 1 } }
+		}
+		if = {
+			limit = { FROM = { diplomacy = 10 } }
+			FROM = { change_variable = { which = "popular_vote_count" value = 1 } }
+		}
+		if = {
+			limit = { FROM = { diplomacy = 11 } }
+			FROM = { change_variable = { which = "popular_vote_count" value = 1 } }
+		}
+		if = {
+			limit = { FROM = { diplomacy = 12 } }
+			FROM = { change_variable = { which = "popular_vote_count" value = 1 } }
+		}
+		if = {
+			limit = { FROM = { diplomacy = 13 } }
+			FROM = { change_variable = { which = "popular_vote_count" value = 1 } }
+		}
+		if = {
+			limit = { FROM = { diplomacy = 14 } }
+			FROM = { change_variable = { which = "popular_vote_count" value = 1 } }
+		}
+		if = {
+			limit = { FROM = { diplomacy = 15 } }
+			FROM = { change_variable = { which = "popular_vote_count" value = 1 } }
+		}
+		if = {
+			limit = { FROM = { diplomacy = 16 } }
+			FROM = { change_variable = { which = "popular_vote_count" value = 1 } }
+		}
+		if = {
+			limit = { FROM = { diplomacy = 17 } }
+			FROM = { change_variable = { which = "popular_vote_count" value = 1 } }
+		}
+		if = {
+			limit = { FROM = { diplomacy = 18 } }
+			FROM = { change_variable = { which = "popular_vote_count" value = 1 } }
+		}
+		if = {
+			limit = { FROM = { diplomacy = 19 } }
+			FROM = { change_variable = { which = "popular_vote_count" value = 1 } }
+		}
+		if = {
+			limit = { FROM = { diplomacy = 20 } }
+			FROM = { change_variable = { which = "popular_vote_count" value = 1 } }
+		}
+		
+		# Ideological Factors
+		if = {
+			limit = {
+				FROM = {
+					religion = ROOT
+					piety = 1000
+					religion_authority = 0.2
+				}
+			}
+			FROM = { change_variable = { which = "popular_vote_count" value = 10 } }
+		}
+		if = {
+			limit = {
+				FROM = {
+					religion = ROOT
+					piety = 750
+					religion_authority = 0.4
+				}
+			}
+			FROM = { change_variable = { which = "popular_vote_count" value = 10 } }
+		}
+		if = {
+			limit = {
+				FROM = {
+					religion = ROOT
+					piety = 500
+					religion_authority = 0.6
+				}
+			}
+			FROM = { change_variable = { which = "popular_vote_count" value = 10 } }
+		}
+		if = {
+			limit = {
+				FROM = {
+					religion = ROOT
+					piety = 250
+					religion_authority = 0.8
+				}
+			}
+			FROM = { change_variable = { which = "popular_vote_count" value = 10 } }
+		}
+		if = {
+			limit = {
+				FROM = {
+					religion = ROOT
+					piety = 0
+					religion_authority = 1
+				}
+			}
+			FROM = { change_variable = { which = "popular_vote_count" value = 10 } }
+		}
+		
+		# Cultural Preferences
+		if = {
+			limit = {
+				FROM = {
+					any_realm_character = {
+						culture_group = PREV
+						culture = ROOT
+					}
+				}
+			}
+			FROM = { change_variable = { which = "popular_vote_count" value = 25 } }
+		}
+		# Votes for challenger
+		# Challenger's charisma
+		if = {
+			limit = { FROM = { FROM = { diplomacy = 1 } } }
+			FROM = { change_variable = { which = "popular_vote_count" value = -1 } }
+		}
+		if = {
+			limit = { FROM = { FROM = { diplomacy = 2 } } }
+			FROM = { change_variable = { which = "popular_vote_count" value = -1 } }
+		}
+		if = {
+			limit = { FROM = { FROM = { diplomacy = 3 } } }
+			FROM = { change_variable = { which = "popular_vote_count" value = -1 } }
+		}
+		if = {
+			limit = { FROM = { FROM = { diplomacy = 4 } } }
+			FROM = { change_variable = { which = "popular_vote_count" value = -1 } }
+		}
+		if = {
+			limit = { FROM = { FROM = { diplomacy = 5 } } }
+			FROM = { change_variable = { which = "popular_vote_count" value = -1 } }
+		}
+		if = {
+			limit = { FROM = { FROM = { diplomacy = 6 } } }
+			FROM = { change_variable = { which = "popular_vote_count" value = -1 } }
+		}
+		if = {
+			limit = { FROM = { FROM = { diplomacy = 7 } } }
+			FROM = { change_variable = { which = "popular_vote_count" value = -1 } }
+		}
+		if = {
+			limit = { FROM = { FROM = { diplomacy = 8 } } }
+			FROM = { change_variable = { which = "popular_vote_count" value = -1 } }
+		}
+		if = {
+			limit = { FROM = { FROM = { diplomacy = 9 } } }
+			FROM = { change_variable = { which = "popular_vote_count" value = -1 } }
+		}
+		if = {
+			limit = { FROM = { FROM = { diplomacy = 10 } } }
+			FROM = { change_variable = { which = "popular_vote_count" value = -1 } }
+		}
+		if = {
+			limit = { FROM = { FROM = { diplomacy = 11 } } }
+			FROM = { change_variable = { which = "popular_vote_count" value = -1 } }
+		}
+		if = {
+			limit = { FROM = { FROM = { diplomacy = 12 } } }
+			FROM = { change_variable = { which = "popular_vote_count" value = -1 } }
+		}
+		if = {
+			limit = { FROM = { FROM = { diplomacy = 13 } } }
+			FROM = { change_variable = { which = "popular_vote_count" value = -1 } }
+		}
+		if = {
+			limit = { FROM = { FROM = { diplomacy = 14 } } }
+			FROM = { change_variable = { which = "popular_vote_count" value = -1 } }
+		}
+		if = {
+			limit = { FROM = { FROM = { diplomacy = 15 } } }
+			FROM = { change_variable = { which = "popular_vote_count" value = -1 } }
+		}
+		if = {
+			limit = { FROM = { FROM = { diplomacy = 16 } } }
+			FROM = { change_variable = { which = "popular_vote_count" value = -1 } }
+		}
+		if = {
+			limit = { FROM = { FROM = { diplomacy = 17 } } }
+			FROM = { change_variable = { which = "popular_vote_count" value = -1 } }
+		}
+		if = {
+			limit = { FROM = { FROM = { diplomacy = 18 } } }
+			FROM = { change_variable = { which = "popular_vote_count" value = -1 } }
+		}
+		if = {
+			limit = { FROM = { FROM = { diplomacy = 19 } } }
+			FROM = { change_variable = { which = "popular_vote_count" value = -1 } }
+		}
+		if = {
+			limit = { FROM = { FROM = { diplomacy = 20 } } }
+			FROM = { change_variable = { which = "popular_vote_count" value = -1 } }
+		}
+		
+		# Ideological Factors
+		if = {
+			limit = {
+				FROM = {
+					FROM = {
+						religion = ROOT
+						piety = 1000
+						religion_authority = 0.2
+					}
+				}
+			}
+			FROM = { change_variable = { which = "popular_vote_count" value = -10 } }
+		}
+		if = {
+			limit = {
+				FROM = {
+					FROM = {
+						religion = ROOT
+						piety = 750
+						religion_authority = 0.4
+					}
+				}
+			}
+			FROM = { change_variable = { which = "popular_vote_count" value = -10 } }
+		}
+		if = {
+			limit = {
+				FROM = {
+					FROM = {
+						religion = ROOT
+						piety = 500
+						religion_authority = 0.6
+					}
+				}
+			}
+			FROM = { change_variable = { which = "popular_vote_count" value = -10 } }
+		}
+		if = {
+			limit = {
+				FROM = {
+					FROM = {
+						religion = ROOT
+						piety = 250
+						religion_authority = 0.8
+					}
+				}
+			}
+			FROM = { change_variable = { which = "popular_vote_count" value = -10 } }
+		}
+		if = {
+			limit = {
+				FROM = {
+					FROM = {
+						religion = ROOT
+						piety = 0
+						religion_authority = 1
+					}
+				}
+			}
+			FROM = { change_variable = { which = "popular_vote_count" value = -10 } }
+		}
+		
+		# Cultural Preferences
+		if = {
+			limit = {
+				FROM = {
+					FROM = {
+						any_realm_character = {
+							culture_group = PREV
+							culture = ROOT
+						}
+					}
+				}
+			}
+			FROM = { change_variable = { which = "popular_vote_count" value = -25 } }
+		}
+	}
+}
+
+# REGULARLY SCHEDULED ELECTIONS
+# Timer begins for newly-elected character
+character_event = {
+	id = laws.120
+	hide_window = yes
+	
+	only_rulers = yes
+	
+	trigger = {
+		any_demesne_title = {
+			OR = {
+				has_law = term_length_0
+				has_law = term_length_1
+				has_law = term_length_2
+				has_law = term_length_3
+				has_law = local_term_length_0
+				has_law = local_term_length_1
+				has_law = local_term_length_2
+				has_law = local_term_length_3
+			}
+		}
+		NOT = { has_character_flag = flag_term_limit_timer }
+	}
+	
+	immediate = { set_character_flag = flag_term_limit_timer }
+}
+
+# Remove timer on a character who no longer needs it
+character_event = {
+	id = laws.121
+	hide_window = yes
+	
+	trigger = {
+		NOT = {
+			any_demesne_title = {
+				OR = {
+					has_law = term_length_0
+					has_law = term_length_1
+					has_law = term_length_2
+					has_law = term_length_3
+					has_law = local_term_length_0
+					has_law = local_term_length_1
+					has_law = local_term_length_2
+					has_law = local_term_length_3
+				}
+			}
+		}
+		has_character_flag = flag_term_limit_timer
+	}
+	
+	immediate = { clr_character_flag = flag_term_limit_timer }
+}
+
+# Election triggered by term limit expiring
+character_event = {
+	id = laws.122
+	desc = "EVTDESCLAWS122"
+	
+	trigger = {
+		NOT = { has_character_modifier = constitutional_crisis }
+		OR = {
+			AND = {
+				had_character_flag = { flag = flag_term_limit_timer days = 365 }
+				primary_title = {
+					OR = {
+						has_law = term_length_0
+						has_law = local_term_length_0
+					}
+				}
+			}
+			AND = {
+				had_character_flag = { flag = flag_term_limit_timer days = 1460 }
+				primary_title = {
+					OR = {
+						has_law = term_length_1
+						has_law = local_term_length_1
+					}
+				}
+			}
+			AND = {
+				had_character_flag = { flag = flag_term_limit_timer days = 2920 }
+				primary_title = {
+					OR = {
+						has_law = term_length_2
+						has_law = local_term_length_2
+					}
+				}
+			}
+			AND = {
+				had_character_flag = { flag = flag_term_limit_timer days = 3650 }
+				primary_title = {
+					OR = {
+						has_law = term_length_3
+						has_law = local_term_length_3
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		# Reset term timer
+		if = {
+			limit = { has_character_flag = flag_term_limit_timer }
+			clr_character_flag = flag_term_limit_timer
+			set_character_flag = flag_term_limit_timer
+		}
+	}
+	
+	option = {
+		name = "EVTOPTALAWS112" # Hold new elections
+		character_event = { id = laws.100 tooltip = "EVTTOOLTIPLAWS100" }
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		trigger = { primary_title = { higher_tier_than = BARON } } # Barons can't do anything that would start a crisis
+		name = "EVTOPTBLAWS122" # Refuse to hold elections
+		# Add relevant modifiers
+		add_character_modifier = { name = constitutional_crisis duration = -1 }
+		add_character_modifier = { name = crisis_law_against_ruler duration = -1 }
+		
+		# Flag crisis rank and type
+		set_character_flag = flag_crisis_term_limit_defied
+		if = {
+			limit = { primary_title = { tier = EMPEROR } }
+			set_character_flag = flag_crisis_emperor
+		}
+		if = {
+			limit = { primary_title = { tier = KING } }
+			set_character_flag = flag_crisis_king
+		}
+		if = {
+			limit = { primary_title = { tier = DUKE } }
+			set_character_flag = flag_crisis_duke
+		}
+		if = {
+			limit = { primary_title = { tier = COUNT } }
+			set_character_flag = flag_crisis_count
+		}
+		religion_authority = { modifier = legal_demand_refused }
+		if = {
+			limit = {
+				NOT = { religion = terran_imperial }
+				NOT = { religion = neo_feudal }
+				NOT = { religion = astrist }
+			}
+			piety = -200
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_seperatist
+				}
+			}
+			piety = -300
+		}
+		hidden_tooltip = {
+			any_realm_character = {
+				limit = { liege = { character = ROOT } }
+				character_event = { id = laws.123 } # Inform vassals
+				character_event = { id = laws.500 days = 30 random = 15 } # AI takes sides for or against
+			}
+		}
+		ai_chance = {
+			factor = 100
+			
+			# Personality Effects
+			modifier = {
+				factor = 4
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.25
+				trait = content
+			}
+			modifier = {
+				factor = 2
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				trait = humble
+			}
+			
+			# Ideological authority effects
+			# Only applicable for non-autocratic ideologies
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_imperial }
+				NOT = { religion = neo_feudal }
+				NOT = { religion = astrist }
+				religion_authority = 0.1
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_imperial }
+				NOT = { religion = neo_feudal }
+				NOT = { religion = astrist }
+				religion_authority = 0.2
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_imperial }
+				NOT = { religion = neo_feudal }
+				NOT = { religion = astrist }
+				religion_authority = 0.3
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_imperial }
+				NOT = { religion = neo_feudal }
+				NOT = { religion = astrist }
+				religion_authority = 0.4
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_imperial }
+				NOT = { religion = neo_feudal }
+				NOT = { religion = astrist }
+				religion_authority = 0.5
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_imperial }
+				NOT = { religion = neo_feudal }
+				NOT = { religion = astrist }
+				religion_authority = 0.6
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_imperial }
+				NOT = { religion = neo_feudal }
+				NOT = { religion = astrist }
+				religion_authority = 0.7
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_imperial }
+				NOT = { religion = neo_feudal }
+				NOT = { religion = astrist }
+				religion_authority = 0.8
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_imperial }
+				NOT = { religion = neo_feudal }
+				NOT = { religion = astrist }
+				religion_authority = 0.9
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_imperial }
+				NOT = { religion = neo_feudal }
+				NOT = { religion = astrist }
+				religion_authority = 1
+			}
+			
+			# Risk of reprisal
+			modifier = {
+				factor = 0.1
+				NOT = { trait = lunatic }
+				NOT = { trait = imbecile }
+				any_vassal = {
+					OR = {
+						religion = terran_federalist
+						religion = terran_republican
+						religion = colonial_seperatist
+					}
+					relative_power_to_liege = 0.25
+					religion_authority = 0.5
+				}
+			}
+			modifier = {
+				factor = 0.1
+				NOT = { trait = lunatic }
+				NOT = { trait = imbecile }
+				NOT = {
+					any_vassal = {
+						OR = {
+							AND = {
+								NOT = { religion = terran_federalist }
+								NOT = { religion = terran_republican }
+								NOT = { religion = colonial_seperatist }
+							}
+							NOT = { religion_authority = 0.25 }
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.1
+				NOT = { trait = lunatic }
+				NOT = { trait = imbecile }
+				NOT = { relative_power_to_liege = 0.25 }
+				liege = {
+					OR = {
+						religion = terran_federalist
+						religion = terran_republican
+						religion = colonial_seperatist
+					}
+					religion_authority = 0.5
+				}
+			}
+			
+			# Can't afford a crisis
+			modifier = {
+				factor = 0.1
+				at_war = yes
+				NOT = { trait = lunatic }
+				NOT = { trait = imbecile }
+			}
+		}
+	}
+}
+
+# Constitutional Crisis triggered by refusing to hold elections - inform vassals
+character_event = {
+	id = laws.123
+	desc = "EVTDESCLAWS123"
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+
+# MERCHANT REPUBLIC WORKAROUNDS
+# There's a number of bugs surrounding merchant republics. These events
+# exist to try to prevent them as much as possible.
+character_event = {
+	id = laws.150
+	desc = "EVTDESCLAWS150"
+	picture = GFX_evt_speech
+	is_triggered_only = yes
+	
+	# No problems, just abdicate
+	option = {
+		trigger = {
+			any_demesne_title = {
+				is_primary_holder_title_tier = yes
+				current_heir = { any_dynasty_member = { character = ROOT } }
+			}
+		}
+		name = "EVTOPTCONFIRM"
+		abdicate = yes
+	}
+	
+	# Deposed by rival dynasty
+	option = {
+		trigger = {
+			NOT = {
+				any_demesne_title = {
+					is_primary_holder_title_tier = yes
+					current_heir = { any_dynasty_member = { character = ROOT } }
+				}
+			}
+			any_demesne_title = {
+				is_primary_holder_title_tier = no
+				current_heir = { any_dynasty_member = { character = ROOT } }
+			}
+		}
+		name = "EVTOPTCONFIRM"
+		custom_tooltip = {
+			text = "ABDICATETOOLTIP"
+			hidden_tooltip = {
+				random_dynasty_member = {
+					limit = {
+						ROOT = {
+							any_demesne_title = {
+								is_patrician = yes
+								current_heir = { character = PREVPREVPREV }
+							}
+						}
+					}
+					ROOT = { abdicate = yes }
+					abdicate_to = ROOT
+				}
+			}
+		}
+	}
+	
+	# Deposed by rival dynasty but has no same-dynasty patrician heir due to patrician gender bug
+	option = {
+		trigger = {
+			NOT = { any_demesne_title = { current_heir = { any_dynasty_member = { character = ROOT } } } }
+			any_dynasty_member = { is_female = yes }
+		}
+		name = "EVTOPTCONFIRM"
+		custom_tooltip = {
+			text = "ADBDICATETOOLTIP"
+			hidden_tooltip = {
+				create_character = {
+					age = 20
+					name = "Shareholder Meeting"
+					culture = ROOT
+					religion = ROOT
+					dynasty = ROOT
+					female = no
+					random_traits = no
+				}
+				new_character = {
+					ROOT = { abdicate = yes }
+					abdicate_to = ROOT
+					death = { death_reason = death_sacrifice }
+				}
+			}
+		}
+	}
+}
+
+# Event to call on ruler death, also to deal with the patrician gender bug
+character_event = {
+	id = laws.155
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		any_demesne_title = { has_law = succ_patrician_elective }
+		NOT = { any_demesne_title = { current_heir = { any_dynasty_member = { character = ROOT } } } }
+		any_dynasty_member = { is_female = yes }
+	}
+	
+	immediate = {
+		create_character = {
+			age = 20
+			name = "Shareholder Meeting"
+			culture = ROOT
+			religion = ROOT
+			dynasty = ROOT
+			female = no
+			random_traits = no
+		}
+		new_character = {
+			ROOT = { abdicate = yes }
+			abdicate_to = ROOT
+			death = { death_reason = death_sacrifice }
+		}
+	}
+}

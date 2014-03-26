@@ -1,3 +1,13 @@
+# Designated capital systems for kingdoms and empires
+kingdom_capital_system = {
+	icon = 9
+	local_revolt_risk = -0.25
+}
+empire_capital_system = {
+	icon = 9
+	local_revolt_risk = -0.5
+}
+
 # Public Opinion in Constitutional Crisis
 public_for_count = {
 	icon = 18
@@ -23,75 +33,123 @@ public_for_emperor = {
 public_against_emperor = {
 	icon = 36
 }
+recent_speech_for_count = {
+	icon = 16
+}
+recent_failed_pro_count_speech = {
+	icon = 34
+}
+recent_speech_against_count = {
+	icon = 34
+}
+recent_failed_anti_count_speech = {
+	icon = 16
+}
+recent_speech_for_duke = {
+	icon = 16
+}
+recent_failed_pro_duke_speech = {
+	icon = 34
+}
+recent_speech_against_duke = {
+	icon = 34
+}
+recent_failed_anti_duke_speech = {
+	icon = 16
+}
+recent_speech_for_king = {
+	icon = 16
+}
+recent_failed_pro_king_speech = {
+	icon = 34
+}
+recent_speech_against_king = {
+	icon = 34
+}
+recent_failed_anti_king_speech = {
+	icon = 16
+}
+recent_speech_for_emperor = {
+	icon = 16
+}
+recent_failed_pro_emperor_speech = {
+	icon = 34
+}
+recent_speech_against_emperor = {
+	icon = 34
+}
+recent_failed_anti_emperor_speech = {
+	icon = 16
+}
 
 # Civil Unrest
 civil_unrest_0 = {
 	icon = 36
-	local_revolt_risk = 0.05
-	local_tax_modifier = -0.1
-	local_build_time_modifier = 0.1
-	local_build_cost_modifier = 0.05
+	local_revolt_risk = 0.01
+	local_tax_modifier = -0.025
+	local_build_time_modifier = 0.025
+	local_build_cost_modifier = 0.025
 }
 civil_unrest_1 = {
 	icon = 36
-	local_revolt_risk = 0.1
-	local_tax_modifier = -0.2
-	local_build_time_modifier = 0.2
-	local_build_cost_modifier = 0.1
+	local_revolt_risk = 0.03
+	local_tax_modifier = -0.05
+	local_build_time_modifier = 0.05
+	local_build_cost_modifier = 0.05
 }
 civil_unrest_2 = {
 	icon = 36
-	local_revolt_risk = 0.15
-	local_tax_modifier = -0.3
-	local_build_time_modifier = 0.3
-	local_build_cost_modifier = 0.15
+	local_revolt_risk = 0.06
+	local_tax_modifier = -0.075
+	local_build_time_modifier = 0.075
+	local_build_cost_modifier = 0.075
 }
 civil_unrest_3 = {
 	icon = 36
-	local_revolt_risk = 0.2
-	local_tax_modifier = -0.4
-	local_build_time_modifier = 0.4
-	local_build_cost_modifier = 0.2
+	local_revolt_risk = 0.1
+	local_tax_modifier = -0.15
+	local_build_time_modifier = 0.15
+	local_build_cost_modifier = 0.15
 }
 civil_unrest_4 = {
 	icon = 36
-	local_revolt_risk = 0.25
-	local_tax_modifier = -0.5
-	local_build_time_modifier = 0.5
+	local_revolt_risk = 0.15
+	local_tax_modifier = -0.25
+	local_build_time_modifier = 0.25
 	local_build_cost_modifier = 0.25
 }
 civil_unrest_5 = {
 	icon = 36
-	local_revolt_risk = 0.3
-	local_tax_modifier = -0.6
-	local_build_time_modifier = 0.6
-	local_build_cost_modifier = 0.3
+	local_revolt_risk = 0.21
+	local_tax_modifier = -0.375
+	local_build_time_modifier = 0.375
+	local_build_cost_modifier = 0.375
 }
 civil_unrest_6 = {
 	icon = 36
-	local_revolt_risk = 0.35
-	local_tax_modifier = -0.7
-	local_build_time_modifier = 0.7
-	local_build_cost_modifier = 0.35
+	local_revolt_risk = 0.28
+	local_tax_modifier = -0.525
+	local_build_time_modifier = 0.525
+	local_build_cost_modifier = 0.525
 }
 civil_unrest_7 = {
 	icon = 36
-	local_revolt_risk = 0.4
-	local_tax_modifier = -0.8
-	local_build_time_modifier = 0.8
-	local_build_cost_modifier = 0.4
+	local_revolt_risk = 0.36
+	local_tax_modifier = -0.7
+	local_build_time_modifier = 0.7
+	local_build_cost_modifier = 0.7
 }
 civil_unrest_8 = {
 	icon = 36
 	local_revolt_risk = 0.45
 	local_tax_modifier = -0.9
 	local_build_time_modifier = 0.9
-	local_build_cost_modifier = 0.45
+	local_build_cost_modifier = 0.9
 }
 civil_unrest_9 = {
 	icon = 36
-	local_revolt_risk = 0.5
-	local_tax_modifier = -1
-	local_build_time_modifier = 1
-	local_build_cost_modifier = 0.5
+	local_revolt_risk = 0.55
+	local_tax_modifier = -1.15
+	local_build_time_modifier = 1.15
+	local_build_cost_modifier = 1.15
 }

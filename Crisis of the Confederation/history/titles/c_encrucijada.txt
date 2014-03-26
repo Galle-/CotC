@@ -3,5 +3,6 @@
 	liege = "d_encrucijada"
 	law = true_cognatic_succession
 	law = succ_feudal_elective
+	effect = { location = { add_province_modifier = { name = kingdom_capital_system duration = -1 } } }
 }
 2998.1.1 = { holder = 1104499 } # Mateo Dia

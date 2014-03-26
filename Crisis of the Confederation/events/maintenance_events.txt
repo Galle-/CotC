@@ -30,7 +30,7 @@ character_event = {
 	hide_window = yes
 	
 	trigger = {
-		is_landed = no
+		NOT = { any_demesne_title = { always = yes } }
 		dynasty = none
 	}
 	
@@ -39,6 +39,28 @@ character_event = {
 			e_rebels = { holder_scope = { reverse_banish = ROOT } }
 			ROOT = { dynasty = father_bastard }
 			reverse_banish = ROOT
+		}
+	}
+}
+
+# Reset crown law timer
+character_event = {
+	id = maintenance.3
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		create_character = {
+			name = "Cabinet Meeting"
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			age = 20
+		}
+		new_character = {
+			ROOT = { abdicate_to = PREV }
+			abdicate_to = ROOT
+			death = { death_reason = death_sacrifice }
 		}
 	}
 }

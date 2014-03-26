@@ -58,12 +58,52 @@ character_event = {
 				has_lover = yes
 			}
 			modifier = {
-				factor = 0.5
+				factor = 0.8
+				has_lover = yes
+				opinion = { who = lover value = 10 }
+			}
+			modifier = {
+				factor = 0.8
+				has_lover = yes
+				opinion = { who = lover value = 20 }
+			}
+			modifier = {
+				factor = 0.8
+				has_lover = yes
+				opinion = { who = lover value = 30 }
+			}
+			modifier = {
+				factor = 0.8
+				has_lover = yes
+				opinion = { who = lover value = 40 }
+			}
+			modifier = {
+				factor = 0.8
 				has_lover = yes
 				opinion = { who = lover value = 50 }
 			}
 			modifier = {
-				factor = 0
+				factor = 0.8
+				has_lover = yes
+				opinion = { who = lover value = 60 }
+			}
+			modifier = {
+				factor = 0.8
+				has_lover = yes
+				opinion = { who = lover value = 70 }
+			}
+			modifier = {
+				factor = 0.8
+				has_lover = yes
+				opinion = { who = lover value = 80 }
+			}
+			modifier = {
+				factor = 0.8
+				has_lover = yes
+				opinion = { who = lover value = 90 }
+			}
+			modifier = {
+				factor = 0.8
 				has_lover = yes
 				opinion = { who = lover value = 100 }
 			}
@@ -156,6 +196,7 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTBLOVERS0"
+		ai_chance = { factor = 50 }
 	}
 }
 
@@ -831,6 +872,22 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 36
+		modifier = {
+			factor = 0.5
+			trait = beautiful
+		}
+		modifier = {
+			factor = 0.8
+			trait = attractive
+		}
+		modifier = {
+			factor = 1.25
+			trait = homely
+		}
+		modifier = {
+			factor = 2
+			trait = ugly
+		}
 	}
 	
 	immediate = {
@@ -876,6 +933,22 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 60
+		modifier = {
+			factor = 0.5
+			trait = beautiful
+		}
+		modifier = {
+			factor = 0.8
+			trait = attractive
+		}
+		modifier = {
+			factor = 1.25
+			trait = homely
+		}
+		modifier = {
+			factor = 2
+			trait = ugly
+		}
 	}
 	
 	immediate = {
@@ -917,6 +990,22 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 60
+		modifier = {
+			factor = 0.5
+			trait = beautiful
+		}
+		modifier = {
+			factor = 0.8
+			trait = attractive
+		}
+		modifier = {
+			factor = 1.25
+			trait = homely
+		}
+		modifier = {
+			factor = 2
+			trait = ugly
+		}
 	}
 	
 	immediate = {
@@ -956,6 +1045,22 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 60
+		modifier = {
+			factor = 0.5
+			trait = beautiful
+		}
+		modifier = {
+			factor = 0.8
+			trait = attractive
+		}
+		modifier = {
+			factor = 1.25
+			trait = homely
+		}
+		modifier = {
+			factor = 2
+			trait = ugly
+		}
 	}
 	
 	immediate = {
@@ -994,6 +1099,22 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 60
+		modifier = {
+			factor = 0.5
+			trait = beautiful
+		}
+		modifier = {
+			factor = 0.8
+			trait = attractive
+		}
+		modifier = {
+			factor = 1.25
+			trait = homely
+		}
+		modifier = {
+			factor = 2
+			trait = ugly
+		}
 	}
 	
 	immediate = {
@@ -1023,6 +1144,22 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 60
+		modifier = {
+			factor = 0.5
+			trait = beautiful
+		}
+		modifier = {
+			factor = 0.8
+			trait = attractive
+		}
+		modifier = {
+			factor = 1.25
+			trait = homely
+		}
+		modifier = {
+			factor = 2
+			trait = ugly
+		}
 	}
 	
 	immediate = {
@@ -1053,6 +1190,22 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 120
+		modifier = {
+			factor = 0.5
+			trait = beautiful
+		}
+		modifier = {
+			factor = 0.8
+			trait = attractive
+		}
+		modifier = {
+			factor = 1.25
+			trait = homely
+		}
+		modifier = {
+			factor = 2
+			trait = ugly
+		}
 	}
 	
 	immediate = {
@@ -1091,6 +1244,22 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 120
+		modifier = {
+			factor = 0.5
+			trait = beautiful
+		}
+		modifier = {
+			factor = 0.8
+			trait = attractive
+		}
+		modifier = {
+			factor = 1.25
+			trait = homely
+		}
+		modifier = {
+			factor = 2
+			trait = ugly
+		}
 	}
 	
 	immediate = {
@@ -1127,6 +1296,22 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 120
+		modifier = {
+			factor = 0.5
+			trait = beautiful
+		}
+		modifier = {
+			factor = 0.8
+			trait = attractive
+		}
+		modifier = {
+			factor = 1.25
+			trait = homely
+		}
+		modifier = {
+			factor = 2
+			trait = ugly
+		}
 	}
 	
 	immediate = {
@@ -1162,6 +1347,22 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 120
+		modifier = {
+			factor = 0.5
+			trait = beautiful
+		}
+		modifier = {
+			factor = 0.8
+			trait = attractive
+		}
+		modifier = {
+			factor = 1.25
+			trait = homely
+		}
+		modifier = {
+			factor = 2
+			trait = ugly
+		}
 	}
 	
 	immediate = {
@@ -1189,6 +1390,22 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 120
+		modifier = {
+			factor = 0.5
+			trait = beautiful
+		}
+		modifier = {
+			factor = 0.8
+			trait = attractive
+		}
+		modifier = {
+			factor = 1.25
+			trait = homely
+		}
+		modifier = {
+			factor = 2
+			trait = ugly
+		}
 	}
 	
 	immediate = {

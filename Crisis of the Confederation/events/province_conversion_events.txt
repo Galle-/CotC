@@ -1,0 +1,4071 @@
+namespace = conversion
+
+##############################
+# Ideology Conversion Events #
+##############################
+
+# Province Conversions
+# Terran Federalist
+province_event = {
+	id = conversion.100
+	desc = "EVTDESCCONVERSION100"
+	picture = GFX_evt_speech
+	
+	trigger = {
+		NOT = { religion = terran_federalist }
+		OR = {
+			religion_group = political_group
+			province_id = 202 # Terran ideologies are always available to Earth
+			any_province_lord = { religion = terran_federalist }
+			any_neighbor_province = { religion = terran_federalist }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		# Religion Authority Effects
+		modifier = {
+			factor = 2
+			religion_authority = 0.1
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.2
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.3
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.4
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.5
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.6
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.7
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.8
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.9
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 1
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 0.1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 0.2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 0.3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 0.4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 0.5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 0.6
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 0.7
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 0.8
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 0.9
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 1
+				}
+			}
+		}
+		# Existing ideological similarities/differences
+		modifier = {
+			factor = 0.25
+			OR = {
+				religion = terran_republican
+				religion = colonial_seperatist
+			}
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				religion = astrist
+				religion = neo_feudal
+				religion = terran_imperial
+			}
+		}
+		modifier = {
+			factor = 5
+			or = {
+				religion_group = religious_group
+				religion_group = transhumanist_group
+				religion_group = outlaw_group
+			}
+		}
+		
+		# Proximity to Earth
+		# Terran Federalism tends to peak in the outer Core Worlds.
+		modifier = {
+			factor = 0.25
+			religion_group = political_group
+			empire = { title = e_terran_confederation }
+		}
+		modifier = {
+			factor = 0.25
+			religion_group = political_group
+			NOT = { religion = terran_republican }
+			NOT = { religion = terran_imperial }
+			kingdom = { title = k_terran_commonwealth }
+		}
+		modifier = {
+			factor = 0.25
+			religion_group = political_group
+			NOT = { religion = terran_republican }
+			NOT = { religion = terran_imperial }
+			province_id = 202
+		}
+		
+		# Democratic provinces tend to prefer democratic ideologies
+		modifier = {
+			factor = 0.25
+			NOT = { religion = terran_republican }
+			NOT = { religion = colonial_seperatist }
+			NOT = { religion_group = outlaw_group }
+			owner = { is_republic = yes }
+		}
+		
+		# Neighboring Province Effects
+		modifier = {
+			factor = 2
+			any_neighbor_province = { NOT = { religion = terran_federalist } }
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = terran_federalist }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = terran_federalist }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = terran_federalist }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = terran_federalist }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = { religion = terran_federalist }
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = terran_federalist
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = terran_federalist
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = terran_federalist
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = terran_federalist
+				count = 5
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		religion = terran_federalist
+	}
+}
+# Terran Republican
+province_event = {
+	id = conversion.101
+	desc = "EVTDESCCONVERSION101"
+	picture = GFX_evt_speech
+	
+	trigger = {
+		NOT = { religion = terran_republican }
+		OR = {
+			religion_group = political_group
+			province_id = 202 # Terran ideologies are always available to Earth
+			any_province_lord = { religion = terran_republican }
+			any_neighbor_province = { religion = terran_republican }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		# Religion Authority Effects
+		modifier = {
+			factor = 2
+			religion_authority = 0.1
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.2
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.3
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.4
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.5
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.6
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.7
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.8
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.9
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 1
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 0.1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 0.2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 0.3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 0.4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 0.5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 0.6
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 0.7
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 0.8
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 0.9
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 1
+				}
+			}
+		}
+		# Existing ideological similarities/differences
+		modifier = {
+			factor = 0.25
+			OR = {
+				religion = terran_federalist
+				religion = terran_imperial
+			}
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				religion = astrist
+				religion = neo_feudal
+				religion = colonial_seperatist
+			}
+		}
+		modifier = {
+			factor = 5
+			or = {
+				religion_group = religious_group
+				religion_group = transhumanist_group
+				religion_group = outlaw_group
+			}
+		}
+		
+		# Proximity to Earth
+		# Terran Republicanism tends to peak in the worlds closest to Earth.
+		modifier = {
+			factor = 0.25
+			religion_group = political_group
+			NOT = { religion = terran_federalist }
+			empire = { title = e_terran_confederation }
+		}
+		modifier = {
+			factor = 0.25
+			religion_group = political_group
+			NOT = { religion = terran_imperial }
+			kingdom = { title = k_terran_commonwealth }
+		}
+		modifier = {
+			factor = 0.25
+			religion_group = political_group
+			NOT = { religion = terran_imperial }
+			province_id = 202
+		}
+		
+		# Democratic provinces tend to prefer democratic ideologies
+		modifier = {
+			factor = 0.25
+			NOT = { religion = terran_federalist }
+			NOT = { religion = colonial_seperatist }
+			NOT = { religion_group = outlaw_group }
+			owner = { is_republic = yes }
+		}
+		
+		# Neighboring Province Effects
+		modifier = {
+			factor = 2
+			any_neighbor_province = { NOT = { religion = terran_republican } }
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = terran_republican }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = terran_republican }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = terran_republican }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = terran_republican }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = { religion = terran_republican }
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = terran_republican
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = terran_republican
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = terran_republican
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = terran_republican
+				count = 5
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		religion = terran_republican
+	}
+}
+# Terran Imperialism
+province_event = {
+	id = conversion.102
+	desc = "EVTDESCCONVERSION102"
+	picture = GFX_evt_speech
+	
+	trigger = {
+		NOT = { religion = terran_imperial }
+		OR = {
+			religion_group = political_group
+			province_id = 202 # Terran ideologies are always available to Earth
+			any_province_lord = { religion = terran_imperial }
+			any_neighbor_province = { religion = terran_imperial }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		# Religion Authority Effects
+		modifier = {
+			factor = 2
+			religion_authority = 0.1
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.2
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.3
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.4
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.5
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.6
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.7
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.8
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.9
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 1
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 0.1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 0.2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 0.3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 0.4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 0.5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 0.6
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 0.7
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 0.8
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 0.9
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 1
+				}
+			}
+		}
+		# Existing ideological similarities/differences
+		modifier = {
+			factor = 0.25
+			OR = {
+				religion = astrist
+				religion = neo_feudal
+				religion = terran_republican
+			}
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				religion = terran_federalist
+				religion = neo_socialist
+				religion = colonial_seperatist
+			}
+		}
+		modifier = {
+			factor = 5
+			or = {
+				religion_group = religious_group
+				religion_group = transhumanist_group
+				religion_group = outlaw_group
+			}
+		}
+		
+		# Proximity to Earth
+		# Terran Imperialism tends to peak in the worlds closest to Earth.
+		modifier = {
+			factor = 0.25
+			religion_group = political_group
+			NOT = { religion = terran_federalist }
+			NOT = { religion = terran_republican }
+			empire = { title = e_terran_confederation }
+		}
+		modifier = {
+			factor = 0.25
+			religion_group = political_group
+			NOT = { religion = terran_republican }
+			kingdom = { title = k_terran_commonwealth }
+		}
+		modifier = {
+			factor = 0.25
+			religion_group = political_group
+			NOT = { religion = terran_republican }
+			province_id = 202
+		}
+		
+		# Military provinces tend to prefer military ideologies
+		modifier = {
+			factor = 0.25
+			NOT = { religion = astrist }
+			NOT = { religion = neo_feudal }
+			NOT = { religion_group = outlaw_group }
+			owner = { is_republic = yes }
+		}
+		
+		# Neighboring Province Effects
+		modifier = {
+			factor = 2
+			any_neighbor_province = { NOT = { religion = terran_imperial } }
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = terran_imperial }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = terran_imperial }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = terran_imperial }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = terran_imperial }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = { religion = terran_imperial }
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = terran_imperial
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = terran_imperial
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = terran_imperial
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = terran_imperial
+				count = 5
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		religion = terran_imperial
+	}
+}
+# Colonial Seperatism
+province_event = {
+	id = conversion.103
+	desc = "EVTDESCCONVERSION103"
+	picture = GFX_evt_speech
+	
+	trigger = {
+		NOT = { religion = colonial_seperatist }
+		NOT = { kingdom = { title = k_terran_commonwealth } } # Never going to happen.
+		NOT = { province_id = 202 } # Earth is never going to follow an inherently anti-Terran ideology.
+		OR = {
+			religion_group = political_group
+			any_province_lord = { religion = colonial_seperatist }
+			any_neighbor_province = { religion = colonial_seperatist }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		# Religion Authority Effects
+		modifier = {
+			factor = 2
+			religion_authority = 0.1
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.2
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.3
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.4
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.5
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.6
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.7
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.8
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.9
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 1
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = colonial_seperatist
+					religion_authority = 0.1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = colonial_seperatist
+					religion_authority = 0.2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = colonial_seperatist
+					religion_authority = 0.3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = colonial_seperatist
+					religion_authority = 0.4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = colonial_seperatist
+					religion_authority = 0.5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = colonial_seperatist
+					religion_authority = 0.6
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = colonial_seperatist
+					religion_authority = 0.7
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = colonial_seperatist
+					religion_authority = 0.8
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = colonial_seperatist
+					religion_authority = 0.9
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = colonial_seperatist
+					religion_authority = 1
+				}
+			}
+		}
+		# Existing ideological similarities/differences
+		modifier = {
+			factor = 0.25
+			OR = {
+				religion = terran_federalist
+				religion = neo_feudal
+			}
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				religion = terran_republican
+				religion = terran_imperial
+			}
+		}
+		modifier = {
+			factor = 5
+			or = {
+				religion_group = religious_group
+				religion_group = transhumanist_group
+				religion_group = outlaw_group
+			}
+		}
+		
+		# Proximity to Earth
+		# Colonial seperatism tends to peak on the worlds furthest from Earth.
+		modifier = {
+			factor = 0.25
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = terran_imperial
+			}
+			empire = { NOT = { title = e_terran_confederation } }
+		}
+		modifier = {
+			factor = 4
+			empire = { title = e_terran_confederation }
+		}
+		
+		# Democratic provinces tend to prefer democratic ideologies
+		modifier = {
+			factor = 0.25
+			NOT = { religion = terran_federalist }
+			NOT = { religion = terran_republican }
+			owner = { is_republic = yes }
+		}
+		
+		# Neighboring Province Effects
+		modifier = {
+			factor = 2
+			any_neighbor_province = { NOT = { religion = colonial_seperatist } }
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = colonial_seperatist }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = colonial_seperatist }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = colonial_seperatist }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = colonial_seperatist }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = { religion = colonial_seperatist }
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = colonial_seperatist
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = colonial_seperatist
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = colonial_seperatist
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = colonial_seperatist
+				count = 5
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		religion = colonial_seperatist
+	}
+}
+# Neo-Feudal
+province_event = {
+	id = conversion.104
+	desc = "EVTDESCCONVERSION104"
+	picture = GFX_evt_speech
+	
+	trigger = {
+		NOT = { religion = neo_feudal }
+		OR = {
+			religion_group = political_group
+			any_province_lord = { religion = neo_feudal }
+			any_neighbor_province = { religion = neo_feudal }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		# Religion Authority Effects
+		modifier = {
+			factor = 2
+			religion_authority = 0.1
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.2
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.3
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.4
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.5
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.6
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.7
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.8
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.9
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 1
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 0.1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 0.2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 0.3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 0.4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 0.5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 0.6
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 0.7
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 0.8
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 0.9
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 1
+				}
+			}
+		}
+		# Existing ideological similarities/differences
+		modifier = {
+			factor = 0.25
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = bio_directionist
+			}
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				religion = terran_republican
+				religion = terran_federalist
+				religion = colonial_seperatist
+			}
+		}
+		modifier = {
+			factor = 5
+			or = {
+				religion = neo_socialist
+				religion_group = religious_group
+				religion_group = transhumanist_group
+				religion_group = outlaw_group
+			}
+		}
+		
+		# Military provinces tend to prefer military ideologies
+		modifier = {
+			factor = 0.25
+			NOT = { religion = terran_federalist }
+			NOT = { religion = terran_republican }
+			owner = { is_feudal = yes }
+		}
+		
+		# Neighboring Province Effects
+		modifier = {
+			factor = 2
+			any_neighbor_province = { NOT = { religion = neo_feudal } }
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = neo_feudal }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = neo_feudal }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = neo_feudal }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = neo_feudal }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = { religion = neo_feudal }
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = neo_feudal
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = neo_feudal
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = neo_feudal
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = neo_feudal
+				count = 5
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		religion = neo_feudal
+	}
+}
+# Neo-Socialist
+province_event = {
+	id = conversion.105
+	desc = "EVTDESCCONVERSION105"
+	picture = GFX_evt_speech
+	
+	trigger = {
+		NOT = { religion = neo_socialist }
+		OR = {
+			religion_group = political_group
+			any_province_lord = { religion = neo_socialist }
+			any_neighbor_province = { religion = neo_socialist }
+			revolt_risk = 0.5
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		# Religion Authority Effects
+		modifier = {
+			factor = 2
+			religion_authority = 0.1
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.2
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.3
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.4
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.5
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.6
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.7
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.8
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.9
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 1
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 0.1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 0.2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 0.3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 0.4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 0.5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 0.6
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 0.7
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 0.8
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 0.9
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 1
+				}
+			}
+		}
+		# Existing ideological similarities/differences
+		modifier = {
+			factor = 0.25
+			OR = {
+				religion = terran_republican
+				religion = terran_federalist
+				religion = colonial_seperatist
+			}
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+			}
+		}
+		modifier = {
+			factor = 5
+			or = {
+				religion_group = religious_group
+				religion_group = transhumanist_group
+				religion_group = outlaw_group
+			}
+		}
+		
+		# Revolutionary fervor goes well with space communism
+		modifier = {
+			factor = 0.5
+			owner = { NOT = { religion = neo_socialist } }
+			revolt_risk = 0.1
+		}
+		modifier = {
+			factor = 0.5
+			owner = { NOT = { religion = neo_socialist } }
+			revolt_risk = 0.2
+		}
+		modifier = {
+			factor = 0.5
+			owner = { NOT = { religion = neo_socialist } }
+			revolt_risk = 0.3
+		}
+		modifier = {
+			factor = 0.5
+			owner = { NOT = { religion = neo_socialist } }
+			revolt_risk = 0.4
+		}
+		modifier = {
+			factor = 0.5
+			owner = { NOT = { religion = neo_socialist } }
+			revolt_risk = 0.5
+		}
+		modifier = {
+			factor = 0.5
+			owner = { NOT = { religion = neo_socialist } }
+			revolt_risk = 0.6
+		}
+		modifier = {
+			factor = 0.5
+			owner = { NOT = { religion = neo_socialist } }
+			revolt_risk = 0.7
+		}
+		modifier = {
+			factor = 0.5
+			owner = { NOT = { religion = neo_socialist } }
+			revolt_risk = 0.8
+		}
+		modifier = {
+			factor = 0.5
+			owner = { NOT = { religion = neo_socialist } }
+			revolt_risk = 0.9
+		}
+		modifier = {
+			factor = 0.5
+			owner = { NOT = { religion = neo_socialist } }
+			revolt_risk = 1
+		}
+		
+		# Neighboring Province Effects
+		modifier = {
+			factor = 2
+			any_neighbor_province = { NOT = { religion = neo_socialist } }
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = neo_socialist }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = neo_socialist }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = neo_socialist }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = neo_socialist }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = { religion = neo_socialist }
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = neo_socialist
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = neo_socialist
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = neo_socialist
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = neo_socialist
+				count = 5
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		religion = neo_socialist
+	}
+}
+# Astrist
+province_event = {
+	id = conversion.106
+	desc = "EVTDESCCONVERSION106"
+	picture = GFX_evt_speech
+	
+	trigger = {
+		NOT = { religion = astrist }
+		OR = {
+			religion_group = political_group
+			any_province_lord = { religion = astrist }
+			any_neighbor_province = { religion = astrist }
+			revolt_risk = 0.5
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		# Religion Authority Effects
+		modifier = {
+			factor = 2
+			religion_authority = 0.1
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.2
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.3
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.4
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.5
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.6
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.7
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.8
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.9
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 1
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 0.1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 0.2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 0.3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 0.4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 0.5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 0.6
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 0.7
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 0.8
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 0.9
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 1
+				}
+			}
+		}
+		# Existing ideological similarities/differences
+		modifier = {
+			factor = 0.25
+			OR = {
+				religion = terran_imperial
+				religion = neo_feudal
+			}
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+			}
+		}
+		modifier = {
+			factor = 5
+			or = {
+				religion = neo_socialist
+				religion_group = religious_group
+				religion_group = transhumanist_group
+				religion_group = outlaw_group
+			}
+		}
+		
+		# Military provinces tend to favor military ideologies
+		modifier = {
+			factor = 0.25
+			NOT = { religion = terran_imperial }
+			NOT = { religion = neo_feudal }
+			owner = { is_feudal = yes }
+		}
+		
+		# Revolutionary fervor ALSO goes well with space fascism
+		modifier = {
+			factor = 0.5
+			owner = { NOT = { religion = astrist } }
+			revolt_risk = 0.1
+		}
+		modifier = {
+			factor = 0.5
+			owner = { NOT = { religion = astrist } }
+			revolt_risk = 0.2
+		}
+		modifier = {
+			factor = 0.5
+			owner = { NOT = { religion = astrist } }
+			revolt_risk = 0.3
+		}
+		modifier = {
+			factor = 0.5
+			owner = { NOT = { religion = astrist } }
+			revolt_risk = 0.4
+		}
+		modifier = {
+			factor = 0.5
+			owner = { NOT = { religion = astrist } }
+			revolt_risk = 0.5
+		}
+		modifier = {
+			factor = 0.5
+			owner = { NOT = { religion = astrist } }
+			revolt_risk = 0.6
+		}
+		modifier = {
+			factor = 0.5
+			owner = { NOT = { religion = astrist } }
+			revolt_risk = 0.7
+		}
+		modifier = {
+			factor = 0.5
+			owner = { NOT = { religion = astrist } }
+			revolt_risk = 0.8
+		}
+		modifier = {
+			factor = 0.5
+			owner = { NOT = { religion = astrist } }
+			revolt_risk = 0.9
+		}
+		modifier = {
+			factor = 0.5
+			owner = { NOT = { religion = astrist } }
+			revolt_risk = 1
+		}
+		
+		# Neighboring Province Effects
+		modifier = {
+			factor = 2
+			any_neighbor_province = { NOT = { religion = astrist } }
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = astrist }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = astrist }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = astrist }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = astrist }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = { religion = astrist }
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = astrist
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = astrist
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = astrist
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = astrist
+				count = 5
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		religion = astrist
+	}
+}
+# Cyberneticist
+province_event = {
+	id = conversion.107
+	desc = "EVTDESCCONVERSION107"
+	picture = GFX_evt_speech
+	
+	trigger = {
+		NOT = { religion = cyberneticist }
+		OR = {
+			religion_group = transhumanist_group
+			any_province_lord = { religion = cyberneticist }
+			any_neighbor_province = { religion = cyberneticist }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		# Religion Authority Effects
+		modifier = {
+			factor = 2
+			religion_authority = 0.1
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.2
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.3
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.4
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.5
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.6
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.7
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.8
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.9
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 1
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = cyberneticist
+					religion_authority = 0.1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = cyberneticist
+					religion_authority = 0.2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = cyberneticist
+					religion_authority = 0.3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = cyberneticist
+					religion_authority = 0.4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = cyberneticist
+					religion_authority = 0.5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = cyberneticist
+					religion_authority = 0.6
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = cyberneticist
+					religion_authority = 0.7
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = cyberneticist
+					religion_authority = 0.8
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = cyberneticist
+					religion_authority = 0.9
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = cyberneticist
+					religion_authority = 1
+				}
+			}
+		}
+		# Existing ideological similarities/differences
+		modifier = {
+			factor = 0.25
+			OR = {
+				religion = hiver
+				religion = machine_cultist
+			}
+		}
+		modifier = {
+			factor = 5
+			or = {
+				religion_group = political_group
+				religion_group = outlaw_group
+			}
+		}
+		modifier = {
+			factor = 10
+			religion_group = religious_group
+		}
+		
+		# Transhumanist ideologies become more popular the more
+		# advanced the relevant technologies are
+		# Cybernetics
+		modifier = {
+			factor = 0.8
+			TECH_POPULAR_CUSTOMS = 1
+		}
+		modifier = {
+			factor = 0.8
+			TECH_POPULAR_CUSTOMS = 2
+		}
+		modifier = {
+			factor = 0.8
+			TECH_POPULAR_CUSTOMS = 3
+		}
+		modifier = {
+			factor = 0.8
+			TECH_POPULAR_CUSTOMS = 4
+		}
+		modifier = {
+			factor = 0.8
+			TECH_POPULAR_CUSTOMS = 5
+		}
+		modifier = {
+			factor = 0.8
+			TECH_POPULAR_CUSTOMS = 6
+		}
+		modifier = {
+			factor = 0.8
+			TECH_POPULAR_CUSTOMS = 7
+		}
+		modifier = {
+			factor = 0.8
+			TECH_POPULAR_CUSTOMS = 8
+		}
+		modifier = {
+			factor = 0.8
+			TECH_POPULAR_CUSTOMS = 9
+		}
+		modifier = {
+			factor = 0.8
+			TECH_POPULAR_CUSTOMS = 10
+		}
+		# Artificial Intelligence
+		modifier = {
+			factor = 0.8
+			TECH_MAJESTY = 1
+		}
+		modifier = {
+			factor = 0.8
+			TECH_MAJESTY = 2
+		}
+		modifier = {
+			factor = 0.8
+			TECH_MAJESTY = 3
+		}
+		modifier = {
+			factor = 0.8
+			TECH_MAJESTY = 4
+		}
+		modifier = {
+			factor = 0.8
+			TECH_MAJESTY = 5
+		}
+		modifier = {
+			factor = 0.8
+			TECH_MAJESTY = 6
+		}
+		modifier = {
+			factor = 0.8
+			TECH_MAJESTY = 7
+		}
+		modifier = {
+			factor = 0.8
+			TECH_MAJESTY = 8
+		}
+		modifier = {
+			factor = 0.8
+			TECH_MAJESTY = 9
+		}
+		modifier = {
+			factor = 0.8
+			TECH_MAJESTY = 10
+		}
+		
+		# Neighboring Province Effects
+		modifier = {
+			factor = 2
+			any_neighbor_province = { NOT = { religion = cyberneticist } }
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = cyberneticist }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = cyberneticist }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = cyberneticist }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = cyberneticist }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = { religion = cyberneticist }
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = cyberneticist
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = cyberneticist
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = cyberneticist
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = cyberneticist
+				count = 5
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		religion = cyberneticist
+	}
+}
+# Hiver
+province_event = {
+	id = conversion.108
+	desc = "EVTDESCCONVERSION108"
+	picture = GFX_evt_speech
+	
+	# The Hivers are very, very scary. Willing conversion should happen only in extreme cases.
+	trigger = {
+		or = {
+			religion = cyberneticist
+			religion = machine_cultist
+		}
+		OR = {
+			any_province_lord = { religion = hiver }
+			any_neighbor_province = { religion = hiver }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		
+		# Religion Authority Effects
+		modifier = {
+			factor = 2
+			religion_authority = 0.1
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.2
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.3
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.4
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.5
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.6
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.7
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.8
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.9
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 1
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = hiver
+					religion_authority = 0.1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = hiver
+					religion_authority = 0.2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = hiver
+					religion_authority = 0.3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = hiver
+					religion_authority = 0.4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = hiver
+					religion_authority = 0.5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = hiver
+					religion_authority = 0.6
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = hiver
+					religion_authority = 0.7
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = hiver
+					religion_authority = 0.8
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = hiver
+					religion_authority = 0.9
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = hiver
+					religion_authority = 1
+				}
+			}
+		}
+		
+		# Neighboring Province Effects
+		modifier = {
+			factor = 2
+			any_neighbor_province = { NOT = { religion = hiver } }
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = hiver }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = hiver }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = hiver }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = hiver }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = { religion = hiver }
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = hiver
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = hiver
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = hiver
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = hiver
+				count = 5
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		religion = hiver
+	}
+}
+# Machine Cult
+province_event = {
+	id = conversion.109
+	desc = "EVTDESCCONVERSION109"
+	picture = GFX_evt_speech
+	
+	trigger = {
+		OR = {
+			AND = {
+				religion = cyberneticist
+				OR = {
+					any_province_lord = { religion_group = religious_group }
+					any_neighbor_province = { religion_group = religious_group }
+				}
+			}
+			AND = {
+				religion_group = religious_group
+				OR = {
+					any_province_lord = { religion = cyberneticist }
+					any_neighbor_province = { religion = cyberneticist }
+				}
+			}
+			any_province_lord = { religion = machine_cultist }
+			any_neighbor_province = { religion = machine_cultist }
+		}
+		OR = {
+			any_province_lord = { religion = hiver }
+			any_neighbor_province = { religion = hiver }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		# Religion Authority Effects
+		modifier = {
+			factor = 2
+			religion_authority = 0.1
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.2
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.3
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.4
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.5
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.6
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.7
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.8
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.9
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 1
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = machine_cultist
+					religion_authority = 0.1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = machine_cultist
+					religion_authority = 0.2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = machine_cultist
+					religion_authority = 0.3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = machine_cultist
+					religion_authority = 0.4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = machine_cultist
+					religion_authority = 0.5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = machine_cultist
+					religion_authority = 0.6
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = machine_cultist
+					religion_authority = 0.7
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = machine_cultist
+					religion_authority = 0.8
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = machine_cultist
+					religion_authority = 0.9
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = machine_cultist
+					religion_authority = 1
+				}
+			}
+		}
+		
+		# Neighboring Province Effects
+		modifier = {
+			factor = 2
+			any_neighbor_province = { NOT = { religion = machine_cultist } }
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = machine_cultist }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = machine_cultist }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = machine_cultist }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = machine_cultist }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = { religion = machine_cultist }
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = machine_cultist
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = machine_cultist
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = machine_cultist
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = machine_cultist
+				count = 5
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		religion = machine_cultist
+	}
+}
+# Bio-Directionist
+province_event = {
+	id = conversion.110
+	desc = "EVTDESCCONVERSION110"
+	picture = GFX_evt_speech
+	
+	trigger = {
+		NOT = { religion = bio_directionist }
+		OR = {
+			religion_group = transhumanist_group
+			any_province_lord = { religion = bio_directionist }
+			any_neighbor_province = { religion = bio_directionist }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		# Religion Authority Effects
+		modifier = {
+			factor = 2
+			religion_authority = 0.1
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.2
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.3
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.4
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.5
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.6
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.7
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.8
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.9
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 1
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = bio_directionist
+					religion_authority = 0.1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = bio_directionist
+					religion_authority = 0.2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = bio_directionist
+					religion_authority = 0.3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = bio_directionist
+					religion_authority = 0.4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = bio_directionist
+					religion_authority = 0.5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = bio_directionist
+					religion_authority = 0.6
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = bio_directionist
+					religion_authority = 0.7
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = bio_directionist
+					religion_authority = 0.8
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = bio_directionist
+					religion_authority = 0.9
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = bio_directionist
+					religion_authority = 1
+				}
+			}
+		}
+		# Existing ideological similarities/differences
+		modifier = {
+			factor = 5
+			or = {
+				religion_group = political_group
+				religion_group = outlaw_group
+			}
+		}
+		modifier = {
+			factor = 10
+			religion_group = religious_group
+		}
+		
+		# Transhumanist ideologies become more popular the more
+		# advanced the relevant technologies are
+		# Medicine
+		modifier = {
+			factor = 0.8
+			TECH_NOBLE_CUSTOMS = 1
+		}
+		modifier = {
+			factor = 0.8
+			TECH_NOBLE_CUSTOMS = 2
+		}
+		modifier = {
+			factor = 0.8
+			TECH_NOBLE_CUSTOMS = 3
+		}
+		modifier = {
+			factor = 0.8
+			TECH_NOBLE_CUSTOMS = 4
+		}
+		modifier = {
+			factor = 0.8
+			TECH_NOBLE_CUSTOMS = 5
+		}
+		modifier = {
+			factor = 0.8
+			TECH_NOBLE_CUSTOMS = 6
+		}
+		modifier = {
+			factor = 0.8
+			TECH_NOBLE_CUSTOMS = 7
+		}
+		modifier = {
+			factor = 0.8
+			TECH_NOBLE_CUSTOMS = 8
+		}
+		modifier = {
+			factor = 0.8
+			TECH_NOBLE_CUSTOMS = 9
+		}
+		modifier = {
+			factor = 0.8
+			TECH_NOBLE_CUSTOMS = 10
+		}
+		# Biotechnology
+		modifier = {
+			factor = 0.8
+			TECH_RELIGIOUS_CUSTOMS = 1
+		}
+		modifier = {
+			factor = 0.8
+			TECH_RELIGIOUS_CUSTOMS = 2
+		}
+		modifier = {
+			factor = 0.8
+			TECH_RELIGIOUS_CUSTOMS = 3
+		}
+		modifier = {
+			factor = 0.8
+			TECH_RELIGIOUS_CUSTOMS = 4
+		}
+		modifier = {
+			factor = 0.8
+			TECH_RELIGIOUS_CUSTOMS = 5
+		}
+		modifier = {
+			factor = 0.8
+			TECH_RELIGIOUS_CUSTOMS = 6
+		}
+		modifier = {
+			factor = 0.8
+			TECH_RELIGIOUS_CUSTOMS = 7
+		}
+		modifier = {
+			factor = 0.8
+			TECH_RELIGIOUS_CUSTOMS = 8
+		}
+		modifier = {
+			factor = 0.8
+			TECH_RELIGIOUS_CUSTOMS = 9
+		}
+		modifier = {
+			factor = 0.8
+			TECH_RELIGIOUS_CUSTOMS = 10
+		}
+		
+		# Neighboring Province Effects
+		modifier = {
+			factor = 2
+			any_neighbor_province = { NOT = { religion = bio_directionist } }
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = bio_directionist }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = bio_directionist }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = bio_directionist }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = bio_directionist }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = { religion = bio_directionist }
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = bio_directionist
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = bio_directionist
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = bio_directionist
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = bio_directionist
+				count = 5
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		religion = bio_directionist
+	}
+}
+# Religious Group
+# Orthodox
+province_event = {
+	id = conversion.111
+	desc = "EVTDESCCONVERSION111"
+	picture = GFX_evt_speech
+	
+	trigger = {
+		NOT = { religion = orthodox }
+		has_global_flag = flag_pilgrim_reformation # Pilgrimage must have been reformed to form Orthodoxy
+		OR = {
+			religion_group = religious_group
+			any_province_lord = { religion = orthodox }
+			any_neighbor_province = { religion = orthodox }
+			province_id = 202 # The pilgrimage and its derivatives are always available to Earth
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		# Religion Authority Effects
+		modifier = {
+			factor = 2
+			religion_authority = 0.1
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.2
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.3
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.4
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.5
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.6
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.7
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.8
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.9
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 1
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = orthodox
+					religion_authority = 0.1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = orthodox
+					religion_authority = 0.2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = orthodox
+					religion_authority = 0.3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = orthodox
+					religion_authority = 0.4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = orthodox
+					religion_authority = 0.5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = orthodox
+					religion_authority = 0.6
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = orthodox
+					religion_authority = 0.7
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = orthodox
+					religion_authority = 0.8
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = orthodox
+					religion_authority = 0.9
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = orthodox
+					religion_authority = 1
+				}
+			}
+		}
+		
+		# Existing ideological similarities/differences
+		modifier = {
+			factor = 0.25
+			religion = pilgrim
+		}
+		modifier = {
+			factor = 5
+			or = {
+				religion = xenoterran
+				religion_group = political_group
+				religion_group = outlaw_group
+			}
+		}
+		modifier = {
+			factor = 10
+			religion_group = transhumanist_group
+		}
+		
+		# Neighboring Province Effects
+		modifier = {
+			factor = 2
+			any_neighbor_province = { NOT = { religion = orthodox } }
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = orthodox }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = orthodox }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = orthodox }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = orthodox }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = { religion = orthodox }
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = orthodox
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = orthodox
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = orthodox
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = orthodox
+				count = 5
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		religion = orthodox
+	}
+}
+# Pilgrim
+province_event = {
+	id = conversion.112
+	desc = "EVTDESCCONVERSION112"
+	picture = GFX_evt_speech
+	
+	trigger = {
+		NOT = { religion = pilgrim }
+		OR = {
+			religion = orthodox
+			any_province_lord = { religion = pilgrim }
+			any_neighbor_province = { religion = pilgrim }
+			NOT = { has_global_flag = flag_pilgrim_reformation }
+		}
+		OR = {
+			religion_group = religious_group
+			any_province_lord = { religion = pilgrim }
+			any_neighbor_province = { religion = pilgrim }
+			province_id = 202 # The pilgrimage and its derivatives are always available to Earth
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		# Religion Authority Effects
+		modifier = {
+			factor = 2
+			religion_authority = 0.1
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.2
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.3
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.4
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.5
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.6
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.7
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.8
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.9
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 1
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = pilgrim
+					religion_authority = 0.1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = pilgrim
+					religion_authority = 0.2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = pilgrim
+					religion_authority = 0.3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = pilgrim
+					religion_authority = 0.4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = pilgrim
+					religion_authority = 0.5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = pilgrim
+					religion_authority = 0.6
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = pilgrim
+					religion_authority = 0.7
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = pilgrim
+					religion_authority = 0.8
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = pilgrim
+					religion_authority = 0.9
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = pilgrim
+					religion_authority = 1
+				}
+			}
+		}
+		
+		# Existing ideological similarities/differences
+		modifier = {
+			factor = 0.25
+			religion = orthodox
+		}
+		modifier = {
+			factor = 5
+			or = {
+				religion = xenoterran
+				religion_group = political_group
+				religion_group = outlaw_group
+			}
+		}
+		modifier = {
+			factor = 10
+			religion_group = transhumanist_group
+		}
+		
+		# Neighboring Province Effects
+		modifier = {
+			factor = 2
+			any_neighbor_province = { NOT = { religion = pilgrim } }
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = pilgrim }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = pilgrim }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = pilgrim }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = pilgrim }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = { religion = pilgrim }
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = pilgrim
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = pilgrim
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = pilgrim
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = pilgrim
+				count = 5
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		religion = pilgrim
+	}
+}
+# Sect Adoptionist
+province_event = {
+	id = conversion.113
+	desc = "EVTDESCCONVERSION113"
+	picture = GFX_evt_speech
+	
+	trigger = {
+		NOT = { religion = adoptionist_cultist }
+		OR = {
+			religion = adoptionist
+			any_province_lord = { religion = adoptionist_cultist }
+			any_neighbor_province = { religion = adoptionist_cultist }
+			NOT = { has_global_flag = flag_pilgrim_reformation }
+		}
+		OR = {
+			religion_group = religious_group
+			any_province_lord = { religion = adoptionist_cultist }
+			any_neighbor_province = { religion = adoptionist_cultist }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		# Religion Authority Effects
+		modifier = {
+			factor = 2
+			religion_authority = 0.1
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.2
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.3
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.4
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.5
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.6
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.7
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.8
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.9
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 1
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist_cultist
+					religion_authority = 0.1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist_cultist
+					religion_authority = 0.2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist_cultist
+					religion_authority = 0.3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist_cultist
+					religion_authority = 0.4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist_cultist
+					religion_authority = 0.5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist_cultist
+					religion_authority = 0.6
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist_cultist
+					religion_authority = 0.7
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist_cultist
+					religion_authority = 0.8
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist_cultist
+					religion_authority = 0.9
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist_cultist
+					religion_authority = 1
+				}
+			}
+		}
+		
+		# Existing ideological similarities/differences
+		modifier = {
+			factor = 0.25
+			religion = adoptionist
+		}
+		modifier = {
+			factor = 5
+			or = {
+				religion_group = political_group
+				religion_group = outlaw_group
+			}
+		}
+		modifier = {
+			factor = 10
+			religion_group = transhumanist_group
+		}
+		
+		# Traditional ideology of the Sexto Solar culture group
+		modifier = {
+			factor = 0.25
+			NOT = { religion = adoptionist }
+			culture_group = sexto_solar_group
+		}
+		
+		# Neighboring Province Effects
+		modifier = {
+			factor = 2
+			any_neighbor_province = { NOT = { religion = adoptionist_cultist } }
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = adoptionist_cultist }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = adoptionist_cultist }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = adoptionist_cultist }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = adoptionist_cultist }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = { religion = adoptionist_cultist }
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = adoptionist_cultist
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = adoptionist_cultist
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = adoptionist_cultist
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = adoptionist_cultist
+				count = 5
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		religion = adoptionist_cultist
+	}
+}
+# Adoptionist
+province_event = {
+	id = conversion.114
+	desc = "EVTDESCCONVERSION114"
+	picture = GFX_evt_speech
+	
+	trigger = {
+		NOT = { religion = adoptionist }
+		has_global_flag = flag_pilgrim_reformation
+		OR = {
+			religion_group = religious_group
+			any_province_lord = { religion = adoptionist }
+			any_neighbor_province = { religion = adoptionist }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		# Religion Authority Effects
+		modifier = {
+			factor = 2
+			religion_authority = 0.1
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.2
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.3
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.4
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.5
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.6
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.7
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.8
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.9
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 1
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist
+					religion_authority = 0.1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist
+					religion_authority = 0.2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist
+					religion_authority = 0.3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist
+					religion_authority = 0.4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist
+					religion_authority = 0.5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist
+					religion_authority = 0.6
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist
+					religion_authority = 0.7
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist
+					religion_authority = 0.8
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist
+					religion_authority = 0.9
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_province_lord = {
+				any_realm_character = {
+					religion = adoptionist
+					religion_authority = 1
+				}
+			}
+		}
+		
+		# Existing ideological similarities/differences
+		modifier = {
+			factor = 0.25
+			religion = adoptionist_cultist
+		}
+		modifier = {
+			factor = 5
+			or = {
+				religion_group = political_group
+				religion_group = outlaw_group
+			}
+		}
+		modifier = {
+			factor = 10
+			religion_group = transhumanist_group
+		}
+		
+		# Traditional ideology of the Sexto Solar culture group
+		modifier = {
+			factor = 0.25
+			NOT = { religion = adoptionist_cultist }
+			culture_group = sexto_solar_group
+		}
+		
+		# Neighboring Province Effects
+		modifier = {
+			factor = 2
+			any_neighbor_province = { NOT = { religion = adoptionist } }
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = adoptionist }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = adoptionist }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = adoptionist }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				NOT = { religion = adoptionist }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = { religion = adoptionist }
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = adoptionist
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = adoptionist
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = adoptionist
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = adoptionist
+				count = 5
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		religion = adoptionist
+	}
+}

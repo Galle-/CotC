@@ -1,4 +1,9 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+STAT_PIETY;Legitimacy;PiétEPietät;;Piedad;;;;;;;;;x
+STAT_PIETY_DESC;Legitimacy represents your perceived credibility, devotion to your professed ideals, and respect for the rule of law. Like Prestige, it is added to your score on the death of a ruler.;La piétEest respectée par le clergE notamment par le chef de votre Église. Elle peut être utilisée pour faire des requêtes au chef de votre Église. Comme le prestige, elle est additionnée Evotre score Ela mort d’un souverain.;Pietät wird von der Kirche und ganz besonders von Eurem Kirchenoberhaupt geschätzt. Sie kann darauf verwandt werden, Euer Kirchenoberhaupt um einen Gefallen zu bitten. Wie auch das Prestige wird sie beim Tod eines Herrschers den Werten des nächsten hinzugefEt.;;La Piedad es respetada por el clero, en especial, por el lúer de tu Iglesia. Puede invertirse para hacer peticiones al lúer de tu iglesia. Igual que el Prestigio, se suma a tu puntuación al morir el soberano.;;;;;;;;;x
+PIETY_EFFECT;$DIRECTION$ $VALUE$ Legitimacy.\n;$DIRECTION$ $VALUE$ en piétE\n;$DIRECTION$ $VALUE$ Pietät.\n;;$DIRECTION$ $VALUE$ Piedad.\n;;;;;;;;;x
+COMBATEND_PIETY;§YLegitimacy Gained in Battle§!;§YPiétEacquise au combat§!;§YIn Schlacht erlangte Pietät§!;;§YPiedad lograda en batalla§!;;;;;;;;;x
+CH_PIETY_CHANGE;Legitimacy $DIRECTION$ by $CHANGE$;PiétE$DIRECTION$ de $CHANGE$;Ehre $DIRECTION$ um $CHANGE$;;Piedad: $DIRECTION$ en $CHANGE$;;;;;;;;;x
 COMBATVIEW_PHASE_DESC_SKIRMISH;During the Skirmish phase, the main fleets keep their distance while fighters engage in dogfights.\nSmall ships are at their most vulnerable during this phase, but only ï½§YFightersï½§W, ï½§YDestroyersï½§W, and ï½§YCombat Dronesï½§W are able to attack and exploit this.;Au cours de la phase de combat, les principales flottilles gardent leur distance tandis que les chasseurs engage l'ennemi.\nLes petits navires sont les plus vulnérables durant cette phase, mais seuls ï½§Yles chasseursï½§W, ï½§Yles estroyeursï½§W, et ï½§Yles drônes de combat½§W sont capables d'attaquer et d'exploiter cette faille.;;;;;;;;;;;;x
 COMBATVIEW_PHASE_DESC_MELEE;During the Melee phase, the fleets close to combat distance.\nï½§YBattlecruisersï½§W, ï½§YDreadnoughtsï½§W, and ï½§YBombersï½§W excel in the Melee Phase.;Pendant la phase de mélée, les flottilles entrent dans le combat à distance.\nï½§Yles croiseurs de batailleï½§W, ï½§Yles cuirasésï½§W, et ï½§Yles bombardiersï½§W excellent dans ces opérations.;;;;;;;;;;;;x
 COMBATVIEW_PHASE_DESC_PURSUE;During the Pursuit phase, one fleet is retreating, and the other is attempting to chase them down.\nï½§YBattlecruisersï½§W, ï½§YBombersï½§W, and ï½§YTroop Transportsï½§W excel in the Pursuit Phase.;Pendant la phase de poursuite, une flotille se replie, et les autres tentent de lui donner la chasse.\nï½§Yles croiseurs de batailleï½§W, ï½§Yles bombardiersï½§W, et ï½§Yles transport de troupesï½§W excellent dans ces opérations.;;;;;;;;;;;;x
@@ -37,3 +42,17 @@ ARCHERS_MORALE;Marine Morale;Moral marines;;;;;;;;;;;;x
 ARCHERS_DISCIPLINE;Marine Discipline;Discipline marines;;;;;;;;;;;;x
 ARCHERS_OFFENSIVE_FIRE;Troop Transport Attack;Attaque transport de troupe;;;;;;;;;;;;x
 ARCHERS_DEFENSIVE_FIRE;Troop Transport Defense;Défense transport de troupe;;;;;;;;;;;;x
+CHAR_PRIEST;A scholar;Un prêtre;Ein Priester;;Un sacerdote;;;;;;;;;x
+CHAR_SOLDIER;A military officer;Un soldat;Ein Soldat;;Un soldado;;;;;;;;;x
+CHAR_STEWARD;An accountant;Un Intendant;Ein Verwalter;;Un noble;;;;;;;;;x
+CHAR_INTRIGUER;An intelligence agent;Un intrigant;Ein Intrigant;;Un conspirador;;;;;;;;;x
+CHAR_DIPLOMAT;A diplomat;Un diplomate;Ein Diplomat;;Un diplomático;;;;;;;;;x
+ACTION_DESC;In $LOCATION$ to $ACTION$;À $LOCATION$ pour $ACTION$;In $LOCATION$ fE: $ACTION$;;En $LOCATION$ para $ACTION$;;;;;;;;;x
+BESIEGED_LEADER_DESC;Defending $BARONY$, $LOCATION$;Défend $BARONY$, $LOCATION$;Verteidigt $BARONY$, $LOCATION$;;Defendiendo $BARONY$, $LOCATION$;;;;;;;;;x
+GENERAL_LEADER_DESC;Commanding the fleet in $LOCATION$;Mène des troupes E$LOCATION$;FErt Truppen in $LOCATION$ an;;Liderando tropas en $LOCATION$;;;;;;;;;x
+BEING_TUTORED_DESC;Tutored by $TUTOR$ in $LOCATION$;ÉduquEe) par $TUTOR$ E$LOCATION$;Unterrichtet von $TUTOR$ in $LOCATION$;;Bajo la tutela de $TUTOR$ en $LOCATION$;;;;;;;;;x
+IMPRISONED_BY_DESC;Imprisoned by $JAILOR$ in $LOCATION$;EmprisonnEe) par $JAILOR$ in $LOCATION$;Eingekerkert von $JAILOR$ in $LOCATION$;;Encarcelado por $JAILOR$ en $LOCATION$;;;;;;;;;x
+AT_COURT_DESC;Residing on $BARONY$, $PROVINCE$;À la Cour de $BARONY$, $PROVINCE$;Am Hof in $BARONY$, $PROVINCE$;;En la corte de $BARONY$, $PROVINCE$;;;;;;;;;x
+HOLDING_COURT_DESC;Reigning on $BARONY$, $LOCATION$;Règne sur $BARONY$, $LOCATION$;Regiert in $BARONY$, $LOCATION$;;Gobernando en $BARONY$, $LOCATION$;;;;;;;;;x
+LANDLESS_COURT_DESC;Residing in $LOCATION$;Réside E$LOCATION$;Residiert in $LOCATION$;;Residiendo en $LOCATION$;;;;;;;;;x
+DEAD_SINCE_DESC;Dead since $DATE$;Mort(e) depuis $DATE$;Tot seit $DATE$;;Muerto desde el $DATE$;;;;;;;;;x

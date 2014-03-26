@@ -1,0 +1,134 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+political_group;Political;;;;;;;;;;;;;x
+terran_federalist;Terran Federalist;;;;;;;;;;;;;x
+terran_republican;Terran Republican;;;;;;;;;;;;;x
+terran_imperial;Terran Imperial;;;;;;;;;;;;;x
+colonial_seperatist;Colonial Seperatist;;;;;;;;;;;;;x
+neo_feudal;Neo-Feudal;;;;;;;;;;;;;x
+astrist;Astrist;;;;;;;;;;;;;x
+neo_socialist;Neo-Socialist;;;;;;;;;;;;;x
+religious_group;Religious;;;;;;;;;;;;;x
+pilgrim;Pilgrim;;;;;;;;;;;;;x
+pilgrim_desc;While humanity follows many different religions, nearly all of them share one vital commonality - they all originated on Old Earth. Across the galaxy are billions of colonists who find themselves compelled to travel to the holy places on Earth, and over time, an infrastructure has evolved to support them. The largest organization responsible for the transportation of pilgrims is known simply as "the Pilgrimage.";;;;;;;;;;;;;x
+orthodox;Terran Orthodox;;;;;;;;;;;;;x
+orthodox_desc;Following the Edict of Reformation, the Pilgrimage transformed from a loose association of clerics into a true, united church. While the actual beliefs of followers of the Church of Holy Terra can very wildly, they all share a common veneration of humanity's homeworld and hold it as sacred.;;;;;;;;;;;;;x
+solar_cultist;Solar Cultist;;;;;;;;;;;;;x
+solarian;Solarian;;;;;;;;;;;;;x
+xenoterran;Xenoterran;;;;;;;;;;;;;x
+adoptionist_cultist;Sect Adoptionist;;;;;;;;;;;;;x
+adoptionist;Adoptionist;;;;;;;;;;;;;x
+mother_gaia_cultist;Matriarch;;;;;;;;;;;;;x
+father_earth_cultist;Patriarch;;;;;;;;;;;;;x
+transhumanist_group;Transhumanist;;;;;;;;;;;;;x
+cyberneticist;Cyberneticist;;;;;;;;;;;;;x
+machine_cultist;Machine Cultist;;;;;;;;;;;;;x
+hiver;Hiver;;;;;;;;;;;;;x
+bio_directionist;Bio-Directionist;;;;;;;;;;;;;x
+outlaw_group;Outlaw;;;;;;;;;;;;;x
+space_pirate;Space Pirate;;;;;;;;;;;;;x
+PIETY_CREDIBILITY;Credibility;;;;;;;;;;;;;x
+PIETY_LEGITIMACY;Legitimacy;;;;;;;;;;;;;x
+PIETY_ASPIRATION;Aspiration;;;;;;;;;;;;;x
+PIETY_RESPECT;Respect;;;;;;;;;;;;;x
+OP_ALACRITY;Alacrity;;;;;;;;;;;;;x
+OP_CHAPTER;Chapter;;;;;;;;;;;;;x
+OP_CORKSCREW;Corkscrew;;;;;;;;;;;;;x
+OP_DEADLIGHT;Deadlight;;;;;;;;;;;;;x
+OP_DERVISH;Dervish;;;;;;;;;;;;;x
+OP_DYNAMO;Dynamo;;;;;;;;;;;;;x
+OP_MATADOR;Matador;;;;;;;;;;;;;x
+OP_MERIDIAN;Meridian;;;;;;;;;;;;;x
+OP_OVERLORD;Overlord;;;;;;;;;;;;;x
+OP_SABRE;Sabre;;;;;;;;;;;;;x
+OP_VICTORY;Victory;;;;;;;;;;;;;x
+OP_CERBERUS;Cerberus;;;;;;;;;;;;;x
+OP_CHIMERA;Chimera;;;;;;;;;;;;;x
+OP_PEGASUS;Pegasus;;;;;;;;;;;;;x
+OP_DRAGON;Dragon;;;;;;;;;;;;;x
+OP_WYVERN;Wyvern;;;;;;;;;;;;;x
+OP_MINOTAUR;Minotaur;;;;;;;;;;;;;x
+OP_SPHINX;Sphinx;;;;;;;;;;;;;x
+OP_DJINN;Djinn;;;;;;;;;;;;;x
+OP_EFREET;Efreet;;;;;;;;;;;;;x
+OP_SCARAB;Scarab;;;;;;;;;;;;;x
+OP_YOKAI;Yokai;;;;;;;;;;;;;x
+OP_DEVA;Deva;;;;;;;;;;;;;x
+OP_AHURA;Ahura;;;;;;;;;;;;;x
+OP_HERACLES;Heracles;;;;;;;;;;;;;x
+OP_GILGAMESH;Gilgamesh;;;;;;;;;;;;;x
+OP_BEOWULF;Beowulf;;;;;;;;;;;;;x
+OP_MERCURY;Mercury;;;;;;;;;;;;;x
+OP_VENUS;Venus;;;;;;;;;;;;;x
+OP_LUNA;Luna;;;;;;;;;;;;;x
+OP_ARES;Ares;;;;;;;;;;;;;x
+OP_CERES;Ceres;;;;;;;;;;;;;x
+OP_JUPITER;Jupiter;;;;;;;;;;;;;x
+OP_GANYMEDE;Ganymede;;;;;;;;;;;;;x
+OP_EUROPA;Europa;;;;;;;;;;;;;x
+OP_CALLISTO;Callisto;;;;;;;;;;;;;x
+OP_IO;Io;;;;;;;;;;;;;x
+OP_SATURN;Saturn;;;;;;;;;;;;;x
+OP_TITAN;Titan;;;;;;;;;;;;;x
+OP_URANUS;Uranus;;;;;;;;;;;;;x
+OP_NEPTUNE;Neptune;;;;;;;;;;;;;x
+OP_PLUTO;Pluto;;;;;;;;;;;;;x
+OP_CHARON;Charon;;;;;;;;;;;;;x
+OP_LIBERTY;Liberty;;;;;;;;;;;;;x
+OP_REPUBLIC;Republic;;;;;;;;;;;;;x
+OP_ATHENS;Athens;;;;;;;;;;;;;x
+OP_SOLON;Solon;;;;;;;;;;;;;x
+OP_BASTILLE;Bastille;;;;;;;;;;;;;x
+OP_CINCINATUS;Cincinatus;;;;;;;;;;;;;x
+OP_AUGUSUTS;Augustus;;;;;;;;;;;;;x
+OP_CAESAR;Caesar;;;;;;;;;;;;;x
+OP_IMPERATOR;Imperator;;;;;;;;;;;;;x
+OP_IMPERIAL;Imperial;;;;;;;;;;;;;x
+OP_SHANG_YANG;Shang Yang;;;;;;;;;;;;;x
+OP_SHI_HUANGDI;Shi Huangdi;;;;;;;;;;;;;x
+OP_THRONE;Throne;;;;;;;;;;;;;x
+OP_CROWN;Crown;;;;;;;;;;;;;x
+OP_GALLANT;Gallant;;;;;;;;;;;;;x
+OP_CAVALIER;Cavalier;;;;;;;;;;;;;x
+OP_ARIES;Aries;;;;;;;;;;;;;x
+OP_GEMINI;Gemini;;;;;;;;;;;;;x
+OP_TAURUS;Taurus;;;;;;;;;;;;;x
+OP_CANCER;Cancer;;;;;;;;;;;;;x
+OP_LEO;Leo;;;;;;;;;;;;;x
+OP_VIRGO;Virgo;;;;;;;;;;;;;x
+OP_SAGITTARIUS;Sagittarius;;;;;;;;;;;;;x
+OP_LIBRA;Libra;;;;;;;;;;;;;x
+OP_SCORPIO;Scorpio;;;;;;;;;;;;;x
+OP_CAPRICORN;Capricorn;;;;;;;;;;;;;x
+OP_AQUARIUS;Aquarius;;;;;;;;;;;;;x
+OP_PISCES;Pisces;;;;;;;;;;;;;x
+OP_ORION;Orion;;;;;;;;;;;;;x
+OP_WITCHHEAD;Witchhead;;;;;;;;;;;;;x
+OP_HORSEHEAD;Horsehead;;;;;;;;;;;;;x
+OP_FLAME;Flame;;;;;;;;;;;;;x
+OP_VEIL;Veil;;;;;;;;;;;;;x
+OP_HELIX;Helix;;;;;;;;;;;;;x
+OP_ARCHANGEL;Archangel;;;;;;;;;;;;;x
+OP_SERAPHIM;Seraphim;;;;;;;;;;;;;x
+OP_CHERUBIM;Cherubim;;;;;;;;;;;;;x
+OP_GOSPEL;Gospel;;;;;;;;;;;;;x
+OP_TESTAMENT;Testament;;;;;;;;;;;;;x
+OP_FAITHFUL;Faithful;;;;;;;;;;;;;x
+OP_GABRIEL;Gabriel;;;;;;;;;;;;;x
+OP_MICHAEL;Michael;;;;;;;;;;;;;x
+OP_AZRAEL;Azrael;;;;;;;;;;;;;x
+OP_PROPHECY;Prophecy;;;;;;;;;;;;;x
+OP_ABRAHAM;Abraham;;;;;;;;;;;;;x
+OP_ISAAC;Isaac;;;;;;;;;;;;;x
+OP_JACOB;Jacob;;;;;;;;;;;;;x
+OP_JOSHUA;Joshua;;;;;;;;;;;;;x
+OP_DAVID;David;;;;;;;;;;;;;x
+OP_SOLOMON;Solomon;;;;;;;;;;;;;x
+OP_MOHAMMED;Mohammed;;;;;;;;;;;;;x
+OP_MITHRAS;Mithras;;;;;;;;;;;;;x
+OP_SOL_INVICTUS;Sol Invictus;;;;;;;;;;;;;x
+OP_ENLIGHTENMENT;Enlightenment;;;;;;;;;;;;;x
+OP_TRANSCENDENCE;Transcendence;;;;;;;;;;;;;x
+OP_NIRVANA;Nirvana;;;;;;;;;;;;;x
+OP_ASCENSION;Ascension;;;;;;;;;;;;;x
+OP_UTOPIA;Utopia;;;;;;;;;;;;;x
+OP_SINGULARITY;Singularity;;;;;;;;;;;;;x

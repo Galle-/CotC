@@ -1,0 +1,23 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+kingdom_capital_bonus;Regional Bureaucracy;;;;;;;;;;;;;x
+kingdom_capital_bonus_desc;This character's seat of government is established in the permanent capital of their state, allowing them to take advantage of an established bureaucracy.;;;;;;;;;;;;;x
+empire_capital_bonus;Federal Bureaucracy;;;;;;;;;;;;;x
+empire_capital_bonus_desc;This character's seat of government is established in the permanent capital of their state, allowing them to take advantage of an established bureaucracy.;;;;;;;;;;;;;x
+kingdom_capital_system;Regional Capital;;;;;;;;;;;;;x
+kingdom_capital_system_desc;This system has been designated as the Federal Capital District for its region - it is considered to be the exclusive property of the federal government, and will be automatically granted to a new government when it takes power.;;;;;;;;;;;;;x
+empire_capital_system;Federal Capital;;;;;;;;;;;;;x
+empire_capital_system_desc;This system has been designated as the Federal Capital District for its empire - it is considered to be the exclusive property of the federal government, and will be automatically granted to a new government when it takes power.;;;;;;;;;;;;;x
+set_kingdom_capital_system;Designate [Root.Capital.GetName] as the [Root.Capital.Kingdom.GetAdjective] Capital;;;;;;;;;;;;;x
+set_kingdom_capital_system_desc;Establishing a permanent seat of the [Root.Capital.Kingdom.GetAdjective] government in the [Root.Capital.GetName] System would greatly assist in the administration of the state.;;;;;;;;;;;;;x
+set_empire_capital_system;Designate [Root.Capital.GetName] as the [Root.Capital.Empire.GetAdjective] Capital;;;;;;;;;;;;;x
+set_empire_capital_system_desc;Establishing a permanent seat of the [Root.Capital.Empire.GetAdjective] government in the [Root.Capital.GetName] System would greatly assist in the administration of the state.;;;;;;;;;;;;;x
+HASNOTDECLAREDKINGDOMCAPITAL;You have not already designated a regional capital.\n;;;;;;;;;;;;;x
+HASNOTDECLAREDEMPIRECAPITAL;You have not already designated a federal capital.\n;;;;;;;;;;;;;x
+EVTDESCCAPITAL0;The [Root.GetName] System can no longer serve as the established capital of the [Root.Kingdom.GetFullName], and many of the administrative agencies that were established here are now being dissolved or dispersed.;;;;;;;;;;;;;x
+EVTDESCCAPITAL1;The [From.GetName] System can no longer serve as the established capital of the [From.Kingdom.GetFullName], and many of the administrative agencies that were established there are now being dissolved or dispersed.;;;;;;;;;;;;;x
+EVTDESCCAPITAL2;The [Root.GetName] System can no longer serve as the established capital of the [Root.Empire.GetFullName], and many of the administrative agencies that were established here are now being dissolved or dispersed.;;;;;;;;;;;;;x
+EVTDESCCAPITAL3;The [From.GetName] System can no longer serve as the established capital of the [From.Empire.GetFullName], and many of the administrative agencies that were established there are now being dissolved or dispersed.;;;;;;;;;;;;;x
+EVTTOOLTIPCAPITAL100;will become the permanent capital of the [This.Kingdom.GetFullName].;;;;;;;;;;;;;x
+EVTDESCCAPITAL100;The [Root.Kingdom.GetFullName] has established a permanent capital in the [Root.GetName] System.;;;;;;;;;;;;;x
+EVTTOOLTIPCAPITAL101;will become the permanent capital of the [This.Empire.GetFullName].;;;;;;;;;;;;;x
+EVTDESCCAPITAL101;The [Root.Empire.GetFullName] has established a permanent capital in the [Root.GetName] System.;;;;;;;;;;;;;x

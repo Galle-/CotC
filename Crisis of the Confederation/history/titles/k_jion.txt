@@ -1,0 +1,12 @@
+2983.1.1 = {
+	law = legitimacy_law_1
+	law = election_law_1
+	law = true_cognatic_succession
+	law = succ_open_elective
+}
+2992.1.1 = {
+	holder = 1208425 # Yukio Hasegawa
+}
+2998.1.1 = {
+	holder = 1107945 # Ryusei Sato
+}

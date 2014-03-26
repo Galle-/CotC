@@ -1,4 +1,12 @@
-2489.1.1 = { liege = "e_terran_confederation" }
+2385.1.1 = {
+	# Founding of the Homeworld Alliance/United Commonwealth of Terran States
+	effect = { location = { add_province_modifier = { name = kingdom_capital_system duration = -1 } } }
+}
+
+2489.1.1 = {
+	liege = "e_terran_confederation"
+	effect = { location = { add_province_modifier = { name = empire_capital_system duration = -1 } } }
+}
 
 # Modern era
 2948.1.1 = { holder = 1304931 }		# Lucia Salazar (died in office)

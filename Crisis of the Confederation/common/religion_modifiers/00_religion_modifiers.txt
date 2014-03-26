@@ -2,10 +2,68 @@
 # RELIGIOUS AUTHORITY MODIFIERS - fully scriptable
 ##########################################################################
 
+# These are awared to ideologies whose rulers pursue reforms compatible with them
+major_compatible_reform = {
+	authority = 10
+	years = 50
+}
+minor_compatible_reform = {
+	authority = 3
+	years = 50
+}
+major_compatible_local_reform = {
+	authority = 3
+	years = 25
+}
+minor_compatible_local_reform = {
+	authority = 1
+	years = 25
+}
+
+# These are used to penalize ideologies whose rulers pursue reforms incompatible with them
+major_hypocritical_reform = {
+	authority = -10
+	years = 50
+}
+minor_hypocritical_reform = {
+	authority = -3
+	years = 50
+}
+major_hypocritical_local_reform = {
+	authority = -3
+	years = 25
+}
+minor_hypocritical_local_reform = {
+	authority = -1
+	years = 25
+}
+
 # Apply once for each rebelling kingdom
 allowed_major_rebellion = {
 	authority = -5
 	years = 30
+}
+
+allowed_civil_war_county = {
+	authority = -1
+	years = 30
+}
+allowed_civil_war_duchy = {
+	authority = -3
+	years = 30
+}
+allowed_civil_war_kingdom = {
+	authority = -5
+	years = 30
+}
+allowed_civil_war_empire = {
+	authority = -15
+	years = 30
+}
+
+legal_demand_refused = {
+	authority = -3
+	years = 10
 }
 
 won_crusade = {

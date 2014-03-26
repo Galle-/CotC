@@ -1,6 +1,195 @@
+civil_war = {
+	# A generic civil war triggered by a failed coup or purge
+	name = CB_NAME_CIVIL_WAR
+	war_name = WAR_NAME_CIVIL_WAR
+	sprite = 3
+	truce_days = 0
+	hostile_against_others = yes
+	major_revolt = yes
+	is_permanent = yes
+	
+	press_claim = yes
+	can_call_vassals = yes
+	
+	can_use = {
+		# Triggered by event only
+		OR = {
+			ROOT = { has_character_flag = flag_launching_civil_war }
+			FROM = { has_character_flag = flag_launching_civil_war }
+		}
+	}
+	
+	on_add = {
+		# Remove initiating flags
+		ROOT = { clr_character_flag = flag_launching_civil_war }
+		FROM = { clr_character_flag = flag_launching_civil_war }
+		
+		# If FROM and ROOT share the same ideology, change that ideology's moral authority.
+		if = {
+			limit = {
+				FROM = { primary_title = { tier = EMPEROR } }
+				FROM = { religion = ROOT }
+			}
+			FROM = { religion_authority = { modifier = allowed_civil_war_empire } }
+		}
+		if = {
+			limit = {
+				FROM = { primary_title = { tier = KING } }
+				FROM = { religion = ROOT }
+			}
+			FROM = { religion_authority = { modifier = allowed_civil_war_kingdom } }
+		}
+		if = {
+			limit = {
+				FROM = { primary_title = { tier = DUKE } }
+				FROM = { religion = ROOT }
+			}
+			FROM = { religion_authority = { modifier = allowed_civil_war_duchy } }
+		}
+		if = {
+			limit = {
+				FROM = { primary_title = { tier = COUNT } }
+				FROM = { religion = ROOT }
+			}
+			FROM = { religion_authority = { modifier = allowed_civil_war_county } }
+		}
+	}
+	
+	is_valid = {
+		OR = {
+			# Civil wars without an actual CB end with the leader's death
+			ROOT = { has_character_flag = flag_failed_coup }
+			FROM = { has_character_flag = flag_failed_purge }
+			
+			# Civil wars that are theoretically actually over something
+			FROM = {
+				any_demesne_title = {
+					is_primary_holder_title_tier = yes
+					ROOT = { has_strong_claim = PREV }
+				}
+			}
+			FROM = { has_character_modifier = constitutional_crisis }
+		}
+	}
+	
+	on_success = {
+		# The rebels have won!
+		# Exactly what the rebels get should depend on whether this was a coup or purge
+		if = {
+			limit = { ROOT = { has_character_flag = flag_coup_leader } }
+			ROOT = { character_event = { id = coup.5300 tooltip = "EVTTOOLTIPCOUP5300" } }
+		}
+		any_attacker = {
+			limit = { character = ROOT }
+			participation_scaled_prestige = 200
+		}
+		any_attacker = {
+			limit = { NOT = { character = ROOT } }
+			hidden_tooltip = { participation_scaled_prestige = 200 }
+		}
+		any_attacker = {
+			limit = { trait = partisan }
+			hidden_tooltip = {
+				remove_trait = partisan
+				any_courtier = { ROOT = { reverse_banish = PREV } }
+				ROOT = { reverse_banish = PREV }
+				piety = 200
+			}
+		}
+		any_defender = {
+			limit = { trait = partisan }
+			hidden_tooltip = {
+				remove_trait = partisan
+				imprison = ROOT
+			}
+		}
+		
+		# If FROM and ROOTs' ideologies are different, the latter gets a bonus and
+		# the former takes a hit
+	}
+	
+	on_fail = {
+		# Initiator fails to achieve whatever it was they were after
+		if = {
+			limit = { ROOT = { has_character_flag = flag_coup_leader } }
+			character_event = { id = coup.5400 tooltip = "EVTTOOLTIPCOUP5400" }
+		}
+	}
+	
+	on_reverse_demand = {
+		# Coups fail immediately
+		if = {
+			limit = { ROOT = { has_character_flag = flag_coup_leader } }
+			character_event = { id = coup.5400 tooltip = "EVTTOOLTIPCOUP5400" }
+		}
+		# Ruler has won!
+		FROM = { prestige = 100 }
+		# Imprison all rebels
+		any_attacker = { imprison = FROM }
+		# Imprison all of ROOT's co-conspirators (if not rebels)
+		if = {
+			limit = {
+				ROOT = {
+					OR = {
+						has_plot = plot_coup
+						has_plot = plot_justified_coup
+					}
+					plot_target_char = { character = FROM }
+				}
+			}
+			ROOT = {
+				any_plot_backer = {
+					limit = { NOT = { war_with = FROM } }
+					imprison = FROM
+				}
+			}
+		}
+		# All anti-ruler vassals are automatically no longer anti-ruler
+		FROM = {
+			any_vassal = {
+				limit = { trait = anti_ruler }
+				hidden_tooltip = {
+					remove_trait = anti_ruler
+					character_event = { id = laws.5 }
+				}
+			}
+			any_courtier = {
+				limit = { trait = anti_ruler }
+				hidden_tooltip = {
+					remove_trait = anti_ruler
+					character_event = { id = laws.5 }
+				}
+			}
+		}
+		# If FROM is in a constitutional crisis, this resolves it in their favor.
+		if = {
+			limit = { FROM = { has_character_modifier = constitutional_crisis } }
+			FROM = { character_event = { id = laws.1000 tooltip = "EVTTOOLTIPLAWS1000" } }
+		}
+		
+		# If FROM and ROOTs' ideologies are different, the former gets a bonus and
+		# the latter takes a hit
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
 cb_military_campaign = {
-	# This CB is used by military vassals against enemies of their
-	# lieges.
+	# This CB is used by military vassals against enemies of their lieges.
 	name = CB_NAME_MILITARY_CAMPAIGN
 	war_name = WAR_NAME_MILITARY_CAMPAIGN
 	sprite = 1
@@ -106,5 +295,153 @@ cb_military_campaign = {
 	
 	defender_ai_defeat_worth = {
 		factor = 100
+	}
+	
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 2
+			ROOT = { liege = { religion_authority = 0.1 } }
+		}
+		modifier = {
+			factor = 2
+			ROOT = { liege = { religion_authority = 0.2 } }
+		}
+		modifier = {
+			factor = 2
+			ROOT = { liege = { religion_authority = 0.3 } }
+		}
+		modifier = {
+			factor = 2
+			ROOT = { liege = { religion_authority = 0.4 } }
+		}
+		modifier = {
+			factor = 2
+			ROOT = { liege = { religion_authority = 0.5 } }
+		}
+		modifier = {
+			factor = 2
+			ROOT = { liege = { religion_authority = 0.6 } }
+		}
+		modifier = {
+			factor = 2
+			ROOT = { liege = { religion_authority = 0.7 } }
+		}
+		modifier = {
+			factor = 2
+			ROOT = { liege = { religion_authority = 0.8 } }
+		}
+		modifier = {
+			factor = 2
+			ROOT = { liege = { religion_authority = 0.9 } }
+		}
+		modifier = {
+			factor = 2
+			ROOT = { liege = { religion_authority = 1 } }
+		}
+		modifier = {
+			factor = 2
+			ROOT = { trait = brave }
+		}
+		modifier = {
+			factor = 0.5
+			ROOT = { trait = craven }
+		}
+		modifier = {
+			factor = 2
+			ROOT = { trait = disciplined }
+		}
+		modifier = {
+			factor = 0.5
+			ROOT = { trait = carefree }
+		}
+		modifier = {
+			factor = 2
+			ROOT = { trait = proud }
+		}
+		modifier = {
+			factor = 2
+			ROOT = { trait = ambitious }
+		}
+		modifier = {
+			factor = 0.8
+			ROOT = { opinion = { who = FROM value = 100 } }
+		}
+		modifier = {
+			factor = 0.8
+			ROOT = { opinion = { who = FROM value = 90 } }
+		}
+		modifier = {
+			factor = 0.8
+			ROOT = { opinion = { who = FROM value = 80 } }
+		}
+		modifier = {
+			factor = 0.8
+			ROOT = { opinion = { who = FROM value = 70 } }
+		}
+		modifier = {
+			factor = 0.8
+			ROOT = { opinion = { who = FROM value = 60 } }
+		}
+		modifier = {
+			factor = 0.8
+			ROOT = { opinion = { who = FROM value = 50 } }
+		}
+		modifier = {
+			factor = 0.8
+			ROOT = { opinion = { who = FROM value = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			ROOT = { opinion = { who = FROM value = 30 } }
+		}
+		modifier = {
+			factor = 0.8
+			ROOT = { opinion = { who = FROM value = 20 } }
+		}
+		modifier = {
+			factor = 0.8
+			ROOT = { opinion = { who = FROM value = 10 } }
+		}
+		modifier = {
+			factor = 1.25
+			ROOT = { NOT = { opinion = { who = FROM value = -9 } } }
+		}
+		modifier = {
+			factor = 1.25
+			ROOT = { NOT = { opinion = { who = FROM value = -19 } } }
+		}
+		modifier = {
+			factor = 1.25
+			ROOT = { NOT = { opinion = { who = FROM value = -29 } } }
+		}
+		modifier = {
+			factor = 1.25
+			ROOT = { NOT = { opinion = { who = FROM value = -39 } } }
+		}
+		modifier = {
+			factor = 1.25
+			ROOT = { NOT = { opinion = { who = FROM value = -49 } } }
+		}
+		modifier = {
+			factor = 1.25
+			ROOT = { NOT = { opinion = { who = FROM value = -59 } } }
+		}
+		modifier = {
+			factor = 1.25
+			ROOT = { NOT = { opinion = { who = FROM value = -69 } } }
+		}
+		modifier = {
+			factor = 1.25
+			ROOT = { NOT = { opinion = { who = FROM value = -79 } } }
+		}
+		modifier = {
+			factor = 1.25
+			ROOT = { NOT = { opinion = { who = FROM value = -89 } } }
+		}
+		modifier = {
+			factor = 1.25
+			ROOT = { NOT = { opinion = { who = FROM value = -99 } } }
+		}
 	}
 }

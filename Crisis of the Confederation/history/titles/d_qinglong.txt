@@ -2,6 +2,6 @@
 2489.1.1 = {
 	liege = "k_xingjie"
 	law = true_cognatic_succession
-	law = succ_catholic_bishopric
+	law = succ_appointment
 }
 2998.1.1 = { holder = 1104754 } # Jian Escobar

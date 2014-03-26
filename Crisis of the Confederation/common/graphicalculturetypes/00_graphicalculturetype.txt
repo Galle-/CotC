@@ -13,6 +13,9 @@ angloconfederategfx = {
 hispanicconfederategfx = {
 	skin_tone = 1
 }
+indoconfederategfx = {
+	skin_tone = 2
+}
 mideastconfederategfx = {
 	skin_tone = 2
 }
@@ -155,4 +158,21 @@ aztecholygfx = {
 }
 jewishholygfx = {
 	skin_tone = 1
+}
+
+# Indian
+indiangfx = {
+	skin_tone = 2
+}
+
+hindugfx = {
+	skin_tone = 2
+}
+
+jaingfx = {
+	skin_tone = 2
+}
+
+buddhistgfx = {
+	skin_tone = 2
 }

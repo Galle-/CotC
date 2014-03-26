@@ -1,0 +1,102 @@
+plot_decisions = {
+	launch_coup = {
+		is_high_prio = yes
+		potential = {
+			OR = {
+				has_plot = plot_coup
+				has_plot = plot_justified_coup
+			}
+		}
+		allow = { always = yes }
+		effect = { character_event = { id = coup.5000 tooltip = "EVTTOOLTIPCOUP5000" } }
+		ai_will_do = {
+			factor = 0.1
+			modifier = {
+				factor = 1.25
+				plot_power = 0.2
+			}
+			modifier = {
+				factor = 1.25
+				plot_power = 0.4
+			}
+			modifier = {
+				factor = 1.25
+				plot_power = 0.6
+			}
+			modifier = {
+				factor = 1.25
+				plot_power = 0.8
+			}
+			modifier = {
+				factor = 1.25
+				plot_power = 1
+			}
+			modifier = {
+				factor = 1.25
+				plot_power = 1.2
+			}
+			modifier = {
+				factor = 1.25
+				plot_power = 1.4
+			}
+			modifier = {
+				factor = 1.25
+				plot_power = 1.6
+			}
+			modifier = {
+				factor = 1.25
+				plot_power = 1.8
+			}
+			modifier = {
+				factor = 1.25
+				plot_power = 2
+			}
+			
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			
+			modifier = {
+				factor = 2
+				has_character_flag = flag_coup_plan_military
+			}
+			modifier = {
+				factor = 2
+				any_plot_backer = { has_character_flag = flag_coup_plan_military }
+			}
+			modifier = {
+				factor = 2
+				any_plot_backer = {
+					has_character_flag = flag_coup_plan_military
+					count = 2
+				}
+			}
+			modifier = {
+				factor = 2
+				any_plot_backer = {
+					has_character_flag = flag_coup_plan_military
+					count = 3
+				}
+			}
+			modifier = {
+				factor = 2
+				any_plot_backer = {
+					has_character_flag = flag_coup_plan_military
+					count = 4
+				}
+			}
+			modifier = {
+				factor = 2
+				any_plot_backer = {
+					has_character_flag = flag_coup_plan_military
+					count = 5
+				}
+			}
+		}
+	}
+}

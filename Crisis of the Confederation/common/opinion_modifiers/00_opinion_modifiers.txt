@@ -58,6 +58,10 @@ de_jure_liege_hog = {
 	opinion = -20
 }
 
+opinion_imprisoned = {
+	opinion = -50
+}
+
 # Not applied under Feudal Elective
 opinion_pretender = {
 	opinion = -50
@@ -108,9 +112,14 @@ opinion_defending_my_titles = {
 	opinion = 100
 }
 
-# My liege is defending against Infidels
+# My liege is defending against infidels in some type of holy war
 opinion_defending_vs_infidel = {
-	opinion = 30
+	opinion = 75
+}
+
+# My liege is defending in a war against foreigners
+opinion_defending_vs_foreigners = {
+	opinion = 50
 }
 
 opinion_pope_vs_antipope = {
@@ -134,6 +143,12 @@ opinion_repented_sins = {
 
 opinion_lover = {
 	opinion = 75
+	months = 2400
+}
+
+# Ex-lover
+opinion_former_lover = {
+	opinion = -15
 	months = 2400
 }
 
@@ -225,6 +240,17 @@ opinion_heir_guardian_my_culture = {
 
 # Heir Educated with Foreign Culture
 opinion_heir_guardian_foreign_culture = {
+	opinion = -25
+}
+
+# Revoked Honorary Title with positive opinion mod
+opinion_revoked_honorary_title = {
+	opinion = -25
+	months = 1200
+}
+
+# Kings don't like being vassals
+opinion_vassal_king = {
 	opinion = -25
 }
 

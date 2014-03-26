@@ -1,3 +1,146 @@
+# Ryusei Sato and family
+# Any resemblance to a certain famous mecha anime TOTALLY coincidental.
+1107945 = {
+	# Dictator of Jion, 2998 - Present
+	name = "Ryusei"
+	dynasty = 7945 # Sato
+	female = no
+	
+	culture = japanese_tengoku
+	religion = astrist
+	
+	trait = intricate_webweaver
+	trait = friendly
+	trait = pragmatic
+	trait = confident
+	trait = disciplined
+	trait = proud
+	trait = ambitious
+	
+	2936.1.1 = { birth = "2936.1.1" }
+}
+
+1117945 = {
+	# Commander of the Jion Space Attack Force, 2998 - Present
+	# Minister of War for the Military State of Jion
+	name = "Jiro"
+	dynasty = 7945 # Sato
+	female = no
+	
+	culture = japanese_tengoku
+	religion = astrist
+	
+	trait = quick
+	trait = brilliant_strategist
+	trait = warship_captain
+	trait = inspiring_leader
+	trait = extraverted
+	trait = cold
+	trait = radical
+	trait = confident
+	trait = disciplined
+	trait = proud
+	trait = ambitious
+	
+	2963.1.1 = { birth = "2963.1.1" }
+	
+	father = 11017945 # Ryusei Sato
+}
+
+1127945 = {
+	# Defense Zone Commander, Sector Taikun
+	name = "Toshiko"
+	dynasty = 7945
+	female = yes # Sato
+	
+	culture = japanese_tengoku
+	religion = astrist
+	
+	trait = tough_soldier
+	trait = warship_captain
+	trait = friendly
+	trait = confident
+	trait = disciplined
+	trait = proud
+	trait = content
+	trait = brave
+	
+	2970.1.1 = { birth = "2970.1.1" }
+	
+	father = 1107945 # Ryusei Sato
+}
+
+1137945 = {
+	# Defense Zone Commander, Sector Sumitomo
+	# Minister of Intelligence for the Military State of Jion
+	name = "Kenichi"
+	dynasty = 7945 # Sato
+	female = no
+	
+	culture = japanese_tengoku
+	religion = astrist
+	
+	trait = elusive_shadow
+	trait = introverted
+	trait = cold
+	trait = radical
+	trait = confident
+	trait = disciplined
+	trait = proud
+	trait = ambitious
+	
+	2974.1.1 = { birth = "2974.1.1" }
+	
+	father = 11017945 # Ryusei Sato
+}
+
+1147945 = {
+	# Commander, Star System Moegara
+	name = "Kaoru"
+	dynasty = 7945 # Sato
+	female = yes
+	
+	culture = japanese_tengoku
+	religion = astrist
+	
+	trait = attractive
+	trait = naive_appeaser
+	trait = friendly
+	trait = radical
+	trait = carefree
+	trait = confident
+	trait = proud
+	
+	2978.1.1 = { birth = "2978.1.1" }
+	
+	father = 11017945 # Ryusei Sato
+}
+
+1108425 = {
+	# Commander of ,
+	# COMPLETELY TRUSTWORTHY
+	name = "Shiro"
+	dynasty = 8425 # Hasegawa
+	female = no
+	
+	culture = japanese_tengoku
+	religion = astrist
+	
+	trait = quick
+	trait = brilliant_strategist
+	trait = fighter_pilot
+	trait = trickster
+	trait = friendly
+	trait = pragmatic
+	trait = brave
+	trait = proud
+	trait = confident
+	trait = ambitious
+	
+	2978.1.1 = { birth = "2978.1.1" }
+	father = 1208425 # Yukio Hasegawa
+}
+
 1208425 = {
 	# President of Jion, 2992 - 2998
 	name = "Yukio"
@@ -10,7 +153,7 @@
 	father = 1308425 # Shiro Hasegawa
 	
 	2945.1.1 = { birth = "2945.1.1" }
-	2998.1.1 = { death = { death_reason = death_execution } } # Executed by Ryusei Sato
+	2998.1.1 = { death = { death_reason = death_execution killer = 1107945 } } # Executed by Ryusei Sato
 }
 
 1308425 = {
@@ -49,7 +192,7 @@
 	# Anti-Sato Jionese military officer
 	# Father of the Shibata Twins
 	name = "Jiro"
-	dynasty = 8921
+	dynasty = 8921 # Shibata
 	female = no
 	
 	culture = japanese_tengoku

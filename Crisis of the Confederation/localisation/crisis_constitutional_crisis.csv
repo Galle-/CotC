@@ -1,6 +1,34 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
-EVTTOOLTIPCONSTITUTIONALCRISIS;The [This.GetFullName] will enter a constitutional crisis!;;;;;;;;;;;;;x
-EVTTOOLTIPLAWAGAINSTRULER;[This.Holder.GetTitle] [This.Holder.GetFullName]'s actions will be considered illegal!;;;;;;;;;;;;;x
+constitutional_crisis;Constitutional Crisis;;;;;;;;;;;;;x
+constitutional_crisis_desc;This character is the nominal leader of a government currently undergoing a constitutional crisis.;;;;;;;;;;;;;x
+crisis_liege_for_ruler;Support From Superiors;;;;;;;;;;;;;x
+crisis_liege_for_ruler_desc;This character's actions in the current constitutional crisis have been officially endorsed by their superiors.;;;;;;;;;;;;;x
+crisis_liege_against_ruler;Opposition From Superiors;;;;;;;;;;;;;x
+crisis_liege_against_ruler_desc;This character's actions in the current constitutional crisis have been officially denounced by their superiors.;;;;;;;;;;;;;x
+crisis_law_for_ruler;Legal Mandate;;;;;;;;;;;;;x
+crisis_law_for_ruler_desc;This character's actions in the current constitutional crisis are widely acknowledged as being the legally correct ones according to their government's constitution.;;;;;;;;;;;;;x
+crisis_law_against_ruler;Illegal Actions;;;;;;;;;;;;;x
+crisis_law_against_ruler_desc;This character's actions in the current constitutional crisis are widely considered to be a particularly blatant violation of their government's constitution.;;;;;;;;;;;;;x
+public_for_emperor;Public Support - Federal;;;;;;;;;;;;;x
+public_for_emperor_desc;The population of this system support the actions of the executive in the current federal constitutional crisis.;;;;;;;;;;;;;x
+public_against_emperor;Public Opposition - Federal;;;;;;;;;;;;;x
+public_against_emperor_desc;The population of this system oppose the actions of the executive in the current federal constitutional crisis.;;;;;;;;;;;;;x
+public_for_king;Public Support - Regional;;;;;;;;;;;;;x
+public_for_king_desc;The population of this system support the actions of the executive in the current regional constitutional crisis.;;;;;;;;;;;;;x
+public_against_king;Public Opposition - Regional;;;;;;;;;;;;;x
+public_against_king_desc;The population of this system oppose the actions of the executive in the current regional constitutional crisis.;;;;;;;;;;;;;x
+public_for_duke;Public Support - Sector;;;;;;;;;;;;;x
+public_for_duke_desc;The population of this system support the actions of the executive in the current sector-level constitutional crisis.;;;;;;;;;;;;;x
+public_against_duke;Public Opposition - Sector;;;;;;;;;;;;;x
+public_against_duke_desc;The population of this system oppose the actions of the executive in the current sector-level constitutional crisis.;;;;;;;;;;;;;x
+public_for_count;Public Support - System;;;;;;;;;;;;;x
+public_for_count_desc;The population of this system support the actions of the executive in the current local constitutional crisis.;;;;;;;;;;;;;x
+public_against_count;Public Opposition - System;;;;;;;;;;;;;x
+public_against_count_desc;The population of this system oppose the actions of the executive in the current local constitutional crisis.;;;;;;;;;;;;;x
+pro_ruler;Pro-Ruler;;;;;;;;;;;;;x
+pro_ruler_desc;This character has officially declared their support for their liege in the current constitutional crisis.;;;;;;;;;;;;;x
+anti_ruler;Anti-Ruler;;;;;;;;;;;;;x
+anti_ruler_desc;This character has officially declared their opposition to their liege in the current constitutional crisis.;;;;;;;;;;;;;x
 EVTDESCLAWS300;The current crisis has seen the [Root.Liege.PrimaryTitle.GetFullName]'s leaders divided into two camps, those who support the [Root.Liege.GetTitle] and those who oppose [Root.Liege.GetHerHim]. You are considering lending [Root.Liege.GetHerHim] your support.;;;;;;;;;;;;;x
 EVTDESCLAWS301;TO: [Root.GetTitle] [Root.GetFullName]\nFROM: [From.GetTitle] [From.GetFullName]\nRE: The poltiical situation\n[Root.GetFOA], I would like to make a proposal. Given the current political crisis, you are obviously in dire need of allies. I am willing to be one of those allies, in exchange for your good will in the future.;;;;;;;;;;;;;x
 EVTDESCLAWS302;TO: [Root.GetTitle] [Root.GetFullName]\nFROM: [From.GetTitle] [From.GetFullName]\nRE: The political situation\nI have decided to accept your proposal. Provided you maintain your support for the duration of the crisis, I will ensure you that your future requests receive their proper consideration.;;;;;;;;;;;;;x

@@ -189,7 +189,7 @@ terran_group = {
 	}
 	
 	indo_terran = {
-		graphical_culture = mideastconfederategfx
+		graphical_culture = indoconfederategfx
 		color = { 0.5 0.5 0.95 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -624,7 +624,7 @@ xingjie_group = {
 	}
 	
 	indo_xingjie = {
-		graphical_culture = muslimgfx
+		graphical_culture = indiangfx
 		color = { 0.95 0.5 0.5 }
 		
 		male_names = {
@@ -1054,7 +1054,7 @@ celestean_group = {
 	}
 	
 	indo_celestean = {
-		graphical_culture = muslimgfx
+		graphical_culture = indiangfx
 		color = { 0.5 0.5 0.95 }
 
 		male_names = {
@@ -1479,7 +1479,7 @@ sexto_solar_group = {
 	}
 	
 	indo_sexto_solar = {
-		graphical_culture = muslimgfx
+		graphical_culture = indiangfx
 		color = { 0.5 0.5 0.95 }
 		
 		male_names = {
@@ -1893,7 +1893,7 @@ samawati_group = {
 	}
 	
 	indo_samawati = {
-		graphical_culture = muslimgfx
+		graphical_culture = indiangfx
 		color = { 0.5 0.5 0.95 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -2332,7 +2332,7 @@ angani_group = {
 	}
 	
 	indo_angani = {
-		graphical_culture = muslimgfx
+		graphical_culture = indiangfx
 		color = { 0.5 0.5 0.95 }
 
 		male_names = {
@@ -2782,7 +2782,7 @@ frontiersman_group = {
 	}
 	
 	indo_frontiersman = {
-		graphical_culture = muslimgfx
+		graphical_culture = indiangfx
 		color = { 0.5 0.5 0.95 }
 		male_names = {
 			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
@@ -3249,7 +3249,7 @@ centauri_group = {
 	}
 	
 	indo_centauri = {
-		graphical_culture = muslimgfx
+		graphical_culture = indiangfx
 		color = { 0.5 0.5 0.95 }
 
 		male_names = {
@@ -3732,7 +3732,7 @@ tengoku_group = {
 	}
 	
 	indo_tengoku = {
-		graphical_culture = muslimgfx
+		graphical_culture = indiangfx
 		color = { 0.5 0.5 0.95 }
 		
 		male_names = {
@@ -4188,7 +4188,7 @@ bianjiangese_group = {
 	}
 	
 	indo_bianjiangese = {
-		graphical_culture = muslimgfx
+		graphical_culture = indiangfx
 		color = { 0.5 0.5 0.95 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -4625,7 +4625,7 @@ orion_group = {
 	}
 	
 	indo_orion = {
-		graphical_culture = muslimgfx
+		graphical_culture = indiangfx
 		color = { 0.5 0.5 0.95 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -5062,7 +5062,7 @@ mukta_group = {
 	}
 	
 	indo_mukta = {
-		graphical_culture = muslimgfx
+		graphical_culture = indiangfx
 		color = { 0.5 0.5 0.95 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -5499,7 +5499,7 @@ tarkan_group = {
 	}
 	
 	indo_tarkan = {
-		graphical_culture = muslimgfx
+		graphical_culture = indiangfx
 		color = { 0.5 0.5 0.95 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -5936,7 +5936,7 @@ avalonian_group = {
 	}
 	
 	indo_avalonian = {
-		graphical_culture = muslimgfx
+		graphical_culture = indiangfx
 		color = { 0.5 0.5 0.95 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -6397,7 +6397,7 @@ strugatskite_group = {
 	}
 	
 	indo_strugatskite = {
-		graphical_culture = muslimgfx
+		graphical_culture = indiangfx
 		color = { 0.5 0.5 0.95 }
 
 		male_names = {
@@ -6885,7 +6885,7 @@ edemite_group = {
 	}
 	
 	indo_edemite = {
-		graphical_culture = muslimgfx
+		graphical_culture = indiangfx
 		color = { 0.5 0.5 0.95 }
 
 		male_names = {

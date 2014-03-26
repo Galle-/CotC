@@ -1,0 +1,40 @@
+EVENT PICTURES WE'RE GOING TO NEED
+	POLITICAL
+		GFX_evt_office
+		GFX_evt_chancellor
+		GFX_evt_council
+		GFX_evt_scandal
+		GFX_evt_protest
+		GFX_evt_speech
+		GFX_evt_legislature
+	MILITARY
+		GFX_evt_admiral
+		GFX_evt_space_battle
+		GFX_evt_military_coup
+	ADMINISTRATIVE
+		GFX_evt_treasurer
+	INTRIGUE
+		GFX_evt_spymaster
+		GFX_evt_cabal
+		GFX_evt_betrayal
+	SCIENCE
+		GFX_evt_laboratory
+		GFX_evt_scientist
+	IDEOLOGY AND JUSTICE
+		GFX_evt_trial
+		GFX_evt_judge
+		GFX_evt_preacher
+	FAMILY AND RELATIONSHIPS
+		GFX_evt_lovers
+		GFX_evt_quarrel
+		GFX_evt_pregnancy
+		GFX_evt_birth
+	CHILDHOOD
+		GFX_evt_child
+		GFX_evt_guardian
+	OTHER
+		GFX_evt_news
+		GFX_evt_city
+		GFX_evt_prison
+		GFX_evt_illness
+		GFX_evt_culture (should come in culture group-specific versions)

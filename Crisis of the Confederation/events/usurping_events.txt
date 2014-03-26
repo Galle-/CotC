@@ -1,0 +1,171 @@
+namespace = usurpation
+
+# Usurp Primary Title: Not Merchant Republic
+character_event = {
+	id = usurpation.0
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = { is_merchant_republic = no }
+	
+	immediate = {
+		clr_character_flag = flag_primary_title_usurped # Clear this flag if it was set
+		any_demesne_title = {
+			limit = {
+				OR = {
+					is_primary_holder_title_tier = yes
+					location = { ROOT = { capital_scope = { province_id = PREVPREV } } }
+					ROOT = { capital_scope = { duchy = { title = PREVPREVPREV } } }
+					ROOT = { capital_scope = { kingdom = { title = PREVPREVPREV } } }
+				}
+			}
+			usurp_title = FROM
+		}
+	}
+	set_defacto_liege = FROM
+}
+
+# Usurp Primary Title: Merchant Republic
+character_event = {
+	id = usurpation.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_merchant_republic = yes
+		FROM = { is_patrician = yes }
+	}
+	immediate = {
+		clr_character_flag = flag_primary_title_usurped # Clear this flag if it was set
+		# Create dummy middleman to hold onto the family estate for a second
+		create_character = {
+			name = "Stockholder Meeting"
+			age = 20
+			culture = ROOT
+			religion = ROOT
+			dynasty = ROOT
+			is_female = no
+		}
+		new_character = {
+			set_defacto_liege = FROM # Do this at every possible opportunity
+			ROOT = {
+				# Grab any family estate titles and give them to the dummy
+				any_demesne_title = {
+					limit = {
+						is_primary_holder_title_tier = no # These are all state titles, obviously
+						NOT = { location = { ROOT = { capital_scope = { province_id = PREVPREV } } } }
+						NOT = { ROOT = { capital_scope = { duchy = { title = PREVPREVPREV } } } }
+						NOT = { ROOT = { capital_scope = { kingdom = { title = PREVPREVPREV } } } }
+					}
+					grant_title = PREVPREV
+				}
+				# Make extra sure to get the patrician title
+				any_demesne_title = {
+					limit = { is_patrician = yes }
+					grant_title = PREVPREV
+				}
+			}
+			set_defacto_liege = FROM
+			# Now Commence the Abdications
+			ROOT = { abdicate_to = FROM }
+			abdicate_to = ROOT
+			death = { death_reason = death_sacrifice }
+		}
+		set_defacto_liege = FROM # One more time now
+		opinion = { who = FROM modifier = usurped_my_title }
+	}
+}
+
+character_event = {
+	id = usurpation.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_merchant_republic = yes
+		FROM = { is_patrician = no }
+	}
+	
+	immediate = {
+		clr_character_flag = flag_primary_title_usurped # Clear this flag if it was set
+		# Much simpler in this case. Well, relatively speaking
+		# First, create a temporary title of at least the appropriate
+		# tier to ensure vassals can be safely transferred
+		if = {
+			limit = {
+				primary_title = { tier = duke }
+				FROM = { primary_title = { NOT = { higher_tier_than = count } } }
+			}
+			FROM = {
+				create_title = {
+					tier = DUKE
+					landless = yes
+					temporary = yes
+					name = "TRANSITIONAL_GOVERNMENT"
+					holder = THIS
+				}
+			}
+		}
+		if = {
+			limit = {
+				primary_title = { tier = king }
+				FROM = { primary_title = { NOT = { higher_tier_than = duke } } }
+			}
+			FROM = {
+				create_title = {
+					tier = KING
+					landless = yes
+					temporary = yes
+					name = "TRANSITIONAL_GOVERNMENT"
+					holder = THIS
+				}
+			}
+		}
+		if = {
+			limit = {
+				primary_title = { tier = emperor }
+				FROM = { primary_title = { tier = emperor } }
+			}
+			FROM = {
+				create_title = {
+					tier = EMPEROR
+					landless = yes
+					temporary = yes
+					name = "TRANSITIONAL_GOVERNMENT"
+					holder = THIS
+				}
+			}
+		}
+		# Transfer vassals
+		any_vassal = { set_defacto_liege = FROM }
+		any_demesne_title = {
+			limit = {
+				OR = {
+					is_primary_holder_title_tier = yes
+					location = { ROOT = { capital_scope = { province_id = PREVPREV } } }
+					ROOT = { capital_scope = { duchy = { title = PREVPREVPREV } } }
+					ROOT = { capital_scope = { kingdom = { title = PREVPREVPREV } } }
+				}
+				is_patrician = no
+			}
+			usurp_title = FROM
+		}
+		set_defacto_liege = FROM
+	}
+}
+
+# War-ending 
+character_event = {
+	id = usurpation.100
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		any_current_enemy = {
+			limit = { has_character_flag = flag_primary_title_usurped }
+			character_event = { id = usurpation.0 }
+			character_event = { id = usurpation.1 }
+			character_event = { id = usurpation.2 }
+		}
+	}
+}

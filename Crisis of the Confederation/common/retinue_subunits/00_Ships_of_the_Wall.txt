@@ -5,40 +5,42 @@
 # 3 - Light Cavalry/DD
 # 4 - Heavy Cavalry/BC
 # 5 - Archers/TT
-# 6 - Horse Archers/DN
+# 6 - Special Troops (DN)
 
-RETTYPE_INF1 = #destroyer
+# Default capship classes
+# These classes are already obsolete in 2998, but everyone has access to them.
+RETTYPE_DD1 = # Perseus-class Destroyer
 {
 	first_type = 3
 	first_amount = 1
 		
 	modifier = {
-		light_cavalry_offensive = 0.4
-		light_cavalry_defensive = 0.2
+		light_cavalry_offensive = -0.2
+		light_cavalry_defensive = -0.2
 	}
 }
-
-RETTYPE_INF2 = #BC
+RETTYPE_BC1 = # Yamato-class Battlecruiser
 {
 	first_type = 4
 	first_amount = 1
 	
 	
 	modifier = {
-		knights_offensive = 0.4
-		knights_defensive = 0.2
+		knights_offensive = -0.2
+		knights_defensive = -0.2
 	}
 }
 
-RETTYPE_CAV1 = #DN
+RETTYPE_DN1 = # Victory-class Dreadnought
 {
 	first_type = 6
 	first_amount = 1
 	
+	special_troops = dreadnoughts
 	
 	modifier = {
-		horse_archers_offensive = 0.3
-		horse_archers_defensive = 0.3
+		dreadnoughts_offensive = -0.2
+		dreadnoughts_defensive = -0.2
 	}
 }
 
