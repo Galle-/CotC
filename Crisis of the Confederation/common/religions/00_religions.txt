@@ -16,7 +16,7 @@ political_group = {
 		
 		# Defaults to the Pilgrimage
 		scripture_name = THE_LAW
-		piety_name = CREDIBILITY
+		piety_name = PIETY_CREDIBILITY
 		god_names = { GOD_GOD GOD_HOLY_TERRA GOD_THE_LORD }
 		# Actually randomly-generated names for military operations and science projects
 		evil_god_names = {
@@ -50,7 +50,7 @@ political_group = {
 		
 		# Defaults to the Pilgrimage
 		scripture_name = THE_LAW
-		piety_name = CREDIBILITY
+		piety_name = PIETY_CREDIBILITY
 		god_names = { GOD_GOD GOD_HOLY_TERRA GOD_THE_LORD }
 		evil_god_names = {
 			OP_ALACRITY OP_CHAPTER OP_CORKSCREW OP_DEADLIGHT OP_DERVISH OP_DYNAMO OP_MATADOR OP_MERIDIAN OP_OVERLORD OP_SABRE OP_VICTORY # Generic operation names
@@ -83,7 +83,7 @@ political_group = {
 		
 		# Defaults to the Pilgrimage
 		scripture_name = THE_LAW
-		piety_name = LEGITIMACY
+		piety_name = PIETY_LEGITIMACY
 		god_names = { GOD_GOD GOD_HOLY_TERRA GOD_THE_LORD }
 		evil_god_names = {
 			OP_ALACRITY OP_CHAPTER OP_CORKSCREW OP_DEADLIGHT OP_DERVISH OP_DYNAMO OP_MATADOR OP_MERIDIAN OP_OVERLORD OP_SABRE OP_VICTORY # Generic operation names
@@ -114,7 +114,7 @@ political_group = {
 		
 		# Defaults to the Pilgrimage
 		scripture_name = THE_LAW
-		piety_name = CREDIBILITY
+		piety_name = PIETY_CREDIBILITY
 		god_names = { GOD_GOD GOD_THE_LORD }
 		evil_god_names = {
 			OP_ALACRITY OP_CHAPTER OP_CORKSCREW OP_DEADLIGHT OP_DERVISH OP_DYNAMO OP_MATADOR OP_MERIDIAN OP_OVERLORD OP_SABRE OP_VICTORY # Generic operation names
@@ -147,7 +147,7 @@ political_group = {
 		
 		# Defaults to the Pilgrimage
 		scripture_name = THE_LAW
-		piety_name = LEGITIMACY
+		piety_name = PIETY_LEGITIMACY
 		god_names = { GOD_GOD GOD_THE_LORD }
 		evil_god_names = {
 			OP_ALACRITY OP_CHAPTER OP_CORKSCREW OP_DEADLIGHT OP_DERVISH OP_DYNAMO OP_MATADOR OP_MERIDIAN OP_OVERLORD OP_SABRE OP_VICTORY # Generic operation names
@@ -179,7 +179,7 @@ political_group = {
 		
 		# Defaults to the Pilgrimage
 		scripture_name = THE_LAW
-		piety_name = CREDIBILITY
+		piety_name = PIETY_CREDIBILITY
 		god_names = { GOD_THE_GREATER_GOOD GOD_THE_CAUSE }
 		evil_god_names = {
 			OP_ALACRITY OP_CHAPTER OP_CORKSCREW OP_DEADLIGHT OP_DERVISH OP_DYNAMO OP_MATADOR OP_MERIDIAN OP_OVERLORD OP_SABRE OP_VICTORY # Generic operation names
@@ -210,7 +210,7 @@ political_group = {
 		
 		# Defaults to the Pilgrimage
 		scripture_name = THE_LAW
-		piety_name = CREDIBILITY
+		piety_name = PIETY_CREDIBILITY
 		god_names = { GOD_THE_GREATER_GOOD GOD_THE_CAUSE }
 		evil_god_names = {
 			OP_ALACRITY OP_CHAPTER OP_CORKSCREW OP_DEADLIGHT OP_DERVISH OP_DYNAMO OP_MATADOR OP_MERIDIAN OP_OVERLORD OP_SABRE OP_VICTORY # Generic operation names
@@ -463,8 +463,9 @@ transhumanist_group = {
 		color = { 0.5 0.5 0.5 }
 		
 		scripture_name = THE_LAW
-		piety_name = RESPECT
+		piety_name = PIETY_ASPIRATION
 		god_names = { THE_CAUSE }
+		character_modifier = { learning = 2 }
 		evil_god_names = {
 			OP_ALACRITY OP_CHAPTER OP_CORKSCREW OP_DEADLIGHT OP_DERVISH OP_DYNAMO OP_MATADOR OP_MERIDIAN OP_OVERLORD OP_SABRE OP_VICTORY # Generic operation names
 			OP_MERCURY OP_VENUS OP_ARES OP_CERES OP_JUPITER OP_GANYMEDE OP_CALLISTO OP_EUROPA OP_IO OP_SATURN OP_TITAN OP_NEPTUNE OP_URANUS OP_PLUTO OP_CHARON # Solar system operation names
@@ -495,6 +496,7 @@ transhumanist_group = {
 		
 		scripture_name = THE_LAW
 		god_names = { THE_SACRED_ENGINE THE_MACHINE }
+		character_modifier = { learning = 2 }
 		evil_god_names = {
 			OP_ALACRITY OP_CHAPTER OP_CORKSCREW OP_DEADLIGHT OP_DERVISH OP_DYNAMO OP_MATADOR OP_MERIDIAN OP_OVERLORD OP_SABRE OP_VICTORY # Generic operation names
 			OP_MERCURY OP_VENUS OP_ARES OP_CERES OP_JUPITER OP_GANYMEDE OP_CALLISTO OP_EUROPA OP_IO OP_SATURN OP_TITAN OP_NEPTUNE OP_URANUS OP_PLUTO OP_CHARON # Solar system operation names
@@ -531,6 +533,8 @@ transhumanist_group = {
 		
 		crusade_name = ASSIMILATION
 		scripture_name = THE_CODE
+		piety_name = PIETY_ASPIRATION
+		character_modifier = { learning = 2 }
 		god_names = { THE_HIVE THE_VOICE THE_CODE }
 		
 		investiture = no
@@ -563,7 +567,7 @@ transhumanist_group = {
 		}
 		
 		scripture_name = THE_LAW
-		piety_name = RESPECT
+		piety_name = PIETY_ASPIRATION
 		god_names = { THE_CAUSE }
 		
 		investiture = yes
@@ -603,7 +607,7 @@ outlaw_group = {
 		
 		# Default to the Pilgrimage
 		scripture_name = THE_SCRIPTURES
-		piety_name = RESPECT
+		piety_name = PIETY_RESPECT
 		god_names = { GOD_GOD GOD_HOLY_TERRA GOD_THE_LORD }
 		evil_god_names = {
 			OP_ALACRITY OP_CHAPTER OP_CORKSCREW OP_DEADLIGHT OP_DERVISH OP_DYNAMO OP_MATADOR OP_MERIDIAN OP_OVERLORD OP_SABRE OP_VICTORY # Generic operation names

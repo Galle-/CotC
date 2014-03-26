@@ -14,3 +14,7 @@ EVTDESCCAMPAIGN5;[From.GetTitle] [From.GetFullName] has suffered a humilitating 
 EVTOPTACAMPAIGN5;I'm surrounded by IDIOTS!;;;;;;;;;;;;;x
 opinion_successful_military_campaign;Conducted Successful Military Campaign;;;;;;;;;;;;;x
 opinion_failed_military_campaign;Conducted Failed Military Campaign;;;;;;;;;;;;;x
+dreadnoughts;Dreadnoughts;Cuirass駸;;;;;;;;;;;x
+RETTYPE_DD1;Perseus-class Destroyer;;;;;;;;;;;;x
+RETTYPE_BC1;Yamato-class Battlecruiser;;;;;;;;;;;;x
+RETTYPE_DN1;Victory-class Dreadnought;;;;;;;;;;;;x
