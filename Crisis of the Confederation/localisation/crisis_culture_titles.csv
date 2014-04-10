@@ -55,30 +55,45 @@ city_emperor_foa;Mister President;Monsieur le président;;;;;;;;;;;;x
 city_emperor_foa_female;Madam President;Madame la présidente;;;;;;;;;;;;x
 city_emperor_title_ruler_consort;First Man;Epoux;;;;;;;;;;;;x
 city_emperor_title_ruler_consort_female;First Lady;Première dame;;;;;;;;;;;;x
+city_empire_of;Confederation of;Confédération de;;;;;;;;;;;;x
+city_empire;Confederation;Confédération;;;;;;;;;;;;x
+city_empires;Confederations;Confédérations;;;;;;;;;;;;x
 city_king;President;Président;;;;;;;;;;;;x
 city_king_female;President;Présidente;;;;;;;;;;;;x
 city_king_foa;Mister President;Monsieur le président;;;;;;;;;;;;x
 city_king_foa_female;Madam President;Madame la présidente;;;;;;;;;;;;x
 city_king_title_ruler_consort;First Man;Epoux;;;;;;;;;;;;x
 city_king_title_ruler_consort_female;First Lady;Première dame;;;;;;;;;;;;x
+city_kingdom_of;Republic of;République de;;;;;;;;;;;;x
+city_kingdom;Republic;République;;;;;;;;;;;;x
+city_kingdoms;Republics;Républiques;;;;;;;;;;;;x
 city_duke;Governor-General;Gouverneur-Général;;;;;;;;;;;;x
 city_duke_female;Governor-General;Gouverneur-Général;;;;;;;;;;;;x
 city_duke_foa;Mister Governor;Monsieur le gouverneur-général;;;;;;;;;;;;x
 city_duke_foa_female;Madam Governor;Madame le gouverneur-général;;;;;;;;;;;;x
 city_duke_title_ruler_consort;Governor's Husband;Epoux;;;;;;;;;;;;x
 city_duke_title_ruler_consort_female;Governor's Wife;Dame;;;;;;;;;;;;x
+city_duchy_of;Sector;Secteur;;;;;;;;;;;;x
+city_duchy;Sector;Secteur;;;;;;;;;;;;x
+city_duchies;Sectors;Secteurs;;;;;;;;;;;;x
 city_count;Governor;Gouverneur;;;;;;;;;;;;x
 city_count_female;Governor;Gouverneur;;;;;;;;;;;;x
 city_count_foa;Mister Governor;Monsieur le gouverneur;;;;;;;;;;;;x
 city_count_foa_female;Madam Governor;Madame le gouverneur;;;;;;;;;;;;x
 city_count_title_ruler_consort;Governor's Husband;Epoux;;;;;;;;;;;;x
 city_count_title_ruler_consort_female;Governor's Wife;Dame;;;;;;;;;;;;x
+city_county_of;Star System;Système stellaire;;;;;;;;;;;;x
+city_county;System;Système;;;;;;;;;;;;x
+city_counties;Systems;Systèmes;;;;;;;;;;;;x
 city_baron;Governor;Gouverneur;;;;;;;;;;;;x
 city_baron_female;Governor;Gouverneur;;;;;;;;;;;;x
 city_baron_foa;Mister Governor;Monsieur le gouverneur;;;;;;;;;;;;x
 city_baron_foa_female;Madam Governor;Madame le gouverneur;;;;;;;;;;;;x
 city_baron_title_ruler_consort;Governor's Husband;Epoux;;;;;;;;;;;;x
 city_baron_title_ruler_consort_female;Governor's Wife;Dame;;;;;;;;;;;;x
+city_barony_of;Planet;Planète;;;;;;;;;;;;x
+city_barony;Planet;Planète;;;;;;;;;;;;x
+city_baronies;Planets;Planètes;;;;;;;;;;;;x
 temple_emperor;Director-General;Directeur-Général;;;;;;;;;;;;x
 temple_emperor_female;Director-General;Directrice-Général;;;;;;;;;;;;x
 temple_emperor_foa;Director-General;Monsieur le directeur-général;;;;;;;;;;;;x
@@ -295,5 +310,12 @@ job_scientist_neo_feudal;Minister of Technology;Savant;;;;;;;;;;;;x
 job_spiritual_neo_feudal;Justiciar;Justicier;;;;;;;;;;;;x
 GRANDADMIRAL;Grand Admiral;Grand amiral;;;;;;;;;;;;x
 GRANDADMIRALFOA;Admiral;Amiral;;;;;;;;;;;;x
+GRANDADMIRAL_female;Grand Admiral;Grand amiral;;;;;;;;;;;;x
+GRANDADMIRALFOA_female;Admiral;Amiral;;;;;;;;;;;;x
 FLEETADMIRAL;Fleet Admiral;Amiral de flotte;;;;;;;;;;;;x
 FLEETADMIRALFOA;Admiral;Amiral;;;;;;;;;;;;x
+FLEETADMIRAL_female;Fleet Admiral;Amiral de flotte;;;;;;;;;;;;x
+FLEETADMIRALFOA_female;Admiral;Amiral;;;;;;;;;;;;x
+MASTER;Master;;;;;;;;;;;;;x
+MASTER_female;Mistress;;;;;;;;;;;;;x
+MASTERFOA_female;Mistress;;;;;;;;;;;;;x

@@ -1,9 +1,4 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
-STAT_PIETY;Legitimacy;PiétEPietät;;Piedad;;;;;;;;;x
-STAT_PIETY_DESC;Legitimacy represents your perceived credibility, devotion to your professed ideals, and respect for the rule of law. Like Prestige, it is added to your score on the death of a ruler.;La piétEest respectée par le clergE notamment par le chef de votre Église. Elle peut être utilisée pour faire des requêtes au chef de votre Église. Comme le prestige, elle est additionnée Evotre score Ela mort d’un souverain.;Pietät wird von der Kirche und ganz besonders von Eurem Kirchenoberhaupt geschätzt. Sie kann darauf verwandt werden, Euer Kirchenoberhaupt um einen Gefallen zu bitten. Wie auch das Prestige wird sie beim Tod eines Herrschers den Werten des nächsten hinzugefEt.;;La Piedad es respetada por el clero, en especial, por el lúer de tu Iglesia. Puede invertirse para hacer peticiones al lúer de tu iglesia. Igual que el Prestigio, se suma a tu puntuación al morir el soberano.;;;;;;;;;x
-PIETY_EFFECT;$DIRECTION$ $VALUE$ Legitimacy.\n;$DIRECTION$ $VALUE$ en piétE\n;$DIRECTION$ $VALUE$ Pietät.\n;;$DIRECTION$ $VALUE$ Piedad.\n;;;;;;;;;x
-COMBATEND_PIETY;§YLegitimacy Gained in Battle§!;§YPiétEacquise au combat§!;§YIn Schlacht erlangte Pietät§!;;§YPiedad lograda en batalla§!;;;;;;;;;x
-CH_PIETY_CHANGE;Legitimacy $DIRECTION$ by $CHANGE$;PiétE$DIRECTION$ de $CHANGE$;Ehre $DIRECTION$ um $CHANGE$;;Piedad: $DIRECTION$ en $CHANGE$;;;;;;;;;x
 COMBATVIEW_PHASE_DESC_SKIRMISH;During the Skirmish phase, the main fleets keep their distance while fighters engage in dogfights.\nSmall ships are at their most vulnerable during this phase, but only ï½§YFightersï½§W, ï½§YDestroyersï½§W, and ï½§YCombat Dronesï½§W are able to attack and exploit this.;Au cours de la phase de combat, les principales flottilles gardent leur distance tandis que les chasseurs engage l'ennemi.\nLes petits navires sont les plus vulnérables durant cette phase, mais seuls ï½§Yles chasseursï½§W, ï½§Yles estroyeursï½§W, et ï½§Yles drônes de combat½§W sont capables d'attaquer et d'exploiter cette faille.;;;;;;;;;;;;x
 COMBATVIEW_PHASE_DESC_MELEE;During the Melee phase, the fleets close to combat distance.\nï½§YBattlecruisersï½§W, ï½§YDreadnoughtsï½§W, and ï½§YBombersï½§W excel in the Melee Phase.;Pendant la phase de mélée, les flottilles entrent dans le combat à distance.\nï½§Yles croiseurs de batailleï½§W, ï½§Yles cuirasésï½§W, et ï½§Yles bombardiersï½§W excellent dans ces opérations.;;;;;;;;;;;;x
 COMBATVIEW_PHASE_DESC_PURSUE;During the Pursuit phase, one fleet is retreating, and the other is attempting to chase them down.\nï½§YBattlecruisersï½§W, ï½§YBombersï½§W, and ï½§YTroop Transportsï½§W excel in the Pursuit Phase.;Pendant la phase de poursuite, une flotille se replie, et les autres tentent de lui donner la chasse.\nï½§Yles croiseurs de batailleï½§W, ï½§Yles bombardiersï½§W, et ï½§Yles transport de troupesï½§W excellent dans ces opérations.;;;;;;;;;;;;x
@@ -32,11 +27,11 @@ KNIGHTS_MORALE;Battlecruiser Crew Morale;Moral équipage croiseur de bataille;;;;
 KNIGHTS_DISCIPLINE;Battlecruiser Crew Discipline;Discipline équipage croiseur de bataille;;;;;;;;;;;;x
 KNIGHTS_OFFENSIVE_FIRE;Battlecruiser Attack;Attaque croiseur de bataille;;;;;;;;;;;;x
 KNIGHTS_DEFENSIVE_FIRE;Battlecruiser Defense;Défense croiseur de bataille;;;;;;;;;;;;x
-HORSE_ARCHERS;Dreadnoughts;Cuirassés;;;;;;;;;;;;x
-HORSE_ARCHERS_MORALE;Dreadnought Crew Morale;Moral équipage de cuirassé;;;;;;;;;;;;x
-HORSE_ARCHERS_DISCIPLINE;Dreadnought Crew Discipline;Discipline équipage de cuirassé;;;;;;;;;;;;x
-HORSE_ARCHERS_OFFENSIVE_FIRE;Dreadnought Attack;Attaque cuirassé;;;;;;;;;;;;x
-HORSE_ARCHERS_DEFENSIVE_FIRE;Dreadnought Defense;Défense cuirassé;;;;;;;;;;;;x
+DREADNOUGHTS;Dreadnoughts;Cuirassés;;;;;;;;;;;;x
+DREADNOUGHTS_MORALE;Dreadnought Crew Morale;Moral équipage de cuirassé;;;;;;;;;;;;x
+DREADNOUGHTS_DISCIPLINE;Dreadnought Crew Discipline;Discipline équipage de cuirassé;;;;;;;;;;;;x
+DREADNOUGHTS_OFFENSIVE_FIRE;Dreadnought Attack;Attaque cuirassé;;;;;;;;;;;;x
+DREADNOUGHTS_DEFENSIVE_FIRE;Dreadnought Defense;Défense cuirassé;;;;;;;;;;;;x
 ARCHERS;Troop Transports;Transport de troupes;;;;;;;;;;;;x
 ARCHERS_MORALE;Marine Morale;Moral marines;;;;;;;;;;;;x
 ARCHERS_DISCIPLINE;Marine Discipline;Discipline marines;;;;;;;;;;;;x

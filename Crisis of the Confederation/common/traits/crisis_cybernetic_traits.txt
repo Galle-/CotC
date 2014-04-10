@@ -1,0 +1,314 @@
+# Cybernetic Traits
+# Direct Neural Interface: The DNI is the necessary basic implant
+# for enabling stat-enhancing implants
+dni = {
+	cached = yes # Helpfully marks characters whose brains have an internet connection.
+}
+# Stat-enhancing implants
+# Individual Analysis and Empathy Implant (IAEI) Line - Diplomacy Buff
+iaei_mk_i = {
+	potential = { trait = dni }
+	opposites = {
+		iaei_mk_ii
+		iaei_mk_iii
+		iaei_mk_iv
+		iaei_mk_v
+	}
+	diplomacy = 2
+}
+iaei_mk_ii = {
+	customizer = no # Requires more tech than exists in 2998
+	potential = { trait = dni }
+	opposites = {
+		iaei_mk_i
+		iaei_mk_iii
+		iaei_mk_iv
+		iaei_mk_v
+	}
+	diplomacy = 4
+}
+iaei_mk_iii = {
+	customizer = no # Requires more tech than exists in 2998
+	potential = { trait = dni }
+	opposites = {
+		iaei_mk_i
+		iaei_mk_ii
+		iaei_mk_iv
+		iaei_mk_v
+	}
+	diplomacy = 6
+}
+iaei_mk_iv = {
+	customizer = no # Requires more tech than exists in 2998
+	potential = { trait = dni }
+	opposites = {
+		iaei_mk_i
+		iaei_mk_ii
+		iaei_mk_iii
+		iaei_mk_v
+	}
+	diplomacy = 8
+}
+iaei_mk_v = {
+	customizer = no # Requires more tech than exists in 2998
+	potential = { trait = dni }
+	opposites = {
+		iaei_mk_i
+		iaei_mk_ii
+		iaei_mk_iii
+		iaei_mk_iv
+	}
+	diplomacy = 10
+}
+# Odin Cybernetic Eye - Martial Buff
+odin_mk_i = {
+	potential = { trait = dni }
+	opposites = {
+		odin_mk_ii
+		odin_mk_iii
+		odin_mk_iv
+		odin_mk_v
+	}
+	martial = 2
+}
+odin_mk_ii = {
+	customizer = no # Requires more tech than exists in 2998
+	potential = { trait = dni }
+	opposites = {
+		odin_mk_i
+		odin_mk_iii
+		odin_mk_iv
+		odin_mk_v
+	}
+	martial = 4
+}
+odin_mk_iii = {
+	customizer = no # Requires more tech than exists in 2998
+	potential = { trait = dni }
+	opposites = {
+		odin_mk_i
+		odin_mk_ii
+		odin_mk_iv
+		odin_mk_v
+	}
+	martial = 6
+}
+odin_mk_iv = {
+	customizer = no # Requires more tech than exists in 2998
+	potential = { trait = dni }
+	opposites = {
+		odin_mk_i
+		odin_mk_ii
+		odin_mk_iii
+		odin_mk_v
+	}
+	martial = 8
+}
+odin_mk_v = {
+	customizer = no # Requires more tech than exists in 2998
+	potential = { trait = dni }
+	opposites = {
+		odin_mk_i
+		odin_mk_ii
+		odin_mk_iii
+		odin_mk_iv
+	}
+	martial = 10
+}
+# Personal Calculation Implant (PCI) Line - Stewardship Buff
+pci_mk_i = {
+	potential = { trait = dni }
+	opposites = {
+		pci_mk_ii
+		pci_mk_iii
+		pci_mk_iv
+		pci_mk_v
+	}
+	stewardship = 2
+}
+pci_mk_ii = {
+	customizer = no # Requires more tech than exists in 2998
+	potential = { trait = dni }
+	opposites = {
+		pci_mk_i
+		pci_mk_iii
+		pci_mk_iv
+		pci_mk_v
+	}
+	stewardship = 4
+}
+pci_mk_iii = {
+	customizer = no # Requires more tech than exists in 2998
+	potential = { trait = dni }
+	opposites = {
+		pci_mk_i
+		pci_mk_ii
+		pci_mk_iv
+		pci_mk_v
+	}
+	stewardship = 6
+}
+pci_mk_iv = {
+	customizer = no # Requires more tech than exists in 2998
+	potential = { trait = dni }
+	opposites = {
+		pci_mk_i
+		pci_mk_ii
+		pci_mk_iii
+		pci_mk_v
+	}
+	stewardship = 8
+}
+pci_mk_v = {
+	customizer = no # Requires more tech than exists in 2998
+	potential = { trait = dni }
+	opposites = {
+		pci_mk_i
+		pci_mk_ii
+		pci_mk_iii
+		pci_mk_iv
+	}
+	stewardship = 10
+}
+# Pluto Information Analysis Line - Intrigue Buff
+pluto_mk_i = {
+	potential = { trait = dni }
+	opposites = {
+		pluto_mk_ii
+		pluto_mk_iii
+		pluto_mk_iv
+		pluto_mk_v
+	}
+	intrigue = 2
+}
+pluto_mk_ii = {
+	customizer = no # Requires more tech than exists in 2998
+	potential = { trait = dni }
+	opposites = {
+		pluto_mk_i
+		pluto_mk_iii
+		pluto_mk_iv
+		pluto_mk_v
+	}
+	intrigue = 4
+}
+pluto_mk_iii = {
+	customizer = no # Requires more tech than exists in 2998
+	potential = { trait = dni }
+	opposites = {
+		pluto_mk_i
+		pluto_mk_ii
+		pluto_mk_iv
+		pluto_mk_v
+	}
+	intrigue = 6
+}
+pluto_mk_iv = {
+	customizer = no # Requires more tech than exists in 2998
+	potential = { trait = dni }
+	opposites = {
+		pluto_mk_i
+		pluto_mk_ii
+		pluto_mk_iii
+		pluto_mk_v
+	}
+	intrigue = 8
+}
+pluto_mk_v = {
+	customizer = no # Requires more tech than exists in 2998
+	potential = { trait = dni }
+	opposites = {
+		pluto_mk_i
+		pluto_mk_ii
+		pluto_mk_iii
+		pluto_mk_iv
+	}
+	intrigue = 10
+}
+
+# Thoth general-purpose processing implant - Learning Buff
+thoth_mk_i = {
+	potential = { trait = dni }
+	opposites = {
+		thoth_mk_ii
+		thoth_mk_iii
+		thoth_mk_iv
+		thoth_mk_v
+	}
+	learning = 2
+}
+thoth_mk_ii = {
+	customizer = no # Requires more tech than exists in 2998
+	potential = { trait = dni }
+	opposites = {
+		thoth_mk_i
+		thoth_mk_iii
+		thoth_mk_iv
+		thoth_mk_v
+	}
+	learning = 4
+}
+thoth_mk_iii = {
+	customizer = no # Requires more tech than exists in 2998
+	potential = { trait = dni }
+	opposites = {
+		thoth_mk_i
+		thoth_mk_ii
+		thoth_mk_iv
+		thoth_mk_v
+	}
+	learning = 6
+}
+thoth_mk_iv = {
+	customizer = no # Requires more tech than exists in 2998
+	potential = { trait = dni }
+	opposites = {
+		thoth_mk_i
+		thoth_mk_ii
+		thoth_mk_iii
+		thoth_mk_v
+	}
+	learning = 8
+}
+thoth_mk_v = {
+	customizer = no # Requires more tech than exists in 2998
+	potential = { trait = dni }
+	opposites = {
+		thoth_mk_i
+		thoth_mk_ii
+		thoth_mk_iii
+		thoth_mk_iv
+	}
+	learning = 10
+}
+# Other assorted cybernetic implants
+cybernetic_limb = {
+	is_health = yes
+	opposites = { full_cybernetic_conversion }
+}
+full_cybernetic_conversion = {
+	random = no
+	opposites = {
+		cybernetic_limb
+		wounded
+		maimed
+		scarred
+		ill
+		# Any genetic traits we put in should go here
+		# Any disease traits we put in should go here
+	}
+	is_health = yes
+	immortal = yes
+	general_opinion = -50 # Creeepy
+	same_opinion = 25 # Not quite so creepy
+	fertility = -10000
+}
+# HIVER IMPLANT - MASSIVELY PLOT IMPORTANT
+hiver_implant = {
+	customizer = no
+	random = no
+	cached = yes
+	ai_ambition = 100 # We are the Borg.
+	general_opinion = -100 # Resistance is futile.
+	same_opinion = 10000 # You will be assimilated.
+}

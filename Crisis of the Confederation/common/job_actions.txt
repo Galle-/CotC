@@ -142,7 +142,7 @@ action_counterintelligence = {
 	
 	plot_discovery_chance = 0.01
 	
-	events = { 929 931 9000 9020}
+	events = { spymaster.100 931 9000 9020}
 }
 
 action_organize_spies = {

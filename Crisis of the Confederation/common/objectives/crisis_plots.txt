@@ -170,7 +170,7 @@ plot_coup = {
 	}
 	success = { FROM = { has_character_flag = flag_successful_coup } }
 	effect = { FROM = { clr_character_flag = flag_successful_coup } }
-	abort = { }
+	abort = { FROM = { NOT = { liege = { character = ROOT } } } }
 	abort_effect = {
 		FROM = {
 			clr_character_flag = flag_coup_plan_military

@@ -4,6 +4,44 @@
 #
 ##################################################
 
+# CYBORGS
+cybernetics_bad = {
+	potential = { always = yes }
+	trigger = {
+		religion_group = religious_group
+		OR = {
+			trait = dni
+			trait = cybernetic_limb
+		}
+	}
+	icon = 30
+	
+	church_opinion = -20
+}
+cybernetics_very_bad = {
+	potential = { always = yes }
+	trigger = {
+		religion_group = religious_group
+		trait = full_cybernetic_conversion
+	}
+	icon = 30
+	church_opinion = -50
+}
+cybernetics_good = {
+	potential = { always = yes }
+	trigger = {
+		religion_group = transhumanist_group
+		NOT = { religion = bio_directionist }
+		OR = {
+			trait = dni
+			trait = cybernetic_limb
+			trait = full_cybernetic_conversion
+		}
+	}
+	icon = 12
+	church_opinion = 20
+}
+
 # Bankruptcy
 negative_money = {
 	potential = {

@@ -41,3 +41,45 @@ crisis_law_against_ruler = {
 	monthly_character_piety = -0.1
 	general_opinion = -10
 }
+
+# Cybernetics
+iaei_beta_test = {
+	icon = 12
+	diplomacy = 5
+}
+odin_beta_test = {
+	icon = 12
+	martial = 5
+}
+pci_beta_test = {
+	icon = 12
+	stewardship = 5
+}
+pluto_beta_test = {
+	icon = 12
+	intrigue = 5
+}
+thoth_beta_test = {
+	icon = 12
+	learning = 5
+}
+feedback_bliss = {
+	icon = 12
+	diplomacy = 1
+	martial = 1
+	stewardship = 1
+	intrigue = 1
+	learning = 1
+	fertility = 0.1
+	health = 1
+}
+feedback_overload = {
+	icon = 30
+	diplomacy = -1
+	martial = -1
+	stewardship = -1
+	intrigue = -1
+	learning = -1
+	fertility = -0.1
+	health = -1
+}

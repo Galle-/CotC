@@ -43,6 +43,7 @@
 	trait = ambitious
 	
 	2963.1.1 = { birth = "2963.1.1" }
+	2998.1.1 = { effect = { grant_job_title = job_marshal } }
 	
 	father = 11017945 # Ryusei Sato
 }
@@ -66,13 +67,47 @@
 	trait = brave
 	
 	2970.1.1 = { birth = "2970.1.1" }
+	2989.1.1 = {
+		add_matrilineal_spouse = 11011449
+		effect = { spouse = { add_lover = ROOT } }
+	}
 	
 	father = 1107945 # Ryusei Sato
 }
 
+11011449 = {
+	# Husband of Toshiko Sato
+	name = "Takashi"
+	dynasty = 111449 # Ozerov
+	female = no
+	
+	culture = russo_tengoku
+	religion = astrist
+	
+	trait = charismatic_negotiator
+	trait = friendly
+	trait = content
+	trait = open_minded
+	
+	2971.1.1 = { birth = "2971.1.1" }
+}
+
+1207945 = {
+	# Son of Toshiko Sato and Takashi Ozerov
+	name = "Mitsuo"
+	dynasty = 7945
+	female = no
+	
+	religion = astrist
+	
+	2990.1.1 = { birth = "2990.1.1" }
+	father = 11011449 # Takashi Ozerov
+	mother = 1127945 # Toshiko Sato
+}
+
 1137945 = {
 	# Defense Zone Commander, Sector Sumitomo
-	# Minister of Intelligence for the Military State of Jion
+	# Minister of Research for the Military State of Jion
 	name = "Kenichi"
 	dynasty = 7945 # Sato
 	female = no
@@ -80,7 +115,7 @@
 	culture = japanese_tengoku
 	religion = astrist
 	
-	trait = elusive_shadow
+	trait = mastermind_scholar
 	trait = introverted
 	trait = cold
 	trait = radical
@@ -90,6 +125,7 @@
 	trait = ambitious
 	
 	2974.1.1 = { birth = "2974.1.1" }
+	2998.1.1 = { effect = { grant_job_title = job_scientist } }
 	
 	father = 11017945 # Ryusei Sato
 }
@@ -117,7 +153,7 @@
 }
 
 1108425 = {
-	# Commander of ,
+	# Commander, Star System Rasen
 	# COMPLETELY TRUSTWORTHY
 	name = "Shiro"
 	dynasty = 8425 # Hasegawa
@@ -139,6 +175,99 @@
 	
 	2978.1.1 = { birth = "2978.1.1" }
 	father = 1208425 # Yukio Hasegawa
+}
+
+1108665 = {
+	# Commander, Star System Saber
+	name = "Minoru"
+	dynasty = 8665 # Miura
+	female = no
+	
+	culture = japanese_tengoku
+	religion = astrist
+	
+	trait = flamboyant_schemer
+	trait = ambitious
+	trait = extraverted
+	trait = proud
+	trait = confident
+	
+	2967.1.1 = { birth = "2967.1.1" }
+}
+
+1108745 = {
+	# Former chancellor of Jion, Hasegawa partisan
+	name = "Junko"
+	dynasty = 8745 # Harada
+	female = yes
+	
+	culture = japanese_tengoku
+	religion = terran_federalist
+	
+	trait = charismatic_negotiator
+	trait = confident
+	trait = extraverted
+	trait = radical
+	trait = content
+	
+	2949.1.1 = { birth = "2949.1.1" }
+	2992.1.1 = {
+		effect = {
+			k_jion = {
+				holder_scope = {
+					ROOT = {
+						set_defacto_liege = PREV
+						add_friend = PREV
+						grant_job_title = job_chancellor
+					}
+					add_friend = ROOT
+				}
+			}
+		}
+	}
+	2998.1.1 = { death = { death_reason = death_murder_secret killer = 1107945 } }
+}
+
+1208745 = {
+	# Defense Zone Commander, Sector Iogi
+	name = "Rie"
+	dynasty = 8745 # Harada
+	female = yes
+	
+	culture = japanese_tengoku
+	religion = colonial_seperatist
+	
+	trait = skilled_tactician
+	trait = marine_colonel
+	trait = brave
+	trait = confident
+	trait = content
+	trait = friendly
+	trait = pragmatic
+	
+	2963.1.1 = { birth = "2963.1.1" }
+	
+	mother = 1108745 # Junko Harada
+}
+
+1108233 = {
+	# Commander, Star System Fuyuki
+	# Rie Harada's lover
+	name = "Shoji"
+	dynasty = 8233 # Hayashi
+	female = no
+	
+	culture = japanese_tengoku
+	religion = colonial_seperatist
+	
+	trait = tough_soldier
+	trait = marine_colonel
+	trait = content
+	trait = confident
+	trait = friendly
+	
+	2966.1.1 = { birth = "2966.1.1" }
+	2998.1.1 = { effect = { liege = { add_lover = ROOT } } }
 }
 
 1208425 = {

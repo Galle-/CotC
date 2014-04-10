@@ -25,6 +25,21 @@
 	}
 	2971.1.1 = { add_spouse = 1101537 } # Ellen Dixon
 	2971.1.1 = { effect = { spouse = { add_lover = ROOT } } }
+	2998.1.1 = {
+		# The Crisis begins
+		effect = {
+			religion_authority = { modifier = allowed_major_rebellion years = 30 } # Orion
+			religion_authority = { modifier = allowed_major_rebellion years = 30 } # Bianjiang
+			religion_authority = { modifier = allowed_major_rebellion years = 30 } # Xin Zizhiqu
+			religion_authority = { modifier = allowed_major_rebellion years = 30 } # Novy Edem
+			religion_authority = { modifier = allowed_major_rebellion years = 30 } # Strugatsky
+			religion_authority = { modifier = allowed_major_rebellion years = 30 } # Jion
+			religion_authority = { modifier = allowed_major_rebellion years = 30 } # New Frontier
+			religion_authority = { modifier = allowed_major_rebellion years = 30 } # Avalon
+			religion_authority = { modifier = allowed_major_rebellion years = 30 } # Tarka
+			religion_authority = { modifier = allowed_major_rebellion years = 30 } # Mukta Duniya
+		}
+	}
 
 }
 
