@@ -14,7 +14,10 @@ province_event = {
 	trigger = {
 		NOT = { religion = terran_federalist }
 		OR = {
-			religion_group = political_group
+			religion = terran_republican
+			religion = terran_imperial
+			religion = colonial_seperatist
+			religion = 
 			province_id = 202 # Terran ideologies are always available to Earth
 			any_province_lord = { religion = terran_federalist }
 			any_neighbor_province = { religion = terran_federalist }
@@ -22,7 +25,7 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 240
 		
 		# Religion Authority Effects
 		modifier = {
@@ -161,18 +164,18 @@ province_event = {
 			OR = {
 				religion = terran_republican
 				religion = colonial_seperatist
-			}
-		}
-		modifier = {
-			factor = 4
-			OR = {
-				religion = astrist
-				religion = neo_feudal
 				religion = terran_imperial
 			}
 		}
 		modifier = {
-			factor = 5
+			factor = 10
+			OR = {
+				religion = astrist
+				religion = neo_feudal
+			}
+		}
+		modifier = {
+			factor = 25
 			or = {
 				religion_group = religious_group
 				religion_group = transhumanist_group
@@ -245,6 +248,45 @@ province_event = {
 			}
 		}
 		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 5
+			}
+		}
+		modifier = {
 			factor = 0.5
 			any_neighbor_province = { religion = terran_federalist }
 		}
@@ -276,6 +318,44 @@ province_event = {
 				count = 5
 			}
 		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = terran_federalist
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = terran_federalist
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = terran_federalist
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = terran_federalist
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = {
+				religion = terran_federalist
+				count = 5
+			}
+		}
 	}
 	
 	option = {
@@ -292,7 +372,8 @@ province_event = {
 	trigger = {
 		NOT = { religion = terran_republican }
 		OR = {
-			religion_group = political_group
+			religion = terran_federalist
+			religion = terran_imperial
 			province_id = 202 # Terran ideologies are always available to Earth
 			any_province_lord = { religion = terran_republican }
 			any_neighbor_province = { religion = terran_republican }
@@ -300,7 +381,7 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 240
 		
 		# Religion Authority Effects
 		modifier = {
@@ -442,7 +523,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 4
+			factor = 10
 			OR = {
 				religion = astrist
 				religion = neo_feudal
@@ -450,7 +531,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 5
+			factor = 25
 			or = {
 				religion_group = religious_group
 				religion_group = transhumanist_group
@@ -522,6 +603,45 @@ province_event = {
 			}
 		}
 		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 5
+			}
+		}
+		modifier = {
 			factor = 0.5
 			any_neighbor_province = { religion = terran_republican }
 		}
@@ -569,7 +689,10 @@ province_event = {
 	trigger = {
 		NOT = { religion = terran_imperial }
 		OR = {
-			religion_group = political_group
+			religion = astrist
+			religion = neo_feudal
+			religion = terran_republican
+			religion = terran_federalist
 			province_id = 202 # Terran ideologies are always available to Earth
 			any_province_lord = { religion = terran_imperial }
 			any_neighbor_province = { religion = terran_imperial }
@@ -577,7 +700,7 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 240
 		
 		# Religion Authority Effects
 		modifier = {
@@ -717,18 +840,18 @@ province_event = {
 				religion = astrist
 				religion = neo_feudal
 				religion = terran_republican
+				religion = terran_federalist
 			}
 		}
 		modifier = {
-			factor = 4
+			factor = 10
 			OR = {
-				religion = terran_federalist
 				religion = neo_socialist
 				religion = colonial_seperatist
 			}
 		}
 		modifier = {
-			factor = 5
+			factor = 25
 			or = {
 				religion_group = religious_group
 				religion_group = transhumanist_group
@@ -801,6 +924,45 @@ province_event = {
 			}
 		}
 		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 5
+			}
+		}
+		modifier = {
 			factor = 0.5
 			any_neighbor_province = { religion = terran_imperial }
 		}
@@ -850,14 +1012,16 @@ province_event = {
 		NOT = { kingdom = { title = k_terran_commonwealth } } # Never going to happen.
 		NOT = { province_id = 202 } # Earth is never going to follow an inherently anti-Terran ideology.
 		OR = {
-			religion_group = political_group
+			religion = terran_federalist
+			religion = neo_feudal
+			religion = neo_socialist
 			any_province_lord = { religion = colonial_seperatist }
 			any_neighbor_province = { religion = colonial_seperatist }
 		}
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 240
 		
 		# Religion Authority Effects
 		modifier = {
@@ -996,17 +1160,18 @@ province_event = {
 			OR = {
 				religion = terran_federalist
 				religion = neo_feudal
+				religion = neo_socialist
 			}
 		}
 		modifier = {
-			factor = 4
+			factor = 10
 			OR = {
 				religion = terran_republican
 				religion = terran_imperial
 			}
 		}
 		modifier = {
-			factor = 5
+			factor = 25
 			or = {
 				religion_group = religious_group
 				religion_group = transhumanist_group
@@ -1119,14 +1284,17 @@ province_event = {
 	trigger = {
 		NOT = { religion = neo_feudal }
 		OR = {
-			religion_group = political_group
+			religion = terran_imperial
+			religion = colonial_seperatist
+			religion = astrist
+			religion = bio_directionist
 			any_province_lord = { religion = neo_feudal }
 			any_neighbor_province = { religion = neo_feudal }
 		}
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 240
 		
 		# Religion Authority Effects
 		modifier = {
@@ -1266,18 +1434,19 @@ province_event = {
 				religion = terran_imperial
 				religion = astrist
 				religion = bio_directionist
-			}
-		}
-		modifier = {
-			factor = 4
-			OR = {
-				religion = terran_republican
-				religion = terran_federalist
 				religion = colonial_seperatist
 			}
 		}
 		modifier = {
-			factor = 5
+			factor = 10
+			OR = {
+				religion = terran_republican
+				religion = terran_federalist
+			}
+		}
+		modifier = {
+			factor = 25
+			NOT = { religion = bio_directionist }
 			or = {
 				religion = neo_socialist
 				religion_group = religious_group
@@ -1324,6 +1493,45 @@ province_event = {
 			factor = 2
 			any_neighbor_province = {
 				NOT = { religion = neo_feudal }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
 				count = 5
 			}
 		}
@@ -1375,7 +1583,9 @@ province_event = {
 	trigger = {
 		NOT = { religion = neo_socialist }
 		OR = {
-			religion_group = political_group
+			religion = terran_republican
+			religion = terran_federalist
+			religion = colonial_seperatist
 			any_province_lord = { religion = neo_socialist }
 			any_neighbor_province = { religion = neo_socialist }
 			revolt_risk = 0.5
@@ -1383,7 +1593,7 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 240
 		
 		# Religion Authority Effects
 		modifier = {
@@ -1526,14 +1736,14 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 4
+			factor = 10
 			OR = {
 				religion = terran_imperial
 				religion = astrist
 			}
 		}
 		modifier = {
-			factor = 5
+			factor = 25
 			or = {
 				religion_group = religious_group
 				religion_group = transhumanist_group
@@ -1627,6 +1837,45 @@ province_event = {
 			}
 		}
 		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 5
+			}
+		}
+		modifier = {
 			factor = 0.5
 			any_neighbor_province = { religion = neo_socialist }
 		}
@@ -1674,7 +1923,8 @@ province_event = {
 	trigger = {
 		NOT = { religion = astrist }
 		OR = {
-			religion_group = political_group
+			religion = terran_imperial
+			religion = neo_feudal
 			any_province_lord = { religion = astrist }
 			any_neighbor_province = { religion = astrist }
 			revolt_risk = 0.5
@@ -1682,7 +1932,7 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 240
 		
 		# Religion Authority Effects
 		modifier = {
@@ -1824,14 +2074,14 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 4
+			factor = 10
 			OR = {
 				religion = terran_federalist
 				religion = terran_republican
 			}
 		}
 		modifier = {
-			factor = 5
+			factor = 25
 			or = {
 				religion = neo_socialist
 				religion_group = religious_group
@@ -1934,6 +2184,45 @@ province_event = {
 			}
 		}
 		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 5
+			}
+		}
+		modifier = {
 			factor = 0.5
 			any_neighbor_province = { religion = astrist }
 		}
@@ -1981,14 +2270,16 @@ province_event = {
 	trigger = {
 		NOT = { religion = cyberneticist }
 		OR = {
-			religion_group = transhumanist_group
+			religion = machine_cult
+			religion = hiver
+			TECH_POPULAR_CUSTOMS = 0.5
 			any_province_lord = { religion = cyberneticist }
 			any_neighbor_province = { religion = cyberneticist }
 		}
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 240
 		
 		# Religion Authority Effects
 		modifier = {
@@ -2130,14 +2421,14 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 5
+			factor = 10
 			or = {
 				religion_group = political_group
 				religion_group = outlaw_group
 			}
 		}
 		modifier = {
-			factor = 10
+			factor = 25
 			religion_group = religious_group
 		}
 		
@@ -2256,6 +2547,45 @@ province_event = {
 			factor = 2
 			any_neighbor_province = {
 				NOT = { religion = cyberneticist }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
 				count = 5
 			}
 		}
@@ -2485,6 +2815,45 @@ province_event = {
 			}
 		}
 		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 5
+			}
+		}
+		modifier = {
 			factor = 0.5
 			any_neighbor_province = { religion = hiver }
 		}
@@ -2548,14 +2917,10 @@ province_event = {
 			any_province_lord = { religion = machine_cultist }
 			any_neighbor_province = { religion = machine_cultist }
 		}
-		OR = {
-			any_province_lord = { religion = hiver }
-			any_neighbor_province = { religion = hiver }
-		}
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 240
 		
 		# Religion Authority Effects
 		modifier = {
@@ -2723,6 +3088,45 @@ province_event = {
 			}
 		}
 		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 5
+			}
+		}
+		modifier = {
 			factor = 0.5
 			any_neighbor_province = { religion = machine_cultist }
 		}
@@ -2770,14 +3174,15 @@ province_event = {
 	trigger = {
 		NOT = { religion = bio_directionist }
 		OR = {
-			religion_group = transhumanist_group
+			religion = neo_feudal
+			TECH_RELIGIOUS_CUSTOMS = 5
 			any_province_lord = { religion = bio_directionist }
 			any_neighbor_province = { religion = bio_directionist }
 		}
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 240
 		
 		# Religion Authority Effects
 		modifier = {
@@ -2912,14 +3317,15 @@ province_event = {
 		}
 		# Existing ideological similarities/differences
 		modifier = {
-			factor = 5
+			factor = 10
+			NOT = { religion = neo_feudal }
 			or = {
 				religion_group = political_group
 				religion_group = outlaw_group
 			}
 		}
 		modifier = {
-			factor = 10
+			factor = 25
 			religion_group = religious_group
 		}
 		
@@ -3042,6 +3448,45 @@ province_event = {
 			}
 		}
 		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 5
+			}
+		}
+		modifier = {
 			factor = 0.5
 			any_neighbor_province = { religion = bio_directionist }
 		}
@@ -3099,7 +3544,7 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 240
 		
 		# Religion Authority Effects
 		modifier = {
@@ -3239,7 +3684,7 @@ province_event = {
 			religion = pilgrim
 		}
 		modifier = {
-			factor = 5
+			factor = 10
 			or = {
 				religion = xenoterran
 				religion_group = political_group
@@ -3247,7 +3692,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 10
+			factor = 25
 			religion_group = transhumanist_group
 		}
 		
@@ -3281,6 +3726,45 @@ province_event = {
 			factor = 2
 			any_neighbor_province = {
 				NOT = { religion = orthodox }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
 				count = 5
 			}
 		}
@@ -3346,7 +3830,7 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 240
 		
 		# Religion Authority Effects
 		modifier = {
@@ -3486,7 +3970,7 @@ province_event = {
 			religion = orthodox
 		}
 		modifier = {
-			factor = 5
+			factor = 10
 			or = {
 				religion = xenoterran
 				religion_group = political_group
@@ -3494,7 +3978,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 10
+			factor = 25
 			religion_group = transhumanist_group
 		}
 		
@@ -3528,6 +4012,45 @@ province_event = {
 			factor = 2
 			any_neighbor_province = {
 				NOT = { religion = pilgrim }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
 				count = 5
 			}
 		}
@@ -3592,7 +4115,7 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 240
 		
 		# Religion Authority Effects
 		modifier = {
@@ -3732,14 +4255,14 @@ province_event = {
 			religion = adoptionist
 		}
 		modifier = {
-			factor = 5
+			factor = 10
 			or = {
 				religion_group = political_group
 				religion_group = outlaw_group
 			}
 		}
 		modifier = {
-			factor = 10
+			factor = 25
 			religion_group = transhumanist_group
 		}
 		
@@ -3780,6 +4303,45 @@ province_event = {
 			factor = 2
 			any_neighbor_province = {
 				NOT = { religion = adoptionist_cultist }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
 				count = 5
 			}
 		}
@@ -3839,7 +4401,7 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 240
 		
 		# Religion Authority Effects
 		modifier = {
@@ -3979,14 +4541,14 @@ province_event = {
 			religion = adoptionist_cultist
 		}
 		modifier = {
-			factor = 5
+			factor = 10
 			or = {
 				religion_group = political_group
 				religion_group = outlaw_group
 			}
 		}
 		modifier = {
-			factor = 10
+			factor = 25
 			religion_group = transhumanist_group
 		}
 		
@@ -4027,6 +4589,45 @@ province_event = {
 			factor = 2
 			any_neighbor_province = {
 				NOT = { religion = adoptionist }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_province = {
+				culture_group = ROOT
+				religion = ROOT
 				count = 5
 			}
 		}

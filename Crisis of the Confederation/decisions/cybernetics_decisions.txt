@@ -1,0 +1,3571 @@
+decisions = {
+	# Get DNI
+	get_dni_decision = {
+		is_high_prio = yes
+		potential = {
+			NOT = { trait = dni }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = {
+				ai = yes
+				has_character_flag = flag_cybernetics_menu_open
+			}
+		}
+		allow = {
+			wealth = 100
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+		}
+		effect = {
+			wealth = -100
+			add_trait = dni
+			hidden_tooltip = { character_event = { id = cybernetics.5000 } }
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = religious_group
+				}
+				religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				piety = -100
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+				religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				piety = 100
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+			}
+			modifier = {
+				factor = 5
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			modifier = {
+				factor = 0.2
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 4
+				trait = open_minded
+			}
+			modifier = {
+				factor = 0.25
+				trait = close_minded
+			}
+			modifier = {
+				factor = 2
+				trait = introverted
+			}
+			modifier = {
+				factor = 0.5
+				trait = extraverted
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0.5
+				trait = spiritual
+			}
+		}
+	}
+	get_iaei_mk_i_decision = {
+		is_high_prio = yes
+		potential = {
+			trait = dni
+			NOT = { trait = iaei_mk_i }
+			NOT = { trait = iaei_mk_ii }
+			NOT = { trait = iaei_mk_iii }
+			NOT = { trait = iaei_mk_iv }
+			NOT = { trait = iaei_mk_v }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = {
+				ai = yes
+				has_character_flag = flag_cybernetics_menu_open
+			}
+		}
+		allow = {
+			wealth = 300
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+		}
+		effect = {
+			wealth = -300
+			add_trait = iaei_mk_i
+			hidden_tooltip = { character_event = { id = cybernetics.5010 } }
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = religious_group
+				}
+				religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				piety = -100
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+				religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				piety = 100
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 5
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			modifier = {
+				factor = 0.2
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_objective = obj_improve_diplomacy
+					has_objective = obj_become_chancellor
+				}
+			}
+			modifier = {
+				factor = 4
+				has_job_title = job_chancellor
+			}
+			modifier = {
+				factor = 0.5
+				trait = introverted
+			}
+			modifier = {
+				factor = 2
+				trait = extraverted
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0.5
+				trait = spiritual
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 2 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 2 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 4 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 4 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+				trait = proud
+			}
+		}
+	}
+	get_iaei_mk_ii_decision = {
+		is_high_prio = yes
+		potential = {
+			trait = dni
+			location = { TECH_POPULAR_CUSTOMS = 2 }
+			NOT = { trait = iaei_mk_ii }
+			NOT = { trait = iaei_mk_iii }
+			NOT = { trait = iaei_mk_iv }
+			NOT = { trait = iaei_mk_v }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = {
+				ai = yes
+				has_character_flag = flag_cybernetics_menu_open
+			}
+		}
+		allow = {
+			wealth = 400
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+		}
+		effect = {
+			wealth = -400
+			remove_trait = iaei_mk_i
+			add_trait = iaei_mk_ii
+			hidden_tooltip = { character_event = { id = cybernetics.5010 } }
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = religious_group
+				}
+				religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				piety = -100
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+				religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				piety = 100
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 5
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			modifier = {
+				factor = 0.2
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_objective = obj_improve_diplomacy
+					has_objective = obj_become_chancellor
+				}
+			}
+			modifier = {
+				factor = 4
+				has_job_title = job_chancellor
+			}
+			modifier = {
+				factor = 0.5
+				trait = introverted
+			}
+			modifier = {
+				factor = 2
+				trait = extraverted
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0.5
+				trait = spiritual
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 4 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 4 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+				trait = proud
+			}
+		}
+	}
+	get_iaei_mk_iii_decision = {
+		is_high_prio = yes
+		potential = {
+			trait = dni
+			location = { TECH_POPULAR_CUSTOMS = 4 }
+			NOT = { trait = iaei_mk_iii }
+			NOT = { trait = iaei_mk_iv }
+			NOT = { trait = iaei_mk_v }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = {
+				ai = yes
+				has_character_flag = flag_cybernetics_menu_open
+			}
+		}
+		allow = {
+			wealth = 500
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+		}
+		effect = {
+			wealth = -500
+			remove_trait = iaei_mk_i
+			remove_trait = iaei_mk_ii
+			add_trait = iaei_mk_iii
+			hidden_tooltip = { character_event = { id = cybernetics.5010 } }
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = religious_group
+				}
+				religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				piety = -100
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+				religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				piety = 100
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 5
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			modifier = {
+				factor = 0.2
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_objective = obj_improve_diplomacy
+					has_objective = obj_become_chancellor
+				}
+			}
+			modifier = {
+				factor = 4
+				has_job_title = job_chancellor
+			}
+			modifier = {
+				factor = 0.5
+				trait = introverted
+			}
+			modifier = {
+				factor = 2
+				trait = extraverted
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0.5
+				trait = spiritual
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+				trait = proud
+			}
+		}
+	}
+	get_iaei_mk_iv_decision = {
+		is_high_prio = yes
+		potential = {
+			trait = dni
+			location = { TECH_POPULAR_CUSTOMS = 6 }
+			NOT = { trait = iaei_mk_iv }
+			NOT = { trait = iaei_mk_v }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = {
+				ai = yes
+				has_character_flag = flag_cybernetics_menu_open
+			}
+		}
+		allow = {
+			wealth = 600
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+		}
+		effect = {
+			wealth = -600
+			remove_trait = iaei_mk_i
+			remove_trait = iaei_mk_ii
+			remove_trait = iaei_mk_iii
+			add_trait = iaei_mk_iv
+			hidden_tooltip = { character_event = { id = cybernetics.5010 } }
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = religious_group
+				}
+				religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				piety = -100
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+				religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				piety = 100
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 5
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			modifier = {
+				factor = 0.2
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_objective = obj_improve_diplomacy
+					has_objective = obj_become_chancellor
+				}
+			}
+			modifier = {
+				factor = 4
+				has_job_title = job_chancellor
+			}
+			modifier = {
+				factor = 0.5
+				trait = introverted
+			}
+			modifier = {
+				factor = 2
+				trait = extraverted
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0.5
+				trait = spiritual
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+				trait = proud
+			}
+		}
+	}
+	get_iaei_mk_v_decision = {
+		is_high_prio = yes
+		potential = {
+			trait = dni
+			location = { TECH_POPULAR_CUSTOMS = 8 }
+			NOT = { trait = iaei_mk_v }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = {
+				ai = yes
+				has_character_flag = flag_cybernetics_menu_open
+			}
+		}
+		allow = {
+			wealth = 750
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+		}
+		effect = {
+			wealth = -750
+			remove_trait = iaei_mk_i
+			remove_trait = iaei_mk_ii
+			remove_trait = iaei_mk_iii
+			add_trait = iaei_mk_iv
+			hidden_tooltip = { character_event = { id = cybernetics.5010 } }
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = religious_group
+				}
+				religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				piety = -100
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+				religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				piety = 100
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 5
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			modifier = {
+				factor = 0.2
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_objective = obj_improve_diplomacy
+					has_objective = obj_become_chancellor
+				}
+			}
+			modifier = {
+				factor = 4
+				has_job_title = job_chancellor
+			}
+			modifier = {
+				factor = 0.5
+				trait = introverted
+			}
+			modifier = {
+				factor = 2
+				trait = extraverted
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0.5
+				trait = spiritual
+			}
+		}
+	}
+	get_odin_mk_i_decision = {
+		is_high_prio = yes
+		potential = {
+			trait = dni
+			NOT = { trait = odin_mk_i }
+			NOT = { trait = odin_mk_ii }
+			NOT = { trait = odin_mk_iii }
+			NOT = { trait = odin_mk_iv }
+			NOT = { trait = odin_mk_v }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = {
+				ai = yes
+				has_character_flag = flag_cybernetics_menu_open
+			}
+		}
+		allow = {
+			wealth = 300
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+		}
+		effect = {
+			wealth = -300
+			add_trait = odin_mk_i
+			hidden_tooltip = { character_event = { id = cybernetics.5010 } }
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = religious_group
+				}
+				religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				piety = -100
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+				religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				piety = 100
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 5
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			modifier = {
+				factor = 0.2
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_objective = obj_improve_martial
+					has_objective = obj_become_marshal
+				}
+			}
+			modifier = {
+				factor = 4
+				has_job_title = job_marshal
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 4
+				trait = brave
+			}
+			modifier = {
+				factor = 0.25
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0.5
+				trait = spiritual
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 2 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 2 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 4 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 4 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+				trait = proud
+			}
+		}
+	}
+	get_odin_mk_ii_decision = {
+		is_high_prio = yes
+		potential = {
+			trait = dni
+			location = { TECH_POPULAR_CUSTOMS = 2 }
+			NOT = { trait = odin_mk_ii }
+			NOT = { trait = odin_mk_iii }
+			NOT = { trait = odin_mk_iv }
+			NOT = { trait = odin_mk_v }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = {
+				ai = yes
+				has_character_flag = flag_cybernetics_menu_open
+			}
+		}
+		allow = {
+			wealth = 400
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+		}
+		effect = {
+			wealth = -400
+			remove_trait = odin_mk_i
+			add_trait = odin_mk_ii
+			hidden_tooltip = { character_event = { id = cybernetics.5010 } }
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = religious_group
+				}
+				religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				piety = -100
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+				religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				piety = 100
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 5
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			modifier = {
+				factor = 0.2
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_objective = obj_improve_martial
+					has_objective = obj_become_marshal
+				}
+			}
+			modifier = {
+				factor = 4
+				has_job_title = job_marshal
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 4
+				trait = brave
+			}
+			modifier = {
+				factor = 0.25
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0.5
+				trait = spiritual
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 4 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 4 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+				trait = proud
+			}
+		}
+	}
+	get_odin_mk_iii_decision = {
+		is_high_prio = yes
+		potential = {
+			trait = dni
+			location = { TECH_POPULAR_CUSTOMS = 4 }
+			NOT = { trait = odin_mk_iii }
+			NOT = { trait = odin_mk_iv }
+			NOT = { trait = odin_mk_v }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = {
+				ai = yes
+				has_character_flag = flag_cybernetics_menu_open
+			}
+		}
+		allow = {
+			wealth = 500
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+		}
+		effect = {
+			wealth = -500
+			remove_trait = odin_mk_i
+			remove_trait = odin_mk_ii
+			add_trait = odin_mk_iii
+			hidden_tooltip = { character_event = { id = cybernetics.5010 } }
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = religious_group
+				}
+				religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				piety = -100
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+				religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				piety = 100
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 5
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			modifier = {
+				factor = 0.2
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_objective = obj_improve_martial
+					has_objective = obj_become_marshal
+				}
+			}
+			modifier = {
+				factor = 4
+				has_job_title = job_marshal
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 4
+				trait = brave
+			}
+			modifier = {
+				factor = 0.25
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0.5
+				trait = spiritual
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+				trait = proud
+			}
+		}
+	}
+	get_odin_mk_iv_decision = {
+		is_high_prio = yes
+		potential = {
+			trait = dni
+			location = { TECH_POPULAR_CUSTOMS = 6 }
+			NOT = { trait = odin_mk_iv }
+			NOT = { trait = odin_mk_v }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = {
+				ai = yes
+				has_character_flag = flag_cybernetics_menu_open
+			}
+		}
+		allow = {
+			wealth = 600
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+		}
+		effect = {
+			wealth = -600
+			remove_trait = odin_mk_i
+			remove_trait = odin_mk_ii
+			remove_trait = odin_mk_iii
+			add_trait = odin_mk_iv
+			hidden_tooltip = { character_event = { id = cybernetics.5010 } }
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = religious_group
+				}
+				religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				piety = -100
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+				religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				piety = 100
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 5
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			modifier = {
+				factor = 0.2
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_objective = obj_improve_martial
+					has_objective = obj_become_marshal
+				}
+			}
+			modifier = {
+				factor = 4
+				has_job_title = job_marshal
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 4
+				trait = brave
+			}
+			modifier = {
+				factor = 0.25
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0.5
+				trait = spiritual
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+				trait = proud
+			}
+		}
+	}
+	get_odin_mk_v_decision = {
+		is_high_prio = yes
+		potential = {
+			trait = dni
+			location = { TECH_POPULAR_CUSTOMS = 8 }
+			NOT = { trait = odin_mk_v }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = {
+				ai = yes
+				has_character_flag = flag_cybernetics_menu_open
+			}
+		}
+		allow = {
+			wealth = 750
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+		}
+		effect = {
+			wealth = -750
+			remove_trait = odin_mk_i
+			remove_trait = odin_mk_ii
+			remove_trait = odin_mk_iii
+			add_trait = odin_mk_iv
+			hidden_tooltip = { character_event = { id = cybernetics.5010 } }
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = religious_group
+				}
+				religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				piety = -100
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+				religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				piety = 100
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 5
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			modifier = {
+				factor = 0.2
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_objective = obj_improve_martial
+					has_objective = obj_become_marshal
+				}
+			}
+			modifier = {
+				factor = 4
+				has_job_title = job_marshal
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 4
+				trait = brave
+			}
+			modifier = {
+				factor = 0.25
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0.5
+				trait = spiritual
+			}
+		}
+	}
+	get_pci_mk_i_decision = {
+		is_high_prio = yes
+		potential = {
+			trait = dni
+			NOT = { trait = pci_mk_i }
+			NOT = { trait = pci_mk_ii }
+			NOT = { trait = pci_mk_iii }
+			NOT = { trait = pci_mk_iv }
+			NOT = { trait = pci_mk_v }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = {
+				ai = yes
+				has_character_flag = flag_cybernetics_menu_open
+			}
+		}
+		allow = {
+			wealth = 300
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+		}
+		effect = {
+			wealth = -300
+			add_trait = pci_mk_i
+			hidden_tooltip = { character_event = { id = cybernetics.5010 } }
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = religious_group
+				}
+				religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				piety = -100
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+				religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				piety = 100
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 5
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			modifier = {
+				factor = 0.2
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_objective = obj_improve_stewardship
+					has_objective = obj_become_treasurer
+				}
+			}
+			modifier = {
+				factor = 4
+				has_job_title = job_treasurer
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 2
+				trait = disciplined
+			}
+			modifier = {
+				factor = 0.5
+				trait = carefree
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0.5
+				trait = spiritual
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 2 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 2 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 4 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 4 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+				trait = proud
+			}
+		}
+	}
+	get_pci_mk_ii_decision = {
+		is_high_prio = yes
+		potential = {
+			trait = dni
+			location = { TECH_POPULAR_CUSTOMS = 2 }
+			NOT = { trait = pci_mk_ii }
+			NOT = { trait = pci_mk_iii }
+			NOT = { trait = pci_mk_iv }
+			NOT = { trait = pci_mk_v }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = {
+				ai = yes
+				has_character_flag = flag_cybernetics_menu_open
+			}
+		}
+		allow = {
+			wealth = 400
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+		}
+		effect = {
+			wealth = -400
+			remove_trait = pci_mk_i
+			add_trait = pci_mk_ii
+			hidden_tooltip = { character_event = { id = cybernetics.5010 } }
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = religious_group
+				}
+				religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				piety = -100
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+				religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				piety = 100
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 5
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			modifier = {
+				factor = 0.2
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_objective = obj_improve_stewardship
+					has_objective = obj_become_treasurer
+				}
+			}
+			modifier = {
+				factor = 4
+				has_job_title = job_treasurer
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 2
+				trait = disciplined
+			}
+			modifier = {
+				factor = 0.5
+				trait = carefree
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0.5
+				trait = spiritual
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 4 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 4 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+				trait = proud
+			}
+		}
+	}
+	get_pci_mk_iii_decision = {
+		is_high_prio = yes
+		potential = {
+			trait = dni
+			location = { TECH_POPULAR_CUSTOMS = 4 }
+			NOT = { trait = pci_mk_iii }
+			NOT = { trait = pci_mk_iv }
+			NOT = { trait = pci_mk_v }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = {
+				ai = yes
+				has_character_flag = flag_cybernetics_menu_open
+			}
+		}
+		allow = {
+			wealth = 500
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+		}
+		effect = {
+			wealth = -500
+			remove_trait = pci_mk_i
+			remove_trait = pci_mk_ii
+			add_trait = pci_mk_iii
+			hidden_tooltip = { character_event = { id = cybernetics.5010 } }
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = religious_group
+				}
+				religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				piety = -100
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+				religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				piety = 100
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 5
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			modifier = {
+				factor = 0.2
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_objective = obj_improve_stewardship
+					has_objective = obj_become_treasurer
+				}
+			}
+			modifier = {
+				factor = 4
+				has_job_title = job_treasurer
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 2
+				trait = disciplined
+			}
+			modifier = {
+				factor = 0.5
+				trait = carefree
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0.5
+				trait = spiritual
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+				trait = proud
+			}
+		}
+	}
+	get_pci_mk_iv_decision = {
+		is_high_prio = yes
+		potential = {
+			trait = dni
+			location = { TECH_POPULAR_CUSTOMS = 6 }
+			NOT = { trait = pci_mk_iv }
+			NOT = { trait = pci_mk_v }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = {
+				ai = yes
+				has_character_flag = flag_cybernetics_menu_open
+			}
+		}
+		allow = {
+			wealth = 600
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+		}
+		effect = {
+			wealth = -600
+			remove_trait = pci_mk_i
+			remove_trait = pci_mk_ii
+			remove_trait = pci_mk_iii
+			add_trait = pci_mk_iv
+			hidden_tooltip = { character_event = { id = cybernetics.5010 } }
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = religious_group
+				}
+				religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				piety = -100
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+				religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				piety = 100
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 5
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			modifier = {
+				factor = 0.2
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_objective = obj_improve_stewardship
+					has_objective = obj_become_treasurer
+				}
+			}
+			modifier = {
+				factor = 4
+				has_job_title = job_treasurer
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 2
+				trait = disciplined
+			}
+			modifier = {
+				factor = 0.5
+				trait = carefree
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0.5
+				trait = spiritual
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+				trait = proud
+			}
+		}
+	}
+	get_pci_mk_v_decision = {
+		is_high_prio = yes
+		potential = {
+			trait = dni
+			location = { TECH_POPULAR_CUSTOMS = 8 }
+			NOT = { trait = pci_mk_v }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = {
+				ai = yes
+				has_character_flag = flag_cybernetics_menu_open
+			}
+		}
+		allow = {
+			wealth = 750
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+		}
+		effect = {
+			wealth = -750
+			remove_trait = pci_mk_i
+			remove_trait = pci_mk_ii
+			remove_trait = pci_mk_iii
+			add_trait = pci_mk_iv
+			hidden_tooltip = { character_event = { id = cybernetics.5010 } }
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = religious_group
+				}
+				religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				piety = -100
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+				religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				piety = 100
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 5
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			modifier = {
+				factor = 0.2
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_objective = obj_improve_stewardship
+					has_objective = obj_become_treasurer
+				}
+			}
+			modifier = {
+				factor = 4
+				has_job_title = job_treasurer
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 2
+				trait = disciplined
+			}
+			modifier = {
+				factor = 0.5
+				trait = carefree
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0.5
+				trait = spiritual
+			}
+		}
+	}
+	get_pluto_mk_i_decision = {
+		is_high_prio = yes
+		potential = {
+			trait = dni
+			NOT = { trait = pluto_mk_i }
+			NOT = { trait = pluto_mk_ii }
+			NOT = { trait = pluto_mk_iii }
+			NOT = { trait = pluto_mk_iv }
+			NOT = { trait = pluto_mk_v }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = {
+				ai = yes
+				has_character_flag = flag_cybernetics_menu_open
+			}
+		}
+		allow = {
+			wealth = 300
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+		}
+		effect = {
+			wealth = -300
+			add_trait = pluto_mk_i
+			hidden_tooltip = { character_event = { id = cybernetics.5010 } }
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = religious_group
+				}
+				religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				piety = -100
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+				religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				piety = 100
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 5
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			modifier = {
+				factor = 0.2
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_objective = obj_improve_intrigue
+					has_objective = obj_become_spymaster
+				}
+			}
+			modifier = {
+				factor = 4
+				has_job_title = job_spymaster
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 2
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0.5
+				trait = spiritual
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 2 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 2 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 4 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 4 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+				trait = proud
+			}
+		}
+	}
+	get_pluto_mk_ii_decision = {
+		is_high_prio = yes
+		potential = {
+			trait = dni
+			location = { TECH_POPULAR_CUSTOMS = 2 }
+			NOT = { trait = pluto_mk_ii }
+			NOT = { trait = pluto_mk_iii }
+			NOT = { trait = pluto_mk_iv }
+			NOT = { trait = pluto_mk_v }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = {
+				ai = yes
+				has_character_flag = flag_cybernetics_menu_open
+			}
+		}
+		allow = {
+			wealth = 400
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+		}
+		effect = {
+			wealth = -400
+			remove_trait = pluto_mk_i
+			add_trait = pluto_mk_ii
+			hidden_tooltip = { character_event = { id = cybernetics.5010 } }
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = religious_group
+				}
+				religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				piety = -100
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+				religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				piety = 100
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 5
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			modifier = {
+				factor = 0.2
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_objective = obj_improve_intrigue
+					has_objective = obj_become_spymaster
+				}
+			}
+			modifier = {
+				factor = 4
+				has_job_title = job_spymaster
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 2
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0.5
+				trait = spiritual
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 4 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 4 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+				trait = proud
+			}
+		}
+	}
+	get_pluto_mk_iii_decision = {
+		is_high_prio = yes
+		potential = {
+			trait = dni
+			location = { TECH_POPULAR_CUSTOMS = 4 }
+			NOT = { trait = pluto_mk_iii }
+			NOT = { trait = pluto_mk_iv }
+			NOT = { trait = pluto_mk_v }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = {
+				ai = yes
+				has_character_flag = flag_cybernetics_menu_open
+			}
+		}
+		allow = {
+			wealth = 500
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+		}
+		effect = {
+			wealth = -500
+			remove_trait = pluto_mk_i
+			remove_trait = pluto_mk_ii
+			add_trait = pluto_mk_iii
+			hidden_tooltip = { character_event = { id = cybernetics.5010 } }
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = religious_group
+				}
+				religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				piety = -100
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+				religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				piety = 100
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 5
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			modifier = {
+				factor = 0.2
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_objective = obj_improve_intrigue
+					has_objective = obj_become_spymaster
+				}
+			}
+			modifier = {
+				factor = 4
+				has_job_title = job_spymaster
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 2
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0.5
+				trait = spiritual
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+				trait = proud
+			}
+		}
+	}
+	get_pluto_mk_iv_decision = {
+		is_high_prio = yes
+		potential = {
+			trait = dni
+			location = { TECH_POPULAR_CUSTOMS = 6 }
+			NOT = { trait = pluto_mk_iv }
+			NOT = { trait = pluto_mk_v }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = {
+				ai = yes
+				has_character_flag = flag_cybernetics_menu_open
+			}
+		}
+		allow = {
+			wealth = 600
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+		}
+		effect = {
+			wealth = -600
+			remove_trait = pluto_mk_i
+			remove_trait = pluto_mk_ii
+			remove_trait = pluto_mk_iii
+			add_trait = pluto_mk_iv
+			hidden_tooltip = { character_event = { id = cybernetics.5010 } }
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = religious_group
+				}
+				religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				piety = -100
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+				religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				piety = 100
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 5
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			modifier = {
+				factor = 0.2
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_objective = obj_improve_intrigue
+					has_objective = obj_become_spymaster
+				}
+			}
+			modifier = {
+				factor = 4
+				has_job_title = job_spymaster
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 2
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0.5
+				trait = spiritual
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+				trait = proud
+			}
+		}
+	}
+	get_pluto_mk_v_decision = {
+		is_high_prio = yes
+		potential = {
+			trait = dni
+			location = { TECH_POPULAR_CUSTOMS = 8 }
+			NOT = { trait = pluto_mk_v }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = {
+				ai = yes
+				has_character_flag = flag_cybernetics_menu_open
+			}
+		}
+		allow = {
+			wealth = 750
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+		}
+		effect = {
+			wealth = -750
+			remove_trait = pluto_mk_i
+			remove_trait = pluto_mk_ii
+			remove_trait = pluto_mk_iii
+			add_trait = pluto_mk_iv
+			hidden_tooltip = { character_event = { id = cybernetics.5010 } }
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = religious_group
+				}
+				religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				piety = -100
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+				religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				piety = 100
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 5
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			modifier = {
+				factor = 0.2
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_objective = obj_improve_intrigue
+					has_objective = obj_become_spymaster
+				}
+			}
+			modifier = {
+				factor = 4
+				has_job_title = job_spymaster
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 2
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0.5
+				trait = spiritual
+			}
+		}
+	}
+	get_thoth_mk_i_decision = {
+		is_high_prio = yes
+		potential = {
+			trait = dni
+			NOT = { trait = thoth_mk_i }
+			NOT = { trait = thoth_mk_ii }
+			NOT = { trait = thoth_mk_iii }
+			NOT = { trait = thoth_mk_iv }
+			NOT = { trait = thoth_mk_v }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = {
+				ai = yes
+				has_character_flag = flag_cybernetics_menu_open
+			}
+		}
+		allow = {
+			wealth = 300
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+		}
+		effect = {
+			wealth = -300
+			add_trait = thoth_mk_i
+			hidden_tooltip = { character_event = { id = cybernetics.5010 } }
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = religious_group
+				}
+				religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				piety = -100
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+				religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				piety = 100
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 5
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			modifier = {
+				factor = 0.2
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_objective = obj_improve_learning
+					has_objective = obj_become_scientist
+				}
+			}
+			modifier = {
+				factor = 4
+				has_job_title = job_scientist
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 4
+				trait = open_minded
+			}
+			modifier = {
+				factor = 0.25
+				trait = close_minded
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0.5
+				trait = spiritual
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 2 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 2 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 4 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 4 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+				trait = proud
+			}
+		}
+	}
+	get_thoth_mk_ii_decision = {
+		is_high_prio = yes
+		potential = {
+			trait = dni
+			location = { TECH_POPULAR_CUSTOMS = 2 }
+			NOT = { trait = thoth_mk_ii }
+			NOT = { trait = thoth_mk_iii }
+			NOT = { trait = thoth_mk_iv }
+			NOT = { trait = thoth_mk_v }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = {
+				ai = yes
+				has_character_flag = flag_cybernetics_menu_open
+			}
+		}
+		allow = {
+			wealth = 400
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+		}
+		effect = {
+			wealth = -400
+			remove_trait = thoth_mk_i
+			add_trait = thoth_mk_ii
+			hidden_tooltip = { character_event = { id = cybernetics.5010 } }
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = religious_group
+				}
+				religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				piety = -100
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+				religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				piety = 100
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 5
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			modifier = {
+				factor = 0.2
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_objective = obj_improve_learning
+					has_objective = obj_become_scientist
+				}
+			}
+			modifier = {
+				factor = 4
+				has_job_title = job_scientist
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 4
+				trait = open_minded
+			}
+			modifier = {
+				factor = 0.25
+				trait = close_minded
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0.5
+				trait = spiritual
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 4 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 4 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+				trait = proud
+			}
+		}
+	}
+	get_thoth_mk_iii_decision = {
+		is_high_prio = yes
+		potential = {
+			trait = dni
+			location = { TECH_POPULAR_CUSTOMS = 4 }
+			NOT = { trait = thoth_mk_iii }
+			NOT = { trait = thoth_mk_iv }
+			NOT = { trait = thoth_mk_v }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = {
+				ai = yes
+				has_character_flag = flag_cybernetics_menu_open
+			}
+		}
+		allow = {
+			wealth = 500
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+		}
+		effect = {
+			wealth = -500
+			remove_trait = thoth_mk_i
+			remove_trait = thoth_mk_ii
+			add_trait = thoth_mk_iii
+			hidden_tooltip = { character_event = { id = cybernetics.5010 } }
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = religious_group
+				}
+				religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				piety = -100
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+				religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				piety = 100
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 5
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			modifier = {
+				factor = 0.2
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_objective = obj_improve_learning
+					has_objective = obj_become_scientist
+				}
+			}
+			modifier = {
+				factor = 4
+				has_job_title = job_scientist
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 4
+				trait = open_minded
+			}
+			modifier = {
+				factor = 0.25
+				trait = close_minded
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0.5
+				trait = spiritual
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 6 }
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+				trait = proud
+			}
+		}
+	}
+	get_thoth_mk_iv_decision = {
+		is_high_prio = yes
+		potential = {
+			trait = dni
+			location = { TECH_POPULAR_CUSTOMS = 6 }
+			NOT = { trait = thoth_mk_iv }
+			NOT = { trait = thoth_mk_v }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = {
+				ai = yes
+				has_character_flag = flag_cybernetics_menu_open
+			}
+		}
+		allow = {
+			wealth = 600
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+		}
+		effect = {
+			wealth = -600
+			remove_trait = thoth_mk_i
+			remove_trait = thoth_mk_ii
+			remove_trait = thoth_mk_iii
+			add_trait = thoth_mk_iv
+			hidden_tooltip = { character_event = { id = cybernetics.5010 } }
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = religious_group
+				}
+				religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				piety = -100
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+				religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				piety = 100
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 5
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			modifier = {
+				factor = 0.2
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_objective = obj_improve_learning
+					has_objective = obj_become_scientist
+				}
+			}
+			modifier = {
+				factor = 4
+				has_job_title = job_scientist
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 4
+				trait = open_minded
+			}
+			modifier = {
+				factor = 0.25
+				trait = close_minded
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0.5
+				trait = spiritual
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+			}
+			modifier = {
+				factor = 0.5
+				location = { TECH_POPULAR_CUSTOMS = 8 }
+				trait = proud
+			}
+		}
+	}
+	get_thoth_mk_v_decision = {
+		is_high_prio = yes
+		potential = {
+			trait = dni
+			location = { TECH_POPULAR_CUSTOMS = 8 }
+			NOT = { trait = thoth_mk_v }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = {
+				ai = yes
+				has_character_flag = flag_cybernetics_menu_open
+			}
+		}
+		allow = {
+			wealth = 750
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+		}
+		effect = {
+			wealth = -750
+			remove_trait = thoth_mk_i
+			remove_trait = thoth_mk_ii
+			remove_trait = thoth_mk_iii
+			add_trait = thoth_mk_iv
+			hidden_tooltip = { character_event = { id = cybernetics.5010 } }
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = religious_group
+				}
+				religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				piety = -100
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+				religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				piety = 100
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 5
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			modifier = {
+				factor = 0.2
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_objective = obj_improve_learning
+					has_objective = obj_become_scientist
+				}
+			}
+			modifier = {
+				factor = 4
+				has_job_title = job_scientist
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 4
+				trait = open_minded
+			}
+			modifier = {
+				factor = 0.25
+				trait = close_minded
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = skeptical
+			}
+			modifier = {
+				factor = 0.5
+				trait = spiritual
+			}
+		}
+	}
+	# Get cybernetic limb
+	get_cybernetic_limb_decision = {
+		is_high_prio = yes
+		potential = {
+			trait = maimed
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = {
+				ai = yes
+				has_character_flag = flag_cybernetics_menu_open
+			}
+		}
+		allow = {
+			wealth = 500
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+		}
+		effect = {
+			wealth = -500
+			remove_trait = maimed
+			add_trait = cybernetic_limb
+			hidden_tooltip = { character_event = { id = cybernetics.5060 } }
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = religious_group
+				}
+				piety = -100
+				religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+				piety = 100
+				religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+			}
+			modifier = {
+				factor = 5
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			modifier = {
+				factor = 0.2
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 4
+				trait = open_minded
+			}
+			modifier = {
+				factor = 0.25
+				trait = close_minded
+			}
+			modifier = {
+				factor = 4
+				trait = craven
+			}
+			modifier = {
+				factor = 0.5
+				trait = brave
+			}
+			modifier = {
+				factor = 2
+				NOT = { health = 5 }
+			}
+			modifier = {
+				factor = 2
+				NOT = { health = 4 }
+			}
+			modifier = {
+				factor = 2
+				NOT = { health = 3 }
+			}
+			modifier = {
+				factor = 2
+				NOT = { health = 2 }
+			}
+			modifier = {
+				factor = 2
+				NOT = { health = 1 }
+			}
+		}
+	}
+}
+dynasty_decisions = {
+	# Get dni
+	get_relative_dni_decision = {
+		is_high_prio = yes
+		potential = {
+			NOT = { trait = dni }
+			is_landed = no
+			NOT = { trait = incapable }
+			prisoner = no
+			FROM = {
+				NOT = { trait = incapable }
+				prisoner = no
+				OR = {
+					ai = yes
+					has_character_flag = flag_cybernetics_menu_open
+				}
+				any_courtier = { character = ROOT }
+			}
+		}
+		allow = {
+			FROM = {
+				wealth = 100
+				OR = {
+					NOT = { religion_group = religious_group }
+					trait = pragmatic
+					piety = 100
+				}
+			}
+		}
+		effect = {
+			add_trait = dni
+			hidden_tooltip = { character_event = { id = cybernetics.5001 } }
+			FROM = {
+				wealth = -100
+				if = {
+					limit = {
+						is_landed = yes
+						religion_group = religious_group
+					}
+					piety = -100
+					religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				}
+				if = {
+					limit = {
+						is_landed = yes
+						religion_group = transhumanist_group
+						NOT = { religion = bio_directionist }
+					}
+					piety = 100
+					religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 5
+				FROM = {
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+			}
+			modifier = {
+				factor = 0.2
+				FROM = {
+					religion_group = religious_group
+					NOT = { trait = pragmatic }
+				}
+			}
+			modifier = {
+				factor = 2
+				FROM = { trait = friendly }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { trait = cold }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 100 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -99 } }
+			}
+		}
+	}
+	# Get cybernetic limb
+	get_relative_cybernetic_limb_decision = {
+		is_high_prio = yes
+		potential = {
+			trait = maimed
+			is_landed = no
+			NOT = { trait = incapable }
+			prisoner = no
+			FROM = {
+				NOT = { trait = incapable }
+				prisoner = no
+				OR = {
+					ai = yes
+					has_character_flag = flag_cybernetics_menu_open
+				}
+				any_courtier = { character = ROOT }
+			}
+		}
+		allow = {
+			FROM = {
+				wealth = 500
+				OR = {
+					NOT = { religion_group = religious_group }
+					trait = pragmatic
+					piety = 100
+				}
+			}
+		}
+		effect = {
+			remove_trait = maimed
+			add_trait = cybernetic_limb
+			hidden_tooltip = { character_event = { id = cybernetics.5061 } }
+			FROM = {
+				wealth = -500
+				if = {
+					limit = {
+						is_landed = yes
+						religion_group = religious_group
+					}
+					piety = -100
+					religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+				}
+				if = {
+					limit = {
+						is_landed = yes
+						religion_group = transhumanist_group
+						NOT = { religion = bio_directionist }
+					}
+					piety = 100
+					religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 5
+				FROM = {
+					religion_group = transhumanist_group
+					NOT = { religion = bio_directionist }
+				}
+			}
+			modifier = {
+				factor = 0.2
+				FROM = {
+					religion_group = religious_group
+					NOT = { trait = pragmatic }
+				}
+			}
+			modifier = {
+				factor = 2
+				FROM = { trait = friendly }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { trait = cold }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 100 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 2
+				NOT = { health = 5 }
+			}
+			modifier = {
+				factor = 2
+				NOT = { health = 4 }
+			}
+			modifier = {
+				factor = 2
+				NOT = { health = 3 }
+			}
+			modifier = {
+				factor = 2
+				NOT = { health = 2 }
+			}
+			modifier = {
+				factor = 2
+				NOT = { health = 1 }
+			}
+		}
+	}
+}
+# Menu controls
+decisions = {
+	open_cybernetics_menu_decision = {
+		potential = {
+			ai = no
+			NOT = { has_character_flag = flag_cybernetics_menu_open }
+		}
+		effect = { set_character_flag = flag_cybernetics_menu_open }
+	}
+	close_cybernetics_menu_decision = {
+		is_high_prio = yes
+		potential = { has_character_flag = flag_cybernetics_menu_open }
+		effect = { clr_character_flag = flag_cybernetics_menu_open }
+	}
+}

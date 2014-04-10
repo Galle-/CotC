@@ -1,24 +1,33 @@
+opinion_incompetent_treasurer = { opinion = -10 months = 30 }
+opinion_competent_treasurer = { opinion = 10 months = 30 }
+opinion_incompetent_spymaster = { opinion = -10 months = 30 }
+opinion_competent_spymaster = { opinion = 10 months = 30 }
 opinion_in_love = { opinion = 50 }
 opinion_heartbroken = { opinion = -50 }
 opinion_stole_my_love = { opinion = -50 }
 opinion_attempted_coup = {
-	value = -50
+	opinion = -50
 	months = 320
 	imprison_reason = yes
 }
 opinion_captured_coup_target = {
-	value = 25
+	opinion = 25
 	months = 120
 }
 opinion_failed_to_capture_coup_target = {
-	value = -25
+	opinion = -25
 	months = 60
 }
 opinion_thwarted_coup = {
-	value = 50
+	opinion = 50
 	months = 120
 }
 opinion_foiled_my_plans = {
-	value = -50
+	opinion = -50
+	months = 120
+}
+opinion_massacred_my_child = {
+	opinion = -75
+	imprison_reason = yes
 	months = 120
 }

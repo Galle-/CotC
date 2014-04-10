@@ -1,0 +1,8 @@
+2489.1.1={
+	holding_dynasty = 167
+	liege="e_terran_confederation"
+	law = succ_seniority
+	law = true_cognatic_succession
+}
+2952.1.1 = { holder = 120167 } # Jacob Weyland
+2989.1.1 = { holder = 110167 } # Owen Weyland

@@ -1414,62 +1414,31 @@ character_event = {
 	picture = GFX_evt_speech
 	is_triggered_only = yes
 	
-	# No problems, just abdicate
 	option = {
-		trigger = {
-			any_demesne_title = {
-				is_primary_holder_title_tier = yes
-				current_heir = { any_dynasty_member = { character = ROOT } }
-			}
-		}
+		trigger = { primary_title = { current_heir = { dynasty = ROOT } } } # Going to win the election
 		name = "EVTOPTCONFIRM"
-		abdicate = yes
+		primary_title = { current_heir = { ROOT = { abdicate_to = PREV } } }
 	}
 	
-	# Deposed by rival dynasty
 	option = {
-		trigger = {
-			NOT = {
-				any_demesne_title = {
-					is_primary_holder_title_tier = yes
-					current_heir = { any_dynasty_member = { character = ROOT } }
-				}
-			}
-			any_demesne_title = {
-				is_primary_holder_title_tier = no
-				current_heir = { any_dynasty_member = { character = ROOT } }
-			}
-		}
+		trigger = { NOT = { primary_title = { current_heir = { dynasty = ROOT } } } } # Going to lose the election
 		name = "EVTOPTCONFIRM"
 		custom_tooltip = {
-			text = "ABDICATETOOLTIP"
+			text = "EVTTOOLTIPABDICATE"
 			hidden_tooltip = {
-				random_dynasty_member = {
+				# You see what you've made me do, Paradox?
+				any_dynasty_member = {
+					limit = { has_minor_title = title_patrician_heir }
+					set_character_flag = flag_patrician_heir
+				}
+				any_dynasty_member = {
 					limit = {
-						ROOT = {
-							any_demesne_title = {
-								is_patrician = yes
-								current_heir = { character = PREVPREVPREV }
-							}
-						}
+						NOT = { trait = bastard }
+						NOT = { character = ROOT }
 					}
-					ROOT = { abdicate = yes }
-					abdicate_to = ROOT
+					add_trait = bastard
+					set_character_flag = flag_not_really_a_bastard
 				}
-			}
-		}
-	}
-	
-	# Deposed by rival dynasty but has no same-dynasty patrician heir due to patrician gender bug
-	option = {
-		trigger = {
-			NOT = { any_demesne_title = { current_heir = { any_dynasty_member = { character = ROOT } } } }
-			any_dynasty_member = { is_female = yes }
-		}
-		name = "EVTOPTCONFIRM"
-		custom_tooltip = {
-			text = "ADBDICATETOOLTIP"
-			hidden_tooltip = {
 				create_character = {
 					age = 20
 					name = "Shareholder Meeting"
@@ -1480,9 +1449,25 @@ character_event = {
 					random_traits = no
 				}
 				new_character = {
-					ROOT = { abdicate = yes }
+					ROOT = {
+						any_demesne_title = {
+							limit = { is_patrician = yes }
+							grant_title = PREVPREV
+						}
+						abdicate = yes
+					}
 					abdicate_to = ROOT
 					death = { death_reason = death_sacrifice }
+				}
+				any_dynasty_member = {
+					limit = { has_character_flag = flag_not_really_a_bastard }
+					remove_trait = bastard
+					clr_character_flag = flag_not_really_a_bastard
+				}
+				any_dynasty_member = {
+					limit = { has_character_flag = flag_patrician_heir }
+					clr_character_flag = flag_patrician_heir
+					give_minor_title = title_patrician_heir
 				}
 			}
 		}
@@ -1496,12 +1481,36 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		any_demesne_title = { has_law = succ_patrician_elective }
-		NOT = { any_demesne_title = { current_heir = { any_dynasty_member = { character = ROOT } } } }
-		any_dynasty_member = { is_female = yes }
+		is_merchant_republic = yes
+		primary_title = { current_heir = { dynasty = ROOT } }
+	}
+	
+	immediate = { primary_title = { current_heir = { ROOT = { abdicate_to = PREVPREV } } } }
+}
+character_event = {
+	id = laws.156
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_merchant_republic = yes
+		primary_title = { current_heir = { NOT = { dynasty = ROOT } } }
 	}
 	
 	immediate = {
+		# You see what you've made me do, Paradox?
+		any_dynasty_member = {
+			limit = { has_minor_title = title_patrician_heir }
+			set_character_flag = flag_patrician_heir
+		}
+		any_dynasty_member = {
+			limit = {
+				NOT = { trait = bastard }
+				NOT = { character = ROOT }
+			}
+			add_trait = bastard
+			set_character_flag = flag_not_really_a_bastard
+		}
 		create_character = {
 			age = 20
 			name = "Shareholder Meeting"
@@ -1512,9 +1521,25 @@ character_event = {
 			random_traits = no
 		}
 		new_character = {
-			ROOT = { abdicate = yes }
+			ROOT = {
+				any_demesne_title = {
+					limit = { is_patrician = yes }
+					grant_title = PREVPREV
+				}
+				abdicate = yes
+			}
 			abdicate_to = ROOT
 			death = { death_reason = death_sacrifice }
+		}
+		any_dynasty_member = {
+			limit = { has_character_flag = flag_not_really_a_bastard }
+			remove_trait = bastard
+			clr_character_flag = flag_not_really_a_bastard
+		}
+		any_dynasty_member = {
+			limit = { has_character_flag = flag_patrician_heir }
+			clr_character_flag = flag_patrician_heir
+			give_minor_title = title_patrician_heir
 		}
 	}
 }

@@ -6,11 +6,7 @@ decisions = {
 			NOT = { has_character_flag = flag_cloning_decision_active }
 			# Tech requirement goes here
 		}
-		allow = {
-			# Cloning must be legal
-			NOT = { primary_title = { has_law = cloning_0 } }
-			NOT = { crownlaw_title = { has_law = cloning_0 } }
-			
+		allow = {			
 			# Clones are expensive
 			wealth = 500
 		}
@@ -35,6 +31,7 @@ decisions = {
 						age = 45
 					}
 				}
+				NOT = { religion = bio_directionist } # Cloning preferred
 				fertility = 0.5
 				spouse = { fertility = 0.5 }
 			}

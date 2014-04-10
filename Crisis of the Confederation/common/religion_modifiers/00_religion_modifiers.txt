@@ -43,6 +43,10 @@ allowed_major_rebellion = {
 	authority = -5
 	years = 30
 }
+crushed_major_rebellion = {
+	authority = 5
+	years = 30
+}
 
 allowed_civil_war_county = {
 	authority = -1
@@ -59,6 +63,15 @@ allowed_civil_war_kingdom = {
 allowed_civil_war_empire = {
 	authority = -15
 	years = 30
+}
+
+ruler_cybernetics_good = {
+	authority = 1
+	years = 10
+}
+ruler_cybernetics_bad = {
+	authority = -1
+	years = 10
 }
 
 legal_demand_refused = {

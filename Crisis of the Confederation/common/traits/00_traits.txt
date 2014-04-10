@@ -489,10 +489,7 @@ kinslayer = {
 	
 	dynasty_opinion = -25
 }
-homosexual = {
-	sex_appeal_opinion = 30 # Only to those of the same sex
-	vassal_opinion = -10
-	
+homosexual = {	
 	fertility = -0.15
 	
 	cost = -10
@@ -635,6 +632,7 @@ disciplined = {
 	opposites = { carefree }
 	
 	stewardship = 2
+	fertility = -0.2
 	
 	same_opinion = 20
 	general_opinion = -10
@@ -645,6 +643,7 @@ carefree = {
 	opposites = { disciplined }
 	
 	stewardship = -2
+	fertility = 0.2
 	
 	same_opinion = 10
 	general_opinion = 10
@@ -659,6 +658,7 @@ extraverted = {
 	diplomacy = 2
 	intrigue = -1
 	learning = -1
+	fertility = 0.2
 	
 	same_opinion = 10
 	opposite_opinion = -20
@@ -670,6 +670,7 @@ introverted = {
 	diplomacy = -2
 	intrigue = 1
 	learning = 1
+	fertility = -0.2
 	
 	same_opinion = 10
 	opposite_opinion = -20

@@ -225,12 +225,9 @@ title_patrician_heir = {
 	monthly_prestige = 0.002
 	
 	allow = {
-		is_female = no
 		dynasty = FROM
 		NOT = { trait = bastard }
-		FROM = {
-			is_patrician = yes
-		}
+		FROM = { is_patrician = yes }
 	}
 	
 	gain_effect = {

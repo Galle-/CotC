@@ -18,10 +18,7 @@ iaei_mk_i = {
 }
 iaei_mk_ii = {
 	customizer = no # Requires more tech than exists in 2998
-	potential = {
-		trait = dni
-		location = { TECH_POPULAR_CUSTOMS = 2 }
-	}
+	potential = { trait = dni }
 	opposites = {
 		iaei_mk_i
 		iaei_mk_iii
@@ -32,10 +29,7 @@ iaei_mk_ii = {
 }
 iaei_mk_iii = {
 	customizer = no # Requires more tech than exists in 2998
-	potential = {
-		trait = dni
-		location = { TECH_POPULAR_CUSTOMS = 4 }
-	}
+	potential = { trait = dni }
 	opposites = {
 		iaei_mk_i
 		iaei_mk_ii
@@ -46,10 +40,7 @@ iaei_mk_iii = {
 }
 iaei_mk_iv = {
 	customizer = no # Requires more tech than exists in 2998
-	potential = {
-		trait = dni
-		location = { TECH_POPULAR_CUSTOMS = 6 }
-	}
+	potential = { trait = dni }
 	opposites = {
 		iaei_mk_i
 		iaei_mk_ii
@@ -60,10 +51,7 @@ iaei_mk_iv = {
 }
 iaei_mk_v = {
 	customizer = no # Requires more tech than exists in 2998
-	potential = {
-		trait = dni
-		location = { TECH_POPULAR_CUSTOMS = 8 }
-	}
+	potential = { trait = dni }
 	opposites = {
 		iaei_mk_i
 		iaei_mk_ii
@@ -85,10 +73,7 @@ odin_mk_i = {
 }
 odin_mk_ii = {
 	customizer = no # Requires more tech than exists in 2998
-	potential = {
-		trait = dni
-		location = { TECH_POPULAR_CUSTOMS = 2 }
-	}
+	potential = { trait = dni }
 	opposites = {
 		odin_mk_i
 		odin_mk_iii
@@ -99,10 +84,7 @@ odin_mk_ii = {
 }
 odin_mk_iii = {
 	customizer = no # Requires more tech than exists in 2998
-	potential = {
-		trait = dni
-		location = { TECH_POPULAR_CUSTOMS = 4 }
-	}
+	potential = { trait = dni }
 	opposites = {
 		odin_mk_i
 		odin_mk_ii
@@ -113,10 +95,7 @@ odin_mk_iii = {
 }
 odin_mk_iv = {
 	customizer = no # Requires more tech than exists in 2998
-	potential = {
-		trait = dni
-		location = { TECH_POPULAR_CUSTOMS = 6 }
-	}
+	potential = { trait = dni }
 	opposites = {
 		odin_mk_i
 		odin_mk_ii
@@ -127,10 +106,7 @@ odin_mk_iv = {
 }
 odin_mk_v = {
 	customizer = no # Requires more tech than exists in 2998
-	potential = {
-		trait = dni
-		location = { TECH_POPULAR_CUSTOMS = 8 }
-	}
+	potential = { trait = dni }
 	opposites = {
 		odin_mk_i
 		odin_mk_ii
@@ -152,10 +128,7 @@ pci_mk_i = {
 }
 pci_mk_ii = {
 	customizer = no # Requires more tech than exists in 2998
-	potential = {
-		trait = dni
-		location = { TECH_POPULAR_CUSTOMS = 2 }
-	}
+	potential = { trait = dni }
 	opposites = {
 		pci_mk_i
 		pci_mk_iii
@@ -166,10 +139,7 @@ pci_mk_ii = {
 }
 pci_mk_iii = {
 	customizer = no # Requires more tech than exists in 2998
-	potential = {
-		trait = dni
-		location = { TECH_POPULAR_CUSTOMS = 4 }
-	}
+	potential = { trait = dni }
 	opposites = {
 		pci_mk_i
 		pci_mk_ii
@@ -180,10 +150,7 @@ pci_mk_iii = {
 }
 pci_mk_iv = {
 	customizer = no # Requires more tech than exists in 2998
-	potential = {
-		trait = dni
-		location = { TECH_POPULAR_CUSTOMS = 6 }
-	}
+	potential = { trait = dni }
 	opposites = {
 		pci_mk_i
 		pci_mk_ii
@@ -194,10 +161,7 @@ pci_mk_iv = {
 }
 pci_mk_v = {
 	customizer = no # Requires more tech than exists in 2998
-	potential = {
-		trait = dni
-		location = { TECH_POPULAR_CUSTOMS = 8 }
-	}
+	potential = { trait = dni }
 	opposites = {
 		pci_mk_i
 		pci_mk_ii
@@ -219,10 +183,7 @@ pluto_mk_i = {
 }
 pluto_mk_ii = {
 	customizer = no # Requires more tech than exists in 2998
-	potential = {
-		trait = dni
-		location = { TECH_POPULAR_CUSTOMS = 2 }
-	}
+	potential = { trait = dni }
 	opposites = {
 		pluto_mk_i
 		pluto_mk_iii
@@ -233,10 +194,7 @@ pluto_mk_ii = {
 }
 pluto_mk_iii = {
 	customizer = no # Requires more tech than exists in 2998
-	potential = {
-		trait = dni
-		location = { TECH_POPULAR_CUSTOMS = 4 }
-	}
+	potential = { trait = dni }
 	opposites = {
 		pluto_mk_i
 		pluto_mk_ii
@@ -247,10 +205,7 @@ pluto_mk_iii = {
 }
 pluto_mk_iv = {
 	customizer = no # Requires more tech than exists in 2998
-	potential = {
-		trait = dni
-		location = { TECH_POPULAR_CUSTOMS = 6 }
-	}
+	potential = { trait = dni }
 	opposites = {
 		pluto_mk_i
 		pluto_mk_ii
@@ -261,10 +216,7 @@ pluto_mk_iv = {
 }
 pluto_mk_v = {
 	customizer = no # Requires more tech than exists in 2998
-	potential = {
-		trait = dni
-		location = { TECH_POPULAR_CUSTOMS = 8 }
-	}
+	potential = { trait = dni }
 	opposites = {
 		pluto_mk_i
 		pluto_mk_ii
@@ -287,10 +239,7 @@ thoth_mk_i = {
 }
 thoth_mk_ii = {
 	customizer = no # Requires more tech than exists in 2998
-	potential = {
-		trait = dni
-		location = { TECH_POPULAR_CUSTOMS = 2 }
-	}
+	potential = { trait = dni }
 	opposites = {
 		thoth_mk_i
 		thoth_mk_iii
@@ -301,10 +250,7 @@ thoth_mk_ii = {
 }
 thoth_mk_iii = {
 	customizer = no # Requires more tech than exists in 2998
-	potential = {
-		trait = dni
-		location = { TECH_POPULAR_CUSTOMS = 4 }
-	}
+	potential = { trait = dni }
 	opposites = {
 		thoth_mk_i
 		thoth_mk_ii
@@ -315,10 +261,7 @@ thoth_mk_iii = {
 }
 thoth_mk_iv = {
 	customizer = no # Requires more tech than exists in 2998
-	potential = {
-		trait = dni
-		location = { TECH_POPULAR_CUSTOMS = 6 }
-	}
+	potential = { trait = dni }
 	opposites = {
 		thoth_mk_i
 		thoth_mk_ii
@@ -329,10 +272,7 @@ thoth_mk_iv = {
 }
 thoth_mk_v = {
 	customizer = no # Requires more tech than exists in 2998
-	potential = {
-		trait = dni
-		location = { TECH_POPULAR_CUSTOMS = 8 }
-	}
+	potential = { trait = dni }
 	opposites = {
 		thoth_mk_i
 		thoth_mk_ii
@@ -344,13 +284,10 @@ thoth_mk_v = {
 # Other assorted cybernetic implants
 cybernetic_limb = {
 	is_health = yes
-	opposites = {
-		maimed
-		full_cybernetic_conversion
-	}
+	opposites = { full_cybernetic_conversion }
 }
 full_cybernetic_conversion = {
-	potential = { location = { TECH_POPULAR_CUSTOMS = 8 } }
+	random = no
 	opposites = {
 		cybernetic_limb
 		wounded

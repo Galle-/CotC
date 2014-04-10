@@ -26,10 +26,18 @@ hiver;Hiver;;;;;;;;;;;;;x
 bio_directionist;Bio-Directionist;;;;;;;;;;;;;x
 outlaw_group;Outlaw;;;;;;;;;;;;;x
 space_pirate;Space Pirate;;;;;;;;;;;;;x
-PIETY_CREDIBILITY;Credibility;;;;;;;;;;;;;x
-PIETY_LEGITIMACY;Legitimacy;;;;;;;;;;;;;x
-PIETY_ASPIRATION;Aspiration;;;;;;;;;;;;;x
-PIETY_RESPECT;Respect;;;;;;;;;;;;;x
+STAT_PIETY_CREDIBILITY;Credibility;;;;;;;;;;;;;x
+STAT_PIETY_CREDIBILITY_DESC;Political credibility is respected by other followers of your ideology. Like Prestige, it is added to your score on the death of a ruler.;;;;;;;;;;;;;x
+MONTHLY_PIETY_CREDIBILITY;Monthly Credibility Increase;;;;.;;;;;;;;;x
+STAT_PIETY_LEGITIMACY;Legitimacy;;;;;;;;;;;;;x
+STAT_PIETY_LEGITIMACY_DESC;Political legitimacy is respected by other followers of your ideology. Like Prestige, it is added to your score on the death of a ruler.;;;;;;;;;;;;;x
+MONTHLY_PIETY_LEGITIMACY;Monthly Legitimacy Increase;;;;.;;;;;;;;;x
+STAT_PIETY_ASPIRATION;Aspiration;;;;;;;;;;;;;x
+STAT_PIETY_ASPIRATION_DESC;Courage and optimistic in pursuing the cause is respected by other followers of your ideology. Like Prestige, it is added to your score on the death of a ruler.;;;;;;;;;;;;;x
+MONTHLY_PIETY_ASPIRATION;Monthly Aspiration Increase;;;;.;;;;;;;;;x
+STAT_PIETY_RESPECT;Respect;;;;;;;;;;;;;x
+STAT_PIETY_RESPECT_DESC;Respect is the measure of your standing in the eyes of your fellow criminals. Like Prestige, it is added to your score on the death of a ruler.;;;;;;;;;;;;;x
+MONTHLY_PIETY_RESPECT;Monthly Respect Increase;;;;.;;;;;;;;;x
 OP_ALACRITY;Alacrity;;;;;;;;;;;;;x
 OP_CHAPTER;Chapter;;;;;;;;;;;;;x
 OP_CORKSCREW;Corkscrew;;;;;;;;;;;;;x

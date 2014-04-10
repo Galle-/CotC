@@ -1,0 +1,13 @@
+# Family member opinions
+opinion_my_parent = {
+	opinion = 50
+}
+opinion_my_child = {
+	opinion = 50
+}
+opinion_my_older_sibling = {
+	opinion = 25
+}
+opinion_my_younger_sibling = {
+	opinion = 25
+}

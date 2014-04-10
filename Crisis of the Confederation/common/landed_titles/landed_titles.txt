@@ -40,51 +40,11 @@ d_pilgrimage = {
 	primary = yes
 	
 	controls_religion = pilgrim
-	controls_religion = orthodox
 	
 	dynasty_title_names = no
 	
 	title = "MASTER"
 	title_foa = "MASTERFOA"
-}
-
-
-# Bureaucracy
-k_terran_federal_authority = {
-	color = { 0 128 64 }
-	color2 = { 192 192 192 }
-	
-	capital = 202 # Sol
-	
-	short_name = yes
-	
-	landless = yes
-
-	controls_religion = terran_federalist
-}
-k_terran_republic_authority = {
-	color = { 0 128 64 }
-	color2 = { 192 192 192 }
-	
-	capital = 202 # Sol
-	
-	short_name = yes
-	
-	landless = yes
-
-	controls_religion = terran_republican
-}
-k_terran_imperial_authority = {
-	color = { 0 128 64 }
-	color2 = { 192 192 192 }
-	
-	capital = 202 # Sol
-	
-	short_name = yes
-	
-	landless = yes
-
-	controls_religion = terran_imperial
 }
 
 e_terran_confederation = {

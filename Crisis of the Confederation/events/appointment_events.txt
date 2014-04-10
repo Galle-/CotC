@@ -3,120 +3,68 @@ namespace = nepotism
 # These events handle the new system for trying to manipulate successions
 # This event should be called both on death and whenever a character would otherwise abdicate
 character_event = {
-	id = nepotism.0
-	is_triggered_only = yes
-	
-	trigger = {
-		any_demesne_title = { has_law = succ_appointment }
-		any_vassal = { has_minor_title = title_expected_successor }
-	}
-	
-	immediate = {
-		# All titles are appointed
-		if = {
-			limit = {
-				NOT = {
-					any_demesne_title = {
-						higher_tier_than = baron
-						NOT = { has_law = succ_appointment }
-					}
-				}
-			}
-			random_vassal = {
-				limit = { has_minor_title = title_expected_successor }
-				ROOT = { abdicate_to = PREV }
-				character_event = { id = nepotism.2 }
-			}
-		}
-		# Has mixed succession laws
-		if = {
-			limit = {
-				any_demesne_title = {
-					higher_tier_than = baron
-					NOT = { has_law = succ_appointment }
-				}
-			}
-			random_vassal = {
-				limit = { has_minor_title = title_expected_successor }
-				ROOT = {
-					any_demesne_title = {
-						limit = { has_law = succ_appointment }
-						usurp_title_plus_barony_if_unlanded = PREVPREV # This should handle titles with de jure territory
-						grant_title = PREVPREV
-					}
-					# Fortunately, vassals are landed by definition and don't need to bother with all that capital transfer business
-				}
-				character_event = { id = nepotism.2 }
-			}
-		}
-	}
-}
-
-character_event = {
 	id = nepotism.1
-	hide_window = yes
 	is_triggered_only = yes
 	
 	trigger = {
 		any_demesne_title = { has_law = succ_appointment }
-		any_courtier = { has_minor_title = title_expected_successor }
+		any_realm_character = {
+			liege = { character = ROOT }
+			has_minor_title = title_expected_successor
+		}
 	}
 	
 	immediate = {
 		# All titles are appointed
 		if = {
-			limit = {
-				NOT = {
-					any_demesne_title = {
-						higher_tier_than = baron
-						NOT = { has_law = succ_appointment }
-					}
+			limit = { NOT = { any_demesne_title = { NOT = { has_law = succ_appointment } } } }
+			random_realm_character = {
+				limit = {
+					liege = { character = ROOT }
+					has_minor_title = title_expected_successor
 				}
-			}
-			random_courtier = {
-				limit = { has_minor_title = title_expected_successor }
 				ROOT = { abdicate_to = PREV }
 				character_event = { id = nepotism.2 }
 			}
 		}
-		# Has mixed succession laws
+		# Has mixed succession laws, liege
 		if = {
 			limit = {
-				any_demesne_title = {
-					higher_tier_than = baron
-					NOT = { has_law = succ_appointment }
+				any_demesne_title = { NOT = { has_law = succ_appointment } }
+				independent = no
+			}
+			liege = {
+				random_realm_character = {
+					limit = {
+						liege = { character = ROOT }
+						has_minor_title = title_expected_successor
+					}
+					ROOT = {
+						any_demesne_title = {
+							limit = { has_law = succ_appointment }
+							usurp_title_plus_barony_if_unlanded = PREVPREV
+						}
+					}
+					set_defacto_liege = PREV
+					character_event = { id = nepotism.2 }
 				}
 			}
-			random_courtier = {
-				limit = { has_minor_title = title_expected_successor }
+		}
+		# Has mixed sucession laws, no liege
+		if = {
+			limit = {
+				any_demesne_title = { NOT = { has_law = succ_appointment } }
+				independent = yes
+			}
+			random_realm_character = {
+				limit = {
+					liege = { character = ROOT }
+					has_minor_title = title_expected_successor
+				}
 				ROOT = {
 					any_demesne_title = {
 						limit = { has_law = succ_appointment }
-						usurp_title_plus_barony_if_unlanded = PREVPREV # This should handle titles with de jure territory
-						grant_title = PREVPREV
-					}
-					random_demesne_title = {
-						limit = {
-							PREV = { PREV = { NOT = { demesne_size = 1 } } }
-							OR = {
-								AND = {
-									tier = baron
-									is_patrician = no
-									ROOT = { capital_holding = { NOT = { title = PREVPREV } } }
-								}
-								AND = {
-									tier = count
-									location = { ROOT = { capital_scope = { NOT = { province_id = PREVPREV } } } }
-								}
-							}
-							# Make sure military titles get a military holding
-							NOT = {
-								AND = {
-									PREV = { PREV = { any_demesne_title = { is_tribal_type_title = yes } } }
-									is_feudal = no
-								}
-							}
-						}
+						usurp_title_plus_barony_if_unlanded = PREVPREV
 					}
 				}
 				character_event = { id = nepotism.2 }
@@ -132,7 +80,7 @@ character_event = {
 	hide_window = yes
 	
 	immediate = {
-		liege = { character_event = { id = nepotism.2 } }
+		liege = { character_event = { id = nepotism.3 } }
 	}
 }
 
@@ -159,7 +107,7 @@ character_event = {
 		FROM = { FROM = { letter_event = { id = nepotism.5 } } }
 	}
 	
-	option = { "EVTOPTCONFIRM" }
+	option = { name = "EVTOPTCONFIRM" }
 }
 
 # Inform new holder
@@ -1061,83 +1009,83 @@ letter_event = {
 			# Opinion of nominee
 			modifier = {
 				factor = 1.25
-				opinion = { who = FROM value = 100 as_if_liege = yes }
+				opinion = { who = FROM value = 100 }
 			}
 			modifier = {
 				factor = 1.25
-				opinion = { who = FROM value = 90 as_if_liege = yes }
+				opinion = { who = FROM value = 90 }
 			}
 			modifier = {
 				factor = 1.25
-				opinion = { who = FROM value = 80 as_if_liege = yes }
+				opinion = { who = FROM value = 80 }
 			}
 			modifier = {
 				factor = 1.25
-				opinion = { who = FROM value = 70 as_if_liege = yes }
+				opinion = { who = FROM value = 70 }
 			}
 			modifier = {
 				factor = 1.25
-				opinion = { who = FROM value = 60 as_if_liege = yes }
+				opinion = { who = FROM value = 60 }
 			}
 			modifier = {
 				factor = 1.25
-				opinion = { who = FROM value = 50 as_if_liege = yes }
+				opinion = { who = FROM value = 50 }
 			}
 			modifier = {
 				factor = 1.25
-				opinion = { who = FROM value = 40 as_if_liege = yes }
+				opinion = { who = FROM value = 40 }
 			}
 			modifier = {
 				factor = 1.25
-				opinion = { who = FROM value = 30 as_if_liege = yes }
+				opinion = { who = FROM value = 30 }
 			}
 			modifier = {
 				factor = 1.25
-				opinion = { who = FROM value = 20 as_if_liege = yes }
+				opinion = { who = FROM value = 20 }
 			}
 			modifier = {
 				factor = 1.25
-				opinion = { who = FROM value = 10 as_if_liege = yes }
+				opinion = { who = FROM value = 10 }
 			}
 			modifier = {
 				factor = 0.8
-				NOT = { opinion = { who = FROM value = -9 as_if_liege = yes } }
+				NOT = { opinion = { who = FROM value = -9 } }
 			}
 			modifier = {
 				factor = 0.8
-				NOT = { opinion = { who = FROM value = -19 as_if_liege = yes } }
+				NOT = { opinion = { who = FROM value = -19 } }
 			}
 			modifier = {
 				factor = 0.8
-				NOT = { opinion = { who = FROM value = -29 as_if_liege = yes } }
+				NOT = { opinion = { who = FROM value = -29 } }
 			}
 			modifier = {
 				factor = 0.8
-				NOT = { opinion = { who = FROM value = -39 as_if_liege = yes } }
+				NOT = { opinion = { who = FROM value = -39 } }
 			}
 			modifier = {
 				factor = 0.8
-				NOT = { opinion = { who = FROM value = -49 as_if_liege = yes } }
+				NOT = { opinion = { who = FROM value = -49 } }
 			}
 			modifier = {
 				factor = 0.8
-				NOT = { opinion = { who = FROM value = -59 as_if_liege = yes } }
+				NOT = { opinion = { who = FROM value = -59 } }
 			}
 			modifier = {
 				factor = 0.8
-				NOT = { opinion = { who = FROM value = -69 as_if_liege = yes } }
+				NOT = { opinion = { who = FROM value = -69 } }
 			}
 			modifier = {
 				factor = 0.8
-				NOT = { opinion = { who = FROM value = -79 as_if_liege = yes } }
+				NOT = { opinion = { who = FROM value = -79 } }
 			}
 			modifier = {
 				factor = 0.8
-				NOT = { opinion = { who = FROM value = -89 as_if_liege = yes } }
+				NOT = { opinion = { who = FROM value = -89 } }
 			}
 			modifier = {
 				factor = 0.8
-				NOT = { opinion = { who = FROM value = -99 as_if_liege = yes } }
+				NOT = { opinion = { who = FROM value = -99 } }
 			}
 			# Opinion of current candidate
 			modifier = {
@@ -2200,35 +2148,29 @@ character_event = {
 				liege = { liege = { always = yes } }
 				OR = {
 					# Liegeliege
-					AND = {
+					liege = {
 						liege = {
-							liege = {
-								character = ROOT
-								NOT = { any_vassal = { has_minor_title = title_regent } }
-								NOT = { any_vassal = { has_minor_title = title_prime_minister } }
-							}
+							character = ROOT
+							NOT = { any_vassal = { has_minor_title = title_regent } }
+							NOT = { any_vassal = { has_minor_title = title_prime_minister } }
 						}
 					}
 					# Prime Minister
-					AND = {
+					liege = {
 						liege = {
-							liege = {
-								any_vassal = {
-									character = ROOT
-									has_minor_title = title_prime_minister
-								}
+							any_vassal = {
+								character = ROOT
+								has_minor_title = title_prime_minister
 							}
 						}
 					}
 					# Regent
-					AND = {
+					liege = {
 						liege = {
-							liege = {
-								NOT = { any_vassal = { has_minor_title = title_prime_minister } }
-								any_vassal = {
-									character = ROOT
-									has_minor_title = title_regent
-								}
+							NOT = { any_vassal = { has_minor_title = title_prime_minister } }
+							any_vassal = {
+								character = ROOT
+								has_minor_title = title_regent
 							}
 						}
 					}
@@ -2238,7 +2180,7 @@ character_event = {
 		name = "EVTOPTANEPOTISM200"
 		random_dynasty_member = {
 			limit = { has_opinion_modifier = { who = ROOT modifier = opinion_appointment_nominee } }
-			letter_event = { id = nepotism.220 tooltip = "EVTTOOLTIP220" }
+			letter_event = { id = nepotism.201 tooltip = "EVTTOOLTIP201" }
 			hidden_tooltip = { remove_opinion = { who = ROOT modifier = opinion_appointment_nominee } }
 		}
 	}
@@ -3230,7 +3172,7 @@ character_event = {
 	is_triggered_only = yes
 	notification = yes
 	
-	option = { name = "CONFIRM" }
+	option = { name = "EVTOPTCONFIRM" }
 }
 
 # 203: Patron is Appointer
@@ -3240,7 +3182,7 @@ character_event = {
 	desc = "EVTDESCNEPOTISM203"
 	is_triggered_only = yes
 	
-	option = { name = "CONFIRM" }
+	option = { name = "EVTOPTCONFIRM" }
 }
 
 # 204: Patron is Appointer
@@ -3250,7 +3192,7 @@ character_event = {
 	desc = "EVTDESCNEPOTISM204"
 	is_triggered_only = yes
 	
-	option = { name = "CONFIRM" }
+	option = { name = "EVTOPTCONFIRM" }
 }
 
 # 205: Patron nomination
@@ -3449,83 +3391,83 @@ letter_event = {
 			# Opinion of nominee
 			modifier = {
 				factor = 1.25
-				opinion = { who = FROM value = 100 as_if_liege = yes }
+				opinion = { who = FROM value = 100 }
 			}
 			modifier = {
 				factor = 1.25
-				opinion = { who = FROM value = 90 as_if_liege = yes }
+				opinion = { who = FROM value = 90 }
 			}
 			modifier = {
 				factor = 1.25
-				opinion = { who = FROM value = 80 as_if_liege = yes }
+				opinion = { who = FROM value = 80 }
 			}
 			modifier = {
 				factor = 1.25
-				opinion = { who = FROM value = 70 as_if_liege = yes }
+				opinion = { who = FROM value = 70 }
 			}
 			modifier = {
 				factor = 1.25
-				opinion = { who = FROM value = 60 as_if_liege = yes }
+				opinion = { who = FROM value = 60 }
 			}
 			modifier = {
 				factor = 1.25
-				opinion = { who = FROM value = 50 as_if_liege = yes }
+				opinion = { who = FROM value = 50 }
 			}
 			modifier = {
 				factor = 1.25
-				opinion = { who = FROM value = 40 as_if_liege = yes }
+				opinion = { who = FROM value = 40 }
 			}
 			modifier = {
 				factor = 1.25
-				opinion = { who = FROM value = 30 as_if_liege = yes }
+				opinion = { who = FROM value = 30 }
 			}
 			modifier = {
 				factor = 1.25
-				opinion = { who = FROM value = 20 as_if_liege = yes }
+				opinion = { who = FROM value = 20 }
 			}
 			modifier = {
 				factor = 1.25
-				opinion = { who = FROM value = 10 as_if_liege = yes }
+				opinion = { who = FROM value = 10 }
 			}
 			modifier = {
 				factor = 0.8
-				NOT = { opinion = { who = FROM value = -9 as_if_liege = yes } }
+				NOT = { opinion = { who = FROM value = -9 } }
 			}
 			modifier = {
 				factor = 0.8
-				NOT = { opinion = { who = FROM value = -19 as_if_liege = yes } }
+				NOT = { opinion = { who = FROM value = -19 } }
 			}
 			modifier = {
 				factor = 0.8
-				NOT = { opinion = { who = FROM value = -29 as_if_liege = yes } }
+				NOT = { opinion = { who = FROM value = -29 } }
 			}
 			modifier = {
 				factor = 0.8
-				NOT = { opinion = { who = FROM value = -39 as_if_liege = yes } }
+				NOT = { opinion = { who = FROM value = -39 } }
 			}
 			modifier = {
 				factor = 0.8
-				NOT = { opinion = { who = FROM value = -49 as_if_liege = yes } }
+				NOT = { opinion = { who = FROM value = -49 } }
 			}
 			modifier = {
 				factor = 0.8
-				NOT = { opinion = { who = FROM value = -59 as_if_liege = yes } }
+				NOT = { opinion = { who = FROM value = -59 } }
 			}
 			modifier = {
 				factor = 0.8
-				NOT = { opinion = { who = FROM value = -69 as_if_liege = yes } }
+				NOT = { opinion = { who = FROM value = -69 } }
 			}
 			modifier = {
 				factor = 0.8
-				NOT = { opinion = { who = FROM value = -79 as_if_liege = yes } }
+				NOT = { opinion = { who = FROM value = -79 } }
 			}
 			modifier = {
 				factor = 0.8
-				NOT = { opinion = { who = FROM value = -89 as_if_liege = yes } }
+				NOT = { opinion = { who = FROM value = -89 } }
 			}
 			modifier = {
 				factor = 0.8
-				NOT = { opinion = { who = FROM value = -99 as_if_liege = yes } }
+				NOT = { opinion = { who = FROM value = -99 } }
 			}
 			# Opinion of patron
 			modifier = {
