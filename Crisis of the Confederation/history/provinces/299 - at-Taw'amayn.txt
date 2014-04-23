@@ -1,7 +1,7 @@
-# 299 - at-Taw'amayn.txt
+# 299 - at-Taw'amayn
 
 # County Title
-title = c_at-taw'amayn
+title = c_at_tawamayn
 
 # Settlements
 max_settlements = 4
@@ -15,15 +15,30 @@ religion = terran_federalist
 
 # History
 1.1.1 = {
-	b_at_tawamayn_iii = ct_lakes
-	b_at_tawamayn_iii = ct_optimal_cold
 	b_at_tawamayn_iii = ct_toxic_atmosphere
-	b_at_tawamayn_iv = tp_trace_water
-	b_at_tawamayn_iv = tp_cool
+	b_at_tawamayn_iii = ct_no_water
+	b_at_tawamayn_iii = ct_trace_water
+	b_at_tawamayn_iii = ct_lakes
+	b_at_tawamayn_iii = ct_frozen
+	b_at_tawamayn_iii = ct_cold
+	b_at_tawamayn_iii = ct_cool
+	b_at_tawamayn_iii = ct_optimal_cold
+	b_at_tawamayn_iii = ct_planet_survey
+	
 	b_at_tawamayn_iv = tp_clean_atmosphere
-	b_at_tawamayn_iv_b = ca_no_water
-	b_at_tawamayn_iv_b = ca_cool
+	b_at_tawamayn_iv = tp_no_water
+	b_at_tawamayn_iv = tp_trace_water
+	b_at_tawamayn_iv = tp_frozen
+	b_at_tawamayn_iv = tp_cold
+	b_at_tawamayn_iv = tp_cool
+	b_at_tawamayn_iv = tp_planet_survey
+	
 	b_at_tawamayn_iv_b = ca_toxic_atmosphere
+	b_at_tawamayn_iv_b = ca_no_water
+	b_at_tawamayn_iv_b = ca_frozen
+	b_at_tawamayn_iv_b = ca_cold
+	b_at_tawamayn_iv_b = ca_cool
+	b_at_tawamayn_iv_b = ca_planet_survey
 }
 
 2998.1.1 = {

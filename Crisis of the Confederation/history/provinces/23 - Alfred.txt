@@ -1,12 +1,13 @@
-# 23 - Alfred.txt
+# 23 - Alfred
 
 # County Title
 title = c_alfred
 
 # Settlements
 max_settlements = 5
-b_alfred_prime = city
+
 b_alfred_prime_b = castle
+b_alfred_prime = city
 b_alfred_prime_c = temple
 
 # Misc

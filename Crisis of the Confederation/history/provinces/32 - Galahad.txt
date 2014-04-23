@@ -1,13 +1,14 @@
-# 32 - Galahad.txt
+# 32 - Galahad
 
 # County Title
 title = c_galahad
 
 # Settlements
 max_settlements = 6
+
+b_galahad_citadel = castle
 b_galahad_iii = city
 b_galahad_iii_b = temple
-b_galahad_citadel = castle
 
 # Misc
 culture = anglo_avalonian # Initial culture

@@ -1,13 +1,14 @@
-# 175 - Sovershenstvo.txt
+# 175 - Sovershenstvo
 
 # County Title
 title = c_sovershenstvo
 
 # Settlements
 max_settlements = 5
-b_sovershenstvo_ii = temple
+
 b_sovershenstvo_prime = castle
 b_sovershenstvo_prime_b = city
+b_sovershenstvo_ii = temple
 
 # Misc
 culture = russo_edemite # Initial culture

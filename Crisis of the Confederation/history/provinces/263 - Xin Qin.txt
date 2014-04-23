@@ -1,4 +1,4 @@
-# 263 - Xin Qin.txt
+# 263 - Xin Qin
 
 # County Title
 title = c_xin_qin
@@ -15,15 +15,32 @@ religion = colonial_seperatist
 
 # History
 1.1.1 = {
-	b_xin_qin_iii = ct_seas
-	b_xin_qin_iii = ct_optimal_hot
 	b_xin_qin_iii = ct_clean_atmosphere
-	b_xin_qin_iii_b = tp_no_water
-	b_xin_qin_iii_b = tp_optimal_hot
+	b_xin_qin_iii = ct_no_water
+	b_xin_qin_iii = ct_trace_water
+	b_xin_qin_iii = ct_lakes
+	b_xin_qin_iii = ct_seas
+	b_xin_qin_iii = ct_burning
+	b_xin_qin_iii = ct_hot
+	b_xin_qin_iii = ct_warm
+	b_xin_qin_iii = ct_optimal_hot
+	b_xin_qin_iii = ct_planet_survey
+	
 	b_xin_qin_iii_b = tp_no_atmosphere
-	b_xin_qin_iv = ca_trace_water
-	b_xin_qin_iv = ca_cool
+	b_xin_qin_iii_b = tp_no_water
+	b_xin_qin_iii_b = tp_burning
+	b_xin_qin_iii_b = tp_hot
+	b_xin_qin_iii_b = tp_warm
+	b_xin_qin_iii_b = tp_optimal_hot
+	b_xin_qin_iii_b = tp_planet_survey
+	
 	b_xin_qin_iv = ca_toxic_atmosphere
+	b_xin_qin_iv = ca_no_water
+	b_xin_qin_iv = ca_trace_water
+	b_xin_qin_iv = ca_frozen
+	b_xin_qin_iv = ca_cold
+	b_xin_qin_iv = ca_cool
+	b_xin_qin_iv = ca_planet_survey
 }
 
 2998.1.1 = {

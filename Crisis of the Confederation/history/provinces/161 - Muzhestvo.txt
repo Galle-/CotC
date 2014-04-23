@@ -1,12 +1,12 @@
-# 161 - Muzhestvo.txt
+# 161 - Muzhestvo
 
 # County Title
 title = c_muzhestvo
 
 # Settlements
 max_settlements = 4
-b_muzhestvo_viii_c = temple
 b_muzhestvo_viii_b = castle
+b_muzhestvo_viii_c = temple
 
 # Misc
 culture = russo_edemite # Initial culture

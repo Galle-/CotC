@@ -1,12 +1,12 @@
-# 165 - Vera.txt
+# 165 - Vera
 
 # County Title
 title = c_vera
 
 # Settlements
 max_settlements = 4
-b_vera_ii_b = city
 b_vera_ii = castle
+b_vera_ii_b = city
 
 # Misc
 culture = japanese_edemite # Initial culture

@@ -1,7 +1,7 @@
-# 302 - al-Jisr.txt
+# 302 - al-Jisr
 
 # County Title
-title = c_al-jisr
+title = c_al_jisr
 
 # Settlements
 max_settlements = 4
@@ -15,13 +15,22 @@ religion = pilgrim
 
 # History
 1.1.1 = {
+	b_al_jisr_waystation = ca_space_station_0
 	b_al_jisr_waystation = ca_space_station_1
+	
+	b_al_jisr_prime = tp_toxic_atmosphere
+	b_al_jisr_prime = tp_no_water
 	b_al_jisr_prime = tp_trace_water
 	b_al_jisr_prime = tp_burning
-	b_al_jisr_prime = tp_toxic_atmosphere
-	b_al_jisr_ii = ct_lakes
-	b_al_jisr_ii = ct_hot
+	b_al_jisr_prime = tp_planet_survey
+	
 	b_al_jisr_ii = ct_toxic_atmosphere
+	b_al_jisr_ii = ct_no_water
+	b_al_jisr_ii = ct_trace_water
+	b_al_jisr_ii = ct_lakes
+	b_al_jisr_ii = ct_burning
+	b_al_jisr_ii = ct_hot
+	b_al_jisr_ii = ct_planet_survey
 }
 
 2998.1.1 = {

@@ -1,12 +1,13 @@
-# 44 - Victoria.txt
+# 44 - Victoria
 
 # County Title
 title = c_victoria
 
 # Settlements
 max_settlements = 5
-b_victoria_iii_orbital = city
+
 b_victoria_iii = castle
+b_victoria_iii_orbital = city
 
 # Misc
 culture = anglo_avalonian # Initial culture

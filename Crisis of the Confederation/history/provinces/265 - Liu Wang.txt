@@ -1,13 +1,13 @@
-# 265 - Liu Wang.txt
+# 265 - Liu Wang
 
 # County Title
 title = c_liu_wang
 
 # Settlements
 max_settlements = 4
+b_liu_wang_waystation = castle
 b_liu_wang_iv = city
 b_liu_wang_iv_b = temple
-b_liu_wang_waystation = castle
 
 # Misc
 culture = sino_xingjie # Initial culture
@@ -15,13 +15,24 @@ religion = terran_federalist
 
 # History
 1.1.1 = {
-	b_liu_wang_iv = ct_trace_water
-	b_liu_wang_iv = ct_warm
-	b_liu_wang_iv = ct_clean_atmosphere
-	b_liu_wang_iv_b = tp_no_water
-	b_liu_wang_iv_b = tp_warm
-	b_liu_wang_iv_b = tp_no_atmosphere
+	b_liu_wang_waystation = ca_space_station_0
+	b_liu_wang_waystation = ca_space_station_1
 	b_liu_wang_waystation = ca_space_station_2
+	
+	b_liu_wang_iv = ct_clean_atmosphere
+	b_liu_wang_iv = ct_no_water
+	b_liu_wang_iv = ct_trace_water
+	b_liu_wang_iv = ct_burning
+	b_liu_wang_iv = ct_hot
+	b_liu_wang_iv = ct_warm
+	b_liu_wang_iv = ct_planet_survey
+	
+	b_liu_wang_iv_b = tp_no_atmosphere
+	b_liu_wang_iv_b = tp_no_water
+	b_liu_wang_iv_b = tp_burning
+	b_liu_wang_iv_b = tp_hot
+	b_liu_wang_iv_b = tp_warm
+	b_liu_wang_iv_b = tp_planet_survey
 }
 
 2998.1.1 = {

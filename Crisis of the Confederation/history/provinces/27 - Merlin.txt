@@ -1,12 +1,13 @@
-# 27 - Merlin.txt
+# 27 - Merlin
 
 # County Title
 title = c_merlin
 
 # Settlements
 max_settlements = 4
-b_nimue = temple
+
 b_merlin_ii = castle
+b_nimue = temple
 
 # Misc
 culture = anglo_avalonian # Initial culture

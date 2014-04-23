@@ -1,4 +1,4 @@
-# 306 - Janna.txt
+# 306 - Janna
 
 # County Title
 title = c_janna
@@ -15,14 +15,29 @@ religion = pilgrim
 
 # History
 1.1.1 = {
-	b_janna_ii = ct_lakes
-	b_janna_ii = ct_optimal_cold
 	b_janna_ii = ct_clean_atmosphere
-	b_janna_iv_b = tp_no_water
-	b_janna_iv_b = tp_cold
+	b_janna_ii = ct_no_water
+	b_janna_ii = ct_trace_water
+	b_janna_ii = ct_lakes
+	b_janna_ii = ct_frozen
+	b_janna_ii = ct_cold
+	b_janna_ii = ct_cool
+	b_janna_ii = ct_optimal_cold
+	b_janna_ii = ct_planet_survey
+	
 	b_janna_iv_b = tp_toxic_atmosphere
-	b_janna_iv_c = ca_oceans
+	b_janna_iv_b = tp_no_water
+	b_janna_iv_b = tp_frozen
+	b_janna_iv_b = tp_cold
+	b_janna_iv_b = tp_planet_survey
+	
 	b_janna_iv_c = ca_no_atmosphere
+	b_janna_iv_c = ca_no_water
+	b_janna_iv_c = ca_trace_water
+	b_janna_iv_c = ca_lakes
+	b_janna_iv_c = ca_seas
+	b_janna_iv_c = ca_oceans
+	b_janna_iv_c = ca_planet_survey
 }
 
 2998.1.1 = {

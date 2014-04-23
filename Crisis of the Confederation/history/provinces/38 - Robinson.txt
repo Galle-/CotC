@@ -1,10 +1,11 @@
-# 38 - Robinson.txt
+# 38 - Robinson
 
 # County Title
 title = c_robinson
 
 # Settlements
 max_settlements = 5
+
 b_robinson_ii = castle
 b_robinson_ii_orbital = city
 

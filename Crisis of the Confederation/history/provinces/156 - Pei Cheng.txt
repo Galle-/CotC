@@ -1,13 +1,13 @@
-# 156 - Pei Cheng.txt
+# 156 - Pei Cheng
 
 # County Title
 title = c_pei_cheng
 
 # Settlements
 max_settlements = 4
+b_pei_cheng_waystation = castle
 b_pei_cheng_observatory = temple
 b_pei_cheng_prime = city
-b_pei_cheng_waystation = castle
 
 # Misc
 culture = sino_edemite # Initial culture

@@ -1,10 +1,11 @@
-# 37 - Numenor.txt
+# 37 - Numenor
 
 # County Title
 title = c_numenor
 
 # Settlements
 max_settlements = 4
+
 b_numenor_ii = castle
 b_numenor_iii = temple
 
