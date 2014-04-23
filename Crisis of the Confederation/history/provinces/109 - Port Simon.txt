@@ -1,11 +1,10 @@
-# 109 - Port Simon
+# 109 - Port Simon.txt
 
 # County Title
 title = c_port_simon
 
 # Settlements
 max_settlements = 2
-
 b_port_simon_observatory = temple
 b_port_simon = castle
 

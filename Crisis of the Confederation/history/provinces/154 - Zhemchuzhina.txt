@@ -1,12 +1,12 @@
-# 154 - Zhemchuzhina
+# 154 - Zhemchuzhina.txt
 
 # County Title
 title = c_zhemchuzhina
 
 # Settlements
 max_settlements = 4
-b_zhemchuzhina_vi_b = castle
 b_zhemchuzhina_vi_c = city
+b_zhemchuzhina_vi_b = castle
 
 # Misc
 culture = sino_edemite # Initial culture

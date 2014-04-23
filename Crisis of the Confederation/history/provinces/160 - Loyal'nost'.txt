@@ -1,13 +1,13 @@
-# 160 - Loyal'nost'
+# 160 - Loyal'nost'.txt
 
 # County Title
-title = c_loyalnost
+title = c_loyal'nost'
 
 # Settlements
 max_settlements = 4
-b_loyalnost_ii = castle
-b_loyalnost_iii = city
 b_loyalnost_iii_b = temple
+b_loyalnost_iii = city
+b_loyalnost_ii = castle
 
 # Misc
 culture = russo_edemite # Initial culture

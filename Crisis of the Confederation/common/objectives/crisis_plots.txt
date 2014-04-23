@@ -511,41 +511,46 @@ plot_justified_coup = {
 	success = { FROM = { has_character_flag = flag_successful_coup } }
 	effect = { FROM = { clr_character_flag = flag_successful_coup } }
 	abort = {
-		NOT = { has_character_flag = flag_coup_leader } # Once the coup is underway, it can't be aborted
-		NOT = { religion = space_pirate }
 		OR = {
-			religion_authority = 0.8
-			NOT = { FROM = { trait = anti_ruler } }
-		}
-		OR = {
-			religion_authority = 0.5
-			NOT = { reverse_has_opinion_modifier = { who = FROM modifier = opinion_usurped_title } }
-			NOT = {
-				any_demesne_title = {
-					is_primary_holder_title_tier = yes
-					FROM = { has_strong_claim = PREV }
+			FROM = { liege = { NOT = { character = ROOT } } }
+			AND = {
+				NOT = { has_character_flag = flag_coup_leader } # Once the coup is underway, it can't be aborted
+				NOT = { religion = space_pirate }
+				OR = {
+					religion_authority = 0.8
+					NOT = { FROM = { trait = anti_ruler } }
 				}
+				OR = {
+					religion_authority = 0.5
+					NOT = { reverse_has_opinion_modifier = { who = FROM modifier = opinion_usurped_title } }
+					NOT = {
+						any_demesne_title = {
+							is_primary_holder_title_tier = yes
+							FROM = { has_strong_claim = PREV }
+						}
+					}
+				}
+				OR = {
+					religion_authority = 0.35
+					NOT = {
+						any_demesne_title = {
+							is_primary_holder_title_tier = yes
+							FROM = { has_strong_claim = PREV }
+						}
+					}
+				}
+				OR = {
+					religion_authority = 0.25
+					NOT = {
+						any_demesne_title = {
+							is_primary_holder_title_tier = yes
+							FROM = { has_weak_claim = PREV }
+						}
+					}
+				}
+				religion_authority = 0.1
 			}
 		}
-		OR = {
-			religion_authority = 0.35
-			NOT = {
-				any_demesne_title = {
-					is_primary_holder_title_tier = yes
-					FROM = { has_strong_claim = PREV }
-				}
-			}
-		}
-		OR = {
-			religion_authority = 0.25
-			NOT = {
-				any_demesne_title = {
-					is_primary_holder_title_tier = yes
-					FROM = { has_weak_claim = PREV }
-				}
-			}
-		}
-		religion_authority = 0.1
 	}
 	abort_effect = {
 		FROM = {

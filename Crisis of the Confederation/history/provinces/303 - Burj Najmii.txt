@@ -1,4 +1,4 @@
-# 303 - Burj Najmiii
+# 303 - Burj Najmii.txt
 
 # County Title
 title = c_burj_najmii
@@ -15,23 +15,13 @@ religion = pilgrim
 
 # History
 1.1.1 = {
-	b_burj_najmii = ca_space_station_0
-	b_burj_najmii = ca_space_station_1
 	b_burj_najmii = ca_space_station_2
-	
-	b_burj_vi_b = tp_no_atmosphere
 	b_burj_vi_b = tp_no_water
 	b_burj_vi_b = tp_frozen
-	b_burj_vi_b = tp_planet_survey
-	
-	b_burj_vi_c = ct_no_atmosphere
-	b_burj_vi_c = ct_no_water
-	b_burj_vi_c = ct_trace_water
-	b_burj_vi_c = ct_lakes
-	b_burj_vi_c = ct_seas
+	b_burj_vi_b = tp_no_atmosphere
 	b_burj_vi_c = ct_oceans
 	b_burj_vi_c = ct_frozen
-	b_burj_vi_c = ct_planet_survey
+	b_burj_vi_c = ct_no_atmosphere
 }
 
 2998.1.1 = {

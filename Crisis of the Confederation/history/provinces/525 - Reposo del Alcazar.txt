@@ -1,0 +1,27 @@
+# 525 - Reposo del Alcazar.txt
+
+# County Title
+title = c_reposo_del_alcazar
+
+# Settlements
+max_settlements = 4
+b_alcazar_waystation = city
+b_alcazar_security_station = castle
+b_reposo_del_alcazar = temple
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+	b_alcazar_waystation = ct_colony_0
+	b_alcazar_waystation = ct_space_station_0
+	b_alcazar_security_station = ca_colony_1
+	b_alcazar_security_station = ca_space_station_1
+	b_reposo_del_alcazar = tp_colony_0
+	b_reposo_del_alcazar = tp_seas
+	b_reposo_del_alcazar = tp_burning
+	b_reposo_del_alcazar = tp_toxic_atmosphere
+}
+

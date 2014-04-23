@@ -9,7 +9,7 @@ political_group = {
 	terran_federalist = {
 		graphical_culture = westerngfx
 		icon = 1
-		heresy_icon = 6
+		heresy_icon = 1
 		
 		color = { 0.2 0.2 0.8 }
 		crusade_name = "UNIFICATION"
@@ -37,7 +37,7 @@ political_group = {
 	terran_republican = {
 		graphical_culture = westerngfx
 		icon = 1
-		heresy_icon = 6
+		heresy_icon = 1
 		
 		color = { 0.4 0.4 0.8 }
 		crusade_name = "UNIFICATION"
@@ -63,8 +63,8 @@ political_group = {
 	}
 	terran_imperial = {
 		graphical_culture = westerngfx
-		icon = 1
-		heresy_icon = 6
+		icon = 2
+		heresy_icon = 2
 		
 		color = { 0.8 0.2 0.8 }
 		crusade_name = "UNIFICATION"
@@ -88,8 +88,8 @@ political_group = {
 	}
 	colonial_seperatist = {
 		graphical_culture = westerngfx
-		icon = 1
-		heresy_icon = 6
+		icon = 3
+		heresy_icon = 3
 		
 		parent = terran_federalist
 		
@@ -116,8 +116,8 @@ political_group = {
 	}
 	neo_feudal = {
 		graphical_culture = westerngfx
-		icon = 1
-		heresy_icon = 6
+		icon = 4
+		heresy_icon = 4
 		
 		parent = terran_imperial
 		
@@ -142,8 +142,8 @@ political_group = {
 	}
 	neo_socialist = {
 		graphical_culture = westerngfx
-		icon = 1
-		heresy_icon = 6
+		icon = 5
+		heresy_icon = 5
 		
 		parent = terran_republican
 		
@@ -167,7 +167,7 @@ political_group = {
 	}
 	astrist = {
 		graphical_culture = westerngfx
-		icon = 1
+		icon = 6
 		heresy_icon = 6
 		
 		parent = terran_republican

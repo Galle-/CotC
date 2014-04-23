@@ -1,0 +1,31 @@
+# 526 - Ramon y Cajal.txt
+
+# County Title
+title = c_ramon_y_cajal
+
+# Settlements
+max_settlements = 4
+b_ramon_y_cajal_iii = temple
+b_ramon_y_cajal_iv = city
+b_ramon_y_cajal_iv_b = castle
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = bio_directionist
+
+# History
+1.1.1 = {
+	b_ramon_y_cajal_iii = tp_colony_2
+	b_ramon_y_cajal_iii = tp_oceans
+	b_ramon_y_cajal_iii = tp_burning
+	b_ramon_y_cajal_iii = tp_toxic_atmosphere_domes
+	b_ramon_y_cajal_iv = ct_colony_1
+	b_ramon_y_cajal_iv = ct_trace_water
+	b_ramon_y_cajal_iv = ct_hot
+	b_ramon_y_cajal_iv = ct_toxic_atmosphere_domes
+	b_ramon_y_cajal_iv_b = ca_colony_0
+	b_ramon_y_cajal_iv_b = ca_no_water
+	b_ramon_y_cajal_iv_b = ca_burning
+	b_ramon_y_cajal_iv_b = ca_no_atmosphere
+}
+

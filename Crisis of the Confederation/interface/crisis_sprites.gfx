@@ -60,13 +60,6 @@ spriteTypes = {
 		can_be_lowres = yes
 	}
 	spriteType = {
-		name = "GFX_confederate_female_clothes_infront"
-		texturefile = "gfx\\characters\\confederate_female_clothes_infront.dds"
-		noOfFrames = 12
-		norefcount = yes
-		can_be_lowres = yes
-	}
-	spriteType = {
 		name = "GFX_confederate_female_headgear_behind"
 		texturefile = "gfx\\characters\\confederate_female_headgear_behind.dds"
 		noOfFrames = 12

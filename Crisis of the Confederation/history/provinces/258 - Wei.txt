@@ -1,13 +1,13 @@
-# 258 - Wei
+# 258 - Wei.txt
 
 # County Title
 title = c_wei
 
 # Settlements
 max_settlements = 4
-b_wei_iii = city
 b_wei_iii_b = temple
 b_wei_iii_c = castle
+b_wei_iii = city
 
 # Misc
 culture = sino_bianjiangese # Initial culture
@@ -15,27 +15,15 @@ religion = astrist
 
 # History
 1.1.1 = {
-	b_wei_iii = ct_clean_atmosphere
-	b_wei_iii = ct_no_water
-	b_wei_iii = ct_trace_water
-	b_wei_iii = ct_lakes
-	b_wei_iii = ct_seas
-	b_wei_iii = ct_frozen
-	b_wei_iii = ct_cold
-	b_wei_iii = ct_planet_survey
-	
-	b_wei_iii_b = tp_no_atmosphere
-	b_wei_iii_b = tp_no_water
 	b_wei_iii_b = tp_trace_water
-	b_wei_iii_b = tp_frozen
 	b_wei_iii_b = tp_cold
-	b_wei_iii_b = tp_planet_survey
-	
-	b_wei_iii_c = ca_no_atmosphere
+	b_wei_iii_b = tp_no_atmosphere
 	b_wei_iii_c = ca_no_water
-	b_wei_iii_c = ca_frozen
 	b_wei_iii_c = ca_cold
-	b_wei_iii_c = ca_planet_survey
+	b_wei_iii_c = ca_no_atmosphere
+	b_wei_iii = ct_seas
+	b_wei_iii = ct_cold
+	b_wei_iii = ct_clean_atmosphere
 }
 
 2998.1.1 = {

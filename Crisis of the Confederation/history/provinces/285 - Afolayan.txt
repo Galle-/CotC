@@ -1,4 +1,4 @@
-# 285 - Afolayan
+# 285 - Afolayan.txt
 
 # County Title
 title = c_afolayan
@@ -6,8 +6,8 @@ title = c_afolayan
 # Settlements
 max_settlements = 5
 b_afolayan_iii = city
-b_afolayan_iii_b = temple
 b_afolayan_iv_b = castle
+b_afolayan_iii_b = temple
 
 # Misc
 culture = west_afro_angani # Initial culture
@@ -15,33 +15,15 @@ religion = terran_republican
 
 # History
 1.1.1 = {
-	b_afolayan_iii = ct_clean_atmosphere
-	b_afolayan_iii = ct_no_water
-	b_afolayan_iii = ct_trace_water
-	b_afolayan_iii = ct_lakes
-	b_afolayan_iii = ct_seas
 	b_afolayan_iii = ct_oceans
-	b_afolayan_iii = ct_frozen
-	b_afolayan_iii = ct_cold
 	b_afolayan_iii = ct_cool
-	b_afolayan_iii = ct_planet_survey
-	
-	b_afolayan_iii_b = tp_no_atmosphere
-	b_afolayan_iii_b = tp_no_water
-	b_afolayan_iii_b = tp_frozen
-	b_afolayan_iii_b = tp_cold
-	b_afolayan_iii_b = tp_cool
-	b_afolayan_iii_b = tp_planet_survey
-	
-	b_afolayan_iv_b = ca_no_atmosphere
-	b_afolayan_iv_b = ca_no_water
-	b_afolayan_iv_b = ca_trace_water
-	b_afolayan_iv_b = ca_lakes
-	b_afolayan_iv_b = ca_seas
+	b_afolayan_iii = ct_clean_atmosphere
 	b_afolayan_iv_b = ca_oceans
-	b_afolayan_iv_b = ca_frozen
 	b_afolayan_iv_b = ca_cold
-	b_afolayan_iv_b = ca_planet_survey
+	b_afolayan_iv_b = ca_no_atmosphere
+	b_afolayan_iii_b = tp_no_water
+	b_afolayan_iii_b = tp_cool
+	b_afolayan_iii_b = tp_no_atmosphere
 }
 
 2998.1.1 = {

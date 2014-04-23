@@ -1,13 +1,13 @@
-# 212 - Tannhauser Gate
+# 212 - Tannhauser Gate.txt
 
 # County Title
 title = c_tannhauser_gate
 
 # Settlements
 max_settlements = 4
-b_tannhauser_gate = castle
 b_tannhauser_vii_b = city
 b_tannhauser_vii_c = temple
+b_tannhauser_gate = castle
 
 # Misc
 culture = russo_centauri # Initial culture
@@ -15,27 +15,13 @@ religion = terran_federalist
 
 # History
 1.1.1 = {
-	b_tannhauser_gate = ca_space_station_0
-	b_tannhauser_gate = ca_space_station_1
-	b_tannhauser_gate = ca_space_station_2
-	
-	b_tannhauser_vii_b = ct_no_atmosphere
-	b_tannhauser_vii_b = ct_no_water
-	b_tannhauser_vii_b = ct_trace_water
-	b_tannhauser_vii_b = ct_lakes
-	b_tannhauser_vii_b = ct_seas
 	b_tannhauser_vii_b = ct_oceans
 	b_tannhauser_vii_b = ct_frozen
-	b_tannhauser_vii_b = ct_planet_survey
-	
-	b_tannhauser_vii_c = tp_no_atmosphere
-	b_tannhauser_vii_c = tp_no_water
-	b_tannhauser_vii_c = tp_trace_water
-	b_tannhauser_vii_c = tp_lakes
-	b_tannhauser_vii_c = tp_seas
+	b_tannhauser_vii_b = ct_no_atmosphere
 	b_tannhauser_vii_c = tp_oceans
 	b_tannhauser_vii_c = tp_frozen
-	b_tannhauser_vii_c = tp_planet_survey
+	b_tannhauser_vii_c = tp_no_atmosphere
+	b_tannhauser_gate = ca_space_station_2
 }
 
 2998.1.1 = {

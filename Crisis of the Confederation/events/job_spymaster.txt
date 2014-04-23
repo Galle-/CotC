@@ -284,7 +284,7 @@ letter_event = {
 	desc = "EVTDESCSPYMASTER2"
 	is_triggered_only = yes
 	
-	option = { name = "EVTOPTASPYMASTER2" }
+	option = { name = "EVTOPTCONFIRM" }
 }
 
 # Blackmail!
@@ -414,7 +414,7 @@ letter_event = {
 	}
 	option = {
 		trigger = { FROM = { has_plot = plot_blackmail } }
-		name = "EVTOPTASPYMASTER4"
+		name = "EVTOPTBSPYMASTER4"
 	}
 }
 # Accepted blackmail as payment for owed favor

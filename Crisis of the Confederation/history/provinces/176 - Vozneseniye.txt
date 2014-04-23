@@ -1,11 +1,10 @@
-# 176 - Vozneseniye
+# 176 - Vozneseniye.txt
 
 # County Title
 title = c_vozneseniye
 
 # Settlements
 max_settlements = 5
-
 b_vozneseniye_prime = castle
 b_vozneseniye_prime_b = city
 b_vozneseniye_prime_c = temple

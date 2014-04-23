@@ -1,13 +1,13 @@
-# 157 - Mir
+# 157 - Mir.txt
 
 # County Title
 title = c_mir
 
 # Settlements
 max_settlements = 5
-b_mir_citadel = castle
 b_mir_iii = city
 b_mir_iii_b = temple
+b_mir_citadel = castle
 
 # Misc
 culture = hispanic_edemite # Initial culture

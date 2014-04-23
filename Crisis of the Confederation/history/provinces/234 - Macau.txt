@@ -1,13 +1,13 @@
-# 234 - Macau
+# 234 - Macau.txt
 
 # County Title
 title = c_macau
 
 # Settlements
 max_settlements = 5
-b_macau_station = city
-b_macau_prime = temple
 b_macau_prime_b = castle
+b_macau_prime = temple
+b_macau_station = city
 
 # Misc
 culture = sino_bianjiangese # Initial culture
@@ -15,20 +15,13 @@ religion = colonial_seperatist
 
 # History
 1.1.1 = {
-	b_macau_station = ct_space_station_0
-	b_macau_station = ct_space_station_1
-	b_macau_station = ct_space_station_2
-	b_macau_station = ct_space_station_3
-	
-	b_macau_prime = tp_toxic_atmosphere
-	b_macau_prime = tp_no_water
-	b_macau_prime = tp_burning
-	b_macau_prime = tp_planet_survey
-	
-	b_macau_prime_b = ca_no_atmosphere
 	b_macau_prime_b = ca_no_water
 	b_macau_prime_b = ca_burning
-	b_macau_prime_b = ca_planet_survey
+	b_macau_prime_b = ca_no_atmosphere
+	b_macau_prime = tp_no_water
+	b_macau_prime = tp_burning
+	b_macau_prime = tp_toxic_atmosphere
+	b_macau_station = ct_space_station_3
 }
 
 2998.1.1 = {

@@ -1,0 +1,31 @@
+# 503 - Genciana.txt
+
+# County Title
+title = c_genciana
+
+# Settlements
+max_settlements = 4
+b_genciana_vii_c = temple
+b_genciana_vii_b = city
+b_genciana_vii_d = castle
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+	b_genciana_vii_c = tp_colony_0
+	b_genciana_vii_c = tp_oceans
+	b_genciana_vii_c = tp_optimal_cold
+	b_genciana_vii_c = tp_no_atmosphere
+	b_genciana_vii_b = ct_colony_2
+	b_genciana_vii_b = ct_oceans
+	b_genciana_vii_b = ct_optimal_cold
+	b_genciana_vii_b = ct_no_atmosphere_domes
+	b_genciana_vii_d = ca_colony_0
+	b_genciana_vii_d = ca_oceans
+	b_genciana_vii_d = ca_optimal_cold
+	b_genciana_vii_d = ca_no_atmosphere
+}
+

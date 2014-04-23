@@ -1,13 +1,12 @@
-# 36 - Lancelot
+# 36 - Lancelot.txt
 
 # County Title
 title = c_lancelot
 
 # Settlements
 max_settlements = 5
-
-b_lancelot_iii_b = castle
 b_lancelot_iii = city
+b_lancelot_iii_b = castle
 b_lancelot_iii_c = temple
 
 # Misc

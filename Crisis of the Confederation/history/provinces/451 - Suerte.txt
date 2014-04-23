@@ -1,0 +1,31 @@
+# 451 - Suerte.txt
+
+# County Title
+title = c_suerte
+
+# Settlements
+max_settlements = 4
+b_suerte_iv = castle
+b_suerte_iii = city
+b_suerte_iv_b = temple
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+	b_suerte_iv = ca_colony_3
+	b_suerte_iv = ca_seas
+	b_suerte_iv = ca_burning
+	b_suerte_iv = ca_clean_atmosphere
+	b_suerte_iii = ct_colony_1
+	b_suerte_iii = ct_oceans
+	b_suerte_iii = ct_optimal_cold
+	b_suerte_iii = ct_toxic_atmosphere
+	b_suerte_iv_b = tp_colony_0
+	b_suerte_iv_b = tp_no_water
+	b_suerte_iv_b = tp_burning
+	b_suerte_iv_b = tp_no_atmosphere
+}
+

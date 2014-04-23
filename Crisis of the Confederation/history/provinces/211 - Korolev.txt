@@ -1,13 +1,13 @@
-# 211 - Korolev
+# 211 - Korolev.txt
 
 # County Title
 title = c_korolev
 
 # Settlements
 max_settlements = 4
-b_korolev_iv = castle
 b_korolev_iv_b = city
 b_korolev_v = temple
+b_korolev_iv = castle
 
 # Misc
 culture = russo_centauri # Initial culture
@@ -15,30 +15,15 @@ religion = terran_federalist
 
 # History
 1.1.1 = {
-	b_korolev_iv = ca_clean_atmosphere
-	b_korolev_iv = ca_no_water
-	b_korolev_iv = ca_trace_water
-	b_korolev_iv = ca_lakes
-	b_korolev_iv = ca_seas
-	b_korolev_iv = ca_frozen
-	b_korolev_iv = ca_cold
-	b_korolev_iv = ca_cool
-	b_korolev_iv = ca_planet_survey
-	
-	b_korolev_iv_b = ct_clean_atmosphere
-	b_korolev_iv_b = ct_no_water
-	b_korolev_iv_b = ct_trace_water
 	b_korolev_iv_b = ct_lakes
-	b_korolev_iv_b = ct_frozen
-	b_korolev_iv_b = ct_cold
 	b_korolev_iv_b = ct_cool
-	b_korolev_iv_b = ct_planet_survey
-	
-	b_korolev_v = tp_no_atmosphere
+	b_korolev_iv_b = ct_clean_atmosphere
 	b_korolev_v = tp_no_water
-	b_korolev_v = tp_frozen
 	b_korolev_v = tp_cold
-	b_korolev_v = tp_planet_survey
+	b_korolev_v = tp_no_atmosphere
+	b_korolev_iv = ca_seas
+	b_korolev_iv = ca_cool
+	b_korolev_iv = ca_clean_atmosphere
 }
 
 2998.1.1 = {

@@ -1,16 +1,13 @@
-# 243 - Wanguan
-# Guardpost against the pirates that live in the flame nebula
+# 243 - Wanguan.txt
+
 # County Title
 title = c_wanguan
 
 # Settlements
 max_settlements = 3
-				
-			
-				b_wanguan_ii = castle
-				b_wanguan_orbital_a = city
-				b_wanguan_orbital_b = castle
-			
+b_wanguan_orbital_a = city
+b_wanguan_orbital_b = castle
+b_wanguan_ii = castle
 
 # Misc
 culture = sino_xingjie # Initial culture
@@ -18,13 +15,9 @@ religion = colonial_seperatist
 
 # History
 1.1.1 = {
-	b_wanguan_ii = ca_toxic_atmosphere
-	b_wanguan_ii = ca_burning
-	b_wanguan_ii = ca_hot
-	b_wanguan_ii = ca_no_water
 	b_wanguan_ii = ca_trace_water
-	
-		
+	b_wanguan_ii = ca_hot
+	b_wanguan_ii = ca_toxic_atmosphere
 }
 
 2998.1.1 = {

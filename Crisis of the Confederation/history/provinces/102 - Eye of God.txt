@@ -1,13 +1,12 @@
-# 102 - Eye of God
+# 102 - Eye of God.txt
 
 # County Title
 title = c_eye_of_god
 
 # Settlements
 max_settlements = 2
-
-b_eye_of_god = temple
 b_eye_of_god_waystation = castle
+b_eye_of_god = temple
 
 # Misc
 culture = russo_centauri # Initial culture

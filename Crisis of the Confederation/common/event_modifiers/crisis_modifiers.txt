@@ -42,6 +42,11 @@ crisis_law_against_ruler = {
 	general_opinion = -10
 }
 
+ignored_vassals = {
+	icon = 34
+	vassal_opinion = -25
+}
+
 # Cybernetics
 iaei_beta_test = {
 	icon = 12

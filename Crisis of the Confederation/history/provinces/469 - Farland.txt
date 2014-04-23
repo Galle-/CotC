@@ -1,0 +1,15 @@
+# 469 - Farland.txt
+
+# County Title
+title = c_farland
+
+# Settlements
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+}
+

@@ -1,0 +1,29 @@
+# 496 - Saiph.txt
+
+# County Title
+title = c_saiph
+
+# Settlements
+max_settlements = 4
+b_saiph_prime = castle
+b_saiph_waystation = city
+b_saiph_prime_b = temple
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+	b_saiph_prime = ca_colony_2
+	b_saiph_prime = ca_lakes
+	b_saiph_prime = ca_warm
+	b_saiph_prime = ca_toxic_atmosphere_domes
+	b_saiph_waystation = ct_colony_0
+	b_saiph_waystation = ct_space_station_0
+	b_saiph_prime_b = tp_colony_0
+	b_saiph_prime_b = tp_no_water
+	b_saiph_prime_b = tp_warm
+	b_saiph_prime_b = tp_no_atmosphere
+}
+

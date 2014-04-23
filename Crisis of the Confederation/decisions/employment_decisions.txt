@@ -28,10 +28,9 @@ decisions = {
 						female = no
 						culture = ROOT
 						religion = ROOT
-						dynasty = none
+						dynasty = culture
 						random_traits = yes
 					}
-					new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 				}
 				10 = {
 					create_random_diplomat = {
@@ -39,10 +38,9 @@ decisions = {
 						female = yes
 						culture = ROOT
 						religion = ROOT
-						dynasty = none
+						dynasty = culture
 						random_traits = yes
 					}
-					new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 				}
 				20 = {
 					location = {
@@ -52,10 +50,9 @@ decisions = {
 								female = no
 								culture = PREVPREV
 								religion = PREVPREV
-								dynasty = none
+								dynasty = culture
 								random_traits = yes
 							}
-							new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 						}
 					}
 				}
@@ -67,10 +64,9 @@ decisions = {
 								female = yes
 								culture = PREVPREV
 								religion = PREVPREV
-								dynasty = none
+								dynasty = culture
 								random_traits = yes
 							}
-							new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 						}
 					}
 				}
@@ -84,10 +80,9 @@ decisions = {
 									female = no
 									culture = PREVPREV
 									religion = PREVPREV
-									dynasty = none
+									dynasty = culture
 									random_traits = yes
 								}
-								new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 							}
 						}
 					}
@@ -102,10 +97,9 @@ decisions = {
 									female = yes
 									culture = PREVPREV
 									religion = PREVPREV
-									dynasty = none
+									dynasty = culture
 									random_traits = yes
 								}
-								new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 							}
 						}
 					}
@@ -157,10 +151,9 @@ decisions = {
 						female = no
 						culture = ROOT
 						religion = ROOT
-						dynasty = none
+						dynasty = culture
 						random_traits = yes
 					}
-					new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 				}
 				10 = {
 					create_random_soldier = {
@@ -168,10 +161,9 @@ decisions = {
 						female = yes
 						culture = ROOT
 						religion = ROOT
-						dynasty = none
+						dynasty = culture
 						random_traits = yes
 					}
-					new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 				}
 				20 = {
 					location = {
@@ -181,10 +173,9 @@ decisions = {
 								female = no
 								culture = PREVPREV
 								religion = PREVPREV
-								dynasty = none
+								dynasty = culture
 								random_traits = yes
 							}
-							new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 						}
 					}
 				}
@@ -196,10 +187,9 @@ decisions = {
 								female = yes
 								culture = PREVPREV
 								religion = PREVPREV
-								dynasty = none
+								dynasty = culture
 								random_traits = yes
 							}
-							new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 						}
 					}
 				}
@@ -213,10 +203,9 @@ decisions = {
 									female = no
 									culture = PREVPREV
 									religion = PREVPREV
-									dynasty = none
+									dynasty = culture
 									random_traits = yes
 								}
-								new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 							}
 						}
 					}
@@ -231,10 +220,9 @@ decisions = {
 									female = yes
 									culture = PREVPREV
 									religion = PREVPREV
-									dynasty = none
+									dynasty = culture
 									random_traits = yes
 								}
-								new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 							}
 						}
 					}
@@ -286,10 +274,9 @@ decisions = {
 						female = no
 						culture = ROOT
 						religion = ROOT
-						dynasty = none
+						dynasty = culture
 						random_traits = yes
 					}
-					new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 				}
 				10 = {
 					create_random_steward = {
@@ -297,10 +284,9 @@ decisions = {
 						female = yes
 						culture = ROOT
 						religion = ROOT
-						dynasty = none
+						dynasty = culture
 						random_traits = yes
 					}
-					new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 				}
 				20 = {
 					location = {
@@ -310,10 +296,9 @@ decisions = {
 								female = no
 								culture = PREVPREV
 								religion = PREVPREV
-								dynasty = none
+								dynasty = culture
 								random_traits = yes
 							}
-							new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 						}
 					}
 				}
@@ -325,10 +310,9 @@ decisions = {
 								female = yes
 								culture = PREVPREV
 								religion = PREVPREV
-								dynasty = none
+								dynasty = culture
 								random_traits = yes
 							}
-							new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 						}
 					}
 				}
@@ -342,10 +326,9 @@ decisions = {
 									female = no
 									culture = PREVPREV
 									religion = PREVPREV
-									dynasty = none
+									dynasty = culture
 									random_traits = yes
 								}
-								new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 							}
 						}
 					}
@@ -360,10 +343,9 @@ decisions = {
 									female = yes
 									culture = PREVPREV
 									religion = PREVPREV
-									dynasty = none
+									dynasty = culture
 									random_traits = yes
 								}
-								new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 							}
 						}
 					}
@@ -415,10 +397,9 @@ decisions = {
 						female = no
 						culture = ROOT
 						religion = ROOT
-						dynasty = none
+						dynasty = culture
 						random_traits = yes
 					}
-					new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 				}
 				10 = {
 					create_random_intriguer = {
@@ -426,10 +407,9 @@ decisions = {
 						female = yes
 						culture = ROOT
 						religion = ROOT
-						dynasty = none
+						dynasty = culture
 						random_traits = yes
 					}
-					new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 				}
 				20 = {
 					location = {
@@ -439,10 +419,9 @@ decisions = {
 								female = no
 								culture = PREVPREV
 								religion = PREVPREV
-								dynasty = none
+								dynasty = culture
 								random_traits = yes
 							}
-							new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 						}
 					}
 				}
@@ -454,10 +433,9 @@ decisions = {
 								female = yes
 								culture = PREVPREV
 								religion = PREVPREV
-								dynasty = none
+								dynasty = culture
 								random_traits = yes
 							}
-							new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 						}
 					}
 				}
@@ -471,10 +449,9 @@ decisions = {
 									female = no
 									culture = PREVPREV
 									religion = PREVPREV
-									dynasty = none
+									dynasty = culture
 									random_traits = yes
 								}
-								new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 							}
 						}
 					}
@@ -489,10 +466,9 @@ decisions = {
 									female = yes
 									culture = PREVPREV
 									religion = PREVPREV
-									dynasty = none
+									dynasty = culture
 									random_traits = yes
 								}
-								new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 							}
 						}
 					}
@@ -544,10 +520,9 @@ decisions = {
 						female = no
 						culture = ROOT
 						religion = ROOT
-						dynasty = none
+						dynasty = culture
 						random_traits = yes
 					}
-					new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 				}
 				10 = {
 					create_random_priest = {
@@ -555,10 +530,9 @@ decisions = {
 						female = yes
 						culture = ROOT
 						religion = ROOT
-						dynasty = none
+						dynasty = culture
 						random_traits = yes
 					}
-					new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 				}
 				20 = {
 					location = {
@@ -568,10 +542,9 @@ decisions = {
 								female = no
 								culture = PREVPREV
 								religion = PREVPREV
-								dynasty = none
+								dynasty = culture
 								random_traits = yes
 							}
-							new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 						}
 					}
 				}
@@ -583,10 +556,9 @@ decisions = {
 								female = yes
 								culture = PREVPREV
 								religion = PREVPREV
-								dynasty = none
+								dynasty = culture
 								random_traits = yes
 							}
-							new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 						}
 					}
 				}
@@ -600,10 +572,9 @@ decisions = {
 									female = no
 									culture = PREVPREV
 									religion = PREVPREV
-									dynasty = none
+									dynasty = culture
 									random_traits = yes
 								}
-								new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 							}
 						}
 					}
@@ -618,10 +589,9 @@ decisions = {
 									female = yes
 									culture = PREVPREV
 									religion = PREVPREV
-									dynasty = none
+									dynasty = culture
 									random_traits = yes
 								}
-								new_character = { hidden_tooltip = { character_event = { id = maintenance.2 } } } # Assign a random dynasty
 							}
 						}
 					}

@@ -1,4 +1,4 @@
-# 91 - John Henry
+# 91 - John Henry.txt
 
 # County Title
 title = c_john_henry
@@ -6,8 +6,8 @@ title = c_john_henry
 # Settlements
 max_settlements = 4
 b_john_henry_ii = city
-b_john_henry_iii = temple
 b_john_henry_iii_b = castle
+b_john_henry_iii = temple
 
 # Misc
 culture = anglo_frontiersman # Initial culture
@@ -15,31 +15,15 @@ religion = terran_federalist
 
 # History
 1.1.1 = {
-	b_john_henry_ii = ct_toxic_atmosphere
-	b_john_henry_ii = ct_no_water
-	b_john_henry_ii = ct_trace_water
-	b_john_henry_ii = ct_lakes
 	b_john_henry_ii = ct_seas
-	b_john_henry_ii = ct_frozen
-	b_john_henry_ii = ct_cold
-	b_john_henry_ii = ct_cool
 	b_john_henry_ii = ct_optimal_cold
-	b_john_henry_ii = ct_planet_survey
-	
-	b_john_henry_iii = tp_toxic_atmosphere
-	b_john_henry_iii = tp_no_water
-	b_john_henry_iii = tp_trace_water
-	b_john_henry_iii = tp_frozen
-	b_john_henry_iii = tp_cold
-	b_john_henry_iii = tp_cool
-	b_john_henry_iii = tp_planet_survey
-	
-	b_john_henry_iii_b = ca_no_atmosphere
+	b_john_henry_ii = ct_toxic_atmosphere
 	b_john_henry_iii_b = ca_no_water
-	b_john_henry_iii_b = ca_frozen
-	b_john_henry_iii_b = ca_cold
 	b_john_henry_iii_b = ca_cool
-	b_john_henry_iii_b = ca_planet_survey
+	b_john_henry_iii_b = ca_no_atmosphere
+	b_john_henry_iii = tp_trace_water
+	b_john_henry_iii = tp_cool
+	b_john_henry_iii = tp_toxic_atmosphere
 }
 
 2998.1.1 = {

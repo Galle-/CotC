@@ -817,6 +817,197 @@ province_event = {
 			has_province_modifier = civil_unrest_8
 		}
 		
+		# We want democracy!
+		modifier = {
+			factor = 0.5
+			religion_authority = 0.25
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_seperatist
+			}
+			owner = {
+				is_republic = no
+				NOT = {
+					ROOT = {
+						any_province_lord = {
+							is_republic = yes
+							is_liege_or_above = PREVPREV
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			religion_authority = 0.5
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_seperatist
+			}
+			owner = {
+				is_republic = no
+				NOT = {
+					ROOT = {
+						any_province_lord = {
+							is_republic = yes
+							is_liege_or_above = PREVPREV
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			religion_authority = 0.75
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_seperatist
+			}
+			owner = {
+				is_republic = no
+				NOT = {
+					ROOT = {
+						any_province_lord = {
+							is_republic = yes
+							is_liege_or_above = PREVPREV
+						}
+					}
+				}
+			}
+		}
+		# We want autocracy!
+		modifier = {
+			factor = 0.5
+			religion_authority = 0.25
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+				religion = bio_directionist
+			}
+			owner = {
+				is_feudal = no
+				NOT = {
+					ROOT = {
+						any_province_lord = {
+							is_feudal = yes
+							is_liege_or_above = PREVPREV
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			religion_authority = 0.5
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+				religion = bio_directionist
+			}
+			owner = {
+				is_feudal = no
+				NOT = {
+					ROOT = {
+						any_province_lord = {
+							is_feudal = yes
+							is_liege_or_above = PREVPREV
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			religion_authority = 0.75
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+				religion = bio_directionist
+			}
+			owner = {
+				is_feudal = no
+				NOT = {
+					ROOT = {
+						any_province_lord = {
+							is_feudal = yes
+							is_liege_or_above = PREVPREV
+						}
+					}
+				}
+			}
+		}
+		# We want theocracy!
+		modifier = {
+			factor = 0.5
+			religion_authority = 0.25
+			OR = {
+				religion = orthodox
+				religion = xenoterran
+				religion = solarian
+				religion = machine_cultist
+				
+			}
+			owner = {
+				is_theocracy = no
+				NOT = {
+					ROOT = {
+						any_province_lord = {
+							is_theocracy = yes
+							is_liege_or_above = PREVPREV
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			religion_authority = 0.5
+			OR = {
+				religion = orthodox
+				religion = xenoterran
+				religion = solarian
+				religion = machine_cultist
+			}
+			owner = {
+				is_theocracy = no
+				NOT = {
+					ROOT = {
+						any_province_lord = {
+							is_theocracy = yes
+							is_liege_or_above = PREVPREV
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			religion_authority = 0.75
+			OR = {
+				religion = orthodox
+				religion = xenoterran
+				religion = solarian
+				religion = machine_cultist
+			}
+			owner = {
+				is_theocracy = no
+				NOT = {
+					ROOT = {
+						any_province_lord = {
+							is_theocracy = yes
+							is_liege_or_above = PREVPREV
+						}
+					}
+				}
+			}
+		}
+		
 		# Other Factors
 		modifier = {
 			factor = 0.5
@@ -824,7 +1015,20 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.5
-			any_province_lord = { NOT = { religion = ROOT } }
+			NOT = { owner = { religion = ROOT } }
+		}
+		modifier = {
+			factor = 0.5
+			religion = neo_socialist
+			NOT = { any_province_lord = { religion = neo_socialist } }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { owner = { culture_group = ROOT } }
+		}
+		modifier = {
+			factor = 10
+			has_province_modifier = successful_revolt
 		}
 	}
 	
@@ -916,11 +1120,36 @@ province_event = {
 	
 	mean_time_to_happen = {
 		months = 6
-		# Constitutional Crisis Effects
+		# Major Effects
 		modifier = {
 			factor = 10
 			any_province_lord = { has_character_modifier = constitutional_crisis }
 		}
+		modifier = {
+			factor = 10
+			any_province_lord = {
+				war = yes
+				any_war = { using_cb = civil_war }
+			}
+		}
+		modifier = {
+			factor = 10
+			any_province_lord = {
+				war = yes
+				any_war = {
+					OR = {
+						using_cb = democratic_rebellion
+						using_cb = autocratic_rebellion
+						using_cb = theocratic_rebellion
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			has_province_modifier = successful_revolt
+		}
+		# Constitutional Crisis Effects
 		modifier = {
 			factor = 0.25
 			has_province_modifier = public_for_emperor
@@ -1089,13 +1318,31 @@ province_event = {
 			factor = 0.8
 			religion_authority = 0.9
 		}
+		
+		# Other factors
+		modifier = {
+			factor = 5
+			OR = {
+				religion = neo_socialist
+				religion = astrist
+			}
+		}
 		modifier = {
 			factor = 2
 			any_province_lord = { war = yes }
 		}
 		modifier = {
 			factor = 2
-			any_province_lord = { NOT = { religion = ROOT } }
+			NOT = { owner = { religion = ROOT } }
+		}
+		modifier = {
+			factor = 2
+			religion = neo_socialist
+			NOT = { any_province_lord = { religion = neo_socialist } }
+		}
+		modifier = {
+			factor = 2
+			NOT = { owner = { culture_group = ROOT } }
 		}
 	}
 	
@@ -1153,7 +1400,7 @@ province_event = {
 	}
 }
 
-# Public support swayed toward emperor in crisis
+#Public support swayed toward emperor in crisis
 province_event = {
 	id = laws.210
 	desc = "EVTDESCLAWS210"

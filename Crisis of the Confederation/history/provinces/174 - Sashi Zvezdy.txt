@@ -1,13 +1,12 @@
-# 174 - Sashi Zvezdy
+# 174 - Sashi Zvezdy.txt
 
 # County Title
 title = c_sashi_zvezdy
 
 # Settlements
 max_settlements = 4
-
-b_sashi_zvezdy_ii = castle
 b_sashi_zvezdy_iii = city
+b_sashi_zvezdy_ii = castle
 
 # Misc
 culture = russo_edemite # Initial culture

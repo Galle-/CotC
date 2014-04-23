@@ -1,0 +1,19 @@
+# 439 - El Didal.txt
+
+# County Title
+title = c_el_didal
+
+# Settlements
+max_settlements = 4
+b_el_didal = castle
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+	b_el_didal = ca_colony_1
+	b_el_didal = ca_space_station_1
+}
+

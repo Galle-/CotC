@@ -1,14 +1,12 @@
-# 242 - Fanxing Hai
-# 
+# 242 - Fanxing Hai.txt
+
 # County Title
 title = c_fanxing_hai
 
 # Settlements
 max_settlements = 2
-				
-				b_fanxing_hai_viii = city
-				b_fanxing_hai_orbital = castle
-			
+b_fanxing_hai_orbital = castle
+b_fanxing_hai_viii = city
 
 # Misc
 culture = sino_xingjie # Initial culture
@@ -16,16 +14,9 @@ religion = colonial_seperatist
 
 # History
 1.1.1 = {
-
-	b_fanxing_hai_viii = ct_no_atmosphere
-	b_fanxing_hai_viii = ct_frozen
-	b_fanxing_hai_viii = ct_cold
-	b_fanxing_hai_viii = ct_no_water
-	b_fanxing_hai_viii = ct_trace_water
-	b_fanxing_hai_viii = ct_seas
 	b_fanxing_hai_viii = ct_oceans
-	
-	
+	b_fanxing_hai_viii = ct_cold
+	b_fanxing_hai_viii = ct_no_atmosphere
 }
 
 2998.1.1 = {

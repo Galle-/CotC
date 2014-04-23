@@ -1,0 +1,15 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+EVTDESCSPYMASTER0;You have discovered a plot where [FromFrom.GetFullName] seeks to [FromFrom.Plot.GetName].;;;;;;;;;;;;;x
+EVTOPTASPYMASTER0;I will report this to the [Liege.GetTitle].;;;;;;;;;;;;;x
+EVTOPTBSPYMASTER0;I wonder how much that secret is worth to [FromFrom.GetHerHim]?;;;;;;;;;;;;;x
+EVTOPTCSPYMASTER0;It's none of my concern.;;;;;;;;;;;;;x
+EVTDESCSPYMASTER1;Disaster! [From.GetFullName], the head of [From.Liege.PrimaryTitle.GetAdjective] Intelligence, has exposed your plot to [Root.Plot.GetName]!;;;;;;;;;;;;;x
+EVTOPTASPYMASTER1;How did [From.GetSheHe] find out?!;;;;;;;;;;;;;x
+EVTDESCSPYMASTER2;TO: [Root.GetFullName]\nFROM: [FromFrom.GetFullName], [FromFrom.Liege.PrimaryTitle.GetAdjective] Intelligence\nRE: Security concerns\nI have discovered that [From.GetBestName] is planning to [From.Plot.GetName].;;;;;;;;;;;;;x
+EVTDESCSPYMASTER3;TO: [Root.GetFullName]\nFROM: $R$ERROR: UNTRACEABLE$W$\nRE: Security concerns\nI know you plan to [Root.Plot.GetName]. Either you start doing exactly what I want you to, or everyone else will find out, too.;;;;;;;;;;;;;x
+EVTOPTASPYMASTER3;...what do you want?;;;;;;;;;;;;;x
+EVTOPTBSPYMASTER3;...you can consider your debt to me absolved.;;;;;;;;;;;;;x
+EVTOPTCSPYMASTER3;Go ahead. I could use a good scandal.;;;;;;;;;;;;;x
+EVTDESCSPYMASTER4;TO: [Root.GetFullName]\nFROM: [From.GetFullName]\nRE: Security concerns\nI'll do anything you want, but please tell no-one! You need but name the price and you will have it!;;;;;;;;;;;;;x
+EVTOPTASPYMASTER4;Having a [From.GetManWoman] in your debt is so rewarding.;;;;;;;;;;;;;x
+EVTOPTBSPYMASTER4;;;;;;;;;;;;;;x

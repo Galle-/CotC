@@ -1,11 +1,10 @@
-# 41 - Sherwood
+# 41 - Sherwood.txt
 
 # County Title
 title = c_sherwood
 
 # Settlements
 max_settlements = 4
-
 b_sherwood_citadel = castle
 b_sherwood_iii = city
 

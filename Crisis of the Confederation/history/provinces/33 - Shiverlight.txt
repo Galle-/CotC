@@ -1,13 +1,12 @@
-# 33 - Shiverlight
+# 33 - Shiverlight.txt
 
 # County Title
 title = c_shiverlight
 
 # Settlements
 max_settlements = 4
-
-b_shiverlight_prime = castle
 b_shiverlight_prime_b = temple
+b_shiverlight_prime = castle
 
 # Misc
 culture = anglo_avalonian # Initial culture

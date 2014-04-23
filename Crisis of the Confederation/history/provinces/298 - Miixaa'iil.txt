@@ -1,13 +1,13 @@
-# 298 - Miixaa'iil
+# 298 - Miixaa'iil.txt
 
 # County Title
-title = c_mixaaiil
+title = c_miixaa'iil
 
 # Settlements
 max_settlements = 4
-b_mixaaiil_prime = city
 b_mixaaiil_prime_b = temple
 b_mixaaiil_iii = castle
+b_mixaaiil_prime = city
 
 # Misc
 culture = arab_samawati # Initial culture
@@ -15,29 +15,15 @@ religion = terran_federalist
 
 # History
 1.1.1 = {
-	b_mixaaiil_prime = ct_clean_atmosphere
-	b_mixaaiil_prime = ct_no_water
-	b_mixaaiil_prime = ct_trace_water
-	b_mixaaiil_prime = ct_lakes
-	b_mixaaiil_prime = ct_seas
-	b_mixaaiil_prime = ct_oceans
-	b_mixaaiil_prime = ct_burning
-	b_mixaaiil_prime = ct_hot
-	b_mixaaiil_prime = ct_planet_survey
-	
-	b_mixaaiil_prime_b = tp_no_atmosphere
 	b_mixaaiil_prime_b = tp_no_water
-	b_mixaaiil_prime_b = tp_burning
 	b_mixaaiil_prime_b = tp_hot
-	b_mixaaiil_prime_b = tp_planet_survey
-	
-	b_mixaaiil_iii = ca_no_atmosphere
-	b_mixaaiil_iii = ca_no_water
+	b_mixaaiil_prime_b = tp_no_atmosphere
 	b_mixaaiil_iii = ca_trace_water
-	b_mixaaiil_iii = ca_frozen
-	b_mixaaiil_iii = ca_cold
 	b_mixaaiil_iii = ca_cool
-	b_mixaaiil_iii = ca_planet_survey
+	b_mixaaiil_iii = ca_no_atmosphere
+	b_mixaaiil_prime = ct_oceans
+	b_mixaaiil_prime = ct_hot
+	b_mixaaiil_prime = ct_clean_atmosphere
 }
 
 2998.1.1 = {

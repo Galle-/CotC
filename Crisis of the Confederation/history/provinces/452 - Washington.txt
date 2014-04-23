@@ -1,0 +1,15 @@
+# 452 - Washington.txt
+
+# County Title
+title = c_washington
+
+# Settlements
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+}
+

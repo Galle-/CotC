@@ -33,6 +33,12 @@ anti_ruler = {
 	opposite_opinion = -25
 }
 
+rebel_leader = {
+	#rebel_inherited = yes
+	customizer = no
+	random = no
+}
+
 #### Military Traits ####
 # Core Military Traits
 fighter_pilot = {

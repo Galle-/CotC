@@ -750,7 +750,7 @@ character_event = {
 
 	option = {
 		name = OK
-		dynasty = father_bastard
+		dynasty = culture
 		add_trait = bastard
 		
 		father = {
@@ -822,7 +822,7 @@ character_event = {
 
 	option = {
 		name = OK
-		dynasty = mother_bastard
+		dynasty = culture
 		
 		father = {
 			spouse = {

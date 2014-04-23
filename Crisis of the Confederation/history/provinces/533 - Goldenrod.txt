@@ -1,0 +1,15 @@
+# 533 - Goldenrod.txt
+
+# County Title
+title = c_goldenrod
+
+# Settlements
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = colonial_seperatist
+
+# History
+1.1.1 = {
+}
+

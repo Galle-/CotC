@@ -1,13 +1,12 @@
-# 26 - Camelot
+# 26 - Camelot.txt
 
 # County Title
 title = c_camelot
 
 # Settlements
 max_settlements = 4
-
-b_new_camelot = castle
 b_new_camelot_orbital = city
+b_new_camelot = castle
 
 # Misc
 culture = anglo_avalonian # Initial culture

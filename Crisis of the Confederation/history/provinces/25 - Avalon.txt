@@ -1,14 +1,13 @@
-# 25 - Avalon
+# 25 - Avalon.txt
 
 # County Title
 title = c_avalon
 
 # Settlements
 max_settlements = 6
-
-b_avalon_iii = castle
 b_avalon_iii_orbital = city
 b_avalon_iii_b = temple
+b_avalon_iii = castle
 
 # Misc
 culture = anglo_avalonian # Initial culture

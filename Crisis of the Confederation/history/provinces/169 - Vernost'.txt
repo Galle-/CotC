@@ -1,12 +1,12 @@
-# 169 - Vernost'
+# 169 - Vernost'.txt
 
 # County Title
-title = c_vernost
+title = c_vernost'
 
 # Settlements
 max_settlements = 4
-b_vernost_iii = castle
 b_vernost_iii_b = temple
+b_vernost_iii = castle
 
 # Misc
 culture = russo_edemite # Initial culture
