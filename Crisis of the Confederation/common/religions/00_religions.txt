@@ -1,5 +1,5 @@
 political_group = {
-	has_coa_on_barony_only = yes
+	has_coa_on_barony_only = no
 	graphical_culture = westerngfx
 	playable = yes
 	
@@ -193,7 +193,7 @@ political_group = {
 }
 
 religious_group = {
-	has_coa_on_barony_only = yes
+	has_coa_on_barony_only = no
 	graphical_culture = muslimgfx
 	playable = yes
 	
@@ -417,7 +417,7 @@ religious_group = {
 }
 
 transhumanist_group = {
-	has_coa_on_barony_only = yes
+	has_coa_on_barony_only = no
 	graphical_culture = westerngfx
 	playable = yes
 	
