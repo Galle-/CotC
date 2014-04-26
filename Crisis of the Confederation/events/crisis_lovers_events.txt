@@ -2140,7 +2140,7 @@ character_event = {
 				factor = 1.25
 				FROM = {
 					num_of_lovers = 1
-					NOT = { any_lover = { { reverse_opinion = { who = ROOT value = -99 } } }
+					NOT = { any_lover = { { reverse_opinion = { who = ROOT value = -99 } } } }
 				}
 			}
 			modifier = {

@@ -1108,47 +1108,47 @@ province_event = {
 		if = {
 			limit = { has_province_modifier = civil_unrest_1 }
 			remove_province_modifier = civil_unrest_1
-			add_province_modifier = { name = civil_unrest_0 durations = -1 }
+			add_province_modifier = { name = civil_unrest_0 duration = -1 }
 		}
 		if = {
 			limit = { has_province_modifier = civil_unrest_2 }
 			remove_province_modifier = civil_unrest_2
-			add_province_modifier = { name = civil_unrest_1 durations = -1 }
+			add_province_modifier = { name = civil_unrest_1 duration = -1 }
 		}
 		if = {
 			limit = { has_province_modifier = civil_unrest_3 }
 			remove_province_modifier = civil_unrest_3
-			add_province_modifier = { name = civil_unrest_2 durations = -1 }
+			add_province_modifier = { name = civil_unrest_2 duration = -1 }
 		}
 		if = {
 			limit = { has_province_modifier = civil_unrest_4 }
 			remove_province_modifier = civil_unrest_4
-			add_province_modifier = { name = civil_unrest_3 durations = -1 }
+			add_province_modifier = { name = civil_unrest_3 duration = -1 }
 		}
 		if = {
 			limit = { has_province_modifier = civil_unrest_5 }
 			remove_province_modifier = civil_unrest_5
-			add_province_modifier = { name = civil_unrest_4 durations = -1 }
+			add_province_modifier = { name = civil_unrest_4 duration = -1 }
 		}
 		if = {
 			limit = { has_province_modifier = civil_unrest_6 }
 			remove_province_modifier = civil_unrest_6
-			add_province_modifier = { name = civil_unrest_5 durations = -1 }
+			add_province_modifier = { name = civil_unrest_5 duration = -1 }
 		}
 		if = {
 			limit = { has_province_modifier = civil_unrest_7 }
 			remove_province_modifier = civil_unrest_7
-			add_province_modifier = { name = civil_unrest_6 durations = -1 }
+			add_province_modifier = { name = civil_unrest_6 duration = -1 }
 		}
 		if = {
 			limit = { has_province_modifier = civil_unrest_8 }
 			remove_province_modifier = civil_unrest_8
-			add_province_modifier = { name = civil_unrest_7 durations = -1 }
+			add_province_modifier = { name = civil_unrest_7 duration = -1 }
 		}
 		if = {
 			limit = { has_province_modifier = civil_unrest_9 }
 			remove_province_modifier = civil_unrest_9
-			add_province_modifier = { name = civil_unrest_8 durations = -1 }
+			add_province_modifier = { name = civil_unrest_8 duration = -1 }
 		}
 	}
 }
