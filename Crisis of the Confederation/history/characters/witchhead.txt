@@ -190,11 +190,12 @@
 	add_trait = introverted
 	add_trait = friendly
 	add_trait = radical
+	#add_trait = legit_bastard #born before marriage of parents
 	
 	father = 1108921 # Jiro Shibata
 	mother = 1318425 # Michiko Hasegawa
 	
-	2957.1.1 = { birth = "2957.1.1" }
+	2961.1.1 = { birth = "yes" }
 }
 
 1102153 = {

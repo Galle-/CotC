@@ -26,7 +26,7 @@
 	add_trait = marine_colonel
 	
 	2967.1.1 = {
-		birth = "2977.1.1"
+		birth = "yes"
 		effect = { set_dynasty_flag = flag_dynasty_processed }
 	}
 }

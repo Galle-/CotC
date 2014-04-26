@@ -42,10 +42,10 @@
 	trait = proud
 	trait = ambitious
 	
+	father = 1107945 # Ryusei Sato
+	
 	2963.1.1 = { birth = "2963.1.1" }
 	2998.1.1 = { effect = { grant_job_title = job_marshal } }
-	
-	father = 11017945 # Ryusei Sato
 }
 
 1127945 = {
@@ -66,19 +66,20 @@
 	trait = content
 	trait = brave
 	
+	father = 1107945 # Ryusei Sato
+	
 	2970.1.1 = { birth = "2970.1.1" }
 	2989.1.1 = {
 		add_matrilineal_spouse = 11011449
 		effect = { spouse = { add_lover = ROOT } }
 	}
 	
-	father = 1107945 # Ryusei Sato
 }
 
 11011449 = {
 	# Husband of Toshiko Sato
 	name = "Takashi"
-	dynasty = 111449 # Ozerov
+	dynasty = 11449 # Ozerov
 	female = no
 	
 	culture = russo_tengoku
@@ -98,11 +99,14 @@
 	dynasty = 7945
 	female = no
 	
+	culture = japanese_tengoku
 	religion = astrist
+	#add_trait = legit_bastard #born before marriage of parents
 	
-	2990.1.1 = { birth = "2990.1.1" }
 	father = 11011449 # Takashi Ozerov
 	mother = 1127945 # Toshiko Sato
+	
+	2990.1.1 = { birth = "2990.1.1" }
 }
 
 1137945 = {
@@ -124,10 +128,10 @@
 	trait = proud
 	trait = ambitious
 	
+	father = 1107945 # Ryusei Sato
+	
 	2974.1.1 = { birth = "2974.1.1" }
 	2998.1.1 = { effect = { grant_job_title = job_scientist } }
-	
-	father = 11017945 # Ryusei Sato
 }
 
 1147945 = {
@@ -147,9 +151,9 @@
 	trait = confident
 	trait = proud
 	
-	2978.1.1 = { birth = "2978.1.1" }
+	father = 1107945 # Ryusei Sato
 	
-	father = 11017945 # Ryusei Sato
+	2978.1.1 = { birth = "2978.1.1" }
 }
 
 1108425 = {
@@ -173,8 +177,9 @@
 	trait = confident
 	trait = ambitious
 	
-	2978.1.1 = { birth = "2978.1.1" }
 	father = 1208425 # Yukio Hasegawa
+	
+	2978.1.1 = { birth = "2978.1.1" }
 }
 
 1108665 = {
@@ -245,9 +250,9 @@
 	trait = friendly
 	trait = pragmatic
 	
-	2963.1.1 = { birth = "2963.1.1" }
-	
 	mother = 1108745 # Junko Harada
+	
+	2965.1.1 = { birth = "yes" }
 }
 
 1108233 = {
@@ -329,7 +334,7 @@
 	
 	2945.1.1 = { birth = 2945.1.1 }
 	2964.1.1 = {
-		spouse = 1318425
+		add_spouse = 1318425
 		effect = { spouse = { add_lover = ROOT } }
 	}
 }
