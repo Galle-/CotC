@@ -302,7 +302,7 @@ religious_group = {
 		investiture = no
 		can_excommunicate = no
 		can_grant_divorce = no
-		can_grant_invasion_cb = no
+		#can_grant_invasion_cb = no #wants a CB
 		can_call_crusade = no
 		can_grant_claim = no
 		
@@ -316,7 +316,7 @@ religious_group = {
 		graphical_culture = muslimgfx
 		icon = 2
 		heresy_icon = 7
-		parent = pilgrimage
+		parent = pilgrim
 		
 		color = { 0.8 0.4 0.2 }
 		god_names = { GOD_GOD GOD_SOL GOD_UNCONQUERED_SUN GOD_THE_LORD }
@@ -337,7 +337,7 @@ religious_group = {
 		graphical_culture = muslimgfx
 		icon = 2
 		heresy_icon = 7
-		parent = pilgrimage
+		parent = pilgrim
 		
 		color = { 0.2 0.8 0.8 }
 		god_names = { GOD_GOD GOD_THE_HOMEWORLD GOD_THE_LORD }
@@ -357,7 +357,7 @@ religious_group = {
 		graphical_culture = muslimgfx
 		icon = 2
 		heresy_icon = 7
-		parent = pilgrimage
+		parent = pilgrim
 		
 		color = { 0.2 0.8 0.4 }
 		god_names = { GOD_GOD GOD_THE_HOMEWORLD GOD_THE_LORD }
@@ -378,7 +378,7 @@ religious_group = {
 		graphical_culture = muslimgfx
 		icon = 2
 		heresy_icon = 7
-		parent = pilgrimage
+		parent = pilgrim
 		
 		color = { 0.9 0.6 0.6 }
 		god_names = { GOD_GODDESS GOD_HOLY_TERRA GOD_MOTHER_GAIA GOD_THE_LADY }
@@ -398,7 +398,7 @@ religious_group = {
 		graphical_culture = muslimgfx
 		icon = 2
 		heresy_icon = 7
-		parent = pilgrimage
+		parent = pilgrim
 		
 		color = { 0.6 0.6 0.9 }
 		god_names = { GOD_GOD GOD_HOLY_TERRA GOD_HOLY_FATHER GOD_THE_LORD }
@@ -446,7 +446,7 @@ transhumanist_group = {
 		autocephaly = yes
 		can_excommunicate = no
 		can_grant_divorce = yes
-		can_grant_invasion_cb = no
+		#can_grant_invasion_cb = no #wants a cb
 		can_call_crusade = no
 		can_grant_claim = no
 		
@@ -478,7 +478,7 @@ transhumanist_group = {
 		autocephaly = no
 		can_excommunicate = yes
 		can_grant_divorce = yes
-		can_grant_invasion_cb = no
+		#can_grant_invasion_cb = no  #wants a cb
 		can_call_crusade = yes
 		can_grant_claim = no
 		
@@ -512,7 +512,7 @@ transhumanist_group = {
 		autocephaly = no
 		can_excommunicate = no
 		can_grant_divorce = yes
-		can_grant_invasion_cb = no
+		#can_grant_invasion_cb = no  #wants a cb
 		can_call_crusade = yes
 		can_grant_claim = no
 		
@@ -546,7 +546,7 @@ transhumanist_group = {
 		autocephaly = yes
 		can_excommunicate = no
 		can_grant_divorce = yes
-		can_grant_invasion_cb = yes
+		can_grant_invasion_cb = invasion #yes #wants a cb
 		can_call_crusade = no
 		can_grant_claim = yes
 		
