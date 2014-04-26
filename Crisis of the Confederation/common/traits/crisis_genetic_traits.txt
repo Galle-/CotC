@@ -198,8 +198,25 @@ dwarf = {
 	birth = 25
 	inherit_chance = 25
 	
+	opposites =  {
+		tall
+	}
+	
 	sex_appeal_opinion = -30
 	same_opinion = 10
+}
+tall = {
+	birth = 100
+	inherit_chance = 33
+
+	opposites =  {
+		dwarf
+	}
+
+	diplomacy = 1
+
+	sex_appeal_opinion = 5
+	vassal_opinion = 5
 }
 clubfooted = {
 	birth = 50
