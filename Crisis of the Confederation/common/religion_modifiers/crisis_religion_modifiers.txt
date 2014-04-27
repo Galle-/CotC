@@ -1,0 +1,136 @@
+#########################################################################
+# RELIGIOUS AUTHORITY MODIFIERS - fully scriptable
+##########################################################################
+
+# These are awared to ideologies whose rulers pursue reforms compatible with them
+major_compatible_reform = {
+	authority = 10
+	years = 50
+}
+minor_compatible_reform = {
+	authority = 3
+	years = 50
+}
+major_compatible_local_reform = {
+	authority = 3
+	years = 25
+}
+minor_compatible_local_reform = {
+	authority = 1
+	years = 25
+}
+
+# These are used to penalize ideologies whose rulers pursue reforms incompatible with them
+major_hypocritical_reform = {
+	authority = -10
+	years = 50
+}
+minor_hypocritical_reform = {
+	authority = -3
+	years = 50
+}
+major_hypocritical_local_reform = {
+	authority = -3
+	years = 25
+}
+minor_hypocritical_local_reform = {
+	authority = -1
+	years = 25
+}
+
+# Apply once for each rebelling kingdom
+allowed_major_rebellion = {
+	authority = -5
+	years = 60
+}
+successful_major_rebellion = {
+	authority = 5
+	years = 60
+}
+failed_major_rebellion = {
+	authority = -5
+	years = 60
+}
+crushed_major_rebellion = {
+	authority = 5
+	years = 60
+}
+fell_to_major_rebellion = {
+	authority = -5
+	years = 60
+}
+allowed_minor_rebellion = {
+	authority = -5
+	years = 10
+}
+successful_minor_rebellion = {
+	authority = 5
+	years = 10
+}
+failed_minor_rebellion = {
+	authority = -5
+	years = 10
+}
+crushed_minor_rebellion = {
+	authority = 5
+	years = 10
+}
+fell_to_minor_rebellion = {
+	authority = -5
+	years = 10
+}
+opposed_system_revolt = {
+	authority = 1
+	years = 30
+}
+opposed_sector_revolt = {
+	authority = 2
+	years = 30
+}
+opposed_regional_revolt = {
+	authority = 3
+	years = 30
+}
+ignored_system_revolt = {
+	authority = -1
+	years = 120
+}
+ignored_sector_revolt = {
+	authority = -2
+	years = 120
+}
+ignored_regional_revolt = {
+	authority = -3
+	years = 120
+}
+
+allowed_civil_war_county = {
+	authority = -1
+	years = 30
+}
+allowed_civil_war_duchy = {
+	authority = -3
+	years = 30
+}
+allowed_civil_war_kingdom = {
+	authority = -5
+	years = 30
+}
+allowed_civil_war_empire = {
+	authority = -15
+	years = 30
+}
+
+ruler_cybernetics_good = {
+	authority = 1
+	years = 10
+}
+ruler_cybernetics_bad = {
+	authority = -1
+	years = 10
+}
+
+legal_demand_refused = {
+	authority = -3
+	years = 10
+}
