@@ -208,6 +208,13 @@ character_event = {
 				}
 			}
 			if = {
+				limit = { ROOT = { trait = tall } }
+				random = {
+					chance = 90
+					add_trait = tall
+				}
+			}
+			if = {
 				limit = { ROOT = { trait = harelip } }
 				random = {
 					chance = 90
@@ -374,6 +381,13 @@ character_event = {
 				}
 			}
 			if = {
+				limit = { ROOT = { trait = tall } }
+				random = {
+					chance = 90
+					add_trait = tall
+				}
+			}
+			if = {
 				limit = { ROOT = { trait = harelip } }
 				random = {
 					chance = 90
@@ -535,6 +549,13 @@ character_event = {
 				random = {
 					chance = 90
 					add_trait = dwarf
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = tall } }
+				random = {
+					chance = 90
+					add_trait = tall
 				}
 			}
 			if = {
@@ -711,6 +732,13 @@ character_event = {
 				random = {
 					chance = 90
 					add_trait = dwarf
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = tall } }
+				random = {
+					chance = 90
+					add_trait = tall
 				}
 			}
 			if = {
@@ -955,6 +983,13 @@ character_event = {
 				}
 			}
 			if = {
+				limit = { ROOT = { trait = tall } }
+				random = {
+					chance = 90
+					add_trait = tall
+				}
+			}
+			if = {
 				limit = { FROM = { FROM = { trait = harelip } } }
 				random = {
 					chance = 90
@@ -1131,6 +1166,13 @@ character_event = {
 				random = {
 					chance = 90
 					add_trait = dwarf
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = tall } }
+				random = {
+					chance = 90
+					add_trait = tall
 				}
 			}
 			if = {
@@ -1376,6 +1418,13 @@ character_event = {
 				}
 			}
 			if = {
+				limit = { ROOT = { trait = tall } }
+				random = {
+					chance = 90
+					add_trait = tall
+				}
+			}
+			if = {
 				limit = { FROM = { FROM = { trait = harelip } } }
 				random = {
 					chance = 90
@@ -1542,6 +1591,13 @@ character_event = {
 				random = {
 					chance = 90
 					add_trait = dwarf
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = tall } }
+				random = {
+					chance = 90
+					add_trait = tall
 				}
 			}
 			if = {
@@ -1784,6 +1840,13 @@ character_event = {
 				random = {
 					chance = 90
 					add_trait = dwarf
+				}
+			}
+			if = {
+				limit = { ROOT = { trait = tall } }
+				random = {
+					chance = 90
+					add_trait = tall
 				}
 			}
 			if = {
