@@ -1,0 +1,24 @@
+k_terran_federal_authority = {
+	color = { 19 180 16 }
+	
+	allow = {
+		always = no
+	}
+}
+
+k_terran_republic_authority = {
+	color={ 255 108 0 }
+	color2={ 255 255 255 }
+	
+	allow = {
+		always = no
+	}
+}
+
+k_terran_imperial_authority = {
+	color = { 163 254 56 }
+	
+	allow = {
+		always = no
+	}
+}
