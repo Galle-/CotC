@@ -197,7 +197,7 @@ clumsy = {
 dwarf = {
 	birth = 25
 	inherit_chance = 25
-	
+
 	opposites =  {
 		tall
 	}

@@ -1,5 +1,7 @@
 clone = {
 	# Really doesn't do anything at the moment
+	health = -0.5
+	general_opinion = -10
 }
 
 known_murderer = {

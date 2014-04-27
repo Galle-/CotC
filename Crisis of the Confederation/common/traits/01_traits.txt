@@ -1,0 +1,126 @@
+########################################################################################################
+# WARNING: IF YOU DON'T ADD NEW TRAITS LAST (IN THE LAST READ TRAIT FILE), IT WILL BREAK OLD SAVE GAMES!
+########################################################################################################
+
+# transhumanist_group equivalent of Crusader (HARD STATUS - DO NOT REMOVE!)
+mujahid = {
+	potential = {
+		religion_group = transhumanist_group
+		always = no
+	}
+	
+	martial = 2
+	
+	muslim_opinion = 10
+	same_opinion_if_same_religion = 30
+	
+	ai_zeal = 10
+	customizer = no
+	random = no
+}
+
+
+
+# transhumanist_group who has completed the Hajj
+hajjaj = {
+	potential = {
+		religion_group = transhumanist_group
+		always = no
+	}
+	
+	muslim_opinion = 10
+	monthly_character_piety = 0.1
+	stewardship = 1
+	customizer = no
+	random = no
+}
+
+# transhumanist_group performing hajj.
+on_hajj = {
+	potential = {
+		religion_group = transhumanist_group
+		NOT = { trait = hajjaj }
+		always = no
+	}
+	
+	cached = yes # Keep a cache of all trait holders, to use with the corresponding event trigger 
+	
+	muslim_opinion = 20
+	monthly_character_piety = 0.2
+	
+	pilgrimage = yes # Will need a regent, but can still be guardian to children
+	customizer = no
+	random = no
+}
+
+
+# transhumanist_group who is schooled in Islamic jurisprudence
+faqih = {
+	lifestyle = yes
+	
+	potential = {
+		religion_group = transhumanist_group
+		always = no
+	}
+	
+	vassal_opinion = 10
+	customizer = no
+	random = no
+}
+
+# transhumanist_group who has completely memorized the Qur'an
+hafiz = {
+	potential = {
+		religion_group = transhumanist_group
+		always = no
+	}
+	
+	muslim_opinion = 5
+	customizer = no
+	random = no
+}
+
+# transhumanist_group agnatically descended from Muhammed
+sayyid = {
+	agnatic = yes # Always inherited from fathers
+	potential = {
+		always = no
+	}
+	
+	opposites =  {
+		mirza
+	}
+	
+	muslim_opinion = 10
+	customizer = no
+	random = no
+}
+
+# religious_group who has completed a Pilgrimage
+pilgrim = {
+	potential = {
+		religion_group = religious_group
+	}
+	
+	same_religion_opinion = 5
+	monthly_character_piety = 0.1
+}
+
+# Child of a Sayyida mother (hardcoded to be passed on from Sayyid trait)
+mirza = {
+	potential = {
+		always = no
+	}
+	muslim_opinion = 5
+	
+	opposites =  {
+		sayyid
+	}
+	customizer = no
+	random = no
+}
+
+# The character is visibly scarred from an old wound
+scarred = {
+	monthly_character_prestige = 0.1
+}
