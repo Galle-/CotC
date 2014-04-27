@@ -1,0 +1,158 @@
+#Intergalactic Banking Consortium
+namespace = IBC
+
+# IBC Expelled
+character_event = {
+	id = IBC.105
+	desc = EVTDESC_IBC_105
+	picture = GFX_evt_ibc_market
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_IBC_105
+		wealth = 200
+		prestige = -100
+		#banish_religion = ibc
+		hidden_tooltip = {
+			any_realm_lord = {
+				limit = { 
+					OR = {
+						ai = no
+						has_character_modifier = borrowed_from_ibc
+					}
+				}
+				character_event = { id = IBC.107 }
+			}
+		}
+	}
+}
+
+# IBC Welcomed Back
+character_event = {
+	id = IBC.106
+	desc = EVTDESC_IBC_106
+	picture = GFX_evt_ibc_market
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_IBC_106
+		prestige = 50
+		hidden_tooltip = {
+			any_realm_lord = {
+				limit = { ai = no }
+				character_event = { id = IBC.108 }
+			}
+		}
+	}
+}
+
+# IBC Expelled (Notifier for Vassals)
+character_event = {
+	id = IBC.107
+	desc = EVTDESC_IBC_107
+	picture = GFX_evt_ibc_market
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_IBC_107
+		trigger = {
+			NOT = { has_character_modifier = borrowed_from_ibc }
+		}
+	}
+	option = {
+		name = EVTOPTB_IBC_107
+		trigger = {
+			has_character_modifier = borrowed_from_ibc
+		}
+		remove_character_modifier = borrowed_from_ibc
+	}
+}
+
+# IBC Welcomed Back (Notifier for Vassals)
+character_event = {
+	id = IBC.108
+	desc = EVTDESC_IBC_108
+	picture = GFX_evt_ibc_market
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_IBC_107
+	}
+}
+
+### Expulsion Events
+
+# Loss of economic tech
+character_event = {
+	id = IBC.300
+	desc = EVTDESC_IBC_300
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_religion
+	
+	trigger = {
+		has_character_modifier = expelled_ibc
+	}
+	
+	mean_time_to_happen = {
+		months = 680
+	}
+	
+	option = {
+		name = EVTOPTA_IBC_300
+		economy_techpoints = -50
+	}
+}
+
+# Loss of cultural tech
+character_event = {
+	id = IBC.301
+	desc = EVTDESC_IBC_301
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_religion
+	
+	trigger = {
+		has_character_modifier = expelled_ibc
+	}
+	
+	mean_time_to_happen = {
+		months = 680
+	}
+	
+	option = {
+		name = EVTOPTA_IBC_301
+		culture_techpoints = -50
+	}
+}
+
+# Loss of military tech
+character_event = {
+	id = IBC.302
+	desc = EVTDESC_IBC_302
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_religion
+	
+	trigger = {
+		has_character_modifier = expelled_ibc
+	}
+	
+	mean_time_to_happen = {
+		months = 680
+	}
+	
+	option = {
+		name = EVTOPTA_IBC_302
+		military_techpoints = -50
+	}
+}
