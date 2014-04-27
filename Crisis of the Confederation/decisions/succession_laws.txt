@@ -450,7 +450,9 @@ gender_laws = {
 		male_dynasty_opinion = 10
 		female_dynasty_opinion = -10
 		potential = { always = yes }
-		allow = { holder_scope = { religion = father_earth_cultist } }
+		allow = { 
+			holder_scope = { religion = father_earth_cultist } 
+		}
 		effect = {
 			gender_succ = cognatic
 		}
@@ -463,7 +465,9 @@ gender_laws = {
 		female_dynasty_opinion = -20
 	
 		potential = { always = yes }
-		allow = { holder_scope = { religion = father_earth_cultist } }
+		allow = { 
+			holder_scope = { religion = father_earth_cultist } 
+		}
 		effect = {
 			gender_succ = agnatic
 		}
@@ -489,9 +493,8 @@ gender_laws = {
 		female_dynasty_opinion = 20
 		
 		potential = { always = yes }
-		allow = { holder_scope = { religion = mother_gaia_cultist } }
-		allow = {
-			always = yes
+		allow = { 
+			holder_scope = { religion = mother_gaia_cultist }
 		}
 		effect = {
 			gender_succ = enatic
@@ -506,7 +509,9 @@ gender_laws = {
 		female_dynasty_opinion = 10
 		
 		potential = { always = yes }
-		allow = { holder_scope = { religion = mother_gaia_cultist } }
+		allow = { 
+			holder_scope = { religion = mother_gaia_cultist }
+		}
 		effect = {
 			gender_succ = enatic_cognatic
 		}

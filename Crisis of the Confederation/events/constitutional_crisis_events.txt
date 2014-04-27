@@ -3436,7 +3436,7 @@ letter_event = {
 		hidden_tooltip = {
 			any_realm_character = {
 				limit = { same_liege = ROOT }
-				character_event = { laws.407 } # Inform fellow vassals
+				character_event = { id = laws.407 } # Inform fellow vassals
 			}
 		}
 	}
@@ -7009,13 +7009,13 @@ character_event = {
 			any_demesne_title = {
 				limit = {
 					OR = {
-						has_law = local_term_length_0
-						has_law = local_term_length_1
-						has_law = local_term_length_2
-						has_law = local_term_length_3
+						has_law = term_length_0
+						has_law = term_length_1
+						has_law = term_length_2
+						has_law = term_length_3
 					}
 				}
-				add_law = local_term_length_4
+				add_law = term_length_4
 			}
 			clr_character_flag = flag_term_limit_defied
 		}

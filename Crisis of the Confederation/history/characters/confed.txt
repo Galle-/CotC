@@ -812,7 +812,7 @@
 		birth = 2954.1.1
 		effect = { set_dynasty_flag = flag_dynasty_processed }
 	}
-	2980.1.1 = { add_spouse = 11020006 } # Iskinder Desta
+	2980.1.1 = { add_spouse_matrilineal = 11020006 } # Iskinder Desta
 	2980.1.1 = { effect = { spouse = { add_lover = ROOT } } }
 
 }

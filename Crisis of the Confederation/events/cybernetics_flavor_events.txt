@@ -187,7 +187,7 @@ character_event = {
 	}
 }
 character_event = {
-	id = cybernetics.1007
+	id = cybernetics.10007
 	desc = "EVTDESCCYBERNETICS10007"
 	picture = GFX_evt_lovers
 	is_triggered_only = yes

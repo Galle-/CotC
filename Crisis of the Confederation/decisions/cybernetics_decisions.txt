@@ -1,4 +1,18 @@
 decisions = {
+	# Menu controls
+	open_cybernetics_menu_decision = {
+		potential = {
+			ai = no
+			NOT = { has_character_flag = flag_cybernetics_menu_open }
+		}
+		effect = { set_character_flag = flag_cybernetics_menu_open }
+	}
+	close_cybernetics_menu_decision = {
+		is_high_prio = yes
+		potential = { has_character_flag = flag_cybernetics_menu_open }
+		effect = { clr_character_flag = flag_cybernetics_menu_open }
+	}
+	
 	# Get DNI
 	get_dni_decision = {
 		is_high_prio = yes
@@ -3552,20 +3566,5 @@ dynasty_decisions = {
 				NOT = { health = 1 }
 			}
 		}
-	}
-}
-# Menu controls
-decisions = {
-	open_cybernetics_menu_decision = {
-		potential = {
-			ai = no
-			NOT = { has_character_flag = flag_cybernetics_menu_open }
-		}
-		effect = { set_character_flag = flag_cybernetics_menu_open }
-	}
-	close_cybernetics_menu_decision = {
-		is_high_prio = yes
-		potential = { has_character_flag = flag_cybernetics_menu_open }
-		effect = { clr_character_flag = flag_cybernetics_menu_open }
 	}
 }

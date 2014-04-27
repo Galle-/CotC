@@ -583,7 +583,7 @@ character_event = {
 							OR = {
 								AND = {
 									is_primary_holder_title_tier = yes
-									has_law = open_elective
+									has_law = succ_open_elective
 									current_heir = { character = ROOT }
 								}
 								# Kingdom capital systems
@@ -592,7 +592,7 @@ character_event = {
 										has_province_modifier = kingdom_capital_system
 										kingdom = {
 											is_primary_holder_title_tier = yes
-											has_law = open_elective
+											has_law = succ_open_elective
 											current_heir = { character = ROOT }
 										}
 										OR = {
@@ -607,7 +607,7 @@ character_event = {
 										has_province_modifier = empire_capital_system
 										empire = {
 											is_primary_holder_title_tier = yes
-											has_law = open_elective
+											has_law = succ_open_elective
 											current_heir = { character = ROOT }
 										}
 										OR = {
@@ -1093,10 +1093,6 @@ character_event = {
 				has_law = term_length_1
 				has_law = term_length_2
 				has_law = term_length_3
-				has_law = local_term_length_0
-				has_law = local_term_length_1
-				has_law = local_term_length_2
-				has_law = local_term_length_3
 			}
 		}
 		NOT = { has_character_flag = flag_term_limit_timer }
@@ -1118,10 +1114,6 @@ character_event = {
 					has_law = term_length_1
 					has_law = term_length_2
 					has_law = term_length_3
-					has_law = local_term_length_0
-					has_law = local_term_length_1
-					has_law = local_term_length_2
-					has_law = local_term_length_3
 				}
 			}
 		}
@@ -1142,37 +1134,25 @@ character_event = {
 			AND = {
 				had_character_flag = { flag = flag_term_limit_timer days = 365 }
 				primary_title = {
-					OR = {
-						has_law = term_length_0
-						has_law = local_term_length_0
-					}
+					has_law = term_length_0
 				}
 			}
 			AND = {
 				had_character_flag = { flag = flag_term_limit_timer days = 1460 }
 				primary_title = {
-					OR = {
-						has_law = term_length_1
-						has_law = local_term_length_1
-					}
+					has_law = term_length_1
 				}
 			}
 			AND = {
 				had_character_flag = { flag = flag_term_limit_timer days = 2920 }
 				primary_title = {
-					OR = {
-						has_law = term_length_2
-						has_law = local_term_length_2
-					}
+					has_law = term_length_2
 				}
 			}
 			AND = {
 				had_character_flag = { flag = flag_term_limit_timer days = 3650 }
 				primary_title = {
-					OR = {
-						has_law = term_length_3
-						has_law = local_term_length_3
-					}
+					has_law = term_length_3
 				}
 			}
 		}

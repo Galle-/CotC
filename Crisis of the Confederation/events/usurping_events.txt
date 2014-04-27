@@ -72,7 +72,7 @@ character_event = {
 			death = { death_reason = death_sacrifice }
 		}
 		set_defacto_liege = FROM # One more time now
-		opinion = { who = FROM modifier = usurped_my_title }
+		opinion = { who = FROM modifier = opinion_usurped_title }
 	}
 }
 
