@@ -140,8 +140,8 @@ de_jure_laws = {
 		}
 		effect = {
 			hidden_tooltip = {
-				remove_law = premiership_1
-				remove_law = premiership_2
+				revoke_law = premiership_1
+				revoke_law = premiership_2
 			}
 		}
 	}
@@ -157,8 +157,8 @@ de_jure_laws = {
 		}
 		effect = {
 			hidden_tooltip = {
-				remove_law = premiership_0
-				remove_law = premiership_1
+				revoke_law = premiership_0
+				revoke_law = premiership_1
 			}
 		}
 	}
@@ -174,8 +174,8 @@ de_jure_laws = {
 		}
 		effect = {
 			hidden_tooltip = {
-				remove_law = premiership_0
-				remove_law = premiership_1
+				revoke_law = premiership_0
+				revoke_law = premiership_1
 			}
 		}
 	}
@@ -307,14 +307,8 @@ de_jure_laws = {
 			holder_scope = { 
 				is_republic = no 
 				hidden_tooltip = {
-					NOT = { religion = norse_pagan }
-					NOT = { religion = tengri_pagan }
-					NOT = { religion = baltic_pagan }
-					NOT = { religion = finnish_pagan }
-					NOT = { religion = aztec }
-					NOT = { religion = slavic_pagan }
+					NOT = { religion_group = outlaw_group }
 				}
-				custom_tooltip = TT_NOT_UNREFORMED_PAGAN
 			}
 			OR = {
 				has_law = centralization_1
@@ -394,14 +388,8 @@ de_jure_laws = {
 			holder_scope = { 
 				is_republic = no 
 				hidden_tooltip = {
-					NOT = { religion = norse_pagan }
-					NOT = { religion = tengri_pagan }
-					NOT = { religion = baltic_pagan }
-					NOT = { religion = finnish_pagan }
-					NOT = { religion = aztec }
-					NOT = { religion = slavic_pagan }
+					NOT = { religion_group = outlaw_group }
 				}
-				custom_tooltip = TT_NOT_UNREFORMED_PAGAN
 			}
 			OR = {
 				has_law = centralization_2
@@ -485,14 +473,8 @@ de_jure_laws = {
 			holder_scope = { 
 				is_republic = no 
 				hidden_tooltip = {
-					NOT = { religion = norse_pagan }
-					NOT = { religion = tengri_pagan }
-					NOT = { religion = baltic_pagan }
-					NOT = { religion = finnish_pagan }
-					NOT = { religion = aztec }
-					NOT = { religion = slavic_pagan }
+					NOT = { religion_group = outlaw_group }
 				}
-				custom_tooltip = TT_NOT_UNREFORMED_PAGAN
 			}
 			has_law = centralization_3
 		}
@@ -570,7 +552,15 @@ de_jure_laws = {
 		default = yes
 		potential = {
 			year = 1000
-			holder_scope = { religion = catholic }
+			holder_scope = { 
+				OR = {
+					religion = orthodox
+					religion = solarian
+					religion = cyberneticist
+					religion = machine_cultist
+					religion = bio_directionist
+				}
+			}
 		}
 		revoke_allowed = {
 			always = no
@@ -597,7 +587,15 @@ de_jure_laws = {
 		temple_all_opinion = 25 # Bishops will be grateful to their liege for their appointment
 		group = investiture_law
 		potential = {
-			holder_scope = { religion = catholic }
+			holder_scope = { 
+				OR = {
+					religion = orthodox
+					religion = solarian
+					religion = cyberneticist
+					religion = machine_cultist
+					religion = bio_directionist
+				}
+			}
 		}
 		revoke_allowed = {
 			always = no
@@ -641,9 +639,9 @@ de_jure_laws = {
 		}
 		
 		# The military can't be relied on to take orders
-		city_vassal_minimum_levy = -10
-		castle_vassal_minimum_levy = -10
-		temple_vassal_minimum_levy = -10
+		city_vassal_min_levy = -10
+		castle_vassal_min_levy = -10
+		temple_vassal_min_levy = -10
 	}
 	public_order_1 = {
 		show_as_title = yes
