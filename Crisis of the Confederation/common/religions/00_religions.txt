@@ -546,7 +546,7 @@ transhumanist_group = {
 		autocephaly = yes
 		can_excommunicate = no
 		can_grant_divorce = yes
-		can_grant_invasion_cb = invasion #yes #wants a cb
+		can_grant_invasion_cb = holy_invasion #yes #wants a cb
 		can_call_crusade = no
 		can_grant_claim = yes
 		
@@ -563,7 +563,7 @@ transhumanist_group = {
 }
 
 outlaw_group = {
-	has_coa_on_barony_only = no
+	has_coa_on_barony_only = yes
 	graphical_culture = norsegfx
 	playable = yes
 	

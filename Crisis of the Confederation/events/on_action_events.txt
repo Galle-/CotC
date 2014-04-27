@@ -1230,8 +1230,8 @@ character_event = {
 	option = {
 		name = "EVTOPTA40026"
 		if = {
-			limit = { trait = kind }
-			remove_trait = kind
+			limit = { trait = friendly }
+			remove_trait = friendly
 		}
 		if = {
 			limit = { trait = just }
@@ -2731,15 +2731,15 @@ diploresponse_event = {
 # On-action event: Royal Marriage Aid Duty
 character_event = {
 	id = 500
-	desc = "EVTDESC500"
-	picture = "GFX_evt_marriage"
+	desc = EVTDESC500
+	picture = GFX_evt_marriage
 	
 	is_triggered_only = yes
 	
 	trigger = {
-		NOT = { religion_group = muslim }
+		#NOT = { religion_group = muslim }
 		OR = {
-			NOT = { religion = zoroastrian }
+			NOT = { religion = bio_directionist }
 			NOT = { new_character = { is_close_relative = FROM } }
 		}
 		OR = {
@@ -2785,16 +2785,16 @@ character_event = {
 	}
 }
 
-# On-action event: Zoroastrian Xwedodah marriage
+# On-action event: bio_directionist marriage
 character_event = {
 	id = 501
-	desc = "EVTDESC501"
-	picture = "GFX_evt_marriage_zoroastrian"
+	desc = EVTDESC501
+	picture = GFX_evt_marriage_zoroastrian_group
 	
 	is_triggered_only = yes
 	
 	trigger = {
-		religion = zoroastrian
+		religion = bio_directionist
 		new_character = { is_close_relative = FROM }
 		OR = {
 			FROM = { character = ROOT }
@@ -3449,37 +3449,6 @@ narrative_event = {
 				religion = ROOT
 			}
 		}
-		if = {
-			limit = { religion = norse_pagan_reformed }
-			d_jomsvikings = {
-				religion = norse_pagan_reformed # This Holy Order now changes religion
-			}
-			set_global_flag = norse_reformation
-		}
-		if = {
-			limit = { religion = tengri_pagan_reformed }
-			set_global_flag = tengri_reformation
-		}
-		if = {
-			limit = { religion = baltic_pagan_reformed }
-			set_global_flag = baltic_reformation
-		}
-		if = {
-			limit = { religion = finnish_pagan_reformed }
-			set_global_flag = finnish_reformation
-		}
-		if = {
-			limit = { religion = aztec_reformed }
-			set_global_flag = aztec_reformation
-		}
-		if = {
-			limit = { religion = slavic_pagan_reformed }
-			set_global_flag = slavic_reformation
-		}
-		if = {
-			limit = { religion = west_african_pagan_reformed }
-			set_global_flag = west_african_reformation
-		}
 	}
 
 	option = {
@@ -3503,7 +3472,7 @@ narrative_event = {
 			}
 			modifier = {
 				factor = 5
-				trait = cynical
+				trait = skeptical
 			}
 			modifier = {
 				factor = 10
@@ -3511,7 +3480,7 @@ narrative_event = {
 			}
 			modifier = {
 				factor = 0.1
-				trait = zealous
+				trait = radical
 			}
 			modifier = {
 				factor = 0.5
@@ -3551,10 +3520,6 @@ narrative_event = {
 		}
 		ai_chance = {
 			factor = 50
-			modifier = {
-				factor = 0
-				has_landed_title = d_jomsvikings
-			}
 		}
 		tooltip = { religion = THIS }
 	}

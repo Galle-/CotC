@@ -2270,7 +2270,7 @@ province_event = {
 	trigger = {
 		NOT = { religion = cyberneticist }
 		OR = {
-			religion = machine_cult
+			religion = machine_cultist
 			religion = hiver
 			TECH_POPULAR_CUSTOMS = 0.5
 			any_province_lord = { religion = cyberneticist }
