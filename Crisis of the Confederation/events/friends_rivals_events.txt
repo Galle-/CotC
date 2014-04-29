@@ -53,7 +53,7 @@ character_event = {
 					trait = craven
 				}
 				NOT = {
-					trait = honest
+					trait = friendly
 				}
 				NOT = {
 					sibling = ROOT
@@ -114,7 +114,7 @@ character_event = {
 						trait = craven
 					}
 					NOT = {
-						trait = honest
+						trait = friendly
 					}
 					OR = {
 						AND = {
@@ -193,7 +193,7 @@ character_event = {
 						trait = craven
 					}
 					NOT = {
-						trait = honest
+						trait = friendly
 					}
 					NOT = {
 						sibling = ROOT
@@ -299,7 +299,7 @@ character_event = {
 		
 		modifier = {
 			factor = 0.5
-			trait = honest
+			trait = friendly
 		}
 		modifier = {
 			factor = 2
@@ -717,10 +717,10 @@ character_event = {
 					num_of_traits = 5
 				}
 				NOT = {
-					trait = honest
+					trait = friendly
 				}
 			}
-			add_trait = honest
+			add_trait = friendly
 		}
 	}
 }
@@ -1022,7 +1022,7 @@ character_event = {
 				add_trait = proud
 				hidden_tooltip = {
 					character_event = {
-						id = 38261 #Notify Shy
+						id = 38261 #Notify introverted
 					}
 				}
 			}
@@ -1119,7 +1119,7 @@ character_event = {
 			religion_group = muslim
 		}
 		OR = {
-			trait = paranoid
+			trait = close_minded
 			trait = introverted
 		}
 		any_courtier = {
@@ -1358,7 +1358,7 @@ character_event = {
 				remove_trait = introverted
 				hidden_tooltip = {
 					character_event = {
-						id = 38295  #Notify Removed Shy
+						id = 38295  #Notify Removed introverted
 					}
 				}
 			}
@@ -1556,11 +1556,11 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.5
-			trait = trusting
+			trait = open_minded
 		}
 		modifier = {
 			factor = 2
-			trait = paranoid
+			trait = close_minded
 		}
 		modifier = {
 			factor = 2
@@ -1769,7 +1769,7 @@ character_event = {
 		OR = {
 			trait = disciplined
 			trait = introverted
-			trait = paranoid
+			trait = close_minded
 		}
 		host = {
 			any_courtier = {
@@ -2041,7 +2041,7 @@ character_event = {
 		}
 		OR = {
 			trait = disciplined
-			trait = paranoid
+			trait = close_minded
 			trait = introverted
 		}
 		any_courtier = {
@@ -2054,7 +2054,7 @@ character_event = {
 			}
 			trait = carefree
 			OR = {
-				trait = trusting
+				trait = open_minded
 				trait = friendly
 				trait = friendly
 				trait = extraverted
@@ -2086,7 +2086,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.5
-			trait = trusting
+			trait = open_minded
 		}
 		
 		modifier = {
@@ -2112,7 +2112,7 @@ character_event = {
 				at_location = ROOT
 				trait = carefree
 				OR = {
-					trait = trusting
+					trait = open_minded
 					trait = friendly
 					trait = friendly
 					trait = extraverted
@@ -2154,7 +2154,7 @@ character_event = {
 				at_location = ROOT
 				trait = carefree
 				OR = {
-					trait = trusting
+					trait = open_minded
 					trait = friendly
 					trait = friendly
 					trait = extraverted
@@ -2299,9 +2299,9 @@ character_event = {
 		}
 		if = {
 			limit = {
-				trait = paranoid
+				trait = close_minded
 			}
-			remove_trait = paranoid
+			remove_trait = close_minded
 		}
 		if = {
 			limit = {
@@ -2880,11 +2880,11 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			trait = honest
+			trait = friendly
 		}
 		modifier = {
 			factor = 0.5
-			trait = deceitful
+			trait = cold
 		}
 		modifier = {
 			factor = 0.5
@@ -3378,10 +3378,10 @@ character_event = {
 					num_of_traits = 5
 				}
 				NOT = {
-					trait = deceitful
+					trait = cold
 				}
 			}
-			add_trait = deceitful
+			add_trait = cold
 		}
 		FROM = {
 			character_event = {
@@ -3844,7 +3844,7 @@ character_event = {
 					num_of_rivals = 2
 				}
 				OR = {
-					trait = deceitful
+					trait = cold
 					trait = cold
 				}
 				NOT = {
@@ -3932,7 +3932,7 @@ character_event = {
 							num_of_rivals = 2
 						}
 						OR = {
-							trait = deceitful
+							trait = cold
 							trait = cold
 						}
 						NOT = {
@@ -4132,11 +4132,11 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			trait = deceitful
+			trait = cold
 		}
 		modifier = {
 			factor = 2
-			trait = paranoid
+			trait = close_minded
 		}
 		modifier = {
 			factor = 2
@@ -4153,7 +4153,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.5
-			trait = honest
+			trait = friendly
 		}
 	}
 	
@@ -4253,7 +4253,7 @@ character_event = {
 				add_trait = cold
 				hidden_tooltip = {
 					character_event = {
-						id = 38252 #Notify Greedy
+						id = 38252 #Notify cold
 					}
 				}
 			}
@@ -4272,7 +4272,7 @@ character_event = {
 				add_trait = pragmatic
 				hidden_tooltip = {
 					character_event = {
-						id = 38258 #Notify Cynical
+						id = 38258 #Notify pragmatic
 					}
 				}
 			}
@@ -4530,7 +4530,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.5
-			trait = trusting
+			trait = open_minded
 		}
 		modifier = {
 			factor = 0.5
@@ -4551,7 +4551,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 2
-			trait = paranoid
+			trait = close_minded
 		}
 		modifier = {
 			factor = 2
@@ -4653,15 +4653,15 @@ character_event = {
 					num_of_traits = 5
 				}
 				NOT = {
-					trait = honest
+					trait = friendly
 				}
 			}
 			random = {
 				chance = 15
-				add_trait = honest
+				add_trait = friendly
 				hidden_tooltip = {
 					character_event = {
-						id = 38262 #Notify Honest
+						id = 38262 #Notify friendly
 					}
 				}
 			}
@@ -4681,7 +4681,7 @@ character_event = {
 				add_trait = disciplined
 				hidden_tooltip = {
 					character_event = {
-						id = 38256 #Notify Diligent
+						id = 38256 #Notify disciplined
 					}
 				}
 			}
@@ -4704,15 +4704,15 @@ character_event = {
 					num_of_traits = 5
 				}
 				NOT = {
-					trait = honest
+					trait = friendly
 				}
 			}
 			random = {
 				chance = 15
-				add_trait = honest
+				add_trait = friendly
 				hidden_tooltip = {
 					character_event = {
-						id = 38262 #Notify Honest
+						id = 38262 #Notify friendly
 					}
 				}
 			}
@@ -4731,7 +4731,7 @@ character_event = {
 				add_trait = disciplined
 				hidden_tooltip = {
 					character_event = {
-						id = 38256 #Notify Diligent
+						id = 38256 #Notify disciplined
 					}
 				}
 			}
@@ -4754,15 +4754,15 @@ character_event = {
 					num_of_traits = 5
 				}
 				NOT = {
-					trait = honest
+					trait = friendly
 				}
 			}
 			random = {
 				chance = 15
-				add_trait = honest
+				add_trait = friendly
 				hidden_tooltip = {
 					character_event = {
-						id = 38262 #Notify Honest
+						id = 38262 #Notify friendly
 					}
 				}
 			}
@@ -4781,7 +4781,7 @@ character_event = {
 				add_trait = disciplined
 				hidden_tooltip = {
 					character_event = {
-						id = 38256 #Notify Diligent
+						id = 38256 #Notify disciplined
 					}
 				}
 			}
@@ -4804,15 +4804,15 @@ character_event = {
 					num_of_traits = 5
 				}
 				NOT = {
-					trait = honest
+					trait = friendly
 				}
 			}
 			random = {
 				chance = 15
-				add_trait = honest
+				add_trait = friendly
 				hidden_tooltip = {
 					character_event = {
-						id = 38262 #Notify Honest
+						id = 38262 #Notify friendly
 					}
 				}
 			}
@@ -4832,7 +4832,7 @@ character_event = {
 				add_trait = disciplined
 				hidden_tooltip = {
 					character_event = {
-						id = 38256 #Notify Diligent
+						id = 38256 #Notify disciplined
 					}
 				}
 			}
@@ -4855,15 +4855,15 @@ character_event = {
 					num_of_traits = 5
 				}
 				NOT = {
-					trait = honest
+					trait = friendly
 				}
 			}
 			random = {
 				chance = 15
-				add_trait = honest
+				add_trait = friendly
 				hidden_tooltip = {
 					character_event = {
-						id = 38262 #Notify Honest
+						id = 38262 #Notify friendly
 					}
 				}
 			}
@@ -4882,7 +4882,7 @@ character_event = {
 				add_trait = disciplined
 				hidden_tooltip = {
 					character_event = {
-						id = 38256 #Notify Diligent
+						id = 38256 #Notify disciplined
 					}
 				}
 			}
@@ -4912,7 +4912,7 @@ character_event = {
 	}
 	option = {
 		name = EVTOPTB100111
-		add_trait = paranoid
+		add_trait = close_minded
 		reverse_opinion = {
 			modifier = opinion_grateful
 			who = FROM
@@ -5096,11 +5096,11 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.5
-			trait = honest
+			trait = friendly
 		}
 		modifier = {
 			factor = 0.5
-			trait = trusting
+			trait = open_minded
 		}
 		modifier = {
 			factor = 0.5
@@ -5113,11 +5113,11 @@ character_event = {
 		}
 		modifier = {
 			factor = 2
-			trait = deceitful
+			trait = cold
 		}
 		modifier = {
 			factor = 2
-			trait = paranoid
+			trait = close_minded
 		}
 		modifier = {
 			factor = 2
@@ -5494,7 +5494,7 @@ character_event = {
 		
 		modifier = {
 			factor = 0.5
-			trait = trusting
+			trait = open_minded
 		}		
 	}
 	
@@ -5822,7 +5822,7 @@ character_event = {
 		
 		modifier = {
 			factor = 0.5
-			trait = honest
+			trait = friendly
 		}
 		modifier = {
 			factor = 0.5
@@ -5834,12 +5834,12 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.5
-			trait = trusting
+			trait = open_minded
 		}
 		
 		modifier = {
 			factor = 2
-			trait = deceitful
+			trait = cold
 		}
 		modifier = {
 			factor = 2
@@ -5851,7 +5851,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 2
-			trait = paranoid
+			trait = close_minded
 		}
 	}
 	
@@ -6195,7 +6195,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.5
-			trait = trusting
+			trait = open_minded
 		}
 		
 		modifier = {
@@ -6212,7 +6212,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 2
-			trait = paranoid
+			trait = close_minded
 		}
 	}
 	
@@ -6560,7 +6560,7 @@ character_event = {
 		
 		modifier = {
 			factor = 0.5
-			trait = honest
+			trait = friendly
 		}
 		modifier = {
 			factor = 0.5
@@ -6572,12 +6572,12 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.5
-			trait = trusting
+			trait = open_minded
 		}
 		
 		modifier = {
 			factor = 2
-			trait = deceitful
+			trait = cold
 		}
 		modifier = {
 			factor = 2
@@ -6589,7 +6589,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 2
-			trait = paranoid
+			trait = close_minded
 		}
 	}
 	
@@ -6915,11 +6915,11 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			trait = paranoid
+			trait = close_minded
 		}
 		modifier = {
 			factor = 0.5
-			trait = trusting
+			trait = open_minded
 		}
 		modifier = {
 			factor = 0.5
@@ -7261,7 +7261,7 @@ character_event = {
 		
 		modifier = {
 			factor = 0.5
-			trait = honest
+			trait = friendly
 		}
 		modifier = {
 			factor = 0.5
@@ -7273,12 +7273,12 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.5
-			trait = trusting
+			trait = open_minded
 		}
 		
 		modifier = {
 			factor = 2
-			trait = deceitful
+			trait = cold
 		}
 		modifier = {
 			factor = 2
@@ -7290,7 +7290,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 2
-			trait = paranoid
+			trait = close_minded
 		}
 	}
 	
@@ -7615,7 +7615,7 @@ character_event = {
 		
 		modifier = {
 			factor = 0.5
-			trait = honest
+			trait = friendly
 		}
 		modifier = {
 			factor = 0.5
@@ -7627,12 +7627,12 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.5
-			trait = trusting
+			trait = open_minded
 		}
 		
 		modifier = {
 			factor = 2
-			trait = deceitful
+			trait = cold
 		}
 		modifier = {
 			factor = 2
@@ -7644,7 +7644,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 2
-			trait = paranoid
+			trait = close_minded
 		}
 	}
 	
@@ -7679,9 +7679,9 @@ character_event = {
 		name = EVTOPTB100220
 		if = {
 			limit = {
-				trait = paranoid
+				trait = close_minded
 			}
-			remove_trait = paranoid
+			remove_trait = close_minded
 		}
 		if = {
 			limit = {
@@ -7695,7 +7695,7 @@ character_event = {
 					trait = disciplined
 				}
 				NOT = {
-					trait = paranoid
+					trait = close_minded
 				}
 			}
 			prestige = 10
@@ -7832,10 +7832,10 @@ character_event = {
 		if = {
 			limit = {
 				NOT = {
-					trait = paranoid
+					trait = close_minded
 				}
 			}
-			add_trait = paranoid
+			add_trait = close_minded
 		}
 	}
 }
@@ -8026,7 +8026,7 @@ character_event = {
 		
 		modifier = {
 			factor = 0.5
-			trait = honest
+			trait = friendly
 		}
 		modifier = {
 			factor = 0.5
@@ -8038,12 +8038,12 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.5
-			trait = trusting
+			trait = open_minded
 		}
 		
 		modifier = {
 			factor = 2
-			trait = deceitful
+			trait = cold
 		}
 		modifier = {
 			factor = 2
@@ -8055,7 +8055,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 2
-			trait = paranoid
+			trait = close_minded
 		}
 	}
 	
@@ -9036,10 +9036,10 @@ character_event = {
 					}
 				}
 				AND = {
-					trait = deceitful
+					trait = cold
 					ROOT = {
 						NOT = {
-							trait = deceitful
+							trait = cold
 						}
 					}
 				}
@@ -9064,12 +9064,12 @@ character_event = {
 		}
 		modifier = {
 			factor = 4
-			trait = trusting
+			trait = open_minded
 		}
 		
 		modifier = {
 			factor = 0.5
-			trait = paranoid
+			trait = close_minded
 		}
 		modifier = {
 			factor = 0.5
@@ -9097,10 +9097,10 @@ character_event = {
 						}
 					}
 					AND = {
-						trait = deceitful
+						trait = cold
 						ROOT = {
 							NOT = {
-								trait = deceitful
+								trait = cold
 							}
 						}
 					}
@@ -9141,10 +9141,10 @@ character_event = {
 						}
 					}
 					AND = {
-						trait = deceitful
+						trait = cold
 						ROOT = {
 							NOT = {
-								trait = deceitful
+								trait = cold
 							}
 						}
 					}
@@ -9184,10 +9184,10 @@ character_event = {
 						}
 					}
 					AND = {
-						trait = deceitful
+						trait = cold
 						ROOT = {
 							NOT = {
-								trait = deceitful
+								trait = cold
 							}
 						}
 					}
@@ -10236,7 +10236,7 @@ character_event = {
 		
 		modifier = {
 			factor = 3
-			trait = honest
+			trait = friendly
 		}
 		modifier = {
 			factor = 0.5
@@ -10248,12 +10248,12 @@ character_event = {
 		}
 		modifier = {
 			factor = 2
-			trait = trusting
+			trait = open_minded
 		}
 		
 		modifier = {
 			factor = 0.5
-			trait = deceitful
+			trait = cold
 		}
 		modifier = {
 			factor = 2
@@ -10265,7 +10265,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.5
-			trait = paranoid
+			trait = close_minded
 		}
 	}
 	
@@ -10401,7 +10401,7 @@ character_event = {
 				add_trait = radical
 				hidden_tooltip = {
 					character_event = {
-						id = 38267 #Notify Just
+						id = 38267 #Notify radical
 					}
 				}
 			}
@@ -10470,7 +10470,7 @@ character_event = {
 				add_trait = pragmatic
 				hidden_tooltip = {
 					character_event = {
-						id = 38266 #Notify Arbitrary
+						id = 38266 #Notify pragmatic
 					}
 				}
 			}
@@ -11215,7 +11215,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			trait = honest
+			trait = friendly
 		}
 	}
 	
@@ -11256,15 +11256,15 @@ character_event = {
 					num_of_traits = 5
 				}
 				NOT = {
-					trait = honest
+					trait = friendly
 				}
 			}
 			random = {
 				chance = 10
-				add_trait = honest
+				add_trait = friendly
 				hidden_tooltip = {
 					character_event = {
-						id = 38262 #Notify Honest
+						id = 38262 #Notify friendly
 					}
 				}
 			}
@@ -11274,7 +11274,7 @@ character_event = {
 				NOT = {
 					num_of_traits = 5
 				}
-				trait = honest
+				trait = friendly
 				NOT = {
 					trait = content
 				}
@@ -11293,7 +11293,7 @@ character_event = {
 			limit = {
 				OR = {
 					AND = {
-						trait = honest
+						trait = friendly
 						trait = content
 					}
 					num_of_traits = 4
@@ -12051,7 +12051,7 @@ character_event = {
 			OR = {
 				leads_faction = faction_succ_seniority
 				leads_faction = faction_succ_primogeniture
-				leads_faction = faction_succ_gavelfriendly
+				leads_faction = faction_succ_gavelkind
 				leads_faction = faction_succ_feudal_elective
 			}
 		}
@@ -12136,7 +12136,7 @@ character_event = {
 				OR = {
 					leads_faction = faction_succ_seniority
 					leads_faction = faction_succ_primogeniture
-					leads_faction = faction_succ_gavelfriendly
+					leads_faction = faction_succ_gavelkind
 					leads_faction = faction_succ_feudal_elective
 				}
 			}
@@ -12158,7 +12158,7 @@ character_event = {
 			}
 			if = {
 				limit = {
-					leads_faction = faction_succ_gavelfriendly
+					leads_faction = faction_succ_gavelkind
 				}
 				ROOT = {
 					back_plot = PREV
@@ -12282,7 +12282,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			trait = deceitful
+			trait = cold
 		}
 	}
 	
@@ -12512,7 +12512,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.5
-			trait = deceitful
+			trait = cold
 		}
 		
 		modifier = {
@@ -12521,7 +12521,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 2
-			trait = honest
+			trait = friendly
 		}
 	}
 	
@@ -12995,7 +12995,7 @@ character_event = {
 		
 		modifier = {
 			factor = 0.5
-			trait = deceitful
+			trait = cold
 		}
 		modifier = {
 			factor = 0.9

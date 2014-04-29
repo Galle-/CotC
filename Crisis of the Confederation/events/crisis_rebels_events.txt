@@ -2191,57 +2191,6 @@ letter_event = {
 			FROM = {
 				any_war = { end_war = invalid }
 				opinion = { who = ROOT modifier = opinion_evil_tyrant }
-				hidden_tooltip = {
-					# Set up a new title for the rebels, one tier below ours
-					if = {
-						limit = { ROOT = { primary_title = { tier = DUKE } } }
-						create_title = {
-							tier = COUNT
-							landless = yes
-							temporary = yes
-							rebel = yes
-							culture = ROOT
-							name = "DEMOCRATIC_REVOLT"
-							holder = THIS
-						}
-						any_demesne_title = {
-							limit = { not = { higher_tier_than = BARON } }
-							destroy_landed_title = this # Destroy all baronies to prevent patricianization
-						}
-					}
-					if = {
-						limit = { ROOT = { primary_title = { tier = KING } } }
-						create_title = {
-							tier = DUKE
-							landless = yes
-							temporary = yes
-							rebel = yes
-							culture = ROOT
-							name = "DEMOCRATIC_REVOLT"
-							holder = THIS
-						}
-						any_demesne_title = {
-							limit = { not = { higher_tier_than = COUNT } }
-							destroy_landed_title = this
-						}
-					}
-					if = {
-						limit = { ROOT = { primary_title = { tier = EMPEROR } } }
-						create_title = {
-							tier = KING
-							landless = yes
-							temporary = yes
-							rebel = yes
-							culture = ROOT
-							name = "DEMOCRATIC_REVOLT"
-							holder = THIS
-						}
-						any_demesne_title = {
-							limit = { not = { higher_tier_than = DUKE } }
-							destroy_landed_title = this
-						}
-					}
-				}
 				set_character_flag = flag_revolter
 				set_defacto_liege = ROOT
 			}
@@ -3277,7 +3226,7 @@ province_event = {
 					new_character = {
 						# Create a new title
 						create_title = {
-							tier = KING
+							tier = DUKE
 							landless = yes
 							temporary = yes
 							rebel = yes
@@ -3337,7 +3286,7 @@ province_event = {
 					new_character = {
 						# Create a new title
 						create_title = {
-							tier = KING
+							tier = DUKE
 							landless = yes
 							temporary = yes
 							rebel = yes
@@ -3400,7 +3349,7 @@ province_event = {
 			new_character = {
 				# Create a new title
 				create_title = {
-					tier = KING
+					tier = DUKE
 					landless = yes
 					temporary = yes
 					rebel = yes
@@ -3461,7 +3410,7 @@ province_event = {
 			new_character = {
 				# Create a new title
 				create_title = {
-					tier = KING
+					tier = DUKE
 					landless = yes
 					temporary = yes
 					rebel = yes
@@ -4424,57 +4373,6 @@ letter_event = {
 			FROM = {
 				any_war = { end_war = invalid }
 				opinion = { who = ROOT modifier = opinion_evil_tyrant }
-				hidden_tooltip = {
-					# Set up a new title for the rebels, one tier below ours
-					if = {
-						limit = { ROOT = { primary_title = { tier = DUKE } } }
-						create_title = {
-							tier = COUNT
-							landless = yes
-							temporary = yes
-							rebel = yes
-							culture = ROOT
-							name = "AUTOCRATIC_REVOLT"
-							holder = THIS
-						}
-						any_demesne_title = {
-							limit = { not = { higher_tier_than = BARON } }
-							destroy_landed_title = this # Destroy all baronies to prevent patricianization
-						}
-					}
-					if = {
-						limit = { ROOT = { primary_title = { tier = KING } } }
-						create_title = {
-							tier = DUKE
-							landless = yes
-							temporary = yes
-							rebel = yes
-							culture = ROOT
-							name = "AUTOCRATIC_REVOLT"
-							holder = THIS
-						}
-						any_demesne_title = {
-							limit = { not = { higher_tier_than = COUNT } }
-							destroy_landed_title = this
-						}
-					}
-					if = {
-						limit = { ROOT = { primary_title = { tier = EMPEROR } } }
-						create_title = {
-							tier = KING
-							landless = yes
-							temporary = yes
-							rebel = yes
-							culture = ROOT
-							name = "AUTOCRATIC_REVOLT"
-							holder = THIS
-						}
-						any_demesne_title = {
-							limit = { not = { higher_tier_than = DUKE } }
-							destroy_landed_title = this
-						}
-					}
-				}
 				set_character_flag = flag_revolter
 				set_defacto_liege = ROOT
 			}
@@ -5510,7 +5408,7 @@ province_event = {
 					new_character = {
 						# Create a new title
 						create_title = {
-							tier = KING
+							tier = DUKE
 							landless = yes
 							temporary = yes
 							rebel = yes
@@ -5570,7 +5468,7 @@ province_event = {
 					new_character = {
 						# Create a new title
 						create_title = {
-							tier = KING
+							tier = DUKE
 							landless = yes
 							temporary = yes
 							rebel = yes
@@ -5633,7 +5531,7 @@ province_event = {
 			new_character = {
 				# Create a new title
 				create_title = {
-					tier = KING
+					tier = DUKE
 					landless = yes
 					temporary = yes
 					rebel = yes
@@ -5694,7 +5592,7 @@ province_event = {
 			new_character = {
 				# Create a new title
 				create_title = {
-					tier = KING
+					tier = DUKE
 					landless = yes
 					temporary = yes
 					rebel = yes
@@ -6649,57 +6547,6 @@ letter_event = {
 			FROM = {
 				any_war = { end_war = invalid }
 				opinion = { who = ROOT modifier = opinion_evil_tyrant }
-				hidden_tooltip = {
-					# Set up a new title for the rebels, one tier below ours
-					if = {
-						limit = { ROOT = { primary_title = { tier = DUKE } } }
-						create_title = {
-							tier = COUNT
-							landless = yes
-							temporary = yes
-							rebel = yes
-							culture = ROOT
-							name = "THEOCRATIC_REVOLT"
-							holder = THIS
-						}
-						any_demesne_title = {
-							limit = { not = { higher_tier_than = BARON } }
-							destroy_landed_title = this # Destroy all baronies to prevent patricianization
-						}
-					}
-					if = {
-						limit = { ROOT = { primary_title = { tier = KING } } }
-						create_title = {
-							tier = DUKE
-							landless = yes
-							temporary = yes
-							rebel = yes
-							culture = ROOT
-							name = "THEOCRATIC_REVOLT"
-							holder = THIS
-						}
-						any_demesne_title = {
-							limit = { not = { higher_tier_than = COUNT } }
-							destroy_landed_title = this
-						}
-					}
-					if = {
-						limit = { ROOT = { primary_title = { tier = EMPEROR } } }
-						create_title = {
-							tier = KING
-							landless = yes
-							temporary = yes
-							rebel = yes
-							culture = ROOT
-							name = "THEOCRATIC_REVOLT"
-							holder = THIS
-						}
-						any_demesne_title = {
-							limit = { not = { higher_tier_than = DUKE } }
-							destroy_landed_title = this
-						}
-					}
-				}
 				set_character_flag = flag_revolter
 				set_defacto_liege = ROOT
 			}
@@ -7731,7 +7578,7 @@ province_event = {
 					new_character = {
 						# Create a new title
 						create_title = {
-							tier = KING
+							tier = DUKE
 							landless = yes
 							temporary = yes
 							rebel = yes
@@ -7790,7 +7637,7 @@ province_event = {
 					new_character = {
 						# Create a new title
 						create_title = {
-							tier = KING
+							tier = DUKE
 							landless = yes
 							temporary = yes
 							rebel = yes
@@ -7853,7 +7700,7 @@ province_event = {
 			new_character = {
 				# Create a new title
 				create_title = {
-					tier = KING
+					tier = DUKE
 					landless = yes
 					temporary = yes
 					rebel = yes
@@ -7914,7 +7761,7 @@ province_event = {
 			new_character = {
 				# Create a new title
 				create_title = {
-					tier = KING
+					tier = DUKE
 					landless = yes
 					temporary = yes
 					rebel = yes

@@ -292,7 +292,7 @@ character_event = {
 	immediate = { character_event = { id = laws.0 } }
 }
 
-# Character has just gained a pro or anti-ruler trait, give them appropriate cache flags
+# Character has radical gained a pro or anti-ruler trait, give them appropriate cache flags
 character_event = {
 	id = laws.8
 	hide_window = yes
@@ -7176,7 +7176,7 @@ character_event = {
 	}
 }
 
-# AI just became important in the middle of a constitutional crisis, deal with the situation
+# AI radical became important in the middle of a constitutional crisis, deal with the situation
 character_event = {
 	id = laws.501
 	hide_window = yes

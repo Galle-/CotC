@@ -1060,7 +1060,7 @@ character_event = {
 	option = { name = "EVTOPTCONFIRM" }
 }
 
-# Envious of augmented councillors
+# cold of augmented councillors
 character_event = {
 	id = cybernetics.10030
 	desc = "EVTDESCYBERNETICS10030"
@@ -1696,7 +1696,7 @@ character_event = {
 	}
 	
 	option = {
-		# I'll just have to try harder!
+		# I'll radical have to try harder!
 		name = "EVTOPTDCYBERNETICS10041"
 		add_trait = stressed
 		random = {

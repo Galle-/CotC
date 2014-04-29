@@ -36,14 +36,6 @@ character_event = { # An election has been called on your titles for some reason
 	option = { # Hold Imperial elections
 		trigger = { primary_title = { tier = emperor } }
 		name = "EVTOPTALAWS100"
-		any_demesne_title = {
-			limit = {
-				tier = emperor
-				has_law = succ_patrician_elective
-			}
-			hold_election = yes
-		}
-		# Non-patrician-elective merchant republics
 		# All elections need to be done simultaneously and have the same outcome,
 		# bsed on the primary title's succession law. Otherwise the republic will
 		# get broken.
@@ -62,7 +54,12 @@ character_event = { # An election has been called on your titles for some reason
 		if = {
 			limit = {
 				is_merchant_republic = yes
-				primary_title = { has_law = succ_open_elective }
+				primary_title = {
+					OR = {
+						has_law = succ_open_elective
+						has_law = succ_patrician_elective
+					}
+				}
 			}
 			primary_title = { current_heir = { character_event = { id = laws.102 tooltip = "EVTTOOLTIPLAWS102" } } } # Begin popular election
 		}
@@ -92,14 +89,6 @@ character_event = { # An election has been called on your titles for some reason
 	option = { # Hold regional elections
 		trigger = { primary_title = { tier = king } }
 		name = "EVTOPTALAWS100"
-		any_demesne_title = {
-			limit = {
-				tier = king
-				has_law = succ_patrician_elective
-			}
-			hold_election = yes
-		}
-		# Non-patrician-elective merchant republics
 		# All elections need to be done simultaneously and have the same outcome,
 		# bsed on the primary title's succession law. Otherwise the republic will
 		# get broken.
@@ -118,7 +107,12 @@ character_event = { # An election has been called on your titles for some reason
 		if = {
 			limit = {
 				is_merchant_republic = yes
-				primary_title = { has_law = succ_open_elective }
+				primary_title = {
+					OR = {
+						has_law = succ_open_elective
+						has_law = succ_patrician_elective
+					}
+				}
 			}
 			primary_title = { current_heir = { character_event = { id = laws.102 tooltip = "EVTTOOLTIPLAWS102" } } } # Begin popular election
 		}
@@ -149,14 +143,6 @@ character_event = { # An election has been called on your titles for some reason
 	option = { # Hold sector elections
 		trigger = { primary_title = { tier = duke } }
 		name = "EVTOPTALAWS100"
-		any_demesne_title = {
-			limit = {
-				tier = duke
-				has_law = succ_patrician_elective
-			}
-			hold_election = yes
-		}
-		# Non-patrician-elective merchant republics
 		# All elections need to be done simultaneously and have the same outcome,
 		# bsed on the primary title's succession law. Otherwise the republic will
 		# get broken.
@@ -175,7 +161,12 @@ character_event = { # An election has been called on your titles for some reason
 		if = {
 			limit = {
 				is_merchant_republic = yes
-				primary_title = { has_law = succ_open_elective }
+				primary_title = {
+					OR = {
+						has_law = succ_open_elective
+						has_law = succ_patrician_elective
+					}
+				}
 			}
 			primary_title = { current_heir = { character_event = { id = laws.102 tooltip = "EVTTOOLTIPLAWS102" } } } # Begin popular election
 		}
@@ -583,7 +574,7 @@ character_event = {
 							OR = {
 								AND = {
 									is_primary_holder_title_tier = yes
-									has_law = open_elective
+									has_law = succ_open_elective
 									current_heir = { character = ROOT }
 								}
 								# Kingdom capital systems
@@ -592,7 +583,7 @@ character_event = {
 										has_province_modifier = kingdom_capital_system
 										kingdom = {
 											is_primary_holder_title_tier = yes
-											has_law = open_elective
+											has_law = succ_open_elective
 											current_heir = { character = ROOT }
 										}
 										OR = {
@@ -607,7 +598,7 @@ character_event = {
 										has_province_modifier = empire_capital_system
 										empire = {
 											is_primary_holder_title_tier = yes
-											has_law = open_elective
+											has_law = succ_open_elective
 											current_heir = { character = ROOT }
 										}
 										OR = {
@@ -1088,6 +1079,7 @@ character_event = {
 	
 	trigger = {
 		any_demesne_title = {
+			temporary = no
 			OR = {
 				has_law = term_length_0
 				has_law = term_length_1
@@ -1113,6 +1105,7 @@ character_event = {
 	trigger = {
 		NOT = {
 			any_demesne_title = {
+				temporary = no
 				OR = {
 					has_law = term_length_0
 					has_law = term_length_1
@@ -1142,6 +1135,7 @@ character_event = {
 			AND = {
 				had_character_flag = { flag = flag_term_limit_timer days = 365 }
 				primary_title = {
+					temporary = no
 					OR = {
 						has_law = term_length_0
 						has_law = local_term_length_0
@@ -1151,6 +1145,7 @@ character_event = {
 			AND = {
 				had_character_flag = { flag = flag_term_limit_timer days = 1460 }
 				primary_title = {
+					temporary = no
 					OR = {
 						has_law = term_length_1
 						has_law = local_term_length_1
@@ -1160,6 +1155,7 @@ character_event = {
 			AND = {
 				had_character_flag = { flag = flag_term_limit_timer days = 2920 }
 				primary_title = {
+					temporary = no
 					OR = {
 						has_law = term_length_2
 						has_law = local_term_length_2
@@ -1169,6 +1165,7 @@ character_event = {
 			AND = {
 				had_character_flag = { flag = flag_term_limit_timer days = 3650 }
 				primary_title = {
+					temporary = no
 					OR = {
 						has_law = term_length_3
 						has_law = local_term_length_3
@@ -1482,10 +1479,13 @@ character_event = {
 	
 	trigger = {
 		is_merchant_republic = yes
-		primary_title = { current_heir = { dynasty = ROOT } }
+		primary_title = {
+			current_heir = { dynasty = ROOT }
+			temporary = no
+		}
 	}
 	
-	immediate = { primary_title = { current_heir = { ROOT = { abdicate_to = PREVPREV } } } }
+	immediate = { primary_title = { current_heir = { ROOT = { abdicate_to = PREV } } } }
 }
 character_event = {
 	id = laws.156
@@ -1494,7 +1494,10 @@ character_event = {
 	
 	trigger = {
 		is_merchant_republic = yes
-		primary_title = { current_heir = { NOT = { dynasty = ROOT } } }
+		primary_title = {
+			current_heir = { NOT = { dynasty = ROOT } }
+			temporary = no
+		}
 	}
 	
 	immediate = {

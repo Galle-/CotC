@@ -38,6 +38,7 @@
 			religion_authority = { modifier = allowed_major_rebellion years = 60 } # Avalon
 			religion_authority = { modifier = allowed_major_rebellion years = 60 } # Tarka
 			religion_authority = { modifier = allowed_major_rebellion years = 60 } # Mukta Duniya
+			prestige = -5000 # James Buchanan IN SPACE
 		}
 	}
 

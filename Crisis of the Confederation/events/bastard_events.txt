@@ -49,12 +49,12 @@ character_event = {
 		}
 		modifier = {
 			factor = 2
-			trait = gregarious
+			trait = extraverted
 		}
 		
 		modifier = {
 			factor = 0.5
-			trait = shy
+			trait = introverted
 		}
 	}
 	
@@ -212,10 +212,10 @@ character_event = {
 		random = {
 			chance = 25
 			
-			add_trait = cruel
+			add_trait = cold
 			hidden_tooltip = {
 				character_event = {
-					id = 38259 #Notify Cruel
+					id = 38259 #Notify cold
 				}
 			}
 		}
@@ -233,7 +233,7 @@ character_event = {
 	option = {
 		name = "EVTOPTA76006"
 		scaled_wealth = -0.33
-		add_trait = deceitful
+		add_trait = cold
 		random = {
 			chance = 10
 			
@@ -252,17 +252,17 @@ character_event = {
 		random = {
 			chance = 33
 			
-			add_trait = arbitrary
+			add_trait = pragmatic
 			hidden_tooltip = {
 				character_event = {
-					id = 38266 #Notify Arbitrary
+					id = 38266 #Notify pragmatic
 				}
 			}
 		}
 	}
 	option = {
 		name = "EVTOPTC76006"
-		add_trait = trusting
+		add_trait = open_minded
 		job_spymaster = {
 			character_event = {
 				id = 76007
@@ -345,14 +345,14 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA76008"
-		add_trait = deceitful
+		add_trait = cold
 		FROM = {
 			imprison = ROOT
 		}
 	}
 	option = {
 		name = "EVTOPTB76008"
-		add_trait = honest
+		add_trait = friendly
 		prestige = -20
 	}
 	option = {
@@ -463,7 +463,7 @@ character_event = {
 	}
 	option = {
 		name = "EVTOPTB76010"
-		add_trait = honest
+		add_trait = friendly
 	}
 }
 
@@ -575,13 +575,13 @@ character_event = {
 			trait = gluttonous
 		}
 		NOT = {
-			trait = greedy
+			trait = cold
 		}
 		NOT = {
-			trait = slothful
+			trait = carefree
 		}
 		NOT = {
-			trait = envious
+			trait = cold
 		}
 		NOT = {
 			trait = wroth
@@ -1037,10 +1037,10 @@ character_event = {
 				change_diplomacy = 1
 			}
 			30 = {
-				add_trait = shy
+				add_trait = introverted
 				hidden_tooltip = {
 					character_event = {
-						id = 38263 #Notify Shy
+						id = 38263 #Notify introverted
 					}
 				}
 			}
@@ -1083,10 +1083,10 @@ character_event = {
 				}
 			}
 			20 = {
-				add_trait = deceitful
+				add_trait = cold
 				hidden_tooltip = {
 					character_event = {
-						id = 38255 #Notify Deceitful
+						id = 38255 #Notify cold
 					}
 				}
 			}
@@ -1159,14 +1159,14 @@ character_event = {
 					}
 				}
 				20 = {
-					add_trait = zealous
+					add_trait = radical
 					hidden_tooltip = {
 						character_event = {
-							id = 38269 #Notify Zealous
+							id = 38269 #Notify radical
 						}
 						ROOT = {
 							character_event = {
-								id = 38169 #Notify child is Zealous
+								id = 38169 #Notify child is radical
 							}
 						}
 					}
@@ -1192,14 +1192,14 @@ character_event = {
 					}
 				}
 				20 = {
-					add_trait = shy
+					add_trait = introverted
 					hidden_tooltip = {
 						character_event = {
-							id = 38263 #Notify Shy
+							id = 38263 #Notify introverted
 						}
 						ROOT = {
 							character_event = {
-								id = 38163 #Notify child is Shy
+								id = 38163 #Notify child is introverted
 							}
 						}
 					}
@@ -1250,14 +1250,14 @@ character_event = {
 				80 = {
 				}
 				20 = {
-					add_trait = zealous
+					add_trait = radical
 					hidden_tooltip = {
 						character_event = {
-							id = 38269 #Notify Zealous
+							id = 38269 #Notify radical
 						}
 						ROOT = {
 							character_event = {
-								id = 38169 #Notify child is Zealous
+								id = 38169 #Notify child is radical
 							}
 						}
 					}

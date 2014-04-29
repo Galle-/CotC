@@ -14,7 +14,7 @@ character_event = {
 			trait = full_cybernetic_conversion
 			trait = open_minded
 			religion = cyberneticist
-			religion = machine_cult
+			religion = machine_cultist
 		}
 		OR = {
 			AND = {
@@ -1112,7 +1112,7 @@ character_event = {
 	}
 }
 
-# Breaking up with a lover who just replaced you
+# Breaking up with a lover who radical replaced you
 character_event = {
 	id = lovers.7
 	hide_window = yes
@@ -2140,7 +2140,7 @@ character_event = {
 				factor = 1.25
 				FROM = {
 					num_of_lovers = 1
-					NOT = { any_lover = { { reverse_opinion = { who = ROOT value = -99 } } }
+					NOT = { any_lover = { { reverse_opinion = { who = ROOT value = -99 } } } }
 				}
 			}
 			modifier = {

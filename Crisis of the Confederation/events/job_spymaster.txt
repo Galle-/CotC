@@ -965,9 +965,9 @@ character_event = {
 			# any_vassal = {
 				# has_character_flag = faction_member
 				# OR = {
-					# trait = just
-					# trait = honest
-					# trait = trusting
+					# trait = radical
+					# trait = friendly
+					# trait = open_minded
 					# trait = content
 					# trait = kind
 				# }
@@ -988,10 +988,10 @@ character_event = {
 				# has_character_flag = faction_member
 				# OR = {
 					# trait = craven
-					# trait = paranoid
-					# trait = cynical
+					# trait = close_minded
+					# trait = pragmatic
 					# trait = humble
-					# trait = slothful
+					# trait = carefree
 				# }
 			# }
 		# }
@@ -1011,13 +1011,13 @@ character_event = {
 				# NOT = {
 					# OR = {
 						# trait = craven
-						# trait = paranoid
-						# trait = cynical
+						# trait = close_minded
+						# trait = pragmatic
 						# trait = humble
-						# trait = slothful
-						# trait = just
-						# trait = honest
-						# trait = trusting
+						# trait = carefree
+						# trait = radical
+						# trait = friendly
+						# trait = open_minded
 						# trait = content
 						# trait = kind
 						# trait = homosexual
@@ -1259,10 +1259,10 @@ character_event = {
 	
 	# is_triggered_only = yes
 	
-		# option = { # Agree (Just)
+		# option = { # Agree (radical)
 		# name = "EVTOPTA9005"
-		# tooltip_info = just
-		# trigger = { trait = just }
+		# tooltip_info = radical
+		# trigger = { trait = radical }
 		# FROM = {
 			# opinion = {
 				# modifier = opinion_pleased
@@ -1279,10 +1279,10 @@ character_event = {
 			# }
 		# }
 	# }
-	# option = { # Agree (Honest)
+	# option = { # Agree (friendly)
 		# name = "EVTOPTB9005"
-		# tooltip_info = honest
-		# trigger = { trait = honest }
+		# tooltip_info = friendly
+		# trigger = { trait = friendly }
 		# FROM = {
 			# opinion = {
 				# modifier = opinion_pleased
@@ -1299,10 +1299,10 @@ character_event = {
 			# }
 		# }
 	# }
-	# option = { # Agree (Trusting)
+	# option = { # Agree (open_minded)
 		# name = "EVTOPTC9005"
-		# tooltip_info = trusting
-		# trigger = { trait = trusting }
+		# tooltip_info = open_minded
+		# trigger = { trait = open_minded }
 		# FROM = {
 			# opinion = {
 				# modifier = opinion_pleased
@@ -1434,10 +1434,10 @@ character_event = {
 			# }
 		# }
 	# }
-	# option = { # Agree (Paranoid)
+	# option = { # Agree (close_minded)
 		# name = "EVTOPTB9008"
-		# tooltip_info = paranoid
-		# trigger = { trait = paranoid }
+		# tooltip_info = close_minded
+		# trigger = { trait = close_minded }
 		# FROM = {
 			# opinion = {
 				# modifier = opinion_pleased
@@ -1454,10 +1454,10 @@ character_event = {
 			# }
 		# }
 	# }
-	# option = { # Agree (Cynical)
+	# option = { # Agree (pragmatic)
 		# name = "EVTOPTC9008"
-		# tooltip_info = cynical
-		# trigger = { trait = cynical }
+		# tooltip_info = pragmatic
+		# trigger = { trait = pragmatic }
 		# FROM = {
 			# opinion = {
 				# modifier = opinion_pleased
@@ -1494,10 +1494,10 @@ character_event = {
 			# }
 		# }
 	# }
-	# option = { # Agree (Slothful)
+	# option = { # Agree (carefree)
 		# name = "EVTOPTE9008"
-		# tooltip_info = slothful
-		# trigger = { trait = slothful }
+		# tooltip_info = carefree
+		# trigger = { trait = carefree }
 		# FROM = {
 			# opinion = {
 				# modifier = opinion_pleased
@@ -1670,10 +1670,10 @@ character_event = {
 					# has_character_flag = faction_recruit
 					# OR = {
 						# trait = craven
-						# trait = paranoid
-						# trait = cynical
+						# trait = close_minded
+						# trait = pragmatic
 						# trait = humble
-						# trait = slothful
+						# trait = carefree
 					# }
 				# }
 			# }
@@ -1694,10 +1694,10 @@ character_event = {
 					# NOT = {
 						# OR = {
 							# trait = craven
-							# trait = paranoid
-							# trait = cynical
+							# trait = close_minded
+							# trait = pragmatic
 							# trait = humble
-							# trait = slothful
+							# trait = carefree
 							# trait = homosexual
 							# trait = impaler
 							# trait = lustful
@@ -1974,10 +1974,10 @@ character_event = {
 	
 	# is_triggered_only = yes
 	
-	# option = { # Agree (Paranoid)
+	# option = { # Agree (close_minded)
 		# name = "EVTOPTB9008"
-		# tooltip_info = paranoid
-		# trigger = { trait = paranoid }
+		# tooltip_info = close_minded
+		# trigger = { trait = close_minded }
 		# FROM = {
 			# opinion = {
 				# modifier = opinion_pleased
@@ -1994,10 +1994,10 @@ character_event = {
 			# }
 		# }
 	# }
-	# option = { # Agree (Cynical)
+	# option = { # Agree (pragmatic)
 		# name = "EVTOPTC9008"
-		# tooltip_info = cynical
-		# trigger = { trait = cynical }
+		# tooltip_info = pragmatic
+		# trigger = { trait = pragmatic }
 		# FROM = {
 			# opinion = {
 				# modifier = opinion_pleased
@@ -2034,10 +2034,10 @@ character_event = {
 			# }
 		# }
 	# }
-	# option = { # Agree (Slothful)
+	# option = { # Agree (carefree)
 		# name = "EVTOPTE9008"
-		# tooltip_info = slothful
-		# trigger = { trait = slothful }
+		# tooltip_info = carefree
+		# trigger = { trait = carefree }
 		# FROM = {
 			# opinion = {
 				# modifier = opinion_pleased
@@ -2584,7 +2584,7 @@ character_event = {
 				# factor = 3.0
 				# OR = {
 					# trait = wroth
-					# trait = paranoid
+					# trait = close_minded
 				# }
 			# }
 		# }
@@ -2617,7 +2617,7 @@ character_event = {
 				# factor = 3.0
 				# OR = {
 					# trait = proud
-					# trait = honest
+					# trait = friendly
 					# trait = brave
 				# }
 			# }

@@ -10,7 +10,7 @@ decisions = {
 				text = TOOLTIP_EMPLOYMENT_COOLDOWN_EXPIRED # Must not have employed a new courtier in the past six months
 				OR = {
 					NOT = { has_character_flag = flag_employment_cooldown }
-					had_character_flag = { name = flag_employment_cooldown days = 180 }
+					had_character_flag = { flag = flag_employment_cooldown days = 180 }
 				}
 			}
 		}
@@ -133,7 +133,7 @@ decisions = {
 				text = TOOLTIP_EMPLOYMENT_COOLDOWN_EXPIRED # Must not have employed a new courtier in the past six months
 				OR = {
 					NOT = { has_character_flag = flag_employment_cooldown }
-					had_character_flag = { name = flag_employment_cooldown days = 180 }
+					had_character_flag = { flag = flag_employment_cooldown days = 180 }
 				}
 			}
 		}
@@ -256,7 +256,7 @@ decisions = {
 				text = TOOLTIP_EMPLOYMENT_COOLDOWN_EXPIRED # Must not have employed a new courtier in the past six months
 				OR = {
 					NOT = { has_character_flag = flag_employment_cooldown }
-					had_character_flag = { name = flag_employment_cooldown days = 180 }
+					had_character_flag = { flag = flag_employment_cooldown days = 180 }
 				}
 			}
 		}
@@ -379,7 +379,7 @@ decisions = {
 				text = TOOLTIP_EMPLOYMENT_COOLDOWN_EXPIRED # Must not have employed a new courtier in the past six months
 				OR = {
 					NOT = { has_character_flag = flag_employment_cooldown }
-					had_character_flag = { name = flag_employment_cooldown days = 180 }
+					had_character_flag = { flag = flag_employment_cooldown days = 180 }
 				}
 			}
 		}
@@ -502,7 +502,7 @@ decisions = {
 				text = TOOLTIP_EMPLOYMENT_COOLDOWN_EXPIRED # Must not have employed a new courtier in the past six months
 				OR = {
 					NOT = { has_character_flag = flag_employment_cooldown }
-					had_character_flag = { name = flag_employment_cooldown days = 180 }
+					had_character_flag = { flag = flag_employment_cooldown days = 180 }
 				}
 			}
 		}

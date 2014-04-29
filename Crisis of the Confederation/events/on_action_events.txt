@@ -1043,7 +1043,7 @@ character_event = {
 			factor = 5
 			modifier = {
 				factor = 100
-				trait = just
+				trait = radical
 			}
 		}
 		any_realm_character = { 
@@ -1144,7 +1144,7 @@ character_event = {
 			factor = 1
 			modifier = {
 				factor = 100
-				trait = arbitrary
+				trait = pragmatic
 			}
 		}
 		reverse_opinion = {
@@ -1234,12 +1234,12 @@ character_event = {
 			remove_trait = kind
 		}
 		if = {
-			limit = { trait = just }
-			remove_trait = just
+			limit = { trait = radical }
+			remove_trait = radical
 		}
 		if = {
-			limit = { trait = honest }
-			remove_trait = honest
+			limit = { trait = friendly }
+			remove_trait = friendly
 		}
 		prestige = -100
 		any_vassal = {
@@ -3503,7 +3503,7 @@ narrative_event = {
 			}
 			modifier = {
 				factor = 5
-				trait = cynical
+				trait = pragmatic
 			}
 			modifier = {
 				factor = 10
@@ -3511,7 +3511,7 @@ narrative_event = {
 			}
 			modifier = {
 				factor = 0.1
-				trait = zealous
+				trait = radical
 			}
 			modifier = {
 				factor = 0.5

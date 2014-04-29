@@ -17,7 +17,6 @@ province_event = {
 			religion = terran_republican
 			religion = terran_imperial
 			religion = colonial_seperatist
-			religion = 
 			province_id = 202 # Terran ideologies are always available to Earth
 			any_province_lord = { religion = terran_federalist }
 			any_neighbor_province = { religion = terran_federalist }
@@ -2270,7 +2269,7 @@ province_event = {
 	trigger = {
 		NOT = { religion = cyberneticist }
 		OR = {
-			religion = machine_cult
+			religion = machine_cultist
 			religion = hiver
 			TECH_POPULAR_CUSTOMS = 0.5
 			any_province_lord = { religion = cyberneticist }

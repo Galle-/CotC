@@ -9,9 +9,9 @@ astrist;Astrist;;;;;;;;;;;;;x
 neo_socialist;Neo-Socialist;;;;;;;;;;;;;x
 religious_group;Religious;;;;;;;;;;;;;x
 pilgrim;Pilgrim;;;;;;;;;;;;;x
-pilgrim_desc;While humanity follows many different religions, nearly all of them share one vital commonality - they all originated on Old Earth. Across the galaxy are billions of colonists who find themselves compelled to travel to the holy places on Earth, and over time, an infrastructure has evolved to support them. The largest organization responsible for the transportation of pilgrims is known simply as "the Pilgrimage.";;;;;;;;;;;;;x
+pilgrim_DESC;While humanity follows many different religions, nearly all of them share one vital commonality - they all originated on Old Earth. Across the galaxy are billions of colonists who find themselves compelled to travel to the holy places on Earth, and over time, an infrastructure has evolved to support them. The largest organization responsible for the transportation of pilgrims is known simply as "the Pilgrimage.";;;;;;;;;;;;;x
 orthodox;Terran Orthodox;;;;;;;;;;;;;x
-orthodox_desc;Following the Edict of Reformation, the Pilgrimage transformed from a loose association of clerics into a true, united church. While the actual beliefs of followers of the Church of Holy Terra can very wildly, they all share a common veneration of humanity's homeworld and hold it as sacred.;;;;;;;;;;;;;x
+orthodox_DESC;Following the Edict of Reformation, the Pilgrimage transformed from a loose association of clerics into a true, united church. While the actual beliefs of followers of the Church of Holy Terra can very wildly, they all share a common veneration of humanity's homeworld and hold it as sacred.;;;;;;;;;;;;;x
 solar_cultist;Solar Cultist;;;;;;;;;;;;;x
 solarian;Solarian;;;;;;;;;;;;;x
 xenoterran;Xenoterran;;;;;;;;;;;;;x
@@ -27,17 +27,21 @@ bio_directionist;Bio-Directionist;;;;;;;;;;;;;x
 outlaw_group;Outlaw;;;;;;;;;;;;;x
 space_pirate;Space Pirate;;;;;;;;;;;;;x
 STAT_PIETY_CREDIBILITY;Credibility;;;;;;;;;;;;;x
-STAT_PIETY_CREDIBILITY_DESC;Political credibility is respected by other followers of your ideology. Like Prestige, it is added to your score on the death of a ruler.;;;;;;;;;;;;;x
+STAT_PIETY_DESC_CREDIBILITY;Political credibility is respected by other followers of your ideology. Like Prestige, it is added to your score on the death of a ruler.;;;;;;;;;;;;;x
 MONTHLY_PIETY_CREDIBILITY;Monthly Credibility Increase;;;;.;;;;;;;;;x
 STAT_PIETY_LEGITIMACY;Legitimacy;;;;;;;;;;;;;x
-STAT_PIETY_LEGITIMACY_DESC;Political legitimacy is respected by other followers of your ideology. Like Prestige, it is added to your score on the death of a ruler.;;;;;;;;;;;;;x
+STAT_PIETY_DESC_LEGITIMACY;Political legitimacy is respected by other followers of your ideology. Like Prestige, it is added to your score on the death of a ruler.;;;;;;;;;;;;;x
 MONTHLY_PIETY_LEGITIMACY;Monthly Legitimacy Increase;;;;.;;;;;;;;;x
 STAT_PIETY_ASPIRATION;Aspiration;;;;;;;;;;;;;x
-STAT_PIETY_ASPIRATION_DESC;Courage and optimistic in pursuing the cause is respected by other followers of your ideology. Like Prestige, it is added to your score on the death of a ruler.;;;;;;;;;;;;;x
+STAT_PIETY_DESC_ASPIRATION;Courage and optimistic in pursuing the cause is respected by other followers of your ideology. Like Prestige, it is added to your score on the death of a ruler.;;;;;;;;;;;;;x
 MONTHLY_PIETY_ASPIRATION;Monthly Aspiration Increase;;;;.;;;;;;;;;x
 STAT_PIETY_RESPECT;Respect;;;;;;;;;;;;;x
-STAT_PIETY_RESPECT_DESC;Respect is the measure of your standing in the eyes of your fellow criminals. Like Prestige, it is added to your score on the death of a ruler.;;;;;;;;;;;;;x
+STAT_PIETY_DESC_RESPECT;Respect is the measure of your standing in the eyes of your fellow criminals. Like Prestige, it is added to your score on the death of a ruler.;;;;;;;;;;;;;x
 MONTHLY_PIETY_RESPECT;Monthly Respect Increase;;;;.;;;;;;;;;x
+THE_SCRIPTURES;Scripture;;;;;;;;;;;;;x
+THE_LAW;the Constitution;;;;;;;;;;;;;x
+THE_CAUSE;the cause;;;;;;;;;;;;;x
+GOD_HOLY_TERRA;Holy Terra;;;;;;;;;;;;;x
 OP_ALACRITY;Alacrity;;;;;;;;;;;;;x
 OP_CHAPTER;Chapter;;;;;;;;;;;;;x
 OP_CORKSCREW;Corkscrew;;;;;;;;;;;;;x
@@ -140,3 +144,5 @@ OP_NIRVANA;Nirvana;;;;;;;;;;;;;x
 OP_ASCENSION;Ascension;;;;;;;;;;;;;x
 OP_UTOPIA;Utopia;;;;;;;;;;;;;x
 OP_SINGULARITY;Singularity;;;;;;;;;;;;;x
+title_ecumenical_councillor;Ecumenical Councillor;;;;;;;;;;;;;x
+title_ecumenical_councillor;Ecumenical Councillor;;;;;;;;;;;;;x

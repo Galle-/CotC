@@ -2378,26 +2378,26 @@ character_event = {
 			factor = 2
 			OR = {
 				religion_group = religious_group
-				religion = machine_cult
+				religion = machine_cultist
 			}
 		}
 		modifier = {
 			factor = 2
 			OR = {
 				religion_group = religious_group
-				religion = machine_cult
+				religion = machine_cultist
 			}
 			trait = radical
 		}
 		modifier = {
 			factor = 0.5
 			religion_group = transhumanist_group
-			NOT = { religion = machine_cult }
+			NOT = { religion = machine_cultist }
 		}
 		modifier = {
 			factor = 0.5
 			religion_group = transhumanist_group
-			NOT = { religion = machine_cult }
+			NOT = { religion = machine_cultist }
 			trait = radical
 		}
 	}
@@ -2433,7 +2433,7 @@ character_event = {
 				factor = 2
 				OR = {
 					religion_group = religious_group
-					religion = machine_cult
+					religion = machine_cultist
 				}
 				religion_group = religious_group
 				NOT = { trait = pragmatic }
@@ -2442,20 +2442,20 @@ character_event = {
 				factor = 2
 				OR = {
 					religion_group = religious_group
-					religion = machine_cult
+					religion = machine_cultist
 				}
 				trait = radical
 			}
 			modifier = {
 				factor = 0.5
 				religion_group = transhumanist_group
-				NOT = { religion = machine_cult }
+				NOT = { religion = machine_cultist }
 				NOT = { trait = pragmatic }
 			}
 			modifier = {
 				factor = 0.5
 				religion_group = transhumanist_group
-				NOT = { religion = machine_cult }
+				NOT = { religion = machine_cultist }
 				trait = radical
 			}
 			modifier = {
@@ -2704,7 +2704,7 @@ character_event = {
 			factor = 0.5
 			OR = {
 				religion_group = religious_group
-				religion = machine_cult
+				religion = machine_cultist
 			}
 			NOT = { trait = open_minded }
 		}
@@ -2712,7 +2712,7 @@ character_event = {
 			factor = 0.5
 			OR = {
 				religion_group = religious_group
-				religion = machine_cult
+				religion = machine_cultist
 			}
 			trait = radical
 		}
@@ -2720,19 +2720,19 @@ character_event = {
 			factor = 0.5
 			OR = {
 				religion_group = religious_group
-				religion = machine_cult
+				religion = machine_cultist
 			}
 			trait = close_minded
 		}
 		modifier = {
 			factor = 2
 			religion_group = transhumanist_group
-			NOT = { religion = machine_cult }
+			NOT = { religion = machine_cultist }
 		}
 		modifier = {
 			factor = 2
 			religion_group = transhumanist_group
-			NOT = { religion = machine_cult }
+			NOT = { religion = machine_cultist }
 			trait = radical
 		}
 	}
@@ -2768,7 +2768,7 @@ character_event = {
 				factor = 0.5
 				OR = {
 					religion_group = religious_group
-					religion = machine_cult
+					religion = machine_cultist
 				}
 				religion_group = religious_group
 				NOT = { trait = pragmatic }
@@ -2777,27 +2777,27 @@ character_event = {
 				factor = 0.5
 				OR = {
 					religion_group = religious_group
-					religion = machine_cult
+					religion = machine_cultist
 				}
 				trait = radical
 			}
 			modifier = {
 				factor = 2
 				religion_group = transhumanist_group
-				NOT = { religion = machine_cult }
+				NOT = { religion = machine_cultist }
 				NOT = { trait = pragmatic }
 			}
 			modifier = {
 				factor = 2
 				religion_group = transhumanist_group
-				NOT = { religion = machine_cult }
+				NOT = { religion = machine_cultist }
 				trait = radical
 			}
 			modifier = {
 				factor = 0
 				OR = {
 					religion_group = religious_group
-					religion = machine_cult
+					religion = machine_cultist
 				}
 				trait = close_minded
 			}
@@ -2894,7 +2894,7 @@ character_event = {
 					AND = {
 						OR = {
 							religion_group = religious_group
-							religion = machine_cult
+							religion = machine_cultist
 						}
 						OR = {
 							trait = radical
@@ -3187,7 +3187,7 @@ character_event = {
 			factor = 2
 			OR = {
 				religion_group = religious_group
-				religion = machine_cult
+				religion = machine_cultist
 			}
 			trait = spiritual
 		}
@@ -3195,20 +3195,20 @@ character_event = {
 			factor = 0.5
 			OR = {
 				religion_group = religious_group
-				religion = machine_cult
+				religion = machine_cultist
 			}
 			trait = skeptical
 		}
 		modifier = {
 			factor = 0.5
 			religion_group = transhumanist_group
-			NOT = { religion = machine_cult }
+			NOT = { religion = machine_cultist }
 			trait = spiritual
 		}
 		modifier = {
 			factor = 2
 			religion_group = transhumanist_group
-			NOT = { religion = machine_cult }
+			NOT = { religion = machine_cultist }
 			trait = skeptical
 		}
 	}
@@ -3600,7 +3600,7 @@ character_event = {
 			factor = 0.5
 			OR = {
 				religion_group = religious_group
-				religion = machine_cult
+				religion = machine_cultist
 			}
 			trait = spiritual
 		}
@@ -3608,20 +3608,20 @@ character_event = {
 			factor = 2
 			OR = {
 				religion_group = religious_group
-				religion = machine_cult
+				religion = machine_cultist
 			}
 			trait = skeptical
 		}
 		modifier = {
 			factor = 2
 			religion_group = transhumanist_group
-			NOT = { religion = machine_cult }
+			NOT = { religion = machine_cultist }
 			trait = spiritual
 		}
 		modifier = {
 			factor = 0.5
 			religion_group = transhumanist_group
-			NOT = { religion = machine_cult }
+			NOT = { religion = machine_cultist }
 			trait = skeptical
 		}
 	}

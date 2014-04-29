@@ -308,6 +308,12 @@ job_treasurer_neo_feudal;Steward;Intendant;;;;;;;;;;;;x
 job_spymaster_neo_feudal;Spymaster;Maître espion;;;;;;;;;;;;x
 job_scientist_neo_feudal;Minister of Technology;Savant;;;;;;;;;;;;x
 job_spiritual_neo_feudal;Justiciar;Justicier;;;;;;;;;;;;x
+job_chancellor_space_pirate;First Mate;;;;;;;;;;;;;x
+job_marshal_space_pirate;Chief Enforcer;;;;;;;;;;;;;x
+job_treasurer_space_pirate;Quartermaster;;;;;;;;;;;;;x
+job_spymaster_space_pirate;Consigliere;;;;;;;;;;;;;x
+job_scientist_space_pirate;Chief Engineer;;;;;;;;;;;;;x
+job_spiritual_space_pirate;Arbitrator;;;;;;;;;;;;;x
 GRANDADMIRAL;Grand Admiral;Grand amiral;;;;;;;;;;;;x
 GRANDADMIRALFOA;Admiral;Amiral;;;;;;;;;;;;x
 GRANDADMIRAL_female;Grand Admiral;Grand amiral;;;;;;;;;;;;x
@@ -317,5 +323,10 @@ FLEETADMIRALFOA;Admiral;Amiral;;;;;;;;;;;;x
 FLEETADMIRAL_female;Fleet Admiral;Amiral de flotte;;;;;;;;;;;;x
 FLEETADMIRALFOA_female;Admiral;Amiral;;;;;;;;;;;;x
 MASTER;Master;;;;;;;;;;;;;x
+MASTERFOA;Father;;;;;;;;;;;;;x
 MASTER_female;Mistress;;;;;;;;;;;;;x
-MASTERFOA_female;Mistress;;;;;;;;;;;;;x
+MASTERFOA_female;Mother;;;;;;;;;;;;;x
+PATRIARCH;Patriarch;;;;;;;;;;;;;x
+PATRIARCHFOA;Your Holiness;;;;;;;;;;;;;x
+PATRIARCH_female;Matriarch;;;;;;;;;;;;;x
+PATRIARCH_female;Your Holiness;;;;;;;;;;;;;x

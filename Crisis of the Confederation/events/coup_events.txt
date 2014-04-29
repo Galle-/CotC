@@ -5460,7 +5460,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = {
-		# This difference is just for flavor, but it's fun anyway
+		# This difference is radical for flavor, but it's fun anyway
 		trigger = {
 			OR = {
 				trait = content
@@ -5525,7 +5525,7 @@ character_event = {
 	}
 	
 	option = {
-		# This difference is just for flavor, but it's fun anyway
+		# This difference is radical for flavor, but it's fun anyway
 		trigger = {
 			NOT = { trait = content }
 			OR = {
