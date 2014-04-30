@@ -35,6 +35,12 @@ anti_ruler = {
 	opposite_opinion = -25
 }
 
+rebel_leader = {
+	#rebel_inherited = yes
+	customizer = no
+	random = no
+}
+
 #### Military Traits ####
 # Core Military Traits
 fighter_pilot = {
@@ -66,7 +72,7 @@ marine_colonel = {
 	}
 	command_modifier = {
 		archers = 0.5
-		siege = 0.5
+		#siege = 0.5
 	}
 }
 
@@ -131,5 +137,13 @@ aggressive_leader = {
 		pursue = 0.2
 		damage = 0.1
 		defence = -0.2
+	}
+}
+
+blockade_leader = {
+	leader = yes
+	
+	command_modifier = {
+		siege = 0.4
 	}
 }

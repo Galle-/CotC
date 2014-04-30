@@ -621,7 +621,6 @@ character_event = {
 				FROM = {
 					is_alive = yes
 					is_landed = yes
-					demesne_size = 1
 				}
 			}
 		}
@@ -1055,7 +1054,6 @@ character_event = {
 					is_female = yes
 					is_alive = yes
 					is_landed = yes
-					demesne_size = 1
 				}
 			}
 		}
@@ -1480,7 +1478,6 @@ character_event = {
 					is_female = no
 					is_alive = yes
 					is_landed = yes
-					demesne_size = 1
 				}
 			}
 		}

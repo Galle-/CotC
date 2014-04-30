@@ -18,7 +18,7 @@
 	add_trait = cold
 	
 	2966.1.1 = { birth = "2966.1.1" }
-	2998.1.1 = { religion = colonial_seperatist }
+	2998.1.1 = { religion = colonial_separatist }
 }
 
 11013898 = {
@@ -40,7 +40,7 @@
 	add_trait = open_minded
 	
 	2954.1.1 = { birth = "2954.1.1" }
-	2998.1.1 = { religion = colonial_seperatist }
+	2998.1.1 = { religion = colonial_separatist }
 }
 
 11012986 = {
@@ -84,7 +84,7 @@
 	add_trait = content
 	
 	2972.1.1 = { birth = "2972.1.1" }
-	2998.1.1 = { religion = colonial_seperatist }
+	2998.1.1 = { religion = colonial_separatist }
 }
 
 11011098 = {
@@ -129,7 +129,7 @@
 	add_trait = confident
 	
 	2954.1.1 = { birth = "2954.1.1" }
-	2997.1.1 = { religion = colonial_seperatist }
+	2997.1.1 = { religion = colonial_separatist }
 }
 
 ### - system administrators (minor rulers)
@@ -149,7 +149,7 @@
 	add_trait = confident
 	add_trait = content
 	2967.5.13 = {birth = "2967.5.13"}
-	2985.6.16 = {religion = colonial_seperatist}
+	2985.6.16 = {religion = colonial_separatist}
 	}
 
 12013178 = {
@@ -169,7 +169,7 @@
 	add_trait = open_minded
 	add_trait = skeptical
 	2957.8.7 = {birth = "2957.8.7"}
-	2962.4.3 = {religion = colonial_seperatist}
+	2962.4.3 = {religion = colonial_separatist}
 			}
 		
 11013178 = {
@@ -188,7 +188,7 @@
 	add_trait = close_minded
 	add_trait = proud
 	2963.11.1 = {birth = "2963.11.1"}
-	2970.4.28 = {religion = colonial_seperatist}
+	2970.4.28 = {religion = colonial_separatist}
 	}
 
 	110113370 = {
@@ -237,7 +237,7 @@
 	mother = 100120025 #Sinn Fun Lim 
 	
 	2972.5.17 = {birth = "yes"}
-	2985.3.12 = {religion = colonial_seperatist}
+	2985.3.12 = {religion = colonial_separatist}
 	}
 	
 	110214361 = { 
@@ -326,7 +326,7 @@
 	female = no
 	
 	culture = sino_bianjiangese	
-	religion = colonial_seperatist
+	religion = colonial_separatist
 	
 	add_trait = elusive_shadow
 	add_trait = disciplined
@@ -345,7 +345,7 @@
 	female = yes
 	
 	culture = sino_bianjiangese
-	religion = colonial_seperatist
+	religion = colonial_separatist
 	
 	add_trait = tough_soldier
 	add_trait = warship_captain
@@ -366,7 +366,7 @@
 	female = yes	
 	
 	culture = sino_bianjiangese
-	religion = colonial_seperatist
+	religion = colonial_separatist
 	
 	add_trait = elusive_shadow
 	add_trait = open_minded
@@ -417,7 +417,7 @@
 	dynasty = 12122 #Khabarov
 	
 	culture = russo_bianjiangese
-	religion = colonial_seperatist
+	religion = colonial_separatist
 	2964.7.13 = {birth = "2964.7.13"}
 	}
 	
@@ -428,7 +428,7 @@
 	female = no
 		 
 	culture = sino_bianjiangese
-	religion = colonial_seperatist
+	religion = colonial_separatist
 	
 	add_trait = charismatic_negotiator
 	add_trait = friendly
@@ -459,7 +459,7 @@
 	female = yes
 	
 	culture = sino_bianjiangese
-	religion = colonial_seperatist
+	religion = colonial_separatist
 	
 	add_trait = skilled_tactician
 	add_trait = warship_captain
@@ -560,7 +560,7 @@
 	2922.1.16 = {birth = "2922.1.16"}
 	2953.1.10 = { add_spouse = 90320025 } # Hai-Lan Lim
 	2953.1.10 = { effect = { spouse = { add_lover = ROOT } } }
-	2987.5.14 = {religion = colonial_seperatist}
+	2987.5.14 = {religion = colonial_separatist}
 	
 	}
 	
@@ -586,7 +586,7 @@
 	2919.8.7 = {birth = "2919.8.7"}
 	2953.1.10 = { add_spouse = 90312602 } # Hai-Lan Lim
 	2953.1.10 = { effect = { spouse = { add_lover = ROOT } } }
-	2987.5.3 = {religion = colonial_seperatist}
+	2987.5.3 = {religion = colonial_separatist}
 	2998.1.1 = {add_trait = incapable}
 	
 	}
@@ -598,7 +598,7 @@
 	female = yes
 	
 	culture = sino_bianjiangese
-	religion = colonial_seperatist
+	religion = colonial_separatist
 	
 	add_trait = intricate_webweaver
 	add_trait = disciplined
@@ -618,7 +618,7 @@
 	female = no
 	
 	culture = sino_bianjiangese
-	religion = colonial_seperatist
+	religion = colonial_separatist
 	
 	add_trait = mastermind_scholar
 	add_trait = disciplined
@@ -637,7 +637,7 @@
 		female = no
 		
 		culture = sino_bianjiangese
-		religion = colonial_seperatist
+		religion = colonial_separatist
 		
 		add_trait = thrifty_clerk
 		add_trait = disciplined

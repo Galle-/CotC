@@ -19,6 +19,31 @@ decisions = {
 			factor = 1
 			modifier = {
 				factor = 0
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+				OR = {
+					NOT = {
+						any_demesne_title = {
+							OR = {
+								has_law = succ_gavelkind
+								has_law = succ_primogeniture
+								has_law = succ_ultimogeniture
+								has_law = succ_seniority
+								has_law = succ_tanistry
+							}
+						}
+					}
+					any_demesne_title = { current_heir = { dynasty = ROOT } }
+					trait = humble
+				}
+			}
+			modifier = {
+				factor = 0
+				religion_group = religious_group
+				trait = radical
+			}
+			modifier = {
+				factor = 0
 				is_married = yes
 				NOT = {
 					AND = {
@@ -42,7 +67,11 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				any_child = { reverse_opinion = { who = ROOT value = 50 } }
+				any_child = {
+					reverse_opinion = { who = ROOT value = -49 }
+					NOT = { trait = incapable }
+					NOT = { trait = bastard }
+				}
 				NOT = {
 					AND = {
 						is_female = no

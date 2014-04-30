@@ -86,7 +86,7 @@ political_group = {
 		
 		psc_marriage = no
 	}
-	colonial_seperatist = {
+	colonial_separatist = {
 		graphical_culture = westerngfx
 		icon = 1
 		heresy_icon = 6
@@ -587,6 +587,8 @@ outlaw_group = {
 			OP_MERCURY OP_VENUS OP_ARES OP_CERES OP_JUPITER OP_GANYMEDE OP_CALLISTO OP_EUROPA OP_IO OP_SATURN OP_TITAN OP_NEPTUNE OP_URANUS OP_PLUTO OP_CHARON # Solar system operation names
 			OP_ARIES OP_TAURUS OP_GEMINI OP_CANCER OP_LEO OP_VIRGO OP_LIBRA OP_SCORPIO OP_SAGITTARIUS OP_CAPRICORN OP_AQUARIUS OP_PISCES OP_ORION OP_WITCHHEAD OP_HORSEHEAD OP_VEIL OP_FLAME OP_HELIX # Constellation and nebula operation names
 		}
+		
+		allow_viking_invasion = yes # Allows the "Prepare Invasion" diplo action
 		
 		can_hold_temples = yes
 		priests_can_marry = yes

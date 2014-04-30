@@ -180,7 +180,7 @@
 	female = no
 	
 	culture = japanese_tengoku
-	religion = colonial_seperatist
+	religion = colonial_separatist
 	
 	add_trait = misguided_warrior
 	add_trait = fighter_pilot
@@ -205,7 +205,7 @@
 	female = yes
 	
 	culture = anglo_tengoku
-	religion = colonial_seperatist
+	religion = colonial_separatist
 	
 	add_trait = tough_soldier
 	add_trait = warship_captain
@@ -221,7 +221,7 @@
 	female = no
 	
 	culture = japanese_frontiersman
-	religion = colonial_seperatist
+	religion = colonial_separatist
 	
 	add_trait = misguided_warrior
 	add_trait = warship_captain
@@ -235,7 +235,7 @@
 	female = no
 	
 	culture = anglo_frontiersman
-	religion = colonial_seperatist
+	religion = colonial_separatist
 	
 	add_trait = tough_soldier
 	add_trait = fighter_pilot

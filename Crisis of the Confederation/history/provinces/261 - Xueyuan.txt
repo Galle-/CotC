@@ -12,7 +12,7 @@ b_xueyuan_iii_b = temple
 
 # Misc
 culture = sino_bianjiangese # Initial culture
-religion = colonial_seperatist
+religion = colonial_separatist
 
 # History
 
@@ -43,8 +43,10 @@ religion = colonial_seperatist
 2631.2.14 = {b_xueyuan_iii = ct_colony_0}
 2680.7.18 = {b_xueyuan_iii = ct_colony_1}
 2740.5.11 = {b_xueyuan_iii = ct_colony_2}
+
 2920.7.12 = {b_xueyuan_ii_b = ca_colony_0}
 2920.8.1 = {b_xueyuan_ii_b = ca_no_atmosphere_domes}
+
 2940.4.12 = {b_xueyuan_iii_b = tp_colony_0 }
 2940.5.13 = {b_xueyuan_ii = tp_colony_0 }
 2940.6.1 = {b_xueyuan_ii = tp_no_atmosphere_domes}

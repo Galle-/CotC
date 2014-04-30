@@ -153,3 +153,16 @@ civil_unrest_9 = {
 	local_build_time_modifier = 1.15
 	local_build_cost_modifier = 1.15
 }
+
+# Revolts
+system_in_revolt = { # Cooldown timer
+	icon = 36
+	local_revolt_risk = -1
+	local_tax_modifier = -10
+	local_build_time_modifier = 10
+	local_build_cost_modifier = 10
+}
+successful_revolt = {
+	icon = 13
+	local_revolt_risk = -10
+}

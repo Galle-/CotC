@@ -30,16 +30,20 @@ character_event = {
 	hide_window = yes
 	
 	trigger = {
-		NOT = { any_demesne_title = { always = yes } }
 		dynasty = none
+		NOT = { any_demesne_title = { always = yes } }
+		NOT = { has_character_flag = flag_dynasty_changed }
 	}
 	
 	immediate = {
 		liege = {
-			e_rebels = { holder_scope = { reverse_banish = ROOT } }
-			ROOT = { dynasty = father_bastard }
-			reverse_banish = ROOT
+			e_rebels = { holder_scope = { ROOT = { set_defacto_liege = PREV } } }
+			ROOT = {
+				dynasty = random
+				set_defacto_liege = PREV
+			}
 		}
+		set_character_flag = flag_dynasty_changed
 	}
 }
 

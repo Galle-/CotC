@@ -442,77 +442,68 @@ on_decade_pulse = {
 on_yearly_childhood_pulse = {
 	random_events = {
 		# Childhood Personality Events
+
+		# 6 - 16: Personality-forming events
+		100 = childhood_education.10 # Curious
+		100 = childhood_education.20 # Cautious
+		100 = childhood_education.30 # Disciplined
+		100 = childhood_education.40 # Carefree
+		100 = childhood_education.50 # Extroverted
+		100 = childhood_education.60 # Introverted
+		100 = childhood_education.70 # Friendly
+		100 = childhood_education.80 # Cold
+		100 = childhood_education.90 # Spiritual
+		100 = childhood_education.100 # Skeptical
+		100 = childhood_education.110 # Radical
+		100 = childhood_education.120 # Pragmatic
+		100 = childhood_education.130 # Humble
+		100 = childhood_education.140 # Proud
+		100 = childhood_education.150 # Content
+		100 = childhood_education.160 # Ambitious
+		100 = childhood_education.170 # Brave
+		100 = childhood_education.180 # Craven
 		
-		#Age 6-16, aiming to get at least 4 traits before adult.
-		100 = 1500
-		100 = 1510
-		100 = 1520
-		100 = 1530
-		100 = 1540
-		100 = 1550
-		100 = 1560
-		100 = 1570
-		100 = 1580
-		100 = 1590
-		100 = 1600
-		100 = 1610
-		100 = 1620
-		100 = 1630
-		100 = 1640
-		100 = 1650
-		100 = 1660
-		100 = 1670
-		100 = 1680
-		100 = 1690
-		100 = 1700
-		100 = 1710
-		100 = 1720
-		100 = 1730
-		100 = 1965
-		100 = 1632
-		100 = 1732
+		# #Toddler flavour events (age 2-5), not very common, but some will get them.
+		# 10 = 1900 
+		# 10 = 1901
+		# 10 = 1902
+		# 10 = 1903
+		# 10 = 1904
 		
-		#Toddler flavour events (age 2-5), not very common, but some will get them.
-		10 = 1900 
-		10 = 1901
-		10 = 1902
-		10 = 1903
-		10 = 1904
+		# #Young children flavour events, (age 6-10), not very common, but some will get then..
+		# 20 = 1905
+		# 20 = 1906
+		# 20 = 1907
+		# 20 = 1908
+		# 20 = 1909
+		# 20 = 1910
+		# 20 = 1911
+		# 20 = 1912
 		
-		#Young children flavour events, (age 6-10), not very common, but some will get then..
-		20 = 1905
-		20 = 1906
-		20 = 1907
-		20 = 1908
-		20 = 1909
-		20 = 1910
-		20 = 1911
-		20 = 1912
-		
-		#Youngsters flavour events (age 11-15), not very common, but some will get then..
-		50 = 1913
-		50 = 1914
-		50 = 1915
-		50 = 1916
-		50 = 1917
-		50 = 1918
-		50 = 1919
-		50 = 1920
-		50 = 1921
-		50 = 1922
-		50 = 1923
-		50 = 1924
-		50 = 1925
-		50 = 1926
-		50 = 1927
-		50 = 1928
-		50 = 1929
-		50 = 1930
-		50 = 1931
-		50 = 1932
-		50 = 1933
-		50 = 1934
-		50 = 1935
+		# #Youngsters flavour events (age 11-15), not very common, but some will get then..
+		# 50 = 1913
+		# 50 = 1914
+		# 50 = 1915
+		# 50 = 1916
+		# 50 = 1917
+		# 50 = 1918
+		# 50 = 1919
+		# 50 = 1920
+		# 50 = 1921
+		# 50 = 1922
+		# 50 = 1923
+		# 50 = 1924
+		# 50 = 1925
+		# 50 = 1926
+		# 50 = 1927
+		# 50 = 1928
+		# 50 = 1929
+		# 50 = 1930
+		# 50 = 1931
+		# 50 = 1932
+		# 50 = 1933
+		# 50 = 1934
+		# 50 = 1935
 		
 		1500 = 0
 	}
@@ -1280,13 +1271,33 @@ on_approve_de_jure_law = {
 # When rebels appear
 on_rebel_revolt = {
 	events = {
-		600 		# Only valid without "The Old Gods" DLC
-		TOG.1030 	# Heretic rebels reinforced
-		TOG.1020	# Heretic rebels rise up
-		TOG.1050 	# Nationalist rebels reinforced
-		TOG.1040	# Nationalist rebels rise up
-		TOG.1010 	# Peasant rebels reinforced
-		TOG.1000 	# Peasant rebels rise up
+		# Democratic Rebels
+		rebels.140
+		rebels.150
+		rebels.160
+		rebels.170
+		# rebels.100
+		rebels.110
+		rebels.120
+		rebels.130
+		# Autocratic Rebels
+		rebels.240
+		rebels.250
+		rebels.260
+		rebels.270
+		# rebels.200
+		rebels.210
+		rebels.220
+		rebels.230
+		# Theocratic Rebels
+		rebels.340
+		rebels.350
+		rebels.360
+		rebels.370
+		# rebels.300
+		rebels.310
+		rebels.320
+		rebels.330
 	}
 }
 
