@@ -37,7 +37,7 @@ character_event = {
 			is_female = no
 			has_lover = no
 			prisoner = no
-			religion_group = christian
+			religion_group = religious_group
 			NOT = { is_close_relative = ROOT }
 			is_valid_attraction = ROOT
 			NOT = { trait = homosexual }
@@ -47,7 +47,7 @@ character_event = {
 			NOT = { any_spouse = { character = ROOT } }
 			OR = {
 				is_married = no
-				NOT = { trait = chaste }
+				NOT = { trait = disciplined }
 			}
 			NOT = {
 				has_character_modifier = lustful_affair_timer
@@ -63,11 +63,11 @@ character_event = {
 		
 		modifier = {
 			factor = 0.4
-			trait = lustful
+			trait = carefree
 		}
 		modifier = {
 			factor = 0.4
-			liege = { trait = lustful }
+			liege = { trait = carefree }
 		}
 		modifier = {
 			factor = 0.75
@@ -103,11 +103,11 @@ character_event = {
 		}
 		modifier = {
 			factor = 2.0
-			trait = chaste
+			trait = disciplined
 		}
 		modifier = {
 			factor = 5.0
-			liege = { trait = chaste }
+			liege = { trait = disciplined }
 		}
 		modifier = {
 			factor = 4
@@ -156,7 +156,7 @@ character_event = {
 		name = EVTOPTB451
 		ai_chance = { factor = 10 }
 		trigger = {
-			NOT = { trait = lustful }
+			NOT = { trait = carefree }
 		}
 		piety = 10
 	}
@@ -235,7 +235,7 @@ character_event = {
 		name = EVTOPTB452
 		ai_chance = { factor = 5 }
 		trigger = {
-			NOT = { trait = lustful }
+			NOT = { trait = carefree }
 			NOT = { trait = slow }
 			NOT = { trait = imbecile }
 			NOT = { trait = inbred }
@@ -247,7 +247,7 @@ character_event = {
 		name = EVTOPTC452
 		ai_chance = { factor = 5 }
 		trigger = {
-			NOT = { trait = lustful }
+			NOT = { trait = carefree }
 		}
 		FROM = { character_event = { id = 455 tooltip = EVTTOOLTIP455 } }
 	}

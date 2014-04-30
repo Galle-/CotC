@@ -26,7 +26,7 @@ character_event = {
 	trigger = {
 		is_married = no
 		NOT = {
-			trait = chaste
+			trait = disciplined
 		}
 		NOT = {
 			trait = celibate
@@ -45,16 +45,16 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			trait = lustful
+			trait = carefree
 		}
 		modifier = {
 			factor = 2
-			trait = gregarious
+			trait = extraverted
 		}
 		
 		modifier = {
 			factor = 0.5
-			trait = shy
+			trait = introverted
 		}
 	}
 	
@@ -64,16 +64,16 @@ character_event = {
 		if = {
 			limit = {
 				NOT = {
-					trait = lustful
+					trait = carefree
 				}
 			}
 			random = {
 				chance = 50
 				
-				add_trait = lustful
+				add_trait = carefree
 				hidden_tooltip = {
 					character_event = {
-						id = 38272 #Notify Lustful
+						id = 38272 #Notify carefree
 					}
 				}
 			}
@@ -83,17 +83,17 @@ character_event = {
 		name = "EVTOPTB76000"
 		if = {
 			limit = {
-				religion_group = muslim
+				religion_group = transhumanist_group
 			}
 			piety = 5
 		}
 		if = {
 			limit = {
 				NOT = {
-					religion_group = muslim
+					religion_group = transhumanist_group
 				}
 			}
-			add_trait = chaste
+			add_trait = disciplined
 		}
 	}
 }
@@ -117,7 +117,7 @@ character_event = {
 			is_married = no
 			fertility = 0.6
 			NOT = {
-				trait = chaste
+				trait = disciplined
 			}
 			NOT = {
 				trait = celibate
@@ -151,7 +151,7 @@ character_event = {
 				is_married = no
 				fertility = 0.4
 				NOT = {
-					trait = chaste
+					trait = disciplined
 				}
 				NOT = {
 					trait = celibate
@@ -174,7 +174,7 @@ character_event = {
 			}
 		}
 		prestige = -5
-		add_trait = kind
+		add_trait = friendly
 	}
 	option = {
 		name = "EVTOPTC76005"
@@ -185,7 +185,7 @@ character_event = {
 				is_married = no
 				fertility = 0.4
 				NOT = {
-					trait = chaste
+					trait = disciplined
 				}
 				NOT = {
 					trait = celibate
@@ -202,20 +202,20 @@ character_event = {
 			if = {
 				limit = {
 					NOT = {
-						religion_group = muslim
+						religion_group = transhumanist_group
 					}
 				}
-				add_trait = chaste
+				add_trait = disciplined
 			}
 			health = -1
 		}
 		random = {
 			chance = 25
 			
-			add_trait = cruel
+			add_trait = cold
 			hidden_tooltip = {
 				character_event = {
-					id = 38259 #Notify Cruel
+					id = 38259 #Notify cold
 				}
 			}
 		}
@@ -252,10 +252,10 @@ character_event = {
 		random = {
 			chance = 33
 			
-			add_trait = arbitrary
+			add_trait = pragmatic
 			hidden_tooltip = {
 				character_event = {
-					id = 38266 #Notify Arbitrary
+					id = 38266 #Notify pragmatic
 				}
 			}
 		}
@@ -308,7 +308,7 @@ character_event = {
 					is_married = no
 					fertility = 0.6
 					NOT = {
-						trait = chaste
+						trait = disciplined
 					}
 					NOT = {
 						trait = celibate
@@ -366,7 +366,7 @@ character_event = {
 				is_married = no
 				fertility = 0.6
 				NOT = {
-					trait = chaste
+					trait = disciplined
 				}
 				NOT = {
 					trait = celibate
@@ -509,10 +509,10 @@ character_event = {
 			random = {
 				chance = 33
 				
-				add_trait = wroth
+				add_trait = proud
 				hidden_tooltip = {
 					character_event = {
-						id = 38254 #Notify Wroth
+						id = 38254 #Notify proud
 					}
 				}
 			}
@@ -569,22 +569,22 @@ character_event = {
 	trigger = {
 		trait = bastard
 		NOT = {
-			trait = lustful
+			trait = carefree
 		}
 		NOT = {
-			trait = gluttonous
+			trait = carefree
 		}
 		NOT = {
-			trait = greedy
+			trait = cold
 		}
 		NOT = {
-			trait = slothful
+			trait = carefree
 		}
 		NOT = {
-			trait = envious
+			trait = cold
 		}
 		NOT = {
-			trait = wroth
+			trait = proud
 		}
 		NOT = {
 			trait = proud
@@ -649,11 +649,11 @@ character_event = {
 			random = {
 				chance = 33
 				
-				add_trait = wroth
+				add_trait = proud
 				hidden_tooltip = {
 					character_event = {
 						days = 2
-						id = 38254 #Notify Wroth
+						id = 38254 #Notify proud
 					}
 				}
 			}
@@ -782,9 +782,9 @@ character_event = {
 		}
 		if = {
 			limit = {
-				trait = kind
+				trait = friendly
 			}
-			remove_trait = kind
+			remove_trait = friendly
 			prestige = -20
 		}
 	}
@@ -986,10 +986,10 @@ character_event = {
 		random = {
 			chance = 30
 			
-			add_trait = wroth
+			add_trait = proud
 			hidden_tooltip = {
 				character_event = {
-					id = 38254 #Notify Wroth
+					id = 38254 #Notify proud
 				}
 			}
 		}
@@ -1037,10 +1037,10 @@ character_event = {
 				change_diplomacy = 1
 			}
 			30 = {
-				add_trait = shy
+				add_trait = introverted
 				hidden_tooltip = {
 					character_event = {
-						id = 38263 #Notify Shy
+						id = 38263 #Notify introverted
 					}
 				}
 			}
@@ -1140,33 +1140,33 @@ character_event = {
 		name = "EVTOPTA76041"
 		trigger = {
 			NOT = {
-				religion_group = muslim
+				religion_group = transhumanist_group
 			}
 		}
 		FROM = {
 			random_list = {
 				80 = {
-					add_trait = chaste
+					add_trait = disciplined
 					hidden_tooltip = {
 						character_event = {
-							id = 38274 #Notify Chaste
+							id = 38274 #Notify disciplined
 						}
 						ROOT = {
 							character_event = {
-								id = 38174 #Notify child is Chaste
+								id = 38174 #Notify child is disciplined
 							}
 						}
 					}
 				}
 				20 = {
-					add_trait = zealous
+					add_trait = radical
 					hidden_tooltip = {
 						character_event = {
-							id = 38269 #Notify Zealous
+							id = 38269 #Notify radical
 						}
 						ROOT = {
 							character_event = {
-								id = 38169 #Notify child is Zealous
+								id = 38169 #Notify child is radical
 							}
 						}
 					}
@@ -1192,14 +1192,14 @@ character_event = {
 					}
 				}
 				20 = {
-					add_trait = shy
+					add_trait = introverted
 					hidden_tooltip = {
 						character_event = {
-							id = 38263 #Notify Shy
+							id = 38263 #Notify introverted
 						}
 						ROOT = {
 							character_event = {
-								id = 38163 #Notify child is Shy
+								id = 38163 #Notify child is introverted
 							}
 						}
 					}
@@ -1243,21 +1243,21 @@ character_event = {
 	option = {
 		name = "EVTOPTD76041"
 		trigger = {
-			religion_group = muslim
+			religion_group = transhumanist_group
 		}
 		FROM = {
 			random_list = {
 				80 = {
 				}
 				20 = {
-					add_trait = zealous
+					add_trait = radical
 					hidden_tooltip = {
 						character_event = {
-							id = 38269 #Notify Zealous
+							id = 38269 #Notify radical
 						}
 						ROOT = {
 							character_event = {
-								id = 38169 #Notify child is Zealous
+								id = 38169 #Notify child is radical
 							}
 						}
 					}

@@ -863,7 +863,7 @@ character_event = {
 			}
 			#OR = {
 			#	trait = disciplined
-			#	religion_group = muslim
+			#	religion_group = transhumanist_group
 			#}
 			#trait = introverted
 		}
@@ -921,7 +921,7 @@ character_event = {
 				}
 				#OR = {
 				#	trait = disciplined
-				#	religion_group = muslim
+				#	religion_group = transhumanist_group
 				#}
 				#trait = introverted
 			}
@@ -981,7 +981,7 @@ character_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = muslim
+					religion_group = transhumanist_group
 				}
 			}
 			remove_trait = disciplined
@@ -1022,7 +1022,7 @@ character_event = {
 				add_trait = proud
 				hidden_tooltip = {
 					character_event = {
-						id = 38261 #Notify Shy
+						id = 38261 #Notify proud
 					}
 				}
 			}
@@ -1116,7 +1116,7 @@ character_event = {
 		}
 		OR = {
 			trait = disciplined
-			religion_group = muslim
+			religion_group = transhumanist_group
 		}
 		OR = {
 			trait = paranoid
@@ -1336,7 +1336,7 @@ character_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = muslim
+					religion_group = transhumanist_group
 				}
 			}
 			random = {
@@ -1358,7 +1358,7 @@ character_event = {
 				remove_trait = introverted
 				hidden_tooltip = {
 					character_event = {
-						id = 38295  #Notify Removed Shy
+						id = 38295  #Notify Removed introverted
 					}
 				}
 			}
@@ -2186,7 +2186,7 @@ character_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = muslim
+					religion_group = transhumanist_group
 				}
 				NOT = {
 					num_of_traits = 5
@@ -3209,7 +3209,7 @@ character_event = {
 	only_playable = yes
 	
 	trigger = {
-		religion_group = christian
+		religion_group = religious_group
 		trait = radical
 		NOT = {
 			num_of_friends = 2
@@ -4097,7 +4097,7 @@ character_event = {
 		NOT = {
 			num_of_rivals = 5
 		}
-		religion_group = christian
+		religion_group = religious_group
 		host = {
 			any_courtier = {
 				is_female = no
@@ -4106,7 +4106,7 @@ character_event = {
 				war = yes
 				at_location = ROOT
 				trait = crusader
-				religion_group = christian
+				religion_group = religious_group
 				NOT = {
 					sibling = ROOT
 				}
@@ -4169,7 +4169,7 @@ character_event = {
 					war = yes
 					at_location = ROOT
 					trait = crusader
-					religion_group = christian
+					religion_group = religious_group
 					NOT = {
 						sibling = ROOT
 					}
@@ -4209,7 +4209,7 @@ character_event = {
 					war = yes
 					at_location = ROOT
 					trait = crusader
-					religion_group = christian
+					religion_group = religious_group
 					NOT = {
 						sibling = ROOT
 					}
@@ -4272,7 +4272,7 @@ character_event = {
 				add_trait = pragmatic
 				hidden_tooltip = {
 					character_event = {
-						id = 38258 #Notify Cynical
+						id = 38258 #Notify pragmatic
 					}
 				}
 			}
@@ -4681,7 +4681,7 @@ character_event = {
 				add_trait = disciplined
 				hidden_tooltip = {
 					character_event = {
-						id = 38256 #Notify Diligent
+						id = 38256 #Notify disciplined
 					}
 				}
 			}
@@ -4731,7 +4731,7 @@ character_event = {
 				add_trait = disciplined
 				hidden_tooltip = {
 					character_event = {
-						id = 38256 #Notify Diligent
+						id = 38256 #Notify disciplined
 					}
 				}
 			}
@@ -4781,7 +4781,7 @@ character_event = {
 				add_trait = disciplined
 				hidden_tooltip = {
 					character_event = {
-						id = 38256 #Notify Diligent
+						id = 38256 #Notify disciplined
 					}
 				}
 			}
@@ -4832,7 +4832,7 @@ character_event = {
 				add_trait = disciplined
 				hidden_tooltip = {
 					character_event = {
-						id = 38256 #Notify Diligent
+						id = 38256 #Notify disciplined
 					}
 				}
 			}
@@ -4882,7 +4882,7 @@ character_event = {
 				add_trait = disciplined
 				hidden_tooltip = {
 					character_event = {
-						id = 38256 #Notify Diligent
+						id = 38256 #Notify disciplined
 					}
 				}
 			}
@@ -6157,8 +6157,8 @@ character_event = {
 		num_of_friends = 1
 		scaled_wealth = 0.5
 		OR = {
-			religion_group = christian
-			religion_group = muslim
+			religion_group = religious_group
+			religion_group = transhumanist_group
 			religion_group = jewish_group
 			religion_group = zoroastrian_group
 		}
@@ -7993,7 +7993,7 @@ character_event = {
 		num_of_friends = 1
 		learning = 5
 		NOT = {
-			religion_group = muslim
+			religion_group = transhumanist_group
 		}
 		NOT = {
 			learning = 10
@@ -8010,7 +8010,7 @@ character_event = {
 			prisoner = no
 			learning = 11
 			NOT = {
-				religion_group = muslim
+				religion_group = transhumanist_group
 			}
 			OR = {
 				piety = 100
@@ -8078,7 +8078,7 @@ character_event = {
 				prisoner = no
 				learning = 11
 				NOT = {
-					religion_group = muslim
+					religion_group = transhumanist_group
 				}
 			}
 			character_event = {
@@ -8362,7 +8362,7 @@ character_event = {
 		in_command = no
 		num_of_friends = 1
 		NOT = {
-			religion_group = muslim
+			religion_group = transhumanist_group
 		}
 		NOT = {
 			lifestyle_traits = 1
@@ -8585,7 +8585,7 @@ character_event = {
 		in_command = no
 		num_of_friends = 1
 		NOT = {
-			religion_group = muslim
+			religion_group = transhumanist_group
 		}
 		NOT = {
 			lifestyle_traits = 1
@@ -8672,7 +8672,7 @@ character_event = {
 			limit = {
 				trait = disciplined
 				NOT = {
-					religion_group = muslim
+					religion_group = transhumanist_group
 				}
 			}
 			hidden_tooltip = {
@@ -8686,7 +8686,7 @@ character_event = {
 		if = {
 			limit = {
 				trait = disciplined
-				religion_group = muslim
+				religion_group = transhumanist_group
 			}
 			hidden_tooltip = {
 				character_event = {
@@ -10937,7 +10937,7 @@ character_event = {
 		in_command = no
 		is_heretic = no
 		num_of_rivals = 1
-		religion_group = christian
+		religion_group = religious_group
 		any_rival = {
 			war = no
 			age = 16
@@ -11580,7 +11580,7 @@ character_event = {
 				add_trait = friendly
 				hidden_tooltip = {
 					character_event = {
-						id = 38268 #Notify Kind
+						id = 38268 #Notify friendly
 					}
 				}
 			}
@@ -12248,7 +12248,7 @@ character_event = {
 		war = no
 		in_command = no
 		num_of_rivals = 1
-		religion_group = christian
+		religion_group = religious_group
 		NOT = {
 			has_character_modifier = religious_rival_timer
 		}
@@ -12304,7 +12304,7 @@ character_event = {
 				age = 16
 				in_command = no
 				prisoner = no
-				religion_group = christian
+				religion_group = religious_group
 			}
 			character_event = {
 				id = 100501
@@ -15802,7 +15802,7 @@ character_event = {
 		in_command = no
 		num_of_friends = 1
 		learning = 5
-		religion_group = muslim
+		religion_group = transhumanist_group
 		NOT = {
 			learning = 10
 		}
@@ -15817,7 +15817,7 @@ character_event = {
 			in_command = no
 			prisoner = no
 			learning = 11
-			religion_group = muslim
+			religion_group = transhumanist_group
 			OR = {
 				piety = 100
 				trait = radical
@@ -15858,7 +15858,7 @@ character_event = {
 				in_command = no
 				prisoner = no
 				learning = 11
-				religion_group = muslim
+				religion_group = transhumanist_group
 			}
 			character_event = {
 				id = 100551

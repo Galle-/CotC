@@ -307,22 +307,3 @@ reincarnation = {
 	customizer = no
 	random = no
 }
-
-war_elephant_leader = {
-	leader = yes
-	random = no
-	
-	command_modifier = {
-		war_elephants = 0.2
-		morale_offence = 0.2
-	}
-}
-
-jungle_terrain_leader = {
-	leader = yes
-	random = no
-	
-	command_modifier = {
-		terrain = jungle
-	}
-}
