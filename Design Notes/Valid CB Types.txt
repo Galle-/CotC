@@ -1,0 +1,48 @@
+VALID CBS
+	- Claim CBs
+	- De Jure CBs
+	- Crusades (limited to certain ideologies)
+	- Invasions (again, limited to certain ideologies)
+	- Embargoes
+	- Revolt Against The Tyranny of yadda yadda yadda (the one when they refuse to give up a title)
+		These work as in vanilla.
+	
+	- Reprisals
+		This is a time-limited (10 years) CB against rulers who have recently attacked you. It allows you to invade and take:
+			- One neighboring province (if they are a count or duke)
+			- One neighboring duchy (if they are a king or emperor)
+		An "attack" is defined as:
+			- A declaration of war (except for military campaigns)
+			- Exposed hostile plots (e.g., assassinations)
+			- Raids on you or your territories
+		The first reprisal type doesn't help much against independents rulers, as it will expire before the truce does. It does, however, allow you to escalate a war.
+	
+	- Cultural Liberation
+		This CB allows you to conquer a neighboring province that shares your culture group, but not its owner's.
+	
+	- Holy War
+		Operates identically to vanilla Holy War. Available only to Orthodox, Solarian, Xenoterran, Patrist, Matrist, and Machine Cult.
+	
+	- Rebellions (Democratic, Autoratic, Theocratic)
+		The CB types used by rebels.
+		
+	- Military Campaign
+		CB type used by military officers to win their lieges' wars. No truce time.
+		
+	- Military Occupation
+		Military Campaign variant. Targets a title of the military charater's tier or below and gains that title upon success. Must be authorized by the overall war leader. No truce time.
+		
+	- Civil War
+		CB type for most civil wars. Non-independence, non-revolt civil wars are always the result of a failed coup (which in turn may be the result of a constitutional crisis, which is the result of the sort of thing that usually causes civil wars in vanilla)
+		
+	- War of Independence
+		Exactly what it says on the tin.
+		
+	- War of Aggression
+		Free CB to conquer one neighboring province. Available only to Astrism, Terran Imperialism
+		
+	- Occupation(?)
+		CB for Space Pirates allowing them to take individual baronies (useful for establishing bases)
+		
+	- Assimilation
+		Free invasion CB available only to the Hive.

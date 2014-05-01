@@ -575,6 +575,9 @@ character_event = {
 			trait = cold
 		}
 		NOT = {
+			trait = carefree
+		}
+		NOT = {
 			trait = proud
 		}
 		NOT = {

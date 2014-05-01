@@ -1,5 +1,5 @@
 political_group = {
-	has_coa_on_barony_only = yes
+	has_coa_on_barony_only = no
 	graphical_culture = westerngfx
 	playable = yes
 	
@@ -9,7 +9,7 @@ political_group = {
 	terran_federalist = {
 		graphical_culture = westerngfx
 		icon = 1
-		heresy_icon = 6
+		heresy_icon = 1
 		
 		color = { 0.2 0.2 0.8 }
 		crusade_name = "UNIFICATION"
@@ -37,7 +37,7 @@ political_group = {
 	terran_republican = {
 		graphical_culture = westerngfx
 		icon = 1
-		heresy_icon = 6
+		heresy_icon = 1
 		
 		color = { 0.4 0.4 0.8 }
 		crusade_name = "UNIFICATION"
@@ -63,8 +63,8 @@ political_group = {
 	}
 	terran_imperial = {
 		graphical_culture = westerngfx
-		icon = 1
-		heresy_icon = 6
+		icon = 2
+		heresy_icon = 2
 		
 		color = { 0.8 0.2 0.8 }
 		crusade_name = "UNIFICATION"
@@ -88,8 +88,8 @@ political_group = {
 	}
 	colonial_separatist = {
 		graphical_culture = westerngfx
-		icon = 1
-		heresy_icon = 6
+		icon = 3
+		heresy_icon = 3
 		
 		parent = terran_federalist
 		
@@ -116,8 +116,8 @@ political_group = {
 	}
 	neo_feudal = {
 		graphical_culture = westerngfx
-		icon = 1
-		heresy_icon = 6
+		icon = 4
+		heresy_icon = 4
 		
 		parent = terran_imperial
 		
@@ -142,8 +142,8 @@ political_group = {
 	}
 	neo_socialist = {
 		graphical_culture = westerngfx
-		icon = 1
-		heresy_icon = 6
+		icon = 5
+		heresy_icon = 5
 		
 		parent = terran_republican
 		
@@ -167,7 +167,7 @@ political_group = {
 	}
 	astrist = {
 		graphical_culture = westerngfx
-		icon = 1
+		icon = 6
 		heresy_icon = 6
 		
 		parent = terran_republican
@@ -193,7 +193,7 @@ political_group = {
 }
 
 religious_group = {
-	has_coa_on_barony_only = yes
+	has_coa_on_barony_only = no
 	graphical_culture = muslimgfx
 	playable = yes
 	
@@ -214,13 +214,7 @@ religious_group = {
 			OP_ARCHANGEL OP_SERAPHIM OP_CHERUBIM OP_GOSPEL OP_TESTAMENT OP_FAITHFUL OP_AZRAEL OP_MICHAEL OP_GABRIEL OP_PROPHECY OP_ABRAHAM OP_ISAAC OP_JACOB OP_JOSHUA OP_DAVID OP_SOLOMON OP_MOHAMMED # Abrahamic operation names
 		}
 		
-		investiture = yes
-		can_excommunicate = yes
-		can_grant_divorce = yes
-		can_grant_invasion_cb = holy_invasion
-		can_call_crusade = yes
-		can_grant_claim = yes
-		
+		priests_can_inherit = no
 		priests_can_marry = no
 		female_temple_holders = yes
 		feminist = yes
@@ -243,13 +237,6 @@ religious_group = {
 			OP_MITHRAS OP_MINOTAUR OP_TAURUS OP_SOL_INVICTUS # Solarian operatio names
 		}
 		
-		investiture = yes
-		can_excommunicate = yes
-		can_grant_divorce = yes
-		can_grant_invasion_cb = holy_invasion
-		can_call_crusade = yes
-		can_grant_claim = yes
-		
 		priests_can_marry = no
 		female_temple_holders = yes
 		feminist = yes
@@ -270,14 +257,6 @@ religious_group = {
 			OP_MERCURY OP_VENUS OP_ARES OP_CERES OP_JUPITER OP_GANYMEDE OP_CALLISTO OP_EUROPA OP_IO OP_SATURN OP_TITAN OP_NEPTUNE OP_URANUS OP_PLUTO OP_CHARON # Solar system operation names
 			OP_ARCHANGEL OP_SERAPHIM OP_CHERUBIM OP_GOSPEL OP_TESTAMENT OP_FAITHFUL OP_AZRAEL OP_MICHAEL OP_GABRIEL OP_PROPHECY OP_ABRAHAM OP_ISAAC OP_JACOB OP_JOSHUA OP_DAVID OP_SOLOMON OP_MOHAMMED # Abrahamic operation names
 		}
-		
-		investiture = no
-		autocephaly = yes
-		can_excommunicate = yes
-		can_grant_divorce = yes
-		can_grant_invasion_cb = holy_invasion
-		can_call_crusade = yes
-		can_grant_claim = yes
 		
 		priests_can_marry = no
 		female_temple_holders = yes
@@ -305,7 +284,7 @@ religious_group = {
 		#can_grant_invasion_cb = no #wants a CB
 		can_call_crusade = no
 		can_grant_claim = no
-		
+		priests_can_inherit = no
 		priests_can_marry = no
 		female_temple_holders = yes
 		feminist = yes
@@ -417,7 +396,7 @@ religious_group = {
 }
 
 transhumanist_group = {
-	has_coa_on_barony_only = yes
+	has_coa_on_barony_only = no
 	graphical_culture = westerngfx
 	playable = yes
 	
@@ -439,7 +418,7 @@ transhumanist_group = {
 			OP_ALACRITY OP_CHAPTER OP_CORKSCREW OP_DEADLIGHT OP_DERVISH OP_DYNAMO OP_MATADOR OP_MERIDIAN OP_OVERLORD OP_SABRE OP_VICTORY # Generic operation names
 			OP_MERCURY OP_VENUS OP_ARES OP_CERES OP_JUPITER OP_GANYMEDE OP_CALLISTO OP_EUROPA OP_IO OP_SATURN OP_TITAN OP_NEPTUNE OP_URANUS OP_PLUTO OP_CHARON # Solar system operation names
 			OP_ARIES OP_TAURUS OP_GEMINI OP_CANCER OP_LEO OP_VIRGO OP_LIBRA OP_SCORPIO OP_SAGITTARIUS OP_CAPRICORN OP_AQUARIUS OP_PISCES OP_ORION OP_WITCHHEAD OP_HORSEHEAD OP_VEIL OP_FLAME OP_HELIX # Constellation and nebula operation names
-			OP_ENLIGHTMENT OP_TRANSCENDENCE OP_NIRVANA OP_ASCENSION OP_UTOPIA OP_SINGULARITY # Transhumanist operation names
+			OP_ENLIGHTENMENT OP_TRANSCENDENCE OP_NIRVANA OP_ASCENSION OP_UTOPIA OP_SINGULARITY # Transhumanist operation names
 		}
 		
 		investiture = yes
@@ -449,7 +428,6 @@ transhumanist_group = {
 		#can_grant_invasion_cb = no #wants a cb
 		can_call_crusade = no
 		can_grant_claim = no
-		
 		can_hold_temples = yes
 		priests_can_marry = yes
 		female_temple_holders = yes
@@ -471,7 +449,7 @@ transhumanist_group = {
 			OP_ALACRITY OP_CHAPTER OP_CORKSCREW OP_DEADLIGHT OP_DERVISH OP_DYNAMO OP_MATADOR OP_MERIDIAN OP_OVERLORD OP_SABRE OP_VICTORY # Generic operation names
 			OP_MERCURY OP_VENUS OP_ARES OP_CERES OP_JUPITER OP_GANYMEDE OP_CALLISTO OP_EUROPA OP_IO OP_SATURN OP_TITAN OP_NEPTUNE OP_URANUS OP_PLUTO OP_CHARON # Solar system operation names
 			OP_ARIES OP_TAURUS OP_GEMINI OP_CANCER OP_LEO OP_VIRGO OP_LIBRA OP_SCORPIO OP_SAGITTARIUS OP_CAPRICORN OP_AQUARIUS OP_PISCES OP_ORION OP_WITCHHEAD OP_HORSEHEAD OP_VEIL OP_FLAME OP_HELIX # Constellation and nebula operation names
-			OP_ENLIGHTMENT OP_TRANSCENDENCE OP_NIRVANA OP_ASCENSION OP_UTOPIA OP_SINGULARITY # Transhumanist operation names
+			OP_ENLIGHTENMENT OP_TRANSCENDENCE OP_NIRVANA OP_ASCENSION OP_UTOPIA OP_SINGULARITY # Transhumanist operation names
 		}
 		
 		investiture = yes
@@ -499,7 +477,7 @@ transhumanist_group = {
 			OP_ALACRITY OP_CHAPTER OP_CORKSCREW OP_DEADLIGHT OP_DERVISH OP_DYNAMO OP_MATADOR OP_MERIDIAN OP_OVERLORD OP_SABRE OP_VICTORY # Generic operation names
 			OP_MERCURY OP_VENUS OP_ARES OP_CERES OP_JUPITER OP_GANYMEDE OP_CALLISTO OP_EUROPA OP_IO OP_SATURN OP_TITAN OP_NEPTUNE OP_URANUS OP_PLUTO OP_CHARON # Solar system operation names
 			OP_ARIES OP_TAURUS OP_GEMINI OP_CANCER OP_LEO OP_VIRGO OP_LIBRA OP_SCORPIO OP_SAGITTARIUS OP_CAPRICORN OP_AQUARIUS OP_PISCES OP_ORION OP_WITCHHEAD OP_HORSEHEAD OP_VEIL OP_FLAME OP_HELIX # Constellation and nebula operation names
-			OP_ENLIGHTMENT OP_TRANSCENDENCE OP_NIRVANA OP_ASCENSION OP_UTOPIA OP_SINGULARITY # Transhumanist operation names
+			OP_ENLIGHTENMENT OP_TRANSCENDENCE OP_NIRVANA OP_ASCENSION OP_UTOPIA OP_SINGULARITY # Transhumanist operation names
 		}
 		
 		crusade_name = ASSIMILATION
@@ -535,7 +513,7 @@ transhumanist_group = {
 			OP_ALACRITY OP_CHAPTER OP_CORKSCREW OP_DEADLIGHT OP_DERVISH OP_DYNAMO OP_MATADOR OP_MERIDIAN OP_OVERLORD OP_SABRE OP_VICTORY # Generic operation names
 			OP_MERCURY OP_VENUS OP_ARES OP_CERES OP_JUPITER OP_GANYMEDE OP_CALLISTO OP_EUROPA OP_IO OP_SATURN OP_TITAN OP_NEPTUNE OP_URANUS OP_PLUTO OP_CHARON # Solar system operation names
 			OP_ARIES OP_TAURUS OP_GEMINI OP_CANCER OP_LEO OP_VIRGO OP_LIBRA OP_SCORPIO OP_SAGITTARIUS OP_CAPRICORN OP_AQUARIUS OP_PISCES OP_ORION OP_WITCHHEAD OP_HORSEHEAD OP_VEIL OP_FLAME OP_HELIX # Constellation and nebula operation names
-			OP_ENLIGHTMENT OP_TRANSCENDENCE OP_NIRVANA OP_ASCENSION OP_UTOPIA OP_SINGULARITY # Transhumanist operation names
+			OP_ENLIGHTENMENT OP_TRANSCENDENCE OP_NIRVANA OP_ASCENSION OP_UTOPIA OP_SINGULARITY # Transhumanist operation names
 		}
 		
 		scripture_name = THE_LAW

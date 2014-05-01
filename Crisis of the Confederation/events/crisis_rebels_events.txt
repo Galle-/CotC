@@ -1,0 +1,8282 @@
+namespace = rebels
+
+# Who gets what kind of rebellion?
+# Terran Federalism - Democratic
+# Terran Republicanism - Democratic
+# Terran Imperialism - Autocratic
+# Colonial Separatism - Democratic
+# Neo-Feudalism - Autocratic
+# Neo-Socialism - Theocratic
+# Astrism - Autocratic
+# Orthodoxy - Theocratic
+# Xenoterranism - Theocratic
+# Solarianism - Theocratic
+# Machine Cult - Theocratic
+# Bio-Directionist: Autocratic
+# All Others: According to current system capital
+
+# Who are the rebels against?
+# Choose the first one to apply
+# Against the Empire If:
+#	- Imperial government demesne
+#	- Against imperial government in constitutional crisis
+# Against the Region If:
+#	- Regional government demesne
+#	- Against regional government in constitutional crisis
+# Against the Sector If:
+#	- Sector government demesne
+#	- Against sector government in constitutional crisis
+# Against the System If:
+#	- All else
+# War target will escalate if lieges attempt to intervene
+
+# Generate Random Rebel Fleet
+# This will randomly generate a rebel fleet, with officers
+# Rebel Fleet Generation Event
+character_event = {
+	id = rebels.0
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		# Generate a warship captain, a marine colonel, and a fighter pilot
+		# Warship Captain
+		random_list = {
+			50 = {
+				create_random_soldier = {
+					age = 40
+					random_traits = yes
+					religion = FROM
+					culture = FROM
+					dynasty = culture
+					female = no
+					trait = rebel_leader
+					trait = warship_captain
+				}
+			}
+			50 = {
+				create_random_soldier = {
+					age = 40
+					random_traits = yes
+					religion = FROM
+					culture = FROM
+					dynasty = culture
+					female = yes
+					trait = rebel_leader
+					trait = warship_captain
+				}
+				new_character = {
+					e_rebels = { holder_scope = { reverse_banish = PREVPREV } }
+					dynasty = random
+					set_defacto_liege = ROOT
+				}
+			}
+		}
+		# Marine Colonel
+		random_list = {
+			50 = {
+				create_random_soldier = {
+					age = 30
+					random_traits = yes
+					religion = FROM
+					culture = FROM
+					dynasty = culture
+					female = no
+					trait = rebel_leader
+					trait = marine_colonel
+				}
+			}
+			50 = {
+				create_random_soldier = {
+					age = 30
+					random_traits = yes
+					religion = FROM
+					culture = FROM
+					dynasty = culture
+					female = yes
+					trait = rebel_leader
+					trait = marine_colonel
+				}
+			}
+		}
+		# Fighter Pilot
+		random_list = {
+			50 = {
+				create_random_soldier = {
+					age = 20
+					random_traits = yes
+					religion = FROM
+					culture = FROM
+					dynasty = culture
+					female = no
+					trait = rebel_leader
+					trait = fighter_pilot
+				}
+			}
+			50 = {
+				create_random_soldier = {
+					age = 20
+					random_traits = yes
+					religion = FROM
+					culture = FROM
+					dynasty = culture
+					female = yes
+					trait = rebel_leader
+					trait = fighter_pilot
+				}
+			}
+		}
+		# Generate the fleet
+		# Guaranteed: 1 DD, 1 Troop Transport, 25 Fighters
+		spawn_unit = {
+			province = FROM
+			home = FROM
+			owner = ROOT
+			troops = { light_cavalry = { 1 1 } }
+			attrition = 1.0
+			disband_on_peace = yes
+		}
+		spawn_unit = {
+			province = FROM
+			home = FROM
+			owner = ROOT
+			troops = { archers = { 1 1 } }
+			attrition = 1.0
+			disband_on_peace = yes
+		}
+		spawn_unit = {
+			province = FROM
+			home = FROM
+			owner = ROOT
+			troops = { light_infantry = { 25 25 } }
+			attrition = 1.0
+			disband_on_peace = yes
+		}
+		# Baseline - Up to 1 DN, 3 BCs, 5 DDs, 3 Troop Transports, 100 Fighters, 100 Bombers
+		# Dreadnoughts
+		random = {
+			chance = 15
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				owner = ROOT
+				troops = { dreadnoughts = { 1 1 } }
+				attrition = 1.0
+				disband_on_peace = yes
+			}
+		}
+		# Battlecruisers
+		random = {
+			chance = 25
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				owner = ROOT
+				troops = { knights = { 1 1 } }
+				attrition = 1.0
+				disband_on_peace = yes
+			}
+		}
+		random = {
+			chance = 25
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				owner = ROOT
+				troops = { knights = { 1 1 } }
+				attrition = 1.0
+				disband_on_peace = yes
+			}
+		}
+		random = {
+			chance = 25
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				owner = ROOT
+				troops = { knights = { 1 1 } }
+				attrition = 1.0
+				disband_on_peace = yes
+			}
+		}
+		# Destroyers
+		random = {
+			chance = 50
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				owner = ROOT
+				troops = { light_cavalry = { 1 1 } }
+				attrition = 1.0
+				disband_on_peace = yes
+			}
+		}
+		random = {
+			chance = 50
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				owner = ROOT
+				troops = { light_cavalry = { 1 1 } }
+				attrition = 1.0
+				disband_on_peace = yes
+			}
+		}
+		random = {
+			chance = 50
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				owner = ROOT
+				troops = { light_cavalry = { 1 1 } }
+				attrition = 1.0
+				disband_on_peace = yes
+			}
+		}
+		random = {
+			chance = 50
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				owner = ROOT
+				troops = { light_cavalry = { 1 1 } }
+				attrition = 1.0
+				disband_on_peace = yes
+			}
+		}
+		random = {
+			chance = 50
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				owner = ROOT
+				troops = { light_cavalry = { 1 1 } }
+				attrition = 1.0
+				disband_on_peace = yes
+			}
+		}
+		# Troop Transports
+		random = {
+			chance = 75
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				owner = ROOT
+				troops = { archers = { 1 1 } }
+				attrition = 1.0
+				disband_on_peace = yes
+			}
+		}
+		random = {
+			chance = 75
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				owner = ROOT
+				troops = { archers = { 1 1 } }
+				attrition = 1.0
+				disband_on_peace = yes
+			}
+		}
+		random = {
+			chance = 75
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				owner = ROOT
+				troops = { archers = { 1 1 } }
+				attrition = 1.0
+				disband_on_peace = yes
+			}
+		}
+		# Fighters
+		random = {
+			chance = 75
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				owner = ROOT
+				troops = { light_infantry = { 25 25 } }
+				attrition = 1.0
+				disband_on_peace = yes
+			}
+		}
+		random = {
+			chance = 75
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				owner = ROOT
+				troops = { light_infantry = { 25 25 } }
+				attrition = 1.0
+				disband_on_peace = yes
+			}
+		}
+		random = {
+			chance = 75
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				owner = ROOT
+				troops = { light_infantry = { 25 25 } }
+				attrition = 1.0
+				disband_on_peace = yes
+			}
+		}
+		random = {
+			chance = 75
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				owner = ROOT
+				troops = { light_infantry = { 25 25 } }
+				attrition = 1.0
+				disband_on_peace = yes
+			}
+		}
+		# Bombers
+		random = {
+			chance = 50
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				owner = ROOT
+				troops = { heavy_infantry = { 25 25 } }
+				attrition = 1.0
+				disband_on_peace = yes
+			}
+		}
+		random = {
+			chance = 50
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				owner = ROOT
+				troops = { heavy_infantry = { 25 25 } }
+				attrition = 1.0
+				disband_on_peace = yes
+			}
+		}
+		random = {
+			chance = 50
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				owner = ROOT
+				troops = { heavy_infantry = { 25 25 } }
+				attrition = 1.0
+				disband_on_peace = yes
+			}
+		}
+		random = {
+			chance = 50
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				owner = ROOT
+				troops = { heavy_infantry = { 25 25 } }
+				attrition = 1.0
+				disband_on_peace = yes
+			}
+		}
+		# Colony
+		if = {
+			limit = {
+				FROM = {
+					any_province_lord = {
+						any_demesne_title = {
+							tier = baron
+							location = { province_id = FROM }
+							OR = {
+								has_building = ca_colony_1
+								has_building = ct_colony_1
+								has_building = tp_colony_1
+							}
+						}
+					}
+				}
+			}
+			# Dreadnoughts
+			random = {
+				chance = 20
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			# Battlecruisers
+			random = {
+				chance = 30
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { knights = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 30
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { knights = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 30
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { knights = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			# Destroyers
+			random = {
+				chance = 55
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_cavalry = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 55
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_cavalry = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 55
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_cavalry = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 55
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_cavalry = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 55
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_cavalry = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			# Troop Transports
+			random = {
+				chance = 80
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { archers = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 80
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { archers = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 80
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { archers = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			# Fighters
+			random = {
+				chance = 80
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 80
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 80
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 80
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			# Bombers
+			random = {
+				chance = 55
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { heavy_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 55
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { heavy_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 55
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { heavy_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 55
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { heavy_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+		}
+		# Inhabited Planet
+		if = {
+			limit = {
+				FROM = {
+					any_province_lord = {
+						any_demesne_title = {
+							tier = baron
+							location = { province_id = FROM }
+							OR = {
+								has_building = ca_colony_2
+								has_building = ct_colony_2
+								has_building = tp_colony_2
+							}
+						}
+					}
+				}
+			}
+			# Dreadnoughts
+			random = {
+				chance = 25
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			# Battlecruisers
+			random = {
+				chance = 35
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { knights = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 35
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { knights = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 35
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { knights = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			# Destroyers
+			random = {
+				chance = 60
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_cavalry = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 60
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_cavalry = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 60
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_cavalry = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 60
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_cavalry = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 60
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_cavalry = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			# Troop Transports
+			random = {
+				chance = 85
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { archers = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 85
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { archers = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 85
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { archers = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			# Fighters
+			random = {
+				chance = 85
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 85
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 85
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 85
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			# Bombers
+			random = {
+				chance = 60
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { heavy_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 60
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { heavy_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 60
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { heavy_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 60
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { heavy_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+		}
+		# Urbanized Planet
+		if = {
+			limit = {
+				FROM = {
+					any_province_lord = {
+						any_demesne_title = {
+							tier = baron
+							location = { province_id = FROM }
+							OR = {
+								has_building = ca_colony_3
+								has_building = ct_colony_3
+								has_building = tp_colony_3
+							}
+						}
+					}
+				}
+			}
+			# Dreadnoughts
+			random = {
+				chance = 30
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			# Battlecruisers
+			random = {
+				chance = 40
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { knights = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 40
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { knights = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 40
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { knights = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			# Destroyers
+			random = {
+				chance = 65
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_cavalry = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 65
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_cavalry = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 65
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_cavalry = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 65
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_cavalry = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 65
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_cavalry = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			# Troop Transports
+			random = {
+				chance = 90
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { archers = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 90
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { archers = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 90
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { archers = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			# Fighters
+			random = {
+				chance = 90
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 90
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 90
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 90
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			# Bombers
+			random = {
+				chance = 65
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { heavy_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 65
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { heavy_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 65
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { heavy_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 65
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { heavy_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+		}
+		# Ecumenopolis
+		if = {
+			limit = {
+				FROM = {
+					any_province_lord = {
+						any_demesne_title = {
+							tier = baron
+							location = { province_id = FROM }
+							OR = {
+								has_building = ca_colony_1
+								has_building = ct_colony_1
+								has_building = tp_colony_1
+							}
+						}
+					}
+				}
+			}
+			# Dreadnoughts
+			random = {
+				chance = 35
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			# Battlecruisers
+			random = {
+				chance = 45
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { knights = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 45
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { knights = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 45
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { knights = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			# Destroyers
+			random = {
+				chance = 70
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_cavalry = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 70
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_cavalry = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 70
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_cavalry = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 70
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_cavalry = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 70
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_cavalry = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			# Troop Transports
+			random = {
+				chance = 95
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { archers = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 95
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { archers = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 95
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { archers = { 1 1 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			# Fighters
+			random = {
+				chance = 95
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 95
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 95
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 95
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { light_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			# Bombers
+			random = {
+				chance = 70
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { heavy_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 70
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { heavy_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 70
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { heavy_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 70
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { heavy_infantry = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+		}
+		
+		# Generate combat drones
+		if = {
+			limit = {
+				FROM = {
+					TECH_MAJESTY = 1
+					NOT = { religion_group = religious_group }
+				}
+			}
+			# Generate a drone scientist
+			random_list = {
+				50 = {
+					create_random_priest = {
+						random_traits = yes
+						age = 30
+						culture = FROM
+						religion = FROM
+						dynasty = culture
+						female = yes
+						trait = rebel_leader
+						trait = drone_engineer
+					}
+				}
+				50 = {
+					create_random_priest = {
+						random_traits = yes
+						age = 30
+						culture = FROM
+						religion = FROM
+						dynasty = culture
+						female = no
+						trait = rebel_leader
+						trait = drone_engineer
+					}
+				}
+			}
+			# Guaranteed - 25 drones
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				owner = ROOT
+				troops = { pikemen = { 25 25 } }
+				attrition = 1.0
+				disband_on_peace = yes
+			}
+			random = {
+				chance = 50
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { pikemen = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 50
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { pikemen = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					TECH_MAJESTY = 1
+					OR = {
+						religion = cyberneticist
+						religion = machine_cultist
+						religion = hiver
+					}
+				}
+			}
+			random = {
+				chance = 50
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { pikemen = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 50
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { pikemen = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 50
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { pikemen = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					TECH_MAJESTY = 3
+					NOT = { religion_group = religious_group }
+				}
+			}
+			random = {
+				chance = 50
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { pikemen = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 50
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { pikemen = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 50
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { pikemen = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					TECH_MAJESTY = 3
+					OR = {
+						religion = cyberneticist
+						religion = machine_cultist
+						religion = hiver
+					}
+				}
+			}
+			random = {
+				chance = 50
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { pikemen = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 50
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { pikemen = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 50
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { pikemen = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					TECH_MAJESTY = 5
+					NOT = { religion_group = religious_group }
+				}
+			}
+			random = {
+				chance = 50
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { pikemen = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 50
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { pikemen = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 50
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { pikemen = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					TECH_MAJESTY = 5
+					OR = {
+						religion = cyberneticist
+						religion = machine_cultist
+						religion = hiver
+					}
+				}
+			}
+			random = {
+				chance = 50
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { pikemen = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 50
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { pikemen = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 50
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { pikemen = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					TECH_MAJESTY = 7
+					NOT = { religion_group = religious_group }
+				}
+			}
+			random = {
+				chance = 50
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { pikemen = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 50
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { pikemen = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 50
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { pikemen = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					TECH_MAJESTY = 7
+					OR = {
+						religion = cyberneticist
+						religion = machine_cultist
+						religion = hiver
+					}
+				}
+			}
+			random = {
+				chance = 50
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { pikemen = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 50
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { pikemen = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+			random = {
+				chance = 50
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					owner = ROOT
+					troops = { pikemen = { 25 25 } }
+					attrition = 1.0
+					disband_on_peace = yes
+				}
+			}
+		}
+	}
+}
+
+# Democratic Revolutions - System
+province_event = {
+	id = rebels.100
+	desc = "EVTDESCREBELS100"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	trigger = {
+		OR = {
+			religion = terran_federalist
+			religion = terran_republican
+			religion = colonial_seperatist
+			AND = {
+				owner = { is_republic = yes }
+				NOT = { religion = terran_imperial }
+				NOT = { religion = astrist }
+				NOT = { religion = neo_feudal }
+				NOT = { religion = neo_socialist }
+				NOT = { religion = bio_directionist }
+				NOT = { religion = orthodox }
+				NOT = { religion = xenoterran }
+				NOT = { religion = solarian }
+				NOT = { religion = machine_cultist }
+			}
+		}
+		
+		# Must be angry at the system government
+		NOT = { owner = { any_demesne_title = { higher_tier_than = COUNT } } }
+		NOT = { has_province_modifier = public_against_duke }
+		NOT = { has_province_modifier = public_against_king }
+		NOT = { has_province_modifier = public_against_emperor }
+		
+		# Must not already be part of a democratic rebellion
+		NOT = {
+			any_province_lord = {
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = democratic_rebellion
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = { religion = mother_gaia_cultist }
+				NOT = { religion = father_earth_cultist }
+			}
+			random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = culture
+						religion = ROOT
+						culture = ROOT
+						female = yes
+						age = 35
+						attributes = { martial = 5 }
+						trait = rebel_leader
+						trait = radical
+						trait = ambitious
+						trait = brilliant_strategist
+						trait = warship_captain
+					}
+					new_character = {
+						# Create a new title
+						create_title = {
+							tier = BARON
+							landless = yes
+							temporary = yes
+							rebel = yes
+							culture = ROOT
+							name = "DEMOCRATIC_REVOLT"
+							holder = THIS
+						}
+						# Flag for revolt
+						set_character_flag = flag_revolter
+						# Flagship
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = THIS
+							leader = THIS
+							troops = { dreadnoughts = { 1 1 } }
+							attrition = 1.0
+						}
+						# Generate a random rebel fleet
+						character_event = { id = rebels.0 }
+						# Declare war against system government
+						ROOT = {
+							owner = {
+								set_defacto_vassal = PREVPREV
+								reverse_war = {
+									target = PREVPREV
+									casus_belli = democratic_rebellion
+								}
+								reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+							}
+						}
+						character_event = { id = rebels.102 }
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = culture
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 35
+						attributes = { martial = 5 }
+						trait = rebel_leader
+						trait = radical
+						trait = ambitious
+						trait = brilliant_strategist
+						trait = warship_captain
+					}
+					new_character = {
+						# Create a new title
+						create_title = {
+							tier = BARON
+							landless = yes
+							temporary = yes
+							rebel = yes
+							culture = ROOT
+							name = "DEMOCRATIC_REVOLT"
+							holder = THIS
+						}
+						# Flag for revolt
+						set_character_flag = flag_revolter
+						# Flagship
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = THIS
+							leader = THIS
+							troops = { dreadnoughts = { 1 1 } }
+							attrition = 1.0
+						}
+						# Generate a random rebel fleet
+						character_event = { id = rebels.0 }
+						# Declare war against system government
+						ROOT = {
+							owner = {
+								set_defacto_vassal = PREVPREV
+								reverse_war = {
+									target = PREVPREV
+									casus_belli = democratic_rebellion
+								}
+								reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+							}
+						}
+						character_event = { id = rebels.102 }
+					}
+				}
+			}
+		}
+		if = {
+			limit = { religion = mother_gaia_cultist }
+			create_character = {
+				random_traits = yes
+				dynasty = culture
+				religion = ROOT
+				culture = ROOT
+				female = yes
+				age = 35
+				attributes = { martial = 5 }
+				trait = rebel_leader
+				trait = radical
+				trait = ambitious
+				trait = brilliant_strategist
+				trait = warship_captain
+			}
+			new_character = {
+				# Create a new title
+				create_title = {
+					tier = BARON
+					landless = yes
+					temporary = yes
+					rebel = yes
+					culture = ROOT
+					name = "DEMOCRATIC_REVOLT"
+					holder = THIS
+				}
+				# Flag for revolt
+				set_character_flag = flag_revolter
+				# Flagship
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					leader = THIS
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+				}
+				# Generate a random rebel fleet
+				character_event = { id = rebels.0 }
+				# Declare war against system government
+				ROOT = {
+					owner = {
+						set_defacto_vassal = PREVPREV
+						reverse_war = {
+							target = PREVPREV
+							casus_belli = democratic_rebellion
+						}
+						reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+					}
+				}
+				character_event = { id = rebels.102 }
+			}
+		}
+		if = {
+			limit = { religion = father_earth_cultist }
+			create_character = {
+				random_traits = yes
+				dynasty = culture
+				religion = ROOT
+				culture = ROOT
+				female = no
+				age = 35
+				attributes = { martial = 5 }
+				trait = rebel_leader
+				trait = radical
+				trait = ambitious
+				trait = brilliant_strategist
+				trait = warship_captain
+			}
+			new_character = {
+				# Create a new title
+				create_title = {
+					tier = BARON
+					landless = yes
+					temporary = yes
+					rebel = yes
+					culture = ROOT
+					name = "DEMOCRATIC_REVOLT"
+					holder = THIS
+				}
+				# Flag for revolt
+				set_character_flag = flag_revolter
+				# Flagship
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					leader = THIS
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+				}
+				# Generate a random rebel fleet
+				character_event = { id = rebels.0 }
+				# Declare war against system government
+				ROOT = {
+					owner = {
+						set_defacto_vassal = PREVPREV
+						reverse_war = {
+							target = PREVPREV
+							casus_belli = democratic_rebellion
+						}
+						reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+					}
+				}
+				character_event = { id = rebels.102 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 365 }
+	}
+}
+# We are at WAR
+character_event = {
+	id = rebels.102
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = { FROM = { owner = { letter_event = { id = rebels.103 days = 1 } } } }
+}
+# Rebels declare war!
+letter_event = {
+	id = rebels.103
+	desc = "EVTDESCREBELS103"
+	is_triggered_only = yes
+	border = GFX_event_letter_frame_war
+	
+	option = {
+		name = "EVTOPTAREBELS103" # We can handle this
+		if = {
+			limit = {
+				has_character_flag = flag_initial_target
+				NOT = { primary_title = { higher_tier_than = duke } }
+			}
+			religion_authority = { modifier = allowed_minor_rebellion years = 5 }
+		}
+		if = {
+			limit = {
+				has_character_flag = flag_initial_target
+				primary_title = { higher_tier_than = duke }
+			}
+			religion_authority = { modifier = allowed_major_rebellion years = 60 }
+		}
+		clr_character_flag = flag_initial_target
+		if = {
+			limit = {
+				independent = no
+				NOT = { liege = { any_current_enemy = { character = ROOT } } }
+			}
+			prestige = 100
+			hidden_tooltip = { liege = { letter_event = { id = rebels.104 } } } # Inform liege that we can handle it
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				trait = humble
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.1 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.2 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.3 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.4 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.5 }
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.5
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.6
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.7
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.8
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.9
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 1
+			}
+			modifier = {
+				factor = 0.25
+				NOT = { relative_power = { who = FROM power = 1 } }
+			}
+			modifier = {
+				factor = 0
+				NOT = { relative_power = { who = FROM power = 1 } }
+				NOT = { trait = brave }
+				NOT = { trait = proud }
+				NOT = { trait = lunatic }
+				NOT = { trait = imbecile }
+			}
+			modifier = {
+				factor = 5
+				NOT = { religion_authority = 0.5 }
+				liege = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+				trait = ambitious
+			}
+		}
+	}
+	option = {
+		trigger = {
+			independent = no
+			NOT = { liege = { any_current_enemy = { character = ROOT } } }
+		}
+		name = "EVTOPTBREBELS103" # Attempt to escalate
+		if = {
+			limit = {
+				has_character_flag = flag_initial_target
+				NOT = { primary_title = { higher_tier_than = duke } }
+			}
+			religion_authority = { modifier = allowed_minor_rebellion years = 5 }
+		}
+		if = {
+			limit = {
+				has_character_flag = flag_initial_target
+				primary_title = { higher_tier_than = duke }
+			}
+			religion_authority = { modifier = allowed_major_rebellion years = 60 }
+		}
+		clr_character_flag = flag_initial_target
+		liege = { letter_event = { id = rebels.105 tooltip = "EVTTOOLTIPREBELS105" } }
+		# If religion authority is low, then this counts as a favor
+		if = {
+			limit = {
+				NOT = { religion_authority = 0.5 }
+				liege = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+			}
+			custom_tooltip = { text = "CALLINFAVOR" }
+		}
+		if = {
+			limit = {
+				NOT = { religion_authority = 0.5 }
+				liege = {
+					NOT = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+					NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+				}
+			}
+			custom_tooltip = { text = "YOUWILLOWEAFAVOR" }
+		}
+		ai_chance = { factor = 75 }
+	}
+}
+letter_event = {
+	id = rebels.104
+	desc = "EVTDESCREBELS104"
+	is_triggered_only = yes
+	border = GFX_event_letter_frame_war
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+# Vassal faces revolt, requests escalation
+letter_event = {
+	id = rebels.105
+	desc = "EVTDESCREBELS105"
+	is_triggered_only = yes
+	border = GFX_event_letter_frame_war
+	
+	# Provide assistance
+	option = {
+		name = "EVTOPTAREBELS105"
+		FROM = {
+			FROM = {
+				any_war = { end_war = invalid }
+				opinion = { who = ROOT modifier = opinion_evil_tyrant }
+				set_character_flag = flag_revolter
+				set_defacto_liege = ROOT
+			}
+		}
+		reverse_war = { target = FROMFROM casus_belli = democratic_rebellion }
+		hidden_tooltip = { FROM = { FROM = { character_event = { id = rebels.106 } } } } # Recursion
+		if = {
+			limit = { FROM = { primary_title = { tier = count } } }
+			religion_authority = { modifier = opposed_system_revolt years = 30 }
+		}
+		if = {
+			limit = { FROM = { primary_title = { tier = duke } } }
+			religion_authority = { modifier = opposed_sector_revolt years = 30 }
+		}
+		if = {
+			limit = { FROM = { primary_title = { tier = king } } }
+			religion_authority = { modifier = opposed_regional_revolt years = 30 }
+		}
+		FROM = {
+			letter_event = { id = rebels.107 tooltip = "EVTTOOLTIPREBELS107" }
+			if = {
+				limit = {
+					NOT = { religion_authority = 0.5 }
+					has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor }
+				}
+				custom_tooltip = {
+					text = "FAVORFULFILLED"
+					remove_opinion = { who = ROOT modifier = opinion_owes_me_a_favor }
+					letter_event = { id = favor.100 } # Favor system not yet implemented
+				}
+			}
+			if = {
+				limit = {
+					NOT = { religion_authority = 0.5 }
+					NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+					NOT = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+				}
+				custom_tooltip = {
+					text = "EVTTOOLTIPWILLOWEFAVOR"
+					hidden_tooltip = {
+						reverse_opinion = { who = ROOT modifier = opinion_owes_me_a_favor }
+						reverse_opinion = { who = ROOT modifier = opinion_favor_type_political }
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.5 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.6 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.7 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.8 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.9 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 1 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 100 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 100 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 90 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 80 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 70 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 60 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 50 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 40 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 30 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 20 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -9 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -19 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -29 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -39 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -49 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -59 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -69 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -79 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -89 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -99 } }
+			}
+			modifier = {
+				factor = 3
+				FROM = { primary_title = { higher_tier_than = count } }
+			}
+			modifier = {
+				factor = 3
+				FROM = { primary_title = { higher_tier_than = duke } }
+			}
+			modifier = {
+				factor = 5
+				reverse_has_opinion_modifier = { who = FROM modifier = opinion_owes_me_a_favor }
+			}
+			modifier = {
+				factor = 5
+				trait = radical
+				FROM = { religion = ROOT }
+			}
+			modifier = {
+				factor = 0.5
+				war = yes
+				NOT = { trait = brave }
+				NOT = { trait = imbecile }
+				NOT = { trait = lunatic }
+			}
+			modifier = {
+				factor = 0.2
+				war = yes
+				any_current_enemy = { relative_power = { who = ROOT power = 1 } } # Do I LOOK like I have time for this?
+				NOT = { trait = brave }
+				NOT = { trait = imbecile }
+				NOT = { trait = lunatic }
+			}
+		}
+	}
+	
+	# I don't see how that's my problem
+	option = {
+		name = "EVTOPTBREBELS105"
+		if = {
+			limit = { FROM = { primary_title = { tier = count } } }
+			religion_authority = { modifier = ignored_system_revolt years = 30 }
+		}
+		if = {
+			limit = { FROM = { primary_title = { tier = duke } } }
+			religion_authority = { modifier = ignored_sector_revolt years = 30 }
+		}
+		if = {
+			limit = { FROM = { primary_title = { tier = king } } }
+			religion_authority = { modifier = ignored_regional_revolt years = 30 }
+		}
+		add_character_modifier = { name = ignored_vassals days = 3650 }
+		FROM = {
+			letter_event = { id = rebels.108 tooltip = "EVTTOOLTIPREBELS108" }
+			if = {
+				limit = {
+					NOT = { religion_authority = 0.5 }
+					has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor }
+				}
+				character_event = { id = favor.200 tooltip = "EVTTOOLTIPFAVOR200" } # Favor system not yet implemented
+			}
+		}
+		ai_chance = { factor = 50 }
+	}
+}
+
+character_event = {
+	 id = rebels.106
+	 hide_window = yes
+	 is_triggered_only = yes
+	 
+	 immediate = {
+		FROM = { letter_event = { id = rebels.103 } }
+	 }
+}
+
+letter_event = {
+	id = rebels.107
+	desc = "EVTDESCREBELS107"
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTAREBELS107" }
+}
+letter_event = {
+	id = rebels.108
+	desc = "EVTDESCREBELS108"
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTAREBELS108" }
+}
+# Democratic rebels - sector
+province_event = {
+	id = rebels.110
+	desc = "EVTDESCREBELS110"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	trigger = {
+		OR = {
+			religion = terran_federalist
+			religion = terran_republican
+			religion = colonial_seperatist
+			AND = {
+				owner = {
+					ROOT = {
+						any_province_lord = {
+							primary_title = { tier = duke }
+							OR = {
+								has_character_modifier = constitutional_crisis
+								ROOT = { owner = { character = PREVPREV } }
+							}
+							is_republic = yes
+						}
+					}
+				}
+				NOT = { religion = terran_imperial }
+				NOT = { religion = astrist }
+				NOT = { religion = neo_feudal }
+				NOT = { religion = neo_socialist }
+				NOT = { religion = bio_directionist }
+				NOT = { religion = orthodox }
+				NOT = { religion = xenoterran }
+				NOT = { religion = solarian }
+				NOT = { religion = machine_cultist }
+			}
+		}
+		
+		# Must be angry at the system government
+		OR = {
+			has_province_modifier = public_against_duke
+			owner = { primary_title = { tier = DUKE } }
+		}
+		NOT = { owner = { any_demesne_title = { higher_tier_than = DUKE } } }
+		NOT = { has_province_modifier = public_against_king }
+		NOT = { has_province_modifier = public_against_emperor }
+		
+		# Must not already be part of a democratic rebellion
+		NOT = {
+			any_province_lord = {
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = democratic_rebellion
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = { religion = mother_gaia_cultist }
+				NOT = { religion = father_earth_cultist }
+			}
+			random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = culture
+						religion = ROOT
+						culture = ROOT
+						female = yes
+						age = 35
+						attributes = { martial = 5 }
+						trait = rebel_leader
+						trait = radical
+						trait = ambitious
+						trait = brilliant_strategist
+						trait = warship_captain
+					}
+					new_character = {
+						# Create a new title
+						create_title = {
+							tier = COUNT
+							landless = yes
+							temporary = yes
+							rebel = yes
+							culture = ROOT
+							name = "DEMOCRATIC_REVOLT"
+							holder = THIS
+						}
+						# Flag for revolt
+						set_character_flag = flag_revolter
+						# Flagship
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = THIS
+							leader = THIS
+							troops = { dreadnoughts = { 1 1 } }
+							attrition = 1.0
+						}
+						# Generate a random rebel fleet
+						character_event = { id = rebels.0 }
+						# Declare war against sector government
+						ROOT = {
+							random_province_lord = {
+								limit = {
+									primary_title = { tier = duke }
+									OR = {
+										ROOT = { owner = { character = PREVPREV } }
+										has_character_modifier = constitutional_crisis
+									}
+								}
+								set_defacto_vassal = PREVPREV
+								reverse_war = {
+									target = PREVPREV
+									casus_belli = democratic_rebellion
+								}
+								reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+							}
+						}
+						character_event = { id = rebels.102 }
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = culture
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 35
+						attributes = { martial = 5 }
+						trait = rebel_leader
+						trait = radical
+						trait = ambitious
+						trait = brilliant_strategist
+						trait = warship_captain
+					}
+					new_character = {
+						# Create a new title
+						create_title = {
+							tier = COUNT
+							landless = yes
+							temporary = yes
+							rebel = yes
+							culture = ROOT
+							name = "DEMOCRATIC_REVOLT"
+							holder = THIS
+						}
+						# Flag for revolt
+						set_character_flag = flag_revolter
+						# Flagship
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = THIS
+							leader = THIS
+							troops = { dreadnoughts = { 1 1 } }
+							attrition = 1.0
+						}
+						# Generate a random rebel fleet
+						character_event = { id = rebels.0 }
+						# Declare war against sector government
+						ROOT = {
+							random_province_lord = {
+								limit = {
+									primary_title = { tier = duke }
+									OR = {
+										ROOT = { owner = { character = PREVPREV } }
+										has_character_modifier = constitutional_crisis
+									}
+								}
+								set_defacto_vassal = PREVPREV
+								reverse_war = {
+									target = PREVPREV
+									casus_belli = democratic_rebellion
+								}
+								reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+							}
+						}
+						character_event = { id = rebels.102 }
+					}
+				}
+			}
+		}
+		if = {
+			limit = { religion = mother_gaia_cultist }
+			create_character = {
+				random_traits = yes
+				dynasty = culture
+				religion = ROOT
+				culture = ROOT
+				female = yes
+				age = 35
+				attributes = { martial = 5 }
+				trait = rebel_leader
+				trait = radical
+				trait = ambitious
+				trait = brilliant_strategist
+				trait = warship_captain
+			}
+			new_character = {
+				# Create a new title
+				create_title = {
+					tier = COUNT
+					landless = yes
+					temporary = yes
+					rebel = yes
+					culture = ROOT
+					name = "DEMOCRATIC_REVOLT"
+					holder = THIS
+				}
+				# Flag for revolt
+				set_character_flag = flag_revolter
+				# Flagship
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					leader = THIS
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+				}
+				# Generate a random rebel fleet
+				character_event = { id = rebels.0 }
+				# Declare war against sector government
+				ROOT = {
+					random_province_lord = {
+						limit = {
+							primary_title = { tier = duke }
+							OR = {
+								ROOT = { owner = { character = PREVPREV } }
+								has_character_modifier = constitutional_crisis
+							}
+						}
+						set_defacto_vassal = PREVPREV
+						reverse_war = {
+							target = PREVPREV
+							casus_belli = democratic_rebellion
+						}
+						reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+					}
+				}
+				character_event = { id = rebels.102 }
+			}
+		}
+		if = {
+			limit = { religion = father_earth_cultist }
+			create_character = {
+				random_traits = yes
+				dynasty = culture
+				religion = ROOT
+				culture = ROOT
+				female = no
+				age = 35
+				attributes = { martial = 5 }
+				trait = rebel_leader
+				trait = radical
+				trait = ambitious
+				trait = brilliant_strategist
+				trait = warship_captain
+			}
+			new_character = {
+				# Create a new title
+				create_title = {
+					tier = COUNT
+					landless = yes
+					temporary = yes
+					rebel = yes
+					culture = ROOT
+					name = "DEMOCRATIC_REVOLT"
+					holder = THIS
+				}
+				# Flag for revolt
+				set_character_flag = flag_revolter
+				# Flagship
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					leader = THIS
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+				}
+				# Generate a random rebel fleet
+				character_event = { id = rebels.0 }
+				# Declare war against system government
+				ROOT = {
+					random_province_lord = {
+						limit = {
+							primary_title = { tier = duke }
+							OR = {
+								ROOT = { owner = { character = PREVPREV } }
+								has_character_modifier = constitutional_crisis
+							}
+						}
+						set_defacto_vassal = PREVPREV
+						reverse_war = {
+							target = PREVPREV
+							casus_belli = democratic_rebellion
+						}
+						reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+					}
+				}
+				character_event = { id = rebels.102 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 365 }
+	}
+}
+# Democratic rebels - regional
+province_event = {
+	id = rebels.120
+	desc = "EVTDESCREBELS120"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	trigger = {
+		OR = {
+			religion = terran_federalist
+			religion = terran_republican
+			religion = colonial_seperatist
+			AND = {
+				owner = {
+					ROOT = {
+						any_province_lord = {
+							primary_title = { tier = king }
+							OR = {
+								has_character_modifier = constitutional_crisis
+								ROOT = { owner = { character = PREVPREV } }
+							}
+							is_republic = yes
+						}
+					}
+				}
+				NOT = { religion = terran_imperial }
+				NOT = { religion = astrist }
+				NOT = { religion = neo_feudal }
+				NOT = { religion = neo_socialist }
+				NOT = { religion = bio_directionist }
+				NOT = { religion = orthodox }
+				NOT = { religion = xenoterran }
+				NOT = { religion = solarian }
+				NOT = { religion = machine_cultist }
+			}
+		}
+		
+		# Must be angry at the system government
+		OR = {
+			has_province_modifier = public_against_king
+			primary_title = { tier = king }
+		}
+		NOT = { owner = { any_demesne_title = { higher_tier_than = KING } } }
+		NOT = { has_province_modifier = public_against_emperor }
+		
+		# Must not already be part of a democratic rebellion
+		NOT = {
+			any_province_lord = {
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = democratic_rebellion
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = { religion = mother_gaia_cultist }
+				NOT = { religion = father_earth_cultist }
+			}
+			random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = culture
+						religion = ROOT
+						culture = ROOT
+						female = yes
+						age = 35
+						attributes = { martial = 5 }
+						trait = rebel_leader
+						trait = radical
+						trait = ambitious
+						trait = brilliant_strategist
+						trait = warship_captain
+					}
+					new_character = {
+						# Create a new title
+						create_title = {
+							tier = DUKE
+							landless = yes
+							temporary = yes
+							rebel = yes
+							culture = ROOT
+							name = "DEMOCRATIC_REVOLT"
+							holder = THIS
+						}
+						# Flag for revolt
+						set_character_flag = flag_revolter
+						# Flagship
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = THIS
+							leader = THIS
+							troops = { dreadnoughts = { 1 1 } }
+							attrition = 1.0
+						}
+						# Generate a random rebel fleet
+						character_event = { id = rebels.0 }
+						# Declare war against sector government
+						ROOT = {
+							random_province_lord = {
+								limit = {
+									primary_title = { tier = king }
+									OR = {
+										has_character_modifier = constitutional_crisis
+										ROOT = { owner = { character = PREVPREV } }
+									}
+								}
+								set_defacto_vassal = PREVPREV
+								reverse_war = {
+									target = PREVPREV
+									casus_belli = democratic_rebellion
+								}
+								reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+							}
+						}
+						character_event = { id = rebels.102 }
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = culture
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 35
+						attributes = { martial = 5 }
+						trait = rebel_leader
+						trait = radical
+						trait = ambitious
+						trait = brilliant_strategist
+						trait = warship_captain
+					}
+					new_character = {
+						# Create a new title
+						create_title = {
+							tier = DUKE
+							landless = yes
+							temporary = yes
+							rebel = yes
+							culture = ROOT
+							name = "DEMOCRATIC_REVOLT"
+							holder = THIS
+						}
+						# Flag for revolt
+						set_character_flag = flag_revolter
+						# Flagship
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = THIS
+							leader = THIS
+							troops = { dreadnoughts = { 1 1 } }
+							attrition = 1.0
+						}
+						# Generate a random rebel fleet
+						character_event = { id = rebels.0 }
+						# Declare war against sector government
+						ROOT = {
+							random_province_lord = {
+								limit = {
+									primary_title = { tier = king }
+									OR = {
+										has_character_modifier = constitutional_crisis
+										ROOT = { owner = { character = PREVPREV } }
+									}
+								}
+								set_defacto_vassal = PREVPREV
+								reverse_war = {
+									target = PREVPREV
+									casus_belli = democratic_rebellion
+								}
+								reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+							}
+						}
+						character_event = { id = rebels.102 }
+					}
+				}
+			}
+		}
+		if = {
+			limit = { religion = mother_gaia_cultist }
+			create_character = {
+				random_traits = yes
+				dynasty = culture
+				religion = ROOT
+				culture = ROOT
+				female = yes
+				age = 35
+				attributes = { martial = 5 }
+				trait = rebel_leader
+				trait = radical
+				trait = ambitious
+				trait = brilliant_strategist
+				trait = warship_captain
+			}
+			new_character = {
+				# Create a new title
+				create_title = {
+					tier = DUKE
+					landless = yes
+					temporary = yes
+					rebel = yes
+					culture = ROOT
+					name = "DEMOCRATIC_REVOLT"
+					holder = THIS
+				}
+				# Flag for revolt
+				set_character_flag = flag_revolter
+				# Flagship
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					leader = THIS
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+				}
+				# Generate a random rebel fleet
+				character_event = { id = rebels.0 }
+				# Declare war against sector government
+				ROOT = {
+					random_province_lord = {
+						limit = {
+							primary_title = { tier = king }
+							OR = {
+								has_character_modifier = constitutional_crisis
+								ROOT = { owner = { character = PREVPREV } }
+							}
+						}
+						set_defacto_vassal = PREVPREV
+						reverse_war = {
+							target = PREVPREV
+							casus_belli = democratic_rebellion
+						}
+						reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+					}
+				}
+				character_event = { id = rebels.102 }
+			}
+		}
+		if = {
+			limit = { religion = father_earth_cultist }
+			create_character = {
+				random_traits = yes
+				dynasty = culture
+				religion = ROOT
+				culture = ROOT
+				female = no
+				age = 35
+				attributes = { martial = 5 }
+				trait = rebel_leader
+				trait = radical
+				trait = ambitious
+				trait = brilliant_strategist
+				trait = warship_captain
+			}
+			new_character = {
+				# Create a new title
+				create_title = {
+					tier = DUKE
+					landless = yes
+					temporary = yes
+					rebel = yes
+					culture = ROOT
+					name = "DEMOCRATIC_REVOLT"
+					holder = THIS
+				}
+				# Flag for revolt
+				set_character_flag = flag_revolter
+				# Flagship
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					leader = THIS
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+				}
+				# Generate a random rebel fleet
+				character_event = { id = rebels.0 }
+				# Declare war against system government
+				ROOT = {
+					random_province_lord = {
+						limit = {
+							primary_title = { tier = king }
+							OR = {
+								has_character_modifier = constitutional_crisis
+								ROOT = { owner = { character = PREVPREV } }
+							}
+						}
+						set_defacto_vassal = PREVPREV
+						reverse_war = {
+							target = PREVPREV
+							casus_belli = democratic_rebellion
+						}
+						reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+					}
+				}
+				character_event = { id = rebels.102 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 365 }
+	}
+}
+# Democratic rebels - empire
+province_event = {
+	id = rebels.130
+	desc = "EVTDESCREBELS130"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	trigger = {
+		OR = {
+			religion = terran_federalist
+			religion = terran_republican
+			religion = colonial_seperatist
+			AND = {
+				owner = {
+					ROOT = {
+						any_province_lord = {
+							primary_title = { tier = emperor }
+							OR = {
+								has_character_modifier = constitutional_crisis
+								ROOT = { owner = { character = PREVPREV } }
+							}
+							is_republic = yes
+						}
+					}
+				}
+				NOT = { religion = terran_imperial }
+				NOT = { religion = astrist }
+				NOT = { religion = neo_feudal }
+				NOT = { religion = neo_socialist }
+				NOT = { religion = bio_directionist }
+				NOT = { religion = orthodox }
+				NOT = { religion = xenoterran }
+				NOT = { religion = solarian }
+				NOT = { religion = machine_cultist }
+			}
+		}
+		
+		# Must be angry at the imperial government
+		OR = {
+			owner = { primary_title = { tier = emperor } }
+			has_province_modifier = public_against_emperor
+		}
+		
+		# Must not already be part of a democratic rebellion
+		NOT = {
+			any_province_lord = {
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = democratic_rebellion
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = { religion = mother_gaia_cultist }
+				NOT = { religion = father_earth_cultist }
+			}
+			random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = culture
+						religion = ROOT
+						culture = ROOT
+						female = yes
+						age = 35
+						attributes = { martial = 5 }
+						trait = rebel_leader
+						trait = radical
+						trait = ambitious
+						trait = brilliant_strategist
+						trait = warship_captain
+					}
+					new_character = {
+						# Create a new title
+						create_title = {
+							tier = DUKE
+							landless = yes
+							temporary = yes
+							rebel = yes
+							culture = ROOT
+							name = "DEMOCRATIC_REVOLT"
+							holder = THIS
+						}
+						# Flag for revolt
+						set_character_flag = flag_revolter
+						# Flagship
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = THIS
+							leader = THIS
+							troops = { dreadnoughts = { 1 1 } }
+							attrition = 1.0
+						}
+						# Generate a random rebel fleet
+						character_event = { id = rebels.0 }
+						# Declare war against sector government
+						ROOT = {
+							random_province_lord = {
+								limit = {
+									primary_title = { tier = emperor }
+									OR = {
+										has_character_modifier = constitutional_crisis
+										ROOT = { owner = { character = PREVPREV } }
+									}
+								}
+								set_defacto_vassal = PREVPREV
+								reverse_war = {
+									target = PREVPREV
+									casus_belli = democratic_rebellion
+								}
+								reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+							}
+						}
+						character_event = { id = rebels.102 }
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = culture
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 35
+						attributes = { martial = 5 }
+						trait = rebel_leader
+						trait = radical
+						trait = ambitious
+						trait = brilliant_strategist
+						trait = warship_captain
+					}
+					new_character = {
+						# Create a new title
+						create_title = {
+							tier = DUKE
+							landless = yes
+							temporary = yes
+							rebel = yes
+							culture = ROOT
+							name = "DEMOCRATIC_REVOLT"
+							holder = THIS
+						}
+						# Flag for revolt
+						set_character_flag = flag_revolter
+						# Flagship
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = THIS
+							leader = THIS
+							troops = { dreadnoughts = { 1 1 } }
+							attrition = 1.0
+						}
+						# Generate a random rebel fleet
+						character_event = { id = rebels.0 }
+						# Declare war against sector government
+						ROOT = {
+							random_province_lord = {
+								limit = {
+									primary_title = { tier = emperor }
+									OR = {
+										has_character_modifier = constitutional_crisis
+										ROOT = { owner = { character = PREVPREV } }
+									}
+								}
+								set_defacto_vassal = PREVPREV
+								reverse_war = {
+									target = PREVPREV
+									casus_belli = democratic_rebellion
+								}
+								reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+							}
+						}
+						character_event = { id = rebels.102 }
+					}
+				}
+			}
+		}
+		if = {
+			limit = { religion = mother_gaia_cultist }
+			create_character = {
+				random_traits = yes
+				dynasty = culture
+				religion = ROOT
+				culture = ROOT
+				female = yes
+				age = 35
+				attributes = { martial = 5 }
+				trait = rebel_leader
+				trait = radical
+				trait = ambitious
+				trait = brilliant_strategist
+				trait = warship_captain
+			}
+			new_character = {
+				# Create a new title
+				create_title = {
+					tier = DUKE
+					landless = yes
+					temporary = yes
+					rebel = yes
+					culture = ROOT
+					name = "DEMOCRATIC_REVOLT"
+					holder = THIS
+				}
+				# Flag for revolt
+				set_character_flag = flag_revolter
+				# Flagship
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					leader = THIS
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+				}
+				# Generate a random rebel fleet
+				character_event = { id = rebels.0 }
+				# Declare war against sector government
+				ROOT = {
+					random_province_lord = {
+						limit = {
+							primary_title = { tier = emperor }
+							OR = {
+								has_character_modifier = constitutional_crisis
+								ROOT = { owner = { character = PREVPREV } }
+							}
+						}
+						set_defacto_vassal = PREVPREV
+						reverse_war = {
+							target = PREVPREV
+							casus_belli = democratic_rebellion
+						}
+						reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+					}
+				}
+				character_event = { id = rebels.102 }
+			}
+		}
+		if = {
+			limit = { religion = father_earth_cultist }
+			create_character = {
+				random_traits = yes
+				dynasty = culture
+				religion = ROOT
+				culture = ROOT
+				female = no
+				age = 35
+				attributes = { martial = 5 }
+				trait = rebel_leader
+				trait = radical
+				trait = ambitious
+				trait = brilliant_strategist
+				trait = warship_captain
+			}
+			new_character = {
+				# Create a new title
+				create_title = {
+					tier = DUKE
+					landless = yes
+					temporary = yes
+					rebel = yes
+					culture = ROOT
+					name = "DEMOCRATIC_REVOLT"
+					holder = THIS
+				}
+				# Flag for revolt
+				set_character_flag = flag_revolter
+				# Flagship
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					leader = THIS
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+				}
+				# Generate a random rebel fleet
+				character_event = { id = rebels.0 }
+				# Declare war against system government
+				ROOT = {
+					random_province_lord = {
+						limit = {
+							primary_title = { tier = emperor }
+							OR = {
+								has_character_modifier = constitutional_crisis
+								ROOT = { owner = { character = PREVPREV } }
+							}
+						}
+						set_defacto_vassal = PREVPREV
+						reverse_war = {
+							target = PREVPREV
+							casus_belli = democratic_rebellion
+						}
+						reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+					}
+				}
+				character_event = { id = rebels.102 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 365 }
+	}
+}
+
+# Democratic rebels join a system revolt already in progress
+province_event = {
+	id = rebels.140
+	desc = "EVTDESCREBELS140"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	trigger = {
+		# Must already be part of a democratic rebellion
+		any_province_lord = {
+			primary_title = { NOT = { higher_tier_than = COUNT } }
+			war = yes
+			any_war = {
+				defender = { character = PREV }
+				using_cb = democratic_rebellion
+			}
+		}
+		NOT = {
+			any_province_lord = {
+				primary_title = { higher_tier_than = COUNT }
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = democratic_rebellion
+				}
+			}
+		}
+		OR = {
+			religion = terran_federalist
+			religion = terran_republican
+			religion = colonial_seperatist
+			AND = {
+				any_province_lord = {
+					primary_title = { NOT = { higher_tier_than = COUNT } }
+					war = yes
+					any_war = {
+						defender = { character = PREV }
+						using_cb = democratic_rebellion
+					}
+					is_republic = yes
+				}
+				NOT = { religion = terran_imperial }
+				NOT = { religion = astrist }
+				NOT = { religion = neo_feudal }
+				NOT = { religion = neo_socialist }
+				NOT = { religion = bio_directionist }
+				NOT = { religion = orthodox }
+				NOT = { religion = xenoterran }
+				NOT = { religion = solarian }
+				NOT = { religion = machine_cultist }
+			}
+		}
+	}
+	
+	immediate = {
+		# Find the current rebel leader
+		random_province_lord = {
+			limit = {
+				primary_title = { NOT = { higher_tier_than = COUNT } }
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = democratic_rebellion
+				}
+			}
+			any_war = {
+				limit = { using_cb = democratic_rebellion }
+				attacker = {
+					character_event = { id = rebels.0 } # MOAR SPACESHIPS
+					character_event = { id = rebels.141 } # Sure you want to do this alone?
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 365 }
+	}
+}
+# We are at WAR
+character_event = {
+	id = rebels.141
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = { FROM = { owner = { character_event = { id = rebels.142 days = 1 } } } }
+}
+# Rebel reinforcements!
+character_event = {
+	id = rebels.142
+	desc = "EVTDESCREBELS142"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	option = {
+		name = "EVTOPTAREBELS103" # We can handle this
+		if = {
+			limit = {
+				independent = no
+				NOT = { liege = { any_current_enemy = { character = ROOT } } }
+			}
+			prestige = 100
+			hidden_tooltip = { liege = { letter_event = { id = rebels.104 } } } # Inform liege that we can handle it
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				trait = humble
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.1 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.2 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.3 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.4 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.5 }
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.5
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.6
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.7
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.8
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.9
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 1
+			}
+			modifier = {
+				factor = 0.25
+				NOT = { relative_power = { who = FROM power = 1 } }
+			}
+			modifier = {
+				factor = 0
+				NOT = { relative_power = { who = FROM power = 1 } }
+				NOT = { trait = brave }
+				NOT = { trait = proud }
+				NOT = { trait = lunatic }
+				NOT = { trait = imbecile }
+			}
+			modifier = {
+				factor = 5
+				NOT = { religion_authority = 0.5 }
+				liege = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+				trait = ambitious
+			}
+		}
+	}
+	option = {
+		trigger = {
+			independent = no
+			NOT = { liege = { any_current_enemy = { character = ROOT } } }
+		}
+		name = "EVTOPTBREBELS103" # Attempt to escalate
+		liege = { letter_event = { id = rebels.105 tooltip = "EVTTOOLTIPREBELS105" } }
+		# If religion authority is low, then this counts as a favor
+		if = {
+			limit = {
+				NOT = { religion_authority = 0.5 }
+				liege = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+			}
+			custom_tooltip = { text = "CALLINFAVOR" }
+		}
+		if = {
+			limit = {
+				NOT = { religion_authority = 0.5 }
+				liege = {
+					NOT = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+					NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+				}
+			}
+			custom_tooltip = { text = "YOUWILLOWEAFAVOR" }
+		}
+		ai_chance = { factor = 75 }
+	}
+}
+# Democratic rebels join a sector revolt already in progress
+province_event = {
+	id = rebels.150
+	desc = "EVTDESCREBELS140"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	trigger = {
+		# Must already be part of a democratic rebellion
+		any_province_lord = {
+			primary_title = { tier = duke }
+			war = yes
+			any_war = {
+				defender = { character = PREV }
+				using_cb = democratic_rebellion
+			}
+		}
+		NOT = {
+			any_province_lord = {
+				primary_title = { higher_tier_than = duke }
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = democratic_rebellion
+				}
+			}
+		}
+		OR = {
+			religion = terran_federalist
+			religion = terran_republican
+			religion = colonial_seperatist
+			AND = {
+				any_province_lord = {
+					primary_title = { tier = duke }
+					war = yes
+					any_war = {
+						defender = { character = PREV }
+						using_cb = democratic_rebellion
+					}
+					is_republic = yes
+				}
+				NOT = { religion = terran_imperial }
+				NOT = { religion = astrist }
+				NOT = { religion = neo_feudal }
+				NOT = { religion = neo_socialist }
+				NOT = { religion = bio_directionist }
+				NOT = { religion = orthodox }
+				NOT = { religion = xenoterran }
+				NOT = { religion = solarian }
+				NOT = { religion = machine_cultist }
+			}
+		}
+	}
+	
+	immediate = {
+		# Find the current rebel leader
+		random_province_lord = {
+			limit = {
+				primary_title = { tier = duke }
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = democratic_rebellion
+				}
+			}
+			any_war = {
+				limit = { using_cb = democratic_rebellion }
+				attacker = {
+					character_event = { id = rebels.0 } # MOAR SPACESHIPS
+					character_event = { id = rebels.141 } # Sure you want to do this alone?
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 365 }
+	}
+}
+# Democratic rebels join a kingdom revolt already in progress
+province_event = {
+	id = rebels.160
+	desc = "EVTDESCREBELS140"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	trigger = {
+		# Must already be part of a democratic rebellion
+		any_province_lord = {
+			primary_title = { tier = king }
+			war = yes
+			any_war = {
+				defender = { character = PREV }
+				using_cb = democratic_rebellion
+			}
+		}
+		NOT = {
+			any_province_lord = {
+				primary_title = { higher_tier_than = king }
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = democratic_rebellion
+				}
+			}
+		}
+		OR = {
+			religion = terran_federalist
+			religion = terran_republican
+			religion = colonial_seperatist
+			AND = {
+				any_province_lord = {
+					primary_title = { tier = king }
+					war = yes
+					any_war = {
+						defender = { character = PREV }
+						using_cb = democratic_rebellion
+					}
+					is_republic = yes
+				}
+				NOT = { religion = terran_imperial }
+				NOT = { religion = astrist }
+				NOT = { religion = neo_feudal }
+				NOT = { religion = neo_socialist }
+				NOT = { religion = bio_directionist }
+				NOT = { religion = orthodox }
+				NOT = { religion = xenoterran }
+				NOT = { religion = solarian }
+				NOT = { religion = machine_cultist }
+			}
+		}
+	}
+	
+	immediate = {
+		# Find the current rebel leader
+		random_province_lord = {
+			limit = {
+				primary_title = { tier = king }
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = democratic_rebellion
+				}
+			}
+			any_war = {
+				limit = { using_cb = democratic_rebellion }
+				attacker = {
+					character_event = { id = rebels.0 } # MOAR SPACESHIPS
+					character_event = { id = rebels.141 } # Sure you want to do this alone?
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 365 }
+	}
+}
+# Democratic rebels join an empire revolt already in progress
+province_event = {
+	id = rebels.170
+	desc = "EVTDESCREBELS140"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	trigger = {
+		# Must already be part of a democratic rebellion
+		any_province_lord = {
+			primary_title = { tier = emperor }
+			war = yes
+			any_war = {
+				defender = { character = PREV }
+				using_cb = democratic_rebellion
+			}
+		}
+		OR = {
+			religion = terran_federalist
+			religion = terran_republican
+			religion = colonial_seperatist
+			AND = {
+				any_province_lord = {
+					primary_title = { tier = emperor }
+					war = yes
+					any_war = {
+						defender = { character = PREV }
+						using_cb = democratic_rebellion
+					}
+					is_republic = yes
+				}
+				NOT = { religion = terran_imperial }
+				NOT = { religion = astrist }
+				NOT = { religion = neo_feudal }
+				NOT = { religion = neo_socialist }
+				NOT = { religion = bio_directionist }
+				NOT = { religion = orthodox }
+				NOT = { religion = xenoterran }
+				NOT = { religion = solarian }
+				NOT = { religion = machine_cultist }
+			}
+		}
+	}
+	
+	immediate = {
+		# Find the current rebel leader
+		random_province_lord = {
+			limit = {
+				primary_title = { tier = emperor }
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = democratic_rebellion
+				}
+			}
+			any_war = {
+				limit = { using_cb = democratic_rebellion }
+				attacker = {
+					character_event = { id = rebels.0 } # MOAR SPACESHIPS
+					character_event = { id = rebels.141 } # Sure you want to do this alone?
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 365 }
+	}
+}
+
+# Autocratic Revolutions
+province_event = {
+	id = rebels.200
+	desc = "EVTDESCREBELS200"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	trigger = {
+		OR = {
+			religion = terran_imperial
+			religion = astrist
+			religion = neo_feudal
+			religion = bio_directionist
+			AND = {
+				owner = { is_feudal = yes }
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = colonial_seperatist }
+				NOT = { religion = neo_socialist }
+				NOT = { religion = orthodox }
+				NOT = { religion = xenoterran }
+				NOT = { religion = solarian }
+				NOT = { religion = machine_cultist }
+			}
+		}
+		
+		# Must be angry at the system government
+		NOT = { owner = { any_demesne_title = { higher_tier_than = COUNT } } }
+		NOT = { has_province_modifier = public_against_duke }
+		NOT = { has_province_modifier = public_against_king }
+		NOT = { has_province_modifier = public_against_emperor }
+		
+		# Must not already be part of a autocratic rebellion
+		NOT = {
+			any_province_lord = {
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = autocratic_rebellion
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = { religion = mother_gaia_cultist }
+				NOT = { religion = father_earth_cultist }
+			}
+			random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = culture
+						religion = ROOT
+						culture = ROOT
+						female = yes
+						age = 35
+						attributes = { martial = 5 }
+						trait = rebel_leader
+						trait = radical
+						trait = ambitious
+						trait = brilliant_strategist
+						trait = warship_captain
+					}
+					new_character = {
+						# Create a new title
+						create_title = {
+							tier = BARON
+							landless = yes
+							temporary = yes
+							rebel = yes
+							culture = ROOT
+							name = "AUTOCRATIC_REVOLT"
+							holder = THIS
+						}
+						# Flag for revolt
+						set_character_flag = flag_revolter
+						# Flagship
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = THIS
+							leader = THIS
+							troops = { dreadnoughts = { 1 1 } }
+							attrition = 1.0
+						}
+						# Generate a random rebel fleet
+						character_event = { id = rebels.0 }
+						# Declare war against system government
+						ROOT = {
+							owner = {
+								set_defacto_vassal = PREVPREV
+								reverse_war = {
+									target = PREVPREV
+									casus_belli = autocratic_rebellion
+								}
+								reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+							}
+						}
+						character_event = { id = rebels.202 }
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = culture
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 35
+						attributes = { martial = 5 }
+						trait = rebel_leader
+						trait = radical
+						trait = ambitious
+						trait = brilliant_strategist
+						trait = warship_captain
+					}
+					new_character = {
+						# Create a new title
+						create_title = {
+							tier = BARON
+							landless = yes
+							temporary = yes
+							rebel = yes
+							culture = ROOT
+							name = "AUTOCRATIC_REVOLT"
+							holder = THIS
+						}
+						# Flag for revolt
+						set_character_flag = flag_revolter
+						# Flagship
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = THIS
+							leader = THIS
+							troops = { dreadnoughts = { 1 1 } }
+							attrition = 1.0
+						}
+						# Generate a random rebel fleet
+						character_event = { id = rebels.0 }
+						# Declare war against system government
+						ROOT = {
+							owner = {
+								set_defacto_vassal = PREVPREV
+								reverse_war = {
+									target = PREVPREV
+									casus_belli = autocratic_rebellion
+								}
+								reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+							}
+						}
+						character_event = { id = rebels.202 }
+					}
+				}
+			}
+		}
+		if = {
+			limit = { religion = mother_gaia_cultist }
+			create_character = {
+				random_traits = yes
+				dynasty = culture
+				religion = ROOT
+				culture = ROOT
+				female = yes
+				age = 35
+				attributes = { martial = 5 }
+				trait = rebel_leader
+				trait = radical
+				trait = ambitious
+				trait = brilliant_strategist
+				trait = warship_captain
+			}
+			new_character = {
+				# Create a new title
+				create_title = {
+					tier = BARON
+					landless = yes
+					temporary = yes
+					rebel = yes
+					culture = ROOT
+					name = "AUTOCRATIC_REVOLT"
+					holder = THIS
+				}
+				# Flag for revolt
+				set_character_flag = flag_revolter
+				# Flagship
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					leader = THIS
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+				}
+				# Generate a random rebel fleet
+				character_event = { id = rebels.0 }
+				# Declare war against system government
+				ROOT = {
+					owner = {
+						set_defacto_vassal = PREVPREV
+						reverse_war = {
+							target = PREVPREV
+							casus_belli = autocratic_rebellion
+						}
+						reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+					}
+				}
+				character_event = { id = rebels.202 }
+			}
+		}
+		if = {
+			limit = { religion = father_earth_cultist }
+			create_character = {
+				random_traits = yes
+				dynasty = culture
+				religion = ROOT
+				culture = ROOT
+				female = no
+				age = 35
+				attributes = { martial = 5 }
+				trait = rebel_leader
+				trait = radical
+				trait = ambitious
+				trait = brilliant_strategist
+				trait = warship_captain
+			}
+			new_character = {
+				# Create a new title
+				create_title = {
+					tier = BARON
+					landless = yes
+					temporary = yes
+					rebel = yes
+					culture = ROOT
+					name = "AUTOCRATIC_REVOLT"
+					holder = THIS
+				}
+				# Flag for revolt
+				set_character_flag = flag_revolter
+				# Flagship
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					leader = THIS
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+				}
+				# Generate a random rebel fleet
+				character_event = { id = rebels.0 }
+				# Declare war against system government
+				ROOT = {
+					owner = {
+						set_defacto_vassal = PREVPREV
+						reverse_war = {
+							target = PREVPREV
+							casus_belli = autocratic_rebellion
+						}
+						reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+					}
+				}
+				character_event = { id = rebels.202 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 365 }
+	}
+}
+# We are at WAR
+character_event = {
+	id = rebels.202
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = { FROM = { owner = { letter_event = { id = rebels.203 days = 1 } } } }
+}
+# Rebels declare war!
+letter_event = {
+	id = rebels.203
+	desc = "EVTDESCREBELS103"
+	is_triggered_only = yes
+	border = GFX_event_letter_frame_war
+	
+	option = {
+		name = "EVTOPTAREBELS103" # We can handle this
+		if = {
+			limit = {
+				has_character_flag = flag_initial_target
+				NOT = { primary_title = { higher_tier_than = duke } }
+			}
+			religion_authority = { modifier = allowed_minor_rebellion years = 5 }
+		}
+		if = {
+			limit = {
+				has_character_flag = flag_initial_target
+				primary_title = { higher_tier_than = duke }
+			}
+			religion_authority = { modifier = allowed_major_rebellion years = 60 }
+		}
+		clr_character_flag = flag_initial_target
+		if = {
+			limit = {
+				independent = no
+				NOT = { liege = { any_current_enemy = { character = ROOT } } }
+			}
+			prestige = 100
+			hidden_tooltip = { liege = { letter_event = { id = rebels.204 } } } # Inform liege that we can handle it
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				trait = humble
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.1 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.2 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.3 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.4 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.5 }
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.5
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.6
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.7
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.8
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.9
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 1
+			}
+			modifier = {
+				factor = 0.25
+				NOT = { relative_power = { who = FROM power = 1 } }
+			}
+			modifier = {
+				factor = 0
+				NOT = { relative_power = { who = FROM power = 1 } }
+				NOT = { trait = brave }
+				NOT = { trait = proud }
+				NOT = { trait = lunatic }
+				NOT = { trait = imbecile }
+			}
+			modifier = {
+				factor = 5
+				NOT = { religion_authority = 0.5 }
+				liege = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+				trait = ambitious
+			}
+		}
+	}
+	option = {
+		trigger = {
+			independent = no
+			NOT = { liege = { any_current_enemy = { character = ROOT } } }
+		}
+		name = "EVTOPTBREBELS103" # Attempt to escalate
+		if = {
+			limit = {
+				has_character_flag = flag_initial_target
+				NOT = { primary_title = { higher_tier_than = duke } }
+			}
+			religion_authority = { modifier = allowed_minor_rebellion years = 5 }
+		}
+		if = {
+			limit = {
+				has_character_flag = flag_initial_target
+				primary_title = { higher_tier_than = duke }
+			}
+			religion_authority = { modifier = allowed_major_rebellion years = 60 }
+		}
+		clr_character_flag = flag_initial_target
+		liege = { letter_event = { id = rebels.205 tooltip = "EVTTOOLTIPREBELS105" } }
+		# If religion authority is low, then this counts as a favor
+		if = {
+			limit = {
+				NOT = { religion_authority = 0.5 }
+				liege = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+			}
+			custom_tooltip = { text = "CALLINFAVOR" }
+		}
+		if = {
+			limit = {
+				NOT = { religion_authority = 0.5 }
+				liege = {
+					NOT = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+					NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+				}
+			}
+			custom_tooltip = { text = "YOUWILLOWEAFAVOR" }
+		}
+		ai_chance = { factor = 75 }
+	}
+}
+letter_event = {
+	id = rebels.204
+	desc = "EVTDESCREBELS104"
+	is_triggered_only = yes
+	border = GFX_event_letter_frame_war
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+# Vassal faces revolt, requests escalation
+letter_event = {
+	id = rebels.205
+	desc = "EVTDESCREBELS105"
+	is_triggered_only = yes
+	border = GFX_event_letter_frame_war
+	
+	# Provide assistance
+	option = {
+		name = "EVTOPTAREBELS105"
+		FROM = {
+			FROM = {
+				any_war = { end_war = invalid }
+				opinion = { who = ROOT modifier = opinion_evil_tyrant }
+				set_character_flag = flag_revolter
+				set_defacto_liege = ROOT
+			}
+		}
+		reverse_war = { target = FROMFROM casus_belli = autocratic_rebellion }
+		hidden_tooltip = { FROM = { FROM = { character_event = { id = rebels.206 } } } } # Recursion
+		if = {
+			limit = { FROM = { primary_title = { tier = count } } }
+			religion_authority = { modifier = opposed_system_revolt years = 30 }
+		}
+		if = {
+			limit = { FROM = { primary_title = { tier = duke } } }
+			religion_authority = { modifier = opposed_sector_revolt years = 30 }
+		}
+		if = {
+			limit = { FROM = { primary_title = { tier = king } } }
+			religion_authority = { modifier = opposed_regional_revolt years = 30 }
+		}
+		FROM = {
+			letter_event = { id = rebels.207 tooltip = "EVTTOOLTIPREBELS107" }
+			if = {
+				limit = {
+					NOT = { religion_authority = 0.5 }
+					has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor }
+				}
+				custom_tooltip = {
+					text = "FAVORFULFILLED"
+					remove_opinion = { who = ROOT modifier = opinion_owes_me_a_favor }
+					letter_event = { id = favor.100 } # Favor system not yet implemented
+				}
+			}
+			if = {
+				limit = {
+					NOT = { religion_authority = 0.5 }
+					NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+					NOT = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+				}
+				custom_tooltip = {
+					text = "EVTTOOLTIPWILLOWEFAVOR"
+					hidden_tooltip = {
+						reverse_opinion = { who = ROOT modifier = opinion_owes_me_a_favor }
+						reverse_opinion = { who = ROOT modifier = opinion_favor_type_political }
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.5 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.6 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.7 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.8 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.9 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 1 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 100 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 100 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 90 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 80 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 70 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 60 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 50 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 40 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 30 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 20 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -9 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -19 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -29 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -39 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -49 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -59 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -69 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -79 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -89 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -99 } }
+			}
+			modifier = {
+				factor = 3
+				FROM = { primary_title = { higher_tier_than = count } }
+			}
+			modifier = {
+				factor = 3
+				FROM = { primary_title = { higher_tier_than = duke } }
+			}
+			modifier = {
+				factor = 5
+				reverse_has_opinion_modifier = { who = FROM modifier = opinion_owes_me_a_favor }
+			}
+			modifier = {
+				factor = 5
+				trait = radical
+				FROM = { religion = ROOT }
+			}
+			modifier = {
+				factor = 0.5
+				war = yes
+				NOT = { trait = brave }
+				NOT = { trait = imbecile }
+				NOT = { trait = lunatic }
+			}
+			modifier = {
+				factor = 0.2
+				war = yes
+				any_current_enemy = { relative_power = { who = ROOT power = 1 } } # Do I LOOK like I have time for this?
+				NOT = { trait = brave }
+				NOT = { trait = imbecile }
+				NOT = { trait = lunatic }
+			}
+		}
+	}
+	
+	# I don't see how that's my problem
+	option = {
+		name = "EVTOPTBREBELS105"
+		if = {
+			limit = { FROM = { primary_title = { tier = count } } }
+			religion_authority = { modifier = ignored_system_revolt years = 30 }
+		}
+		if = {
+			limit = { FROM = { primary_title = { tier = duke } } }
+			religion_authority = { modifier = ignored_sector_revolt years = 30 }
+		}
+		if = {
+			limit = { FROM = { primary_title = { tier = king } } }
+			religion_authority = { modifier = ignored_regional_revolt years = 30 }
+		}
+		add_character_modifier = { name = ignored_vassals days = 3650 }
+		FROM = {
+			letter_event = { id = rebels.208 tooltip = "EVTTOOLTIPREBELS108" }
+			if = {
+				limit = {
+					NOT = { religion_authority = 0.5 }
+					has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor }
+				}
+				character_event = { id = favor.200 tooltip = "EVTTOOLTIPFAVOR200" } # Favor system not yet implemented
+			}
+		}
+		ai_chance = { factor = 50 }
+	}
+}
+
+character_event = {
+	 id = rebels.206
+	 hide_window = yes
+	 is_triggered_only = yes
+	 
+	 immediate = {
+		FROM = { letter_event = { id = rebels.203 } }
+	 }
+}
+
+letter_event = {
+	id = rebels.207
+	desc = "EVTDESCREBELS107"
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTAREBELS107" }
+}
+letter_event = {
+	id = rebels.208
+	desc = "EVTDESCREBELS108"
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTAREBELS108" }
+}
+# Autocratic rebels - sector
+province_event = {
+	id = rebels.210
+	desc = "EVTDESCREBELS210"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	trigger = {
+		OR = {
+			religion = terran_imperial
+			religion = astrist
+			religion = neo_feudal
+			religion = bio_directionist
+			AND = {
+				owner = {
+					ROOT = {
+						any_province_lord = {
+							primary_title = { tier = duke }
+							OR = {
+								has_character_modifier = constitutional_crisis
+								ROOT = { owner = { character = PREVPREV } }
+							}
+							is_feudal = yes
+						}
+					}
+				}
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = colonial_seperatist }
+				NOT = { religion = neo_socialist }
+				NOT = { religion = orthodox }
+				NOT = { religion = xenoterran }
+				NOT = { religion = solarian }
+				NOT = { religion = machine_cultist }
+			}
+		}
+		
+		# Must be angry at the system government
+		OR = {
+			has_province_modifier = public_against_duke
+			owner = { primary_title = { tier = duke } }
+		}
+		NOT = { owner = { any_demesne_title = { higher_tier_than = DUKE } } }
+		NOT = { has_province_modifier = public_against_king }
+		NOT = { has_province_modifier = public_against_emperor }
+		
+		# Must not already be part of a autocratic rebellion
+		NOT = {
+			any_province_lord = {
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = autocratic_rebellion
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = { religion = mother_gaia_cultist }
+				NOT = { religion = father_earth_cultist }
+			}
+			random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = culture
+						religion = ROOT
+						culture = ROOT
+						female = yes
+						age = 35
+						attributes = { martial = 5 }
+						trait = rebel_leader
+						trait = radical
+						trait = ambitious
+						trait = brilliant_strategist
+						trait = warship_captain
+					}
+					new_character = {
+						# Create a new title
+						create_title = {
+							tier = COUNT
+							landless = yes
+							temporary = yes
+							rebel = yes
+							culture = ROOT
+							name = "AUTOCRATIC_REVOLT"
+							holder = THIS
+						}
+						# Flag for revolt
+						set_character_flag = flag_revolter
+						# Flagship
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = THIS
+							leader = THIS
+							troops = { dreadnoughts = { 1 1 } }
+							attrition = 1.0
+						}
+						# Generate a random rebel fleet
+						character_event = { id = rebels.0 }
+						# Declare war against sector government
+						ROOT = {
+							random_province_lord = {
+								limit = {
+									primary_title = { tier = duke }
+									OR = {
+										has_character_modifier = constitutional_crisis
+										ROOT = { owner = { character = PREVPREV } }
+									}
+								}
+								set_defacto_vassal = PREVPREV
+								reverse_war = {
+									target = PREVPREV
+									casus_belli = autocratic_rebellion
+								}
+								reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+							}
+						}
+						character_event = { id = rebels.202 }
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = culture
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 35
+						attributes = { martial = 5 }
+						trait = rebel_leader
+						trait = radical
+						trait = ambitious
+						trait = brilliant_strategist
+						trait = warship_captain
+					}
+					new_character = {
+						# Create a new title
+						create_title = {
+							tier = COUNT
+							landless = yes
+							temporary = yes
+							rebel = yes
+							culture = ROOT
+							name = "AUTOCRATIC_REVOLT"
+							holder = THIS
+						}
+						# Flag for revolt
+						set_character_flag = flag_revolter
+						# Flagship
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = THIS
+							leader = THIS
+							troops = { dreadnoughts = { 1 1 } }
+							attrition = 1.0
+						}
+						# Generate a random rebel fleet
+						character_event = { id = rebels.0 }
+						# Declare war against sector government
+						ROOT = {
+							random_province_lord = {
+								limit = {
+									primary_title = { tier = duke }
+									OR = {
+										has_character_modifier = constitutional_crisis
+										ROOT = { owner = { character = PREVPREV } }
+									}
+								}
+								set_defacto_vassal = PREVPREV
+								reverse_war = {
+									target = PREVPREV
+									casus_belli = autocratic_rebellion
+								}
+								reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+							}
+						}
+						character_event = { id = rebels.202 }
+					}
+				}
+			}
+		}
+		if = {
+			limit = { religion = mother_gaia_cultist }
+			create_character = {
+				random_traits = yes
+				dynasty = culture
+				religion = ROOT
+				culture = ROOT
+				female = yes
+				age = 35
+				attributes = { martial = 5 }
+				trait = rebel_leader
+				trait = radical
+				trait = ambitious
+				trait = brilliant_strategist
+				trait = warship_captain
+			}
+			new_character = {
+				# Create a new title
+				create_title = {
+					tier = COUNT
+					landless = yes
+					temporary = yes
+					rebel = yes
+					culture = ROOT
+					name = "AUTOCRATIC_REVOLT"
+					holder = THIS
+				}
+				# Flag for revolt
+				set_character_flag = flag_revolter
+				# Flagship
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					leader = THIS
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+				}
+				# Generate a random rebel fleet
+				character_event = { id = rebels.0 }
+				# Declare war against sector government
+				ROOT = {
+					random_province_lord = {
+						limit = {
+							primary_title = { tier = duke }
+							OR = {
+								has_character_modifier = constitutional_crisis
+								ROOT = { owner = { character = PREVPREV } }
+							}
+						}
+						set_defacto_vassal = PREVPREV
+						reverse_war = {
+							target = PREVPREV
+							casus_belli = autocratic_rebellion
+						}
+						reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+					}
+				}
+				character_event = { id = rebels.202 }
+			}
+		}
+		if = {
+			limit = { religion = father_earth_cultist }
+			create_character = {
+				random_traits = yes
+				dynasty = culture
+				religion = ROOT
+				culture = ROOT
+				female = no
+				age = 35
+				attributes = { martial = 5 }
+				trait = rebel_leader
+				trait = radical
+				trait = ambitious
+				trait = brilliant_strategist
+				trait = warship_captain
+			}
+			new_character = {
+				# Create a new title
+				create_title = {
+					tier = COUNT
+					landless = yes
+					temporary = yes
+					rebel = yes
+					culture = ROOT
+					name = "AUTOCRATIC_REVOLT"
+					holder = THIS
+				}
+				# Flag for revolt
+				set_character_flag = flag_revolter
+				# Flagship
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					leader = THIS
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+				}
+				# Generate a random rebel fleet
+				character_event = { id = rebels.0 }
+				# Declare war against system government
+				ROOT = {
+					random_province_lord = {
+						limit = {
+							primary_title = { tier = duke }
+							OR = {
+								has_character_modifier = constitutional_crisis
+								ROOT = { owner = { character = PREVPREV } }
+							}
+						}
+						set_defacto_vassal = PREVPREV
+						reverse_war = {
+							target = PREVPREV
+							casus_belli = autocratic_rebellion
+						}
+						reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+					}
+				}
+				character_event = { id = rebels.202 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 365 }
+	}
+}
+# Autocratic rebels - regional
+province_event = {
+	id = rebels.220
+	desc = "EVTDESCREBELS220"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	trigger = {
+		OR = {
+			religion = terran_imperial
+			religion = astrist
+			religion = neo_feudal
+			religion = bio_directionist
+			AND = {
+				owner = {
+					ROOT = {
+						any_province_lord = {
+							primary_title = { tier = king }
+							OR = {
+								has_character_modifier = constitutional_crisis
+								ROOT = { owner = { character = PREVPREV } }
+							}
+							is_feudal = yes
+						}
+					}
+				}
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = colonial_seperatist }
+				NOT = { religion = neo_socialist }
+				NOT = { religion = orthodox }
+				NOT = { religion = xenoterran }
+				NOT = { religion = solarian }
+				NOT = { religion = machine_cultist }
+			}
+		}
+		
+		# Must be angry at the system government
+		OR = {
+			has_province_modifier = public_against_king
+			owner = { primary_title = { tier = KING } }
+		}
+		NOT = { owner = { any_demesne_title = { higher_tier_than = KING } } }
+		NOT = { has_province_modifier = public_against_emperor }
+		
+		# Must not already be part of a autocratic rebellion
+		NOT = {
+			any_province_lord = {
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = autocratic_rebellion
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = { religion = mother_gaia_cultist }
+				NOT = { religion = father_earth_cultist }
+			}
+			random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = culture
+						religion = ROOT
+						culture = ROOT
+						female = yes
+						age = 35
+						attributes = { martial = 5 }
+						trait = rebel_leader
+						trait = radical
+						trait = ambitious
+						trait = brilliant_strategist
+						trait = warship_captain
+					}
+					new_character = {
+						# Create a new title
+						create_title = {
+							tier = DUKE
+							landless = yes
+							temporary = yes
+							rebel = yes
+							culture = ROOT
+							name = "AUTOCRATIC_REVOLT"
+							holder = THIS
+						}
+						# Flag for revolt
+						set_character_flag = flag_revolter
+						# Flagship
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = THIS
+							leader = THIS
+							troops = { dreadnoughts = { 1 1 } }
+							attrition = 1.0
+						}
+						# Generate a random rebel fleet
+						character_event = { id = rebels.0 }
+						# Declare war against sector government
+						ROOT = {
+							random_province_lord = {
+								limit = {
+									primary_title = { tier = king }
+									OR = {
+										has_character_modifier = constitutional_crisis
+										ROOT = { owner = { character = PREVPREV } }
+									}
+								}
+								set_defacto_vassal = PREVPREV
+								reverse_war = {
+									target = PREVPREV
+									casus_belli = autocratic_rebellion
+								}
+								reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+							}
+						}
+						character_event = { id = rebels.202 }
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = culture
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 35
+						attributes = { martial = 5 }
+						trait = rebel_leader
+						trait = radical
+						trait = ambitious
+						trait = brilliant_strategist
+						trait = warship_captain
+					}
+					new_character = {
+						# Create a new title
+						create_title = {
+							tier = DUKE
+							landless = yes
+							temporary = yes
+							rebel = yes
+							culture = ROOT
+							name = "AUTOCRATIC_REVOLT"
+							holder = THIS
+						}
+						# Flag for revolt
+						set_character_flag = flag_revolter
+						# Flagship
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = THIS
+							leader = THIS
+							troops = { dreadnoughts = { 1 1 } }
+							attrition = 1.0
+						}
+						# Generate a random rebel fleet
+						character_event = { id = rebels.0 }
+						# Declare war against sector government
+						ROOT = {
+							random_province_lord = {
+								limit = {
+									primary_title = { tier = king }
+									OR = {
+										has_character_modifier = constitutional_crisis
+										ROOT = { owner = { character = PREVPREV } }
+									}
+								}
+								set_defacto_vassal = PREVPREV
+								reverse_war = {
+									target = PREVPREV
+									casus_belli = autocratic_rebellion
+								}
+								reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+							}
+						}
+						character_event = { id = rebels.202 }
+					}
+				}
+			}
+		}
+		if = {
+			limit = { religion = mother_gaia_cultist }
+			create_character = {
+				random_traits = yes
+				dynasty = culture
+				religion = ROOT
+				culture = ROOT
+				female = yes
+				age = 35
+				attributes = { martial = 5 }
+				trait = rebel_leader
+				trait = radical
+				trait = ambitious
+				trait = brilliant_strategist
+				trait = warship_captain
+			}
+			new_character = {
+				# Create a new title
+				create_title = {
+					tier = DUKE
+					landless = yes
+					temporary = yes
+					rebel = yes
+					culture = ROOT
+					name = "AUTOCRATIC_REVOLT"
+					holder = THIS
+				}
+				# Flag for revolt
+				set_character_flag = flag_revolter
+				# Flagship
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					leader = THIS
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+				}
+				# Generate a random rebel fleet
+				character_event = { id = rebels.0 }
+				# Declare war against sector government
+				ROOT = {
+					random_province_lord = {
+						limit = {
+							primary_title = { tier = king }
+							OR = {
+								has_character_modifier = constitutional_crisis
+								ROOT = { owner = { character = PREVPREV } }
+							}
+						}
+						set_defacto_vassal = PREVPREV
+						reverse_war = {
+							target = PREVPREV
+							casus_belli = autocratic_rebellion
+						}
+						reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+					}
+				}
+				character_event = { id = rebels.202 }
+			}
+		}
+		if = {
+			limit = { religion = father_earth_cultist }
+			create_character = {
+				random_traits = yes
+				dynasty = culture
+				religion = ROOT
+				culture = ROOT
+				female = no
+				age = 35
+				attributes = { martial = 5 }
+				trait = rebel_leader
+				trait = radical
+				trait = ambitious
+				trait = brilliant_strategist
+				trait = warship_captain
+			}
+			new_character = {
+				# Create a new title
+				create_title = {
+					tier = DUKE
+					landless = yes
+					temporary = yes
+					rebel = yes
+					culture = ROOT
+					name = "AUTOCRATIC_REVOLT"
+					holder = THIS
+				}
+				# Flag for revolt
+				set_character_flag = flag_revolter
+				# Flagship
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					leader = THIS
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+				}
+				# Generate a random rebel fleet
+				character_event = { id = rebels.0 }
+				# Declare war against system government
+				ROOT = {
+					random_province_lord = {
+						limit = {
+							primary_title = { tier = king }
+							OR = {
+								has_character_modifier = constitutional_crisis
+								ROOT = { owner = { character = PREVPREV } }
+							}
+						}
+						set_defacto_vassal = PREVPREV
+						reverse_war = {
+							target = PREVPREV
+							casus_belli = autocratic_rebellion
+						}
+						reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+					}
+				}
+				character_event = { id = rebels.202 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 365 }
+	}
+}
+# Autocratic rebels - empire
+province_event = {
+	id = rebels.230
+	desc = "EVTDESCREBELS230"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	trigger = {
+		OR = {
+			religion = terran_imperial
+			religion = astrist
+			religion = neo_feudal
+			religion = bio_directionist
+			AND = {
+				owner = {
+					ROOT = {
+						any_province_lord = {
+							primary_title = { tier = emperor }
+							OR = {
+								has_character_modifier = constitutional_crisis
+								ROOT = { owner = { character = PREVPREV } }
+							}
+							is_feudal = yes
+						}
+					}
+				}
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = colonial_seperatist }
+				NOT = { religion = neo_socialist }
+				NOT = { religion = orthodox }
+				NOT = { religion = xenoterran }
+				NOT = { religion = solarian }
+				NOT = { religion = machine_cultist }
+			}
+		}
+		
+		# Must be angry at the imperial government
+		OR = {
+			has_province_modifier = public_against_emperor
+			owner = { primary_title = { tier = emperor } }
+		}
+		
+		# Must not already be part of a autocratic rebellion
+		NOT = {
+			any_province_lord = {
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = autocratic_rebellion
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = { religion = mother_gaia_cultist }
+				NOT = { religion = father_earth_cultist }
+			}
+			random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = culture
+						religion = ROOT
+						culture = ROOT
+						female = yes
+						age = 35
+						attributes = { martial = 5 }
+						trait = rebel_leader
+						trait = radical
+						trait = ambitious
+						trait = brilliant_strategist
+						trait = warship_captain
+					}
+					new_character = {
+						# Create a new title
+						create_title = {
+							tier = DUKE
+							landless = yes
+							temporary = yes
+							rebel = yes
+							culture = ROOT
+							name = "AUTOCRATIC_REVOLT"
+							holder = THIS
+						}
+						# Flag for revolt
+						set_character_flag = flag_revolter
+						# Flagship
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = THIS
+							leader = THIS
+							troops = { dreadnoughts = { 1 1 } }
+							attrition = 1.0
+						}
+						# Generate a random rebel fleet
+						character_event = { id = rebels.0 }
+						# Declare war against sector government
+						ROOT = {
+							random_province_lord = {
+								limit = {
+									primary_title = { tier = emperor }
+									OR = {
+										has_character_modifier = constitutional_crisis
+										ROOT = { owner = { character = PREVPREV } }
+									}
+								}
+								set_defacto_vassal = PREVPREV
+								reverse_war = {
+									target = PREVPREV
+									casus_belli = autocratic_rebellion
+								}
+								reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+							}
+						}
+						character_event = { id = rebels.202 }
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = culture
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 35
+						attributes = { martial = 5 }
+						trait = rebel_leader
+						trait = radical
+						trait = ambitious
+						trait = brilliant_strategist
+						trait = warship_captain
+					}
+					new_character = {
+						# Create a new title
+						create_title = {
+							tier = DUKE
+							landless = yes
+							temporary = yes
+							rebel = yes
+							culture = ROOT
+							name = "AUTOCRATIC_REVOLT"
+							holder = THIS
+						}
+						# Flag for revolt
+						set_character_flag = flag_revolter
+						# Flagship
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = THIS
+							leader = THIS
+							troops = { dreadnoughts = { 1 1 } }
+							attrition = 1.0
+						}
+						# Generate a random rebel fleet
+						character_event = { id = rebels.0 }
+						# Declare war against sector government
+						ROOT = {
+							random_province_lord = {
+								limit = {
+									primary_title = { tier = emperor }
+									OR = {
+										has_character_modifier = constitutional_crisis
+										ROOT = { owner = { character = PREVPREV } }
+									}
+								}
+								set_defacto_vassal = PREVPREV
+								reverse_war = {
+									target = PREVPREV
+									casus_belli = autocratic_rebellion
+								}
+								reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+							}
+						}
+						character_event = { id = rebels.202 }
+					}
+				}
+			}
+		}
+		if = {
+			limit = { religion = mother_gaia_cultist }
+			create_character = {
+				random_traits = yes
+				dynasty = culture
+				religion = ROOT
+				culture = ROOT
+				female = yes
+				age = 35
+				attributes = { martial = 5 }
+				trait = rebel_leader
+				trait = radical
+				trait = ambitious
+				trait = brilliant_strategist
+				trait = warship_captain
+			}
+			new_character = {
+				# Create a new title
+				create_title = {
+					tier = DUKE
+					landless = yes
+					temporary = yes
+					rebel = yes
+					culture = ROOT
+					name = "AUTOCRATIC_REVOLT"
+					holder = THIS
+				}
+				# Flag for revolt
+				set_character_flag = flag_revolter
+				# Flagship
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					leader = THIS
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+				}
+				# Generate a random rebel fleet
+				character_event = { id = rebels.0 }
+				# Declare war against sector government
+				ROOT = {
+					random_province_lord = {
+						limit = {
+							primary_title = { tier = emperor }
+							OR = {
+								has_character_modifier = constitutional_crisis
+								ROOT = { owner = { character = PREVPREV } }
+							}
+						}
+						set_defacto_vassal = PREVPREV
+						reverse_war = {
+							target = PREVPREV
+							casus_belli = autocratic_rebellion
+						}
+						reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+					}
+				}
+				character_event = { id = rebels.202 }
+			}
+		}
+		if = {
+			limit = { religion = father_earth_cultist }
+			create_character = {
+				random_traits = yes
+				dynasty = culture
+				religion = ROOT
+				culture = ROOT
+				female = no
+				age = 35
+				attributes = { martial = 5 }
+				trait = rebel_leader
+				trait = radical
+				trait = ambitious
+				trait = brilliant_strategist
+				trait = warship_captain
+			}
+			new_character = {
+				# Create a new title
+				create_title = {
+					tier = DUKE
+					landless = yes
+					temporary = yes
+					rebel = yes
+					culture = ROOT
+					name = "AUTOCRATIC_REVOLT"
+					holder = THIS
+				}
+				# Flag for revolt
+				set_character_flag = flag_revolter
+				# Flagship
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					leader = THIS
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+				}
+				# Generate a random rebel fleet
+				character_event = { id = rebels.0 }
+				# Declare war against system government
+				ROOT = {
+					random_province_lord = {
+						limit = {
+							primary_title = { tier = emperor }
+							OR = {
+								has_character_modifier = constitutional_crisis
+								ROOT = { owner = { character = PREVPREV } }
+							}
+						}
+						set_defacto_vassal = PREVPREV
+						reverse_war = {
+							target = PREVPREV
+							casus_belli = autocratic_rebellion
+						}
+						reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+					}
+				}
+				character_event = { id = rebels.202 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 365 }
+	}
+}
+
+# Autocratic rebels join a system revolt already in progress
+province_event = {
+	id = rebels.240
+	desc = "EVTDESCREBELS240"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	trigger = {
+		# Must already be part of a autocratic rebellion
+		any_province_lord = {
+			primary_title = { NOT = { higher_tier_than = COUNT } }
+			war = yes
+			any_war = {
+				defender = { character = PREV }
+				using_cb = autocratic_rebellion
+			}
+		}
+		NOT = {
+			any_province_lord = {
+				primary_title = { higher_tier_than = COUNT }
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = autocratic_rebellion
+				}
+			}
+		}
+		OR = {
+			religion = terran_imperial
+			religion = astrist
+			religion = neo_feudal
+			religion = bio_directionist
+			AND = {
+				any_province_lord = {
+					primary_title = { NOT = { higher_tier_than = COUNT } }
+					war = yes
+					any_war = {
+						defender = { character = PREV }
+						using_cb = autocratic_rebellion
+					}
+					is_feudal = yes
+				}
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = colonial_seperatist }
+				NOT = { religion = neo_socialist }
+				NOT = { religion = orthodox }
+				NOT = { religion = xenoterran }
+				NOT = { religion = solarian }
+				NOT = { religion = machine_cultist }
+			}
+		}
+	}
+	
+	immediate = {
+		# Find the current rebel leader
+		random_province_lord = {
+			limit = {
+				primary_title = { NOT = { higher_tier_than = COUNT } }
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = autocratic_rebellion
+				}
+			}
+			any_war = {
+				limit = { using_cb = autocratic_rebellion }
+				attacker = {
+					character_event = { id = rebels.0 } # MOAR SPACESHIPS
+					character_event = { id = rebels.241 } # Sure you want to do this alone?
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 365 }
+	}
+}
+# We are at WAR
+character_event = {
+	id = rebels.241
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = { FROM = { owner = { character_event = { id = rebels.242 days = 1 } } } }
+}
+# Rebel reinforcements!
+character_event = {
+	id = rebels.242
+	desc = "EVTDESCREBELS142"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	option = {
+		name = "EVTOPTAREBELS103" # We can handle this
+		if = {
+			limit = { independent = no }
+			prestige = 100
+			hidden_tooltip = { liege = { letter_event = { id = rebels.204 } } } # Inform liege that we can handle it
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				trait = humble
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.1 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.2 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.3 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.4 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.5 }
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.5
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.6
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.7
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.8
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.9
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 1
+			}
+			modifier = {
+				factor = 0.25
+				NOT = { relative_power = { who = FROM power = 1 } }
+			}
+			modifier = {
+				factor = 0
+				NOT = { relative_power = { who = FROM power = 1 } }
+				NOT = { trait = brave }
+				NOT = { trait = proud }
+				NOT = { trait = lunatic }
+				NOT = { trait = imbecile }
+			}
+			modifier = {
+				factor = 5
+				NOT = { religion_authority = 0.5 }
+				liege = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+				trait = ambitious
+			}
+		}
+	}
+	option = {
+		trigger = { independent = no }
+		name = "EVTOPTBREBELS103" # Attempt to escalate
+		liege = { letter_event = { id = rebels.205 tooltip = "EVTTOOLTIPREBELS105" } }
+		# If religion authority is low, then this counts as a favor
+		if = {
+			limit = {
+				NOT = { religion_authority = 0.5 }
+				liege = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+			}
+			custom_tooltip = { text = "CALLINFAVOR" }
+		}
+		if = {
+			limit = {
+				NOT = { religion_authority = 0.5 }
+				liege = {
+					NOT = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+					NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+				}
+			}
+			custom_tooltip = { text = "YOUWILLOWEAFAVOR" }
+		}
+		ai_chance = { factor = 75 }
+	}
+}
+# Autocratic rebels join a sector revolt already in progress
+province_event = {
+	id = rebels.250
+	desc = "EVTDESCREBELS240"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	trigger = {
+		# Must already be part of a autocratic rebellion
+		any_province_lord = {
+			primary_title = { tier = duke }
+			war = yes
+			any_war = {
+				defender = { character = PREV }
+				using_cb = autocratic_rebellion
+			}
+		}
+		NOT = {
+			any_province_lord = {
+				primary_title = { higher_tier_than = duke }
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = autocratic_rebellion
+				}
+			}
+		}
+		OR = {
+			religion = terran_imperial
+			religion = astrist
+			religion = neo_feudal
+			religion = bio_directionist
+			AND = {
+				any_province_lord = {
+					primary_title = { tier = duke }
+					war = yes
+					any_war = {
+						defender = { character = PREV }
+						using_cb = autocratic_rebellion
+					}
+					is_feudal = yes
+				}
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = colonial_seperatist }
+				NOT = { religion = neo_socialist }
+				NOT = { religion = orthodox }
+				NOT = { religion = xenoterran }
+				NOT = { religion = solarian }
+				NOT = { religion = machine_cultist }
+			}
+		}
+	}
+	
+	immediate = {
+		# Find the current rebel leader
+		random_province_lord = {
+			limit = {
+				primary_title = { tier = duke }
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = autocratic_rebellion
+				}
+			}
+			any_war = {
+				limit = { using_cb = autocratic_rebellion }
+				attacker = {
+					character_event = { id = rebels.0 } # MOAR SPACESHIPS
+					character_event = { id = rebels.241 } # Sure you want to do this alone?
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 365 }
+	}
+}
+# Autocratic rebels join a kingdom revolt already in progress
+province_event = {
+	id = rebels.260
+	desc = "EVTDESCREBELS240"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	trigger = {
+		# Must already be part of a autocratic rebellion
+		any_province_lord = {
+			primary_title = { tier = king }
+			war = yes
+			any_war = {
+				defender = { character = PREV }
+				using_cb = autocratic_rebellion
+			}
+		}
+		NOT = {
+			any_province_lord = {
+				primary_title = { higher_tier_than = king }
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = autocratic_rebellion
+				}
+			}
+		}
+		OR = {
+			religion = terran_imperial
+			religion = astrist
+			religion = neo_feudal
+			religion = bio_directionist
+			AND = {
+				any_province_lord = {
+					primary_title = { tier = king }
+					war = yes
+					any_war = {
+						defender = { character = PREV }
+						using_cb = autocratic_rebellion
+					}
+					is_feudal = yes
+				}
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = colonial_seperatist }
+				NOT = { religion = neo_socialist }
+				NOT = { religion = orthodox }
+				NOT = { religion = xenoterran }
+				NOT = { religion = solarian }
+				NOT = { religion = machine_cultist }
+			}
+		}
+	}
+	
+	immediate = {
+		# Find the current rebel leader
+		random_province_lord = {
+			limit = {
+				primary_title = { tier = king }
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = autocratic_rebellion
+				}
+			}
+			any_war = {
+				limit = { using_cb = autocratic_rebellion }
+				attacker = {
+					character_event = { id = rebels.0 } # MOAR SPACESHIPS
+					character_event = { id = rebels.241 } # Sure you want to do this alone?
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 365 }
+	}
+}
+# Autocratic rebels join an empire revolt already in progress
+province_event = {
+	id = rebels.270
+	desc = "EVTDESCREBELS240"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	trigger = {
+		# Must already be part of a autocratic rebellion
+		any_province_lord = {
+			primary_title = { tier = emperor }
+			war = yes
+			any_war = {
+				defender = { character = PREV }
+				using_cb = autocratic_rebellion
+			}
+		}
+		OR = {
+			religion = terran_imperial
+			religion = astrist
+			religion = neo_feudal
+			religion = bio_directionist
+			AND = {
+				any_province_lord = {
+					primary_title = { tier = emperor }
+					war = yes
+					any_war = {
+						defender = { character = PREV }
+						using_cb = autocratic_rebellion
+					}
+					is_feudal = yes
+				}
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = colonial_seperatist }
+				NOT = { religion = neo_socialist }
+				NOT = { religion = orthodox }
+				NOT = { religion = xenoterran }
+				NOT = { religion = solarian }
+				NOT = { religion = machine_cultist }
+			}
+		}
+	}
+	
+	immediate = {
+		# Find the current rebel leader
+		random_province_lord = {
+			limit = {
+				primary_title = { tier = emperor }
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = autocratic_rebellion
+				}
+			}
+			any_war = {
+				limit = { using_cb = autocratic_rebellion }
+				attacker = {
+					character_event = { id = rebels.0 } # MOAR SPACESHIPS
+					character_event = { id = rebels.241 } # Sure you want to do this alone?
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 365 }
+	}
+}
+
+# Theocratic Revolutions
+province_event = {
+	id = rebels.300
+	desc = "EVTDESCREBELS300"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	trigger = {
+		OR = {
+			religion = neo_socialist
+			religion = orthodox
+			religion = xenoterran
+			religion = solarian
+			religion = machine_cultist
+			AND = {
+				owner = { is_theocracy = yes }
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = colonial_seperatist }
+				NOT = { religion = terran_imperial }
+				NOT = { religion = astrist }
+				NOT = { religion = neo_feudal }
+				NOT = { religion = bio_directionist }
+			}
+		}
+		
+		# Must be angry at the system government
+		NOT = { owner = { any_demesne_title = { higher_tier_than = COUNT } } }
+		NOT = { has_province_modifier = public_against_duke }
+		NOT = { has_province_modifier = public_against_king }
+		NOT = { has_province_modifier = public_against_emperor }
+		
+		# Must not already be part of a theocratic rebellion
+		NOT = {
+			any_province_lord = {
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = theocratic_rebellion
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = { religion = mother_gaia_cultist }
+				NOT = { religion = father_earth_cultist }
+			}
+			random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = culture
+						religion = ROOT
+						culture = ROOT
+						female = yes
+						age = 35
+						attributes = { martial = 5 }
+						trait = rebel_leader
+						trait = radical
+						trait = ambitious
+						trait = brilliant_strategist
+						trait = warship_captain
+					}
+					new_character = {
+						# Create a new title
+						create_title = {
+							tier = BARON
+							landless = yes
+							temporary = yes
+							rebel = yes
+							culture = ROOT
+							name = "THEOCRATIC_REVOLT"
+							holder = THIS
+						}
+						# Flag for revolt
+						set_character_flag = flag_revolter
+						# Flagship
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = THIS
+							leader = THIS
+							troops = { dreadnoughts = { 1 1 } }
+							attrition = 1.0
+						}
+						# Generate a random rebel fleet
+						character_event = { id = rebels.0 }
+						# Declare war against system government
+						ROOT = {
+							owner = {
+								set_defacto_vassal = PREVPREV
+								reverse_war = {
+									target = PREVPREV
+									casus_belli = theocratic_rebellion
+								}
+								reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+							}
+						}
+						character_event = { id = rebels.302 }
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = culture
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 35
+						attributes = { martial = 5 }
+						trait = rebel_leader
+						trait = ambitious
+						trait = brilliant_strategist
+						trait = warship_captain
+					}
+					new_character = {
+						# Create a new title
+						create_title = {
+							tier = BARON
+							landless = yes
+							temporary = yes
+							rebel = yes
+							culture = ROOT
+							name = "THEOCRATIC_REVOLT"
+							holder = THIS
+						}
+						# Flag for revolt
+						set_character_flag = flag_revolter
+						# Flagship
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = THIS
+							leader = THIS
+							troops = { dreadnoughts = { 1 1 } }
+							attrition = 1.0
+						}
+						# Generate a random rebel fleet
+						character_event = { id = rebels.0 }
+						# Declare war against system government
+						ROOT = {
+							owner = {
+								set_defacto_vassal = PREVPREV
+								reverse_war = {
+									target = PREVPREV
+									casus_belli = theocratic_rebellion
+								}
+								reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+							}
+						}
+						character_event = { id = rebels.302 }
+					}
+				}
+			}
+		}
+		if = {
+			limit = { religion = mother_gaia_cultist }
+			create_character = {
+				random_traits = yes
+				dynasty = culture
+				religion = ROOT
+				culture = ROOT
+				female = yes
+				age = 35
+				attributes = { martial = 5 }
+				trait = rebel_leader
+				trait = radical
+				trait = ambitious
+				trait = brilliant_strategist
+				trait = warship_captain
+			}
+			new_character = {
+				# Create a new title
+				create_title = {
+					tier = BARON
+					landless = yes
+					temporary = yes
+					rebel = yes
+					culture = ROOT
+					name = "THEOCRATIC_REVOLT"
+					holder = THIS
+				}
+				# Flag for revolt
+				set_character_flag = flag_revolter
+				# Flagship
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					leader = THIS
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+				}
+				# Generate a random rebel fleet
+				character_event = { id = rebels.0 }
+				# Declare war against system government
+				ROOT = {
+					owner = {
+						set_defacto_vassal = PREVPREV
+						reverse_war = {
+							target = PREVPREV
+							casus_belli = theocratic_rebellion
+						}
+						reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+					}
+				}
+				character_event = { id = rebels.302 }
+			}
+		}
+		if = {
+			limit = { religion = father_earth_cultist }
+			create_character = {
+				random_traits = yes
+				dynasty = culture
+				culture = ROOT
+				female = no
+				age = 35
+				attributes = { martial = 5 }
+				trait = rebel_leader
+				trait = radical
+				trait = ambitious
+				trait = brilliant_strategist
+				trait = warship_captain
+			}
+			new_character = {
+				# Create a new title
+				create_title = {
+					tier = BARON
+					landless = yes
+					temporary = yes
+					rebel = yes
+					culture = ROOT
+					name = "THEOCRATIC_REVOLT"
+					holder = THIS
+				}
+				# Flag for revolt
+				set_character_flag = flag_revolter
+				# Flagship
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					leader = THIS
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+				}
+				# Generate a random rebel fleet
+				character_event = { id = rebels.0 }
+				# Declare war against system government
+				ROOT = {
+					owner = {
+						set_defacto_vassal = PREVPREV
+						reverse_war = {
+							target = PREVPREV
+							casus_belli = theocratic_rebellion
+						}
+						reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+					}
+				}
+				character_event = { id = rebels.302 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 365 }
+	}
+}
+# We are at WAR
+character_event = {
+	id = rebels.302
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = { FROM = { owner = { letter_event = { id = rebels.303 days = 1 } } } }
+}
+# Rebels declare war!
+letter_event = {
+	id = rebels.303
+	desc = "EVTDESCREBELS103"
+	is_triggered_only = yes
+	border = GFX_event_letter_frame_war
+	
+	option = {
+		name = "EVTOPTAREBELS103" # We can handle this
+		if = {
+			limit = {
+				has_character_flag = flag_initial_target
+				NOT = { primary_title = { higher_tier_than = duke } }
+			}
+			religion_authority = { modifier = allowed_minor_rebellion years = 5 }
+		}
+		if = {
+			limit = {
+				has_character_flag = flag_initial_target
+				primary_title = { higher_tier_than = duke }
+			}
+			religion_authority = { modifier = allowed_major_rebellion years = 60 }
+		}
+		clr_character_flag = flag_initial_target
+		if = {
+			limit = {
+				independent = no
+				NOT = { liege = { any_current_enemy = { character = ROOT } } }
+			}
+			prestige = 100
+			hidden_tooltip = { liege = { letter_event = { id = rebels.304 } } } # Inform liege that we can handle it
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				trait = humble
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.1 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.2 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.3 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.4 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.5 }
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.5
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.6
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.7
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.8
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.9
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 1
+			}
+			modifier = {
+				factor = 0.25
+				NOT = { relative_power = { who = FROM power = 1 } }
+			}
+			modifier = {
+				factor = 0
+				NOT = { relative_power = { who = FROM power = 1 } }
+				NOT = { trait = brave }
+				NOT = { trait = proud }
+				NOT = { trait = lunatic }
+				NOT = { trait = imbecile }
+			}
+			modifier = {
+				factor = 5
+				NOT = { religion_authority = 0.5 }
+				liege = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+				trait = ambitious
+			}
+		}
+	}
+	option = {
+		trigger = {
+			independent = no
+			NOT = { liege = { any_current_enemy = { character = ROOT } } }
+		}
+		name = "EVTOPTBREBELS103" # Attempt to escalate
+		if = {
+			limit = {
+				has_character_flag = flag_initial_target
+				NOT = { primary_title = { higher_tier_than = duke } }
+			}
+			religion_authority = { modifier = allowed_minor_rebellion years = 5 }
+		}
+		if = {
+			limit = {
+				has_character_flag = flag_initial_target
+				primary_title = { higher_tier_than = duke }
+			}
+			religion_authority = { modifier = allowed_major_rebellion years = 60 }
+		}
+		clr_character_flag = flag_initial_target
+		liege = { letter_event = { id = rebels.305 tooltip = "EVTTOOLTIPREBELS105" } }
+		# If religion authority is low, then this counts as a favor
+		if = {
+			limit = {
+				NOT = { religion_authority = 0.5 }
+				liege = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+			}
+			custom_tooltip = { text = "CALLINFAVOR" }
+		}
+		if = {
+			limit = {
+				NOT = { religion_authority = 0.5 }
+				liege = {
+					NOT = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+					NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+				}
+			}
+			custom_tooltip = { text = "YOUWILLOWEAFAVOR" }
+		}
+		ai_chance = { factor = 75 }
+	}
+}
+letter_event = {
+	id = rebels.304
+	desc = "EVTDESCREBELS104"
+	is_triggered_only = yes
+	border = GFX_event_letter_frame_war
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+# Vassal faces revolt, requests escalation
+letter_event = {
+	id = rebels.305
+	desc = "EVTDESCREBELS105"
+	is_triggered_only = yes
+	border = GFX_event_letter_frame_war
+	
+	# Provide assistance
+	option = {
+		name = "EVTOPTAREBELS105"
+		FROM = {
+			FROM = {
+				any_war = { end_war = invalid }
+				opinion = { who = ROOT modifier = opinion_evil_tyrant }
+				set_character_flag = flag_revolter
+				set_defacto_liege = ROOT
+			}
+		}
+		reverse_war = { target = FROMFROM casus_belli = theocratic_rebellion }
+		hidden_tooltip = { FROM = { FROM = { character_event = { id = rebels.306 } } } } # Recursion
+		if = {
+			limit = { FROM = { primary_title = { tier = count } } }
+			religion_authority = { modifier = opposed_system_revolt years = 30 }
+		}
+		if = {
+			limit = { FROM = { primary_title = { tier = duke } } }
+			religion_authority = { modifier = opposed_sector_revolt years = 30 }
+		}
+		if = {
+			limit = { FROM = { primary_title = { tier = king } } }
+			religion_authority = { modifier = opposed_regional_revolt years = 30 }
+		}
+		FROM = {
+			letter_event = { id = rebels.307 tooltip = "EVTTOOLTIPREBELS107" }
+			if = {
+				limit = {
+					NOT = { religion_authority = 0.5 }
+					has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor }
+				}
+				custom_tooltip = {
+					text = "FAVORFULFILLED"
+					remove_opinion = { who = ROOT modifier = opinion_owes_me_a_favor }
+					letter_event = { id = favor.100 } # Favor system not yet implemented
+				}
+			}
+			if = {
+				limit = {
+					NOT = { religion_authority = 0.5 }
+					NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+					NOT = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+				}
+				custom_tooltip = {
+					text = "EVTTOOLTIPWILLOWEFAVOR"
+					hidden_tooltip = {
+						reverse_opinion = { who = ROOT modifier = opinion_owes_me_a_favor }
+						reverse_opinion = { who = ROOT modifier = opinion_favor_type_political }
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.5 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.6 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.7 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.8 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.9 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 1 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 100 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 100 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 90 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 80 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 70 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 60 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 50 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 40 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 30 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 20 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -9 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -19 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -29 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -39 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -49 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -59 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -69 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -79 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -89 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -99 } }
+			}
+			modifier = {
+				factor = 3
+				FROM = { primary_title = { higher_tier_than = count } }
+			}
+			modifier = {
+				factor = 3
+				FROM = { primary_title = { higher_tier_than = duke } }
+			}
+			modifier = {
+				factor = 5
+				reverse_has_opinion_modifier = { who = FROM modifier = opinion_owes_me_a_favor }
+			}
+			modifier = {
+				factor = 5
+				trait = radical
+				FROM = { religion = ROOT }
+			}
+			modifier = {
+				factor = 0.5
+				war = yes
+				NOT = { trait = brave }
+				NOT = { trait = imbecile }
+				NOT = { trait = lunatic }
+			}
+			modifier = {
+				factor = 0.2
+				war = yes
+				any_current_enemy = { relative_power = { who = ROOT power = 1 } } # Do I LOOK like I have time for this?
+				NOT = { trait = brave }
+				NOT = { trait = imbecile }
+				NOT = { trait = lunatic }
+			}
+		}
+	}
+	
+	# I don't see how that's my problem
+	option = {
+		name = "EVTOPTBREBELS105"
+		if = {
+			limit = { FROM = { primary_title = { tier = count } } }
+			religion_authority = { modifier = ignored_system_revolt years = 30 }
+		}
+		if = {
+			limit = { FROM = { primary_title = { tier = duke } } }
+			religion_authority = { modifier = ignored_sector_revolt years = 30 }
+		}
+		if = {
+			limit = { FROM = { primary_title = { tier = king } } }
+			religion_authority = { modifier = ignored_regional_revolt years = 30 }
+		}
+		add_character_modifier = { name = ignored_vassals days = 3650 }
+		FROM = {
+			letter_event = { id = rebels.308 tooltip = "EVTTOOLTIPREBELS108" }
+			if = {
+				limit = {
+					NOT = { religion_authority = 0.5 }
+					has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor }
+				}
+				character_event = { id = favor.200 tooltip = "EVTTOOLTIPFAVOR200" } # Favor system not yet implemented
+			}
+		}
+		ai_chance = { factor = 50 }
+	}
+}
+
+character_event = {
+	 id = rebels.306
+	 hide_window = yes
+	 is_triggered_only = yes
+	 
+	 immediate = {
+		FROM = { letter_event = { id = rebels.303 } }
+	 }
+}
+
+letter_event = {
+	id = rebels.307
+	desc = "EVTDESCREBELS107"
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTAREBELS107" }
+}
+letter_event = {
+	id = rebels.308
+	desc = "EVTDESCREBELS108"
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTAREBELS108" }
+}
+# Theocratic rebels - sector
+province_event = {
+	id = rebels.310
+	desc = "EVTDESCREBELS310"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	trigger = {
+		OR = {
+			religion = neo_socialist
+			religion = orthodox
+			religion = xenoterran
+			religion = solarian
+			religion = machine_cultist
+			AND = {
+				owner = {
+					ROOT = {
+						any_province_lord = {
+							primary_title = { tier = duke }
+							OR = {
+								has_character_modifier = constitutional_crisis
+								ROOT = { owner = { character = PREVPREV } }
+							}
+							is_theocracy = yes
+						}
+					}
+				}
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = colonial_seperatist }
+				NOT = { religion = terran_imperial }
+				NOT = { religion = astrist }
+				NOT = { religion = neo_feudal }
+				NOT = { religion = bio_directionist }
+			}
+		}
+		
+		# Must be angry at the system government
+		OR = {
+			has_province_modifier = public_against_duke
+			owner = { primary_title = { tier = duke } }
+		}
+		NOT = { owner = { any_demesne_title = { higher_tier_than = DUKE } } }
+		NOT = { has_province_modifier = public_against_king }
+		NOT = { has_province_modifier = public_against_emperor }
+		
+		# Must not already be part of a theocratic rebellion
+		NOT = {
+			any_province_lord = {
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = theocratic_rebellion
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = { religion = mother_gaia_cultist }
+				NOT = { religion = father_earth_cultist }
+			}
+			random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = culture
+						religion = ROOT
+						culture = ROOT
+						female = yes
+						age = 35
+						attributes = { martial = 5 }
+						trait = rebel_leader
+						trait = radical
+						trait = ambitious
+						trait = brilliant_strategist
+						trait = warship_captain
+					}
+					new_character = {
+						# Create a new title
+						create_title = {
+							tier = COUNT
+							landless = yes
+							temporary = yes
+							rebel = yes
+							culture = ROOT
+							name = "THEOCRATIC_REVOLT"
+							holder = THIS
+						}
+						# Flag for revolt
+						set_character_flag = flag_revolter
+						# Flagship
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = THIS
+							leader = THIS
+							troops = { dreadnoughts = { 1 1 } }
+							attrition = 1.0
+						}
+						# Generate a random rebel fleet
+						character_event = { id = rebels.0 }
+						# Declare war against sector government
+						ROOT = {
+							random_province_lord = {
+								limit = {
+									primary_title = { tier = duke }
+									OR = {
+										has_character_modifier = constitutional_crisis
+										ROOT = { owner = { character = PREVPREV } }
+									}
+								}
+								set_defacto_vassal = PREVPREV
+								reverse_war = {
+									target = PREVPREV
+									casus_belli = theocratic_rebellion
+								}
+								reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+							}
+						}
+						character_event = { id = rebels.302 }
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = culture
+						culture = ROOT
+						female = no
+						age = 35
+						attributes = { martial = 5 }
+						trait = rebel_leader
+						trait = radical
+						trait = ambitious
+						trait = brilliant_strategist
+						trait = warship_captain
+					}
+					new_character = {
+						# Create a new title
+						create_title = {
+							tier = COUNT
+							landless = yes
+							temporary = yes
+							rebel = yes
+							culture = ROOT
+							name = "THEOCRATIC_REVOLT"
+							holder = THIS
+						}
+						# Flag for revolt
+						set_character_flag = flag_revolter
+						# Flagship
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = THIS
+							leader = THIS
+							troops = { dreadnoughts = { 1 1 } }
+							attrition = 1.0
+						}
+						# Generate a random rebel fleet
+						character_event = { id = rebels.0 }
+						# Declare war against sector government
+						ROOT = {
+							random_province_lord = {
+								limit = {
+									primary_title = { tier = duke }
+									OR = {
+										has_character_modifier = constitutional_crisis
+										ROOT = { owner = { character = PREVPREV } }
+									}
+								}
+								set_defacto_vassal = PREVPREV
+								reverse_war = {
+									target = PREVPREV
+									casus_belli = theocratic_rebellion
+								}
+								reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+							}
+						}
+						character_event = { id = rebels.302 }
+					}
+				}
+			}
+		}
+		if = {
+			limit = { religion = mother_gaia_cultist }
+			create_character = {
+				random_traits = yes
+				dynasty = culture
+				religion = ROOT
+				culture = ROOT
+				female = yes
+				age = 35
+				attributes = { martial = 5 }
+				trait = rebel_leader
+				trait = radical
+				trait = ambitious
+				trait = brilliant_strategist
+				trait = warship_captain
+			}
+			new_character = {
+				# Create a new title
+				create_title = {
+					tier = COUNT
+					landless = yes
+					temporary = yes
+					rebel = yes
+					culture = ROOT
+					name = "THEOCRATIC_REVOLT"
+					holder = THIS
+				}
+				# Flag for revolt
+				set_character_flag = flag_revolter
+				# Flagship
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					leader = THIS
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+				}
+				# Generate a random rebel fleet
+				character_event = { id = rebels.0 }
+				# Declare war against sector government
+				ROOT = {
+					random_province_lord = {
+						limit = {
+							primary_title = { tier = duke }
+							OR = {
+								has_character_modifier = constitutional_crisis
+								ROOT = { owner = { character = PREVPREV } }
+							}
+						}
+						set_defacto_vassal = PREVPREV
+						reverse_war = {
+							target = PREVPREV
+							casus_belli = theocratic_rebellion
+						}
+						reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+					}
+				}
+				character_event = { id = rebels.302 }
+			}
+		}
+		if = {
+			limit = { religion = father_earth_cultist }
+			create_character = {
+				random_traits = yes
+				dynasty = culture
+				culture = ROOT
+				female = no
+				age = 35
+				attributes = { martial = 5 }
+				trait = rebel_leader
+				trait = radical
+				trait = ambitious
+				trait = brilliant_strategist
+				trait = warship_captain
+			}
+			new_character = {
+				# Create a new title
+				create_title = {
+					tier = COUNT
+					landless = yes
+					temporary = yes
+					rebel = yes
+					culture = ROOT
+					name = "THEOCRATIC_REVOLT"
+					holder = THIS
+				}
+				# Flag for revolt
+				set_character_flag = flag_revolter
+				# Flagship
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					leader = THIS
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+				}
+				# Generate a random rebel fleet
+				character_event = { id = rebels.0 }
+				# Declare war against system government
+				ROOT = {
+					random_province_lord = {
+						limit = {
+							primary_title = { tier = duke }
+							OR = {
+								has_character_modifier = constitutional_crisis
+								ROOT = { owner = { character = PREVPREV } }
+							}
+						}
+						set_defacto_vassal = PREVPREV
+						reverse_war = {
+							target = PREVPREV
+							casus_belli = theocratic_rebellion
+						}
+						reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+					}
+				}
+				character_event = { id = rebels.302 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 365 }
+	}
+}
+# Theocratic rebels - regional
+province_event = {
+	id = rebels.320
+	desc = "EVTDESCREBELS320"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	trigger = {
+		OR = {
+			religion = neo_socialist
+			religion = orthodox
+			religion = xenoterran
+			religion = solarian
+			religion = machine_cultist
+			AND = {
+				owner = {
+					ROOT = {
+						any_province_lord = {
+							primary_title = { tier = king }
+							OR = {
+								has_character_modifier = constitutional_crisis
+								ROOT = { owner = { character = PREVPREV } }
+							}
+							is_theocracy = yes
+						}
+					}
+				}
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = colonial_seperatist }
+				NOT = { religion = terran_imperial }
+				NOT = { religion = astrist }
+				NOT = { religion = neo_feudal }
+				NOT = { religion = bio_directionist }
+			}
+		}
+		
+		# Must be angry at the system government
+		OR = {
+			has_province_modifier = public_against_king
+			owner = { primary_title = { tier = KING } }
+		}
+		NOT = { owner = { any_demesne_title = { higher_tier_than = KING } } }
+		NOT = { has_province_modifier = public_against_emperor }
+		
+		# Must not already be part of a theocratic rebellion
+		NOT = {
+			any_province_lord = {
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = theocratic_rebellion
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = { religion = mother_gaia_cultist }
+				NOT = { religion = father_earth_cultist }
+			}
+			random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = culture
+						religion = ROOT
+						culture = ROOT
+						female = yes
+						age = 35
+						attributes = { martial = 5 }
+						trait = rebel_leader
+						trait = radical
+						trait = ambitious
+						trait = brilliant_strategist
+						trait = warship_captain
+					}
+					new_character = {
+						# Create a new title
+						create_title = {
+							tier = DUKE
+							landless = yes
+							temporary = yes
+							rebel = yes
+							culture = ROOT
+							name = "THEOCRATIC_REVOLT"
+							holder = THIS
+						}
+						# Flag for revolt
+						set_character_flag = flag_revolter
+						# Flagship
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = THIS
+							leader = THIS
+							troops = { dreadnoughts = { 1 1 } }
+							attrition = 1.0
+						}
+						# Generate a random rebel fleet
+						character_event = { id = rebels.0 }
+						# Declare war against sector government
+						ROOT = {
+							random_province_lord = {
+								limit = {
+									primary_title = { tier = king }
+									OR = {
+										has_character_modifier = constitutional_crisis
+										ROOT = { owner = { character = PREVPREV } }
+									}
+								}
+								set_defacto_vassal = PREVPREV
+								reverse_war = {
+									target = PREVPREV
+									casus_belli = theocratic_rebellion
+								}
+								reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+							}
+						}
+						character_event = { id = rebels.302 }
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = culture
+						culture = ROOT
+						female = no
+						age = 35
+						attributes = { martial = 5 }
+						trait = rebel_leader
+						trait = radical
+						trait = ambitious
+						trait = brilliant_strategist
+						trait = warship_captain
+					}
+					new_character = {
+						# Create a new title
+						create_title = {
+							tier = DUKE
+							landless = yes
+							temporary = yes
+							rebel = yes
+							culture = ROOT
+							name = "THEOCRATIC_REVOLT"
+							holder = THIS
+						}
+						# Flag for revolt
+						set_character_flag = flag_revolter
+						# Flagship
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = THIS
+							leader = THIS
+							troops = { dreadnoughts = { 1 1 } }
+							attrition = 1.0
+						}
+						# Generate a random rebel fleet
+						character_event = { id = rebels.0 }
+						# Declare war against sector government
+						ROOT = {
+							random_province_lord = {
+								limit = {
+									primary_title = { tier = king }
+									OR = {
+										has_character_modifier = constitutional_crisis
+										ROOT = { owner = { character = PREVPREV } }
+									}
+								}
+								set_defacto_vassal = PREVPREV
+								reverse_war = {
+									target = PREVPREV
+									casus_belli = theocratic_rebellion
+								}
+								reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+							}
+						}
+						character_event = { id = rebels.302 }
+					}
+				}
+			}
+		}
+		if = {
+			limit = { religion = mother_gaia_cultist }
+			create_character = {
+				random_traits = yes
+				dynasty = culture
+				religion = ROOT
+				culture = ROOT
+				female = yes
+				age = 35
+				attributes = { martial = 5 }
+				trait = rebel_leader
+				trait = radical
+				trait = ambitious
+				trait = brilliant_strategist
+				trait = warship_captain
+			}
+			new_character = {
+				# Create a new title
+				create_title = {
+					tier = DUKE
+					landless = yes
+					temporary = yes
+					rebel = yes
+					culture = ROOT
+					name = "THEOCRATIC_REVOLT"
+					holder = THIS
+				}
+				# Flag for revolt
+				set_character_flag = flag_revolter
+				# Flagship
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					leader = THIS
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+				}
+				# Generate a random rebel fleet
+				character_event = { id = rebels.0 }
+				# Declare war against sector government
+				ROOT = {
+					random_province_lord = {
+						limit = {
+							primary_title = { tier = king }
+							OR = {
+								has_character_modifier = constitutional_crisis
+								ROOT = { owner = { character = PREVPREV } }
+							}
+						}
+						set_defacto_vassal = PREVPREV
+						reverse_war = {
+							target = PREVPREV
+							casus_belli = theocratic_rebellion
+						}
+						reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+					}
+				}
+				character_event = { id = rebels.302 }
+			}
+		}
+		if = {
+			limit = { religion = father_earth_cultist }
+			create_character = {
+				random_traits = yes
+				dynasty = culture
+				culture = ROOT
+				female = no
+				age = 35
+				attributes = { martial = 5 }
+				trait = rebel_leader
+				trait = radical
+				trait = ambitious
+				trait = brilliant_strategist
+				trait = warship_captain
+			}
+			new_character = {
+				# Create a new title
+				create_title = {
+					tier = DUKE
+					landless = yes
+					temporary = yes
+					rebel = yes
+					culture = ROOT
+					name = "THEOCRATIC_REVOLT"
+					holder = THIS
+				}
+				# Flag for revolt
+				set_character_flag = flag_revolter
+				# Flagship
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					leader = THIS
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+				}
+				# Generate a random rebel fleet
+				character_event = { id = rebels.0 }
+				# Declare war against system government
+				ROOT = {
+					random_province_lord = {
+						limit = {
+							primary_title = { tier = king }
+							OR = {
+								has_character_modifier = constitutional_crisis
+								ROOT = { owner = { character = PREVPREV } }
+							}
+						}
+						set_defacto_vassal = PREVPREV
+						reverse_war = {
+							target = PREVPREV
+							casus_belli = theocratic_rebellion
+						}
+						reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+					}
+				}
+				character_event = { id = rebels.302 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 365 }
+	}
+}
+# Theocratic rebels - empire
+province_event = {
+	id = rebels.330
+	desc = "EVTDESCREBELS330"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	trigger = {
+		OR = {
+			religion = neo_socialist
+			religion = orthodox
+			religion = xenoterran
+			religion = solarian
+			religion = machine_cultist
+			AND = {
+				owner = {
+					ROOT = {
+						any_province_lord = {
+							primary_title = { tier = emperor }
+							OR = {
+								has_character_modifier = constitutional_crisis
+								ROOT = { owner = { character = PREVPREV } }
+							}
+							is_theocracy = yes
+						}
+					}
+				}
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = colonial_seperatist }
+				NOT = { religion = terran_imperial }
+				NOT = { religion = astrist }
+				NOT = { religion = neo_feudal }
+				NOT = { religion = bio_directionist }
+			}
+		}
+		
+		# Must be angry at the imperial government
+		OR = {
+			has_province_modifier = public_against_emperor
+			owner = { primary_title = { tier = emperor } }
+		}
+		
+		# Must not already be part of a theocratic rebellion
+		NOT = {
+			any_province_lord = {
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = theocratic_rebellion
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = { religion = mother_gaia_cultist }
+				NOT = { religion = father_earth_cultist }
+			}
+			random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = culture
+						religion = ROOT
+						culture = ROOT
+						female = yes
+						age = 35
+						attributes = { martial = 5 }
+						trait = rebel_leader
+						trait = radical
+						trait = ambitious
+						trait = brilliant_strategist
+						trait = warship_captain
+					}
+					new_character = {
+						# Create a new title
+						create_title = {
+							tier = DUKE
+							landless = yes
+							temporary = yes
+							rebel = yes
+							culture = ROOT
+							name = "THEOCRATIC_REVOLT"
+							holder = THIS
+						}
+						# Flag for revolt
+						set_character_flag = flag_revolter
+						# Flagship
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = THIS
+							leader = THIS
+							troops = { dreadnoughts = { 1 1 } }
+							attrition = 1.0
+						}
+						# Generate a random rebel fleet
+						character_event = { id = rebels.0 }
+						# Declare war against sector government
+						ROOT = {
+							random_province_lord = {
+								limit = {
+									primary_title = { tier = emperor }
+									OR = {
+										has_character_modifier = constitutional_crisis
+										ROOT = { owner = { character = PREVPREV } }
+									}
+								}
+								set_defacto_vassal = PREVPREV
+								reverse_war = {
+									target = PREVPREV
+									casus_belli = theocratic_rebellion
+								}
+								reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+							}
+						}
+						character_event = { id = rebels.302 }
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = culture
+						culture = ROOT
+						female = no
+						age = 35
+						attributes = { martial = 5 }
+						trait = rebel_leader
+						trait = radical
+						trait = ambitious
+						trait = brilliant_strategist
+						trait = warship_captain
+					}
+					new_character = {
+						# Create a new title
+						create_title = {
+							tier = DUKE
+							landless = yes
+							temporary = yes
+							rebel = yes
+							culture = ROOT
+							name = "THEOCRATIC_REVOLT"
+							holder = THIS
+						}
+						# Flag for revolt
+						set_character_flag = flag_revolter
+						# Flagship
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = THIS
+							leader = THIS
+							troops = { dreadnoughts = { 1 1 } }
+							attrition = 1.0
+						}
+						# Generate a random rebel fleet
+						character_event = { id = rebels.0 }
+						# Declare war against sector government
+						ROOT = {
+							random_province_lord = {
+								limit = {
+									primary_title = { tier = emperor }
+									OR = {
+										has_character_modifier = constitutional_crisis
+										ROOT = { owner = { character = PREVPREV } }
+									}
+								}
+								set_defacto_vassal = PREVPREV
+								reverse_war = {
+									target = PREVPREV
+									casus_belli = theocratic_rebellion
+								}
+								reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+							}
+						}
+						character_event = { id = rebels.302 }
+					}
+				}
+			}
+		}
+		if = {
+			limit = { religion = mother_gaia_cultist }
+			create_character = {
+				random_traits = yes
+				dynasty = culture
+				religion = ROOT
+				culture = ROOT
+				female = yes
+				age = 35
+				attributes = { martial = 5 }
+				trait = rebel_leader
+				trait = radical
+				trait = ambitious
+				trait = brilliant_strategist
+				trait = warship_captain
+			}
+			new_character = {
+				# Create a new title
+				create_title = {
+					tier = DUKE
+					landless = yes
+					temporary = yes
+					rebel = yes
+					culture = ROOT
+					name = "THEOCRATIC_REVOLT"
+					holder = THIS
+				}
+				# Flag for revolt
+				set_character_flag = flag_revolter
+				# Flagship
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					leader = THIS
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+				}
+				# Generate a random rebel fleet
+				character_event = { id = rebels.0 }
+				# Declare war against sector government
+				ROOT = {
+					random_province_lord = {
+						limit = {
+							primary_title = { tier = emperor }
+							OR = {
+								has_character_modifier = constitutional_crisis
+								ROOT = { owner = { character = PREVPREV } }
+							}
+						}
+						set_defacto_vassal = PREVPREV
+						reverse_war = {
+							target = PREVPREV
+							casus_belli = theocratic_rebellion
+						}
+						reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+					}
+				}
+				character_event = { id = rebels.302 }
+			}
+		}
+		if = {
+			limit = { religion = father_earth_cultist }
+			create_character = {
+				random_traits = yes
+				dynasty = culture
+				religion = ROOT
+				culture = ROOT
+				female = no
+				age = 35
+				attributes = { martial = 5 }
+				trait = rebel_leader
+				trait = radical
+				trait = ambitious
+				trait = brilliant_strategist
+				trait = warship_captain
+			}
+			new_character = {
+				# Create a new title
+				create_title = {
+					tier = DUKE
+					landless = yes
+					temporary = yes
+					rebel = yes
+					culture = ROOT
+					name = "THEOCRATIC_REVOLT"
+					holder = THIS
+				}
+				# Flag for revolt
+				set_character_flag = flag_revolter
+				# Flagship
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					leader = THIS
+					troops = { dreadnoughts = { 1 1 } }
+					attrition = 1.0
+				}
+				# Generate a random rebel fleet
+				character_event = { id = rebels.0 }
+				# Declare war against system government
+				ROOT = {
+					random_province_lord = {
+						limit = {
+							primary_title = { tier = emperor }
+							OR = {
+								has_character_modifier = constitutional_crisis
+								ROOT = { owner = { character = PREVPREV } }
+							}
+						}
+						set_defacto_vassal = PREVPREV
+						reverse_war = {
+							target = PREVPREV
+							casus_belli = theocratic_rebellion
+						}
+						reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
+					}
+				}
+				character_event = { id = rebels.302 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 365 }
+	}
+}
+
+# Theocratic rebels join a system revolt already in progress
+province_event = {
+	id = rebels.340
+	desc = "EVTDESCREBELS340"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	trigger = {
+		# Must already be part of a theocratic rebellion
+		any_province_lord = {
+			primary_title = { NOT = { higher_tier_than = COUNT } }
+			war = yes
+			any_war = {
+				defender = { character = PREV }
+				using_cb = theocratic_rebellion
+			}
+		}
+		NOT = {
+			any_province_lord = {
+				primary_title = { higher_tier_than = COUNT }
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = theocratic_rebellion
+				}
+			}
+		}
+		OR = {
+			religion = neo_socialist
+			religion = orthodox
+			religion = xenoterran
+			religion = solarian
+			religion = machine_cultist
+			AND = {
+				any_province_lord = {
+					primary_title = { NOT = { higher_tier_than = COUNT } }
+					war = yes
+					any_war = {
+						defender = { character = PREV }
+						using_cb = theocratic_rebellion
+					}
+					is_theocracy = yes
+				}
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = colonial_seperatist }
+				NOT = { religion = terran_imperial }
+				NOT = { religion = astrist }
+				NOT = { religion = neo_feudal }
+				NOT = { religion = bio_directionist }
+			}
+		}
+	}
+	
+	immediate = {
+		# Find the current rebel leader
+		random_province_lord = {
+			limit = {
+				primary_title = { NOT = { higher_tier_than = COUNT } }
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = theocratic_rebellion
+				}
+			}
+			any_war = {
+				limit = { using_cb = theocratic_rebellion }
+				attacker = {
+					character_event = { id = rebels.0 } # MOAR SPACESHIPS
+					character_event = { id = rebels.341 } # Sure you want to do this alone?
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 365 }
+	}
+}
+# We are at WAR
+character_event = {
+	id = rebels.341
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = { FROM = { owner = { character_event = { id = rebels.342 days = 1 } } } }
+}
+# Rebel reinforcements!
+character_event = {
+	id = rebels.342
+	desc = "EVTDESCREBELS142"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	option = {
+		name = "EVTOPTAREBELS103" # We can handle this
+		if = {
+			limit = {
+				independent = no
+				NOT = { liege = { any_current_enemy = { character = ROOT } } }
+			}
+			prestige = 100
+			hidden_tooltip = { liege = { letter_event = { id = rebels.304 } } } # Inform liege that we can handle it
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				trait = humble
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.1 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.2 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.3 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.4 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power_to_liege = 0.5 }
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.5
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.6
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.7
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.8
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.9
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 1
+			}
+			modifier = {
+				factor = 0.25
+				NOT = { relative_power = { who = FROM power = 1 } }
+			}
+			modifier = {
+				factor = 0
+				NOT = { relative_power = { who = FROM power = 1 } }
+				NOT = { trait = brave }
+				NOT = { trait = proud }
+				NOT = { trait = lunatic }
+				NOT = { trait = imbecile }
+			}
+			modifier = {
+				factor = 5
+				NOT = { religion_authority = 0.5 }
+				liege = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+				trait = ambitious
+			}
+		}
+	}
+	option = {
+		trigger = {
+			independent = no
+			NOT = { liege = { any_current_enemy = { character = ROOT } } }
+		}
+		name = "EVTOPTBREBELS103" # Attempt to escalate
+		liege = { letter_event = { id = rebels.305 tooltip = "EVTTOOLTIPREBELS105" } }
+		# If religion authority is low, then this counts as a favor
+		if = {
+			limit = {
+				NOT = { religion_authority = 0.5 }
+				liege = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+			}
+			custom_tooltip = { text = "CALLINFAVOR" }
+		}
+		if = {
+			limit = {
+				NOT = { religion_authority = 0.5 }
+				liege = {
+					NOT = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+					NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
+				}
+			}
+			custom_tooltip = { text = "YOUWILLOWEAFAVOR" }
+		}
+		ai_chance = { factor = 75 }
+	}
+}
+# Theocratic rebels join a sector revolt already in progress
+province_event = {
+	id = rebels.350
+	desc = "EVTDESCREBELS340"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	trigger = {
+		# Must already be part of a theocratic rebellion
+		any_province_lord = {
+			primary_title = { tier = duke }
+			war = yes
+			any_war = {
+				defender = { character = PREV }
+				using_cb = theocratic_rebellion
+			}
+		}
+		NOT = {
+			any_province_lord = {
+				primary_title = { higher_tier_than = duke }
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = theocratic_rebellion
+				}
+			}
+		}
+		OR = {
+			religion = neo_socialist
+			religion = orthodox
+			religion = xenoterran
+			religion = solarian
+			religion = machine_cultist
+			AND = {
+				any_province_lord = {
+					primary_title = { tier = duke }
+					war = yes
+					any_war = {
+						defender = { character = PREV }
+						using_cb = theocratic_rebellion
+					}
+					is_theocracy = yes
+				}
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = colonial_seperatist }
+				NOT = { religion = terran_imperial }
+				NOT = { religion = astrist }
+				NOT = { religion = neo_feudal }
+				NOT = { religion = bio_directionist }
+			}
+		}
+	}
+	
+	immediate = {
+		# Find the current rebel leader
+		random_province_lord = {
+			limit = {
+				primary_title = { tier = duke }
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = theocratic_rebellion
+				}
+			}
+			any_war = {
+				limit = { using_cb = theocratic_rebellion }
+				attacker = {
+					character_event = { id = rebels.0 } # MOAR SPACESHIPS
+					character_event = { id = rebels.341 } # Sure you want to do this alone?
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 365 }
+	}
+}
+# Theocratic rebels join a kingdom revolt already in progress
+province_event = {
+	id = rebels.360
+	desc = "EVTDESCREBELS360"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	trigger = {
+		# Must already be part of a theocratic rebellion
+		any_province_lord = {
+			primary_title = { tier = king }
+			war = yes
+			any_war = {
+				defender = { character = PREV }
+				using_cb = theocratic_rebellion
+			}
+		}
+		NOT = {
+			any_province_lord = {
+				primary_title = { higher_tier_than = king }
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = theocratic_rebellion
+				}
+			}
+		}
+		OR = {
+			religion = neo_socialist
+			religion = orthodox
+			religion = xenoterran
+			religion = solarian
+			religion = machine_cultist
+			AND = {
+				any_province_lord = {
+					primary_title = { tier = king }
+					war = yes
+					any_war = {
+						defender = { character = PREV }
+						using_cb = theocratic_rebellion
+					}
+					is_theocracy = yes
+				}
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = colonial_seperatist }
+				NOT = { religion = terran_imperial }
+				NOT = { religion = astrist }
+				NOT = { religion = neo_feudal }
+				NOT = { religion = bio_directionist }
+			}
+		}
+	}
+	
+	immediate = {
+		# Find the current rebel leader
+		random_province_lord = {
+			limit = {
+				primary_title = { tier = king }
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = theocratic_rebellion
+				}
+			}
+			any_war = {
+				limit = { using_cb = theocratic_rebellion }
+				attacker = {
+					character_event = { id = rebels.0 } # MOAR SPACESHIPS
+					character_event = { id = rebels.341 } # Sure you want to do this alone?
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 365 }
+	}
+}
+# Theocratic rebels join an empire revolt already in progress
+province_event = {
+	id = rebels.370
+	desc = "EVTDESCREBELS340"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	trigger = {
+		# Must already be part of a theocratic rebellion
+		any_province_lord = {
+			primary_title = { tier = emperor }
+			war = yes
+			any_war = {
+				defender = { character = PREV }
+				using_cb = theocratic_rebellion
+			}
+		}
+		OR = {
+			religion = neo_socialist
+			religion = orthodox
+			religion = xenoterran
+			religion = solarian
+			religion = machine_cultist
+			AND = {
+				any_province_lord = {
+					primary_title = { tier = emperor }
+					war = yes
+					any_war = {
+						defender = { character = PREV }
+						using_cb = theocratic_rebellion
+					}
+					is_theocracy = yes
+				}
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = colonial_seperatist }
+				NOT = { religion = terran_imperial }
+				NOT = { religion = astrist }
+				NOT = { religion = neo_feudal }
+				NOT = { religion = bio_directionist }
+			}
+		}
+	}
+	
+	immediate = {
+		# Find the current rebel leader
+		random_province_lord = {
+			limit = {
+				primary_title = { tier = emperor }
+				war = yes
+				any_war = {
+					defender = { character = PREV }
+					using_cb = theocratic_rebellion
+				}
+			}
+			any_war = {
+				limit = { using_cb = theocratic_rebellion }
+				attacker = {
+					character_event = { id = rebels.0 } # MOAR SPACESHIPS
+					character_event = { id = rebels.341 } # Sure you want to do this alone?
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 365 }
+	}
+}
+
+# Emergency event - rebels should not be patricians
+character_event = {
+	id = rebels.500
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = flag_revolter
+		is_patrician = yes
+	}
+	
+	# AAAAAAH ABORT ABORT ABORT
+	immediate = {
+		clr_character_flag = flag_revolter
+		any_courtier = { random_independent_ruler = { reverse_banish = PREV } }
+		any_war = { end_war = invalid }
+		any_demesne_title = { destroy_landed_title = this }
+	}
+}

@@ -8,7 +8,7 @@ theocratic_rebellion_desc;The people have decided to rise up against their overl
 CB_NAME_REBELLION;[Actor.Religion.GetName] Rebellion;;;;;;;;;;;;;x
 WAR_NAME_REBELLION;$ORDER$$SECOND_ADJ$ [Actor.Religion.GetName] Rebellion;;;;;;;;;;;;;x
 DEMOCRATIC_REVOLT;[Root.County.GetAdjective] Free Fleet;;;;;;;;;;;;;x
-AUTOCRATIC_REVOLT;[Root.GetCulture] National Navy;;;;;;;;;;;;;x
+AUTOCRATIC_REVOLT;[Root.Culture.GetName] National Navy;;;;;;;;;;;;;x
 THEOCRATIC_REVOLT;[Root.County.GetAdjective] [Root.GetReligion] Fleet;;;;;;;;;;;;;x
 rebel_leader;Rebel Leader;;;;;;;;;;;;;x
 rebel_leader_desc;This character is a major power figure in an ongoing popular revolt.;;;;;;;;;;;;;x

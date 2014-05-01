@@ -15,15 +15,12 @@ EVTDESCFACTIONNAMES12;Due to changes in ideology and its form of government, the
 EVTDESCFACTIONNAMES13;Due to changes in ideology and its form of government, the Terran state has been renamed the Terran People's Union.;En raison de changements idéologiques et gouvernementaux, l'état terrien a été rennomé Union des peuples terriens.;;;;;;;;;;;;x
 EVTDESCFACTIONNAMES14;Due to changes in ideology and its form of government, the [From.GetName] has been renamed the Terran People's Republic.;En raison de changements idéologiques et gouvernementaux, le [From.GetName] a été rennomé République populaire terrienne.;;;;;;;;;;;;x
 EVTDESCFACTIONNAMES15;Due to changes in ideology and its form of government, the Terran state has been renamed the Terran People's Republic.;En raison de changements idéologiques et gouvernementaux, l'état terrien a été rennomé République populaire terrienne.;;;;;;;;;;;;x
+d_pilgrimage;The Pilgrimage;;;;;;;;;;;;x
+d_pilgrimage_ADJ;Pilgrimage;;;;;;;;;;;;x
+d_orthodoxy;The Orthodoxy;;;;;;;;;;;;x
+d_orthodoxy_ADJ;Orthodoxy;;;;;;;;;;;;x
 e_terran_confederation;Terran Confederation;Confédération terrienne;;;;;;;;;;;;x
-e_terran_confederation_ADJ;Confederate;Confédéré;;;;;;;;;;;;x
-k_terran_federal_authority;Terran State Authority;Autorité nationale terrienne;;;;;;;;;;;;x
-k_terran_federal_authority_ADJ;Terran State Authority;Autorité nationale terrienne;;;;;;;;;;;;x
-k_terran_republic_authority;Terran State Authority;Autorité nationale terrienne;;;;;;;;;;;;x
-k_terran_republic_authority_ADJ;Terran State Authority;Autorité nationale terrienne;;;;;;;;;;;;x
-k_terran_imperial_authority;Terran State Authority;Autorité nationale terrienne;;;;;;;;;;;;x
-k_terran_imperial_authority_ADJ;Terran State Authority;Autorité nationale terrienne;;;;;;;;;;;;x
-k_terran_navy_ADJ;Confederate Naval;naval confédéré;;;;;;;;;;;;x
+e_terran_confederation_ADJ;Terran Confederate;Confédéré;;;;;;;;;;;;x
 k_terran_navy;Confederate Space Command;Commandement spatial confédéré;;;;;;;;;;;;x
 k_terran_navy_ADJ;Confederate Naval;naval confédéré;;;;;;;;;;;;x
 d_terran_first_fleet;First Confederate Fleet;Première flotte confédérée;;;;;;;;;;;;x
@@ -386,8 +383,8 @@ c_glenn;Glenn;;;;;;;;;;;;;x
 c_glenn_ADJ;Glenn;;;;;;;;;;;;;x
 k_centauri;Centauri Reach;Centauri Reach;;;;;;;;;;;;x
 k_centauri_ADJ;Centauri;Centauri;;;;;;;;;;;;x
-d_centauri_fleet;Centauri Rangers;Rangers Centauri;;;;;;;;;;;;x
-d_centauri_fleet_ADJ;Centauri Rangers;Rangers Centauri;;;;;;;;;;;;x
+d_centauri_reach_fleet;Centauri Rangers;Rangers Centauri;;;;;;;;;;;;x
+d_centauri_reach_fleet_ADJ;Centauri Rangers;Rangers Centauri;;;;;;;;;;;;x
 d_gagarin;Gagarin;;;;;;;;;;;;;x
 d_gagarin_ADJ;Gagarin;;;;;;;;;;;;;x
 c_gagarin;Gagarin;;;;;;;;;;;;;x
