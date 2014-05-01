@@ -1112,7 +1112,7 @@ character_event = {
 	}
 }
 
-# Breaking up with a lover who radical replaced you
+# Breaking up with a lover who just replaced you
 character_event = {
 	id = lovers.7
 	hide_window = yes
@@ -1144,7 +1144,7 @@ character_event = {
 	option = { name = "EVTOPTALOVERS9" }
 }
 
-# Various "character might be attractive to another character" events
+# Various "character might be fair to another character" events
 # Teenage students of the same guardian
 character_event = {
 	id = lovers.10
@@ -1177,7 +1177,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.8
-			trait = attractive
+			trait = fair
 		}
 		modifier = {
 			factor = 1.25
@@ -1239,7 +1239,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.8
-			trait = attractive
+			trait = fair
 		}
 		modifier = {
 			factor = 1.25
@@ -1298,7 +1298,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.8
-			trait = attractive
+			trait = fair
 		}
 		modifier = {
 			factor = 1.25
@@ -1355,7 +1355,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.8
-			trait = attractive
+			trait = fair
 		}
 		modifier = {
 			factor = 1.25
@@ -1411,7 +1411,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.8
-			trait = attractive
+			trait = fair
 		}
 		modifier = {
 			factor = 1.25
@@ -1458,7 +1458,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.8
-			trait = attractive
+			trait = fair
 		}
 		modifier = {
 			factor = 1.25
@@ -1505,7 +1505,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.8
-			trait = attractive
+			trait = fair
 		}
 		modifier = {
 			factor = 1.25
@@ -1561,7 +1561,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.8
-			trait = attractive
+			trait = fair
 		}
 		modifier = {
 			factor = 1.25
@@ -1615,7 +1615,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.8
-			trait = attractive
+			trait = fair
 		}
 		modifier = {
 			factor = 1.25
@@ -1668,7 +1668,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.8
-			trait = attractive
+			trait = fair
 		}
 		modifier = {
 			factor = 1.25
@@ -1712,7 +1712,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.8
-			trait = attractive
+			trait = fair
 		}
 		modifier = {
 			factor = 1.25

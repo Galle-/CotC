@@ -14,7 +14,7 @@ political_group = {
 		color = { 0.2 0.2 0.8 }
 		crusade_name = "UNIFICATION"
 		
-		# Defaults to the pilgrim
+		# Defaults to the Pilgrimage
 		scripture_name = THE_LAW
 		piety_name = CREDIBILITY
 		god_names = { GOD_GOD GOD_HOLY_TERRA GOD_THE_LORD }
@@ -42,7 +42,7 @@ political_group = {
 		color = { 0.4 0.4 0.8 }
 		crusade_name = "UNIFICATION"
 		
-		# Defaults to the pilgrim
+		# Defaults to the Pilgrimage
 		scripture_name = THE_LAW
 		piety_name = CREDIBILITY
 		god_names = { GOD_GOD GOD_HOLY_TERRA GOD_THE_LORD }
@@ -69,7 +69,7 @@ political_group = {
 		color = { 0.8 0.2 0.8 }
 		crusade_name = "UNIFICATION"
 		
-		# Defaults to the pilgrim
+		# Defaults to the Pilgrimage
 		scripture_name = THE_LAW
 		piety_name = LEGITIMACY
 		god_names = { GOD_GOD GOD_HOLY_TERRA GOD_THE_LORD }
@@ -86,7 +86,7 @@ political_group = {
 		
 		psc_marriage = no
 	}
-	colonial_seperatist = {
+	colonial_separatist = {
 		graphical_culture = westerngfx
 		icon = 3
 		heresy_icon = 3
@@ -95,7 +95,7 @@ political_group = {
 		
 		color = { 0.2 0.8 0.2 }
 		
-		# Defaults to the pilgrim
+		# Defaults to the Pilgrimage
 		scripture_name = THE_LAW
 		piety_name = CREDIBILITY
 		god_names = { GOD_GOD GOD_THE_LORD }
@@ -123,7 +123,7 @@ political_group = {
 		
 		color = { 0.4 0.2 0.4 }
 		
-		# Defaults to the pilgrim
+		# Defaults to the Pilgrimage
 		scripture_name = THE_LAW
 		piety_name = LEGITIMACY
 		god_names = { GOD_GOD GOD_THE_LORD }
@@ -149,7 +149,7 @@ political_group = {
 		
 		color = { 0.8 0.2 0.2 }
 		
-		# Defaults to the pilgrim
+		# Defaults to the Pilgrimage
 		scripture_name = THE_LAW
 		piety_name = CREDIBILITY
 		god_names = { GOD_THE_GREATER_GOOD GOD_THE_CAUSE }
@@ -174,7 +174,7 @@ political_group = {
 		
 		color = { 0.2 0.2 0.2 }
 		
-		# Defaults to the pilgrim
+		# Defaults to the Pilgrimage
 		scripture_name = THE_LAW
 		piety_name = CREDIBILITY
 		god_names = { GOD_THE_GREATER_GOOD GOD_THE_CAUSE }
@@ -278,6 +278,12 @@ religious_group = {
 			OP_ARCHANGEL OP_SERAPHIM OP_CHERUBIM OP_GOSPEL OP_TESTAMENT OP_FAITHFUL OP_AZRAEL OP_MICHAEL OP_GABRIEL OP_PROPHECY OP_ABRAHAM OP_ISAAC OP_JACOB OP_JOSHUA OP_DAVID OP_SOLOMON OP_MOHAMMED # Abrahamic operation names
 		}
 		
+		investiture = no
+		can_excommunicate = no
+		can_grant_divorce = no
+		#can_grant_invasion_cb = no #wants a CB
+		can_call_crusade = no
+		can_grant_claim = no
 		priests_can_inherit = no
 		priests_can_marry = no
 		female_temple_holders = yes
@@ -415,6 +421,13 @@ transhumanist_group = {
 			OP_ENLIGHTENMENT OP_TRANSCENDENCE OP_NIRVANA OP_ASCENSION OP_UTOPIA OP_SINGULARITY # Transhumanist operation names
 		}
 		
+		investiture = yes
+		autocephaly = yes
+		can_excommunicate = no
+		can_grant_divorce = yes
+		#can_grant_invasion_cb = no #wants a cb
+		can_call_crusade = no
+		can_grant_claim = no
 		can_hold_temples = yes
 		priests_can_marry = yes
 		female_temple_holders = yes
@@ -439,6 +452,14 @@ transhumanist_group = {
 			OP_ENLIGHTENMENT OP_TRANSCENDENCE OP_NIRVANA OP_ASCENSION OP_UTOPIA OP_SINGULARITY # Transhumanist operation names
 		}
 		
+		investiture = yes
+		autocephaly = no
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		#can_grant_invasion_cb = no  #wants a cb
+		can_call_crusade = yes
+		can_grant_claim = no
+		
 		can_hold_temples = yes
 		priests_can_marry = yes
 		female_temple_holders = yes
@@ -459,10 +480,19 @@ transhumanist_group = {
 			OP_ENLIGHTENMENT OP_TRANSCENDENCE OP_NIRVANA OP_ASCENSION OP_UTOPIA OP_SINGULARITY # Transhumanist operation names
 		}
 		
+		crusade_name = ASSIMILATION
 		scripture_name = THE_CODE
 		piety_name = ASPIRATION
 		character_modifier = { learning = 2 }
 		god_names = { THE_HIVE THE_VOICE THE_CODE }
+		
+		investiture = no
+		autocephaly = no
+		can_excommunicate = no
+		can_grant_divorce = yes
+		#can_grant_invasion_cb = no  #wants a cb
+		can_call_crusade = yes
+		can_grant_claim = no
 		
 		can_hold_temples = yes
 		priests_can_marry = yes
@@ -490,6 +520,14 @@ transhumanist_group = {
 		piety_name = ASPIRATION
 		god_names = { THE_CAUSE }
 		
+		investiture = yes
+		autocephaly = yes
+		can_excommunicate = no
+		can_grant_divorce = yes
+		can_grant_invasion_cb = holy_invasion #yes #wants a cb
+		can_call_crusade = no
+		can_grant_claim = yes
+		
 		can_hold_temples = yes
 		priests_can_marry = yes
 		female_temple_holders = yes
@@ -503,7 +541,7 @@ transhumanist_group = {
 }
 
 outlaw_group = {
-	has_coa_on_barony_only = no
+	has_coa_on_barony_only = yes
 	graphical_culture = norsegfx
 	playable = yes
 	
@@ -517,7 +555,7 @@ outlaw_group = {
 		
 		color = { 0.3 0.3 0.3 }
 		
-		# Default to the pilgrim
+		# Default to the Pilgrimage
 		scripture_name = THE_SCRIPTURES
 		piety_name = RESPECT
 		god_names = { GOD_GOD GOD_HOLY_TERRA GOD_THE_LORD }
@@ -527,6 +565,8 @@ outlaw_group = {
 			OP_MERCURY OP_VENUS OP_ARES OP_CERES OP_JUPITER OP_GANYMEDE OP_CALLISTO OP_EUROPA OP_IO OP_SATURN OP_TITAN OP_NEPTUNE OP_URANUS OP_PLUTO OP_CHARON # Solar system operation names
 			OP_ARIES OP_TAURUS OP_GEMINI OP_CANCER OP_LEO OP_VIRGO OP_LIBRA OP_SCORPIO OP_SAGITTARIUS OP_CAPRICORN OP_AQUARIUS OP_PISCES OP_ORION OP_WITCHHEAD OP_HORSEHEAD OP_VEIL OP_FLAME OP_HELIX # Constellation and nebula operation names
 		}
+		
+		allow_viking_invasion = yes # Allows the "Prepare Invasion" diplo action
 		
 		can_hold_temples = yes
 		priests_can_marry = yes

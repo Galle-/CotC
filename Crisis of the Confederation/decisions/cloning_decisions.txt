@@ -2,13 +2,14 @@ decisions = {
 	clone_self_decision = {
 		potential = {
 			is_ruler = yes
-			demesne_size = 1 # Must actually have land somewhere
+			is_landed = yes # Must actually have land somewhere
 			NOT = { has_character_flag = flag_cloning_decision_active }
 			# Tech requirement goes here
 		}
 		allow = {			
 			# Clones are expensive
 			wealth = 500
+			prisoner = no
 		}
 		effect = {
 			set_character_flag = flag_cloning_decision_active

@@ -82,7 +82,7 @@ character_event = {
 	trigger = {
 		trait = dni
 		has_lover = yes
-		lover = {
+		any_lover = {
 			trait = dni
 			at_location = ROOT
 			prisoner = no
@@ -118,27 +118,27 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.5
-			lover = { trait = carefree }
+			any_lover = { trait = carefree }
 		}
 		modifier = {
 			factor = 2
-			lover = { trait = disciplined }
+			any_lover = { trait = disciplined }
 		}
 		modifier = {
 			factor = 0.5
-			lover = { trait = open_minded }
+			any_lover = { trait = open_minded }
 		}
 		modifier = {
 			factor = 2
-			lover = { trait = close_minded }
+			any_lover = { trait = close_minded }
 		}
 		modifier = {
 			factor = 0.5
-			lover = { trait = brave }
+			any_lover = { trait = brave }
 		}
 		modifier = {
 			factor = 2
-			lover = { trait = craven }
+			any_lover = { trait = craven }
 		}
 	}
 	
@@ -147,7 +147,7 @@ character_event = {
 		random_list = {
 			50 = {
 				add_character_modifier = { name = feedback_bliss duration = 365 }
-				lover = {
+				any_lover = {
 					limit = {
 						trait = dni
 						at_location = ROOT
@@ -160,7 +160,7 @@ character_event = {
 			}
 			50 = {
 				add_character_modifier = { name = feedback_overload duration = 365 }
-				lover = {
+				any_lover = {
 					limit = {
 						trait = dni
 						at_location = ROOT
@@ -187,7 +187,7 @@ character_event = {
 	}
 }
 character_event = {
-	id = cybernetics.1007
+	id = cybernetics.10007
 	desc = "EVTDESCCYBERNETICS10007"
 	picture = GFX_evt_lovers
 	is_triggered_only = yes

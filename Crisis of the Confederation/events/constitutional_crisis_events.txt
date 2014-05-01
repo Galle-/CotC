@@ -292,7 +292,7 @@ character_event = {
 	immediate = { character_event = { id = laws.0 } }
 }
 
-# Character has radical gained a pro or anti-ruler trait, give them appropriate cache flags
+# Character has just gained a pro or anti-ruler trait, give them appropriate cache flags
 character_event = {
 	id = laws.8
 	hide_window = yes
@@ -824,7 +824,7 @@ province_event = {
 			OR = {
 				religion = terran_federalist
 				religion = terran_republican
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 			owner = {
 				is_republic = no
@@ -844,7 +844,7 @@ province_event = {
 			OR = {
 				religion = terran_federalist
 				religion = terran_republican
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 			owner = {
 				is_republic = no
@@ -864,7 +864,7 @@ province_event = {
 			OR = {
 				religion = terran_federalist
 				religion = terran_republican
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 			owner = {
 				is_republic = no
@@ -1355,52 +1355,52 @@ province_event = {
 		if = {
 			limit = { has_province_modifier = civil_unrest_1 }
 			remove_province_modifier = civil_unrest_1
-			add_province_modifier = { name = civil_unrest_0 durations = -1 }
+			add_province_modifier = { name = civil_unrest_0 duration = -1 }
 		}
 		if = {
 			limit = { has_province_modifier = civil_unrest_2 }
 			remove_province_modifier = civil_unrest_2
-			add_province_modifier = { name = civil_unrest_1 durations = -1 }
+			add_province_modifier = { name = civil_unrest_1 duration = -1 }
 		}
 		if = {
 			limit = { has_province_modifier = civil_unrest_3 }
 			remove_province_modifier = civil_unrest_3
-			add_province_modifier = { name = civil_unrest_2 durations = -1 }
+			add_province_modifier = { name = civil_unrest_2 duration = -1 }
 		}
 		if = {
 			limit = { has_province_modifier = civil_unrest_4 }
 			remove_province_modifier = civil_unrest_4
-			add_province_modifier = { name = civil_unrest_3 durations = -1 }
+			add_province_modifier = { name = civil_unrest_3 duration = -1 }
 		}
 		if = {
 			limit = { has_province_modifier = civil_unrest_5 }
 			remove_province_modifier = civil_unrest_5
-			add_province_modifier = { name = civil_unrest_4 durations = -1 }
+			add_province_modifier = { name = civil_unrest_4 duration = -1 }
 		}
 		if = {
 			limit = { has_province_modifier = civil_unrest_6 }
 			remove_province_modifier = civil_unrest_6
-			add_province_modifier = { name = civil_unrest_5 durations = -1 }
+			add_province_modifier = { name = civil_unrest_5 duration = -1 }
 		}
 		if = {
 			limit = { has_province_modifier = civil_unrest_7 }
 			remove_province_modifier = civil_unrest_7
-			add_province_modifier = { name = civil_unrest_6 durations = -1 }
+			add_province_modifier = { name = civil_unrest_6 duration = -1 }
 		}
 		if = {
 			limit = { has_province_modifier = civil_unrest_8 }
 			remove_province_modifier = civil_unrest_8
-			add_province_modifier = { name = civil_unrest_7 durations = -1 }
+			add_province_modifier = { name = civil_unrest_7 duration = -1 }
 		}
 		if = {
 			limit = { has_province_modifier = civil_unrest_9 }
 			remove_province_modifier = civil_unrest_9
-			add_province_modifier = { name = civil_unrest_8 durations = -1 }
+			add_province_modifier = { name = civil_unrest_8 duration = -1 }
 		}
 	}
 }
 
-#Public support swayed toward emperor in crisis
+# Public support swayed toward emperor in crisis
 province_event = {
 	id = laws.210
 	desc = "EVTDESCLAWS210"
@@ -1482,7 +1482,7 @@ province_event = {
 			OR = {
 				religion = terran_republican
 				religion = terran_federalist
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 		modifier = {
@@ -1495,7 +1495,7 @@ province_event = {
 			OR = {
 				religion = terran_republican
 				religion = terran_federalist
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 		modifier = {
@@ -1508,7 +1508,7 @@ province_event = {
 			OR = {
 				religion = terran_republican
 				religion = terran_federalist
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 		
@@ -1673,7 +1673,7 @@ province_event = {
 			OR = {
 				religion = terran_republican
 				religion = terran_federalist
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 		modifier = {
@@ -1686,7 +1686,7 @@ province_event = {
 			OR = {
 				religion = terran_republican
 				religion = terran_federalist
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 		modifier = {
@@ -1699,7 +1699,7 @@ province_event = {
 			OR = {
 				religion = terran_republican
 				religion = terran_federalist
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 		
@@ -1865,7 +1865,7 @@ province_event = {
 			OR = {
 				religion = terran_republican
 				religion = terran_federalist
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 		modifier = {
@@ -1878,7 +1878,7 @@ province_event = {
 			OR = {
 				religion = terran_republican
 				religion = terran_federalist
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 		modifier = {
@@ -1891,7 +1891,7 @@ province_event = {
 			OR = {
 				religion = terran_republican
 				religion = terran_federalist
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 		
@@ -2056,7 +2056,7 @@ province_event = {
 			OR = {
 				religion = terran_republican
 				religion = terran_federalist
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 		modifier = {
@@ -2069,7 +2069,7 @@ province_event = {
 			OR = {
 				religion = terran_republican
 				religion = terran_federalist
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 		modifier = {
@@ -2082,7 +2082,7 @@ province_event = {
 			OR = {
 				religion = terran_republican
 				religion = terran_federalist
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 		
@@ -2248,7 +2248,7 @@ province_event = {
 			OR = {
 				religion = terran_republican
 				religion = terran_federalist
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 		modifier = {
@@ -2261,7 +2261,7 @@ province_event = {
 			OR = {
 				religion = terran_republican
 				religion = terran_federalist
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 		modifier = {
@@ -2274,7 +2274,7 @@ province_event = {
 			OR = {
 				religion = terran_republican
 				religion = terran_federalist
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 		
@@ -2439,7 +2439,7 @@ province_event = {
 			OR = {
 				religion = terran_republican
 				religion = terran_federalist
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 		modifier = {
@@ -2452,7 +2452,7 @@ province_event = {
 			OR = {
 				religion = terran_republican
 				religion = terran_federalist
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 		modifier = {
@@ -2465,7 +2465,7 @@ province_event = {
 			OR = {
 				religion = terran_republican
 				religion = terran_federalist
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 		
@@ -2619,7 +2619,7 @@ province_event = {
 			OR = {
 				religion = terran_republican
 				religion = terran_federalist
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 		modifier = {
@@ -2629,7 +2629,7 @@ province_event = {
 			OR = {
 				religion = terran_republican
 				religion = terran_federalist
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 		modifier = {
@@ -2639,7 +2639,7 @@ province_event = {
 			OR = {
 				religion = terran_republican
 				religion = terran_federalist
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 	}
@@ -2726,7 +2726,7 @@ province_event = {
 			OR = {
 				religion = terran_republican
 				religion = terran_federalist
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 		modifier = {
@@ -2736,7 +2736,7 @@ province_event = {
 			OR = {
 				religion = terran_republican
 				religion = terran_federalist
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 		modifier = {
@@ -2746,7 +2746,7 @@ province_event = {
 			OR = {
 				religion = terran_republican
 				religion = terran_federalist
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 	}
@@ -3683,7 +3683,7 @@ letter_event = {
 		hidden_tooltip = {
 			any_realm_character = {
 				limit = { same_liege = ROOT }
-				character_event = { laws.407 } # Inform fellow vassals
+				character_event = { id = laws.407 } # Inform fellow vassals
 			}
 		}
 	}
@@ -4701,7 +4701,7 @@ character_event = {
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
-					religion = colonial_seperatist
+					religion = colonial_separatist
 				}
 				NOT = { trait = pragmatic }
 				religion_authority = 0.25
@@ -4729,7 +4729,7 @@ character_event = {
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
-					religion = colonial_seperatist
+					religion = colonial_separatist
 				}
 				OR = {
 					trait = radical
@@ -4807,7 +4807,7 @@ character_event = {
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
-					religion = colonial_seperatist
+					religion = colonial_separatist
 				}
 				NOT = { trait = pragmatic }
 				religion_authority = 0.25
@@ -4835,7 +4835,7 @@ character_event = {
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
-					religion = colonial_seperatist
+					religion = colonial_separatist
 				}
 				OR = {
 					trait = radical
@@ -6089,7 +6089,7 @@ character_event = {
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
-					religion = colonial_seperatist
+					religion = colonial_separatist
 				}
 				NOT = { trait = pragmatic }
 				religion_authority = 0.25
@@ -6117,7 +6117,7 @@ character_event = {
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
-					religion = colonial_seperatist
+					religion = colonial_separatist
 				}
 				OR = {
 					trait = radical
@@ -6195,7 +6195,7 @@ character_event = {
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
-					religion = colonial_seperatist
+					religion = colonial_separatist
 				}
 				NOT = { trait = pragmatic }
 				religion_authority = 0.25
@@ -6223,7 +6223,7 @@ character_event = {
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
-					religion = colonial_seperatist
+					religion = colonial_separatist
 				}
 				OR = {
 					trait = radical
@@ -7176,7 +7176,7 @@ character_event = {
 	}
 }
 
-# AI radical became important in the middle of a constitutional crisis, deal with the situation
+# AI just became important in the middle of a constitutional crisis, deal with the situation
 character_event = {
 	id = laws.501
 	hide_window = yes
@@ -7256,13 +7256,13 @@ character_event = {
 			any_demesne_title = {
 				limit = {
 					OR = {
-						has_law = local_term_length_0
-						has_law = local_term_length_1
-						has_law = local_term_length_2
-						has_law = local_term_length_3
+						has_law = term_length_0
+						has_law = term_length_1
+						has_law = term_length_2
+						has_law = term_length_3
 					}
 				}
-				add_law = local_term_length_4
+				add_law = term_length_4
 			}
 			clr_character_flag = flag_term_limit_defied
 		}

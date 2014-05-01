@@ -13,7 +13,7 @@
 	add_trait = fair
 	add_trait = genius
 	add_trait = brave
-	add_trait = extroverted
+	add_trait = extraverted
 	add_trait = cold
 	add_trait = pragmatic
 	add_trait = carefree
@@ -180,7 +180,7 @@
 	female = no
 	
 	culture = japanese_tengoku
-	religion = colonial_seperatist
+	religion = colonial_separatist
 	
 	add_trait = misguided_warrior
 	add_trait = fighter_pilot
@@ -190,11 +190,12 @@
 	add_trait = introverted
 	add_trait = friendly
 	add_trait = radical
+	#add_trait = legit_bastard #born before marriage of parents
 	
 	father = 1108921 # Jiro Shibata
 	mother = 1318425 # Michiko Hasegawa
 	
-	2957.1.1 = { birth = "2957.1.1" }
+	2961.1.1 = { birth = "yes" }
 }
 
 1102153 = {
@@ -204,7 +205,7 @@
 	female = yes
 	
 	culture = anglo_tengoku
-	religion = colonial_seperatist
+	religion = colonial_separatist
 	
 	add_trait = tough_soldier
 	add_trait = warship_captain
@@ -220,7 +221,7 @@
 	female = no
 	
 	culture = japanese_frontiersman
-	religion = colonial_seperatist
+	religion = colonial_separatist
 	
 	add_trait = misguided_warrior
 	add_trait = warship_captain
@@ -234,7 +235,7 @@
 	female = no
 	
 	culture = anglo_frontiersman
-	religion = colonial_seperatist
+	religion = colonial_separatist
 	
 	add_trait = tough_soldier
 	add_trait = fighter_pilot

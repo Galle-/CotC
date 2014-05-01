@@ -78,6 +78,7 @@ terran_group = {
 
 	east_afro_terran = {
 		graphical_culture = afroconfederategfx
+		second_graphical_culture = mideastconfederategfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -117,6 +118,7 @@ terran_group = {
 	}
 	ethiopian_terran = {
 		graphical_culture = afroconfederategfx
+		second_graphical_culture = mideastconfederategfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -153,6 +155,7 @@ terran_group = {
 	}
 	hispanic_terran = {
 		graphical_culture = hispanicconfederategfx
+		second_graphical_culture = angloconfederategfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -190,6 +193,7 @@ terran_group = {
 	
 	indo_terran = {
 		graphical_culture = indoconfederategfx
+		second_graphical_culture = mideastconfederategfx
 		color = { 0.5 0.5 0.95 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -261,6 +265,7 @@ terran_group = {
 	}
 	japanese_terran = {
 		graphical_culture = sinoconfederategfx
+		second_graphical_culture = mideastconfederategfx
 		
 		color = { 0.5 0.5 0.95 }
 		
@@ -298,6 +303,7 @@ terran_group = {
 	}
 	mesoamerican_terran = {
 		graphical_culture = americonfederategfx
+		second_graphical_culture = mideastconfederategfx
 		color = { 0.5 0.5 0.95 }
 		
 		male_names = {
@@ -375,6 +381,7 @@ terran_group = {
 	}
 	sino_terran = {
 		graphical_culture = sinoconfederategfx
+		second_graphical_culture = mideastconfederategfx
 		color = { 0.5 0.5 0.95 }
 		
 		male_names = {
@@ -406,6 +413,7 @@ terran_group = {
 	}
 	west_afro_terran = {
 		graphical_culture = afroconfederategfx
+		second_graphical_culture = mideastconfederategfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -515,6 +523,7 @@ xingjie_group = {
 
 	east_afro_xingjie = {
 		graphical_culture = africangfx
+		second_graphical_culture = muslimgfx # Fallback type
 		
 		color = { 0.95 0.5 0.5 }
 		
@@ -552,6 +561,7 @@ xingjie_group = {
 	}
 	ethiopian_xingjie = {
 		graphical_culture = africangfx
+		second_graphical_culture = muslimgfx # Fallback type
 		
 		color = { 0.95 0.5 0.5 }
 		
@@ -589,6 +599,7 @@ xingjie_group = {
 	}
 	hispanic_xingjie = {
 		graphical_culture = southerngfx
+		second_graphical_culture = westerngfx # Fallback type
 		
 		color = { 0.95 0.5 0.5 }
 		
@@ -625,6 +636,7 @@ xingjie_group = {
 	
 	indo_xingjie = {
 		graphical_culture = indiangfx
+		second_graphical_culture = muslimgfx # Fallback type
 		color = { 0.95 0.5 0.5 }
 		
 		male_names = {
@@ -693,6 +705,7 @@ xingjie_group = {
 	}
 	japanese_xingjie = {
 		graphical_culture = mongolgfx
+		second_graphical_culture = muslimgfx # Fallback type
 		
 		color = { 0.95 0.5 0.5 }
 		
@@ -726,6 +739,7 @@ xingjie_group = {
 	}
 	mesoamerican_xingjie = {
 		graphical_culture = mesoamericangfx
+		second_graphical_culture = muslimgfx # Fallback type
 		color = { 0.95 0.5 0.5 }
 		
 		male_names = {
@@ -799,6 +813,7 @@ xingjie_group = {
 	}
 	sino_xingjie = {
 		graphical_culture = mongolgfx
+		second_graphical_culture = muslimgfx # Fallback type
 		color = { 0.95 0.5 0.5 }
 		
 		male_names = {
@@ -830,6 +845,7 @@ xingjie_group = {
 	}
 	west_afro_xingjie = {
 		graphical_culture = africangfx
+		second_graphical_culture = muslimgfx # Fallback type
 		
 		color = { 0.95 0.5 0.5 }
 		
@@ -942,6 +958,7 @@ celestean_group = {
 
 	east_afro_celestean = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -980,6 +997,7 @@ celestean_group = {
 	}
 	ethiopian_celestean = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -1018,6 +1036,7 @@ celestean_group = {
 	}
 	hispanic_celestean = {
 		graphical_culture = southerngfx
+second_graphical_culture = westerngfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -1055,6 +1074,7 @@ celestean_group = {
 	
 	indo_celestean = {
 		graphical_culture = indiangfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 
 		male_names = {
@@ -1125,6 +1145,7 @@ celestean_group = {
 	}
 	japanese_celestean = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -1235,6 +1256,7 @@ celestean_group = {
 	}
 	sino_celestean = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 
 		male_names = {
@@ -1268,6 +1290,7 @@ celestean_group = {
 	}
 	west_afro_celestean = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -1376,6 +1399,7 @@ sexto_solar_group = {
 
 	east_afro_sexto_solar = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 		
@@ -1411,6 +1435,7 @@ sexto_solar_group = {
 	}
 	ethiopian_sexto_solar = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 		
@@ -1446,6 +1471,7 @@ sexto_solar_group = {
 	}
 	hispanic_sexto_solar = {
 		graphical_culture = southerngfx
+second_graphical_culture = westerngfx
 		
 		color = { 0.5 0.5 0.95 }
 		
@@ -1480,6 +1506,7 @@ sexto_solar_group = {
 	
 	indo_sexto_solar = {
 		graphical_culture = indiangfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 		
 		male_names = {
@@ -1544,6 +1571,7 @@ sexto_solar_group = {
 	}
 	japanese_sexto_solar = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 		
@@ -1645,6 +1673,7 @@ sexto_solar_group = {
 	}
 	sino_sexto_solar = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 		
 		male_names = {
@@ -1675,6 +1704,7 @@ sexto_solar_group = {
 	}
 	west_afro_sexto_solar = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 		
@@ -1784,6 +1814,7 @@ samawati_group = {
 
 	east_afro_samawati = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -1821,6 +1852,7 @@ samawati_group = {
 	}
 	ethiopian_samawati = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -1858,6 +1890,7 @@ samawati_group = {
 	}
 	hispanic_samawati = {
 		graphical_culture = southerngfx
+second_graphical_culture = westerngfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -1894,6 +1927,7 @@ samawati_group = {
 	
 	indo_samawati = {
 		graphical_culture = indiangfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -1965,6 +1999,7 @@ samawati_group = {
 	}
 	japanese_samawati = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -2072,6 +2107,7 @@ samawati_group = {
 	}
 	sino_samawati = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 		
 
@@ -2105,6 +2141,7 @@ samawati_group = {
 	}
 	west_afro_samawati = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -2220,6 +2257,7 @@ angani_group = {
 
 	east_afro_angani = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -2259,6 +2297,7 @@ angani_group = {
 	}
 	ethiopian_angani = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -2295,6 +2334,7 @@ angani_group = {
 	}
 	hispanic_angani = {
 		graphical_culture = southerngfx
+second_graphical_culture = westerngfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -2333,6 +2373,7 @@ angani_group = {
 	
 	indo_angani = {
 		graphical_culture = indiangfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 
 		male_names = {
@@ -2405,6 +2446,7 @@ angani_group = {
 	}
 	japanese_angani = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -2518,6 +2560,7 @@ angani_group = {
 	}
 	sino_angani = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 
 		male_names = {
@@ -2552,6 +2595,7 @@ angani_group = {
 	}
 	west_afro_angani = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -2667,6 +2711,7 @@ frontiersman_group = {
 
 	east_afro_frontiersman = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 		male_names = {
@@ -2706,6 +2751,7 @@ frontiersman_group = {
 	}
 	ethiopian_frontiersman = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 		male_names = {
@@ -2745,6 +2791,7 @@ frontiersman_group = {
 	}
 	hispanic_frontiersman = {
 		graphical_culture = southerngfx
+second_graphical_culture = westerngfx
 		
 		color = { 0.5 0.5 0.95 }
 		male_names = {
@@ -2783,6 +2830,7 @@ frontiersman_group = {
 	
 	indo_frontiersman = {
 		graphical_culture = indiangfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 		male_names = {
 			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
@@ -2855,6 +2903,7 @@ frontiersman_group = {
 	}
 	japanese_frontiersman = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 		male_names = {
@@ -2968,6 +3017,7 @@ frontiersman_group = {
 	}
 	sino_frontiersman = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 		male_names = {
 			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
@@ -3002,6 +3052,7 @@ frontiersman_group = {
 	}
 	west_afro_frontiersman = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 		male_names = {
@@ -3125,6 +3176,7 @@ centauri_group = {
 
 	east_afro_centauri = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -3167,6 +3219,7 @@ centauri_group = {
 	}
 	ethiopian_centauri = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -3209,6 +3262,7 @@ centauri_group = {
 	}
 	hispanic_centauri = {
 		graphical_culture = southerngfx
+second_graphical_culture = westerngfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -3250,6 +3304,7 @@ centauri_group = {
 	
 	indo_centauri = {
 		graphical_culture = indiangfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 
 		male_names = {
@@ -3328,6 +3383,7 @@ centauri_group = {
 	}
 	japanese_centauri = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -3450,6 +3506,7 @@ centauri_group = {
 	}
 	sino_centauri = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 
 		male_names = {
@@ -3487,6 +3544,7 @@ centauri_group = {
 	}
 	west_afro_centauri = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -3611,6 +3669,7 @@ tengoku_group = {
 
 	east_afro_tengoku = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 		
@@ -3652,6 +3711,7 @@ tengoku_group = {
 	}
 	ethiopian_tengoku = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 		
@@ -3693,6 +3753,7 @@ tengoku_group = {
 	}
 	hispanic_tengoku = {
 		graphical_culture = southerngfx
+second_graphical_culture = westerngfx
 		
 		color = { 0.5 0.5 0.95 }
 		
@@ -3733,6 +3794,7 @@ tengoku_group = {
 	
 	indo_tengoku = {
 		graphical_culture = indiangfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 		
 		male_names = {
@@ -3809,6 +3871,7 @@ tengoku_group = {
 	}
 	japanese_tengoku = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 		
@@ -3928,6 +3991,7 @@ tengoku_group = {
 	}
 	sino_tengoku = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 		
 		male_names = {
@@ -3964,6 +4028,7 @@ tengoku_group = {
 	}
 	west_afro_tengoku = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 		
@@ -4081,6 +4146,7 @@ bianjiangese_group = {
 
 	east_afro_bianjiangese = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -4120,6 +4186,7 @@ bianjiangese_group = {
 	}
 	ethiopian_bianjiangese = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -4152,6 +4219,7 @@ bianjiangese_group = {
 	}
 	hispanic_bianjiangese = {
 		graphical_culture = southerngfx
+second_graphical_culture = westerngfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -4189,6 +4257,7 @@ bianjiangese_group = {
 	
 	indo_bianjiangese = {
 		graphical_culture = indiangfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -4260,6 +4329,7 @@ bianjiangese_group = {
 	}
 	japanese_bianjiangese = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 		
@@ -4374,6 +4444,7 @@ bianjiangese_group = {
 	}
 	sino_bianjiangese = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 		
 		male_names = {
@@ -4405,6 +4476,7 @@ bianjiangese_group = {
 	}
 	west_afro_bianjiangese = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -4518,6 +4590,7 @@ orion_group = {
 
 	east_afro_orion = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -4557,6 +4630,7 @@ orion_group = {
 	}
 	ethiopian_orion = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -4589,6 +4663,7 @@ orion_group = {
 	}
 	hispanic_orion = {
 		graphical_culture = southerngfx
+second_graphical_culture = westerngfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -4626,6 +4701,7 @@ orion_group = {
 	
 	indo_orion = {
 		graphical_culture = indiangfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -4697,6 +4773,7 @@ orion_group = {
 	}
 	japanese_orion = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 		
@@ -4811,6 +4888,7 @@ orion_group = {
 	}
 	sino_orion = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 		
 		male_names = {
@@ -4842,6 +4920,7 @@ orion_group = {
 	}
 	west_afro_orion = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -4955,6 +5034,7 @@ mukta_group = {
 
 	east_afro_mukta = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -4994,6 +5074,7 @@ mukta_group = {
 	}
 	ethiopian_mukta = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -5026,6 +5107,7 @@ mukta_group = {
 	}
 	hispanic_mukta = {
 		graphical_culture = southerngfx
+second_graphical_culture = westerngfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -5063,6 +5145,7 @@ mukta_group = {
 	
 	indo_mukta = {
 		graphical_culture = indiangfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -5134,6 +5217,7 @@ mukta_group = {
 	}
 	japanese_mukta = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 		
@@ -5248,6 +5332,7 @@ mukta_group = {
 	}
 	sino_mukta = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 		
 		male_names = {
@@ -5279,6 +5364,7 @@ mukta_group = {
 	}
 	west_afro_mukta = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -5392,6 +5478,7 @@ tarkan_group = {
 
 	east_afro_tarkan = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -5431,6 +5518,7 @@ tarkan_group = {
 	}
 	ethiopian_tarkan = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -5463,6 +5551,7 @@ tarkan_group = {
 	}
 	hispanic_tarkan = {
 		graphical_culture = southerngfx
+second_graphical_culture = westerngfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -5500,6 +5589,7 @@ tarkan_group = {
 	
 	indo_tarkan = {
 		graphical_culture = indiangfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -5571,6 +5661,7 @@ tarkan_group = {
 	}
 	japanese_tarkan = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 		
@@ -5685,6 +5776,7 @@ tarkan_group = {
 	}
 	sino_tarkan = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 		
 		male_names = {
@@ -5716,6 +5808,7 @@ tarkan_group = {
 	}
 	west_afro_tarkan = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -5829,6 +5922,7 @@ avalonian_group = {
 
 	east_afro_avalonian = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -5868,6 +5962,7 @@ avalonian_group = {
 	}
 	ethiopian_avalonian = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -5900,6 +5995,7 @@ avalonian_group = {
 	}
 	hispanic_avalonian = {
 		graphical_culture = southerngfx
+second_graphical_culture = westerngfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -5937,6 +6033,7 @@ avalonian_group = {
 	
 	indo_avalonian = {
 		graphical_culture = indiangfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -6008,6 +6105,7 @@ avalonian_group = {
 	}
 	japanese_avalonian = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 		
@@ -6122,6 +6220,7 @@ avalonian_group = {
 	}
 	sino_avalonian = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 		
 		male_names = {
@@ -6153,6 +6252,7 @@ avalonian_group = {
 	}
 	west_afro_avalonian = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -6273,6 +6373,7 @@ strugatskite_group = {
 
 	east_afro_strugatskite = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -6315,6 +6416,7 @@ strugatskite_group = {
 	}
 	ethiopian_strugatskite = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -6357,6 +6459,7 @@ strugatskite_group = {
 	}
 	hispanic_strugatskite = {
 		graphical_culture = southerngfx
+second_graphical_culture = westerngfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -6398,6 +6501,7 @@ strugatskite_group = {
 	
 	indo_strugatskite = {
 		graphical_culture = indiangfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 
 		male_names = {
@@ -6476,6 +6580,7 @@ strugatskite_group = {
 	}
 	japanese_strugatskite = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -6598,6 +6703,7 @@ strugatskite_group = {
 	}
 	sino_strugatskite = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 
 		male_names = {
@@ -6635,6 +6741,7 @@ strugatskite_group = {
 	}
 	west_afro_strugatskite = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -6761,6 +6868,7 @@ edemite_group = {
 
 	east_afro_edemite = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -6803,6 +6911,7 @@ edemite_group = {
 	}
 	ethiopian_edemite = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -6845,6 +6954,7 @@ edemite_group = {
 	}
 	hispanic_edemite = {
 		graphical_culture = southerngfx
+second_graphical_culture = westerngfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -6886,6 +6996,7 @@ edemite_group = {
 	
 	indo_edemite = {
 		graphical_culture = indiangfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 
 		male_names = {
@@ -6964,6 +7075,7 @@ edemite_group = {
 	}
 	japanese_edemite = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -7086,6 +7198,7 @@ edemite_group = {
 	}
 	sino_edemite = {
 		graphical_culture = mongolgfx
+second_graphical_culture = muslimgfx
 		color = { 0.5 0.5 0.95 }
 
 		male_names = {
@@ -7123,6 +7236,7 @@ edemite_group = {
 	}
 	west_afro_edemite = {
 		graphical_culture = africangfx
+second_graphical_culture = muslimgfx
 		
 		color = { 0.5 0.5 0.95 }
 

@@ -8,7 +8,7 @@ opinion_stole_my_love = { opinion = -50 }
 opinion_attempted_coup = {
 	opinion = -50
 	months = 320
-	imprison_reason = yes
+	prison_reason = yes
 }
 opinion_captured_coup_target = {
 	opinion = 25
@@ -28,6 +28,6 @@ opinion_foiled_my_plans = {
 }
 opinion_massacred_my_child = {
 	opinion = -75
-	imprison_reason = yes
+	prison_reason = yes
 	months = 120
 }

@@ -3735,14 +3735,14 @@ character_event = {
 					has_plot = plot_coup
 					has_plot = plot_justified_coup
 				}
-				plot_target_char = { lover = { character = ROOT } }
+				plot_target_char = { any_lover = { character = ROOT } }
 			}
 			any_backed_character = {
 				OR = {
 					has_plot = plot_coup
 					has_plot = plot_justified_coup
 				}
-				plot_target_char = { lover = { character = ROOT } }
+				plot_target_char = { any_lover = { character = ROOT } }
 			}
 		}
 		NOT = { has_character_flag = flag_coup_plan_lover }
@@ -3821,14 +3821,14 @@ character_event = {
 							has_plot = plot_coup
 							has_plot = plot_justified_coup
 						}
-						plot_target_char = { lover = { character = ROOT } }
+						plot_target_char = { any_lover = { character = ROOT } }
 					}
 					any_backed_character = {
 						OR = {
 							has_plot = plot_coup
 							has_plot = plot_justified_coup
 						}
-						plot_target_char = { lover = { character = ROOT } }
+						plot_target_char = { any_lover = { character = ROOT } }
 					}
 				}
 				prisoner = no
@@ -4658,7 +4658,7 @@ character_event = {
 			NOT = {
 				AND = {
 					has_character_flag = flag_coup_plan_lover
-					plot_target_char = { lover = { character = ROOT } }
+					plot_target_char = { any_lover = { character = ROOT } }
 				}
 			}
 			NOT = {
@@ -4674,7 +4674,7 @@ character_event = {
 						}
 						AND = {
 							has_character_flag = flag_coup_plan_lover
-							lover = { ROOT = { plot_target_char = { character = PREVPREV } } }
+							any_lover = { ROOT = { plot_target_char = { character = PREVPREV } } }
 						}
 					}
 				}
@@ -4690,13 +4690,13 @@ character_event = {
 			NOT = {
 				AND = {
 					has_character_flag = flag_coup_plan_lover
-					plot_target_char = { lover = { character = ROOT } }
+					plot_target_char = { any_lover = { character = ROOT } }
 				}
 			}
 			NOT = {
 				any_plot_backer = {
 					has_character_flag = flag_coup_plan_lover
-					lover = { ROOT = { plot_target_char = { character = PREVPREV } } }
+					any_lover = { ROOT = { plot_target_char = { character = PREVPREV } } }
 				}
 			}
 			OR = {
@@ -4745,13 +4745,13 @@ character_event = {
 			NOT = {
 				AND = {
 					has_character_flag = flag_coup_plan_lover
-					plot_target_char = { lover = { character = ROOT } }
+					plot_target_char = { any_lover = { character = ROOT } }
 				}
 			}
 			NOT = {
 				any_plot_backer = {
 					has_character_flag = flag_coup_plan_lover
-					lover = { ROOT = { plot_target_char = { character = PREVPREV } } }
+					any_lover = { ROOT = { plot_target_char = { character = PREVPREV } } }
 				}
 			}
 			OR = {
@@ -4785,11 +4785,11 @@ character_event = {
 			OR = {
 				AND = {
 					has_character_flag = flag_coup_plan_lover
-					plot_target_char = { lover = { character = ROOT } }
+					plot_target_char = { any_lover = { character = ROOT } }
 				}
 				any_plot_backer = {
 					has_character_flag = flag_coup_plan_lover
-					lover = { ROOT = { plot_target_char = { character = PREVPREV } } }
+					any_lover = { ROOT = { plot_target_char = { character = PREVPREV } } }
 				}
 			}
 		}
@@ -4797,7 +4797,7 @@ character_event = {
 		if = {
 			limit = {
 				has_character_flag = flag_coup_plan_lover
-				plot_target_char = { lover = { character = ROOT } }
+				plot_target_char = { any_lover = { character = ROOT } }
 			}
 			narrative_event = { id = coup.304 tooltip = "EVTTOOLTIPCOUP304" }
 		}
@@ -4806,14 +4806,14 @@ character_event = {
 				NOT = {
 					AND = {
 						has_character_flag = flag_coup_plan_lover
-						plot_target_char = { lover = { character = ROOT } }
+						plot_target_char = { any_lover = { character = ROOT } }
 					}
 				}
 			}
 			random_plot_backer = {
 				limit = {
 					has_character_flag = flag_coup_plan_lover
-					lover = { ROOT = { plot_target_char = { character = PREVPREV } } }
+					any_lover = { ROOT = { plot_target_char = { character = PREVPREV } } }
 				}
 				narrative_event = { id = coup.304 tooltip = "EVTTOOLTIPCOUP304" }
 			}
@@ -5460,7 +5460,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = {
-		# This difference is radical for flavor, but it's fun anyway
+		# This difference is just for flavor, but it's fun anyway
 		trigger = {
 			OR = {
 				trait = content
@@ -5525,7 +5525,7 @@ character_event = {
 	}
 	
 	option = {
-		# This difference is radical for flavor, but it's fun anyway
+		# This difference is just for flavor, but it's fun anyway
 		trigger = {
 			NOT = { trait = content }
 			OR = {

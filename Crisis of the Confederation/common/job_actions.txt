@@ -205,10 +205,10 @@ action_research_cul_tech = {
 	# trigger = {
 		# OR = {
 			# owner = {
-				# FROM = { NOT = { religion_group = pagan_group } }
+				# FROM = { NOT = { religion_group = outlaw_group } }
 				# independent = yes
 				# NOT = { religion = FROM }
-				# religion_group = pagan_group
+				# religion_group = outlaw_group
 				# is_reformed_religion = no
 				# capital_scope = {
 					# province = ROOT
@@ -242,7 +242,7 @@ action_research_cul_tech = {
 	
 	# potential = {
 		# FROM = {
-			# NOT = { religion_group = muslim }
+			# NOT = { religion_group = transhumanist_group }
 		# }
 	# }
 	
@@ -278,7 +278,7 @@ action_research_cul_tech = {
 	# attribute = learning
 	
 	# potential = {
-		# FROM = { religion_group = muslim }
+		# FROM = { religion_group = transhumanist_group }
 	# }
 	
 	# trigger = {
