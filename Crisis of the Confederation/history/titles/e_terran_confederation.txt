@@ -1,8 +1,7 @@
 2489.1.1 = {
 	law = centralization_1
-	law = legitimacy_law_1
-	law = election_law_3
 	law = military_vassal_legitimacy_2
+	law = public_order_1
 	law = succ_feudal_elective
 	law = true_cognatic_succession
 }
@@ -19,4 +18,7 @@
 2980.1.1 = { holder = 1204931 }		# Maria Salazar
 2988.1.1 = { holder = 1107473 }		# Salman Nazari
 2992.1.1 = { holder = 110167 }		# Owen Weyland
-2998.1.1 = { holder = 11013974 }	# Morgan Afolayan
+2998.1.1 = {
+	law = public_order_0
+	holder = 11013974	# Morgan Afolayan
+}

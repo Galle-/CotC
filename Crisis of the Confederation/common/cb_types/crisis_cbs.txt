@@ -52,6 +52,12 @@ civil_war = {
 			}
 			FROM = { religion_authority = { modifier = allowed_civil_war_county } }
 		}
+		
+		# Downgrade FROM's public order
+		FROM = {
+			any_demesne_title = { limit = { has_law = public_order_1 } }
+			add_law = public_order_0
+		}
 	}
 	
 	is_valid = {
@@ -202,6 +208,7 @@ cb_military_campaign = {
 		ROOT = {
 			independent = no
 			is_feudal = yes
+			is_patrician = no
 			NOT = { is_liege_or_above = FROM }
 		}
 		FROM = { NOT = { is_liege_or_above = ROOT } }
@@ -215,6 +222,7 @@ cb_military_campaign = {
 		ROOT = {
 			independent = no
 			is_feudal = yes
+			is_patrician = no
 			NOT = { is_liege_or_above = FROM }
 		}
 		FROM = { NOT = { is_liege_or_above = ROOT } }
@@ -671,12 +679,16 @@ democratic_rebellion = {
 				}
 			}
 		}
-		if = {
-			limit = { FROM = { capital_holding = { is_republic = yes } } }
-			FROM = { capital_holding = { usurp_title = ROOT } }
-		}
 		# Give the rest of the titles to the rebels as well
 		ROOT = { character_event = { id = usurpation.100 tooltip = "EVTTOOLTIPUSURPATION100" } }
+	}
+	
+	on_add = {
+		# Downgrade FROM's public order
+		FROM = {
+			any_demesne_title = { limit = { has_law = public_order_1 } }
+			add_law = public_order_0
+		}
 	}
 
 	on_fail_title = {
@@ -982,12 +994,16 @@ autocratic_rebellion = {
 				}
 			}
 		}
-		if = {
-			limit = { FROM = { capital_holding = { is_feudal = yes } } }
-			FROM = { capital_holding = { usurp_title = ROOT } }
-		}
 		# Give the rest of the titles to the rebels as well
 		ROOT = { character_event = { id = usurpation.100 tooltip = "EVTTOOLTIPUSURPATION100" } }
+	}
+	
+	on_add = {
+		# Downgrade FROM's public order
+		FROM = {
+			any_demesne_title = { limit = { has_law = public_order_1 } }
+			add_law = public_order_0
+		}
 	}
 
 	on_fail_title = {
@@ -1288,12 +1304,16 @@ theocratic_rebellion = {
 				}
 			}
 		}
-		if = {
-			limit = { FROM = { capital_holding = { is_theocracy = yes } } }
-			FROM = { capital_holding = { usurp_title = ROOT } }
-		}
 		# Give the rest of the titles to the rebels as well
 		ROOT = { character_event = { id = usurpation.100 tooltip = "EVTTOOLTIPUSURPATION100" } }
+	}
+	
+	on_add = {
+		# Downgrade FROM's public order
+		FROM = {
+			any_demesne_title = { limit = { has_law = public_order_1 } }
+			add_law = public_order_0
+		}
 	}
 
 	on_fail_title = {

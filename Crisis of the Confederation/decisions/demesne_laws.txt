@@ -4,10 +4,11 @@ laws = {
 # TERM LENGTH
 	local_term_length_0 = { # 1 Year
 		show_as_title = yes
-		group = term_limits
+		group = local_term_limits
 		default = no
 		
 		potential = {
+			temporary = no
 			OR = {
 				NOT = { higher_tier_than = DUKE }
 				holder_scope = { independent = no }
@@ -31,10 +32,11 @@ laws = {
 	
 	local_term_length_1 = { # 4 Years
 		show_as_title = yes
-		group = term_limits
+		group = local_term_limits
 		default = yes # Because 'MURICA
 		
 		potential = {
+			temporary = no
 			OR = {
 				NOT = { higher_tier_than = DUKE }
 				holder_scope = { independent = no }
@@ -61,10 +63,11 @@ laws = {
 	
 	local_term_length_2 = { # 6 Years
 		show_as_title = yes
-		group = term_limits
+		group = local_term_limits
 		default = no
 		
 		potential = {
+			temporary = no
 			OR = {
 				NOT = { higher_tier_than = DUKE }
 				holder_scope = { independent = no }
@@ -91,10 +94,11 @@ laws = {
 	
 	local_term_length_3 = { # 10 Years
 		show_as_title = yes
-		group = term_limits
+		group = local_term_limits
 		default = no
 		
 		potential = {
+			temporary = no
 			OR = {
 				NOT = { higher_tier_than = DUKE }
 				holder_scope = { independent = no }
@@ -121,10 +125,11 @@ laws = {
 	
 	local_term_length_4 = { # For Life
 		show_as_title = yes
-		group = term_limits
+		group = local_term_limits
 		default = no
 		
 		potential = {
+			temporary = no
 			OR = {
 				NOT = { higher_tier_than = DUKE }
 				holder_scope = { independent = no }

@@ -1,0 +1,1016 @@
+namespace = military
+
+# # Military titles should only be held by military characters
+# character_event = {
+	# id = military.0
+	# desc = "EVTDESCMILITARY0"
+	# picture = GFX_evt_military
+	
+	# only_rulers = yes
+	
+	# trigger = {
+		# any_demesne_title = { is_tribal_type_title = yes }
+		# OR = {
+			# is_feudal = no
+			# is_patrician = yes
+		# }
+		
+		# NOT = { trait = misguided_warrior }
+		# NOT = { trait = tough_soldier }
+		# NOT = { trait = skilled_tactician }
+		# NOT = { trait = brilliant_strategist }
+	# }
+	
+	# # # Give command to our most qualified loyal officer
+	# # option = {
+		# # trigger = {
+			# # any_vassal = {
+				# # is_feudal = yes
+				# # opinion = { who = ROOT value = 10 }
+			# # }
+			# # any_demesne_title = {
+				# # is_tribal_type_title = yes
+				# # is_primary_holder_title_tier = no
+			# # }
+		# # }
+		# # name = "EVTOPTAMILITARY0"
+		# # random_vassal = {
+			# # limit = {
+				# # is_feudal = yes
+				# # opinion = { who = ROOT value = 10 }
+				# # NOT = {
+					# # ROOT = {
+						# # any_vassal = {
+							# # is_feudal = yes
+							# # opinion = { who = ROOT value = 10 }
+							# # attribute_diff = { character = PREVPREV attribute = martial value = 1 }
+						# # }
+					# # }
+				# # }
+			# # }
+			# # ROOT = {
+				# # any_demesne_title = {
+					# # limit = {
+						# # is_tribal_type_title = yes
+						# # is_primary_holder_title_tier = no
+					# # }
+					# # grant_title = PREVPREV
+					# # remove_claim = ROOT
+				# # }
+			# # }
+		# # }
+		# # # Eliminate same-tier military titles
+		# # any_demesne_title = {
+			# # limit = {
+				# # is_tribal_type_title = yes
+				# # is_primary_holder_title_tier = yes
+			# # }
+			# # destroy_landed_title = THIS
+		# # }
+		# # ai_chance = {
+			# # factor = 10000
+		# # }
+	# # }
+	
+	# # Give command to our most qualified officer
+	# option = {
+		# trigger = {
+			# any_vassal = { is_feudal = yes }
+			# any_demesne_title = {
+				# is_tribal_type_title = yes
+				# is_primary_holder_title_tier = no
+			# }
+		# }
+		# name = "EVTOPTBMILITARY0"
+		# random_vassal = {
+			# limit = {
+				# is_feudal = yes
+				# NOT = {
+					# ROOT = {
+						# any_vassal = {
+							# is_feudal = yes
+							# attribute_diff = {
+								# character = PREVPREV
+								# attribute = martial
+								# value = 1
+							# }
+						# }
+					# }
+				# }
+			# }
+			# ROOT = {
+				# any_demesne_title = {
+					# limit = {
+						# is_tribal_type_title = yes
+						# is_primary_holder_title_tier = no
+					# }
+					# grant_title = PREVPREV
+				# }
+			# }
+		# }
+		# # Eliminate same-tier military titles
+		# any_demesne_title = {
+			# limit = {
+				# is_tribal_type_title = yes
+				# is_primary_holder_title_tier = yes
+			# }
+			# destroy_landed_title = THIS
+		# }
+		# ai_chance = {
+			# factor = 1
+		# }
+	# }
+	
+	# # Dissolve the military
+	# option = {
+		# name = "EVTOPTCMILITARY0"
+		# any_demesne_title = {
+			# limit = { is_tribal_type_title = yes }
+			# ROOT = {
+				# prestige = -250
+				# any_vassal = { opinion = { who = ROOT modifier = opinion_dissolved_the_military_wtf months = 2400 } }
+			# }
+			# destroy_landed_title = THIS
+		# }
+		# ai_chance = { factor = 0 }
+	# }
+# }
+
+# # Has more than one fleet title
+# character_event = {
+	# id = military.1
+	# desc = "EVTDESCMILITARY1"
+	# picture = GFX_evt_military
+	
+	# only_rulers = yes
+	
+	# trigger = {
+		# any_demesne_title = {
+			# tier = duke
+			# is_tribal_type_title = yes
+			# count = 2
+		# }
+		# is_feudal = yes
+		# is_patrician = no
+	# }
+	
+	# option = {
+		# trigger = {
+			# primary_title = { higher_tier_than = DUKE }
+			# any_vassal = {
+				# NOT = { any_demesne_title = { higher_tier_than = COUNT } }
+				# dynasty = ROOT
+				# is_feudal = yes
+			# }
+		# }
+		# # Assign one to a relative
+		# name = "EVTOPTAMILITARY1"
+		# random_vassal = {
+			# limit = {
+				# is_feudal = yes
+				# dynasty = ROOT
+				# NOT = { any_demesne_title = { higher_tier_than = COUNT } }
+				# NOT = {
+					# ROOT = {
+						# any_vassal = {
+							# is_feudal = yes
+							# dynasty = ROOT
+							# NOT = { any_demesne_title = { higher_tier_than = COUNT } }
+							# attribute_diff = { character = PREVPREV attribute = martial value = 1 }
+						# }
+					# }
+				# }
+			# }
+			# ROOT = {
+				# random_demesne_title = {
+					# limit = {
+						# is_tribal_type_title = yes
+						# tier = DUKE
+					# }
+					# grant_title = PREVPREV
+					# remove_claim = ROOT
+				# }
+			# }
+		# }
+		# ai_chance = { factor = 100 }
+		# hidden_tooltip = { character_event = { id = military.1 } } # Recursive
+	# }
+	
+	# option = {
+		# trigger = {
+			# primary_title = { higher_tier_than = DUKE }
+			# any_vassal = {
+				# NOT = { any_demesne_title = { higher_tier_than = COUNT } }
+				# is_feudal = yes
+			# }
+		# }
+		# # Assign one to the most qualified officer
+		# name = "EVTOPTBMILITARY1"
+		# random_vassal = {
+			# limit = {
+				# is_feudal = yes
+				# NOT = { any_demesne_title = { higher_tier_than = COUNT } }
+				# NOT = {
+					# ROOT = {
+						# any_vassal = {
+							# is_feudal = yes
+							# NOT = { any_demesne_title = { higher_tier_than = COUNT } }
+							# attribute_diff = { character = PREVPREV attribute = martial value = 1 }
+						# }
+					# }
+				# }
+			# }
+			# ROOT = {
+				# random_demesne_title = {
+					# limit = {
+						# is_tribal_type_title = yes
+						# tier = DUKE
+					# }
+					# grant_title = PREVPREV
+					# remove_claim = ROOT
+				# }
+			# }
+		# }
+		# hidden_tooltip = { character_event = { id = military.1 } } # Recursive
+	# }
+	
+	# # Dissolve them all to be reassigned later
+	# option = {
+		# name = "EVTOPTCMILITARY1"
+		# any_demesne_title = {
+			# limit = {
+				# is_landless_type_title = yes
+				# tier = DUKE
+				# is_primary_holder_title = no
+			# }
+			# destroy_landed_title = THIS
+		# }
+		# ai_chance = { factor = 0 }
+	# }
+# }
+
+# # AI management - appointed officers should land their relatives
+# character_event = {
+	# id = military.10
+	# hide_window = yes
+	
+	# only_rulers = yes
+	# min_age = 16
+	# prisoner = no
+	# capable_only = yes
+	
+	# trigger = {
+		# ai = yes # This is a strategy event for the AI, the player can manage on their own
+		# primary_title = { has_law = succ_appointment }
+		# NOT = { any_vassal = { dynasty = ROOT } }
+		# any_courtier = {
+			# is_landed = no
+			# dynasty = ROOT
+			# age = 16
+			# prisoner = no
+			# NOT = { trait = incapable }
+			# reverse_opinion = { who = ROOT value = 0 }
+		# }
+		# any_demesne_title = {
+			# can_be_given_away = yes
+			# tier = count
+			# is_feudal = yes
+			# location = { is_capital = no }
+		# }
+	# }
+	
+	# immediate = {
+		# random_courtier = {
+			# limit = {
+				# is_landed = no
+				# dynasty = ROOT
+				# age = 16
+				# prisoner = no
+				# NOT = { trait = incapable }
+				# reverse_opinion = { who = ROOT value = 0 }
+				# NOT = {
+					# ROOT = {
+						# any_courtier = {
+							# is_landed = no
+							# dynasty = ROOT
+							# NOT = { trait = incapable }
+							# reverse_opinion = { who = ROOT value = 0 }
+							# attribute_diff = { who = PREVPREV attribute = martial value = 1 }
+						# }
+					# }
+				# }
+			# }
+			# ROOT = {
+				# random_demesne_title = {
+					# limit = {
+						# can_be_given_away = yes
+						# tier = count
+						# is_feudal = yes
+						# location = { is_capital = no }
+					# }
+					# grant_title = PREVPREV
+				# }
+			# }
+		# }
+		# character_event = { id = military.10 } # Recursive
+	# }
+# }
+
+# AI management - launch a campaign against a nearby enemy
+character_event = {
+	id = military.11
+	hide_window = yes
+	
+	only_rulers = yes
+	min_age = 16
+	prisoner = no
+	only_capable = yes
+	
+	trigger = {
+		ai = yes
+		independent = no
+		is_feudal = yes
+		is_patrician = no
+		primary_title = { higher_tier_than = BARON }
+		# Either not already engaged or has subordinates who can engage
+		OR = {
+			NOT = { any_war = { using_cb = cb_military_campaign } }
+			any_vassal = {
+				is_feudal = yes
+				is_patrician = no
+				primary_title = {
+					is_tribal_type_title = yes
+					tier = duke
+				}
+				NOT = { any_war = { using_cb = cb_military_campaign } }
+			}
+		}
+		liege = {
+			any_current_enemy = {
+				# Must be a valid war target
+				OR = {
+					independent = yes
+					same_liege = PREV
+					liege_before_war = {
+						OR = {
+							character = PREVPREV
+							same_liege = PREVPREV
+							independent = yes
+						}
+					}
+				}
+				any_realm_province = { NOT = { distance = { who = ROOT value = 500 } } }
+				prisoner = no
+				NOT = { reverse_has_truce = ROOT }
+				NOT = { any_current_enemy = { character = ROOT } }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 600
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.1 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.2 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.3 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.4 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.5 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.6 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.7 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.8 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.9 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 1 }
+		}
+		modifier = {
+			factor = 0.5
+			trait = brave
+		}
+		modifier = {
+			factor = 10
+			trait = craven
+		}
+		modifier = {
+			factor = 0.5
+			trait = disciplined
+		}
+		modifier = {
+			factor = 2
+			trait = carefree
+		}
+		modifier = {
+			factor = 0.5
+			trait = cold
+		}
+		modifier = {
+			factor = 2
+			trait = friendly
+		}
+	}
+	
+	immediate = {
+		liege = {
+			random_current_enemy = {
+				limit = {
+					# Must be a valid war target
+					OR = {
+						independent = yes
+						same_liege = PREV
+						liege_before_war = {
+							OR = {
+								character = PREVPREV
+								same_liege = PREVPREV
+								independent = yes
+							}
+						}
+					}
+					any_realm_province = { NOT = { distance = { who = ROOT value = 500 } } }
+					prisoner = no
+					NOT = { reverse_has_truce = ROOT }
+					NOT = { any_current_enemy = { character = ROOT } }
+				}
+				reverse_war = { target = ROOT casus_belli = cb_military_campaign }
+			}
+		}
+	}
+}
+
+# AI management - take out the main enemy!
+character_event = {
+	id = military.12
+	hide_window = yes
+	
+	only_rulers = yes
+	min_age = 16
+	prisoner = no
+	only_capable = yes
+	
+	trigger = {
+		ai = yes
+		independent = no
+		is_feudal = yes
+		is_patrician = no
+		primary_title = { higher_tier_than = BARON }
+		# Either not already engaged or has subordinates who can engage
+		OR = {
+			NOT = { any_war = { using_cb = cb_military_campaign } }
+			any_vassal = {
+				is_feudal = yes
+				is_patrician = no
+				primary_title = {
+					is_tribal_type_title = yes
+					tier = duke
+				}
+				NOT = { any_war = { using_cb = cb_military_campaign } }
+			}
+		}
+		liege = {
+			any_current_enemy = {
+				# Must be a valid war target
+				OR = {
+					independent = yes
+					same_liege = PREV
+					liege_before_war = {
+						OR = {
+							character = PREVPREV
+							same_liege = PREVPREV
+							independent = yes
+						}
+					}
+				}
+				OR = {
+					is_primary_war_attacker = yes
+					is_primary_war_defender = yes
+				}
+				prisoner = no
+				NOT = { reverse_has_truce = ROOT }
+				NOT = { any_current_enemy = { character = ROOT } }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 600
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.1 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.2 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.3 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.4 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.5 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.6 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.7 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.8 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.9 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 1 }
+		}
+		modifier = {
+			factor = 0.5
+			trait = brave
+		}
+		modifier = {
+			factor = 10
+			trait = craven
+		}
+		modifier = {
+			factor = 0.5
+			trait = disciplined
+		}
+		modifier = {
+			factor = 2
+			trait = carefree
+		}
+		modifier = {
+			factor = 0.5
+			trait = cold
+		}
+		modifier = {
+			factor = 2
+			trait = friendly
+		}
+	}
+	
+	immediate = {
+		liege = {
+			random_current_enemy = {
+				limit = {
+					# Must be a valid war target
+					OR = {
+						independent = yes
+						same_liege = PREV
+						liege_before_war = {
+							OR = {
+								character = PREVPREV
+								same_liege = PREVPREV
+								independent = yes
+							}
+						}
+					}
+					OR = {
+						is_primary_war_attacker = yes
+						is_primary_war_defender = yes
+					}
+					prisoner = no
+					NOT = { reverse_has_truce = ROOT }
+					NOT = { any_current_enemy = { character = ROOT } }
+				}
+				reverse_war = { target = ROOT casus_belli = cb_military_campaign }
+			}
+		}
+	}
+}
+# AI management - take out a very powerful enemy
+character_event = {
+	id = military.13
+	hide_window = yes
+	
+	only_rulers = yes
+	min_age = 16
+	prisoner = no
+	only_capable = yes
+	
+	trigger = {
+		ai = yes
+		independent = no
+		is_feudal = yes
+		is_patrician = no
+		primary_title = { higher_tier_than = BARON }
+		# Either not already engaged or has subordinates who can engage
+		OR = {
+			NOT = { any_war = { using_cb = cb_military_campaign } }
+			any_vassal = {
+				is_feudal = yes
+				is_patrician = no
+				primary_title = {
+					is_tribal_type_title = yes
+					tier = duke
+				}
+				NOT = { any_war = { using_cb = cb_military_campaign } }
+			}
+		}
+		liege = {
+			any_current_enemy = {
+				# Must be a valid war target
+				OR = {
+					independent = yes
+					same_liege = PREV
+					liege_before_war = {
+						OR = {
+							character = PREVPREV
+							same_liege = PREVPREV
+							independent = yes
+						}
+					}
+				}
+				NOT = { ROOT = { is_liege_or_above = PREV } }
+				relative_power = { who = PREV power = 2.0 }
+				prisoner = no
+				NOT = { reverse_has_truce = ROOT }
+				NOT = { any_current_enemy = { character = ROOT } }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 600
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.1 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.2 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.3 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.4 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.5 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.6 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.7 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.8 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.9 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 1 }
+		}
+		modifier = {
+			factor = 0.5
+			trait = brave
+		}
+		modifier = {
+			factor = 10
+			trait = craven
+		}
+		modifier = {
+			factor = 0.5
+			trait = disciplined
+		}
+		modifier = {
+			factor = 2
+			trait = carefree
+		}
+		modifier = {
+			factor = 0.5
+			trait = cold
+		}
+		modifier = {
+			factor = 2
+			trait = friendly
+		}
+	}
+	
+	immediate = {
+		liege = {
+			random_current_enemy = {
+				limit = {
+					# Must be a valid war target
+					OR = {
+						independent = yes
+						same_liege = PREV
+						liege_before_war = {
+							OR = {
+								character = PREVPREV
+								same_liege = PREVPREV
+								independent = yes
+							}
+						}
+					}
+					relative_power = { who = PREV power = 2.0 }
+					prisoner = no
+					NOT = { reverse_has_truce = ROOT }
+					NOT = { any_current_enemy = { character = ROOT } }
+				}
+				reverse_war = { target = ROOT casus_belli = cb_military_campaign }
+			}
+		}
+	}
+}
+# Well, at least attack SOMEBODY
+character_event = {
+	id = military.14
+	hide_window = yes
+	
+	only_rulers = yes
+	min_age = 16
+	prisoner = no
+	only_capable = yes
+	
+	trigger = {
+		ai = yes
+		independent = no
+		is_feudal = yes
+		is_patrician = no
+		primary_title = { higher_tier_than = BARON }
+		# Either not already engaged or has subordinates who can engage
+		OR = {
+			NOT = { any_war = { using_cb = cb_military_campaign } }
+			any_vassal = {
+				is_feudal = yes
+				is_patrician = no
+				primary_title = {
+					is_tribal_type_title = yes
+					tier = duke
+				}
+				NOT = { any_war = { using_cb = cb_military_campaign } }
+			}
+		}
+		liege = {
+			any_current_enemy = {
+				# Must be a valid war target
+				OR = {
+					independent = yes
+					same_liege = PREV
+					liege_before_war = {
+						OR = {
+							character = PREVPREV
+							same_liege = PREVPREV
+							independent = yes
+						}
+					}
+				}
+				NOT = { character = ROOT }
+				prisoner = no
+				NOT = { reverse_has_truce = ROOT }
+				NOT = { any_current_enemy = { character = ROOT } }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2400
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.1 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.2 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.3 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.4 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.5 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.6 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.7 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.8 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.9 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 1 }
+		}
+		modifier = {
+			factor = 0.5
+			trait = brave
+		}
+		modifier = {
+			factor = 10
+			trait = craven
+		}
+		modifier = {
+			factor = 0.5
+			trait = disciplined
+		}
+		modifier = {
+			factor = 2
+			trait = carefree
+		}
+		modifier = {
+			factor = 0.5
+			trait = cold
+		}
+		modifier = {
+			factor = 2
+			trait = friendly
+		}
+	}
+	
+	immediate = {
+		liege = {
+			random_current_enemy = {
+				limit = {
+					# Must be a valid war target
+					OR = {
+						independent = yes
+						same_liege = PREV
+						liege_before_war = {
+							OR = {
+								character = PREVPREV
+								same_liege = PREVPREV
+								independent = yes
+							}
+						}
+					}
+					prisoner = no
+					NOT = { reverse_has_truce = ROOT }
+					NOT = { any_current_enemy = { character = ROOT } }
+				}
+				reverse_war = { target = ROOT casus_belli = cb_military_campaign }
+			}
+		}
+	}
+}
+
+
+# Command Assignments
+# Terran Navy
+character_event = {
+	id = military.100
+	desc = "EVTDESCMILITARY100"
+	picture = GFX_evt_promotion
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+# First Terran Fleet
+character_event = {
+	id = military.101
+	desc = "EVTDESCMILITARY101"
+	picture = GFX_evt_promotion
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+# Second Terran Fleet
+character_event = {
+	id = military.102
+	desc = "EVTDESCMILITARY102"
+	picture = GFX_evt_promotion
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+# Third Terran Fleet
+character_event = {
+	id = military.103
+	desc = "EVTDESCMILITARY103"
+	picture = GFX_evt_promotion
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+# Fourth Terran Fleet
+character_event = {
+	id = military.104
+	desc = "EVTDESCMILITARY104"
+	picture = GFX_evt_promotion
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+# Fifth Terran Fleet
+character_event = {
+	id = military.105
+	desc = "EVTDESCMILITARY105"
+	picture = GFX_evt_promotion
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+# Solar Guard
+character_event = {
+	id = military.106
+	desc = "EVTDESCMILITARY106"
+	picture = GFX_evt_promotion
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+# Xingjie Armed Forces
+character_event = {
+	id = military.107
+	desc = "EVTDESCMILITARY107"
+	picture = GFX_evt_promotion
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+# Celestean Armada
+character_event = {
+	id = military.108
+	desc = "EVTDESCMILITARY108"
+	picture = GFX_evt_promotion
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+# Samawati Guard
+character_event = {
+	id = military.109
+	desc = "EVTDESCMILITARY109"
+	picture = GFX_evt_promotion
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+# Angani Armed Forces
+character_event = {
+	id = military.110
+	desc = "EVTDESCMILITARY110"
+	picture = GFX_evt_promotion
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+# Frontier Rangers
+character_event = {
+	id = military.111
+	desc = "EVTDESCMILITARY111"
+	picture = GFX_evt_promotion
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}

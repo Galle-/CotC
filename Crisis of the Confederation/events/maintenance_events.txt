@@ -141,3 +141,127 @@ character_event = {
 		}
 	}
 }
+
+# Wrong holding type management for the AI
+character_event = { # Theocracies - these are particularly troubling
+	id = maintenance.20
+	hide_window = yes
+	
+	only_rulers = yes
+	
+	trigger = {
+		ai = yes
+		is_theocracy = no
+		any_demesne_title = {
+			can_be_given_away = yes
+			tier = count
+			is_theocracy = yes
+		}
+	}
+	
+	immediate = {
+		# If no courtiers are available, make one up
+		if = {
+			limit = {
+				NOT = {
+					any_courtier = {
+						is_landed = no
+						NOT = { dynasty = ROOT }
+						age = 16
+						prisoner = no
+						NOT = { trait = incapable }
+					}
+				}
+			}
+			capital_scope = {
+				ROOT = {
+					random_list = {
+						50 = {
+							create_random_priest = {
+								random_traits = yes
+								age = 30
+								culture = PREV
+								religion = PREV
+								dynasty = culture
+								female = yes
+							}
+						}
+						50 = {
+							create_random_priest = {
+								random_traits = yes
+								age = 30
+								culture = PREV
+								religion = PREV
+								dynasty = culture
+								female = no
+							}
+						}
+					}
+				}
+			}
+		}
+		random_courtier = {
+			limit = {
+				is_landed = no
+				NOT = { dynasty = ROOT }
+				age = 16
+				prisoner = no
+				NOT = { trait = incapable }
+			}
+			ROOT = {
+				random_demesne_title = {
+					limit = {
+						can_be_given_away = yes
+						tier = count
+						is_theocracy = yes
+					}
+					grant_title = PREVPREV
+					remove_claim = ROOT
+				}
+			}
+		}
+		character_event = { id = maintenance.20 } # Recursive
+	}
+}
+
+# # Open elective titles with no successor
+# character_event = {
+	# id = maintenance.30
+	# hide_window = yes
+	
+	# only_rulers = yes
+	
+	# trigger = {
+		# any_demesne_title = {
+			# has_law = succ_open_elective
+			# NOT = { current_heir = { always = yes } }
+		# }
+	# }
+	
+	# immediate = {
+		# capital_scope = {
+			# ROOT = {
+				# 50 = {
+					# create_character = {
+						# random_traits = yes
+						# age = 25
+						# culture = PREV
+						# religion = PREV
+						# dynasty = culture
+						# is_female = yes
+					# }
+				# }
+				# 50 = {
+					# create_character = {
+						# random_traits = yes
+						# age = 25
+						# culture = PREV
+						# religion = PREV
+						# dynasty = culture
+						# is_female = no
+					# }
+				# }
+			# }
+		# }
+	# }
+# }

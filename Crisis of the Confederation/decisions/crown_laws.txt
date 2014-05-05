@@ -654,6 +654,7 @@ de_jure_laws = {
 		default = no
 		
 		potential = {
+			temporary = no
 			NOT = {
 				crownlaw_title = {
 					NOT = { title = PREV }
@@ -683,6 +684,7 @@ de_jure_laws = {
 		default = yes # Because 'MURICA
 		
 		potential = {
+			temporary = no
 			NOT = {
 				crownlaw_title = {
 					NOT = { title = PREV }
@@ -715,6 +717,7 @@ de_jure_laws = {
 		default = no
 		
 		potential = {
+			temporary = no
 			NOT = {
 				crownlaw_title = {
 					NOT = { title = PREV }
@@ -747,6 +750,7 @@ de_jure_laws = {
 		default = no
 		
 		potential = {
+			temporary = no
 			NOT = {
 				crownlaw_title = {
 					NOT = { title = PREV }
@@ -779,6 +783,7 @@ de_jure_laws = {
 		default = no
 		
 		potential = {
+			temporary = no
 			NOT = {
 				crownlaw_title = {
 					NOT = { title = PREV }
@@ -1408,16 +1413,22 @@ de_jure_laws = {
 		}
 		
 		allow = {
-			always = yes
+			ROOT = {
+				war = no # Not at war
+				religion_authority = 0.25 # Minimum 25% moral authority
+				NOT = { any_vassal = { any_current_enemy = { liege = { character = ROOT } } } } # No vassals at war
+				NOT = { has_character_modifier = constitutional_crisis } # No constitutional crisis
+				NOT = { any_demesne_province = { revolt_risk = 0.1 } } # No demesne revolt risk above 10%
+			}
 		}
 		
 		revoke_allowed = { always = no }
 		
-		ai_will_do = { factor = 0 }
+		ai_will_do = { factor = 1 } # Always do this if possible
 		
 		effect = {
-			hidden_tooltip = { revoke_law = public_order_1 }
-			set_the_kings_peace = no
+			hidden_tooltip = { revoke_law = public_order_0 }
+			set_the_kings_peace = yes
 		}
 	}
 }

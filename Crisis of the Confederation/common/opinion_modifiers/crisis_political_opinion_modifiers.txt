@@ -52,3 +52,6 @@ opinion_retracted_relative_appointment = { opinion = -30 months = 240 }
 # Revolution stuff
 opinion_hero_of_the_revolution = { opinion = 100 months = 240 }
 opinion_aided_my_revolution = { opinion = 50 months = 240 }
+
+# Miscellaneous
+opinion_abolished_the_military = { opinion = -50 months = 2400 } # We, uh, we kind of need that, boss...

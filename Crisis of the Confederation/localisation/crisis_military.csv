@@ -18,3 +18,51 @@ dreadnoughts;Dreadnoughts;Cuirass駸;;;;;;;;;;;x
 RETTYPE_DD1;Perseus-class Destroyer;;;;;;;;;;;;x
 RETTYPE_BC1;Yamato-class Battlecruiser;;;;;;;;;;;;x
 RETTYPE_DN1;Victory-class Dreadnought;;;;;;;;;;;;x
+EVTDESCMILITARY0;You currently hold command of a military office, but you are a civilian, and have neither the training nor the experience to command field units. You will have to either give command to someone more qualified, or dissolve the military.;;;;;;;;;;;;x
+EVTOPTAMILITARY0;Who's the most qualified officer I can trust?;;;;;;;;;;;;x
+EVTOPTBMILITARY0;Command will go to our brightest strategic mind.;;;;;;;;;;;;x
+EVTOPTCMILITARY0;If I can't command the military, nobody will!;;;;;;;;;;;;x
+EVTDESCMILITARY1;Your command is currently organized as multiple separate fleets, which is causing no end of logistical and organizational nightmares for your staff. Either command of one fleet will have to be given to a subordinate, or the fleets must be merged.;;;;;;;;;;;;x
+EVTOPTAMILITARY1;A little nepotism never hurt anyone.;;;;;;;;;;;;x
+EVTOPTBMILITARY1;Who is my most qualified subordinate?;;;;;;;;;;;;x
+EVTOPTCMILITARY1;I'll have to set up a merged fleet command.;;;;;;;;;;;;x
+open_fleet_command_menu;Open Military Offices Menu;;;;;;;;;;;;x
+open_fleet_command_menu_desc;Opens a menu allowing you to assign Navy and Fleet titles to the military officers under your command.;;;;;;;;;;;;x
+close_fleet_command_menu;Close Military Offices Menu;;;;;;;;;;;;x
+close_fleet_command_menu_desc;Hides the Military Office decisions to clear up space in your decision list.;;;;;;;;;;;x
+assign_command_terran_navy;Give [This.GetTitle] [This.GetOnlyDynastyName] Command of the Terran Navy;;;;;;;;;;;;x
+assign_command_terran_navy_desc;The Terran Navy lacks an autonomous commander. [This.GetFullName], currently serving as [This.GetTitle] of the [This.PrimaryTitle.GetFullName], would make a fine candidate.;;;;;;;;;;;;x
+EVTDESCMILITARY100;[Root.Liege.GetTitle] [Root.Liege.GetFullName] has given you command of the Terran Navy!;;;;;;;;;;;;x
+assign_command_first_terran_fleet;Give [This.GetTitle] [This.GetOnlyDynastyName] Command of the First Terran Fleet;;;;;;;;;;;;x
+assign_command_first_terran_fleet_desc;The First Terran Fleet lacks an autonomous commander. [This.GetFullName], currently serving as [This.GetTitle] of the [This.PrimaryTitle.GetFullName], would make a fine candidate.;;;;;;;;;;;;x
+EVTDESCMILITARY101;[Root.Liege.GetTitle] [Root.Liege.GetFullName] has given you command of the Second Terran Fleet!;;;;;;;;;;;;x
+assign_command_second_terran_fleet;Give [This.GetTitle] [This.GetOnlyDynastyName] Command of the Second Terran Fleet;;;;;;;;;;;;x
+assign_command_second_terran_fleet_desc;The Second Terran Fleet lacks an autonomous commander. [This.GetFullName], currently serving as [This.GetTitle] of the [This.PrimaryTitle.GetFullName], would make a fine candidate.;;;;;;;;;;;;x
+EVTDESCMILITARY102;[Root.Liege.GetTitle] [Root.Liege.GetFullName] has given you command of the Second Terran Fleet!;;;;;;;;;;;;x
+assign_command_third_terran_fleet;Give [This.GetTitle] [This.GetOnlyDynastyName] Command of the Third Terran Fleet;;;;;;;;;;;;x
+assign_command_third_terran_fleet_desc;The Third Terran Fleet lacks an autonomous commander. [This.GetFullName], currently serving as [This.GetTitle] of the [This.PrimaryTitle.GetFullName], would make a fine candidate.;;;;;;;;;;;;x
+EVTDESCMILITARY103;[Root.Liege.GetTitle] [Root.Liege.GetFullName] has given you command of the Third Terran Fleet!;;;;;;;;;;;;x
+assign_command_fourth_terran_fleet;Give [This.GetTitle] [This.GetOnlyDynastyName] Command of the Fourth Terran Fleet;;;;;;;;;;;;x
+assign_command_fourth_terran_fleet_desc;The Fourth Terran Fleet lacks an autonomous commander. [This.GetFullName], currently serving as [This.GetTitle] of the [This.PrimaryTitle.GetFullName], would make a fine candidate.;;;;;;;;;;;;x
+EVTDESCMILITARY104;[Root.Liege.GetTitle] [Root.Liege.GetFullName] has given you command of the Fourth Terran Fleet!;;;;;;;;;;;;x
+assign_command_fifth_terran_fleet;Give [This.GetTitle] [This.GetOnlyDynastyName] Command of the Fifth Terran Fleet;;;;;;;;;;;;x
+assign_command_fifth_terran_fleet_desc;The Fifth Terran Fleet lacks an autonomous commander. [This.GetFullName], currently serving as [This.GetTitle] of the [This.PrimaryTitle.GetFullName], would make a fine candidate.;;;;;;;;;;;;x
+EVTDESCMILITARY105;[Root.Liege.GetTitle] [Root.Liege.GetFullName] has given you command of the Fifth Terran Fleet!;;;;;;;;;;;;x
+assign_command_terran_commonwealth_fleet;Give [This.GetTitle] [This.GetOnlyDynastyName] Command of the Solar Guard;;;;;;;;;;;;x
+assign_command_terran_commonwealth_fleet_desc;The Solar Guard lacks an autonomous commander. [This.GetFullName], currently serving as [This.GetTitle] of the [This.PrimaryTitle.GetFullName], would make a fine candidate.;;;;;;;;;;;;x
+EVTDESCMILITARY106;[Root.Liege.GetTitle] [Root.Liege.GetFullName] has given you command of the Solar Guard!;;;;;;;;;;;;x
+assign_command_xingjie_fleet;Give [This.GetTitle] [This.GetOnlyDynastyName] Command of the Xingjie Space Force;;;;;;;;;;;;x
+assign_command_xingjie_fleet_desc;The Xingjie Space Forces lacks an autonomous commander. [This.GetFullName], currently serving as [This.GetTitle] of the [This.PrimaryTitle.GetFullName], would make a fine candidate.;;;;;;;;;;;;x
+EVTDESCMILITARY107;[Root.Liege.GetTitle] [Root.Liege.GetFullName] has given you command of the Xingjie Space Force!;;;;;;;;;;;;x
+assign_command_tierra_celeste_fleet;Give [This.GetTitle] [This.GetOnlyDynastyName] Command of the Celestean Armada;;;;;;;;;;;;x
+assign_command_tierra_celeste_fleet_desc;The Celestean Armada lacks an autonomous commander. [This.GetFullName], currently serving as [This.GetTitle] of the [This.PrimaryTitle.GetFullName], would make a fine candidate.;;;;;;;;;;;;x
+EVTDESCMILITARY108;[Root.Liege.GetTitle] [Root.Liege.GetFullName] has given you command of the Celestean Armada!;;;;;;;;;;;;x
+assign_command_al_samawat_fleet;Give [This.GetTitle] [This.GetOnlyDynastyName] Command of the Samawati Guard;;;;;;;;;;;;x
+assign_command_al_samawat_fleet_desc;The Samawati Guard lacks an autonomous commander. [This.GetFullName], currently serving as [This.GetTitle] of the [This.PrimaryTitle.GetFullName], would make a fine candidate.;;;;;;;;;;;;x
+EVTDESCMILITARY109;[Root.Liege.GetTitle] [Root.Liege.GetFullName] has given you command of the Samawati Guard!;;;;;;;;;;;;x
+assign_command_zenye_nyota_angani_fleet;Give [This.GetTitle] [This.GetOnlyDynastyName] Command of the Angani Armed Forces;;;;;;;;;;;;x
+assign_command_zenye_nyota_angani_fleet_desc;The Angani Armed Forces lack an autonomous commander. [This.GetFullName], currently serving as [This.GetTitle] of the [This.PrimaryTitle.GetFullName], would make a fine candidate.;;;;;;;;;;;;x
+EVTDESCMILITARY110;[Root.Liege.GetTitle] [Root.Liege.GetFullName] has given you command of the Angani Armed Forces!;;;;;;;;;;;;x
+assign_command_frontier_fleet;Give [This.GetTitle] [This.GetOnlyDynastyName] Command of the Frontier Rangers;;;;;;;;;;;;x
+assign_command_frontier_fleet_desc;The Frontier Rangers lack an autonomous commander. [This.GetFullName], currently serving as [This.GetTitle] of the [This.PrimaryTitle.GetFullName], would make a fine candidate.;;;;;;;;;;;;x
+EVTDESCMILITARY111;[Root.Liege.GetTitle] [Root.Liege.GetFullName] has given you command of the Frontier Rangers!;;;;;;;;;;;;x
