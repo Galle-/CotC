@@ -45,7 +45,7 @@
 	father = 1107945 # Ryusei Sato
 	
 	2963.1.1 = { birth = "2963.1.1" }
-	2998.1.1 = { effect = { grant_job_title = job_marshal } }
+	2998.1.1 = { effect = { give_job_title = job_marshal } }
 }
 
 1127945 = {
@@ -70,7 +70,7 @@
 	
 	2970.1.1 = { birth = "2970.1.1" }
 	2989.1.1 = {
-		add_matrilineal_spouse = 11011449
+		effect = { add_spouse_matrilineal = 11011449 }
 		effect = { spouse = { add_lover = ROOT } }
 	}
 	
@@ -131,7 +131,7 @@
 	father = 1107945 # Ryusei Sato
 	
 	2974.1.1 = { birth = "2974.1.1" }
-	2998.1.1 = { effect = { grant_job_title = job_scientist } }
+	2998.1.1 = { effect = { give_job_title = job_scientist } }
 }
 
 1147945 = {
@@ -223,7 +223,7 @@
 					ROOT = {
 						set_defacto_liege = PREV
 						add_friend = PREV
-						grant_job_title = job_chancellor
+						give_job_title = job_chancellor
 					}
 					add_friend = ROOT
 				}

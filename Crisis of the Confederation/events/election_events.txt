@@ -1149,7 +1149,7 @@ character_event = {
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
-					religion = colonial_seperatist
+					religion = colonial_separatist
 				}
 			}
 			piety = -300
@@ -1264,7 +1264,7 @@ character_event = {
 					OR = {
 						religion = terran_federalist
 						religion = terran_republican
-						religion = colonial_seperatist
+						religion = colonial_separatist
 					}
 					relative_power_to_liege = 0.25
 					religion_authority = 0.5
@@ -1280,7 +1280,7 @@ character_event = {
 							AND = {
 								NOT = { religion = terran_federalist }
 								NOT = { religion = terran_republican }
-								NOT = { religion = colonial_seperatist }
+								NOT = { religion = colonial_separatist }
 							}
 							NOT = { religion_authority = 0.25 }
 						}
@@ -1296,7 +1296,7 @@ character_event = {
 					OR = {
 						religion = terran_federalist
 						religion = terran_republican
-						religion = colonial_seperatist
+						religion = colonial_separatist
 					}
 					religion_authority = 0.5
 				}

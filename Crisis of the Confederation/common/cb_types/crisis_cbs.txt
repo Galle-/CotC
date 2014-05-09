@@ -194,6 +194,7 @@ cb_military_campaign = {
 			is_feudal = yes
 			is_patrician = no
 			NOT = { is_liege_or_above = FROM }
+			NOT = { has_character_flag = flag_revolter }
 		}
 		FROM = { NOT = { is_liege_or_above = ROOT } }
 	}
@@ -446,7 +447,6 @@ democratic_rebellion = {
 	attacker_can_call_allies = yes
 	defender_can_call_allies = yes
 	can_ask_to_join_war = yes
-	can_call_vassals = yes
 	
 	can_use = { ROOT = { has_character_flag = flag_revolter } }
 	
@@ -476,7 +476,7 @@ democratic_rebellion = {
 						OR = {
 							religion = terran_federalist
 							religion = terran_republican
-							religion = colonial_seperatist
+							religion = colonial_separatist
 						}
 					}
 					add_province_modifier = { name = successful_revolt days = 365 }
@@ -720,6 +720,18 @@ democratic_rebellion = {
 			hidden_tooltip = {
 				opinion = { modifier = opinion_rebel_traitor  who = ROOT months = 1200 }
 				add_character_modifier = { name = crushed_revolt days = 3650 }
+				any_realm_province = {
+					limit = {
+						any_province_lord = { character = FROM }
+						OR = {
+							religion = terran_republican
+							religion = terran_federalist
+							religion = colonial_separatist
+							owner = { is_republic = yes }
+						}
+					}
+					add_province_modifier = { name = "failed_revolt" days = 3650 }
+				}
 			}
 		}
 		any_attacker = {
@@ -760,7 +772,6 @@ autocratic_rebellion = {
 	attacker_can_call_allies = yes
 	defender_can_call_allies = yes
 	can_ask_to_join_war = yes
-	can_call_vassals = yes
 	
 	can_use = { ROOT = { has_character_flag = flag_revolter } }
 	
@@ -1035,6 +1046,21 @@ autocratic_rebellion = {
 			hidden_tooltip = {
 				opinion = { modifier = opinion_rebel_traitor  who = ROOT months = 1200 }
 				add_character_modifier = { name = crushed_revolt days = 3650 }
+				any_realm_province = {
+					limit = {
+						any_province_lord = { character = FROM }
+						OR = {
+							religion = terran_imperial
+							religion = astrist
+							religion = neo_feudal
+							owner = {
+								is_feudal = yes
+								is_patrician = no
+							}
+						}
+					}
+					add_province_modifier = { name = "failed_revolt" days = 3650 }
+				}
 			}
 		}
 		any_attacker = {
@@ -1075,7 +1101,6 @@ theocratic_rebellion = {
 	attacker_can_call_allies = yes
 	defender_can_call_allies = yes
 	can_ask_to_join_war = yes
-	can_call_vassals = yes
 	
 	can_use = { ROOT = { has_character_flag = flag_revolter } }
 	
@@ -1345,6 +1370,18 @@ theocratic_rebellion = {
 			hidden_tooltip = {
 				opinion = { modifier = opinion_rebel_traitor  who = ROOT months = 1200 }
 				add_character_modifier = { name = crushed_revolt days = 3650 }
+				any_realm_province = {
+					limit = {
+						any_province_lord = { character = FROM }
+						OR = {
+							religion = neo_socialist
+							religion = orthodox
+							religion = machine_cultist
+							owner = { is_theocracy = yes }
+						}
+					}
+					add_province_modifier = { name = "failed_revolt" days = 3650 }
+				}
 			}
 		}
 		any_attacker = {

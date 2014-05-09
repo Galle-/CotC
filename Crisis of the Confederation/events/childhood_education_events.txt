@@ -8,7 +8,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	min_age = 6
-	max_age = 16
+	max_age = 12
 	
 	trigger = {
 		OR = {
@@ -50,7 +50,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	min_age = 6
-	max_age = 16
+	max_age = 12
 	
 	trigger = {
 		NOT = { trait = open_minded }
@@ -330,7 +330,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	min_age = 6
-	max_age = 16
+	max_age = 12
 	
 	trigger = {
 		NOT = { trait = open_minded }
@@ -610,7 +610,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	min_age = 6
-	max_age = 16
+	max_age = 12
 	
 	trigger = {
 		NOT = { trait = disciplined }
@@ -886,7 +886,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	min_age = 6
-	max_age = 16
+	max_age = 12
 	
 	trigger = {
 		NOT = { trait = disciplined }
@@ -1158,7 +1158,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	min_age = 6
-	max_age = 16
+	max_age = 12
 	
 	trigger = {
 		NOT = { trait = extraverted }
@@ -1450,7 +1450,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	min_age = 6
-	max_age = 16
+	max_age = 12
 	
 	trigger = {
 		NOT = { trait = extraverted }
@@ -1773,7 +1773,7 @@ character_event = {
 	picture = GFX_evt_child
 	is_triggered_only = yes
 	min_age = 6
-	max_age = 16
+	max_age = 12
 	
 	trigger = {
 		NOT = { trait = friendly }
@@ -2060,7 +2060,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	min_age = 6
-	max_age = 16
+	max_age = 12
 	
 	trigger = {
 		NOT = { trait = friendly }
@@ -2325,7 +2325,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	min_age = 6
-	max_age = 16
+	max_age = 12
 	
 	trigger = {
 		NOT = { trait = spiritual }
@@ -2647,7 +2647,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	min_age = 6
-	max_age = 16
+	max_age = 12
 	
 	trigger = {
 		NOT = { trait = spiritual }
@@ -3010,7 +3010,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	min_age = 6
-	max_age = 16
+	max_age = 12
 	
 	trigger = {
 		NOT = { trait = radical }
@@ -3452,7 +3452,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	min_age = 6
-	max_age = 16
+	max_age = 12
 	
 	trigger = {
 		NOT = { trait = radical }
@@ -3853,7 +3853,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	min_age = 6
-	max_age = 16
+	max_age = 12
 	
 	trigger = {
 		NOT = { trait = humble }
@@ -4204,7 +4204,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	min_age = 6
-	max_age = 16
+	max_age = 12
 	
 	trigger = {
 		NOT = { trait = humble }
@@ -4845,7 +4845,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	min_age = 6
-	max_age = 16
+	max_age = 12
 	
 	trigger = {
 		NOT = { trait = content }
@@ -5200,7 +5200,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	min_age = 6
-	max_age = 16
+	max_age = 12
 	
 	trigger = {
 		NOT = { trait = brave }
@@ -5509,7 +5509,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	min_age = 6
-	max_age = 16
+	max_age = 12
 	
 	trigger = {
 		NOT = { trait = brave }
@@ -5843,5 +5843,307 @@ character_event = {
 	option = {
 		name = "EVTOPTACHILDHOODEDUCATION189"
 		FROM = { add_trait = craven }
+	}
+}
+
+# Childhood ideological conversion
+character_event = {
+	id = childhood_education.200
+	desc = "EVTDESCCHILDHOODEDUCATION200"
+	picture = GFX_evt_child_reading
+	is_triggered_only = yes
+	
+	min_age = 6
+	max_age = 16
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		NOT = { trait = radical }
+		has_guardian = yes
+		guardian = { NOT = { religion = ROOT } }
+	}
+	
+	weight_multiplier = {
+		days = 1
+		# Religion Authority
+		modifier = {
+			factor = 2
+			guardian = { religion_authority = 0.1 }
+		}
+		modifier = {
+			factor = 2
+			guardian = { religion_authority = 0.2 }
+		}
+		modifier = {
+			factor = 2
+			guardian = { religion_authority = 0.3 }
+		}
+		modifier = {
+			factor = 2
+			guardian = { religion_authority = 0.4 }
+		}
+		modifier = {
+			factor = 2
+			guardian = { religion_authority = 0.5 }
+		}
+		modifier = {
+			factor = 2
+			guardian = { religion_authority = 0.6 }
+		}
+		modifier = {
+			factor = 2
+			guardian = { religion_authority = 0.7 }
+		}
+		modifier = {
+			factor = 2
+			guardian = { religion_authority = 0.8 }
+		}
+		modifier = {
+			factor = 2
+			guardian = { religion_authority = 0.9 }
+		}
+		modifier = {
+			factor = 2
+			guardian = { religion_authority = 1 }
+		}
+		modifier = {
+			factor = 0.5
+			religion_authority = 0.1
+		}
+		modifier = {
+			factor = 0.5
+			religion_authority = 0.2
+		}
+		modifier = {
+			factor = 0.5
+			religion_authority = 0.3
+		}
+		modifier = {
+			factor = 0.5
+			religion_authority = 0.4
+		}
+		modifier = {
+			factor = 0.5
+			religion_authority = 0.5
+		}
+		modifier = {
+			factor = 0.5
+			religion_authority = 0.6
+		}
+		modifier = {
+			factor = 0.5
+			religion_authority = 0.7
+		}
+		modifier = {
+			factor = 0.5
+			religion_authority = 0.8
+		}
+		modifier = {
+			factor = 0.5
+			religion_authority = 0.9
+		}
+		modifier = {
+			factor = 0.5
+			religion_authority = 1
+		}
+		# Respect for guardian
+		modifier = {
+			factor = 1.25
+			guardian = { reverse_opinion = { who = ROOT value = 100 } }
+		}
+		modifier = {
+			factor = 1.25
+			guardian = { reverse_opinion = { who = ROOT value = 90 } }
+		}
+		modifier = {
+			factor = 1.25
+			guardian = { reverse_opinion = { who = ROOT value = 80 } }
+		}
+		modifier = {
+			factor = 1.25
+			guardian = { reverse_opinion = { who = ROOT value = 70 } }
+		}
+		modifier = {
+			factor = 1.25
+			guardian = { reverse_opinion = { who = ROOT value = 60 } }
+		}
+		modifier = {
+			factor = 1.25
+			guardian = { reverse_opinion = { who = ROOT value = 50 } }
+		}
+		modifier = {
+			factor = 1.25
+			guardian = { reverse_opinion = { who = ROOT value = 40 } }
+		}
+		modifier = {
+			factor = 1.25
+			guardian = { reverse_opinion = { who = ROOT value = 30 } }
+		}
+		modifier = {
+			factor = 1.25
+			guardian = { reverse_opinion = { who = ROOT value = 20 } }
+		}
+		modifier = {
+			factor = 1.25
+			guardian = { reverse_opinion = { who = ROOT value = 10 } }
+		}
+		modifier = {
+			factor = 0.8
+			guardian = { NOT = { reverse_opinion = { who = ROOT value = -9 } } }
+		}
+		modifier = {
+			factor = 0.8
+			guardian = { NOT = { reverse_opinion = { who = ROOT value = -19 } } }
+		}
+		modifier = {
+			factor = 0.8
+			guardian = { NOT = { reverse_opinion = { who = ROOT value = -29 } } }
+		}
+		modifier = {
+			factor = 0.8
+			guardian = { NOT = { reverse_opinion = { who = ROOT value = -39 } } }
+		}
+		modifier = {
+			factor = 0.8
+			guardian = { NOT = { reverse_opinion = { who = ROOT value = -49 } } }
+		}
+		modifier = {
+			factor = 0.8
+			guardian = { NOT = { reverse_opinion = { who = ROOT value = -59 } } }
+		}
+		modifier = {
+			factor = 0.8
+			guardian = { NOT = { reverse_opinion = { who = ROOT value = -69 } } }
+		}
+		modifier = {
+			factor = 0.8
+			guardian = { NOT = { reverse_opinion = { who = ROOT value = -79 } } }
+		}
+		modifier = {
+			factor = 0.8
+			guardian = { NOT = { reverse_opinion = { who = ROOT value = -89 } } }
+		}
+		modifier = {
+			factor = 0.8
+			guardian = { NOT = { reverse_opinion = { who = ROOT value = -99 } } }
+		}
+		# Existing Similarities
+		modifier = {
+			factor = 2
+			guardian = { religion_group = ROOT }
+		}
+		modifier = {
+			factor = 0.5
+			guardian = { NOT = { religion_group = ROOT } }
+		}
+		# Background Ideology
+		modifier = {
+			factor = 2
+			guardian = { location = { religion = PREV } }
+		}
+		modifier = {
+			factor = 0.5
+			location = { religion = ROOT }
+		}
+		modifier = {
+			factor = 2
+			guardian = { ROOT = { liege = { religion = PREVPREV } } }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion = ROOT }
+		}
+		modifier = {
+			factor = 2
+			guardian = { ROOT = { father = { religion = PREVPREV } } }
+		}
+		modifier = {
+			factor = 0.5
+			father = { religion = ROOT }
+		}
+		modifier = {
+			factor = 2
+			guardian = { ROOT = { mother = { religion = PREVPREV } } }
+		}
+		modifier = {
+			factor = 0.5
+			father = { mother = ROOT }
+		}
+		# Personality
+		modifier = {
+			factor = 4
+			trait = open_minded
+		}
+		modifier = {
+			factor = 0.25
+			trait = close_minded
+		}
+		modifier = {
+			factor = 5
+			trait = spiritual
+			NOT = { religion_group = religious_group }
+			NOT = { religion = machine_cultist }
+			guardian = {
+				OR = {
+					religion_group = religious_group
+					religion = machine_cultist
+				}
+			}
+		}
+		modifier = {
+			factor = 0.2
+			trait = skeptical
+			NOT = { religion_group = religious_group }
+			NOT = { religion = machine_cultist }
+			guardian = {
+				OR = {
+					religion_group = religious_group
+					religion = machine_cultist
+				}
+			}
+		}
+		modifier = {
+			factor = 0.2
+			trait = spiritual
+			OR = {
+				religion_group = religious_group
+				religion = machine_cultist
+			}
+			guardian = {
+				NOT = { religion_group = religious_group }
+				NOT = { religion = machine_cultist }
+			}
+		}
+		modifier = {
+			factor = 5
+			trait = skeptical
+			OR = {
+				religion_group = religious_group
+				religion = machine_cultist
+			}
+			guardian = {
+				NOT = { religion_group = religious_group }
+				NOT = { religion = machine_cultist }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION200"
+		guardian = { ROOT = { religion = PREV } }
+		hidden_tooltip = { guardian = { character_event = { id = childhood_education.201 } } }
+	}
+}
+
+character_event = {
+	id = childhood_education.201
+	desc = "EVTDESCCHILDHOODEDUCATION201"
+	picture = GFX_evt_child_reading
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACHILDHOODEDUCATION201"
+		FROM = { religion = ROOT }
 	}
 }

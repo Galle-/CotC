@@ -5,7 +5,8 @@ opinion_disapproves_of_reform = { opinion = -25 months = 240 }
 opinion_hates_reform = { opinion = -100 months = 240 }
 
 # Law and order and so on
-opinion_criminal = { opinion = -25 months = 2400 imprison = yes }
+opinion_criminal = { opinion = -25 months = 2400 prison_reason = yes }
+opinion_criminal_treason = { opinion = -100 months = 2400 prison_reason = yes revoke_reason = yes inherit = yes }
 
 # This has extremely powerful effects
 opinion_owes_me_a_favor = { opinion = 40 months = 2400 }

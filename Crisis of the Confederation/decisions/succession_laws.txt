@@ -368,7 +368,7 @@ succession_laws = {
 							}
 							OR = {
 								religion = terran_federalist
-								religion = colonial_seperatist
+								religion = colonial_separatist
 							}
 						}
 						AND = {
@@ -470,7 +470,7 @@ succession_laws = {
 					OR = {
 						religion = terran_federalist
 						religion = terran_republican
-						religion = colonial_seperatist
+						religion = colonial_separatist
 						religion = neo_socialist
 					}
 				}
@@ -679,7 +679,7 @@ succession_laws = {
 						AND = {
 							is_feudal = yes
 							OR = {
-								religion = colonial_seperatist
+								religion = colonial_separatist
 								religion = terran_federalist
 								religion = terran_republican
 							}

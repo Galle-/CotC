@@ -2300,6 +2300,7 @@ character_event = {
 			any_courtier = { character = ROOT }
 			any_courtier = {
 				has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+				NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_heartbroken } }
 				NOT = { any_lover = { character = ROOT } }
 				NOT = { trait = incapable }
 				prisoner = no
@@ -2307,13 +2308,16 @@ character_event = {
 		}
 	}
 	
-	mean_time_to_happen = { factor = 120 }
+	mean_time_to_happen = {
+		months = 120
+	}
 	
 	immediate = {
 		liege = {
 			random_courtier = {
 				limit = {
 					has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+					NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_heartbroken } }
 					NOT = { any_lover = { character = ROOT } }
 					NOT = { trait = incapable }
 					prisoner = no
@@ -2335,18 +2339,22 @@ character_event = {
 	trigger = {
 		any_friend = {
 			has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_heartbroken } }
 			NOT = { any_lover = { character = ROOT } }
 			NOT = { trait = incapable }
 			prisoner = no
 		}
 	}
 	
-	mean_time_to_happen = { factor = 120 }
+	mean_time_to_happen = {
+		months = 120
+	}
 	
 	immediate = {
 		random_friend = {
 			limit = {
 				has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+				NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_heartbroken } }
 				NOT = { any_lover = { character = ROOT } }
 				NOT = { trait = incapable }
 				prisoner = no
@@ -2367,18 +2375,22 @@ character_event = {
 	trigger = {
 		any_courtier = {
 			has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_heartbroken } }
 			NOT = { any_lover = { character = ROOT } }
 			NOT = { trait = incapable }
 			prisoner = no
 		}
 	}
 	
-	mean_time_to_happen = { factor = 120 }
+	mean_time_to_happen = {
+		months = 120
+	}
 	
 	immediate = {
 		random_courtier = {
 			limit = {
 				has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+				NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_heartbroken } }
 				NOT = { any_lover = { character = ROOT } }
 				NOT = { trait = incapable }
 				prisoner = no
@@ -2399,13 +2411,16 @@ character_event = {
 	trigger = {
 		liege = {
 			has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_heartbroken } }
 			NOT = { any_lover = { character = ROOT } }
 			NOT = { trait = incapable }
 			prisoner = no
 		}
 	}
 	
-	mean_time_to_happen = { factor = 120 }
+	mean_time_to_happen = {
+		months = 120
+	}
 	
 	immediate = { liege = { character_event = { id = lovers.50 } } }
 }
@@ -2421,13 +2436,16 @@ character_event = {
 	trigger = {
 		spouse = {
 			has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_heartbroken } }
 			NOT = { any_lover = { character = ROOT } }
 			NOT = { trait = incapable }
 			prisoner = no
 		}
 	}
 	
-	mean_time_to_happen = { factor = 120 }
+	mean_time_to_happen = {
+		months = 120
+	}
 	
 	immediate = { spouse = { character_event = { id = lovers.50 } } }
 }

@@ -155,6 +155,22 @@ civil_unrest_9 = {
 }
 
 # Revolts
+peaceful_protests = {
+	icon = 36
+	local_revolt_risk = -0.1 # Sublimates some rebelliousness
+	local_tax_modifier = -2
+	local_build_time_modifier = 2
+	local_build_cost_modifier = 2
+	disease_defence = -0.5
+}
+riots = {
+	icon = 36
+	local_revolt_risk = 0.1 # Increases tensions
+	local_tax_modifier = -5
+	local_build_time_modifier = 5
+	local_build_cost_modifier = 5
+	disease_defence = -1
+}
 system_in_revolt = { # Cooldown timer
 	icon = 36
 	local_revolt_risk = -1
@@ -165,4 +181,8 @@ system_in_revolt = { # Cooldown timer
 successful_revolt = {
 	icon = 13
 	local_revolt_risk = -10
+}
+failed_revolt = {
+	icon = 13
+	local_revolt_risk = -1
 }

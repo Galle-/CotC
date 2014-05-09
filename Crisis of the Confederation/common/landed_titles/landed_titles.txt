@@ -22,8 +22,8 @@ e_pirates = {
 	color2={ 0 0 0 }
 }
 
-# A dummy title used purely to work around Paradox's terrible programming
-b_dummy = {
+# Used to keep rebellions alive while escalating
+c_dummy_rebels = {
 	color = { 0 0 0 }
 	color2 = { 0 0 0 }
 	landless = yes

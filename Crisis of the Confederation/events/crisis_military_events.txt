@@ -331,6 +331,7 @@ character_event = {
 		independent = no
 		is_feudal = yes
 		is_patrician = no
+		NOT = { has_character_flag = flag_revolter }
 		primary_title = { higher_tier_than = BARON }
 		# Either not already engaged or has subordinates who can engage
 		OR = {
@@ -477,6 +478,7 @@ character_event = {
 		independent = no
 		is_feudal = yes
 		is_patrician = no
+		NOT = { has_character_flag = flag_revolter }
 		primary_title = { higher_tier_than = BARON }
 		# Either not already engaged or has subordinates who can engage
 		OR = {
@@ -628,6 +630,7 @@ character_event = {
 		independent = no
 		is_feudal = yes
 		is_patrician = no
+		NOT = { has_character_flag = flag_revolter }
 		primary_title = { higher_tier_than = BARON }
 		# Either not already engaged or has subordinates who can engage
 		OR = {
@@ -774,6 +777,7 @@ character_event = {
 		independent = no
 		is_feudal = yes
 		is_patrician = no
+		NOT = { has_character_flag = flag_revolter }
 		primary_title = { higher_tier_than = BARON }
 		# Either not already engaged or has subordinates who can engage
 		OR = {

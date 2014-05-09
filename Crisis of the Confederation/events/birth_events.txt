@@ -1178,11 +1178,7 @@ character_event = {
 
 	option = {
 		name = OK
-<<<<<<< HEAD:Crisis of the Confederation/events/birth_events.txt
-		dynasty = FROM
-=======
 		dynasty = culture
->>>>>>> origin/Revolts:Crisis of the Confederation/birth_events.txt
 		add_trait = bastard
 		
 		father = {

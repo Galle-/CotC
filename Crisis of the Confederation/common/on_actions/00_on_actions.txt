@@ -443,7 +443,7 @@ on_yearly_childhood_pulse = {
 	random_events = {
 		# Childhood Personality Events
 
-		# 6 - 16: Personality-forming events
+		# 6 - 12: Personality-forming events
 		100 = childhood_education.10 # Curious
 		100 = childhood_education.20 # Cautious
 		100 = childhood_education.30 # Disciplined
@@ -462,6 +462,9 @@ on_yearly_childhood_pulse = {
 		100 = childhood_education.160 # Ambitious
 		100 = childhood_education.170 # Brave
 		100 = childhood_education.180 # Craven
+		
+		# Ideological conversion
+		50 = childhood_education.200
 		
 		# #Toddler flavour events (age 2-5), not very common, but some will get them.
 		# 10 = 1900 
@@ -1271,33 +1274,24 @@ on_approve_de_jure_law = {
 # When rebels appear
 on_rebel_revolt = {
 	events = {
-		# Democratic Rebels
-		rebels.140
-		rebels.150
-		rebels.160
-		rebels.170
-		# rebels.100
-		rebels.110
-		rebels.120
-		rebels.130
-		# Autocratic Rebels
+		# Events are called in reverse ID order due to prerequisite issues
+		# Theocratic Rebellions
+		# Autocratic Rebellions
 		rebels.240
-		rebels.250
-		rebels.260
-		rebels.270
-		# rebels.200
-		rebels.210
-		rebels.220
 		rebels.230
-		# Theocratic Rebels
-		rebels.340
-		rebels.350
-		rebels.360
-		rebels.370
-		# rebels.300
-		rebels.310
-		rebels.320
-		rebels.330
+		rebels.220
+		rebels.210
+		rebels.200
+		# Democratic Rebellions
+		rebels.140
+		rebels.130
+		rebels.120
+		rebels.110
+		rebels.100
+		# Protests and Riots
+		rebels.16
+		rebels.15
+		rebels.10
 	}
 }
 

@@ -1,0 +1,36 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION0;You feel like you're constantly under intense pressure. You can never seem to think straight, and you never seem to be good enough at anything you do.;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION0;Somebody help!;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION1;Of late, your [GetFromRelation] [From.GetFirstName] seems to be growing increasingly anxious, especially around you, terrified that anything [From.GetSheHe] does is wrong.;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION1;Maybe I was too hard on [From.GetHerHim]?;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION10;There's nothing you like more than fresh experiences. You love to explore and experiment, and you drive your teachers mad by listening eagerly to lessons, then wandering off bored during review.;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION10;The world is so big!;;;;;;;;;;;;;x
+EVTOPTBCHILDHOODEDUCATION10;Hey, want to see this cool new bug I caught?;;;;;;;;;;;;;x
+EVTTOOLTIPCHILDHOODEDUCATION11;reacts to your newfound curiosity.;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION11;You [GetFromRelation], [From.GetFirstName] is an inquisitive young [From.GetGirlBoy]. Just this morning, [From.GetSheHe] showed you some strange insect [From.GetSheHe] found while crawling around the ventilation system.;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION11;Encourage [From.GetFirstName]'s curiosity.;;;;;;;;;;;;;x
+EVTOPTBCHILDHOODEDUCATION11;Warn [From.GetHerHim] about unexpected dangers.;;;;;;;;;;;;;x
+EVTOPTCCHILDHOODEDUCATION11;Scold [From.GetFirstName] for going off on [From.GetHerHis] own.;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION12;Your [GetFromRelation] grinned when you showed [From.GetHerHim] the fruits of your explorations, and even helped you trace the bug back to its hive in the air vents!;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION12;I wonder what else there is to find?;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION13;When you told your [GetFromRelation] about the bug you found while exploring the air vents, [From.GetHerHis] face turned pale, and [From.GetSheHe] took you aside and explained to you how dangerous it is to go crawling out of sight like that.;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION13;Curiosity killed the cat...;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION14;Your [GetFromRelation]'s face turned pale when you told [From.GetHerHim] about how you'd been exploring the air vents. [From.GetSheHeCap] knelt down next to you, and told you how worried [From.GetSheHe] would be if anything happened to you.;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION14;I'm sorry, it won't happen again, I promise!;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION15;Your [GetFromRelation] just doesn't appreciate the finer things in life. [From.GetSheHeCap] keeps saying that exploring the air vents or running off out of sight is dangerous, but what does [From.GetSheHe] know?;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION15;I wonder what beer tastes like...;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION16;Your [GetFromRelation] was furious when you told [From.GetHerHim] about the bug you'd found exploring the air vents. [From.GetSheHeCap] grounded you for a week and made you promise never to do any such thing again.;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION16;I guess some things just aren't worth it.;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION17;Your [GetFromRelation] was furious when you told [From.GetHerHim] about the bug you'd found exploring the air vents. [From.GetSheHeCap] grounded you for a week and made you promise never to do any such thing again. Later that night, you snuck out of your bedroom anyway.;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION17;What does [From.GetSheHe] know, anyway?;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION18;It seems that did the trick. [From.GetFirstName] is much more cautious now, and shouldn't run into any more dangerous situations in the future.;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION18;Maybe even a little too cautious?;;;;;;;;;;;;;x
+EVTOPTBCHILDHOODEDUCATION18;At least [From.GetSheHe]'ll be safe from now on.;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION19;You thought you'd convinced [From.GetFirstName] of your concerns, but you don't think [From.GetSheHe] really took them to heart. [From.GetSheHeCap] seems more adventurous now than ever!;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION19;What am I ever going to do with you?;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION20;The other children sometimes call you a coward, but you aren't, not really. You're just sensible. Why go looking for trouble? Why try to fix things that aren't broken? Won't you just end up making things worse?;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION20;I want things to stay just the way they are.;;;;;;;;;;;;;x
+EVTOPTBCHILDHOODEDUCATION20;I don't WANT to go the park, I want to stay home!;;;;;;;;;;;;;x
+EVTTOOLTIPCHILDHOODEDUCATION21;reacts to your newfound cautiousness.;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION21;Your [GetFromRelation] [From.GetFirstName] has been growing more cautious and conservative lately. Today, when you told [From.GetHerHim] that you were going to the park, you thought [From.GetSheHe]'d be excited, but instead [From.GetSheHe] insisted that [From.GetSheHe] just wanted to stay home.;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION21;Well, at least [From.GetSheHe]'ll be safe.;;;;;;;;;;;;;x
