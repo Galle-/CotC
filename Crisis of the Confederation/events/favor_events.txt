@@ -28,7 +28,8 @@ character_event = {
 				text = "UNTRUSTWORTHY"
 				hidden_tooltip = {
 					reverse_remove_opinion = { who = ROOT modifier = opinion_owes_me_a_favor }
-					reverse_remove_opinion = { who = ROOT modifier = opinion_favor_ongoing }
+					reverse_remove_opinion = { who = ROOT modifier = opinion_favor_ongoing_appointment }
+					reverse_remove_opinion = { who = ROOT modifier = opinion_favor_ongoing_crisis_support }
 					reverse_remove_opinion = { who = ROOT modifier = opinion_favor_type_political }
 					reverse_opinion = { who = ROOT modifier = opinion_defaulted_favor }
 					clr_character_flag = flag_defaulted_favor

@@ -16,7 +16,8 @@ province_event = {
 		OR = {
 			religion = terran_republican
 			religion = terran_imperial
-			religion = colonial_seperatist
+			religion = colonial_separatist
+			#religion = 
 			province_id = 202 # Terran ideologies are always available to Earth
 			any_province_lord = { religion = terran_federalist }
 			any_neighbor_province = { religion = terran_federalist }
@@ -162,7 +163,7 @@ province_event = {
 			factor = 0.25
 			OR = {
 				religion = terran_republican
-				religion = colonial_seperatist
+				religion = colonial_separatist
 				religion = terran_imperial
 			}
 		}
@@ -208,7 +209,7 @@ province_event = {
 		modifier = {
 			factor = 0.25
 			NOT = { religion = terran_republican }
-			NOT = { religion = colonial_seperatist }
+			NOT = { religion = colonial_separatist }
 			NOT = { religion_group = outlaw_group }
 			owner = { is_republic = yes }
 		}
@@ -526,7 +527,7 @@ province_event = {
 			OR = {
 				religion = astrist
 				religion = neo_feudal
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 		modifier = {
@@ -563,7 +564,7 @@ province_event = {
 		modifier = {
 			factor = 0.25
 			NOT = { religion = terran_federalist }
-			NOT = { religion = colonial_seperatist }
+			NOT = { religion = colonial_separatist }
 			NOT = { religion_group = outlaw_group }
 			owner = { is_republic = yes }
 		}
@@ -846,7 +847,7 @@ province_event = {
 			factor = 10
 			OR = {
 				religion = neo_socialist
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 		modifier = {
@@ -1007,15 +1008,15 @@ province_event = {
 	picture = GFX_evt_speech
 	
 	trigger = {
-		NOT = { religion = colonial_seperatist }
+		NOT = { religion = colonial_separatist }
 		NOT = { kingdom = { title = k_terran_commonwealth } } # Never going to happen.
 		NOT = { province_id = 202 } # Earth is never going to follow an inherently anti-Terran ideology.
 		OR = {
 			religion = terran_federalist
 			religion = neo_feudal
 			religion = neo_socialist
-			any_province_lord = { religion = colonial_seperatist }
-			any_neighbor_province = { religion = colonial_seperatist }
+			any_province_lord = { religion = colonial_separatist }
+			any_neighbor_province = { religion = colonial_separatist }
 		}
 	}
 	
@@ -1067,7 +1068,7 @@ province_event = {
 			factor = 0.5
 			any_province_lord = {
 				any_realm_character = {
-					religion = colonial_seperatist
+					religion = colonial_separatist
 					religion_authority = 0.1
 				}
 			}
@@ -1076,7 +1077,7 @@ province_event = {
 			factor = 0.5
 			any_province_lord = {
 				any_realm_character = {
-					religion = colonial_seperatist
+					religion = colonial_separatist
 					religion_authority = 0.2
 				}
 			}
@@ -1085,7 +1086,7 @@ province_event = {
 			factor = 0.5
 			any_province_lord = {
 				any_realm_character = {
-					religion = colonial_seperatist
+					religion = colonial_separatist
 					religion_authority = 0.3
 				}
 			}
@@ -1094,7 +1095,7 @@ province_event = {
 			factor = 0.5
 			any_province_lord = {
 				any_realm_character = {
-					religion = colonial_seperatist
+					religion = colonial_separatist
 					religion_authority = 0.4
 				}
 			}
@@ -1103,7 +1104,7 @@ province_event = {
 			factor = 0.5
 			any_province_lord = {
 				any_realm_character = {
-					religion = colonial_seperatist
+					religion = colonial_separatist
 					religion_authority = 0.5
 				}
 			}
@@ -1112,7 +1113,7 @@ province_event = {
 			factor = 0.5
 			any_province_lord = {
 				any_realm_character = {
-					religion = colonial_seperatist
+					religion = colonial_separatist
 					religion_authority = 0.6
 				}
 			}
@@ -1121,7 +1122,7 @@ province_event = {
 			factor = 0.5
 			any_province_lord = {
 				any_realm_character = {
-					religion = colonial_seperatist
+					religion = colonial_separatist
 					religion_authority = 0.7
 				}
 			}
@@ -1130,7 +1131,7 @@ province_event = {
 			factor = 0.5
 			any_province_lord = {
 				any_realm_character = {
-					religion = colonial_seperatist
+					religion = colonial_separatist
 					religion_authority = 0.8
 				}
 			}
@@ -1139,7 +1140,7 @@ province_event = {
 			factor = 0.5
 			any_province_lord = {
 				any_realm_character = {
-					religion = colonial_seperatist
+					religion = colonial_separatist
 					religion_authority = 0.9
 				}
 			}
@@ -1148,7 +1149,7 @@ province_event = {
 			factor = 0.5
 			any_province_lord = {
 				any_realm_character = {
-					religion = colonial_seperatist
+					religion = colonial_separatist
 					religion_authority = 1
 				}
 			}
@@ -1205,65 +1206,65 @@ province_event = {
 		# Neighboring Province Effects
 		modifier = {
 			factor = 2
-			any_neighbor_province = { NOT = { religion = colonial_seperatist } }
+			any_neighbor_province = { NOT = { religion = colonial_separatist } }
 		}
 		modifier = {
 			factor = 2
 			any_neighbor_province = {
-				NOT = { religion = colonial_seperatist }
+				NOT = { religion = colonial_separatist }
 				count = 2
 			}
 		}
 		modifier = {
 			factor = 2
 			any_neighbor_province = {
-				NOT = { religion = colonial_seperatist }
+				NOT = { religion = colonial_separatist }
 				count = 3
 			}
 		}
 		modifier = {
 			factor = 2
 			any_neighbor_province = {
-				NOT = { religion = colonial_seperatist }
+				NOT = { religion = colonial_separatist }
 				count = 4
 			}
 		}
 		modifier = {
 			factor = 2
 			any_neighbor_province = {
-				NOT = { religion = colonial_seperatist }
+				NOT = { religion = colonial_separatist }
 				count = 5
 			}
 		}
 		modifier = {
 			factor = 0.5
-			any_neighbor_province = { religion = colonial_seperatist }
+			any_neighbor_province = { religion = colonial_separatist }
 		}
 		modifier = {
 			factor = 0.5
 			any_neighbor_province = {
-				religion = colonial_seperatist
+				religion = colonial_separatist
 				count = 2
 			}
 		}
 		modifier = {
 			factor = 0.5
 			any_neighbor_province = {
-				religion = colonial_seperatist
+				religion = colonial_separatist
 				count = 3
 			}
 		}
 		modifier = {
 			factor = 0.5
 			any_neighbor_province = {
-				religion = colonial_seperatist
+				religion = colonial_separatist
 				count = 4
 			}
 		}
 		modifier = {
 			factor = 0.5
 			any_neighbor_province = {
-				religion = colonial_seperatist
+				religion = colonial_separatist
 				count = 5
 			}
 		}
@@ -1271,7 +1272,7 @@ province_event = {
 	
 	option = {
 		name = "EVTOPTCONFIRM"
-		religion = colonial_seperatist
+		religion = colonial_separatist
 	}
 }
 # Neo-Feudal
@@ -1284,7 +1285,7 @@ province_event = {
 		NOT = { religion = neo_feudal }
 		OR = {
 			religion = terran_imperial
-			religion = colonial_seperatist
+			religion = colonial_separatist
 			religion = astrist
 			religion = bio_directionist
 			any_province_lord = { religion = neo_feudal }
@@ -1433,7 +1434,7 @@ province_event = {
 				religion = terran_imperial
 				religion = astrist
 				religion = bio_directionist
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 		modifier = {
@@ -1584,7 +1585,7 @@ province_event = {
 		OR = {
 			religion = terran_republican
 			religion = terran_federalist
-			religion = colonial_seperatist
+			religion = colonial_separatist
 			any_province_lord = { religion = neo_socialist }
 			any_neighbor_province = { religion = neo_socialist }
 			revolt_risk = 0.5
@@ -1731,7 +1732,7 @@ province_event = {
 			OR = {
 				religion = terran_republican
 				religion = terran_federalist
-				religion = colonial_seperatist
+				religion = colonial_separatist
 			}
 		}
 		modifier = {

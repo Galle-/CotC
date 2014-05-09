@@ -17,7 +17,7 @@ character_event = { # Terran Confederation
 			religion = terran_federalist
 			religion = colonial_separatist
 		}
-		e_terran_confederation = { has_law = legitimacy_1 }
+		e_terran_confederation = { has_law = legitimacy_law_1 }
 		OR = {
 			has_global_flag = flag_terran_empire_name
 			has_global_flag = flag_terran_hegemony_name
@@ -102,7 +102,7 @@ character_event = { # Terran Empire
 			religion = terran_imperial
 			religion = neo_feudal
 		}
-		e_terran_confederation = { has_law = legitimacy_0 }
+		e_terran_confederation = { has_law = legitimacy_law_0 }
 		NOT = { has_global_flag = flag_terran_empire_name }
 		NOT = { has_global_flag = flag_holy_terran_empire_name }
 	}
@@ -246,7 +246,7 @@ character_event = { # Terran Republic
 	trigger = {
 		has_landed_title = e_terran_confederation
 		religion = terran_republican
-		e_terran_confederation = { has_law = legitimacy_1 }
+		e_terran_confederation = { has_law = legitimacy_law_1 }
 		NOT = { has_global_flag = flag_terran_republic_name }
 		OR = {
 			has_global_flag = flag_terran_empire_name
@@ -325,7 +325,7 @@ character_event = { # Terran Directorate
 		religion_group = transhumanist_group
 		NOT = { religion = machine_cultist }
 		NOT = { has_global_flag = flag_terran_directorate_name }
-		e_terran_confederation = { NOT = { has_law = legitimacy_0 } }
+		e_terran_confederation = { NOT = { has_law = legitimacy_law_0 } }
 	}
 	
 	option = {
@@ -396,7 +396,7 @@ character_event = { # Holy Terran Empire
 			religion = machine_cultist
 		}
 		NOT = { has_global_flag = flag_holy_terran_empire_name }
-		e_terran_confederation = { NOT = { has_law = legitimacy_1 } }
+		e_terran_confederation = { NOT = { has_law = legitimacy_law_1 } }
 	}
 	
 	option = {
@@ -467,7 +467,7 @@ character_event = { # Terran People's Union
 		NOT = { e_terran_confederation = { has_law = centralization_3 } }
 		NOT = { e_terran_confederation = { has_law = centralization_4 } }
 		OR = {
-			NOT = { e_terran_confederation = { has_law = legitimacy_1 } }
+			NOT = { e_terran_confederation = { has_law = legitimacy_law_1 } }
 			has_global_flag = flag_terran_empire_name
 			has_global_flag = flag_terran_hegemony_name
 			has_global_flag = flag_terran_directorate_name
@@ -549,7 +549,7 @@ character_event = { # Terran People's Republic
 			}
 		}
 		OR = {
-			NOT = { e_terran_confederation = { has_law = legitimacy_1 } }
+			NOT = { e_terran_confederation = { has_law = legitimacy_law_1 } }
 			has_global_flag = flag_terran_empire_name
 			has_global_flag = flag_terran_hegemony_name
 			has_global_flag = flag_terran_directorate_name

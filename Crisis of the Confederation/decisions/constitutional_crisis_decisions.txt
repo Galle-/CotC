@@ -219,7 +219,7 @@ decisions = {
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
-					religion = colonial_seperatist
+					religion = colonial_separatist
 				}
 				OR = {
 					religion_authority = 0.25
@@ -232,7 +232,7 @@ decisions = {
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
-					religion = colonial_seperatist
+					religion = colonial_separatist
 				}
 				religion_authority = 0.5
 				NOT = { trait = pragmatic }
@@ -242,7 +242,7 @@ decisions = {
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
-					religion = colonial_seperatist
+					religion = colonial_separatist
 				}
 				religion_authority = 0.75
 			}
@@ -435,7 +435,7 @@ decisions = {
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
-					religion = colonial_seperatist
+					religion = colonial_separatist
 				}
 				OR = {
 					religion_authority = 0.25
@@ -448,7 +448,7 @@ decisions = {
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
-					religion = colonial_seperatist
+					religion = colonial_separatist
 				}
 				religion_authority = 0.5
 				NOT = { trait = pragmatic }
@@ -458,7 +458,7 @@ decisions = {
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
-					religion = colonial_seperatist
+					religion = colonial_separatist
 				}
 				religion_authority = 0.75
 			}
@@ -1160,7 +1160,7 @@ decisions = {
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
-					religion = colonial_seperatist
+					religion = colonial_separatist
 				}
 				OR = {
 					religion_authority = 0.25
@@ -1190,7 +1190,7 @@ decisions = {
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
-					religion = colonial_seperatist
+					religion = colonial_separatist
 				}
 				religion_authority = 0.5
 				NOT = { trait = pragmatic }
@@ -1218,7 +1218,7 @@ decisions = {
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
-					religion = colonial_seperatist
+					religion = colonial_separatist
 				}
 				religion_authority = 0.75
 			}
@@ -1269,7 +1269,7 @@ decisions = {
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
-					religion = colonial_seperatist
+					religion = colonial_separatist
 				}
 				OR = {
 					religion_authority = 0.25
@@ -1299,7 +1299,7 @@ decisions = {
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
-					religion = colonial_seperatist
+					religion = colonial_separatist
 				}
 				religion_authority = 0.5
 				NOT = { trait = pragmatic }
@@ -1327,7 +1327,7 @@ decisions = {
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
-					religion = colonial_seperatist
+					religion = colonial_separatist
 				}
 				religion_authority = 0.75
 			}

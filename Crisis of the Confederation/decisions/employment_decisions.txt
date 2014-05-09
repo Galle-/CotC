@@ -5,7 +5,7 @@ decisions = {
 		}
 		allow = {
 			wealth = 50
-			NOT = { num_of_courtiers = 10 }
+			#NOT = { num_of_courtiers = 10 }
 			custom_tooltip = {
 				text = TOOLTIP_EMPLOYMENT_COOLDOWN_EXPIRED # Must not have employed a new courtier in the past six months
 				OR = {
@@ -118,7 +118,7 @@ decisions = {
 			modifier = {
 				factor = 0
 				has_character_flag = flag_employment_cooldown
-				NOT = { had_character_flag = { name = flag_employment_cooldown days = 365 } }
+				NOT = { had_character_flag = { flag = flag_employment_cooldown days = 365 } }
 			}
 		}
 	}
@@ -128,7 +128,7 @@ decisions = {
 		}
 		allow = {
 			wealth = 50
-			NOT = { num_of_courtiers = 10 }
+			#NOT = { num_of_courtiers = 10 }
 			custom_tooltip = {
 				text = TOOLTIP_EMPLOYMENT_COOLDOWN_EXPIRED # Must not have employed a new courtier in the past six months
 				OR = {
@@ -241,7 +241,7 @@ decisions = {
 			modifier = {
 				factor = 0
 				has_character_flag = flag_employment_cooldown
-				NOT = { had_character_flag = { name = flag_employment_cooldown days = 365 } }
+				NOT = { had_character_flag = { flag = flag_employment_cooldown days = 365 } }
 			}
 		}
 	}
@@ -251,7 +251,7 @@ decisions = {
 		}
 		allow = {
 			wealth = 50
-			NOT = { num_of_courtiers = 10 }
+			#NOT = { num_of_courtiers = 10 }
 			custom_tooltip = {
 				text = TOOLTIP_EMPLOYMENT_COOLDOWN_EXPIRED # Must not have employed a new courtier in the past six months
 				OR = {
@@ -364,7 +364,7 @@ decisions = {
 			modifier = {
 				factor = 0
 				has_character_flag = flag_employment_cooldown
-				NOT = { had_character_flag = { name = flag_employment_cooldown days = 365 } }
+				NOT = { had_character_flag = { flag = flag_employment_cooldown days = 365 } }
 			}
 		}
 	}
@@ -374,7 +374,7 @@ decisions = {
 		}
 		allow = {
 			wealth = 50
-			NOT = { num_of_courtiers = 10 }
+			#NOT = { num_of_courtiers = 10 }
 			custom_tooltip = {
 				text = TOOLTIP_EMPLOYMENT_COOLDOWN_EXPIRED # Must not have employed a new courtier in the past six months
 				OR = {
@@ -487,7 +487,7 @@ decisions = {
 			modifier = {
 				factor = 0
 				has_character_flag = flag_employment_cooldown
-				NOT = { had_character_flag = { name = flag_employment_cooldown days = 365 } }
+				NOT = { had_character_flag = { flag = flag_employment_cooldown days = 365 } }
 			}
 		}
 	}
@@ -497,7 +497,7 @@ decisions = {
 		}
 		allow = {
 			wealth = 50
-			NOT = { num_of_courtiers = 10 }
+			#NOT = { num_of_courtiers = 10 }
 			custom_tooltip = {
 				text = TOOLTIP_EMPLOYMENT_COOLDOWN_EXPIRED # Must not have employed a new courtier in the past six months
 				OR = {
@@ -610,7 +610,7 @@ decisions = {
 			modifier = {
 				factor = 0
 				has_character_flag = flag_employment_cooldown
-				NOT = { had_character_flag = { name = flag_employment_cooldown days = 365 } }
+				NOT = { had_character_flag = { flag = flag_employment_cooldown days = 365 } }
 			}
 		}
 	}

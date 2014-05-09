@@ -446,7 +446,7 @@ has_small_pox = {
 
 crusader = {
 	potential = {
-		religion_group = christian
+		religion_group = religious_group
 	}
 	
 	martial = 2
@@ -482,7 +482,7 @@ excommunicated = {
 }
 kinslayer = {
 	potential = {
-		NOT = { religion_group = muslim }
+		#NOT = { religion_group = transhumanist_group }
 	}
 
 	diplomacy = -3
@@ -503,7 +503,7 @@ celibate = {
 	lifestyle = yes
 	
 	potential = {
-		religion_group = christian
+		religion_group = religious_group
 	}
 	
 	opposites =  {

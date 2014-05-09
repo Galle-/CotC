@@ -1170,7 +1170,7 @@ e_terran_confederation = {
 			
 			c_afolayan = {
 				color = { 255 255 208 }
-				color = { 10 10 10 }
+				color2 = { 10 10 10 }
 				
 				b_afolayan_iii = { }
 				b_afolayan_iii_b = { }
@@ -2516,6 +2516,10 @@ e_helix = {
 }
 
 e_witchhead = {
+	color = { 164 148 0 }
+	color2 = { 255 0 0 }
+		
+	capital = 215 # Fukuoka
 	
 	k_witchhead_nebula = {
 		color = { 128 128 255 }
@@ -2979,142 +2983,4 @@ e_witchhead = {
 			}
 		}
 	}
-}
-
-# Big Five Megacorps
-b_weyland = {
-	culture = anglo_terran
-	religion = terran_federalist
-}
-b_salazar = {
-	culture = hispanic_terran
-	religion = terran_federalist
-}
-b_nazari = {
-	culture = iranian_terran
-	religion = terran_federalist
-}
-b_kojima = {
-	culture = japanese_terran
-	religion = terran_republican
-}
-b_afolayan = {
-	culture = west_afro_terran
-	religion = terran_republican
-}
-
-# Xin Zizhiqu Megacorps
-b_zhang = {
-	culture = sino_bianjiangese
-	religion = colonial_seperatist
-}
-b_komissarov = {
-	culture = russo_bianjiangese
-	religion = colonial_seperatist
-}
-b_xiang = {
-	culture = sino_bianjiangese
-	religion = colonial_seperatist
-}
-b_cao = {
-	culture = sino_bianjiangese
-	religion = colonial_seperatist
-}
-b_madrigal = {
-	culture = hispanic_bianjiangese
-	religion = colonial_seperatist
-}
-
-# Xin ZiZhiqu - d_tian_yuan Megacorps
-b_bakare = {
-	culture = east_afro_bianjiangese
-	religion = colonial_seperatist
-}
-
-b_allen = {
-	culture = anglo_bianjiangese
-	religion = colonial_seperatist
-	}
-
-b_yudin = {
-		culture = sino_bianjiangese
-		religion = colonial_seperatist
-	}
-b_khoury = {
-		culture = sino_bianjiangese
-		religion = colonial_seperatist
-		}
-b_feng = {
-		culture = sino_bianjiangese
-		religion = colonial_seperatist
-		}
-#dynasty = 2336 #Khoury
-#dynasty = 12426 #Yudin
-#dynasty = 426 #Allen
-#dynasty = 12954 # Feng
-
-# Orion Reach Megacorps
-b_lebedev = {
-	culture = russo_orion
-	religion = colonial_seperatist
-}
-b_ramirez = {
-	culture = hispanic_orion
-	religion = colonial_seperatist
-}
-b_calderon = {
-	culture = hispanic_orion
-	religion = colonial_seperatist
-}
-b_ortiz = {
-	culture = hispanic_orion
-	religion = colonial_seperatist
-}
-b_abu_abed = {
-	culture = arab_orion
-	religion = colonial_seperatist
-}
-
-# Mukta Duniya Megacorps
-b_rizvi = {
-	culture = indo_mukta
-	religion = colonial_seperatist
-}
-b_singhal = {
-	culture = indo_mukta
-	religion = colonial_seperatist
-}
-b_trivedi = {
-	culture = indo_mukta
-	religion = colonial_seperatist
-}
-b_cruz = {
-	culture = hispanic_mukta
-	religion = colonial_seperatist
-}
-b_igwe = {
-	culture = west_afro_mukta
-	religion = colonial_seperatist
-}
-
-# New Frontier Megacorps
-b_hawking = {
-	culture = anglo_frontiersman
-	religion = colonial_seperatist
-}
-b_cameron = {
-	culture = anglo_frontiersman
-	religion = colonial_seperatist
-}
-b_davis = {
-	culture = anglo_frontiersman
-	religion = colonial_seperatist
-}
-b_ishikawa = {
-	culture = japanese_frontiersman
-	religion = colonial_seperatist
-}
-b_omosun = {
-	culture = west_afro_frontiersman
-	religion = colonial_seperatist
 }

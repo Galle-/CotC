@@ -12,7 +12,7 @@ b_chi_tianliang_iv = city
 
 # Misc
 culture = sino_bianjiangese # Initial culture
-religion = colonial_seperatist
+religion = colonial_separatist
 
 # History
 1.1.1 = {
@@ -63,8 +63,8 @@ religion = colonial_seperatist
 2810.5.11 = {b_chi_tianliang_iii = ca_colony_1}
 
 2780.2.12 = {b_chi_tianliang_iv = ct_colony_0}
-2820.7.17 = {b_chi_tianliang_iv = ct_no_atmosphere_domes}
 2793.7.16 = {b_chi_tianliang_iv = ct_trace_water}
+2820.7.17 = {b_chi_tianliang_iv = ct_no_atmosphere_domes}
 
 
 2712.3.1 = {

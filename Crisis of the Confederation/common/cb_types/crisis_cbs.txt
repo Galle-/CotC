@@ -92,22 +92,6 @@ civil_war = {
 			limit = { NOT = { character = ROOT } }
 			hidden_tooltip = { participation_scaled_prestige = 200 }
 		}
-		any_attacker = {
-			limit = { trait = partisan }
-			hidden_tooltip = {
-				remove_trait = partisan
-				any_courtier = { ROOT = { reverse_banish = PREV } }
-				ROOT = { reverse_banish = PREV }
-				piety = 200
-			}
-		}
-		any_defender = {
-			limit = { trait = partisan }
-			hidden_tooltip = {
-				remove_trait = partisan
-				imprison = ROOT
-			}
-		}
 		
 		# If FROM and ROOTs' ideologies are different, the latter gets a bonus and
 		# the former takes a hit
@@ -1119,10 +1103,10 @@ theocratic_rebellion = {
 					limit = {
 						owner = { is_liege_or_above = FROM }
 						OR = {
-							religion = orthodx
+							religion = orthodox
 							religion = xenoterran
 							religion = solarian
-							religion = machine_cult
+							religion = machine_cultist
 							religion = neo_socialist
 						}
 					}
