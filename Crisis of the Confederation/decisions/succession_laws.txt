@@ -901,7 +901,7 @@ gender_laws = {
 				holder_scope = { religion = mother_gaia_cultist }
 			}
 		}
-		allow = {
+		allow = { 
 			has_law = enatic_cognatic_succession
 			holder_scope = {
 				religion = mother_gaia_cultist
