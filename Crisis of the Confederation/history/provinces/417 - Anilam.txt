@@ -1,0 +1,22 @@
+# 417 - Anilam
+
+# County Title
+title = c_anilam
+
+# Settlements
+max_settlements = 4
+
+b_anilam_vi_b = castle
+b_anilam_vi_c = temple
+b_anilam_vi_d = city
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

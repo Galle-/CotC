@@ -1,0 +1,23 @@
+# 395 - Nueva Valencia
+
+# County Title
+title = c_nueva_valencia
+
+# Settlements
+max_settlements = 4
+
+b_nueva_valencia = city
+b_nueva_valencia_b = temple
+b_nueva_valencia_c = castle
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+	capital = b_nueva_valencia_c
+}

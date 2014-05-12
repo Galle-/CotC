@@ -1,12 +1,12 @@
 2983.1.1 = {
-	law = legitimacy_law_1
-	law = election_law_1
+	liege = "e_terran_confederation"
+	law = centralization_3
+	law = military_vassal_legitimacy_2
+	law = republic_vassal_legitimacy_1
+	law = theocracy_vassal_legitimacy_2
 	law = true_cognatic_succession
 	law = succ_open_elective
 }
-2992.1.1 = {
-	holder = 1208425 # Yukio Hasegawa
-}
-2998.1.1 = {
-	holder = 1107945 # Ryusei Sato
-}
+2992.1.1 = { holder = 1208425 } # Yukio Hasegawa
+2997.6.5 = { holder = 11014089 } # Akiko Adeosun
+2997.7.7 = { holder = 1107945 } # Ryusei Sato

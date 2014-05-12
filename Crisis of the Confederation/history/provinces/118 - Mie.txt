@@ -1,0 +1,18 @@
+# 118 - Mie
+
+# County Title
+title = c_mie
+
+# Settlements
+max_settlements = 4
+
+b_mie_vi_b = castle
+b_mie_vi_c = city
+b_mie_vi_d = temple
+
+# Misc
+culture = japanese_tengoku # Initial culture
+religion = astrist
+
+1.1.1 = {
+}

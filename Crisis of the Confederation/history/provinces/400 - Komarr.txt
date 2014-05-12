@@ -1,0 +1,22 @@
+# 400 - Komarr
+
+# County Title
+title = c_komarr
+
+# Settlements
+max_settlements = 4
+
+b_komarr_prime = city
+b_komarr_prime_b = temple
+b_komarr_prime_orbital_alpha = castle
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

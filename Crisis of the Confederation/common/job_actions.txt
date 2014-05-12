@@ -58,7 +58,7 @@ action_distribute_mil_tech = {
 	
 	tech_growth_modifier_military = 0.05
 	
-	events = { 938 939 }
+	events = { marshal.100 marshal.110 }
 }
 
 action_recruiting_drive = {

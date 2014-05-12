@@ -1,0 +1,19 @@
+# 214 - Trigorin
+
+# County Title
+title = c_trigorin
+
+# Settlements
+max_settlements = 2
+
+b_freeport_trigorin = castle
+b_trigorin_ii = temple
+
+# Misc
+culture = russo_frontiersman # Initial culture
+religion = space_pirate
+
+1.1.1 = {
+	b_freeport_trigorin = ca_pirate_harbor
+	b_trigorin_ii = tp_pirate_harbor
+}

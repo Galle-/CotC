@@ -1,0 +1,30 @@
+castle = {
+	# Space Pirate Harbor
+	ca_pirate_harbor = {
+		trigger = { TECH_CONSTRUCTION = 0 }
+		build_cost = 50
+		build_time = 180
+		potential = { religion = space_pirate }
+		galleys = 25
+	}
+}
+city = {
+	# Space Pirate Harbor
+	ct_pirate_harbor = {
+		trigger = { TECH_CONSTRUCTION = 0 }
+		build_cost = 50
+		build_time = 180
+		potential = { religion = space_pirate }
+		galleys = 25
+	}
+}
+temple = {
+	# Space Pirate Harbor
+	tp_pirate_harbor = {
+		trigger = { TECH_CONSTRUCTION = 0 }
+		build_cost = 50
+		build_time = 180
+		potential = { religion = space_pirate }
+		galleys = 25
+	}
+}

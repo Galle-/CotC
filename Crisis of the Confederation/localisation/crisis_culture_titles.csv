@@ -257,6 +257,9 @@ barony_of_neo_feudal;Planet;;;;;;;;;;;;;x
 barony_neo_feudal;Planet;;;;;;;;;;;;;x
 baronies_neo_feudal;Planets;;;;;;;;;;;;;x
 count_deed_neo_feudal;Throne of;;;;;;;;;;;;;x
+kingdom_of_astrist;Military State of;;;;;;;;;;;;;x
+kingdom_astrist;Military State;;;;;;;;;;;;;x
+kingdoms_astrist;Military States;;;;;;;;;;;;;x
 temple_count_religious_group;Abbot;;;;;;;;;;;;;x
 temple_count_female_religious_group;Abbess;;;;;;;;;;;;;x
 temple_count_foa_religious_group;Father;;;;;;;;;;;;;x
@@ -272,24 +275,24 @@ temple_baron_title_ruler_consort_female_religious_group;Abbot's Wife;;;;;;;;;;;;
 temple_barony_of_religious_group;Shrine World;;;;;;;;;;;;;x
 temple_barony_religious_group;Shrine World;;;;;;;;;;;;;x
 temple_baronies_religious_group;Shrine Worlds;;;;;;;;;;;;;x
-castle_emperor_space_pirate;Shadow Emperor;;;;;;;;;;;;;x
-castle_emperor_space_pirate_female;Shadow Empress;;;;;;;;;;;;;x
-castle_empire_of_space_pirate;Shadow Empire of;;;;;;;;;;;;;x
-castle_empires_space_pirate;Empires;;;;;;;;;;;;;x
-castle_empire_space_pirate;Empire;;;;;;;;;;;;;x
-castle_king_space_pirate;Pirate King;;;;;;;;;;;;;x
-castle_king_space_pirate_female;Pirate Queen;;;;;;;;;;;;;x
-castle_king_title_ruler_consort_space_pirate;Pirate Consort;;;;;;;;;;;;;x
-castle_king_title_ruler_consort_space_pirate_female;Pirate Consort;;;;;;;;;;;;;x
-castle_kingdom_of_space_pirate;Pirate Kingdom;;;;;;;;;;;;;x
-castle_kingdoms_space_pirate;Pirate Kingdoms;;;;;;;;;;;;;x
-castle_kingdom_space_pirate;Pirate Kingdom;;;;;;;;;;;;;x
-castle_king_deed_space_pirate;Control of;;;;;;;;;;;;;x
-castle_duke_space_pirate;Pirate Overlord;;;;;;;;;;;;;x
-castle_duke_space_pirate_female;Pirate Overlord;;;;;;;;;;;;;x
-castle_duke_deed_space_pirate;Control of;;;;;;;;;;;;;x
-castle_count_space_pirate;Pirate Lord;;;;;;;;;;;;;x
-castle_count_space_pirate_female;Pirate Lady;;;;;;;;;;;;;x
+emperor_space_pirate;Shadow Emperor;;;;;;;;;;;;;x
+emperor_space_pirate_female;Shadow Empress;;;;;;;;;;;;;x
+empire_of_space_pirate;Shadow Empire of;;;;;;;;;;;;;x
+empires_space_pirate;Empires;;;;;;;;;;;;;x
+empire_space_pirate;Empire;;;;;;;;;;;;;x
+king_space_pirate;Pirate King;;;;;;;;;;;;;x
+king_space_pirate_female;Pirate Queen;;;;;;;;;;;;;x
+king_title_ruler_consort_space_pirate;Pirate Consort;;;;;;;;;;;;;x
+king_title_ruler_consort_space_pirate_female;Pirate Consort;;;;;;;;;;;;;x
+kingdom_of_space_pirate;Pirate Kingdom of;;;;;;;;;;;;;x
+kingdoms_space_pirate;Pirate Kingdoms;;;;;;;;;;;;;x
+kingdom_space_pirate;Pirate Kingdom;;;;;;;;;;;;;x
+king_deed_space_pirate;Control of;;;;;;;;;;;;;x
+duke_space_pirate;Pirate Overlord;;;;;;;;;;;;;x
+duke_space_pirate_female;Pirate Overlord;;;;;;;;;;;;;x
+duke_deed_space_pirate;Control of;;;;;;;;;;;;;x
+count_space_pirate;Pirate Lord;;;;;;;;;;;;;x
+count_space_pirate_female;Pirate Lady;;;;;;;;;;;;;x
 job_chancellor;Secretary of State;Secrétaire de l'état;;;;;;;;;;;;x;
 job_marshal;Secretary of Defense;Secrétaire de la défense;;;;;;;;;;;;x;
 job_treasurer;Secretary of the Treasury;Secrétaire du budget;;;;;;;;;;;;x;
@@ -329,4 +332,8 @@ MASTERFOA_female;Mother;;;;;;;;;;;;;x
 PATRIARCH;Patriarch;;;;;;;;;;;;;x
 PATRIARCHFOA;Your Holiness;;;;;;;;;;;;;x
 PATRIARCH_female;Matriarch;;;;;;;;;;;;;x
-PATRIARCH_female;Your Holiness;;;;;;;;;;;;;x
+PATRIARCHFOA_female;Your Holiness;;;;;;;;;;;;;x
+MAYOR;Mayor;;;;;;;;;;;;;x
+MAYORFOA;Mister Mayor;;;;;;;;;;;;;x
+MAYOR_female;Mayor;;;;;;;;;;;;;x
+MAYORFOA_female;Madam Mayor;;;;;;;;;;;;;x

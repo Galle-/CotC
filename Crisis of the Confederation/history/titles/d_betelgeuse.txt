@@ -1,0 +1,11 @@
+2990.1.1 = {
+	liege = "k_tierra_celeste"
+	holder = 1104475 # Miguel Ortiz
+	law = true_cognatic_succession
+	law = succ_seniority
+}
+2998.1.1 = {
+	liege = "k_orion_reach"
+	holder = 1104635 # Matias Villalobos
+	law = succ_appointment
+}

@@ -1,0 +1,9 @@
+2980.1.1 = {
+	liege = "k_tierra_celeste"
+}
+2998.1.1 = {
+	liege = "k_orion_reach"
+	holder = 1104683 # Navya Vasquez
+	law = true_cognatic_succession
+	law = succ_appointment
+}

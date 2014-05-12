@@ -1,0 +1,11 @@
+2990.1.1 = {
+	liege = "k_tierra_celeste"
+	holder = 1103131 # Amanda Abu Abed
+	law = true_cognatic_succession
+	law = succ_seniority
+}
+2998.1.1 = {
+	liege = "k_orion_reach"
+	holder = 11013627 # Ximena Yan
+	law = succ_appointment
+}

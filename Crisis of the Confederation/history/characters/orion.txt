@@ -1,0 +1,713 @@
+11010155 = {
+	# The man responsible for this mess
+	# President of the Orion Reach, 2998 - Present
+	name = "Juan"
+	dynasty = 10155 # Lebedev
+	female = no
+	
+	culture = russo_orion
+	religion = colonial_separatist
+	
+	trait = grey_eminence
+	trait = open_minded
+	trait = extraverted
+	trait = friendly
+	trait = confident
+	trait = radical
+	trait = ambitious
+	trait = proud
+	
+	2949.1.1 = { birth = "2949.1.1" }
+	2981.1.1 = { add_spouse = 1214331 } # Ximena Ramirez
+	2997.5.5 = {
+		# Failed assassination attempt
+		add_trait = maimed
+	}
+	2997.10.32 = {
+		remove_trait = maimed
+		add_trait = cybernetic_limb
+	}
+}
+11110155 = {
+	# Daughter of Juan Lebedev
+	name = "Gabriela"
+	dynasty = 10155
+	female = yes
+	
+	religion = colonial_separatist
+	
+	father = 11010155 # Juan Lebedev
+	mother = 1214331 # Ximena Ramirez
+	
+	2984.1.1 = { birth = "2984.1.1" }
+}
+11210155 = {
+	# First son of Juan Lebedev
+	name = "Matias"
+	dynasty = 10155
+	female = no
+	
+	religion = colonial_separatist
+	
+	father = 11010155 # Juan Lebedev
+	mother = 1214331 # Ximena Ramirez
+	
+	2988.1.1 = { birth = "2988.1.1" }
+}
+11310155 = {
+	# Second son of Juan Lebedev
+	name = "Juan"
+	dynasty = 10155
+	female = no
+	
+	religion = colonial_separatist
+	
+	father = 11010155 # Juan Lebedev
+	mother = 1214331 # Ximena Ramirez
+	
+	2990.1.1 = { birth = "2990.1.1" }
+}
+
+1104683 = {
+	# Fleet Admiral, Orion Armada, 2992 - Present
+	name = "Navya"
+	dynasty = 4683 # Vasquez
+	female = yes
+	
+	culture = hispanic_orion
+	religion = colonial_separatist
+	
+	trait = misguided_warrior
+	trait = marine_colonel
+	trait = confident
+	trait = radical
+	trait = humble
+	trait = brave
+	
+	father = 1204683 # Alejandro Vasquez
+	mother = 1106171 # Navya Vaghela
+	
+	2943.1.1 = { birth = "2943.1.1" }
+	2965.1.1 = {
+		add_spouse_matrilineal = 1234331 # Lucas Ramirez
+		effect = { spouse = { add_lover = ROOT } }
+	}
+}
+1114683 = {
+	# Son of Navya Vasquez
+	name = "Leonardo"
+	dynasty = 4683 # Vasquez
+	female = no
+	
+	culture = hispanic_orion
+	religion = colonial_separatist
+	
+	father = 1234331 # Lucas Ramirez
+	mother = 1104683 # Navya Vasquez
+	
+	2969.1.1 = { birth = "2969.1.1" }
+}
+1124683 = {
+	# Daughter of Navya Vasquez
+	name = "Isabella"
+	dynasty = 4683 # Vasquez
+	female = yes
+	
+	culture = hispanic_orion
+	religion = colonial_separatist
+	
+	father = 1234331 # Lucas Ramirez
+	mother = 1104683 # Navya Vasquez
+	
+	2974.1.1 = { birth = "2974.1.1" }
+}
+1204683 = {
+	# Father of Juan-Pablo and Navya Vasquez
+	name = "Alejandro"
+	dynasty = 4683 # Vasquez
+	female = no
+	
+	culture = hispanic_orion
+	religion = terran_federalist
+	
+	2912.1.1 = { birth = "2912.1.1" }
+	2936.1.1 = {
+		add_spouse = 1106171 # Navya Vaghela
+		effect = { spouse = { add_lover = ROOT } }
+	}
+	2994.1.1 = { death = { death_reason = death_natural } }
+}
+1214683 = {
+	# Older sister of Navya Vasquez, mother of Leonardo Vasquez
+	name = "Lucia"
+	dynasty = 4683 # Vasquez
+	female = yes
+	
+	culture = hispanic_orion
+	religion = terran_federalist
+	
+	father = 1204683 # Alejandro Vasquez
+	mother = 1106171 # Navya Vaghela
+	
+	2939.1.1 = { birth = "2939.1.1" }
+}
+1106171 = {
+	# Mother and namesake of Navya Vasquez
+	name = "Navya"
+	dynasty = 6172 # Vaghela
+	female = yes
+	
+	culture = indo_mukta
+	religion = terran_federalist
+	
+	2918.1.1 = { birth = "2918.1.1" }
+	2997.1.1 = { death = { death_reason = death_natural } }
+}
+
+# Megacorp CEOs
+1104539 = {
+	# Ceo of Calderon, Governor of Paulet
+	name = "Emmanuel"
+	dynasty = 4539 # Calderon
+	female = no
+	
+	culture = hispanic_orion
+	religion = cyberneticist
+	
+	trait = homosexual
+	
+	2950.1.1 = { birth = "2950.1.1" }
+	2975.1.1 = {
+		add_spouse = 1103883 # Martin Naber
+		effect = { spouse = { add_lover = ROOT } }
+	}
+}
+1103883 = {
+	# Husband of Emmanuel Calderon
+	name = "Martin"
+	dynasty = 3883 # Naber
+	female = no
+	
+	culture = arab_orion
+	religion = cyberneticist
+	
+	trait = homosexual
+	
+	2954.1.1 = { birth = "2954.1.1" }
+}
+1114539 = {
+	# Clone of Emmanuel Calderon
+	name = "Emiliano"
+	dynasty = 4539 # Calderon
+	female = no
+	
+	culture = hispanic_orion
+	religion = cyberneticist
+	
+	trait = clone
+	trait = homosexual
+	
+	father = 1104539 # Emmanuel Calderon
+	
+	2972.1.1 = { birth = "2972.1.1" }
+}
+1104331 = {
+	# CEO of Ramirez, Governor of Nueva Galicia
+	name = "Tomas"
+	dynasty = 4331 # Ramirez
+	female = no
+	
+	culture = hispanic_orion
+	religion = colonial_separatist
+	
+	mother = 1204331 # Gabriela Ramirez
+	
+	2946.1.1 = { birth = "2946.1.1" }
+}
+1204331 = {
+	# Former Governor-General of Nueva Galicia
+	name = "Gabriela"
+	dynasty = 4331 # Ramirez
+	female = yes
+	
+	culture = hispanic_orion
+	religion = terran_federalist
+	
+	2916.1.1 = { birth = "2916.1.1" }
+	2993.1.1 = { death = { death_reason = death_natural } }
+}
+1214331 = {
+	# Sister of Tomas Ramirez, wife of Juan Lebedev
+	name = "Ximena"
+	dynasty = 4331 # Ramirez
+	female = yes
+	
+	culture = hispanic_orion
+	religion = colonial_separatist
+	
+	mother = 1204331 # Gabriela Ramirez
+	
+	2949.1.1 = { birth = "2949.1.1" }
+}
+1224331 = {
+	# Brother of Tomas Ramirez, Husband of Emma Joshi
+	name = "David"
+	dynasty = 4331 # Ramirez
+	female = no
+	
+	culture = hispanic_orion
+	religion = colonial_separatist
+	
+	mother = 1204331 # Gabriela Ramirez
+	
+	2952.1.1 = { birth = "2952.1.1" }
+}
+1234331 = {
+	# Brother of Tomas Ramirez, Husband of Navya Vasquez
+	name = "Lucas"
+	dynasty = 4331 # Ramirez
+	female = no
+	
+	culture = hispanic_orion
+	religion = colonial_separatist
+	
+	mother = 1204331 # Gabriela Ramirez
+	
+	2947.1.1 = { birth = "2947.1.1" }
+}
+1104475 = {
+	# CEO of Ortiz, Governor of Betelgeuse
+	name = "Miguel"
+	dynasty = 4475 # Ortiz
+	female = no
+	
+	culture = hispanic_orion
+	religion = colonial_separatist
+	
+	2957.1.1 = { birth = "2957.1.1" }
+	2973.1.1 = {
+		add_spouse = 1107083 # Amanda Javadi
+		effect = { spouse = { add_lover = ROOT } }
+	}
+}
+1107083 = {
+	# Wife of Miguel Ortiz
+	name = "Amanda"
+	dynasty = 7083 # Javadi
+	female = yes
+	
+	culture = iranian_orion
+	religion = colonial_separatist
+	
+	2955.1.1 = { birth = "2955.1.1" }
+}
+1114475 = {
+	# Son of Miguel Ortiz
+	name = "Miguel"
+	dynasty = 4475
+	female = no
+	
+	religion = colonial_separatist
+	father = 1104475 # Miguel Ortiz
+	mother = 1107083 # Amanda Javadi
+}
+1103131 = {
+	# CEO of Abu Abed, Governor of Santiago
+	name = "Amanda"
+	dynasty = 3131 # Abu Abed
+	female = yes
+	
+	culture = arab_orion
+	religion = colonial_separatist
+	
+	2959.1.1 = { birth = "2959.1.1" }
+	2984.1.1 = {
+		add_spouse_matrilineal = 11010475 # Gabriel Belinsky
+		effect = { spouse = { add_lover = ROOT } }
+	}
+}
+11010475 = {
+	# Husband of Amanda Abu Abed
+	name = "Gabriel"
+	dynasty = 10475 # Belinsky
+	female = no
+	
+	culture = russo_orion
+	religion = colonial_separatist
+	
+	2965.1.1 = { birth = "2965.1.1" }
+}
+1113131 = {
+	# First son of Amanda Abu Abed
+	name = "Gabriel"
+	dynasty = 3131 # Abu Abed
+	female = no
+	
+	religion = colonial_separatist
+	
+	father = 11010475 # Gabriel Belinsky
+	mother = 1103131 # Amanda Abu Abed
+	
+	2988.1.1 = { birth = "2988.1.1" }
+}
+1113131 = {
+	# Second son of Amanda Abu Abed
+	name = "David"
+	dynasty = 3131 # Abu Abed
+	female = no
+	
+	religion = colonial_separatist
+	
+	father = 11010475 # Gabriel Belinsky
+	mother = 1103131 # Amanda Abu Abed
+	
+	2992.1.1 = { birth = "2992.1.1" }
+}
+
+11013627 = {
+	# Admiral of Defense Zone Santiago, Commander of Sergyar
+	name = "Ximena"
+	dynasty = 13627 # Yan
+	female = yes
+	
+	culture = sino_orion
+	religion = colonial_separatist
+	
+	trait = misguided_warrior
+	trait = fighter_pilot
+	
+	2959.1.1 = { birth = "2959.1.1" }
+}
+1104571 = {
+	# Commander of Barrayar
+	name = "Samantha"
+	dynasty = 4571 # Salas
+	female = yes
+	
+	culture = hispanic_orion
+	religion = astrist
+	
+	trait = brilliant_strategist
+	trait = fighter_pilot
+	
+	2972.1.1 = { birth = "2972.1.1" }
+	2995.1.1 = {
+		add_spouse_matrilineal = 11010587 # Miguel Voronin
+		effect = { spouse = { add_lover = ROOT } }
+	}
+}
+11010587 = {
+	# Husband of Samantha Salas
+	name = "Miguel"
+	dynasty = 10587 # Voronin
+	female = no
+	
+	culture = russo_orion
+	religion = astrist
+	
+	trait = elusive_shadow
+	trait = dwarf
+	
+	2972.1.1 = { birth = "2972.1.1" }
+}
+11010795 = {
+	# Governor of Komarr Prime
+	name = "Tomas"
+	dynasty = 10795 # Yozhikov
+	female = no
+	
+	culture = russo_orion
+	religion = colonial_separatist
+	
+	2975.1.1 = { birth = "2975.1.1" }
+}
+1104667 = {
+	# Admiral of Ortega-Gaona, Commander of Suerte
+	name = "Sebastian"
+	dynasty = 4667 # Madrigal
+	female = no
+	
+	culture = hispanic_orion
+	religion = colonial_separatist
+	
+	trait = trained_soldier
+	trait = marine_colonel
+	
+	2951.1.1 = { birth = "2951.1.1" }
+}
+11013643 = {
+	# Commander of Nueva Valencia
+	name = "Catalina"
+	dynasty = 13643 # Duan
+	female = yes
+	
+	culture = sino_orion
+	religion = colonial_separatist
+	
+	trait = trained_soldier
+	trait = marine_colonel
+	
+	2975.1.1 = { birth = "2975.1.1" }
+}
+1104635 = {
+	# Admiral of Defense Zone Betelgeuse, Commander of Estrella del Anciano
+	name = "Matias"
+	dynasty = 4635 # Villalobos
+	female = no
+	
+	culture = hispanic_orion
+	religion = colonial_separatist
+	
+	trait = skilled_tactician
+	trait = warship_captain
+	
+	2956.1.1 = { birth = "2956.1.1" }
+}
+11013515 = {
+	# Commander of Reposo del Alcazar
+	name = "Nicole"
+	dynasty = 13515 # Zou
+	female = yes
+	
+	culture = sino_orion
+	religion = colonial_separatist
+	
+	trait = trained_soldier
+	trait = warship_captain
+	trait = homosexual
+	
+	2954.1.1 = { birth = "2954.1.1" }
+}
+11113515 = {
+	# Clone of Nicole Zou
+	name = "Isabella"
+	dynasty = 13515 # Zou
+	female = yes
+	
+	culture = sino_orion
+	religion = colonial_separatist
+	
+	trait = clone
+	
+	mother = 11013515 # Nicole Zou
+	
+	2988.1.1 = { birth = "2988.1.1" }
+}
+1105579 = {
+	# Admiral of Defense Zone Paulet, Commander of Warshawski
+	name = "Emma"
+	dynasty = 5579 # Joshi
+	female = yes
+	
+	culture = indo_orion
+	religion = colonial_separatist
+	
+	trait = skilled_tactician
+	trait = warship_captain
+	
+	2948.1.1 = { birth = "2948.1.1" }
+	2960.1.1 = { add_spouse_matrilineal = 1224331 } # David Ramirez
+}
+1115579 = {
+	# First daughter of Emma Joshi
+	name = "Gabriela"
+	dynasty = 5579 # Joshi
+	female = yes
+	
+	religion = colonial_separatist
+	
+	father = 1224331 # David Ramirez
+	mother = 1105579 # Emma Joshi
+	
+	2962.1.1 = { birth = "2962.1.1" }
+}
+1115579 = {
+	# Second daughter of Emma Joshi
+	name = "Catalina"
+	dynasty = 5579 # Joshi
+	female = yes
+	
+	religion = colonial_separatist
+	
+	father = 1224331 # David Ramirez
+	mother = 1105579 # Emma Joshi
+	
+	2965.1.1 = { birth = "2965.1.1" }
+}
+11012939 = {
+	# Governor of Seldon
+	name = "Sebastian"
+	dynasty = 12939 # Han
+	female = no
+	
+	culture = sino_orion
+	religion = colonial_separatist
+	
+	2974.1.1 = { birth = "2974.1.1" }
+}
+1105707 = {
+	# Administrator of Ramon y Cajal
+	name = "Joaquin"
+	dynasty = 5707 # Purohit
+	female = no
+	
+	culture = indo_orion
+	religion = bio_directionist
+	
+	trait = mastermind_scholar
+	
+	2958.1.1 = { birth = "2958.1.1" }
+}
+1115707 = {
+	# First clone of Joaquin Purohit
+	name = "Juan"
+	dynasty = 5707 # Purohit
+	female = no
+	
+	culture = indo_orion
+	religion = bio_directionist
+	
+	trait = clone
+	
+	father = 1105707 # Joaquin Purohit
+	
+	2978.1.1 = { birth = "2978.1.1" }
+}
+1115707 = {
+	# Second clone of Joaquin Purohit
+	name = "Lucas"
+	dynasty = 5707 # Purohit
+	female = no
+	
+	culture = indo_orion
+	religion = bio_directionist
+	
+	trait = clone
+	
+	father = 1105707 # Joaquin Purohit
+	
+	2986.1.1 = { birth = "2986.1.1" }
+}
+1224683 = {
+	# Nephew of Navya Vasquez, Governor-General of Bellatrix
+	name = "Leonardo"
+	dynasty = 4683 # Vasquez
+	female = no
+	
+	culture = hispanic_orion
+	religion = colonial_separatist
+	
+	trait = homosexual
+	
+	mother = 1214683 # Lucia Vasquez
+	
+	2960.1.1 = { birth = "2960.1.1" }
+}
+1234683 = {
+	# Clone of Leonardo Vasquez
+	name = "Lucia"
+	dynasty = 4683 # Vasquez
+	female = yes
+	
+	culture = hispanic_orion
+	religion = colonial_separatist
+	
+	trait = clone
+	
+	father = 1224683 # Leonardo Vasquez
+	
+	2984.1.1 = { birth = "2984.1.1" }
+}
+1244683 = {
+	# Nephew of Navya Vasquez, brother of Leonardo Vasquez, Governor of Hailu
+	name = "Lucas"
+	dynasty = 4683 # Vasquez
+	female = no
+	
+	culture = hispanic_orion
+	religion = colonial_separatist
+	
+	trait = ambitious
+	trait = pragmatic
+	
+	mother = 1214683 # Lucias Vasquez
+	
+	2957.1.1 = { birth = "2957.1.1" }
+}
+11013531 = {
+	# Admiral of Defense Zone Rigel, Commander of Ansilam
+	name = "Maximiliano"
+	dynasty = 13531 # Meng
+	female = no
+	
+	culture = sino_orion
+	religion = colonial_separatist
+	
+	trait = skilled_tactician
+	trait = warship_captain
+	trait = genius
+	trait = pragmatic
+	trait = ambitious
+	
+	2952.1.1 = { birth = "2952.1.1" }
+}
+1105435 = {
+	# Commander of Saiph
+	name = "Juan"
+	dynasty = 5435 # Farooqi
+	female = no
+	
+	culture = indo_orion
+	religion = colonial_separatist
+	
+	trait = skilled_tactician
+	trait = fighter_pilot
+	
+	2977.1.1 = { birth = "2977.1.1" }
+}
+1105451 = {
+	# Governor of Rigel
+	name = "Sofia"
+	dynasty = 5451 # Ganguly
+	female = yes
+	
+	culture = indo_orion
+	religion = colonial_separatist
+	
+	2959.1.1 = { birth = "2959.1.1" }
+}
+1104731 = {
+	# Governor of Dorter
+	name = "Pablo"
+	dynasty = 4731 # Ramos
+	female = no
+	
+	culture = hispanic_orion
+	religion = colonial_separatist
+	
+	2965.1.1 = { birth = "2965.1.1" }
+}
+1104363 = {
+	# Governor of Genciana
+	name = "Rodrigo"
+	dynasty = 4363 # Torres
+	female = no
+	
+	culture = hispanic_orion
+	religion = colonial_separatist
+	
+	trait = homosexual
+	
+	2976.1.1 = { birth = "2976.1.1" }
+}
+1104395 = {
+	# Governor of Mintaka
+	name = "Beatriz"
+	dynasty = 4395 # Gomez
+	female = yes
+	
+	culture = hispanic_orion
+	religion = colonial_separatist
+	
+	2974.1.1 = { birth = "2974.1.1" }
+}

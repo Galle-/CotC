@@ -1,0 +1,86 @@
+# 111 - Sen Eisei
+
+# County Title
+title = c_sen_eisei
+
+# Settlements
+max_settlements = 6
+
+b_sen_eisei_b = city
+b_sen_eisei_c = castle
+b_sen_eisei_d = temple
+b_sen_eisei_e = city
+b_sen_eisei_f = castle
+b_sen_eisei_g = temple
+
+# Misc
+culture = japanese_tengoku # Initial culture
+religion = colonial_separatist
+1.1.1 = {
+	b_sen_eisei_b = ct_no_atmosphere
+	b_sen_eisei_b = ct_no_water
+	b_sen_eisei_b = ct_trace_water
+	b_sen_eisei_b = ct_lakes
+	b_sen_eisei_b = ct_seas
+	b_sen_eisei_b = ct_oceans
+	b_sen_eisei_b = ct_frozen
+	b_sen_eisei_b = ct_planet_survey
+	
+	b_sen_eisei_c = ca_no_atmosphere
+	b_sen_eisei_c = ca_no_water
+	b_sen_eisei_c = ca_trace_water
+	b_sen_eisei_c = ca_lakes
+	b_sen_eisei_c = ca_seas
+	b_sen_eisei_c = ca_oceans
+	b_sen_eisei_c = ca_frozen
+	b_sen_eisei_c = ca_planet_survey
+	
+	b_sen_eisei_d = tp_no_atmosphere
+	b_sen_eisei_d = tp_no_water
+	b_sen_eisei_d = tp_trace_water
+	b_sen_eisei_d = tp_lakes
+	b_sen_eisei_d = tp_seas
+	b_sen_eisei_d = tp_oceans
+	b_sen_eisei_d = tp_frozen
+	b_sen_eisei_d = tp_planet_survey
+	
+	b_sen_eisei_e = ct_no_atmosphere
+	b_sen_eisei_e = ct_no_water
+	b_sen_eisei_e = ct_trace_water
+	b_sen_eisei_e = ct_lakes
+	b_sen_eisei_e = ct_seas
+	b_sen_eisei_e = ct_oceans
+	b_sen_eisei_e = ct_frozen
+	b_sen_eisei_e = ct_planet_survey
+	
+	b_sen_eisei_f = ca_no_atmosphere
+	b_sen_eisei_f = ca_no_water
+	b_sen_eisei_f = ca_trace_water
+	b_sen_eisei_f = ca_lakes
+	b_sen_eisei_f = ca_seas
+	b_sen_eisei_f = ca_oceans
+	b_sen_eisei_f = ca_frozen
+	b_sen_eisei_f = ca_planet_survey
+	
+	b_sen_eisei_g = tp_no_atmosphere
+	b_sen_eisei_g = tp_no_water
+	b_sen_eisei_g = tp_trace_water
+	b_sen_eisei_g = tp_lakes
+	b_sen_eisei_g = tp_seas
+	b_sen_eisei_g = tp_oceans
+	b_sen_eisei_g = tp_frozen
+	b_sen_eisei_g = tp_planet_survey
+}
+
+2992.1.1 = { capital = b_sen_eisei_c }
+
+2997.7.7 = {
+	b_sen_eisei_b = ct_no_atmosphere_domes
+	b_sen_eisei_b = ct_colony_0
+	b_sen_eisei_b = ct_colony_1
+	b_sen_eisei_c = ca_colony_0
+	b_sen_eisei_d = tp_colony_0
+	b_sen_eisei_f = ct_colony_0
+	b_sen_eisei_c = ca_colony_0
+	b_sen_eisei_d = tp_colony_0
+}

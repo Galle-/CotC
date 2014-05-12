@@ -1,0 +1,385 @@
+namespace = marshal
+
+# Distribute mil tech related
+# Clash with conservative faction
+character_event = {
+	id = marshal.100
+	title = "EVTNAMEMARSHAL100"
+	desc = "EVTDESCMARSHAL100"
+	picture = GFX_evt_shipyard
+	
+	capable_only = yes
+	prisoner = no
+	min_age = 16
+	
+	trigger = {
+		has_job_action = distribute_mil_tech
+		location = {
+			NOT = { has_province_modifier = military_conservatives }
+			any_province_lord = {
+				at_location = ROOT
+				NOT = { character = ROOT }
+				NOT = { ROOT = { is_liege_or_above = PREV } }
+				NOT = { opinion = { who = ROOT value = 25 } }
+				NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_newfangled_ideas } }
+				is_feudal = yes
+				is_patrician = no
+				OR = {
+					trait = close_minded
+					trait = proud
+				}
+				NOT = { trait = open_minded }
+				NOT = { trait = humble }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		modifier = {
+			factor = 1.25
+			diplomacy = 1
+		}
+		modifier = {
+			factor = 1.25
+			diplomacy = 2
+		}
+		modifier = {
+			factor = 1.25
+			diplomacy = 3
+		}
+		modifier = {
+			factor = 1.25
+			diplomacy = 4
+		}
+		modifier = {
+			factor = 1.25
+			diplomacy = 5
+		}
+		modifier = {
+			factor = 1.25
+			diplomacy = 6
+		}
+		modifier = {
+			factor = 1.25
+			diplomacy = 7
+		}
+		modifier = {
+			factor = 1.25
+			diplomacy = 8
+		}
+		modifier = {
+			factor = 1.25
+			diplomacy = 9
+		}
+		modifier = {
+			factor = 1.25
+			diplomacy = 10
+		}
+		modifier = {
+			factor = 1.25
+			diplomacy = 11
+		}
+		modifier = {
+			factor = 1.25
+			diplomacy = 12
+		}
+		modifier = {
+			factor = 1.25
+			diplomacy = 13
+		}
+		modifier = {
+			factor = 1.25
+			diplomacy = 14
+		}
+		modifier = {
+			factor = 1.25
+			diplomacy = 15
+		}
+		modifier = {
+			factor = 1.25
+			diplomacy = 16
+		}
+		modifier = {
+			factor = 1.25
+			diplomacy = 17
+		}
+		modifier = {
+			factor = 1.25
+			diplomacy = 18
+		}
+		modifier = {
+			factor = 1.25
+			diplomacy = 19
+		}
+		modifier = {
+			factor = 1.25
+			diplomacy = 20
+		}
+	}
+	
+	option = {
+		# Take it slowly to appease them
+		name = "EVTOPTAMARSHAL100"
+		location = {
+			add_province_modifier = { name = military_conservatives days = 1825 }
+			any_province_lord = {
+				limit = {
+					at_location = ROOT
+					NOT = { character = ROOT }
+					NOT = { ROOT = { is_liege_or_above = PREV } }
+					NOT = { opinion = { who = ROOT value = 25 } }
+					NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_newfangled_ideas } }
+					is_feudal = yes
+					is_patrician = no
+					OR = {
+						trait = close_minded
+						trait = proud
+					}
+					NOT = { trait = open_minded }
+					NOT = { trait = humble }
+				}
+				character_event = { id = marshal.101 tooltip = "EVTTOOLTIPMARSHAL101" }
+			}
+		}
+		liege = { letter_event = { id = marshal.102 tooltip = "EVTTOOLTIPMARSHAL102" } }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = friendly
+			}
+			modifier = {
+				factor = 0.5
+				trait = cold
+			}
+			modifier = {
+				factor = 2
+				trait = close_minded
+			}
+			modifier = {
+				factor = 0.5
+				trait = open_minded
+			}
+			modifier = {
+				factor = 2
+				trait = humble
+			}
+			modifier = {
+				factor = 0.5
+				trait = proud
+			}
+			modifier = {
+				factor = 2
+				trait = content
+			}
+			modifier = {
+				factor = 0.5
+				trait = ambitious
+			}
+		}
+	}
+	
+	option = {
+		# Overrule them
+		location = {
+			any_province_lord = {
+				limit = {
+					at_location = ROOT
+					NOT = { character = ROOT }
+					NOT = { ROOT = { is_liege_or_above = PREV } }
+					NOT = { opinion = { who = ROOT value = 25 } }
+					NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_newfangled_ideas } }
+					is_feudal = yes
+					is_patrician = no
+					OR = {
+						trait = close_minded
+						trait = proud
+					}
+					NOT = { trait = open_minded }
+					NOT = { trait = humble }
+				}
+				opinion = { who = ROOT modifier = opinion_newfangled_ideas months = 30 }
+				character_event = { id = marshal.103 tooltip = "EVTTOOLTIPMARSHAL103" }
+			}
+		}
+		liege = { letter_event = { id = marshal.104 tooltip = "EVTTOOLTIPMARSHAL104" } }
+		ai_chance = { factor = 50 }
+	}
+}
+
+character_event = {
+	id = marshal.101
+	desc = "EVTDESCMARSHAL101"
+	picture = GFX_evt_shipyard
+	is_triggered_only = yes
+	
+	option = {
+		FROM = { location = { add_province_modifier = { name = military_conservatives days = 1825 } } }
+		name = "EVTOPTAMARSHAL101"
+	}
+}
+letter_event = {
+	id = marshal.102
+	desc = "EVTDESCMARSHAL102"
+	is_triggered_only = yes
+	
+	option = {
+		FROM = { location = { add_province_modifier = { name = military_conservatives days = 1825 } } }
+		name = "EVTOPTAMARSHAL102"
+	}
+}
+character_event = {
+	id = marshal.103
+	desc = "EVTDESCMARSHAL103"
+	picture = GFX_evt_shipyard
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTAMARSHAL103" }
+}
+letter_event = {
+	id = marshal.104
+	desc = "EVTDESCMARSHAL104"
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTAMARSHAL104" }
+}
+
+# Learning things instead
+character_event = {
+	id = marshal.110
+	title = "EVTNAMEMARSHAL110"
+	desc = "EVTDESCMARSHAL110"
+	picture = GFX_evt_library
+	
+	capable_only = yes
+	prisoner = no
+	min_age = 16
+	
+	trigger = {
+		has_job_action = action_distribute_mil_tech
+	}
+	
+	mean_time_to_happen = {
+		months = 2400
+		modifier = {
+			factor = 0.1
+			location = { higher_tech_than = ROOT }
+		}
+		modifier = {
+			factor = 0.5
+			trait = humble
+		}
+		modifier = {
+			factor = 2
+			trait = proud
+		}
+		modifier = {
+			factor = 0.5
+			trait = open_minded
+		}
+		modifier = {
+			factor = 2
+			trait = close_minded
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { learning = 2 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { learning = 3 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { learning = 4 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { learning = 6 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { learning = 7 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { learning = 8 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { learning = 9 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { learning = 10 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { learning = 11 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { learning = 12 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { learning = 13 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { learning = 14 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { learning = 15 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { learning = 16 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { learning = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { learning = 18 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { learning = 19 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { learning = 20 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTAMARSHAL110"
+		liege = {
+			opinion = { who = ROOT modifier = opinion_competent_marshal months = 30 }
+			letter_event = { id = marshal.111 tooltip = "EVTTOOLTIPMARSHAL111" }
+		}
+	}
+}
+
+letter_event = {
+	id = marshal.111
+	desc = "EVTDESCMARSHAL111"
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAMARSHAL111"
+		military_techpoints = 50
+	}
+}

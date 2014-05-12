@@ -24,6 +24,5 @@
 2996.2.5 = { holder = "11020019" } # Victoria XIV Locksley
 2996.2.19 = { holder = "11020020" } # "Arthur Pendragon"
 2998.1.1 = {
-	liege = 0
 	law = military_vassal_legitimacy_0
 }

@@ -1,0 +1,21 @@
+# 119 - Nara
+
+# County Title
+title = c_nara
+
+# Settlements
+max_settlements = 4
+
+b_nara_iii = city
+b_nara_iii_b = temple
+b_nara_iv = castle
+
+# Misc
+culture = japanese_tengoku # Initial culture
+religion = colonial_separatist
+1.1.1 = {
+}
+
+2992.1.1 = { capital = b_nara_iv }
+
+2997.7.7 = { }

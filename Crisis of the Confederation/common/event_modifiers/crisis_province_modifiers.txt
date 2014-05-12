@@ -1,3 +1,9 @@
+# Job Actions
+military_conservatives = {
+	icon = 36
+	tech_growth_modifier_military = -0.1
+}
+
 # Designated capital systems for kingdoms and empires
 kingdom_capital_system = {
 	icon = 9
@@ -183,6 +189,6 @@ successful_revolt = {
 	local_revolt_risk = -10
 }
 failed_revolt = {
-	icon = 13
+	icon = 31
 	local_revolt_risk = -1
 }

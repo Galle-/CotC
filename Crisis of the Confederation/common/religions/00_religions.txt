@@ -574,6 +574,7 @@ outlaw_group = {
 		feminist = yes
 		
 		allow_looting = yes
+		allow_rivermovement = yes
 		
 		peace_prestige_loss = yes
 		short_reign_opinion_year_mult = 5

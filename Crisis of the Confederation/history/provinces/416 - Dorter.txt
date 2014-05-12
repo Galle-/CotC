@@ -1,0 +1,22 @@
+# 416 - Dorter
+
+# County Title
+title = c_dorter
+
+# Settlements
+max_settlements = 4
+
+b_dorter_ii_b = city
+b_dorter_observatory = temple
+b_dorter_ii_c = castle
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

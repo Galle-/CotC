@@ -1,0 +1,22 @@
+# 414 - Genciana
+
+# County Title
+title = c_genciana
+
+# Settlements
+max_settlements = 4
+
+b_genciana_vii_b = city
+b_genciana_vii_c = temple
+b_genciana_vii_d = castle
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

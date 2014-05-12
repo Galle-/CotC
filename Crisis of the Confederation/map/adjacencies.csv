@@ -134,15 +134,15 @@ From;To;Type;Through;-1;-1;-1;-1;Comment
 120;121;sea;971;-1;-1;-1;-1;268-269
 121;122;sea;971;-1;-1;-1;-1;269-Iogi
 121;111;sea;;-1;-1;-1;-1;269-212
-121;122;sea;;-1;-1;-1;-1;269-Jion
+121;126;sea;;-1;-1;-1;-1;269-Jion
 111;110;sea;968;-1;-1;-1;-1;212-211
 111;112;sea;968;-1;-1;-1;-1;212-213
 110;112;sea;968;-1;-1;-1;-1;211-213
-112;122;sea;;-1;-1;-1;-1;213-Jion
+112;126;sea;;-1;-1;-1;-1;213-Jion
 112;125;sea;;-1;-1;-1;-1;213-Akasei
-122;124;sea;972;-1;-1;-1;-1;Jion-215
-122;123;sea;972;-1;-1;-1;-1;Jion-214
-122;125;sea;972;-1;-1;-1;-1;Jion-Akasei
+126;124;sea;972;-1;-1;-1;-1;Jion-215
+126;123;sea;972;-1;-1;-1;-1;Jion-214
+126;125;sea;972;-1;-1;-1;-1;Jion-Akasei
 124;123;sea;972;-1;-1;-1;-1;215-214
 123;125;sea;972;-1;-1;-1;-1;214-Akasei
 123;113;sea;;-1;-1;-1;-1;214-218
@@ -554,4 +554,42 @@ From;To;Type;Through;-1;-1;-1;-1;Comment
 332;331;sea;;-1;-1;-1;-1;VN-32-VN-381
 331;335;sea;;-1;-1;-1;-1;VN-381-VN-128
 335;337;sea;;-1;-1;-1;-1;VN-128-VN-732
+52;394;sea;;-1;-1;-1;-1;Xie Lanzhou - Nueva Galicia
+65;394;sea;;-1;-1;-1;-1;Ahora la Luz-Nueva Galicia
+394;395;sea;;-1;-1;-1;-1;Nueva Galicia - Nueva Valencia
+394;396;sea;;-1;-1;-1;-1;Nueva Galicia - Suerte
+395;396;sea;;-1;-1;-1;-1;Nueva Valencia - Suerte
+395;397;sea;;-1;-1;-1;-1;Nueva Valencia - Santiago
+395;396;sea;;-1;-1;-1;-1;Nueva Valencia - Suerte
+396;406;sea;;-1;-1;-1;-1;Suerte - Reposo del Alcazar
+397;398;sea;;-1;-1;-1;-1;Santiago - Barrayar
+397;399;sea;;-1;-1;-1;-1;Santiago - El Didal
+398;399;sea;;-1;-1;-1;-1;Barrayar - El Didal
+398;400;sea;;-1;-1;-1;-1;Barrayar - Komarr
+398;401;sea;;-1;-1;-1;-1;Barrayar - Sergyar
+399;405;sea;;-1;-1;-1;-1;El Didal - Cisne
+401;402;sea;;-1;-1;-1;-1;Sergyar - Bellatrix
+402;403;sea;;-1;-1;-1;-1;Bellatrix - Hailu
+403;405;sea;;-1;-1;-1;-1;Hailu - Cisne
+403;416;sea;;-1;-1;-1;-1;Hailu - Dorter
+404;405;sea;;-1;-1;-1;-1;Meissa - Cisne
+404;407;sea;;-1;-1;-1;-1;Meissa - Betelgeuse
+405;409;sea;;-1;-1;-1;-1;Cisne - Ramon y Cajal
+405;413;sea;;-1;-1;-1;-1;Cisne - Mintaka
+406;407;sea;;-1;-1;-1;-1;Reposo del Acazar - Betelgeuse
+407;408;sea;;-1;-1;-1;-1;Betelgeuse - Estrella del Anciano
+408;410;sea;;-1;-1;-1;-1;Estrella del Anciano - Warshawski
+409;410;sea;;-1;-1;-1;-1;Ramon y Cajal - Warshawski
+409;411;sea;;-1;-1;-1;-1;Ramon y Cajal - Seldon
+409;415;sea;;-1;-1;-1;-1;Ramon y Cajal - Saiph
+410;411;sea;;-1;-1;-1;-1;Warshawski - Seldon
+410;412;sea;;-1;-1;-1;-1;Warshawski - Paulet
+411;412;sea;;-1;-1;-1;-1;Seldon - Paulet
+413;414;sea;;-1;-1;-1;-1;Mintaka - Genciana
+414;415;sea;;-1;-1;-1;-1;Genciana - Saiph
+414;416;sea;;-1;-1;-1;-1;Genciana - Dorter
+414;418;sea;;-1;-1;-1;-1;Genciana - Rigel
+416;417;sea;;-1;-1;-1;-1;Dorter - Anilam
+416;418;sea;;-1;-1;-1;-1;Dorter - Rigel
+417;418;sea;;-1;-1;-1;-1;Anilam - Rigel
 -1;-1;;-1;-1;-1;-1;-1;-1

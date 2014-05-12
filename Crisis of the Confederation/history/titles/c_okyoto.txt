@@ -1,0 +1,8 @@
+2983.1.1 = {
+	liege = "d_okyoto_nara"
+	law = true_cognatic_succession
+	law = succ_open_elective
+}
+2995.1.1 = {
+	holder = 11020026 # Sachiko Mengesha
+}

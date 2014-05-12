@@ -1,0 +1,22 @@
+# 398 - Barrayar
+
+# County Title
+title = c_barrayar
+
+# Settlements
+max_settlements = 5
+
+b_barrayar_iii = castle
+b_barrayar_iii_b = temple
+b_barrayar_iii_c = city
+
+# Misc
+culture = russo_orion # Initial culture
+religion = astrist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

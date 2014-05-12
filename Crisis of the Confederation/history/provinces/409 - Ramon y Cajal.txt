@@ -1,0 +1,23 @@
+# 409 - Ramon y Cajal
+
+# County Title
+title = c_ramon_y_cajal
+
+# Settlements
+max_settlements = 4
+
+b_ramon_y_cajal_iii = city
+b_ramon_y_cajal_iii_b = temple
+b_ramon_y_cajal_iv = castle
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = bio_directionist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+	capital = b_ramon_y_cajal_iii_b
+}

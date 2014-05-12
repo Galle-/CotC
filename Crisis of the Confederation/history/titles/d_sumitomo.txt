@@ -1,0 +1,9 @@
+2983.1.1 = {
+	liege = "k_jion"
+	law = true_cognatic_succession
+	law = succ_open_elective
+}
+2997.11.25 = {
+	law = succ_appointment
+	holder = 1137945 # Kenichi Sato
+}

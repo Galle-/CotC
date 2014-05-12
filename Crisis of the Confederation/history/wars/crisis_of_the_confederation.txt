@@ -1,0 +1,15 @@
+name = "Crisis of the Confederation"
+
+casus_belli={
+	casus_belli=cb_faction_independence
+	actor=11010155 # Juan Lebedev
+	recipient=11013974 # Morgan Afolayan
+	date=2998.1.1
+}
+
+2998.1.1 = {
+	add_attacker = 11010155 # Juan Lebedev
+	add_attacker = 11012570 # Zhen Zhou
+	add_attacker = 11020020 # "Arthur Pendragon"
+	add_defender = 11013974 # Morgan Afolayan
+}

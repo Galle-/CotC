@@ -1,0 +1,19 @@
+2983.1.1 = {
+	liege = "d_iogi"
+	law = true_cognatic_succession
+	law = succ_open_elective
+}
+2992.1.1 = {
+	liege = "d_jion_fleet"
+	law = succ_appointment
+	holder = 1208745 # Rie Harada
+}
+2997.7.7 = {
+	liege = "k_jion"
+}
+2997.10.21 = {
+	liege = "d_iogi"
+}
+2997.11.10 = {
+	holder = 1108201 # Shoji Kimura
+}

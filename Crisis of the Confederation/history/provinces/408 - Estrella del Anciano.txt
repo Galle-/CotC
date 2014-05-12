@@ -1,0 +1,23 @@
+# 408 - Estrella del Anciano
+
+# County Title
+title = c_estrella_del_anciano
+
+# Settlements
+max_settlements = 3
+
+b_estrella_del_anciano_prime = city
+b_estrella_del_anciano_ii = castle
+b_estrella_del_anciano_observatory = temple
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+	capital = b_estrella_del_anciano_ii
+}

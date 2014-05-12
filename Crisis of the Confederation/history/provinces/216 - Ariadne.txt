@@ -1,0 +1,21 @@
+# 216 - Ariadne
+
+# County Title
+title = c_ariadne
+
+# Settlements
+max_settlements = 3
+
+b_port_ariadne = castle
+b_ariadne_ii = temple
+b_ariadne_iii = temple
+
+# Misc
+culture = japanese_strugatskite # Initial culture
+religion = space_pirate
+
+1.1.1 = {
+	b_port_ariadne = ca_pirate_harbor
+	b_ariadne_ii = tp_pirate_harbor
+	b_ariadne_iii = tp_pirate_harbor
+}

@@ -1,0 +1,20 @@
+# 399 - El Didal
+
+# County Title
+title = c_el_didal
+
+# Settlements
+max_settlements = 1
+
+b_el_didal = castle
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

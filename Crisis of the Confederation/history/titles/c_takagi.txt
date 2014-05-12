@@ -1,0 +1,6 @@
+2983.1.1 = {
+	liege = "d_hiyokuoka"
+	law = true_cognatic_succession
+	law = succ_open_elective
+}
+2993.1.1 = { holder = 1108937 } # Noriko Sakai

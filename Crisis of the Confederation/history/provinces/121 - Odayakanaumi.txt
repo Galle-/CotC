@@ -1,0 +1,19 @@
+# 121 - Odayakanaumi
+
+# County Title
+title = c_odayakanaumi
+
+# Settlements
+max_settlements = 4
+
+b_odayakanaumi_b = city
+b_odayakanaumi_c = temple
+b_odayakanaumi_d = castle
+
+# Misc
+culture = japanese_tengoku # Initial culture
+religion = colonial_separatist
+1.1.1 = {
+}
+
+2997.7.7 = { }

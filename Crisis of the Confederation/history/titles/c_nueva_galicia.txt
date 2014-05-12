@@ -1,0 +1,12 @@
+2950.1.1 = {
+	liege = "d_ortega_gaona"
+	holder = 1204331 # Gabriela Ramirez
+	law = true_cognatic_succession
+	law = succ_seniority
+}
+2993.1.1 = {
+	holder = 1104331 # Tomas Ramirez
+}
+2998.1.1 = {
+	liege = "k_orion_reach"
+}

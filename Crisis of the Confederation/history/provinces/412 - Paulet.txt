@@ -1,0 +1,22 @@
+# 412 - Paulet
+
+# County Title
+title = c_paulet
+
+# Settlements
+max_settlements = 5
+
+b_paulet_iii = city
+b_paulet_iii_b = castle
+b_paulet_observatory = temple
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

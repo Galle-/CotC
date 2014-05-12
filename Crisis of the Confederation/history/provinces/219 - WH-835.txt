@@ -1,0 +1,16 @@
+# 219 - WH-835
+
+# County Title
+title = c_wh_835
+
+# Settlements
+max_settlements = 4
+
+b_wh_835_station_alpha = castle
+
+# Misc
+culture = anglo_strugatskite # Initial culture
+religion = space_pirate
+
+1.1.1 = {
+}
