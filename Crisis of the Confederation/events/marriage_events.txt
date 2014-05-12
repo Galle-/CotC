@@ -1,0 +1,110 @@
+namespace = marriage
+
+# Marriage on-action scopes
+# ROOT: Authorizing party
+# FROM, new_character
+
+# Only women left in patrician dynasty
+character_event = {
+	id = marriage.50
+	hide_window = yes
+	
+	only_women = yes
+	min_age = 16
+	max_age = 50
+	prisoner = no
+	capable_only = yes
+	
+	trigger = {
+		is_landed = no
+		liege = {
+			dynasty = ROOT
+			is_patrician = yes
+			any_courtier = {
+				is_landed = no
+				NOT = { any_heir_title = { always = yes } }
+				NOT = { any_pretender_title = { always = yes } }
+				is_female = no
+				is_married = no
+				fertility = 0.1
+				NOT = { num_of_lovers = 1 }
+				NOT = { age = 50 }
+				NOT = { is_close_relative = ROOT }
+				NOT = { dynasty = ROOT }
+				age = 16
+			}
+		}
+		is_married = no
+		NOT = { num_of_lovers = 1 }
+		fertility = 0.1
+		NOT = {
+			any_dynasty_member = {
+				is_female = no
+				NOT = { trait = bastard }
+				NOT = { trait = incapable }
+				fertility = 0.1
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+		
+		modifier = {
+			factor = 10
+			has_character_flag = flag_ignore_patrician_matrilineal_marriage_request
+		}
+		modifier = {
+			factor = 0.5
+			has_ambition = obj_get_married
+		}
+	}
+	
+	immediate = {
+		liege = {
+			random_courtier = {
+				limit = {
+					is_landed = no
+					NOT = { any_heir_title = { always = yes } }
+					NOT = { any_pretender_title = { always = yes } }
+					is_female = no
+					is_married = no
+					fertility = 0.1
+					NOT = { num_of_lovers = 1 }
+					NOT = { age = 50 }
+					NOT = { is_close_relative = ROOT }
+					NOT = { dynasty = ROOT }
+					age = 16
+				}
+				character_event = { id = marriage.51 }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = marriage.51
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = { liege = { character_event = { id = marriage.52 } } }
+}
+
+character_event = {
+	id = marriage.52
+	desc = "EVTDESCMARRIAGE52"
+	picture = GFX_evt_marriage
+	show_from_from = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAMARRIAGE52"
+		FROM = { FROM = { add_spouse_matrilineal = PREV } }
+	}
+	
+	option = {
+		name = "EVTOPTBMARRIAGE52"
+		FROM = { FROM = { set_character_flag = flag_ignore_patrician_matrilineal_marriage_request } }
+		ai_chance = { factor = 0 }
+	}
+}

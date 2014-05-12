@@ -1,0 +1,19 @@
+# 115 - Shiga
+
+# County Title
+title = c_shiga
+
+# Settlements
+max_settlements = 4
+
+b_shiga = castle
+b_shiga_orbital_alpha = city
+b_shiga_orbital_beta = temple
+
+# Misc
+culture = japanese_tengoku # Initial culture
+religion = astrist
+1.1.1 = {
+}
+
+2766.1.1 = { capital = b_shiga }

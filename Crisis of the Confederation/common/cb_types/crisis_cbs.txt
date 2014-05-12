@@ -5,7 +5,6 @@ civil_war = {
 	sprite = 3
 	truce_days = 0
 	hostile_against_others = yes
-	major_revolt = yes
 	is_permanent = yes
 	
 	press_claim = yes
@@ -53,6 +52,12 @@ civil_war = {
 			}
 			FROM = { religion_authority = { modifier = allowed_civil_war_county } }
 		}
+		
+		# Downgrade FROM's public order
+		FROM = {
+			any_demesne_title = { limit = { has_law = public_order_1 } }
+			add_law = public_order_0
+		}
 	}
 	
 	is_valid = {
@@ -86,22 +91,6 @@ civil_war = {
 		any_attacker = {
 			limit = { NOT = { character = ROOT } }
 			hidden_tooltip = { participation_scaled_prestige = 200 }
-		}
-		any_attacker = {
-			limit = { trait = partisan }
-			hidden_tooltip = {
-				remove_trait = partisan
-				any_courtier = { ROOT = { reverse_banish = PREV } }
-				ROOT = { reverse_banish = PREV }
-				piety = 200
-			}
-		}
-		any_defender = {
-			limit = { trait = partisan }
-			hidden_tooltip = {
-				remove_trait = partisan
-				imprison = ROOT
-			}
 		}
 		
 		# If FROM and ROOTs' ideologies are different, the latter gets a bonus and
@@ -203,7 +192,9 @@ cb_military_campaign = {
 		ROOT = {
 			independent = no
 			is_feudal = yes
+			is_patrician = no
 			NOT = { is_liege_or_above = FROM }
+			NOT = { has_character_flag = flag_revolter }
 		}
 		FROM = { NOT = { is_liege_or_above = ROOT } }
 	}
@@ -216,6 +207,7 @@ cb_military_campaign = {
 		ROOT = {
 			independent = no
 			is_feudal = yes
+			is_patrician = no
 			NOT = { is_liege_or_above = FROM }
 		}
 		FROM = { NOT = { is_liege_or_above = ROOT } }
@@ -443,5 +435,980 @@ cb_military_campaign = {
 			factor = 1.25
 			ROOT = { NOT = { opinion = { who = FROM value = -99 } } }
 		}
+	}
+}
+
+democratic_rebellion = {
+	name = CB_NAME_REBELLION
+	war_name = WAR_NAME_REBELLION
+	sprite = 7
+	truce_days = 365
+	hostile_against_others = yes
+	attacker_can_call_allies = yes
+	defender_can_call_allies = yes
+	can_ask_to_join_war = yes
+	
+	can_use = { ROOT = { has_character_flag = flag_revolter } }
+	
+	is_valid = { ROOT = { has_character_flag = flag_revolter } }
+	
+	on_success = {
+		ROOT = {
+			prestige = 100
+			clr_character_flag = flag_revolter
+			any_courtier = {
+				opinion = { who = ROOT modifier = opinion_hero_of_the_revolution }
+				reverse_opinion = { who = ROOT modifier = opinion_aided_my_revolution }
+			}
+		}
+		any_attacker = {
+			limit = { NOT = { character = ROOT } }
+			participation_scaled_prestige = 100
+			opinion = { who = ROOT modifier = opinion_hero_of_the_revolution }
+			reverse_opinion = { who = ROOT modifier = opinion_aided_my_revolution }
+		}
+		FROM = {
+			prestige = -100
+			hidden_tooltip = {
+				any_realm_province = {
+					limit = {
+						owner = { is_liege_or_above = FROM }
+						OR = {
+							religion = terran_federalist
+							religion = terran_republican
+							religion = colonial_separatist
+						}
+					}
+					add_province_modifier = { name = successful_revolt days = 365 }
+				}
+			}
+			# Set democratic legitimacy
+			any_demesne_title = {
+				limit = { is_primary_holder_title_tier = yes }
+				add_law = legitimacy_law_1
+				add_law = local_legitimacy_law_1
+			}
+		}
+		# Moral authority changes
+		if = {
+			limit = {
+				FROM = {
+					primary_title = { NOT = { higher_tier_than = duke } }
+					NOT = { religion = ROOT }
+				}
+			}
+			FROM = { religion_authority = { modifier = fell_to_minor_rebellion years = 10 } }
+			ROOT = {
+				religion_authority = { modifier = successful_minor_rebellion years = 10 }
+				piety = 100
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					primary_title = { higher_tier_than = duke }
+					NOT = { religion = ROOT }
+				}
+			}
+			FROM = { religion_authority = { modifier = fell_to_major_rebellion years = 60 } }
+			ROOT = {
+				religion_authority = { modifier = successful_major_rebellion years = 60 }
+				piety = 500
+			}
+		}
+		FROM = { set_character_flag = flag_primary_title_usurped }
+		# Get the rebels a city if possible first
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						any_demesne_title = {
+							is_republic = yes
+							NOT = { higher_tier_than = count }
+						}
+					}
+					NOT = {
+						any_realm_title = {
+							is_republic = yes
+							NOT = { higher_tier_than = count }
+							OR = {
+								holder_scope = { liege = { character = FROM } }
+								location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+							}
+						}
+					}
+					any_realm_title = {
+						is_republic = yes
+						NOT = { higher_tier_than = count }
+					}
+				}
+			}
+			FROM = {
+				random_realm_title = {
+					limit = {
+						is_republic = yes
+						NOT = { higher_tier_than = count }
+					}
+					usurp_title = ROOT
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						any_demesne_title = {
+							is_republic = yes
+							NOT = { higher_tier_than = count }
+						}
+					}
+					NOT = {
+						any_realm_title = {
+							is_republic = yes
+							NOT = { higher_tier_than = count }
+							location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+						}
+					}
+					any_realm_title = {
+						is_republic = yes
+						NOT = { higher_tier_than = count }
+						holder_scope = { liege = { character = FROM } }
+					}
+				}
+			}
+			FROM = {
+				random_realm_title = {
+					limit = {
+						is_republic = yes
+						NOT = { higher_tier_than = count }
+						holder_scope = { liege = { character = FROM } }
+					}
+					usurp_title = ROOT
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						any_demesne_title = {
+							is_republic = yes
+							NOT = { higher_tier_than = count }
+						}
+					}
+					any_realm_title = {
+						is_republic = yes
+						NOT = { higher_tier_than = count }
+						location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+					}
+				}
+			}
+			FROM = {
+				random_realm_title = {
+					limit = {
+						is_republic = yes
+						NOT = { higher_tier_than = count }
+						location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+					}
+					usurp_title = ROOT
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					NOT = { capital_holding = { is_republic = yes } }
+					NOT = {
+						any_demesne_title = {
+							is_republic = yes
+							NOT = { higher_tier_than = count }
+							location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+						}
+					}
+					any_demesne_title = {
+						is_republic = yes
+						NOT = { higher_tier_than = count }
+					}
+				}
+			}
+			FROM = {
+				random_demesne_title = {
+					limit = {
+						is_republic = yes
+						NOT = { higher_tier_than = count }
+					}
+					usurp_title = ROOT
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					NOT = { capital_holding = { is_republic = yes } }
+					any_demesne_title = {
+						is_republic = yes
+						NOT = { higher_tier_than = count }
+						location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+					}
+				}
+			}
+			FROM = {
+				random_demesne_title = {
+					limit = {
+						is_republic = yes
+						NOT = { higher_tier_than = count }
+						location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+					}
+					usurp_title = ROOT
+				}
+			}
+		}
+		# Give the rest of the titles to the rebels as well
+		ROOT = { character_event = { id = usurpation.100 tooltip = "EVTTOOLTIPUSURPATION100" } }
+	}
+	
+	on_add = {
+		# Downgrade FROM's public order
+		FROM = {
+			any_demesne_title = { limit = { has_law = public_order_1 } }
+			add_law = public_order_0
+		}
+	}
+
+	on_fail_title = {
+		ROOT = { clr_character_flag = flag_revolter }
+		FROM = {
+			prestige = 100
+			hidden_tooltip = { opinion = { modifier = opinion_rebel_traitor  who = ROOT months = 1200 } }
+		}
+		any_attacker = {
+			limit = { NOT = { character = ROOT } }
+			participation_scaled_prestige = -100
+			hidden_tooltip = { reverse_opinion = { who = FROM modifier = opinion_traitor months = 240 } }
+		}
+		ROOT = {
+			imprison = FROM 
+			hidden_tooltip = { add_character_modifier = { name = broken_spirit days = -1 } }
+		}
+	}
+
+	on_reverse_demand = {
+		ROOT = { clr_character_flag = flag_revolter }
+		# Moral authority changes
+		if = {
+			limit = {
+				FROM = {
+					primary_title = { NOT = { higher_tier_than = duke } }
+					NOT = { religion = ROOT }
+				}
+			}
+			FROM = { religion_authority = { modifier = crushed_minor_rebellion years = 10 } }
+			ROOT = { religion_authority = { modifier = failed_minor_rebellion years = 10 } }
+		}
+		if = {
+			limit = {
+				FROM = {
+					primary_title = { higher_tier_than = duke }
+					NOT = { religion = ROOT }
+				}
+			}
+			FROM = { religion_authority = { modifier = crushed_major_rebellion years = 60 } }
+			ROOT = { religion_authority = { modifier = failed_major_rebellion years = 60 } }
+		}
+		FROM = {
+			prestige = 200
+			hidden_tooltip = {
+				opinion = { modifier = opinion_rebel_traitor  who = ROOT months = 1200 }
+				add_character_modifier = { name = crushed_revolt days = 3650 }
+				any_realm_province = {
+					limit = {
+						any_province_lord = { character = FROM }
+						OR = {
+							religion = terran_republican
+							religion = terran_federalist
+							religion = colonial_separatist
+							owner = { is_republic = yes }
+						}
+					}
+					add_province_modifier = { name = "failed_revolt" days = 3650 }
+				}
+			}
+		}
+		any_attacker = {
+			limit = { NOT = { character = ROOT } }
+			participation_scaled_prestige = -100
+			imprison = FROM
+			hidden_tooltip = { reverse_opinion = { who = FROM modifier = opinion_traitor months = 240 } }
+		}
+		ROOT = {
+			imprison = FROM 
+			hidden_tooltip = { add_character_modifier = { name = broken_spirit days = -1 } }
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+autocratic_rebellion = {
+	name = CB_NAME_REBELLION
+	war_name = WAR_NAME_REBELLION
+	sprite = 7
+	truce_days = 365
+	hostile_against_others = yes
+	attacker_can_call_allies = yes
+	defender_can_call_allies = yes
+	can_ask_to_join_war = yes
+	
+	can_use = { ROOT = { has_character_flag = flag_revolter } }
+	
+	is_valid = { ROOT = { has_character_flag = flag_revolter } }
+	
+	on_success = {
+		ROOT = {
+			prestige = 100
+			clr_character_flag = flag_revolter
+			any_courtier = {
+				opinion = { who = ROOT modifier = opinion_hero_of_the_revolution }
+				reverse_opinion = { who = ROOT modifier = opinion_aided_my_revolution }
+			}
+		}
+		any_attacker = {
+			limit = { NOT = { character = ROOT } }
+			participation_scaled_prestige = 100
+			opinion = { who = ROOT modifier = opinion_hero_of_the_revolution }
+			reverse_opinion = { who = ROOT modifier = opinion_aided_my_revolution }
+		}
+		FROM = {
+			prestige = -100
+			hidden_tooltip = {
+				any_realm_province = {
+					limit = {
+						owner = { is_liege_or_above = FROM }
+						OR = {
+							religion = terran_imperial
+							religion = neo_feudal
+							religion = astrist
+							religion = bio_directionist
+						}
+					}
+					add_province_modifier = { name = successful_revolt days = 365 }
+				}
+			}
+			# Set autocratic legitimacy
+			any_demesne_title = {
+				limit = { is_primary_holder_title_tier = yes }
+				add_law = legitimacy_law_0
+				add_law = local_legitimacy_law_0
+			}
+		}
+		# Moral authority changes
+		if = {
+			limit = {
+				FROM = {
+					primary_title = { NOT = { higher_tier_than = duke } }
+					NOT = { religion = ROOT }
+				}
+			}
+			FROM = { religion_authority = { modifier = fell_to_minor_rebellion years = 10 } }
+			ROOT = {
+				religion_authority = { modifier = successful_minor_rebellion years = 10 }
+				piety = 100
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					primary_title = { higher_tier_than = duke }
+					NOT = { religion = ROOT }
+				}
+			}
+			FROM = { religion_authority = { modifier = fell_to_major_rebellion years = 60 } }
+			ROOT = {
+				religion_authority = { modifier = successful_major_rebellion years = 60 }
+				piety = 500
+			}
+		}
+		FROM = { set_character_flag = flag_primary_title_usurped }
+		# Get the rebels a castle if possible first
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						any_demesne_title = {
+							is_feudal = yes
+							NOT = { higher_tier_than = count }
+						}
+					}
+					NOT = {
+						any_realm_title = {
+							is_feudal = yes
+							NOT = { higher_tier_than = count }
+							OR = {
+								holder_scope = { liege = { character = FROM } }
+								location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+							}
+						}
+					}
+					any_realm_title = {
+						is_feudal = yes
+						NOT = { higher_tier_than = count }
+					}
+				}
+			}
+			FROM = {
+				random_realm_title = {
+					limit = {
+						is_feudal = yes
+						NOT = { higher_tier_than = count }
+					}
+					usurp_title = ROOT
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						any_demesne_title = {
+							is_feudal = yes
+							NOT = { higher_tier_than = count }
+						}
+					}
+					NOT = {
+						any_realm_title = {
+							is_feudal = yes
+							NOT = { higher_tier_than = count }
+							location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+						}
+					}
+					any_realm_title = {
+						is_feudal = yes
+						NOT = { higher_tier_than = count }
+						holder_scope = { liege = { character = FROM } }
+					}
+				}
+			}
+			FROM = {
+				random_realm_title = {
+					limit = {
+						is_feudal = yes
+						NOT = { higher_tier_than = count }
+						holder_scope = { liege = { character = FROM } }
+					}
+					usurp_title = ROOT
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						any_demesne_title = {
+							is_feudal = yes
+							NOT = { higher_tier_than = count }
+						}
+					}
+					any_realm_title = {
+						is_feudal = yes
+						NOT = { higher_tier_than = count }
+						location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+					}
+				}
+			}
+			FROM = {
+				random_realm_title = {
+					limit = {
+						is_feudal = yes
+						NOT = { higher_tier_than = count }
+						location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+					}
+					usurp_title = ROOT
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					NOT = { capital_holding = { is_feudal = yes } }
+					NOT = {
+						any_demesne_title = {
+							is_feudal = yes
+							NOT = { higher_tier_than = count }
+							location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+						}
+					}
+					any_demesne_title = {
+						is_feudal = yes
+						NOT = { higher_tier_than = count }
+					}
+				}
+			}
+			FROM = {
+				random_demesne_title = {
+					limit = {
+						is_feudal = yes
+						NOT = { higher_tier_than = count }
+					}
+					usurp_title = ROOT
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					NOT = { capital_holding = { is_feudal = yes } }
+					any_demesne_title = {
+						is_feudal = yes
+						NOT = { higher_tier_than = count }
+						location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+					}
+				}
+			}
+			FROM = {
+				random_demesne_title = {
+					limit = {
+						is_feudal = yes
+						NOT = { higher_tier_than = count }
+						location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+					}
+					usurp_title = ROOT
+				}
+			}
+		}
+		# Give the rest of the titles to the rebels as well
+		ROOT = { character_event = { id = usurpation.100 tooltip = "EVTTOOLTIPUSURPATION100" } }
+	}
+	
+	on_add = {
+		# Downgrade FROM's public order
+		FROM = {
+			any_demesne_title = { limit = { has_law = public_order_1 } }
+			add_law = public_order_0
+		}
+	}
+
+	on_fail_title = {
+		ROOT = { clr_character_flag = flag_revolter }
+		FROM = {
+			prestige = 100
+			hidden_tooltip = { opinion = { modifier = opinion_rebel_traitor  who = ROOT months = 1200 } }
+		}
+		any_attacker = {
+			limit = { NOT = { character = ROOT } }
+			participation_scaled_prestige = -100
+			hidden_tooltip = { reverse_opinion = { who = FROM modifier = opinion_traitor months = 240 } }
+		}
+		ROOT = {
+			imprison = FROM 
+			hidden_tooltip = { add_character_modifier = { name = broken_spirit days = -1 } }
+		}
+	}
+
+	on_reverse_demand = {
+		ROOT = { clr_character_flag = flag_revolter }
+		# Moral authority changes
+		if = {
+			limit = {
+				FROM = {
+					primary_title = { NOT = { higher_tier_than = duke } }
+					NOT = { religion = ROOT }
+				}
+			}
+			FROM = { religion_authority = { modifier = crushed_minor_rebellion years = 10 } }
+			ROOT = { religion_authority = { modifier = failed_minor_rebellion years = 10 } }
+		}
+		if = {
+			limit = {
+				FROM = {
+					primary_title = { higher_tier_than = duke }
+					NOT = { religion = ROOT }
+				}
+			}
+			FROM = { religion_authority = { modifier = crushed_major_rebellion years = 60 } }
+			ROOT = { religion_authority = { modifier = failed_major_rebellion years = 60 } }
+		}
+		FROM = {
+			prestige = 200
+			hidden_tooltip = {
+				opinion = { modifier = opinion_rebel_traitor  who = ROOT months = 1200 }
+				add_character_modifier = { name = crushed_revolt days = 3650 }
+				any_realm_province = {
+					limit = {
+						any_province_lord = { character = FROM }
+						OR = {
+							religion = terran_imperial
+							religion = astrist
+							religion = neo_feudal
+							owner = {
+								is_feudal = yes
+								is_patrician = no
+							}
+						}
+					}
+					add_province_modifier = { name = "failed_revolt" days = 3650 }
+				}
+			}
+		}
+		any_attacker = {
+			limit = { NOT = { character = ROOT } }
+			participation_scaled_prestige = -100
+			imprison = FROM
+			hidden_tooltip = { reverse_opinion = { who = FROM modifier = opinion_traitor months = 240 } }
+		}
+		ROOT = {
+			imprison = FROM 
+			hidden_tooltip = { add_character_modifier = { name = broken_spirit days = -1 } }
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+theocratic_rebellion = {
+	name = CB_NAME_REBELLION
+	war_name = WAR_NAME_REBELLION
+	sprite = 7
+	truce_days = 365
+	hostile_against_others = yes
+	attacker_can_call_allies = yes
+	defender_can_call_allies = yes
+	can_ask_to_join_war = yes
+	
+	can_use = { ROOT = { has_character_flag = flag_revolter } }
+	
+	is_valid = { ROOT = { has_character_flag = flag_revolter } }
+	
+	on_success = {
+		ROOT = {
+			prestige = 100
+			clr_character_flag = flag_revolter
+			any_courtier = {
+				opinion = { who = ROOT modifier = opinion_hero_of_the_revolution }
+				reverse_opinion = { who = ROOT modifier = opinion_aided_my_revolution }
+			}
+		}
+		any_attacker = {
+			limit = { NOT = { character = ROOT } }
+			participation_scaled_prestige = 100
+			opinion = { who = ROOT modifier = opinion_hero_of_the_revolution }
+			reverse_opinion = { who = ROOT modifier = opinion_aided_my_revolution }
+		}
+		FROM = {
+			prestige = -100
+			hidden_tooltip = {
+				any_realm_province = {
+					limit = {
+						owner = { is_liege_or_above = FROM }
+						OR = {
+							religion = orthodox
+							religion = xenoterran
+							religion = solarian
+							religion = machine_cultist
+							religion = neo_socialist
+						}
+					}
+					add_province_modifier = { name = successful_revolt days = 365 }
+				}
+			}
+		}
+		# Moral authority changes
+		if = {
+			limit = {
+				FROM = {
+					primary_title = { NOT = { higher_tier_than = duke } }
+					NOT = { religion = ROOT }
+				}
+			}
+			FROM = { religion_authority = { modifier = fell_to_minor_rebellion years = 10 } }
+			ROOT = {
+				religion_authority = { modifier = successful_minor_rebellion years = 10 }
+				piety = 100
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					primary_title = { higher_tier_than = duke }
+					NOT = { religion = ROOT }
+				}
+			}
+			FROM = { religion_authority = { modifier = fell_to_major_rebellion years = 60 } }
+			ROOT = {
+				religion_authority = { modifier = successful_major_rebellion years = 50 }
+				piety = 500
+			}
+		}
+		FROM = { set_character_flag = flag_primary_title_usurped }
+		# Get the rebels a temple if possible first
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						any_demesne_title = {
+							is_theocracy = yes
+							NOT = { higher_tier_than = count }
+						}
+					}
+					NOT = {
+						any_realm_title = {
+							is_theocracy = yes
+							NOT = { higher_tier_than = count }
+							OR = {
+								holder_scope = { liege = { character = FROM } }
+								location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+							}
+						}
+					}
+					any_realm_title = {
+						is_theocracy = yes
+						NOT = { higher_tier_than = count }
+					}
+				}
+			}
+			FROM = {
+				random_realm_title = {
+					limit = {
+						is_theocracy = yes
+						NOT = { higher_tier_than = count }
+					}
+					usurp_title = ROOT
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						any_demesne_title = {
+							is_theocracy = yes
+							NOT = { higher_tier_than = count }
+						}
+					}
+					NOT = {
+						any_realm_title = {
+							is_theocracy = yes
+							NOT = { higher_tier_than = count }
+							location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+						}
+					}
+					any_realm_title = {
+						is_theocracy = yes
+						NOT = { higher_tier_than = count }
+						holder_scope = { liege = { character = FROM } }
+					}
+				}
+			}
+			FROM = {
+				random_realm_title = {
+					limit = {
+						is_theocracy = yes
+						NOT = { higher_tier_than = count }
+						holder_scope = { liege = { character = FROM } }
+					}
+					usurp_title = ROOT
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						any_demesne_title = {
+							is_theocracy = yes
+							NOT = { higher_tier_than = count }
+						}
+					}
+					any_realm_title = {
+						is_theocracy = yes
+						NOT = { higher_tier_than = count }
+						location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+					}
+				}
+			}
+			FROM = {
+				random_realm_title = {
+					limit = {
+						is_theocracy = yes
+						NOT = { higher_tier_than = count }
+						location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+					}
+					usurp_title = ROOT
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					NOT = { capital_holding = { is_theocracy = yes } }
+					NOT = {
+						any_demesne_title = {
+							is_theocracy = yes
+							NOT = { higher_tier_than = count }
+							location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+						}
+					}
+					any_demesne_title = {
+						is_theocracy = yes
+						NOT = { higher_tier_than = count }
+					}
+				}
+			}
+			FROM = {
+				random_demesne_title = {
+					limit = {
+						is_theocracy = yes
+						NOT = { higher_tier_than = count }
+					}
+					usurp_title = ROOT
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					NOT = { capital_holding = { is_theocracy = yes } }
+					any_demesne_title = {
+						is_theocracy = yes
+						NOT = { higher_tier_than = count }
+						location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+					}
+				}
+			}
+			FROM = {
+				random_demesne_title = {
+					limit = {
+						is_theocracy = yes
+						NOT = { higher_tier_than = count }
+						location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+					}
+					usurp_title = ROOT
+				}
+			}
+		}
+		# Give the rest of the titles to the rebels as well
+		ROOT = { character_event = { id = usurpation.100 tooltip = "EVTTOOLTIPUSURPATION100" } }
+	}
+	
+	on_add = {
+		# Downgrade FROM's public order
+		FROM = {
+			any_demesne_title = { limit = { has_law = public_order_1 } }
+			add_law = public_order_0
+		}
+	}
+
+	on_fail_title = {
+		ROOT = { clr_character_flag = flag_revolter }
+		FROM = {
+			prestige = 100
+			hidden_tooltip = { opinion = { modifier = opinion_rebel_traitor  who = ROOT months = 1200 } }
+		}
+		any_attacker = {
+			limit = { NOT = { character = ROOT } }
+			participation_scaled_prestige = -100
+			hidden_tooltip = { reverse_opinion = { who = FROM modifier = opinion_traitor months = 240 } }
+		}
+		ROOT = {
+			imprison = FROM 
+			hidden_tooltip = { add_character_modifier = { name = broken_spirit days = -1 } }
+		}
+	}
+
+	on_reverse_demand = {
+		ROOT = { clr_character_flag = flag_revolter }
+		# Moral authority changes
+		if = {
+			limit = {
+				FROM = {
+					primary_title = { NOT = { higher_tier_than = duke } }
+					NOT = { religion = ROOT }
+				}
+			}
+			FROM = { religion_authority = { modifier = crushed_minor_rebellion years = 10 } }
+			ROOT = { religion_authority = { modifier = failed_minor_rebellion years = 10 } }
+		}
+		if = {
+			limit = {
+				FROM = {
+					primary_title = { higher_tier_than = duke }
+					NOT = { religion = ROOT }
+				}
+			}
+			FROM = { religion_authority = { modifier = crushed_major_rebellion years = 60 } }
+			ROOT = { religion_authority = { modifier = failed_major_rebellion years = 60 } }
+		}
+		FROM = {
+			prestige = 200
+			hidden_tooltip = {
+				opinion = { modifier = opinion_rebel_traitor  who = ROOT months = 1200 }
+				add_character_modifier = { name = crushed_revolt days = 3650 }
+				any_realm_province = {
+					limit = {
+						any_province_lord = { character = FROM }
+						OR = {
+							religion = neo_socialist
+							religion = orthodox
+							religion = machine_cultist
+							owner = { is_theocracy = yes }
+						}
+					}
+					add_province_modifier = { name = "failed_revolt" days = 3650 }
+				}
+			}
+		}
+		any_attacker = {
+			limit = { NOT = { character = ROOT } }
+			participation_scaled_prestige = -100
+			imprison = FROM
+			hidden_tooltip = { reverse_opinion = { who = FROM modifier = opinion_traitor months = 240 } }
+		}
+		ROOT = {
+			imprison = FROM 
+			hidden_tooltip = { add_character_modifier = { name = broken_spirit days = -1 } }
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
 	}
 }

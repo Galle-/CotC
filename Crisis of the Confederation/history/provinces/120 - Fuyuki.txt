@@ -1,0 +1,39 @@
+# 120 - Fuyuki
+
+# County Title
+title = c_fuyuki
+
+# Settlements
+max_settlements = 4
+
+b_fuyuki_iii = city
+b_fuyuki_iii_b = castle
+b_fuyuki_iii_c = temple
+
+# Misc
+culture = japanese_tengoku # Initial culture
+religion = colonial_separatist
+1.1.1 = {
+	b_fuyuki_iii = ct_clean_atmosphere
+	b_fuyuki_iii = ct_no_water
+	b_fuyuki_iii = ct_trace_water
+	b_fuyuki_iii = ct_lakes
+	b_fuyuki_iii = ct_seas
+	b_fuyuki_iii = ct_oceans
+	b_fuyuki_iii = ct_frozen
+	b_fuyuki_iii = ct_cold
+	b_fuyuki_iii = ct_planet_survey
+	
+	b_fuyuki_iii_b = ca_no_atmosphere
+	b_fuyuki_iii_b = ca_no_water
+	b_fuyuki_iii_b = ca_frozen
+	b_fuyuki_iii_b = ca_cold
+	b_fuyuki_iii_b = ca_planet_survey
+	
+	b_fuyuki_iii_c = tp_no_atmosphere
+	b_fuyuki_iii_c = tp_no_water
+	b_fuyuki_iii_c = tp_frozen
+	b_fuyuki_iii_c = tp_cold
+	b_fuyuki_iii_c = tp_planet_survey
+}
+2992.1.1 = { capital = b_fuyuki_iii_b }

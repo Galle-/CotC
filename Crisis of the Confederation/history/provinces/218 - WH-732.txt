@@ -1,0 +1,16 @@
+# 218 - WH-732
+
+# County Title
+title = c_wh_732
+
+# Settlements
+max_settlements = 4
+
+b_wh_732_station_alpha = castle
+
+# Misc
+culture = russo_frontiersman # Initial culture
+religion = space_pirate
+
+1.1.1 = {
+}

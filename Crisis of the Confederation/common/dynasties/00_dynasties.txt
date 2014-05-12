@@ -59430,8 +59430,11 @@
 	name = "Daniachew"
 	culture = ethiopian_terran
 }
-
 20025 = {
 	name = "Lim"
 	culture = sino_bianjiangese
+}
+20026 = {
+	name = "Mengesha"
+	culture = ethiopian_tengoku
 }

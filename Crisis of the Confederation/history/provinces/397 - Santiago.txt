@@ -1,0 +1,22 @@
+# 397 - Santiago
+
+# County Title
+title = c_santiago
+
+# Settlements
+max_settlements = 6
+
+b_santiago_ii = city
+b_santiago_ii_b = temple
+b_santiago_iii = castle
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

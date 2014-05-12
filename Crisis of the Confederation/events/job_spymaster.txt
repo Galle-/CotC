@@ -284,7 +284,7 @@ letter_event = {
 	desc = "EVTDESCSPYMASTER2"
 	is_triggered_only = yes
 	
-	option = { name = "EVTOPTASPYMASTER2" }
+	option = { name = "EVTOPTCONFIRM" }
 }
 
 # Blackmail!
@@ -414,7 +414,7 @@ letter_event = {
 	}
 	option = {
 		trigger = { FROM = { has_plot = plot_blackmail } }
-		name = "EVTOPTASPYMASTER4"
+		name = "EVTOPTBSPYMASTER4"
 	}
 }
 # Accepted blackmail as payment for owed favor
@@ -944,7 +944,7 @@ character_event = {
 				# OR = {
 					# trait = homosexual
 					# trait = impaler
-					# trait = lustful
+					# trait = carefree
 					# trait = drunkard
 					# trait = hedonist
 					# trait = syphilitic
@@ -965,11 +965,11 @@ character_event = {
 			# any_vassal = {
 				# has_character_flag = faction_member
 				# OR = {
-					# trait = just
-					# trait = honest
-					# trait = trusting
+					# trait = radical
+					# trait = friendly
+					# trait = friendly
 					# trait = content
-					# trait = kind
+					# trait = friendly
 				# }
 			# }
 		# }
@@ -988,10 +988,10 @@ character_event = {
 				# has_character_flag = faction_member
 				# OR = {
 					# trait = craven
-					# trait = paranoid
-					# trait = cynical
+					# trait = cold
+					# trait = skeptical
 					# trait = humble
-					# trait = slothful
+					# trait = carefree
 				# }
 			# }
 		# }
@@ -1011,18 +1011,18 @@ character_event = {
 				# NOT = {
 					# OR = {
 						# trait = craven
-						# trait = paranoid
-						# trait = cynical
+						# trait = cold
+						# trait = skeptical
 						# trait = humble
-						# trait = slothful
-						# trait = just
-						# trait = honest
-						# trait = trusting
+						# trait = carefree
+						# trait = radical
+						# trait = friendly
+						# trait = friendly
 						# trait = content
-						# trait = kind
+						# trait = friendly
 						# trait = homosexual
 						# trait = impaler
-						# trait = lustful
+						# trait = carefree
 						# trait = drunkard
 						# trait = hedonist
 						# trait = syphilitic
@@ -1099,10 +1099,10 @@ character_event = {
 			# }
 		# }
 	# }
-	# option = { # Agree (Lustful)
+	# option = { # Agree (carefree)
 		# name = "EVTOPTC9002"
-		# tooltip_info = lustful
-		# trigger = { trait = lustful }
+		# tooltip_info = carefree
+		# trigger = { trait = carefree }
 		# FROM = {
 			# opinion = {
 				# modifier = opinion_pleased
@@ -1259,10 +1259,10 @@ character_event = {
 	
 	# is_triggered_only = yes
 	
-		# option = { # Agree (Just)
+		# option = { # Agree (radical)
 		# name = "EVTOPTA9005"
-		# tooltip_info = just
-		# trigger = { trait = just }
+		# tooltip_info = radical
+		# trigger = { trait = radical }
 		# FROM = {
 			# opinion = {
 				# modifier = opinion_pleased
@@ -1279,10 +1279,10 @@ character_event = {
 			# }
 		# }
 	# }
-	# option = { # Agree (Honest)
+	# option = { # Agree (friendly)
 		# name = "EVTOPTB9005"
-		# tooltip_info = honest
-		# trigger = { trait = honest }
+		# tooltip_info = friendly
+		# trigger = { trait = friendly }
 		# FROM = {
 			# opinion = {
 				# modifier = opinion_pleased
@@ -1299,10 +1299,10 @@ character_event = {
 			# }
 		# }
 	# }
-	# option = { # Agree (Trusting)
+	# option = { # Agree (friendly)
 		# name = "EVTOPTC9005"
-		# tooltip_info = trusting
-		# trigger = { trait = trusting }
+		# tooltip_info = friendly
+		# trigger = { trait = friendly }
 		# FROM = {
 			# opinion = {
 				# modifier = opinion_pleased
@@ -1339,10 +1339,10 @@ character_event = {
 			# }
 		# }
 	# }
-	# option = { # Agree (Kind)
+	# option = { # Agree (friendly)
 		# name = "EVTOPTE9005"
-		# tooltip_info = kind
-		# trigger = { trait = kind }
+		# tooltip_info = friendly
+		# trigger = { trait = friendly }
 		# FROM = {
 			# opinion = {
 				# modifier = opinion_pleased
@@ -1434,10 +1434,10 @@ character_event = {
 			# }
 		# }
 	# }
-	# option = { # Agree (Paranoid)
+	# option = { # Agree (cold)
 		# name = "EVTOPTB9008"
-		# tooltip_info = paranoid
-		# trigger = { trait = paranoid }
+		# tooltip_info = cold
+		# trigger = { trait = cold }
 		# FROM = {
 			# opinion = {
 				# modifier = opinion_pleased
@@ -1454,10 +1454,10 @@ character_event = {
 			# }
 		# }
 	# }
-	# option = { # Agree (Cynical)
+	# option = { # Agree (skeptical)
 		# name = "EVTOPTC9008"
-		# tooltip_info = cynical
-		# trigger = { trait = cynical }
+		# tooltip_info = skeptical
+		# trigger = { trait = skeptical }
 		# FROM = {
 			# opinion = {
 				# modifier = opinion_pleased
@@ -1494,10 +1494,10 @@ character_event = {
 			# }
 		# }
 	# }
-	# option = { # Agree (Slothful)
+	# option = { # Agree (carefree)
 		# name = "EVTOPTE9008"
-		# tooltip_info = slothful
-		# trigger = { trait = slothful }
+		# tooltip_info = carefree
+		# trigger = { trait = carefree }
 		# FROM = {
 			# opinion = {
 				# modifier = opinion_pleased
@@ -1647,7 +1647,7 @@ character_event = {
 					# OR = {
 						# trait = homosexual
 						# trait = impaler
-						# trait = lustful
+						# trait = carefree
 						# trait = drunkard
 						# trait = hedonist
 						# trait = syphilitic
@@ -1670,10 +1670,10 @@ character_event = {
 					# has_character_flag = faction_recruit
 					# OR = {
 						# trait = craven
-						# trait = paranoid
-						# trait = cynical
+						# trait = cold
+						# trait = skeptical
 						# trait = humble
-						# trait = slothful
+						# trait = carefree
 					# }
 				# }
 			# }
@@ -1694,13 +1694,13 @@ character_event = {
 					# NOT = {
 						# OR = {
 							# trait = craven
-							# trait = paranoid
-							# trait = cynical
+							# trait = cold
+							# trait = skeptical
 							# trait = humble
-							# trait = slothful
+							# trait = carefree
 							# trait = homosexual
 							# trait = impaler
-							# trait = lustful
+							# trait = carefree
 							# trait = drunkard
 							# trait = hedonist
 							# trait = syphilitic
@@ -1776,10 +1776,10 @@ character_event = {
 			# }
 		# }
 	# }
-	# option = { # Agree (Lustful)
+	# option = { # Agree (carefree)
 		# name = "EVTOPTC9002"
-		# tooltip_info = lustful
-		# trigger = { trait = lustful }
+		# tooltip_info = carefree
+		# trigger = { trait = carefree }
 		# FROM = {
 			# opinion = {
 				# modifier = opinion_pleased
@@ -1974,10 +1974,10 @@ character_event = {
 	
 	# is_triggered_only = yes
 	
-	# option = { # Agree (Paranoid)
+	# option = { # Agree (cold)
 		# name = "EVTOPTB9008"
-		# tooltip_info = paranoid
-		# trigger = { trait = paranoid }
+		# tooltip_info = cold
+		# trigger = { trait = cold }
 		# FROM = {
 			# opinion = {
 				# modifier = opinion_pleased
@@ -1994,10 +1994,10 @@ character_event = {
 			# }
 		# }
 	# }
-	# option = { # Agree (Cynical)
+	# option = { # Agree (skeptical)
 		# name = "EVTOPTC9008"
-		# tooltip_info = cynical
-		# trigger = { trait = cynical }
+		# tooltip_info = skeptical
+		# trigger = { trait = skeptical }
 		# FROM = {
 			# opinion = {
 				# modifier = opinion_pleased
@@ -2034,10 +2034,10 @@ character_event = {
 			# }
 		# }
 	# }
-	# option = { # Agree (Slothful)
+	# option = { # Agree (carefree)
 		# name = "EVTOPTE9008"
-		# tooltip_info = slothful
-		# trigger = { trait = slothful }
+		# tooltip_info = carefree
+		# trigger = { trait = carefree }
 		# FROM = {
 			# opinion = {
 				# modifier = opinion_pleased
@@ -2583,8 +2583,8 @@ character_event = {
 			# modifier = {
 				# factor = 3.0
 				# OR = {
-					# trait = wroth
-					# trait = paranoid
+					# trait = proud
+					# trait = cold
 				# }
 			# }
 		# }
@@ -2617,7 +2617,7 @@ character_event = {
 				# factor = 3.0
 				# OR = {
 					# trait = proud
-					# trait = honest
+					# trait = friendly
 					# trait = brave
 				# }
 			# }

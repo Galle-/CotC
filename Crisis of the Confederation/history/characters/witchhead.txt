@@ -8,16 +8,17 @@
 	culture = japanese_tengoku
 	religion = space_pirate
 	
-	add_trait = brilliant_strategist
-	add_trait = fighter_pilot
-	add_trait = fair
-	add_trait = genius
-	add_trait = brave
-	add_trait = extroverted
-	add_trait = cold
-	add_trait = pragmatic
-	add_trait = carefree
-	add_trait = proud
+	trait = brilliant_strategist
+	trait = fighter_pilot
+	trait = fair
+	trait = genius
+	trait = brave
+	trait = extraverted
+	trait = cold
+	trait = pragmatic
+	trait = carefree
+	trait = proud
+	trait = ambitious
 	
 	give_nickname = nick_the_black_tiger
 	
@@ -180,7 +181,7 @@
 	female = no
 	
 	culture = japanese_tengoku
-	religion = colonial_seperatist
+	religion = colonial_separatist
 	
 	add_trait = misguided_warrior
 	add_trait = fighter_pilot
@@ -190,24 +191,22 @@
 	add_trait = introverted
 	add_trait = friendly
 	add_trait = radical
+	#add_trait = legit_bastard #born before marriage of parents
 	
 	father = 1108921 # Jiro Shibata
 	mother = 1318425 # Michiko Hasegawa
 	
-	2957.1.1 = { birth = "2957.1.1" }
+	2965.1.1 = { birth = "2965.1.1" }
 }
 
 1102153 = {
-	# Commander of WH-367
+	# Governor of WH-367
 	name = "Noriko"
 	dynasty = 2153 # O'Reilly
 	female = yes
 	
 	culture = anglo_tengoku
-	religion = colonial_seperatist
-	
-	add_trait = tough_soldier
-	add_trait = warship_captain
+	religion = colonial_separatist
 	
 	2968.1.1 = { birth = "2968.1.1" }
 }
@@ -220,7 +219,7 @@
 	female = no
 	
 	culture = japanese_frontiersman
-	religion = colonial_seperatist
+	religion = colonial_separatist
 	
 	add_trait = misguided_warrior
 	add_trait = warship_captain
@@ -234,7 +233,7 @@
 	female = no
 	
 	culture = anglo_frontiersman
-	religion = colonial_seperatist
+	religion = colonial_separatist
 	
 	add_trait = tough_soldier
 	add_trait = fighter_pilot

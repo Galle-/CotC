@@ -1,0 +1,6 @@
+2990.1.1 = {
+	liege = "d_rigel"
+	holder = 1104731 # Pablo Ramos
+	law = true_cognatic_succession
+	law = succ_open_elective
+}

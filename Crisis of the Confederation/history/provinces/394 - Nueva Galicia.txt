@@ -1,0 +1,22 @@
+# 394 - Nueva Galicia
+
+# County Title
+title = c_nueva_galicia
+
+# Settlements
+max_settlements = 4
+
+b_nueva_galicia = city
+b_nueva_galicia_b = temple
+b_nueva_galicia_station = castle
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

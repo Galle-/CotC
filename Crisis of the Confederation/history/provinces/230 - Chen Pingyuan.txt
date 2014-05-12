@@ -6,15 +6,13 @@ title = c_chen_pingyuan
 # Settlements
 max_settlements = 4
 				
-
-				b_chen_pingyuan = ca_castle
-				
 # Misc
 culture = sino_bianjiangese # Initial culture
-religion = colonial_seperatist
+religion = colonial_separatist
 
 # History
 1.1.1 = {
+	b_chen_pingyuan = ca_planet_survey
 	b_chen_pingyuan = ca_toxic_atmosphere
 	b_chen_pingyuan = ca_frozen
 	b_chen_pingyuan = ca_lakes
@@ -24,5 +22,5 @@ religion = colonial_seperatist
 2998.1.1 = {
 	b_chen_pingyuan = ca_toxic_atmosphere_domes
 	b_chen_pingyuan = ca_colony_0
-	b_chen_pingyuwn = FL_01_ca
+	b_chen_pingyuan = FL_01_ca
 	}

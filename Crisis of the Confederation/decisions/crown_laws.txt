@@ -2,6 +2,651 @@
 # Laws ending with 0 will be default laws at game start
 
 de_jure_laws = {
+# MILITARY VASSAL LEGITIMACY
+	military_vassal_legitimacy_0 = { # Inheritance
+		show_as_title = yes
+		group = military_vassal_legitimacy
+		default = no
+		
+		potential = {
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
+			holder_scope = {
+				any_realm_title = {
+					holder_scope = {
+						is_feudal = yes
+						is_liege_or_above = ROOT
+						NOT = { character = ROOT }
+					}
+					has_crown_law_title = yes
+					crownlaw_title = {
+						title = PREVPREVPREV
+						OR = {
+							has_law = centralization_2
+							has_law = centralization_3
+							has_law = centralization_4
+							PREV = { is_tribal_type_title = yes }
+						}
+					}
+				}
+			}
+		}
+		
+		allow = {
+			always = yes
+		}
+		
+		revoke_allowed = { always = no }
+		ai_will_do = { factor = 0 }
+		ai_will_revoke = { factor = 0 }
+		
+		effect = {
+			holder_scope = {
+				any_realm_title = {
+					limit = {
+						holder_scope = {
+							is_feudal = yes
+							is_liege_or_above = ROOT
+							NOT = { character = ROOT }
+						}
+						has_crown_law_title = yes
+						crownlaw_title = {
+							title = PREVPREVPREV
+							OR = {
+								has_law = centralization_2
+								has_law = centralization_3
+								has_law = centralization_4
+								PREV = { is_tribal_type_title = yes }
+							}
+						}
+						NOT = { has_law = succ_gavelkind }
+						NOT = { has_law = succ_primogeniture }
+						NOT = { has_law = succ_seniority }
+						NOT = { has_law = succ_ultimogeniture }
+					}
+					add_law = succ_gavelkind
+				}
+			}
+		}
+	}
+	military_vassal_legitimacy_1 = { # Election
+		show_as_title = yes
+		group = military_vassal_legitimacy
+		default = no
+		
+		potential = {
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
+			holder_scope = {
+				any_realm_title = {
+					holder_scope = {
+						is_feudal = yes
+						is_liege_or_above = ROOT
+						NOT = { character = ROOT }
+					}
+					has_crown_law_title = yes
+					crownlaw_title = {
+						title = PREVPREVPREV
+						OR = {
+							has_law = centralization_2
+							has_law = centralization_3
+							has_law = centralization_4
+							PREV = { is_tribal_type_title = yes }
+						}
+					}
+				}
+			}
+		}
+		
+		allow = {
+			always = yes
+		}
+		
+		revoke_allowed = { always = no }
+		ai_will_do = { factor = 0 }
+		ai_will_revoke = { factor = 0 }
+		
+		effect = {
+			holder_scope = {
+				any_realm_title = {
+					limit = {
+						holder_scope = {
+							is_feudal = yes
+							is_liege_or_above = ROOT
+							NOT = { character = ROOT }
+						}
+						has_crown_law_title = yes
+						crownlaw_title = {
+							title = PREVPREVPREV
+							OR = {
+								has_law = centralization_2
+								has_law = centralization_3
+								has_law = centralization_4
+								PREV = { is_tribal_type_title = yes }
+							}
+						}
+						NOT = { has_law = succ_open_elective }
+						NOT = { has_law = succ_feudal_elective }
+						NOT = { has_law = succ_tanistry }
+					}
+					add_law = succ_open_elective
+				}
+			}
+		}
+	}
+	military_vassal_legitimacy_2 = { # Appointment
+		show_as_title = yes
+		group = military_vassal_legitimacy
+		default = yes
+		
+		potential = {
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
+			holder_scope = {
+				any_realm_title = {
+					holder_scope = {
+						is_feudal = yes
+						is_liege_or_above = ROOT
+						NOT = { character = ROOT }
+					}
+					has_crown_law_title = yes
+					crownlaw_title = {
+						title = PREVPREVPREV
+						OR = {
+							has_law = centralization_2
+							has_law = centralization_3
+							has_law = centralization_4
+							PREV = { is_tribal_type_title = yes }
+						}
+					}
+				}
+			}
+		}
+		
+		allow = {
+			always = yes
+		}
+		
+		revoke_allowed = { always = no }
+		ai_will_do = { factor = 0 }
+		ai_will_revoke = { factor = 0 }
+		
+		effect = {
+			holder_scope = {
+				any_realm_title = {
+					limit = {
+						holder_scope = {
+							is_feudal = yes
+							is_liege_or_above = ROOT
+							NOT = { character = ROOT }
+						}
+						has_crown_law_title = yes
+						crownlaw_title = {
+							title = PREVPREVPREV
+							OR = {
+								has_law = centralization_2
+								has_law = centralization_3
+								has_law = centralization_4
+								PREV = { is_tribal_type_title = yes }
+							}
+						}
+						NOT = { has_law = succ_appointment }
+					}
+					add_law = succ_appointment
+				}
+			}
+		}
+	}
+# REPUBLIC VASSAL LEGITIMACY
+	republic_vassal_legitimacy_0 = { # Inheritance
+		show_as_title = yes
+		group = republic_vassal_legitimacy
+		default = no
+		
+		potential = {
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
+			holder_scope = {
+				any_realm_title = {
+					holder_scope = {
+						is_republic = yes
+						OR = {
+							is_merchant_republic = yes
+							is_patrician = no
+						}
+						is_liege_or_above = ROOT
+						NOT = { character = ROOT }
+					}
+					has_crown_law_title = yes
+					crownlaw_title = {
+						title = PREVPREVPREV
+						OR = {
+							has_law = centralization_2
+							has_law = centralization_3
+							has_law = centralization_4
+							PREV = { is_tribal_type_title = yes }
+						}
+					}
+				}
+			}
+		}
+		
+		allow = {
+			always = yes
+		}
+		
+		revoke_allowed = { always = no }
+		ai_will_do = { factor = 0 }
+		ai_will_revoke = { factor = 0 }
+		
+		effect = {
+			holder_scope = {
+				any_realm_title = {
+					limit = {
+						holder_scope = {
+							is_republic = yes
+							OR = {
+								is_merchant_republic = yes
+								is_patrician = no
+							}
+							is_liege_or_above = ROOT
+							NOT = { character = ROOT }
+						}
+						has_crown_law_title = yes
+						crownlaw_title = {
+							title = PREVPREVPREV
+							OR = {
+								has_law = centralization_2
+								has_law = centralization_3
+								has_law = centralization_4
+								PREV = { is_tribal_type_title = yes }
+							}
+						}
+						NOT = { has_law = succ_gavelkind }
+						NOT = { has_law = succ_primogeniture }
+						NOT = { has_law = succ_seniority }
+						NOT = { has_law = succ_ultimogeniture }
+					}
+					add_law = succ_gavelkind
+				}
+			}
+		}
+	}
+	republic_vassal_legitimacy_1 = { # Election
+		show_as_title = yes
+		group = republic_vassal_legitimacy
+		default = yes
+		
+		potential = {
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
+			holder_scope = {
+				any_realm_title = {
+					holder_scope = {
+						is_republic = yes
+						OR = {
+							is_merchant_republic = yes
+							is_patrician = no
+						}
+						is_liege_or_above = ROOT
+						NOT = { character = ROOT }
+					}
+					has_crown_law_title = yes
+					crownlaw_title = {
+						title = PREVPREVPREV
+						OR = {
+							has_law = centralization_2
+							has_law = centralization_3
+							has_law = centralization_4
+							PREV = { is_tribal_type_title = yes }
+						}
+					}
+				}
+			}
+		}
+		
+		allow = {
+			always = yes
+		}
+		
+		revoke_allowed = { always = no }
+		ai_will_do = { factor = 0 }
+		ai_will_revoke = { factor = 0 }
+		
+		effect = {
+			holder_scope = {
+				any_realm_title = {
+					limit = {
+						holder_scope = {
+							is_republic = yes
+							OR = {
+								is_merchant_republic = yes
+								is_patrician = no
+							}
+							is_liege_or_above = ROOT
+							NOT = { character = ROOT }
+						}
+						has_crown_law_title = yes
+						crownlaw_title = {
+							title = PREVPREVPREV
+							OR = {
+								has_law = centralization_2
+								has_law = centralization_3
+								has_law = centralization_4
+								PREV = { is_tribal_type_title = yes }
+							}
+						}
+						NOT = { has_law = succ_open_elective }
+						NOT = { has_law = succ_republic_elective }
+						NOT = { has_law = succ_tanistry }
+					}
+					add_law = succ_open_elective
+				}
+			}
+		}
+	}
+	republic_vassal_legitimacy_2 = { # Appointment
+		show_as_title = yes
+		group = republic_vassal_legitimacy
+		default = no
+		
+		potential = {
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
+			holder_scope = {
+				any_realm_title = {
+					holder_scope = {
+						is_republic = yes
+						OR = {
+							is_merchant_republic = yes
+							is_patrician = no
+						}
+						is_liege_or_above = ROOT
+						NOT = { character = ROOT }
+					}
+					has_crown_law_title = yes
+					crownlaw_title = {
+						title = PREVPREVPREV
+						OR = {
+							has_law = centralization_2
+							has_law = centralization_3
+							has_law = centralization_4
+							PREV = { is_tribal_type_title = yes }
+						}
+					}
+				}
+			}
+		}
+		
+		allow = {
+			always = yes
+		}
+		
+		revoke_allowed = { always = no }
+		ai_will_do = { factor = 0 }
+		ai_will_revoke = { factor = 0 }
+		
+		effect = {
+			holder_scope = {
+				any_realm_title = {
+					limit = {
+						holder_scope = {
+							is_republic = yes
+							OR = {
+								is_merchant_republic = yes
+								is_patrician = no
+							}
+							is_liege_or_above = ROOT
+							NOT = { character = ROOT }
+						}
+						has_crown_law_title = yes
+						crownlaw_title = {
+							title = PREVPREVPREV
+							OR = {
+								has_law = centralization_2
+								has_law = centralization_3
+								has_law = centralization_4
+								PREV = { is_tribal_type_title = yes }
+							}
+						}
+						NOT = { has_law = succ_appointment }
+					}
+					add_law = succ_appointment
+				}
+			}
+		}
+	}
+# THEOCRACY VASSAL LEGITIMACY
+	theocracy_vassal_legitimacy_0 = { # Inheritance
+		show_as_title = yes
+		group = theocracy_vassal_legitimacy
+		default = no
+		
+		potential = {
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
+			holder_scope = {
+				any_realm_title = {
+					holder_scope = {
+						is_theocracy = yes
+						is_liege_or_above = ROOT
+						NOT = { character = ROOT }
+					}
+					has_crown_law_title = yes
+					crownlaw_title = {
+						title = PREVPREVPREV
+						OR = {
+							has_law = centralization_2
+							has_law = centralization_3
+							has_law = centralization_4
+							PREV = { is_tribal_type_title = yes }
+						}
+					}
+				}
+			}
+		}
+		
+		allow = {
+			always = yes
+		}
+		
+		revoke_allowed = { always = no }
+		ai_will_do = { factor = 0 }
+		ai_will_revoke = { factor = 0 }
+		
+		effect = {
+			holder_scope = {
+				any_realm_title = {
+					limit = {
+						holder_scope = {
+							is_theocracy = yes
+							is_liege_or_above = ROOT
+							NOT = { character = ROOT }
+						}
+						has_crown_law_title = yes
+						crownlaw_title = {
+							title = PREVPREVPREV
+							OR = {
+								has_law = centralization_2
+								has_law = centralization_3
+								has_law = centralization_4
+								PREV = { is_tribal_type_title = yes }
+							}
+						}
+						NOT = { has_law = succ_gavelkind }
+						NOT = { has_law = succ_primogeniture }
+						NOT = { has_law = succ_seniority }
+						NOT = { has_law = succ_ultimogeniture }
+					}
+					add_law = succ_gavelkind
+				}
+			}
+		}
+	}
+	theocracy_vassal_legitimacy_1 = { # Election
+		show_as_title = yes
+		group = theocracy_vassal_legitimacy
+		default = no
+		
+		potential = {
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
+			holder_scope = {
+				any_realm_title = {
+					holder_scope = {
+						is_theocracy = yes
+						is_liege_or_above = ROOT
+						NOT = { character = ROOT }
+					}
+					has_crown_law_title = yes
+					crownlaw_title = {
+						title = PREVPREVPREV
+						OR = {
+							has_law = centralization_2
+							has_law = centralization_3
+							has_law = centralization_4
+							PREV = { is_tribal_type_title = yes }
+						}
+					}
+				}
+			}
+		}
+		
+		allow = {
+			always = yes
+		}
+		
+		revoke_allowed = { always = no }
+		ai_will_do = { factor = 0 }
+		ai_will_revoke = { factor = 0 }
+		
+		effect = {
+			holder_scope = {
+				any_realm_title = {
+					limit = {
+						holder_scope = {
+							is_theocracy = yes
+							is_liege_or_above = ROOT
+							NOT = { character = ROOT }
+						}
+						has_crown_law_title = yes
+						crownlaw_title = {
+							title = PREVPREVPREV
+							OR = {
+								has_law = centralization_2
+								has_law = centralization_3
+								has_law = centralization_4
+								PREV = { is_tribal_type_title = yes }
+							}
+						}
+						NOT = { has_law = succ_open_elective }
+						NOT = { has_law = succ_theocracy_elective }
+						NOT = { has_law = succ_tanistry }
+					}
+					add_law = succ_open_elective
+				}
+			}
+		}
+	}
+	theocracy_vassal_legitimacy_2 = { # Appointment
+		show_as_title = yes
+		group = theocracy_vassal_legitimacy
+		default = yes
+		
+		potential = {
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
+			holder_scope = {
+				any_realm_title = {
+					holder_scope = {
+						is_theocracy = yes
+						is_liege_or_above = ROOT
+						NOT = { character = ROOT }
+					}
+					has_crown_law_title = yes
+					crownlaw_title = {
+						title = PREVPREVPREV
+						OR = {
+							has_law = centralization_2
+							has_law = centralization_3
+							has_law = centralization_4
+							PREV = { is_tribal_type_title = yes }
+						}
+					}
+				}
+			}
+		}
+		
+		allow = {
+			always = yes
+		}
+		
+		revoke_allowed = { always = no }
+		ai_will_do = { factor = 0 }
+		ai_will_revoke = { factor = 0 }
+		
+		effect = {
+			holder_scope = {
+				any_realm_title = {
+					limit = {
+						holder_scope = {
+							is_theocracy = yes
+							is_liege_or_above = ROOT
+							NOT = { character = ROOT }
+						}
+						has_crown_law_title = yes
+						crownlaw_title = {
+							title = PREVPREVPREV
+							OR = {
+								has_law = centralization_2
+								has_law = centralization_3
+								has_law = centralization_4
+								PREV = { is_tribal_type_title = yes }
+							}
+						}
+						NOT = { has_law = succ_appointment }
+					}
+					add_law = succ_appointment
+				}
+			}
+		}
+	}
 # TERM LENGTH
 	term_length_0 = { # 1 Year
 		show_as_title = yes
@@ -9,6 +654,13 @@ de_jure_laws = {
 		default = no
 		
 		potential = {
+			temporary = no
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
 			is_primary_holder_title = yes
 			OR = {
 				has_law = succ_patrician_elective
@@ -32,6 +684,13 @@ de_jure_laws = {
 		default = yes # Because 'MURICA
 		
 		potential = {
+			temporary = no
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
 			is_primary_holder_title = yes
 			OR = {
 				has_law = succ_patrician_elective
@@ -58,6 +717,13 @@ de_jure_laws = {
 		default = no
 		
 		potential = {
+			temporary = no
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
 			is_primary_holder_title = yes
 			OR = {
 				has_law = succ_patrician_elective
@@ -84,6 +750,13 @@ de_jure_laws = {
 		default = no
 		
 		potential = {
+			temporary = no
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
 			is_primary_holder_title = yes
 			OR = {
 				has_law = succ_patrician_elective
@@ -110,6 +783,13 @@ de_jure_laws = {
 		default = no
 		
 		potential = {
+			temporary = no
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
 			is_primary_holder_title = yes
 			OR = {
 				has_law = succ_patrician_elective
@@ -133,6 +813,14 @@ de_jure_laws = {
 		group = premiership
 		default = yes
 		
+		potential = {
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
+		}
 		allow = { always = yes }
 		revoke_allowed = { always = no }
 		ai_will_do = {
@@ -140,8 +828,8 @@ de_jure_laws = {
 		}
 		effect = {
 			hidden_tooltip = {
-				remove_law = premiership_1
-				remove_law = premiership_2
+				revoke_law = premiership_1
+				revoke_law = premiership_2
 			}
 		}
 	}
@@ -150,6 +838,14 @@ de_jure_laws = {
 		group = premiership
 		default = no
 		
+		potential = {
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
+		}
 		allow = { always = yes }
 		revoke_allowed = { always = no }
 		ai_will_do = {
@@ -157,8 +853,8 @@ de_jure_laws = {
 		}
 		effect = {
 			hidden_tooltip = {
-				remove_law = premiership_0
-				remove_law = premiership_1
+				revoke_law = premiership_0
+				revoke_law = premiership_1
 			}
 		}
 	}
@@ -167,6 +863,14 @@ de_jure_laws = {
 		group = premiership
 		default = no
 		
+		potential = {
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
+		}
 		allow = { always = yes }
 		revoke_allowed = { always = no }
 		ai_will_do = {
@@ -174,8 +878,8 @@ de_jure_laws = {
 		}
 		effect = {
 			hidden_tooltip = {
-				remove_law = premiership_0
-				remove_law = premiership_1
+				revoke_law = premiership_0
+				revoke_law = premiership_1
 			}
 		}
 	}
@@ -188,6 +892,14 @@ de_jure_laws = {
 		
 		feudal_opinion = 5
 		
+		potential = {
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
+		}
 		allow = {
 			holder_scope = { is_republic = no }
 			has_law = centralization_1
@@ -230,6 +942,15 @@ de_jure_laws = {
 		group = centralization
 		
 		feudal_opinion = -5
+		
+		potential = {
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
+		}
 		
 		allow = {
 			OR = {
@@ -303,18 +1024,21 @@ de_jure_laws = {
 		
 		feudal_opinion = -10
 		
+		potential = {
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
+		}
+		
 		allow = {
 			holder_scope = { 
 				is_republic = no 
 				hidden_tooltip = {
-					NOT = { religion = norse_pagan }
-					NOT = { religion = tengri_pagan }
-					NOT = { religion = baltic_pagan }
-					NOT = { religion = finnish_pagan }
-					NOT = { religion = aztec }
-					NOT = { religion = slavic_pagan }
+					NOT = { religion_group = outlaw_group }
 				}
-				custom_tooltip = TT_NOT_UNREFORMED_PAGAN
 			}
 			OR = {
 				has_law = centralization_1
@@ -390,18 +1114,21 @@ de_jure_laws = {
 		
 		feudal_opinion = -20
 		
+		potential = {
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
+		}
+		
 		allow = {
 			holder_scope = { 
 				is_republic = no 
 				hidden_tooltip = {
-					NOT = { religion = norse_pagan }
-					NOT = { religion = tengri_pagan }
-					NOT = { religion = baltic_pagan }
-					NOT = { religion = finnish_pagan }
-					NOT = { religion = aztec }
-					NOT = { religion = slavic_pagan }
+					NOT = { religion_group = outlaw_group }
 				}
-				custom_tooltip = TT_NOT_UNREFORMED_PAGAN
 			}
 			OR = {
 				has_law = centralization_2
@@ -481,18 +1208,21 @@ de_jure_laws = {
 		
 		feudal_opinion = -30
 		
+		potential = {
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
+		}
+		
 		allow = {
 			holder_scope = { 
 				is_republic = no 
 				hidden_tooltip = {
-					NOT = { religion = norse_pagan }
-					NOT = { religion = tengri_pagan }
-					NOT = { religion = baltic_pagan }
-					NOT = { religion = finnish_pagan }
-					NOT = { religion = aztec }
-					NOT = { religion = slavic_pagan }
+					NOT = { religion_group = outlaw_group }
 				}
-				custom_tooltip = TT_NOT_UNREFORMED_PAGAN
 			}
 			has_law = centralization_3
 		}
@@ -564,13 +1294,22 @@ de_jure_laws = {
 	}
 	
 # INVESTITURE
+
+	# Papal Investiture
 	investiture_law_0 = {
 		show_as_title = yes
 		group = investiture_law
 		default = yes
 		potential = {
+			holder_scope = { 
+				OR = {
+					religion = orthodox
+					religion = pilgrim
+				}
+			}
+		}
+		allow = {
 			year = 1000
-			holder_scope = { religion = catholic }
 		}
 		revoke_allowed = {
 			always = no
@@ -590,20 +1329,37 @@ de_jure_laws = {
 		}
 	}
 	
+	# Free Investiture
 	investiture_law_1 = {
 		show_as_title = yes
 		rel_head_opinion = -30
 		free_invest_vassal_opinion = 10 # vassals with bishops will appreciate this law
-		temple_all_opinion = 25 # Bishops will be grateful to their liege for their appointment
+		temple_all_opinion = 10 # Bishops will tend to be more loyal to the Crown
 		group = investiture_law
 		potential = {
-			holder_scope = { religion = catholic }
+			holder_scope = {
+				OR = {
+					religion = orthodox
+					religion = pilgrim
+				}
+			}
 		}
 		revoke_allowed = {
 			always = no
 		}			
 		ai_will_do = {
-			factor = 0
+			modifier = {
+				factor = 0.002 # Rare to do this
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					holder_scope = {
+						NOT = { trait = pragmatic }
+					}
+					NOT = { has_law = investiture_law_0 }
+				}
+			}
 		}
 		ai_will_revoke = {
 			factor = 0
@@ -624,7 +1380,12 @@ de_jure_laws = {
 		default = no
 		
 		potential = {
-			always = yes
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
 		}
 		
 		allow = {
@@ -641,9 +1402,9 @@ de_jure_laws = {
 		}
 		
 		# The military can't be relied on to take orders
-		city_vassal_minimum_levy = -10
-		castle_vassal_minimum_levy = -10
-		temple_vassal_minimum_levy = -10
+		city_vassal_min_levy = -10
+		castle_vassal_min_levy = -10
+		temple_vassal_min_levy = -10
 	}
 	public_order_1 = {
 		show_as_title = yes
@@ -651,20 +1412,31 @@ de_jure_laws = {
 		default = yes
 		
 		potential = {
-			always = yes
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
 		}
 		
 		allow = {
-			always = yes
+			ROOT = {
+				war = no # Not at war
+				religion_authority = 0.25 # Minimum 25% moral authority
+				NOT = { any_vassal = { any_current_enemy = { liege = { character = ROOT } } } } # No vassals at war
+				NOT = { has_character_modifier = constitutional_crisis } # No constitutional crisis
+				NOT = { any_demesne_province = { revolt_risk = 0.1 } } # No demesne revolt risk above 10%
+			}
 		}
 		
 		revoke_allowed = { always = no }
 		
-		ai_will_do = { factor = 0 }
+		ai_will_do = { factor = 1 } # Always do this if possible
 		
 		effect = {
-			hidden_tooltip = { revoke_law = public_order_1 }
-			set_the_kings_peace = no
+			hidden_tooltip = { revoke_law = public_order_0 }
+			set_the_kings_peace = yes
 		}
 	}
 }

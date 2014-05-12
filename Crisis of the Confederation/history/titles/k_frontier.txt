@@ -1,11 +1,5 @@
 2489.1.1={
 	liege="e_terran_confederation"
-	law = legitimacy_law_1
-	law = election_law_1
-	law = centralization_3
-	law = military_vassal_legitimacy_2
-	law = republic_vassal_legitimacy_1
-	law = theocracy_vassal_legitimacy_2
 	law = succ_open_elective
 	law = true_cognatic_succession
 }

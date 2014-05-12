@@ -1,0 +1,17 @@
+# 229 - WH-998
+
+# County Title
+title = c_wh_998
+
+# Settlements
+max_settlements = 4
+
+b_wh_998_station_alpha = castle
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = space_pirate
+
+1.1.1 = {
+	b_wh_998_station_alpha = ca_pirate_harbor
+}

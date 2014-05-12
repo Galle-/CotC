@@ -1,0 +1,19 @@
+# 114 - Saber
+
+# County Title
+title = c_saber
+
+# Settlements
+max_settlements = 4
+
+b_saber_iii = city
+b_saber_observatory = temple
+b_saber_defense_station = castle
+
+# Misc
+culture = japanese_tengoku # Initial culture
+religion = colonial_separatist
+1.1.1 = {
+}
+
+2998.1.1 = { capital = b_saber_defense_station }

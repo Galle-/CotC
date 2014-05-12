@@ -1,0 +1,12 @@
+2766.1.1 = {
+	liege = "d_okyoto_nara"
+	law = true_cognatic_succession
+	law = succ_tanistry
+	law = local_term_length_4
+}
+2966.1.1 = {
+	holder = 1108233 # Hiroshi Hayashi
+}
+2997.10.21 = {
+	liege = "d_jion_fleet"
+}

@@ -1,0 +1,23 @@
+# 410 - Warshawski
+
+# County Title
+title = c_warshawski
+
+# Settlements
+max_settlements = 4
+
+b_warshawski_iii = city
+b_warshawski_iii_b = temple
+b_warshawski_iii_c = castle
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+	capital = b_warshawski_iii_c
+}

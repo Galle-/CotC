@@ -1,0 +1,16 @@
+# 220 - WH-178
+
+# County Title
+title = c_wh_178
+
+# Settlements
+max_settlements = 4
+
+b_wh_178_station_alpha = castle
+
+# Misc
+culture = russo_strugatskite # Initial culture
+religion = neo_socialist
+
+1.1.1 = {
+}

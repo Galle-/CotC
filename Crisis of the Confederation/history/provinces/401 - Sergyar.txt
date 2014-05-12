@@ -1,0 +1,22 @@
+# 401 - Sergyar
+
+# County Title
+title = c_sergyar
+
+# Settlements
+max_settlements = 4
+
+b_sergyar_iii = castle
+b_sergyar_iii_observatory = temple
+b_sergyar_iv = city
+
+# Misc
+culture = russo_orion # Initial culture
+religion = astrist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

@@ -185,6 +185,14 @@ term_length_3_desc;Leaders hold power for ten years before a new leader must be 
 term_length_4;No Term Limits;Pas de durée de mandat;;;;;;;;;;;;x
 term_length_4_option;Life;A vie;;;;;;;;;;;;x
 term_length_4_desc;Leaders hold power for life or until they are removed by a vote of no confidence..;Les dirigeants gardent le pouvoir à vie ou jusqu'à ce qu'ils soient démis de leurs fonctions…;;;;;;;;;;;;x
+public_order;Civil Order;;;;;;;;;;;;;x
+public_order_desc;Whether or not the government is able to enforce its control over its subordinates. Civil Order is automatically set to Weak whenever a civil war or revolt breaks out against the government, and can only be restored to Strong by a sufficiently powerful government.;;;;;;;;;;;;;x
+public_order_0;Weak Civil Order;;;;;;;;;;;;;x
+public_order_0_option;Weak;;;;;;;;;;;;;x
+public_order_0_desc;The government has little de facto control over its territory, and local governors are largely autonomous. Vassals may wage private wars within the realm, and local militias cannot be relied upon for support.;;;;;;;;;;;;;x
+public_order_0;Strong Civil Order;;;;;;;;;;;;;x
+public_order_0_option;Strong;;;;;;;;;;;;;x
+public_order_0_desc;The government is strong and steady. Vassals cannot wage autonomous wars within the realm, for fear of a swift and strong reprisal from the capital.;;;;;;;;;;;;;x
 civil_unrest_0;Insignificant Civil Unrest;;;;;;;;;;;;;x
 civil_unrest_1;Trivial Civil Unrest;;;;;;;;;;;;;x
 civil_unrest_2;Mild Civil Unrest;;;;;;;;;;;;;x

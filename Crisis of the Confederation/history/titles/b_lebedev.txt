@@ -1,0 +1,10 @@
+2978.1.1 = {
+	holding_dynasty = 10155 # Lebedev
+	liege = "k_tierra_celeste"
+	holder = 11010155 # Juan Lebedev
+	law = true_cognatic_succession
+	law = succ_seniority
+}
+2998.1.1 = {
+	liege = "k_orion_reach"
+}

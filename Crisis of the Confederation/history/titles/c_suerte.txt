@@ -1,0 +1,6 @@
+2998.1.1 = {
+	liege = "d_ortega_gaona"
+	law = true_cognatic_succession
+	law = succ_appointment
+	holder = 1104667 # Sebastian Madrigal
+}

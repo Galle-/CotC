@@ -1,0 +1,6 @@
+2998.1.1 = {
+	liege = "d_paulet"
+	holder = 1105707 # Joaquin Purohit
+	law = true_cognatic_succession
+	law = succ_open_elective
+}

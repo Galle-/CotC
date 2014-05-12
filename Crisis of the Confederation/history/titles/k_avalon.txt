@@ -1,7 +1,6 @@
 2509.1.1 = {
 	liege = "e_terran_confederation"
-	law = legitimacy_law_0
-	law = inheritance_law_2
+	law = military_vassal_legitimacy_2
 	law = centralization_1
 	law = true_cognatic_succession
 	law = succ_primogeniture
@@ -14,7 +13,6 @@
 2699.1.1 = { holder = "19020019" } # Victoria VI Locksley
 2705.1.1 = {
 	holder = "18020019" # Victoria VII Locksley
-	law = inheritance_law_3
 	law = succ_ultimogeniture
 }
 2764.1.1 = { holder = "17020019" } # Victoria VIII Locksley
@@ -25,4 +23,6 @@
 2975.1.1 = { holder = "12020019" } # Victoria XIII Locksley
 2996.2.5 = { holder = "11020019" } # Victoria XIV Locksley
 2996.2.19 = { holder = "11020020" } # "Arthur Pendragon"
-2998.1.1 = { liege = 0 }
+2998.1.1 = {
+	law = military_vassal_legitimacy_0
+}

@@ -3,7 +3,90 @@ namespace = nepotism
 # These events handle the new system for trying to manipulate successions
 # This event should be called both on death and whenever a character would otherwise abdicate
 character_event = {
+	id = nepotism.0
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		independent = no
+		any_demesne_title = { has_law = succ_appointment }
+		NOT = {
+			any_realm_character = {
+				liege = { character = ROOT }
+				has_minor_title = title_expected_successor
+			}
+		}
+		OR = {
+			AND = {
+				OR = {
+					is_republic = yes
+					is_patrician = yes
+				}
+				liege = {
+					is_republic = no
+					is_patrician = no
+				}
+			}
+			AND = {
+				is_feudal = yes
+				is_patrician = no
+				liege = {
+					OR = {
+						is_feudal = no
+						is_patrician = yes
+					}
+				}
+			}
+			AND = {
+				is_theocracy = yes
+				liege = { is_theocracy = no }
+			}
+		}
+	}
+	
+	immediate = {
+		liege = {
+			ROOT = {
+				# Give away all titles above county level
+				any_demesne_title = {
+					limit = {
+						has_law = succ_appointment
+						higher_tier_than = COUNT
+					}
+					grant_title = PREVPREV
+				}
+			}
+		}
+		# Create a new character to inherit all lower titles
+		random_list = {
+			50 = {
+				create_random_priest = {
+					random_traits = yes
+					culture = ROOT
+					religion = ROOT
+					age = 25
+					female = yes
+				}
+				new_character = { give_minor_title = title_expected_successor }
+			}
+			50 = {
+				create_random_priest = {
+					random_traits = yes
+					culture = ROOT
+					religion = ROOT
+					age = 25
+					female = no
+				}
+				new_character = { give_minor_title = title_expected_successor }
+			}
+		}
+		character_event = { id = nepotism.1 }
+	}
+}
+# Likewise this one
+character_event = {
 	id = nepotism.1
+	hide_window = yes
 	is_triggered_only = yes
 	
 	trigger = {

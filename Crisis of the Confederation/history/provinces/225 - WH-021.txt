@@ -1,0 +1,16 @@
+# 225 WH-021
+
+# County Title
+title = c_wh_021
+
+# Settlements
+max_settlements = 4
+
+b_wh_021_station_alpha = city
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = colonial_separatist
+
+1.1.1 = {
+}

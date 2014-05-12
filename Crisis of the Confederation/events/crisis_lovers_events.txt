@@ -14,7 +14,7 @@ character_event = {
 			trait = full_cybernetic_conversion
 			trait = open_minded
 			religion = cyberneticist
-			religion = machine_cult
+			religion = machine_cultist
 		}
 		OR = {
 			AND = {
@@ -1144,7 +1144,7 @@ character_event = {
 	option = { name = "EVTOPTALOVERS9" }
 }
 
-# Various "character might be attractive to another character" events
+# Various "character might be fair to another character" events
 # Teenage students of the same guardian
 character_event = {
 	id = lovers.10
@@ -1177,7 +1177,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.8
-			trait = attractive
+			trait = fair
 		}
 		modifier = {
 			factor = 1.25
@@ -1239,7 +1239,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.8
-			trait = attractive
+			trait = fair
 		}
 		modifier = {
 			factor = 1.25
@@ -1298,7 +1298,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.8
-			trait = attractive
+			trait = fair
 		}
 		modifier = {
 			factor = 1.25
@@ -1355,7 +1355,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.8
-			trait = attractive
+			trait = fair
 		}
 		modifier = {
 			factor = 1.25
@@ -1411,7 +1411,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.8
-			trait = attractive
+			trait = fair
 		}
 		modifier = {
 			factor = 1.25
@@ -1458,7 +1458,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.8
-			trait = attractive
+			trait = fair
 		}
 		modifier = {
 			factor = 1.25
@@ -1505,7 +1505,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.8
-			trait = attractive
+			trait = fair
 		}
 		modifier = {
 			factor = 1.25
@@ -1561,7 +1561,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.8
-			trait = attractive
+			trait = fair
 		}
 		modifier = {
 			factor = 1.25
@@ -1615,7 +1615,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.8
-			trait = attractive
+			trait = fair
 		}
 		modifier = {
 			factor = 1.25
@@ -1668,7 +1668,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.8
-			trait = attractive
+			trait = fair
 		}
 		modifier = {
 			factor = 1.25
@@ -1712,7 +1712,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.8
-			trait = attractive
+			trait = fair
 		}
 		modifier = {
 			factor = 1.25
@@ -2140,7 +2140,7 @@ character_event = {
 				factor = 1.25
 				FROM = {
 					num_of_lovers = 1
-					NOT = { any_lover = { { reverse_opinion = { who = ROOT value = -99 } } }
+					NOT = { any_lover = { { reverse_opinion = { who = ROOT value = -99 } } } }
 				}
 			}
 			modifier = {
@@ -2300,6 +2300,7 @@ character_event = {
 			any_courtier = { character = ROOT }
 			any_courtier = {
 				has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+				NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_heartbroken } }
 				NOT = { any_lover = { character = ROOT } }
 				NOT = { trait = incapable }
 				prisoner = no
@@ -2307,13 +2308,16 @@ character_event = {
 		}
 	}
 	
-	mean_time_to_happen = { factor = 120 }
+	mean_time_to_happen = {
+		months = 120
+	}
 	
 	immediate = {
 		liege = {
 			random_courtier = {
 				limit = {
 					has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+					NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_heartbroken } }
 					NOT = { any_lover = { character = ROOT } }
 					NOT = { trait = incapable }
 					prisoner = no
@@ -2335,18 +2339,22 @@ character_event = {
 	trigger = {
 		any_friend = {
 			has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_heartbroken } }
 			NOT = { any_lover = { character = ROOT } }
 			NOT = { trait = incapable }
 			prisoner = no
 		}
 	}
 	
-	mean_time_to_happen = { factor = 120 }
+	mean_time_to_happen = {
+		months = 120
+	}
 	
 	immediate = {
 		random_friend = {
 			limit = {
 				has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+				NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_heartbroken } }
 				NOT = { any_lover = { character = ROOT } }
 				NOT = { trait = incapable }
 				prisoner = no
@@ -2367,18 +2375,22 @@ character_event = {
 	trigger = {
 		any_courtier = {
 			has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_heartbroken } }
 			NOT = { any_lover = { character = ROOT } }
 			NOT = { trait = incapable }
 			prisoner = no
 		}
 	}
 	
-	mean_time_to_happen = { factor = 120 }
+	mean_time_to_happen = {
+		months = 120
+	}
 	
 	immediate = {
 		random_courtier = {
 			limit = {
 				has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+				NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_heartbroken } }
 				NOT = { any_lover = { character = ROOT } }
 				NOT = { trait = incapable }
 				prisoner = no
@@ -2399,13 +2411,16 @@ character_event = {
 	trigger = {
 		liege = {
 			has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_heartbroken } }
 			NOT = { any_lover = { character = ROOT } }
 			NOT = { trait = incapable }
 			prisoner = no
 		}
 	}
 	
-	mean_time_to_happen = { factor = 120 }
+	mean_time_to_happen = {
+		months = 120
+	}
 	
 	immediate = { liege = { character_event = { id = lovers.50 } } }
 }
@@ -2421,13 +2436,16 @@ character_event = {
 	trigger = {
 		spouse = {
 			has_opinion_modifier = { who = ROOT modifier = opinion_in_love }
+			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_heartbroken } }
 			NOT = { any_lover = { character = ROOT } }
 			NOT = { trait = incapable }
 			prisoner = no
 		}
 	}
 	
-	mean_time_to_happen = { factor = 120 }
+	mean_time_to_happen = {
+		months = 120
+	}
 	
 	immediate = { spouse = { character_event = { id = lovers.50 } } }
 }

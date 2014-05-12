@@ -1,12 +1,14 @@
 # Ryusei Sato and family
 # Any resemblance to a certain famous mecha anime TOTALLY coincidental.
 1107945 = {
-	# Dictator of Jion, 2998 - Present
+	# Dictator of Jion, 2997 - Present
 	name = "Ryusei"
 	dynasty = 7945 # Sato
 	female = no
 	
 	culture = japanese_tengoku
+	dna = "achdfofabbe"
+	properties = "0m00g"
 	religion = astrist
 	
 	trait = intricate_webweaver
@@ -21,13 +23,15 @@
 }
 
 1117945 = {
-	# Commander of the Jion Space Attack Force, 2998 - Present
+	# Commander of the Jion Space Attack Force, 2997 - Present
 	# Minister of War for the Military State of Jion
 	name = "Jiro"
 	dynasty = 7945 # Sato
 	female = no
 	
 	culture = japanese_tengoku
+	dna="bajbmwbbabo"
+	properties="0h00g"
 	religion = astrist
 	
 	trait = quick
@@ -42,10 +46,10 @@
 	trait = proud
 	trait = ambitious
 	
-	2963.1.1 = { birth = "2963.1.1" }
-	2998.1.1 = { effect = { grant_job_title = job_marshal } }
+	father = 1107945 # Ryusei Sato
 	
-	father = 11017945 # Ryusei Sato
+	2963.1.1 = { birth = "2963.1.1" }
+	2998.1.1 = { effect = { give_job_title = job_marshal } }
 }
 
 1127945 = {
@@ -55,6 +59,8 @@
 	female = yes # Sato
 	
 	culture = japanese_tengoku
+	dna="deklkgbcaah"
+	properties="0j00f"
 	religion = astrist
 	
 	trait = tough_soldier
@@ -66,19 +72,27 @@
 	trait = content
 	trait = brave
 	
+	father = 1107945 # Ryusei Sato
+	
 	2970.1.1 = { birth = "2970.1.1" }
 	2989.1.1 = {
-		add_matrilineal_spouse = 11011449
+		effect = { add_spouse_matrilineal = 11011449 }
 		effect = { spouse = { add_lover = ROOT } }
 	}
+	2997.6.24 = { effect = { add_trait = wounded } }
+	2997.10.12 = {
+		effect = {
+			remove_trait = wounded
+			add_trait = scarred
+		}
+	}
 	
-	father = 1107945 # Ryusei Sato
 }
 
 11011449 = {
 	# Husband of Toshiko Sato
 	name = "Takashi"
-	dynasty = 111449 # Ozerov
+	dynasty = 11449 # Ozerov
 	female = no
 	
 	culture = russo_tengoku
@@ -98,11 +112,14 @@
 	dynasty = 7945
 	female = no
 	
+	culture = japanese_tengoku
 	religion = astrist
+	#add_trait = legit_bastard #born before marriage of parents
 	
-	2990.1.1 = { birth = "2990.1.1" }
 	father = 11011449 # Takashi Ozerov
 	mother = 1127945 # Toshiko Sato
+	
+	2990.1.1 = { birth = "2990.1.1" }
 }
 
 1137945 = {
@@ -113,6 +130,8 @@
 	female = no
 	
 	culture = japanese_tengoku
+	dna="bkebmcbcabs"
+	properties="0g00g"
 	religion = astrist
 	
 	trait = mastermind_scholar
@@ -124,10 +143,10 @@
 	trait = proud
 	trait = ambitious
 	
-	2974.1.1 = { birth = "2974.1.1" }
-	2998.1.1 = { effect = { grant_job_title = job_scientist } }
+	father = 1107945 # Ryusei Sato
 	
-	father = 11017945 # Ryusei Sato
+	2974.1.1 = { birth = "2974.1.1" }
+	2998.1.1 = { effect = { give_job_title = job_scientist } }
 }
 
 1147945 = {
@@ -137,9 +156,11 @@
 	female = yes
 	
 	culture = japanese_tengoku
+	dna="blfiermbaac"
+	properties="0d00a"
 	religion = astrist
 	
-	trait = attractive
+	trait = fair
 	trait = naive_appeaser
 	trait = friendly
 	trait = radical
@@ -147,34 +168,102 @@
 	trait = confident
 	trait = proud
 	
-	2978.1.1 = { birth = "2978.1.1" }
+	father = 1107945 # Ryusei Sato
 	
-	father = 11017945 # Ryusei Sato
+	2978.1.1 = { birth = "2978.1.1" }
 }
 
 1108425 = {
 	# Commander, Star System Rasen
-	# COMPLETELY TRUSTWORTHY
+	# EXTREMELY TRUSTWORTHY
 	name = "Shiro"
 	dynasty = 8425 # Hasegawa
 	female = no
 	
-	culture = japanese_tengoku
+	culture = anglo_tengoku # All Char clones are required to be blonde by science fiction law
+	dna = "dhccbdiegcb"
+	properties = "0e00h"
 	religion = astrist
 	
 	trait = quick
 	trait = brilliant_strategist
 	trait = fighter_pilot
 	trait = trickster
-	trait = friendly
+	trait = outgoing
+	trait = cold
 	trait = pragmatic
 	trait = brave
 	trait = proud
 	trait = confident
 	trait = ambitious
 	
-	2978.1.1 = { birth = "2978.1.1" }
 	father = 1208425 # Yukio Hasegawa
+	mother = 1101737 # Akiko Avery
+	
+	2978.1.1 = { birth = "2978.1.1" }
+}
+
+1218425 = {
+	# Daughter of Shiro Hasegawa, Confederate military officer under Vincent Martin
+	name = "Seiko"
+	dynasty = 8425 # Hasegawa
+	female = yes
+	
+	culture = japanese_tengoku
+	religion = terran_federalist
+	
+	trait = quick
+	trait = skilled_tactician
+	trait = fighter_pilot
+	trait = friendly
+	trait = brave
+	trait = disciplined
+	
+	father = 1208425
+	mother = 1101737
+	
+	employer = 11065 # Vincent Martin
+	
+	2981.1.1 = { birth = "2981.1.1" }
+}
+
+1108553 = {
+	# Commander, Star System Akasei, 2997 - Present
+	name = "Takashi"
+	dynasty = 8553 # Sakamoto
+	female = no
+	
+	culture = japanese_tengoku
+	religion = colonial_separatist
+	
+	trait = trained_soldier
+	trait = fighter_pilot
+	
+	2962.1.1 = { birth = "2962.1.1" }
+}
+
+1109161 = {
+	# Governor of Kojo, 2994 - Present
+	name = "Shinichi"
+	dynasty = 9161 # Takado
+	female = no
+	
+	culture = japanese_tengoku
+	religion = colonial_separatist
+	
+	2966.1.1 = { birth = "2966.1.1" }
+}
+
+1109017 = {
+	# Governor of Uminoasa, 2996 - Present
+	name = "Hitomi"
+	dynasty = 9017 # Miyazaki
+	female = yes
+	
+	culture = japanese_tengoku
+	religion = colonial_separatist
+	
+	2963.1.1 = { birth = "2963.1.1" }
 }
 
 1108665 = {
@@ -183,7 +272,6 @@
 	dynasty = 8665 # Miura
 	female = no
 	
-	culture = japanese_tengoku
 	religion = astrist
 	
 	trait = flamboyant_schemer
@@ -218,14 +306,14 @@
 					ROOT = {
 						set_defacto_liege = PREV
 						add_friend = PREV
-						grant_job_title = job_chancellor
+						give_job_title = job_chancellor
 					}
 					add_friend = ROOT
 				}
 			}
 		}
 	}
-	2998.1.1 = { death = { death_reason = death_murder_secret killer = 1107945 } }
+	2997.5.25 = { death = { death_reason = death_murder_unknown killer = 1107945 } }
 }
 
 1208745 = {
@@ -235,7 +323,7 @@
 	female = yes
 	
 	culture = japanese_tengoku
-	religion = colonial_seperatist
+	religion = colonial_separatist
 	
 	trait = skilled_tactician
 	trait = marine_colonel
@@ -245,20 +333,20 @@
 	trait = friendly
 	trait = pragmatic
 	
-	2963.1.1 = { birth = "2963.1.1" }
-	
 	mother = 1108745 # Junko Harada
+	
+	2965.1.1 = { birth = "yes" }
 }
 
-1108233 = {
+1108201 = {
 	# Commander, Star System Fuyuki
 	# Rie Harada's lover
 	name = "Shoji"
-	dynasty = 8233 # Hayashi
+	dynasty = 8201 # Kimura
 	female = no
 	
 	culture = japanese_tengoku
-	religion = colonial_seperatist
+	religion = colonial_separatist
 	
 	trait = tough_soldier
 	trait = marine_colonel
@@ -270,35 +358,53 @@
 	2998.1.1 = { effect = { liege = { add_lover = ROOT } } }
 }
 
-1208425 = {
-	# President of Jion, 2992 - 2998
-	name = "Yukio"
-	dynasty = 8425 # Hasegawa
+11011881 = {
+	# Governor of Odayakanaumi, 2997 - Present
+	name = "Fumiko"
+	dynasty = 11881 # Stepanov
+	female = yes
+	
+	culture = russo_tengoku
+	religion = colonial_separatist
+	
+	trait = homosexual
+	
+	2970.1.1 = { birth = "2970.1.1" }
+}
+
+1101977 = {
+	# Admiral of Defense Zone Hiyokuoka, 2997 - Present, Sato partisan
+	name = "Makoto"
+	dynasty = 1977 # MacTavish
+	female = no
+	
+	culture = anglo_tengoku
+	religion = astrist
+	
+	trait = trained_soldier
+	trait = marine_colonel
+	trait = radical
+	trait = content
+	
+	2970.1.1 = { birth = "2970.1.1" }
+	2988.1.1 = { effect = { add_friend = 1127945 } } # Toshiko Sato
+}
+
+1108921 = {
+	# Commander of Sen Eisei, 2992 - Present, Anti-Sato partisan
+	# Father of the Shibata Twins
+	name = "Jiro"
+	dynasty = 8921 # Shibata
 	female = no
 	
 	culture = japanese_tengoku
 	religion = terran_federalist
 	
-	father = 1308425 # Shiro Hasegawa
-	
-	2945.1.1 = { birth = "2945.1.1" }
-	2998.1.1 = { death = { death_reason = death_execution killer = 1107945 } } # Executed by Ryusei Sato
-}
-
-1308425 = {
-	# Tengoku military officer, loyalist
-	name = "Shiro"
-	dynasty = 8425 # Hasegawa
-	female = no
-	
-	culture = japanese_tengoku
-	religion = terran_republican
-	
-	add_trait = tough_soldier
-	add_trait = warship_captain
-	
-	2919.1.1 = { birth = "2919.1.1" }
-	2983.1.1 = { death = { death_reason = death_battle } } # Killed in Jionese rebellion
+	2945.1.1 = { birth = 2945.1.1 }
+	2964.1.1 = {
+		add_spouse = 1318425
+		effect = { spouse = { add_lover = ROOT } }
+	}
 }
 
 1318425 = {
@@ -317,19 +423,187 @@
 	2942.1.1 = { birth = "2942.1.1" }
 }
 
-1108921 = {
-	# Anti-Sato Jionese military officer
-	# Father of the Shibata Twins
-	name = "Jiro"
-	dynasty = 8921 # Shibata
+1108937 = {
+	# Governor of Takagi, 2993 - Present
+	name = "Noriko"
+	dynasty = 8937 # Sakai
+	female = yes
+	
+	culture = japanese_tengoku
+	religion = terran_federalist
+	
+	trait = homosexual
+	
+	2956.1.1 = { birth = "2956.1.1" }
+}
+
+11020026 = {
+	# Governor-General of Okyoto-Nara, 2995 - Present
+	name = "Sachiko"
+	dynasty = 20026 # Mengesha
+	female = yes
+	
+	culture = ethiopian_tengoku
+	religion = colonial_separatist
+	
+	trait = homosexual
+	
+	2961.1.1 = { birth = "2961.1.1" }
+}
+
+11012537 = {
+	# Governor of Sabashi, 2983 - Present
+	name = "Koji"
+	dynasty = 12537 # Wang
+	female = no
+	
+	culture = sino_tengoku
+	religion = terran_federalist
+	
+	2950.1.1 = { birth = "2950.1.1" }
+}
+
+11012105 = {
+	# Commander of Mie, 2988 - Present
+	name = "Fumio"
+	dynasty = 12105 # Firsov
+	female = no
+	
+	culture = russo_tengoku
+	religion = astrist
+	
+	trait = trained_soldier
+	trait = fighter_pilot
+	
+	2961.1.1 = { birth = "2961.1.1" }
+}
+
+1108233 = {
+	# Commander of Shiga, 2966 - Present
+	name = "Hiroshi"
+	dynasty = 8233 # Hayashi
+	female = no
+	
+	culture = japanese_tengoku
+	religion = astrist
+	
+	trait = elusive_shadow
+	trait = disciplined
+	trait = introverted
+	trait = cold
+	trait = confident
+	trait = content
+	trait = pragmatic
+	
+	2945.1.1 = { birth = "2945.1.1" }
+	2968.1.1 = { add_spouse = 1108089 } # Emi Kato
+}
+
+1108089 = {
+	# Wife of Hiroshi Hayashi
+	name = "Emi"
+	dynasty = 8089 # Kato
+	female = yes
+	
+	culture = japanese_tengoku
+	religion = astrist
+	
+	2947.1.1 = { birth = "2947.1.1" }
+}
+
+1118233 = {
+	# Son of Hiroshi Hayashi
+	name = "Hiroshi"
+	dynasty = 8233 # Hayashi
+	female = no
+	
+	culture = japanese_tengoku
+	religion = astrist
+	
+	trait = twin
+	trait = intricate_webweaver
+	
+	father = 1108233 # Hiroshi Hayashi
+	mother = 1108089 # Emi Kato
+	
+	2973.1.1 = { birth = "2973.1.1" }
+}
+1128233 = {
+	# Daughter of Hiroshi Hayashi
+	name = "Hiroko"
+	dynasty = 8233 # Hayashi
+	female = yes
+	
+	culture = japanese_tengoku
+	religion = astrist
+	
+	trait = twin
+	trait = intricate_webweaver
+	
+	father = 1108233 # Hiroshi Hayashi
+	mother = 1108089 # Emi Kato
+	
+	2973.1.1 = { birth = "2973.1.1" }
+}
+
+# Historical
+1208425 = {
+	# President of Jion, 2992 - 2997
+	name = "Yukio"
+	dynasty = 8425 # Hasegawa
 	female = no
 	
 	culture = japanese_tengoku
 	religion = terran_federalist
 	
-	2945.1.1 = { birth = 2945.1.1 }
-	2964.1.1 = {
-		spouse = 1318425
+	father = 1308425 # Shiro Hasegawa
+	
+	2945.1.1 = { birth = "2945.1.1" }
+	2977.1.1 = {
+		add_spouse = 1101737
 		effect = { spouse = { add_lover = ROOT } }
 	}
+	2997.6.5 = { death = { death_reason = death_murder_unknown killer = 1107945 } } # Assassinated on Ryusei Sato's orders
+}
+
+1101737 = {
+	# Yukio Hasegawa's wife
+	name = "Akiko"
+	dynasty = 1737 # Avery
+	female = yes
+	
+	culture = anglo_tengoku
+	religion = terran_federalist
+	
+	2945.1.1 = { birth = "2945.1.1" }
+	2997.6.5 = { death = { death_reason = death_murder_unknown killer = 1107945 } } # Died in the same assassination attempt as her husband
+}
+
+1308425 = {
+	# Tengoku military officer, loyalist
+	name = "Shiro"
+	dynasty = 8425 # Hasegawa
+	female = no
+	
+	culture = japanese_tengoku
+	religion = terran_republican
+	
+	add_trait = tough_soldier
+	add_trait = warship_captain
+	
+	2919.1.1 = { birth = "2919.1.1" }
+	2983.1.1 = { death = { death_reason = death_battle killer = 1107945 } } # Killed in Jionese rebellion
+}
+
+11014089 = {
+	# President of Jion between Yukio Hasegawa's death and Ryusei Sato's coup
+	name = "Akiko"
+	dynasty = 14089 # Adeosun
+	female = yes
+	
+	culture = west_afro_tengoku
+	religion = colonial_separatist
+	
+	2947.1.1 = { birth = "2947.1.1" }
+	2997.10.7 = { death = { death_reason = death_execution killer = 1107945 } } # Executed by Ryusei Sato for treason
 }

@@ -1,0 +1,6 @@
+2983.1.1 = {
+	liege = "d_jion"
+	law = true_cognatic_succession
+	law = succ_open_elective
+}
+2996.1.1 = { holder = 1109017 } # Hitomi Miyazaki

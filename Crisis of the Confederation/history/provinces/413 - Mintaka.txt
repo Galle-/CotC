@@ -1,0 +1,22 @@
+# 413 - Mintaka
+
+# County Title
+title = c_mintaka
+
+# Settlements
+max_settlements = 4
+
+b_mintaka_prime = city
+b_mintaka_ii = temple
+b_mintaka_iii = castle
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

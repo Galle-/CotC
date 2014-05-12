@@ -1,0 +1,7 @@
+2998.1.1 = {
+	holding_dynasty = 3131 # Abu Abed
+	liege = "k_orion_reach"
+	holder = 1103131 # Amanda Abu Abed
+	law = true_cognatic_succession
+	law = succ_seniority
+}

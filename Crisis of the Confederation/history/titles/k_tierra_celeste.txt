@@ -1,12 +1,6 @@
 # Modern era
 2489.1.1 = {
 	liege = "e_terran_confederation"
-	law = legitimacy_law_1
-	law = election_law_3
-	law = centralization_2
-	law = military_vassal_legitimacy_2
-	law = republic_vassal_legitimacy_1
-	law = theocracy_vassal_legitimacy_2
 	law = true_cognatic_succession
 	law = succ_feudal_elective
 }

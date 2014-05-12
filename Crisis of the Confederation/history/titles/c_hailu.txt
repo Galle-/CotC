@@ -1,0 +1,6 @@
+2990.1.1 = {
+	liege = "d_bellatrix"
+	holder = 1234683 # Lucas Vasquez
+	law = true_cognatic_succession
+	law = succ_open_elective
+}

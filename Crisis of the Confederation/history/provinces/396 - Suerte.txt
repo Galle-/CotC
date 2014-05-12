@@ -1,0 +1,23 @@
+# 396 - Suerte
+
+# County Title
+title = c_suerte
+
+# Settlements
+max_settlements = 4
+
+b_suerte_iii = city
+b_suerte_iii_b = temple
+b_suerte_iv = castle
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+	capital = b_suerte_iv
+}

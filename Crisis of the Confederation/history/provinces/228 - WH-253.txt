@@ -1,0 +1,16 @@
+# 228 WH-253
+
+# County Title
+title = c_wh_253
+
+# Settlements
+max_settlements = 4
+
+b_wh_253_station_alpha = castle
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = colonial_separatist
+
+1.1.1 = {
+}

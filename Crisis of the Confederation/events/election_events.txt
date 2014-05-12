@@ -36,14 +36,6 @@ character_event = { # An election has been called on your titles for some reason
 	option = { # Hold Imperial elections
 		trigger = { primary_title = { tier = emperor } }
 		name = "EVTOPTALAWS100"
-		any_demesne_title = {
-			limit = {
-				tier = emperor
-				has_law = succ_patrician_elective
-			}
-			hold_election = yes
-		}
-		# Non-patrician-elective merchant republics
 		# All elections need to be done simultaneously and have the same outcome,
 		# bsed on the primary title's succession law. Otherwise the republic will
 		# get broken.
@@ -62,7 +54,12 @@ character_event = { # An election has been called on your titles for some reason
 		if = {
 			limit = {
 				is_merchant_republic = yes
-				primary_title = { has_law = succ_open_elective }
+				primary_title = {
+					OR = {
+						has_law = succ_open_elective
+						has_law = succ_patrician_elective
+					}
+				}
 			}
 			primary_title = { current_heir = { character_event = { id = laws.102 tooltip = "EVTTOOLTIPLAWS102" } } } # Begin popular election
 		}
@@ -92,14 +89,6 @@ character_event = { # An election has been called on your titles for some reason
 	option = { # Hold regional elections
 		trigger = { primary_title = { tier = king } }
 		name = "EVTOPTALAWS100"
-		any_demesne_title = {
-			limit = {
-				tier = king
-				has_law = succ_patrician_elective
-			}
-			hold_election = yes
-		}
-		# Non-patrician-elective merchant republics
 		# All elections need to be done simultaneously and have the same outcome,
 		# bsed on the primary title's succession law. Otherwise the republic will
 		# get broken.
@@ -118,7 +107,12 @@ character_event = { # An election has been called on your titles for some reason
 		if = {
 			limit = {
 				is_merchant_republic = yes
-				primary_title = { has_law = succ_open_elective }
+				primary_title = {
+					OR = {
+						has_law = succ_open_elective
+						has_law = succ_patrician_elective
+					}
+				}
 			}
 			primary_title = { current_heir = { character_event = { id = laws.102 tooltip = "EVTTOOLTIPLAWS102" } } } # Begin popular election
 		}
@@ -149,14 +143,6 @@ character_event = { # An election has been called on your titles for some reason
 	option = { # Hold sector elections
 		trigger = { primary_title = { tier = duke } }
 		name = "EVTOPTALAWS100"
-		any_demesne_title = {
-			limit = {
-				tier = duke
-				has_law = succ_patrician_elective
-			}
-			hold_election = yes
-		}
-		# Non-patrician-elective merchant republics
 		# All elections need to be done simultaneously and have the same outcome,
 		# bsed on the primary title's succession law. Otherwise the republic will
 		# get broken.
@@ -175,7 +161,12 @@ character_event = { # An election has been called on your titles for some reason
 		if = {
 			limit = {
 				is_merchant_republic = yes
-				primary_title = { has_law = succ_open_elective }
+				primary_title = {
+					OR = {
+						has_law = succ_open_elective
+						has_law = succ_patrician_elective
+					}
+				}
 			}
 			primary_title = { current_heir = { character_event = { id = laws.102 tooltip = "EVTTOOLTIPLAWS102" } } } # Begin popular election
 		}
@@ -449,64 +440,16 @@ character_event = {
 			FROM = {
 				FROM = {
 					character_event = { id = laws.105 tooltip = "EVTTOOLTIPLAWS105" } # Inform incumbent they lost
-					hidden_tooltip = {
-						any_realm_character = {
-							limit = { is_liege_or_above = FROMFROM }
-							character_event = { id = laws.107 } # Inform voters
-						}
-					}
 					any_demesne_title = {
 						limit = {
 							OR = {
-								# Actual elected title
-								AND = {
-									is_primary_holder_title_tier = yes
-									OR = {
-										has_law = succ_feudal_elective
-										has_law = succ_tanistry
-									}
-									current_heir = { character = ROOT }
-								}
-								# Kingdom federal capital district
-								holder_scope = {
-									any_demesne_province = {
-										has_province_modifier = kingdom_capital_system
-										kingdom = {
-											is_primary_holder_title_tier = yes
-											OR = {
-												has_law = succ_feudal_elective
-												has_law = succ_tanistry
-											}
-											current_heir = { character = ROOT }
-										}
-										OR = {
-											county = { title = PREVPREVPREV }
-											duchy = { title = PREVPREVPREV }
-										}
-									}
-								}
-								# Empire federal capital district
-								holder_scope = {
-									any_demesne_province = {
-										has_province_modifier = empire_capital_system
-										empire = {
-											is_primary_holder_title_tier = yes
-											OR = {
-												has_law = succ_feudal_elective
-												has_law = succ_tanistry
-											}
-											current_heir = { character = ROOT }
-										}
-										OR = {
-											county = { title = PREVPREVPREV }
-											duchy = { title = PREVPREVPREV }
-											kingdom = { title = PREVPREVPREV }
-										}
-									}
-								}
+								is_primary_holder_title_tier = yes
+								location = { ROOT = { capital_scope = { province_id = PREVPREV } } }
+								ROOT = { capital_scope = { duchy = { title = PREVPREVPREV } } }
+								ROOT = { capital_scope = { kingdom = { title = PREVPREVPREV } } }
 							}
 						}
-						grant_title = ROOT # Give title to ROOT immediately
+						grant_title = ROOT
 					}
 				}
 			}
@@ -581,45 +524,13 @@ character_event = {
 					any_demesne_title = {
 						limit = {
 							OR = {
-								AND = {
-									is_primary_holder_title_tier = yes
-									has_law = open_elective
-									current_heir = { character = ROOT }
-								}
-								# Kingdom capital systems
-								holder_scope = {
-									any_demesne_province = {
-										has_province_modifier = kingdom_capital_system
-										kingdom = {
-											is_primary_holder_title_tier = yes
-											has_law = open_elective
-											current_heir = { character = ROOT }
-										}
-										OR = {
-											county = { title = PREVPREVPREV }
-											duchy = { title = PREVPREVPREV }
-										}
-									}
-								}
-								# Empire capital system
-								holder_scope = {
-									any_demesne_province = {
-										has_province_modifier = empire_capital_system
-										empire = {
-											is_primary_holder_title_tier = yes
-											has_law = open_elective
-											current_heir = { character = ROOT }
-										}
-										OR = {
-											county = { title = PREVPREVPREV }
-											duchy = { title = PREVPREVPREV }
-											kingdom = { title = PREVPREVPREV }
-										}
-									}
-								}
+								is_primary_holder_title_tier = yes
+								location = { ROOT = { capital_scope = { province_id = PREVPREV } } }
+								ROOT = { capital_scope = { duchy = { title = PREVPREVPREV } } }
+								ROOT = { capital_scope = { kingdom = { title = PREVPREVPREV } } }
 							}
 						}
-						grant_title = ROOT # Give title to ROOT immediately
+						grant_title = ROOT
 					}
 				}
 			}
@@ -1088,6 +999,7 @@ character_event = {
 	
 	trigger = {
 		any_demesne_title = {
+			temporary = no
 			OR = {
 				has_law = term_length_0
 				has_law = term_length_1
@@ -1113,6 +1025,7 @@ character_event = {
 	trigger = {
 		NOT = {
 			any_demesne_title = {
+				temporary = no
 				OR = {
 					has_law = term_length_0
 					has_law = term_length_1
@@ -1142,6 +1055,7 @@ character_event = {
 			AND = {
 				had_character_flag = { flag = flag_term_limit_timer days = 365 }
 				primary_title = {
+					temporary = no
 					OR = {
 						has_law = term_length_0
 						has_law = local_term_length_0
@@ -1151,6 +1065,7 @@ character_event = {
 			AND = {
 				had_character_flag = { flag = flag_term_limit_timer days = 1460 }
 				primary_title = {
+					temporary = no
 					OR = {
 						has_law = term_length_1
 						has_law = local_term_length_1
@@ -1160,6 +1075,7 @@ character_event = {
 			AND = {
 				had_character_flag = { flag = flag_term_limit_timer days = 2920 }
 				primary_title = {
+					temporary = no
 					OR = {
 						has_law = term_length_2
 						has_law = local_term_length_2
@@ -1169,6 +1085,7 @@ character_event = {
 			AND = {
 				had_character_flag = { flag = flag_term_limit_timer days = 3650 }
 				primary_title = {
+					temporary = no
 					OR = {
 						has_law = term_length_3
 						has_law = local_term_length_3
@@ -1232,7 +1149,7 @@ character_event = {
 				OR = {
 					religion = terran_federalist
 					religion = terran_republican
-					religion = colonial_seperatist
+					religion = colonial_separatist
 				}
 			}
 			piety = -300
@@ -1347,7 +1264,7 @@ character_event = {
 					OR = {
 						religion = terran_federalist
 						religion = terran_republican
-						religion = colonial_seperatist
+						religion = colonial_separatist
 					}
 					relative_power_to_liege = 0.25
 					religion_authority = 0.5
@@ -1363,7 +1280,7 @@ character_event = {
 							AND = {
 								NOT = { religion = terran_federalist }
 								NOT = { religion = terran_republican }
-								NOT = { religion = colonial_seperatist }
+								NOT = { religion = colonial_separatist }
 							}
 							NOT = { religion_authority = 0.25 }
 						}
@@ -1379,7 +1296,7 @@ character_event = {
 					OR = {
 						religion = terran_federalist
 						religion = terran_republican
-						religion = colonial_seperatist
+						religion = colonial_separatist
 					}
 					religion_authority = 0.5
 				}
@@ -1482,10 +1399,13 @@ character_event = {
 	
 	trigger = {
 		is_merchant_republic = yes
-		primary_title = { current_heir = { dynasty = ROOT } }
+		primary_title = {
+			current_heir = { dynasty = ROOT }
+			temporary = no
+		}
 	}
 	
-	immediate = { primary_title = { current_heir = { ROOT = { abdicate_to = PREVPREV } } } }
+	immediate = { primary_title = { current_heir = { ROOT = { abdicate_to = PREV } } } }
 }
 character_event = {
 	id = laws.156
@@ -1494,7 +1414,10 @@ character_event = {
 	
 	trigger = {
 		is_merchant_republic = yes
-		primary_title = { current_heir = { NOT = { dynasty = ROOT } } }
+		primary_title = {
+			current_heir = { NOT = { dynasty = ROOT } }
+			temporary = no
+		}
 	}
 	
 	immediate = {

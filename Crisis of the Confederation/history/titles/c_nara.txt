@@ -1,0 +1,10 @@
+2983.1.1 = {
+	liege = "d_okyoto_nara"
+	law = true_cognatic_succession
+	law = succ_open_elective
+}
+2997.7.21 = {
+	liege = "d_jion_fleet"
+	law = succ_appointment
+	holder = 1117945 # Jiro Sato
+}

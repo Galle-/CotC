@@ -1,0 +1,77 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+democratic_rebellion;Democratic Rebellion;;;;;;;;;;;;;x
+democratic_rebellion_desc;The people have decided to rise up against their overlords, overthrow them, and found a new republic.;;;;;;;;;;;;;x
+autocratic_rebellion;Aurocratic Rebellion;;;;;;;;;;;;;x
+autocratic_rebellion_desc;The people have decided to rise up against their overlords, overthrow them, and found a new military state.;;;;;;;;;;;;;x
+theocratic_rebellion;Theocratic Rebellion;;;;;;;;;;;;;x
+theocratic_rebellion_desc;The people have decided to rise up against their overlords, overthrow them, and found a new technocratic state.;;;;;;;;;;;;;x
+CB_NAME_REBELLION;[Actor.Religion.GetName] Rebellion;;;;;;;;;;;;;x
+WAR_NAME_REBELLION;$ORDER$$SECOND_ADJ$ [Actor.Religion.GetName] Rebellion;;;;;;;;;;;;;x
+DEMOCRATIC_REVOLT;[Root.County.GetAdjective] Free Fleet;;;;;;;;;;;;;x
+AUTOCRATIC_REVOLT;[Root.Culture.GetName] National Navy;;;;;;;;;;;;;x
+THEOCRATIC_REVOLT;[Root.County.GetAdjective] [Root.GetReligion] Fleet;;;;;;;;;;;;;x
+rebel_leader;Rebel Leader;;;;;;;;;;;;;x
+rebel_leader_desc;This character is a major power figure in an ongoing popular revolt.;;;;;;;;;;;;;x
+allowed_minor_rebellion;Allowed Rebellions;;;;;;;;;;;;;x
+crushed_minor_rebellion;Crushed Rebellions;;;;;;;;;;;;;x
+successful_minor_rebellion;Successful Rebellions;;;;;;;;;;;;;x
+fell_to_minor_rebellion;Governments Fallen to Rebellion;;;;;;;;;;;;;x
+failed_minor_rebellion;Failed Rebellions;;;;;;;;;;;;;x
+allowed_major_rebellion;Allowed Major Rebellions;;;;;;;;;;;;;x
+crushed_major_rebellion;Crushed Major Rebellions;;;;;;;;;;;;;x
+successful_major_rebellion;Successful Major Rebellions;;;;;;;;;;;;;x
+fell_to_major_rebellion;Major Governments Fallen to Rebellion;;;;;;;;;;;;;x
+failed_major_rebellion;Failed Major Rebellions;;;;;;;;;;;;;x
+opposed_system_revolt;Assisted System Governments;;;;;;;;;;;;;x
+opposed_sector_revolt;Assisted Sector Governments;;;;;;;;;;;;;x
+opposed_regional_revolt;Assisted Regional Governments;;;;;;;;;;;;;x
+ignored_system_revolt;Abandoned System Governments;;;;;;;;;;;;;x
+ignored_sector_revolt;Abandoned Sector Governments;;;;;;;;;;;;;x
+ignored_regional_revolt;Abandoned Regional Governments;;;;;;;;;;;;;x
+ignored_vassals;Abandoned Subordinates;;;;;;;;;;;;;x
+ignored_vassals_desc;This character has ignored their subordinates' requests for military assistance and abandoned them to their enemies, greatly weakening their standing in the eyes of their other subordinates.;;;;;;;;;;;;;x
+peaceful_protests;Political Protests;;;;;;;;;;;;;x
+peaceful_protests_desc;The people of this system are extremely unhappy with their current government and are staging major political demonstrations against it. So far, the protests have not turned violent, but if the situation continues to escalate it could lead to riots.;;;;;;;;;;;;;x
+riots;Riots;;;;;;;;;;;;;x
+riots_desc;Peaceful political demonstrations in this system have given way to violent riots and mass civil disorder. At this point, all it would take is a little bit of organization to turn things into a shooting war.;;;;;;;;;;;;;x
+system_in_revolt;System in Revolt;;;;;;;;;;;;;x
+system_in_revolt_desc;The people of this system are in open revolt against the government. The government's control over the system is purely nominal at this point, but as the rebels have already claimed all the ships they can get their hands on, it is unlikely to cause additional trouble for some time.;;;;;;;;;;;;;x
+successful_revolt;Revolutionary Celebration;;;;;;;;;;;;;x
+successful_revolt_desc;The people of this system are celebrating the recent victory of the revolution against the old, corrupt regime. The system is unlikely to cause any trouble for the new government for some time.;;;;;;;;;;;;;x
+EVTDESCREBELS10;The people of the [Root.GetName] System are upset with the current government and are staging several peaceful anti-government protests.;;;;;;;;;;;;;x
+EVTDESCREBELS15;The political protests in the [Root.GetName] System have turned violent as frustrated protestors begin to riot in the streets.;;;;;;;;;;;;;x
+EVTDESCREBELS16;Just when it seemed they might die out, the riots in the [Root.GetName] System have flared up again, and are likely to continue for some time.;;;;;;;;;;;;;x
+EVTDESCREBELS20;Political protest in the [Root.GetName] System has given way to riots, and with them has come increased danger. Just this morning, you were badly injured by a rock thrown by one of the protestors, although the doctor says there should be no permanent damage.;;;;;;;;;;;;;x
+EVTOPTAREBELS20;Somebody ought to do something.;;;;;;;;;;;;;x
+EVTDESCREBELS21;[From.GetFullName] was wounded in the [From.Location.GetName] Riots.;;;;;;;;;;;;;x
+EVTDESCREBELS25;The rioters ambushed you while you were on your way home last evening. At first you'd hoped you could talk them down, but then one of them drew a knife, and by the time you managed to escape your arm was already numb and bleeding.;;;;;;;;;;;;;x
+EVTOPTAREBELS25;Doctor! I need a doctor!;;;;;;;;;;;;;x
+EVTDESCREBELS26;[From.GetFullName] was maimed in the [From.Location.GetName] Riots.;;;;;;;;;;;;;x
+EVTDESCREBELS30;You had thought you had been careful to avoid the worst of the rioting, but you made a critical mistake on your way home last night. Finding yourself and your security detail cornered by a mob of protestors, you attempted to reason with them - then, one of your bodyguards panicked and drew a gun, and before you knew it, someone had opened fire...;;;;;;;;;;;;;x
+EVTOPTAREBELS30;Not like this!;;;;;;;;;;;;;x
+EVTDESCREBELS31;[From.GetFullName] was killed in the [From.Location.GetName] Riots.;;;;;;;;;;;;;x
+EVTDESCREBELS100;The people of the [Root.GetName] System have launched a rebelling against the system's government, claiming they want to establish a new democratic government in its place.;;;;;;;;;;;;;x
+EVTOPTAREBELS100;Traitors!;;;;;;;;;;;;;x
+EVTDESCREBELS110;The people of the [Root.GetName] System have launched a rebelling against the sector government, claiming they want to establish a new democratic government in its place.;;;;;;;;;;;;;x
+EVTOPTAREBELS110;Traitors!;;;;;;;;;;;;;x
+EVTDESCREBELS120;The people of the [Root.GetName] System have launched a rebelling against the regional government, claiming they want to establish a new democratic government in its place.;;;;;;;;;;;;;x
+EVTOPTAREBELS120;Traitors!;;;;;;;;;;;;;x
+EVTDESCREBELS130;The people of the [Root.GetName] System have launched a rebelling against the federal government, claiming they want to establish a new democratic government in its place.;;;;;;;;;;;;;x
+EVTOPTAREBELS130;Traitors!;;;;;;;;;;;;;x
+EVTDESCREBELS140;Partisans from the [Root.GetName] System have joined an ongoing democratic rebellion.;;;;;;;;;;;;;x
+EVTOPTAREBELS140;Traitors!;;;;;;;;;;;;;x
+EVTDESCREBELS200;The people of the [Root.GetName] System have launched a rebelling against the system's government, claiming they want to establish a new autocratic government in its place.;;;;;;;;;;;;;x
+EVTDESCREBELS210;The people of the [Root.GetName] System have launched a rebelling against the sector government, claiming they want to establish a new autocratic government in its place.;;;;;;;;;;;;;x
+EVTDESCREBELS220;The people of the [Root.GetName] System have launched a rebelling against the regional government, claiming they want to establish a new autocratic government in its place.;;;;;;;;;;;;;x
+EVTDESCREBELS230;The people of the [Root.GetName] System have launched a rebelling against the federal government, claiming they want to establish a new autocratic government in its place.;;;;;;;;;;;;;x
+EVTDESCREBELS240;Partisans from the [Root.GetName] System have joined an ongoing autocratic rebellion.;;;;;;;;;;;;;x
+EVTDESCREBELS300;The people of the [Root.GetName] System have launched a rebelling against the system's government, claiming they want to establish a new theocratic government in its place.;;;;;;;;;;;;;x
+EVTDESCREBELS310;The people of the [Root.GetName] System have launched a rebelling against the sector government, claiming they want to establish a new theocratic government in its place.;;;;;;;;;;;;;x
+EVTDESCREBELS320;The people of the [Root.GetName] System have launched a rebelling against the regional government, claiming they want to establish a new theocratic government in its place.;;;;;;;;;;;;;x
+EVTDESCREBELS330;The people of the [Root.GetName] System have launched a rebelling against the federal government, claiming they want to establish a new theocratic government in its place.;;;;;;;;;;;;;x
+EVTDESCREBELS340;Partisans from the [Root.GetName] System have joined an ongoing theocratic rebellion.;;;;;;;;;;;;;x
+EVTTOOLTIPREBELS101;calls on the government to intervene;;;;;;;;;;;;;x
+EVTDESCREBELS101;Dissatisfaction with your government has reached the boiling point. The people of the [Root.GetName] System are openly rebelling against you. You've called on the federal government to send reinforcements as quickly as they can.;;;;;;;;;;;;;x
+EVTOPTAREBELS101;I can only hope they arrive in time;;;;;;;;;;;;;x
+EVTDESCREBELS102;TO: [Root.GetFullName], [Root.GetTitle] of the [Root.PrimaryTitle.GetFullName]\nFROM: [From.GetFullName], [From.GetTitle] of the [From.PrimaryTitle.GetFullName]\nRE: Terrorist attacks\nThe riots in the [FromFrom.GetName] System have escalated into open war. The rebels have already seized several military ships. You must send in the fleet at once!;;;;;;;;;;;;;x
+EVTDESCREBELS103;[From.GetTitle] [From.GetFullName] has ordered the military to intervene in the ongoing crisis in the [Root.GetName] System.;;;;;;;;;;;;;x

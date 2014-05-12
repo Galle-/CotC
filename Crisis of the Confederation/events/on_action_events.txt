@@ -159,13 +159,13 @@ character_event = {
 	
 	immediate = {
 		FROM = {
-			if = {
-				limit = { 
-					dynasty = ROOT 
-					NOT = { religion_group = muslim }
-				}
-				add_trait = kinslayer
-			}
+			#if = {
+			#	limit = { 
+			#		dynasty = ROOT 
+			#		NOT = { religion_group = transhumanist_group }
+			#	}
+			#	add_trait = kinslayer
+			#}
 			if = {
 				limit = { 
 					spouse = { character = ROOT }
@@ -699,13 +699,13 @@ character_event = {
 	is_triggered_only = yes 
 	
 	immediate = {
-		if = {
-			limit = { 
-				dynasty = FROM 
-				NOT = { FROM = { religion_group = muslim } }
-			}
-			FROM = { add_trait = kinslayer }
-		}
+		#if = {
+		#	limit = { 
+		#		dynasty = FROM 
+		#		NOT = { FROM = { religion_group = transhumanist_group } }
+		#	}
+		#	FROM = { add_trait = kinslayer }
+		#}
 		if = {
 			limit = { spouse = { character = FROM } }
 			any_dynasty_member = {
@@ -1043,7 +1043,7 @@ character_event = {
 			factor = 5
 			modifier = {
 				factor = 100
-				trait = just
+				trait = radical
 			}
 		}
 		any_realm_character = { 
@@ -1144,7 +1144,7 @@ character_event = {
 			factor = 1
 			modifier = {
 				factor = 100
-				trait = arbitrary
+				trait = pragmatic
 			}
 		}
 		reverse_opinion = {
@@ -1230,16 +1230,16 @@ character_event = {
 	option = {
 		name = "EVTOPTA40026"
 		if = {
-			limit = { trait = kind }
-			remove_trait = kind
+			limit = { trait = friendly }
+			remove_trait = friendly
 		}
 		if = {
-			limit = { trait = just }
-			remove_trait = just
+			limit = { trait = radical }
+			remove_trait = radical
 		}
 		if = {
-			limit = { trait = honest }
-			remove_trait = honest
+			limit = { trait = friendly }
+			remove_trait = friendly
 		}
 		prestige = -100
 		any_vassal = {
@@ -1252,7 +1252,7 @@ character_event = {
 	}
 }
 
-# CHRISTIAN CRUSADE AGAINST MUSLIMS
+# religious_group CRUSADE AGAINST MUSLIMS
 # Called from 'on_crusade_creation'
 # new_character is the targetted enemy
 # ROOT is the religious head
@@ -1270,9 +1270,9 @@ narrative_event = {
 	
 	trigger = {
 		can_call_crusade = yes
-		ROOT = { religion_group = christian }
+		ROOT = { religion_group = religious_group }
 		new_character = {
-			religion_group = muslim
+			religion_group = transhumanist_group
 		}
 	}
 	
@@ -1309,7 +1309,7 @@ narrative_event = {
 	}
 }
 
-# CHRISTIAN CRUSADE AGAINST PAGANS
+# religious_group CRUSADE AGAINST PAGANS
 # Called from 'on_crusade_creation'
 # new_character is the targetted enemy
 # ROOT is the religious head
@@ -1327,10 +1327,10 @@ narrative_event = {
 	
 	trigger = {
 		can_call_crusade = yes
-		ROOT = { religion_group = christian }
+		ROOT = { religion_group = religious_group }
 		new_character = {
-			NOT = { religion_group = muslim }
-			NOT = { religion_group = christian }
+			NOT = { religion_group = transhumanist_group }
+			NOT = { religion_group = religious_group }
 		}
 	}
 	
@@ -1367,7 +1367,7 @@ narrative_event = {
 	}
 }
 
-# CHRISTIAN CRUSADE AGAINST HERETICS
+# religious_group CRUSADE AGAINST HERETICS
 # Called from 'on_crusade_creation'
 # new_character is the targetted enemy
 # ROOT is the religious head
@@ -1385,9 +1385,9 @@ narrative_event = {
 	
 	trigger = {
 		can_call_crusade = yes
-		ROOT = { religion_group = christian }
+		ROOT = { religion_group = religious_group }
 		new_character = {
-			religion_group = christian
+			religion_group = religious_group
 		}
 	}
 	
@@ -1424,7 +1424,7 @@ narrative_event = {
 	}
 }
 
-# MUSLIM JIHAD AGAINST CHRISTIANS
+# transhumanist_group JIHAD AGAINST CHRISTIANS
 # Called from 'on_crusade_creation'
 # new_character is the targetted enemy
 # ROOT is the religious head
@@ -1442,9 +1442,9 @@ narrative_event = {
 	
 	trigger = {
 		can_call_crusade = yes
-		ROOT = { religion_group = muslim }
+		ROOT = { religion_group = transhumanist_group }
 		new_character = {
-			religion_group = christian
+			religion_group = religious_group
 		}
 	}
 	
@@ -1481,7 +1481,7 @@ narrative_event = {
 	}
 }
 
-# MUSLIM JIHAD AGAINST PAGANS
+# transhumanist_group JIHAD AGAINST PAGANS
 # Called from 'on_crusade_creation'
 # new_character is the targetted enemy
 # ROOT is the religious head
@@ -1499,10 +1499,10 @@ narrative_event = {
 	
 	trigger = {
 		can_call_crusade = yes
-		ROOT = { religion_group = muslim }
+		ROOT = { religion_group = transhumanist_group }
 		new_character = {
-			NOT = { religion_group = muslim }
-			NOT = { religion_group = christian }
+			NOT = { religion_group = transhumanist_group }
+			NOT = { religion_group = religious_group }
 		}
 	}
 	
@@ -1539,7 +1539,7 @@ narrative_event = {
 	}
 }
 
-# MUSLIM JIHAD AGAINST HERETICS
+# transhumanist_group JIHAD AGAINST HERETICS
 # Called from 'on_crusade_creation'
 # new_character is the targetted enemy
 # ROOT is the religious head
@@ -1557,9 +1557,9 @@ narrative_event = {
 	
 	trigger = {
 		can_call_crusade = yes
-		ROOT = { religion_group = muslim }
+		ROOT = { religion_group = transhumanist_group }
 		new_character = {
-			religion_group = muslim
+			religion_group = transhumanist_group
 		}
 	}
 	
@@ -1614,9 +1614,9 @@ narrative_event = {
 	
 	trigger = {
 		can_call_crusade = yes
-		ROOT = { religion_group = pagan_group }
+		ROOT = { religion_group = outlaw_group }
 		new_character = {
-			religion_group = christian
+			religion_group = religious_group
 		}
 	}
 	
@@ -1671,9 +1671,9 @@ narrative_event = {
 	
 	trigger = {
 		can_call_crusade = yes
-		ROOT = { religion_group = pagan_group }
+		ROOT = { religion_group = outlaw_group }
 		new_character = {
-			religion_group = muslim
+			religion_group = transhumanist_group
 		}
 	}
 	
@@ -1728,10 +1728,10 @@ narrative_event = {
 	
 	trigger = {
 		can_call_crusade = yes
-		ROOT = { religion_group = pagan_group }
+		ROOT = { religion_group = outlaw_group }
 		new_character = {
-			NOT = { religion_group = muslim }
-			NOT = { religion_group = christian }
+			NOT = { religion_group = transhumanist_group }
+			NOT = { religion_group = religious_group }
 		}
 	}
 	
@@ -2731,15 +2731,15 @@ diploresponse_event = {
 # On-action event: Royal Marriage Aid Duty
 character_event = {
 	id = 500
-	desc = "EVTDESC500"
-	picture = "GFX_evt_marriage"
+	desc = EVTDESC500
+	picture = GFX_evt_marriage
 	
 	is_triggered_only = yes
 	
 	trigger = {
-		NOT = { religion_group = muslim }
+		#NOT = { religion_group = transhumanist_group }
 		OR = {
-			NOT = { religion = zoroastrian }
+			NOT = { religion = bio_directionist }
 			NOT = { new_character = { is_close_relative = FROM } }
 		}
 		OR = {
@@ -2785,16 +2785,16 @@ character_event = {
 	}
 }
 
-# On-action event: Zoroastrian Xwedodah marriage
+# On-action event: bio_directionist marriage
 character_event = {
 	id = 501
-	desc = "EVTDESC501"
-	picture = "GFX_evt_marriage_zoroastrian"
+	desc = EVTDESC501
+	picture = GFX_evt_marriage_zoroastrian_group
 	
 	is_triggered_only = yes
 	
 	trigger = {
-		religion = zoroastrian
+		religion = bio_directionist
 		new_character = { is_close_relative = FROM }
 		OR = {
 			FROM = { character = ROOT }
@@ -3085,7 +3085,7 @@ province_event = {
 				50 = {
 					create_random_soldier = {
 						random_traits = yes
-						dynasty = random
+						dynasty = culture
 						religion = prev
 						culture = prev
 						female = no
@@ -3108,7 +3108,7 @@ province_event = {
 				25 = {
 					create_random_soldier = {
 						random_traits = yes
-						dynasty = random
+						dynasty = culture
 						religion = prev
 						culture = prev
 						female = no
@@ -3131,7 +3131,7 @@ province_event = {
 				25 = {
 					create_random_soldier = {
 						random_traits = yes
-						dynasty = random
+						dynasty = culture
 						religion = prev
 						culture = prev
 						female = no
@@ -3449,37 +3449,6 @@ narrative_event = {
 				religion = ROOT
 			}
 		}
-		if = {
-			limit = { religion = norse_pagan_reformed }
-			d_jomsvikings = {
-				religion = norse_pagan_reformed # This Holy Order now changes religion
-			}
-			set_global_flag = norse_reformation
-		}
-		if = {
-			limit = { religion = tengri_pagan_reformed }
-			set_global_flag = tengri_reformation
-		}
-		if = {
-			limit = { religion = baltic_pagan_reformed }
-			set_global_flag = baltic_reformation
-		}
-		if = {
-			limit = { religion = finnish_pagan_reformed }
-			set_global_flag = finnish_reformation
-		}
-		if = {
-			limit = { religion = aztec_reformed }
-			set_global_flag = aztec_reformation
-		}
-		if = {
-			limit = { religion = slavic_pagan_reformed }
-			set_global_flag = slavic_reformation
-		}
-		if = {
-			limit = { religion = west_african_pagan_reformed }
-			set_global_flag = west_african_reformation
-		}
 	}
 
 	option = {
@@ -3503,7 +3472,7 @@ narrative_event = {
 			}
 			modifier = {
 				factor = 5
-				trait = cynical
+				trait = skeptical
 			}
 			modifier = {
 				factor = 10
@@ -3511,7 +3480,7 @@ narrative_event = {
 			}
 			modifier = {
 				factor = 0.1
-				trait = zealous
+				trait = radical
 			}
 			modifier = {
 				factor = 0.5
@@ -3551,10 +3520,6 @@ narrative_event = {
 		}
 		ai_chance = {
 			factor = 50
-			modifier = {
-				factor = 0
-				has_landed_title = d_jomsvikings
-			}
 		}
 		tooltip = { religion = THIS }
 	}

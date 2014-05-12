@@ -5,7 +5,8 @@ opinion_disapproves_of_reform = { opinion = -25 months = 240 }
 opinion_hates_reform = { opinion = -100 months = 240 }
 
 # Law and order and so on
-opinion_criminal = { opinion = -25 months = 2400 imprison = yes }
+opinion_criminal = { opinion = -25 months = 2400 prison_reason = yes }
+opinion_criminal_treason = { opinion = -100 months = 2400 prison_reason = yes revoke_reason = yes inherit = yes }
 
 # This has extremely powerful effects
 opinion_owes_me_a_favor = { opinion = 40 months = 2400 }
@@ -48,3 +49,10 @@ opinion_nominated_me_for_appointment = { opinion = 20 months = 240 }
 opinion_promised_relative_appointment = { opinion = 20 months = 240 }
 opinion_refused_relative_appointment = { opinion = -10 months = 120 }
 opinion_retracted_relative_appointment = { opinion = -30 months = 240 }
+
+# Revolution stuff
+opinion_hero_of_the_revolution = { opinion = 100 months = 240 }
+opinion_aided_my_revolution = { opinion = 50 months = 240 }
+
+# Miscellaneous
+opinion_abolished_the_military = { opinion = -50 months = 2400 } # We, uh, we kind of need that, boss...

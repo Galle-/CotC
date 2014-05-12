@@ -1,0 +1,9 @@
+2983.1.1 = {
+	liege = "d_taikun"
+	law = true_cognatic_succession
+	law = succ_open_elective
+}
+2997.10.5 = {
+	law = succ_appointment
+	holder = 1127945 # Toshiko Sato
+}

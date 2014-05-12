@@ -1,0 +1,16 @@
+# 222 WH-930
+
+# County Title
+title = c_wh_930
+
+# Settlements
+max_settlements = 4
+
+b_wh_930_station_alpha = castle
+
+# Misc
+culture = russo_strugatskite # Initial culture
+religion = neo_socialist
+
+1.1.1 = {
+}

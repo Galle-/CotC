@@ -1,0 +1,7 @@
+2998.1.1 = {
+	holding_dynasty = 4475 # Ortiz
+	liege = "k_orion_reach"
+	holder = 1104475 # Miguel Ortiz
+	law = true_cognatic_succession
+	law = succ_seniority
+}

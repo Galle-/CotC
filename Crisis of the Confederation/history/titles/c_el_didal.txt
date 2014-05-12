@@ -1,0 +1,6 @@
+2998.1.1 = {
+	liege = "d_orion_reach_fleet"
+	holder = 1104683 # Navya Vasquez
+	law = true_cognatic_succession
+	law = succ_appointment
+}

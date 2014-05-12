@@ -1,6 +1,6 @@
 2489.1.1 = {
 	liege = "k_terran_navy"
-	law = succ_feudal_elective
+	law = succ_appointment
 	law = true_cognatic_succession
 }
 

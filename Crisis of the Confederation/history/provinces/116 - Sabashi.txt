@@ -1,0 +1,19 @@
+# 116 - Sabashi
+
+# County Title
+title = c_sabashi
+
+# Settlements
+max_settlements = 4
+
+b_sabashi_iii = city
+b_sabashi_iii_b = castle
+b_sabashi_iii_c = temple
+
+# Misc
+culture = japanese_tengoku # Initial culture
+religion = colonial_separatist
+1.1.1 = {
+}
+
+2998.1.1 = { }

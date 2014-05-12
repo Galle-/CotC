@@ -1,0 +1,12 @@
+2983.1.1 = {
+	liege = "d_jion"
+	law = true_cognatic_succession
+	law = succ_open_elective
+}
+2992.1.1 = {
+	liege = "d_jion_fleet"
+	law = succ_appointment
+	holder = 1107945 # Ryusei Sato
+}
+2997.7.7 = { liege = "k_jion" }
+2997.7.21 = { holder = 1108553 } # Takashi Sakamoto

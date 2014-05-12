@@ -1,0 +1,21 @@
+# 125 - Akasei
+
+# County Title
+title = c_akasei
+
+# Settlements
+max_settlements = 4
+
+b_akasei_prime = city
+b_akasei_ii = temple
+b_akasei_iii = castle
+
+# Misc
+culture = japanese_tengoku # Initial culture
+religion = colonial_separatist
+1.1.1 = {
+}
+
+2992.1.1 = { capital = b_akasei_iii }
+
+2997.7.7 = { }

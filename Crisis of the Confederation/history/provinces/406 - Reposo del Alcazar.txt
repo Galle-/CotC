@@ -1,0 +1,23 @@
+# 406 - Reposo del Alcazar
+
+# County Title
+title = c_reposo_del_alcazar
+
+# Settlements
+max_settlements = 3
+
+b_reposo_del_alcazar = temple
+b_alcazar_security_station = castle
+b_alcazar_waystation = city
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+	capital = b_alcazar_security_station
+}

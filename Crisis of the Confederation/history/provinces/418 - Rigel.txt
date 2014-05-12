@@ -1,0 +1,22 @@
+# 418 - Rigel
+
+# County Title
+title = c_rigel
+
+# Settlements
+max_settlements = 5
+
+b_rigel_iii = city
+b_rigel_iii_b = temple
+b_rigel_iv = castle
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

@@ -1,0 +1,22 @@
+# 403 - Hailu
+
+# County Title
+title = c_hailu
+
+# Settlements
+max_settlements = 4
+
+b_hailu_iv = city
+b_hailu_v = temple
+b_hailu_v_b = castle
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

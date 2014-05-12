@@ -1,6 +1,155 @@
 # Demesne type (de facto) laws (set for the PRIMARY title in a demesne but affects the whole demesne)
 
 laws = {
+# TERM LENGTH
+	local_term_length_0 = { # 1 Year
+		show_as_title = yes
+		group = local_term_limits
+		default = no
+		
+		potential = {
+			temporary = no
+			OR = {
+				NOT = { higher_tier_than = DUKE }
+				holder_scope = { independent = no }
+			}
+			is_primary_holder_title = yes
+			OR = {
+				has_law = succ_patrician_elective
+				has_law = succ_open_elective
+				has_law = succ_feudal_elective
+			}
+		}
+		
+		allow = {
+			has_law = local_term_length_1
+		}
+		
+		revoke_allowed = { always = no }
+		ai_will_do = { factor = 0 }
+		ai_will_revoke = { factor = 0 }
+	}
+	
+	local_term_length_1 = { # 4 Years
+		show_as_title = yes
+		group = local_term_limits
+		default = yes # Because 'MURICA
+		
+		potential = {
+			temporary = no
+			OR = {
+				NOT = { higher_tier_than = DUKE }
+				holder_scope = { independent = no }
+			}
+			is_primary_holder_title = yes
+			OR = {
+				has_law = succ_patrician_elective
+				has_law = succ_open_elective
+				has_law = succ_feudal_elective
+			}
+		}
+		
+		allow = {
+			OR = {
+				has_law = local_term_length_0
+				has_law = local_term_length_2
+			}
+		}
+		
+		revoke_allowed = { always = no }
+		ai_will_do = { factor = 0 }
+		ai_will_revoke = { factor = 0 }
+	}
+	
+	local_term_length_2 = { # 6 Years
+		show_as_title = yes
+		group = local_term_limits
+		default = no
+		
+		potential = {
+			temporary = no
+			OR = {
+				NOT = { higher_tier_than = DUKE }
+				holder_scope = { independent = no }
+			}
+			is_primary_holder_title = yes
+			OR = {
+				has_law = succ_patrician_elective
+				has_law = succ_open_elective
+				has_law = succ_feudal_elective
+			}
+		}
+		
+		allow = {
+			OR = {
+				has_law = local_term_length_1
+				has_law = local_term_length_3
+			}
+		}
+		
+		revoke_allowed = { always = no }
+		ai_will_do = { factor = 0 }
+		ai_will_revoke = { factor = 0 }
+	}
+	
+	local_term_length_3 = { # 10 Years
+		show_as_title = yes
+		group = local_term_limits
+		default = no
+		
+		potential = {
+			temporary = no
+			OR = {
+				NOT = { higher_tier_than = DUKE }
+				holder_scope = { independent = no }
+			}
+			is_primary_holder_title = yes
+			OR = {
+				has_law = succ_patrician_elective
+				has_law = succ_open_elective
+				has_law = succ_feudal_elective
+			}
+		}
+		
+		allow = {
+			OR = {
+				has_law = local_term_length_2
+				has_law = local_term_length_4
+			}
+		}
+		
+		revoke_allowed = { always = no }
+		ai_will_do = { factor = 0 }
+		ai_will_revoke = { factor = 0 }
+	}
+	
+	local_term_length_4 = { # For Life
+		show_as_title = yes
+		group = local_term_limits
+		default = no
+		
+		potential = {
+			temporary = no
+			OR = {
+				NOT = { higher_tier_than = DUKE }
+				holder_scope = { independent = no }
+			}
+			is_primary_holder_title = yes
+			OR = {
+				has_law = succ_patrician_elective
+				has_law = succ_open_elective
+				has_law = succ_feudal_elective
+			}
+		}
+		
+		allow = {
+			has_law = local_term_length_3
+		}
+		
+		revoke_allowed = { always = no }
+		ai_will_do = { factor = 0 }
+		ai_will_revoke = { factor = 0 }
+	}
 	# FEUDAL VASSAL LEVY SIZE LAWS
 	##############################
 	
@@ -13,7 +162,7 @@ laws = {
 				NOT = { tier = baron }
 				holder_scope = { is_patrician = yes }
 			}
-			NOT = { holder_scope = { religion_group = muslim } }
+			#NOT = { holder_scope = { religion_group = transhumanist_group } }
 		}
 		revoke_allowed = {
 			always = no
@@ -45,7 +194,7 @@ laws = {
 				NOT = { tier = baron }
 				holder_scope = { is_patrician = yes }
 			}
-			NOT = { holder_scope = { religion_group = muslim } }
+			#NOT = { holder_scope = { religion_group = transhumanist_group } }
 		}
 		revoke_allowed = {
 			always = no
@@ -77,7 +226,7 @@ laws = {
 				NOT = { tier = baron }
 				holder_scope = { is_patrician = yes }
 			}
-			NOT = { holder_scope = { religion_group = muslim } }
+			#NOT = { holder_scope = { religion_group = transhumanist_group } }
 		}
 		revoke_allowed = {
 			always = no
@@ -109,7 +258,7 @@ laws = {
 				NOT = { tier = baron }
 				holder_scope = { is_patrician = yes }
 			}
-			NOT = { holder_scope = { religion_group = muslim } }
+			#NOT = { holder_scope = { religion_group = transhumanist_group } }
 		}
 		revoke_allowed = {
 			always = no
@@ -141,7 +290,7 @@ laws = {
 				NOT = { tier = baron }
 				holder_scope = { is_patrician = yes }
 			}
-			NOT = { holder_scope = { religion_group = muslim } }
+			#NOT = { holder_scope = { religion_group = transhumanist_group } }
 		}
 		revoke_allowed = {
 			always = no
@@ -172,7 +321,7 @@ laws = {
 				NOT = { tier = baron }
 				holder_scope = { is_patrician = yes }
 			}
-			NOT = { holder_scope = { religion_group = muslim } }
+			#NOT = { holder_scope = { religion_group = transhumanist_group } }
 		}
 		revoke_allowed = {
 			always = no
@@ -204,7 +353,7 @@ laws = {
 				NOT = { tier = baron }
 				holder_scope = { is_patrician = yes }
 			}
-			NOT = { holder_scope = { religion_group = muslim } }
+			#NOT = { holder_scope = { religion_group = transhumanist_group } }
 		}
 		revoke_allowed = {
 			always = no
@@ -234,7 +383,7 @@ laws = {
 				NOT = { tier = baron }
 				holder_scope = { is_patrician = yes }
 			}
-			NOT = { holder_scope = { religion_group = muslim } }
+			#NOT = { holder_scope = { religion_group = transhumanist_group } }
 		}
 		revoke_allowed = {
 			always = no
@@ -517,7 +666,7 @@ laws = {
 				NOT = { tier = baron }
 				holder_scope = { is_patrician = yes }
 			}
-			NOT = { holder_scope = { religion_group = muslim } }
+			#NOT = { holder_scope = { religion_group = transhumanist_group } }
 		}
 		revoke_allowed = {
 			always = no
@@ -551,7 +700,7 @@ laws = {
 				NOT = { tier = baron }
 				holder_scope = { is_patrician = yes }
 			}
-			NOT = { holder_scope = { religion_group = muslim } }
+			#NOT = { holder_scope = { religion_group = transhumanist_group } }
 		}
 		revoke_allowed = {
 			always = no
@@ -581,7 +730,7 @@ laws = {
 				NOT = { tier = baron }
 				holder_scope = { is_patrician = yes }
 			}
-			NOT = { holder_scope = { religion_group = muslim } }
+			#NOT = { holder_scope = { religion_group = transhumanist_group } }
 		}
 		revoke_allowed = {
 			always = no
@@ -611,7 +760,7 @@ laws = {
 				NOT = { tier = baron }
 				holder_scope = { is_patrician = yes }
 			}
-			NOT = { holder_scope = { religion_group = muslim } }
+			#NOT = { holder_scope = { religion_group = transhumanist_group } }
 		}
 		revoke_allowed = {
 			always = no
@@ -646,7 +795,7 @@ laws = {
 				NOT = { tier = baron }
 				holder_scope = { is_patrician = yes }
 			}
-			NOT = { holder_scope = { religion_group = muslim } }
+			#NOT = { holder_scope = { religion_group = transhumanist_group } }
 		}
 		revoke_allowed = {
 			always = no
@@ -680,7 +829,7 @@ laws = {
 				NOT = { tier = baron }
 				holder_scope = { is_patrician = yes }
 			}
-			NOT = { holder_scope = { religion_group = muslim } }
+			#NOT = { holder_scope = { religion_group = transhumanist_group } }
 		}
 		revoke_allowed = {
 			always = no
@@ -710,7 +859,7 @@ laws = {
 				NOT = { tier = baron }
 				holder_scope = { is_patrician = yes }
 			}
-			NOT = { holder_scope = { religion_group = muslim } }
+			#NOT = { holder_scope = { religion_group = transhumanist_group } }
 		}
 		revoke_allowed = {
 			always = no
@@ -740,7 +889,7 @@ laws = {
 				NOT = { tier = baron }
 				holder_scope = { is_patrician = yes }
 			}
-			NOT = { holder_scope = { religion_group = muslim } }
+			#NOT = { holder_scope = { religion_group = transhumanist_group } }
 		}
 		revoke_allowed = {
 			always = no
@@ -770,255 +919,255 @@ laws = {
 	# IQTA VASSAL LEVY SIZE LAWS
 	##############################
 	
-	iqta_contract_0 = {
-		group = iqta_contract
-		feudal_opinion = 10
+	# iqta_contract_0 = {
+		# group = iqta_contract
+		# feudal_opinion = 10
 		
-		potential = {
-			OR = {
-				NOT = { tier = baron }
-				holder_scope = { is_patrician = yes }
-			}
-			holder_scope = { religion_group = muslim }
-		}
-		revoke_allowed = {
-			always = no
-		}			
-		ai_will_do = {
-			factor = 0
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		effect = {
-			hidden_tooltip = {
-				revoke_law = iqta_contract_0
-				revoke_law = iqta_contract_1
-				revoke_law = iqta_contract_2
-				revoke_law = iqta_contract_3
-			}
-		}
+		# potential = {
+			# OR = {
+				# NOT = { tier = baron }
+				# holder_scope = { is_patrician = yes }
+			# }
+			# holder_scope = { religion_group = transhumanist_group }
+		# }
+		# revoke_allowed = {
+			# always = no
+		# }			
+		# ai_will_do = {
+			# factor = 0
+		# }
+		# ai_will_revoke = {
+			# factor = 0
+		# }
+		# effect = {
+			# hidden_tooltip = {
+				# revoke_law = iqta_contract_0
+				# revoke_law = iqta_contract_1
+				# revoke_law = iqta_contract_2
+				# revoke_law = iqta_contract_3
+			# }
+		# }
 		
-		castle_vassal_max_levy = -0.4
-	}
+		# castle_vassal_max_levy = -0.4
+	# }
 	
-	iqta_contract_1 = {
-		group = iqta_contract
-		feudal_opinion = 5
+	# iqta_contract_1 = {
+		# group = iqta_contract
+		# feudal_opinion = 5
 		
-		potential = {
-			OR = {
-				NOT = { tier = baron }
-				holder_scope = { is_patrician = yes }
-			}
-			holder_scope = { religion_group = muslim }
-		}
-		revoke_allowed = {
-			always = no
-		}			
-		ai_will_do = {
-			factor = 0
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		effect = {
-			hidden_tooltip = {
-				revoke_law = iqta_contract_0
-				revoke_law = iqta_contract_1
-				revoke_law = iqta_contract_2
-				revoke_law = iqta_contract_3
-			}
-		}
-		castle_vassal_max_levy = -0.3
-	}
+		# potential = {
+			# OR = {
+				# NOT = { tier = baron }
+				# holder_scope = { is_patrician = yes }
+			# }
+			# holder_scope = { religion_group = transhumanist_group }
+		# }
+		# revoke_allowed = {
+			# always = no
+		# }			
+		# ai_will_do = {
+			# factor = 0
+		# }
+		# ai_will_revoke = {
+			# factor = 0
+		# }
+		# effect = {
+			# hidden_tooltip = {
+				# revoke_law = iqta_contract_0
+				# revoke_law = iqta_contract_1
+				# revoke_law = iqta_contract_2
+				# revoke_law = iqta_contract_3
+			# }
+		# }
+		# castle_vassal_max_levy = -0.3
+	# }
 	
-	iqta_contract_2 = {
-		group = iqta_contract
-		feudal_opinion = 0
-		default = yes
+	# iqta_contract_2 = {
+		# group = iqta_contract
+		# feudal_opinion = 0
+		# default = yes
 		
-		potential = {
-			OR = {
-				NOT = { tier = baron }
-				holder_scope = { is_patrician = yes }
-			}
-			holder_scope = { religion_group = muslim }
-		}
-		revoke_allowed = {
-			always = no
-		}			
-		ai_will_do = {
-			factor = 1
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		effect = {
-			hidden_tooltip = {
-				revoke_law = iqta_contract_0
-				revoke_law = iqta_contract_1
-				revoke_law = iqta_contract_2
-				revoke_law = iqta_contract_3
-			}
-		}
+		# potential = {
+			# OR = {
+				# NOT = { tier = baron }
+				# holder_scope = { is_patrician = yes }
+			# }
+			# holder_scope = { religion_group = transhumanist_group }
+		# }
+		# revoke_allowed = {
+			# always = no
+		# }			
+		# ai_will_do = {
+			# factor = 1
+		# }
+		# ai_will_revoke = {
+			# factor = 0
+		# }
+		# effect = {
+			# hidden_tooltip = {
+				# revoke_law = iqta_contract_0
+				# revoke_law = iqta_contract_1
+				# revoke_law = iqta_contract_2
+				# revoke_law = iqta_contract_3
+			# }
+		# }
 		
-		castle_vassal_max_levy = -0.2
-	}
+		# castle_vassal_max_levy = -0.2
+	# }
 	
-	iqta_contract_3 = {
-		group = iqta_contract
-		feudal_opinion = -5
+	# iqta_contract_3 = {
+		# group = iqta_contract
+		# feudal_opinion = -5
 		
-		potential = {
-			OR = {
-				NOT = { tier = baron }
-				holder_scope = { is_patrician = yes }
-			}
-			holder_scope = { religion_group = muslim }
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 0
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		effect = {
-			revoke_law = iqta_contract_0
-			revoke_law = iqta_contract_1
-			revoke_law = iqta_contract_2
-		}
-	}
+		# potential = {
+			# OR = {
+				# NOT = { tier = baron }
+				# holder_scope = { is_patrician = yes }
+			# }
+			# holder_scope = { religion_group = transhumanist_group }
+		# }
+		# revoke_allowed = {
+			# always = no
+		# }
+		# ai_will_do = {
+			# factor = 0
+		# }
+		# ai_will_revoke = {
+			# factor = 0
+		# }
+		# effect = {
+			# revoke_law = iqta_contract_0
+			# revoke_law = iqta_contract_1
+			# revoke_law = iqta_contract_2
+		# }
+	# }
 	
 	
 	# FEUDAL VASSAL TAX SIZE LAWS
 	##############################
 	
-	iqta_tax_0 = {
-		group = iqta_tax
-		feudal_opinion = 10
+	# iqta_tax_0 = {
+		# group = iqta_tax
+		# feudal_opinion = 10
 		
-		potential = {
-			OR = {
-				NOT = { tier = baron }
-				holder_scope = { is_patrician = yes }
-			}
-			holder_scope = { religion_group = muslim }
-		}
-		revoke_allowed = {
-			always = no
-		}			
-		ai_will_do = {
-			factor = 0
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		effect = {
-			hidden_tooltip = {
-				revoke_law = iqta_tax_0
-				revoke_law = iqta_tax_1
-				revoke_law = iqta_tax_2
-				revoke_law = iqta_tax_3
-			}
-		}
-		castle_vassal_tax_modifier = 0.0
-	}
+		# potential = {
+			# OR = {
+				# NOT = { tier = baron }
+				# holder_scope = { is_patrician = yes }
+			# }
+			# holder_scope = { religion_group = transhumanist_group }
+		# }
+		# revoke_allowed = {
+			# always = no
+		# }			
+		# ai_will_do = {
+			# factor = 0
+		# }
+		# ai_will_revoke = {
+			# factor = 0
+		# }
+		# effect = {
+			# hidden_tooltip = {
+				# revoke_law = iqta_tax_0
+				# revoke_law = iqta_tax_1
+				# revoke_law = iqta_tax_2
+				# revoke_law = iqta_tax_3
+			# }
+		# }
+		# castle_vassal_tax_modifier = 0.0
+	# }
 
-	iqta_tax_1 = {
-		group = iqta_tax
-		default = yes
-		feudal_opinion = -0
+	# iqta_tax_1 = {
+		# group = iqta_tax
+		# default = yes
+		# feudal_opinion = -0
 		
-		potential = {
-			OR = {
-				NOT = { tier = baron }
-				holder_scope = { is_patrician = yes }
-			}
-			holder_scope = { religion_group = muslim }
-		}
-		revoke_allowed = {
-			always = no
-		}			
-		ai_will_do = {
-			factor = 1
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		effect = {
-			hidden_tooltip = {
-				revoke_law = iqta_tax_0
-				revoke_law = iqta_tax_1
-				revoke_law = iqta_tax_2
-				revoke_law = iqta_tax_3
-			}
-		}
+		# potential = {
+			# OR = {
+				# NOT = { tier = baron }
+				# holder_scope = { is_patrician = yes }
+			# }
+			# holder_scope = { religion_group = transhumanist_group }
+		# }
+		# revoke_allowed = {
+			# always = no
+		# }			
+		# ai_will_do = {
+			# factor = 1
+		# }
+		# ai_will_revoke = {
+			# factor = 0
+		# }
+		# effect = {
+			# hidden_tooltip = {
+				# revoke_law = iqta_tax_0
+				# revoke_law = iqta_tax_1
+				# revoke_law = iqta_tax_2
+				# revoke_law = iqta_tax_3
+			# }
+		# }
 		
-		castle_vassal_tax_modifier = 0.1
-	}
+		# castle_vassal_tax_modifier = 0.1
+	# }
 	
-	iqta_tax_2 = {
-		group = iqta_tax
-		feudal_opinion = -10
-		potential = {
-			OR = {
-				NOT = { tier = baron }
-				holder_scope = { is_patrician = yes }
-			}
-			holder_scope = { religion_group = muslim }
-		}
-		revoke_allowed = {
-			always = no
-		}			
-		ai_will_do = {
-			factor = 0
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		effect = {
-			hidden_tooltip = {
-				revoke_law = iqta_tax_0
-				revoke_law = iqta_tax_1
-				revoke_law = iqta_tax_2
-				revoke_law = iqta_tax_3
-			}
-		}
-		castle_vassal_tax_modifier = 0.2
-	}
+	# iqta_tax_2 = {
+		# group = iqta_tax
+		# feudal_opinion = -10
+		# potential = {
+			# OR = {
+				# NOT = { tier = baron }
+				# holder_scope = { is_patrician = yes }
+			# }
+			# holder_scope = { religion_group = transhumanist_group }
+		# }
+		# revoke_allowed = {
+			# always = no
+		# }			
+		# ai_will_do = {
+			# factor = 0
+		# }
+		# ai_will_revoke = {
+			# factor = 0
+		# }
+		# effect = {
+			# hidden_tooltip = {
+				# revoke_law = iqta_tax_0
+				# revoke_law = iqta_tax_1
+				# revoke_law = iqta_tax_2
+				# revoke_law = iqta_tax_3
+			# }
+		# }
+		# castle_vassal_tax_modifier = 0.2
+	# }
 	
-	iqta_tax_3 = {
-		group = iqta_tax
-		feudal_opinion = -20
-		potential = {
-			OR = {
-				NOT = { tier = baron }
-				holder_scope = { is_patrician = yes }
-			}
-			holder_scope = { religion_group = muslim }
-		}
-		revoke_allowed = {
-			always = no
-		}			
-		ai_will_do = {
-			factor = 0
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		effect = {
-			hidden_tooltip = {
-				revoke_law = iqta_tax_0
-				revoke_law = iqta_tax_1
-				revoke_law = iqta_tax_2
-				revoke_law = iqta_tax_3
-			}
-		}
+	# iqta_tax_3 = {
+		# group = iqta_tax
+		# feudal_opinion = -20
+		# potential = {
+			# OR = {
+				# NOT = { tier = baron }
+				# holder_scope = { is_patrician = yes }
+			# }
+			# holder_scope = { religion_group = transhumanist_group }
+		# }
+		# revoke_allowed = {
+			# always = no
+		# }			
+		# ai_will_do = {
+			# factor = 0
+		# }
+		# ai_will_revoke = {
+			# factor = 0
+		# }
+		# effect = {
+			# hidden_tooltip = {
+				# revoke_law = iqta_tax_0
+				# revoke_law = iqta_tax_1
+				# revoke_law = iqta_tax_2
+				# revoke_law = iqta_tax_3
+			# }
+		# }
 		
-		castle_vassal_tax_modifier = 0.3
-	}
+		# castle_vassal_tax_modifier = 0.3
+	# }
 }

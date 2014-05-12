@@ -22,8 +22,8 @@ e_pirates = {
 	color2={ 0 0 0 }
 }
 
-# A dummy title used purely to work around Paradox's terrible programming
-b_dummy = {
+# Used to keep rebellions alive while escalating
+c_dummy_rebels = {
 	color = { 0 0 0 }
 	color2 = { 0 0 0 }
 	landless = yes
@@ -44,7 +44,9 @@ d_pilgrimage = {
 	dynasty_title_names = no
 	
 	title = "MASTER"
+	title_female = "MASTER_female"
 	title_foa = "MASTERFOA"
+	title_foa_female = "MASTERFOA_female"
 }
 
 e_terran_confederation = {
@@ -68,7 +70,9 @@ e_terran_confederation = {
 		short_name = yes
 		
 		title = "GRANDADMIRAL"
+		title_female = "GRANDADMIRAL_female"
 		title_foa = "GRANDADMIRALFOA"
+		title_foa_female = "GRANDADMIRALFOA_female"
 		
 		religion = terran_federalist
 		
@@ -82,7 +86,9 @@ e_terran_confederation = {
 			color2 = { 192 192 192 }
 			short_name = yes
 			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
 			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
 			religion = terran_federalist
 			capital = 202
 			landless = yes
@@ -93,7 +99,9 @@ e_terran_confederation = {
 			color2 = { 192 192 192 }
 			short_name = yes
 			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
 			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
 			religion = terran_federalist
 			capital = 202
 			landless = yes
@@ -104,7 +112,9 @@ e_terran_confederation = {
 			color2 = { 192 192 192 }
 			short_name = yes
 			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
 			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
 			religion = terran_federalist
 			capital = 202
 			landless = yes
@@ -115,7 +125,9 @@ e_terran_confederation = {
 			color2 = { 192 192 192 }
 			short_name = yes
 			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
 			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
 			religion = terran_federalist
 			capital = 202
 			landless = yes
@@ -126,7 +138,9 @@ e_terran_confederation = {
 			color2 = { 192 192 192 }
 			short_name = yes
 			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
 			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
 			religion = terran_federalist
 			capital = 202
 			landless = yes
@@ -148,7 +162,9 @@ e_terran_confederation = {
 			color2 = { 192 192 192 }
 			short_name = yes
 			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
 			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 202
 			landless = yes
 			tribe = yes
@@ -288,7 +304,9 @@ e_terran_confederation = {
 			color2 = { 200 200 0 }
 			short_name = yes
 			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
 			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 267
 			landless = yes
 			tribe = yes
@@ -508,7 +526,9 @@ e_terran_confederation = {
 			color2 = { 255 255 0 }
 			short_name = yes
 			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
 			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 69 # Escudo
 			landless = yes
 			tribe = yes
@@ -784,7 +804,9 @@ e_terran_confederation = {
 			color2 = { 255 255 255 }
 			short_name = yes
 			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
 			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 303 # Burj Najmii
 			landless = yes
 			tribe = yes
@@ -1019,7 +1041,9 @@ e_terran_confederation = {
 			color2 = { 10 10 10 }
 			short_name = yes
 			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
 			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 290 # Upeo wa Macho
 			landless = yes
 			tribe = yes
@@ -1146,7 +1170,7 @@ e_terran_confederation = {
 			
 			c_afolayan = {
 				color = { 255 255 208 }
-				color = { 10 10 10 }
+				color2 = { 10 10 10 }
 				
 				b_afolayan_iii = { }
 				b_afolayan_iii_b = { }
@@ -1243,7 +1267,9 @@ e_terran_confederation = {
 			color2 = { 255 255 0 }
 			short_name = yes
 			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
 			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 86 # Aldrin
 			landless = yes
 			tribe = yes
@@ -1588,7 +1614,9 @@ e_tianguo = {
 		short_name = yes
 		
 		title = "GRANDADMIRAL"
+		title_female = "GRANDADMIRAL_female"
 		title_foa = "GRANDADMIRALFOA"
+		title_foa_female = "GRANDADMIRALFOA_female"
 		
 		capital = 263 # Xin Qin
 		
@@ -1600,7 +1628,9 @@ e_tianguo = {
 			color2 = { 255 255 0 }
 			short_name = yes
 			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
 			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 264
 			landless = yes
 			tribe = yes
@@ -1610,7 +1640,9 @@ e_tianguo = {
 			color2 = { 255 255 0 }
 			short_name = yes
 			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
 			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 263
 			landless = yes
 			tribe = yes
@@ -1620,7 +1652,9 @@ e_tianguo = {
 			color2 = { 255 255 0 }
 			short_name = yes
 			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
 			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 263
 			landless = yes
 			tribe = yes
@@ -1630,7 +1664,9 @@ e_tianguo = {
 			color2 = { 255 255 0 }
 			short_name = yes
 			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
 			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 263
 			landless = yes
 			tribe = yes
@@ -1640,7 +1676,9 @@ e_tianguo = {
 			color2 = { 255 255 0 }
 			short_name = yes
 			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
 			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 263
 			landless = yes
 			tribe = yes
@@ -1660,7 +1698,9 @@ e_tianguo = {
 			color2 = { 255 0 0 }
 			short_name = yes
 			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
 			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 263
 			landless = yes
 			tribe = yes
@@ -2070,7 +2110,9 @@ e_helix = {
 			color2 = { 0 200 200 }
 			short_name = yes
 			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
 			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 109 # Port Simon
 			landless = yes
 			tribe = yes
@@ -2174,7 +2216,9 @@ e_helix = {
 			color2 = { 20 20 20 }
 			short_name = yes
 			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
 			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 162
 			landless = yes
 			tribe = yes
@@ -2472,6 +2516,10 @@ e_helix = {
 }
 
 e_witchhead = {
+	color = { 164 148 0 }
+	color2 = { 255 0 0 }
+		
+	capital = 215 # Fukuoka
 	
 	k_witchhead_nebula = {
 		color = { 128 128 255 }
@@ -2653,7 +2701,9 @@ e_witchhead = {
 			color2 = { 200 200 200 }
 			short_name = yes
 			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
 			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 25
 			landless = yes
 			tribe = yes
@@ -2933,142 +2983,592 @@ e_witchhead = {
 			}
 		}
 	}
-}
-
-# Big Five Megacorps
-b_weyland = {
-	culture = anglo_terran
-	religion = terran_federalist
-}
-b_salazar = {
-	culture = hispanic_terran
-	religion = terran_federalist
-}
-b_nazari = {
-	culture = iranian_terran
-	religion = terran_federalist
-}
-b_kojima = {
-	culture = japanese_terran
-	religion = terran_republican
-}
-b_afolayan = {
-	culture = west_afro_terran
-	religion = terran_republican
-}
-
-# Xin Zizhiqu Megacorps
-b_zhang = {
-	culture = sino_bianjiangese
-	religion = colonial_seperatist
-}
-b_komissarov = {
-	culture = russo_bianjiangese
-	religion = colonial_seperatist
-}
-b_xiang = {
-	culture = sino_bianjiangese
-	religion = colonial_seperatist
-}
-b_cao = {
-	culture = sino_bianjiangese
-	religion = colonial_seperatist
-}
-b_madrigal = {
-	culture = hispanic_bianjiangese
-	religion = colonial_seperatist
-}
-
-# Xin ZiZhiqu - d_tian_yuan Megacorps
-b_bakare = {
-	culture = east_afro_bianjiangese
-	religion = colonial_seperatist
-}
-
-b_allen = {
-	culture = anglo_bianjiangese
-	religion = colonial_seperatist
-	}
-
-b_yudin = {
-		culture = sino_bianjiangese
-		religion = colonial_seperatist
-	}
-b_khoury = {
-		culture = sino_bianjiangese
-		religion = colonial_seperatist
+	k_jion = {
+		color = { 72 124 16 }
+		color2 = { 128 0 0 }
+		
+		capital = 126 # Jion
+		
+		d_jion_fleet = {
+			color = { 72 124 16 }
+			color2 = { 200 200 200 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 126
+			landless = yes
+			tribe = yes
 		}
-b_feng = {
-		culture = sino_bianjiangese
-		religion = colonial_seperatist
+		
+		d_jion = {
+			color = { 80 124 16 }
+			color2 = { 128 0 0 }
+			
+			capital = 126 # Jion
+			
+			c_jion = {
+				color = { 80 124 24 }
+				color2 = { 128 0 0 }
+				
+				b_jion_iii = { }
+				b_jion_iii_orbital_alpha = { }
+				b_jion_iii_orbital_beta = { }
+				b_jion_iii_orbital_gamma = { }
+				b_jion_iii_b = { }
+			}
+			
+			c_kojo = {
+				color = { 80 124 32 }
+				color2 = { 128 0 0 }
+				
+				b_kojo_iii = { }
+				b_kojo_iii_b = { }
+				b_kojo_vii_b = { }
+				b_kojo_vii_c = { }
+			}
+			
+			c_uminoasa = {
+				color = { 80 124 40 }
+				color2 = { 128 0 0 }
+				
+				b_uminoasa_ii = { }
+				b_uminoasa_ii_b = { }
+				b_uminoasa_iii = { }
+				b_uminoasa_iv = { }
+			}
+			
+			c_akasei = {
+				color = { 80 124 48 }
+				color2 = { 128 0 0 }
+				
+				b_akasei_prime = { }
+				b_akasei_ii = { }
+				b_akasei_iii = { }
+				b_akasei_iv = { }
+			}
 		}
-#dynasty = 2336 #Khoury
-#dynasty = 12426 #Yudin
-#dynasty = 426 #Allen
-#dynasty = 12954 # Feng
+		
+		d_hiyokuoka = {
+			color = { 88 124 16 }
+			color2 = { 128 0 0 }
+			
+			capital = 112 # Hiyokuoka
+			
+			c_hiyokuoka = {
+				color = { 88 124 24 }
+				color2 = { 128 0 0 }
+				
+				b_hiyokuna_oka = { }
+				b_hiyokuna_oka_b = { }
+				b_hiyokuna_oka_c = { }
+				b_hiyokuoka_iv = { }
+				b_hiyokuoka_iv_b = { }
+				b_hiyokuoka_v = { }
+			}
+			
+			c_takagi = {
+				color = { 88 124 32 }
+				color2 = { 128 0 0 }
+				
+				b_takagi_iii = { }
+				b_takagi_iii_b = { }
+				b_takagi_iv = { }
+				b_takagi_iv_b = { }
+			}
+			
+			c_sen_eisei = {
+				color = { 88 124 40 }
+				color2 = { 128 0 0 }
+				
+				b_sen_eisei_b = { }
+				b_sen_eisei_c = { }
+				b_sen_eisei_d = { }
+				b_sen_eisei_e = { }
+				b_sen_eisei_f = { }
+				b_sen_eisei_g = { }
+			}
+		}
+		
+		d_sumitomo = {
+			color = { 96 124 16 }
+			color2 = { 128 0 0 }
+			
+			capital = 113 # Sumitomo
+			
+			c_sumitomo = {
+				color = { 96 124 24 }
+				color2 = { 128 0 0 }
+				
+				b_sumitomo_ii = { }
+				b_sumitomo_ii_b = { }
+				b_sumitomo_iii = { }
+				b_sumitomo_iii_b = { }
+			}
+			
+			c_saber = {
+				color = { 96 124 32 }
+				
+				b_saber_iii = { }
+				b_saber_iii_b = { }
+				b_saber_defense_station = { }
+				b_saber_observatory = { }
+			}
+		}
+		
+		d_okyoto_nara = {
+			color = { 104 124 16 }
+			color2 = { 128 0 0 }
+			
+			capital = 117 # Okyoto
+			
+			c_okyoto = {
+				color = { 104 124 24 }
+				color2 = { 128 0 0 }
+				
+				b_okyoto_ii = { }
+				b_okyoto_ii_b = { }
+				b_okyoto_iii = { }
+				b_okyoto_iii_b = { }
+			}
+			
+			c_shiga = {
+				color = { 104 124 32 }
+				color2 = { 128 0 0 }
+				
+				b_shiga = { }
+				b_shiga_orbital_alpha = { }
+				b_shiga_orbital_beta = { }
+				b_shiga_orbital_gamma = { }
+			}
+			
+			c_sabashi = {
+				color = { 104 124 40 }
+				color2 = { 128 0 0 }
+				
+				b_sabashi_iii = { }
+				b_sabashi_iii_b = { }
+				b_sabashi_iii_c = { }
+				b_sabashi_iv = { }
+			}
+			
+			c_mie = {
+				color = { 104 124 48 }
+				color2 = { 128 0 0 }
+				
+				b_mie_vi_b = { }
+				b_mie_vi_c = { }
+				b_mie_vi_d = { }
+				b_mie_vi_e = { }
+			}
+			
+			c_nara = {
+				color = { 104 124 56 }
+				color2 = { 128 0 0 }
+				
+				b_nara_iii = { }
+				b_nara_iii_b = { }
+				b_nara_iv = { }
+				b_nara_v = { }
+			}
+		}
+		
+		d_iogi = {
+			color = { 122 124 16 }
+			color2 = { 128 0 0 }
+			
+			capital = 122 # Iogi
+			
+			c_iogi = {
+				color = { 122 124 24 }
+				color2 = { 128 0 0 }
+				
+				b_iogi_prime = { }
+				b_iogi_ii = { }
+				b_iogi_iii = { }
+				b_iogi_iv = { }
+			}
+			
+			c_fuyuki = {
+				color = { 122 124 32 }
+				color2 = { 128 0 0 }
+				
+				b_fuyuki_iii = { }
+				b_fuyuki_iii_b = { }
+				b_fuyuki_iii_c = { }
+				b_fuyuki_iv = { }
+			}
+			
+			c_odayakanaumi = {
+				color = { 122 124 40 }
+				color2 = { 128 0 0 }
+				
+				b_odayakanaumi_b = { }
+				b_odayakanaumi_c = { }
+				b_odayakanaumi_d = { }
+				b_odayakanaumi_e = { }
+			}
+		}
+		
+		d_taikun = {
+			color = { 130 124 16 }
+			color2 = { 128 0 0 }
+			
+			capital = 129 # Taikun
+			
+			c_taikun = {
+				color = { 130 124 24 }
+				color2 = { 128 0 0 }
+				
+				b_taikun_ii = { }
+				b_taikun_ii_b = { }
+				b_taikun_ii_orbital = { }
+				b_taikun_iii = { }
+				b_taikun_iii_orbital = { }
+			}
+			
+			c_moegara = {
+				color = { 130 124 24 }
+				color2 = { 128 0 0 }
+				
+				b_moegara_vi_b = { }
+				b_moegara_vi_c = { }
+				b_moegara_vi_d = { }
+				b_moegara_vi_e = { }
+			}
+			
+			c_rasen = {
+				color = { 200 0 0 } # Yes, this is another Mobile Suit Gundam meta-joke
+				color2 = { 200 0 0 }
+				
+				b_rasen_prime = { }
+				b_rasen_ii = { }
+				b_rasen_iii = { }
+				b_rasen_iv = { }
+			}
+		}
+	}
+}
 
-# Orion Reach Megacorps
-b_lebedev = {
-	culture = russo_orion
-	religion = colonial_seperatist
-}
-b_ramirez = {
-	culture = hispanic_orion
-	religion = colonial_seperatist
-}
-b_calderon = {
-	culture = hispanic_orion
-	religion = colonial_seperatist
-}
-b_ortiz = {
-	culture = hispanic_orion
-	religion = colonial_seperatist
-}
-b_abu_abed = {
-	culture = arab_orion
-	religion = colonial_seperatist
-}
-
-# Mukta Duniya Megacorps
-b_rizvi = {
-	culture = indo_mukta
-	religion = colonial_seperatist
-}
-b_singhal = {
-	culture = indo_mukta
-	religion = colonial_seperatist
-}
-b_trivedi = {
-	culture = indo_mukta
-	religion = colonial_seperatist
-}
-b_cruz = {
-	culture = hispanic_mukta
-	religion = colonial_seperatist
-}
-b_igwe = {
-	culture = west_afro_mukta
-	religion = colonial_seperatist
-}
-
-# New Frontier Megacorps
-b_hawking = {
-	culture = anglo_frontiersman
-	religion = colonial_seperatist
-}
-b_cameron = {
-	culture = anglo_frontiersman
-	religion = colonial_seperatist
-}
-b_davis = {
-	culture = anglo_frontiersman
-	religion = colonial_seperatist
-}
-b_ishikawa = {
-	culture = japanese_frontiersman
-	religion = colonial_seperatist
-}
-b_omosun = {
-	culture = west_afro_frontiersman
-	religion = colonial_seperatist
+e_orion = {
+	color = { 225 225 225 }
+	color2 = { 255 255 0 }
+		
+	capital = 404 # Meissa
+	
+	k_orion_reach = {
+		color = { 200 200 200 }
+		color2 = { 255 255 0 }
+		
+		capital = 404 # Meissa
+		
+		
+		d_orion_reach_fleet = {
+			color = { 200 200 200 }
+			color2 = { 0 0 0 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 404
+			landless = yes
+			tribe = yes
+		}
+		
+		d_meissa = {
+			color = { 216 200 200 }
+			color2 = { 255 255 0 }
+			capital = 404 # Meissa
+			
+			c_meissa = {
+				color = { 216 216 200 }
+				color2 = { 255 255 0 }
+				b_meissa_ii = { }
+				b_meissa_ii_b = { }
+				b_meissa_ii_c = { }
+				b_meissa_iii = { }
+				b_meissa_iii_b = { }
+			}
+			
+			c_cisne = {
+				color = { 216 216 216 }
+				color2 = { 255 255 0 }
+				
+				b_cisne_iii = { }
+				b_cisne_iii_b = { }
+				b_cisne_citadel = { }
+				b_cisne_vi_b = { }
+				b_cisne_vi_c = { }
+				b_cisne_vi_d = { }
+				b_cisne_vi_e = { }
+			}
+		}
+		
+		d_ortega_gaona = {
+			color = { 184 200 200 }
+			color2 = { 255 255 0 }
+			capital = 394 # Nueva Galicia
+			
+			c_nueva_galicia = {
+				color = { 184 184 200 }
+				color2 = { 255 255 0 }
+				
+				b_nueva_galicia = { }
+				b_nueva_galicia_station = { }
+				b_nueva_galicia_b = { }
+				b_nueva_galicia_c = { }
+			}
+			c_nueva_valencia = {
+				color = { 184 184 184 }
+				color2 = { 255 255 0 }
+				
+				b_nueva_valencia = { }
+				b_nueva_valencia_b = { }
+				b_nueva_valencia_c = { }
+				b_nueva_valencia_d = { }
+			}
+			c_suerte = {
+				color = { 184 200 184 }
+				color2 = { 255 255 0 }
+				
+				b_suerte_iii = { }
+				b_suerte_iii_b = { }
+				b_suerte_iv = { }
+				b_suerte_iv_b = { }
+			}
+		}
+		
+		d_santiago = {
+			color = { 232 200 200 }
+			color2 = { 255 255 0 }
+			
+			capital = 397 # Santiago
+			
+			c_santiago = {
+				color = { 232 232 200 }
+				color2 = { 255 255 0 }
+				
+				b_santiago_ii = { }
+				b_santiago_ii_b = { }
+				b_santiago_iii = { }
+				b_santiago_iii_b = { }
+				b_santiago_iv = { }
+				b_santiago_iv_b = { }
+			}
+			
+			c_barrayar = {
+				color = { 232 232 232 }
+				color2 = { 255 255 0 }
+				
+				b_barrayar_iii = { }
+				b_barrayar_iii_b = { }
+				b_barrayar_iii_c = { }
+				b_barrayar_iii_orbital_alpha = { }
+				b_barrayar_iii_orbital_beta = { }
+			}
+			
+			c_el_didal = {
+				color = { 232 200 232 }
+				color2 = { 255 255 0 }
+				
+				b_el_didal = { }
+			}
+			
+			c_komarr = {
+				color = { 232 216 200 }
+				color2 = { 255 255 0 }
+				
+				b_komarr_prime = { }
+				b_komarr_prime_b = { }
+				b_komarr_prime_orbital_alpha = { }
+				b_komarr_prime_orbital_beta = { }
+			}
+			
+			c_sergyar = {
+				color = { 232 216 216 }
+				color2 = { 255 255 0 }
+				
+				b_sergyar_iii = { }
+				b_sergyar_iii_observatory = { }
+				b_sergyar_iv = { }
+				b_sergyar_iv_b = { }
+			}
+		}
+		
+		d_bellatrix = {
+			color = { 168 200 200 }
+			color2 = { 255 255 0 }
+			
+			capital = 402 # Bellatrix
+			
+			c_bellatrix = {
+				color = { 168 168 200 }
+				color2 = { 255 255 0 }
+				
+				b_bellatrix_iii = { }
+				b_bellatrix_iii_b = { }
+				b_bellatrix_iii_c = { }
+				b_bellatrix_iv = { }
+			}
+			
+			c_hailu = {
+				color = { 168 168 168 }
+				color2 = { 255 255 0 }
+				
+				b_hailu_iv = { }
+				b_hailu_v = { }
+				b_hailu_v_b = { }
+				b_hailu_v_c = { }
+			}
+		}
+		
+		d_betelgeuse = {
+			color = { 248 200 200 }
+			color2 = { 255 255 0 }
+			
+			capital = 407 # Betelgeuse
+			
+			c_betelgeuse = {
+				color = { 248 248 200 }
+				color2 = { 255 255 0 }
+				
+				b_betelgeuse_prime = { }
+				b_betelgeuse_ii = { }
+				b_betelgeuse_iii = { }
+				b_betelgeuse_iv = { }
+				b_betelgeuse_v = { }
+			}
+			
+			c_reposo_del_alcazar = {
+				color = { 248 248 248 }
+				color2 = { 255 255 0 }
+				
+				b_alcazar_security_station = { }
+				b_reposo_del_alcazar = { }
+				b_alcazar_waystation = { }
+			}
+			
+			c_estrella_del_anciano = {
+				color = { 248 200 248 }
+				color2 = { 255 255 0 }
+				b_estrella_del_anciano_prime = { }
+				b_estrella_del_anciano_ii = { }
+				b_estrella_del_anciano_observatory = { }
+			}
+		}
+		
+		d_paulet = {
+			color = { 152 200 200 }
+			color2 = { 255 255 0 }
+			
+			capital = 412 # Paulet
+			
+			c_paulet = {
+				color = { 152 152 200 }
+				color2 = { 255 255 0 }
+				
+				b_paulet_iii = { }
+				b_paulet_iii_b = { }
+				b_paulet_observatory = { }
+				b_paulet_iv = { }
+				b_paulet_iv_b = { }
+			}
+			c_ramon_y_cajal = {
+				color = { 152 152 152 }
+				color2 = { 255 255 0 }
+				
+				b_ramon_y_cajal_iii = { }
+				b_ramon_y_cajal_iii_b = { }
+				b_ramon_y_cajal_iv = { }
+				b_ramon_y_cajal_iv_b = { }
+			}
+			c_warshawski = {
+				color = { 152 200 152 }
+				color2 = { 255 255 0 }
+				
+				b_warshawski_iii = { }
+				b_warshawski_iii_b = { }
+				b_warshawski_iii_c = { }
+				b_warshawski_iii_d = { }
+			}
+			c_seldon = {
+				color = { 200 152 152 }
+				color2 = { 255 255 0 }
+				title = "MAYOR"
+				title_female = "MAYOR_female"
+				title_foa = "MAYORFOA"
+				title_foa_female = "MAYORFOA_female"
+				
+				b_termino = { }
+				b_seldon_observatory = { }
+				b_seldon_iv = { }
+				b_seldon_v = { }
+			}
+		}
+		
+		d_rigel = {
+			color = { 255 200 200 }
+			color2 = { 255 255 0 }
+			
+			capital = 418 # Rigel
+			
+			c_rigel = {
+				color = { 255 255 200 }
+				color2 = { 255 255 0 }
+				
+				b_rigel_iii = { }
+				b_rigel_iii_b = { }
+				b_rigel_iv = { }
+				b_rigel_iv_b = { }
+				b_rigel_v = { }
+			}
+			c_mintaka = {
+				color = { 255 255 255 }
+				color2 = { 255 255 0 }
+				
+				b_mintaka_prime = { }
+				b_mintaka_ii = { }
+				b_mintaka_iii = { }
+				b_mintaka_iv = { }
+			}
+			c_genciana = {
+				color = { 255 200 255 }
+				color2 = { 255 255 0 }
+				
+				b_genciana_vii_b = { }
+				b_genciana_vii_c = { }
+				b_genciana_vii_d = { }
+				b_genciana_vii_e = { }
+			}
+			c_saiph = {
+				color = { 200 255 255 }
+				color2 = { 255 255 0 }
+				
+				b_saiph_prime = { }
+				b_saiph_prime_b = { }
+				b_saiph_waystation = { }
+				b_saiph_iii = { }
+			}
+			c_dorter = {
+				color = { 200 255 200 }
+				color2 = { 255 255 0 }
+				
+				b_dorter_ii_b = { }
+				b_dorter_ii_c = { }
+				b_dorter_ii_d = { }
+				b_dorter_observatory = { }
+			}
+			c_anilam = {
+				color = { 200 200 255 }
+				color2 = { 255 255 0 }
+				
+				b_anilam_vi_b = { }
+				b_anilam_vi_c = { }
+				b_anilam_vi_d = { }
+				b_anilam_vi_e = { }
+			}
+		}
+	}
 }

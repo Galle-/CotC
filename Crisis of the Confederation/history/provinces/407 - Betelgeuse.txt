@@ -1,0 +1,22 @@
+# 407 - Betelgeuse
+
+# County Title
+title = c_betelgeuse
+
+# Settlements
+max_settlements = 5
+
+b_betelgeuse_prime = city
+b_betelgeuse_ii = temple
+b_betelgeuse_iii = castle
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

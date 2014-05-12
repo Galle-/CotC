@@ -1,0 +1,6 @@
+2998.1.1 = {
+	liege = "d_betelgeuse"
+	holder = 1104635 # Matias Villalobos
+	law = true_cognatic_succession
+	law = succ_appointment
+}

@@ -1,0 +1,58 @@
+# 110 - Takagi
+
+# County Title
+title = c_takagi
+
+# Settlements
+max_settlements = 4
+
+b_takagi_iii = city
+b_takagi_iii_b = temple
+b_takagi_iv = castle
+
+# Misc
+culture = japanese_tengoku # Initial culture
+religion = colonial_separatist
+1.1.1 = {
+	# Takagi III - notable for very unusual xenofauna (a "world tree")
+	b_takagi_iii = ct_clean_atmosphere
+	b_takagi_iii = ct_no_water
+	b_takagi_iii = ct_trace_water
+	b_takagi_iii = ct_lakes
+	b_takagi_iii = ct_seas
+	b_takagi_iii = ct_oceans
+	b_takagi_iii = ct_burning
+	b_takagi_iii = ct_hot
+	b_takagi_iii = ct_warm
+	b_takagi_iii = ct_planet_survey
+	
+	b_takagi_iii_b = tp_no_atmosphere
+	b_takagi_iii_b = tp_no_water
+	b_takagi_iii_b = tp_trace_water
+	b_takagi_iii_b = tp_burning
+	b_takagi_iii_b = tp_hot
+	b_takagi_iii_b = tp_warm
+	b_takagi_iii_b = tp_planet_survey
+	
+	b_takagi_iv = ca_toxic_atmosphere
+	b_takagi_iv = ca_no_water
+	b_takagi_iv = ca_trace_water
+	b_takagi_iv = ca_lakes
+	b_takagi_iv = ca_burning
+	b_takagi_iv = ca_hot
+	b_takagi_iv = ca_warm
+	b_takagi_iv = ca_optimal_hot
+	b_takagi_iv = ca_planet_survey
+}
+
+2997.7.7 = {
+	b_takagi_iii = ct_colony_0
+	b_takagi_iii = ct_colony_1
+	b_takagi_iii = ct_colony_2
+	b_takagi_iii = ct_colony_3
+	
+	b_takagi_iii_b = tp_colony_0
+	
+	b_takagi_iv = ca_colony_0
+	b_takagi_iv = ca_colony_1
+}

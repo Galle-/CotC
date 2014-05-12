@@ -288,6 +288,11 @@ cybernetic_limb = {
 }
 full_cybernetic_conversion = {
 	random = no
+
+	potential = { 
+		religion_group = transhumanist_group
+	}
+
 	opposites = {
 		cybernetic_limb
 		wounded
@@ -305,6 +310,11 @@ full_cybernetic_conversion = {
 }
 # HIVER IMPLANT - MASSIVELY PLOT IMPORTANT
 hiver_implant = {
+
+	potential = { 
+		religion_group = transhumanist_group
+	}
+
 	customizer = no
 	random = no
 	cached = yes

@@ -28,16 +28,17 @@
 	2998.1.1 = {
 		# The Crisis begins
 		effect = {
-			religion_authority = { modifier = allowed_major_rebellion years = 30 } # Orion
-			religion_authority = { modifier = allowed_major_rebellion years = 30 } # Bianjiang
-			religion_authority = { modifier = allowed_major_rebellion years = 30 } # Xin Zizhiqu
-			religion_authority = { modifier = allowed_major_rebellion years = 30 } # Novy Edem
-			religion_authority = { modifier = allowed_major_rebellion years = 30 } # Strugatsky
-			religion_authority = { modifier = allowed_major_rebellion years = 30 } # Jion
-			religion_authority = { modifier = allowed_major_rebellion years = 30 } # New Frontier
-			religion_authority = { modifier = allowed_major_rebellion years = 30 } # Avalon
-			religion_authority = { modifier = allowed_major_rebellion years = 30 } # Tarka
-			religion_authority = { modifier = allowed_major_rebellion years = 30 } # Mukta Duniya
+			religion_authority = { modifier = allowed_major_rebellion years = 60 } # Orion
+			religion_authority = { modifier = allowed_major_rebellion years = 60 } # Bianjiang
+			religion_authority = { modifier = allowed_major_rebellion years = 60 } # Xin Zizhiqu
+			religion_authority = { modifier = allowed_major_rebellion years = 60 } # Novy Edem
+			religion_authority = { modifier = allowed_major_rebellion years = 60 } # Strugatsky
+			religion_authority = { modifier = allowed_major_rebellion years = 60 } # Jion
+			religion_authority = { modifier = allowed_major_rebellion years = 60 } # New Frontier
+			religion_authority = { modifier = allowed_major_rebellion years = 60 } # Avalon
+			religion_authority = { modifier = allowed_major_rebellion years = 60 } # Tarka
+			religion_authority = { modifier = allowed_major_rebellion years = 60 } # Mukta Duniya
+			prestige = -5000 # James Buchanan IN SPACE
 		}
 	}
 
@@ -812,7 +813,7 @@
 		birth = 2954.1.1
 		effect = { set_dynasty_flag = flag_dynasty_processed }
 	}
-	2980.1.1 = { add_spouse = 11020006 } # Iskinder Desta
+	2980.1.1 = { effect = { add_spouse_matrilineal = 11020006 } } # Iskinder Desta
 	2980.1.1 = { effect = { spouse = { add_lover = ROOT } } }
 
 }
@@ -1045,7 +1046,7 @@
 	2967.1.1 = { birth = "2967.1.1" }
 	2994.1.1 = { add_spouse = 11013073 } # Shan Yuan
 	2994.1.1 = { effect = { spouse = { add_lover = ROOT } } }
-	2997.1.1 = { effect = { grant_minor_title = title_expected_successor } } # Character flagged for future canonical importance, shouldn't be allowed to disappear.
+	2997.1.1 = { effect = { give_minor_title = title_expected_successor } } # Character flagged for future canonical importance, shouldn't be allowed to disappear.
 }
 
 11013073 = {

@@ -1,0 +1,22 @@
+# 415 - Saiph
+
+# County Title
+title = c_saiph
+
+# Settlements
+max_settlements = 4
+
+b_saiph_prime = castle
+b_saiph_prime_b = temple
+b_saiph_waystation = city
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

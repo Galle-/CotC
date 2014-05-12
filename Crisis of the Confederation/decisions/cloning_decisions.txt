@@ -2,13 +2,14 @@ decisions = {
 	clone_self_decision = {
 		potential = {
 			is_ruler = yes
-			demesne_size = 1 # Must actually have land somewhere
+			is_landed = yes # Must actually have land somewhere
 			NOT = { has_character_flag = flag_cloning_decision_active }
 			# Tech requirement goes here
 		}
 		allow = {			
 			# Clones are expensive
 			wealth = 500
+			prisoner = no
 		}
 		effect = {
 			set_character_flag = flag_cloning_decision_active
@@ -16,6 +17,31 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				religion_group = religious_group
+				NOT = { trait = pragmatic }
+				OR = {
+					NOT = {
+						any_demesne_title = {
+							OR = {
+								has_law = succ_gavelkind
+								has_law = succ_primogeniture
+								has_law = succ_ultimogeniture
+								has_law = succ_seniority
+								has_law = succ_tanistry
+							}
+						}
+					}
+					any_demesne_title = { current_heir = { dynasty = ROOT } }
+					trait = humble
+				}
+			}
+			modifier = {
+				factor = 0
+				religion_group = religious_group
+				trait = radical
+			}
 			modifier = {
 				factor = 0
 				is_married = yes
@@ -41,7 +67,11 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				any_child = { reverse_opinion = { who = ROOT value = 50 } }
+				any_child = {
+					reverse_opinion = { who = ROOT value = -49 }
+					NOT = { trait = incapable }
+					NOT = { trait = bastard }
+				}
 				NOT = {
 					AND = {
 						is_female = no
