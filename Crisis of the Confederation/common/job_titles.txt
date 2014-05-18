@@ -24,6 +24,7 @@ job_chancellor = {
 		NOT = { trait = incapable }
 	}
 	gain_effect = {
+		remove_opinion = { who = FROM modifier = opinion_fired_from_council }
 	}
 	lose_effect = {
 		opinion = { who = FROM modifier = opinion_fired_from_council }
@@ -55,6 +56,7 @@ job_marshal = {
 	}
 	
 	gain_effect = {
+		remove_opinion = { who = FROM modifier = opinion_fired_from_council }
 	}
 	lose_effect = {
 		opinion = { who = FROM modifier = opinion_fired_from_council }
@@ -84,6 +86,7 @@ job_treasurer = {
 		NOT = { trait = incapable }
 	}
 	gain_effect = {
+		remove_opinion = { who = FROM modifier = opinion_fired_from_council }
 	}
 	lose_effect = {
 		opinion = { who = FROM modifier = opinion_fired_from_council }
@@ -112,6 +115,7 @@ job_spymaster = {
 		NOT = { trait = incapable }
 	}
 	gain_effect = {
+		remove_opinion = { who = FROM modifier = opinion_fired_from_council }
 	}
 	lose_effect = {
 		opinion = { who = FROM modifier = opinion_fired_from_council }
@@ -140,6 +144,7 @@ job_scientist = {
 		NOT = { trait = incapable }
 	}
 	gain_effect = {
+		remove_opinion = { who = FROM modifier = opinion_fired_from_council }
 	}
 	lose_effect = {
 		opinion = { who = FROM modifier = opinion_fired_from_council }
@@ -170,6 +175,7 @@ job_spiritual = {
 		NOT = { trait = incapable }
 	}
 	gain_effect = {
+		remove_opinion = { who = FROM modifier = opinion_fired_from_council }
 	}
 	lose_effect = {
 		opinion = { who = FROM modifier = opinion_fired_from_council }
