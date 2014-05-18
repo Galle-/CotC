@@ -1,0 +1,496 @@
+
+e_tianguo = {
+	color = { 128 0 0 }
+	color2 = { 255 255 0 }
+	
+	capital = 263 # Xin Qin
+	
+	culture = sino_bianjiangese # Default culture
+	
+	# Navy
+	k_tianguo_navy = {
+		color = { 128 64 0 }
+		color2 = { 255 255 0 }
+		
+		short_name = yes
+		
+		title = "GRANDADMIRAL"
+		title_female = "GRANDADMIRAL_female"
+		title_foa = "GRANDADMIRALFOA"
+		title_foa_female = "GRANDADMIRALFOA_female"
+		
+		capital = 263 # Xin Qin
+		
+		landless = yes
+		tribe = yes
+		
+		d_tianguo_first_fleet = {
+			color = { 128 64 16 }
+			color2 = { 255 255 0 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 264
+			landless = yes
+			tribe = yes
+		}
+		d_tianguo_second_fleet = {
+			color = { 128 64 32 }
+			color2 = { 255 255 0 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 263
+			landless = yes
+			tribe = yes
+		}
+		d_tianguo_third_fleet = {
+			color = { 128 64 48 }
+			color2 = { 255 255 0 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 263
+			landless = yes
+			tribe = yes
+		}
+		d_tianguo_fourth_fleet = {
+			color = { 128 64 64 }
+			color2 = { 255 255 0 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 263
+			landless = yes
+			tribe = yes
+		}
+		d_tianguo_fifth_fleet = {
+			color = { 128 64 80 }
+			color2 = { 255 255 0 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 263
+			landless = yes
+			tribe = yes
+		}
+	}
+	
+	k_xin_zizhiqu = {
+		color = { 164 164 0 }
+		color2 = { 255 0 0 }
+		
+		capital = 263 # Xin Qin
+		
+		culture = sino_bianjiangese
+		
+		d_xin_zizhiqu_fleet = {
+			color = { 164 164 32 }
+			color2 = { 255 0 0 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 263
+			landless = yes
+			tribe = yes
+		}
+		
+		d_xin_qin = {
+			color = { 148 164 0 }
+			color2 = { 255 0 0 }
+			
+			capital = 263 # Xin Qin
+			
+			c_xin_qin = {
+				color = { 148 164 16 }
+				color2 = { 255 0 0 }
+				b_xin_qin_iii = { }
+				b_xin_qin_iii_b = { }
+				b_xin_qin_iv = { }
+				b_xin_qin_iv_b = { }
+				b_xin_qin_vi_b = { }
+				b_xin_qin_vi_c = { }
+				b_xin_qin_vi_d = { }
+			}
+			c_hexi = {
+				color = { 148 164 32 }
+				color2 = { 255 0 0 }
+				
+				b_hexi_iii = { }
+				b_hexi_iv = { }
+				b_hexi_iv_b = { }
+				b_hexi_iv_c = { }
+			}
+			c_xueyuan = {
+				color = { 148 164 48 }
+				color2 = { 255 0 0 }
+				
+				b_xueyuan_ii = { }
+				b_xueyuan_ii_b = { }
+				b_xueyuan_iii = { }
+				b_xueyuan_iii_b = { }
+			}
+			c_yang_wenli = {
+				color = { 148 164 64 }
+				color2 = { 255 0 0 }
+				
+				b_yang_wenli_prime = { }
+				b_yang_wenli_prime_b = { }
+				b_yang_wenli_iii = { }
+				b_yang_wenli_iv = { }
+			}
+			c_chi_tianliang = {
+				color = { 148 164 80 }
+				color2 = { 255 0 0 }
+				
+				b_chi_tianliang_prime = { }
+				b_chi_tianliang_prime_b = { }
+				b_chi_tianliang_iii = { }
+				b_chi_tianliang_iv = { }
+			}
+		}
+		
+		d_wu_ren_zhi_ah = {
+			color = { 164 148 0 }
+			color2 = { 255 0 0 }
+			
+			capital = 383 # Anquan Gang
+			
+			c_anquan_gang = {
+				color = { 164 148 16 }
+				color2 = { 255 0 0 }
+				
+				b_anquan_gang = { }
+				b_anquan_gang_b = { }
+				b_anquan_gang_c = { }
+				b_anquan_gang_iv = { }
+			}
+			c_chen_pingyuan = {
+				color = { 164 148 32 }
+				color2 = { 255 0 0 }
+				
+				b_chen_pingyuan = { }
+				b_chen_pingyuan_b = { }
+				b_chen_pingyuan_c = { }
+				b_chen_pingyuan_iv = { }
+			}
+			c_yonghengde_anbian = {
+				color = { 164 148 48 }
+				color2 = { 255 0 0 }
+				
+				b_yonghende_anbian = { }
+				b_yonghende_anbian_iii = { }
+				b_yonghende_anbian_iv = { }
+				b_yonghende_anbian_v = { }
+			}
+			c_da_dianhai = {
+				color = { 164 148 64 }
+				color2 = { 255 0 0 }
+				
+				b_da_dianhai_waystation = { }
+				b_da_dianhai_observatory = { }
+				b_da_dianhai_starport = { }
+				b_da_dianhai_prime = { }
+			}
+		}
+		
+		d_macau = {
+			color = { 148 148 0 }
+			color2 = { 255 0 0 }
+			
+			capital = 234 # Macau
+			
+			c_macau = {
+				color = { 148 148 16 }
+				color2 = { 255 0 0 }
+				
+				b_macau_station = { }
+				b_macau_prime = { }
+				b_macau_prime_b = { }
+				b_macau_iii = { }
+				b_macau_iv = { }
+			}
+			c_pu_erh = {
+				color = { 148 148 32 }
+				color2 = { 255 0 0 }
+				
+				b_pu_erh = { }
+				b_pu_erh_b = { }
+				b_pu_erh_orbital = { }
+				b_pu_erh_v = { }
+			}
+			c_kantebolei = {
+				color = { 148 148 48 }
+				color2 = { 255 0 0 }
+				
+				b_kantebolei_iii = { }
+				b_kantebolei_iii_b = { }
+				b_kantebolei_iv = { }
+				b_kantebolei_v = { }
+			}
+		}
+		
+		d_tian_yuan = {
+			color = { 132 148 0 }
+			color2 = { 255 0 0 }
+			capital = 240 # Tian Yuan
+			
+			c_tian_yuan = {
+				color = { 132 148 16 }
+				color2 = { 255 0 0 }
+				
+				b_tian_yuan_iv_b = city
+				b_tian_yuan_iv = temple
+				b_tian_yuan_v = temple
+				b_tian_yuan_v_b = castle
+			}
+			c_lasa = {
+				color = { 132 148 32 }
+				color2 = { 255 0 0 }
+				
+				b_lasa_prime = { }
+				b_lasa_ii = { }
+				b_lasa_iii = { }
+				b_lasa_iv = { }
+			}
+			c_yulin = {
+				color = { 132 148 48 }
+				color2 = { 255 0 0 }
+				
+				b_yulin_ii = { }
+				b_yulin_ii_b = { }
+				b_yulin_iii = { }
+				b_yulin_iv = { }
+			}
+			c_yesushan = {
+				color = { 132 148 64 }
+				color2 = { 255 0 0 }
+				
+				b_yesushan = { }
+				b_yesushan_b = { }
+				b_yesushan_c = { }
+				b_yesushan_iv = { }
+			}
+		}
+		
+		d_hua = {
+			color = { 148 132 0 }
+			color2 = { 255 0 0 }
+			capital = 241 # Hua
+			
+			c_hua = {
+				color = { 148 132 16 }
+				color2 = { 255 0 0 }
+				
+				b_hua_prime = { }
+				b_hua_prime_c = { }
+				b_hua_prime_f = { }
+				b_hua_prime_g = { }
+				b_hua_prime_orbital_a = { }
+				b_hua_prime_orbital_b = { }
+			}
+			c_fanxing_hai = {
+				color = { 148 132 32 }
+				color2 = { 255 0 0 }
+				
+				b_fanxing_hai_viii = { }
+				b_fanxing_hai_orbital = { }
+			}
+			c_wanguan = {
+				color = { 148 132 48 }
+				color2 = { 255 0 0 }
+				
+				b_wanguan_ii = { }
+				b_wanguan_orbital_a = { }
+				b_wanguan_orbital_b = { }
+			}
+		}
+		
+		d_yingshi = {
+			color = { 132 132 0 }
+			color2 = { 255 0 0 }
+			capital = 244 # Yingshi
+			
+			c_yingshi = {
+				color = { 132 132 16 }
+				color2 = { 255 0 0 }
+				
+				b_ying_shi_viii = { }
+				b_ying_shi_viii_orbital = { }
+				b_ying_shi_xii = { }
+				b_ying_shi_xii_orbital = { }
+				b_ying_shi_xx = { }
+			}
+			c_ghuanghai = {
+				color = { 132 132 32 }
+				color2 = { 255 0 0 }
+				
+				b_ghuanghai_inner_belt = { }
+				b_ghuanghai_vii = { }
+				b_ghuanghai_ii = { }
+				b_ghuanghai_outer_belt = { }
+			}
+			c_youfeng = {
+				color = { 132 132 48 }
+				color2 = { 255 0 0 }
+				
+				b_youfeng_vi_a = { }
+				b_youfeng_vi_orbital = { }
+				b_youfeng_inner_belt_a = { }
+				b_youfeng_inner_belt_b = { }
+			}
+		}
+		
+		d_hang_seng = {
+			color = { 128 132 0 }
+			color2 = { 255 0 0 }
+			capital = 248 # Xianggang Xin
+			
+			c_xianggang_xin = {
+				color = { 128 132 16 }
+				color2 = { 255 0 0 }
+				
+				b_xianggang_xin = { }
+				b_xianggang_xin_b = { }
+				b_xianggang_xin_orbital = { }
+				b_xianggang_xin_vii_b = { }
+				b_xianggang_xin_vii_c = { }
+				b_xianggang_xin_vii_d = { }
+			}
+			c_tiantiang = {
+				color = { 128 132 32 }
+				color2 = { 255 0 0 }
+				
+				b_tiantiang_ii = { }
+				b_tiantiang_iv = { }
+				b_tiantiang_vi_b = { }
+				b_tiantiang_iv_orbital = { }
+			}
+			c_leyuan = {
+				color = { 128 132 48 }
+				color2 = { 255 0 0 }
+				
+				b_leyuan_ii = { }
+				b_leyuan_v = { }
+				b_leyuan_vii = { }
+				b_leyuan_vii_a = { }
+				b_leyuan_vii_c = { }
+			}
+			c_jiayuan = {
+				color = { 128 132 64 }
+				color2 = { 255 0 0 }
+				
+				b_jiayuan_prime = { }
+				b_jiayuan_prime_a = { }
+				b_jiayuan_prime_e = { }
+				b_jiayuan_orbital = { }
+			}
+		}
+		
+		d_qiangying = {
+			color = { 132 128 0 }
+			color2 = { 255 0 0 }
+			capital = 253 # Qiangying
+			
+			c_qiangying = {
+				color = { 132 128 16 }
+				color2 = { 255 0 0 }
+				
+				b_qiangying_vii = { }
+				b_qianyging_station = { }
+				b_qiangying_vii_a = { }
+				b_qiangying_v = { }
+			}
+			c_liuyang = {
+				color = { 132 128 32 }
+				color2 = { 255 0 0 }
+				
+				b_liuyang_iii = { }
+				b_liuyang_iv = { }
+				b_liuyang_iii_b = { }
+				b_liuyang_vi = { }
+			}
+			c_youli = {
+				color = { 132 128 48 }
+				color2 = { 255 0 0 }
+				
+				b_youli_prime = { }
+				b_youli_prime_b = { }
+				b_youli_ii = { }
+				b_youli_ii_c = { }
+			}
+		}
+		
+		d_deng_biao = {
+			color = { 128 128 0 }
+			color2 = { 255 0 0 }
+			capital = 255 # Deng Biao
+			
+			c_deng_biao = {
+				color = { 128 128 16 }
+				color2 = { 255 0 0 }
+				
+				b_deng_biao_v_b = { }
+				b_deng_biao_v_c = { }
+				b_deng_biao_v_d = { }
+				b_deng_biao_v_e = { }
+			}
+			c_Niu_Cunlan = {
+				color = { 128 128 32 }
+				color2 = { 255 0 0 }
+				
+				b_Niu_Cunlan_Prime = { }
+				b_Niu_Cunlan_Moon_1 = { }
+				b_Niu_Cunlan_Moon_2 = { }
+				b_Niu_Cunlan_Moon_7 = { }
+			}
+			c_gaoda_de_shan = {
+				color = { 128 128 48 }
+				color2 = { 255 0 0 }
+				
+				b_gaoda_de_shan_iii = { }
+				b_gaoda_de_shan_iv = { }
+				b_gaoda_de_shan_iii_b = { }
+				b_gaoda_de_shan_iii_refinery = { }
+			}
+		}
+		
+		d_wei = {
+			color = { 164 128 0 }
+			color2 = { 255 0 0 }
+			capital = 248 # Wei
+			
+			c_wei = {
+				color = { 164 128 16 }
+				color2 = { 255 0 0 }
+				
+				b_wei_iii = { }
+				b_wei_iii_b = { }
+				b_wei_iii_c = { }
+				b_wei_iv = { }
+			}
+			
+			c_jiu_wanguan = {
+				color = { 164 128 32 }
+				color2 = { 255 0 0 }
+				
+				b_jiu_wanguan_xi = { }
+				b_jiu_wanguan_xi_orbital_a = { }
+				b_jiu_wanguan_xi_orbital_b = { }
+				b_jiu_wanguan_xi_orbital_c = { }
+			}
+		}
+	}
+}

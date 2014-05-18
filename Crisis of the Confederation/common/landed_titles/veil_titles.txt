@@ -1,0 +1,94 @@
+k_veil = {
+	color = { 128 64 0 }
+	color2 = { 255 255 0 }
+	capital = 332 #687 #vn32
+	
+	d_inner_veil = {
+		color = { 128 0 0 }
+		color2 = { 255 255 0 }
+		capital = 332 #687 #vn32
+		
+		c_vn_381 = {
+			color = { 132 128 0 }
+			color2 = { 255 255 0 }
+			
+			b_vn_381_i = {
+			}
+		}
+		c_vn_1241 = {
+			color = { 132 132 0 }
+			color2 = { 255 255 0 }
+			
+			b_vn_1241_i = {
+			}
+		}
+		c_vn_32 = {
+			color = { 132 128 0 }
+			color2 = { 255 255 0 }
+			
+			b_vn_32_i = {
+			}
+		}
+		c_vn_362 = {
+			color = { 128 128 0 }
+			color2 = { 255 255 0 }
+			
+			b_vn_362_i = {
+			}
+		}
+	}
+	d_outer_veil = {
+		color = { 128 64 48 }
+		color2 = { 255 255 0 }
+		capital = 335 #690 #vn 128
+		
+		c_vn_128 = {
+			color = { 132 148 0 }
+			color2 = { 255 255 0 }
+			
+			b_vn_128_i = {
+			}
+		}
+		c_vn_732 = {
+			color = { 164 148 48 }
+			color2 = { 255 255 0 }
+			
+			b_vn_732_i = {
+			}
+		}
+		c_vn_697 = {
+			color = { 148 148 16 }
+			color2 = { 255 255 0 }
+			
+			b_vn_697_i = {
+			}
+		}
+	}
+	d_remote_veil = {
+		color = { 148 164 0 }
+		color2 = { 255 255 0 }
+		capital = 329 #vn 1571
+		
+		c_vn_1571 = {
+			color = { 164 164 32 }
+			color2 = { 255 255 0 }
+			
+			b_vn_1571_i = {
+			}
+		}
+		c_vn_1780 = {
+			color = { 148 164 0 }
+			color2 = { 255 255 0 }
+			
+			b_vn_1780_i = {
+			}
+		}
+		c_vn_3110 = {
+			color = { 148 164 16 }
+			color2 = { 255 255 0 }
+			
+			b_vn_3110_i = {
+			}
+		}
+	}
+}

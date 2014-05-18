@@ -1,0 +1,421 @@
+
+e_helix = {
+	color = { 128 0 255 }
+	color2 = { 128 0 128 }
+	
+	k_helix = {
+		color = { 200 0 200 }
+		color2 = { 0 200 200 }
+		
+		capital = 102 # Eye of God
+		
+		
+		d_helix_fleet = {
+			color = { 180 0 220 }
+			color2 = { 0 200 200 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 109 # Port Simon
+			landless = yes
+			tribe = yes
+		}
+		
+		d_lower_helix = {
+			color = { 180 0 180 }
+			color2 = { 0 200 200 }
+			
+			capital = 102 # Eye of God
+			
+			c_eye_of_god = {
+				color = { 180 16 180 }
+				color2 = { 0 200 200 }
+				
+				b_eye_of_god = { }
+				b_eye_of_god_waystation = { }
+			}
+			c_he_843 = {
+				color = { 180 32 180 }
+				color2 = { 0 200 200 }
+				
+				b_he_843_station_alpha = { }
+				b_he_843_station_beta = { }
+				b_he_843_station_gamma = { }
+				b_he_843_station_delta = { }
+			}
+			c_he_794 = {
+				color = { 180 48 180 }
+				color2 = { 0 200 200 }
+				
+				b_he_794_station_alpha = { }
+				b_he_794_station_beta = { }
+				b_he_794_station_gamma = { }
+				b_he_794_station_delta = { }
+			}
+			c_he_153 = {
+				color = { 180 64 180 }
+				color2 = { 0 200 200 }
+				
+				b_he_153_station_alpha = { }
+				b_he_153_station_beta = { }
+				b_he_153_station_gamma = { }
+				b_he_153_station_delta = { }
+			}
+		}
+		
+		d_upper_helix = {
+			color = { 220 0 220 }
+			color2 = { 0 200 200 }
+			
+			capital = 109 # Port Simon
+			
+			c_port_simon = {
+				color = { 220 16 220 }
+				color2 = { 0 200 200 }
+				
+				b_port_simon = { }
+				b_port_simon_observatory = { }
+			}
+			c_he_219 = {
+				color = { 220 32 220 }
+				color2 = { 0 200 200 }
+				
+				b_he_219_station_alpha = { }
+				b_he_219_station_beta = { }
+				b_he_219_station_gamma = { }
+				b_he_219_station_delta = { }
+			}
+			c_he_338 = {
+				color = { 220 48 220 }
+				color2 = { 0 200 200 }
+				
+				b_he_338_station_alpha = { }
+				b_he_338_station_beta = { }
+				b_he_338_station_gamma = { }
+				b_he_338_station_delta = { }
+			}
+			c_he_702 = {
+				color = { 220 64 220 }
+				color2 = { 0 200 200 }
+				
+				b_he_702_station_alpha = { }
+				b_he_702_station_beta = { }
+				b_he_702_station_gamma = { }
+				b_he_702_station_delta = { }
+			}
+		}
+	}
+	
+	k_novyy_edem = {
+		color = { 120 200 0 }
+		color2 = { 20 20 20 }
+		
+		capital = 162 # Novyy Edem
+		
+		culture = russo_edemite
+		
+		d_novyy_edem_fleet = {
+			color = { 100 180 0 }
+			color2 = { 20 20 20 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 162
+			landless = yes
+			tribe = yes
+		}
+		
+		d_novyy_edem = {
+			color = { 132 200 0 }
+			color2 = { 20 20 20 }
+			
+			capital = 162
+			
+			c_novyy_edem = {
+				color = { 132 200 16 }
+				color2 = { 20 20 20 }
+				
+				b_novyy_edem_prime = { }
+				b_novyy_edem_prime_b = { }
+				b_novyy_edem_prime_orbital = { }
+				b_novyy_edem_ii = { }
+				b_novyy_edem_iii = { }
+				b_novyy_edem_iv = { }
+			}
+			c_loyalnost = {
+				color = { 132 200 32 }
+				color2 = { 20 20 20 }
+				
+				b_loyalnost_ii = { }
+				b_loyalnost_iii = { }
+				b_loyalnost_iii_b = { }
+				b_loyalnost_iv = { }
+			}
+			c_muzhestvo = {
+				color = { 132 200 48 }
+				color2 = { 20 20 20 }
+				
+				b_muzhestvo_viii_b = { }
+				b_muzhestvo_viii_c = { }
+				b_muzhestvo_viii_d = { }
+				b_muzhestvo_viii_e = { }
+			}
+			c_distsiplina = {
+				color = { 132 200 64 }
+				color2 = { 20 20 20 }
+				
+				b_distsiplina_ii = { }
+				b_distsiplina_ii_b = { }
+				b_distsiplina_ii_c = { }
+				b_distsiplina_iii = { }
+			}
+		}
+		
+		d_prochnost = {
+			color = { 144 200 0 }
+			color2 = { 20 20 20 }
+			
+			capital = 167 # Prochnost'
+			
+			c_prochnost = {
+				color = { 144 200 16 }
+				color2 = { 20 20 20 }
+				
+				b_prochnost_iii = { }
+				b_prochnost_iv = { }
+				b_prochnost_iv_b = { }
+				b_prochnost_v = { }
+				b_prochnost_v_b = { }
+			}
+			c_vernost = {
+				color = { 144 200 32 }
+				color2 = { 20 20 20 }
+				
+				b_vernost_iii = { }
+				b_vernost_iii_b = { }
+				b_vernost_iv = { }
+				b_vernost_iv_b = { }
+			}
+			c_ostorozhnost = {
+				color = { 144 200 48 }
+				color2 = { 20 20 20 }
+				
+				b_ostorozhnost_iii = { }
+				b_ostorozhnost_iv = { }
+				b_ostorozhnost_iv_b = { }
+				b_ostorozhnost_iv_c = { }
+			}
+			c_stabilnost = {
+				color = { 144 200 64 }
+				color2 = { 20 20 20 }
+				
+				b_stabilnost_ii = { }
+				b_stabilnost_ii_b = { }
+				b_stabilnost_iii = { }
+				b_stabilnost_station = { }
+			}
+		}
+		
+		d_sovershenstvo = {
+			color = { 156 200 0 }
+			color2 = { 20 20 20 }
+			
+			capital = 175 # Sovershentsvo
+			
+			c_sovershenstvo = {
+				color = { 156 200 16 }
+				color2 = { 20 20 20 }
+				
+				b_sovershenstvo_prime = { }
+				b_sovershenstvo_prime_b = { }
+				b_sovershenstvo_ii = { }
+				b_sovershenstvo_iii = { }
+				b_sovershenstvo_iii_b = { }
+			}
+			c_ad = {
+				color = { 156 200 32 }
+				color2 = { 20 20 20 }
+				
+				b_ad_iii = { }
+				b_ad_iii_b = { }
+				b_ad_waystation = { }
+				b_ad_iv = { }
+			}
+			c_sashi_zvezdy = {
+				color = { 156 200 48 }
+				color2 = { 20 20 20 }
+				
+				b_sashi_zvezdy_ii = { }
+				b_sashi_zvezdy_iii = { }
+				b_sashi_zvezdy_iv = { }
+				b_sashi_zvezdy_iv_b = { }
+			}
+			c_vozneseniye = {
+				color = { 156 200 64 }
+				color2 = { 20 20 20 }
+				
+				b_vozneseniye_prime = { }
+				b_vozneseniye_prime_b = { }
+				b_vozneseniye_prime_c = { }
+				b_vozneseniye_iii = { }
+				b_vozeneseniye_iii_b = { }
+			}
+		}
+		
+		d_shen_yan = {
+			color = { 168 200 0 }
+			color2 = { 20 20 20 }
+			
+			capital = 172 # Shen Yan
+			
+			c_shen_yan = {
+				color = { 168 200 16 }
+				color2 = { 20 20 20 }
+				
+				b_shen_yan_iii = { }
+				b_shen_yan_iii_orbital = { }
+				b_shen_yan_iii_b = { }
+				b_shen_yan_iv = { }
+				b_shen_yan_v = { }
+			}
+			c_glaz_boga = {
+				color = { 168 200 32 }
+				color2 = { 20 20 20 }
+				
+				b_glaz_boga_ii = { }
+				b_glaz_boga_iii = { }
+				b_glaz_boga_iv = { }
+				b_glaz_boga_iv_b = { }
+			}
+			c_luoxuan = {
+				color = { 168 200 48 }
+				color2 = { 20 20 20 }
+				
+				b_luoxuan_ii = { }
+				b_luoxuan_ii_b = { }
+				b_luoxuan_iii = { }
+				b_luoxuan_iv = { }
+			}
+		}
+		
+		d_almaz = {
+			color = { 108 200 0 }
+			color2 = { 20 20 20 }
+			
+			capital = 153 # Almaz
+			
+			c_almaz = {
+				color = { 108 200 16 }
+				color2 = { 20 20 20 }
+				
+				b_almaz_iii = { }
+				b_almaz_iii_b = { }
+				b_almaz_iii_c = { }
+				b_almaz_iii_d = { }
+			}
+			c_zhemchuzhina = {
+				color = { 108 200 32 }
+				color2 = { 20 20 20 }
+				
+				b_zhemchuzhina_vi_b = { }
+				b_zhemchuzhina_vi_c = { }
+				b_zhemchuzhina_vii_b = { }
+				b_zhemchuzhina_vii_c = { }
+			}
+		}
+		
+		d_maoxian = {
+			color = { 96 200 0 }
+			color2 = { 20 20 20 }
+			
+			capital = 155 # Maoxian
+			
+			c_maoxian = {
+				color = { 96 200 16 }
+				color2 = { 20 20 20 }
+				
+				b_maoxian_iii = { }
+				b_maoxian_iii_b = { }
+				b_maoxian_iii_orbital = { }
+				b_maoxian_waystation = { }
+				b_maoxian_vi_b = { }
+				b_maoxian_vi_c = { }
+			}
+			c_pei_cheng = {
+				color = { 96 200 32 }
+				color2 = { 20 20 20 }
+				
+				b_pei_cheng_waystation = { }
+				b_pei_cheng_observatory = { }
+				b_pei_cheng_prime = { }
+				b_pei_cheng_prime_b = { }
+			}
+		}
+		
+		d_mir = {
+			color = { 84 200 0 }
+			color2 = { 20 20 20 }
+			
+			capital = 157 # Mir
+			
+			c_mir = {
+				color = { 84 200 16 }
+				color2 = { 20 20 20 }
+				
+				b_mir_citadel = { }
+				b_mir_iii = { }
+				b_mir_iii_b = { }
+				b_mir_iv = { }
+				b_mir_iv_b = { }
+			}
+			c_vynoslivost = {
+				color = { 84 200 32 }
+				color2 = { 20 20 20 }
+				
+				b_vynoslivost_waystation = { }
+				b_vynoslivost_vi_b = { }
+				b_vynoslivost_vi_c = { }
+				b_vynoslivost_vi_d = { }
+			}
+		}
+		
+		d_probeda = {
+			color = { 72 200 0 }
+			color2 = { 20 20 20 }
+			
+			capital = 163 # Probeda
+			
+			c_probeda = {
+				color = { 72 200 16 }
+				color2 = { 20 20 20 }
+				
+				b_probeda_prime = { }
+				b_probeda_orbital_alpha = { }
+				b_probeda_orbital_beta = { }
+				b_probeda_iii = { }
+				b_probeda_iii_b = { }
+			}
+			c_tselostnost = {
+				color = { 72 200 32 }
+				color2 = { 20 20 20 }
+				
+				b_tselostnost_ii = { }
+				b_tselostnost_iii = { }
+				b_tselostnost_iv = { }
+			}
+			c_vera = {
+				color = { 72 200 48 }
+				color2 = { 20 20 20 }
+				
+				b_vera_ii = { }
+				b_vera_ii_b = { }
+				b_vera_iii = { }
+				b_vera_iii_b = { }
+			}
+		}
+	}
+}

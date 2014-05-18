@@ -1,0 +1,322 @@
+
+e_orion = {
+	color = { 225 225 225 }
+	color2 = { 255 255 0 }
+		
+	capital = 404 # Meissa
+	
+	k_orion_reach = {
+		color = { 200 200 200 }
+		color2 = { 255 255 0 }
+		
+		capital = 404 # Meissa
+		
+		
+		d_orion_reach_fleet = {
+			color = { 200 200 200 }
+			color2 = { 0 0 0 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 404
+			landless = yes
+			tribe = yes
+		}
+		
+		d_meissa = {
+			color = { 216 200 200 }
+			color2 = { 255 255 0 }
+			capital = 404 # Meissa
+			
+			c_meissa = {
+				color = { 216 216 200 }
+				color2 = { 255 255 0 }
+				b_meissa_ii = { }
+				b_meissa_ii_b = { }
+				b_meissa_ii_c = { }
+				b_meissa_iii = { }
+				b_meissa_iii_b = { }
+			}
+			
+			c_cisne = {
+				color = { 216 216 216 }
+				color2 = { 255 255 0 }
+				
+				b_cisne_iii = { }
+				b_cisne_iii_b = { }
+				b_cisne_citadel = { }
+				b_cisne_vi_b = { }
+				b_cisne_vi_c = { }
+				b_cisne_vi_d = { }
+				b_cisne_vi_e = { }
+			}
+		}
+		
+		d_ortega_gaona = {
+			color = { 184 200 200 }
+			color2 = { 255 255 0 }
+			capital = 394 # Nueva Galicia
+			
+			c_nueva_galicia = {
+				color = { 184 184 200 }
+				color2 = { 255 255 0 }
+				
+				b_nueva_galicia = { }
+				b_nueva_galicia_station = { }
+				b_nueva_galicia_b = { }
+				b_nueva_galicia_c = { }
+			}
+			c_nueva_valencia = {
+				color = { 184 184 184 }
+				color2 = { 255 255 0 }
+				
+				b_nueva_valencia = { }
+				b_nueva_valencia_b = { }
+				b_nueva_valencia_c = { }
+				b_nueva_valencia_d = { }
+			}
+			c_suerte = {
+				color = { 184 200 184 }
+				color2 = { 255 255 0 }
+				
+				b_suerte_iii = { }
+				b_suerte_iii_b = { }
+				b_suerte_iv = { }
+				b_suerte_iv_b = { }
+			}
+		}
+		
+		d_santiago = {
+			color = { 232 200 200 }
+			color2 = { 255 255 0 }
+			
+			capital = 397 # Santiago
+			
+			c_santiago = {
+				color = { 232 232 200 }
+				color2 = { 255 255 0 }
+				
+				b_santiago_ii = { }
+				b_santiago_ii_b = { }
+				b_santiago_iii = { }
+				b_santiago_iii_b = { }
+				b_santiago_iv = { }
+				b_santiago_iv_b = { }
+			}
+			
+			c_barrayar = {
+				color = { 232 232 232 }
+				color2 = { 255 255 0 }
+				
+				b_barrayar_iii = { }
+				b_barrayar_iii_b = { }
+				b_barrayar_iii_c = { }
+				b_barrayar_iii_orbital_alpha = { }
+				b_barrayar_iii_orbital_beta = { }
+			}
+			
+			c_el_didal = {
+				color = { 232 200 232 }
+				color2 = { 255 255 0 }
+				
+				b_el_didal = { }
+			}
+			
+			c_komarr = {
+				color = { 232 216 200 }
+				color2 = { 255 255 0 }
+				
+				b_komarr_prime = { }
+				b_komarr_prime_b = { }
+				b_komarr_prime_orbital_alpha = { }
+				b_komarr_prime_orbital_beta = { }
+			}
+			
+			c_sergyar = {
+				color = { 232 216 216 }
+				color2 = { 255 255 0 }
+				
+				b_sergyar_iii = { }
+				b_sergyar_iii_observatory = { }
+				b_sergyar_iv = { }
+				b_sergyar_iv_b = { }
+			}
+		}
+		
+		d_bellatrix = {
+			color = { 168 200 200 }
+			color2 = { 255 255 0 }
+			
+			capital = 402 # Bellatrix
+			
+			c_bellatrix = {
+				color = { 168 168 200 }
+				color2 = { 255 255 0 }
+				
+				b_bellatrix_iii = { }
+				b_bellatrix_iii_b = { }
+				b_bellatrix_iii_c = { }
+				b_bellatrix_iv = { }
+			}
+			
+			c_hailu = {
+				color = { 168 168 168 }
+				color2 = { 255 255 0 }
+				
+				b_hailu_iv = { }
+				b_hailu_v = { }
+				b_hailu_v_b = { }
+				b_hailu_v_c = { }
+			}
+		}
+		
+		d_betelgeuse = {
+			color = { 248 200 200 }
+			color2 = { 255 255 0 }
+			
+			capital = 407 # Betelgeuse
+			
+			c_betelgeuse = {
+				color = { 248 248 200 }
+				color2 = { 255 255 0 }
+				
+				b_betelgeuse_prime = { }
+				b_betelgeuse_ii = { }
+				b_betelgeuse_iii = { }
+				b_betelgeuse_iv = { }
+				b_betelgeuse_v = { }
+			}
+			
+			c_reposo_del_alcazar = {
+				color = { 248 248 248 }
+				color2 = { 255 255 0 }
+				
+				b_alcazar_security_station = { }
+				b_reposo_del_alcazar = { }
+				b_alcazar_waystation = { }
+			}
+			
+			c_estrella_del_anciano = {
+				color = { 248 200 248 }
+				color2 = { 255 255 0 }
+				b_estrella_del_anciano_prime = { }
+				b_estrella_del_anciano_ii = { }
+				b_estrella_del_anciano_observatory = { }
+			}
+		}
+		
+		d_paulet = {
+			color = { 152 200 200 }
+			color2 = { 255 255 0 }
+			
+			capital = 412 # Paulet
+			
+			c_paulet = {
+				color = { 152 152 200 }
+				color2 = { 255 255 0 }
+				
+				b_paulet_iii = { }
+				b_paulet_iii_b = { }
+				b_paulet_observatory = { }
+				b_paulet_iv = { }
+				b_paulet_iv_b = { }
+			}
+			c_ramon_y_cajal = {
+				color = { 152 152 152 }
+				color2 = { 255 255 0 }
+				
+				b_ramon_y_cajal_iii = { }
+				b_ramon_y_cajal_iii_b = { }
+				b_ramon_y_cajal_iv = { }
+				b_ramon_y_cajal_iv_b = { }
+			}
+			c_warshawski = {
+				color = { 152 200 152 }
+				color2 = { 255 255 0 }
+				
+				b_warshawski_iii = { }
+				b_warshawski_iii_b = { }
+				b_warshawski_iii_c = { }
+				b_warshawski_iii_d = { }
+			}
+			c_seldon = {
+				color = { 200 152 152 }
+				color2 = { 255 255 0 }
+				title = "MAYOR"
+				title_female = "MAYOR_female"
+				title_foa = "MAYORFOA"
+				title_foa_female = "MAYORFOA_female"
+				
+				b_termino = { }
+				b_seldon_observatory = { }
+				b_seldon_iv = { }
+				b_seldon_v = { }
+			}
+		}
+		
+		d_rigel = {
+			color = { 255 200 200 }
+			color2 = { 255 255 0 }
+			
+			capital = 418 # Rigel
+			
+			c_rigel = {
+				color = { 255 255 200 }
+				color2 = { 255 255 0 }
+				
+				b_rigel_iii = { }
+				b_rigel_iii_b = { }
+				b_rigel_iv = { }
+				b_rigel_iv_b = { }
+				b_rigel_v = { }
+			}
+			c_mintaka = {
+				color = { 255 255 255 }
+				color2 = { 255 255 0 }
+				
+				b_mintaka_prime = { }
+				b_mintaka_ii = { }
+				b_mintaka_iii = { }
+				b_mintaka_iv = { }
+			}
+			c_genciana = {
+				color = { 255 200 255 }
+				color2 = { 255 255 0 }
+				
+				b_genciana_vii_b = { }
+				b_genciana_vii_c = { }
+				b_genciana_vii_d = { }
+				b_genciana_vii_e = { }
+			}
+			c_saiph = {
+				color = { 200 255 255 }
+				color2 = { 255 255 0 }
+				
+				b_saiph_prime = { }
+				b_saiph_prime_b = { }
+				b_saiph_waystation = { }
+				b_saiph_iii = { }
+			}
+			c_dorter = {
+				color = { 200 255 200 }
+				color2 = { 255 255 0 }
+				
+				b_dorter_ii_b = { }
+				b_dorter_ii_c = { }
+				b_dorter_ii_d = { }
+				b_dorter_observatory = { }
+			}
+			c_anilam = {
+				color = { 200 200 255 }
+				color2 = { 255 255 0 }
+				
+				b_anilam_vi_b = { }
+				b_anilam_vi_c = { }
+				b_anilam_vi_d = { }
+				b_anilam_vi_e = { }
+			}
+		}
+	}
+}

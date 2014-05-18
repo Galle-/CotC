@@ -1,0 +1,20 @@
+# 331 - VN-381
+
+# County Title
+title = c_vn_381
+
+# Settlements
+max_settlements = 4
+
+b_vn_381_i = castle
+
+# Misc
+culture = arab_tarkan
+religion = space_pirate
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

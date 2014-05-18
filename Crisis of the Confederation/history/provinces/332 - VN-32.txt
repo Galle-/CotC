@@ -1,0 +1,20 @@
+# 332 - VN-32
+
+# County Title
+title = c_vn_32
+
+# Settlements
+max_settlements = 4
+
+b_vn_32_i = castle
+
+# Misc
+culture = west_afro_mukta
+religion = space_pirate
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

@@ -1,0 +1,20 @@
+# 337 - VN-732
+
+# County Title
+title = c_vn_732
+
+# Settlements
+max_settlements = 4
+
+b_vn_732_i = castle
+
+# Misc
+culture = anglo_mukta
+religion = space_pirate
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

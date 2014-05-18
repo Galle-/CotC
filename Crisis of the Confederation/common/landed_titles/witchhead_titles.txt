@@ -1,0 +1,736 @@
+
+e_witchhead = {
+	color = { 164 148 0 }
+	color2 = { 255 0 0 }
+		
+	capital = 215 # Fukuoka
+	
+	k_witchhead_nebula = {
+		color = { 128 128 255 }
+		color2 = { 128 0 128 }
+		
+		capital = 215 # Fukuoka
+		
+		d_upper_witchhead = {
+			color = { 144 128 255 }
+			color2 = { 128 0 128 }
+			
+			capital = 224 # Alpha Sagitarii
+			
+			c_alpha_sagitarii = {
+				color = { 144 128 240 }
+				color2 = { 128 0 128 }
+				
+				b_alpha_sagitarii_prime = { }
+				b_alpha_sagitarii_prime_b = { }
+			}
+			c_napata = {
+				color = { 144 128 224 }
+				color2 = { 128 0 128 }
+				
+				b_napata_prime = { }
+				b_napata_observatory = { }
+			}
+			c_wh_998 = {
+				color = { 144 128 208 }
+				color2 = { 128 0 128 }
+				
+				b_wh_998_station_alpha = { }
+				b_wh_998_station_beta = { }
+				b_wh_998_station_gamma = { }
+				b_wh_998_station_delta = { }
+			}
+			c_wh_229 = {
+				color = { 144 128 192 }
+				color2 = { 128 0 128 }
+				
+				b_wh_228_station_alpha = { }
+				b_wh_229_station_beta = { }
+				b_wh_229_station_gamma = { }
+				b_wh_229_station_delta = { }
+			}
+			c_wh_253 = {
+				color = { 144 128 176 }
+				color2 = { 128 0 128 }
+				
+				b_wh_253_station_alpha = { }
+				b_wh_253_station_beta = { }
+				b_wh_253_station_gamma = { }
+				b_wh_253_station_delta = { }
+			}
+			c_wh_064 = {
+				color = { 144 128 160 }
+				color2 = { 128 0 128 }
+				
+				b_wh_064_station_alpha = { }
+				b_wh_064_station_beta = { }
+				b_wh_064_station_gamma = { }
+				b_wh_064_station_delta = { }
+			}
+			c_wh_021 = {
+				color = { 144 128 144 }
+				color2 = { 128 0 128 }
+				
+				b_wh_021_station_alpha = { }
+				b_wh_021_station_beta = { }
+				b_wh_021_station_gamma = { }
+				b_wh_021_station_delta = { }
+			}
+		}
+		d_core_witchhead = {
+			color = { 128 144 255 }
+			color2 = { 128 0 128 }
+			
+			capital = 215 # Fukuoka
+			
+			c_fukuoka = {
+				color = { 128 144 240 }
+				color2 = { 128 0 128 }
+				
+				# Asteroid, temple
+				b_fukuoka_prime = { }
+				# Pirate bases
+				b_fukuoka_station_alpha = { }
+				b_fukuoka_station_beta = { }
+				b_fukuoka_station_gamma = { }
+			}
+			c_trigorin = {
+				color = { 128 144 224 }
+				color2 = { 128 0 128 }
+				
+				b_freeport_trigorin = { }
+				b_trigorin_ii = { }
+			}
+			c_ariadne = {
+				color = { 128 144 208 }
+				color2 = { 128 0 128 }
+				
+				b_port_ariadne = { }
+				# Temples
+				b_ariadne_ii = { }
+				b_ariadne_iii = { }
+			}
+			c_wh_732 = {
+				color = { 128 144 192 }
+				color2 = { 128 0 128 }
+				
+				b_wh_732_station_alpha = { }
+				b_wh_732_station_beta = { }
+				b_wh_732_station_gamma = { }
+				b_wh_732_station_delta = { }
+			}
+			c_wh_835 = {
+				color = { 128 144 176 }
+				color2 = { 128 0 128 }
+				
+				b_wh_835_station_alpha = { }
+				b_wh_835_station_beta = { }
+				b_wh_835_station_gamma = { }
+				b_wh_835_station_delta = { }
+			}
+			c_wh_367 = {
+				color = { 128 144 160 }
+				color2 = { 128 0 128 }
+				
+				b_wh_367_drift = { } # Independent asteroid trade port, frequent target of pirate raids
+				b_wh_367_station_alpha = { }
+				b_wh_367_station_beta = { }
+				b_wh_367_station_gamma = { }
+				b_wh_367_station_delta = { }
+			}
+		}
+		d_lower_witchhead = {
+			color = { 144 144 255 }
+			color2 = { 128 0 128 }
+			
+			capital = 222 # WH-930
+			
+			c_wh_930 = {
+				color = { 144 144 240 }
+				color2 = { 128 0 128 }
+				
+				b_wh_930_station_alpha = { }
+				b_wh_930_station_beta = { }
+				b_wh_930_station_gamma = { }
+				b_wh_930_station_delta = { }
+			}
+			c_wh_178 = {
+				color = { 144 144 224 }
+				color2 = { 128 0 128 }
+				
+				b_wh_178_station_alpha = { }
+				b_wh_178_station_beta = { }
+				b_wh_178_station_gamma = { }
+				b_wh_178_station_delta = { }
+			}
+			c_wh_336 = {
+				color = { 144 144 208 }
+				color2 = { 128 0 128 }
+				
+				b_wh_336_station_alpha = { }
+				b_wh_336_station_beta = { }
+				b_wh_336_station_gamma = { }
+				b_wh_336_station_delta = { }
+			}
+		}
+	}
+	k_avalon = {
+		color = { 128 0 0 }
+		color2 = { 200 200 200 }
+		
+		capital = 25 # Avalon
+		
+		d_avalon_fleet = {
+			color = { 100 0 0 }
+			color2 = { 200 200 200 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 25
+			landless = yes
+			tribe = yes
+		}
+		
+		d_avalon = {
+			color = { 128 16 0 }
+			color2 = { 200 200 200 }
+			
+			capital = 25
+			
+			c_avalon = {
+				color = { 128 16 16 }
+				color2 = { 200 200 200 }
+				
+				b_avalon_iii = { }
+				b_avalon_iii_orbital = { }
+				b_avalon_iii_b = { }
+				b_avalon_vi_b = { }
+				b_avalon_vi_c = { }
+				b_avalon_vi_d = { }
+			}
+			c_merlin = {
+				color = { 128 16 32 }
+				color2 = { 200 200 200 }
+				
+				b_merlin_ii = { }
+				b_nimue = { } # Moon of Merlin II
+				b_merlin_iii = { }
+				b_merlin_iv = { }
+			}
+			c_camelot = {
+				color = { 128 16 48 }
+				color2 = { 200 200 200 }
+				
+				b_new_camelot = { }
+				b_new_camelot_orbital = { }
+				b_new_camelot_b = { }
+				b_camelot_iii = { }
+			}
+			c_paladin = {
+				color = { 128 16 64 }
+				color2 = { 200 200 200 }
+				
+				b_paladin_ii = { }
+				b_paladin_ii_b = { }
+				b_paladin_iii = { }
+				b_paladin_iii_b = { }
+			}
+		}
+		
+		d_victoria = {
+			color = { 128 32 0 }
+			color2 = { 200 200 200 }
+			
+			capital = 44 # Victoria
+			
+			c_victoria = {
+				color = { 128 32 16 }
+				color2 = { 200 200 200 }
+				
+				b_victoria_iii = { }
+				b_victoria_iii_orbital = { }
+				b_victoria_iii_b = { }
+				b_victoria_iii_c = { }
+				b_victoria_iv = { }
+			}
+			c_hawkwood = {
+				color = { 128 32 32 }
+				color2 = { 200 200 200 }
+				
+				b_hawkwood_ii = { }
+				b_hawkwood_iii = { }
+				b_hawkwood_iii_b = { }
+				b_hawkwood_iv = { }
+			}
+			c_garrison = {
+				color = { 128 32 48 }
+				color2 = { 200 200 200 }
+				
+				b_garrison_viii_b = { }
+				b_garrison_viii_c = { }
+				b_garrison_viii_d = { }
+				b_garrison_viii_e = { }
+				b_garrison_viii_f = { }
+			}
+			c_endeavour = { # Yes, using the Commonwealth spelling
+				color = { 128 32 64 }
+				color2 = { 200 200 200 }
+				
+				b_endeavour_prime = { }
+				b_endeavour_ii = { }
+				b_endeavour_ii_b = { }
+				b_endeavour_ii_c = { }
+			}
+		}
+		
+		d_nelson = {
+			color = { 128 48 0 }
+			color2 = { 200 200 200 }
+			
+			capital = 40 # Nelson
+			
+			c_nelson = {
+				color = { 128 48 16 }
+				color2 = { 200 200 200 }
+				
+				b_nelson_ii = { }
+				b_nelson_ii_b = { }
+				b_nelson_iii = { }
+				b_nelson_iv = { }
+				b_nelson_v = { }
+			}
+			c_sherwood = {
+				color = { 128 48 32 }
+				color2 = { 200 200 200 }
+				
+				b_sherwood_citadel = { }
+				b_sherwood_iii = { }
+				b_sherwood_iii_b = { }
+				b_sherwood_iv = { }
+			}
+			c_chalice = {
+				color = { 128 48 48 }
+				color2 = { 200 200 200 }
+				
+				b_chalice_prime = { }
+				b_chalice_ii = { }
+				b_chalice_iii = { }
+				b_chalice_iv = { }
+			}
+		}
+		
+		d_caliburn = {
+			color = { 128 64 0 }
+			color2 = { 200 200 200 }
+			
+			capital = 29 # Caliburn
+			
+			c_caliburn = {
+				color = { 128 64 16 }
+				color2 = { 200 200 200 }
+				
+				b_caliburn_iii = { }
+				b_caliburn_iii_b = { }
+				b_caliburn_iii_orbital = { }
+				b_caliburn_iv = { }
+				b_caliburn_v = { }
+			}
+			c_greywood = {
+				color = { 128 64 32 }
+				color2 = { 200 200 200 }
+				
+				b_greywood_iii = { }
+				b_greywood_iv = { }
+				b_greywood_iv_b = { }
+				b_greywood_iv_c = { }
+			}
+			c_marys_star = {
+				color = { 128 64 48 }
+				color2 = { 200 200 200 }
+				
+				b_marys_star_vi_b = { }
+				b_marys_star_vi_c = { }
+				b_marys_star_vi_d = { }
+				b_marys_star_vi_e = { }
+			}
+		}
+		
+		d_galahad = {
+			color = { 128 80 0 }
+			color2 = { 200 200 200 }
+			
+			capital = 32 # Galahad
+			
+			c_galahad = {
+				color = { 128 80 16 }
+				color2 = { 200 200 200 }
+				
+				b_galahad_citadel = { }
+				b_galahad_iii = { }
+				b_galahad_iii_b = { }
+				b_galahad_iv = { }
+				b_galahad_vii_b = { }
+				b_galahad_vii_c = { }
+			}
+			c_shiverlight = {
+				color = { 128 80 32 }
+				color2 = { 200 200 200 }
+				
+				b_shiverlight_prime = { }
+				b_shiverlight_prime_b = { }
+				b_shiverlight_ii = { }
+				b_shiverlight_ii_b = { }
+			}
+			c_virtue = {
+				color = { 128 80 48 }
+				color2 = { 200 200 200 }
+				
+				b_virtue_iv = { }
+				b_virtue_iv_b = { }
+				b_virtue_iv_c = { }
+				b_virtue_iv_d = { }
+			}
+		}
+		
+		d_lancelot = {
+			color = { 128 96 0 }
+			color2 = { 200 200 200 }
+			
+			capital = 36 # Lancelot
+			
+			c_lancelot = {
+				color = { 128 80 16 }
+				color2 = { 200 200 200 }
+				
+				b_lancelot_iii = { }
+				b_lancelot_iii_b = { }
+				b_lancelot_iii_c = { }
+				b_lancelot_iv = { }
+				b_lancelot_v = { }
+			}
+			c_numenor = {
+				color = { 128 80 32 }
+				color2 = { 200 200 200 }
+				
+				b_numenor_ii = { }
+				b_numenor_iii = { }
+				b_numenor_iv = { }
+				b_numenor_v = { }
+			}
+			c_henrys_star = {
+				color = { 128 80 48 }
+				color2 = { 200 200 200 }
+				
+				b_henrys_star_waystation = { }
+				b_henrys_star_iii = { }
+				b_henrys_star_iv = { }
+				b_henrys_star_v = { }
+			}
+			c_robinson = {
+				color = { 128 80 64 }
+				color2 = { 200 200 200 }
+				
+				b_robinson_ii = { }
+				b_robinson_ii_orbital = { }
+				b_robinson_iii = { }
+				b_robinson_iii_b = { }
+				b_robinson_iv = { }
+			}
+		}
+		
+		d_alfred = {
+			color = { 128 112 0 }
+			color2 = { 200 200 200 }
+			
+			capital = 23 # Alfred
+			
+			c_alfred = {
+				color = { 128 112 16 }
+				color2 = { 200 200 200 }
+				
+				b_alfred_prime = { }
+				b_alfred_prime_b = { }
+				b_alfred_prime_c = { }
+				b_alfred_ii = { }
+				b_alfred_iii = { }
+			}
+			c_etherland = {
+				color = { 128 112 32 }
+				color2 = { 200 200 200 }
+				
+				b_etherland_prime_b = { }
+				b_etherland_prime_c = { }
+				b_etherland_prime_d = { }
+				b_etherland_prime_e = { }
+			}
+		}
+	}
+	k_jion = {
+		color = { 72 124 16 }
+		color2 = { 128 0 0 }
+		
+		capital = 126 # Jion
+		
+		d_jion_fleet = {
+			color = { 72 124 16 }
+			color2 = { 200 200 200 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 126
+			landless = yes
+			tribe = yes
+		}
+		
+		d_jion = {
+			color = { 80 124 16 }
+			color2 = { 128 0 0 }
+			
+			capital = 126 # Jion
+			
+			c_jion = {
+				color = { 80 124 24 }
+				color2 = { 128 0 0 }
+				
+				b_jion_iii = { }
+				b_jion_iii_orbital_alpha = { }
+				b_jion_iii_orbital_beta = { }
+				b_jion_iii_orbital_gamma = { }
+				b_jion_iii_b = { }
+			}
+			
+			c_kojo = {
+				color = { 80 124 32 }
+				color2 = { 128 0 0 }
+				
+				b_kojo_iii = { }
+				b_kojo_iii_b = { }
+				b_kojo_vii_b = { }
+				b_kojo_vii_c = { }
+			}
+			
+			c_uminoasa = {
+				color = { 80 124 40 }
+				color2 = { 128 0 0 }
+				
+				b_uminoasa_ii = { }
+				b_uminoasa_ii_b = { }
+				b_uminoasa_iii = { }
+				b_uminoasa_iv = { }
+			}
+			
+			c_akasei = {
+				color = { 80 124 48 }
+				color2 = { 128 0 0 }
+				
+				b_akasei_prime = { }
+				b_akasei_ii = { }
+				b_akasei_iii = { }
+				b_akasei_iv = { }
+			}
+		}
+		
+		d_hiyokuoka = {
+			color = { 88 124 16 }
+			color2 = { 128 0 0 }
+			
+			capital = 112 # Hiyokuoka
+			
+			c_hiyokuoka = {
+				color = { 88 124 24 }
+				color2 = { 128 0 0 }
+				
+				b_hiyokuna_oka = { }
+				b_hiyokuna_oka_b = { }
+				b_hiyokuna_oka_c = { }
+				b_hiyokuoka_iv = { }
+				b_hiyokuoka_iv_b = { }
+				b_hiyokuoka_v = { }
+			}
+			
+			c_takagi = {
+				color = { 88 124 32 }
+				color2 = { 128 0 0 }
+				
+				b_takagi_iii = { }
+				b_takagi_iii_b = { }
+				b_takagi_iv = { }
+				b_takagi_iv_b = { }
+			}
+			
+			c_sen_eisei = {
+				color = { 88 124 40 }
+				color2 = { 128 0 0 }
+				
+				b_sen_eisei_b = { }
+				b_sen_eisei_c = { }
+				b_sen_eisei_d = { }
+				b_sen_eisei_e = { }
+				b_sen_eisei_f = { }
+				b_sen_eisei_g = { }
+			}
+		}
+		
+		d_sumitomo = {
+			color = { 96 124 16 }
+			color2 = { 128 0 0 }
+			
+			capital = 113 # Sumitomo
+			
+			c_sumitomo = {
+				color = { 96 124 24 }
+				color2 = { 128 0 0 }
+				
+				b_sumitomo_ii = { }
+				b_sumitomo_ii_b = { }
+				b_sumitomo_iii = { }
+				b_sumitomo_iii_b = { }
+			}
+			
+			c_saber = {
+				color = { 96 124 32 }
+				
+				b_saber_iii = { }
+				b_saber_iii_b = { }
+				b_saber_defense_station = { }
+				b_saber_observatory = { }
+			}
+		}
+		
+		d_okyoto_nara = {
+			color = { 104 124 16 }
+			color2 = { 128 0 0 }
+			
+			capital = 117 # Okyoto
+			
+			c_okyoto = {
+				color = { 104 124 24 }
+				color2 = { 128 0 0 }
+				
+				b_okyoto_ii = { }
+				b_okyoto_ii_b = { }
+				b_okyoto_iii = { }
+				b_okyoto_iii_b = { }
+			}
+			
+			c_shiga = {
+				color = { 104 124 32 }
+				color2 = { 128 0 0 }
+				
+				b_shiga = { }
+				b_shiga_orbital_alpha = { }
+				b_shiga_orbital_beta = { }
+				b_shiga_orbital_gamma = { }
+			}
+			
+			c_sabashi = {
+				color = { 104 124 40 }
+				color2 = { 128 0 0 }
+				
+				b_sabashi_iii = { }
+				b_sabashi_iii_b = { }
+				b_sabashi_iii_c = { }
+				b_sabashi_iv = { }
+			}
+			
+			c_mie = {
+				color = { 104 124 48 }
+				color2 = { 128 0 0 }
+				
+				b_mie_vi_b = { }
+				b_mie_vi_c = { }
+				b_mie_vi_d = { }
+				b_mie_vi_e = { }
+			}
+			
+			c_nara = {
+				color = { 104 124 56 }
+				color2 = { 128 0 0 }
+				
+				b_nara_iii = { }
+				b_nara_iii_b = { }
+				b_nara_iv = { }
+				b_nara_v = { }
+			}
+		}
+		
+		d_iogi = {
+			color = { 122 124 16 }
+			color2 = { 128 0 0 }
+			
+			capital = 122 # Iogi
+			
+			c_iogi = {
+				color = { 122 124 24 }
+				color2 = { 128 0 0 }
+				
+				b_iogi_prime = { }
+				b_iogi_ii = { }
+				b_iogi_iii = { }
+				b_iogi_iv = { }
+			}
+			
+			c_fuyuki = {
+				color = { 122 124 32 }
+				color2 = { 128 0 0 }
+				
+				b_fuyuki_iii = { }
+				b_fuyuki_iii_b = { }
+				b_fuyuki_iii_c = { }
+				b_fuyuki_iv = { }
+			}
+			
+			c_odayakanaumi = {
+				color = { 122 124 40 }
+				color2 = { 128 0 0 }
+				
+				b_odayakanaumi_b = { }
+				b_odayakanaumi_c = { }
+				b_odayakanaumi_d = { }
+				b_odayakanaumi_e = { }
+			}
+		}
+		
+		d_taikun = {
+			color = { 130 124 16 }
+			color2 = { 128 0 0 }
+			
+			capital = 129 # Taikun
+			
+			c_taikun = {
+				color = { 130 124 24 }
+				color2 = { 128 0 0 }
+				
+				b_taikun_ii = { }
+				b_taikun_ii_b = { }
+				b_taikun_ii_orbital = { }
+				b_taikun_iii = { }
+				b_taikun_iii_orbital = { }
+			}
+			
+			c_moegara = {
+				color = { 130 124 24 }
+				color2 = { 128 0 0 }
+				
+				b_moegara_vi_b = { }
+				b_moegara_vi_c = { }
+				b_moegara_vi_d = { }
+				b_moegara_vi_e = { }
+			}
+			
+			c_rasen = {
+				color = { 200 0 0 } # Yes, this is another Mobile Suit Gundam meta-joke
+				color2 = { 200 0 0 }
+				
+				b_rasen_prime = { }
+				b_rasen_ii = { }
+				b_rasen_iii = { }
+				b_rasen_iv = { }
+			}
+		}
+	}
+}

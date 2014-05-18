@@ -1,0 +1,20 @@
+# 333 - VN-1241
+
+# County Title
+title = c_vn_1241
+
+# Settlements
+max_settlements = 4
+
+b_vn_1241_i = castle
+
+# Misc
+culture = anglo_mukta
+religion = space_pirate
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}
