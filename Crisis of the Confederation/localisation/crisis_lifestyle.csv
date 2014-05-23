@@ -1,0 +1,80 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+EVTDESCLIFESTYLE100;You've always been a big sports fan, and you've been looking into take up a hobby. Perhaps you should try out for the local athletics team?;;;;;;;;;;;;;x
+EVTOPTALIFESTYLE100;Why not? Could be fun...;;;;;;;;;;;;;x
+EVTOPTBLIFESTYLE100;Eh, I don't think it's for me.;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE200;Growing up, everyone always told you were a creative sort. There are worlds and ideas inside you just waiting to get out. Perhaps now is the time to let them?;;;;;;;;;;;;;x
+EVTOPTALIFESTYLE200;I'm an artist!;;;;;;;;;;;;;x
+EVTOPTBLIFESTYLE200;What a waste of time.;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE300;You always find small moments of serenity in your garden, such as it is, safe from the chaos that seems to surround you in day-to-day life. Here, at least, you can find a little peace of mind.;;;;;;;;;;;;;x
+EVTOPTALIFESTYLE300;I'm a gardener!;;;;;;;;;;;;;x
+EVTOPTBLIFESTYLE300;But it's so BORING!;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE400;The natural world fascinates you. So does the unnatural world. Be it organism or machine, you desperately yearn to know how the world fits together.;;;;;;;;;;;;;x
+EVTOPTALIFESTYLE400;For science!;;;;;;;;;;;;;x
+EVTOPTBLIFESTYLE400;It's not THAT interesting.;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE1000;Your football team's victory in its last match has made planetwide headlines, and you were at the center of the vital play that secured it. Your schedule is booked soldi with interviews, and you've received a generous bonus.;;;;;;;;;;;;;x
+EVTOPTALIFESTYLE1000;Look, it's all about how much you want it.;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE1100;Your football team suffered a brutal defeat in its last match, and the analysts are all agreed on the cause: your crucial fumble at the last second practically gave the entire game away. For the past three weeks, you've been harassed and sent death threats by angry fans.;;;;;;;;;;;;;x
+EVTOPTALIFESTYLE1100;It's not my fault, I swear!;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE1200;You pulled a leg muscle at football practice - nothing serious, but you'll be laid up in bed for a week or two.;;;;;;;;;;;;;x
+EVTOPTALIFESTYLE1200;Ow, ow, ow, ow, ow!;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE1300;You've fallen ill, which is unfortunate, because your football team has a major game in just two weeks, and you're their star player.;;;;;;;;;;;;;x
+EVTOPTALIFESTYLE1300;I won't let some cold hold me back.;;;;;;;;;;;;;x
+EVTOPTBLIFESTYLE1300;I guess I'll have to drop out.;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE2000;You've been discussing what your next work should be. There was an interesting idea that struck you last night that you want to work on, but your publisher is suggesting some low-brow vampire romance or somesuch, totally devoid of artistic merit but sure to be a bestseller.;;;;;;;;;;;;;x
+EVTOPTALIFESTYLE2000;Well, I do need the money...;;;;;;;;;;;;;x
+EVTOPTBLIFESTYLE2000;I won't compromise my creative integrity.;;;;;;;;;;;;;x
+EVTTOOLTIPLIFESTYLE2001;Your new work is a hit!;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE2001;Your latest work has finally been released, and apparently, it's a huge hit! You've been raking in money hand over fist.;;;;;;;;;;;;;x
+EVTOPTALIFESTYLE2001;Another glorious success!;;;;;;;;;;;;;x
+EVTTOOLTIPLIFESTYLE2002;Your new work is a flop!;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE2002;Your new work has finally been released. You're sure. You checked. You were a bit confused when the royalty check came in with a negative number. Apparently there's just nobody buying it.;;;;;;;;;;;;;x
+EVTOPTALIFESTYLE2002;Well, I guess you can't win them all.;;;;;;;;;;;;;x
+EVTTOOLTIPLIFESTYLE2003;At least the critics like it.;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE2003;However your new work is doing with the public, you do have one thing going for you - it's been a big hit with the critics, if nothing else. They've praised both your artistic vision and your commitment to it.;;;;;;;;;;;;;x
+EVTOPTALIFESTYLE2003;At least SOMEONE appreciates it.;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE2100;You've missed your last three deadlines in a row, and your publisher is starting to get a bit impatient. They say that if you can't make the next deadline, you're going to have to find a new publisher.;;;;;;;;;;;;;x
+EVTOPTALIFESTYLE2100;Well, better start pulling all-nighters.;;;;;;;;;;;;;x
+EVTOPTBLIFESTYLE2100;Oh, whatever.;;;;;;;;;;;;;x
+EVTTOOLTIPLIFESTYLE2101;You made the deadline!;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE2101;Well, it sure wasn't easy, but it looks like you made the deadline after all. Your publisher was pleasantly surprised and made sure to include a little extra in your royalties.;;;;;;;;;;;;;x
+EVTOPTALIFESTYLE2101;A job well done.;;;;;;;;;;;;;x
+EVTTOOLTIPLIFESTYLE2102;You missed the deadline!;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE2102;All that work and it apparently STILL wasn't enough. You've missed your deadline, and your publisher is letting you go.;;;;;;;;;;;;;x
+EVTOPTALIFESTYLE2102;I can always find a new publisher.;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE2200;You'd thought the silence from your editors lately had been a good thing - but the silence from the audience was a little less heartening. Apparently, your editor was just too frightened by your reputation to say anything!;;;;;;;;;;;;;x
+EVTOPTALIFESTYLE2200;They just don't appreciate my genius.;;;;;;;;;;;;;x
+EVTOPTBLIFESTYLE2200;Maybe I should try to make myself less threatening.;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE4000;Your experiments have led you to a stunning new breakthrough! This is sure to advance the cause of science by over a decade!;;;;;;;;;;;;;x
+EVTOPTALIFESTYLE4000;I need to publish this immediately!;;;;;;;;;;;;;x
+EVTOPTBLIFESTYLE4000;We ought to keep this advantage secret.;;;;;;;;;;;;;x
+EVTTOOLTIPLIFESTYLE4001;Other rulers will study your new military engineering techniques.;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE4001;[From.GetFullName] appears to be a remarkably talented individual. In addition to serving as [From.GetTitle] of [From.PrimaryTitle.GetName], [From.GetSheHe] has also recently published a paper detailing several new engineering techniques that could easily be put into improving your military.;;;;;;;;;;;;;x
+EVTTOOLTIPLIFESTYLE4002;Other rulers will study your new social sciences research.;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE4002;[From.GetFullName] appears to be a remarkably talented individual. In addition to serving as [From.GetTitle] of [From.PrimaryTitle.GetName], [From.GetSheHe] has also recently published a paper a major breakthrough [From.GetSheHe] made in the social sciences.;;;;;;;;;;;;;x
+EVTTOOLTIPLIFESTYLE4003;Other rulers will study your new hard sciences research.;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE4003;[From.GetFullName] appears to be a remarkably talented individual. In addition to serving as [From.GetTitle] of [From.PrimaryTitle.GetName], [From.GetSheHe] has also recently published a paper a major breakthrough [From.GetSheHe] made in the hard sciences.;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE4100;You recently performed an extremely promising experiment. However, your results are still somewhat controversial, and have yet to be replicated.;;;;;;;;;;;;;x
+EVTOPTALIFESTYLE4100;I'm sure my results will be vindicated.;;;;;;;;;;;;;x
+EVTTOOLTIPLIFESTYLE4101;successfully replicates your results.;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE4101;[From.GetFullName] recently performed a promising but controversial experiment. You attempted to replicate [From.GetHerHis] results, and have recently been rewarded with success! It appears [From.GetHerHis] theories were sound after all.;;;;;;;;;;;;;x
+EVTOPTALIFESTYLE4101;I'm sure [From.GetSheHe] will be happy to hear about this.;;;;;;;;;;;;;x
+EVTTOOLTIPLIFESTYLE4102;fails to replicate your results.;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE4102;[From.GetFullName] recently performed a promising but controversial experiment. You attempted to replicate [From.GetHerHis] results, but have consistently been unable to. It appears they were merely a fluke.;;;;;;;;;;;;;x
+EVTOPTALIFESTYLE4102;I'm sorry to have to tell [From.GetHerHim] this.;;;;;;;;;;;;;x
+EVTTOOLTIPLIFESTYLE4103;is grateful for your successful replication.;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE4103;A fellow scientist, [From.GetFullName], recently attempted to replicate your recent experiment, and [From.GetSheHe] has confirmed your results!;;;;;;;;;;;;;x
+EVTOPTALIFESTYLE4103;Never doubted it for a second.;;;;;;;;;;;;;x
+EVTTOOLTIPLIFESTYLE4104;hears about their theory's failure.;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE4104;A fellow 'scientist', [From.GetFullName] recently attempted to replicate your recent experiment, but has published a paper insisting that [From.GetSheHe] could not, and your results must have been a mere fluke.;;;;;;;;;;;;;x
+EVTOPTALIFESTYLE4104;Idiot.;;;;;;;;;;;;;x
+EVTOPTBLIFESTYLE4104;Perhaps I was wrong?;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE4200;A scientist working under you has been working on a promising new invention. Supposedly, it will revolutionize the mining industry or somesuch. You can't help but notice, however, that the device could also have some rather intriguing military applications...;;;;;;;;;;;;;x
+EVTOPTALIFESTYLE4200;Listen, you're putting a gun on this thing one way or another.;;;;;;;;;;;;;x
+EVTOPTBLIFESTYLE4200;The mining industry DOES need to be revolutionized...;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE4201;You have been working on a promising new invention, one that you had hoped would ease the lives of many. That said, the device has certain... military applications, and the [From.GetTitle] is insisting that you focus on these instead.;;;;;;;;;;;;;x
+EVTOPTALIFESTYLE4201;Never! The giant death ray was meant for peace, not war!;;;;;;;;;;;;;x
+EVTOPTBLIFESTYLE4201;So be it.;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE4202;You have been working on a promising new invention, one that you had hoped would ease the lives of many. The device has certain military applications, but to your relief, the [From.GetTitle] seems content to allow you to focus on its peaceful ones.;;;;;;;;;;;;;x
+EVTOPTALIFESTYLE4202;Thank [Root.Religion.GetRandomGodName].;;;;;;;;;;;;;x
+EVTDESCLIFESTYLE4300;They laughed at your theories at the institute! They all said you were mad!;;;;;;;;;;;;;x
+EVTOPTALIFESTYLE4300;Well, I'll show them! I'LL SHOW THEM ALL!;;;;;;;;;;;;;x

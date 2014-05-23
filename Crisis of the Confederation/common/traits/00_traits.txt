@@ -498,105 +498,34 @@ homosexual = {
 ################################################
 # LIFESTYLE - Events - only 1 lifestyle (adult)
 ################################################
-
-celibate = {
-	lifestyle = yes
-	
-	potential = {
-		religion_group = religious_group
-	}
-	
-	opposites =  {
-		hedonist
-	}
-	fertility = -10.0
-	
-	christian_church_opinion = 10
-	opposite_opinion = -10
+athlete = {
+	lifestyle= yes
+	cached = yes
+	martial = 3
 	same_opinion = 20
-	
-	monthly_character_piety = 1
-	
-	ai_zeal = 30
 }
-hedonist = {
+artist = {
 	lifestyle = yes
-	
-	opposites =  {
-		celibate
-	}
-
-	fertility = 0.2
-	
-	opposite_opinion = -5
+	cached = yes
+	diplomacy = 3
 	same_opinion = 20
-	
-	christian_church_opinion = -10
-	
-	monthly_character_piety = -0.5
-	
-	ai_zeal = -30
 }
-scholar = {
+intellectual = {
 	lifestyle = yes
-	
-	learning = 2
-	
+	cached = yes
+	learning = 3
 	same_opinion = 20
 }
 gardener = {
 	lifestyle = yes
-	
-	stewardship = 2
-	
+	cached = yes
+	stewardship = 3
 	same_opinion = 20
 }
 mystic = {
 	lifestyle = yes
-	
-	intrigue = 1
-	
-	same_opinion = 20
-}
-impaler = {
-	lifestyle = yes
-	
-	intrigue = 1
-	
-	same_opinion = 20
-	
-	ai_honor = -15
-	
-	command_modifier = {
-		morale_offence = 0.1
-	}
-}
-duelist = {
-	lifestyle = yes
-	
-	martial = 1
-	
-	same_opinion = 20
-}
-hunter = {
-	lifestyle = yes
-	
-	martial = 1
-	
-	same_opinion = 20
-}
-poet = {
-	lifestyle = yes
-	
-	diplomacy = 1
-	
-	same_opinion = 20
-}
-falconer = {
-	lifestyle = yes
-	
-	diplomacy = 1
-	
+	cached = yes
+	intrigue = 3
 	same_opinion = 20
 }
 
