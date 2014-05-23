@@ -19,7 +19,60 @@ indoconfederategfx = {
 mideastconfederategfx = {
 	skin_tone = 2
 }
+persianconfederategfx = {
+	skin_tone = 0
+}
 sinoconfederategfx = {
+	skin_tone = 1
+}
+# Frontier
+afrofrontiergfx = {
+	skin_tone = 3
+}
+amerifrontiergfx = {
+	skin_tone = 1
+}
+anglofrontiergfx = {
+	skin_tone = 0
+}
+hispanicfrontiergfx = {
+	skin_tone = 1
+}
+indofrontiergfx = {
+	skin_tone = 2
+}
+mideastfrontiergfx = {
+	skin_tone = 2
+}
+persianfrontiergfx = {
+	skin_tone = 0
+}
+sinofrontiergfx = {
+	skin_tone = 1
+}
+# Samawati
+afrosamawatigfx = {
+	skin_tone = 3
+}
+amerisamawatigfx = {
+	skin_tone = 1
+}
+anglosamawatigfx = {
+	skin_tone = 0
+}
+hispanicsamawatigfx = {
+	skin_tone = 1
+}
+indosamawatigfx = {
+	skin_tone = 2
+}
+mideastsamawatigfx = {
+	skin_tone = 2
+}
+persiansamawatigfx = {
+	skin_tone = 0
+}
+sinosamawatigfx = {
 	skin_tone = 1
 }
 # Western

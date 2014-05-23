@@ -80,4 +80,164 @@ spriteTypes = {
 		norefcount = yes
 		can_be_lowres = yes
 	}
+	### FRONTIER MALE ###
+	spriteType = {
+		name = "GFX_frontier_male_clothes_behind"
+		texturefile = "gfx\\characters\\frontier_male_clothes_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_frontier_male_clothes"
+		texturefile = "gfx\\characters\\frontier_male_clothes.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_frontier_male_clothes_infront"
+		texturefile = "gfx\\characters\\frontier_male_clothes_infront.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_frontier_male_headgear_behind"
+		texturefile = "gfx\\characters\\frontier_male_headgear_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_frontier_male_headgear"
+		texturefile = "gfx\\characters\\frontier_male_headgear.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_frontier_male_headgear_mid"
+		texturefile = "gfx\\characters\\frontier_male_headgear_mid.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	
+	### FRONTIER FEMALE ###
+	spriteType = {
+		name = "GFX_frontier_female_clothes_behind"
+		texturefile = "gfx\\characters\\frontier_female_clothes_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_frontier_female_clothes"
+		texturefile = "gfx\\characters\\frontier_female_clothes.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_frontier_female_headgear_behind"
+		texturefile = "gfx\\characters\\frontier_female_headgear_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_frontier_female_headgear"
+		texturefile = "gfx\\characters\\frontier_female_headgear.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_frontier_female_headgear_mid"
+		texturefile = "gfx\\characters\\frontier_female_headgear_mid.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	### SAMAWATI MALE ###
+	spriteType = {
+		name = "GFX_samawati_male_clothes_behind"
+		texturefile = "gfx\\characters\\alsamawat_male_clothes_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_samawati_male_clothes"
+		texturefile = "gfx\\characters\\alsamawat_male_clothes.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_samawati_male_clothes_infront"
+		texturefile = "gfx\\characters\\alsamawat_male_clothes_infront.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_samawati_male_headgear_behind"
+		texturefile = "gfx\\characters\\alsamawat_male_headgear_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_samawati_male_headgear"
+		texturefile = "gfx\\characters\\alsamawat_male_headgear.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_samawati_male_headgear_mid"
+		texturefile = "gfx\\characters\\alsamawat_male_headgear_mid.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	
+	### SAMAWATI FEMALE ###
+	spriteType = {
+		name = "GFX_samawati_female_clothes_behind"
+		texturefile = "gfx\\characters\\alsamawat_female_clothes_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_samawati_female_clothes"
+		texturefile = "gfx\\characters\\alsamawat_female_clothes.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_samawati_female_headgear_behind"
+		texturefile = "gfx\\characters\\alsamawat_female_headgear_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_samawati_female_headgear"
+		texturefile = "gfx\\characters\\alsamawat_female_headgear.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_samawati_female_headgear_mid"
+		texturefile = "gfx\\characters\\alsamawat_female_headgear_mid.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
 }

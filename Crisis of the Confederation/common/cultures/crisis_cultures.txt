@@ -227,7 +227,8 @@ terran_group = {
 		modifier = default_culture_modifier
 	}
 	iranian_terran = {
-		graphical_culture = mideastconfederategfx
+		graphical_culture = persianconfederategfx
+		second_graphical_culture = mideastconfederategfx
 
 		color = { 0.5 0.5 0.95 }
 
@@ -1737,10 +1738,10 @@ second_graphical_culture = muslimgfx
 	}
 }
 samawati_group = {
-	graphical_culture = westerngfx
+	graphical_culture = mideastsamawatigfx
 	
 	anglo_samawati = {
-		graphical_culture = westerngfx
+		graphical_culture = anglosamawatigfx
 		color = { 0.5 0.5 0.95 }
 
 		male_names = {
@@ -1773,7 +1774,7 @@ samawati_group = {
 	}
 	
 	arab_samawati = {
-		graphical_culture = muslimgfx
+		graphical_culture = mideastsamawatigfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -1813,8 +1814,8 @@ samawati_group = {
 	}
 
 	east_afro_samawati = {
-		graphical_culture = africangfx
-second_graphical_culture = muslimgfx
+		graphical_culture = afrosamawatigfx
+		second_graphical_culture = mideastsamawatigfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -1851,8 +1852,8 @@ second_graphical_culture = muslimgfx
 		modifier = default_culture_modifier
 	}
 	ethiopian_samawati = {
-		graphical_culture = africangfx
-second_graphical_culture = muslimgfx
+		graphical_culture = afrosamawatigfx
+		second_graphical_culture = mideastsamawatigfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -1889,8 +1890,8 @@ second_graphical_culture = muslimgfx
 		modifier = default_culture_modifier
 	}
 	hispanic_samawati = {
-		graphical_culture = southerngfx
-second_graphical_culture = westerngfx
+		graphical_culture = hispanicsamawatigfx
+		second_graphical_culture = anglosamawatigfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -1926,8 +1927,8 @@ second_graphical_culture = westerngfx
 	}
 	
 	indo_samawati = {
-		graphical_culture = indiangfx
-second_graphical_culture = muslimgfx
+		graphical_culture = indosamawatigfx
+		second_graphical_culture = mideastsamawatigfx
 		color = { 0.5 0.5 0.95 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -1961,7 +1962,8 @@ second_graphical_culture = muslimgfx
 		modifier = default_culture_modifier
 	}
 	iranian_samawati = {
-		graphical_culture = muslimgfx
+		graphical_culture = persiansamawatigfx
+		second_graphical_culture = mideastsamawatigfx
 
 		color = { 0.5 0.5 0.95 }
 
@@ -1998,8 +2000,8 @@ second_graphical_culture = muslimgfx
 		modifier = default_culture_modifier
 	}
 	japanese_samawati = {
-		graphical_culture = mongolgfx
-second_graphical_culture = muslimgfx
+		graphical_culture = sinosamawatigfx
+		second_graphical_culture = mideastsamawatigfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -2032,7 +2034,8 @@ second_graphical_culture = muslimgfx
 		modifier = default_culture_modifier
 	}
 	mesoamerican_samawati = {
-		graphical_culture = mesoamericangfx
+		graphical_culture = amerisamawatigfx
+		second_graphical_culture = mideastsamawatigfx
 		color = { 0.5 0.5 0.95 }
 
 		male_names = {
@@ -2067,7 +2070,7 @@ second_graphical_culture = muslimgfx
 		modifier = default_culture_modifier
 	}
 	russo_samawati = {
-		graphical_culture = easternslavicgfx
+		graphical_culture = anglosamawatigfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -2106,8 +2109,8 @@ second_graphical_culture = muslimgfx
 		modifier = default_culture_modifier
 	}
 	sino_samawati = {
-		graphical_culture = mongolgfx
-second_graphical_culture = muslimgfx
+		graphical_culture = sinosamawatigfx
+		second_graphical_culture = mideastsamawatigfx
 		color = { 0.5 0.5 0.95 }
 		
 
@@ -2140,8 +2143,8 @@ second_graphical_culture = muslimgfx
 		modifier = default_culture_modifier
 	}
 	west_afro_samawati = {
-		graphical_culture = africangfx
-second_graphical_culture = muslimgfx
+		graphical_culture = afrosamawatigfx
+		second_graphical_culture = mideastsamawatigfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -2630,10 +2633,10 @@ second_graphical_culture = muslimgfx
 	}
 }
 frontiersman_group = {
-	graphical_culture = westerngfx
+	graphical_culture = anglofrontiergfx
 	
 	anglo_frontiersman = {
-		graphical_culture = westerngfx
+		graphical_culture = anglofrontiergfx
 		color = { 0.5 0.5 0.95 }
 		male_names = {
 			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
@@ -2668,7 +2671,7 @@ frontiersman_group = {
 	}
 	
 	arab_frontiersman = {
-		graphical_culture = muslimgfx
+		graphical_culture = mideastfrontiergfx
 		
 		color = { 0.5 0.5 0.95 }
 		male_names = {
@@ -2710,8 +2713,8 @@ frontiersman_group = {
 	}
 
 	east_afro_frontiersman = {
-		graphical_culture = africangfx
-second_graphical_culture = muslimgfx
+		graphical_culture = afrofrontiergfx
+		second_graphical_culture = mideastfrontiergfx
 		
 		color = { 0.5 0.5 0.95 }
 		male_names = {
@@ -2750,8 +2753,8 @@ second_graphical_culture = muslimgfx
 		modifier = default_culture_modifier
 	}
 	ethiopian_frontiersman = {
-		graphical_culture = africangfx
-second_graphical_culture = muslimgfx
+		graphical_culture = afrofrontiergfx
+		second_graphical_culture = mideastfrontiergfx
 		
 		color = { 0.5 0.5 0.95 }
 		male_names = {
@@ -2790,8 +2793,8 @@ second_graphical_culture = muslimgfx
 		modifier = default_culture_modifier
 	}
 	hispanic_frontiersman = {
-		graphical_culture = southerngfx
-second_graphical_culture = westerngfx
+		graphical_culture = hispanicfrontiergfx
+		second_graphical_culture = anglofrontiergfx
 		
 		color = { 0.5 0.5 0.95 }
 		male_names = {
@@ -2829,8 +2832,8 @@ second_graphical_culture = westerngfx
 	}
 	
 	indo_frontiersman = {
-		graphical_culture = indiangfx
-second_graphical_culture = muslimgfx
+		graphical_culture = indofrontiergfx
+		second_graphical_culture = mideastfrontiergfx
 		color = { 0.5 0.5 0.95 }
 		male_names = {
 			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
@@ -2864,7 +2867,8 @@ second_graphical_culture = muslimgfx
 		modifier = default_culture_modifier
 	}
 	iranian_frontiersman = {
-		graphical_culture = muslimgfx
+		graphical_culture = persianfrontiergfx
+		second_graphical_culture = mideastfrontiergfx
 
 		color = { 0.5 0.5 0.95 }
 		male_names = {
@@ -2902,8 +2906,8 @@ second_graphical_culture = muslimgfx
 		modifier = default_culture_modifier
 	}
 	japanese_frontiersman = {
-		graphical_culture = mongolgfx
-second_graphical_culture = muslimgfx
+		graphical_culture = sinofrontiergfx
+		second_graphical_culture = mideastfrontiergfx
 		
 		color = { 0.5 0.5 0.95 }
 		male_names = {
@@ -2938,7 +2942,9 @@ second_graphical_culture = muslimgfx
 		modifier = default_culture_modifier
 	}
 	mesoamerican_frontiersman = {
-		graphical_culture = mesoamericangfx
+		graphical_culture = amerifrontiergfx
+		second_graphical_culture = mideastfrontiergfx
+		
 		color = { 0.5 0.5 0.95 }
 		male_names = {
 			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
@@ -2975,7 +2981,7 @@ second_graphical_culture = muslimgfx
 		modifier = default_culture_modifier
 	}
 	russo_frontiersman = {
-		graphical_culture = easternslavicgfx
+		graphical_culture = anglofrontiergfx
 		
 		color = { 0.5 0.5 0.95 }
 		male_names = {
@@ -3016,8 +3022,8 @@ second_graphical_culture = muslimgfx
 		modifier = default_culture_modifier
 	}
 	sino_frontiersman = {
-		graphical_culture = mongolgfx
-second_graphical_culture = muslimgfx
+		graphical_culture = sinofrontiergfx
+		second_graphical_culture = mideastfrontiergfx
 		color = { 0.5 0.5 0.95 }
 		male_names = {
 			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
@@ -3051,8 +3057,8 @@ second_graphical_culture = muslimgfx
 		modifier = default_culture_modifier
 	}
 	west_afro_frontiersman = {
-		graphical_culture = africangfx
-second_graphical_culture = muslimgfx
+		graphical_culture = afrofrontiergfx
+		second_graphical_culture = mideastfrontiergfx
 		
 		color = { 0.5 0.5 0.95 }
 		male_names = {
