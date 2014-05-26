@@ -1,0 +1,7 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+open_decree_menu_decision;Open Decrees Menu;;;;;;;;;;;;;x
+open_decree_menu_decision_desc;Who's [Root.GetTitle], again? This menu opens decisions allowing you to change crown laws without needing to confirm them through a vote - although not always without consequences.;;;;;;;;;;;;;x
+close_decree_menu_decision;Close Decrees Menu;;;;;;;;;;;;;x
+close_decree_menu_decision_desc;Close the Decrees Menu.;;;;;;;;;;;;;x
+dissolve_legislature_decision;Dissolve the Senate;;;;;;;;;;;;;x
+dissolve_legislature_decision_desc;Order that the Senate dissolve and claim the power to rule by decree. This action will trigger a constitutional crisis.;;;;;;;;;;;;;x

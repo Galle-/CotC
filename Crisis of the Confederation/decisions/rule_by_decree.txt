@@ -1,0 +1,518 @@
+# These decisions are (mostly) enabled only when there is no legislature
+# They allow crown laws to be passed by decree without the need for a vote
+
+decisions = {
+	# Menu Controls
+	open_decree_menu_decision = {
+		potential = {
+			ai = no
+			NOT = { has_character_flag = flag_decree_menu_open }
+			any_demesne_title = { crownlaw_title = { holder_scope = { character = ROOT } } }
+		}
+		allow = { always = yes }
+		effect = { set_character_flag = flag_decree_menu_open }
+	}
+	close_decree_menu_decision = {
+		is_high_prio = yes
+		potential = {
+			ai = no
+			has_character_flag = flag_decree_menu_open
+		}
+		allow = { always = yes }
+		effect = { clr_character_flag = flag_decree_menu_open }
+	}
+	
+	# Dissolve the Legislature
+	# Available to everyone, but doing it this way causes a constitutional crisis for obvious reasons
+	dissolve_legislature_decision = {
+		is_high_prio = yes
+		potential = {
+			any_demesne_title = { has_law = legislative_authority_1 }
+			OR = {
+				ai = yes
+				has_character_flag = flag_decree_menu_open
+			}
+			NOT = { has_character_flag = flag_making_decree }
+		}
+		allow = {
+			# Must not already be in a constitutional crisis
+			NOT = { has_character_modifier = constitutional_crisis }
+			
+			# Must actually be capable of governing
+			NOT = {
+				any_realm_character = {
+					has_minor_title = title_regent
+					liege = { character = ROOT }
+				}
+			}
+		}
+		effect = {
+			# Dissolve all legislatures
+			any_demesne_title = {
+				limit = { has_law = legislative_authority_1 }
+				add_law = legislative_authority_0
+			}
+			if = {
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_separatist
+					religion = neo_socialist
+				}
+				piety = -500
+				religion_authority = { modifier = major_incompatible_reform years = 50 }
+			}
+			# Start a constitutional crisis
+			add_character_modifier = { name = constitutional_crisis duration = -1 }
+			add_character_modifier = { name = law_against_ruler duration = -1 }
+			
+			# Flag crisis rank and type
+			set_character_flag = flag_crisis_term_limit_defied
+			if = {
+				limit = { primary_title = { tier = EMPEROR } }
+				set_character_flag = flag_crisis_emperor
+			}
+			if = {
+				limit = { primary_title = { tier = KING } }
+				set_character_flag = flag_crisis_king
+			}
+			
+			# Annoy all the vassals
+			hidden_tooltip = {
+				# Self Interest
+				any_vassal = {
+					limit = { NOT = { trait = content } }
+					opinion = { who = ROOT modifier = opinion_tyrant months = 120 }
+				}
+				any_vassal = {
+					limit = { trait = ambitious }
+					opinion = { who = ROOT modifier = opinion_tyrant months = 120 }
+				}
+				# Ideological Opposition
+				any_vassal = {
+					limit = {
+						OR = {
+							religion = terran_federalist
+							religion = terran_republican
+							religion = colonial_separatist
+							religion = neo_socialist
+						}
+						religion_authority = 0.5
+					}
+					opinion = { who = ROOT modifier = opinion_tyrant months = 120 }
+				}
+				any_vassal = {
+					limit = {
+						OR = {
+							religion = terran_federalist
+							religion = terran_republican
+							religion = colonial_separatist
+							religion = neo_socialist
+						}
+						religion_authority = 0.25
+						NOT = { trait = pragmatic }
+					}
+					opinion = { who = ROOT modifier = opinion_tyrant months = 120 }
+				}
+				any_vassal = {
+					limit = {
+						OR = {
+							religion = terran_federalist
+							religion = terran_republican
+							religion = colonial_separatist
+							religion = neo_socialist
+						}
+						trait = radical
+					}
+					opinion = { who = ROOT modifier = opinion_tyrant months = 120 }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1 # This is a pretty big decision
+			}
+			# Personality
+			modifier = {
+				factor = 4
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.25
+				trait = content
+			}
+			modifier = {
+				factor = 2
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				trait = humble
+			}
+			modifier = {
+				factor = 4
+				trait = cold
+			}
+			modifier = {
+				factor = 0.25
+				trait = friendly
+			}
+			# Ideology
+			modifier = {
+				factor = 0.5
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_separatist
+					religion = neo_socialist
+				}
+				religion_authority = 0.5
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_separatist
+					religion = neo_socialist
+				}
+				NOT = { trait = pragmatic }
+				religion_authority = 0.25
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_separatist
+					religion = neo_socialist
+				}
+				trait = radical
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_feudal
+				}
+				religion_authority = 0.5
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_feudal
+				}
+				religion_authority = 0.25
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_feudal
+				}
+				trait = radical
+			}
+			
+			# Ruler despises the legislature
+			modifier = {
+				factor = 2
+				any_vassal = {
+					age = 16
+					NOT = { trait = incapable }
+					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
+					relative_power_to_liege = 0.2
+				}
+			}
+			modifier = {
+				factor = 2
+				any_vassal = {
+					age = 16
+					NOT = { trait = incapable }
+					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
+					relative_power_to_liege = 0.4
+				}
+			}
+			modifier = {
+				factor = 2
+				any_vassal = {
+					age = 16
+					NOT = { trait = incapable }
+					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
+					relative_power_to_liege = 0.6
+				}
+			}
+			modifier = {
+				factor = 2
+				any_vassal = {
+					age = 16
+					NOT = { trait = incapable }
+					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
+					relative_power_to_liege = 0.8
+				}
+			}
+			modifier = {
+				factor = 2
+				any_vassal = {
+					age = 16
+					NOT = { trait = incapable }
+					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
+					relative_power_to_liege = 1
+				}
+			}
+			modifier = {
+				factor = 2
+				any_vassal = {
+					age = 16
+					NOT = { trait = incapable }
+					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
+					count = 2
+					relative_power_to_liege = 0.2
+				}
+			}
+			modifier = {
+				factor = 2
+				any_vassal = {
+					age = 16
+					NOT = { trait = incapable }
+					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
+					count = 3
+					relative_power_to_liege = 0.2
+				}
+			}
+			modifier = {
+				factor = 2
+				any_vassal = {
+					age = 16
+					NOT = { trait = incapable }
+					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
+					count = 4
+					relative_power_to_liege = 0.2
+				}
+			}
+			modifier = {
+				factor = 2
+				any_vassal = {
+					age = 16
+					NOT = { trait = incapable }
+					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
+					count = 5
+					relative_power_to_liege = 0.2
+				}
+			}
+		}
+	}
+	
+	# Wait, you WANT to limit your actions like this? Uh, your call, I guess
+	found_legislature_decision = {
+		is_high_prio = yes
+		potential = {
+			OR = {
+				ai = yes
+				has_character_flag = flag_decree_menu_open
+			}
+			any_demesne_title = { has_law = legislative_authority_0 }
+		}
+		allow = {
+			# Must not be in a constitutional crisis
+			NOT = { has_character_modifier = constitutional_crisis }
+		}
+		effect = {
+			# Create legislatures for all titles eligible for them
+			any_demesne_title = {
+				limit = { has_law = legislative_authority_0 }
+				add_law = legislative_authority_0
+			}
+			if = {
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_separatist
+					religion = neo_socialist
+				}
+				piety = 500
+				religion_authority = { modifier = major_compatible_reform years = 50 }
+			}
+		}
+		ai_will_do = {
+			factor = 0.1
+			# Personality
+			modifier = {
+				factor = 0.25
+				trait = ambitious
+			}
+			modifier = {
+				factor = 4
+				trait = content
+			}
+			modifier = {
+				factor = 0.5
+				trait = proud
+			}
+			modifier = {
+				factor = 2
+				trait = humble
+			}
+			modifier = {
+				factor = 0.25
+				trait = cold
+			}
+			modifier = {
+				factor = 4
+				trait = friendly
+			}
+			# Ideology
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_separatist
+					religion = neo_socialist
+				}
+				religion_authority = 0.5
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_separatist
+					religion = neo_socialist
+				}
+				NOT = { trait = pragmatic }
+				religion_authority = 0.25
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_separatist
+					religion = neo_socialist
+				}
+				trait = radical
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_feudal
+				}
+				religion_authority = 0.5
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_feudal
+				}
+				religion_authority = 0.25
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_feudal
+				}
+				trait = radical
+			}
+			
+			# Ruler despises the legislature
+			modifier = {
+				factor = 0.5
+				any_vassal = {
+					age = 16
+					NOT = { trait = incapable }
+					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
+					relative_power_to_liege = 0.2
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_vassal = {
+					age = 16
+					NOT = { trait = incapable }
+					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
+					relative_power_to_liege = 0.4
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_vassal = {
+					age = 16
+					NOT = { trait = incapable }
+					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
+					relative_power_to_liege = 0.6
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_vassal = {
+					age = 16
+					NOT = { trait = incapable }
+					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
+					relative_power_to_liege = 0.8
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_vassal = {
+					age = 16
+					NOT = { trait = incapable }
+					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
+					relative_power_to_liege = 1
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_vassal = {
+					age = 16
+					NOT = { trait = incapable }
+					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
+					count = 2
+					relative_power_to_liege = 0.2
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_vassal = {
+					age = 16
+					NOT = { trait = incapable }
+					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
+					count = 3
+					relative_power_to_liege = 0.2
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_vassal = {
+					age = 16
+					NOT = { trait = incapable }
+					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
+					count = 4
+					relative_power_to_liege = 0.2
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_vassal = {
+					age = 16
+					NOT = { trait = incapable }
+					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
+					count = 5
+					relative_power_to_liege = 0.2
+				}
+			}
+		}
+	}
+}

@@ -807,6 +807,71 @@ de_jure_laws = {
 		ai_will_revoke = { factor = 0 }
 	}
 	
+# LEGISLATIVE AUTHORITY
+	legislative_authority_0 = {	# No Legislature
+		show_as_title = yes
+		group = legislative_authority
+		default = yes
+		
+		potential = { always = yes }
+		allow = {
+			# It's possible to get the legislature to vote to dissolve itself without triggering a crisis
+			# But it's very difficult
+			NOT = {
+				holder_scope = {
+					any_vassal = {
+						# Vassal is capable of opposing decision
+						age = 16
+						NOT = { trait = incapable }
+						prisoner = no
+						primary_title = { higher_tier_than = BARON }
+						
+						# Vassal would oppose decision
+						OR = {
+							NOT = { opinion = { who = PREV value = 0 } }
+							trait = ambitious
+							religion = terran_federalist
+							religion = terran_republican
+							religion = colonial_separatist
+							religion = neo_socialist
+						}
+						
+						# Vassal would not agree to decision for some other reason
+						NOT = {
+							AND = {
+								OR = {
+									religion = terran_imperial
+									religion = astrist
+									religion = neo_feudal
+								}
+								trait = radical
+							}
+						}
+						NOT = { opinion = { who = PREV value = 100 } }
+					}
+				}
+			}
+		}
+		revoke_allowed = { always = no }
+		ai_will_do = { factor = 0 }
+		effect = { hidden_tooltip = { revoke_law = legislative_authority_1 } }
+	}
+	legislative_authority_1 = {	# Legislature
+		show_as_title = yes
+		group = legislative_authority
+		default = no
+		
+		feudal_opinion = 35
+		city_opinion = 35
+		temple_opinion = 35
+		
+		potential = { always = yes }
+		allow = { always = no } # These decisions are made by decree
+		revoke_allowed = { always = no }
+		ai_will_do = { factor = 0 }
+		effect = { hidden_tooltip = { revoke_law = legislative_authority_0 } }
+	}
+	
 # PREMIERSHIP
 	premiership_0 = { # No prime minister
 		show_as_title = yes

@@ -27,7 +27,8 @@ character_event = {
 		clr_character_flag = flag_cached_liege_against_ruler
 		
 		# Crisis Type
-		clr_character_flag = flag_cached_term_limit_defied
+		clr_character_flag = flag_cached_crisis_term_limit_defied
+		clr_character_flag = flag_cached_crisis_dissolved_legislature
 		
 		# Crisis Rank
 		clr_character_flag = flag_cached_crisis_emperor
@@ -95,7 +96,8 @@ character_event = {
 		remove_character_modifier = crisis_liege_against_ruler
 		
 		# Crisis Type
-		clr_character_flag = flag_term_limit_defied
+		clr_character_flag = flag_crisis_term_limit_defied
+		clr_character_flag = flag_crisis_dissolved_legislature
 		
 		# Crisis Rank
 		clr_character_flag = flag_crisis_emperor
@@ -169,7 +171,8 @@ character_event = {
 			has_character_flag = flag_cached_liege_against_ruler
 			
 			# Crisis Type
-			has_character_flag = flag_cached_term_limit_defied
+			has_character_flag = flag_cached_crisis_term_limit_defied
+			has_character_flag = flag_cached_crisis_dissolved_legislature
 			
 			# Crisis Rank
 			has_character_flag = flag_cached_crisis_emperor
@@ -198,7 +201,8 @@ character_event = {
 			has_character_flag = flag_cached_liege_against_ruler
 			
 			# Crisis Type
-			has_character_flag = flag_cached_term_limit_defied
+			has_character_flag = flag_cached_crisis_term_limit_defied
+			has_character_flag = flag_cached_crisis_dissolved_legislature
 			
 			# Crisis Rank
 			has_character_flag = flag_cached_crisis_emperor
@@ -215,7 +219,8 @@ character_event = {
 		clr_character_flag = flag_cached_liege_against_ruler
 		
 		# Crisis Type
-		clr_character_flag = flag_cached_term_limit_defied
+		clr_character_flag = flag_cached_crisis_term_limit_defied
+		clr_character_flag = flag_cached_crisis_dissolved_legislature
 		
 		# Crisis Rank
 		clr_character_flag = flag_cached_crisis_emperor
@@ -243,7 +248,8 @@ character_event = {
 			has_character_modifier = crisis_liege_against_ruler
 			
 			# Crisis Type
-			has_character_flag = flag_term_limit_defied
+			has_character_flag = flag_crisis_term_limit_defied
+			has_character_flag = flag_crisis_dissolved_legislature
 			
 			# Crisis Rank
 			has_character_flag = flag_crisis_emperor
@@ -263,7 +269,8 @@ character_event = {
 		remove_character_modifier = crisis_liege_against_ruler
 		
 		# Crisis Type
-		clr_character_flag = flag_term_limit_defied
+		clr_character_flag = flag_crisis_term_limit_defied
+		clr_character_flag = flag_crisis_dissolved_legislature
 		
 		# Crisis Rank
 		clr_character_flag = flag_crisis_emperor
@@ -326,8 +333,12 @@ character_event = {
 		
 		# Crisis Type
 		if = {
-			limit = { liege = { has_character_flag = flag_term_limit_defied } }
-			set_character_flag = flag_cached_term_limit_defied
+			limit = { liege = { has_character_flag = flag_crisis_term_limit_defied } }
+			set_character_flag = flag_cached_crisis_term_limit_defied
+		}
+		if = {
+			limit = { liege = { has_character_flag = flag_crisis_dissolved_legislature } }
+			set_character_flag = flag_cached_crisis_dissolved_legislature
 		}
 		
 		# Crisis Rank
@@ -423,7 +434,7 @@ character_event = {
 				trait = pro_ruler
 				trait = anti_ruler
 			}
-			has_character_flag = flag_cached_term_limit_defied
+			has_character_flag = flag_cached_crisis_term_limit_defied
 			OR = {
 				AND = {
 					has_character_flag = flag_cached_crisis_emperor
@@ -538,6 +549,165 @@ character_event = {
 	option = {
 		name = "EVTOPTCONFIRM"
 		hidden_tooltip = { character_event = { id = laws.0 } }
+	}
+}
+
+# Inheriting a crisis caused by dissolving the legislature
+character_event = {
+	id = laws.40
+	desc = "EVTDESCLAWS40"
+	picture = GFX_evt_scandal
+	
+	only_rulers = yes
+	
+	trigger = {
+		NOT = { has_character_modifier = constitutional_crisis }
+		any_vassal = {
+			OR = {
+				trait = pro_ruler
+				trait = anti_ruler
+			}
+			has_character_flag = flag_cached_crisis_dissolved_legislature
+			OR = {
+				AND = {
+					has_character_flag = flag_cached_crisis_emperor
+					ROOT = { primary_title = { tier = EMPEROR } }
+				}
+				AND = {
+					has_character_flag = flag_cached_crisis_king
+					ROOT = { primary_title = { tier = KING } }
+				}
+			}
+		}
+	}
+	
+	option = {
+		# Fine, whatever, let them have their legislature if they want it so badly
+		name = "EVTOPTALAWS40"
+		set_character_flag = flag_crisis_dissolved_legislature
+		character_event = { id = laws.1010 tooltip = "EVTTOOLTIPLAWS1010" }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 10
+				trait = anti_ruler
+				has_character_flag = flag_cached_crisis_dissolved_legislature
+			}
+			modifier = {
+				factor = 4
+				trait = friendly
+			}
+			modifier = {
+				factor = 0.25
+				trait = cold
+			}
+			modifier = {
+				factor = 2
+				trait = content
+			}
+			modifier = {
+				factor = 0.5
+				trait = ambitious
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_separatist
+					religion = neo_socialist
+				}
+				religion_authority = 0.75
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_separatist
+					religion = neo_socialist
+				}
+				NOT = { trait = pragmatic }
+				religion_authority = 0.5
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_separatist
+					religion = neo_socialist
+				}
+				trait = radical
+				religion_authority = 0.25
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_feudal
+				}
+				religion_authority = 0.75
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_feudal
+				}
+				NOT = { trait = pragmatic }
+				religion_authority = 0.5
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_feudal
+				}
+				trait = radical
+				religion_authority = 0.25
+			}
+		}
+	}
+	
+	option = {
+		# What? No! All the power is mine!
+		name = "EVTOPTBLAWS40"
+		add_character_modifier = { name = constitutional_crisis duration = -1 }
+		add_character_modifier = { name = law_against_ruler duration = -1 }
+		
+		set_character_flag = flag_crisis_dissolved_legislature
+		
+		# Inherit any existing cached modifiers
+		if = {
+			limit = { any_vassal = { has_character_flag = flag_cached_crisis_emperor } }
+			set_character_flag = flag_crisis_emperor
+		}
+		if = {
+			limit = { any_vassal = { has_character_flag = flag_cached_crisis_king } }
+			set_character_flag = flag_crisis_king
+		}
+		if = {
+			limit = { any_vassal = { has_character_flag = flag_cached_law_for_ruler } }
+			add_character_modifier = { name = crisis_law_for_ruler duration = -1 }
+		}
+		if = {
+			limit = { any_vassal = { has_character_flag = flag_cached_law_against_ruler } }
+			add_character_modifier = { name = crisis_law_against_ruler duration = -1 }
+		}
+		if = {
+			limit = { any_vassal = { has_character_flag = flag_cached_liege_for_ruler } }
+			add_character_modifier = { name = crisis_liege_for_ruler duration = -1 }
+		}
+		if = {
+			limit = { any_vassal = { has_character_flag = flag_cached_liege_against_ruler } }
+			add_character_modifier = { name = crisis_liege_against_ruler duration = -1 }
+		}
+		
+		ai_chance = { factor = 50 }
 	}
 }
 
@@ -7241,7 +7411,7 @@ character_event = {
 		# Do something based on whatever the crisis was about
 		if = {
 			# Successfully defied term length. Terms are now for life!
-			limit = { has_character_flag = flag_term_limit_defied }
+			limit = { has_character_flag = flag_crisis_term_limit_defied }
 			any_demesne_title = {
 				limit = {
 					OR = {
@@ -7264,7 +7434,12 @@ character_event = {
 				}
 				add_law = term_length_4
 			}
-			clr_character_flag = flag_term_limit_defied
+			clr_character_flag = flag_crisis_term_limit_defied
+		}
+		if = {
+			# Legislature now dissolved
+			limit = { has_character_flag = flag_crisis_dissolved_legislature }
+			clr_character_flag = flag_crisis_dissolved_legislature
 		}
 		# Crisis official ends
 		remove_character_modifier = constitutional_crisis
@@ -7319,9 +7494,24 @@ character_event = {
 		clr_character_flag = flag_constitutional_crisis_forced_defeat
 		# Do something based on whatever the crisis was about
 		if = {
-			limit = { has_character_flag = flag_term_limit_defied }
+			limit = { has_character_flag = flag_crisis_term_limit_defied }
 			character_event = { id = laws.100 tooltip = "EVTTOOLTIPLAWS100" } # Hold elections
-			clr_character_flag = flag_term_limit_defied
+			clr_character_flag = flag_crisis_term_limit_defied
+		}
+		if = {
+			limit = { has_character_flag = flag_crisis_legislature_dissolved }
+			any_demesne_title = {
+				limit = {
+					ROOT = {
+						any_vassal = {
+							crownlaw_title = { title = PREVPREVPREV }
+							has_character_flag = flag_cached_crisis_legislature_dissolved
+						}
+						add_law = legislative_authority_1
+					}
+				}
+			}
+			clr_character_flag = flag_crisis_legislature_dissolved
 		}
 		# Crisis officially ends
 		remove_character_modifier = constitutional_crisis
