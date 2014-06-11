@@ -3422,6 +3422,10 @@ narrative_event = {
 			limit = { ai = no }
 			set_character_flag = achievement_new_ways
 		}
+		if = {
+			limit = { religion = orthodox }
+			set_global_flag = flag_orthodox_reformation
+		}
 		any_courtier = {
 			limit = {
 				is_heresy_of = ROOT
@@ -3458,6 +3462,12 @@ narrative_event = {
 	option = {
 		name = "EVTOPTB670" # Rulers of the old Faith - Accept
 		trigger = {
+			NOT = {
+				AND = {
+					ROOT = { religion = orthodox }
+					has_landed_title = d_pilgrimage
+				}
+			}
 			is_heresy_of = ROOT # The old religion has become a heresy of the Reformed one
 		}
 		ai_chance = {
@@ -3516,12 +3526,60 @@ narrative_event = {
 	option = {
 		name = "EVTOPTC670" # Rulers of the old Faith - Decline
 		trigger = {
+			NOT = {
+				AND = {
+					ROOT = { religion = orthodox }
+					has_landed_title = d_pilgrimage
+				}
+			}
 			is_heresy_of = ROOT # The old religion has become a heresy of the Reformed one
 		}
 		ai_chance = {
 			factor = 50
 		}
 		tooltip = { religion = THIS }
+	}
+	option = {
+		# The Pilgrimage is transformed into the Orthodoxy
+		trigger = {
+			ROOT = { religion = orthodox }
+			has_landed_title = d_pilgrimage
+		}
+		religion = ROOT
+		
+		hidden_tooltip = {
+			any_courtier = {
+				limit = {
+					is_heresy_of = ROOT
+					employer = { character = PREV }
+				}
+				religion = ROOT
+			}
+			any_vassal = {
+				limit = {
+					is_playable = no
+					is_heresy_of = ROOT
+				}
+				religion = ROOT
+			}
+			capital_scope = {
+				if = {
+					limit = { is_heresy_of = ROOT }
+					religion = ROOT
+				}
+			}
+		}
+		activate_title = { title = k_orthodoxy status = yes }
+		d_pilgrimage = {
+			k_orthodoxy = {
+				grant_title = PREVPREV
+				copy_title_laws = PREV
+				copy_title_history = PREV
+				make_primary_title = yes
+			}
+			destroy_landed_title = THIS
+		}
+		activate_title = { title = d_pilgrimage status = no }
 	}
 	option = {
 		name = "EVTOPTD670" # Other playable rulers

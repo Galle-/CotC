@@ -1,4 +1,23 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+MIL_ARMIES;Fleets;Flottes;Flotten;;Flotas;;;;;;;;;x
+MIL_NAVIES;Hyperspace Fleets;Flottes;Flotten;;Flotas;;;;;;;;;x
+L_INF;F;;;;;;;;;;;;;x
+H_INF;B;;;;;;;;;;;;;x
+PIKE;D;;;;;;;;;;;;;x
+L_CAV;DD;;;;;;;;;;;;;x
+H_CAV;BC;;;;;;;;;;;;;x
+ARCH;TT;;;;;;;;;;;;;x
+H_ARCH;DN;;;;;;;;;;;;;x
+GALL;G;G;G;;G;;;;;;;;;x
+LEDGER_INDSTATE_ARMY;Fleet;;;;;;;;;;;;;x
+REGIMENT;Squadron;Squadron;Squadron;;Squadron;;;;;;;;;x
+FLEET;Deep Space Fleet;Flotte;Flotte;;Flota;;;;;;;;;x
+ARMY;Fleet;Flotte;Flotte;;Flota;;;;;;;;;x
+ARMY_NAME;$NAME$'s Fleet;Flotte de $NAME$;Flotte von $NAME$;;Flota de $NAME$;;;;;;;;;x
+FLEET_NAME;$NAME$ Hyperspace Fleet;Flotte de $NAME$;$NAME$ Flotte;;Flota de $NAME$;;;;;;;;;x
+ARMY_NAME_noculturegroup;$NUM$$ORDER$ Fleet;$NUM$$ORDER$ Flotte;$NUM$$ORDER$ Flotte;;$NUM$$ORDER$ Flota;$NUM$$ORDER$ flotta;;;;;;;;;x
+NAVY_NAME_noculturegroup;$NUM$$ORDER$ Hyperspace Fleet;$NUM$$ORDER$ Flotte;$NUM$$ORDER$ Flotte;;$NUM$$ORDER$ Flota;$NUM$$ORDER$ flotta;;;;;;;;x
+REGIMENT_NAME_noculturegroup;$HOME$'s $NUM$$ORDER$ Squadron;;;;;;;;;;;;x
 COMBATVIEW_PHASE_DESC_SKIRMISH;During the Skirmish phase, the main fleets keep their distance while fighters engage in dogfights.\nSmall ships are at their most vulnerable during this phase, but only ｧYFightersｧW, ｧYDestroyersｧW, and ｧYCombat DronesｧW are able to attack and exploit this.;Au cours de la phase de combat, les principales flottilles gardent leur distance tandis que les chasseurs engage l'ennemi.\nLes petits navires sont les plus vuln�rables durant cette phase, mais seuls ｧYles chasseursｧW, ｧYles estroyeursｧW, et ｧYles dr�nes de combat��W sont capables d'attaquer et d'exploiter cette faille.;;;;;;;;;;;;x
 COMBATVIEW_PHASE_DESC_MELEE;During the Melee phase, the fleets close to combat distance.\nｧYBattlecruisersｧW, ｧYDreadnoughtsｧW, and ｧYBombersｧW excel in the Melee Phase.;Pendant la phase de m�l�e, les flottilles entrent dans le combat � distance.\nｧYles croiseurs de batailleｧW, ｧYles cuiras�sｧW, et ｧYles bombardiersｧW excellent dans ces op�rations.;;;;;;;;;;;;x
 COMBATVIEW_PHASE_DESC_PURSUE;During the Pursuit phase, one fleet is retreating, and the other is attempting to chase them down.\nｧYBattlecruisersｧW, ｧYBombersｧW, and ｧYTroop TransportsｧW excel in the Pursuit Phase.;Pendant la phase de poursuite, une flotille se replie, et les autres tentent de lui donner la chasse.\nｧYles croiseurs de batailleｧW, ｧYles bombardiersｧW, et ｧYles transport de troupesｧW excellent dans ces op�rations.;;;;;;;;;;;;x
@@ -51,3 +70,4 @@ AT_COURT_DESC;Residing on $BARONY$, $PROVINCE$;� la Cour de $BARONY$, $PROVINCE$
 HOLDING_COURT_DESC;Reigning on $BARONY$, $LOCATION$;R�gne sur $BARONY$, $LOCATION$;Regiert in $BARONY$, $LOCATION$;;Gobernando en $BARONY$, $LOCATION$;;;;;;;;;x
 LANDLESS_COURT_DESC;Residing in $LOCATION$;R�side �E$LOCATION$;Residiert in $LOCATION$;;Residiendo en $LOCATION$;;;;;;;;;x
 DEAD_SINCE_DESC;Dead since $DATE$;Mort(e) depuis $DATE$;Tot seit $DATE$;;Muerto desde el $DATE$;;;;;;;;;x
+SIEGE_OF;Invasion of $PROVINCE$;Si�ge de $PROVINCE$;Belagerung von $PROVINCE$;;Asedio de $PROVINCE$;;;;;;;;;x

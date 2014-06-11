@@ -800,7 +800,7 @@ on_death = {
 		nepotism.0 # Automatically hands all appointed titles to the expected successor
 		nepotism.1
 		laws.155 # Use a dummy character to handle patrician inheritance if necessary
-		laws.156
+		#laws.156
 	}
 	random_events = {
 		10 = 24505
@@ -1276,6 +1276,11 @@ on_rebel_revolt = {
 	events = {
 		# Events are called in reverse ID order due to prerequisite issues
 		# Theocratic Rebellions
+		rebels.340
+		rebels.330
+		rebels.320
+		rebels.310
+		rebels.300
 		# Autocratic Rebellions
 		rebels.240
 		rebels.230

@@ -213,6 +213,12 @@ religious_group = {
 			OP_MERCURY OP_VENUS OP_ARES OP_CERES OP_JUPITER OP_GANYMEDE OP_CALLISTO OP_EUROPA OP_IO OP_SATURN OP_TITAN OP_NEPTUNE OP_URANUS OP_PLUTO OP_CHARON # Solar system operation names
 			OP_ARCHANGEL OP_SERAPHIM OP_CHERUBIM OP_GOSPEL OP_TESTAMENT OP_FAITHFUL OP_AZRAEL OP_MICHAEL OP_GABRIEL OP_PROPHECY OP_ABRAHAM OP_ISAAC OP_JACOB OP_JOSHUA OP_DAVID OP_SOLOMON OP_MOHAMMED # Abrahamic operation names
 		}
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_call_crusade = yes
+		can_retire_to_monastery = yes
 		
 		priests_can_inherit = no
 		priests_can_marry = no

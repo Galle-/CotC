@@ -1,5 +1,5 @@
 plot_coup = {
-	type = realm_characters # Actually targets liege, but isn't title-based
+	type = liege_titles
 	murder_plot = yes # Non-justified coups are immoral and characters with moral qualms won't back them
 	military_plot = yes
 	intrigue_plot = yes
@@ -9,46 +9,27 @@ plot_coup = {
 		NOT = { trait = incapable }
 		prisoner = no
 	}
-	allow = {
-		FROM = { liege = { character = ROOT } } # Must always target character's liege
-		
+	allow = {		
 		# Non-justified coups can't be initiated in circumstances where justified coups could be
-		NOT = { religion = space_pirate }
-		NOT = {
-			AND = {
-				NOT = { religion_authority = 0.8 }
-				FROM = { trait = anti_ruler }
-			}
+		holder_scope = { NOT = { religion = space_pirate } }
+		OR = {
+			holder_scope = { religion_authority = 0.8 }
+			NOT = { FROM = { trait = anti_ruler } }
 		}
-		NOT = {
-			AND = {
-				NOT = { religion_authority = 0.5 }
-				reverse_has_opinion_modifier = { who = FROM modifier = opinion_usurped_title }
-				any_demesne_title = {
-					is_primary_holder_title_tier = yes
-					FROM = { has_strong_claim = PREV }
-				}
-			}
+		OR = {
+			holder_scope = { religion_authority = 0.5 }
+			holder_scope = { NOT = { reverse_has_opinion_modifier = { who = FROM modifier = opinion_usurped_title } } }
+			NOT = { FROM = { has_strong_claim = PREV } }
 		}
-		NOT = {
-			AND = {
-				NOT = { religion_authority = 0.35 }
-				any_demesne_title = {
-					is_primary_holder_title_tier = yes
-					FROM = { has_strong_claim = PREV }
-				}
-			}
+		OR = {
+			holder_scope = { religion_authority = 0.35 }
+			NOT = { FROM = { has_strong_claim = PREV } }
 		}
-		NOT = {
-			AND = {
-				NOT = { religion_authority = 0.25 }
-				any_demesne_title = {
-					is_primary_holder_title_tier = yes
-					FROM = { has_weak_claim = PREV }
-				}
-			}
+		OR = {
+			holder_scope = { religion_authority = 0.25 }
+			NOT = { FROM = { has_weak_claim = PREV } }
 		}
-		religion_authority = 0.1
+		holder_scope = { religion_authority = 0.1 }
 	}
 	chance = {
 		factor = 1
@@ -82,98 +63,108 @@ plot_coup = {
 		# Moral authority effects
 		modifier = {
 			factor = 0.8
-			religion_authority = 0.1
+			holder_scope = { religion_authority = 0.1 }
 		}
 		modifier = {
 			factor = 0.8
-			religion_authority = 0.2
+			holder_scope = { religion_authority = 0.2 }
 		}
 		modifier = {
 			factor = 0.8
-			religion_authority = 0.3
+			holder_scope = { religion_authority = 0.3 }
 		}
 		modifier = {
 			factor = 0.8
-			religion_authority = 0.4
+			holder_scope = { religion_authority = 0.4 }
 		}
 		modifier = {
 			factor = 0.8
-			religion_authority = 0.5
+			holder_scope = { religion_authority = 0.5 }
 		}
 		modifier = {
 			factor = 0.8
-			religion_authority = 0.6
+			holder_scope = { religion_authority = 0.6 }
 		}
 		modifier = {
 			factor = 0.8
-			religion_authority = 0.7
+			holder_scope = { religion_authority = 0.7 }
 		}
 		modifier = {
 			factor = 0.8
-			religion_authority = 0.8
+			holder_scope = { religion_authority = 0.8 }
 		}
 		modifier = {
 			factor = 0.8
-			religion_authority = 0.9
+			holder_scope = { religion_authority = 0.9 }
 		}
 		modifier = {
 			factor = 0.8
-			religion_authority = 1
+			holder_scope = { religion_authority = 1 }
 		}
 		
 		# Personal Opinion
 		# Unjustified coups will never be launched by vassals with positive opinions
 		modifier = {
 			factor = 0
-			reverse_opinion = { who = FROM value = 1 }
+			holder_scope = { reverse_opinion = { who = FROM value = 1 } }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { reverse_opinion = { who = FROM value = -9 } }
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -9 } } }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { reverse_opinion = { who = FROM value = -19 } }
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -19 } } }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { reverse_opinion = { who = FROM value = -29 } }
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -29 } } }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { reverse_opinion = { who = FROM value = -39 } }
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -39 } } }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { reverse_opinion = { who = FROM value = -49 } }
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -49 } } }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { reverse_opinion = { who = FROM value = -59 } }
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -59 } } }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { reverse_opinion = { who = FROM value = -69 } }
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -69 } } }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { reverse_opinion = { who = FROM value = -79 } }
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -79 } } }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { reverse_opinion = { who = FROM value = -89 } }
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -89 } } }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { reverse_opinion = { who = FROM value = -99 } }
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -99 } } }
 		}
 	}
 	success = { FROM = { has_character_flag = flag_successful_coup } }
 	effect = { FROM = { clr_character_flag = flag_successful_coup } }
-	abort = { FROM = { NOT = { liege = { character = ROOT } } } }
+	abort = { 
+		OR = {
+			NOT = { holder_scope = { always = yes } } # Title must actually exist and be held by someone
+			AND = {
+				FROM = { NOT = { has_character_flag = flag_coup_leader } } # Once the coup is underway, it can't be aborted
+				NOT = { holder_scope = { any_vassal = { character = FROM } } }
+			}
+		}
+	}
 	abort_effect = {
 		FROM = {
+			clr_character_flag = flag_coup_leader
 			clr_character_flag = flag_coup_plan_military
+			clr_character_flag = flag_coup_plan_spymaster
 			any_plot_backer = {
 				limit = {
 					NOT = {
@@ -187,13 +178,14 @@ plot_coup = {
 					}
 				}
 				clr_character_flag = flag_coup_plan_military
+				clr_character_flag = flag_coup_plan_spymaster
 			}
 		}
 	}
 }
 
 plot_justified_coup = {
-	type = realm_characters # Actually targets liege, but isn't title-based
+	type = liege_titles
 	military_plot = yes
 	intrigue_plot = yes
 	
@@ -203,36 +195,29 @@ plot_justified_coup = {
 		prisoner = no
 	}
 	allow = {
-		FROM = { liege = { character = ROOT } } # Must always target character's liege
+		is_primary_holder_title = yes
 		OR = {
-			religion = space_pirate
-			AND = {
+			holder_scope = { religion = space_pirate }
+			holder_scope = {
 				NOT = { religion_authority = 0.8 }
 				FROM = { trait = anti_ruler }
 			}
 			AND = {
-				NOT = { religion_authority = 0.5 }
-				reverse_has_opinion_modifier = { who = FROM modifier = opinion_usurped_title }
-				any_demesne_title = {
-					is_primary_holder_title_tier = yes
-					FROM = { has_strong_claim = PREV }
+				holder_scope = {
+					NOT = { religion_authority = 0.5 }
+					reverse_has_opinion_modifier = { who = FROM modifier = opinion_usurped_title }
 				}
+				FROM = { has_strong_claim = PREV }
 			}
 			AND = {
-				NOT = { religion_authority = 0.35 }
-				any_demesne_title = {
-					is_primary_holder_title_tier = yes
-					FROM = { has_strong_claim = PREV }
-				}
+				holder_scope = { NOT = { religion_authority = 0.35 } }
+				FROM = { has_strong_claim = PREV }
 			}
 			AND = {
-				NOT = { religion_authority = 0.25 }
-				any_demesne_title = {
-					is_primary_holder_title_tier = yes
-					FROM = { has_weak_claim = PREV }
-				}
+				holder_scope = { NOT = { religion_authority = 0.25 } }
+				FROM = { has_weak_claim = PREV }
 			}
-			NOT = { religion_authority = 0.1 }
+			holder_scope = { NOT = { religion_authority = 0.1 } }
 		}
 	}
 	chance = {
@@ -246,6 +231,31 @@ plot_justified_coup = {
 		modifier = {
 			factor = 0
 			FROM = { trait = pro_ruler }
+		}
+		
+		# Try to avoid splitting the plot up if possible
+		modifier = {
+			factor = 0
+			holder_scope = {
+				any_vassal = {
+					has_plot = plot_justified_coup
+					NOT = { character = FROM }
+					OR = {
+						reverse_opinion = { who = FROM value = 25 }
+						higher_tier_than = FROM
+						FROM = { trait = content }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			FROM = {
+				any_backed_character = {
+					same_liege = FROM
+					has_plot = plot_justified_coup
+				}
+			}
 		}
 		
 		# Personality Effects
@@ -269,292 +279,305 @@ plot_justified_coup = {
 		# Moral authority effects
 		modifier = {
 			factor = 0.8
-			religion_authority = 0.1
+			holder_scope = { religion_authority = 0.1 }
 		}
 		modifier = {
 			factor = 0.8
-			religion_authority = 0.2
+			holder_scope = { religion_authority = 0.2 }
 		}
 		modifier = {
 			factor = 0.8
-			religion_authority = 0.3
+			holder_scope = { religion_authority = 0.3 }
 		}
 		modifier = {
 			factor = 0.8
-			religion_authority = 0.4
+			holder_scope = { religion_authority = 0.4 }
 		}
 		modifier = {
 			factor = 0.8
-			religion_authority = 0.5
+			holder_scope = { religion_authority = 0.5 }
 		}
 		modifier = {
 			factor = 0.8
-			religion_authority = 0.6
+			holder_scope = { religion_authority = 0.6 }
 		}
 		modifier = {
 			factor = 0.8
-			religion_authority = 0.7
+			holder_scope = { religion_authority = 0.7 }
 		}
 		modifier = {
 			factor = 0.8
-			religion_authority = 0.8
+			holder_scope = { religion_authority = 0.8 }
 		}
 		modifier = {
 			factor = 0.8
-			religion_authority = 0.9
+			holder_scope = { religion_authority = 0.9 }
 		}
 		modifier = {
 			factor = 0.8
-			religion_authority = 1
+			holder_scope = { religion_authority = 1 }
 		}
 		
 		modifier = {
 			factor = 1.25
-			NOT = { religion = FROM }
+			holder_scope = { NOT = { religion = FROM } }
 			FROM = { religion_authority = 0.1 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { religion = FROM }
+			holder_scope = { NOT = { religion = FROM } }
 			FROM = { religion_authority = 0.2 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { religion = FROM }
+			holder_scope = { NOT = { religion = FROM } }
 			FROM = { religion_authority = 0.3 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { religion = FROM }
+			holder_scope = { NOT = { religion = FROM } }
 			FROM = { religion_authority = 0.4 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { religion = FROM }
+			holder_scope = { NOT = { religion = FROM } }
 			FROM = { religion_authority = 0.5 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { religion = FROM }
+			holder_scope = { NOT = { religion = FROM } }
 			FROM = { religion_authority = 0.6 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { religion = FROM }
+			holder_scope = { NOT = { religion = FROM } }
 			FROM = { religion_authority = 0.7 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { religion = FROM }
+			holder_scope = { NOT = { religion = FROM } }
 			FROM = { religion_authority = 0.8 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { religion = FROM }
+			holder_scope = { NOT = { religion = FROM } }
 			FROM = { religion_authority = 0.9 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { religion = FROM }
+			holder_scope = { NOT = { religion = FROM } }
 			FROM = { religion_authority = 1 }
 		}
 		
 		# Personal Opinion
 		modifier = {
 			factor = 0.8
-			reverse_opinion = { who = FROM value = 100 }
+			holder_scope = { reverse_opinion = { who = FROM value = 100 } }
 		}
 		modifier = {
 			factor = 0.8
-			reverse_opinion = { who = FROM value = 90 }
+			holder_scope = { reverse_opinion = { who = FROM value = 90 } }
 		}
 		modifier = {
 			factor = 0.8
-			reverse_opinion = { who = FROM value = 80 }
+			holder_scope = { reverse_opinion = { who = FROM value = 80 } }
 		}
 		modifier = {
 			factor = 0.8
-			reverse_opinion = { who = FROM value = 70 }
+			holder_scope = { reverse_opinion = { who = FROM value = 70 } }
 		}
 		modifier = {
 			factor = 0.8
-			reverse_opinion = { who = FROM value = 60 }
+			holder_scope = { reverse_opinion = { who = FROM value = 60 } }
 		}
 		modifier = {
 			factor = 0.8
-			reverse_opinion = { who = FROM value = 50 }
+			holder_scope = { reverse_opinion = { who = FROM value = 50 } }
 		}
 		modifier = {
 			factor = 0.8
-			reverse_opinion = { who = FROM value = 40 }
+			holder_scope = { reverse_opinion = { who = FROM value = 40 } }
 		}
 		modifier = {
 			factor = 0.8
-			reverse_opinion = { who = FROM value = 30 }
+			holder_scope = { reverse_opinion = { who = FROM value = 30 } }
 		}
 		modifier = {
 			factor = 0.8
-			reverse_opinion = { who = FROM value = 20 }
+			holder_scope = { reverse_opinion = { who = FROM value = 20 } }
 		}
 		modifier = {
 			factor = 0.8
-			reverse_opinion = { who = FROM value = 10 }
+			holder_scope = { reverse_opinion = { who = FROM value = 10 } }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { reverse_opinion = { who = FROM value = -9 } }
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -9 } } }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { reverse_opinion = { who = FROM value = -19 } }
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -19 } } }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { reverse_opinion = { who = FROM value = -29 } }
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -29 } } }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { reverse_opinion = { who = FROM value = -39 } }
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -39 } } }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { reverse_opinion = { who = FROM value = -49 } }
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -49 } } }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { reverse_opinion = { who = FROM value = -59 } }
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -59 } } }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { reverse_opinion = { who = FROM value = -69 } }
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -69 } } }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { reverse_opinion = { who = FROM value = -79 } }
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -79 } } }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { reverse_opinion = { who = FROM value = -89 } }
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -89 } } }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { reverse_opinion = { who = FROM value = -99 } }
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -99 } } }
 		}
 		
 		# Legal effects
 		modifier = {
 			factor = 0.2
-			has_character_modifier = law_for_ruler
+			holder_scope = { has_character_modifier = law_for_ruler }
 		}
 		modifier = {
 			factor = 5
-			has_character_modifier = law_against_ruler
+			holder_scope = { has_character_modifier = law_against_ruler }
 		}
 		
 		# Things get more desperate the longer a crisis goes on
 		modifier = {
 			factor = 2
-			has_character_flag = flag_crisis_timer
-			had_character_flag = { flag = flag_crisis_timer days = 30 }
+			holder_scope = {
+				has_character_flag = flag_crisis_timer
+				had_character_flag = { flag = flag_crisis_timer days = 30 }
+			}
 		}
 		modifier = {
 			factor = 2
-			has_character_flag = flag_crisis_timer
-			had_character_flag = { flag = flag_crisis_timer days = 60 }
+			holder_scope = {
+				has_character_flag = flag_crisis_timer
+				had_character_flag = { flag = flag_crisis_timer days = 60 }
+			}
 		}
 		modifier = {
 			factor = 2
-			has_character_flag = flag_crisis_timer
-			had_character_flag = { flag = flag_crisis_timer days = 90 }
+			holder_scope = {
+				has_character_flag = flag_crisis_timer
+				had_character_flag = { flag = flag_crisis_timer days = 90 }
+			}
 		}
 		modifier = {
 			factor = 2
-			has_character_flag = flag_crisis_timer
-			had_character_flag = { flag = flag_crisis_timer days = 120 }
+			holder_scope = {
+				has_character_flag = flag_crisis_timer
+				had_character_flag = { flag = flag_crisis_timer days = 120 }
+			}
 		}
 		modifier = {
 			factor = 2
-			has_character_flag = flag_crisis_timer
-			had_character_flag = { flag = flag_crisis_timer days = 180 }
+			holder_scope = {
+				has_character_flag = flag_crisis_timer
+				had_character_flag = { flag = flag_crisis_timer days = 180 }
+			}
 		}
 		modifier = {
 			factor = 2
-			has_character_flag = flag_crisis_timer
-			had_character_flag = { flag = flag_crisis_timer days = 210 }
+			holder_scope = {
+				has_character_flag = flag_crisis_timer
+				had_character_flag = { flag = flag_crisis_timer days = 210 }
+			}
 		}
 		modifier = {
 			factor = 2
-			has_character_flag = flag_crisis_timer
-			had_character_flag = { flag = flag_crisis_timer days = 240 }
+			holder_scope = {
+				has_character_flag = flag_crisis_timer
+				had_character_flag = { flag = flag_crisis_timer days = 240 }
+			}
 		}
 		modifier = {
 			factor = 2
-			has_character_flag = flag_crisis_timer
-			had_character_flag = { flag = flag_crisis_timer days = 270 }
+			holder_scope = {
+				has_character_flag = flag_crisis_timer
+				had_character_flag = { flag = flag_crisis_timer days = 270 }
+			}
 		}
 		modifier = {
 			factor = 2
-			has_character_flag = flag_crisis_timer
-			had_character_flag = { flag = flag_crisis_timer days = 300 }
+			holder_scope = {
+				has_character_flag = flag_crisis_timer
+				had_character_flag = { flag = flag_crisis_timer days = 300 }
+			}
 		}
 		modifier = {
 			factor = 2
-			has_character_flag = flag_crisis_timer
-			had_character_flag = { flag = flag_crisis_timer days = 330 }
+			holder_scope = {
+				has_character_flag = flag_crisis_timer
+				had_character_flag = { flag = flag_crisis_timer days = 330 }
+			}
 		}
 		modifier = {
 			factor = 2
-			has_character_flag = flag_crisis_timer
-			had_character_flag = { flag = flag_crisis_timer days = 360 }
+			holder_scope = {
+				has_character_flag = flag_crisis_timer
+				had_character_flag = { flag = flag_crisis_timer days = 360 }
+			}
 		}
 	}
 	success = { FROM = { has_character_flag = flag_successful_coup } }
 	effect = { FROM = { clr_character_flag = flag_successful_coup } }
 	abort = {
 		OR = {
-			FROM = { liege = { NOT = { character = ROOT } } }
+			NOT = { holder_scope = { always = yes } } # Title must actually exist and be held by someone
 			AND = {
-				NOT = { has_character_flag = flag_coup_leader } # Once the coup is underway, it can't be aborted
-				NOT = { religion = space_pirate }
+				FROM = { NOT = { has_character_flag = flag_coup_leader } } # Once the coup is underway, it can't be aborted
+				NOT = { holder_scope = { any_vassal = { character = FROM } } }
+			}
+			AND = {
+				FROM = { NOT = { has_character_flag = flag_coup_leader } } # Once the coup is underway, it can't be aborted
+				holder_scope = { NOT = { religion = space_pirate } }
 				OR = {
-					religion_authority = 0.8
+					holder_scope = { religion_authority = 0.8 }
 					NOT = { FROM = { trait = anti_ruler } }
 				}
 				OR = {
-					religion_authority = 0.5
-					NOT = { reverse_has_opinion_modifier = { who = FROM modifier = opinion_usurped_title } }
-					NOT = {
-						any_demesne_title = {
-							is_primary_holder_title_tier = yes
-							FROM = { has_strong_claim = PREV }
-						}
-					}
+					holder_scope = { religion_authority = 0.5 }
+					holder_scope = { NOT = { reverse_has_opinion_modifier = { who = FROM modifier = opinion_usurped_title } } }
+					NOT = { FROM = { has_strong_claim = PREV } }
 				}
 				OR = {
-					religion_authority = 0.35
-					NOT = {
-						any_demesne_title = {
-							is_primary_holder_title_tier = yes
-							FROM = { has_strong_claim = PREV }
-						}
-					}
+					holder_scope = { religion_authority = 0.35 }
+					NOT = { FROM = { has_strong_claim = PREV } }
 				}
 				OR = {
-					religion_authority = 0.25
-					NOT = {
-						any_demesne_title = {
-							is_primary_holder_title_tier = yes
-							FROM = { has_weak_claim = PREV }
-						}
-					}
+					holder_scope = { religion_authority = 0.25 }
+					NOT = { FROM = { has_weak_claim = PREV } }
 				}
-				religion_authority = 0.1
+				holder_scope = { religion_authority = 0.1 }
 			}
 		}
 	}
 	abort_effect = {
 		FROM = {
+			clr_character_flag = flag_coup_leader
 			clr_character_flag = flag_coup_plan_military
+			clr_character_flag = flag_coup_plan_spymaster
 			any_plot_backer = {
 				limit = {
 					NOT = {
@@ -568,6 +591,7 @@ plot_justified_coup = {
 					}
 				}
 				clr_character_flag = flag_coup_plan_military
+				clr_character_flag = flag_coup_plan_spymaster
 			}
 		}
 	}

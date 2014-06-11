@@ -225,7 +225,7 @@ opinion_patrician_wo_council_position = {
 
 # Patricians of one Merchant Republic hate those in another
 opinion_rival_republic = {
-	opinion = -75
+	opinion = 0
 }
 
 # Feudal lords married to familymembers of patricians get this bonus towards the patrician

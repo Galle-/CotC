@@ -47,6 +47,16 @@ ignored_vassals = {
 	vassal_opinion = -25
 }
 
+annoyed_by_legislature = {
+	icon = 29
+}
+angry_at_legislature = {
+	icon = 29
+}
+furious_at_legislature = {
+	icon = 29
+}
+
 # Cybernetics
 iaei_beta_test = {
 	icon = 12
@@ -88,3 +98,5 @@ feedback_overload = {
 	fertility = -0.1
 	health = -1
 }
+
+# Lifestyle

@@ -2,6 +2,3857 @@
 # Laws ending with 0 will be default laws at game start
 
 de_jure_laws = {
+
+# CENTRALIZATION
+	centralization_0 = {
+		show_as_title = yes
+		group = centralization
+		default = yes
+		
+		feudal_opinion = 5
+		
+		potential = {
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
+		}
+		allow = {
+			holder_scope = { NOT = { has_character_modifier = constitutional_crisis } }
+			has_law = centralization_1
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+			}
+			# Ideology
+			modifier = {
+				factor = 2
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					religion_authority = 0.75
+				}
+			}
+			modifier = {
+				factor = 2
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					religion_authority = 0.5
+				}
+			}
+			modifier = {
+				factor = 2
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					religion_authority = 0.25
+					NOT = { trait = pragmatic }
+				}
+			}
+			modifier = {
+				factor = 2
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					trait = radical
+				}
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					religion_authority = 0.75
+				}
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					religion_authority = 0.5
+				}
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					religion_authority = 0.25
+					NOT = { trait = pragmatic }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					trait = radical
+				}
+			}
+			# Personality
+			modifier = {
+				factor = 0.25
+				holder_scope = { trait = ambitious }
+			}
+			modifier = {
+				factor = 4
+				holder_scope = { trait = content }
+			}
+			modifier = {
+				factor = 2
+				holder_scope = { trait = disciplined }
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = { trait = carefree }
+			}
+			
+			# Politics
+			modifier = {
+				factor = 2
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -24 }
+						in_faction = faction_anti_centralization
+						relative_power_to_liege = 0.1
+					}
+					NOT = { trait = cold }
+				}
+			}
+			modifier = {
+				factor = 2
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -49 }
+						in_faction = faction_anti_centralization
+						relative_power_to_liege = 0.1
+					}
+					trait = friendly
+				}
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -24 }
+						in_faction = faction_pro_centralization
+						relative_power_to_liege = 0.1
+					}
+					NOT = { trait = cold }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -49 }
+						in_faction = faction_pro_centralization
+						relative_power_to_liege = 0.1
+					}
+					trait = friendly
+				}
+			}
+			modifier = {
+				factor = 5
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = 50 }
+						in_faction = faction_anti_centralization
+					}
+				}
+			}
+			modifier = {
+				factor = 0.2
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = 50 }
+						in_faction = faction_pro_centralization
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 0.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 1
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 1.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 2
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 2.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 3
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 0.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 1
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 1.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 2
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 2.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 3
+						}
+					}
+				}
+			}
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		pass_effect = {
+			hidden_tooltip = {
+				holder_scope = {
+					set_character_flag = flag_decreased_crown_authority
+					any_vassal = {
+						limit = {
+							crownlaw_title = { title = PREVPREVPREV }
+							NOT = { in_faction = faction_pro_centralization }
+						}
+						opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good  }
+					}
+					any_vassal = {
+						limit = {
+							crownlaw_title = { title = PREVPREVPREV }
+							in_faction = faction_pro_centralization
+						}
+						opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					holder_scope = {
+						OR = {
+							religion = terran_federalist
+							religion = colonial_separatist
+							religion = neo_feudal
+							religion = adoptionist_cultist
+							religion = adoptionist
+							religion = xenoterran
+						}
+					}
+				}
+				holder_scope = {
+					piety = 100
+					religion_authority = { modifier = major_compatible_reform years = 50 }
+				}
+			}
+			if = {
+				limit = {
+					holder_scope = {
+						OR = {
+							religion = terran_republican
+							religion = terran_imperial
+							religion = astrist
+							religion = neo_socialist
+							religion = orthodox
+							religion = solarian
+						}
+					}
+				}
+				holder_scope = {
+					piety = -100
+					religion_authority = { modifier = major_hypocritical_reform years = 50 }
+				}
+			}
+			hidden_tooltip = {
+				revoke_law = centralization_0
+				revoke_law = centralization_1
+				revoke_law = centralization_2
+				revoke_law = centralization_3
+				revoke_law = centralization_4
+			}
+			
+			set_appoint_generals = no
+			set_appoint_regents = no
+#			set_the_kings_peace = no
+#			set_the_kings_full_peace = no
+			set_protected_inheritance = no
+			set_allow_title_revokation = no
+			set_allow_free_infidel_revokation = no
+			set_allow_free_revokation = no
+		}
+		
+		city_vassal_min_levy = 0.0
+		castle_vassal_min_levy = 0.0
+		temple_vassal_min_levy = 0.0
+	}
+	
+	centralization_1 = {
+		show_as_title = yes
+		group = centralization
+		
+		feudal_opinion = -5
+		
+		potential = {
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
+		}
+		
+		allow = {
+			holder_scope = { NOT = { has_character_modifier = constitutional_crisis } }
+			OR = {
+				has_law = centralization_0
+				has_law = centralization_2
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}			
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+			}
+			# Increasing
+			# Ideology
+			modifier = {
+				factor = 0.5
+				has_law = centralization_0
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					religion_authority = 0.75
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_0
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					religion_authority = 0.5
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_0
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					religion_authority = 0.25
+					NOT = { trait = pragmatic }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_0
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					trait = radical
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_0
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					religion_authority = 0.75
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_0
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					religion_authority = 0.5
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_0
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					religion_authority = 0.25
+					NOT = { trait = pragmatic }
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_0
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					trait = radical
+				}
+			}
+			# Personality
+			modifier = {
+				factor = 4
+				has_law = centralization_0
+				holder_scope = { trait = ambitious }
+			}
+			modifier = {
+				factor = 0.25
+				has_law = centralization_0
+				holder_scope = { trait = content }
+			}
+			modifier = {
+				factor = 2
+				holder_scope = { trait = disciplined }
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = { trait = carefree }
+			}
+			
+			# Politics
+			modifier = {
+				factor = 0.5
+				has_law = centralization_0
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -24 }
+						in_faction = faction_anti_centralization
+						relative_power_to_liege = 0.1
+					}
+					NOT = { trait = cold }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_0
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -49 }
+						in_faction = faction_anti_centralization
+						relative_power_to_liege = 0.1
+					}
+					trait = friendly
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_0
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -24 }
+						in_faction = faction_pro_centralization
+						relative_power_to_liege = 0.1
+					}
+					NOT = { trait = cold }
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_0
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -49 }
+						in_faction = faction_pro_centralization
+						relative_power_to_liege = 0.1
+					}
+					trait = friendly
+				}
+			}
+			modifier = {
+				factor = 0.2
+				has_law = centralization_0
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = 50 }
+						in_faction = faction_anti_centralization
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				has_law = centralization_0
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = 50 }
+						in_faction = faction_pro_centralization
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_0
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 0.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_0
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 1
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_0
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 1.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_0
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 2
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_0
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 2.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_0
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 3
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_0
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 0.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_0
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 1
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_0
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 1.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_0
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 2
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_0
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 2.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_0
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 3
+						}
+					}
+				}
+			}
+			# Decreasing
+			# Ideology
+			modifier = {
+				factor = 2
+				has_law = centralization_2
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					religion_authority = 0.75
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_2
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					religion_authority = 0.5
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_2
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					religion_authority = 0.25
+					NOT = { trait = pragmatic }
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_2
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					trait = radical
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_2
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					religion_authority = 0.75
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_2
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					religion_authority = 0.5
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_2
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					religion_authority = 0.25
+					NOT = { trait = pragmatic }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_2
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					trait = radical
+				}
+			}
+			# Personality
+			modifier = {
+				factor = 0.25
+				has_law = centralization_2
+				holder_scope = { trait = ambitious }
+			}
+			modifier = {
+				factor = 4
+				has_law = centralization_2
+				holder_scope = { trait = content }
+			}
+			# Politics
+			modifier = {
+				factor = 2
+				has_law = centralization_2
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -24 }
+						in_faction = faction_anti_centralization
+						relative_power_to_liege = 0.1
+					}
+					NOT = { trait = cold }
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_2
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -49 }
+						in_faction = faction_anti_centralization
+						relative_power_to_liege = 0.1
+					}
+					trait = friendly
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_2
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -24 }
+						in_faction = faction_pro_centralization
+						relative_power_to_liege = 0.1
+					}
+					NOT = { trait = cold }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_2
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -49 }
+						in_faction = faction_pro_centralization
+						relative_power_to_liege = 0.1
+					}
+					trait = friendly
+				}
+			}
+			modifier = {
+				factor = 5
+				has_law = centralization_2
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = 50 }
+						in_faction = faction_anti_centralization
+					}
+				}
+			}
+			modifier = {
+				factor = 0.2
+				has_law = centralization_2
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = 50 }
+						in_faction = faction_pro_centralization
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 0.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 1
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 1.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 2
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 2.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 3
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 0.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 1
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 1.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 2
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 2.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 3
+						}
+					}
+				}
+			}
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		pass_effect = {
+			hidden_tooltip = {
+				if = {
+					limit = { has_law = centralization_0 }
+					holder_scope = {
+						set_character_flag = flag_increased_crown_authority
+						any_vassal = {
+							limit = {
+								crownlaw_title = { title = PREVPREVPREV }
+								NOT = { in_faction = faction_pro_centralization }
+							}
+							opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
+						}
+						any_vassal = {
+							limit = {
+								crownlaw_title = { title = PREVPREVPREV }
+								in_faction = faction_pro_centralization
+							}
+							opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
+						}
+					}
+				}
+				if = {
+					limit = { has_law = centralization_2 }
+					holder_scope = {
+						set_character_flag = flag_decreased_crown_authority
+						any_vassal = {
+							limit = {
+								crownlaw_title = { title = PREVPREVPREV }
+								NOT = { in_faction = faction_pro_centralization }
+							}
+							opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
+						}
+						any_vassal = {
+							limit = {
+								crownlaw_title = { title = PREVPREVPREV }
+								in_faction = faction_pro_centralization
+							}
+							opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							has_law = centralization_0
+							holder_scope = {
+								OR = {
+									religion = terran_federalist
+									religion = colonial_separatist
+									religion = neo_feudal
+									religion = adoptionist_cultist
+									religion = adoptionist
+									religion = xenoterran
+								}
+							}
+						}
+						AND = {
+							has_law = centralization_2
+							holder_scope = {
+								OR = {
+									religion = terran_republican
+									religion = terran_imperial
+									religion = astrist
+									religion = neo_socialist
+									religion = orthodox
+									religion = solarian
+								}
+							}
+						}
+					}
+				}
+				holder_scope = {
+					piety = -100
+					religion_authority = { modifier = major_hypocritical_reform years = 50 }
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							has_law = centralization_2
+							holder_scope = {
+								OR = {
+									religion = terran_federalist
+									religion = colonial_separatist
+									religion = neo_feudal
+									religion = adoptionist_cultist
+									religion = adoptionist
+									religion = xenoterran
+								}
+							}
+						}
+						AND = {
+							has_law = centralization_0
+							holder_scope = {
+								OR = {
+									religion = terran_republican
+									religion = terran_imperial
+									religion = astrist
+									religion = neo_socialist
+									religion = orthodox
+									religion = solarian
+								}
+							}
+						}
+					}
+				}
+				holder_scope = {
+					piety = 100
+					religion_authority = { modifier = major_compatible_reform years = 50 }
+				}
+			}
+			hidden_tooltip = {
+				revoke_law = centralization_0
+				revoke_law = centralization_1
+				revoke_law = centralization_2
+				revoke_law = centralization_3
+				revoke_law = centralization_4
+			}
+			set_appoint_generals = yes
+			set_appoint_regents = no
+#			set_the_kings_peace = no
+#			set_the_kings_full_peace = no
+			set_protected_inheritance = no
+			set_allow_title_revokation = yes
+			set_allow_free_infidel_revokation = no
+			set_allow_free_revokation = no
+		}
+		
+		city_vassal_min_levy = 0.2
+		castle_vassal_min_levy = 0.2
+		temple_vassal_min_levy = 0.2
+	}
+	
+	centralization_2 = {
+		show_as_title = yes
+		group = centralization
+		
+		feudal_opinion = -10
+		
+		potential = {
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
+		}
+		
+		allow = {
+			holder_scope = { NOT = { has_character_modifier = constitutional_crisis } }
+			OR = {
+				has_law = centralization_1
+				has_law = centralization_3
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}			
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+			}
+			# Increasing
+			# Ideology
+			modifier = {
+				factor = 0.5
+				has_law = centralization_1
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					religion_authority = 0.75
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_1
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					religion_authority = 0.5
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_1
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					religion_authority = 0.25
+					NOT = { trait = pragmatic }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_1
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					trait = radical
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_1
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					religion_authority = 0.75
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_1
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					religion_authority = 0.5
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_1
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					religion_authority = 0.25
+					NOT = { trait = pragmatic }
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_1
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					trait = radical
+				}
+			}
+			# Personality
+			modifier = {
+				factor = 4
+				has_law = centralization_1
+				holder_scope = { trait = ambitious }
+			}
+			modifier = {
+				factor = 0.25
+				has_law = centralization_1
+				holder_scope = { trait = content }
+			}
+			modifier = {
+				factor = 2
+				holder_scope = { trait = disciplined }
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = { trait = carefree }
+			}
+			
+			# Politics
+			modifier = {
+				factor = 0.5
+				has_law = centralization_1
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -24 }
+						in_faction = faction_anti_centralization
+						relative_power_to_liege = 0.1
+					}
+					NOT = { trait = cold }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_1
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -49 }
+						in_faction = faction_anti_centralization
+						relative_power_to_liege = 0.1
+					}
+					trait = friendly
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_1
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -24 }
+						in_faction = faction_pro_centralization
+						relative_power_to_liege = 0.1
+					}
+					NOT = { trait = cold }
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_1
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -49 }
+						in_faction = faction_pro_centralization
+						relative_power_to_liege = 0.1
+					}
+					trait = friendly
+				}
+			}
+			modifier = {
+				factor = 0.2
+				has_law = centralization_1
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = 50 }
+						in_faction = faction_anti_centralization
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				has_law = centralization_1
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = 50 }
+						in_faction = faction_pro_centralization
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_1
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 0.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_1
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 1
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_1
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 1.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_1
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 2
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_1
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 2.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_1
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 3
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_1
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 0.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_1
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 1
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_1
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 1.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_1
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 2
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_1
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 2.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_1
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 3
+						}
+					}
+				}
+			}
+			# Decreasing
+			# Ideology
+			modifier = {
+				factor = 2
+				has_law = centralization_3
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					religion_authority = 0.75
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_3
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					religion_authority = 0.5
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_3
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					religion_authority = 0.25
+					NOT = { trait = pragmatic }
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_3
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					trait = radical
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_3
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					religion_authority = 0.75
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_3
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					religion_authority = 0.5
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_3
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					religion_authority = 0.25
+					NOT = { trait = pragmatic }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_3
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					trait = radical
+				}
+			}
+			# Personality
+			modifier = {
+				factor = 0.25
+				has_law = centralization_3
+				holder_scope = { trait = ambitious }
+			}
+			modifier = {
+				factor = 4
+				has_law = centralization_3
+				holder_scope = { trait = content }
+			}
+			# Politics
+			modifier = {
+				factor = 2
+				has_law = centralization_3
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -24 }
+						in_faction = faction_anti_centralization
+						relative_power_to_liege = 0.1
+					}
+					NOT = { trait = cold }
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_3
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -49 }
+						in_faction = faction_anti_centralization
+						relative_power_to_liege = 0.1
+					}
+					trait = friendly
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_3
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -24 }
+						in_faction = faction_pro_centralization
+						relative_power_to_liege = 0.1
+					}
+					NOT = { trait = cold }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_3
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -49 }
+						in_faction = faction_pro_centralization
+						relative_power_to_liege = 0.1
+					}
+					trait = friendly
+				}
+			}
+			modifier = {
+				factor = 5
+				has_law = centralization_3
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = 50 }
+						in_faction = faction_anti_centralization
+					}
+				}
+			}
+			modifier = {
+				factor = 0.2
+				has_law = centralization_3
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = 50 }
+						in_faction = faction_pro_centralization
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_3
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 0.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_3
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 1
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_3
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 1.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_3
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 2
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_3
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 2.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_3
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 3
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_3
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 0.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_3
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 1
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_3
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 1.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_3
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 2
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_3
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 2.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_3
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 3
+						}
+					}
+				}
+			}
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		pass_effect = {
+			hidden_tooltip = {
+				if = {
+					limit = { has_law = centralization_1 }
+					holder_scope = {
+						set_character_flag = flag_increased_crown_authority
+						any_vassal = {
+							limit = {
+								crownlaw_title = { title = PREVPREVPREV }
+								NOT = { in_faction = faction_pro_centralization }
+							}
+							opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
+						}
+						any_vassal = {
+							limit = {
+								crownlaw_title = { title = PREVPREVPREV }
+								in_faction = faction_pro_centralization
+							}
+							opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
+						}
+					}
+				}
+				if = {
+					limit = { has_law = centralization_3 }
+					holder_scope = {
+						set_character_flag = flag_decreased_crown_authority
+						any_vassal = {
+							limit = {
+								crownlaw_title = { title = PREVPREVPREV }
+								NOT = { in_faction = faction_pro_centralization }
+							}
+							opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
+						}
+						any_vassal = {
+							limit = {
+								crownlaw_title = { title = PREVPREVPREV }
+								in_faction = faction_pro_centralization
+							}
+							opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							has_law = centralization_1
+							holder_scope = {
+								OR = {
+									religion = terran_federalist
+									religion = colonial_separatist
+									religion = neo_feudal
+									religion = adoptionist_cultist
+									religion = adoptionist
+									religion = xenoterran
+								}
+							}
+						}
+						AND = {
+							has_law = centralization_3
+							holder_scope = {
+								OR = {
+									religion = terran_republican
+									religion = terran_imperial
+									religion = astrist
+									religion = neo_socialist
+									religion = orthodox
+									religion = solarian
+								}
+							}
+						}
+					}
+				}
+				holder_scope = {
+					piety = -100
+					religion_authority = { modifier = major_hypocritical_reform years = 50 }
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							has_law = centralization_3
+							holder_scope = {
+								OR = {
+									religion = terran_federalist
+									religion = colonial_separatist
+									religion = neo_feudal
+									religion = adoptionist_cultist
+									religion = adoptionist
+									religion = xenoterran
+								}
+							}
+						}
+						AND = {
+							has_law = centralization_1
+							holder_scope = {
+								OR = {
+									religion = terran_republican
+									religion = terran_imperial
+									religion = astrist
+									religion = neo_socialist
+									religion = orthodox
+									religion = solarian
+								}
+							}
+						}
+					}
+				}
+				holder_scope = {
+					piety = 100
+					religion_authority = { modifier = major_compatible_reform years = 50 }
+				}
+			}
+			hidden_tooltip = {
+				revoke_law = centralization_0
+				revoke_law = centralization_1
+				revoke_law = centralization_2
+				revoke_law = centralization_3
+				revoke_law = centralization_4
+			}
+			set_appoint_generals = yes
+			set_appoint_regents = no
+#			set_the_kings_peace = yes
+#			set_the_kings_full_peace = no
+			set_protected_inheritance = no
+			set_allow_title_revokation = yes
+			set_allow_free_infidel_revokation = yes
+			set_allow_free_revokation = no
+		}
+		
+		city_vassal_min_levy = 0.4
+		castle_vassal_min_levy = 0.4
+		temple_vassal_min_levy = 0.4
+	}
+	
+	centralization_3 = {
+		show_as_title = yes
+		group = centralization
+		
+		feudal_opinion = -20
+		
+		potential = {
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
+		}
+		
+		allow = {
+			holder_scope = { NOT = { has_character_modifier = constitutional_crisis } }
+			OR = {
+				has_law = centralization_2
+				has_law = centralization_4
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+			}
+			# Increasing
+			# Ideology
+			modifier = {
+				factor = 0.5
+				has_law = centralization_2
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					religion_authority = 0.75
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_2
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					religion_authority = 0.5
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_2
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					religion_authority = 0.25
+					NOT = { trait = pragmatic }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_2
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					trait = radical
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_2
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					religion_authority = 0.75
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_2
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					religion_authority = 0.5
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_2
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					religion_authority = 0.25
+					NOT = { trait = pragmatic }
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_2
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					trait = radical
+				}
+			}
+			# Personality
+			modifier = {
+				factor = 4
+				has_law = centralization_2
+				holder_scope = { trait = ambitious }
+			}
+			modifier = {
+				factor = 0.25
+				has_law = centralization_2
+				holder_scope = { trait = content }
+			}
+			modifier = {
+				factor = 2
+				holder_scope = { trait = disciplined }
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = { trait = carefree }
+			}
+			
+			# Politics
+			modifier = {
+				factor = 0.5
+				has_law = centralization_2
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -24 }
+						in_faction = faction_anti_centralization
+						relative_power_to_liege = 0.1
+					}
+					NOT = { trait = cold }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_2
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -49 }
+						in_faction = faction_anti_centralization
+						relative_power_to_liege = 0.1
+					}
+					trait = friendly
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_2
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -24 }
+						in_faction = faction_pro_centralization
+						relative_power_to_liege = 0.1
+					}
+					NOT = { trait = cold }
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_2
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -49 }
+						in_faction = faction_pro_centralization
+						relative_power_to_liege = 0.1
+					}
+					trait = friendly
+				}
+			}
+			modifier = {
+				factor = 0.2
+				has_law = centralization_2
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = 50 }
+						in_faction = faction_anti_centralization
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				has_law = centralization_2
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = 50 }
+						in_faction = faction_pro_centralization
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 0.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 1
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 1.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 2
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 2.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 3
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 0.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 1
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 1.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 2
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 2.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 3
+						}
+					}
+				}
+			}
+			# Decreasing
+			# Ideology
+			modifier = {
+				factor = 2
+				has_law = centralization_4
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					religion_authority = 0.75
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_4
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					religion_authority = 0.5
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_4
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					religion_authority = 0.25
+					NOT = { trait = pragmatic }
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_4
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					trait = radical
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_4
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					religion_authority = 0.75
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_4
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					religion_authority = 0.5
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_4
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					religion_authority = 0.25
+					NOT = { trait = pragmatic }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_4
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					trait = radical
+				}
+			}
+			# Personality
+			modifier = {
+				factor = 0.25
+				has_law = centralization_4
+				holder_scope = { trait = ambitious }
+			}
+			modifier = {
+				factor = 4
+				has_law = centralization_4
+				holder_scope = { trait = content }
+			}
+			# Politics
+			modifier = {
+				factor = 2
+				has_law = centralization_4
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -24 }
+						in_faction = faction_anti_centralization
+						relative_power_to_liege = 0.1
+					}
+					NOT = { trait = cold }
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_4
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -49 }
+						in_faction = faction_anti_centralization
+						relative_power_to_liege = 0.1
+					}
+					trait = friendly
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_4
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -24 }
+						in_faction = faction_pro_centralization
+						relative_power_to_liege = 0.1
+					}
+					NOT = { trait = cold }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_4
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -49 }
+						in_faction = faction_pro_centralization
+						relative_power_to_liege = 0.1
+					}
+					trait = friendly
+				}
+			}
+			modifier = {
+				factor = 5
+				has_law = centralization_4
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = 50 }
+						in_faction = faction_anti_centralization
+					}
+				}
+			}
+			modifier = {
+				factor = 0.2
+				has_law = centralization_4
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = 50 }
+						in_faction = faction_pro_centralization
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_4
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 0.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_4
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 1
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_4
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 1.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_4
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 2
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_4
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 2.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_law = centralization_4
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 3
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_4
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 0.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_4
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 1
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_4
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 1.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_4
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 2
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_4
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 2.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_law = centralization_4
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 3
+						}
+					}
+				}
+			}
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		pass_effect = {
+			hidden_tooltip = {
+				if = {
+					limit = { has_law = centralization_2 }
+					holder_scope = {
+						set_character_flag = flag_increased_crown_authority
+						any_vassal = {
+							limit = {
+								crownlaw_title = { title = PREVPREVPREV }
+								NOT = { in_faction = faction_pro_centralization }
+							}
+							opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
+						}
+						any_vassal = {
+							limit = {
+								crownlaw_title = { title = PREVPREVPREV }
+								in_faction = faction_pro_centralization
+							}
+							opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
+						}
+					}
+				}
+				if = {
+					limit = { has_law = centralization_4 }
+					holder_scope = {
+						set_character_flag = flag_decreased_crown_authority
+						any_vassal = {
+							limit = {
+								crownlaw_title = { title = PREVPREVPREV }
+								NOT = { in_faction = faction_pro_centralization }
+							}
+							opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
+						}
+						any_vassal = {
+							limit = {
+								crownlaw_title = { title = PREVPREVPREV }
+								in_faction = faction_pro_centralization
+							}
+							opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							has_law = centralization_2
+							holder_scope = {
+								OR = {
+									religion = terran_federalist
+									religion = colonial_separatist
+									religion = neo_feudal
+									religion = adoptionist_cultist
+									religion = adoptionist
+									religion = xenoterran
+								}
+							}
+						}
+						AND = {
+							has_law = centralization_4
+							holder_scope = {
+								OR = {
+									religion = terran_republican
+									religion = terran_imperial
+									religion = astrist
+									religion = neo_socialist
+									religion = orthodox
+									religion = solarian
+								}
+							}
+						}
+					}
+				}
+				holder_scope = {
+					piety = -100
+					religion_authority = { modifier = major_hypocritical_reform years = 50 }
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							has_law = centralization_4
+							holder_scope = {
+								OR = {
+									religion = terran_federalist
+									religion = colonial_separatist
+									religion = neo_feudal
+									religion = adoptionist_cultist
+									religion = adoptionist
+									religion = xenoterran
+								}
+							}
+						}
+						AND = {
+							has_law = centralization_2
+							holder_scope = {
+								OR = {
+									religion = terran_republican
+									religion = terran_imperial
+									religion = astrist
+									religion = neo_socialist
+									religion = orthodox
+									religion = solarian
+								}
+							}
+						}
+					}
+				}
+				holder_scope = {
+					piety = 100
+					religion_authority = { modifier = major_compatible_reform years = 50 }
+				}
+			}
+			hidden_tooltip = {
+				revoke_law = centralization_0
+				revoke_law = centralization_1
+				revoke_law = centralization_2
+				revoke_law = centralization_3
+				revoke_law = centralization_4
+			}
+			set_appoint_generals = yes
+			set_appoint_regents = yes
+#			set_the_kings_peace = yes
+#			set_the_kings_full_peace = no
+			set_protected_inheritance = yes
+			set_allow_title_revokation = yes
+			set_allow_free_infidel_revokation = yes
+			set_allow_free_revokation = no
+		}
+		
+		city_vassal_min_levy = 0.6
+		castle_vassal_min_levy = 0.6
+		temple_vassal_min_levy = 0.6
+	}
+	
+	centralization_4 = {
+		show_as_title = yes
+		group = centralization
+		
+		feudal_opinion = -30
+		
+		potential = {
+			NOT = {
+				crownlaw_title = {
+					NOT = { title = PREV }
+					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
+				}
+			}
+		}
+		
+		allow = {
+			holder_scope = { NOT = { has_character_modifier = constitutional_crisis } }
+			has_law = centralization_3
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+			}
+			# Ideology
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					religion_authority = 0.75
+				}
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					religion_authority = 0.5
+				}
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					religion_authority = 0.25
+					NOT = { trait = pragmatic }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					OR = {
+						religion = terran_federalist
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = adoptionist_cultist
+						religion = adoptionist
+						religion = xenoterran
+					}
+					trait = radical
+				}
+			}
+			modifier = {
+				factor = 2
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					religion_authority = 0.75
+				}
+			}
+			modifier = {
+				factor = 2
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					religion_authority = 0.5
+				}
+			}
+			modifier = {
+				factor = 2
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					religion_authority = 0.25
+					NOT = { trait = pragmatic }
+				}
+			}
+			modifier = {
+				factor = 2
+				holder_scope = {
+					OR = {
+						religion = terran_republican
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_socialist
+						religion = orthodox
+						religion = solarian
+					}
+					trait = radical
+				}
+			}
+			# Personality
+			modifier = {
+				factor = 4
+				holder_scope = { trait = ambitious }
+			}
+			modifier = {
+				factor = 0.25
+				holder_scope = { trait = content }
+			}
+			modifier = {
+				factor = 2
+				holder_scope = { trait = disciplined }
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = { trait = carefree }
+			}
+			
+			# Politics
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -24 }
+						in_faction = faction_anti_centralization
+						relative_power_to_liege = 0.1
+					}
+					NOT = { trait = cold }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -49 }
+						in_faction = faction_anti_centralization
+						relative_power_to_liege = 0.1
+					}
+					trait = friendly
+				}
+			}
+			modifier = {
+				factor = 2
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -24 }
+						in_faction = faction_pro_centralization
+						relative_power_to_liege = 0.1
+					}
+					NOT = { trait = cold }
+				}
+			}
+			modifier = {
+				factor = 2
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = -49 }
+						in_faction = faction_pro_centralization
+						relative_power_to_liege = 0.1
+					}
+					trait = friendly
+				}
+			}
+			modifier = {
+				factor = 0.2
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = 50 }
+						in_faction = faction_anti_centralization
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				holder_scope = {
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						reverse_opinion = { who = PREV value = 50 }
+						in_faction = faction_pro_centralization
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 0.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 1
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 1.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 2
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 2.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_anti_centralization
+							power = 3
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 0.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 1
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 1.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 2
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 2.5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				holder_scope = {
+					NOT = { trait = lunatic }
+					NOT = { trait = imbecile }
+					any_vassal = {
+						crownlaw_title = { title = PREVPREVPREV }
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 3
+						}
+					}
+				}
+			}
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		pass_effect = {
+			hidden_tooltip = {
+				holder_scope = {
+					set_character_flag = flag_increased_crown_authority
+					any_vassal = {
+						limit = {
+							crownlaw_title = { title = PREVPREVPREV }
+							NOT = { in_faction = faction_pro_centralization }
+						}
+						opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
+					}
+					any_vassal = {
+						limit = {
+							crownlaw_title = { title = PREVPREVPREV }
+							in_faction = faction_pro_centralization
+						}
+						opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					holder_scope = {
+						OR = {
+							religion = terran_federalist
+							religion = colonial_separatist
+							religion = neo_feudal
+							religion = adoptionist_cultist
+							religion = adoptionist
+							religion = xenoterran
+						}
+					}
+				}
+				holder_scope = {
+					piety = -100
+					religion_authority = { modifier = major_hypocritical_reform years = 50 }
+				}
+			}
+			if = {
+				limit = {
+					holder_scope = {
+						OR = {
+							religion = terran_republican
+							religion = terran_imperial
+							religion = astrist
+							religion = neo_socialist
+							religion = orthodox
+							religion = solarian
+						}
+					}
+				}
+				holder_scope = {
+					piety = 100
+					religion_authority = { modifier = major_compatible_reform years = 50 }
+				}
+			}
+			hidden_tooltip = {
+				revoke_law = centralization_0
+				revoke_law = centralization_1
+				revoke_law = centralization_2
+				revoke_law = centralization_3
+				revoke_law = centralization_4
+			}
+			set_appoint_generals = yes
+			set_appoint_regents = yes
+#			set_the_kings_peace = yes
+#			set_the_kings_full_peace = yes
+			set_protected_inheritance = yes
+			set_allow_title_revokation = yes
+			set_allow_free_infidel_revokation = yes
+			set_allow_free_revokation = yes
+		}
+		
+		city_vassal_min_levy = 0.8
+		castle_vassal_min_levy = 0.8
+		temple_vassal_min_levy = 0.8
+	}
+
 # MILITARY VASSAL LEGITIMACY
 	military_vassal_legitimacy_0 = { # Inheritance
 		show_as_title = yes
@@ -948,415 +4799,6 @@ de_jure_laws = {
 			}
 		}
 	}
-
-# CENTRALIZATION
-	centralization_0 = {
-		show_as_title = yes
-		group = centralization
-		default = yes
-		
-		feudal_opinion = 5
-		
-		potential = {
-			NOT = {
-				crownlaw_title = {
-					NOT = { title = PREV }
-					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
-				}
-			}
-		}
-		allow = {
-			holder_scope = { is_republic = no }
-			has_law = centralization_1
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 0
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		effect = {
-			hidden_tooltip = {
-				revoke_law = centralization_0
-				revoke_law = centralization_1
-				revoke_law = centralization_2
-				revoke_law = centralization_3
-				revoke_law = centralization_4
-			}
-			
-			set_appoint_generals = no
-			set_appoint_regents = no
-#			set_the_kings_peace = no
-#			set_the_kings_full_peace = no
-			set_protected_inheritance = no
-			set_allow_title_revokation = no
-			set_allow_free_infidel_revokation = no
-			set_allow_free_revokation = no
-		}
-		
-		city_vassal_min_levy = 0.0
-		castle_vassal_min_levy = 0.0
-		temple_vassal_min_levy = 0.0
-	}
-	
-	centralization_1 = {
-		show_as_title = yes
-		group = centralization
-		
-		feudal_opinion = -5
-		
-		potential = {
-			NOT = {
-				crownlaw_title = {
-					NOT = { title = PREV }
-					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
-				}
-			}
-		}
-		
-		allow = {
-			OR = {
-				has_law = centralization_0
-				has_law = centralization_2
-			}
-		}
-		revoke_allowed = {
-			always = no
-		}			
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				NOT = { has_law = centralization_0 }
-			}
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		
-		pass_effect = {
-			hidden_tooltip = {
-				if = { 
-					limit = {
-						has_law = centralization_0
-					}
-					any_de_jure_vassal = {
-						limit = {
-							OR = {
-								religion = ROOT
-								is_liege_or_above = ROOT
-							}
-						}
-						opinion = {
-							who = ROOT
-							modifier = opinion_increased_authority
-							months = 60
-						}
-					}
-				}
-			}
-		}
-		
-		effect = {
-			hidden_tooltip = {
-				revoke_law = centralization_0
-				revoke_law = centralization_1
-				revoke_law = centralization_2
-				revoke_law = centralization_3
-				revoke_law = centralization_4
-			}
-			set_appoint_generals = yes
-			set_appoint_regents = no
-#			set_the_kings_peace = no
-#			set_the_kings_full_peace = no
-			set_protected_inheritance = no
-			set_allow_title_revokation = yes
-			set_allow_free_infidel_revokation = no
-			set_allow_free_revokation = no
-		}
-		
-		city_vassal_min_levy = 0.2
-		castle_vassal_min_levy = 0.2
-		temple_vassal_min_levy = 0.2
-	}
-	
-	centralization_2 = {
-		show_as_title = yes
-		group = centralization
-		
-		feudal_opinion = -10
-		
-		potential = {
-			NOT = {
-				crownlaw_title = {
-					NOT = { title = PREV }
-					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
-				}
-			}
-		}
-		
-		allow = {
-			holder_scope = { 
-				is_republic = no 
-				hidden_tooltip = {
-					NOT = { religion_group = outlaw_group }
-				}
-			}
-			OR = {
-				has_law = centralization_1
-				has_law = centralization_3
-			}
-		}
-		revoke_allowed = {
-			always = no
-		}			
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.01
-			}
-			modifier = {
-				factor = 0
-				NOT = { has_law = centralization_1 }
-			}
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		
-		pass_effect = {
-			hidden_tooltip = {
-				if = { 
-					limit = {
-						has_law = centralization_1
-					}
-					any_de_jure_vassal = {
-						limit = {
-							OR = {
-								religion = ROOT
-								is_liege_or_above = ROOT
-							}
-						}
-						opinion = {
-							who = ROOT
-							modifier = opinion_increased_authority
-							months = 60
-						}
-					}
-				}
-			}
-		}
-		
-		effect = {
-			hidden_tooltip = {
-				revoke_law = centralization_0
-				revoke_law = centralization_1
-				revoke_law = centralization_2
-				revoke_law = centralization_3
-				revoke_law = centralization_4
-			}
-			set_appoint_generals = yes
-			set_appoint_regents = no
-#			set_the_kings_peace = yes
-#			set_the_kings_full_peace = no
-			set_protected_inheritance = no
-			set_allow_title_revokation = yes
-			set_allow_free_infidel_revokation = yes
-			set_allow_free_revokation = no
-		}
-		
-		city_vassal_min_levy = 0.4
-		castle_vassal_min_levy = 0.4
-		temple_vassal_min_levy = 0.4
-	}
-	
-	centralization_3 = {
-		show_as_title = yes
-		group = centralization
-		
-		feudal_opinion = -20
-		
-		potential = {
-			NOT = {
-				crownlaw_title = {
-					NOT = { title = PREV }
-					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
-				}
-			}
-		}
-		
-		allow = {
-			holder_scope = { 
-				is_republic = no 
-				hidden_tooltip = {
-					NOT = { religion_group = outlaw_group }
-				}
-			}
-			OR = {
-				has_law = centralization_2
-				has_law = centralization_4
-			}
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.005
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					NOT = { has_law = centralization_2 }
-					NOT = { ruled_years = 20 }
-				}
-			}
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		
-		pass_effect = {
-			hidden_tooltip = {
-				if = { 
-					limit = {
-						has_law = centralization_2
-					}
-					any_de_jure_vassal = {
-						limit = {
-							OR = {
-								religion = ROOT
-								is_liege_or_above = ROOT
-							}
-						}
-						opinion = {
-							who = ROOT
-							modifier = opinion_increased_authority
-							months = 60
-						}
-					}
-				}
-			}
-		}
-		
-		effect = {
-		
-			hidden_tooltip = {
-				revoke_law = centralization_0
-				revoke_law = centralization_1
-				revoke_law = centralization_2
-				revoke_law = centralization_3
-				revoke_law = centralization_4
-			}
-			set_appoint_generals = yes
-			set_appoint_regents = yes
-#			set_the_kings_peace = yes
-#			set_the_kings_full_peace = no
-			set_protected_inheritance = yes
-			set_allow_title_revokation = yes
-			set_allow_free_infidel_revokation = yes
-			set_allow_free_revokation = no
-		}
-		
-		city_vassal_min_levy = 0.6
-		castle_vassal_min_levy = 0.6
-		temple_vassal_min_levy = 0.6
-	}
-	
-	centralization_4 = {
-		show_as_title = yes
-		group = centralization
-		
-		feudal_opinion = -30
-		
-		potential = {
-			NOT = {
-				crownlaw_title = {
-					NOT = { title = PREV }
-					holder_scope = { ROOT = { holder_scope = { is_liege_or_above = PREVPREV } } }
-				}
-			}
-		}
-		
-		allow = {
-			holder_scope = { 
-				is_republic = no 
-				hidden_tooltip = {
-					NOT = { religion_group = outlaw_group }
-				}
-			}
-			has_law = centralization_3
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.001
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					NOT = { has_law = centralization_3 }
-					NOT = { ruled_years = 20 }
-				}
-			}
-		}
-		
-		ai_will_revoke = {
-			factor = 0
-		}
-		
-		pass_effect = {
-			hidden_tooltip = {
-				if = { 
-					limit = {
-						has_law = centralization_3
-					}
-					any_de_jure_vassal = {
-						limit = {
-							OR = {
-								religion = ROOT
-								is_liege_or_above = ROOT
-							}
-						}
-						opinion = {
-							who = ROOT
-							modifier = opinion_increased_authority
-							months = 60
-						}
-					}
-				}
-			}
-		}
-		
-		effect = {
-			hidden_tooltip = {
-				revoke_law = centralization_0
-				revoke_law = centralization_1
-				revoke_law = centralization_2
-				revoke_law = centralization_3
-				revoke_law = centralization_4
-			}
-			set_appoint_generals = yes
-			set_appoint_regents = yes
-#			set_the_kings_peace = yes
-#			set_the_kings_full_peace = yes
-			set_protected_inheritance = yes
-			set_allow_title_revokation = yes
-			set_allow_free_infidel_revokation = yes
-			set_allow_free_revokation = yes
-		}
-		
-		city_vassal_min_levy = 0.8
-		castle_vassal_min_levy = 0.8
-		temple_vassal_min_levy = 0.8
-	}
 	
 # INVESTITURE
 
@@ -1464,6 +4906,10 @@ de_jure_laws = {
 		effect = {
 			hidden_tooltip = { revoke_law = public_order_1 }
 			set_the_kings_peace = no
+			holder_scope = {
+				prestige = -250
+				religion_authority = { modifier = public_order_collapsed years = 100 }
+			}
 		}
 		
 		# The military can't be relied on to take orders
@@ -1491,7 +4937,7 @@ de_jure_laws = {
 				religion_authority = 0.25 # Minimum 25% moral authority
 				NOT = { any_vassal = { any_current_enemy = { liege = { character = ROOT } } } } # No vassals at war
 				NOT = { has_character_modifier = constitutional_crisis } # No constitutional crisis
-				NOT = { any_demesne_province = { revolt_risk = 0.1 } } # No demesne revolt risk above 10%
+				NOT = { any_demesne_province = { revolt_risk = 0.5 } } # No demesne revolt risk above 50%
 			}
 		}
 		
@@ -1502,6 +4948,10 @@ de_jure_laws = {
 		effect = {
 			hidden_tooltip = { revoke_law = public_order_0 }
 			set_the_kings_peace = yes
+			holder_scope = {
+				prestige = 250
+				religion_authority = { modifier = public_order_restored years = 100 }
+			}
 		}
 	}
 }

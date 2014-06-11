@@ -38,6 +38,12 @@ opinion_revoked_premiership = { opinion = -30 months = 120 }
 # Parliamentary actions
 opinion_supported_my_proposal = { opinion = 10 months = 60 }
 opinion_opposed_my_proposal = { opinion = -10 months = 60 }
+opinion_passed_bad_bill = { opinion = -15 months = 120 }
+opinion_passed_good_bill = { opinion = 15 months = 120 }
+opinion_lowered_crown_authority_good = { opinion = 10 months = 240 }
+opinion_lowered_crown_authority_bad = { opinion = -10 months = 240 }
+opinion_raised_crown_authority_good = { opinion = 15 months = 240 }
+opinion_raised_crown_authority_bad = { opinion = -15 months = 240 }
 
 # Appointment nominations and nepotism
 opinion_promised_me_appointment = { opinion = 40 months = 240 }

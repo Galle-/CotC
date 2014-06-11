@@ -16,8 +16,17 @@ character_event = { # Terran Confederation
 		OR = {
 			religion = terran_federalist
 			religion = colonial_separatist
+			AND = {
+				religion = terran_republican
+				NOT = { has_global_flag = flag_terran_republic_name }
+				NOT = { has_global_flag = flag_terran_peoples_republic_name }
+			}
 		}
-		e_terran_confederation = { has_law = legitimacy_law_1 }
+		e_terran_confederation = {
+			has_law = succ_open_elective
+			has_law = succ_feudal_elective
+			has_law = succ_patrician_elective
+		}
 		OR = {
 			has_global_flag = flag_terran_empire_name
 			has_global_flag = flag_terran_hegemony_name
@@ -102,7 +111,15 @@ character_event = { # Terran Empire
 			religion = terran_imperial
 			religion = neo_feudal
 		}
-		e_terran_confederation = { has_law = legitimacy_law_0 }
+		e_terran_confederation = {
+			OR = {
+				has_law = succ_gavelkind
+				has_law = succ_primogeniture
+				has_law = succ_ultimogeniture
+				has_law = succ_seniority
+				has_law = succ_tanistry
+			}
+		}
 		NOT = { has_global_flag = flag_terran_empire_name }
 		NOT = { has_global_flag = flag_holy_terran_empire_name }
 	}
@@ -246,7 +263,12 @@ character_event = { # Terran Republic
 	trigger = {
 		has_landed_title = e_terran_confederation
 		religion = terran_republican
-		e_terran_confederation = { has_law = legitimacy_law_1 }
+		e_terran_confederation = {
+			OR = {
+				has_law = succ_open_elective
+				has_law = succ_patrician_elective
+			}
+		}
 		NOT = { has_global_flag = flag_terran_republic_name }
 		OR = {
 			has_global_flag = flag_terran_empire_name
@@ -325,7 +347,11 @@ character_event = { # Terran Directorate
 		religion_group = transhumanist_group
 		NOT = { religion = machine_cultist }
 		NOT = { has_global_flag = flag_terran_directorate_name }
-		e_terran_confederation = { NOT = { has_law = legitimacy_law_0 } }
+		e_terran_confederation = { 
+			NOT = { has_law = succ_open_elective }
+			NOT = { has_law = succ_feudal_elective }
+			NOT = { has_law = succ_patrician_elective }
+		}
 	}
 	
 	option = {
@@ -396,7 +422,11 @@ character_event = { # Holy Terran Empire
 			religion = machine_cultist
 		}
 		NOT = { has_global_flag = flag_holy_terran_empire_name }
-		e_terran_confederation = { NOT = { has_law = legitimacy_law_1 } }
+		e_terran_confederation = {
+			NOT = { has_law = succ_open_elective }
+			NOT = { has_law = succ_feudal_elective }
+			NOT = { has_law = succ_patrician_elective }
+		}
 	}
 	
 	option = {
@@ -467,7 +497,12 @@ character_event = { # Terran People's Union
 		NOT = { e_terran_confederation = { has_law = centralization_3 } }
 		NOT = { e_terran_confederation = { has_law = centralization_4 } }
 		OR = {
-			NOT = { e_terran_confederation = { has_law = legitimacy_law_1 } }
+			e_terran_confederation = {
+				OR = {
+					has_law = succ_open_elective
+					has_law = succ_appointment
+				}
+			}
 			has_global_flag = flag_terran_empire_name
 			has_global_flag = flag_terran_hegemony_name
 			has_global_flag = flag_terran_directorate_name
@@ -549,7 +584,12 @@ character_event = { # Terran People's Republic
 			}
 		}
 		OR = {
-			NOT = { e_terran_confederation = { has_law = legitimacy_law_1 } }
+			e_terran_confederation = {
+				OR = {
+					has_law = succ_open_elective
+					has_law = succ_appointment
+				}
+			}
 			has_global_flag = flag_terran_empire_name
 			has_global_flag = flag_terran_hegemony_name
 			has_global_flag = flag_terran_directorate_name

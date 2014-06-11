@@ -10,6 +10,7 @@ succession_laws = {
 		potential = {
 			# Special cases
 			NOT = { title = d_pilgrimage }
+			NOT = { title = k_orthodoxy }
 			OR = {
 				is_landless_type_title = no
 				is_tribal_type_title = yes
@@ -101,6 +102,7 @@ succession_laws = {
 				}
 				AND = {
 					NOT = { title = d_pilgrimage }
+					NOT = { title = k_orthodoxy }
 					OR = {
 						is_landless_type_title = no
 						is_tribal_type_title = yes
@@ -201,6 +203,7 @@ succession_laws = {
 		potential = {
 			# Special cases
 			NOT = { title = d_pilgrimage }
+			NOT = { title = k_orthodoxy }
 			OR = {
 				is_landless_type_title = no
 				is_tribal_type_title = yes
@@ -298,6 +301,7 @@ succession_laws = {
 			# Special cases
 			higher_tier_than = BARON # Obviously
 			NOT = { title = d_pilgrimage }
+			NOT = { title = k_orthodoxy }
 			OR = {
 				is_landless_type_title = no
 				is_tribal_type_title = yes
@@ -396,6 +400,7 @@ succession_laws = {
 			# Special cases
 			higher_tier_than = BARON
 			NOT = { title = d_pilgrimage }
+			NOT = { title = k_orthodoxy }
 			OR = {
 				is_landless_type_title = no
 				is_tribal_type_title = yes
@@ -492,6 +497,7 @@ succession_laws = {
 		potential = {
 			# Special cases
 			NOT = { title = d_pilgrimage }
+			NOT = { title = k_orthodoxy }
 			OR = {
 				is_landless_type_title = no
 				is_tribal_type_title = yes
@@ -593,7 +599,10 @@ succession_laws = {
 	}
 	succ_papal_succession = {
 		potential = {
-			title = d_pilgrimage # Special case
+			OR = {
+				title = d_pilgrimage # Special case
+				title = k_orthodoxy
+			}
 		}
 		
 		effect = {
@@ -609,6 +618,7 @@ succession_laws = {
 		potential = {
 			# Special cases
 			NOT = { title = d_pilgrimage }
+			NOT = { title = k_orthodoxy }
 			OR = {
 				is_landless_type_title = no
 				is_tribal_type_title = yes
@@ -701,6 +711,7 @@ succession_laws = {
 		potential = {
 			# Special cases
 			NOT = { title = d_pilgrimage }
+			NOT = { title = k_orthodoxy }
 			OR = {
 				holder_scope = { is_patrician = no }
 				holder_scope = { is_merchant_republic = yes }
@@ -792,6 +803,7 @@ succession_laws = {
 		potential = {
 			holder_scope = { is_merchant_republic = yes }
 			NOT = { title = d_pilgrimage }
+			NOT = { title = k_orthodoxy }
 			# Not ruled out by vassal legitimacy laws
 			OR = {
 				# No vassal legitimacy laws apply

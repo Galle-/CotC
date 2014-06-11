@@ -139,6 +139,8 @@ TECH_GROUP_ECONOMY = {
 			add_building = tp_town_3
 		}
 		2 = {
+			add_building = ca_shipyard_1
+			
 			add_building = tp_monastery_3
 			add_building = tp_elite_barracks_3
 		}

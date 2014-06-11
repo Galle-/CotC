@@ -93,6 +93,13 @@ title_prince = {
 	monthly_salary = 0.05
 	monthly_prestige = 0.01
 	
+	allow = {
+		OR = {
+			religion = terran_imperial
+			religion = neo_feudal
+		}
+	}
+	
 	gain_effect = {
 	}
 	lose_effect = {

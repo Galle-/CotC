@@ -1,31 +1,31 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
 political_group;Political;;;;;;;;;;;;;x
-terran_federalist;Terran Federalist;;;;;;;;;;;;;x
-terran_republican;Terran Republican;;;;;;;;;;;;;x
-terran_imperial;Terran Imperial;;;;;;;;;;;;;x
-colonial_separatist;Colonial Separatist;;;;;;;;;;;;;x
-neo_feudal;Neo-Feudal;;;;;;;;;;;;;x
-astrist;Astrist;;;;;;;;;;;;;x
-neo_socialist;Neo-Socialist;;;;;;;;;;;;;x
+terran_federalist;Terran Federalism;;;;;;;;;;;;;x
+terran_republican;Terran Republicanism;;;;;;;;;;;;;x
+terran_imperial;Terran Imperialism;;;;;;;;;;;;;x
+colonial_separatist;Colonial Separatism;;;;;;;;;;;;;x
+neo_feudal;Neo-Feudalism;;;;;;;;;;;;;x
+astrist;Astrism;;;;;;;;;;;;;x
+neo_socialist;Neo-Socialism;;;;;;;;;;;;;x
 religious_group;Religious;;;;;;;;;;;;;x
-pilgrim;Pilgrim;;;;;;;;;;;;;x
+pilgrim;Pilgrimagism;;;;;;;;;;;;;x
 pilgrim_DESC;While humanity follows many different religions, nearly all of them share one vital commonality - they all originated on Old Earth. Across the galaxy are billions of colonists who find themselves compelled to travel to the holy places on Earth, and over time, an infrastructure has evolved to support them. The largest organization responsible for the transportation of pilgrims is known simply as "the Pilgrimage.";;;;;;;;;;;;;x
-orthodox;Terran Orthodox;;;;;;;;;;;;;x
+orthodox;Terran Orthodoxy;;;;;;;;;;;;;x
 orthodox_DESC;Following the Edict of Reformation, the Pilgrimage transformed from a loose association of clerics into a true, united church. While the actual beliefs of followers of the Church of Holy Terra can very wildly, they all share a common veneration of humanity's homeworld and hold it as sacred.;;;;;;;;;;;;;x
-solar_cultist;Solar Cultist;;;;;;;;;;;;;x
-solarian;Solarian;;;;;;;;;;;;;x
-xenoterran;Xenoterran;;;;;;;;;;;;;x
-adoptionist_cultist;Sect Adoptionist;;;;;;;;;;;;;x
-adoptionist;Adoptionist;;;;;;;;;;;;;x
-mother_gaia_cultist;Matriarch;;;;;;;;;;;;;x
-father_earth_cultist;Patriarch;;;;;;;;;;;;;x
+solar_cultist;Solar Cultism;;;;;;;;;;;;;x
+solarian;Solarianism;;;;;;;;;;;;;x
+xenoterran;Xenoterranism;;;;;;;;;;;;;x
+adoptionist_cultist;Sect Adoptionism;;;;;;;;;;;;;x
+adoptionist;Adoptionism;;;;;;;;;;;;;x
+mother_gaia_cultist;Matriarchy;;;;;;;;;;;;;x
+father_earth_cultist;Patriarchy;;;;;;;;;;;;;x
 transhumanist_group;Transhumanist;;;;;;;;;;;;;x
-cyberneticist;Cyberneticist;;;;;;;;;;;;;x
-machine_cultist;Machine Cultist;;;;;;;;;;;;;x
-hiver;Hiver;;;;;;;;;;;;;x
-bio_directionist;Bio-Directionist;;;;;;;;;;;;;x
+cyberneticist;Cyberneticism;;;;;;;;;;;;;x
+machine_cultist;Machine Cultism;;;;;;;;;;;;;x
+hiver;The Hive;;;;;;;;;;;;;x
+bio_directionist;Bio-Directionism;;;;;;;;;;;;;x
 outlaw_group;Outlaw;;;;;;;;;;;;;x
-space_pirate;Space Pirate;;;;;;;;;;;;;x
+space_pirate;Space Piracy;;;;;;;;;;;;;x
 STAT_PIETY_CREDIBILITY;Credibility;;;;;;;;;;;;;x
 STAT_PIETY_DESC_CREDIBILITY;Political credibility is respected by other followers of your ideology. Like Prestige, it is added to your score on the death of a ruler.;;;;;;;;;;;;;x
 MONTHLY_PIETY_CREDIBILITY;Monthly Credibility Increase;;;;.;;;;;;;;;x
@@ -146,3 +146,15 @@ OP_UTOPIA;Utopia;;;;;;;;;;;;;x
 OP_SINGULARITY;Singularity;;;;;;;;;;;;;x
 title_ecumenical_councillor;Ecumenical Councillor;;;;;;;;;;;;;x
 title_ecumenical_councillor;Ecumenical Councillor;;;;;;;;;;;;;x
+EVTDESCCONVERSION5000;You are a firm believer in [Root.Religion.GetName], but one of your close friends is not. Perhaps it is time that they were persuaded to see things your way?;;;;;;;;;;;;;x
+EVTOPTACONVERSION5000;I'm sure they'll listen to reason.;;;;;;;;;;;;;x
+EVTOPTBCONVERSION5000;No, I won't jeopardize our friendship.;;;;;;;;;;;;;x
+EVTDESCCONVERSION5001;Today, your friend [From.GetFullName] took you aside and tried to engage you in a philosophical debate. It appears that [From.GetSheHe] disagrees with your belief in [Root.Religion.GetName], and [From.GetSheHe] tried to persuade you to accept [From.Religion.GetName] instead.;;;;;;;;;;;;;x
+EVTOPTACONVERSION5001;[FROM.GetSheHeCap] actually made a very good case.;;;;;;;;;;;;;x
+EVTOPTBCONVERSION5001;I'm sorry, but you're still wrong about this.;;;;;;;;;;;;;x
+EVTDESCCONVERSION5002;It seems that your friend [From.GetFullName] was willing to listen to reason, after all. [From.GetSheHeCap] told you that [From.GetSheHe] would think about what you told [From.GetHerHim], and [From.GetSheHe] seems to be growing closer and closer to the truth every day.;;;;;;;;;;;;;x
+EVTOPTACONVERSION5002;A job well done.;;;;;;;;;;;;;x
+EVTDESCCONVERSION5003;You tried to explain to your friend [From.GetFullName] why [From.GetHerHis] belief in [From.Religion.GetName] was misguided, but [From.GetSheHe] refused to listen to reason.;;;;;;;;;;;;;x
+EVTOPTACONVERSION5003;I suppose we'll have to agree to disagree.;;;;;;;;;;;;;x
+EVTOPTBCONVERSION5003;Then we can no longer be friends.;;;;;;;;;;;;;x
+EVTDESCCONVERSION10001;Your [GetFromRelation], [From.GetFullName], has fled [Root.Location.GetName] to become a space pirate in the [From.Liege.PrimaryTitle.GetFullName]!;;;;;;;;;;;;;x

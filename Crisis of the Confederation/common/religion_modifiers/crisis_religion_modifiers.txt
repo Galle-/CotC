@@ -1,6 +1,14 @@
 #########################################################################
 # RELIGIOUS AUTHORITY MODIFIERS - fully scriptable
 ##########################################################################
+public_order_collapsed = {
+	authority = -10
+	years = 100
+}
+public_order_restored = {
+	authority = 10
+	years = 100
+}
 
 # These are awared to ideologies whose rulers pursue reforms compatible with them
 major_compatible_reform = {
@@ -62,6 +70,7 @@ failed_major_rebellion = {
 fell_to_major_rebellion = {
 	authority = -5
 	years = 60
+}
 allowed_minor_rebellion = {
 	authority = -5
 	years = 10
@@ -84,8 +93,12 @@ fell_to_minor_rebellion = {
 }
 opposed_system_revolt = {
 	authority = 1
+	years = 120
+}
 opposed_sector_revolt = {
 	authority = 2
+	years = 120
+}
 opposed_regional_revolt = {
 	years = 30
 }
@@ -101,73 +114,30 @@ ignored_regional_revolt = {
 	authority = -3
 	years = 120
 }
-ignored_system_revolt = {
 allowed_civil_war_county = {
 	authority = -1
 	years = 30
 }
-crushed_major_rebellion = {
-	authority = 5
-	years = 60
-}
-fell_to_major_rebellion = {
-	authority = -5
-	years = 60
-}
-allowed_minor_rebellion = {
-	authority = -5
-}
-successful_minor_rebellion = {
-	years = 120
-}
-failed_minor_rebellion = {
-	authority = -5
-	years = 30
-}
-crushed_minor_rebellion = {
-	years = 30
-	years = 10
-}
-fell_to_minor_rebellion = {
-	authority = -5
-	years = 10
-}
-opposed_system_revolt = {
-	years = 30
-	years = 30
-opposed_sector_revolt = {
-	authority = 2
-	years = 30
-}
-opposed_regional_revolt = {
-	authority = 3
-	years = 30
-}
-ignored_system_revolt = {
-	years = 120
-ignored_sector_revolt = {
-	authority = -2
-	years = 120
-}
-ignored_regional_revolt = {
-	authority = -3
-	years = 120
-}
-ruler_cybernetics_bad = {
 allowed_civil_war_county = {
 	authority = -1
 	years = 30
 }
 allowed_civil_war_duchy = {
+	authority = -3
 	years = 30
+}
 allowed_civil_war_kingdom = {
 	authority = -5
 	years = 30
+}
 allowed_civil_war_empire = {
 	authority = -15
 	years = 30
+}
 ruler_cybernetics_good = {
+	authority = 1
 	years = 10
+}
 ruler_cybernetics_bad = {
 	authority = -1
 	years = 10

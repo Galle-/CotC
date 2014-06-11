@@ -2,6 +2,28 @@
 # They allow crown laws to be passed by decree without the need for a vote
 
 decisions = {
+	# Restore public order
+	# Available to anyone who meets the public order requirements
+	# as that law shouldn't have to be voted on anyway
+	restore_public_order_decision = {
+		is_high_prio = yes
+		potential = { any_demesne_title = { has_law = public_order_0 } }
+		allow = {
+			NOT = { trait = incapable }
+			war = no # Not at war
+			religion_authority = 0.25 # Minimum 25% moral authority
+			NOT = { any_vassal = { any_current_enemy = { liege = { character = ROOT } } } } # No vassals at war
+			NOT = { has_character_modifier = constitutional_crisis } # No constitutional crisis
+			NOT = { any_demesne_province = { revolt_risk = 0.5 } } # No demesne revolt risk above 50%
+		}
+		effect = {
+			any_demesne_title = {
+				limit = { has_law = public_order_0 }
+				add_law = public_order_0
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
 	# Menu Controls
 	open_decree_menu_decision = {
 		potential = {
@@ -45,6 +67,14 @@ decisions = {
 					liege = { character = ROOT }
 				}
 			}
+			
+			# Can't do this without at least SOME centralization
+			NOT = {
+				any_demesne_title = {
+					has_law = legislative_authority_1
+					has_law = centralization_0
+				}
+			}
 		}
 		effect = {
 			# Dissolve all legislatures
@@ -65,9 +95,11 @@ decisions = {
 			# Start a constitutional crisis
 			add_character_modifier = { name = constitutional_crisis duration = -1 }
 			add_character_modifier = { name = law_against_ruler duration = -1 }
+			clr_character_flag = flag_crisis_timer
+			set_character_flag = flag_crisis_timer
 			
 			# Flag crisis rank and type
-			set_character_flag = flag_crisis_term_limit_defied
+			set_character_flag = flag_crisis_dissolved_legislature
 			if = {
 				limit = { primary_title = { tier = EMPEROR } }
 				set_character_flag = flag_crisis_emperor
@@ -126,12 +158,19 @@ decisions = {
 					}
 					opinion = { who = ROOT modifier = opinion_tyrant months = 120 }
 				}
+				
+				# Inform the vassals of this decision
+				any_realm_character = {
+					limit = { liege = { character = ROOT } }
+					character_event = { id = laws.7500 }
+					character_event = { id = laws.500 days = 30 random = 15 } # AI takes sides for or against
+				}
 			}
 		}
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.1 # This is a pretty big decision
+				factor = 0.01 # This is a pretty big decision
 			}
 			# Personality
 			modifier = {
@@ -143,20 +182,20 @@ decisions = {
 				trait = content
 			}
 			modifier = {
-				factor = 2
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
-				trait = humble
-			}
-			modifier = {
 				factor = 4
 				trait = cold
 			}
 			modifier = {
 				factor = 0.25
 				trait = friendly
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { trait = brave }
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
 			}
 			# Ideology
 			modifier = {
@@ -167,7 +206,6 @@ decisions = {
 					religion = colonial_separatist
 					religion = neo_socialist
 				}
-				religion_authority = 0.5
 			}
 			modifier = {
 				factor = 0.5
@@ -178,7 +216,6 @@ decisions = {
 					religion = neo_socialist
 				}
 				NOT = { trait = pragmatic }
-				religion_authority = 0.25
 			}
 			modifier = {
 				factor = 0.5
@@ -188,7 +225,137 @@ decisions = {
 					religion = colonial_separatist
 					religion = neo_socialist
 				}
-				trait = radical
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_feudal
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_feudal
+				}
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_feudal
+				}
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_imperial }
+				NOT = { religion = astrist }
+				NOT = { religion = neo_feudal }
+				religion_authority = 0.1
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_imperial }
+				NOT = { religion = astrist }
+				NOT = { religion = neo_feudal }
+				religion_authority = 0.2
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_imperial }
+				NOT = { religion = astrist }
+				NOT = { religion = neo_feudal }
+				religion_authority = 0.3
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_imperial }
+				NOT = { religion = astrist }
+				NOT = { religion = neo_feudal }
+				religion_authority = 0.4
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_imperial }
+				NOT = { religion = astrist }
+				NOT = { religion = neo_feudal }
+				religion_authority = 0.5
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_imperial }
+				NOT = { religion = astrist }
+				NOT = { religion = neo_feudal }
+				religion_authority = 0.6
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_imperial }
+				NOT = { religion = astrist }
+				NOT = { religion = neo_feudal }
+				religion_authority = 0.7
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_imperial }
+				NOT = { religion = astrist }
+				NOT = { religion = neo_feudal }
+				religion_authority = 0.8
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_imperial }
+				NOT = { religion = astrist }
+				NOT = { religion = neo_feudal }
+				religion_authority = 0.9
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_imperial }
+				NOT = { religion = astrist }
+				NOT = { religion = neo_feudal }
+				religion_authority = 1
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_feudal
+				}
+				religion_authority = 0.1
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_feudal
+				}
+				religion_authority = 0.2
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_feudal
+				}
+				religion_authority = 0.3
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_feudal
+				}
+				religion_authority = 0.4
 			}
 			modifier = {
 				factor = 2
@@ -206,8 +373,7 @@ decisions = {
 					religion = astrist
 					religion = neo_feudal
 				}
-				religion_authority = 0.25
-				NOT = { trait = pragmatic }
+				religion_authority = 0.6
 			}
 			modifier = {
 				factor = 2
@@ -216,93 +382,193 @@ decisions = {
 					religion = astrist
 					religion = neo_feudal
 				}
-				trait = radical
+				religion_authority = 0.7
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_feudal
+				}
+				religion_authority = 0.8
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_feudal
+				}
+				religion_authority = 0.9
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_feudal
+				}
+				religion_authority = 1
 			}
 			
-			# Ruler despises the legislature
+			# Opinion of powerful vassals
 			modifier = {
 				factor = 2
 				any_vassal = {
-					age = 16
-					NOT = { trait = incapable }
-					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
-					relative_power_to_liege = 0.2
+					relative_power_to_liege = 0.1
+					NOT = { reverse_opinion = { who = ROOT value = -74 } }
 				}
 			}
 			modifier = {
 				factor = 2
 				any_vassal = {
-					age = 16
-					NOT = { trait = incapable }
-					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
-					relative_power_to_liege = 0.4
-				}
-			}
-			modifier = {
-				factor = 2
-				any_vassal = {
-					age = 16
-					NOT = { trait = incapable }
-					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
-					relative_power_to_liege = 0.6
-				}
-			}
-			modifier = {
-				factor = 2
-				any_vassal = {
-					age = 16
-					NOT = { trait = incapable }
-					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
-					relative_power_to_liege = 0.8
-				}
-			}
-			modifier = {
-				factor = 2
-				any_vassal = {
-					age = 16
-					NOT = { trait = incapable }
-					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
-					relative_power_to_liege = 1
-				}
-			}
-			modifier = {
-				factor = 2
-				any_vassal = {
-					age = 16
-					NOT = { trait = incapable }
-					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
+					relative_power_to_liege = 0.1
+					NOT = { reverse_opinion = { who = ROOT value = -74 } }
 					count = 2
-					relative_power_to_liege = 0.2
 				}
 			}
 			modifier = {
 				factor = 2
 				any_vassal = {
-					age = 16
-					NOT = { trait = incapable }
-					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
+					relative_power_to_liege = 0.1
+					NOT = { reverse_opinion = { who = ROOT value = -74 } }
 					count = 3
-					relative_power_to_liege = 0.2
 				}
 			}
 			modifier = {
 				factor = 2
 				any_vassal = {
-					age = 16
-					NOT = { trait = incapable }
-					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
+					relative_power_to_liege = 0.1
+					NOT = { reverse_opinion = { who = ROOT value = -74 } }
 					count = 4
-					relative_power_to_liege = 0.2
 				}
 			}
 			modifier = {
 				factor = 2
 				any_vassal = {
-					age = 16
-					NOT = { trait = incapable }
-					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
+					relative_power_to_liege = 0.1
+					NOT = { reverse_opinion = { who = ROOT value = -74 } }
 					count = 5
-					relative_power_to_liege = 0.2
+				}
+			}
+			modifier = {
+				factor = 2
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					NOT = { reverse_opinion = { who = ROOT value = -74 } }
+					count = 6
+				}
+			}
+			modifier = {
+				factor = 2
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					NOT = { reverse_opinion = { who = ROOT value = -74 } }
+					count = 7
+				}
+			}
+			modifier = {
+				factor = 2
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					NOT = { reverse_opinion = { who = ROOT value = -74 } }
+					count = 8
+				}
+			}
+			modifier = {
+				factor = 2
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					NOT = { reverse_opinion = { who = ROOT value = -74 } }
+					count = 9
+				}
+			}
+			modifier = {
+				factor = 2
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					NOT = { reverse_opinion = { who = ROOT value = -74 } }
+					count = 10
+				}
+			}
+			modifier = {
+				factor = 2
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					NOT = { reverse_opinion = { who = ROOT value = -74 } }
+				}
+			}
+			modifier = {
+				factor = 2
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					NOT = { reverse_opinion = { who = ROOT value = -74 } }
+					count = 2
+				}
+			}
+			modifier = {
+				factor = 2
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					NOT = { reverse_opinion = { who = ROOT value = -74 } }
+					count = 3
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					reverse_opinion = { who = ROOT value = 75 }
+					count = 4
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					reverse_opinion = { who = ROOT value = 75 }
+					count = 5
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					reverse_opinion = { who = ROOT value = 75 }
+					count = 6
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					reverse_opinion = { who = ROOT value = 75 }
+					count = 7
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					reverse_opinion = { who = ROOT value = 75 }
+					count = 8
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					reverse_opinion = { who = ROOT value = 75 }
+					count = 9
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					reverse_opinion = { who = ROOT value = 75 }
+					count = 10
 				}
 			}
 		}
@@ -340,7 +606,7 @@ decisions = {
 			}
 		}
 		ai_will_do = {
-			factor = 0.1
+			factor = 0.01
 			# Personality
 			modifier = {
 				factor = 0.25
@@ -375,7 +641,6 @@ decisions = {
 					religion = colonial_separatist
 					religion = neo_socialist
 				}
-				religion_authority = 0.5
 			}
 			modifier = {
 				factor = 2
@@ -386,7 +651,6 @@ decisions = {
 					religion = neo_socialist
 				}
 				NOT = { trait = pragmatic }
-				religion_authority = 0.25
 			}
 			modifier = {
 				factor = 2
@@ -396,7 +660,6 @@ decisions = {
 					religion = colonial_separatist
 					religion = neo_socialist
 				}
-				trait = radical
 			}
 			modifier = {
 				factor = 0.5
@@ -405,7 +668,6 @@ decisions = {
 					religion = astrist
 					religion = neo_feudal
 				}
-				religion_authority = 0.5
 			}
 			modifier = {
 				factor = 0.5
@@ -414,7 +676,6 @@ decisions = {
 					religion = astrist
 					religion = neo_feudal
 				}
-				religion_authority = 0.25
 				NOT = { trait = pragmatic }
 			}
 			modifier = {
@@ -424,93 +685,345 @@ decisions = {
 					religion = astrist
 					religion = neo_feudal
 				}
-				trait = radical
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = colonial_separatist }
+				NOT = { religion = neo_socialist }
+				religion_authority = 0.1
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = colonial_separatist }
+				NOT = { religion = neo_socialist }
+				religion_authority = 0.2
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = colonial_separatist }
+				NOT = { religion = neo_socialist }
+				religion_authority = 0.3
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = colonial_separatist }
+				NOT = { religion = neo_socialist }
+				religion_authority = 0.4
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = colonial_separatist }
+				NOT = { religion = neo_socialist }
+				religion_authority = 0.5
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = colonial_separatist }
+				NOT = { religion = neo_socialist }
+				religion_authority = 0.6
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = colonial_separatist }
+				NOT = { religion = neo_socialist }
+				religion_authority = 0.7
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = colonial_separatist }
+				NOT = { religion = neo_socialist }
+				religion_authority = 0.8
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = colonial_separatist }
+				NOT = { religion = neo_socialist }
+				religion_authority = 0.9
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = colonial_separatist }
+				NOT = { religion = neo_socialist }
+				religion_authority = 1
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_separatist
+					religion = neo_socialist
+				}
+				religion_authority = 0.1
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_separatist
+					religion = neo_socialist
+				}
+				religion_authority = 0.2
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_separatist
+					religion = neo_socialist
+				}
+				religion_authority = 0.3
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_separatist
+					religion = neo_socialist
+				}
+				religion_authority = 0.4
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_separatist
+					religion = neo_socialist
+				}
+				religion_authority = 0.5
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_separatist
+					religion = neo_socialist
+				}
+				religion_authority = 0.6
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_separatist
+					religion = neo_socialist
+				}
+				religion_authority = 0.7
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_separatist
+					religion = neo_socialist
+				}
+				religion_authority = 0.8
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_separatist
+					religion = neo_socialist
+				}
+				religion_authority = 0.9
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_separatist
+					religion = neo_socialist
+				}
+				religion_authority = 1
 			}
 			
-			# Ruler despises the legislature
+			# Opinion of powerful vassals
 			modifier = {
 				factor = 0.5
 				any_vassal = {
-					age = 16
-					NOT = { trait = incapable }
-					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
-					relative_power_to_liege = 0.2
+					relative_power_to_liege = 0.1
+					NOT = { reverse_opinion = { who = ROOT value = -74 } }
 				}
 			}
 			modifier = {
 				factor = 0.5
 				any_vassal = {
-					age = 16
-					NOT = { trait = incapable }
-					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
-					relative_power_to_liege = 0.4
-				}
-			}
-			modifier = {
-				factor = 0.5
-				any_vassal = {
-					age = 16
-					NOT = { trait = incapable }
-					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
-					relative_power_to_liege = 0.6
-				}
-			}
-			modifier = {
-				factor = 0.5
-				any_vassal = {
-					age = 16
-					NOT = { trait = incapable }
-					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
-					relative_power_to_liege = 0.8
-				}
-			}
-			modifier = {
-				factor = 0.5
-				any_vassal = {
-					age = 16
-					NOT = { trait = incapable }
-					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
-					relative_power_to_liege = 1
-				}
-			}
-			modifier = {
-				factor = 0.5
-				any_vassal = {
-					age = 16
-					NOT = { trait = incapable }
-					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
+					relative_power_to_liege = 0.1
+					NOT = { reverse_opinion = { who = ROOT value = -74 } }
 					count = 2
-					relative_power_to_liege = 0.2
 				}
 			}
 			modifier = {
 				factor = 0.5
 				any_vassal = {
-					age = 16
-					NOT = { trait = incapable }
-					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
+					relative_power_to_liege = 0.1
+					NOT = { reverse_opinion = { who = ROOT value = -74 } }
 					count = 3
-					relative_power_to_liege = 0.2
 				}
 			}
 			modifier = {
 				factor = 0.5
 				any_vassal = {
-					age = 16
-					NOT = { trait = incapable }
-					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
+					relative_power_to_liege = 0.1
+					NOT = { reverse_opinion = { who = ROOT value = -74 } }
 					count = 4
-					relative_power_to_liege = 0.2
 				}
 			}
 			modifier = {
 				factor = 0.5
 				any_vassal = {
-					age = 16
-					NOT = { trait = incapable }
-					NOT = { reverse_opinion = { who = ROOT opinion = -49 } }
+					relative_power_to_liege = 0.1
+					NOT = { reverse_opinion = { who = ROOT value = -74 } }
 					count = 5
-					relative_power_to_liege = 0.2
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					NOT = { reverse_opinion = { who = ROOT value = -74 } }
+					count = 6
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					NOT = { reverse_opinion = { who = ROOT value = -74 } }
+					count = 7
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					NOT = { reverse_opinion = { who = ROOT value = -74 } }
+					count = 8
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					NOT = { reverse_opinion = { who = ROOT value = -74 } }
+					count = 9
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					NOT = { reverse_opinion = { who = ROOT value = -74 } }
+					count = 10
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					NOT = { reverse_opinion = { who = ROOT value = -74 } }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					NOT = { reverse_opinion = { who = ROOT value = -74 } }
+					count = 2
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					NOT = { reverse_opinion = { who = ROOT value = -74 } }
+					count = 3
+				}
+			}
+			modifier = {
+				factor = 2
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					reverse_opinion = { who = ROOT value = 75 }
+					count = 4
+				}
+			}
+			modifier = {
+				factor = 2
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					reverse_opinion = { who = ROOT value = 75 }
+					count = 5
+				}
+			}
+			modifier = {
+				factor = 2
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					reverse_opinion = { who = ROOT value = 75 }
+					count = 6
+				}
+			}
+			modifier = {
+				factor = 2
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					reverse_opinion = { who = ROOT value = 75 }
+					count = 7
+				}
+			}
+			modifier = {
+				factor = 2
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					reverse_opinion = { who = ROOT value = 75 }
+					count = 8
+				}
+			}
+			modifier = {
+				factor = 2
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					reverse_opinion = { who = ROOT value = 75 }
+					count = 9
+				}
+			}
+			modifier = {
+				factor = 2
+				any_vassal = {
+					relative_power_to_liege = 0.1
+					reverse_opinion = { who = ROOT value = 75 }
+					count = 10
 				}
 			}
 		}

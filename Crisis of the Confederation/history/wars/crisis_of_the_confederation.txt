@@ -8,8 +8,8 @@ casus_belli={
 }
 
 2998.1.1 = {
+	add_defender = 11013974 # Morgan Afolayan
 	add_attacker = 11010155 # Juan Lebedev
 	add_attacker = 11012570 # Zhen Zhou
 	add_attacker = 11020020 # "Arthur Pendragon"
-	add_defender = 11013974 # Morgan Afolayan
 }
