@@ -1,0 +1,60 @@
+# Types:
+# 0 - Light Infantry/Fighters
+# 1 - Heavy Infantry/Bombers
+# 2 - Pikemen/Drones
+# 3 - Light Cavalry/DD
+# 4 - Heavy Cavalry/BC
+# 5 - Archers/TT
+# 6 - Special Troops (DN)
+
+# Default fighter squadron types
+RETTYPE_I1 = { # Fighter Wing
+	first_type = 0
+	first_amount = 50
+}
+RETTYPE_B1 = { # Bomber Wing
+	first_type = 1
+	first_amount = 50
+}
+
+# Zealots
+RETTYPE_I2 = { # Fanatics Fighter Wing
+	first_type = 0
+	first_amount = 50
+	
+	potential = {
+		capital_scope = {
+			OR = {
+				religion = orthodox
+				religion = xenoterran
+				religion = solarian
+				religion = machine_cultist
+				religion = neo_socialist
+				religion = astrist
+			}
+		}
+		any_current_enemy = { NOT = { religion = PREV } }
+	}
+	
+	modifier = { light_infantry_morale = 5 }
+}
+RETTYPE_B2 = { # Fanatics Bomber Wing
+	first_type = 1
+	first_amount = 50
+	
+	potential = {
+		capital_scope = {
+			OR = {
+				religion = orthodox
+				religion = xenoterran
+				religion = solarian
+				religion = machine_cultist
+				religion = neo_socialist
+				religion = astrist
+			}
+		}
+		any_current_enemy = { NOT = { religion = PREV } }
+	}
+	
+	modifier = { heavy_infantry_morale = 5 }
+}

@@ -3534,7 +3534,7 @@ province_event = {
 	
 	trigger = {
 		NOT = { religion = orthodox }
-		has_global_flag = flag_pilgrim_reformation # Pilgrimage must have been reformed to form Orthodoxy
+		has_global_flag = flag_orthodox_reformation # Pilgrimage must have been reformed to form Orthodoxy
 		OR = {
 			religion_group = religious_group
 			any_province_lord = { religion = orthodox }

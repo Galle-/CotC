@@ -1,24 +1,1224 @@
-k_terran_federal_authority = {
-	color = { 19 180 16 }
+# Formable Empires
+e_xingjie = {
+	color = { 128 0 0 }
+	color2 = { 200 200 0 }
+	
+	capital = 267
 	
 	allow = {
-		always = no
+		primary_title = { title = k_xingjie }
+		num_of_king_titles = 3
+	}
+	
+	# Navy
+	k_xingjie_navy = {
+		allow = { has_landed_title = e_xingjie }
+		color = { 64 0 0 }
+		color2 = { 192 192 192 }
+		
+		short_name = yes
+		
+		title = "GRANDADMIRAL"
+		title_female = "GRANDADMIRAL_female"
+		title_foa = "GRANDADMIRALFOA"
+		title_foa_female = "GRANDADMIRALFOA_female"
+		capital = 267
+		landless = yes
+		tribe = yes
+		
+		d_xingjie_first_fleet = {
+			allow = { has_landed_title = k_xingjie_navy }
+			color = { 64 16 16 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 267
+			landless = yes
+			tribe = yes
+		}
+		d_xingjie_second_fleet = {
+			allow = { has_landed_title = k_xingjie_navy }
+			color = { 64 32 32 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 267
+			landless = yes
+			tribe = yes
+		}
+		d_xingjie_third_fleet = {
+			allow = { has_landed_title = k_xingjie_navy }
+			color = { 64 48 48 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 267
+			landless = yes
+			tribe = yes
+		}
+		d_xingjie_fourth_fleet = {
+			allow = { has_landed_title = k_xingjie_navy }
+			color = { 64 64 64 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 267
+			landless = yes
+			tribe = yes
+		}
+		d_xingjie_fifth_fleet = {
+			allow = { has_landed_title = k_xingjie_navy }
+			color = { 64 80 80 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 267
+			landless = yes
+			tribe = yes
+		}
 	}
 }
-
-k_terran_republic_authority = {
-	color={ 255 108 0 }
-	color2={ 255 255 255 }
+e_tierra_celeste = {
+	color = { 128 128 0 }
+	color2 = { 255 255 255 }
+	
+	capital = 70 # Encrucijada
 	
 	allow = {
-		always = no
+		primary_title = { title = k_tierra_celeste }
+		num_of_king_titles = 3
+	}
+	
+	# Navy
+	k_tierra_celeste_navy = {
+		allow = { has_landed_title = e_tierra_celeste }
+		color = { 64 64 0 }
+		color2 = { 192 192 192 }
+		
+		short_name = yes
+		
+		title = "GRANDADMIRAL"
+		title_female = "GRANDADMIRAL_female"
+		title_foa = "GRANDADMIRALFOA"
+		title_foa_female = "GRANDADMIRALFOA_female"
+		capital = 70
+		landless = yes
+		tribe = yes
+		
+		d_tierra_celeste_first_fleet = {
+			allow = { has_landed_title = k_tierra_celeste_navy }
+			color = { 64 64 16 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 70
+			landless = yes
+			tribe = yes
+		}
+		d_tierra_celeste_second_fleet = {
+			allow = { has_landed_title = k_tierra_celeste_navy }
+			color = { 64 64 32 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 70
+			landless = yes
+			tribe = yes
+		}
+		d_tierra_celeste_third_fleet = {
+			allow = { has_landed_title = k_tierra_celeste_navy }
+			color = { 64 64 48 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 70
+			landless = yes
+			tribe = yes
+		}
+		d_tierra_celeste_fourth_fleet = {
+			allow = { has_landed_title = k_tierra_celeste_navy }
+			color = { 64 64 64 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 70
+			landless = yes
+			tribe = yes
+		}
+		d_tierra_celeste_fifth_fleet = {
+			allow = { has_landed_title = k_tierra_celeste_navy }
+			color = { 64 64 80 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 70
+			landless = yes
+			tribe = yes
+		}
 	}
 }
+e_al_samawat = {
+	color = { 0 64 0 }
+	color2 = { 255 255 255 }
+	
+	capital = 307 # Makkat al-Jadiida
 
-k_terran_imperial_authority = {
-	color = { 163 254 56 }
+	allow = {
+		primary_title = { title = k_al_samawat }
+		num_of_king_titles = 3
+	}
+	
+	# Navy
+	k_al_samawat_navy = {
+			allow = { has_landed_title = e_al_samawat }
+		color = { 0 32 0 }
+		color2 = { 192 192 192 }
+		
+		short_name = yes
+		
+		title = "GRANDADMIRAL"
+		title_female = "GRANDADMIRAL_female"
+		title_foa = "GRANDADMIRALFOA"
+		title_foa_female = "GRANDADMIRALFOA_female"
+		capital = 307
+		landless = yes
+		tribe = yes
+		
+		d_al_samawat_first_fleet = {
+			allow = { has_landed_title = k_al_samawat_navy }
+			color = { 8 32 8 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 307
+			landless = yes
+			tribe = yes
+		}
+		d_al_samawat_second_fleet = {
+			allow = { has_landed_title = k_al_samawat_navy }
+			color = { 16 32 16 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 307
+			landless = yes
+			tribe = yes
+		}
+		d_al_samawat_third_fleet = {
+			allow = { has_landed_title = k_al_samawat_navy }
+			color = { 24 32 24 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 307
+			landless = yes
+			tribe = yes
+		}
+		d_al_samawat_fourth_fleet = {
+			allow = { has_landed_title = k_al_samawat_navy }
+			color = { 32 32 32 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 307
+			landless = yes
+			tribe = yes
+		}
+		d_al_samawat_fifth_fleet = {
+			allow = { has_landed_title = k_al_samawat_navy }
+			color = { 40 32 40 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 307
+			landless = yes
+			tribe = yes
+		}
+	}
+}
+e_zenye_nyota_angani = {
+	color = { 200 200 200 }
+	color2 = { 10 10 10 }
+		
+	capital = 289 # Mpya ya Zanzibar
 	
 	allow = {
-		always = no
+		primary_title = { title = k_zenye_nyota_angani }
+		num_of_king_titles = 3
+	}
+	
+	# Navy
+	k_angani_navy = {
+		allow = { has_landed_title = e_zenye_nyota_angani }
+		color = { 100 100 100 }
+		color2 = { 192 192 192 }
+		
+		short_name = yes
+		
+		title = "GRANDADMIRAL"
+		title_female = "GRANDADMIRAL_female"
+		title_foa = "GRANDADMIRALFOA"
+		title_foa_female = "GRANDADMIRALFOA_female"
+		capital = 289
+		landless = yes
+		tribe = yes
+		
+		d_angani_first_fleet = {
+			allow = { has_landed_title = k_angani_navy }
+			color = { 92 92 92 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 289
+			landless = yes
+			tribe = yes
+		}
+		d_angani_second_fleet = {
+			allow = { has_landed_title = k_angani_navy }
+			color = { 108 108 108 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 289
+			landless = yes
+			tribe = yes
+		}
+		d_angani_third_fleet = {
+			allow = { has_landed_title = k_angani_navy }
+			color = { 84 84 84 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 289
+			landless = yes
+			tribe = yes
+		}
+		d_angani_fourth_fleet = {
+			allow = { has_landed_title = k_angani_navy }
+			color = { 116 116 116 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 289
+			landless = yes
+			tribe = yes
+		}
+		d_angani_fifth_fleet = {
+			allow = { has_landed_title = k_angani_navy }
+			color = { 76 76 76 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 289
+			landless = yes
+			tribe = yes
+		}
+	}
+}
+e_frontier = {
+	color = { 0 0 255 }
+	color2 = { 255 255 0 }
+	
+	capital = 87 # Armstrong
+	
+	allow = {
+		primary_title = { title = k_frontier }
+		num_of_king_titles = 3
+	}
+	
+	# Navy
+	k_frontier_navy = {
+		allow = { has_landed_title = e_frontier }
+		color = { 0 0 128 }
+		color2 = { 192 192 192 }
+		
+		short_name = yes
+		
+		title = "GRANDADMIRAL"
+		title_female = "GRANDADMIRAL_female"
+		title_foa = "GRANDADMIRALFOA"
+		title_foa_female = "GRANDADMIRALFOA_female"
+		capital = 87
+		landless = yes
+		tribe = yes
+		
+		d_frontier_first_fleet = {
+			allow = { has_landed_title = k_frontier_navy }
+			color = { 16 16 128 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 87
+			landless = yes
+			tribe = yes
+		}
+		d_frontier_second_fleet = {
+			allow = { has_landed_title = k_frontier_navy }
+			color = { 32 32 128 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 87
+			landless = yes
+			tribe = yes
+		}
+		d_frontier_third_fleet = {
+			allow = { has_landed_title = k_frontier_navy }
+			color = { 48 48 128 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 87
+			landless = yes
+			tribe = yes
+		}
+		d_frontier_fourth_fleet = {
+			allow = { has_landed_title = k_frontier_navy }
+			color = { 64 64 128 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 87
+			landless = yes
+			tribe = yes
+		}
+		d_frontier_fifth_fleet = {
+			allow = { has_landed_title = k_frontier_navy }
+			color = { 80 80 128 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 87
+			landless = yes
+			tribe = yes
+		}
+	}
+}
+e_centauri_reach = {
+	color = { 32 32 32 }
+	color2 = { 200 200 200 }
+	
+	capital = 206 # Gagarin
+	
+	allow = {
+		primary_title = { title = k_centauri_reach }
+		num_of_king_titles = 3
+	}
+	
+	# Navy
+	k_centauri_navy = {
+		allow = { has_landed_title = e_centauri_reach }
+		color = { 16 16 16 }
+		color2 = { 192 192 192 }
+		
+		short_name = yes
+		
+		title = "GRANDADMIRAL"
+		title_female = "GRANDADMIRAL_female"
+		title_foa = "GRANDADMIRALFOA"
+		title_foa_female = "GRANDADMIRALFOA_female"
+		capital = 206
+		landless = yes
+		tribe = yes
+		
+		d_centauri_first_fleet = {
+			allow = { has_landed_title = k_centauri_navy }
+			color = { 32 16 16 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 206
+			landless = yes
+			tribe = yes
+		}
+		d_centauri_second_fleet = {
+			allow = { has_landed_title = k_centauri_navy }
+			color = { 16 32 16 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 206
+			landless = yes
+			tribe = yes
+		}
+		d_centauri_third_fleet = {
+			allow = { has_landed_title = k_centauri_navy }
+			color = { 16 16 32 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 206
+			landless = yes
+			tribe = yes
+		}
+		d_centauri_fourth_fleet = {
+			allow = { has_landed_title = k_centauri_navy }
+			color = { 32 32 16 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 206
+			landless = yes
+			tribe = yes
+		}
+		d_centauri_fifth_fleet = {
+			allow = { has_landed_title = k_centauri_navy }
+			color = { 16 32 32 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 206
+			landless = yes
+			tribe = yes
+		}
+	}
+}
+e_xin_zizhiqu = {
+	color = { 164 164 0 }
+	color2 = { 255 0 0 }
+	
+	capital = 263 # Xin Qin
+	
+	allow = {
+		primary_title = { title = k_xin_zizhiqu }
+		num_of_king_titles = 3
+	}
+	
+	# Navy
+	k_xin_zizhiqu_navy = {
+		allow = { has_landed_title = e_xin_zizhiqu }
+		color = { 82 82 0 }
+		color2 = { 192 192 192 }
+		
+		short_name = yes
+		
+		title = "GRANDADMIRAL"
+		title_female = "GRANDADMIRAL_female"
+		title_foa = "GRANDADMIRALFOA"
+		title_foa_female = "GRANDADMIRALFOA_female"
+		capital = 263
+		landless = yes
+		tribe = yes
+		
+		d_xin_zizhiqu_first_fleet = {
+			allow = { has_landed_title = k_xin_zizhiqu_navy }
+			color = { 82 82 16 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 263
+			landless = yes
+			tribe = yes
+		}
+		d_xin_zizhiqu_second_fleet = {
+			allow = { has_landed_title = k_xin_zizhiqu_navy }
+			color = { 82 82 32 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 263
+			landless = yes
+			tribe = yes
+		}
+		d_xin_zizhiqu_third_fleet = {
+			allow = { has_landed_title = k_xin_zizhiqu_navy }
+			color = { 82 82 48 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 263
+			landless = yes
+			tribe = yes
+		}
+		d_xin_zizhiqu_fourth_fleet = {
+			allow = { has_landed_title = k_xin_zizhiqu_navy }
+			color = { 82 82 64 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 263
+			landless = yes
+			tribe = yes
+		}
+		d_xin_zizhiqu_fifth_fleet = {
+			allow = { has_landed_title = k_xin_zizhiqu_navy }
+			color = { 82 82 80 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 263
+			landless = yes
+			tribe = yes
+		}
+	}
+}
+e_helix = {
+	color = { 200 0 200 }
+	color2 = { 0 200 200 }
+	
+	capital = 102 # Eye of God
+	
+	allow = {
+		primary_title = { title = k_helix }
+		num_of_king_titles = 3
+	}
+	
+	# Navy
+	k_helix_navy = {
+		allow = { has_landed_title = e_helix }
+		color = { 100 0 100 }
+		color2 = { 192 192 192 }
+		
+		short_name = yes
+		
+		title = "GRANDADMIRAL"
+		title_female = "GRANDADMIRAL_female"
+		title_foa = "GRANDADMIRALFOA"
+		title_foa_female = "GRANDADMIRALFOA_female"
+		capital = 102
+		landless = yes
+		tribe = yes
+		
+		d_helix_first_fleet = {
+			allow = { has_landed_title = k_helix_navy }
+			color = { 100 16 100 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 102
+			landless = yes
+			tribe = yes
+		}
+		d_helix_second_fleet = {
+			allow = { has_landed_title = k_helix_navy }
+			color = { 100 32 100 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 102
+			landless = yes
+			tribe = yes
+		}
+		d_helix_third_fleet = {
+			allow = { has_landed_title = k_helix_navy }
+			color = { 100 48 100 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 102
+			landless = yes
+			tribe = yes
+		}
+		d_helix_fourth_fleet = {
+			allow = { has_landed_title = k_helix_navy }
+			color = { 100 64 100 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 102
+			landless = yes
+			tribe = yes
+		}
+		d_helix_fifth_fleet = {
+			allow = { has_landed_title = k_helix_navy }
+			color = { 100 80 100 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 102
+			landless = yes
+			tribe = yes
+		}
+	}
+}
+e_novyy_edem = {
+	color = { 120 200 0 }
+	color2 = { 20 20 20 }
+	
+	capital = 162 # Novyy Edem
+	
+	allow = {
+		primary_title = { title = k_novyy_edem }
+		num_of_king_titles = 3
+	}
+	
+	# Navy
+	k_novyy_edem_navy = {
+		allow = { has_landed_title = e_novyy_edem }
+		color = { 60 100 0 }
+		color2 = { 192 192 192 }
+		
+		short_name = yes
+		
+		title = "GRANDADMIRAL"
+		title_female = "GRANDADMIRAL_female"
+		title_foa = "GRANDADMIRALFOA"
+		title_foa_female = "GRANDADMIRALFOA_female"
+		capital = 162
+		landless = yes
+		tribe = yes
+		
+		d_novyy_edem_first_fleet = {
+			allow = { has_landed_title = k_novyy_edem_navy }
+			color = { 60 100 16 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 162
+			landless = yes
+			tribe = yes
+		}
+		d_novyy_edem_second_fleet = {
+			allow = { has_landed_title = k_novyy_edem_navy }
+			color = { 60 100 32 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 162
+			landless = yes
+			tribe = yes
+		}
+		d_novyy_edem_third_fleet = {
+			allow = { has_landed_title = k_novyy_edem_navy }
+			color = { 60 100 48 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 162
+			landless = yes
+			tribe = yes
+		}
+		d_novyy_edem_fourth_fleet = {
+			allow = { has_landed_title = k_novyy_edem_navy }
+			color = { 60 100 64 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 162
+			landless = yes
+			tribe = yes
+		}
+		d_novyy_edem_fifth_fleet = {
+			allow = { has_landed_title = k_novyy_edem_navy }
+			color = { 60 100 80 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 162
+			landless = yes
+			tribe = yes
+		}
+	}
+}
+e_witchhead_nebula = {
+	color = { 128 128 255 }
+	color2 = { 128 0 128 }
+	
+	capital = 215 # Fukuoka
+	
+	allow = {
+		primary_title = { title = k_witchhead_nebula }
+		num_of_king_titles = 3
+	}
+	
+	# Navy
+	k_witchhead_navy = {
+		allow = { has_landed_title = e_witchhead_nebula }
+		color = { 64 64 128 }
+		color2 = { 192 192 192 }
+		
+		short_name = yes
+		
+		title = "GRANDADMIRAL"
+		title_female = "GRANDADMIRAL_female"
+		title_foa = "GRANDADMIRALFOA"
+		title_foa_female = "GRANDADMIRALFOA_female"
+		capital = 215
+		landless = yes
+		tribe = yes
+		
+		d_witchhead_first_fleet = {
+			allow = { has_landed_title = k_witchhead_navy }
+			color = { 64 64 112 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 215
+			landless = yes
+			tribe = yes
+		}
+		d_witchhead_second_fleet = {
+			allow = { has_landed_title = k_witchhead_navy }
+			color = { 64 64 144 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 215
+			landless = yes
+			tribe = yes
+		}
+		d_witchhead_third_fleet = {
+			allow = { has_landed_title = k_witchhead_navy }
+			color = { 64 64 96 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 215
+			landless = yes
+			tribe = yes
+		}
+		d_witchhead_fourth_fleet = {
+			allow = { has_landed_title = k_witchhead_navy }
+			color = { 64 64 160 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 215
+			landless = yes
+			tribe = yes
+		}
+		d_witchhead_fifth_fleet = {
+			allow = { has_landed_title = k_witchhead_navy }
+			color = { 64 64 80 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 215
+			landless = yes
+			tribe = yes
+		}
+	}
+}
+e_avalon = {
+	color = { 128 0 0 }
+	color2 = { 200 200 200 }
+	
+	capital = 25 # Avalon
+	
+	allow = {
+		primary_title = { title = k_avalon }
+		num_of_king_titles = 3
+	}
+	
+	# Navy
+	k_avalon_navy = {
+		allow = { has_landed_title = e_avalon }
+		color = { 64 0 0 }
+		color2 = { 192 192 192 }
+		
+		short_name = yes
+		
+		title = "GRANDADMIRAL"
+		title_female = "GRANDADMIRAL_female"
+		title_foa = "GRANDADMIRALFOA"
+		title_foa_female = "GRANDADMIRALFOA_female"
+		capital = 267
+		landless = yes
+		tribe = yes
+		
+		d_avalon_first_fleet = {
+			allow = { has_landed_title = k_avalon_navy }
+			color = { 64 16 16 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 25
+			landless = yes
+			tribe = yes
+		}
+		d_avalon_second_fleet = {
+			allow = { has_landed_title = k_avalon_navy }
+			color = { 64 32 32 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 25
+			landless = yes
+			tribe = yes
+		}
+		d_avalon_third_fleet = {
+			allow = { has_landed_title = k_avalon_navy }
+			color = { 64 48 48 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 25
+			landless = yes
+			tribe = yes
+		}
+		d_avalon_fourth_fleet = {
+			allow = { has_landed_title = k_avalon_navy }
+			color = { 64 64 64 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 25
+			landless = yes
+			tribe = yes
+		}
+		d_avalon_fifth_fleet = {
+			allow = { has_landed_title = k_avalon_navy }
+			color = { 64 80 80 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 25
+			landless = yes
+			tribe = yes
+		}
+	}
+}
+e_jion = {
+	color = { 72 124 16 }
+	color2 = { 128 0 0 }
+	
+	capital = 126 # Jion
+	
+	allow = {
+		primary_title = { title = k_jion }
+		num_of_king_titles = 3
+	}
+	
+	# Navy
+	k_jion_navy = {
+		color = { 36 62 8 }
+		color2 = { 192 192 192 }
+		
+		allow = { has_landed_title = e_jion }
+		
+		short_name = yes
+		
+		title = "GRANDADMIRAL"
+		title_female = "GRANDADMIRAL_female"
+		title_foa = "GRANDADMIRALFOA"
+		title_foa_female = "GRANDADMIRALFOA_female"
+		capital = 126
+		landless = yes
+		tribe = yes
+		
+		d_jion_first_fleet = {
+			allow = { has_landed_title = k_jion_navy }
+			color = { 36 62 16 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 126
+			landless = yes
+			tribe = yes
+		}
+		d_jion_second_fleet = {
+			allow = { has_landed_title = k_jion_navy }
+			color = { 44 62 8 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 126
+			landless = yes
+			tribe = yes
+		}
+		d_jion_third_fleet = {
+			allow = { has_landed_title = k_jion_navy }
+			color = { 36 62 0 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 126
+			landless = yes
+			tribe = yes
+		}
+		d_jion_fourth_fleet = {
+			allow = { has_landed_title = k_jion_navy }
+			color = { 28 62 8 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 126
+			landless = yes
+			tribe = yes
+		}
+		d_jion_fifth_fleet = {
+			allow = { has_landed_title = k_jion_navy }
+			color = { 24 64 16 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 126
+			landless = yes
+			tribe = yes
+		}
+	}
+}
+e_orion_reach = {
+	color = { 200 200 200 }
+	color2 = { 255 255 0 }
+	
+	capital = 404 # Meissa
+
+	allow = {
+		primary_title = { title = k_orion_reach }
+		num_of_king_titles = 3
+	}
+	
+	# Navy
+	k_orion_reach_navy = {
+		allow = { has_landed_title = e_orion_reach }
+		color = { 100 100 100 }
+		color2 = { 192 192 192 }
+		
+		short_name = yes
+		
+		title = "GRANDADMIRAL"
+		title_female = "GRANDADMIRAL_female"
+		title_foa = "GRANDADMIRALFOA"
+		title_foa_female = "GRANDADMIRALFOA_female"
+		capital = 404
+		landless = yes
+		tribe = yes
+		
+		d_orion_reach_first_fleet = {
+			allow = { has_landed_title = k_orion_reach_navy }
+			color = { 116 116 116 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 404
+			landless = yes
+			tribe = yes
+		}
+		d_orion_reach_second_fleet = {
+			allow = { has_landed_title = k_orion_reach_navy }
+			color = { 132 132 132 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 404
+			landless = yes
+			tribe = yes
+		}
+		d_orion_reach_third_fleet = {
+			allow = { has_landed_title = k_orion_reach_navy }
+			color = { 148 148 148 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 404
+			landless = yes
+			tribe = yes
+		}
+		d_orion_reach_fourth_fleet = {
+			allow = { has_landed_title = k_orion_reach_navy }
+			color = { 164 164 164 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 404
+			landless = yes
+			tribe = yes
+		}
+		d_orion_reach_fifth_fleet = {
+			allow = { has_landed_title = k_orion_reach_navy }
+			color = { 180 180 180 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 404
+			landless = yes
+			tribe = yes
+		}
 	}
 }

@@ -101,7 +101,10 @@ character_event = {
 		create_character = {
 			female = no
 			age = 0
-			dna = ROOT
+			culture = ROOT
+			religion = ROOT
+			dynasty = ROOT
+			#dna = ROOT
 		}
 		new_character = {
 			set_father = ROOT
@@ -259,6 +262,7 @@ character_event = {
 			# Send to parent's court
 			ROOT = { reverse_banish = PREV }
 		}
+		recalc_succession = yes
 	}
 }
 # Female clone is decanted
@@ -274,7 +278,10 @@ character_event = {
 		create_character = {
 			female = yes
 			age = 0
-			dna = ROOT
+			culture = ROOT
+			religion = ROOT
+			dynasty = ROOT
+			#dna = ROOT
 		}
 		new_character = {
 			set_mother = ROOT
@@ -432,6 +439,7 @@ character_event = {
 			# Send to parent's court
 			ROOT = { reverse_banish = PREV }
 		}
+		recalc_succession = yes
 	}
 	
 	option = {
@@ -440,7 +448,7 @@ character_event = {
 		create_character = {
 			female = yes
 			age = 0
-			dna = ROOT
+			#dna = ROOT
 		}
 		new_character = {
 			set_father = ROOT
@@ -603,6 +611,7 @@ character_event = {
 			# Send to parent's court
 			ROOT = { reverse_banish = PREV }
 		}
+		recalc_succession = yes
 	}
 }
 
@@ -627,7 +636,9 @@ character_event = {
 		create_character = {
 			female = no
 			age = 0
-			dna = FROMFROM
+			culture = FROMFROM
+			religion = FROMFROM
+			dynasty = FROMFROM
 		}
 		new_character = {
 			set_father = FROMFROM
@@ -786,6 +797,7 @@ character_event = {
 			FROM = { FROM = { reverse_banish = PREV } }
 			FROM = { FROM = { character_event = { id = clone.7 tooltip = "EVTTOOLTIPCLONE7" } } }
 		}
+		FROM = { FROM = { recalc_succession = yes } }
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -875,7 +887,10 @@ character_event = {
 		create_character = {
 			female = no
 			age = 0
-			dna = FROMFROM
+			culture = FROMFROM
+			religion = FROMFROM
+			dynasty = FROMFROM
+			#dna = FROMFROM
 		}
 		new_character = {
 			set_father = FROMFROM
@@ -1034,6 +1049,7 @@ character_event = {
 			ROOT = { reverse_banish = PREV }
 			FROM = { FROM = { character_event = { id = clone.8 tooltip = "EVTTOOLTIPCLONE8" } } }
 		}
+		FROM = { FROM = { recalc_succession = yes } }
 		ai_chance = { factor = 50 }
 	}
 }
@@ -1060,7 +1076,10 @@ character_event = {
 		create_character = {
 			female = no
 			age = 0
-			dna = FROMFROM
+			culture = FROMFROM
+			religion = FROMFROM
+			dynasty = FROMFROM
+			# dna = FROMFROM
 		}
 		new_character = {
 			set_mother = FROMFROM
@@ -1309,7 +1328,10 @@ character_event = {
 		create_character = {
 			female = no
 			age = 0
-			dna = FROMFROM
+			culture = FROMFROM
+			religion = FROMFROM
+			dynasty = FROMFROM
+			# dna = FROMFROM
 		}
 		new_character = {
 			set_mother = FROMFROM
@@ -1484,7 +1506,10 @@ character_event = {
 		create_character = {
 			female = no
 			age = 0
-			dna = FROMFROM
+			culture = FROMFROM
+			religion = FROMFROM
+			dynasty = FROMFROM
+			# dna = FROMFROM
 		}
 		new_character = {
 			set_mother = FROMFROM
@@ -1643,6 +1668,7 @@ character_event = {
 			FROM = { FROM = { reverse_banish = PREV } }
 			FROM = { FROM = { character_event = { id = clone.7 tooltip = "EVTTOOLTIPCLONE7" } } }
 		}
+		FROM = { FROM = { recalc_succession = yes } }
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -1733,7 +1759,10 @@ character_event = {
 		create_character = {
 			female = no
 			age = 0
-			dna = FROMFROM
+			culture = FROMFROM
+			religion = FROMFROM
+			dynasty = FROMFROM
+			#dna = FROMFROM
 		}
 		new_character = {
 			set_mother = FROMFROM
@@ -1892,6 +1921,7 @@ character_event = {
 			ROOT = { reverse_banish = PREV }
 			FROM = { FROM = { character_event = { id = clone.8 tooltip = "EVTTOOLTIPCLONE8" } } }
 		}
+		FROM = { FROM = { recalc_succession = yes } }
 		ai_chance = { factor = 50 }
 	}
 }

@@ -1,4 +1,11 @@
-2385.1.1 = { }	# Founding of the Homeworld Alliance/United Commonwealth of Terran States
+2385.1.1 = {
+	law = centralization_2
+	law = military_vassal_legitimacy_2
+	law = theocracy_vassal_legitimacy_2
+	law = republic_vassal_legitimacy_1
+	law = legislative_authority_1
+	law = public_order_1
+}	# Founding of the Homeworld Alliance/United Commonwealth of Terran States
 
 2489.1.1 = {
 	liege = "e_terran_confederation"

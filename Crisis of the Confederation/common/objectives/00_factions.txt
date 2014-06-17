@@ -1,0 +1,1607 @@
+# Faction tags need to start with 'faction_'
+
+# Supported types:
+# liege_titles, liege_titles_w_claimant, character
+
+# The succession law factions have hard coded elements to ensure that the correct heir is shown in Plot and 
+# Faction interfaces and that AI faction members vote for laws in accordance with the faction goal.
+# The valid tags correspond to the law name: faction_succ_seniority, faction_succ_primogeniture, etc.
+# (faction_succ_ultimogeniture is fully supported by the code, but not currently implemented)
+
+###############
+# FACTIONS
+###############
+# Anti-Centralization
+faction_anti_centralization = {
+	type = liege_titles
+	
+	warning_level = 0.7 # At this level of faction power we give player an alert. Set to 0 for no alerts.
+	
+	# Plotter scope
+	potential = {
+		prisoner = no
+		is_ruler = yes
+		independent = no
+		is_landed = yes
+		is_adult = yes
+		NOT = { trait = incapable }
+		liege = { NOT = { any_demesne_title = { temporary = yes } } }
+		primary_title = { higher_tier_than = BARON }
+		
+		NOT = { in_faction = faction_pro_centralization }
+	}
+	
+	# Target scope
+	allow = {
+		higher_tier_than = DUKE
+	
+		holder_scope = { independent = yes }
+		
+		OR = {
+			is_primary_holder_title = yes
+			is_titular = no
+		}
+
+		OR = {
+			has_law = centralization_0
+			has_law = centralization_1
+			has_law = centralization_2
+			has_law = centralization_3
+			has_law = centralization_4
+		}
+		
+		holder_scope = {
+			NOT = {
+				any_war = {
+					war_title = ROOT
+					using_cb = civil_war
+				}
+			}
+			
+			NOT = {
+				reverse_has_opinion_modifier = {
+					who = FROM
+					modifier = opinion_coerced_into_leaving_faction
+				}
+			}
+		}
+	}
+	
+	# Faction member scope (ROOT = joiner, FROM = target)
+	allow_join = {
+		ROOT = {
+			is_ruler = yes
+			independent = no
+			is_landed = yes
+			is_adult = yes
+			NOT = { trait = incapable }
+			prisoner = no
+			NOT = { in_faction = faction_pro_centralization }
+		}
+	}		
+	
+	# AI creation weight
+	chance = {
+		factor = 1		
+		modifier = {
+			factor = 0
+			FROM = { prisoner = yes }
+		}
+		
+		# Situational Issues
+		modifier = {
+			factor = 0
+			NOT = { FROM = { crownlaw_title = { title = ROOT } } }
+		}
+		modifier = {
+			factor = 0
+			holder_scope = { FROM = { has_opinion_modifier = { who = PREV modifier = opinion_lowered_crown_authority_good } } }
+		}
+		modifier = {
+			factor = 0
+			holder_scope = { FROM = { has_opinion_modifier = { who = PREV modifier = opinion_lowered_crown_authority_bad } } }
+		}
+		modifier = {
+			factor = 0
+			FROM = { preparing_invasion = yes }
+		}
+		
+		# Ideology
+		modifier = {
+			factor = 2
+			FROM = {
+				OR = {
+					religion = terran_federalist
+					religion = colonial_separatist
+					religion = neo_feudal
+					religion = sect_adoptionist
+					religion = adoptionist
+					religion = xenoterran
+				}
+				religion_authority = 0.5
+			}
+		}
+		modifier = {
+			factor = 2
+			FROM = {
+				OR = {
+					religion = terran_federalist
+					religion = colonial_separatist
+					religion = neo_feudal
+					religion = sect_adoptionist
+					religion = adoptionist
+					religion = xenoterran
+				}
+				religion_authority = 0.25
+				NOT = { trait = pragmatic }
+			}
+		}
+		modifier = {
+			factor = 2
+			FROM = {
+				OR = {
+					religion = terran_federalist
+					religion = colonial_separatist
+					religion = neo_feudal
+					religion = sect_adoptionist
+					religion = adoptionist
+					religion = xenoterran
+				}
+				trait = radical
+			}
+		}
+		modifier = {
+			factor = 0.5
+			FROM = {
+				OR = {
+					religion = terran_republican
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_socialist
+					religion = orthodox
+					religion = solarian
+				}
+				religion_authority = 0.5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			FROM = {
+				OR = {
+					religion = terran_republican
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_socialist
+					religion = orthodox
+					religion = solarian
+				}
+				religion_authority = 0.25
+				NOT = { trait = pragmatic }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			FROM = {
+				OR = {
+					religion = terran_republican
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_socialist
+					religion = orthodox
+					religion = solarian
+				}
+				trait = radical
+			}
+		}
+		
+		# Current centralization
+		modifier = {
+			factor = 0.5
+			has_law = centralization_3
+		}
+		modifier = {
+			factor = 0.25
+			has_law = centralization_2
+		}
+		modifier = {
+			factor = 0.12
+			has_law = centralization_1
+		}
+		modifier = {
+			factor = 0.06
+			has_law = centralization_0
+		}
+		
+		# Cultural and ideological differences
+		modifier = {
+			factor = 4
+			holder_scope = { NOT = { culture_group = FROM } }
+		}
+		modifier = {
+			factor = 4
+			holder_scope = { NOT = { religion = FROM } }
+		}
+		
+		# Personality Effects
+		modifier = {
+			factor = 0.25
+			NOT = { current_heir = { character = FROM } }
+			FROM = { trait = content }
+		}
+		modifier = {
+			factor = 4
+			NOT = { current_heir = { character = FROM } }
+			FROM = { trait = ambitious }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { current_heir = { character = FROM } }
+			FROM = { trait = friendly }
+		}
+		modifier = {
+			factor = 2
+			NOT = { current_heir = { character = FROM } }
+			FROM = { trait = cold }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { current_heir = { character = FROM } }
+			FROM = { trait = carefree }
+		}
+		modifier = {
+			factor = 2
+			NOT = { current_heir = { character = FROM } }
+			FROM = { trait = disciplined }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { current_heir = { character = FROM } }
+			FROM = { trait = humble }
+		}
+		modifier = {
+			factor = 2
+			NOT = { current_heir = { character = FROM } }
+			FROM = { trait = proud }
+		}
+		modifier = {
+			factor = 0.5
+			has_law = legislative_authority_0
+			FROM = { trait = craven }
+		}
+		modifier = {
+			factor = 0.5
+			has_law = legislative_authority_0
+			FROM = { NOT = { trait = brave } }
+		}
+		modifier = {
+			factor = 0.5
+			FROM = { trait = craven }
+		}
+		modifier = {
+			factor = 0.5
+			FROM = { NOT = { trait = brave } }
+		}
+		
+		modifier = {
+			factor = 0.8
+			NOT = { has_law = legislative_authority_1 }
+			holder_scope = { reverse_opinion = { who = FROM value = 10 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { has_law = legislative_authority_1 }
+			holder_scope = { reverse_opinion = { who = FROM value = 20 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { has_law = legislative_authority_1 }
+			holder_scope = { reverse_opinion = { who = FROM value = 30 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { has_law = legislative_authority_1 }
+			holder_scope = { reverse_opinion = { who = FROM value = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { has_law = legislative_authority_1 }
+			holder_scope = { reverse_opinion = { who = FROM value = 50 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { has_law = legislative_authority_1 }
+			holder_scope = { reverse_opinion = { who = FROM value = 60 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { has_law = legislative_authority_1 }
+			holder_scope = { reverse_opinion = { who = FROM value = 70 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { has_law = legislative_authority_1 }
+			holder_scope = { reverse_opinion = { who = FROM value = 80 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { has_law = legislative_authority_1 }
+			holder_scope = { reverse_opinion = { who = FROM value = 90 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { has_law = legislative_authority_1 }
+			holder_scope = { reverse_opinion = { who = FROM value = 100 } }
+		}
+	}
+	
+	# AI membership weight: ROOT is the prospective member. FROM is the faction leader. FROMFROM is the target title or character.
+	membership = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				prisoner = yes
+				trait = incapable
+				is_adult = no
+				is_landed = no
+				preparing_invasion = yes
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			NOT = { crownlaw_title = { title = FROMFROM } }
+		}
+		
+		modifier = {
+			factor = 0
+			has_opinion_modifier = {
+				who = LIEGE
+				modifier = opinion_coerced_into_leaving_faction
+			}
+		}
+		
+		modifier = {
+			factor = 1000
+			has_opinion_modifier = {
+				who = FROM
+				modifier = opinion_coerced_into_joining_faction
+			}
+		}
+		
+		# Ideology
+		modifier = {
+			factor = 2
+			OR = {
+				religion = terran_federalist
+				religion = colonial_separatist
+				religion = neo_feudal
+				religion = sect_adoptionist
+				religion = adoptionist
+				religion = xenoterran
+			}
+			religion_authority = 0.5
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				religion = terran_federalist
+				religion = colonial_separatist
+				religion = neo_feudal
+				religion = sect_adoptionist
+				religion = adoptionist
+				religion = xenoterran
+			}
+			religion_authority = 0.25
+			NOT = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				religion = terran_federalist
+				religion = colonial_separatist
+				religion = neo_feudal
+				religion = sect_adoptionist
+				religion = adoptionist
+				religion = xenoterran
+			}
+			trait = radical
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				religion = terran_republican
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_socialist
+				religion = orthodox
+				religion = solarian
+			}
+			religion_authority = 0.5
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				religion = terran_republican
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_socialist
+				religion = orthodox
+				religion = solarian
+			}
+			religion_authority = 0.25
+			NOT = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				religion = terran_republican
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_socialist
+				religion = orthodox
+				religion = solarian
+			}
+			trait = radical
+		}
+		
+		# Current centralization
+		modifier = {
+			factor = 0.5
+			FROMFROM = { has_law = centralization_3 }
+		}
+		modifier = {
+			factor = 0.25
+			FROMFROM = { has_law = centralization_2 }
+		}
+		modifier = {
+			factor = 0.12
+			FROMFROM = { has_law = centralization_1 }
+		}
+		modifier = {
+			factor = 0.06
+			FROMFROM = { has_law = centralization_0 }
+		}
+		
+		# Cultural and ideological differences
+		modifier = {
+			factor = 4
+			holder_scope = { NOT = { culture_group = FROM } }
+		}
+		modifier = {
+			factor = 4
+			holder_scope = { NOT = { religion = FROM } }
+		}
+		
+		# Personality Effects
+		modifier = {
+			factor = 0.25
+			NOT = { FROMFROM = { current_heir = { character = ROOT } } }
+			trait = content
+		}
+		modifier = {
+			factor = 4
+			NOT = { FROMFROM = { current_heir = { character = ROOT } } }
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { FROMFROM = { current_heir = { character = ROOT } } }
+			trait = friendly
+		}
+		modifier = {
+			factor = 2
+			NOT = { FROMFROM = { current_heir = { character = ROOT } } }
+			trait = cold
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { FROMFROM = { current_heir = { character = ROOT } } }
+			trait = carefree
+		}
+		modifier = {
+			factor = 2
+			NOT = { FROMFROM = { current_heir = { character = ROOT } } }
+			trait = disciplined
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { FROMFROM = { current_heir = { character = ROOT } } }
+			trait = humble
+		}
+		modifier = {
+			factor = 2
+			NOT = { FROMFROM = { current_heir = { character = ROOT } } }
+			trait = proud
+		}
+		
+		modifier = {
+			factor = 0.5
+			FROMFROM = { has_law = legislative_authority_0 }
+			trait = craven
+		}
+		modifier = {
+			factor = 0.5
+			FROMFROM = { has_law = legislative_authority_0 }
+			NOT = { trait = brave }
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = {
+				NOT = { has_law = legislative_authority_1 }
+				holder_scope = { reverse_opinion = { who = ROOT value = 10 } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = {
+				NOT = { has_law = legislative_authority_1 }
+				holder_scope = { reverse_opinion = { who = ROOT value = 20 } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = {
+				NOT = { has_law = legislative_authority_1 }
+				holder_scope = { reverse_opinion = { who = ROOT value = 30 } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = {
+				NOT = { has_law = legislative_authority_1 }
+				holder_scope = { reverse_opinion = { who = ROOT value = 40 } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = {
+				NOT = { has_law = legislative_authority_1 }
+				holder_scope = { reverse_opinion = { who = ROOT value = 50 } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = {
+				NOT = { has_law = legislative_authority_1 }
+				holder_scope = { reverse_opinion = { who = ROOT value = 60 } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = {
+				NOT = { has_law = legislative_authority_1 }
+				holder_scope = { reverse_opinion = { who = ROOT value = 70 } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = {
+				NOT = { has_law = legislative_authority_1 }
+				holder_scope = { reverse_opinion = { who = ROOT value = 80 } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = {
+				NOT = { has_law = legislative_authority_1 }
+				holder_scope = { reverse_opinion = { who = ROOT value = 90 } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = {
+				NOT = { has_law = legislative_authority_1 }
+				holder_scope = { reverse_opinion = { who = ROOT value = 100 } }
+			}
+		}
+	}
+	
+	success = {
+		holder_scope = {
+			FROM = {
+				OR = {
+					has_opinion_modifier = { who = PREV modifier = opinion_lowered_crown_authority_good }
+					has_opinion_modifier = { who = PREV modifier = opinion_lowered_crown_authority_bad }
+				}
+			}
+		}
+	}
+	
+	abort = {
+		always = no
+	}
+	
+	abort_effect = {
+	}
+	
+	effect = {
+		FROM = {
+			any_faction_backer = {
+				faction = faction_anti_centralization
+				reverse_opinion = { who = PREV modifier = opinion_supported_my_proposal }
+			}
+		}
+	}
+}
+
+# Pro-Centralization
+faction_pro_centralization = {
+	type = liege_titles
+	
+	warning_level = 0.7 # At this level of faction power we give player an alert. Set to 0 for no alerts.
+	
+	# Plotter scope
+	potential = {
+		prisoner = no
+		is_ruler = yes
+		independent = no
+		is_landed = yes
+		is_adult = yes
+		NOT = { trait = incapable }
+		liege = { NOT = { any_demesne_title = { temporary = yes } } }
+		primary_title = { higher_tier_than = BARON }
+		
+		NOT = { in_faction = faction_anti_centralization }
+	}
+	
+	# Target scope
+	allow = {
+		higher_tier_than = DUKE
+	
+		holder_scope = { independent = yes }
+		
+		OR = {
+			is_primary_holder_title = yes
+			is_titular = no
+		}
+
+		OR = {
+			has_law = centralization_0
+			has_law = centralization_1
+			has_law = centralization_2
+			has_law = centralization_3
+			has_law = centralization_4
+		}
+		
+		holder_scope = {
+			NOT = {
+				any_war = {
+					war_title = ROOT
+					using_cb = civil_war
+				}
+			}
+			
+			NOT = {
+				reverse_has_opinion_modifier = {
+					who = FROM
+					modifier = opinion_coerced_into_leaving_faction
+				}
+			}
+		}
+	}
+	
+	# Faction member scope (ROOT = joiner, FROM = target)
+	allow_join = {
+		ROOT = {
+			is_ruler = yes
+			independent = no
+			is_landed = yes
+			is_adult = yes
+			NOT = { trait = incapable }
+			prisoner = no
+			NOT = { in_faction = faction_anti_centralization }
+		}
+	}		
+	
+	# AI creation weight
+	chance = {
+		factor = 1		
+		modifier = {
+			factor = 0
+			FROM = { prisoner = yes }
+		}
+		
+		# Situational Issues
+		modifier = {
+			factor = 0
+			NOT = { FROM = { crownlaw_title = { title = ROOT } } }
+		}
+		modifier = {
+			factor = 0
+			holder_scope = { FROM = { has_opinion_modifier = { who = PREV modifier = opinion_raised_crown_authority_good } } }
+		}
+		modifier = {
+			factor = 0
+			holder_scope = { FROM = { has_opinion_modifier = { who = PREV modifier = opinion_raised_crown_authority_bad } } }
+		}
+		modifier = {
+			factor = 0
+			FROM = { preparing_invasion = yes }
+		}
+		
+		# Ideology
+		modifier = {
+			factor = 0.5
+			FROM = {
+				OR = {
+					religion = terran_federalist
+					religion = colonial_separatist
+					religion = neo_feudal
+					religion = sect_adoptionist
+					religion = adoptionist
+					religion = xenoterran
+				}
+				religion_authority = 0.5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			FROM = {
+				OR = {
+					religion = terran_federalist
+					religion = colonial_separatist
+					religion = neo_feudal
+					religion = sect_adoptionist
+					religion = adoptionist
+					religion = xenoterran
+				}
+				religion_authority = 0.25
+				NOT = { trait = pragmatic }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			FROM = {
+				OR = {
+					religion = terran_federalist
+					religion = colonial_separatist
+					religion = neo_feudal
+					religion = sect_adoptionist
+					religion = adoptionist
+					religion = xenoterran
+				}
+				trait = radical
+			}
+		}
+		modifier = {
+			factor = 2
+			FROM = {
+				OR = {
+					religion = terran_republican
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_socialist
+					religion = orthodox
+					religion = solarian
+				}
+				religion_authority = 0.5
+			}
+		}
+		modifier = {
+			factor = 2
+			FROM = {
+				OR = {
+					religion = terran_republican
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_socialist
+					religion = orthodox
+					religion = solarian
+				}
+				religion_authority = 0.25
+				NOT = { trait = pragmatic }
+			}
+		}
+		modifier = {
+			factor = 2
+			FROM = {
+				OR = {
+					religion = terran_republican
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_socialist
+					religion = orthodox
+					religion = solarian
+				}
+				trait = radical
+			}
+		}
+		
+		# Current centralization
+		modifier = {
+			factor = 0.5
+			has_law = centralization_1
+		}
+		modifier = {
+			factor = 0.25
+			has_law = centralization_2
+		}
+		modifier = {
+			factor = 0.12
+			has_law = centralization_3
+		}
+		modifier = {
+			factor = 0.06
+			has_law = centralization_4
+		}
+		
+		# Cultural and ideological differences
+		modifier = {
+			factor = 0.25
+			holder_scope = { NOT = { culture_group = FROM } }
+		}
+		modifier = {
+			factor = 0.25
+			holder_scope = { NOT = { religion = FROM } }
+		}
+		
+		# Personality Effects
+		modifier = {
+			factor = 0.5
+			has_law = legislative_authority_0
+			FROM = { trait = craven }
+		}
+		modifier = {
+			factor = 0.5
+			has_law = legislative_authority_0
+			FROM = { NOT = { trait = brave } }
+		}
+		modifier = {
+			factor = 0.5
+			FROM = { trait = craven }
+		}
+		modifier = {
+			factor = 0.5
+			FROM = { NOT = { trait = brave } }
+		}
+		
+		modifier = {
+			factor = 0.8
+			NOT = { has_law = legislative_authority_1 }
+			holder_scope = { reverse_opinion = { who = FROM value = 10 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { has_law = legislative_authority_1 }
+			holder_scope = { reverse_opinion = { who = FROM value = 20 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { has_law = legislative_authority_1 }
+			holder_scope = { reverse_opinion = { who = FROM value = 30 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { has_law = legislative_authority_1 }
+			holder_scope = { reverse_opinion = { who = FROM value = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { has_law = legislative_authority_1 }
+			holder_scope = { reverse_opinion = { who = FROM value = 50 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { has_law = legislative_authority_1 }
+			holder_scope = { reverse_opinion = { who = FROM value = 60 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { has_law = legislative_authority_1 }
+			holder_scope = { reverse_opinion = { who = FROM value = 70 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { has_law = legislative_authority_1 }
+			holder_scope = { reverse_opinion = { who = FROM value = 80 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { has_law = legislative_authority_1 }
+			holder_scope = { reverse_opinion = { who = FROM value = 90 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { has_law = legislative_authority_1 }
+			holder_scope = { reverse_opinion = { who = FROM value = 100 } }
+		}
+	}
+	
+	# AI membership weight: ROOT is the prospective member. FROM is the faction leader. FROMFROM is the target title or character.
+	membership = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				prisoner = yes
+				trait = incapable
+				is_adult = no
+				is_landed = no
+				preparing_invasion = yes
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			NOT = { crownlaw_title = { title = FROMFROM } }
+		}
+		
+		modifier = {
+			factor = 0
+			has_opinion_modifier = {
+				who = LIEGE
+				modifier = opinion_coerced_into_leaving_faction
+			}
+		}
+		
+		modifier = {
+			factor = 1000
+			has_opinion_modifier = {
+				who = FROM
+				modifier = opinion_coerced_into_joining_faction
+			}
+		}
+		
+		# Ideology
+		modifier = {
+			factor = 0.5
+			OR = {
+				religion = terran_federalist
+				religion = colonial_separatist
+				religion = neo_feudal
+				religion = sect_adoptionist
+				religion = adoptionist
+				religion = xenoterran
+			}
+			religion_authority = 0.5
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				religion = terran_federalist
+				religion = colonial_separatist
+				religion = neo_feudal
+				religion = sect_adoptionist
+				religion = adoptionist
+				religion = xenoterran
+			}
+			religion_authority = 0.25
+			NOT = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				religion = terran_federalist
+				religion = colonial_separatist
+				religion = neo_feudal
+				religion = sect_adoptionist
+				religion = adoptionist
+				religion = xenoterran
+			}
+			trait = radical
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				religion = terran_republican
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_socialist
+				religion = orthodox
+				religion = solarian
+			}
+			religion_authority = 0.5
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				religion = terran_republican
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_socialist
+				religion = orthodox
+				religion = solarian
+			}
+			religion_authority = 0.25
+			NOT = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				religion = terran_republican
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_socialist
+				religion = orthodox
+				religion = solarian
+			}
+			trait = radical
+		}
+		
+		# Current centralization
+		modifier = {
+			factor = 0.5
+			FROMFROM = { has_law = centralization_1 }
+		}
+		modifier = {
+			factor = 0.25
+			FROMFROM = { has_law = centralization_2 }
+		}
+		modifier = {
+			factor = 0.12
+			FROMFROM = { has_law = centralization_3 }
+		}
+		modifier = {
+			factor = 0.06
+			FROMFROM = { has_law = centralization_4 }
+		}
+		
+		# Cultural and ideological differences
+		modifier = {
+			factor = 0.25
+			holder_scope = { NOT = { culture_group = FROM } }
+		}
+		modifier = {
+			factor = 0.25
+			holder_scope = { NOT = { religion = FROM } }
+		}
+		
+		# Personality Effects
+		modifier = {
+			factor = 0.5
+			FROMFROM = { has_law = legislative_authority_0 }
+			trait = craven
+		}
+		modifier = {
+			factor = 0.5
+			FROMFROM = { has_law = legislative_authority_0 }
+			NOT = { trait = brave }
+		}
+		
+		modifier = {
+			factor = 0.8
+			FROMFROM = {
+				NOT = { has_law = legislative_authority_1 }
+				holder_scope = { reverse_opinion = { who = ROOT value = 10 } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = {
+				NOT = { has_law = legislative_authority_1 }
+				holder_scope = { reverse_opinion = { who = ROOT value = 20 } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = {
+				NOT = { has_law = legislative_authority_1 }
+				holder_scope = { reverse_opinion = { who = ROOT value = 30 } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = {
+				NOT = { has_law = legislative_authority_1 }
+				holder_scope = { reverse_opinion = { who = ROOT value = 40 } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = {
+				NOT = { has_law = legislative_authority_1 }
+				holder_scope = { reverse_opinion = { who = ROOT value = 50 } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = {
+				NOT = { has_law = legislative_authority_1 }
+				holder_scope = { reverse_opinion = { who = ROOT value = 60 } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = {
+				NOT = { has_law = legislative_authority_1 }
+				holder_scope = { reverse_opinion = { who = ROOT value = 70 } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = {
+				NOT = { has_law = legislative_authority_1 }
+				holder_scope = { reverse_opinion = { who = ROOT value = 80 } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = {
+				NOT = { has_law = legislative_authority_1 }
+				holder_scope = { reverse_opinion = { who = ROOT value = 90 } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = {
+				NOT = { has_law = legislative_authority_1 }
+				holder_scope = { reverse_opinion = { who = ROOT value = 100 } }
+			}
+		}
+	}
+	
+	success = {
+		holder_scope = {
+			FROM = {
+				OR = {
+					has_opinion_modifier = { who = PREV modifier = opinion_lowered_crown_authority_good }
+					has_opinion_modifier = { who = PREV modifier = opinion_lowered_crown_authority_bad }
+				}
+			}
+		}
+	}
+	
+	abort = {
+		always = no
+	}
+	
+	abort_effect = {
+	}
+	
+	effect = {
+		FROM = {
+			any_faction_backer = {
+				faction = faction_anti_centralization
+				reverse_opinion = { who = PREV modifier = opinion_supported_my_proposal }
+			}
+		}
+	}
+}
+
+
+# Democratic Legislature
+faction_democratic_legislature = {
+	type = liege_titles
+	
+	warning_level = 0.7 # At this level of faction power we give player an alert. Set to 0 for no alerts.
+	
+	# Plotter scope
+	potential = {
+		prisoner = no
+		is_ruler = yes
+		independent = no
+		is_landed = yes
+		is_adult = yes
+		NOT = { trait = incapable }
+		liege = { NOT = { any_demesne_title = { temporary = yes } } }
+		primary_title = { higher_tier_than = BARON }
+	}
+	
+	# Target scope
+	allow = {
+		higher_tier_than = DUKE
+	
+		holder_scope = { independent = yes }
+		
+		OR = {
+			is_primary_holder_title = yes
+			is_titular = no
+		}
+		
+		has_law = { legislative_authority_0 }
+		
+		holder_scope = {
+			NOT = {
+				any_war = {
+					war_title = ROOT
+					using_cb = civil_war
+				}
+			}
+			
+			NOT = {
+				reverse_has_opinion_modifier = {
+					who = FROM
+					modifier = opinion_coerced_into_leaving_faction
+				}
+			}
+		}
+	}
+	
+	# Faction member scope (ROOT = joiner, FROM = target)
+	allow_join = {
+		ROOT = {
+			is_ruler = yes
+			independent = no
+			is_landed = yes
+			is_adult = yes
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+	}		
+	
+	# AI creation weight
+	chance = {
+		factor = 1		
+		modifier = {
+			factor = 0
+			FROM = { prisoner = yes }
+		}
+		
+		# Situational Issues
+		modifier = {
+			factor = 0
+			NOT = { FROM = { crownlaw_title = { title = ROOT } } }
+		}
+		modifier = {
+			factor = 0
+			FROM = { preparing_invasion = yes }
+		}
+		
+		# Ideology
+		modifier = {
+			factor = 4
+			FROM = {
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_separatist
+				}
+				religion_authority = 0.5
+			}
+		}
+		modifier = {
+			factor = 4
+			FROM = {
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_separatist
+				}
+				religion_authority = 0.25
+				NOT = { trait = pragmatic }
+			}
+		}
+		modifier = {
+			factor = 4
+			FROM = {
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = colonial_separatist
+				}
+				trait = radical
+			}
+		}
+		modifier = {
+			factor = 0.25
+			FROM = {
+				OR = {
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_feudal
+				}
+				religion_authority = 0.5
+			}
+		}
+		modifier = {
+			factor = 0.25
+			FROM = {
+				OR = {
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_feudal
+				}
+				religion_authority = 0.25
+				NOT = { trait = pragmatic }
+			}
+		}
+		modifier = {
+			factor = 0.25
+			FROM = {
+				OR = {
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_feudal
+				}
+				trait = radical
+			}
+		}
+		
+		# Personality Effects
+		modifier = {
+			factor = 0.2
+			NOT = { current_heir = { character = FROM } }
+			FROM = { trait = content }
+		}
+		modifier = {
+			factor = 5
+			NOT = { current_heir = { character = FROM } }
+			FROM = { trait = ambitious }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { current_heir = { character = FROM } }
+			FROM = { trait = friendly }
+		}
+		modifier = {
+			factor = 2
+			NOT = { current_heir = { character = FROM } }
+			FROM = { trait = cold }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { current_heir = { character = FROM } }
+			FROM = { trait = carefree }
+		}
+		modifier = {
+			factor = 2
+			NOT = { current_heir = { character = FROM } }
+			FROM = { trait = disciplined }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { current_heir = { character = FROM } }
+			FROM = { trait = humble }
+		}
+		modifier = {
+			factor = 2
+			NOT = { current_heir = { character = FROM } }
+			FROM = { trait = proud }
+		}
+		modifier = {
+			factor = 0.25
+			FROM = { trait = craven }
+		}
+		modifier = {
+			factor = 0.25
+			FROM = { NOT = { trait = brave } }
+		}
+		
+		modifier = {
+			factor = 0.8
+			holder_scope = { reverse_opinion = { who = FROM value = 10 } }
+		}
+		modifier = {
+			factor = 0.8
+			holder_scope = { reverse_opinion = { who = FROM value = 20 } }
+		}
+		modifier = {
+			factor = 0.8
+			holder_scope = { reverse_opinion = { who = FROM value = 30 } }
+		}
+		modifier = {
+			factor = 0.8
+			holder_scope = { reverse_opinion = { who = FROM value = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			holder_scope = { reverse_opinion = { who = FROM value = 50 } }
+		}
+		modifier = {
+			factor = 0.8
+			holder_scope = { reverse_opinion = { who = FROM value = 60 } }
+		}
+		modifier = {
+			factor = 0.8
+			holder_scope = { reverse_opinion = { who = FROM value = 70 } }
+		}
+		modifier = {
+			factor = 0.8
+			holder_scope = { reverse_opinion = { who = FROM value = 80 } }
+		}
+		modifier = {
+			factor = 0.8
+			holder_scope = { reverse_opinion = { who = FROM value = 90 } }
+		}
+		modifier = {
+			factor = 0.8
+			holder_scope = { reverse_opinion = { who = FROM value = 100 } }
+		}
+	}
+	
+	# AI membership weight: ROOT is the prospective member. FROM is the faction leader. FROMFROM is the target title or character.
+	membership = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				prisoner = yes
+				trait = incapable
+				is_adult = no
+				is_landed = no
+				preparing_invasion = yes
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			NOT = { crownlaw_title = { title = FROMFROM } }
+		}
+		
+		modifier = {
+			factor = 0
+			has_opinion_modifier = {
+				who = LIEGE
+				modifier = opinion_coerced_into_leaving_faction
+			}
+		}
+		
+		modifier = {
+			factor = 1000
+			has_opinion_modifier = {
+				who = FROM
+				modifier = opinion_coerced_into_joining_faction
+			}
+		}
+		
+		# Ideology
+		modifier = {
+			factor = 4
+			OR = {
+				religion = terran_republican
+				religion = terran_federalist
+				religion = colonial_separatist
+			}
+			religion_authority = 0.5
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				religion = terran_republican
+				religion = terran_federalist
+				religion = colonial_separatist
+			}
+			religion_authority = 0.25
+			NOT = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				religion = terran_republican
+				religion = terran_federalist
+				religion = colonial_separatist
+			}
+			trait = radical
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+			religion_authority = 0.5
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+			religion_authority = 0.25
+			NOT = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+			trait = radical
+		}
+		
+		# Personality Effects
+		modifier = {
+			factor = 0.25
+			NOT = { FROMFROM = { current_heir = { character = ROOT } } }
+			trait = content
+		}
+		modifier = {
+			factor = 4
+			NOT = { FROMFROM = { current_heir = { character = ROOT } } }
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { FROMFROM = { current_heir = { character = ROOT } } }
+			trait = friendly
+		}
+		modifier = {
+			factor = 2
+			NOT = { FROMFROM = { current_heir = { character = ROOT } } }
+			trait = cold
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { FROMFROM = { current_heir = { character = ROOT } } }
+			trait = carefree
+		}
+		modifier = {
+			factor = 2
+			NOT = { FROMFROM = { current_heir = { character = ROOT } } }
+			trait = disciplined
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { FROMFROM = { current_heir = { character = ROOT } } }
+			trait = humble
+		}
+		modifier = {
+			factor = 2
+			NOT = { FROMFROM = { current_heir = { character = ROOT } } }
+			trait = proud
+		}
+		
+		modifier = {
+			factor = 0.5
+			trait = craven
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { trait = brave }
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = { holder_scope = { reverse_opinion = { who = ROOT value = 10 } } }
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = { holder_scope = { reverse_opinion = { who = ROOT value = 20 } } }
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = { holder_scope = { reverse_opinion = { who = ROOT value = 30 } } }
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = { holder_scope = { reverse_opinion = { who = ROOT value = 40 } } }
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = { holder_scope = { reverse_opinion = { who = ROOT value = 50 } } }
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = { holder_scope = { reverse_opinion = { who = ROOT value = 60 } } }
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = { holder_scope = { reverse_opinion = { who = ROOT value = 70 } } }
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = { holder_scope = { reverse_opinion = { who = ROOT value = 80 } } }
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = { holder_scope = { reverse_opinion = { who = ROOT value = 90 } } }
+		}
+		modifier = {
+			factor = 0.8
+			FROMFROM = { holder_scope = { reverse_opinion = { who = ROOT value = 100 } } }
+		}
+	}
+	
+	success = {
+		has_law = legislative_authority_1
+	}
+	
+	abort = {
+		always = no
+	}
+	
+	abort_effect = {
+	}
+	
+	effect = {
+		FROM = {
+			any_faction_backer = {
+				faction = faction_democratic_legislature
+				reverse_opinion = { who = PREV modifier = opinion_supported_my_proposal }
+			}
+		}
+	}
+}

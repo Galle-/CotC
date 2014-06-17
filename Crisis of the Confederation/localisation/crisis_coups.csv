@@ -1,10 +1,10 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
 CB_NAME_CIVIL_WAR;Civil War;;;;;;;;;;;;;x
 WAR_NAME_CIVIL_WAR;$ORDER$[From.PrimaryTitle.GetAdjective] Civil War;;;;;;;;;;;;;x
-plot_coup_title;Depose [This.GetTitle] [This.GetFullName];;;;;;;;;;;;;x
-plot_coup_desc;[From.GetFullName] and [From.GetHerHis] conspirators believe that [This.GetFullName] can no longer be permitted to remain [This.PrimaryTitle.GetTitle] of the [This.PrimaryTitle.GetFullName], and intend to take drastic measures to remove [This.GetHerHim] by any means necessary. A coup would currently be considered unjustified.;;;;;;;;;;;;;x
-plot_justified_coup_title;Depose [This.GetTitle] [This.GetFullName];;;;;;;;;;;;;x
-plot_justified_coup_desc;[From.GetFullName] and [From.GetHerHis] conspirators believe that [This.GetFullName] can no longer be permitted to remain [This.PrimaryTitle.GetTitle] of the [This.PrimaryTitle.GetFullName], and intend to take drastic measures to remove [This.GetHerHim] by any means necessary. A coup would currently be considered justified.;;;;;;;;;;;;;x
+plot_coup_title;Depose [This.Holder.GetTitle] [This.Holder.GetFullName];;;;;;;;;;;;;x
+plot_coup_desc;[From.GetFullName] and [From.GetHerHis] conspirators believe that [This.Holder.GetFullName] can no longer be permitted to remain [This.GetTitle] of the [This.GetFullName], and intend to take drastic measures to remove [This.Holder.GetHerHim] by any means necessary. A coup would currently be considered unjustified.;;;;;;;;;;;;;x
+plot_justified_coup_title;Depose [This.Holder.GetTitle] [This.Holder.GetFullName];;;;;;;;;;;;;x
+plot_justified_coup_desc;[From.GetFullName] and [From.GetHerHis] conspirators believe that [This.Holder.GetFullName] can no longer be permitted to remain [This.GetTitle] of the [This.GetFullName], and intend to take drastic measures to remove [This.Holder.GetHerHim] by any means necessary. A coup would currently be considered justified.;;;;;;;;;;;;;x
 EVTDESCCOUP5000;You peer over an intelligence report, fingers drumming idly on your desk. You have prepared carefully, but the fall of a [Root.PlotTarget.GetTitle] is no small matter. Has the time truly come to strike?;;;;;;;;;;;;;x
 EVTTOOLTIPCOUP5001;Your plans will be set in motion.;;;;;;;;;;;;;x
 EVTDESCCOUP5001;You fold dismiss the intelligence report with a wave of your hand, and turn to the comm center. You are more full of conviction now then you have ever been before. Tonight, [Root.PlotTarget.GetFullName] falls.;;;;;;;;;;;;;x

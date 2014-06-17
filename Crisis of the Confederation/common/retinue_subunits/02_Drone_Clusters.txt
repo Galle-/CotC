@@ -1,0 +1,18 @@
+# Types:
+# 0 - Light Infantry/Fighters
+# 1 - Heavy Infantry/Bombers
+# 2 - Pikemen/Drones
+# 3 - Light Cavalry/DD
+# 4 - Heavy Cavalry/BC
+# 5 - Archers/TT
+# 6 - Special Troops (DN)
+
+RETTYPE_D1 = { # Standard drone cluster
+	first_type = 2
+	first_amount = 50
+	
+	potential = {
+		capital_scope = { TECH_MAJESTY = 1 }
+		NOT = { religion_group = religious_group }
+	}
+}

@@ -150,139 +150,59 @@ laws = {
 		ai_will_do = { factor = 0 }
 		ai_will_revoke = { factor = 0 }
 	}
-	# FEUDAL VASSAL LEVY SIZE LAWS
-	##############################
-	
-	feudal_contract_0 = {
-		group = feudal_contract
-		feudal_opinion = 10
-		
-		potential = {
-			OR = {
-				NOT = { tier = baron }
-				holder_scope = { is_patrician = yes }
-			}
-			#NOT = { holder_scope = { religion_group = transhumanist_group } }
-		}
-		revoke_allowed = {
-			always = no
-		}			
-		ai_will_do = {
-			factor = 0
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		effect = {
-			hidden_tooltip = {
-				revoke_law = feudal_contract_0
-				revoke_law = feudal_contract_1
-				revoke_law = feudal_contract_2
-				revoke_law = feudal_contract_3
-			}
-		}
-		
-		castle_vassal_max_levy = -0.4
-	}
-	
-	feudal_contract_1 = {
-		group = feudal_contract
-		feudal_opinion = 5
-		
-		potential = {
-			OR = {
-				NOT = { tier = baron }
-				holder_scope = { is_patrician = yes }
-			}
-			#NOT = { holder_scope = { religion_group = transhumanist_group } }
-		}
-		revoke_allowed = {
-			always = no
-		}			
-		ai_will_do = {
-			factor = 0
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		effect = {
-			hidden_tooltip = {
-				revoke_law = feudal_contract_0
-				revoke_law = feudal_contract_1
-				revoke_law = feudal_contract_2
-				revoke_law = feudal_contract_3
-			}
-		}
-		castle_vassal_max_levy = -0.3
-	}
-	
-	feudal_contract_2 = {
-		group = feudal_contract
-		feudal_opinion = 0
-		default = yes
-		
-		potential = {
-			OR = {
-				NOT = { tier = baron }
-				holder_scope = { is_patrician = yes }
-			}
-			#NOT = { holder_scope = { religion_group = transhumanist_group } }
-		}
-		revoke_allowed = {
-			always = no
-		}			
-		ai_will_do = {
-			factor = 1
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		effect = {
-			hidden_tooltip = {
-				revoke_law = feudal_contract_0
-				revoke_law = feudal_contract_1
-				revoke_law = feudal_contract_2
-				revoke_law = feudal_contract_3
-			}
-		}
-		
-		castle_vassal_max_levy = -0.2
-	}
-	
-	feudal_contract_3 = {
-		group = feudal_contract
-		feudal_opinion = -5
-		
-		potential = {
-			OR = {
-				NOT = { tier = baron }
-				holder_scope = { is_patrician = yes }
-			}
-			#NOT = { holder_scope = { religion_group = transhumanist_group } }
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 0
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		effect = {
-			revoke_law = feudal_contract_0
-			revoke_law = feudal_contract_1
-			revoke_law = feudal_contract_2
-		}
-	}
-	
-	
-	# FEUDAL VASSAL TAX SIZE LAWS
+	# Military Subsidies/Taxes
 	##############################
 	
 	feudal_tax_0 = {
 		group = feudal_tax
-		feudal_opinion = 0
+		feudal_opinion = 25
+		default = no
+		
+		potential = {
+			OR = {
+				NOT = { tier = baron }
+				holder_scope = { is_patrician = yes }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}			
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+			}
+			modifier = {
+				factor = 0
+				holder_scope = { war = no }
+			}
+			modifier = {
+				factor = 0
+				holder_scope = { NOT = { yearly_income = 0 } }
+			}
+			modifier = {
+				factor = 0
+				holder_scope = { NOT = { wealth = 0 } }
+			}
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = feudal_tax_0
+				revoke_law = feudal_tax_1
+				revoke_law = feudal_tax_2
+				revoke_law = feudal_tax_3
+				revoke_law = feudal_tax_4
+			}
+		}
+		castle_vassal_tax_modifier = -0.5
+	}
+
+	feudal_tax_1 = {
+		group = feudal_tax
+		feudal_opinion = 10
 		default = yes
 		
 		potential = {
@@ -290,44 +210,24 @@ laws = {
 				NOT = { tier = baron }
 				holder_scope = { is_patrician = yes }
 			}
-			#NOT = { holder_scope = { religion_group = transhumanist_group } }
 		}
 		revoke_allowed = {
 			always = no
 		}			
 		ai_will_do = {
 			factor = 1
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		effect = {
-			hidden_tooltip = {
-				revoke_law = feudal_tax_0
-				revoke_law = feudal_tax_1
-				revoke_law = feudal_tax_2
-				revoke_law = feudal_tax_3
+			modifier = {
+				factor = 0.5
+				holder_scope = { war = no }
 			}
-		}
-		castle_vassal_tax_modifier = 0.0
-	}
-
-	feudal_tax_1 = {
-		group = feudal_tax
-		feudal_opinion = -10
-		
-		potential = {
-			OR = {
-				NOT = { tier = baron }
-				holder_scope = { is_patrician = yes }
+			modifier = {
+				factor = 0.5
+				holder_scope = { NOT = { wealth = 0 } }
 			}
-			#NOT = { holder_scope = { religion_group = transhumanist_group } }
-		}
-		revoke_allowed = {
-			always = no
-		}			
-		ai_will_do = {
-			factor = 0
+			modifier = {
+				factor = 0.1
+				holder_scope = { religion = neo_feudal }
+			}
 		}
 		ai_will_revoke = {
 			factor = 0
@@ -341,108 +241,13 @@ laws = {
 			}
 		}
 		
-		castle_vassal_tax_modifier = 0.1
+		castle_vassal_tax_modifier = -0.25
 		
 	}
 	
 	feudal_tax_2 = {
 		group = feudal_tax
-		feudal_opinion = -20
-		potential = {
-			OR = {
-				NOT = { tier = baron }
-				holder_scope = { is_patrician = yes }
-			}
-			#NOT = { holder_scope = { religion_group = transhumanist_group } }
-		}
-		revoke_allowed = {
-			always = no
-		}			
-		ai_will_do = {
-			factor = 0
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		effect = {
-			hidden_tooltip = {
-				revoke_law = feudal_tax_0
-				revoke_law = feudal_tax_1
-				revoke_law = feudal_tax_2
-				revoke_law = feudal_tax_3
-			}
-		}
-		castle_vassal_tax_modifier = 0.2
-	}
-	
-	feudal_tax_3 = {
-		group = feudal_tax
-		feudal_opinion = -30
-		potential = {
-			OR = {
-				NOT = { tier = baron }
-				holder_scope = { is_patrician = yes }
-			}
-			#NOT = { holder_scope = { religion_group = transhumanist_group } }
-		}
-		revoke_allowed = {
-			always = no
-		}			
-		ai_will_do = {
-			factor = 0
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		effect = {
-			hidden_tooltip = {
-				revoke_law = feudal_tax_0
-				revoke_law = feudal_tax_1
-				revoke_law = feudal_tax_2
-				revoke_law = feudal_tax_3
-			}
-		}
-		
-		castle_vassal_tax_modifier = 0.3
-	}
-	
-	# CITY VASSAL LEVY SIZE LAWS
-	##############################
-	
-	city_contract_0 = {
-		group = city_contract
-		city_opinion = 10
-		potential = {
-			OR = {
-				NOT = { tier = baron }
-				holder_scope = { is_patrician = yes }
-			}
-		}
-		revoke_allowed = {
-			always = no
-		}			
-		ai_will_do = {
-			factor = 0
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		effect = {
-			hidden_tooltip = {
-				revoke_law = city_contract_0
-				revoke_law = city_contract_1
-				revoke_law = city_contract_2
-				revoke_law = city_contract_3
-			}
-		}
-		
-		city_vassal_max_levy = -0.5
-	}
-
-	city_contract_1 = {
-		group = city_contract
-		city_opinion = 0
-		default = yes
+		feudal_opinion = 0
 		potential = {
 			OR = {
 				NOT = { tier = baron }
@@ -454,25 +259,28 @@ laws = {
 		}			
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 2
+				holder_scope = { religion = neo_feudal }
+			}
 		}
 		ai_will_revoke = {
 			factor = 0
 		}
 		effect = {
 			hidden_tooltip = {
-				revoke_law = city_contract_0
-				revoke_law = city_contract_1
-				revoke_law = city_contract_2
-				revoke_law = city_contract_3
+				revoke_law = feudal_tax_0
+				revoke_law = feudal_tax_1
+				revoke_law = feudal_tax_2
+				revoke_law = feudal_tax_3
 			}
 		}
-		
-		city_vassal_max_levy = -0.35
+		castle_vassal_tax_modifier = 0
 	}
 	
-	city_contract_2 = {
-		group = city_contract
-		city_opinion = -10
+	feudal_tax_3 = {
+		group = feudal_tax
+		feudal_opinion = 10
 		potential = {
 			OR = {
 				NOT = { tier = baron }
@@ -483,25 +291,46 @@ laws = {
 			always = no
 		}			
 		ai_will_do = {
-			factor = 0
+			factor = 1
+			modifier = {
+				factor = 0
+				holder_scope = { war = yes }
+			}
+			modifier = {
+				factor = 0
+				holder_scope = { wealth = 50 }
+			}
+			modifier = {
+				factor = 0
+				holder_scope = {
+					NOT = {
+						any_vassal = {
+							is_feudal = yes
+							is_patrician = no
+							wealth = 100
+						}
+					}
+				}
+			}
 		}
 		ai_will_revoke = {
 			factor = 0
 		}
 		effect = {
 			hidden_tooltip = {
-				revoke_law = city_contract_0
-				revoke_law = city_contract_1
-				revoke_law = city_contract_2
-				revoke_law = city_contract_3
+				revoke_law = feudal_tax_0
+				revoke_law = feudal_tax_1
+				revoke_law = feudal_tax_2
+				revoke_law = feudal_tax_3
 			}
 		}
-		city_vassal_max_levy = -0.2
+		
+		castle_vassal_tax_modifier = 0.25
 	}
 	
-	city_contract_3 = {
-		group = city_contract
-		city_opinion = -20
+	feudal_tax_4 = {
+		group = feudal_tax
+		feudal_opinion = 25
 		potential = {
 			OR = {
 				NOT = { tier = baron }
@@ -512,23 +341,42 @@ laws = {
 			always = no
 		}			
 		ai_will_do = {
-			factor = 0
+			factor = 1
+			modifier = {
+				factor = 0
+				holder_scope = { war = yes }
+			}
+			modifier = {
+				factor = 0
+				holder_scope = { wealth = 0 }
+			}
+			modifier = {
+				factor = 0
+				holder_scope = {
+					NOT = {
+						any_vassal = {
+							is_feudal = yes
+							is_patrician = no
+							wealth = 500
+						}
+					}
+				}
+			}
 		}
 		ai_will_revoke = {
 			factor = 0
 		}
 		effect = {
 			hidden_tooltip = {
-				revoke_law = city_contract_0
-				revoke_law = city_contract_1
-				revoke_law = city_contract_2
-				revoke_law = city_contract_3
+				revoke_law = feudal_tax_0
+				revoke_law = feudal_tax_1
+				revoke_law = feudal_tax_2
+				revoke_law = feudal_tax_3
 			}
 		}
 		
-		city_vassal_max_levy = -0.05
+		castle_vassal_tax_modifier = 0.5
 	}
-	
 	
 	# CITY VASSAL TAX SIZE LAWS
 	##############################
@@ -654,134 +502,6 @@ laws = {
 		
 		city_vassal_tax_modifier = 0.45
 	}
-	
-	# TEMPLE VASSAL LEVY SIZE LAWS
-	##############################
-	
-	temple_contract_0 = {
-		group = temple_contract
-		temple_opinion = 10
-		potential = {
-			OR = {
-				NOT = { tier = baron }
-				holder_scope = { is_patrician = yes }
-			}
-			#NOT = { holder_scope = { religion_group = transhumanist_group } }
-		}
-		revoke_allowed = {
-			always = no
-		}			
-		ai_will_do = {
-			factor = 0
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		effect = {
-			hidden_tooltip = {
-				revoke_law = temple_contract_0
-				revoke_law = temple_contract_1
-				revoke_law = temple_contract_2
-				revoke_law = temple_contract_3
-			}
-		}
-		
-		temple_vassal_max_levy = -0.5
-		
-	}
-
-	temple_contract_1 = {
-		group = temple_contract
-		temple_opinion = 0
-		default = yes
-		
-		potential = {
-			OR = {
-				NOT = { tier = baron }
-				holder_scope = { is_patrician = yes }
-			}
-			#NOT = { holder_scope = { religion_group = transhumanist_group } }
-		}
-		revoke_allowed = {
-			always = no
-		}			
-		ai_will_do = {
-			factor = 1
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		effect = {
-			hidden_tooltip = {
-				revoke_law = temple_contract_0
-				revoke_law = temple_contract_1
-				revoke_law = temple_contract_2
-				revoke_law = temple_contract_3
-			}
-		}
-		temple_vassal_max_levy = -0.4
-	}
-	
-	temple_contract_2 = {
-		group = temple_contract
-		temple_opinion = -10
-		potential = {
-			OR = {
-				NOT = { tier = baron }
-				holder_scope = { is_patrician = yes }
-			}
-			#NOT = { holder_scope = { religion_group = transhumanist_group } }
-		}
-		revoke_allowed = {
-			always = no
-		}			
-		ai_will_do = {
-			factor = 0
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		effect = {
-			hidden_tooltip = {
-				revoke_law = temple_contract_0
-				revoke_law = temple_contract_1
-				revoke_law = temple_contract_2
-				revoke_law = temple_contract_3
-			}
-		}
-		temple_vassal_max_levy = -0.3
-	}
-	
-	temple_contract_3 = {
-		group = temple_contract
-		temple_opinion = -20
-		potential = {
-			OR = {
-				NOT = { tier = baron }
-				holder_scope = { is_patrician = yes }
-			}
-			#NOT = { holder_scope = { religion_group = transhumanist_group } }
-		}
-		revoke_allowed = {
-			always = no
-		}			
-		ai_will_do = {
-			factor = 0
-		}
-		ai_will_revoke = {
-			factor = 0
-		}
-		effect = {
-			hidden_tooltip = {
-				revoke_law = temple_contract_0
-				revoke_law = temple_contract_1
-				revoke_law = temple_contract_2
-				revoke_law = temple_contract_3
-			}
-		}
-		temple_vassal_max_levy = -0.2
-	}
-	
 	
 	
 	# TEMPLE VASSAL TAX SIZE LAWS

@@ -690,9 +690,9 @@ radical = {
 	monthly_character_piety = 1
 	
 	church_opinion = 10
-	infidel_opinion = -50
+	infidel_opinion = -25
 	same_opinion = -20
-	same_opinion_if_same_religion = 30
+	same_opinion_if_same_religion = 25
 	opposite_opinion = -20
 	
 	ai_zeal = 20
@@ -766,8 +766,7 @@ ambitious = {
 	intrigue = 1
 	learning = 1
 	
-	ambition_opinion = -50
-	same_opinion = -25
+	ambition_opinion = -25
 	
 	ai_ambition = 30
 	ai_greed = 30

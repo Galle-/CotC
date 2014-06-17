@@ -31,19 +31,19 @@ character_event = {
 	
 	trigger = {
 		dynasty = none
-		NOT = { any_demesne_title = { always = yes } }
-		NOT = { has_character_flag = flag_dynasty_changed }
 	}
 	
 	immediate = {
-		liege = {
-			e_rebels = { holder_scope = { ROOT = { set_defacto_liege = PREV } } }
-			ROOT = {
-				dynasty = random
-				set_defacto_liege = PREV
-			}
+		create_character = {
+			age = 25
+			culture = ROOT
+			religion = ROOT
+			dynasty = culture
 		}
-		set_character_flag = flag_dynasty_changed
+		new_character = {
+			ROOT = { dynasty = PREV }
+			death = { death_reason = death_sacrifice }
+		}
 	}
 }
 
@@ -224,44 +224,154 @@ character_event = { # Theocracies - these are particularly troubling
 	}
 }
 
-# # Open elective titles with no successor
-# character_event = {
-	# id = maintenance.30
-	# hide_window = yes
+# Fixing titles with bad succession laws
+character_event = {
+	id = maintenance.100
+	desc = "EVTDESCMAINTENANCE100"
 	
-	# only_rulers = yes
+	only_rulers = yes
 	
-	# trigger = {
-		# any_demesne_title = {
-			# has_law = succ_open_elective
-			# NOT = { current_heir = { always = yes } }
-		# }
-	# }
+	trigger = {
+		is_feudal = yes
+		is_patrician = no
+		any_demesne_title = {
+			NOT = { has_law = succ_appointment }
+			crownlaw_title = {
+				holder_scope = {
+					NOT = { character = ROOT }
+					is_vassal_or_below = ROOT
+				}
+				has_law = military_vassal_legitimacy_2
+			}
+			OR = {
+				is_tribal_type_title = yes
+				crownlaw_title = { has_law = centralization_2 }
+				crownlaw_title = { has_law = centralization_3 }
+				crownlaw_title = { has_law = centralization_4 }
+			}
+		}
+	}
 	
-	# immediate = {
-		# capital_scope = {
-			# ROOT = {
-				# 50 = {
-					# create_character = {
-						# random_traits = yes
-						# age = 25
-						# culture = PREV
-						# religion = PREV
-						# dynasty = culture
-						# is_female = yes
-					# }
-				# }
-				# 50 = {
-					# create_character = {
-						# random_traits = yes
-						# age = 25
-						# culture = PREV
-						# religion = PREV
-						# dynasty = culture
-						# is_female = no
-					# }
-				# }
-			# }
-		# }
-	# }
-# }
+	option = {
+		name = "EVTOPTAMAINTENANCE100"
+		any_demesne_title = {
+			limit = {
+				NOT = { has_law = succ_appointment }
+				crownlaw_title = {
+					holder_scope = {
+						NOT = { character = ROOT }
+						is_vassal_or_below = ROOT
+					}
+					has_law = military_vassal_legitimacy_2
+				}
+				OR = {
+					is_tribal_type_title = yes
+					crownlaw_title = { has_law = centralization_2 }
+					crownlaw_title = { has_law = centralization_3 }
+					crownlaw_title = { has_law = centralization_4 }
+				}
+			}
+			add_law = succ_appointment
+		}
+	}
+}
+
+character_event = {
+	id = maintenance.101
+	desc = "EVTDESCMAINTENANCE100"
+	
+	only_rulers = yes
+	
+	trigger = {
+		is_theocracy = yes
+		any_demesne_title = {
+			NOT = { has_law = succ_appointment }
+			crownlaw_title = {
+				holder_scope = {
+					NOT = { character = ROOT }
+					is_vassal_or_below = ROOT
+				}
+				has_law = theocracy_vassal_legitimacy_2
+			}
+			OR = {
+				is_tribal_type_title = yes
+				crownlaw_title = { has_law = centralization_2 }
+				crownlaw_title = { has_law = centralization_3 }
+				crownlaw_title = { has_law = centralization_4 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTAMAINTENANCE100"
+		any_demesne_title = {
+			limit = {
+				NOT = { has_law = succ_appointment }
+				crownlaw_title = {
+					holder_scope = {
+						NOT = { character = ROOT }
+						is_vassal_or_below = ROOT
+					}
+					has_law = theocracy_vassal_legitimacy_2
+				}
+				OR = {
+					is_tribal_type_title = yes
+					crownlaw_title = { has_law = centralization_2 }
+					crownlaw_title = { has_law = centralization_3 }
+					crownlaw_title = { has_law = centralization_4 }
+				}
+			}
+			add_law = succ_appointment
+		}
+	}
+}
+character_event = {
+	id = maintenance.102
+	desc = "EVTDESCMAINTENANCE100"
+	
+	only_rulers = yes
+	
+	trigger = {
+		is_republic = yes
+		is_patrician = no
+		any_demesne_title = {
+			NOT = { has_law = succ_appointment }
+			crownlaw_title = {
+				holder_scope = {
+					NOT = { character = ROOT }
+					is_vassal_or_below = ROOT
+				}
+				has_law = republic_vassal_legitimacy_2
+			}
+			OR = {
+				is_tribal_type_title = yes
+				crownlaw_title = { has_law = centralization_2 }
+				crownlaw_title = { has_law = centralization_3 }
+				crownlaw_title = { has_law = centralization_4 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTAMAINTENANCE100"
+		any_demesne_title = {
+			limit = {
+				NOT = { has_law = succ_appointment }
+				crownlaw_title = {
+					holder_scope = {
+						NOT = { character = ROOT }
+						is_vassal_or_below = ROOT
+					}
+					has_law = republic_vassal_legitimacy_2
+				}
+				OR = {
+					is_tribal_type_title = yes
+					crownlaw_title = { has_law = centralization_2 }
+					crownlaw_title = { has_law = centralization_3 }
+					crownlaw_title = { has_law = centralization_4 }
+				}
+			}
+			add_law = succ_appointment
+		}
+	}
+}

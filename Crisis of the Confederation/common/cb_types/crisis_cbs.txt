@@ -456,9 +456,11 @@ democratic_rebellion = {
 		ROOT = {
 			prestige = 100
 			clr_character_flag = flag_revolter
-			any_courtier = {
-				opinion = { who = ROOT modifier = opinion_hero_of_the_revolution }
-				reverse_opinion = { who = ROOT modifier = opinion_aided_my_revolution }
+			hidden_tooltip = {
+				any_courtier = {
+					opinion = { who = ROOT modifier = opinion_hero_of_the_revolution }
+					reverse_opinion = { who = ROOT modifier = opinion_aided_my_revolution }
+				}
 			}
 		}
 		any_attacker = {
@@ -472,12 +474,8 @@ democratic_rebellion = {
 			hidden_tooltip = {
 				any_realm_province = {
 					limit = {
-						owner = { is_liege_or_above = FROM }
-						OR = {
-							religion = terran_federalist
-							religion = terran_republican
-							religion = colonial_separatist
-						}
+						owner = { is_liege_or_above = PREVPREV }
+						religion = ROOT
 					}
 					add_province_modifier = { name = successful_revolt days = 365 }
 				}
@@ -518,116 +516,109 @@ democratic_rebellion = {
 		}
 		FROM = { set_character_flag = flag_primary_title_usurped }
 		# Get the rebels a city if possible first
+		# There's nothing in the capital, but you have a republic vassal SOMEWHERE
 		if = {
 			limit = {
 				FROM = {
+					capital_holding = { is_republic = no }
 					NOT = {
 						any_demesne_title = {
 							is_republic = yes
-							NOT = { higher_tier_than = count }
+							tier = baron
 						}
 					}
 					NOT = {
-						any_realm_title = {
-							is_republic = yes
-							NOT = { higher_tier_than = count }
-							OR = {
-								holder_scope = { liege = { character = FROM } }
-								location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+						capital_scope = {
+							any_province_lord = {
+								is_liege_or_above = PREVPREV
+								any_demesne_title = {
+									tier = baron
+									is_republic = yes
+									location = { province_id = PREVPREVPREV }
+								}
 							}
 						}
 					}
-					any_realm_title = {
-						is_republic = yes
-						NOT = { higher_tier_than = count }
+					any_vassal = {
+						any_demesne_title = {
+							is_republic = yes
+							tier = baron
+						}
 					}
 				}
 			}
 			FROM = {
-				random_realm_title = {
+				random_vassal = {
 					limit = {
-						is_republic = yes
-						NOT = { higher_tier_than = count }
+						any_demesne_title = {
+							is_republic = yes
+							tier = baron
+						}
 					}
-					usurp_title = ROOT
+					random_demesne_title = {
+						limit = {
+							is_republic = yes
+							tier = baron
+						}
+						usurp_title = ROOT
+					}
 				}
 			}
 		}
+		# You don't have a city yourself, but you have a republic vassal in the capital
 		if = {
 			limit = {
 				FROM = {
+					capital_holding = { is_republic = no }
 					NOT = {
 						any_demesne_title = {
 							is_republic = yes
-							NOT = { higher_tier_than = count }
+							tier = baron
 						}
 					}
-					NOT = {
-						any_realm_title = {
-							is_republic = yes
-							NOT = { higher_tier_than = count }
-							location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+					capital_scope = {
+						any_province_lord = {
+							is_liege_or_above = PREVPREV
+							any_demesne_title = {
+								tier = baron
+								is_republic = yes
+								location = { province_id = PREVPREVPREV }
+							}
 						}
-					}
-					any_realm_title = {
-						is_republic = yes
-						NOT = { higher_tier_than = count }
-						holder_scope = { liege = { character = FROM } }
 					}
 				}
 			}
 			FROM = {
-				random_realm_title = {
-					limit = {
-						is_republic = yes
-						NOT = { higher_tier_than = count }
-						holder_scope = { liege = { character = FROM } }
+				capital_scope = {
+					random_province_lord = {
+						limit = {
+							is_liege_or_above = PREVPREV
+							any_demesne_title = {
+								tier = baron
+								is_republic = yes
+								location = { province_id = PREVPREVPREV }
+							}
+						}
+						random_demesne_title = {
+							limit = {
+								tier = baron
+								is_republic = yes
+								location = { province_id = PREVPREVPREV }
+							}
+							usurp_title = ROOT
+						}
 					}
-					usurp_title = ROOT
 				}
 			}
 		}
+		# You hold a city title personally to give them
 		if = {
 			limit = {
 				FROM = {
-					NOT = {
-						any_demesne_title = {
-							is_republic = yes
-							NOT = { higher_tier_than = count }
-						}
-					}
-					any_realm_title = {
-						is_republic = yes
-						NOT = { higher_tier_than = count }
-						location = { FROM = { capital_scope = { province_id = PREVPREV } } }
-					}
-				}
-			}
-			FROM = {
-				random_realm_title = {
-					limit = {
-						is_republic = yes
-						NOT = { higher_tier_than = count }
-						location = { FROM = { capital_scope = { province_id = PREVPREV } } }
-					}
-					usurp_title = ROOT
-				}
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					NOT = { capital_holding = { is_republic = yes } }
-					NOT = {
-						any_demesne_title = {
-							is_republic = yes
-							NOT = { higher_tier_than = count }
-							location = { FROM = { capital_scope = { province_id = PREVPREV } } }
-						}
-					}
+					capital_holding = { is_republic = no }
 					any_demesne_title = {
 						is_republic = yes
-						NOT = { higher_tier_than = count }
+						tier = baron
 					}
 				}
 			}
@@ -635,29 +626,7 @@ democratic_rebellion = {
 				random_demesne_title = {
 					limit = {
 						is_republic = yes
-						NOT = { higher_tier_than = count }
-					}
-					usurp_title = ROOT
-				}
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					NOT = { capital_holding = { is_republic = yes } }
-					any_demesne_title = {
-						is_republic = yes
-						NOT = { higher_tier_than = count }
-						location = { FROM = { capital_scope = { province_id = PREVPREV } } }
-					}
-				}
-			}
-			FROM = {
-				random_demesne_title = {
-					limit = {
-						is_republic = yes
-						NOT = { higher_tier_than = count }
-						location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+						tier = baron
 					}
 					usurp_title = ROOT
 				}
@@ -781,9 +750,11 @@ autocratic_rebellion = {
 		ROOT = {
 			prestige = 100
 			clr_character_flag = flag_revolter
-			any_courtier = {
-				opinion = { who = ROOT modifier = opinion_hero_of_the_revolution }
-				reverse_opinion = { who = ROOT modifier = opinion_aided_my_revolution }
+			hidden_tooltip = {
+				any_courtier = {
+					opinion = { who = ROOT modifier = opinion_hero_of_the_revolution }
+					reverse_opinion = { who = ROOT modifier = opinion_aided_my_revolution }
+				}
 			}
 		}
 		any_attacker = {
@@ -797,13 +768,8 @@ autocratic_rebellion = {
 			hidden_tooltip = {
 				any_realm_province = {
 					limit = {
-						owner = { is_liege_or_above = FROM }
-						OR = {
-							religion = terran_imperial
-							religion = neo_feudal
-							religion = astrist
-							religion = bio_directionist
-						}
+						owner = { is_liege_or_above = PREVPREV }
+						religion = ROOT
 					}
 					add_province_modifier = { name = successful_revolt days = 365 }
 				}
@@ -844,116 +810,119 @@ autocratic_rebellion = {
 		}
 		FROM = { set_character_flag = flag_primary_title_usurped }
 		# Get the rebels a castle if possible first
+		# There's nothing in the capital, but you have a feudal vassal SOMEWHERE
 		if = {
 			limit = {
 				FROM = {
+					capital_holding = { is_feudal = no }
 					NOT = {
 						any_demesne_title = {
 							is_feudal = yes
-							NOT = { higher_tier_than = count }
+							is_patrician = no
+							tier = baron
 						}
 					}
 					NOT = {
-						any_realm_title = {
-							is_feudal = yes
-							NOT = { higher_tier_than = count }
-							OR = {
-								holder_scope = { liege = { character = FROM } }
-								location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+						capital_scope = {
+							any_province_lord = {
+								is_liege_or_above = PREVPREV
+								any_demesne_title = {
+									tier = baron
+									is_feudal = yes
+									is_patrician = no
+									location = { province_id = PREVPREVPREV }
+								}
 							}
 						}
 					}
-					any_realm_title = {
-						is_feudal = yes
-						NOT = { higher_tier_than = count }
+					any_vassal = {
+						any_demesne_title = {
+							is_feudal = yes
+							is_patrician = no
+							tier = baron
+						}
 					}
 				}
 			}
 			FROM = {
-				random_realm_title = {
+				random_vassal = {
 					limit = {
-						is_feudal = yes
-						NOT = { higher_tier_than = count }
+						any_demesne_title = {
+							is_feudal = yes
+							is_patrician = no
+							tier = baron
+						}
 					}
-					usurp_title = ROOT
+					random_demesne_title = {
+						limit = {
+							is_feudal = yes
+							is_patrician = no
+							tier = baron
+						}
+						usurp_title = ROOT
+					}
 				}
 			}
 		}
+		# You don't have a feudal world yourself, but you have a feudal vassal in the capital
 		if = {
 			limit = {
 				FROM = {
+					capital_holding = { is_feudal = no }
 					NOT = {
 						any_demesne_title = {
 							is_feudal = yes
-							NOT = { higher_tier_than = count }
+							is_patrician = no
+							tier = baron
 						}
 					}
-					NOT = {
-						any_realm_title = {
-							is_feudal = yes
-							NOT = { higher_tier_than = count }
-							location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+					capital_scope = {
+						any_province_lord = {
+							is_liege_or_above = PREVPREV
+							any_demesne_title = {
+								tier = baron
+								is_feudal = yes
+								is_patrician = no
+								location = { province_id = PREVPREVPREV }
+							}
 						}
-					}
-					any_realm_title = {
-						is_feudal = yes
-						NOT = { higher_tier_than = count }
-						holder_scope = { liege = { character = FROM } }
 					}
 				}
 			}
 			FROM = {
-				random_realm_title = {
-					limit = {
-						is_feudal = yes
-						NOT = { higher_tier_than = count }
-						holder_scope = { liege = { character = FROM } }
+				capital_scope = {
+					random_province_lord = {
+						limit = {
+							is_liege_or_above = PREVPREV
+							any_demesne_title = {
+								tier = baron
+								is_feudal = yes
+								is_patrician = no
+								location = { province_id = PREVPREVPREV }
+							}
+						}
+						random_demesne_title = {
+							limit = {
+								tier = baron
+								is_feudal = yes
+								is_patrician = no
+								location = { province_id = PREVPREVPREV }
+							}
+							usurp_title = ROOT
+						}
 					}
-					usurp_title = ROOT
 				}
 			}
 		}
+		# You hold a feudal title personally to give them
 		if = {
 			limit = {
 				FROM = {
-					NOT = {
-						any_demesne_title = {
-							is_feudal = yes
-							NOT = { higher_tier_than = count }
-						}
-					}
-					any_realm_title = {
-						is_feudal = yes
-						NOT = { higher_tier_than = count }
-						location = { FROM = { capital_scope = { province_id = PREVPREV } } }
-					}
-				}
-			}
-			FROM = {
-				random_realm_title = {
-					limit = {
-						is_feudal = yes
-						NOT = { higher_tier_than = count }
-						location = { FROM = { capital_scope = { province_id = PREVPREV } } }
-					}
-					usurp_title = ROOT
-				}
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					NOT = { capital_holding = { is_feudal = yes } }
-					NOT = {
-						any_demesne_title = {
-							is_feudal = yes
-							NOT = { higher_tier_than = count }
-							location = { FROM = { capital_scope = { province_id = PREVPREV } } }
-						}
-					}
+					capital_holding = { is_feudal = no }
 					any_demesne_title = {
 						is_feudal = yes
-						NOT = { higher_tier_than = count }
+						is_patrician = no
+						tier = baron
 					}
 				}
 			}
@@ -961,29 +930,8 @@ autocratic_rebellion = {
 				random_demesne_title = {
 					limit = {
 						is_feudal = yes
-						NOT = { higher_tier_than = count }
-					}
-					usurp_title = ROOT
-				}
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					NOT = { capital_holding = { is_feudal = yes } }
-					any_demesne_title = {
-						is_feudal = yes
-						NOT = { higher_tier_than = count }
-						location = { FROM = { capital_scope = { province_id = PREVPREV } } }
-					}
-				}
-			}
-			FROM = {
-				random_demesne_title = {
-					limit = {
-						is_feudal = yes
-						NOT = { higher_tier_than = count }
-						location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+						is_patrician = no
+						tier = baron
 					}
 					usurp_title = ROOT
 				}
@@ -1110,9 +1058,11 @@ theocratic_rebellion = {
 		ROOT = {
 			prestige = 100
 			clr_character_flag = flag_revolter
-			any_courtier = {
-				opinion = { who = ROOT modifier = opinion_hero_of_the_revolution }
-				reverse_opinion = { who = ROOT modifier = opinion_aided_my_revolution }
+			hidden_tooltip = {
+				any_courtier = {
+					opinion = { who = ROOT modifier = opinion_hero_of_the_revolution }
+					reverse_opinion = { who = ROOT modifier = opinion_aided_my_revolution }
+				}
 			}
 		}
 		any_attacker = {
@@ -1126,14 +1076,8 @@ theocratic_rebellion = {
 			hidden_tooltip = {
 				any_realm_province = {
 					limit = {
-						owner = { is_liege_or_above = FROM }
-						OR = {
-							religion = orthodox
-							religion = xenoterran
-							religion = solarian
-							religion = machine_cultist
-							religion = neo_socialist
-						}
+						owner = { is_liege_or_above = PREVPREV }
+						religion = ROOT
 					}
 					add_province_modifier = { name = successful_revolt days = 365 }
 				}
@@ -1167,117 +1111,110 @@ theocratic_rebellion = {
 			}
 		}
 		FROM = { set_character_flag = flag_primary_title_usurped }
-		# Get the rebels a temple if possible first
+		# Get the rebels a theocracy if possible first
+		# There's nothing in the capital, but you have a theocracy vassal SOMEWHERE
 		if = {
 			limit = {
 				FROM = {
+					capital_holding = { is_theocracy = no }
 					NOT = {
 						any_demesne_title = {
 							is_theocracy = yes
-							NOT = { higher_tier_than = count }
+							tier = baron
 						}
 					}
 					NOT = {
-						any_realm_title = {
-							is_theocracy = yes
-							NOT = { higher_tier_than = count }
-							OR = {
-								holder_scope = { liege = { character = FROM } }
-								location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+						capital_scope = {
+							any_province_lord = {
+								is_liege_or_above = PREVPREV
+								any_demesne_title = {
+									tier = baron
+									is_theocracy = yes
+									location = { province_id = PREVPREVPREV }
+								}
 							}
 						}
 					}
-					any_realm_title = {
-						is_theocracy = yes
-						NOT = { higher_tier_than = count }
+					any_vassal = {
+						any_demesne_title = {
+							is_theocracy = yes
+							tier = baron
+						}
 					}
 				}
 			}
 			FROM = {
-				random_realm_title = {
+				random_vassal = {
 					limit = {
-						is_theocracy = yes
-						NOT = { higher_tier_than = count }
+						any_demesne_title = {
+							is_theocracy = yes
+							tier = baron
+						}
 					}
-					usurp_title = ROOT
+					random_demesne_title = {
+						limit = {
+							is_theocracy = yes
+							tier = baron
+						}
+						usurp_title = ROOT
+					}
 				}
 			}
 		}
+		# You don't have a theocracy world yourself, but you have a theocracy vassal in the capital
 		if = {
 			limit = {
 				FROM = {
+					capital_holding = { is_theocracy = no }
 					NOT = {
 						any_demesne_title = {
 							is_theocracy = yes
-							NOT = { higher_tier_than = count }
+							tier = baron
 						}
 					}
-					NOT = {
-						any_realm_title = {
-							is_theocracy = yes
-							NOT = { higher_tier_than = count }
-							location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+					capital_scope = {
+						any_province_lord = {
+							is_liege_or_above = PREVPREV
+							any_demesne_title = {
+								tier = baron
+								is_theocracy = yes
+								location = { province_id = PREVPREVPREV }
+							}
 						}
-					}
-					any_realm_title = {
-						is_theocracy = yes
-						NOT = { higher_tier_than = count }
-						holder_scope = { liege = { character = FROM } }
 					}
 				}
 			}
 			FROM = {
-				random_realm_title = {
-					limit = {
-						is_theocracy = yes
-						NOT = { higher_tier_than = count }
-						holder_scope = { liege = { character = FROM } }
+				capital_scope = {
+					random_province_lord = {
+						limit = {
+							is_liege_or_above = PREVPREV
+							any_demesne_title = {
+								tier = baron
+								is_theocracy = yes
+								location = { province_id = PREVPREVPREV }
+							}
+						}
+						random_demesne_title = {
+							limit = {
+								tier = baron
+								is_theocracy = yes
+								location = { province_id = PREVPREVPREV }
+							}
+							usurp_title = ROOT
+						}
 					}
-					usurp_title = ROOT
 				}
 			}
 		}
+		# You hold a theocracy title personally to give them
 		if = {
 			limit = {
 				FROM = {
-					NOT = {
-						any_demesne_title = {
-							is_theocracy = yes
-							NOT = { higher_tier_than = count }
-						}
-					}
-					any_realm_title = {
-						is_theocracy = yes
-						NOT = { higher_tier_than = count }
-						location = { FROM = { capital_scope = { province_id = PREVPREV } } }
-					}
-				}
-			}
-			FROM = {
-				random_realm_title = {
-					limit = {
-						is_theocracy = yes
-						NOT = { higher_tier_than = count }
-						location = { FROM = { capital_scope = { province_id = PREVPREV } } }
-					}
-					usurp_title = ROOT
-				}
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					NOT = { capital_holding = { is_theocracy = yes } }
-					NOT = {
-						any_demesne_title = {
-							is_theocracy = yes
-							NOT = { higher_tier_than = count }
-							location = { FROM = { capital_scope = { province_id = PREVPREV } } }
-						}
-					}
+					capital_holding = { is_theocracy = no }
 					any_demesne_title = {
 						is_theocracy = yes
-						NOT = { higher_tier_than = count }
+						tier = baron
 					}
 				}
 			}
@@ -1285,29 +1222,7 @@ theocratic_rebellion = {
 				random_demesne_title = {
 					limit = {
 						is_theocracy = yes
-						NOT = { higher_tier_than = count }
-					}
-					usurp_title = ROOT
-				}
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					NOT = { capital_holding = { is_theocracy = yes } }
-					any_demesne_title = {
-						is_theocracy = yes
-						NOT = { higher_tier_than = count }
-						location = { FROM = { capital_scope = { province_id = PREVPREV } } }
-					}
-				}
-			}
-			FROM = {
-				random_demesne_title = {
-					limit = {
-						is_theocracy = yes
-						NOT = { higher_tier_than = count }
-						location = { FROM = { capital_scope = { province_id = PREVPREV } } }
+						tier = baron
 					}
 					usurp_title = ROOT
 				}

@@ -185,6 +185,14 @@ term_length_3_desc;Leaders hold power for ten years before a new leader must be 
 term_length_4;No Term Limits;Pas de durée de mandat;;;;;;;;;;;;x
 term_length_4_option;Life;A vie;;;;;;;;;;;;x
 term_length_4_desc;Leaders hold power for life or until they are removed by a vote of no confidence..;Les dirigeants gardent le pouvoir à vie ou jusqu'à ce qu'ils soient démis de leurs fonctions…;;;;;;;;;;;;x
+legislative_authority;Legislature;;;;;;;;;;;;x
+legislative_authority_desc;The existence and authority of the legislative branch of government, relative to the executive.;;;;;;;;;;;;x
+legislative_authority_0;No Legislature;;;;;;;;;;;;x
+legislative_authority_0_option;None;;;;;;;;;;;;x
+legislative_authority_0_desc;This state has no legislative body. The ruler rules by decree.;;;;;;;;;;;;x
+legislative_authority_1;Legislative Supremacy;;;;;;;;;;;;x
+legislative_authority_1_option;Strong;;;;;;;;;;;;x
+legislative_authority_1_desc;This state has a separate legislative body, which is recognized as the rightful font of authority. Its head of state is legally bound to defer to the legislature's will.;;;;;;;;;;;;x
 public_order;Civil Order;;;;;;;;;;;;;x
 public_order_desc;Whether or not the government is able to enforce its control over its subordinates. Civil Order is automatically set to Weak whenever a civil war or revolt breaks out against the government, and can only be restored to Strong by a sufficiently powerful government.;;;;;;;;;;;;;x
 public_order_0;Weak Civil Order;;;;;;;;;;;;;x

@@ -339,10 +339,6 @@ character_event = {
 			any_vassal = {
 				is_feudal = yes
 				is_patrician = no
-				primary_title = {
-					is_tribal_type_title = yes
-					tier = duke
-				}
 				NOT = { any_war = { using_cb = cb_military_campaign } }
 			}
 		}
@@ -370,6 +366,10 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 600
+		modifier = {
+			factor = 0.2
+			liege = { is_primary_war_defender = yes }
+		}
 		modifier = {
 			factor = 0.5
 			liege = { religion_authority = 0.1 }
@@ -479,17 +479,17 @@ character_event = {
 		is_feudal = yes
 		is_patrician = no
 		NOT = { has_character_flag = flag_revolter }
-		primary_title = { higher_tier_than = BARON }
+		primary_title = {
+			is_tribal_type_title = yes
+			higher_tier_than = baron
+		}
 		# Either not already engaged or has subordinates who can engage
 		OR = {
 			NOT = { any_war = { using_cb = cb_military_campaign } }
 			any_vassal = {
 				is_feudal = yes
 				is_patrician = no
-				primary_title = {
-					is_tribal_type_title = yes
-					tier = duke
-				}
+				primary_title = { is_tribal_type_title = yes }
 				NOT = { any_war = { using_cb = cb_military_campaign } }
 			}
 		}
@@ -520,6 +520,10 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 600
+		modifier = {
+			factor = 0.2
+			liege = { is_primary_war_defender = yes }
+		}
 		modifier = {
 			factor = 0.5
 			liege = { religion_authority = 0.1 }
@@ -631,17 +635,17 @@ character_event = {
 		is_feudal = yes
 		is_patrician = no
 		NOT = { has_character_flag = flag_revolter }
-		primary_title = { higher_tier_than = BARON }
+		primary_title = {
+			is_tribal_type_title = yes
+			higher_tier_than = baron
+		}
 		# Either not already engaged or has subordinates who can engage
 		OR = {
 			NOT = { any_war = { using_cb = cb_military_campaign } }
 			any_vassal = {
 				is_feudal = yes
 				is_patrician = no
-				primary_title = {
-					is_tribal_type_title = yes
-					tier = duke
-				}
+				primary_title = { is_tribal_type_title = yes }
 				NOT = { any_war = { using_cb = cb_military_campaign } }
 			}
 		}
@@ -670,6 +674,10 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 600
+		modifier = {
+			factor = 0.2
+			liege = { is_primary_war_defender = yes }
+		}
 		modifier = {
 			factor = 0.5
 			liege = { religion_authority = 0.1 }
@@ -777,18 +785,18 @@ character_event = {
 		independent = no
 		is_feudal = yes
 		is_patrician = no
+		primary_title = {
+			is_tribal_type_title = yes
+			higher_tier_than = baron
+		}
 		NOT = { has_character_flag = flag_revolter }
-		primary_title = { higher_tier_than = BARON }
 		# Either not already engaged or has subordinates who can engage
 		OR = {
 			NOT = { any_war = { using_cb = cb_military_campaign } }
 			any_vassal = {
 				is_feudal = yes
 				is_patrician = no
-				primary_title = {
-					is_tribal_type_title = yes
-					tier = duke
-				}
+				primary_title = { is_tribal_type_title = yes }
 				NOT = { any_war = { using_cb = cb_military_campaign } }
 			}
 		}
@@ -816,6 +824,10 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 2400
+		modifier = {
+			factor = 0.2
+			liege = { is_primary_war_defender = yes }
+		}
 		modifier = {
 			factor = 0.5
 			liege = { religion_authority = 0.1 }

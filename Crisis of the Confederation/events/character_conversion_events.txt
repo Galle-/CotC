@@ -1,0 +1,4973 @@
+namespace = conversion
+
+# Try to convert friend
+character_event = {
+	id = conversion.5000
+	desc = "EVTDESCCONVERSION5000"
+	picture = GFX_evt_quarrel
+	
+	min_age = 16
+	only_capable = yes
+	prisoner = no
+	
+	trigger = {
+		any_friend = {
+			at_location = ROOT
+			NOT = { religion = ROOT }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			NOT = {
+				any_war = {
+					attacker = { character = ROOT }
+					OR = {
+						using_cb = democratic_rebellion
+						using_cb = autocratic_rebellion
+						using_cb = theocratic_rebellion
+					}
+				}
+			}
+		}
+		NOT = { religion = space_pirate }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "EVTOPTACONVERSION5000"
+		random_friend = {
+			limit = {
+				at_location = ROOT
+				NOT = { religion = ROOT }
+				age = 16
+				NOT = { trait = incapable }
+				prisoner = no
+				NOT = {
+					any_war = {
+						attacker = { character = ROOT }
+						OR = {
+							using_cb = democratic_rebellion
+							using_cb = autocratic_rebellion
+							using_cb = theocratic_rebellion
+						}
+					}
+				}
+			}
+			character_event = { id = conversion.5001 tooltip = "EVTTOOLTIPCONVERSION5001" }
+		}
+		piety = 100
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = radical
+			}
+			modifier = {
+				factor = 0.5
+				trait = pragmatic
+			}
+			modifier = {
+				factor = 2
+				trait = extraverted
+			}
+			modifier = {
+				factor = 0.5
+				trait = introverted
+			}
+			modifier = {
+				factor = 2
+				trait = cold
+			}
+			modifier = {
+				factor = 0.5
+				trait = friendly
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBCONVERSION5000"
+		ai_chance = { factor = 50 }
+	}
+}
+
+# A friend engages you in an ideological dispute
+character_event = {
+	id = conversion.5001
+	desc = "EVTDESCCONVERSION5001"
+	picture = GFX_evt_quarrel
+	is_triggered_only = yes
+	
+	option = {
+		# They're right
+		trigger = {
+			OR = {
+				NOT = { trait = radical }
+				NOT = { trait = close_minded }
+			}
+		}
+		name = "EVTOPTACONVERSION5001"
+		religion = FROM
+		reverse_opinion = { who = ROOT modifier = opinion_converted_by_me }
+		hidden_tooltip = { FROM = { character_event = { id = conversion.5002 } } }
+		ai_chance = {
+			factor = 10
+			# Moral authority
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.1 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.2 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.3 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.4 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.5 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.6 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.7 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.8 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.9 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 1 }
+			}
+			modifier = {
+				factor = 0.5
+				religion_authority = 0.1
+			}
+			modifier = {
+				factor = 0.5
+				religion_authority = 0.2
+			}
+			modifier = {
+				factor = 0.5
+				religion_authority = 0.3
+			}
+			modifier = {
+				factor = 0.5
+				religion_authority = 0.4
+			}
+			modifier = {
+				factor = 0.5
+				religion_authority = 0.5
+			}
+			modifier = {
+				factor = 0.5
+				religion_authority = 0.6
+			}
+			modifier = {
+				factor = 0.5
+				religion_authority = 0.7
+			}
+			modifier = {
+				factor = 0.5
+				religion_authority = 0.8
+			}
+			modifier = {
+				factor = 0.5
+				religion_authority = 0.9
+			}
+			modifier = {
+				factor = 0.5
+				religion_authority = 1
+			}
+			
+			# Personality
+			modifier = {
+				factor = 4
+				trait = pragmatic
+			}
+			modifier = {
+				factor = 0.25
+				trait = radical
+			}
+			modifier = {
+				factor = 4
+				trait = open_minded
+			}
+			modifier = {
+				factor = 0.25
+				trait = close_minded
+			}
+			
+			# FROM's diplomacy
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 1 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 2 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 3 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 4 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 5 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 6 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 7 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 8 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 9 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 11 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 12 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 13 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 14 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 15 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 16 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 17 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 18 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 19 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 20 }
+			}
+		}
+	}
+	
+	option = {
+		# They're wrong
+		name = "EVTOPTBCONVERSION5001"
+		FROM = { character_event = { id = conversion.5003 tooltip = "EVTTOOLTIPCONVERSION5003" } }
+		piety = 50
+		ai_chance = { factor = 100 }
+	}
+}
+
+# You successfully converted your friend!
+character_event = {
+	id = conversion.5002
+	desc = "EVTDESCCONVERSION5002"
+	picture = GFX_evt_scholar
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACONVERSION5002" }
+}
+
+# You failed to convert your friend!
+character_event = {
+	id = conversion.5003
+	desc = "EVTDESCCONVERSION5003"
+	picture = GFX_evt_quarrel
+	is_triggered_only = yes
+	
+	option = {
+		# We'll agree to disagree
+		name = "EVTOPTACONVERSION5003"
+		piety = -50
+		
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 5
+				trait = friendly
+			}
+			modifier = {
+				factor = 0.5
+				trait = cold
+			}
+			modifier = {
+				factor = 4
+				trait = open_minded
+			}
+			modifier = {
+				factor = 0.5
+				trait = close_minded
+			}
+			modifier = {
+				factor = 4
+				trait = pragmatic
+			}
+			modifier = {
+				factor = 0.25
+				trait = radical
+			}
+		}
+	}
+	
+	option = {
+		# Then we are no longer friends
+		name = "EVTOPTBCONVERSION5003"
+		remove_friend = FROM
+		hidden_tooltip = { FROM = { character_event = { id = conversion.5004 } } }
+		ai_chance = { factor = 50 }
+	}
+}
+
+# Your friend is infuriated by your refusal to see things their way
+character_event = {
+	id = conversion.5004
+	desc = "EVTDESCCONVERSION5004"
+	picture = GFX_evt_quarrel
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACONVERSION5004"
+		remove_friend = FROM
+	}
+}
+
+# Try to convert lover
+character_event = {
+	id = conversion.5100
+	desc = "EVTDESCCONVERSION5100"
+	picture = GFX_evt_quarrel
+	
+	min_age = 16
+	only_capable = yes
+	prisoner = no
+	
+	trigger = {
+		any_lover = {
+			at_location = ROOT
+			NOT = { religion = ROOT }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			NOT = {
+				any_war = {
+					attacker = { character = ROOT }
+					OR = {
+						using_cb = democratic_rebellion
+						using_cb = autocratic_rebellion
+						using_cb = theocratic_rebellion
+					}
+				}
+			}
+		}
+		NOT = { religion = space_pirate }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "EVTOPTACONVERSION5100"
+		random_lover = {
+			limit = {
+				at_location = ROOT
+				NOT = { religion = ROOT }
+				age = 16
+				NOT = { trait = incapable }
+				prisoner = no
+				NOT = {
+					any_war = {
+						attacker = { character = ROOT }
+						OR = {
+							using_cb = democratic_rebellion
+							using_cb = autocratic_rebellion
+							using_cb = theocratic_rebellion
+						}
+					}
+				}
+			}
+			character_event = { id = conversion.5101 tooltip = "EVTTOOLTIPCONVERSION5101" }
+		}
+		piety = 100
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = radical
+			}
+			modifier = {
+				factor = 0.5
+				trait = pragmatic
+			}
+			modifier = {
+				factor = 2
+				trait = extraverted
+			}
+			modifier = {
+				factor = 0.5
+				trait = introverted
+			}
+			modifier = {
+				factor = 2
+				trait = cold
+			}
+			modifier = {
+				factor = 0.5
+				trait = friendly
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBCONVERSION5100"
+		ai_chance = { factor = 50 }
+	}
+}
+
+# A lover engages you in an ideological dispute
+character_event = {
+	id = conversion.5101
+	desc = "EVTDESCCONVERSION5101"
+	picture = GFX_evt_quarrel
+	is_triggered_only = yes
+	
+	option = {
+		# They're right
+		trigger = {
+			OR = {
+				NOT = { trait = radical }
+				NOT = { trait = close_minded }
+			}
+		}
+		name = "EVTOPTACONVERSION5001"
+		religion = FROM
+		reverse_opinion = { who = ROOT modifier = opinion_converted_by_me }
+		hidden_tooltip = { FROM = { character_event = { id = conversion.5002 } } }
+		ai_chance = {
+			factor = 10
+			# Moral authority
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.1 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.2 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.3 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.4 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.5 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.6 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.7 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.8 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.9 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 1 }
+			}
+			modifier = {
+				factor = 0.5
+				religion_authority = 0.1
+			}
+			modifier = {
+				factor = 0.5
+				religion_authority = 0.2
+			}
+			modifier = {
+				factor = 0.5
+				religion_authority = 0.3
+			}
+			modifier = {
+				factor = 0.5
+				religion_authority = 0.4
+			}
+			modifier = {
+				factor = 0.5
+				religion_authority = 0.5
+			}
+			modifier = {
+				factor = 0.5
+				religion_authority = 0.6
+			}
+			modifier = {
+				factor = 0.5
+				religion_authority = 0.7
+			}
+			modifier = {
+				factor = 0.5
+				religion_authority = 0.8
+			}
+			modifier = {
+				factor = 0.5
+				religion_authority = 0.9
+			}
+			modifier = {
+				factor = 0.5
+				religion_authority = 1
+			}
+			
+			# Personality
+			modifier = {
+				factor = 4
+				trait = pragmatic
+			}
+			modifier = {
+				factor = 0.25
+				trait = radical
+			}
+			modifier = {
+				factor = 4
+				trait = open_minded
+			}
+			modifier = {
+				factor = 0.25
+				trait = close_minded
+			}
+			
+			# FROM's diplomacy
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 1 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 2 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 3 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 4 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 5 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 6 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 7 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 8 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 9 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 11 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 12 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 13 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 14 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 15 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 16 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 17 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 18 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 19 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { diplomacy = 20 }
+			}
+		}
+	}
+	
+	option = {
+		# They're wrong
+		name = "EVTOPTBCONVERSION5001"
+		FROM = { character_event = { id = conversion.5103 tooltip = "EVTTOOLTIPCONVERSION5103" } }
+		piety = 50
+		ai_chance = { factor = 100 }
+	}
+}
+
+# You successfully converted your friend!
+character_event = {
+	id = conversion.5102
+	desc = "EVTDESCCONVERSION5102"
+	picture = GFX_evt_lovers
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACONVERSION5102" }
+}
+
+# You failed to convert your lover!
+character_event = {
+	id = conversion.5103
+	desc = "EVTDESCCONVERSION5103"
+	picture = GFX_evt_quarrel
+	is_triggered_only = yes
+	
+	option = {
+		# We'll agree to disagree
+		name = "EVTOPTACONVERSION5003"
+		piety = -50
+		
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 5
+				trait = friendly
+			}
+			modifier = {
+				factor = 0.5
+				trait = cold
+			}
+			modifier = {
+				factor = 4
+				trait = open_minded
+			}
+			modifier = {
+				factor = 0.5
+				trait = close_minded
+			}
+			modifier = {
+				factor = 4
+				trait = pragmatic
+			}
+			modifier = {
+				factor = 0.25
+				trait = radical
+			}
+		}
+	}
+	
+	option = {
+		# Then I can no longer love them
+		name = "EVTOPTBCONVERSION5103"
+		remove_lover = FROM
+		hidden_tooltip = { FROM = { character_event = { id = conversion.5104 } } }
+		ai_chance = { factor = 50 }
+	}
+}
+
+# Your lover is infuriated by your refusal to see things their way
+character_event = {
+	id = conversion.5104
+	desc = "EVTDESCCONVERSION5104"
+	picture = GFX_evt_quarrel
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACONVERSION5104"
+		remove_lover = FROM
+	}
+}
+
+# Special Conversion: Space Pirate
+character_event = {
+	id = conversion.10000
+	desc = "EVTDESCCONVERSION10000"
+	picture = GFX_evt_space_pirate
+	
+	min_age = 16
+	only_capable = yes
+	prisoner = no
+	
+	trigger = {
+		is_ruler = no
+		not = { religion = space_pirate }
+		NOT = { trait = radical }
+		OR = {
+			NOT = {  religion_authority = 0.5 }
+			trait = pragmatic
+			trait = cold
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+		modifier = {
+			factor = 2
+			religion_authority = 0.1
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.2
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.3
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.4
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.5
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.6
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.7
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.8
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.9
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 1
+		}
+		
+		# Personality
+		modifier = {
+			factor = 0.25
+			trait = pragmatic
+		}
+		modifier = {
+			factor = 0.25
+			trait = open_minded
+		}
+		modifier = {
+			factor = 4
+			trait = close_minded
+		}
+		modifier = {
+			factor = 0.5
+			trait = carefree
+		}
+		modifier = {
+			factor = 2
+			trait = disciplined
+		}
+		modifier = {
+			factor = 0.25
+			trait = cold
+		}
+		modifier = {
+			factor = 4
+			trait = friendly
+		}
+		modifier = {
+			factor = 0.5
+			trait = brave
+		}
+		modifier = {
+			factor = 10
+			trait = craven
+		}
+		modifier = {
+			factor = 0.1
+			trait = ambitious
+		}
+		modifier = {	
+			factor = 10
+			trait = content
+		}
+		
+		# Self-interest
+		modifier = {
+			factor = 5
+			OR = {
+				any_heir_title = { always = yes }
+				has_minor_title = title_expected_successor
+			}
+		}
+		modifier = {
+			factor = 5
+			trait = ambitious
+			OR = {
+				any_heir_title = { always = yes }
+				has_minor_title = title_expected_successor
+			}
+		}
+		modifier = {
+			factor = 5
+			any_pretender_title = { always = yes }
+		}
+		modifier = {
+			factor = 2
+			trait = ambitious
+			any_pretender_title = { always = yes }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTACONVERSION10000"
+		religion = space_pirate
+		if = {
+			limit = { liege = { NOT = { religion = space_pirate } } }
+			any_independent_ruler = {
+				limit = { religion = space_pirate }
+				reverse_banish = ROOT
+			}
+			liege = { character_event = { id = conversion.10001 } }
+		}
+	}
+}
+
+character_event = {
+	id = conversion.10001
+	desc = "EVTDESCCONVERSION10001"
+	picture = GFX_evt_pirate
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+
+# Special Conversion: Devolved naval commander turns space pirate
+character_event = {
+	id = conversion.10010
+	desc = "EVTDESCCONVERSION10010"
+	picture = GFX_evt_space_pirate
+	
+	min_age = 16
+	only_capable = yes
+	rulers_only = yes
+	
+	trigger = {
+		primary_title = { is_tribal_type_title = yes }
+		independent = yes
+		war = no
+		not = { religion = space_pirate }
+		NOT = { trait = radical }
+		OR = {
+			NOT = {  religion_authority = 0.5 }
+			trait = pragmatic
+			trait = cold
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+		modifier = {
+			factor = 2
+			religion_authority = 0.1
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.2
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.3
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.4
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.5
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.6
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.7
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.8
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.9
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 1
+		}
+		
+		# Personality
+		modifier = {
+			factor = 0.25
+			trait = pragmatic
+		}
+		modifier = {
+			factor = 0.25
+			trait = open_minded
+		}
+		modifier = {
+			factor = 4
+			trait = close_minded
+		}
+		modifier = {
+			factor = 0.5
+			trait = carefree
+		}
+		modifier = {
+			factor = 2
+			trait = disciplined
+		}
+		modifier = {
+			factor = 0.25
+			trait = cold
+		}
+		modifier = {
+			factor = 4
+			trait = friendly
+		}
+		modifier = {
+			factor = 0.5
+			trait = brave
+		}
+		modifier = {
+			factor = 10
+			trait = craven
+		}
+		modifier = {
+			factor = 0.1
+			trait = ambitious
+		}
+		modifier = {	
+			factor = 10
+			trait = content
+		}
+	}
+	
+	option = {
+		name = "EVTOPTACONVERSION10010"
+		religion = space_pirate
+		hidden_tooltip = { any_vassal = { character_event = { id = conversion.10011 } }
+	}
+}
+
+character_event = {
+	id = conversion.10011
+	desc = "EVTDESCCONVERSION10011"
+	picture = GFX_evt_space_pirate
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+
+# Special Conversion: Terran Federalist
+character_event = {
+	id = conversion.10100
+	desc = "EVTDESCCONVERSION10100"
+	picture = GFX_evt_conversion
+	
+	min_age = 16
+	only_capable = yes
+	
+	trigger = {
+		religion_group = political_group
+		NOT = { religion = terran_federalist }
+		NOT = { religion_authority = 0.5 }
+		NOT = {
+			any_war = {
+				attacker = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+		
+		# Personality
+		modifier = {
+			factor = 5
+			trait = close_minded
+		}
+		modifier = {
+			factor = 0.2
+			trait = open_minded
+		}
+		modifier = {
+			factor = 4
+			trait = radical
+		}
+		modifier = {
+			factor = 0.25
+			trait = pragmatic
+		}
+		
+		# Moral Authority
+		modifier = {
+			factor = 2
+			religion_authority = 0.1
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.2
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.3
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.4
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 0.1
+				}
+				any_realm_province = {
+					religion = terran_federalist
+					religion_authority = 0.1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 0.2
+				}
+				any_realm_province = {
+					religion = terran_federalist
+					religion_authority = 0.2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 0.3
+				}
+				any_realm_province = {
+					religion = terran_federalist
+					religion_authority = 0.3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 0.4
+				}
+				any_realm_province = {
+					religion = terran_federalist
+					religion_authority = 0.4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 0.5
+				}
+				any_realm_province = {
+					religion = terran_federalist
+					religion_authority = 0.5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 0.6
+				}
+				any_realm_province = {
+					religion = terran_federalist
+					religion_authority = 0.6
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 0.7
+				}
+				any_realm_province = {
+					religion = terran_federalist
+					religion_authority = 0.7
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 0.8
+				}
+				any_realm_province = {
+					religion = terran_federalist
+					religion_authority = 0.8
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 0.9
+				}
+				any_realm_province = {
+					religion = terran_federalist
+					religion_authority = 0.9
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_federalist
+					religion_authority = 1
+				}
+				any_realm_province = {
+					religion = terran_federalist
+					religion_authority = 1
+				}
+			}
+		}
+		
+		# Existing ideological differences
+		modifier = {
+			factor = 5
+			NOT = { religion = colonial_separatist }
+			NOT = { religion = terran_republican }
+		}
+		
+		# Self interest
+		modifier = {
+			factor = 0.5
+			NOT = { religion = terran_imperial }
+			NOT = { religion = terran_republican }
+			NOT = { trait = content }
+			culture_group = terran_group
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { religion = terran_imperial }
+			NOT = { religion = terran_republican }
+			trait = ambitious
+			culture_group = terran_group
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				religion = terran_imperial
+				religion = terran_republican
+			}
+			NOT = { trait = content }
+			culture_group = terran_group
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				religion = terran_imperial
+				religion = terran_republican
+			}
+			trait = ambitious
+			culture_group = terran_group
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { trait = content }
+			OR = {
+				culture_group = xingjie_group
+				culture_group = celestean_group
+				culture_group = sexto_solar_group
+				culture_group = samawati_group
+				culture_group = angani_group
+				culture_group = frontier_group
+				culture_group = centauri_group
+			}
+		}
+		modifier = {
+			factor = 0.5
+			trait = ambitious
+			OR = {
+				culture_group = xingjie_group
+				culture_group = celestean_group
+				culture_group = sexto_solar_group
+				culture_group = samawati_group
+				culture_group = angani_group
+				culture_group = frontier_group
+				culture_group = centauri_group
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { religion = terran_imperial }
+			NOT = { religion = terran_republican }
+			OR = {
+				culture_group = xingjie_group
+				culture_group = celestean_group
+				culture_group = sexto_solar_group
+				culture_group = samawati_group
+				culture_group = angani_group
+				culture_group = frontier_group
+				culture_group = centauri_group
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { religion = terran_imperial }
+			NOT = { religion = terran_republican }
+			NOT = { trait = content }
+			OR = {
+				culture_group = xingjie_group
+				culture_group = celestean_group
+				culture_group = sexto_solar_group
+				culture_group = samawati_group
+				culture_group = angani_group
+				culture_group = frontier_group
+				culture_group = centauri_group
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { religion = terran_imperial }
+			NOT = { religion = terran_republican }
+			trait = ambitious
+			OR = {
+				culture_group = xingjie_group
+				culture_group = celestean_group
+				culture_group = sexto_solar_group
+				culture_group = samawati_group
+				culture_group = angani_group
+				culture_group = frontier_group
+				culture_group = centauri_group
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = { trait = content }
+			OR = {
+				religion = terran_imperial
+				religion = terran_republican
+			}
+			OR = {
+				culture_group = bianjiangese_group
+				culture_group = orion_group
+				culture_group = mukta_group
+				culture_group = tarkan_group
+				culture_group = avalonian_group
+				culture_group = jionese_group
+				culture_group = strugatskite_group
+				culture_group = edemite_group
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				religion = terran_imperial
+				religion = terran_republican
+			}
+			trait = ambitious
+			OR = {
+				culture_group = bianjiangese_group
+				culture_group = orion_group
+				culture_group = mukta_group
+				culture_group = tarkan_group
+				culture_group = avalonian_group
+				culture_group = jionese_group
+				culture_group = strugatskite_group
+				culture_group = edemite_group
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = { religion = terran_imperial }
+			NOT = { religion = terran_republican }
+			NOT = { trait = content }
+			OR = {
+				culture_group = bianjiangese_group
+				culture_group = orion_group
+				culture_group = mukta_group
+				culture_group = tarkan_group
+				culture_group = avalonian_group
+				culture_group = jionese_group
+				culture_group = strugatskite_group
+				culture_group = edemite_group
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = { religion = terran_imperial }
+			NOT = { religion = terran_republican }
+			trait = ambitious
+			OR = {
+				culture_group = bianjiangese_group
+				culture_group = orion_group
+				culture_group = mukta_group
+				culture_group = tarkan_group
+				culture_group = avalonian_group
+				culture_group = jionese_group
+				culture_group = strugatskite_group
+				culture_group = edemite_group
+			}
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+			is_feudal = yes
+			is_patrician = no
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+			is_feudal = yes
+			is_patrician = no
+			trait = ambitious
+		}
+		modifier = {
+			factor = 4
+			religion = neo_socialist
+			is_theocracy = yes
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 4
+			religion = neo_socialist
+			is_theocracy = yes
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { religion = terran_republican }
+			NOT = { religion = colonial_separatist }
+			is_republic = yes
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { religion = terran_republican }
+			NOT = { religion = colonial_separatist }
+			is_republic = yes
+			trait = ambitious
+		}
+		
+		# Influences
+		modifier = {
+			factor = 0.5
+			location = { religion = terran_federalist }
+		}
+		modifier = {
+			factor = 2
+			location = { religion = ROOT }
+		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				religion = terran_federalist
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 2
+			liege = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = terran_federalist
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = terran_federalist
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = terran_federalist
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = terran_federalist
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = terran_federalist
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			spouse = {
+				religion = terran_federalist
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 2
+			spouse = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_lover = { religion = terran_federalist }
+		}
+		modifier = {
+			factor = 2
+			any_lover = { religion = ROOT }
+		}
+		modifier = {
+			factor = 0.5
+			any_lover = {
+				religion = terran_federalist
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_lover = {
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_lover = {
+				religion = terran_federalist
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_lover = {
+				religion = ROOT
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = { religion = terran_federalist }
+		}
+		modifier = {
+			factor = 2
+			any_friend = { religion = ROOT }
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = {
+				religion = terran_federalist
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_friend = {
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = {
+				religion = terran_federalist
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_friend = {
+				religion = ROOT
+				count = 3
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTACONVERSION10100"
+		religion = terran_federalist
+		hidden_tooltip = { any_vassal = { character_event = { id = conversion.10101 } } }
+	}
+}
+
+character_event = {
+	id = conversion.10101
+	desc = "EVTDESCCONVERSION10101"
+	picture = GFX_evt_conversion
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+
+# Special Conversion: Terran Republican
+character_event = {
+	id = conversion.10200
+	desc = "EVTDESCCONVERSION10200"
+	picture = GFX_evt_conversion
+	
+	min_age = 16
+	only_capable = yes
+	
+	trigger = {
+		religion_group = political_group
+		NOT = { religion = terran_republican }
+		NOT = { religion_authority = 0.5 }
+		NOT = {
+			any_war = {
+				attacker = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+		
+		# Personality
+		modifier = {
+			factor = 5
+			trait = close_minded
+		}
+		modifier = {
+			factor = 0.2
+			trait = open_minded
+		}
+		modifier = {
+			factor = 4
+			trait = radical
+		}
+		modifier = {
+			factor = 0.25
+			trait = pragmatic
+		}
+		
+		# Moral Authority
+		modifier = {
+			factor = 2
+			religion_authority = 0.1
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.2
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.3
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.4
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 0.1
+				}
+				any_realm_province = {
+					religion = terran_republican
+					religion_authority = 0.1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 0.2
+				}
+				any_realm_province = {
+					religion = terran_republican
+					religion_authority = 0.2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 0.3
+				}
+				any_realm_province = {
+					religion = terran_republican
+					religion_authority = 0.3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 0.4
+				}
+				any_realm_province = {
+					religion = terran_republican
+					religion_authority = 0.4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 0.5
+				}
+				any_realm_province = {
+					religion = terran_republican
+					religion_authority = 0.5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 0.6
+				}
+				any_realm_province = {
+					religion = terran_republican
+					religion_authority = 0.6
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 0.7
+				}
+				any_realm_province = {
+					religion = terran_republican
+					religion_authority = 0.7
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 0.8
+				}
+				any_realm_province = {
+					religion = terran_republican
+					religion_authority = 0.8
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 0.9
+				}
+				any_realm_province = {
+					religion = terran_republican
+					religion_authority = 0.9
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_republican
+					religion_authority = 1
+				}
+				any_realm_province = {
+					religion = terran_republican
+					religion_authority = 1
+				}
+			}
+		}
+		
+		# Existing ideological differences
+		modifier = {
+			factor = 5
+			NOT = { religion = terran_imperial }
+			NOT = { religion = terran_federalist }
+			NOT = { religion = astrist }
+		}
+		
+		# Self interest
+		modifier = {
+			factor = 0.5
+			NOT = { religion = terran_imperial }
+			NOT = { religion = terran_federalist }
+			NOT = { trait = content }
+			OR = {
+				culture_group = xingjie_group
+				culture_group = celestean_group
+				culture_group = sexto_solar_group
+				culture_group = samawati_group
+				culture_group = angani_group
+				culture_group = frontier_group
+				culture_group = centauri_group
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { religion = terran_imperial }
+			NOT = { religion = terran_federalist }
+			trait = ambitious
+			OR = {
+				culture_group = xingjie_group
+				culture_group = celestean_group
+				culture_group = sexto_solar_group
+				culture_group = samawati_group
+				culture_group = angani_group
+				culture_group = frontier_group
+				culture_group = centauri_group
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = { religion = terran_imperial }
+			religion = terran_federalist
+			NOT = { trait = content }
+			OR = {
+				culture_group = xingjie_group
+				culture_group = celestean_group
+				culture_group = sexto_solar_group
+				culture_group = samawati_group
+				culture_group = angani_group
+				culture_group = frontier_group
+				culture_group = centauri_group
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = { religion = terran_imperial }
+			religion = terran_federalist
+			trait = ambitious
+			OR = {
+				culture_group = xingjie_group
+				culture_group = celestean_group
+				culture_group = sexto_solar_group
+				culture_group = samawati_group
+				culture_group = angani_group
+				culture_group = frontier_group
+				culture_group = centauri_group
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { religion = terran_imperial }
+			NOT = { trait = content }
+			culture_group = terran_group
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { religion = terran_imperial }
+			trait = ambitious
+			culture_group = terran_group
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { religion = terran_imperial }
+			NOT = { religion = terran_federalist }
+			culture_group = terran_group
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { religion = terran_imperial }
+			NOT = { religion = terran_federalist }
+			NOT = { trait = content }
+			culture_group = terran_group
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { religion = terran_imperial }
+			NOT = { religion = terran_federalist }
+			trait = ambitious
+			culture_group = terran_group
+		}
+		modifier = {
+			factor = 4
+			NOT = { religion = terran_imperial }
+			NOT = { trait = content }
+			OR = {
+				culture_group = bianjiangese_group
+				culture_group = orion_group
+				culture_group = mukta_group
+				culture_group = tarkan_group
+				culture_group = avalonian_group
+				culture_group = jionese_group
+				culture_group = strugatskite_group
+				culture_group = edemite_group
+			}
+		}
+		modifier = {
+			factor = 4
+			NOT = { religion = terran_imperial }
+			trait = ambitious
+			OR = {
+				culture_group = bianjiangese_group
+				culture_group = orion_group
+				culture_group = mukta_group
+				culture_group = tarkan_group
+				culture_group = avalonian_group
+				culture_group = jionese_group
+				culture_group = strugatskite_group
+				culture_group = edemite_group
+			}
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+			is_feudal = yes
+			is_patrician = no
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+			is_feudal = yes
+			is_patrician = no
+			trait = ambitious
+		}
+		modifier = {
+			factor = 4
+			religion = neo_socialist
+			is_theocracy = yes
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 4
+			religion = neo_socialist
+			is_theocracy = yes
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { religion = terran_federalist }
+			NOT = { religion = colonial_separatist }
+			is_republic = yes
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { religion = terran_federalist }
+			NOT = { religion = colonial_separatist }
+			is_republic = yes
+			trait = ambitious
+		}
+		
+		# Influences
+		modifier = {
+			factor = 0.5
+			location = { religion = terran_republican }
+		}
+		modifier = {
+			factor = 2
+			location = { religion = ROOT }
+		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				religion = terran_republican
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 2
+			liege = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = terran_republican
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = terran_republican
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = terran_republican
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = terran_republican
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = terran_republican
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			spouse = {
+				religion = terran_republican
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 2
+			spouse = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_lover = { religion = terran_republican }
+		}
+		modifier = {
+			factor = 2
+			any_lover = { religion = ROOT }
+		}
+		modifier = {
+			factor = 0.5
+			any_lover = {
+				religion = terran_republican
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_lover = {
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_lover = {
+				religion = terran_republican
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_lover = {
+				religion = ROOT
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = { religion = terran_republican }
+		}
+		modifier = {
+			factor = 2
+			any_friend = { religion = ROOT }
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = {
+				religion = terran_republican
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_friend = {
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = {
+				religion = terran_republican
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_friend = {
+				religion = ROOT
+				count = 3
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTACONVERSION10200"
+		religion = terran_republican
+		hidden_tooltip = { any_vassal = { character_event = { id = conversion.10201 } } }
+	}
+}
+
+character_event = {
+	id = conversion.10201
+	desc = "EVTDESCCONVERSION10201"
+	picture = GFX_evt_conversion
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+
+# Special Conversion: Terran Imperial
+character_event = {
+	id = conversion.10300
+	desc = "EVTDESCCONVERSION10300"
+	picture = GFX_evt_conversion
+	
+	min_age = 16
+	only_capable = yes
+	
+	trigger = {
+		religion_group = political_group
+		NOT = { religion = terran_imperial }
+		NOT = { religion_authority = 0.5 }
+		NOT = {
+			any_war = {
+				attacker = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+		
+		# Personality
+		modifier = {
+			factor = 5
+			trait = close_minded
+		}
+		modifier = {
+			factor = 0.2
+			trait = open_minded
+		}
+		modifier = {
+			factor = 4
+			trait = radical
+		}
+		modifier = {
+			factor = 0.25
+			trait = pragmatic
+		}
+		
+		# Moral Authority
+		modifier = {
+			factor = 2
+			religion_authority = 0.1
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.2
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.3
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.4
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 0.1
+				}
+				any_realm_province = {
+					religion = terran_imperial
+					religion_authority = 0.1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 0.2
+				}
+				any_realm_province = {
+					religion = terran_imperial
+					religion_authority = 0.2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 0.3
+				}
+				any_realm_province = {
+					religion = terran_imperial
+					religion_authority = 0.3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 0.4
+				}
+				any_realm_province = {
+					religion = terran_imperial
+					religion_authority = 0.4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 0.5
+				}
+				any_realm_province = {
+					religion = terran_imperial
+					religion_authority = 0.5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 0.6
+				}
+				any_realm_province = {
+					religion = terran_imperial
+					religion_authority = 0.6
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 0.7
+				}
+				any_realm_province = {
+					religion = terran_imperial
+					religion_authority = 0.7
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 0.8
+				}
+				any_realm_province = {
+					religion = terran_imperial
+					religion_authority = 0.8
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 0.9
+				}
+				any_realm_province = {
+					religion = terran_imperial
+					religion_authority = 0.9
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = terran_imperial
+					religion_authority = 1
+				}
+				any_realm_province = {
+					religion = terran_imperial
+					religion_authority = 1
+				}
+			}
+		}
+		
+		# Existing ideological differences
+		modifier = {
+			factor = 5
+			NOT = { religion = terran_republican }
+			NOT = { religion = astrist }
+			NOT = { religion = neo_feudal }
+		}
+		
+		# Self interest
+		modifier = {
+			factor = 0.5
+			NOT = { religion = terran_republican }
+			NOT = { religion = terran_federalist }
+			NOT = { trait = content }
+			OR = {
+				culture_group = xingjie_group
+				culture_group = celestean_group
+				culture_group = sexto_solar_group
+				culture_group = samawati_group
+				culture_group = angani_group
+				culture_group = frontier_group
+				culture_group = centauri_group
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { religion = terran_republican }
+			NOT = { religion = terran_federalist }
+			trait = ambitious
+			OR = {
+				culture_group = xingjie_group
+				culture_group = celestean_group
+				culture_group = sexto_solar_group
+				culture_group = samawati_group
+				culture_group = angani_group
+				culture_group = frontier_group
+				culture_group = centauri_group
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = { religion = terran_republican }
+			religion = terran_federalist
+			NOT = { trait = content }
+			OR = {
+				culture_group = xingjie_group
+				culture_group = celestean_group
+				culture_group = sexto_solar_group
+				culture_group = samawati_group
+				culture_group = angani_group
+				culture_group = frontier_group
+				culture_group = centauri_group
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = { religion = terran_republican }
+			religion = terran_federalist
+			trait = ambitious
+			OR = {
+				culture_group = xingjie_group
+				culture_group = celestean_group
+				culture_group = sexto_solar_group
+				culture_group = samawati_group
+				culture_group = angani_group
+				culture_group = frontier_group
+				culture_group = centauri_group
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { religion = terran_republican }
+			NOT = { trait = content }
+			culture_group = terran_group
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { religion = terran_republican }
+			trait = ambitious
+			culture_group = terran_group
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { religion = terran_republican }
+			NOT = { religion = terran_federalist }
+			culture_group = terran_group
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { religion = terran_republican }
+			NOT = { religion = terran_federalist }
+			NOT = { trait = content }
+			culture_group = terran_group
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { religion = terran_republican }
+			NOT = { religion = terran_federalist }
+			trait = ambitious
+			culture_group = terran_group
+		}
+		modifier = {
+			factor = 4
+			NOT = { religion = terran_republican }
+			NOT = { trait = content }
+			OR = {
+				culture_group = bianjiangese_group
+				culture_group = orion_group
+				culture_group = mukta_group
+				culture_group = tarkan_group
+				culture_group = avalonian_group
+				culture_group = jionese_group
+				culture_group = strugatskite_group
+				culture_group = edemite_group
+			}
+		}
+		modifier = {
+			factor = 4
+			NOT = { religion = terran_republican }
+			trait = ambitious
+			OR = {
+				culture_group = bianjiangese_group
+				culture_group = orion_group
+				culture_group = mukta_group
+				culture_group = tarkan_group
+				culture_group = avalonian_group
+				culture_group = jionese_group
+				culture_group = strugatskite_group
+				culture_group = edemite_group
+			}
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { religion = astrist }
+			NOT = { religion = neo_feudal }
+			is_feudal = yes
+			is_patrician = no
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { religion = astrist }
+			NOT = { religion = neo_feudal }
+			is_feudal = yes
+			is_patrician = no
+			trait = ambitious
+		}
+		modifier = {
+			factor = 4
+			religion = neo_socialist
+			is_theocracy = yes
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 4
+			religion = neo_socialist
+			is_theocracy = yes
+			trait = ambitious
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+			}
+			is_republic = yes
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+			}
+			is_republic = yes
+			trait = ambitious
+		}
+		
+		# Influences
+		modifier = {
+			factor = 0.5
+			location = { religion = terran_imperial }
+		}
+		modifier = {
+			factor = 2
+			location = { religion = ROOT }
+		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				religion = terran_imperial
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 2
+			liege = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = terran_imperial
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = terran_imperial
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = terran_imperial
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = terran_imperial
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = terran_imperial
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			spouse = {
+				religion = terran_imperial
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 2
+			spouse = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_lover = { religion = terran_imperial }
+		}
+		modifier = {
+			factor = 2
+			any_lover = { religion = ROOT }
+		}
+		modifier = {
+			factor = 0.5
+			any_lover = {
+				religion = terran_imperial
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_lover = {
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_lover = {
+				religion = terran_imperial
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_lover = {
+				religion = ROOT
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = { religion = terran_imperial }
+		}
+		modifier = {
+			factor = 2
+			any_friend = { religion = ROOT }
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = {
+				religion = terran_imperial
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_friend = {
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = {
+				religion = terran_imperial
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_friend = {
+				religion = ROOT
+				count = 3
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTACONVERSION10300"
+		religion = terran_imperial
+		hidden_tooltip = { any_vassal = { character_event = { id = conversion.10301 } } }
+	}
+}
+
+character_event = {
+	id = conversion.10301
+	desc = "EVTDESCCONVERSION10301"
+	picture = GFX_evt_conversion
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+
+# Special Conversion: Colonial Separatist
+character_event = {
+	id = conversion.10400
+	desc = "EVTDESCCONVERSION10400"
+	picture = GFX_evt_conversion
+	
+	min_age = 16
+	only_capable = yes
+	
+	trigger = {
+		religion_group = political_group
+		NOT = { religion = colonial_separatist }
+		NOT = { religion_authority = 0.5 }
+		NOT = {
+			any_war = {
+				attacker = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+		
+		# Personality
+		modifier = {
+			factor = 5
+			trait = close_minded
+		}
+		modifier = {
+			factor = 0.2
+			trait = open_minded
+		}
+		modifier = {
+			factor = 4
+			trait = radical
+		}
+		modifier = {
+			factor = 0.25
+			trait = pragmatic
+		}
+		
+		# Moral Authority
+		modifier = {
+			factor = 2
+			religion_authority = 0.1
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.2
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.3
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.4
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = colonial_separatist
+					religion_authority = 0.1
+				}
+				any_realm_province = {
+					religion = colonial_separatist
+					religion_authority = 0.1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = colonial_separatist
+					religion_authority = 0.2
+				}
+				any_realm_province = {
+					religion = colonial_separatist
+					religion_authority = 0.2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = colonial_separatist
+					religion_authority = 0.3
+				}
+				any_realm_province = {
+					religion = colonial_separatist
+					religion_authority = 0.3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = colonial_separatist
+					religion_authority = 0.4
+				}
+				any_realm_province = {
+					religion = colonial_separatist
+					religion_authority = 0.4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = colonial_separatist
+					religion_authority = 0.5
+				}
+				any_realm_province = {
+					religion = colonial_separatist
+					religion_authority = 0.5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = colonial_separatist
+					religion_authority = 0.6
+				}
+				any_realm_province = {
+					religion = colonial_separatist
+					religion_authority = 0.6
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = colonial_separatist
+					religion_authority = 0.7
+				}
+				any_realm_province = {
+					religion = colonial_separatist
+					religion_authority = 0.7
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = colonial_separatist
+					religion_authority = 0.8
+				}
+				any_realm_province = {
+					religion = colonial_separatist
+					religion_authority = 0.8
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = colonial_separatist
+					religion_authority = 0.9
+				}
+				any_realm_province = {
+					religion = colonial_separatist
+					religion_authority = 0.9
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = colonial_separatist
+					religion_authority = 1
+				}
+				any_realm_province = {
+					religion = colonial_separatist
+					religion_authority = 1
+				}
+			}
+		}
+		
+		# Existing ideological differences
+		modifier = {
+			factor = 5
+			NOT = { religion = terran_federalist }
+			NOT = { religion = neo_feudal }
+		}
+		
+		# Self interest
+		modifier = {
+			factor = 4
+			NOT = { religion = neo_feudal }
+			NOT = { religion = astrist }
+			NOT = { trait = content }
+			culture_group = terran_group
+		}
+		modifier = {
+			factor = 4
+			NOT = { religion = neo_feudal }
+			NOT = { religion = astrist }
+			trait = ambitious
+			culture_group = terran_group
+		}
+		modifier = {
+			factor = 2
+			NOT = { religion = neo_feudal }
+			NOT = { religion = astrist }
+			NOT = { trait = content }
+			OR = {
+				culture_group = xingjie_group
+				culture_group = celestean_group
+				culture_group = sexto_solar_group
+				culture_group = samawati_group
+				culture_group = angani_group
+				culture_group = frontier_group
+				culture_group = centauri_group
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = { religion = neo_feudal }
+			NOT = { religion = astrist }
+			trait = ambitious
+			OR = {
+				culture_group = xingjie_group
+				culture_group = celestean_group
+				culture_group = sexto_solar_group
+				culture_group = samawati_group
+				culture_group = angani_group
+				culture_group = frontier_group
+				culture_group = centauri_group
+			}
+		}
+		modifier = {
+			factor = 2
+			religion = terran_federalist
+			NOT = { trait = content }
+			OR = {
+				culture_group = xingjie_group
+				culture_group = celestean_group
+				culture_group = sexto_solar_group
+				culture_group = samawati_group
+				culture_group = angani_group
+				culture_group = frontier_group
+				culture_group = centauri_group
+			}
+		}
+		modifier = {
+			factor = 2
+			religion = terran_federalist
+			trait = ambitious
+			OR = {
+				culture_group = xingjie_group
+				culture_group = celestean_group
+				culture_group = sexto_solar_group
+				culture_group = samawati_group
+				culture_group = angani_group
+				culture_group = frontier_group
+				culture_group = centauri_group
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = { trait = content }
+			OR = {
+				religion = terran_imperial
+				religion = terran_republican
+			}
+			OR = {
+				culture_group = bianjiangese_group
+				culture_group = orion_group
+				culture_group = mukta_group
+				culture_group = tarkan_group
+				culture_group = avalonian_group
+				culture_group = jionese_group
+				culture_group = strugatskite_group
+				culture_group = edemite_group
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				religion = terran_imperial
+				religion = terran_republican
+			}
+			trait = ambitious
+			OR = {
+				culture_group = bianjiangese_group
+				culture_group = orion_group
+				culture_group = mukta_group
+				culture_group = tarkan_group
+				culture_group = avalonian_group
+				culture_group = jionese_group
+				culture_group = strugatskite_group
+				culture_group = edemite_group
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = { trait = content }
+			OR = {
+				religion = terran_imperial
+				religion = terran_republican
+				religion = terran_federalist
+			}
+			OR = {
+				culture_group = bianjiangese_group
+				culture_group = orion_group
+				culture_group = mukta_group
+				culture_group = tarkan_group
+				culture_group = avalonian_group
+				culture_group = jionese_group
+				culture_group = strugatskite_group
+				culture_group = edemite_group
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				religion = terran_imperial
+				religion = terran_republican
+				religion = terran_federalist
+			}
+			trait = ambitious
+			OR = {
+				culture_group = bianjiangese_group
+				culture_group = orion_group
+				culture_group = mukta_group
+				culture_group = tarkan_group
+				culture_group = avalonian_group
+				culture_group = jionese_group
+				culture_group = strugatskite_group
+				culture_group = edemite_group
+			}
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+			is_feudal = yes
+			is_patrician = no
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+			is_feudal = yes
+			is_patrician = no
+			trait = ambitious
+		}
+		modifier = {
+			factor = 4
+			religion = neo_socialist
+			is_theocracy = yes
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 4
+			religion = neo_socialist
+			is_theocracy = yes
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { religion = terran_republican }
+			NOT = { religion = colonial_separatist }
+			is_republic = yes
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { religion = terran_republican }
+			NOT = { religion = colonial_separatist }
+			is_republic = yes
+			trait = ambitious
+		}
+		
+		# Influences
+		modifier = {
+			factor = 0.5
+			location = { religion = colonial_separatist }
+		}
+		modifier = {
+			factor = 2
+			location = { religion = ROOT }
+		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				religion = colonial_separatist
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 2
+			liege = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = colonial_separatist
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = colonial_separatist
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = colonial_separatist
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = colonial_separatist
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = colonial_separatist
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			spouse = {
+				religion = colonial_separatist
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 2
+			spouse = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_lover = { religion = colonial_separatist }
+		}
+		modifier = {
+			factor = 2
+			any_lover = { religion = ROOT }
+		}
+		modifier = {
+			factor = 0.5
+			any_lover = {
+				religion = colonial_separatist
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_lover = {
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_lover = {
+				religion = colonial_separatist
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_lover = {
+				religion = ROOT
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = { religion = colonial_separatist }
+		}
+		modifier = {
+			factor = 2
+			any_friend = { religion = ROOT }
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = {
+				religion = colonial_separatist
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_friend = {
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = {
+				religion = colonial_separatist
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_friend = {
+				religion = ROOT
+				count = 3
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTACONVERSION10400"
+		religion = colonial_separatist
+		hidden_tooltip = { any_vassal = { character_event = { id = conversion.10401 } } }
+	}
+}
+
+character_event = {
+	id = conversion.10401
+	desc = "EVTDESCCONVERSION10401"
+	picture = GFX_evt_conversion
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+
+# Special Conversion: Astrist
+character_event = {
+	id = conversion.10500
+	desc = "EVTDESCCONVERSION10500"
+	picture = GFX_evt_conversion
+	
+	min_age = 16
+	only_capable = yes
+	
+	trigger = {
+		religion_group = political_group
+		NOT = { religion = astrist }
+		NOT = { religion_authority = 0.5 }
+		NOT = {
+			any_war = {
+				attacker = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+		
+		# Personality
+		modifier = {
+			factor = 5
+			trait = close_minded
+		}
+		modifier = {
+			factor = 0.2
+			trait = open_minded
+		}
+		modifier = {
+			factor = 4
+			trait = radical
+		}
+		modifier = {
+			factor = 0.25
+			trait = pragmatic
+		}
+		
+		# Moral Authority
+		modifier = {
+			factor = 2
+			religion_authority = 0.1
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.2
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.3
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.4
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 0.1
+				}
+				any_realm_province = {
+					religion = astrist
+					religion_authority = 0.1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 0.2
+				}
+				any_realm_province = {
+					religion = astrist
+					religion_authority = 0.2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 0.3
+				}
+				any_realm_province = {
+					religion = astrist
+					religion_authority = 0.3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 0.4
+				}
+				any_realm_province = {
+					religion = astrist
+					religion_authority = 0.4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 0.5
+				}
+				any_realm_province = {
+					religion = astrist
+					religion_authority = 0.5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 0.6
+				}
+				any_realm_province = {
+					religion = astrist
+					religion_authority = 0.6
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 0.7
+				}
+				any_realm_province = {
+					religion = astrist
+					religion_authority = 0.7
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 0.8
+				}
+				any_realm_province = {
+					religion = astrist
+					religion_authority = 0.8
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 0.9
+				}
+				any_realm_province = {
+					religion = astrist
+					religion_authority = 0.9
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = astrist
+					religion_authority = 1
+				}
+				any_realm_province = {
+					religion = astrist
+					religion_authority = 1
+				}
+			}
+		}
+		
+		# Existing ideological differences
+		modifier = {
+			factor = 5
+			NOT = { religion = terran_republican }
+			NOT = { religion = terran_imperial }
+		}
+		
+		# Self interest
+		modifier = {
+			factor = 0.25
+			NOT = { religion = terran_imperial }
+			NOT = { religion = neo_feudal }
+			is_feudal = yes
+			is_patrician = no
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { religion = terran_imperial }
+			NOT = { religion = neo_feudal }
+			is_feudal = yes
+			is_patrician = no
+			trait = ambitious
+		}
+		modifier = {
+			factor = 4
+			religion = neo_socialist
+			is_theocracy = yes
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 4
+			religion = neo_socialist
+			is_theocracy = yes
+			trait = ambitious
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+			}
+			is_republic = yes
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+			}
+			is_republic = yes
+			trait = ambitious
+		}
+		
+		# Influences
+		modifier = {
+			factor = 0.5
+			location = { religion = astrist }
+		}
+		modifier = {
+			factor = 2
+			location = { religion = ROOT }
+		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				religion = astrist
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 2
+			liege = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = astrist
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = astrist
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = astrist
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = astrist
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = astrist
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			spouse = {
+				religion = astrist
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 2
+			spouse = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_lover = { religion = astrist }
+		}
+		modifier = {
+			factor = 2
+			any_lover = { religion = ROOT }
+		}
+		modifier = {
+			factor = 0.5
+			any_lover = {
+				religion = astrist
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_lover = {
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_lover = {
+				religion = astrist
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_lover = {
+				religion = ROOT
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = { religion = astrist }
+		}
+		modifier = {
+			factor = 2
+			any_friend = { religion = ROOT }
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = {
+				religion = astrist
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_friend = {
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = {
+				religion = astrist
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_friend = {
+				religion = ROOT
+				count = 3
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTACONVERSION10500"
+		religion = astrist
+		hidden_tooltip = { any_vassal = { character_event = { id = conversion.10501 } } }
+	}
+}
+
+character_event = {
+	id = conversion.10501
+	desc = "EVTDESCCONVERSION10501"
+	picture = GFX_evt_conversion
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+
+# Special Conversion: Neo-Feudal
+character_event = {
+	id = conversion.10600
+	desc = "EVTDESCCONVERSION10600"
+	picture = GFX_evt_conversion
+	
+	min_age = 16
+	only_capable = yes
+	
+	trigger = {
+		religion_group = political_group
+		NOT = { religion = neo_feudal }
+		NOT = { religion_authority = 0.5 }
+		NOT = {
+			any_war = {
+				attacker = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+		
+		# Personality
+		modifier = {
+			factor = 5
+			trait = close_minded
+		}
+		modifier = {
+			factor = 0.2
+			trait = open_minded
+		}
+		modifier = {
+			factor = 4
+			trait = radical
+		}
+		modifier = {
+			factor = 0.25
+			trait = pragmatic
+		}
+		modifier = {
+			factor = 0.25
+			trait = spiritual
+		}
+		modifier = {
+			factor = 4
+			trait = skeptical
+		}
+		
+		# Moral Authority
+		modifier = {
+			factor = 2
+			religion_authority = 0.1
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.2
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.3
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.4
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 0.1
+				}
+				any_realm_province = {
+					religion = neo_feudal
+					religion_authority = 0.1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 0.2
+				}
+				any_realm_province = {
+					religion = neo_feudal
+					religion_authority = 0.2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 0.3
+				}
+				any_realm_province = {
+					religion = neo_feudal
+					religion_authority = 0.3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 0.4
+				}
+				any_realm_province = {
+					religion = neo_feudal
+					religion_authority = 0.4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 0.5
+				}
+				any_realm_province = {
+					religion = neo_feudal
+					religion_authority = 0.5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 0.6
+				}
+				any_realm_province = {
+					religion = neo_feudal
+					religion_authority = 0.6
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 0.7
+				}
+				any_realm_province = {
+					religion = neo_feudal
+					religion_authority = 0.7
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 0.8
+				}
+				any_realm_province = {
+					religion = neo_feudal
+					religion_authority = 0.8
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 0.9
+				}
+				any_realm_province = {
+					religion = neo_feudal
+					religion_authority = 0.9
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = neo_feudal
+					religion_authority = 1
+				}
+				any_realm_province = {
+					religion = neo_feudal
+					religion_authority = 1
+				}
+			}
+		}
+		
+		# Existing ideological differences
+		modifier = {
+			factor = 5
+			NOT = { religion = colonial_separatist }
+			NOT = { religion = terran_imperial }
+		}
+		
+		# Self interest
+		modifier = {
+			factor = 4
+			NOT = { religion = colonial_separatist }
+			NOT = { religion = astrist }
+			NOT = { trait = content }
+			culture_group = terran_group
+		}
+		modifier = {
+			factor = 4
+			NOT = { religion = colonial_separatist }
+			NOT = { religion = astrist }
+			trait = ambitious
+			culture_group = terran_group
+		}
+		modifier = {
+			factor = 2
+			NOT = { religion = colonial_separatist }
+			NOT = { religion = astrist }
+			NOT = { trait = content }
+			OR = {
+				culture_group = xingjie_group
+				culture_group = celestean_group
+				culture_group = sexto_solar_group
+				culture_group = samawati_group
+				culture_group = angani_group
+				culture_group = frontier_group
+				culture_group = centauri_group
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = { religion = colonial_separatist }
+			NOT = { religion = astrist }
+			trait = ambitious
+			OR = {
+				culture_group = xingjie_group
+				culture_group = celestean_group
+				culture_group = sexto_solar_group
+				culture_group = samawati_group
+				culture_group = angani_group
+				culture_group = frontier_group
+				culture_group = centauri_group
+			}
+		}
+		modifier = {
+			factor = 2
+			religion = terran_federalist
+			NOT = { trait = content }
+			OR = {
+				culture_group = xingjie_group
+				culture_group = celestean_group
+				culture_group = sexto_solar_group
+				culture_group = samawati_group
+				culture_group = angani_group
+				culture_group = frontier_group
+				culture_group = centauri_group
+			}
+		}
+		modifier = {
+			factor = 2
+			religion = terran_federalist
+			trait = ambitious
+			OR = {
+				culture_group = xingjie_group
+				culture_group = celestean_group
+				culture_group = sexto_solar_group
+				culture_group = samawati_group
+				culture_group = angani_group
+				culture_group = frontier_group
+				culture_group = centauri_group
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = { trait = content }
+			OR = {
+				religion = terran_imperial
+				religion = terran_republican
+			}
+			OR = {
+				culture_group = bianjiangese_group
+				culture_group = orion_group
+				culture_group = mukta_group
+				culture_group = tarkan_group
+				culture_group = avalonian_group
+				culture_group = jionese_group
+				culture_group = strugatskite_group
+				culture_group = edemite_group
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				religion = terran_imperial
+				religion = terran_republican
+			}
+			trait = ambitious
+			OR = {
+				culture_group = bianjiangese_group
+				culture_group = orion_group
+				culture_group = mukta_group
+				culture_group = tarkan_group
+				culture_group = avalonian_group
+				culture_group = jionese_group
+				culture_group = strugatskite_group
+				culture_group = edemite_group
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = { trait = content }
+			OR = {
+				religion = terran_imperial
+				religion = terran_republican
+				religion = terran_federalist
+			}
+			OR = {
+				culture_group = bianjiangese_group
+				culture_group = orion_group
+				culture_group = mukta_group
+				culture_group = tarkan_group
+				culture_group = avalonian_group
+				culture_group = jionese_group
+				culture_group = strugatskite_group
+				culture_group = edemite_group
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				religion = terran_imperial
+				religion = terran_republican
+				religion = terran_federalist
+			}
+			trait = ambitious
+			OR = {
+				culture_group = bianjiangese_group
+				culture_group = orion_group
+				culture_group = mukta_group
+				culture_group = tarkan_group
+				culture_group = avalonian_group
+				culture_group = jionese_group
+				culture_group = strugatskite_group
+				culture_group = edemite_group
+			}
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { religion = terran_imperial }
+			NOT = { religion = astrist }
+			is_feudal = yes
+			is_patrician = no
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { religion = terran_imperial }
+			NOT = { religion = astrist }
+			is_feudal = yes
+			is_patrician = no
+			trait = ambitious
+		}
+		modifier = {
+			factor = 4
+			religion = neo_socialist
+			is_theocracy = yes
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 4
+			religion = neo_socialist
+			is_theocracy = yes
+			trait = ambitious
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+			}
+			is_republic = yes
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+			}
+			is_republic = yes
+			trait = ambitious
+		}
+		
+		# Influences
+		modifier = {
+			factor = 0.5
+			location = { religion = neo_feudal }
+		}
+		modifier = {
+			factor = 2
+			location = { religion = ROOT }
+		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				religion = neo_feudal
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 2
+			liege = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = neo_feudal
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = neo_feudal
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = neo_feudal
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = neo_feudal
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = neo_feudal
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			spouse = {
+				religion = neo_feudal
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 2
+			spouse = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_lover = { religion = neo_feudal }
+		}
+		modifier = {
+			factor = 2
+			any_lover = { religion = ROOT }
+		}
+		modifier = {
+			factor = 0.5
+			any_lover = {
+				religion = neo_feudal
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_lover = {
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_lover = {
+				religion = neo_feudal
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_lover = {
+				religion = ROOT
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = { religion = neo_feudal }
+		}
+		modifier = {
+			factor = 2
+			any_friend = { religion = ROOT }
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = {
+				religion = neo_feudal
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_friend = {
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = {
+				religion = neo_feudal
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_friend = {
+				religion = ROOT
+				count = 3
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTACONVERSION10600"
+		religion = neo_feudal
+		hidden_tooltip = { any_vassal = { character_event = { id = conversion.10601 } } }
+	}
+}
+
+character_event = {
+	id = conversion.10601
+	desc = "EVTDESCCONVERSION10601"
+	picture = GFX_evt_conversion
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+
+# Special Conversion: Neo-Socialist
+character_event = {
+	id = conversion.10700
+	desc = "EVTDESCCONVERSION10700"
+	picture = GFX_evt_conversion
+	
+	min_age = 16
+	only_capable = yes
+	
+	trigger = {
+		religion_group = political_group
+		NOT = { religion = neo_socialist }
+		NOT = { religion_authority = 0.5 }
+		NOT = {
+			any_war = {
+				attacker = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+		
+		# Personality
+		modifier = {
+			factor = 5
+			trait = close_minded
+		}
+		modifier = {
+			factor = 0.2
+			trait = open_minded
+		}
+		modifier = {
+			factor = 4
+			trait = radical
+		}
+		modifier = {
+			factor = 0.25
+			trait = pragmatic
+		}
+		
+		# Moral Authority
+		modifier = {
+			factor = 2
+			religion_authority = 0.1
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.2
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.3
+		}
+		modifier = {
+			factor = 2
+			religion_authority = 0.4
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 0.1
+				}
+				any_realm_province = {
+					religion = neo_socialist
+					religion_authority = 0.1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 0.2
+				}
+				any_realm_province = {
+					religion = neo_socialist
+					religion_authority = 0.2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 0.3
+				}
+				any_realm_province = {
+					religion = neo_socialist
+					religion_authority = 0.3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 0.4
+				}
+				any_realm_province = {
+					religion = neo_socialist
+					religion_authority = 0.4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 0.5
+				}
+				any_realm_province = {
+					religion = neo_socialist
+					religion_authority = 0.5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 0.6
+				}
+				any_realm_province = {
+					religion = neo_socialist
+					religion_authority = 0.6
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 0.7
+				}
+				any_realm_province = {
+					religion = neo_socialist
+					religion_authority = 0.7
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 0.8
+				}
+				any_realm_province = {
+					religion = neo_socialist
+					religion_authority = 0.8
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 0.9
+				}
+				any_realm_province = {
+					religion = neo_socialist
+					religion_authority = 0.9
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				any_realm_character = {
+					religion = neo_socialist
+					religion_authority = 1
+				}
+				any_realm_province = {
+					religion = neo_socialist
+					religion_authority = 1
+				}
+			}
+		}
+		
+		# Existing ideological similarities
+		modifier = {
+			factor = 5
+			NOT = { religion = terran_federalist }
+			NOT = { religion = terran_republican }
+			NOT = { religion = colonial_separatist }
+		}
+		
+		# Self interest
+		modifier = {
+			factor = 5
+			is_patrician = yes
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 5
+			is_patrician = yes
+			trait = ambitious
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+			is_feudal = yes
+			is_patrician = no
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+			is_feudal = yes
+			is_patrician = no
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.25
+			is_theocracy = yes
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 0.25
+			is_theocracy = yes
+			trait = ambitious
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+			}
+			is_republic = yes
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+			}
+			is_republic = yes
+			trait = ambitious
+		}
+		
+		# Influences
+		modifier = {
+			factor = 0.5
+			location = { religion = neo_socialist }
+		}
+		modifier = {
+			factor = 2
+			location = { religion = ROOT }
+		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				religion = neo_socialist
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 2
+			liege = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = neo_socialist
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = neo_socialist
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = neo_socialist
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = neo_socialist
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_vassal = {
+				religion = neo_socialist
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 2
+			any_vassal = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+				count = 5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			spouse = {
+				religion = neo_socialist
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 2
+			spouse = {
+				religion = ROOT
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_lover = { religion = neo_socialist }
+		}
+		modifier = {
+			factor = 2
+			any_lover = { religion = ROOT }
+		}
+		modifier = {
+			factor = 0.5
+			any_lover = {
+				religion = neo_socialist
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_lover = {
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_lover = {
+				religion = neo_socialist
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_lover = {
+				religion = ROOT
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = { religion = neo_socialist }
+		}
+		modifier = {
+			factor = 2
+			any_friend = { religion = ROOT }
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = {
+				religion = neo_socialist
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_friend = {
+				religion = ROOT
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_friend = {
+				religion = neo_socialist
+				count = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_friend = {
+				religion = ROOT
+				count = 3
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTACONVERSION10700"
+		religion = neo_socialist
+		hidden_tooltip = { any_vassal = { character_event = { id = conversion.10701 } } }
+	}
+}
+
+character_event = {
+	id = conversion.10701
+	desc = "EVTDESCCONVERSION10701"
+	picture = GFX_evt_conversion
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}

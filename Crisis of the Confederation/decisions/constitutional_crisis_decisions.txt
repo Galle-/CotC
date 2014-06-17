@@ -143,7 +143,10 @@ decisions = {
 			character_event = { id = politics.250 tooltip = "EVTTOOLTIPPOLITICS250" }
 		}
 		ai_will_do = {
-			factor = 0.1
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
 			
 			# Personality
 			modifier = {
@@ -359,7 +362,10 @@ decisions = {
 			character_event = { id = politics.260 tooltip = "EVTTOOLTIPPOLITICS260" }
 		}
 		ai_will_do = {
-			factor = 0.1
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
 			
 			# Personality
 			modifier = {
@@ -530,7 +536,10 @@ decisions = {
 			character_event = { id = laws.1010 tooltip = "EVTTOOLTIPLAWS1010" }
 		}
 		ai_will_do = {
-			factor = 0.1
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
 			
 			# Ruler's personality
 			modifier = {

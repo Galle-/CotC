@@ -12,6 +12,22 @@ plot_decisions = {
 		ai_will_do = {
 			factor = 0.1
 			modifier = {
+				factor = 4
+				has_plot = plot_justified_coup
+				plot_target_char = { religion_authority = 0.25 }
+				OR = {
+					trait = pragmatic
+					trait = ambitious
+				}
+				NOT = { trait = content }
+				NOT = {
+					AND = {
+						trait = radical
+						plot_target_char = { religion = ROOT }
+					}
+				}
+			}
+			modifier = {
 				factor = 1.25
 				plot_power = 0.2
 			}
@@ -96,6 +112,47 @@ plot_decisions = {
 					has_character_flag = flag_coup_plan_military
 					count = 5
 				}
+			}
+			# Pressure to do something, anything!
+			modifier = {
+				factor = 1.25
+				location = { revolt_risk = 0.1 }
+			}
+			modifier = {
+				factor = 1.25
+				location = { revolt_risk = 0.2 }
+			}
+			modifier = {
+				factor = 1.25
+				location = { revolt_risk = 0.3 }
+			}
+			modifier = {
+				factor = 1.25
+				location = { revolt_risk = 0.4 }
+			}
+			modifier = {
+				factor = 1.25
+				location = { revolt_risk = 0.5 }
+			}
+			modifier = {
+				factor = 1.25
+				location = { revolt_risk = 0.6 }
+			}
+			modifier = {
+				factor = 1.25
+				location = { revolt_risk = 0.7 }
+			}
+			modifier = {
+				factor = 1.25
+				location = { revolt_risk = 0.8 }
+			}
+			modifier = {
+				factor = 1.25
+				location = { revolt_risk = 0.9 }
+			}
+			modifier = {
+				factor = 1.25
+				location = { revolt_risk = 1 }
 			}
 		}
 	}

@@ -2347,23 +2347,33 @@ province_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		revolt_risk = 0.5 # There must be serious issues!
+		revolt_risk = 0.5
 		
+		# There is no ongoing same-ideology rebellion
+		NOT = {
+			owner = {
+				OR = {
+					any_war = {
+						defender = { character = PREV }
+						attacker = { religion = ROOT }
+						using_cb = democratic_rebellion
+					}
+					any_liege = {
+						any_war = {
+							defender = { character = PREV }
+							attacker = { religion = ROOT }
+							using_cb = democratic_rebellion
+						}
+					}
+				}
+			}
+		}
 		# Not angry at someone higher ranking
 		owner = { primary_title = { tier = count } }
 		NOT = { has_province_modifier = public_against_duke }
 		NOT = { has_province_modifier = public_against_king }
 		NOT = { has_province_modifier = public_against_emperor }
 		
-		# Not already part of a democratic rebellion
-		NOT = {
-			any_province_lord = {
-				any_war = {
-					defender = { character = PREV }
-					using_cb = democratic_rebellion
-				}
-			}
-		}
 		# Favors democratic rebellions over other kinds
 		OR = {
 			religion = terran_federalist
@@ -2394,6 +2404,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -2442,6 +2453,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -2714,6 +2726,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -2761,6 +2774,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -2822,6 +2836,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -2871,6 +2886,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -2925,7 +2941,27 @@ province_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		revolt_risk = 0.5 # There must be serious issues!
+		revolt_risk = 0.5
+		
+		# There is no ongoing same-ideology rebellion
+		NOT = {
+			owner = {
+				OR = {
+					any_war = {
+						defender = { character = PREV }
+						attacker = { religion = ROOT }
+						using_cb = democratic_rebellion
+					}
+					any_liege = {
+						any_war = {
+							defender = { character = PREV }
+							attacker = { religion = ROOT }
+							using_cb = democratic_rebellion
+						}
+					}
+				}
+			}
+		}
 		
 		# Angry at the sector government
 		OR = {
@@ -2935,15 +2971,6 @@ province_event = {
 		# And not someone else
 		NOT = { has_province_modifier = public_against_king }
 		NOT = { has_province_modifier = public_against_emperor }
-		# Not already part of a democratic rebellion
-		NOT = {
-			any_province_lord = {
-				any_war = {
-					defender = { character = PREV }
-					using_cb = democratic_rebellion
-				}
-			}
-		}
 		# Favors democratic rebellions over other kinds
 		OR = {
 			religion = terran_federalist
@@ -2986,6 +3013,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -3046,6 +3074,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -3148,7 +3177,27 @@ province_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		revolt_risk = 0.5 # There must be serious issues!
+		revolt_risk = 0.5
+		
+		# There is no ongoing same-ideology rebellion
+		NOT = {
+			owner = {
+				OR = {
+					any_war = {
+						defender = { character = PREV }
+						attacker = { religion = ROOT }
+						using_cb = democratic_rebellion
+					}
+					any_liege = {
+						any_war = {
+							defender = { character = PREV }
+							attacker = { religion = ROOT }
+							using_cb = democratic_rebellion
+						}
+					}
+				}
+			}
+		}
 		
 		# Angry at the regional government
 		OR = {
@@ -3157,15 +3206,6 @@ province_event = {
 		}
 		# And not someone else
 		NOT = { has_province_modifier = public_against_emperor }
-		# Not already part of a democratic rebellion
-		NOT = {
-			any_province_lord = {
-				any_war = {
-					defender = { character = PREV }
-					using_cb = democratic_rebellion
-				}
-			}
-		}
 		# Favors democratic rebellions over other kinds
 		OR = {
 			religion = terran_federalist
@@ -3208,6 +3248,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -3268,6 +3309,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -3370,21 +3412,32 @@ province_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		revolt_risk = 0.5 # There must be serious issues!
+		revolt_risk = 0.5
+		
+		# There is no ongoing same-ideology rebellion
+		NOT = {
+			owner = {
+				OR = {
+					any_war = {
+						defender = { character = PREV }
+						attacker = { religion = ROOT }
+						using_cb = democratic_rebellion
+					}
+					any_liege = {
+						any_war = {
+							defender = { character = PREV }
+							attacker = { religion = ROOT }
+							using_cb = democratic_rebellion
+						}
+					}
+				}
+			}
+		}
 		
 		# Angry at the regional government
 		OR = {
 			owner = { primary_title = { tier = emperor } }
 			has_province_modifier = public_against_emperor
-		}
-		# Not already part of a democratic rebellion
-		NOT = {
-			any_province_lord = {
-				any_war = {
-					defender = { character = PREV }
-					using_cb = democratic_rebellion
-				}
-			}
 		}
 		# Favors democratic rebellions over other kinds
 		OR = {
@@ -3412,6 +3465,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -3472,6 +3526,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -3537,11 +3592,22 @@ province_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		# There is an existing democratic rebellion
-		any_province_lord = {
-			any_war = {
-				defender = { character = PREV }
-				using_cb = democratic_rebellion
+		revolt_risk = 0.25
+		# There is an ongoing same-ideology rebellion
+		owner = {
+			OR = {
+				any_war = {
+					defender = { character = PREV }
+					attacker = { religion = ROOT }
+					using_cb = democratic_rebellion
+				}
+				any_liege = {
+					any_war = {
+						defender = { character = PREV }
+						attacker = { religion = ROOT }
+						using_cb = democratic_rebellion
+					}
+				}
 			}
 		}
 		# Favors democratic rebellions over other kinds
@@ -3560,21 +3626,73 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTAREBELS140"
-		add_province_modifier = { name = system_in_revolt days = 1825 }
-		any_province_lord = {
-			any_current_enemy = {
-				limit = {
-					any_war = {
-						attacker = { character = PREV }
-						defender = { character = PREVPREV }
-						using_cb = democratic_rebellion
-					}
+		trigger = {
+			owner = {
+				any_war = {
+					defender = { character = PREV }
+					attacker = { religion = ROOT }
+					using_cb = democratic_rebellion
 				}
-				character_event = { id = rebels.0 }
+			}
+		}
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 1825 }
+		owner = {
+			any_war = {
+				limit = {
+					attacker = { religion = ROOT }
+					defender = { character = PREV }
+					using_cb = democratic_rebellion
+				}
+				attacker = { character_event = { id = rebels.0 } }
 			}
 		}
 	}
+	
+	option = {
+		trigger = {
+			NOT = {
+				owner = {
+					any_war = {
+						defender = { character = PREV }
+						attacker = { religion = ROOT }
+						using_cb = democratic_rebellion
+					}
+				}
+			}
+		}
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 1825 }
+		owner = {
+			any_liege = {
+				limit = {
+					any_war = {
+						defender = { character = PREV }
+						attacker = { religion = ROOT }
+						using_cb = democratic_rebellion
+					}
+				}
+				any_war = {
+					limit = {
+						attacker = { religion = ROOT }
+						defender = { character = PREV }
+						using_cb = democratic_rebellion
+					}
+					attacker = { character_event = { id = rebels.0 } }
+				}
+				hidden_tooltip = { character_event = { id = rebels.141 } }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = rebels.141
+	desc = "EVTDESCREBELS141"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
 }
 
 # AUTOCRATIC REBELLIONS
@@ -3586,23 +3704,33 @@ province_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		revolt_risk = 0.5 # There must be serious issues!
+		revolt_risk = 0.5
 		
+		# There is no ongoing same-ideology rebellion
+		NOT = {
+			owner = {
+				OR = {
+					any_war = {
+						defender = { character = PREV }
+						attacker = { religion = ROOT }
+						using_cb = autocratic_rebellion
+					}
+					any_liege = {
+						any_war = {
+							defender = { character = PREV }
+							attacker = { religion = ROOT }
+							using_cb = autocratic_rebellion
+						}
+					}
+				}
+			}
+		}
 		# Not angry at someone higher ranking
 		owner = { primary_title = { tier = count } }
 		NOT = { has_province_modifier = public_against_duke }
 		NOT = { has_province_modifier = public_against_king }
 		NOT = { has_province_modifier = public_against_emperor }
 		
-		# Not already part of a autocratic rebellion
-		NOT = {
-			any_province_lord = {
-				any_war = {
-					defender = { character = PREV }
-					using_cb = autocratic_rebellion
-				}
-			}
-		}
 		# Favors autocratic rebellions over other kinds
 		OR = {
 			religion = terran_imperial
@@ -3636,6 +3764,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -3684,6 +3813,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -3735,34 +3865,34 @@ province_event = {
 		name = "EVTOPTCONFIRM"
 		add_province_modifier = { name = system_in_revolt days = 1825 }
 		owner = { religion_authority = { modifier = allowed_minor_rebellion years = 10 } }
-		owner = { character_event = { id = rebels.201 tooltip = "EVTTOOLTIPREBELS101" } }
+		owner = { character_event = { id = rebels.201 tooltip = "EVTTOOLTIPREBELS201" } }
 	}
 }
 
 # Local rebellion against you! Ask the top liege for assistance
 character_event = {
 	id = rebels.201
-	desc = "EVTDESCREBELS101"
+	desc = "EVTDESCREBELS201"
 	picture = GFX_evt_rebels
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTAREBELS101"
-		top_liege = { letter_event = { id = rebels.202 tooltip = "EVTTOOLTIPREBELS102" } }
+		name = "EVTOPTAREBELS201"
+		top_liege = { letter_event = { id = rebels.202 tooltip = "EVTTOOLTIPREBELS202" } }
 	}
 }
 
 # A local rebellion in your realm. Intervene or no?
 letter_event = {
 	id = rebels.202
-	desc = "EVTDESCREBELS102"
+	desc = "EVTDESCREBELS202"
 	is_triggered_only = yes
 	
 	option = {
 		name = "EVTOPTACCEPT"
 		FROM = {
 			# FROMFROM launches a global rebellion
-			FROM = { province_event = { id = rebels.203 tooltip = "EVTTOOLTIPREBELS103" } }
+			FROM = { province_event = { id = rebels.203 tooltip = "EVTTOOLTIPREBELS203" } }
 			if = {
 				limit = { primary_title = { tier = count } }
 				religion_authority = { modifier = opposed_system_revolt years = 30 }
@@ -3909,7 +4039,7 @@ letter_event = {
 		}
 		add_character_modifier = { name = ignored_vassals days = 1825 }
 		FROM = {
-			FROM = { province_event = { id = rebels.204 tooltip = "EVTTOOLTIPREBELS104" } } # Launches local rebellion
+			FROM = { province_event = { id = rebels.204 tooltip = "EVTTOOLTIPREBELS204" } } # Launches local rebellion
 			if = {
 				limit = { primary_title = { tier = count } }
 				ROOT = {
@@ -3942,12 +4072,12 @@ letter_event = {
 # Topliege intervention, began a global revolt
 province_event = {
 	id = rebels.203
-	desc = "EVTDESCREBELS103"
+	desc = "EVTDESCREBELS203"
 	picture = GFX_evt_rebels
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTAREBELS103"
+		name = "EVTOPTAREBELS203"
 		random_list = {
 			50 = {
 				create_character = {
@@ -3956,6 +4086,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -4003,6 +4134,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -4033,9 +4165,9 @@ province_event = {
 					ROOT = { any_realm_lord = { opinion = { who = PREVPREV modifier = opinion_criminal_treason } } }
 					FROM = {
 						set_defacto_vassal = PREV
-						reverse_opinion = { who = PREV modifier = opinion_evil_tyrant }
+						reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
 						reverse_war = {
-							target = PREV
+							target = PREVPREV
 							casus_belli = autocratic_rebellion
 						}
 					}
@@ -4050,12 +4182,12 @@ province_event = {
 # No intervention, began a local revolt
 province_event = {
 	id = rebels.204
-	desc = "EVTDESCREBELS104"
+	desc = "EVTDESCREBELS204"
 	picture = GFX_evt_rebels
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTAREBELS104"
+		name = "EVTOPTAREBELS204"
 		random_list = {
 			50 = {
 				create_character = {
@@ -4064,6 +4196,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -4113,6 +4246,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -4167,7 +4301,27 @@ province_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		revolt_risk = 0.5 # There must be serious issues!
+		revolt_risk = 0.5
+		
+		# There is no ongoing same-ideology rebellion
+		NOT = {
+			owner = {
+				OR = {
+					any_war = {
+						defender = { character = PREV }
+						attacker = { religion = ROOT }
+						using_cb = autocratic_rebellion
+					}
+					any_liege = {
+						any_war = {
+							defender = { character = PREV }
+							attacker = { religion = ROOT }
+							using_cb = autocratic_rebellion
+						}
+					}
+				}
+			}
+		}
 		
 		# Angry at the sector government
 		OR = {
@@ -4177,15 +4331,7 @@ province_event = {
 		# And not someone else
 		NOT = { has_province_modifier = public_against_king }
 		NOT = { has_province_modifier = public_against_emperor }
-		# Not already part of a autocratic rebellion
-		NOT = {
-			any_province_lord = {
-				any_war = {
-					defender = { character = PREV }
-					using_cb = autocratic_rebellion
-				}
-			}
-		}
+		
 		# Favors autocratic rebellions over other kinds
 		OR = {
 			religion = terran_imperial
@@ -4231,6 +4377,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -4291,6 +4438,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -4381,7 +4529,7 @@ province_event = {
 				}
 			}
 			religion_authority = { modifier = allowed_minor_rebellion years = 10 }
-			character_event = { id = rebels.201 tooltip = "EVTTOOLTIPREBELS101" }
+			character_event = { id = rebels.201 tooltip = "EVTTOOLTIPREBELS201" }
 		}
 	}
 }
@@ -4393,7 +4541,27 @@ province_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		revolt_risk = 0.5 # There must be serious issues!
+		revolt_risk = 0.5
+		
+		# There is no ongoing same-ideology rebellion
+		NOT = {
+			owner = {
+				OR = {
+					any_war = {
+						defender = { character = PREV }
+						attacker = { religion = ROOT }
+						using_cb = autocratic_rebellion
+					}
+					any_liege = {
+						any_war = {
+							defender = { character = PREV }
+							attacker = { religion = ROOT }
+							using_cb = autocratic_rebellion
+						}
+					}
+				}
+			}
+		}
 		
 		# Angry at the regional government
 		OR = {
@@ -4402,15 +4570,7 @@ province_event = {
 		}
 		# And not someone else
 		NOT = { has_province_modifier = public_against_emperor }
-		# Not already part of a autocratic rebellion
-		NOT = {
-			any_province_lord = {
-				any_war = {
-					defender = { character = PREV }
-					using_cb = autocratic_rebellion
-				}
-			}
-		}
+		
 		# Favors autocratic rebellions over other kinds
 		OR = {
 			religion = terran_imperial
@@ -4456,6 +4616,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -4516,6 +4677,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -4606,7 +4768,7 @@ province_event = {
 				}
 			}
 			religion_authority = { modifier = allowed_major_rebellion years = 10 }
-			character_event = { id = rebels.201 tooltip = "EVTTOOLTIPREBELS101" }
+			character_event = { id = rebels.201 tooltip = "EVTTOOLTIPREBELS201" }
 		}
 	}
 }
@@ -4618,22 +4780,34 @@ province_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		revolt_risk = 0.5 # There must be serious issues!
+		revolt_risk = 0.5
+		
+		# There is no ongoing same-ideology rebellion
+		NOT = {
+			owner = {
+				OR = {
+					any_war = {
+						defender = { character = PREV }
+						attacker = { religion = ROOT }
+						using_cb = autocratic_rebellion
+					}
+					any_liege = {
+						any_war = {
+							defender = { character = PREV }
+							attacker = { religion = ROOT }
+							using_cb = autocratic_rebellion
+						}
+					}
+				}
+			}
+		}
 		
 		# Angry at the regional government
 		OR = {
 			owner = { primary_title = { tier = emperor } }
 			has_province_modifier = public_against_emperor
 		}
-		# Not already part of a autocratic rebellion
-		NOT = {
-			any_province_lord = {
-				any_war = {
-					defender = { character = PREV }
-					using_cb = autocratic_rebellion
-				}
-			}
-		}
+		
 		# Favors autocratic rebellions over other kinds
 		OR = {
 			religion = terran_imperial
@@ -4663,6 +4837,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -4723,6 +4898,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -4788,13 +4964,25 @@ province_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		# There is an existing autocratic rebellion
-		any_province_lord = {
-			any_war = {
-				defender = { character = PREV }
-				using_cb = autocratic_rebellion
+		revolt_risk = 0.25
+		# There is an ongoing same-ideology rebellion
+		owner = {
+			OR = {
+				any_war = {
+					defender = { character = PREV }
+					attacker = { religion = ROOT }
+					using_cb = autocratic_rebellion
+				}
+				any_liege = {
+					any_war = {
+						defender = { character = PREV }
+						attacker = { religion = ROOT }
+						using_cb = autocratic_rebellion
+					}
+				}
 			}
 		}
+		
 		# Favors autocratic rebellions over other kinds
 		OR = {
 			religion = terran_imperial
@@ -4814,21 +5002,73 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTAREBELS140"
-		add_province_modifier = { name = system_in_revolt days = 1825 }
-		any_province_lord = {
-			any_current_enemy = {
-				limit = {
-					any_war = {
-						attacker = { character = PREV }
-						defender = { character = PREVPREV }
-						using_cb = autocratic_rebellion
-					}
+		trigger = {
+			owner = {
+				any_war = {
+					defender = { character = PREV }
+					attacker = { religion = ROOT }
+					using_cb = autocratic_rebellion
 				}
-				character_event = { id = rebels.0 }
+			}
+		}
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 1825 }
+		owner = {
+			any_war = {
+				limit = {
+					attacker = { religion = ROOT }
+					defender = { character = PREV }
+					using_cb = autocratic_rebellion
+				}
+				attacker = { character_event = { id = rebels.0 } }
 			}
 		}
 	}
+	
+	option = {
+		trigger = {
+			NOT = {
+				owner = {
+					any_war = {
+						defender = { character = PREV }
+						attacker = { religion = ROOT }
+						using_cb = autocratic_rebellion
+					}
+				}
+			}
+		}
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = system_in_revolt days = 1825 }
+		owner = {
+			any_liege = {
+				limit = {
+					any_war = {
+						defender = { character = PREV }
+						attacker = { religion = ROOT }
+						using_cb = autocratic_rebellion
+					}
+				}
+				any_war = {
+					limit = {
+						attacker = { religion = ROOT }
+						defender = { character = PREV }
+						using_cb = autocratic_rebellion
+					}
+					attacker = { character_event = { id = rebels.0 } }
+				}
+				hidden_tooltip = { character_event = { id = rebels.241 } }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = rebels.241
+	desc = "EVTDESCREBELS241"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
 }
 
 # THEOCRATIC REBELLIONS
@@ -4840,23 +5080,33 @@ province_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		revolt_risk = 0.5 # There must be serious issues!
+		revolt_risk = 0.5
 		
+		# There is no ongoing same-ideology rebellion
+		NOT = {
+			owner = {
+				OR = {
+					any_war = {
+						defender = { character = PREV }
+						attacker = { religion = ROOT }
+						using_cb = theocratic_rebellion
+					}
+					any_liege = {
+						any_war = {
+							defender = { character = PREV }
+							attacker = { religion = ROOT }
+							using_cb = theocratic_rebellion
+						}
+					}
+				}
+			}
+		}
 		# Not angry at someone higher ranking
 		owner = { primary_title = { tier = count } }
 		NOT = { has_province_modifier = public_against_duke }
 		NOT = { has_province_modifier = public_against_king }
 		NOT = { has_province_modifier = public_against_emperor }
 		
-		# Not already part of a theocratic rebellion
-		NOT = {
-			any_province_lord = {
-				any_war = {
-					defender = { character = PREV }
-					using_cb = theocratic_rebellion
-				}
-			}
-		}
 		# Favors theocratic rebellions over other kinds
 		OR = {
 			religion = neo_socialist
@@ -4864,12 +5114,12 @@ province_event = {
 			religion = machine_cultist
 			owner = { is_theocracy = yes }
 		}
-		NOT = { religion = terran_federalist }
-		NOT = { religion = terran_republican }
-		NOT = { religion = colonial_separatist }
 		NOT = { religion = terran_imperial }
 		NOT = { religion = astrist }
 		NOT = { religion = neo_feudal }
+		NOT = { religion = terran_federalist }
+		NOT = { religion = terran_republican }
+		NOT = { religion = colonial_separatist }
 	}
 	
 	option = {
@@ -4887,6 +5137,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -4935,6 +5186,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -4986,34 +5238,34 @@ province_event = {
 		name = "EVTOPTCONFIRM"
 		add_province_modifier = { name = system_in_revolt days = 1825 }
 		owner = { religion_authority = { modifier = allowed_minor_rebellion years = 10 } }
-		owner = { character_event = { id = rebels.301 tooltip = "EVTTOOLTIPREBELS101" } }
+		owner = { character_event = { id = rebels.301 tooltip = "EVTTOOLTIPREBELS301" } }
 	}
 }
 
 # Local rebellion against you! Ask the top liege for assistance
 character_event = {
 	id = rebels.301
-	desc = "EVTDESCREBELS101"
+	desc = "EVTDESCREBELS301"
 	picture = GFX_evt_rebels
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTAREBELS101"
-		top_liege = { letter_event = { id = rebels.302 tooltip = "EVTTOOLTIPREBELS102" } }
+		name = "EVTOPTAREBELS301"
+		top_liege = { letter_event = { id = rebels.302 tooltip = "EVTTOOLTIPREBELS302" } }
 	}
 }
 
 # A local rebellion in your realm. Intervene or no?
 letter_event = {
 	id = rebels.302
-	desc = "EVTDESCREBELS102"
+	desc = "EVTDESCREBELS302"
 	is_triggered_only = yes
 	
 	option = {
 		name = "EVTOPTACCEPT"
 		FROM = {
 			# FROMFROM launches a global rebellion
-			FROM = { province_event = { id = rebels.303 tooltip = "EVTTOOLTIPREBELS103" } }
+			FROM = { province_event = { id = rebels.303 tooltip = "EVTTOOLTIPREBELS303" } }
 			if = {
 				limit = { primary_title = { tier = count } }
 				religion_authority = { modifier = opposed_system_revolt years = 30 }
@@ -5160,7 +5412,7 @@ letter_event = {
 		}
 		add_character_modifier = { name = ignored_vassals days = 1825 }
 		FROM = {
-			FROM = { province_event = { id = rebels.304 tooltip = "EVTTOOLTIPREBELS104" } } # Launches local rebellion
+			FROM = { province_event = { id = rebels.304 tooltip = "EVTTOOLTIPREBELS304" } } # Launches local rebellion
 			if = {
 				limit = { primary_title = { tier = count } }
 				ROOT = {
@@ -5193,12 +5445,12 @@ letter_event = {
 # Topliege intervention, began a global revolt
 province_event = {
 	id = rebels.303
-	desc = "EVTDESCREBELS103"
+	desc = "EVTDESCREBELS303"
 	picture = GFX_evt_rebels
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTAREBELS103"
+		name = "EVTOPTAREBELS303"
 		random_list = {
 			50 = {
 				create_character = {
@@ -5207,6 +5459,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -5254,6 +5507,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -5284,9 +5538,9 @@ province_event = {
 					ROOT = { any_realm_lord = { opinion = { who = PREVPREV modifier = opinion_criminal_treason } } }
 					FROM = {
 						set_defacto_vassal = PREV
-						reverse_opinion = { who = PREV modifier = opinion_evil_tyrant }
+						reverse_opinion = { who = PREVPREV modifier = opinion_evil_tyrant }
 						reverse_war = {
-							target = PREV
+							target = PREVPREV
 							casus_belli = theocratic_rebellion
 						}
 					}
@@ -5301,12 +5555,12 @@ province_event = {
 # No intervention, began a local revolt
 province_event = {
 	id = rebels.304
-	desc = "EVTDESCREBELS104"
+	desc = "EVTDESCREBELS304"
 	picture = GFX_evt_rebels
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTAREBELS104"
+		name = "EVTOPTAREBELS304"
 		random_list = {
 			50 = {
 				create_character = {
@@ -5315,6 +5569,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -5364,6 +5619,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -5418,7 +5674,27 @@ province_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		revolt_risk = 0.5 # There must be serious issues!
+		revolt_risk = 0.5
+		
+		# There is no ongoing same-ideology rebellion
+		NOT = {
+			owner = {
+				OR = {
+					any_war = {
+						defender = { character = PREV }
+						attacker = { religion = ROOT }
+						using_cb = theocratic_rebellion
+					}
+					any_liege = {
+						any_war = {
+							defender = { character = PREV }
+							attacker = { religion = ROOT }
+							using_cb = theocratic_rebellion
+						}
+					}
+				}
+			}
+		}
 		
 		# Angry at the sector government
 		OR = {
@@ -5428,15 +5704,7 @@ province_event = {
 		# And not someone else
 		NOT = { has_province_modifier = public_against_king }
 		NOT = { has_province_modifier = public_against_emperor }
-		# Not already part of a theocratic rebellion
-		NOT = {
-			any_province_lord = {
-				any_war = {
-					defender = { character = PREV }
-					using_cb = theocratic_rebellion
-				}
-			}
-		}
+		
 		# Favors theocratic rebellions over other kinds
 		OR = {
 			religion = neo_socialist
@@ -5444,12 +5712,12 @@ province_event = {
 			religion = machine_cultist
 			owner = { is_theocracy = yes }
 		}
-		NOT = { religion = terran_federalist }
-		NOT = { religion = terran_republican }
-		NOT = { religion = colonial_separatist }
 		NOT = { religion = terran_imperial }
 		NOT = { religion = astrist }
 		NOT = { religion = neo_feudal }
+		NOT = { religion = terran_federalist }
+		NOT = { religion = terran_republican }
+		NOT = { religion = colonial_separatist }
 	}
 	
 	option = {
@@ -5479,6 +5747,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -5539,6 +5808,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -5629,7 +5899,7 @@ province_event = {
 				}
 			}
 			religion_authority = { modifier = allowed_minor_rebellion years = 10 }
-			character_event = { id = rebels.301 tooltip = "EVTTOOLTIPREBELS101" }
+			character_event = { id = rebels.301 tooltip = "EVTTOOLTIPREBELS301" }
 		}
 	}
 }
@@ -5641,7 +5911,27 @@ province_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		revolt_risk = 0.5 # There must be serious issues!
+		revolt_risk = 0.5
+		
+		# There is no ongoing same-ideology rebellion
+		NOT = {
+			owner = {
+				OR = {
+					any_war = {
+						defender = { character = PREV }
+						attacker = { religion = ROOT }
+						using_cb = theocratic_rebellion
+					}
+					any_liege = {
+						any_war = {
+							defender = { character = PREV }
+							attacker = { religion = ROOT }
+							using_cb = theocratic_rebellion
+						}
+					}
+				}
+			}
+		}
 		
 		# Angry at the regional government
 		OR = {
@@ -5650,15 +5940,7 @@ province_event = {
 		}
 		# And not someone else
 		NOT = { has_province_modifier = public_against_emperor }
-		# Not already part of a theocratic rebellion
-		NOT = {
-			any_province_lord = {
-				any_war = {
-					defender = { character = PREV }
-					using_cb = theocratic_rebellion
-				}
-			}
-		}
+		
 		# Favors theocratic rebellions over other kinds
 		OR = {
 			religion = neo_socialist
@@ -5666,12 +5948,12 @@ province_event = {
 			religion = machine_cultist
 			owner = { is_theocracy = yes }
 		}
-		NOT = { religion = terran_federalist }
-		NOT = { religion = terran_republican }
-		NOT = { religion = colonial_separatist }
 		NOT = { religion = terran_imperial }
 		NOT = { religion = astrist }
 		NOT = { religion = neo_feudal }
+		NOT = { religion = terran_federalist }
+		NOT = { religion = terran_republican }
+		NOT = { religion = colonial_separatist }
 	}
 	
 	option = {
@@ -5701,6 +5983,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -5761,6 +6044,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -5851,7 +6135,7 @@ province_event = {
 				}
 			}
 			religion_authority = { modifier = allowed_major_rebellion years = 10 }
-			character_event = { id = rebels.301 tooltip = "EVTTOOLTIPREBELS101" }
+			character_event = { id = rebels.301 tooltip = "EVTTOOLTIPREBELS301" }
 		}
 	}
 }
@@ -5863,22 +6147,34 @@ province_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		revolt_risk = 0.5 # There must be serious issues!
+		revolt_risk = 0.5
+		
+		# There is no ongoing same-ideology rebellion
+		NOT = {
+			owner = {
+				OR = {
+					any_war = {
+						defender = { character = PREV }
+						attacker = { religion = ROOT }
+						using_cb = theocratic_rebellion
+					}
+					any_liege = {
+						any_war = {
+							defender = { character = PREV }
+							attacker = { religion = ROOT }
+							using_cb = theocratic_rebellion
+						}
+					}
+				}
+			}
+		}
 		
 		# Angry at the regional government
 		OR = {
 			owner = { primary_title = { tier = emperor } }
 			has_province_modifier = public_against_emperor
 		}
-		# Not already part of a theocratic rebellion
-		NOT = {
-			any_province_lord = {
-				any_war = {
-					defender = { character = PREV }
-					using_cb = theocratic_rebellion
-				}
-			}
-		}
+		
 		# Favors theocratic rebellions over other kinds
 		OR = {
 			religion = neo_socialist
@@ -5886,12 +6182,12 @@ province_event = {
 			religion = machine_cultist
 			owner = { is_theocracy = yes }
 		}
-		NOT = { religion = terran_federalist }
-		NOT = { religion = terran_republican }
-		NOT = { religion = colonial_separatist }
 		NOT = { religion = terran_imperial }
 		NOT = { religion = astrist }
 		NOT = { religion = neo_feudal }
+		NOT = { religion = terran_federalist }
+		NOT = { religion = terran_republican }
+		NOT = { religion = colonial_separatist }
 	}
 	
 	option = {
@@ -5905,6 +6201,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -5965,6 +6262,7 @@ province_event = {
 					culture = ROOT
 					religion = ROOT
 					dynasty = culture
+					random_traits = yes
 					trait = brilliant_strategist
 					trait = warship_captain
 					trait = ambitious
@@ -6030,13 +6328,26 @@ province_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		# There is an existing theocratic rebellion
-		any_province_lord = {
-			any_war = {
-				defender = { character = PREV }
-				using_cb = theocratic_rebellion
+		revolt_risk = 0.25
+		
+		# There is an ongoing same-ideology rebellion
+		owner = {
+			OR = {
+				any_war = {
+					defender = { character = PREV }
+					attacker = { religion = ROOT }
+					using_cb = theocratic_rebellion
+				}
+				any_liege = {
+					any_war = {
+						defender = { character = PREV }
+						attacker = { religion = ROOT }
+						using_cb = theocratic_rebellion
+					}
+				}
 			}
 		}
+		
 		# Favors theocratic rebellions over other kinds
 		OR = {
 			religion = neo_socialist
@@ -6044,28 +6355,80 @@ province_event = {
 			religion = machine_cultist
 			owner = { is_theocracy = yes }
 		}
-		NOT = { religion = terran_federalist }
-		NOT = { religion = terran_republican }
-		NOT = { religion = colonial_separatist }
 		NOT = { religion = terran_imperial }
 		NOT = { religion = astrist }
 		NOT = { religion = neo_feudal }
+		NOT = { religion = terran_federalist }
+		NOT = { religion = terran_republican }
+		NOT = { religion = colonial_separatist }
 	}
 	
 	option = {
-		name = "EVTOPTAREBELS140"
-		add_province_modifier = { name = system_in_revolt days = 1825 }
-		any_province_lord = {
-			any_current_enemy = {
-				limit = {
-					any_war = {
-						attacker = { character = PREV }
-						defender = { character = PREVPREV }
-						using_cb = theocratic_rebellion
-					}
+		trigger = {
+			owner = {
+				any_war = {
+					defender = { character = PREV }
+					attacker = { religion = ROOT }
+					using_cb = theocratic_rebellion
 				}
-				character_event = { id = rebels.0 }
+			}
+		}
+		name = "EVTOPTAREBELS340"
+		add_province_modifier = { name = system_in_revolt days = 1825 }
+		owner = {
+			any_war = {
+				limit = {
+					attacker = { religion = ROOT }
+					defender = { character = PREV }
+					using_cb = theocratic_rebellion
+				}
+				attacker = { character_event = { id = rebels.0 } }
 			}
 		}
 	}
+	
+	option = {
+		trigger = {
+			NOT = {
+				owner = {
+					any_war = {
+						defender = { character = PREV }
+						attacker = { religion = ROOT }
+						using_cb = theocratic_rebellion
+					}
+				}
+			}
+		}
+		name = "EVTOPTAREBELS340"
+		add_province_modifier = { name = system_in_revolt days = 1825 }
+		owner = {
+			any_liege = {
+				limit = {
+					any_war = {
+						defender = { character = PREV }
+						attacker = { religion = ROOT }
+						using_cb = theocratic_rebellion
+					}
+				}
+				any_war = {
+					limit = {
+						attacker = { religion = ROOT }
+						defender = { character = PREV }
+						using_cb = theocratic_rebellion
+					}
+					attacker = { character_event = { id = rebels.0 } }
+				}
+				hidden_tooltip = { character_event = { id = rebels.341 } }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = rebels.341
+	desc = "EVTDESCREBELS341"
+	picture = GFX_evt_rebels
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
 }

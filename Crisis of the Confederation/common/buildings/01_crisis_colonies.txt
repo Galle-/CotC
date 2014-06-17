@@ -17,6 +17,7 @@ castle = {
 		tax_income = 1
 		ai_creation_factor = 0
 		extra_tech_building_start = 10.0
+		retinuesize = 200 # Military colonies automatically give some extra manpower
 	}
 	ca_colony_1 = {
 		desc = bu_colony_1_desc
@@ -44,6 +45,7 @@ castle = {
 		tax_income = 2
 		ai_creation_factor = 110
 		extra_tech_building_start = 10.0
+		retinuesize = 200 # Military colonies automatically give some extra manpower
 	}
 	ca_colony_2 = {
 		desc = bu_colony_2_desc
@@ -76,6 +78,7 @@ castle = {
 		tax_income = 4
 		ai_creation_factor = 109
 		extra_tech_building_start = 10.0
+		retinuesize = 200 # Military colonies automatically give some extra manpower
 	}
 	ca_colony_3 = {
 		desc = bu_colony_3_desc
@@ -108,6 +111,7 @@ castle = {
 		tax_income = 8
 		ai_creation_factor = 108
 		extra_tech_building_start = 10.0
+		retinuesize = 200 # Military colonies automatically give some extra manpower
 	}
 	ca_colony_4 = {
 		desc = bu_colony_4_desc
@@ -140,6 +144,7 @@ castle = {
 		tax_income = 16
 		ai_creation_factor = 107
 		extra_tech_building_start = 10.0
+		retinuesize = 200 # Military colonies automatically give some extra manpower
 	}
 	
 }
@@ -159,7 +164,7 @@ city = {
 		}
 		build_cost = 0
 		build_time = 0
-		tax_income = 1
+		tax_income = 2
 		ai_creation_factor = 0
 		extra_tech_building_start = 10.0
 	}
@@ -186,7 +191,7 @@ city = {
 		upgrades_from = ct_colony_0
 		build_cost = 100
 		build_time = 365
-		tax_income = 2
+		tax_income = 4
 		ai_creation_factor = 110
 		extra_tech_building_start = 10.0
 	}
@@ -218,7 +223,7 @@ city = {
 		upgrades_from = ct_colony_1
 		build_cost = 200
 		build_time = 730
-		tax_income = 4
+		tax_income = 8
 		ai_creation_factor = 109
 		extra_tech_building_start = 10.0
 	}
@@ -250,7 +255,7 @@ city = {
 		upgrades_from = ct_colony_2
 		build_cost = 400
 		build_time = 1460
-		tax_income = 8
+		tax_income = 16
 		ai_creation_factor = 108
 		extra_tech_building_start = 10.0
 	}
@@ -282,7 +287,7 @@ city = {
 		upgrades_from = ct_colony_3
 		build_cost = 800
 		build_time = 2920
-		tax_income = 16
+		tax_income = 32
 		ai_creation_factor = 107
 		extra_tech_building_start = 10.0
 	}

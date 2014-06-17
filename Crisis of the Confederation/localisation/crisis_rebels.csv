@@ -60,16 +60,19 @@ EVTDESCREBELS130;The people of the [Root.GetName] System have launched a rebelli
 EVTOPTAREBELS130;Traitors!;;;;;;;;;;;;;x
 EVTDESCREBELS140;Partisans from the [Root.GetName] System have joined an ongoing democratic rebellion.;;;;;;;;;;;;;x
 EVTOPTAREBELS140;Traitors!;;;;;;;;;;;;;x
+EVTDESCREBELS141;Partisans from the [From.GetName] System have joined an ongoing democratic rebellion.;;;;;;;;;;;;;x
 EVTDESCREBELS200;The people of the [Root.GetName] System have launched a rebelling against the system's government, claiming they want to establish a new autocratic government in its place.;;;;;;;;;;;;;x
 EVTDESCREBELS210;The people of the [Root.GetName] System have launched a rebelling against the sector government, claiming they want to establish a new autocratic government in its place.;;;;;;;;;;;;;x
 EVTDESCREBELS220;The people of the [Root.GetName] System have launched a rebelling against the regional government, claiming they want to establish a new autocratic government in its place.;;;;;;;;;;;;;x
 EVTDESCREBELS230;The people of the [Root.GetName] System have launched a rebelling against the federal government, claiming they want to establish a new autocratic government in its place.;;;;;;;;;;;;;x
 EVTDESCREBELS240;Partisans from the [Root.GetName] System have joined an ongoing autocratic rebellion.;;;;;;;;;;;;;x
+EVTDESCREBELS241;Partisans from the [From.GetName] System have joined an ongoing autocratic rebellion.;;;;;;;;;;;;;x
 EVTDESCREBELS300;The people of the [Root.GetName] System have launched a rebelling against the system's government, claiming they want to establish a new theocratic government in its place.;;;;;;;;;;;;;x
 EVTDESCREBELS310;The people of the [Root.GetName] System have launched a rebelling against the sector government, claiming they want to establish a new theocratic government in its place.;;;;;;;;;;;;;x
 EVTDESCREBELS320;The people of the [Root.GetName] System have launched a rebelling against the regional government, claiming they want to establish a new theocratic government in its place.;;;;;;;;;;;;;x
 EVTDESCREBELS330;The people of the [Root.GetName] System have launched a rebelling against the federal government, claiming they want to establish a new theocratic government in its place.;;;;;;;;;;;;;x
 EVTDESCREBELS340;Partisans from the [Root.GetName] System have joined an ongoing theocratic rebellion.;;;;;;;;;;;;;x
+EVTDESCREBELS341;Partisans from the [From.GetName] System have joined an ongoing theocratic rebellion.;;;;;;;;;;;;;x
 EVTTOOLTIPREBELS101;calls on the government to intervene;;;;;;;;;;;;;x
 EVTDESCREBELS101;Dissatisfaction with your government has reached the boiling point. The people of the [Root.GetName] System are openly rebelling against you. You've called on the federal government to send reinforcements as quickly as they can.;;;;;;;;;;;;;x
 EVTOPTAREBELS101;I can only hope they arrive in time;;;;;;;;;;;;;x
