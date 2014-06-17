@@ -147,3 +147,8 @@ legal_demand_refused = {
 	authority = -3
 	years = 10
 }
+
+successful_regime_change = {
+	authority = 5
+	years = 30
+}

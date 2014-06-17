@@ -91,6 +91,7 @@ opinion_related_religion = {
 	opinion = -10
 }
 
+# Important for investiture reasons. Bishops inherently like the Pope.
 opinion_rightful_rel_head = {
 	opinion = 20
 }
@@ -252,6 +253,54 @@ opinion_revoked_honorary_title = {
 # Kings don't like being vassals
 opinion_vassal_king = {
 	opinion = -25
+}
+
+############################
+# FIXED STATE - FOR MODS
+############################
+
+opinion_brother = {
+	opinion = 50
+}
+
+opinion_half_brother = {
+	opinion = 25
+}
+
+opinion_sister = {
+	opinion = 50
+}
+
+opinion_half_sister = {
+	opinion = 25
+}
+
+opinion_grandfather = {
+	opinion = 25
+}
+
+opinion_grandmother = {
+	opinion = 25
+}
+
+opinion_grandchild = {
+	opinion = 25
+}
+
+opinion_uncle = {
+	opinion = 25
+}
+
+opinion_aunt = {
+	opinion = 25
+}
+
+opinion_nephew = {
+	opinion = 25
+}
+
+opinion_niece = {
+	opinion = 25
 }
 
 ###########
@@ -630,6 +679,13 @@ opinion_failed_invasion = {
 	months = 60
 }
 
+# You have been warned that an adventurer is targeting you
+opinion_targeted_by_adventurer = {
+	opinion = -100
+	months = 24
+	preparing_adventure_against_me = yes
+}
+
 ###########
 # TIMED FROM CHARACTER INTERACTION ACCEPT/DECLINE
 ###########
@@ -677,6 +733,63 @@ opinion_granted_independence = {
 	opinion = 50
 	months = 120
 }
+
+##########################################################################
+# PAPAL FAVORS - Sons of Abraham Addition
+##########################################################################
+
+opinion_supported_cardinal = {
+	opinion = 30
+	months = 1000
+	inherit = yes
+}
+
+opinion_supported_pope = {
+	opinion = 200
+	months = 1000
+	inherit = yes
+}
+
+asked_for_money = { # Stacks for each time asked
+	opinion = -50
+	months = 480
+}
+
+asked_for_crusade = { # Stacks for each time asked
+	opinion = -200
+	months = 480
+}
+
+asked_for_excommunication = { # Stacks for each time asked
+	opinion = -25
+	months = 480
+}
+
+asked_to_lift_excommunication = { # Stacks for each time asked
+	opinion = -25
+	months = 480
+}
+
+asked_for_invasion = { # Stacks for each time asked
+	opinion = -100
+	months = 480
+}
+
+asked_for_divorce = { # Stacks for each time asked
+	opinion = -10
+	months = 480
+}
+
+asked_for_claim = { # Stacks for each time asked
+	opinion = -15
+	months = 480
+}
+
+asked_to_nominate_bishop = { # Stacks for each time asked
+	opinion = 0
+	months = 480
+}
+
 
 ##########################################################################
 # SOFT - ADD TIMED ONES AS NEEDED
@@ -2286,4 +2399,79 @@ opinion_claimant_adventure_target = {
 opinion_duchy_adventure_target = {
 	opinion = 0
 	months = 24
+}
+
+opinion_witch = {
+	opinion = -200
+	months = 1200
+	prison_reason = yes
+	revoke_reason = yes
+	execute_reason = yes
+	inherit = yes
+}
+
+opinion_the_chosen_one = {
+	opinion = 500
+	months = 12000
+}
+
+opinion_restored_to_rome = {
+	opinion = 100
+	months = 1200
+}
+
+opinion_creator_of_rel_heal = {
+	opinion = 100
+	months = 1200
+}
+
+opinion_deposed_antipope = {
+	opinion = 100
+	months = 240
+}
+
+opinion_married_wrong_caste = {
+	opinion = -30
+}
+
+opinion_changed_caste = {
+	opinion = -30
+}
+
+opinion_ruler_wrong_caste_hindu = {
+	opinion = -30
+}
+
+opinion_ruler_wrong_caste_non_hindu = {
+	opinion = -15
+}
+
+opinion_low_caste = {
+	opinion = -15
+}
+
+opinion_sacrilege = {
+	opinion = -20
+}
+
+opinion_takfir = {
+	opinion = -40
+	prison_reason = yes
+	execute_reason = yes
+}
+
+opinion_straightened_up = {
+	opinion = 30
+}
+
+opinion_rebel_leader = {
+	opinion = 1000
+}
+
+opinion_fellow_rebel = {
+	opinion = 50
+}
+
+opinion_enlightened = {
+	opinion = 30
 }

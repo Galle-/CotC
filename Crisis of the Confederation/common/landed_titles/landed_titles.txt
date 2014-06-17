@@ -77,6 +77,7 @@ e_terran_confederation = {
 	dynasty_title_names = no
 	
 	has_top_de_jure_capital = yes
+	controls_religion = terran_imperial
 	
 	# Navy
 	k_terran_navy = {

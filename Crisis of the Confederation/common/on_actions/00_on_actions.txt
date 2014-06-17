@@ -1388,3 +1388,28 @@ on_rel_head_chosen = {
 		#704
 	}
 }
+
+# ROOT is the looter, FROM is the settlement title
+on_settlement_looted = {
+}
+
+# ROOT is the navy's owner, FROM is the province
+on_navy_returns_with_loot = {
+}
+
+# ROOT is the creating character, FROM is the title
+on_create_title = {
+}
+
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+on_new_holder = {
+}
+
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+on_new_holder_inheritance = {
+}
+
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+on_new_holder_usurpation = {
+}
+
