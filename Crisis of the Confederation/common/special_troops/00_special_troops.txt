@@ -9,4 +9,5 @@ dreadnoughts = {
 	phase_melee_defense = 7
 	phase_pursue_defense = 7
 	base_type = heavy_cavalry
+	graphical_culture_type = westerngfx # For now, at least
 }
