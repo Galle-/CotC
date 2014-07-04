@@ -396,26 +396,22 @@ job_chancellor;Secretary of State;Secrétaire de l'état;;;;;;;;;;;;x;
 job_marshal;Secretary of Defense;Secrétaire de la défense;;;;;;;;;;;;x;
 job_treasurer;Secretary of the Treasury;Secrétaire du budget;;;;;;;;;;;;x;
 job_spymaster;Secretary of Intelligence;Secrétaire du renseignement;;;;;;;;;;;;x;
-job_scientist;Secretary of Technology;Secrétaire de la recherche;;;;;;;;;;;;x;
-job_spiritual;Secretary of Justice;Secrétaire de la justice;;;;;;;;;;;;x;
+job_spiritual;Secretary of Technology;Secrétaire de la recherche;;;;;;;;;;;;x;
 job_chancellor_terran_imperial;Minister of State;Ministre de l'état;;;;;;;;;;;;x;
 job_marshal_terran_imperial;Minister of War;Ministre de la défense;;;;;;;;;;;;x;
 job_treasurer_terran_imperial;Minister of the Treasury;Ministre du budget;;;;;;;;;;;;x;
 job_spymaster_terran_imperial;Minister of Intelligence;Ministre du renseignement;;;;;;;;;;;;x
-job_scientist_terran_imperial;Minister of Technology;Ministre de la recherche;;;;;;;;;;;;x
-job_spiritual_terran_imperial;Minister of Justice;Ministre de la justice;;;;;;;;;;;;x
+job_spiritual_terran_imperial;Minister of Technology;Ministre de la recherche;;;;;;;;;;;;x
 job_chancellor_neo_feudal;Chancellor;Chancellier;;;;;;;;;;;;x
 job_marshal_neo_feudal;Marshal;Maréchal;;;;;;;;;;;;x
 job_treasurer_neo_feudal;Steward;Intendant;;;;;;;;;;;;x
 job_spymaster_neo_feudal;Spymaster;Maître espion;;;;;;;;;;;;x
-job_scientist_neo_feudal;Minister of Technology;Savant;;;;;;;;;;;;x
-job_spiritual_neo_feudal;Justiciar;Justicier;;;;;;;;;;;;x
+job_spiritual_neo_feudal;Minister of Technology;Savant;;;;;;;;;;;;x
 job_chancellor_space_pirate;First Mate;;;;;;;;;;;;;x
 job_marshal_space_pirate;Chief Enforcer;;;;;;;;;;;;;x
 job_treasurer_space_pirate;Quartermaster;;;;;;;;;;;;;x
 job_spymaster_space_pirate;Consigliere;;;;;;;;;;;;;x
-job_scientist_space_pirate;Chief Engineer;;;;;;;;;;;;;x
-job_spiritual_space_pirate;Arbitrator;;;;;;;;;;;;;x
+job_spiritual_space_pirate;Chief Engineer;;;;;;;;;;;;;x
 GRANDADMIRAL;Grand Admiral;Grand amiral;;;;;;;;;;;;x
 GRANDADMIRALFOA;Admiral;Amiral;;;;;;;;;;;;x
 GRANDADMIRAL_female;Grand Admiral;Grand amiral;;;;;;;;;;;;x

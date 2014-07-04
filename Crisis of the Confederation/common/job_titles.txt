@@ -126,7 +126,8 @@ job_spymaster = {
 	lift_neighbor_fow = yes
 }
 
-job_scientist = {
+job_spiritual = {
+	is_spiritual = yes
 	attribute = learning
 	dignity = 0.15
 	opinion_effect = 15
@@ -152,30 +153,4 @@ job_scientist = {
 	action = action_research_mil_tech
 	action = action_research_eco_tech
 	action = action_research_cul_tech
-}
-
-job_spiritual = {
-	is_spiritual = yes
-	attribute = learning
-	dignity = 0.15
-	opinion_effect = 15
-	
-	monthly_salary = 0.1
-	monthly_piety = 0.015
-	
-	allow = {
-		is_adult = yes
-		prisoner = no
-		liege = { religion = ROOT }
-		NOT = { trait = incapable }
-	}
-	gain_effect = {
-	}
-	lose_effect = {
-		opinion = { who = FROM modifier = opinion_fired_from_council }
-	}
-	#dismiss_trigger = {
-	#}
-
-	lift_fow = yes
 }
