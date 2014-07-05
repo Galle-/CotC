@@ -409,12 +409,7 @@ letter_event = {
 	is_triggered_only = yes
 	
 	option = {
-		trigger = { FROM = { NOT = { has_plot = plot_blackmail } } }
 		name = "EVTOPTASPYMASTER4"
-	}
-	option = {
-		trigger = { FROM = { has_plot = plot_blackmail } }
-		name = "EVTOPTBSPYMASTER4"
 	}
 }
 # Accepted blackmail as payment for owed favor
@@ -424,11 +419,6 @@ letter_event = {
 	is_triggered_only = yes
 	
 	option = {
-		trigger = { FROM = { NOT = { has_plot = plot_blackmail } } }
-		name = "EVTOPTASPYMASTER4"
-	}
-	option = {
-		trigger = { FROM = { has_plot = plot_blackmail } }
 		name = "EVTOPTASPYMASTER4"
 	}
 }
@@ -472,7 +462,7 @@ letter_event = {
 # spymaster.100 - Plot Uncovered
 character_event = {
 	id = spymaster.100
-	title = "EVTNAMESPYMASTER100"
+	title = "EVTSPYMASTER100"
 	desc = "EVTDESCSPYMASTER100"
 	picture = GFX_evt_council
 	border = GFX_event_normal_frame_intrigue
@@ -620,6 +610,551 @@ character_event = {
 	is_triggered_only = yes
 	
 	immediate = { character_event = { id = spymaster.0 } }
+}
+
+# Spymaster successfully changes province ideology
+character_event = {
+	id = spymaster.200
+	title = "EVTSPYMASTER200"
+	desc = "EVTDESCSPYMASTER200"
+	picture = GFX_evt_speech
+	border = GFX_event_normal_frame_intrigue
+	
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		has_job_action = action_spread_propaganda
+		location = {
+			NOT = { religion = ROOT }
+			ROOT = { liege = { NOT = { religion = PREVPREV } } }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+		# Moral Authority
+		modifier = {
+			factor = 2
+			location = { religion_authority = 0.1 }
+		}
+		modifier = {
+			factor = 2
+			location = { religion_authority = 0.2 }
+		}
+		modifier = {
+			factor = 2
+			location = { religion_authority = 0.3 }
+		}
+		modifier = {
+			factor = 2
+			location = { religion_authority = 0.4 }
+		}
+		modifier = {
+			factor = 2
+			location = { religion_authority = 0.5 }
+		}
+		modifier = {
+			factor = 2
+			location = { religion_authority = 0.6 }
+		}
+		modifier = {
+			factor = 2
+			location = { religion_authority = 0.7 }
+		}
+		modifier = {
+			factor = 2
+			location = { religion_authority = 0.8 }
+		}
+		modifier = {
+			factor = 2
+			location = { religion_authority = 0.9 }
+		}
+		modifier = {
+			factor = 2
+			location = { religion_authority = 1 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.1 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.2 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.3 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.4 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.5 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.6 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.7 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.8 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 0.9 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { religion_authority = 1 }
+		}
+		
+		# Situational
+		modifier = {
+			factor = 5
+			location = { owner = { religion = PREV } }
+		}
+		modifier = {
+			factor = 0.2
+			location = { owner = { ROOT = { religion = PREVPREV } } }
+		}
+		
+		# Diplomacy Skill
+		modifier = {
+			factor = 1.25
+			NOT = { diplomacy = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { diplomacy = 2 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { diplomacy = 3 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { diplomacy = 4 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { diplomacy = 5 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { diplomacy = 6 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { diplomacy = 7 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { diplomacy = 8 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { diplomacy = 9 }
+		}
+		modifier = {
+			factor = 0.8
+			diplomacy = 11
+		}
+		modifier = {
+			factor = 0.8
+			diplomacy = 12
+		}
+		modifier = {
+			factor = 0.8
+			diplomacy = 13
+		}
+		modifier = {
+			factor = 0.8
+			diplomacy = 14
+		}
+		modifier = {
+			factor = 0.8
+			diplomacy = 15
+		}
+		modifier = {
+			factor = 0.8
+			diplomacy = 16
+		}
+		modifier = {
+			factor = 0.8
+			diplomacy = 17
+		}
+		modifier = {
+			factor = 0.8
+			diplomacy = 18
+		}
+		modifier = {
+			factor = 0.8
+			diplomacy = 19
+		}
+		modifier = {
+			factor = 0.8
+			diplomacy = 20
+		}
+	}
+	
+	option = {
+		# Change province ideology to liege's
+		name = "EVTOPTASPYMASTER200"
+		liege = {
+			ROOT = { location = { religion = PREVPREV } }
+			opinion = { who = ROOT modifier = opinion_competent_spymaster months = 30 }
+			hidden_tooltip = { letter_event = { id = spymaster.201 } }
+		}
+		if = {
+			limit = { religion = liege }
+			piety = 100
+		}
+		if = {
+			limit = { NOT = { religion = liege } }
+			piety = -100
+		}
+		hidden_tooltip = {
+			location = {
+				any_province_lord = {
+					limit = {
+						NOT = { character = ROOT }
+						NOT = { ROOT = { liege = { character = PREV } } }
+					}
+					character_event = { id = spymaster.202 }
+				}
+			}
+		}
+		ai_chance = { factor = 50 }
+	}
+	option = {
+		# Change province ideology to mine
+		trigger = { liege = { NOT = { religion = ROOT } } }
+		name = "EVTOPTBSPYMASTER202"
+		piety = 100
+		location = { religion = ROOT }
+		liege = {
+			opinion = { who = ROOT modifier = opinion_incompetent_spymaster months = 30 }
+			hidden_tooltip = { letter_event = { id = spymaster.203 } }
+		}
+		hidden_tooltip = {
+			location = {
+				any_province_lord = {
+					limit = {
+						NOT = { character = ROOT }
+						NOT = { ROOT = { liege = { character = PREV } } }
+					}
+					character_event = { id = spymaster.204 }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				has_ambition = obj_become_paragon_of_virtue
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = liege value = -99 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = liege value = -89 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = liege value = -79 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = liege value = -69 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = liege value = -59 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = liege value = -49 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = liege value = -39 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = liege value = -29 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = liege value = -19 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = liege value = -9 } }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = liege value = 10 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = liege value = 20 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = liege value = 30 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = liege value = 40 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = liege value = 50 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = liege value = 60 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = liege value = 70 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = liege value = 80 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = liege value = 90 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = liege value = 100 }
+			}
+		}
+	}
+}
+
+letter_event = {
+	id = spymaster.201
+	desc = "EVTDESCSPYMASTER201"
+	is_triggered_only = yes
+	
+	option = {
+		piety = 100
+		name = "EVTOPTCONFIRM"
+	}
+}
+
+character_event = {
+	id = spymaster.202
+	desc = "EVTDESCSPYMASTER202"
+	picture = GFX_evt_speech
+	hide_from = yes
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { NOT = { intrigue = FROM } }
+		name = "EVTOPTCONFIRM"
+	}
+	option = {
+		trigger = { intrigue = FROM }
+		name = "EVTOPTASPYMASTER202"
+		if = {
+			limit = { NOT = { FROM = { liege = { religion = ROOT } } } }
+			FROM = {
+				reverse_opinion = { who = ROOT modifier = opinion_meddling_propaganda }
+				liege = { reverse_opinion = { who = ROOT modifier = opinion_meddling_propaganda } }
+			}
+		}
+	}
+}
+
+letter_event = {
+	id = spymaster.203
+	desc = "EVTDESCSPYMASTER203"
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+
+character_event = {
+	id = spymaster.204
+	desc = "EVTDESCSPYMASTER204"
+	picture = GFX_evt_speech
+	hide_from = yes
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { NOT = { intrigue = FROM } }
+		name = "EVTOPTCONFIRM"
+	}
+	
+	option = {
+		trigger = { intrigue = FROM }
+		name = "EVTOPTASPYMASTER202"
+		if = {
+			limit = { NOT = { religion = FROM } }
+			opinion = { who = FROM modifier = opinion_meddling_propaganda }
+		}
+	}
+}
+
+# Spymaster attacked by angry populace
+character_event = {
+	id = spymaster.250
+	title = "EVTSPYMASTER250"
+	desc = "EVTDESCSPYMASTER250"
+	picture = GFX_evt_peasants
+	border = GFX_evt_normal_frame_intrigue
+	
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		has_job_action = action_spread_propaganda
+		location = {
+			NOT = { religion = ROOT }
+			ROOT = { liege = { NOT = { religion = PREVPREV } } }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+		modifier = {
+			factor = 2
+			intrigue = 1
+		}
+		modifier = {
+			factor = 2
+			intrigue = 2
+		}
+		modifier = {
+			factor = 2
+			intrigue = 3
+		}
+		modifier = {
+			factor = 2
+			intrigue = 4
+		}
+		modifier = {
+			factor = 2
+			intrigue = 5
+		}
+		modifier = {
+			factor = 2
+			intrigue = 6
+		}
+		modifier = {
+			factor = 2
+			intrigue = 7
+		}
+		modifier = {
+			factor = 2
+			intrigue = 8
+		}
+		modifier = {
+			factor = 2
+			intrigue = 9
+		}
+		modifier = {
+			factor = 2
+			intrigue = 10
+		}
+		modifier = {
+			factor = 2
+			intrigue = 11
+		}
+		modifier = {
+			factor = 2
+			intrigue = 12
+		}
+		modifier = {
+			factor = 2
+			intrigue = 13
+		}
+		modifier = {
+			factor = 2
+			intrigue = 14
+		}
+		modifier = {
+			factor = 2
+			intrigue = 15
+		}
+		modifier = {
+			factor = 2
+			intrigue = 16
+		}
+		modifier = {
+			factor = 2
+			intrigue = 17
+		}
+		modifier = {
+			factor = 2
+			intrigue = 18
+		}
+		modifier = {
+			factor = 2
+			intrigue = 19
+		}
+		modifier = {
+			factor = 2
+			intrigue = 20
+		}
+	}
+	
+	option = {
+		name = "EVTOPTASPYMASTER250"
+		if = {
+			limit = {
+				NOT = { trait = maimed }
+				NOT = { trait = full_cybernetic_conversion }
+			}
+			add_trait = maimed
+		}
+		location = { add_province_modifier = { name = religious_tension duration = 1825 } }
+		liege = {
+			opinion = { who = ROOT modifier = opinion_incompetent_spymaster }
+			hidden_tooltip = { letter_event = { id = spymaster.251 } }
+		}
+		hidden_tooltip = {
+			location = {
+				any_province_lord = {
+					limit = {
+						NOT = { character = ROOT }
+						NOT = { ROOT = { liege = { character = PREVPREV } } }
+					}
+					character_event = { id = spymaster.252 }
+				}
+			}
+		}
+	}
+}
+
+letter_event = {
+	id = spymaster.251
+	desc = "EVTDESCSPYMASTER251"
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+
+character_event = {
+	id = spymaster.252
+	desc = "EVTDESCSPYMASTER252"
+	picture = GFX_evt_peasants
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
 }
 
 # # 931: The Spymaster is attacked by a Noble's thugs (Gets away, Is wounded, Is maimed, Is killed)

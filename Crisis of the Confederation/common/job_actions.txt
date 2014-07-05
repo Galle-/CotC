@@ -159,14 +159,11 @@ action_spread_propaganda = {
 	attribute = intrigue
 	
 	trigger = {
-		any_province_lord = {
-			NOT = { is_liege_or_above = FROM }
-			NOT = { character = FROM }
-		}
+		owner = { always = yes }
+		NOT = { religion = FROM }
 	}
-	local_revolt_risk = 0.01
 	
-	events = { }
+	events = { spymaster.200 spymaster.250 }
 }
 
 # Scientist
@@ -177,7 +174,7 @@ action_research_mil_tech = {
 	
 	tech_growth_modifier_military = 0.1
 	
-	events = { 932 933 }
+	events = { scientist.100 }
 }
 action_research_eco_tech = {
 	attribute = learning
@@ -186,7 +183,7 @@ action_research_eco_tech = {
 	
 	tech_growth_modifier_economy = 0.1
 	
-	events = { 932 933 }
+	events = { scientist.200 }
 }
 action_research_cul_tech = {
 	attribute = learning
@@ -195,7 +192,7 @@ action_research_cul_tech = {
 	
 	tech_growth_modifier_culture = 0.1
 	
-	events = { 932 933 }
+	events = { scientist.300 }
 }
 
 # Lord Spiritual

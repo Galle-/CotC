@@ -1,4 +1,26 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+action_sabotage_relations;Sabotage Relations;;;;;;;;;;;;;x
+action_sabotage_relations_desc;Send the [From.GetChancellorName] on a diplomatic mission to undermine relations between a system's ruler and their superiors and allies.;;;;;;;;;;;;;x
+action_distribute_mil_tech;Distribute Military Technology;;;;;;;;;;;;;x
+action_distribute_mil_tech_desc;Send the [From.GetMarshalName] to instruct military personal in a system on the latest military innovations made in the capital.;;;;;;;;;;;;;x
+action_recruiting_drive;Drive Recruitment;;;;;;;;;;;;;x
+action_recruiting_drive_desc;Send the [From.GetMarshalName] to run a recruiting drive in a system and shore up your manpower.;;;;;;;;;;;;;x
+action_suppress_revolts;Suppress Revolts;;;;;;;;;;;;;x
+action_suppress_revolts_desc;Send the [From.GetMarshalName] to oversee counter-insurgency operations in a system.;;;;;;;;;;;;;x
+action_improve_education;Improve Education;;;;;;;;;;;;;x
+action_improve_education_desc;Send the [From.GetTreasurerName] to bring a system's educational standards up to par with those of the capital.;;;;;;;;;;;;;x
+action_maintain_infrastructure;Maintain Infrastructure;;;;;;;;;;;;;x
+action_maintain_infrastructure_desc;Send the [From.GetTreasurerName] to make sure nothing in a system is falling apart due to shoddy maintenance.;;;;;;;;;;;;;x
+action_counterintelligence;Run Counterintelligence;;;;;;;;;;;;;x
+action_counterintelligence_desc;Order [From.PrimaryTitle.GetAdjective] Intelligence to focus on seeking out foreign spies and domestic terrorists in a system.;;;;;;;;;;;;;x
+action_spread_propaganda;Spread Propaganda;;;;;;;;;;;;;x
+action_spread_propaganda_desc;Order [From.PrimaryTitle.GetAdjective] intelligence to spread [From.Religion.GetName] propaganda in a system.;;;;;;;;;;;;;x
+action_research_mil_tech;Research Military Technology;;;;;;;;;;;;;x
+action_research_mil_tech_desc;Order your [From.GetSpiritualName] to design new weapons, defensive systems, and propulsion techniques.;;;;;;;;;;;;;x
+action_research_eco_tech;Research Social Sciences;;;;;;;;;;;;;x
+action_research_eco_tech_desc;Order your [From.GetSpiritualName] to focus on researching economics, psychology, and related matters.;;;;;;;;;;;;;x
+action_research_cul_tech;Research Hard Sciences;;;;;;;;;;;;;x
+action_research_cul_tech_desc;Order your [From.GetSpiritualName] to focus on researching physics, biology, and related matters.;;;;;;;;;;;;;x
 EVTDESCSPYMASTER0;You have discovered a plot where [FromFrom.GetFullName] seeks to [FromFrom.Plot.GetName].;;;;;;;;;;;;;x
 EVTOPTASPYMASTER0;I will report this to the [Liege.GetTitle].;;;;;;;;;;;;;x
 EVTOPTBSPYMASTER0;I wonder how much that secret is worth to [FromFrom.GetHerHim]?;;;;;;;;;;;;;x
@@ -12,4 +34,34 @@ EVTOPTBSPYMASTER3;...you can consider your debt to me absolved.;;;;;;;;;;;;;x
 EVTOPTCSPYMASTER3;Go ahead. I could use a good scandal.;;;;;;;;;;;;;x
 EVTDESCSPYMASTER4;TO: [Root.GetFullName]\nFROM: [From.GetFullName]\nRE: Security concerns\nI'll do anything you want, but please tell no-one! You need but name the price and you will have it!;;;;;;;;;;;;;x
 EVTOPTASPYMASTER4;Having a [From.GetManWoman] in your debt is so rewarding.;;;;;;;;;;;;;x
-EVTOPTBSPYMASTER4;;;;;;;;;;;;;;x
+EVTDESCSPYMASTER5;TO: [Root.GetFullName]\nFROM: [From.GetFullName]\nRE: Security concerns\nHave it your way, damn you. You may consider your debt absolved.;;;;;;;;;;;;;x
+EVTOPTASPYMASTER5;At least that's finally over with.;;;;;;;;;;;;;x
+EVTDESCSPYMASTER6;TO: [Root.GetFullName]\nFROM: [From.GetFullName]\nRE: Security concerns\nWas that a threat? If you think I care what your masters think, you are sorely mistaken.;;;;;;;;;;;;;x
+EVTOPTASPYMASTER6;You just made a dangerous mistake.;;;;;;;;;;;;;x
+EVTSPYMASTER100;Plot discovered!;;;;;;;;;;;;;x
+EVTDESCSPYMASTER100;Your informants in the [Root.Location.GetName] System have given you a lead on a secretive conspiracy.;;;;;;;;;;;;;x
+EVTOPTASPYMASTER100;Tell me more.;;;;;;;;;;;;;x
+EVTTOOLTIPSPYMASTER101;'s plot is uncovered by your informants.;;;;;;;;;;;;;x
+EVTSPYMASTER200;The system's ideology changes!;;;;;;;;;;;;;x
+EVTDESCSPYMASTER200;After months of building up political connections and working to take control of the local media, you believe you are finally in position to win over the hearts and minds of the people of the [Root.Location.GetName] system and sway them from the [Root.Location.GetReligion] ideology.;;;;;;;;;;;;;x
+EVTOPTASPYMASTER200;The [Root.Liege.GetTitle] will be pleased.;;;;;;;;;;;;;x
+EVTOPTBSPYMASTER200;Technically, [Root.Liege.GetSheHe] never said what KIND of propaganda...;;;;;;;;;;;;;x
+EVTDESCSPYMASTER201;TO: [Root.GetFullName]\nFROM: [From.GetFullName] [From.Liege.PrimaryTitle.GetAdjective] Intelligence\nRE: Operations in [From.Location.GetName]\nAfter several months of work, I believe I have won over the hearts and minds of the people of this system and swayed them to the [Root.GetReligion] ideology.;;;;;;;;;;;;;x
+EVTDESCSPYMASTER202;The people of the [From.Location.GetName] System have embraced the [From.Liege.GetReligion] ideology!;;;;;;;;;;;;;x
+EVTOPTASPYMASTER202;This has [From.Liege.PrimaryTitle.GetAdjective] Intelligence written all over it.;;;;;;;;;;;;;x
+EVTDESCSPYMASTER203;TO: [Root.GetFullName]\nFROM: [From.GetFullName] [From.Liege.PrimaryTitle.GetAdjective] Intelligence\nRE: Operations in [From.Location.GetName]\nAfter several months of work, I believe I have won over the hearts and minds of the people of this system and swayed them to the [From.GetReligion] ideology. That WAS what you wanted, right?;;;;;;;;;;;;;x
+EVTDESCSPYMASTER204;The people of the [From.Location.GetName] System have embraced the [From.GetReligion] ideology!;;;;;;;;;;;;;x
+EVTSPYMASTER250;Your [From.GetSpymasterName] is caught up in riots!;;;;;;;;;;;;;x
+EVTDESCSPYMASTER250;You have been trying to conduct a campaign to win over the hearts and minds of the people of the [Root.Location.GetName] System, but so far your efforts have met with disaster. This morning, in fact, a riot broke out at a speech you tried to arrange, and you were badly injured in the fighting.;;;;;;;;;;;;;x
+EVTOPTASPYMASTER250;This is dangerous work!;;;;;;;;;;;;;x
+EVTDESCSPYMASTER251;TO: [Root.GetFullName]\nFROM: [From.GetFullName], [From.Liege.PrimaryTitle.GetAdjective] Intelligence\nRE: Operations in [From.Location.GetName]\nThere's been a setback. The people haven't been very receptive to my methods, and just this morning I was badly injured in a riot.;;;;;;;;;;;;;x
+EVTDESCSPYMASTER252;Riots broke out in the [From.Location.GetName] System this morning, apparently in response to a political campaign that had been running for the past several months. The [From.Liege.PrimaryTitle.GetAdjective] [From.Liege.GetSpymasterName] was injured in the process.;;;;;;;;;;;;;x
+EVTSCIENTIST100;Breakthrough!;;;;;;;;;;;;;x
+EVTDESCSCIENTIST100;You have made a major breakthrough in your military technology research!;;;;;;;;;;;;;x
+EVTOPTASCIENTIST100;Time to report this.;;;;;;;;;;;;;x
+EVTOPTBSCIENTIST100;I think I'll just keep this to myself...;;;;;;;;;;;;;x
+EVTDESCSCIENTIST101;TO: [Root.GetFullName]\nFROM: [From.GetFullName]\nRE: Breakthrough!\nWe have just made a major military technology breakthrough!;;;;;;;;;;;;;x
+EVTDESCSCIENTIST200;You have made a major breakthrough in your social sciences research!;;;;;;;;;;;;;x
+EVTDESCSCIENTIST201;TO: [Root.GetFullName]\nFROM: [From.GetFullName]\nRE: Breakthrough!\nWe have just made a major social sciences breakthrough!;;;;;;;;;;;;;x
+EVTDESCSCIENTIST300;You have made a major breakthrough in your hard sciences research!;;;;;;;;;;;;;x
+EVTDESCSCIENTIST301;TO: [Root.GetFullName]\nFROM: [From.GetFullName]\nRE: Breakthrough!\nWe have just made a major hard sciences breakthrough!;;;;;;;;;;;;;x
