@@ -1,5 +1,5 @@
 plot_decisions = {
-	launch_coup = {
+	launch_coup_decision = {
 		is_high_prio = yes
 		potential = {
 			OR = {
@@ -7,152 +7,97 @@ plot_decisions = {
 				has_plot = plot_justified_coup
 			}
 		}
-		allow = { always = yes }
-		effect = { character_event = { id = coup.5000 tooltip = "EVTTOOLTIPCOUP5000" } }
+		allow = {
+			is_plot_active = no
+			NOT = { any_current_enemy = { always = yes } } # Needed for war-joining commands to work
+			NOT = { has_character_flag = flag_launching_coup }
+		}
+		effect = {
+			set_character_flag = flag_launching_coup
+			character_event = { id = coup.30 tooltip = "EVTTOOLTIPCOUP30" }
+		}
 		ai_will_do = {
-			factor = 0.1
+			factor = 1
+			
+			# Not without sufficient strength
 			modifier = {
-				factor = 4
-				has_plot = plot_justified_coup
-				plot_target_char = { religion_authority = 0.25 }
-				OR = {
-					trait = pragmatic
-					trait = ambitious
-				}
-				NOT = { trait = content }
+				factor = 0
+				NOT = { plot_power = 0.5 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { plot_power = 1 }
+				NOT = { trait = brave }
+			}
+			
+			# Not if there's a useful likely ally
+			modifier = {
+				factor = 0
+				NOT = { had_character_flag = { flag = flag_ai_plot_timer days = 1095 } }
 				NOT = {
 					AND = {
-						trait = radical
-						plot_target_char = { religion = ROOT }
+						has_plot = plot_justified_coup
+						capital_scope = { revolt_risk = 0.5 }
+					}
+				}
+				plot_target_char = {
+					any_vassal = {
+						NOT = { opinion = { who = PREV value = -24 } }
+						opinion = { who = ROOT value = 25 }
+						OR = {
+							relative_power_to_liege = 0.1
+							is_councillor = yes
+						}
+						NOT = { has_plot = plot_coup }
+						NOT = { has_plot = plot_justified_coup }
+						NOT = {
+							any_backed_character = {
+								OR = {
+									has_plot = plot_coup
+									has_plot = plot_justified_coup
+								}
+							}
+						}
 					}
 				}
 			}
+			
+			# Not if there's a chance for a coup event
 			modifier = {
-				factor = 1.25
-				plot_power = 0.2
-			}
-			modifier = {
-				factor = 1.25
-				plot_power = 0.4
-			}
-			modifier = {
-				factor = 1.25
-				plot_power = 0.6
-			}
-			modifier = {
-				factor = 1.25
-				plot_power = 0.8
-			}
-			modifier = {
-				factor = 1.25
-				plot_power = 1
-			}
-			modifier = {
-				factor = 1.25
-				plot_power = 1.2
-			}
-			modifier = {
-				factor = 1.25
-				plot_power = 1.4
-			}
-			modifier = {
-				factor = 1.25
-				plot_power = 1.6
-			}
-			modifier = {
-				factor = 1.25
-				plot_power = 1.8
-			}
-			modifier = {
-				factor = 1.25
-				plot_power = 2
+				factor = 0
+				NOT = { had_character_flag = { flag = flag_ai_plot_timer days = 1095 } }
+				NOT = {
+					AND = {
+						has_plot = plot_justified_coup
+						capital_scope = { revolt_risk = 0.5 }
+					}
+				}
+				NOT = { plot_power = 3 }
+				OR = {
+					AND = {
+						is_feudal = yes
+						plot_target_char = {
+							location = {
+								OR = {
+									any_province_character = { character = ROOT }
+									any_neighbor_province = {
+										OR = {
+											any_province_character = { character = ROOT }
+											any_neighbor_province = { any_province_character = { character = ROOT } }
+										}
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 			
+			# Not if they've delayed
 			modifier = {
-				factor = 0.5
-				trait = craven
-			}
-			modifier = {
-				factor = 2
-				trait = brave
-			}
-			
-			modifier = {
-				factor = 2
-				has_character_flag = flag_coup_plan_military
-			}
-			modifier = {
-				factor = 2
-				any_plot_backer = { has_character_flag = flag_coup_plan_military }
-			}
-			modifier = {
-				factor = 2
-				any_plot_backer = {
-					has_character_flag = flag_coup_plan_military
-					count = 2
-				}
-			}
-			modifier = {
-				factor = 2
-				any_plot_backer = {
-					has_character_flag = flag_coup_plan_military
-					count = 3
-				}
-			}
-			modifier = {
-				factor = 2
-				any_plot_backer = {
-					has_character_flag = flag_coup_plan_military
-					count = 4
-				}
-			}
-			modifier = {
-				factor = 2
-				any_plot_backer = {
-					has_character_flag = flag_coup_plan_military
-					count = 5
-				}
-			}
-			# Pressure to do something, anything!
-			modifier = {
-				factor = 1.25
-				location = { revolt_risk = 0.1 }
-			}
-			modifier = {
-				factor = 1.25
-				location = { revolt_risk = 0.2 }
-			}
-			modifier = {
-				factor = 1.25
-				location = { revolt_risk = 0.3 }
-			}
-			modifier = {
-				factor = 1.25
-				location = { revolt_risk = 0.4 }
-			}
-			modifier = {
-				factor = 1.25
-				location = { revolt_risk = 0.5 }
-			}
-			modifier = {
-				factor = 1.25
-				location = { revolt_risk = 0.6 }
-			}
-			modifier = {
-				factor = 1.25
-				location = { revolt_risk = 0.7 }
-			}
-			modifier = {
-				factor = 1.25
-				location = { revolt_risk = 0.8 }
-			}
-			modifier = {
-				factor = 1.25
-				location = { revolt_risk = 0.9 }
-			}
-			modifier = {
-				factor = 1.25
-				location = { revolt_risk = 1 }
+				factor = 0
+				has_character_flag = flag_delayed_coup
+				NOT = { had_character_flag = { flag = flag_coup_delay days = 720 } }
 			}
 		}
 	}

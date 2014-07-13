@@ -1,0 +1,2165 @@
+# Plot tags need to start with 'plot_'
+
+# Supported types:
+# character, spouse, rivals, friends, liege_titles, vassal_titles, realm_titles, realm_characters, realm_characters_plus, independent_rulers
+
+###############
+# PLOTS
+###############
+
+# Gain one of a vassal's landed titles
+plot_gain_vassal_title = {
+	type = vassal_titles
+	vassal_rank_plot = yes
+	
+	# Plotter scope
+	potential = {
+		is_playable = yes
+		prisoner = no
+		is_patrician = no
+		is_merchant_republic = no
+		age = 16
+		primary_title = {
+			higher_tier_than = COUNT
+			temporary = no
+		}
+		NOT = { trait = incapable }
+		NOT = { trait = imbecile }
+		
+		OR = {
+			ai = no
+			war = no
+		}
+	}
+	
+	# Target scope
+	allow = {
+		# No barony titles
+		higher_tier_than = BARON
+		is_primary_type_title = no
+		controls_religion = no
+		is_merchant_republic = no
+		mercenary = no
+		is_recent_grant = no
+		NOT = { has_law = succ_appointment } # No need to plot for these
+		
+		OR = {
+			# Count title outside a Duke's duchy
+			AND = {
+				tier = COUNT
+				holder_scope = {
+					tier = DUKE
+					ROOT = { NOT = { de_jure_liege = PREV } }
+				}
+			}
+			# Duke with no count titles
+			AND = {
+				tier = DUKE
+				holder_scope = {
+					AND = {
+						NOT = {
+							any_demesne_title = {
+								tier = COUNT
+								location = { duchy = { title = ROOT } }
+							}
+						}
+						NOT = {
+							any_vassal = {
+								any_demesne_title = {
+									tier = COUNT
+									location = { duchy = { title = ROOT } }
+								}
+							}
+						}
+					}
+				}
+			}
+			# Count titles in ruler's primary duchy
+			AND = {
+				tier = COUNT
+				location = {
+					duchy = {
+						holder_scope = { character = FROM }
+						FROM = { capital_scope = { duchy = { title = PREVPREVPREV } } }
+					}
+				}
+			}
+			# Count's secondary county
+			AND = {
+				tier = COUNT
+				location = { is_capital = no }
+				holder_scope = {
+					lower_tier_than = DUKE
+					num_of_count_titles = 2
+				}
+			}
+		}
+		holder_scope = { liege_before_war = { character = FROM } }
+		holder_scope = { NOT = { reverse_has_truce = FROM } }
+	}
+	
+	creation_effect = {
+		if = {
+			limit = { FROM = { ai = yes } }
+			FROM = {
+				clr_character_flag = flag_ai_plot_timer
+				set_character_flag = flag_ai_plot_timer
+			}
+		}
+	}
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			FROM = { trait = content }
+		}
+		modifier = {
+			factor = 10
+			FROM = { trait = ambitious }
+		}
+		
+		# Sectors > Systems
+		modifier = {
+			factor = 0.5
+			tier = count
+		}
+		
+		# Prioritize stuff around your capital
+		modifier = {
+			factor = 5
+			FROM = { capital_scope = { county = { title = ROOT } } }
+		}
+		modifier = {
+			factor = 5
+			FROM = { capital_scope = { duchy = { title = ROOT } } }
+		}
+		modifier = {
+			factor = 2
+			FROM = { any_demesne_province = { any_neighbor_province = { county = { title = ROOT } } } }
+		}
+		modifier = {
+			factor = 2
+			FROM = { any_demesne_province = { any_neighbor_province = { duchy = { title = ROOT } } } }
+		}
+		
+		# Opinion of current holder
+		modifier = {
+			factor = 0
+			FROM = {
+				ai = yes
+				trait = anti_ruler
+			}
+		}
+		modifier = {
+			factor = 0
+			holder_scope = { reverse_opinion = { who = FROM value = 50 } }
+		}
+		modifier = {
+			factor = 0.1
+			holder_scope = { reverse_opinion = { who = FROM value = 0 } }
+		}
+		modifier = {
+			factor = 0
+			holder_scope = { reverse_opinion = { who = FROM value = 0 } }
+			FROM = { NOT = { trait = cold } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { holder_scope = { reverse_opinion = { who = FROM value = -9 } } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { holder_scope = { reverse_opinion = { who = FROM value = -19 } } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { holder_scope = { reverse_opinion = { who = FROM value = -29 } } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { holder_scope = { reverse_opinion = { who = FROM value = -39 } } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { holder_scope = { reverse_opinion = { who = FROM value = -49 } } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { holder_scope = { reverse_opinion = { who = FROM value = -59 } } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { holder_scope = { reverse_opinion = { who = FROM value = -69 } } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { holder_scope = { reverse_opinion = { who = FROM value = -79 } } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { holder_scope = { reverse_opinion = { who = FROM value = -89 } } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { holder_scope = { reverse_opinion = { who = FROM value = -99 } } }
+		}
+	}
+	
+	success = {
+		holder = FROM
+	}
+	abort = {
+		OR = {
+			has_law = succ_appointment
+			FROM = {
+				ai = yes
+				had_character_flag = { flag = flag_ai_plot_timer days = 365 }
+				NOT = { plot_power = 0.5 }
+			}
+			FROM = {
+				ai = yes
+				had_character_flag = { flag = flag_ai_plot_timer days = 1825 }
+				NOT = { plot_power = 1 }
+			}
+			FROM = {
+				ai = yes
+				trait = anti_ruler # More important things to deal with
+			}
+			holder_scope = {
+				reverse_opinion = { who = FROM value = 50 }
+				FROM = { ai = yes }
+			}
+			holder_scope = {
+				reverse_opinion = { who = FROM value = 0 }
+				FROM = {
+					ai = yes
+					NOT = { trait = cold }
+				}
+			}
+			NOT = {
+				OR = {
+					# Count title outside a Duke's duchy
+					AND = {
+						tier = COUNT
+						holder_scope = {
+							tier = DUKE
+							ROOT = { NOT = { de_jure_liege = PREV } }
+						}
+					}
+					# Duke with no count titles
+					AND = {
+						tier = DUKE
+						holder_scope = {
+							AND = {
+								NOT = {
+									any_demesne_title = {
+										tier = COUNT
+										location = { duchy = { title = ROOT } }
+									}
+								}
+								NOT = {
+									any_vassal = {
+										any_demesne_title = {
+											tier = COUNT
+											location = { duchy = { title = ROOT } }
+										}
+									}
+								}
+							}
+						}
+					}
+					# Count titles in ruler's primary duchy
+					AND = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = FROM }
+								FROM = { capital_scope = { duchy = { title = PREVPREVPREV } } }
+							}
+						}
+					}
+					# Count's secondary county
+					AND = {
+						tier = COUNT
+						location = { is_capital = no }
+						holder_scope = {
+							lower_tier_than = DUKE
+							num_of_count_titles = 2
+						}
+					}
+				}
+			}
+			FROM = {
+				OR = {
+					is_playable = no
+					trait = incapable
+				}
+			}
+			holder_scope = { liege_before_war = { NOT = { character = FROM } } }
+		}
+	}
+	abort_effect = {
+		FROM = {
+			# Clear flags
+			hidden_tooltip = {
+				clr_character_flag = event7040
+				clr_character_flag = plot_gain_vassal_title_decision_taken
+				clr_character_flag = flag_ai_plot_timer
+			}
+		}
+	}
+	effect = {
+		FROM = {
+			any_plot_backer = {
+				reverse_opinion = {
+					modifier = opinion_grateful
+					who = FROM
+					years = 5
+				}
+			}
+			# Clear flags
+			hidden_tooltip = {
+				clr_character_flag = event7040
+				clr_character_flag = plot_gain_vassal_title_decision_taken
+				clr_character_flag = flag_ai_plot_timer
+			}
+		}
+	}
+}
+
+# Get a character killed
+plot_kill_character = {
+	type = realm_characters_plus # All characters in the same realm, plus rivals and relatives of self, parents, children and spouse
+	intrigue_plot = yes
+	murder_plot = yes
+	
+	# Plotter scope
+	potential = {
+		prisoner = no
+		age = 16
+		NOT = { trait = incapable }
+		NOT = {
+			AND = {
+				ai = yes
+				trait = friendly
+			}
+		}
+		
+		hidden_tooltip = {
+			OR = {
+				ai = no # Human
+				trait = ambitious
+				trait = cold
+				trait = lunatic
+				trait = radical
+				any_rival = { always = yes }
+			}
+		}
+	}
+	
+	# Target allow trigger for when players target a specific character in the GUI
+	
+	player_allow = {
+		NOT = { is_child_of = FROM } # Not my own children
+		NOT = { any_spouse = { character = FROM } } # This case is covered by another plot
+		is_within_diplo_range = FROM
+	}
+	
+	creation_effect = {
+		if = {
+			limit = { FROM = { ai = yes } }
+			FROM = {
+				clr_character_flag = flag_ai_plot_timer
+				set_character_flag = flag_ai_plot_timer
+			}
+		}
+	}
+	
+	# Target character scope
+	allow = {
+		NOT = { reverse_opinion = { who = FROM value = 75 } } # Don't kill these people at all!
+		NOT = { is_child_of = FROM } # Not my own children
+		OR = {
+			NOT = { character = FROM }  # Not against myself! (unless I am bonkers)
+			trait = lunatic
+		}
+		NOT = { any_spouse = { character = FROM } } # This case is covered by another plot
+		is_within_diplo_range = FROM
+		FROM = {
+			# List of possible motives
+			OR = {
+				# Inheritances
+				any_heir_title = { holder_scope = { character = ROOT } }
+				AND = {
+					has_minor_title = title_expected_successor
+					liege = { character = ROOT }
+				}
+				any_pretender_title = { current_heir = { character = ROOT } }
+				spouse = { any_heir_title = { holder_scope = { character = ROOT } } }
+				spouse = {
+					has_minor_title = title_expected_successor
+					liege = { character = ROOT }
+				}
+				spouse = { any_pretender_title = { current_heir = { character = ROOT } } }
+				any_child = { any_heir_title = { holder_scope = { character = ROOT } } }
+				any_child = {
+					has_minor_title = title_expected_successor
+					liege = { character = ROOT }
+				}
+				any_child = { any_pretender_title = { current_heir = { character = ROOT } } }
+				
+				# People whose jobs I want
+				AND = {
+					has_ambition = obj_become_chancellor
+					liege = { job_chancellor = { character = ROOT } }
+				}
+				AND = {
+					has_ambition = obj_become_marshal
+					liege = { job_marshal = { character = ROOT } }
+				}
+				AND = {
+					has_ambition = obj_become_treasurer
+					liege = { job_treasurer = { character = ROOT } }
+				}
+				AND = {
+					has_ambition = obj_become_spymaster
+					liege = { job_spymaster = { character = ROOT } }
+				}
+				AND = {
+					has_ambition = obj_become_spiritual
+					liege = { job_spiritual = { character = ROOT } }
+				}
+				
+				# People whose heirs I can press weak claims on
+				ROOT = {
+					has_regent = no
+					any_demesne_title = {
+						FROM = { has_weak_claim = PREV }
+						current_heir = {
+							OR = {
+								NOT = { age = 16 }
+								trait = incapable
+							}
+						}
+					}
+				}
+				# Good decapitation strike choices
+				any_current_enemy = {
+					character = ROOT
+					OR = {
+						martial = 20
+						ruled_years = 40
+					}
+				}
+				# A liege I hate
+				liege = {
+					character = ROOT
+					NOT = { reverse_opinion = { who = FROM value = -74 } }
+				}
+				# A rival
+				any_rival = { character = ROOT }
+			}
+		}
+	}
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			FROM = {
+				ai = yes
+				any_backed_character = {
+					OR = {
+						has_plot = plot_kill_character
+						has_plot = plot_kill_spouse
+					}
+					plot_target_char = { character = ROOT }
+				}
+			}
+		}
+		
+		# Personality
+		modifier = {
+			factor = 5
+			FROM = { trait = cold }
+		}
+		
+		modifier = {
+			factor = 0.1
+			FROM = {
+				trait = humble
+				NOT = {
+					liege = {
+						character = ROOT
+						NOT = { reverse_opinion = { who = FROM value = -74 } }
+					}
+				}
+				# A rival
+				NOT = { any_rival = { character = ROOT } }
+			}
+		}
+		modifier = {
+			factor = 10
+			FROM = { trait = ambitious }
+		}
+		
+		# Ambitions
+		
+		
+		# Moral authority
+		modifier = {
+			factor = 0.5
+			piety = 0
+			FROM = {
+				religion = ROOT
+				religion_authority = 0.75
+			}
+		}
+		modifier = {
+			factor = 0.5
+			piety = 0
+			FROM = {
+				religion = ROOT
+				religion_authority = 0.5
+				NOT = { trait = pragmatic }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			piety = 0
+			FROM = {
+				religion = ROOT
+				religion_authority = 0.25
+				trait = radical
+			}
+		}
+		modifier = {
+			factor = 0.5
+			piety = 0
+			FROM = {
+				religion = ROOT
+				trait = radical
+			}
+		}
+		modifier = {
+			factor = 2
+			FROM = {
+				NOT = { religion = ROOT }
+				trait = radical
+			}
+		}
+		modifier = {
+			factor = 2
+			FROM = { NOT = { religion = ROOT } }
+			NOT = { religion_authority = 0.75 }
+		}
+		modifier = {
+			factor = 2
+			FROM = { NOT = { religion = ROOT } }
+			NOT = { religion_authority = 0.5 }
+		}
+		modifier = {
+			factor = 2
+			FROM = { NOT = { religion = ROOT } }
+			NOT = { religion_authority = 0.25 }
+		}
+		
+		# Opinion of target
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -99 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -89 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -79 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -69 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -59 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -49 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -39 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -29 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -19 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -9 } }
+		}
+		modifier = {
+			factor = 0.8
+			reverse_opinion = { who = FROM value = 10 }
+		}
+		modifier = {
+			factor = 0.8
+			reverse_opinion = { who = FROM value = 20 }
+		}
+		modifier = {
+			factor = 0.8
+			reverse_opinion = { who = FROM value = 30 }
+		}
+		modifier = {
+			factor = 0.8
+			reverse_opinion = { who = FROM value = 40 }
+		}
+		modifier = {
+			factor = 0.8
+			reverse_opinion = { who = FROM value = 50 }
+		}
+		modifier = {
+			factor = 0.8
+			reverse_opinion = { who = FROM value = 60 }
+		}
+		modifier = {
+			factor = 0.8
+			reverse_opinion = { who = FROM value = 70 }
+		}
+		
+		modifier = {
+			# Subtle balance against nepotism: Kill off members of powerful dynasties
+			factor = 2.0
+			top_liege = {
+				higher_tier_than = COUNT
+				dynasty = ROOT
+				dynasty_realm_power = 0.25
+			}
+		}
+		modifier = {
+			# Subtle balance against nepotism: Kill off members of powerful dynasties
+			factor = 2.0
+			top_liege = {
+				higher_tier_than = COUNT
+				dynasty = ROOT
+				dynasty_realm_power = 0.4
+			}
+		}
+		modifier = {
+			# Subtle balance against nepotism: Kill off members of powerful dynasties
+			factor = 2.0
+			top_liege = {
+				higher_tier_than = COUNT
+				dynasty = ROOT
+				dynasty_realm_power = 0.6
+			}
+		}
+	}
+	
+	success = {
+		is_alive = no
+		hidden_tooltip = { FROM = { has_character_flag = murder_in_motion } }
+	}
+	abort = {
+		OR = {
+			is_alive = no
+			# AI should give after a while if things look hopeless
+			FROM = {
+				ai = yes
+				had_character_flag = { flag = flag_ai_plot_timer days = 365 }
+				NOT = { plot_power = 0.5 }
+			}
+			FROM = {
+				ai = yes
+				had_character_flag = { flag = flag_ai_plot_timer days = 1825 }
+				NOT = { plot_power = 1 }
+			}
+			# Or if they decide not to do the whole murder thing
+			FROM = {
+				ai = yes
+				trait = friendly
+			}
+			FROM = {
+				ai = yes
+				opinion = { who = ROOT value = 75 }
+			}
+		}
+	}
+	abort_effect = {
+		FROM = {
+			clr_character_flag = murder_in_motion
+			clr_character_flag = flag_ai_plot_timer
+		}
+	}
+	effect = {
+		FROM = {
+			# Clear flags
+			hidden_tooltip = {
+				clr_character_flag = murder_in_motion
+				clr_character_flag = flag_ai_plot_timer
+			}
+		}
+	}
+}
+
+
+# Get a spouse killed
+plot_kill_spouse = {
+	type = spouse
+	intrigue_plot = yes
+	murder_plot = yes
+	
+	# Plotter scope
+	potential = {
+		prisoner = no
+		age = 16
+		is_married = yes
+		NOT = { trait = incapable }
+		NOT = {
+			AND = {
+				ai = yes
+				trait = friendly
+			}
+		}
+		OR = {
+			ai = no # Human
+			trait = ambitious
+			trait = cold
+			trait = lunatic
+			trait = radical
+		}
+	}
+	
+	# Target allow trigger for when players target a specific character in the GUI
+	player_allow = {
+		always = yes
+	}
+	
+	# Target character scope
+	allow = {
+		OR = {
+			FROM = { ai = no }
+			FROM = { has_ambition = obj_marry_for_love }
+			FROM = { has_ambition = obj_marry_for_power }
+			NOT = { reverse_opinion = { who = FROM value = -49 } }
+			AND = {
+				NOT = { fertility = 0.1 }
+				FROM = {
+					is_ruler = yes
+					OR = {
+						has_ambition = obj_have_a_child
+						has_ambition = obj_have_five_children
+					}
+				}
+			}
+		}
+	}
+	
+	chance = {
+		factor = 10
+		modifier = {
+			factor = 0
+			FROM = {
+				ai = yes
+				any_backed_character = {
+					has_plot = plot_kill_character
+					plot_target_char = { character = ROOT }
+				}
+			}
+		}
+		
+		# Personality
+		modifier = {
+			factor = 5
+			FROM = { trait = cold }
+		}
+		modifier = {
+			factor = 0.1
+			FROM = { trait = content }
+		}
+		modifier = {
+			factor = 10
+			FROM = { trait = ambitious }
+		}
+		
+		# Ideology
+		modifier = {
+			factor = 0.5
+			piety = 0
+			FROM = {
+				religion = ROOT
+				religion_authority = 0.75
+			}
+		}
+		modifier = {
+			factor = 0.5
+			piety = 0
+			FROM = {
+				religion = ROOT
+				religion_authority = 0.5
+				NOT = { trait = pragmatic }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			piety = 0
+			FROM = {
+				religion = ROOT
+				religion_authority = 0.25
+				trait = radical
+			}
+		}
+		modifier = {
+			factor = 0.5
+			piety = 0
+			FROM = {
+				religion = ROOT
+				trait = radical
+			}
+		}
+		modifier = {
+			factor = 2
+			FROM = {
+				NOT = { religion = ROOT }
+				trait = radical
+			}
+		}
+		modifier = {
+			factor = 2
+			FROM = { NOT = { religion = ROOT } }
+			NOT = { religion_authority = 0.75 }
+		}
+		modifier = {
+			factor = 2
+			FROM = { NOT = { religion = ROOT } }
+			NOT = { religion_authority = 0.5 }
+		}
+		modifier = {
+			factor = 2
+			FROM = { NOT = { religion = ROOT } }
+			NOT = { religion_authority = 0.25 }
+		}
+		
+		# Opinion
+		modifier = {
+			factor = 0.8
+			reverse_opinion = { who = FROM value = 100 }
+		}
+		modifier = {
+			factor = 0.8
+			reverse_opinion = { who = FROM value = 90 }
+		}
+		modifier = {
+			factor = 0.8
+			reverse_opinion = { who = FROM value = 80 }
+		}
+		modifier = {
+			factor = 0.8
+			reverse_opinion = { who = FROM value = 70 }
+		}
+		modifier = {
+			factor = 0.8
+			reverse_opinion = { who = FROM value = 60 }
+		}
+		modifier = {
+			factor = 0.8
+			reverse_opinion = { who = FROM value = 40 }
+		}
+		modifier = {
+			factor = 0.8
+			reverse_opinion = { who = FROM value = 30 }
+		}
+		modifier = {
+			factor = 0.8
+			reverse_opinion = { who = FROM value = 20 }
+		}
+		modifier = {
+			factor = 0.8
+			reverse_opinion = { who = FROM value = 10 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -9 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -19 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -29 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -39 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -49 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -59 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -69 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -79 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -89 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -99 } }
+		}
+	}
+	
+	success = {
+		is_alive = no
+		hidden_tooltip = { FROM = { has_character_flag = murder_in_motion } }
+	}
+	abort = {
+		OR = {
+			is_alive = no
+			FROM = {
+				ai = yes
+				had_character_flag = { flag = ai_plot_timer days = 365 }
+				NOT = { plot_power = 0.5 }
+			}
+			FROM = {
+				ai = yes
+				had_character_flag = { flag = ai_plot_timer days = 1825 }
+				NOT = { plot_power = 1 }
+			}
+		}
+	}
+	abort_effect = {
+		FROM = {
+			clr_character_flag = murder_in_motion
+			clr_character_flag = flag_ai_plot_timer
+		}
+	}
+	effect = {
+		FROM = {
+			clr_character_flag = murder_in_motion
+			clr_character_flag = flag_ai_plot_timer
+			# Achievement
+			hidden_tooltip = {
+				if = {
+					limit = {
+						ai = no
+					}
+					set_character_flag = achievement_spouse_killer
+				}
+			}
+		}
+	}
+}
+
+# Cut down a fellow vassal to size
+plot_weaken_fellow_vassal = {
+	type = realm_titles
+	military_plot = yes
+	
+	# Plotter scope
+	potential = {
+		prisoner = no
+		is_patrician = no
+		liege = { 
+			is_merchant_republic = no
+			is_patrician = no
+		}
+		age = 16
+		is_ruler = yes
+		independent = no
+		is_landed = yes
+		primary_title = { higher_tier_than = BARON }
+		NOT = {
+			trait = incapable
+			trait = imbecile
+		}
+		OR = {
+			crownlaw_title = {
+				NOT = {
+					OR = {
+						has_law = centralization_3
+						has_law = centralization_4
+					}
+				}
+			}
+			NOT = { crownlaw_title = { always = yes } }
+		}
+	}
+	
+	# Occurs when plot is activated
+	creation_effect = {
+		if = {
+			limit = { FROM = { ai = yes } }
+			FROM = {
+				clr_character_flag = flag_ai_plot_timer
+				set_character_flag = flag_ai_plot_timer
+			}
+		}
+		ROOT = {
+			holder_scope = {
+				opinion = {
+					modifier = opinion_plot_weaken_fellow_vassal
+					who = FROM
+				}
+			}
+		}
+	}
+	
+	# Target scope
+	allow = {
+		higher_tier_than = COUNT
+		is_primary_holder_title = no
+		current_heir = {
+			NOT = { character = FROM }
+		}
+		holder_scope = {
+			NOT = { reverse_has_truce = FROM }
+			primary_title = { higher_tier_than = COUNT }
+			independent = no
+			held_title_rating = FROM
+			same_liege = FROM
+			any_demesne_title = {
+				tier = ROOT
+				is_primary_holder_title = no
+			}
+			NOT = {
+				spouse = { character = FROM }
+				character = FROM
+				overlord_of = FROM
+				primary_title = { higher_tier_than = DUKE }
+			}
+			any_vassal = {
+				tier = count
+				any_demesne_title = {
+					tier = count
+					dejure_liege_title = { title = ROOT }
+				}
+			}
+		}
+	}
+	
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			FROM = {
+				ai = yes
+				any_backed_character = {
+					has_plot = plot_weaken_fellow_vassal
+					plot_target_title = { title = ROOT }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.0
+			FROM = {
+				ai = yes
+				war = yes
+			}
+		}
+		# Personality
+		modifier = {
+			factor = 0.1
+			FROM = { trait = content }
+		}
+		modifier = {
+			factor = 5
+			FROM = { trait = ambitious }
+		}
+		modifier = {
+			factor = 0.2
+			FROM = { trait = friendly }
+		}
+		modifier = {
+			factor = 5
+			FROM = { trait = cold }
+		}
+		
+		# Concerned about same-ideology or same-culture systems
+		modifier = {
+			factor = 2
+			FROM = { religion_authority = 0.75 }
+			holder_scope = {
+				any_realm_province = {
+					religion = FROM
+					NOT = { religion = PREV }
+					OR = {
+						county = { title = ROOT }
+						duchy = { title = ROOT }
+						kingdom = { title = ROOT }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			FROM = {
+				religion_authority = 0.5
+				NOT = { trait = pragmatic }
+			}
+			holder_scope = {
+				any_realm_province = {
+					religion = FROM
+					NOT = { religion = PREV }
+					OR = {
+						county = { title = ROOT }
+						duchy = { title = ROOT }
+						kingdom = { title = ROOT }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			FROM = {
+				religion_authority = 0.25
+				trait = radical
+			}
+			holder_scope = {
+				any_realm_province = {
+					religion = FROM
+					NOT = { religion = PREV }
+					OR = {
+						county = { title = ROOT }
+						duchy = { title = ROOT }
+						kingdom = { title = ROOT }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			FROM = { trait = radical }
+			holder_scope = {
+				any_realm_province = {
+					religion = FROM
+					NOT = { religion = PREV }
+					OR = {
+						county = { title = ROOT }
+						duchy = { title = ROOT }
+						kingdom = { title = ROOT }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			holder_scope = {
+				any_realm_province = {
+					culture_group = FROM
+					NOT = { culture_group = PREV }
+					OR = {
+						county = { title = ROOT }
+						duchy = { title = ROOT }
+						kingdom = { title = ROOT }
+					}
+				}
+			}
+		}
+		
+		# Balance of power
+		modifier = {
+			factor = 2
+			holder_scope = { any_demesne_title = { claimed_by = FROM } }
+		}
+		modifier = {
+			factor = 2
+			holder_scope = {
+				any_demesne_title = { claimed_by = FROM }
+				relative_power = { who = FROM power = 1.25 }
+			}
+		}
+		modifier = {
+			factor = 2
+			claimed_by = FROM
+		}
+		modifier = {
+			factor = 2
+			claimed_by = FROM
+			holder_scope = { relative_power = { who = FROM power = 1.25 } }
+		}
+		modifier = {
+			factor = 4
+			holder_scope = { relative_power = { who = FROM power = 2 } }
+		}
+		
+		# Opinion
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -99 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -89 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -79 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -69 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -59 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -49 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -39 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -29 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -19 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { reverse_opinion = { who = FROM value = -9 } }
+		}
+		modifier = {
+			factor = 0.8
+			reverse_opinion = { who = FROM value = 10 }
+		}
+		modifier = {
+			factor = 0.8
+			reverse_opinion = { who = FROM value = 20 }
+		}
+		modifier = {
+			factor = 0.8
+			reverse_opinion = { who = FROM value = 30 }
+		}
+		modifier = {
+			factor = 0.8
+			reverse_opinion = { who = FROM value = 40 }
+		}
+		modifier = {
+			factor = 0.8
+			reverse_opinion = { who = FROM value = 50 }
+		}
+		modifier = {
+			factor = 0.8
+			reverse_opinion = { who = FROM value = 60 }
+		}
+		modifier = {
+			factor = 0.8
+			reverse_opinion = { who = FROM value = 70 }
+		}
+		modifier = {
+			factor = 0.8
+			reverse_opinion = { who = FROM value = 80 }
+		}
+		modifier = {
+			factor = 0.8
+			reverse_opinion = { who = FROM value = 90 }
+		}
+		modifier = {
+			factor = 0.8
+			reverse_opinion = { who = FROM value = 100 }
+		}
+		
+		modifier = {
+			# Subtle balance against nepotism
+			factor = 2.0
+			holder_scope = {
+				top_liege = {
+					higher_tier_than = COUNT
+					dynasty = PREV
+					dynasty_realm_power = 0.25
+				}
+			}
+		}
+		modifier = {
+			# Subtle balance against nepotism
+			factor = 2.0
+			holder_scope = {
+				top_liege = {
+					higher_tier_than = COUNT
+					dynasty = PREV
+					dynasty_realm_power = 0.4
+				}
+			}
+		}
+		modifier = {
+			# Subtle balance against nepotism
+			factor = 2.0
+			holder_scope = {
+				top_liege = {
+					higher_tier_than = COUNT
+					dynasty = PREV
+					dynasty_realm_power = 0.6
+				}
+			}
+		}
+	}
+	
+	success = {
+		custom_tooltip = {
+			text = PLOT_TOOLTIP_WEAKEN_VASSAL
+			hidden_tooltip = {
+				holder_scope = {
+					NOT = { 
+						has_opinion_modifier = {
+							modifier = opinion_plot_weaken_fellow_vassal
+							who = FROM			
+						}
+					}
+				}
+			}
+		}
+	}
+	abort = {
+		OR = {
+			holder_scope = { spouse = { character = FROM } }
+			FROM = {
+				OR = {
+					is_ruler = no
+					independent = yes
+					trait = incapable
+				}
+			}
+			FROM = {
+				ai = yes
+				had_character_flag = { flag = flag_ai_plot_timer days = 365 }
+				NOT = { plot_power = 0.5 }
+			}
+			FROM = {
+				ai = yes
+				had_character_flag = { flag = flag_ai_plot_timer days = 1825 }
+				NOT = { plot_power = 1 }
+			}
+		}
+	}
+	abort_effect = {
+		FROM = {
+			# Clear flags
+			hidden_tooltip = {
+				clr_character_flag = plot_weaken_fellow_vassal_decision_liege_taken
+				clr_character_flag = plot_weaken_fellow_vassal_decision_taken
+				clr_character_flag = flag_ai_plot_timer
+			}
+		}
+	}
+	effect = {
+		FROM = {
+			if = {
+				limit = {
+					NOT = { intrigue = 10 }
+				}
+				change_intrigue = 1
+			}
+			any_plot_backer = {
+				reverse_opinion = {
+					modifier = opinion_grateful
+					who = FROM
+					years = 5
+				}
+			}
+			# Clear flags
+			hidden_tooltip = {
+				clr_character_flag = plot_weaken_fellow_vassal_decision_liege_taken
+				clr_character_flag = plot_weaken_fellow_vassal_decision_taken
+				clr_character_flag = flag_ai_plot_timer
+			}
+		}
+	}
+}
+
+#################################
+### Plots to Fabricate Claims ###
+#################################
+
+# Vassal ruler plots to gain claim on liege's title
+plot_gain_liege_title = {
+	type = liege_titles
+	vassal_intrigue_plot = yes
+	
+	# Plotter scope
+	potential = {
+		is_playable = yes
+		prisoner = no
+		age = 16
+		is_feudal = yes
+		is_landed = yes
+		independent = no
+		mercenary = no
+		NOT = { trait = incapable }
+		NOT = { trait = imbecile }
+		liege = {
+			NOT = { is_father = ROOT }
+			NOT = { is_mother = ROOT }
+		}
+	}
+	
+	# Target scope
+	allow = {
+		NOT = { claimed_by = FROM }
+		current_heir = { NOT = { character = FROM } }
+		FROM = {
+			OR = {
+				dejure_liege_title = { title = ROOT }
+				primary_title = { de_jure_vassal_or_below = ROOT }
+			}
+		}
+	}
+	
+	creation_effect = {
+		if = {
+			limit = { FROM = { ai = yes } }
+			FROM = {
+				clr_character_flag = flag_ai_plot_timer
+				set_character_flag = flag_ai_plot_timer
+			}
+		}
+	}
+	
+	chance = {
+		factor = 1 # Must always be an integer
+		
+		modifier = {
+			factor = 0.0
+			FROM = {
+				ai = yes
+				war = yes
+			}
+		}
+		modifier = {
+			factor = 0.01
+			FROM = { trait = content }
+		}
+		modifier = {
+			factor = 0.2
+			FROM = { trait = slow }
+		}
+		modifier = {
+			factor = 0.2
+			FROM = { trait = kind }
+		}
+		modifier = {
+			factor = 0
+			holder_scope = {
+				reverse_opinion = { who = FROM value = 25 }
+			}
+			NOT = {
+				OR = {
+					FROM = { trait = envious }
+					FROM = { trait = deceitful }
+					FROM = { trait = ambitious }
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			holder_scope ={
+				reverse_opinion = { who = FROM value = 50 }
+			}
+			OR = {
+				FROM = { trait = envious }
+				FROM = { trait = deceitful }
+				FROM = { trait = ambitious }
+			}
+		}
+		modifier = {
+			factor = 0.2
+			holder_scope = {
+				reverse_opinion = { who = FROM value = 0 }
+			}
+			NOT = {
+				OR = {
+					FROM = { trait = envious }
+					FROM = { trait = deceitful }
+					FROM = { trait = ambitious }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.2
+			holder_scope ={
+				reverse_opinion = { who = FROM value = 25 }
+			}
+			OR = {
+				FROM = { trait = envious }
+				FROM = { trait = deceitful }
+				FROM = { trait = ambitious }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				holder_scope = {
+					reverse_opinion = { who = FROM value = -50 }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { 
+				holder_scope = {
+					reverse_opinion = { who = FROM value = -75 }
+				}
+			}
+		}
+		modifier = {
+			# Subtle balance against nepotism
+			factor = 2.0
+			holder_scope = {
+				NOT = { dynasty = FROM }
+				top_liege = {
+					higher_tier_than = COUNT
+					dynasty = PREV
+					dynasty_realm_power = 0.25
+				}
+			}
+		}
+		modifier = {
+			# Subtle balance against nepotism
+			factor = 2.0
+			holder_scope = {
+				NOT = { dynasty = FROM }
+				top_liege = {
+					higher_tier_than = COUNT
+					dynasty = PREV
+					dynasty_realm_power = 0.4
+				}
+			}
+		}
+	
+		modifier = {
+			factor = 1.5
+			FROM = { trait = quick }
+		}
+		modifier = {
+			factor = 2.0
+			FROM = { trait = envious }
+		}
+		modifier = {
+			factor = 2.0
+			FROM = { trait = deceitful }
+		}
+		modifier = {
+			factor = 4.0
+			FROM = { trait = ambitious }
+		}
+	}
+	
+	success = {
+		claimed_by = FROM
+	}
+	abort = {
+		OR = {
+			FROM = {
+				ai = yes
+				had_character_flag = { flag = flag_ai_plot_timer days = 365 }
+				NOT = { plot_power = 0.5 }
+			}
+			FROM = {
+				ai = yes
+				had_character_flag = { flag = flag_ai_plot_timer days = 1825 }
+				NOT = { plot_power = 1 }
+			}
+			holder_scope = {
+				character = FROM
+			}
+			has_holder = no
+		}
+	}
+	abort_effect = {
+		FROM = {
+			# Clear flags
+			hidden_tooltip = {
+				clr_character_flag = plot_gain_liege_title_decision_taken
+				clr_character_flag = flag_ai_plot_timer
+			}
+		}
+	}
+	effect = {
+		FROM = {
+			any_plot_backer = {
+				reverse_opinion = {
+					modifier = opinion_grateful
+					who = FROM
+					years = 5
+				}
+			}
+			# Clear flags
+			hidden_tooltip = {
+				clr_character_flag = plot_gain_liege_title_decision_taken
+				clr_character_flag = flag_ai_plot_timer
+			}
+		}
+	}
+}
+
+# Vassal ruler plots to gain claim on a fellow vassal's title
+plot_gain_fellow_vassal_title = {
+	type = realm_titles
+	vassal_intrigue_plot = yes
+	
+	# Plotter scope
+	potential = {
+		is_playable = yes
+		prisoner = no
+		age = 16
+		is_feudal = yes
+		is_landed = yes
+		independent = no
+		NOT = { trait = incapable }
+		NOT = { trait = imbecile }
+	}
+	
+	# Target scope
+	allow = {
+		NOT = { claimed_by = FROM }
+		current_heir = {
+			NOT = { character = FROM }
+		}
+		FROM = {
+			OR = {
+				any_demesne_title = {
+					dejure_liege_title = {
+						title = ROOT
+					}
+				}
+				primary_title = {
+					de_jure_vassal_or_below = ROOT
+				}
+			}
+		}
+		
+		holder_scope = {
+			is_ruler = yes
+			is_feudal = yes
+			is_landed = yes
+			independent = no
+			NOT = { is_liege_of = FROM }
+			same_liege = FROM
+			primary_title = { higher_tier_than = BARON }
+			NOT = { character = FROM }
+		}
+	}
+	
+	creation_effect = {
+		if = {
+			limit = { FROM = { ai = yes } }
+			FROM = {
+				clr_character_flag = flag_ai_plot_timer
+				set_character_flag = flag_ai_plot_timer
+			}
+		}
+	}
+	
+	creation_effect = {
+		if = {
+			limit = { FROM = { ai = yes } }
+			FROM = {
+				clr_character_flag = flag_ai_plot_timer
+				set_character_flag = flag_ai_plot_timer
+			}
+		}
+	}
+	
+	chance = {
+		factor = 1 # Must be an integer
+		
+		modifier = {
+			factor = 0.0
+			FROM = {
+				ai = yes
+				war = yes
+			}
+		}
+		modifier = {
+			factor = 0.01
+			FROM = { trait = content }
+		}
+		modifier = {
+			factor = 0.2
+			FROM = { trait = slow }
+		}
+		modifier = {
+			factor = 0.2
+			FROM = { trait = kind }
+		}
+		modifier = {
+			factor = 0
+			holder_scope = {
+				reverse_opinion = { who = FROM value = 25 }
+			}
+			NOT = {
+				OR = {
+					FROM = { trait = envious }
+					FROM = { trait = deceitful }
+					FROM = { trait = ambitious }
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			holder_scope ={
+				reverse_opinion = { who = FROM value = 50 }
+			}
+			OR = {
+				FROM = { trait = envious }
+				FROM = { trait = deceitful }
+				FROM = { trait = ambitious }
+			}
+		}
+		modifier = {
+			factor = 0.2
+			holder_scope = {
+				reverse_opinion = { who = FROM value = 0 }
+			}
+			NOT = {
+				OR = {
+					FROM = { trait = envious }
+					FROM = { trait = deceitful }
+					FROM = { trait = ambitious }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.2
+			holder_scope ={
+				reverse_opinion = { who = FROM value = 25 }
+			}
+			OR = {
+				FROM = { trait = envious }
+				FROM = { trait = deceitful }
+				FROM = { trait = ambitious }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				ROOT = {
+					holder_scope = {
+						reverse_opinion = { who = FROM value = -50 }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { 
+				ROOT = {
+					holder_scope = {
+						reverse_opinion = { who = FROM value = -75 }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { trait = quick }
+		}
+		modifier = {
+			factor = 2.0
+			FROM = { trait = envious }
+		}
+		modifier = {
+			factor = 2.0
+			FROM = { trait = deceitful }
+		}
+		modifier = {
+			factor = 4.0
+			FROM = { trait = ambitious }
+		}
+	}
+	
+	success = { 
+		claimed_by = FROM
+	}
+	abort = {
+		OR = {
+			FROM = {
+				ai = yes
+				had_character_flag = { flag = flag_ai_plot_timer days = 365 }
+				NOT = { plot_power = 0.5 }
+			}
+			FROM = {
+				ai = yes
+				had_character_flag = { flag = flag_ai_plot_timer days = 1825 }
+				NOT = { plot_power = 1 }
+			}
+			holder_scope = {
+				character = FROM
+			}
+			has_holder = no
+		}
+	}
+	abort_effect = {
+		FROM = {
+			# Clear flags
+			hidden_tooltip = {
+				clr_character_flag = plot_gain_fellow_vassal_title_decision_taken
+				clr_character_flag = flag_ai_plot_timer
+			}
+		}
+	}
+	effect = {
+		FROM = {
+			if = {
+				limit = {
+					NOT = { intrigue = 10 }
+				}
+				change_intrigue = 1
+			}
+			any_plot_backer = {
+				reverse_opinion = {
+					modifier = opinion_grateful
+					who = FROM
+					years = 5
+				}
+			}
+			# Clear flags
+			hidden_tooltip = {
+				clr_character_flag = plot_gain_fellow_vassal_title_decision_taken
+				clr_character_flag = flag_ai_plot_timer
+			}
+		}
+	}
+}
+
+# Seize Trade Post (Republics only)
+plot_seize_trade_post = {
+	type = rep_trade_posts
+	intrigue_plot = yes
+	
+	# Plotter scope
+	potential = {
+		has_dlc = "The Republic"
+		is_patrician = yes
+		prisoner = no
+		age = 16
+		NOT = { trait = incapable }
+		NOT = { trait = imbecile }
+	}
+	
+	# Target scope
+	allow = {
+		has_trade_post = yes
+		trade_post_owner = {
+			OR = {
+				same_liege = FROM
+				liege = { character = FROM }
+				any_vassal = { character = FROM }
+			}
+			NOT = { character = FROM }
+			NOT = { has_opinion_modifier = { who = FROM modifier = opinion_seized_tp } }
+		}
+		any_neighbor_province = {
+			has_trade_post = yes
+			trade_post_owner = {  character = FROM }
+		}
+	}
+	
+	creation_effect = {
+		if = {
+			limit = { FROM = { ai = yes } }
+			FROM = {
+				clr_character_flag = flag_ai_plot_timer
+				set_character_flag = flag_ai_plot_timer
+			}
+		}
+	}
+	
+	chance = {
+		factor = 1 # Must be an integer
+		
+		modifier = {
+			factor = 0.0
+			FROM = {
+				ai = yes
+				war = yes
+			}
+		}
+		
+		# Personality
+		modifier = {
+			factor = 0.1
+			FROM = { trait = content }
+		}
+		modifier = {
+			factor = 10
+			FROM = { trait = ambitious }
+		}
+		modifier = {
+			factor = 0.2
+			FROM = { trait = friendly }
+		}
+		modifier = {
+			factor = 5
+			FROM = { trait = cold }
+		}
+		modifier = {
+			factor = 0.5
+			FROM = { trait = carefree }
+		}
+		modifier = {
+			factor = 2
+			FROM = { trait = disciplined }
+		}
+		modifier = {
+			factor = 0.5
+			FROM = { trait = craven }
+		}
+		modifier = {
+			factor = 2
+			FROM = { trait = brave }
+		}
+		
+		# Prefer trade posts in own territory
+		modifier = {
+			factor = 2
+			location = { county = { holder_scope = { character = FROM } } }
+		}
+		modifier = {
+			factor = 2
+			location = { duchy = { holder_scope = { character = FROM } } }
+		}
+		
+		# Try to form contiguous trade empires if possible
+		modifier = {
+			factor = 5
+			any_neighbor_province = {
+				has_trade_post = yes
+				trade_post_owner = { character = FROM }
+				count = 2
+			}
+		}
+		modifier = {
+			factor = 5
+			any_neighbor_province = {
+				is_sea = yes
+				any_neighbor_province = {
+					has_trade_post = yes
+					trade_post_owner = { character = FROM }
+					count = 2
+				}
+			}
+		}
+		
+		# Counter-blobbing
+		modifier = {
+			factor = 0.5
+			holder_scope = {
+				FROM = {
+					num_of_trade_post_diff = {
+						who = PREV
+						value = 10
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			holder_scope = {
+				FROM = {
+					num_of_trade_post_diff = {
+						who = PREV
+						value = 7
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			holder_scope = {
+				FROM = {
+					num_of_trade_post_diff = {
+						who = PREV
+						value = 4
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			holder_scope = {
+				FROM = {
+					num_of_trade_post_diff = {
+						who = PREV
+						value = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			holder_scope = {
+				num_of_trade_post_diff = {
+					who = FROM
+					value = 1
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			holder_scope = {
+				num_of_trade_post_diff = {
+					who = FROM
+					value = 4
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			holder_scope = {
+				num_of_trade_post_diff = {
+					who = FROM
+					value = 7
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			holder_scope = {
+				num_of_trade_post_diff = {
+					who = FROM
+					value = 10
+				}
+			}
+		}
+		
+		# Opinion
+		modifier = {
+			factor = 1.25
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -99 } } }
+		}
+		modifier = {
+			factor = 1.25
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -89 } } }
+		}
+		modifier = {
+			factor = 1.25
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -79 } } }
+		}
+		modifier = {
+			factor = 1.25
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -69 } } }
+		}
+		modifier = {
+			factor = 1.25
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -59 } } }
+		}
+		modifier = {
+			factor = 1.25
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -49 } } }
+		}
+		modifier = {
+			factor = 1.25
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -39 } } }
+		}
+		modifier = {
+			factor = 1.25
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -29 } } }
+		}
+		modifier = {
+			factor = 1.25
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -19 } } }
+		}
+		modifier = {
+			factor = 1.25
+			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -9 } } }
+		}
+		modifier = {
+			factor = 0.8
+			holder_scope = { reverse_opinion = { who = FROM value = 10 } }
+		}
+		modifier = {
+			factor = 0.8
+			holder_scope = { reverse_opinion = { who = FROM value = 20 } }
+		}
+		modifier = {
+			factor = 0.8
+			holder_scope = { reverse_opinion = { who = FROM value = 30 } }
+		}
+		modifier = {
+			factor = 0.8
+			holder_scope = { reverse_opinion = { who = FROM value = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			holder_scope = { reverse_opinion = { who = FROM value = 50 } }
+		}
+		modifier = {
+			factor = 0.8
+			holder_scope = { reverse_opinion = { who = FROM value = 60 } }
+		}
+		modifier = {
+			factor = 0.8
+			holder_scope = { reverse_opinion = { who = FROM value = 70 } }
+		}
+		modifier = {
+			factor = 0.8
+			holder_scope = { reverse_opinion = { who = FROM value = 80 } }
+		}
+		modifier = {
+			factor = 0.8
+			holder_scope = { reverse_opinion = { who = FROM value = 90 } }
+		}
+		modifier = {
+			factor = 0.8
+			holder_scope = { reverse_opinion = { who = FROM value = 100 } }
+		}
+	}
+	
+	success = {
+		trade_post_owner = { 
+			character = FROM
+		}
+	}
+	abort = {
+		OR = {
+			FROM = {
+				ai = yes
+				had_character_flag = { flag = flag_ai_plot_timer days = 365 }
+				NOT = { plot_power = 0.5 }
+			}
+			FROM = {
+				ai = yes
+				had_character_flag = { flag = flag_ai_plot_timer days = 1825 }
+				NOT = { plot_power = 1 }
+			}
+		}
+#		holder = {
+#			independent = yes
+#		}
+	}
+	abort_effect = {
+		FROM = {
+			clr_character_flag = plot_seize_trade_post_decision_taken
+			clr_character_flag = flag_ai_plot_timer
+		}
+	}
+	effect = {
+		seize_trade_post = FROM
+		FROM = { clr_character_flag = flag_ai_plot_timer }
+	}
+}

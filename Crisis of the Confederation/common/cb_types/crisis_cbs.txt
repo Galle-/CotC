@@ -6,15 +6,24 @@ civil_war = {
 	truce_days = 0
 	hostile_against_others = yes
 	is_permanent = yes
+	is_revolt_cb = yes
+	can_ask_to_join_war = yes
+	can_call_vassals = yes
 	
 	press_claim = yes
-	can_call_vassals = yes
 	
 	can_use = {
 		# Triggered by event only
 		OR = {
 			ROOT = { has_character_flag = flag_launching_civil_war }
 			FROM = { has_character_flag = flag_launching_civil_war }
+		}
+	}
+	
+	can_use_title = {
+		OR = {
+			is_primary_holder_title = yes
+			ROOT = { plot_target_title = { title = PREVPREV } }
 		}
 	}
 	
@@ -65,25 +74,11 @@ civil_war = {
 			# Civil wars without an actual CB end with the leader's death
 			ROOT = { has_character_flag = flag_failed_coup }
 			FROM = { has_character_flag = flag_failed_purge }
-			
-			# Civil wars that are theoretically actually over something
-			FROM = {
-				any_demesne_title = {
-					is_primary_holder_title_tier = yes
-					ROOT = { has_strong_claim = PREV }
-				}
-			}
-			FROM = { has_character_modifier = constitutional_crisis }
 		}
 	}
 	
 	on_success = {
 		# The rebels have won!
-		# Exactly what the rebels get should depend on whether this was a coup or purge
-		if = {
-			limit = { ROOT = { has_character_flag = flag_coup_leader } }
-			ROOT = { character_event = { id = coup.5300 tooltip = "EVTTOOLTIPCOUP5300" } }
-		}
 		any_attacker = {
 			limit = { character = ROOT }
 			participation_scaled_prestige = 200
@@ -95,22 +90,29 @@ civil_war = {
 		
 		# If FROM and ROOTs' ideologies are different, the latter gets a bonus and
 		# the former takes a hit
+		
+		# Remove coup flags
+		ROOT = { clr_character_flag = flag_failed_coup }
+		FROM = { clr_character_flag = flag_failed_purge }
+	}
+	
+	on_success_title = {
+		usurp_title_plus_barony_if_unlanded = ROOT # Messy solution, should be cleaned up later
 	}
 	
 	on_fail = {
 		# Initiator fails to achieve whatever it was they were after
-		if = {
-			limit = { ROOT = { has_character_flag = flag_coup_leader } }
-			character_event = { id = coup.5400 tooltip = "EVTTOOLTIPCOUP5400" }
+		ROOT = {
+			cancel_plot = plot_coup
+			cancel_plot = plot_justified_coup
 		}
+		
+		# Remove coup flags
+		ROOT = { clr_character_flag = flag_failed_coup }
+		FROM = { clr_character_flag = flag_failed_purge }
 	}
 	
 	on_reverse_demand = {
-		# Coups fail immediately
-		if = {
-			limit = { ROOT = { has_character_flag = flag_coup_leader } }
-			character_event = { id = coup.5400 tooltip = "EVTTOOLTIPCOUP5400" }
-		}
 		# Ruler has won!
 		FROM = { prestige = 100 }
 		# Imprison all rebels
@@ -155,9 +157,18 @@ civil_war = {
 			limit = { FROM = { has_character_modifier = constitutional_crisis } }
 			FROM = { character_event = { id = laws.1000 tooltip = "EVTTOOLTIPLAWS1000" } }
 		}
+		# Coups fail immediately
+		ROOT = {
+			cancel_plot = plot_coup
+			cancel_plot = plot_justified_coup
+		}
 		
 		# If FROM and ROOTs' ideologies are different, the former gets a bonus and
 		# the latter takes a hit
+		
+		# Remove coup flags
+		ROOT = { clr_character_flag = flag_failed_coup }
+		FROM = { clr_character_flag = flag_failed_purge }
 	}
 
 	attacker_ai_victory_worth = {
@@ -278,7 +289,122 @@ cb_military_campaign = {
 	}
 	
 	attacker_ai_defeat_worth = {
-		factor = 100
+		factor = 50
+		modifier = {
+			factor = 2
+			ROOT = { trait = proud }
+		}
+		modifier = {
+			factor = 0.5
+			ROOT = { trait = humble }
+		}
+		modifier = {
+			factor = 2
+			ROOT = { trait = brave }
+		}
+		modifier = {
+			factor = 0.5
+			ROOT = { trait = craven }
+		}
+		modifier = {
+			factor = 1.25
+			ROOT = { opinion = { who = liege value = 100 } }
+		}
+		modifier = {
+			factor = 1.25
+			ROOT = { opinion = { who = liege value = 90 } }
+		}
+		modifier = {
+			factor = 1.25
+			ROOT = { opinion = { who = liege value = 80 } }
+		}
+		modifier = {
+			factor = 1.25
+			ROOT = { opinion = { who = liege value = 70 } }
+		}
+		modifier = {
+			factor = 1.25
+			ROOT = { opinion = { who = liege value = 60 } }
+		}
+		modifier = {
+			factor = 1.25
+			ROOT = { opinion = { who = liege value = 50 } }
+		}
+		modifier = {
+			factor = 1.25
+			ROOT = { opinion = { who = liege value = 40 } }
+		}
+		modifier = {
+			factor = 1.25
+			ROOT = { opinion = { who = liege value = 30 } }
+		}
+		modifier = {
+			factor = 1.25
+			ROOT = { opinion = { who = liege value = 20 } }
+		}
+		modifier = {
+			factor = 1.25
+			ROOT = { opinion = { who = liege value = 10 } }
+		}
+		modifier = {
+			factor = 0.8
+			ROOT = { NOT = { opinion = { who = liege value = -9 } } }
+		}
+		modifier = {
+			factor = 0.8
+			ROOT = { NOT = { opinion = { who = liege value = -19 } } }
+		}
+		modifier = {
+			factor = 0.8
+			ROOT = { NOT = { opinion = { who = liege value = -29 } } }
+		}
+		modifier = {
+			factor = 0.8
+			ROOT = { NOT = { opinion = { who = liege value = -39 } } }
+		}
+		modifier = {
+			factor = 0.8
+			ROOT = { NOT = { opinion = { who = liege value = -49 } } }
+		}
+		modifier = {
+			factor = 0.8
+			ROOT = { NOT = { opinion = { who = liege value = -59 } } }
+		}
+		modifier = {
+			factor = 0.8
+			ROOT = { NOT = { opinion = { who = liege value = -69 } } }
+		}
+		modifier = {
+			factor = 0.8
+			ROOT = { NOT = { opinion = { who = liege value = -79 } } }
+		}
+		modifier = {
+			factor = 0.8
+			ROOT = { NOT = { opinion = { who = liege value = -89 } } }
+		}
+		modifier = {
+			factor = 0.8
+			ROOT = { NOT = { opinion = { who = liege value = -99 } } }
+		}
+		modifier = {
+			factor = 0.2
+			ROOT = {
+				OR = {
+					any_plot = plot_coup
+					any_plot = plot_justified_coup
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			ROOT = {
+				OR = {
+					any_plot = plot_coup
+					any_plot = plot_justified_coup
+				}
+				plot_power = 1
+			}
+		}
 	}
 
 	defender_ai_victory_worth = {

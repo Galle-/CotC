@@ -25,28 +25,6 @@ province_event = {
 	}
 }
 
-character_event = {
-	id = maintenance.2
-	hide_window = yes
-	
-	trigger = {
-		dynasty = none
-	}
-	
-	immediate = {
-		create_character = {
-			age = 25
-			culture = ROOT
-			religion = ROOT
-			dynasty = culture
-		}
-		new_character = {
-			ROOT = { dynasty = PREV }
-			death = { death_reason = death_sacrifice }
-		}
-	}
-}
-
 # Reset crown law timer
 character_event = {
 	id = maintenance.3
@@ -65,79 +43,6 @@ character_event = {
 			ROOT = { abdicate_to = PREV }
 			abdicate_to = ROOT
 			death = { death_reason = death_sacrifice }
-		}
-	}
-}
-
-# Family members
-character_event = {
-	id = maintenance.10
-	hide_window = yes
-	
-	trigger = { father = { NOT = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_my_parent } } } }
-	
-	immediate = { father = { reverse_opinion = { who = ROOT modifier = opinion_my_parent } } }
-}
-character_event = {
-	id = maintenance.11
-	hide_window = yes
-	
-	trigger = { mother = { NOT = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_my_parent } } } }
-	
-	immediate = { mother = { reverse_opinion = { who = ROOT modifier = opinion_my_parent } } }
-}
-character_event = {
-	id = maintenance.12
-	hide_window = yes
-	
-	trigger = { any_child = { NOT = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_my_child } } } }
-	
-	immediate = {
-		any_child = {
-			limit = { NOT = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_my_child } } }
-			reverse_opinion = { who = ROOT modifier = opinion_my_child }
-		}
-	}
-}
-character_event = {
-	id = maintenance.13
-	hide_window = yes
-	
-	trigger = {
-		any_sibling = {
-			is_older_than = ROOT
-			NOT = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_my_older_sibling } }
-		}
-	}
-	
-	immediate = {
-		any_sibling = {
-			limit = {
-				is_older_than = ROOT
-				NOT = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_my_older_sibling } }
-			}
-			reverse_opinion = { who = ROOT modifier = opinion_my_older_sibling }
-		}
-	}
-}
-character_event = {
-	id = maintenance.14
-	hide_window = yes
-	
-	trigger = {
-		any_sibling = {
-			ROOT = { is_older_than = PREV }
-			NOT = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_my_younger_sibling } }
-		}
-	}
-	
-	immediate = {
-		any_sibling = {
-			limit = {
-				ROOT = { is_older_than = PREV }
-				NOT = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_my_younger_sibling } }
-			}
-			reverse_opinion = { who = ROOT modifier = opinion_my_younger_sibling }
 		}
 	}
 }

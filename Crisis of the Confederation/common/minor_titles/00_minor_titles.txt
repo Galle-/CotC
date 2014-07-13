@@ -186,38 +186,9 @@ title_expected_successor = {
 		}
 		age = 16
 		NOT = { trait = incapable }
-		NOT = {
-			AND = {
-				is_feudal = yes
-				liege = {
-					OR = {
-						is_republic = yes
-						is_theocracy = yes
-					}
-				}
-			}
-		}
-		NOT = {
-			AND = {
-				is_republic = yes
-				liege = {
-					OR = {
-						is_feudal = yes
-						is_theocracy = yes
-					}
-				}
-			}
-		}
-		NOT = {
-			AND = {
-				is_theocracy = yes
-				liege = {
-					OR = {
-						is_republic = yes
-						is_feudal = yes
-					}
-				}
-			}
+		FROM = {
+			independent = no
+			any_demesne_title = { has_law = succ_appointment }
 		}
 	}
 	

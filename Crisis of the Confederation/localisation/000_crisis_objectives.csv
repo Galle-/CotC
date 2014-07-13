@@ -1,0 +1,14 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+obj_become_exalted_title;Become Famed Across the Stars;;;;;;;;;;;;;x
+obj_become_exalted_desc;[Root.GetFullName] wants to earn such fame and recognition that [Root.GetHerHis] name will be spoken across the Known Worlds.;;;;;;;;;;;;;x
+obj_marry_for_love_title;Marry For Love;;;;;;;;;;;;;x
+obj_marry_for_love_desc;[Root.GetFullName] is either unmarried or unsatisfied in [Root.GetHerHis] current marriage, wants to find a companion with whom [Root.GetSheHe] can spend the rest of [Root.GetHerHis] life in matrimony.;;;;;;;;;;;;;x
+obj_marry_for_power_title;Marry For Power;;;;;;;;;;;;;x
+obj_marry_for_power_desc;[Root.GetFullName] is either unmarried or unsatisfied in [Root.GetHerHis] current marriage, and has little interest in a romantic relationship. [Root.GetSheHeCap] wants to marry a powerful ruler, or manipulate [Root.GetHerHis] current spouse into a position above [Root.GetHerHis] own.;;;;;;;;;;;;;x
+obj_have_a_child_title;Have a Child;;;;;;;;;;;;;x
+obj_have_a_child_desc;[Root.GetFullName] is feeling [Root.GetHerHis] genetic imperative, and wants to have a child, either through cloning or the more conventional method.;;;;;;;;;;;;;x
+obj_become_ruler_title;Become a Ruler;;;;;;;;;;;;;x
+obj_become_ruler_desc;[Root.GetFullName] ;;;;;;;;;;;;;x
+obj_become_emperor_title;Become Ruler of [This.Capital.Empire.GetName];Devient [Root.GetEmperorEmpress] de [This.Capital.Empire.GetName];Werdet [Root.GetEmperorEmpress] von [This.Capital.Empire.GetName];;Convertirse en [Root.GetEmperorEmpress] de [This.Capital.Empire.GetName];;;;;;;;;x
+obj_become_emperor_desc;[This.GetFullName] wants to become [Root.GetEmperorEmpress] of [This.Capital.Empire.GetName].;[This.GetFullName] désire devenir [Root.GetEmperorEmpress] de [This.Capital.Empire.GetName]. S'il est païen, cela permet à/au [This.GetObjectPronoun] l'utilisation illimitée de l'assujettissement casus belli au sein du royaume. ;[This.GetFullName] möchte [Root.GetEmperorEmpress] von [This.Capital.Empire.GetName] werden. Bei heidnischer Herrschaft erlaubt dies [This.GetObjectPronoun] die unbegrenzte Verwendung des Kriegsgrunds Unterwerfung in diesem Königreich.;; [This.GetFullName] quiere convertirse en [Root.GetEmperorEmpress] de [This.Capital.Empire.GetName]. Si es pagano, permite a [This.GetObjectPronoun] el uso ilimitado de la Casus Belli Subyugación dentro del reino.;;;;;;;;;x
+obj_become_emperor_tip;Is [Root.GetEmperorEmpress] of [This.Capital.Empire.GetName];Est [Root.GetEmperorEmpress] de [This.Capital.Empire.GetName];Ist [Root.GetEmperorEmpress] von [This.Capital.Empire.GetName];;Es [Root.GetEmperorEmpress] de [This.Capital.Empire.GetName];;;;;;;;;x

@@ -1,6 +1,23 @@
 #########################################################################
 # RELIGIOUS AUTHORITY MODIFIERS - fully scriptable
 ##########################################################################
+
+# For successfully deposing a bad ruler
+successful_justified_coup = {
+	authority = 2
+	years = 30
+}
+# For deposing a good ruler without justification
+successful_unjustified_coup = {
+	authority = -2
+	years = 30
+}
+# For foiling a military coup attempt
+foiled_coup = {
+	authority = 3
+	years = 30
+}
+
 public_order_collapsed = {
 	authority = -10
 	years = 100

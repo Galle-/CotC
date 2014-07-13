@@ -534,15 +534,12 @@ on_combat_pulse = {
 		20 = 96501 # Gain Combat Trait 2
 		20 = 96502 # Gain Combat Trait 3
 		
-		50 = TOG.3000 # Becomes Berserker
-		15 = TOG.3001 # Berserker Maimed
-		20 = TOG.3002 # Berserker Wounded
-		15 = TOG.3003 # Berserker Killed
-		25 = TOG.3004 # Berserker Kills Many
-		
 		300 = cybernetics.10203 # Odin Glitch results in self-inflicted wound
 		300 = cybernetics.10204 # Odin Glitch results in friendly fire
 		300 = cybernetics.10206 # Odin Glitch results in sudden success!
+	}
+	events = {
+		coup.120 # Civil war defections
 	}
 }
 
@@ -566,6 +563,7 @@ on_siege_pulse = {
 		15 = 62012
 		15 = 62013
 	}
+	events = { coup.140 } # Defense commander defects
 }
 
 #character
@@ -801,6 +799,7 @@ on_death = {
 		nepotism.1
 		laws.155 # Use a dummy character to handle patrician inheritance if necessary
 		#laws.156
+		maintenance.200 # Get rid of extra coup flags
 	}
 	random_events = {
 		10 = 24505

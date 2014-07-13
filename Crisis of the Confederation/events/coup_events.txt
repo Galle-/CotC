@@ -1,5241 +1,138 @@
 namespace = coup
 
-# LIST OF COUP ACTION CHAINS
-#1XX	Military Storms Palace/Bunker
-#2XX	Internal Security Turned
-#3XX	Target's Lover Lays Trap
-#4XX	Treasurer Steals State Funds
-# ANATOMY OF COUP ACTION CHAINS
-#X00	Character	Planning Event
-#X01	Letter		Planning Event - Inform Plot Leader
-#X02	Character	Bad Flag Deletion
-#X03	Character	Bad Flag Deletion - Inform Plot Leader
-#X04	Narrative	First Coup Action - Inform Acting Member
-#X05	Character	First Coup Action - Bounce to Get Target
-#X06	Character	First Coup Action - Resolve Action
-#X07	Narrative	First Coup Action - Success - Inform Actor
-#X08	Narrative	First Coup Action - Success - Inform Target
-#X09	Letter		First Coup Action - Success - Inform Plot Leader
-#X10	Character	First Coup Action - Success - Inform Other Plotters
-#X11	Character	First Coup Action - Success - Inform Bystanders
-#X12	Narrative	First Coup Action - Failure - Inform Actor
-#X13	Narrative	First Coup Action - Failure - Inform Target
-#X14	Letter		First Coup Action - Failure - Inform Plot Leader
-#X15	Character	First Coup Action - Failure - Inform Other Plotters
-#X16	Character	First Coup Action - Failure - Inform Bystanders
-#X17	Narrative	Followup Action - Inform Acting Member
-#X18	Character	Followup Action - Bounce to Get Target
-#X19	Character	Followup Action - Resolve Action
-#X20	Narrative	Followup Action - Success - Inform Actor
-#X21	Narrative	Followup Action - Success - Inform Target
-#X22	Letter		Followup Action - Success - Inform Plot Leader
-#X23	Character	Followup Action - Success - Inform Other Plotters
-#X24	Character	Followup Action - Success - Inform Bystanders
-#X25	Narrative	Followup Action - Failure - Inform Actor
-#X26	Narrative	Followup Action - Failure - Inform Target
-#X27	Letter		Followup Action - Failure - Inform Plot Leader
-#X28	Character	Followup Action - Failure - Inform Other Plotters
-#X29	Character	Followup Action - Failure - Inform Bystanders
-# Many of these are redunant, but need to be different for flavor reasons.
-# OTHER IMPORTANT COUP EVENTS
-#5000	Initiate Coup
-#5100	Resolve Captured Coup Target
-#5200	Coup Leader Delivers Ultimatum
-#5300	Coup Successful
-#5500	Choose next coup action
-
-# 1XX - MILITARY STORMS PALACE
-# Special events for this chain:
-#130	Character	First Coup Action - Military vassals of the Target get a chance to intervene
-#132	Character	First Coup Action - Success - Inform Interveners
-#133	Narrative	First Coup Action - Intervention - Inform Actor
-#134	Narrative	First Coup Action - Intervention - Inform Intervener
-#135	Narrative	First Coup Action - Intervention - Inform Target
-#136	Letter		First Coup Action - Intervention - Inform Plot Leader
-#137	Character	First Coup Action - Intervention - Inform Other Plotters
-#138	Character	First Coup Action - Intervention - Inform Bystanders
-#139	Character	Followup Action - Military vassals of the Target get a chance to intervene
-#140	Character	Followup Action - Success - Inform Interveners
-#141	Narrative	Followup Action - Intervention - Inform Actor
-#142	Narrative	Followup Action - Intervention - Inform Intervener
-#143	Narrative	Followup Action - Intervention - Inform Target
-#144	Letter		Followup Action - Intervention - Inform Plot Leader
-#145	Character	Followup Action - Intervention - Inform Other Plotters
-#146	Character	Followup Action - Intervention - Inform Bystanders
-character_event = {
-	id = coup.100
-	desc = "EVTDESCCOUP100"
-	picture = GFX_evt_cabal
-	
-	min_age = 16
-	only_rulers = yes
-	capable_only = yes
-	
-	trigger = {
-		OR = {
-			has_plot = plot_coup
-			has_plot = plot_justified_coup
-			any_backed_character = {
-				OR = {
-					has_plot = plot_coup
-					has_plot = plot_justified_coup
-				}
-				same_liege = ROOT
-			}
-		}
-		NOT = { has_character_flag = flag_coup_plan_military }
-		prisoner = no
-		
-		# Must have a military command, stationed within at most two jumps of the capital
-		is_feudal = yes
-		liege = {
-			capital_scope = {
-				OR = {
-					ROOT = { has_job_title = job_marshal }
-					any_province_lord = { character = ROOT }
-					any_neighbor_province = {
-						OR = {
-							any_province_lord = { character = ROOT }
-							any_neighbor_province = { any_province_lord = { character = ROOT } }
-						}
-					}
-				}
-			}
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 30
-		
-		modifier = {
-			factor = 0.5
-			trait = genius
-		}
-		modifier = {
-			factor = 0.8
-			trait = quick
-		}
-		modifier = {
-			factor = 1.25
-			trait = slow
-		}
-		modifier = {
-			factor = 2
-			trait = imbecile
-		}
-		
-		modifier = {
-			factor = 0.8
-			relative_power_to_liege = 0.1
-		}
-		modifier = {
-			factor = 0.8
-			relative_power_to_liege = 0.2
-		}
-		modifier = {
-			factor = 0.8
-			relative_power_to_liege = 0.3
-		}
-		modifier = {
-			factor = 0.8
-			relative_power_to_liege = 0.4
-		}
-		modifier = {
-			factor = 0.8
-			relative_power_to_liege = 0.5
-		}
-		modifier = {
-			factor = 0.8
-			relative_power_to_liege = 0.6
-		}
-		modifier = {
-			factor = 0.8
-			relative_power_to_liege = 0.7
-		}
-		modifier = {
-			factor = 0.8
-			relative_power_to_liege = 0.8
-		}
-		modifier = {
-			factor = 0.8
-			relative_power_to_liege = 0.9
-		}
-	}
-	
-	option = {
-		name = "EVTOPTACOUP100"
-		set_character_flag = flag_coup_plan_military
-		any_backed_character = {
-			limit = {
-				OR = {
-					has_plot = plot_coup
-					has_plot = plot_justified_coup
-				}
-				same_liege = ROOT
-			}
-			letter_event = { id = coup.101 tooltip = "EVTTOOLTIPCOUP101" }
-		}
-	}
-}
-
+# Coup Ultimatum
 letter_event = {
-	id = coup.101
-	desc = "EVTDESCCOUP101"
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTACOUP101" }
-}
-
-character_event = {
-	id = coup.102
-	desc = "EVTDESCCOUP102"
-	picture = GFX_evt_cabal
-	
-	trigger = {
-		OR = {
-			has_character_flag = flag_coup_plan_military
-			has_character_flag = flag_coup_action_military
-		}
-		NOT = {
-			AND = {
-				OR = {
-					has_plot = plot_coup
-					has_plot = plot_justified_coup
-					any_backed_character = {
-						OR = {
-							has_plot = plot_coup
-							has_plot = plot_justified_coup
-							same_liege = ROOT
-						}
-					}
-				}
-				is_feudal = yes
-				liege = {
-					capital_scope = {
-						OR = {
-							ROOT = { has_job_title = job_marshal }
-							any_province_lord = { character = ROOT }
-							any_neighbor_province = {
-								OR = {
-									any_province_lord = { character = ROOT }
-									any_neighbor_province = { any_province_lord = { character = ROOT }  }
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTCONFIRM"
-		clr_character_flag = flag_coup_plan_military
-		clr_character_flag = flag_coup_action_military
-		any_backed_character = {
-			limit = {
-				OR = {
-					has_plot = plot_coup
-					has_plot = plot_justified_coup
-				}
-				same_liege = ROOT
-			}
-			character_event = { id = coup.103 tooltip = "EVTTOOLTIPCOUP103" }
-		}
-	}
-}
-
-character_event = {
-	id = coup.103
-	desc = "EVTDESCCOUP103"
-	picture = GFX_evt_cabal
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
-}
-
-narrative_event = {
-	id = coup.104
-	title = "EVTNAMECOUP100"
-	desc = "EVTDESCCOUP104"
-	picture = GFX_evt_military_coup
-	is_triggered_only = yes
-	
-	option = {
-		trigger = { has_character_flag = flag_coup_leader } # Is the coup leader
-		name = "EVTOPTACOUP104"
-		clr_character_flag = flag_coup_plan_military
-		set_character_flag = flag_coup_action_military
-		plot_target_char = {
-			character_event = { id = coup.105 tooltip = "EVTTOOLTIPCOUP105" days = 1 }
-			hidden_tooltip = { any_vassal = { character_event = { id = coup.130 } } } # Possible chance to intercept
-		}
-	}
-	option = {
-		trigger = { NOT = { has_character_flag = flag_coup_leader } } # Is a coup supporter
-		name = "EVTOPTACOUP104"
-		clr_character_flag = flag_coup_plan_military
-		set_character_flag = flag_coup_action_military
-		random_backed_character = {
-			limit = { has_character_flag = flag_coup_leader }
-			plot_target_char = {
-				character_event = { id = coup.105 tooltip = "EVTTOOLTIPCOUP105" days = 1 }
-				hidden_tooltip = { any_vassal = { character_event = { id = coup.130 } } } # Possible chance to intercept
-			}
-		}
-	}
-}
-
-character_event = {
-	id = coup.130
-	desc = "EVTDESCCOUP130"
-	picture = GFX_command_center
-	hide_from = yes
+	id = coup.0
+	desc = "EVTDESCCOUP0"
+	border = GFX_evt_letter_frame_intrigue
 	is_triggered_only = yes
 	
 	trigger = {
-		is_ruler = yes
-		is_feudal = yes
-		relative_power_to_liege = 0.1
-		
-		NOT = { has_character_flag = flag_coup_member }
-		NOT = { has_character_flag = flag_coup_leader }
-		
-		# Needs to have at least as much intrigue as FROM
-		intrigue = FROM
-		
-		# Must be within two jumps of the capital
-		liege = {
-			capital_scope = {
-				OR = {
-					ROOT = { has_job_title = job_marshal }
-					any_province_lord = { character = ROOT }
-					any_neighbor_province = {
-						OR = {
-							any_province_lord = { character = ROOT }
-							any_neighbor_province = { any_province_lord = { character = ROOT } }
-						}
-					}
-				}
-			}
-		}
-		
-		prisoner = no
-		age = 16
-		NOT = { trait = incapable }
-	}
-	
-	option = {
-		name = "EVTOPTACOUP130"
-		set_character_flag = flag_coup_interceptor
-		ai_chance = {
-			factor = 100
-			
-			# Opinion Effects
-			modifier = {
-				factor = 1.25
-				opinion = { who = LIEGE value = 100 }
-			}
-			modifier = {
-				factor = 1.25
-				opinion = { who = LIEGE value = 90 }
-			}
-			modifier = {
-				factor = 1.25
-				opinion = { who = LIEGE value = 80 }
-			}
-			modifier = {
-				factor = 1.25
-				opinion = { who = LIEGE value = 70 }
-			}
-			modifier = {
-				factor = 1.25
-				opinion = { who = LIEGE value = 60 }
-			}
-			modifier = {
-				factor = 1.25
-				opinion = { who = LIEGE value = 50 }
-			}
-			modifier = {
-				factor = 1.25
-				opinion = { who = LIEGE value = 40 }
-			}
-			modifier = {
-				factor = 1.25
-				opinion = { who = LIEGE value = 30 }
-			}
-			modifier = {
-				factor = 1.25
-				opinion = { who = LIEGE value = 20 }
-			}
-			modifier = {
-				factor = 1.25
-				opinion = { who = LIEGE value = 10 }
-			}
-			modifier = {
-				factor = 0.8
-				NOT = { opinion = { who = LIEGE value = -9 } }
-			}
-			modifier = {
-				factor = 0.8
-				NOT = { opinion = { who = LIEGE value = -19 } }
-			}
-			modifier = {
-				factor = 0.8
-				NOT = { opinion = { who = LIEGE value = -29 } }
-			}
-			modifier = {
-				factor = 0.8
-				NOT = { opinion = { who = LIEGE value = -39 } }
-			}
-			modifier = {
-				factor = 0.8
-				NOT = { opinion = { who = LIEGE value = -49 } }
-			}
-			modifier = {
-				factor = 0.8
-				NOT = { opinion = { who = LIEGE value = -59 } }
-			}
-			modifier = {
-				factor = 0.8
-				NOT = { opinion = { who = LIEGE value = -69 } }
-			}
-			modifier = {
-				factor = 0.8
-				NOT = { opinion = { who = LIEGE value = -79 } }
-			}
-			modifier = {
-				factor = 0.8
-				NOT = { opinion = { who = LIEGE value = -89 } }
-			}
-			modifier = {
-				factor = 0.8
-				NOT = { opinion = { who = LIEGE value = -99 } }
-			}
-			
-			# Moral Authority - Thwarting Coups is a Civic Dury
-			modifier = {
-				factor = 2
-				liege = {
-					religion = ROOT
-					OR = {
-						religion_authority = 0.25
-						ROOT = { trait = radical }
-					}
-				}
-			}
-			modifier = {
-				factor = 2
-				liege = { religion_authority = 0.5 }
-			}
-			modifier = {
-				factor = 2
-				liege = { religion_authority = 0.75 }
-			}
-			
-			# Favors
-			modifier = {
-				factor = 5
-				reverse_has_opinion_modifier = { who = LIEGE modifier = opinion_owes_me_a_favor }
-			}
-			modifier = {
-				factor = 2
-				reverse_has_opinion_modifier = { who = LIEGE modifier = opinion_owes_me_a_favor }
-			}
-			modifier = {
-				factor = 5
-				NOT = { has_opinion_modifier = { who = LIEGE modifier = opinion_owes_me_a_favor } }
-				NOT = { reverse_has_opinion_modifier = { who = LIEGE modifier = opinion_owes_me_a_favor } }
-				trait = ambitious
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTBCOUP130"
-		ai_chance = { factor = 100 }
-	}
-}
-
-character_event = {
-	id = coup.105
-	hide_window = yes
-	is_triggered_only = yes
-	
-	immediate = { e_rebels = { holder_scope = { character_event = { id = coup.106 } } } }
-}
-
-# Resolve Coup Action - Military Coup
-character_event = {
-	id = coup.106
-	hide_window = yes
-	is_triggered_only = yes
-	
-	option = {
-		# Coup Action Successful
-		FROM = { FROM = { narrative_event = { id = coup.107 } } }
-		ai_chance = {
-			factor = 100
-			# Coup commander's martial skill
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 1 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 2 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 3 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 4 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 5 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 6 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 7 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 8 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 9 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 10 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 11 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 12 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 13 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 14 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 15 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 16 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 17 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 18 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 19 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 20 } }
-			}
-			
-			# Target and loyalists' martial
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 1
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 2
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 3
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 4
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 5
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 6
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 7
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 8
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 9
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 10
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 11
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 12
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 13
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 14
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 15
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 16
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 17
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 18
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 19
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 20
-						}
-					}
-				}
-			}
-			
-			# Proximity of coup commander to target
-			modifier = {
-				factor = 2
-				OR = {
-					FROM = { FROM = { has_job_title = job_marshal } }
-					FROM = { capital_scope = { any_province_lord = { character = FROMFROM } } }
-				}
-			}
-			modifier = {
-				factor = 2
-				OR = {
-					FROM = { FROM = { has_job_title = job_marshal } }
-					FROM = {
-						capital_scope = {
-							OR = {
-								any_province_lord = { character = FROMFROM }
-								any_neighbor_province = { any_province_lord = { character = FROMFROM } }
-							}
-						}
-					}
-				}
-			}
-			
-			# Proximity of intervener to target
-			modifier = {
-				factor = 2
-				FROM = {
-					OR = {
-						any_vassal = {
-							has_character_flag = flag_coup_intervener
-							has_job_title = job_marshal
-						}
-						capital_scope = {
-							any_province_lord = {
-								liege = { character = FROM }
-								has_character_flag = flag_coup_intervener
-							}
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 2
-				FROM = {
-					OR = {
-						any_vassal = {
-							has_character_flag = flag_coup_intervener
-							has_job_title = job_marshal
-						}
-						capital_scope = {
-							OR = {
-								any_province_lord = {
-									liege = { character = FROM }
-									has_character_flag = flag_coup_intervener
-								}
-								any_neighbor_province = {
-									any_province_lord = {
-										liege = { character = FROM }
-										has_character_flag = flag_coup_intervener
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	option = {
-		# Coup Action Failed
-		# Coup foiled solely by liege
-		if = {
-			limit = { FROM = { NOT = { any_vassal = { has_character_flag = flag_coup_intervener } } } }
-			FROM = { FROM = { narrative_event = { id = coup.112 } } }
-		}
-		# Coup foiled by heroic intervention
-		if = {
-			limit = { FROM = { any_vassal = { has_character_flag = flag_coup_intervener } } }
-			FROM = { FROM = { narrative_event = { id = coup.133 } } }
-		}
-		ai_chance = { factor = 100 }
-	}
-}
-
-# Successful military coup - Inform Actor
-narrative_event = {
-	id = coup.107
-	title = "EVTNAMECOUP100"
-	desc = "EVTDESCCOUP107"
-	picture = GFX_evt_military_coup
-	show_from_from = yes
-	is_triggered_only = yes
-	
-	immediate = { clr_character_flag = flag_coup_action_military }
-	
-	# I am the coup leader
-	option = {
-		trigger = { has_character_flag = flag_coup_leader }
-		name = "EVTOPTACOUP107"
 		FROM = {
-			FROM = {
-				# Target is captured
-				imprison = ROOT
-			}
-		}
-		character_event = { id = coup.5100 tooltip = "EVTTOOLTIPCOUP5100" }
-		hidden_tooltip = {
-			FROM = {
-				FROM = {
-					narrative_event = { id = coup.108 }
-					liege = { character_event = { id = coup.111 } }
-					any_vassal = {
-						limit = {
-							NOT = { has_character_flag = flag_coup_member }
-							NOT = { has_character_flag = flag_coup_leader }
-							NOT = { has_character_flag = flag_coup_intervener }
-						}
-						character_event = { id = coup.111 }
-					}
-					any_vassal = {
-						limit = { has_character_flag = flag_coup_intervener }
-						narrative_event = { id = coup.132 }
-					}
-				}
-			}
-			any_plot_backer = { character_event = { id = coup.110 } }
-		}
-	}
-	
-	# I am not the coup leader
-	option = {
-		trigger = { NOT = { has_character_flag = flag_coup_leader } }
-		name = "EVTOPTACOUP107"
-		random_backed_character = {
-			limit = {
-				has_character_flag = flag_coup_leader
-				plot_target_char = { character = FROMFROM }
-			}
-			plot_target_char = {
-				imprison = PREV
-				hidden_tooltip = {
-					character_event = { id = coup.108 }
-					liege = { character_event = { id = coup.111 } }
-					any_vassal = {
-						limit = {
-							NOT = { has_character_flag = flag_coup_member }
-							NOT = { has_character_flag = flag_coup_leader }
-							NOT = { has_character_flag = flag_coup_intervener }
-						}
-						character_event = { id = coup.111 }
-					}
-					any_vassal = {
-						limit = { has_character_flag = flag_coup_intervener }
-						character_event = { id = coup.132 }
-					}
-				}
-			}
-			hidden_tooltip = {
-				any_plot_backer = {
-					limit = { NOT = { character = ROOT } }
-					character_event = { id = coup.110 }
-				}
-			}
-			letter_event = { id = coup.109 tooltip = "EVTTOOLTIPCOUP109" }
-		}
-	}
-}
-
-# Military Coup Succeeds - Inform Target
-narrative_event = {
-	title = "EVTNAMECOUP101"
-	id = coup.108
-	desc = "EVTDESCCOUP108"
-	picture = GFX_evt_military_coup
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTACOUP108"
-		opinion = { who = FROM modifier = opinion_attempted_coup }
-	}
-}
-
-# Military Coup Succeeds - Inform Plot Leader
-letter_event = {
-	id = coup.109
-	desc = "EVTDESCCOUP109"
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTACOUP109"
-		opinion = { who = FROM modifier = opinion_captured_coup_target }
-		character_event = { id = coup.5100 tooltip = "EVTTOOLTIPCOUP5100" }
-	}
-}
-
-# Initial military coup succeeds - Inform Other Plotters
-character_event = {
-	id = coup.110
-	desc = "EVTDESCCOUP110"
-	picture = GFX_evt_military_coup
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
-}
-
-# Initial military coup succeeds - Inform Bystandards
-character_event = {
-	id = coup.111
-	desc = "EVTDESCCOUP111"
-	picture = GFX_evt_military_coup
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
-}
-
-# Initial military coup succeeds - Inform Interveners
-character_event = {
-	id = coup.132
-	desc = "EVTDESCCOUP132"
-	picture = GFX_evt_military_coup
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTACOUP132"
-		clr_character_flag = flag_coup_intervener
-	}
-}
-
-# Initial military coup fails without intervention - inform commander
-narrative_event = {
-	title = "EVTNAMECOUP100"
-	id = coup.112
-	desc = "EVTDESCCOUP112"
-	picture = GFX_evt_military_coup
-	show_from_from = yes
-	is_triggered_only = yes
-	
-	immediate = { clr_character_flag = flag_coup_action_military }
-	
-	# I am the coup leader
-	option = {
-		trigger = { has_character_flag = flag_coup_leader }
-		name = "EVTOPTACOUP112"
-		character_event = { id = coup.5500 tooltip = "EVTTOOLTIPCOUP5500" }
-		FROM = { FROM = { narrative_event = { id = coup.113 tooltip = "EVTTOOLTIPCOUP113" } } }
-		hidden_tooltip = {
-			FROM = {
-				FROM = {
-					liege = { character_event = { id = coup.116 } }
-					any_vassal = {
-						limit = {
-							NOT = { has_character_flag = flag_coup_member }
-							NOT = { has_character_flag = flag_coup_leader }
-							NOT = { has_character_flag = flag_coup_intervener }
-						}
-						character_event = { id = coup.116 }
-					}
-				}
-			}
-			any_plot_backer = { character_event = { id = coup.115 } }
-		}
-	}
-	
-	# I am not the coup leader
-	option = {
-		trigger = { NOT = { has_character_flag = flag_coup_leader } }
-		name = "EVTOPTACOUP112"
-		random_backed_character = {
-			limit = {
-				has_character_flag = flag_coup_leader
-				plot_target_char = { character = FROMFROM }
-			}
-			plot_target_char = { narrative_event = { id = coup.113 tooltip = "EVTTOOLTIPCOUP113" } }
-			letter_event = { id = coup.114 tooltip = "EVTTOOLTIPCOUP114" }
-			hidden_tooltip = {
-				plot_target_char = {
-					liege = { character_event = { id = coup.116 } }
-					any_vassal = {
-						limit = {
-							NOT = { has_character_flag = flag_coup_member }
-							NOT = { has_character_flag = flag_coup_leader }
-							NOT = { has_character_flag = flag_coup_intervener }
-						}
-						character_event = { id = coup.116 }
-					}
-				}
-				any_plot_backer = {
-					limit = { NOT = { character = ROOT } }
-					character_event = { id = coup.115 }
-				}
-			}
-		}
-	}
-}
-
-# Initial military coup fails without intervention - inform target
-narrative_event = {
-	id = coup.113
-	title = "EVTNAMECOUP101"
-	desc = "EVTDESCCOUP113"
-	picture = GFX_evt_military_coup
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTACOUP113"
-		opinion = { who = FROM modifier = opinion_attempted_coup }
-	}
-}
-
-# Initial military coup fails without intervention - inform plot leader
-letter_event = {
-	id = coup.114
-	desc = "EVTDESCCOUP114"
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTACOUP114"
-		opinion = { who = FROM modifier = opinion_failed_to_capture_coup_target }
-		character_event = { id = coup.5500 tooltip = "EVTTOOLTIPCOUP5500" }
-	}
-}
-
-# Initial military coup fails without intervention - inform plot backers
-character_event = {
-	id = coup.115
-	desc = "EVTDESCCOUP115"
-	picture = GFX_evt_military_coup
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
-}
-
-# Initial military coup fails without intervention - inform bystanders
-character_event = {
-	id = coup.116
-	desc = "EVTDESCCOUP115"
-	picture = GFX_evt_military_coup
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
-}
-
-# Initial military coup fails due to intervention - inform actor
-narrative_event = {
-	title = "EVTNAMECOUP100"
-	id = coup.133
-	desc = "EVTDESCCOUP133"
-	picture = GFX_evt_space_battle
-	show_from_from = yes
-	is_triggered_only = yes
-	
-	immediate = { clr_character_flag = flag_coup_action_military }
-	
-	option = {
-		name = "EVTOPTACOUP133"
-		FROM = {
-			FROM = {
-				# Select the successful intervener - must have highest martial among interveners
-				random_vassal = {
-					limit = {
-						has_character_flag = flag_coup_intervener
-						liege = {
-							NOT = {
-								any_vassal = {
-									has_character_flag = flag_coup_intervener
-									attribute_diff = {
-										character = PREVPREV
-										attribute = martial
-										value = 1
-									}
-								}
-							}
-						}
-					}
-					narrative_event = { id = coup.134 tooltip = "EVTTOOLTIPCOUP134" }
-				}
-			}
-		}
-	}
-}
-
-# Initial military coup fails due to intervention - inform Intervener
-narrative_event = {
-	id = coup.134
-	title = "EVTNAMECOUP101"
-	desc = "EVTDESCCOUP134"
-	picture = GFX_evt_space_battle
-	is_triggered_only = yes
-	
-	option = {
-		# FROM is coup leader
-		trigger = { FROM = { has_character_flag = flag_coup_leader } }
-		name = "EVTOPTACOUP134"
-		clr_character_flag = flag_coup_intervener
-		set_character_flag = flag_coup_loyalist # Character is now locked into defending against all future attacks in this coup
-		
-		# Intervener's reward - prestige and a heroic reputation
-		prestige = 250
-		religion_authority = { modifier = thwarted_coup }
-		liege = { opinion = { who = ROOT modifier = opinion_thwarted_coup } }
-		if = {
-			limit = {
-				liege = {
-					NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
-					NOT = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
-				}
-			}
-			custom_tooltip = {
-				text = "EVTTOOLTIPWILLOWEFAVOR"
-				hidden_tooltip = {
-					reverse_opinion = { who = ROOT modifier = opinion_owes_me_a_favor }
-					reverse_opinion = { who = ROOT modifier = opinion_favor_type_military }
-				}
-			}
-		}
-		if = {
-			limit = { liege = { has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } } }
-			remove_opinion = { who = ROOT modifier = opinion_owes_me_a_favor }
-			letter_event = { id = favor.100 tooltip = "EVTTOOLTIPFAVORFULFILLED" }
-		}
-		hidden_tooltip = {
-			liege = {
-				narrative_event = { id = coup.135 }
-				liege = { character_event = { id = coup.138 } }
-				any_vassal = {
-					limit = {
-						NOT = { has_character_flag = flag_coup_member }
-						NOT = { has_character_flag = flag_coup_leader }
-						NOT = { character = ROOT }
-					}
-					clr_character_flag = flag_coup_intervener
-					character_event = { id = coup.138 }
-				}
-			}
-		}
-		FROM = {
-			opinion = { who = ROOT modifier = opinion_foiled_my_plans }
-			hidden_tooltip = {
-				character_event = { id = coup.5500 }
-				any_plot_backer = { character_event = { id = coup.137 } }
-			}
-		}
-	}
-	
-	option = {
-		# FROM is not coup leader
-		trigger = { FROM = { NOT = { has_character_flag = flag_coup_leader } } }
-		name = "EVTOPTACOUP134"
-		
-		# Intervener's reward - prestige and a heroic reputation
-		prestige = 250
-		religion_authority = { modifier = thwarted_coup }
-		liege = { opinion = { who = ROOT modifier = opinion_thwarted_coup } }
-		if = {
-			limit = {
-				liege = {
-					NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
-					NOT = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
-				}
-			}
-			custom_tooltip = {
-				text = "EVTTOOLTIPWILLOWEFAVOR"
-				hidden_tooltip = {
-					reverse_opinion = { who = ROOT modifier = opinion_owes_me_a_favor }
-					reverse_opinion = { who = ROOT modifier = opinion_favor_type_military }
-				}
-			}
-		}
-		if = {
-			limit = { liege = { has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } } }
-			liege = {
-				remove_opinion = { who = ROOT modifier = opinion_owes_me_a_favor }
-				letter_event = { id = favor.100 tooltip = "EVTTOOLTIPFAVORFULFILLED" }
-			}
-		}
-		hidden_tooltip = {
-			liege = {
-				narrative_event = { id = coup.135 }
-				liege = { character_event = { id = coup.138 } }
-				any_vassal = {
-					limit = {
-						NOT = { has_character_flag = flag_coup_member }
-						NOT = { has_character_flag = flag_coup_leader }
-						NOT = { character = ROOT }
-					}
-					clr_character_flag = flag_coup_intervener
-					character_event = { id = coup.138 }
-				}
-			}
-		}
-		FROM = {
-			opinion = { who = ROOT modifier = opinion_foiled_my_plans }
-			any_backed_character = {
-				limit = {
-					has_character_flag = flag_coup_leader
-					OR = {
-						has_plot = plot_coup
-						has_plot = plot_justified_coup
-					}
-					plot_target_char = { any_vassal = { character = ROOT } }
-				}
-				opinion = { who = ROOT modifier = opinion_foiled_my_plans }
-				hidden_tooltip = {
-					letter_event = { id = coup.136 }
-					any_plot_backer = {
-						limit = { NOT = { character = FROM } }
-						character_event = { id = coup.137 }
-					}
-				}
-			}
-		}
-	}
-}
-
-# Coup fails due to intervention - inform target
-narrative_event = {
-	id = coup.135
-	title = "EVTNAMECOUP102"
-	desc = "EVTDESCCOUP135"
-	picture = GFX_evt_space_battle
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTACOUP135"
-		opinion = { who = FROMFROM modifier = opinion_attempted_coup }
-	}
-}
-
-# Inform plot leader
-letter_event = {
-	id = coup.136
-	desc = "EVTDESCCOUP136"
-	show_from_from = yes
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTACOUP136"
-		opinion = { who = FROMFROM modifier = opinion_failed_to_capture_coup_target }
-		character_event = { id = coup.5500 tooltip = "EVTTOOLTIPCOUP5500" }
-	}
-}
-# Inform other plot backers
-character_event = {
-	id = coup.137
-	desc = "EVTDESCCOUP137"
-	picture = GFX_evt_space_battle
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTCONFIRM"
-	}
-}
-# Inform bystanders
-character_event = {
-	id = coup.138
-	desc = "EVTDESCCOUP137"
-	picture = GFX_evt_space_battle
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
-}
-
-# FOLLOW-UP MILITARY COUP
-narrative_event = {
-	title = "EVTNAMECOUP100"
-	id = coup.117
-	desc = "EVTDESCCOUP117"
-	picture = GFX_evt_military_coup
-	is_triggered_only = yes
-	
-	option = {
-		trigger = { has_character_flag = flag_coup_leader } # Is the coup leader
-		name = "EVTOPTACOUP104"
-		clr_character_flag = flag_coup_plan_military
-		set_character_flag = flag_coup_action_military
-		plot_target_char = {
-			character_event = { id = coup.118 tooltip = "EVTTOOLTIPCOUP105" days = 1 }
-			hidden_tooltip = { any_vassal = { character_event = { id = coup.139 } } } # Possible chance to intercept
-		}
-	}
-	option = {
-		trigger = { NOT = { has_character_flag = flag_coup_leader } } # Is a coup supporter
-		name = "EVTOPTACOUP104"
-		clr_character_flag = flag_coup_plan_military
-		set_character_flag = flag_coup_action_military
-		random_backed_character = {
-			limit = { has_character_flag = flag_coup_leader }
-			plot_target_char = {
-				character_event = { id = coup.118 tooltip = "EVTTOOLTIPCOUP105" days = 1 }
-				hidden_tooltip = { any_vassal = { character_event = { id = coup.139 } } } # Possible chance to intercept
-			}
-		}
-	}
-}
-
-# Inform loyalists of a potential coup in progress
-character_event = {
-	id = coup.139
-	desc = "EVTDESCCOUP139"
-	picture = GFX_command_center
-	hide_from = yes
-	is_triggered_only = yes
-	
-	trigger = {
-		is_ruler = yes
-		is_feudal = yes
-		relative_power_to_liege = 0.1
-		
-		NOT = { has_character_flag = flag_coup_member }
-		NOT = { has_character_flag = flag_coup_leader }
-		
-		# Needs to have at least as much intrigue as FROM
-		intrigue = FROM
-		
-		# Must be within two jumps of the capital
-		liege = {
-			capital_scope = {
-				OR = {
-					ROOT = { has_job_title = job_marshal }
-					any_province_lord = { character = ROOT }
-					any_neighbor_province = {
-						OR = {
-							any_province_lord = { character = ROOT }
-							any_neighbor_province = { any_province_lord = { character = ROOT } }
-						}
-					}
-				}
-			}
-		}
-		
-		prisoner = no
-		age = 16
-		NOT = { trait = incapable }
-	}
-	
-	option = {
-		name = "EVTOPTACOUP139"
-		set_character_flag = flag_coup_interceptor
-		ai_chance = {
-			factor = 100
-			
-			# Opinion Effects
-			modifier = {
-				factor = 1.25
-				opinion = { who = LIEGE value = 100 }
-			}
-			modifier = {
-				factor = 1.25
-				opinion = { who = LIEGE value = 90 }
-			}
-			modifier = {
-				factor = 1.25
-				opinion = { who = LIEGE value = 80 }
-			}
-			modifier = {
-				factor = 1.25
-				opinion = { who = LIEGE value = 70 }
-			}
-			modifier = {
-				factor = 1.25
-				opinion = { who = LIEGE value = 60 }
-			}
-			modifier = {
-				factor = 1.25
-				opinion = { who = LIEGE value = 50 }
-			}
-			modifier = {
-				factor = 1.25
-				opinion = { who = LIEGE value = 40 }
-			}
-			modifier = {
-				factor = 1.25
-				opinion = { who = LIEGE value = 30 }
-			}
-			modifier = {
-				factor = 1.25
-				opinion = { who = LIEGE value = 20 }
-			}
-			modifier = {
-				factor = 1.25
-				opinion = { who = LIEGE value = 10 }
-			}
-			modifier = {
-				factor = 0.8
-				NOT = { opinion = { who = LIEGE value = -9 } }
-			}
-			modifier = {
-				factor = 0.8
-				NOT = { opinion = { who = LIEGE value = -19 } }
-			}
-			modifier = {
-				factor = 0.8
-				NOT = { opinion = { who = LIEGE value = -29 } }
-			}
-			modifier = {
-				factor = 0.8
-				NOT = { opinion = { who = LIEGE value = -39 } }
-			}
-			modifier = {
-				factor = 0.8
-				NOT = { opinion = { who = LIEGE value = -49 } }
-			}
-			modifier = {
-				factor = 0.8
-				NOT = { opinion = { who = LIEGE value = -59 } }
-			}
-			modifier = {
-				factor = 0.8
-				NOT = { opinion = { who = LIEGE value = -69 } }
-			}
-			modifier = {
-				factor = 0.8
-				NOT = { opinion = { who = LIEGE value = -79 } }
-			}
-			modifier = {
-				factor = 0.8
-				NOT = { opinion = { who = LIEGE value = -89 } }
-			}
-			modifier = {
-				factor = 0.8
-				NOT = { opinion = { who = LIEGE value = -99 } }
-			}
-			
-			# Moral Authority - Thwarting Coups is a Civic Dury
-			modifier = {
-				factor = 2
-				liege = {
-					religion = ROOT
-					OR = {
-						religion_authority = 0.25
-						ROOT = { trait = radical }
-					}
-				}
-			}
-			modifier = {
-				factor = 2
-				liege = { religion_authority = 0.5 }
-			}
-			modifier = {
-				factor = 2
-				liege = { religion_authority = 0.75 }
-			}
-			
-			# Favors
-			modifier = {
-				factor = 5
-				reverse_has_opinion_modifier = { who = LIEGE modifier = opinion_owes_me_a_favor }
-			}
-			modifier = {
-				factor = 2
-				reverse_has_opinion_modifier = { who = LIEGE modifier = opinion_owes_me_a_favor }
-			}
-			modifier = {
-				factor = 5
-				NOT = { has_opinion_modifier = { who = LIEGE modifier = opinion_owes_me_a_favor } }
-				NOT = { reverse_has_opinion_modifier = { who = LIEGE modifier = opinion_owes_me_a_favor } }
-				trait = ambitious
-			}
-		}
-	}
-	
-	option = {
-		trigger = { NOT = { has_character_flag = flag_coup_loyalist } } # Can't go back after already committing to intervene
-		name = "EVTOPTBCOUP130"
-		ai_chance = { factor = 100 }
-	}
-}
-
-character_event = {
-	id = coup.118
-	hide_window = yes
-	is_triggered_only = yes
-	
-	immediate = { e_rebels = { holder_scope = { character_event = { id = coup.119 } } } }
-}
-
-# Resolve Coup Action - Military Coup
-character_event = {
-	id = coup.119
-	hide_window = yes
-	is_triggered_only = yes
-	
-	option = {
-		# Coup Action Successful
-		FROM = { FROM = { narrative_event = { id = coup.120 } } }
-		ai_chance = {
-			factor = 25 # Subsequent actions less likely to succeed due to lack of surprise advantage
-			# Coup commander's martial skill
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 1 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 2 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 3 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 4 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 5 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 6 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 7 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 8 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 9 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 10 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 11 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 12 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 13 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 14 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 15 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 16 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 17 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 18 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 19 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { martial = 20 } }
-			}
-			
-			# Target and loyalists' martial
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 1
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 2
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 3
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 4
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 5
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 6
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 7
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 8
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 9
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 10
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 11
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 12
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 13
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 14
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 15
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 16
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 17
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 18
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 19
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				FROM = {
-					OR = {
-						martial = 1
-						any_vassal = {
-							has_character_flag = flag_coup_interceptor
-							martial = 20
-						}
-					}
-				}
-			}
-			
-			# Proximity of coup commander to target
-			modifier = {
-				factor = 2
-				OR = {
-					FROM = { FROM = { has_job_title = job_marshal } }
-					FROM = { capital_scope = { any_province_lord = { character = FROMFROM } } }
-				}
-			}
-			modifier = {
-				factor = 2
-				OR = {
-					FROM = { FROM = { has_job_title = job_marshal } }
-					FROM = {
-						capital_scope = {
-							OR = {
-								any_province_lord = { character = FROMFROM }
-								any_neighbor_province = { any_province_lord = { character = FROMFROM } }
-							}
-						}
-					}
-				}
-			}
-			
-			# Proximity of intervener to target
-			modifier = {
-				factor = 2
-				FROM = {
-					OR = {
-						any_vassal = {
-							has_character_flag = flag_coup_intervener
-							has_job_title = job_marshal
-						}
-						capital_scope = {
-							any_province_lord = {
-								liege = { character = FROM }
-								has_character_flag = flag_coup_intervener
-							}
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 2
-				FROM = {
-					OR = {
-						any_vassal = {
-							has_character_flag = flag_coup_intervener
-							has_job_title = job_marshal
-						}
-						capital_scope = {
-							OR = {
-								any_province_lord = {
-									liege = { character = FROM }
-									has_character_flag = flag_coup_intervener
-								}
-								any_neighbor_province = {
-									any_province_lord = {
-										liege = { character = FROM }
-										has_character_flag = flag_coup_intervener
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	option = {
-		# Coup Action Failed
-		# Coup foiled solely by liege
-		if = {
-			limit = { FROM = { NOT = { any_vassal = { has_character_flag = flag_coup_intervener } } } }
-			FROM = { FROM = { narrative_event = { id = coup.125 } } }
-		}
-		# Coup foiled by heroic intervention
-		if = {
-			limit = { FROM = { any_vassal = { has_character_flag = flag_coup_intervener } } }
-			FROM = { FROM = { narrative_event = { id = coup.141 } } }
-		}
-		ai_chance = { factor = 100 }
-	}
-}
-
-# Successful military coup - Inform Actor
-narrative_event = {
-	title = "EVTNAMECOUP100"
-	id = coup.120
-	desc = "EVTDESCCOUP120"
-	picture = GFX_evt_military_coup
-	show_from_from = yes
-	is_triggered_only = yes
-	
-	immediate = { clr_character_flag = flag_coup_action_military }
-	
-	# I am the coup leader
-	option = {
-		trigger = { has_character_flag = flag_coup_leader }
-		name = "EVTOPTACOUP120"
-		FROM = {
-			FROM = {
-				# Target is captured
-				imprison = ROOT
-			}
-		}
-		character_event = { id = coup.5100 tooltip = "EVTTOOLTIPCOUP5100" }
-		hidden_tooltip = {
-			FROM = {
-				FROM = {
-					narrative_event = { id = coup.121 }
-					liege = { character_event = { id = coup.124 } }
-					any_vassal = {
-						limit = {
-							NOT = { has_character_flag = flag_coup_member }
-							NOT = { has_character_flag = flag_coup_leader }
-							NOT = { has_character_flag = flag_coup_intervener }
-						}
-						character_event = { id = coup.124 }
-					}
-					any_vassal = {
-						limit = { has_character_flag = flag_coup_intervener }
-						character_event = { id = coup.140 }
-					}
-				}
-			}
-			any_plot_backer = { character_event = { id = coup.123 } }
-		}
-	}
-	
-	# I am not the coup leader
-	option = {
-		trigger = { NOT = { has_character_flag = flag_coup_leader } }
-		name = "EVTOPTACOUP120"
-		random_backed_character = {
-			limit = {
-				has_character_flag = flag_coup_leader
-				plot_target_char = { character = FROMFROM }
-			}
-			plot_target_char = {
-				imprison = PREV
-				hidden_tooltip = {
-					narrative_event = { id = coup.121 }
-					liege = { character_event = { id = coup.124 } }
-					any_vassal = {
-						limit = {
-							NOT = { has_character_flag = flag_coup_member }
-							NOT = { has_character_flag = flag_coup_leader }
-							NOT = { has_character_flag = flag_coup_intervener }
-						}
-						character_event = { id = coup.124 }
-					}
-					any_vassal = {
-						limit = { has_character_flag = flag_coup_intervener }
-						character_event = { id = coup.140 }
-					}
-				}
-			}
-			hidden_tooltip = {
-				any_plot_backer = {
-					limit = { NOT = { character = ROOT } }
-					character_event = { id = coup.123 }
-				}
-			}
-			letter_event = { id = coup.122 tooltip = "EVTTOOLTIPCOUP109" }
-		}
-	}
-}
-
-# Military Coup Succeeds - Inform Target
-narrative_event = {
-	id = coup.121
-	title = "EVTNAMECOUP101"
-	desc = "EVTDESCCOUP121"
-	picture = GFX_evt_military_coup
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTACOUP121"
-		opinion = { who = FROM modifier = opinion_attempted_coup }
-	}
-}
-
-# Military Coup Succeeds - Inform Plot Leader
-letter_event = {
-	id = coup.122
-	desc = "EVTDESCCOUP122"
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTACOUP109"
-		opinion = { who = FROM modifier = opinion_captured_coup_target }
-		character_event = { id = coup.5100 tooltip = "EVTTOOLTIPCOUP5100" }
-	}
-}
-
-# Followup military coup succeeds - Inform Other Plotters
-character_event = {
-	id = coup.123
-	desc = "EVTDESCCOUP123"
-	picture = GFX_evt_military_coup
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
-}
-
-# Followup military coup succeeds - Inform Bystanders
-character_event = {
-	id = coup.124
-	desc = "EVTDESCCOUP124"
-	picture = GFX_evt_military_coup
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
-}
-
-# Followup military coup succeeds - Inform Interveners
-character_event = {
-	id = coup.140
-	desc = "EVTDESCCOUP132"
-	picture = GFX_evt_military_coup
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTACOUP132"
-		clr_character_flag = flag_coup_intervener
-	}
-}
-
-# Followup military coup fails without intervention - inform commander
-narrative_event = {
-	title = "EVTNAMECOUP100"
-	id = coup.125
-	desc = "EVTDESCCOUP125"
-	picture = GFX_evt_military_coup
-	show_from_from = yes
-	is_triggered_only = yes
-	
-	immediate = { clr_character_flag = flag_coup_action_military }
-	
-	# I am the coup leader
-	option = {
-		trigger = { has_character_flag = flag_coup_leader }
-		name = "EVTOPTACOUP125"
-		character_event = { id = coup.5500 tooltip = "EVTTOOLTIPCOUP5500" }
-		FROM = { FROM = { narrative_event = { id = coup.126 tooltip = "EVTTOOLTIPCOUP126" } } }
-		hidden_tooltip = {
-			FROM = {
-				FROM = {
-					liege = { character_event = { id = coup.129 } }
-					any_vassal = {
-						limit = {
-							NOT = { has_character_flag = flag_coup_member }
-							NOT = { has_character_flag = flag_coup_leader }
-							NOT = { has_character_flag = flag_coup_intervener }
-						}
-						character_event = { id = coup.129 }
-					}
-				}
-			}
-			any_plot_backer = { character_event = { id = coup.128 } }
-		}
-	}
-	
-	# I am not the coup leader
-	option = {
-		trigger = { NOT = { has_character_flag = flag_coup_leader } }
-		name = "EVTOPTACOUP125"
-		random_backed_character = {
-			limit = {
-				has_character_flag = flag_coup_leader
-				plot_target_char = { character = FROMFROM }
-			}
-			plot_target_char = { narrative_event = { id = coup.126 tooltip = "EVTTOOLTIPCOUP126" } }
-			letter_event = { id = coup.127 tooltip = "EVTTOOLTIPCOUP127" }
-			hidden_tooltip = {
-				plot_target_char = {
-					liege = { character_event = { id = coup.129 } }
-					any_vassal = {
-						limit = {
-							NOT = { has_character_flag = flag_coup_member }
-							NOT = { has_character_flag = flag_coup_leader }
-							NOT = { has_character_flag = flag_coup_intervener }
-						}
-						character_event = { id = coup.129 }
-					}
-				}
-				any_plot_backer = {
-					limit = { NOT = { character = ROOT } }
-					character_event = { id = coup.128 }
-				}
-			}
-		}
-	}
-}
-
-# Followup military coup fails without intervention - inform target
-narrative_event = {
-	id = coup.126
-	title = "EVTNAMECOUP101"
-	desc = "EVTDESCCOUP126"
-	picture = GFX_evt_military_coup
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTACOUP126"
-		opinion = { who = FROM modifier = opinion_attempted_coup }
-	}
-}
-
-# Followup military coup fails without intervention - inform plot leader
-letter_event = {
-	id = coup.127
-	desc = "EVTDESCCOUP127"
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTACOUP114"
-		opinion = { who = FROM modifier = opinion_failed_to_capture_coup_target }
-		character_event = { id = coup.5500 tooltip = "EVTTOOLTIPCOUP5500" }
-	}
-}
-
-# Followup military coup fails without intervention - inform plot backers
-character_event = {
-	id = coup.128
-	desc = "EVTDESCCOUP128"
-	picture = GFX_evt_military_coup
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
-}
-
-# Followup military coup fails without intervention - inform bystanders
-character_event = {
-	id = coup.129
-	desc = "EVTDESCCOUP128"
-	notification = yes
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
-}
-
-# Followup military coup fails due to intervention - inform actor
-narrative_event = {
-	title = "EVTNAMECOUP100"
-	id = coup.141
-	desc = "EVTDESCCOUP141"
-	picture = GFX_evt_space_battle
-	show_from_from = yes
-	is_triggered_only = yes
-	
-	immediate = { clr_character_flag = flag_coup_action_military }
-	
-	option = {
-		name = "EVTOPTACOUP141"
-		FROM = {
-			FROM = {
-				# Select the successful intervener - must have highest martial among interveners
-				random_vassal = {
-					limit = {
-						has_character_flag = flag_coup_intervener
-						liege = {
-							NOT = {
-								any_vassal = {
-									has_character_flag = flag_coup_intervener
-									attribute_diff = {
-										character = PREVPREV
-										attribute = martial
-										value = 1
-									}
-								}
-							}
-						}
-					}
-					narrative_event = { id = coup.142 tooltip = "EVTTOOLTIPCOUP142" }
-				}
-			}
-		}
-	}
-}
-
-# Initial military coup fails due to intervention - inform Intervener
-narrative_event = {
-	id = coup.142
-	title = "EVTNAMECOUP101"
-	desc = "EVTDESCCOUP142"
-	picture = GFX_evt_space_battle
-	is_triggered_only = yes
-	
-	option = {
-		# FROM is coup leader
-		trigger = { FROM = { has_character_flag = flag_coup_leader } }
-		name = "EVTOPTACOUP142"
-		clr_character_flag = flag_coup_intervener
-		
-		# Intervener's reward - prestige and a heroic reputation
-		prestige = 250
-		religion_authority = { modifier = thwarted_coup }
-		liege = { opinion = { who = ROOT modifier = opinion_thwarted_coup } }
-		if = {
-			limit = {
-				liege = {
-					NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
-					NOT = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
-				}
-			}
-			custom_tooltip = {
-				text = "EVTTOOLTIPWILLOWEFAVOR"
-				hidden_tooltip = {
-					reverse_opinion = { who = ROOT modifier = opinion_owes_me_a_favor }
-					reverse_opinion = { who = ROOT modifier = opinion_favor_type_military }
-				}
-			}
-		}
-		if = {
-			limit = { liege = { has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } } }
-			remove_opinion = { who = ROOT modifier = opinion_owes_me_a_favor }
-			letter_event = { id = favor.100 tooltip = "EVTTOOLTIPFAVORFULFILLED" }
-		}
-		hidden_tooltip = {
-			liege = {
-				narrative_event = { id = coup.143 }
-				liege = { character_event = { id = coup.146 } }
-				any_vassal = {
-					limit = {
-						NOT = { has_character_flag = flag_coup_member }
-						NOT = { has_character_flag = flag_coup_leader }
-						NOT = { character = ROOT }
-					}
-					clr_character_flag = flag_coup_intervener
-					character_event = { id = coup.146 }
-				}
-			}
-		}
-		FROM = {
-			opinion = { who = ROOT modifier = opinion_foiled_my_plans }
-			hidden_tooltip = {
-				character_event = { id = coup.5500 }
-				any_plot_backer = { character_event = { id = coup.145 } }
-			}
-		}
-	}
-	
-	option = {
-		# FROM is not coup leader
-		trigger = { FROM = { NOT = { has_character_flag = flag_coup_leader } } }
-		name = "EVTOPTACOUP134"
-		
-		# Intervener's reward - prestige and a heroic reputation
-		prestige = 250
-		religion_authority = { modifier = thwarted_coup }
-		liege = { opinion = { who = ROOT modifier = opinion_thwarted_coup } }
-		if = {
-			limit = {
-				liege = {
-					NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
-					NOT = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } }
-				}
-			}
-			custom_tooltip = {
-				text = "EVTTOOLTIPWILLOWEFAVOR"
-				hidden_tooltip = {
-					reverse_opinion = { who = ROOT modifier = opinion_owes_me_a_favor }
-					reverse_opinion = { who = ROOT modifier = opinion_favor_type_military }
-				}
-			}
-		}
-		if = {
-			limit = { liege = { has_opinion_modifier = { who = ROOT modifier = opinion_owes_me_a_favor } } }
-			liege = {
-				remove_opinion = { who = ROOT modifier = opinion_owes_me_a_favor }
-				letter_event = { id = favor.100 tooltip = "EVTTOOLTIPFAVORFULFILLED" }
-			}
-		}
-		hidden_tooltip = {
-			liege = {
-				narrative_event = { id = coup.143 }
-				liege = { character_event = { id = coup.146 } }
-				any_vassal = {
-					limit = {
-						NOT = { has_character_flag = flag_coup_member }
-						NOT = { has_character_flag = flag_coup_leader }
-						NOT = { character = ROOT }
-					}
-					clr_character_flag = flag_coup_intervener
-					character_event = { id = coup.146 }
-				}
-			}
-		}
-		FROM = {
-			opinion = { who = ROOT modifier = opinion_foiled_my_plans }
-			any_backed_character = {
-				limit = {
-					has_character_flag = flag_coup_leader
-					OR = {
-						has_plot = plot_coup
-						has_plot = plot_justified_coup
-					}
-					plot_target_char = { any_vassal = { character = ROOT } }
-				}
-				opinion = { who = ROOT modifier = opinion_foiled_my_plans }
-				hidden_tooltip = {
-					letter_event = { id = coup.144 }
-					any_plot_backer = {
-						limit = { NOT = { character = FROM } }
-						character_event = { id = coup.145 }
-					}
-				}
-			}
-		}
-	}
-}
-
-# Coup fails due to intervention - inform target
-narrative_event = {
-	id = coup.143
-	title = "EVTNAMECOUP102"
-	desc = "EVTDESCCOUP143"
-	picture = GFX_evt_space_battle
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTACOUP143"
-		opinion = { who = FROMFROM modifier = opinion_attempted_coup }
-	}
-}
-
-# Inform plot leader
-letter_event = {
-	id = coup.144
-	desc = "EVTDESCCOUP144"
-	show_from_from = yes
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTACOUP136"
-		opinion = { who = FROMFROM modifier = opinion_failed_to_capture_coup_target }
-		character_event = { id = coup.5500 tooltip = "EVTTOOLTIPCOUP5500" }
-	}
-}
-# Inform other plot backers
-character_event = {
-	id = coup.145
-	desc = "EVTDESCCOUP145"
-	picture = GFX_evt_space_battle
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTCONFIRM"
-	}
-}
-# Inform bystanders
-character_event = {
-	id = coup.146
-	desc = "EVTDESCCOUP137"
-	notification = yes
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
-}
-
-#2XX	INTERNAL SECURITY TURNED
-character_event = {
-	id = coup.200
-	desc = "EVTDESCCOUP200"
-	picture = GFX_evt_cabal
-	
-	min_age = 16
-	only_rulers = yes
-	capable_only = yes
-	
-	trigger = {
-		OR = {
-			has_plot = plot_coup
-			has_plot = plot_justified_coup
-			any_backed_character = {
-				OR = {
-					has_plot = plot_coup
-					has_plot = plot_justified_coup
-				}
-				same_liege = ROOT
-			}
-		}
-		NOT = { has_character_flag = flag_coup_plan_spymaster }
-		prisoner = no
-		
-		# Must be the spymaster
-		has_job_title = job_spymaster
-	}
-	
-	mean_time_to_happen = {
-		months = 30
-		
-		modifier = {
-			factor = 0.5
-			trait = genius
-		}
-		modifier = {
-			factor = 0.8
-			trait = quick
-		}
-		modifier = {
-			factor = 1.25
-			trait = slow
-		}
-		modifier = {
-			factor = 2
-			trait = imbecile
-		}
-		
-		# Extent of personal control over intelligence
-		modifier = {
-			factor = 0.8
-			diplomacy = 2
-		}
-		modifier = {
-			factor = 0.8
-			diplomacy = 4
-		}
-		modifier = {
-			factor = 0.8
-			diplomacy = 6
-		}
-		modifier = {
-			factor = 0.8
-			diplomacy = 8
-		}
-		modifier = {
-			factor = 0.8
-			diplomacy = 10
-		}
-		modifier = {
-			factor = 0.8
-			diplomacy = 12
-		}
-		modifier = {
-			factor = 0.8
-			diplomacy = 14
-		}
-		modifier = {
-			factor = 0.8
-			diplomacy = 16
-		}
-		modifier = {
-			factor = 0.8
-			diplomacy = 18
-		}
-		modifier = {
-			factor = 0.8
-			diplomacy = 20
-		}
-		modifier = {
-			factor = 1.25
-			liege = { diplomacy = 2 }
-		}
-		modifier = {
-			factor = 1.25
-			liege = { diplomacy = 4 }
-		}
-		modifier = {
-			factor = 1.25
-			liege = { diplomacy = 6 }
-		}
-		modifier = {
-			factor = 1.25
-			liege = { diplomacy = 8 }
-		}
-		modifier = {
-			factor = 1.25
-			liege = { diplomacy = 10 }
-		}
-		modifier = {
-			factor = 1.25
-			liege = { diplomacy = 12 }
-		}
-		modifier = {
-			factor = 1.25
-			liege = { diplomacy = 14 }
-		}
-		modifier = {
-			factor = 1.25
-			liege = { diplomacy = 16 }
-		}
-		modifier = {
-			factor = 1.25
-			liege = { diplomacy = 18 }
-		}
-		modifier = {
-			factor = 1.25
-			liege = { diplomacy = 20 }
-		}
-		# Duty of intelligence to the state
-		modifier = {
-			factor = 2
-			liege = { religion_authority = 0.1 }
-		}
-		modifier = {
-			factor = 2
-			liege = { religion_authority = 0.2 }
-		}
-		modifier = {
-			factor = 2
-			liege = { religion_authority = 0.3 }
-		}
-		modifier = {
-			factor = 2
-			liege = { religion_authority = 0.4 }
-		}
-		modifier = {
-			factor = 2
-			liege = { religion_authority = 0.5 }
-		}
-		modifier = {
-			factor = 2
-			liege = { religion_authority = 0.6 }
-		}
-		modifier = {
-			factor = 2
-			liege = { religion_authority = 0.7 }
-		}
-		modifier = {
-			factor =2
-			liege = { religion_authority = 0.8 }
-		}
-		modifier = {
-			factor = 2
-			liege = { religion_authority = 0.9 }
-		}
-		modifier = {
-			factor = 2
-			liege = { religion_authority = 1 }
-		}
-	}
-	
-	option = {
-		name = "EVTOPTACOUP200"
-		set_character_flag = flag_coup_plan_spymaster
-		any_backed_character = {
-			limit = {
-				OR = {
-					has_plot = plot_coup
-					has_plot = plot_justified_coup
-				}
-				same_liege = ROOT
-			}
-			letter_event = { id = coup.201 tooltip = "EVTTOOLTIPCOUP101" }
-		}
-	}
-}
-
-letter_event = {
-	id = coup.201
-	desc = "EVTDESCCOUP201"
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTACOUP201" }
-}
-
-character_event = {
-	id = coup.202
-	desc = "EVTDESCCOUP202"
-	picture = GFX_evt_cabal
-	
-	trigger = {
-		OR = {
-			has_character_flag = flag_coup_plan_spymaster
-			has_character_flag = flag_coup_action_spymaster
-		}
-		NOT = {
-			AND = {
-				OR = {
-					has_plot = plot_coup
-					has_plot = plot_justified_coup
-					any_backed_character = {
-						OR = {
-							has_plot = plot_coup
-							has_plot = plot_justified_coup
-							same_liege = ROOT
-						}
-					}
-				}
-		
-				# Must be the spymaster
-				has_job_title = job_spymaster
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTCONFIRM"
-		clr_character_flag = flag_coup_plan_spymaster
-		clr_character_flag = flag_coup_action_spymaster
-		any_backed_character = {
-			limit = {
-				OR = {
-					has_plot = plot_coup
-					has_plot = plot_justified_coup
-				}
-				same_liege = ROOT
-			}
-			character_event = { id = coup.203 tooltip = "EVTTOOLTIPCOUP103" }
-		}
-	}
-}
-
-character_event = {
-	id = coup.203
-	desc = "EVTDESCCOUP203"
-	picture = GFX_evt_cabal
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
-}
-
-# Initial coup event - betrayal by intelligence
-narrative_event = {
-	id = coup.204
-	title = "EVTNAMECOUP100"
-	desc = "EVTDESCCOUP204"
-	picture = GFX_evt_cabal
-	is_triggered_only = yes
-	
-	option = {
-		trigger = { has_character_flag = flag_coup_leader } # Is the coup leader
-		name = "EVTOPTACOUP204"
-		clr_character_flag = flag_coup_plan_spymaster
-		set_character_flag = flag_coup_action_spymaster
-		plot_target_char = { character_event = { id = coup.205 tooltip = "EVTTOOLTIPCOUP205" days = 1 } }
-	}
-	option = {
-		trigger = { NOT = { has_character_flag = flag_coup_leader } } # Is a coup supporter
-		name = "EVTOPTACOUP204"
-		clr_character_flag = flag_coup_plan_spymaster
-		set_character_flag = flag_coup_action_spymaster
-		random_backed_character = {
-			limit = { has_character_flag = flag_coup_leader }
-			plot_target_char = { character_event = { id = coup.205 tooltip = "EVTTOOLTIPCOUP205" days = 1 } }
-		}
-	}
-}
-
-character_event = {
-	id = coup.205
-	hide_window = yes
-	is_triggered_only = yes
-	
-	immediate = { e_rebels = { holder_scope = { character_event = { id = coup.206 } } } }
-}
-
-# Resolve Coup Action - Initial Spymaster Coup
-character_event = {
-	id = coup.206
-	hide_window = yes
-	is_triggered_only = yes
-	
-	option = {
-		# Coup Action Successful
-		FROM = { FROM = { narrative_event = { id = coup.207 } } }
-		ai_chance = {
-			factor = 25
-			
-			# Spymaster's intrigue skill
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 1 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 2 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 3 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 4 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 5 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 6 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 7 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 8 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 9 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 10 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 11 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 12 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 13 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 14 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 15 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 16 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 17 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 18 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 19 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 20 } }
-			}
-			
-			# Target's intrigue skill
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 1 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 2 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 3 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 4 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 5 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 6 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 7 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 8 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 9 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 10 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 11 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 12 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 13 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 14 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 15 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 16 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 17 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 18 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 19 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 20 }
-			}
-		}
-	}
-	option = {
-		# Coup Action Failed
-		FROM = { FROM = { narrative_event = { id = coup.212 } } }
-		ai_chance = { factor = 100 }
-	}
-}
-
-# Successful spymaster coup - Inform Actor
-narrative_event = {
-	id = coup.207
-	title = "EVTNAMECOUP100"
-	desc = "EVTDESCCOUP207"
-	picture = GFX_evt_betrayal
-	show_from_from = yes
-	is_triggered_only = yes
-	
-	immediate = { clr_character_flag = flag_coup_action_spymaster }
-	
-	# I am the coup leader
-	option = {
-		trigger = { has_character_flag = flag_coup_leader }
-		name = "EVTOPTACOUP207"
-		FROM = {
-			FROM = {
-				# Target is captured
-				imprison = ROOT
-			}
-		}
-		character_event = { id = coup.5100 tooltip = "EVTTOOLTIPCOUP5100" }
-		hidden_tooltip = {
-			FROM = {
-				FROM = {
-					narrative_event = { id = coup.208 }
-					liege = { character_event = { id = coup.211 } }
-					any_vassal = {
-						limit = {
-							NOT = { has_character_flag = flag_coup_member }
-							NOT = { has_character_flag = flag_coup_leader }
-						}
-						character_event = { id = coup.211 }
-					}
-				}
-			}
-			any_plot_backer = { character_event = { id = coup.210 } }
-		}
-	}
-	
-	# I am not the coup leader
-	option = {
-		trigger = { NOT = { has_character_flag = flag_coup_leader } }
-		name = "EVTOPTACOUP207"
-		random_backed_character = {
-			limit = {
-				has_character_flag = flag_coup_leader
-				plot_target_char = { character = FROMFROM }
-			}
-			plot_target_char = {
-				imprison = PREV
-				hidden_tooltip = {
-					character_event = { id = coup.208 }
-					liege = { character_event = { id = coup.211 } }
-					any_vassal = {
-						limit = {
-							NOT = { has_character_flag = flag_coup_member }
-							NOT = { has_character_flag = flag_coup_leader }
-						}
-						character_event = { id = coup.211 }
-					}
-				}
-			}
-			hidden_tooltip = {
-				any_plot_backer = {
-					limit = { NOT = { character = ROOT } }
-					character_event = { id = coup.210 }
-				}
-			}
-			letter_event = { id = coup.209 tooltip = "EVTTOOLTIPCOUP109" }
-		}
-	}
-}
-
-# Initial spymaster coup succeeds - Inform Target
-narrative_event = {
-	title = "EVTNAMECOUP101"
-	id = coup.208
-	desc = "EVTDESCCOUP208"
-	picture = GFX_evt_betrayal
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTACOUP208"
-		opinion = { who = FROM modifier = opinion_attempted_coup }
-	}
-}
-
-# Initial spymaster coup succeeds - Inform Plot Leader
-letter_event = {
-	id = coup.209
-	desc = "EVTDESCCOUP109"
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTACOUP109"
-		opinion = { who = FROM modifier = opinion_captured_coup_target }
-		character_event = { id = coup.5100 tooltip = "EVTTOOLTIPCOUP5100" }
-	}
-}
-
-# Initial spymaster coup succeeds - Inform Other Plotters
-character_event = {
-	id = coup.210
-	desc = "EVTDESCCOUP210"
-	picture = GFX_evt_betrayal
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
-}
-
-# Initial spymaster coup succeeds - Inform Bystandards
-character_event = {
-	id = coup.211
-	desc = "EVTDESCCOUP211"
-	picture = GFX_evt_betrayal
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
-}
-
-# Initial spymaster coup fails - inform spymaster
-narrative_event = {
-	title = "EVTNAMECOUP100"
-	id = coup.212
-	desc = "EVTDESCCOUP212"
-	picture = GFX_evt_betrayal
-	show_from_from = yes
-	is_triggered_only = yes
-	
-	immediate = { clr_character_flag = flag_coup_action_spymaster }
-	
-	# I am the coup leader
-	option = {
-		trigger = { has_character_flag = flag_coup_leader }
-		name = "EVTOPTACOUP212"
-		character_event = { id = coup.5500 tooltip = "EVTTOOLTIPCOUP5500" }
-		FROM = { FROM = { narrative_event = { id = coup.213 tooltip = "EVTTOOLTIPCOUP113" } } }
-		hidden_tooltip = {
-			FROM = {
-				FROM = {
-					liege = { character_event = { id = coup.216 } }
-					any_vassal = {
-						limit = {
-							NOT = { has_character_flag = flag_coup_member }
-							NOT = { has_character_flag = flag_coup_leader }
-						}
-						character_event = { id = coup.216 }
-					}
-				}
-			}
-			any_plot_backer = { character_event = { id = coup.215 } }
-		}
-	}
-	
-	# I am not the coup leader
-	option = {
-		trigger = { NOT = { has_character_flag = flag_coup_leader } }
-		name = "EVTOPTACOUP212"
-		random_backed_character = {
-			limit = {
-				has_character_flag = flag_coup_leader
-				plot_target_char = { character = FROMFROM }
-			}
-			plot_target_char = { narrative_event = { id = coup.213 tooltip = "EVTTOOLTIPCOUP113" } }
-			letter_event = { id = coup.214 tooltip = "EVTTOOLTIPCOUP114" }
-			hidden_tooltip = {
-				plot_target_char = {
-					liege = { character_event = { id = coup.216 } }
-					any_vassal = {
-						limit = {
-							NOT = { has_character_flag = flag_coup_member }
-							NOT = { has_character_flag = flag_coup_leader }
-						}
-						character_event = { id = coup.216 }
-					}
-				}
-				any_plot_backer = {
-					limit = { NOT = { character = ROOT } }
-					character_event = { id = coup.215 }
-				}
-			}
-		}
-	}
-}
-
-# Initial spymaster coup fails - inform target
-narrative_event = {
-	id = coup.213
-	title = "EVTNAMECOUP101"
-	desc = "EVTDESCCOUP213"
-	picture = GFX_evt_betrayal
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTACOUP213"
-		opinion = { who = FROM modifier = opinion_attempted_coup }
-	}
-}
-
-# Initial spymaster coup fails - inform plot leader
-letter_event = {
-	id = coup.214
-	desc = "EVTDESCCOUP214"
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTACOUP114"
-		opinion = { who = FROM modifier = opinion_failed_to_capture_coup_target }
-		character_event = { id = coup.5500 tooltip = "EVTTOOLTIPCOUP5500" }
-	}
-}
-
-# Initial spymaster coup fails - inform plot backers
-character_event = {
-	id = coup.215
-	desc = "EVTDESCCOUP215"
-	picture = GFX_evt_betrayal
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
-}
-
-# Initial spymaster coup fails - inform bystanders
-character_event = {
-	id = coup.216
-	desc = "EVTDESCCOUP216"
-	picture = GFX_evt_betrayal
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
-}
-
-# FOLLOW-UP SPYMASTER COUP
-narrative_event = {
-	title = "EVTNAMECOUP100"
-	id = coup.217
-	desc = "EVTDESCCOUP217"
-	picture = GFX_evt_betrayal
-	is_triggered_only = yes
-	
-	option = {
-		trigger = { has_character_flag = flag_coup_leader } # Is the coup leader
-		name = "EVTOPTACOUP204"
-		clr_character_flag = flag_coup_plan_spymaster
-		set_character_flag = flag_coup_action_spymaster
-		plot_target_char = { character_event = { id = coup.218 tooltip = "EVTTOOLTIPCOUP205" days = 1 } }
-	}
-	option = {
-		trigger = { NOT = { has_character_flag = flag_coup_leader } } # Is a coup supporter
-		name = "EVTOPTACOUP204"
-		clr_character_flag = flag_coup_plan_spymaster
-		set_character_flag = flag_coup_action_spymaster
-		random_backed_character = {
-			limit = { has_character_flag = flag_coup_leader }
-			plot_target_char = { character_event = { id = coup.218 tooltip = "EVTTOOLTIPCOUP205" days = 1 } }
-		}
-	}
-}
-
-character_event = {
-	id = coup.218
-	hide_window = yes
-	is_triggered_only = yes
-	
-	immediate = { e_rebels = { holder_scope = { character_event = { id = coup.219 } } } }
-}
-
-# Resolve Coup Action - Spymaster Coup
-character_event = {
-	id = coup.219
-	hide_window = yes
-	is_triggered_only = yes
-	
-	option = {
-		# Coup Action Successful
-		FROM = { FROM = { narrative_event = { id = coup.220 } } }
-		ai_chance = {
-			factor = 25
-
-			# In followup actions, the spymaster is either able to take advantage
-			# of the target's trust in them, or is hindered by the absence of such
-			# trust.
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { reverse_opinion = { who = PREV value = 100 } } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { reverse_opinion = { who = PREV value = 90 } } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { reverse_opinion = { who = PREV value = 80 } } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { reverse_opinion = { who = PREV value = 70 } } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { reverse_opinion = { who = PREV value = 60 } } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { reverse_opinion = { who = PREV value = 50 } } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { reverse_opinion = { who = PREV value = 40 } } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { reverse_opinion = { who = PREV value = 30 } } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { reverse_opinion = { who = PREV value = 20 } } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { reverse_opinion = { who = PREV value = 10 } } }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { FROM = { NOT = { reverse_opinion = { who = PREV value = -9 } } } }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { FROM = { NOT = { reverse_opinion = { who = PREV value = -19 } } } }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { FROM = { NOT = { reverse_opinion = { who = PREV value = -29 } } } }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { FROM = { NOT = { reverse_opinion = { who = PREV value = -39 } } } }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { FROM = { NOT = { reverse_opinion = { who = PREV value = -49 } } } }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { FROM = { NOT = { reverse_opinion = { who = PREV value = -59 } } } }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { FROM = { NOT = { reverse_opinion = { who = PREV value = -69 } } } }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { FROM = { NOT = { reverse_opinion = { who = PREV value = -79 } } } }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { FROM = { NOT = { reverse_opinion = { who = PREV value = -89 } } } }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { FROM = { NOT = { reverse_opinion = { who = PREV value = -99 } } } }
-			}
-			
-			# Spymaster's intrigue skill
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 1 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 2 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 3 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 4 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 5 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 6 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 7 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 8 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 9 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 10 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 11 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 12 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 13 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 14 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 15 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 16 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 17 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 18 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 19 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 20 } }
-			}
-			
-			# Target's intrigue skill
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 1 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 2 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 3 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 4 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 5 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 6 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 7 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 8 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 9 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 10 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 11 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 12 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 13 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 14 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 15 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 16 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 17 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 18 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 19 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 20 }
-			}
-		}
-	}
-	option = {
-		# Coup Action Failed
-		FROM = { FROM = { narrative_event = { id = coup.225 } } }
-		ai_chance = { factor = 100 }
-	}
-}
-
-# Successful spymaster coup - Inform Actor
-narrative_event = {
-	title = "EVTNAMECOUP100"
-	id = coup.220
-	desc = "EVTDESCCOUP220"
-	picture = GFX_evt_betrayal
-	show_from_from = yes
-	is_triggered_only = yes
-	
-	immediate = { clr_character_flag = flag_coup_action_spymaster }
-	
-	# I am the coup leader
-	option = {
-		trigger = { has_character_flag = flag_coup_leader }
-		name = "EVTOPTACOUP220"
-		FROM = {
-			FROM = {
-				# Target is captured
-				imprison = ROOT
-			}
-		}
-		character_event = { id = coup.5100 tooltip = "EVTTOOLTIPCOUP5100" }
-		hidden_tooltip = {
-			FROM = {
-				FROM = {
-					narrative_event = { id = coup.221 }
-					liege = { character_event = { id = coup.224 } }
-					any_vassal = {
-						limit = {
-							NOT = { has_character_flag = flag_coup_member }
-							NOT = { has_character_flag = flag_coup_leader }
-							NOT = { has_character_flag = flag_coup_intervener }
-						}
-						character_event = { id = coup.224 }
-					}
-					any_vassal = {
-						limit = { has_character_flag = flag_coup_intervener }
-						character_event = { id = coup.240 }
-					}
-				}
-			}
-			any_plot_backer = { character_event = { id = coup.223 } }
-		}
-	}
-	
-	# I am not the coup leader
-	option = {
-		trigger = { NOT = { has_character_flag = flag_coup_leader } }
-		name = "EVTOPTACOUP220"
-		random_backed_character = {
-			limit = {
-				has_character_flag = flag_coup_leader
-				plot_target_char = { character = FROMFROM }
-			}
-			plot_target_char = {
-				imprison = PREV
-				hidden_tooltip = {
-					narrative_event = { id = coup.221 }
-					liege = { character_event = { id = coup.224 } }
-					any_vassal = {
-						limit = {
-							NOT = { has_character_flag = flag_coup_member }
-							NOT = { has_character_flag = flag_coup_leader }
-						}
-						character_event = { id = coup.224 }
-					}
-				}
-			}
-			hidden_tooltip = {
-				any_plot_backer = {
-					limit = { NOT = { character = ROOT } }
-					character_event = { id = coup.223 }
-				}
-			}
-			letter_event = { id = coup.222 tooltip = "EVTTOOLTIPCOUP109" }
-		}
-	}
-}
-
-# Spymaster Coup Succeeds - Inform Target
-narrative_event = {
-	id = coup.221
-	title = "EVTNAMECOUP101"
-	desc = "EVTDESCCOUP109"
-	picture = GFX_evt_betrayal
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTACOUP221"
-		opinion = { who = FROM modifier = opinion_attempted_coup }
-	}
-}
-
-# Spymaster Coup Succeeds - Inform Plot Leader
-letter_event = {
-	id = coup.222
-	desc = "EVTDESCCOUP109"
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTACOUP109"
-		opinion = { who = FROM modifier = opinion_captured_coup_target }
-		character_event = { id = coup.5100 tooltip = "EVTTOOLTIPCOUP5100" }
-	}
-}
-
-# Followup spymaster coup succeeds - Inform Other Plotters
-character_event = {
-	id = coup.223
-	desc = "EVTDESCCOUP210"
-	picture = GFX_evt_betrayal
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
-}
-
-# Followup spymaster coup succeeds - Inform Bystanders
-character_event = {
-	id = coup.224
-	desc = "EVTDESCCOUP211"
-	picture = GFX_evt_betrayal
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
-}
-
-# Followup spymaster coup fails - inform spymaster
-narrative_event = {
-	title = "EVTNAMECOUP100"
-	id = coup.225
-	desc = "EVTDESCCOUP225"
-	picture = GFX_evt_betrayal
-	show_from_from = yes
-	is_triggered_only = yes
-	
-	immediate = { clr_character_flag = flag_coup_action_spymaster }
-	
-	# I am the coup leader
-	option = {
-		trigger = { has_character_flag = flag_coup_leader }
-		name = "EVTOPTACOUP225"
-		character_event = { id = coup.5500 tooltip = "EVTTOOLTIPCOUP5500" }
-		FROM = { FROM = { narrative_event = { id = coup.226 tooltip = "EVTTOOLTIPCOUP126" } } }
-		hidden_tooltip = {
-			FROM = {
-				FROM = {
-					liege = { character_event = { id = coup.229 } }
-					any_vassal = {
-						limit = {
-							NOT = { has_character_flag = flag_coup_member }
-							NOT = { has_character_flag = flag_coup_leader }
-						}
-						character_event = { id = coup.229 }
-					}
-				}
-			}
-			any_plot_backer = { character_event = { id = coup.228 } }
-		}
-	}
-	
-	# I am not the coup leader
-	option = {
-		trigger = { NOT = { has_character_flag = flag_coup_leader } }
-		name = "EVTOPTACOUP225"
-		random_backed_character = {
-			limit = {
-				has_character_flag = flag_coup_leader
-				plot_target_char = { character = FROMFROM }
-			}
-			plot_target_char = { narrative_event = { id = coup.226 tooltip = "EVTTOOLTIPCOUP126" } }
-			letter_event = { id = coup.227 tooltip = "EVTTOOLTIPCOUP127" }
-			hidden_tooltip = {
-				plot_target_char = {
-					liege = { character_event = { id = coup.229 } }
-					any_vassal = {
-						limit = {
-							NOT = { has_character_flag = flag_coup_member }
-							NOT = { has_character_flag = flag_coup_leader }
-						}
-						character_event = { id = coup.229 }
-					}
-				}
-				any_plot_backer = {
-					limit = { NOT = { character = ROOT } }
-					character_event = { id = coup.228 }
-				}
-			}
-		}
-	}
-}
-
-# Followup spymaster coup fails - inform target
-narrative_event = {
-	id = coup.226
-	title = "EVTNAMECOUP101"
-	desc = "EVTDESCCOUP226"
-	picture = GFX_evt_betrayal
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTACOUP226"
-		opinion = { who = FROM modifier = opinion_attempted_coup }
-	}
-}
-
-# Followup spymaster coup fails - inform plot leader
-letter_event = {
-	id = coup.227
-	desc = "EVTDESCCOUP227"
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTACOUP214"
-		opinion = { who = FROM modifier = opinion_failed_to_capture_coup_target }
-		character_event = { id = coup.5500 tooltip = "EVTTOOLTIPCOUP5500" }
-	}
-}
-
-# Followup spymaster coup fails - inform plot backers
-character_event = {
-	id = coup.228
-	desc = "EVTDESCCOUP228"
-	picture = GFX_evt_betrayal
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
-}
-
-# Followup spymaster coup fails - inform bystanders
-character_event = {
-	id = coup.229
-	desc = "EVTDESCCOUP228"
-	notification = yes
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
-}
-
-#3XX	BETRAYAL BY LOVER
-character_event = {
-	id = coup.300
-	desc = "EVTDESCCOUP300"
-	picture = GFX_evt_cabal
-	
-	min_age = 16
-	only_rulers = yes
-	capable_only = yes
-	
-	trigger = {
-		OR = {
-			AND = {
-				OR = {
-					has_plot = plot_coup
-					has_plot = plot_justified_coup
-				}
-				plot_target_char = { any_lover = { character = ROOT } }
-			}
-			any_backed_character = {
-				OR = {
-					has_plot = plot_coup
-					has_plot = plot_justified_coup
-				}
-				plot_target_char = { any_lover = { character = ROOT } }
-			}
-		}
-		NOT = { has_character_flag = flag_coup_plan_lover }
-		prisoner = no
-	}
-	
-	mean_time_to_happen = {
-		months = 30
-		
-		modifier = {
-			factor = 0.5
-			trait = genius
-		}
-		modifier = {
-			factor = 0.8
-			trait = quick
-		}
-		modifier = {
-			factor = 1.25
-			trait = slow
-		}
-		modifier = {
-			factor = 2
-			trait = imbecile
-		}
-		
-		modifier = {
-			factor = 0.25
-			trait = cold
-		}
-		modifier = {
-			factor = 4
-			trait = friendly
-		}
-	}
-	
-	option = {
-		name = "EVTOPTACOUP300"
-		set_character_flag = flag_coup_plan_lover
-		any_backed_character = {
-			limit = {
-				OR = {
-					has_plot = plot_coup
-					has_plot = plot_justified_coup
-				}
-				same_liege = ROOT
-			}
-			letter_event = { id = coup.301 tooltip = "EVTTOOLTIPCOUP301" }
-		}
-	}
-}
-
-letter_event = {
-	id = coup.301
-	desc = "EVTDESCCOUP301"
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTACOUP301" }
-}
-
-character_event = {
-	id = coup.302
-	desc = "EVTDESCCOUP302"
-	picture = GFX_evt_cabal
-	
-	trigger = {
-		OR = {
-			has_character_flag = flag_coup_plan_lover
-			has_character_flag = flag_coup_action_lover
-		}
-		NOT = {
-			AND = {
-				OR = {
-					AND = {
-						OR = {
-							has_plot = plot_coup
-							has_plot = plot_justified_coup
-						}
-						plot_target_char = { any_lover = { character = ROOT } }
-					}
-					any_backed_character = {
-						OR = {
-							has_plot = plot_coup
-							has_plot = plot_justified_coup
-						}
-						plot_target_char = { any_lover = { character = ROOT } }
-					}
-				}
-				prisoner = no
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTCONFIRM"
-		clr_character_flag = flag_coup_plan_lover
-		clr_character_flag = flag_coup_action_lover
-		any_backed_character = {
-			limit = {
-				OR = {
-					has_plot = plot_coup
-					has_plot = plot_justified_coup
-				}
-				same_liege = ROOT
-			}
-			character_event = { id = coup.303 tooltip = "EVTTOOLTIPCOUP303" }
-		}
-	}
-}
-
-character_event = {
-	id = coup.303
-	desc = "EVTDESCCOUP303"
-	picture = GFX_evt_cabal
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
-}
-
-# Initial coup event - betrayed by lover
-narrative_event = {
-	id = coup.304
-	title = "EVTNAMECOUP100"
-	desc = "EVTDESCCOUP304"
-	picture = GFX_evt_lover
-	is_triggered_only = yes
-	
-	option = {
-		trigger = { has_character_flag = flag_coup_leader } # Is the coup leader
-		name = "EVTOPTACOUP304"
-		clr_character_flag = flag_coup_plan_lover
-		set_character_flag = flag_coup_action_lover
-		plot_target_char = { character_event = { id = coup.305 tooltip = "EVTTOOLTIPCOUP305" days = 1 } }
-	}
-	option = {
-		trigger = { NOT = { has_character_flag = flag_coup_leader } } # Is a coup supporter
-		name = "EVTOPTACOUP304"
-		clr_character_flag = flag_coup_plan_lover
-		set_character_flag = flag_coup_action_lover
-		random_backed_character = {
-			limit = { has_character_flag = flag_coup_leader }
-			plot_target_char = { character_event = { id = coup.305 tooltip = "EVTTOOLTIPCOUP305" days = 1 } }
-		}
-	}
-}
-
-character_event = {
-	id = coup.305
-	hide_window = yes
-	is_triggered_only = yes
-	
-	immediate = { e_rebels = { holder_scope = { character_event = { id = coup.306 } } } }
-}
-
-# Resolve Coup Action - Betrayal by Lover
-character_event = {
-	id = coup.306
-	hide_window = yes
-	is_triggered_only = yes
-	
-	option = {
-		# Coup Action Successful
-		FROM = { FROM = { narrative_event = { id = coup.307 } } }
-		ai_chance = {
-			factor = 25
-			
-			# Lover's intrigue
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 1 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 2 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 3 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 4 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 5 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 6 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 7 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 8 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 9 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 10 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 11 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 12 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 13 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 14 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 15 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 16 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 17 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 18 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 19 } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { intrigue = 20 } }
-			}
-			
-			# Target's Intrigue
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 1 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 2 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 3 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 4 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 5 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 6 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 7 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 8 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 9 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 10 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 11 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 12 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 13 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 14 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 15 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 16 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 17 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 18 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 19 }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { intrigue = 20 }
-			}
-			
-			# How much does the target trust their lover, specifically?
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { reverse_opinion = { who = PREV value = 100 } } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { reverse_opinion = { who = PREV value = 90 } } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { reverse_opinion = { who = PREV value = 80 } } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { reverse_opinion = { who = PREV value = 70 } } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { reverse_opinion = { who = PREV value = 60 } } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { reverse_opinion = { who = PREV value = 50 } } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { reverse_opinion = { who = PREV value = 40 } } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { reverse_opinion = { who = PREV value = 30 } } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { reverse_opinion = { who = PREV value = 20 } } }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { FROM = { reverse_opinion = { who = PREV value = 10 } } }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { FROM = { NOT = { reverse_opinion = { who = PREV value = -9 } } } }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { FROM = { NOT = { reverse_opinion = { who = PREV value = -19 } } } }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { FROM = { NOT = { reverse_opinion = { who = PREV value = -29 } } } }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { FROM = { NOT = { reverse_opinion = { who = PREV value = -39 } } } }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { FROM = { NOT = { reverse_opinion = { who = PREV value = -49 } } } }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { FROM = { NOT = { reverse_opinion = { who = PREV value = -59 } } } }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { FROM = { NOT = { reverse_opinion = { who = PREV value = -69 } } } }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { FROM = { NOT = { reverse_opinion = { who = PREV value = -79 } } } }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { FROM = { NOT = { reverse_opinion = { who = PREV value = -89 } } } }
-			}
-			modifier = {
-				factor = 0.8
-				FROM = { FROM = { NOT = { reverse_opinion = { who = PREV value = -99 } } } }
-			}
-		}
-	}
-	option = {
-		# Coup Action Failed
-		FROM = { FROM = { narrative_event = { id = coup.312 } } }
-		ai_chance = { factor = 100 }
-	}
-}
-
-# Successful betrayal by lover
-narrative_event = {
-	id = coup.307
-	title = "EVTNAMECOUP100"
-	desc = "EVTDESCCOUP307"
-	picture = GFX_evt_betrayal
-	show_from_from = yes
-	is_triggered_only = yes
-	
-	immediate = { clr_character_flag = flag_coup_action_lover }
-	
-	# I am the coup leader
-	option = {
-		trigger = { has_character_flag = flag_coup_leader }
-		name = "EVTOPTACOUP307"
-		if = {
-			limit = {
-				trait = confident
-				opinion = { who = FROMFROM value = 1 }
-				NOT = { trait = cold }
-			}
-			random_list = {
-				10 = { add_trait = depressed }
-				20 = { add_trait = stressed }
-				40 = { }
-			}
-		}
-		if = {
-			limit = {
-				NOT = { trait = confident }
-				NOT = { trait = neurotic }
-				NOT = { trait = cold }
-				opinion = { who = FROMFROM value = 1 }
-			}
-			random_list = {
-				10 = { add_trait = depressed }
-				20 = { add_trait = stressed }
-				30 = { }
-			}
-		}
-		if = {
-			limit = {
-				trait = neurotic
-				NOT = { trait = cold }
-				opinion = { who = FROMFROM value = 1 }
-			}
-			random_list = {
-				10 = { add_trait = depressed }
-				20 = { add_trait = stressed }
-				20 = { }
-			}
-		}
-		FROM = {
-			FROM = {
-				# Target is captured
-				imprison = ROOT
-			}
-		}
-		character_event = { id = coup.5100 tooltip = "EVTTOOLTIPCOUP5100" }
-		hidden_tooltip = {
-			FROM = {
-				FROM = {
-					narrative_event = { id = coup.308 }
-					liege = { character_event = { id = coup.311 } }
-					any_vassal = {
-						limit = {
-							NOT = { has_character_flag = flag_coup_member }
-							NOT = { has_character_flag = flag_coup_leader }
-						}
-						character_event = { id = coup.311 }
-					}
-				}
-			}
-			any_plot_backer = { character_event = { id = coup.310 } }
-		}
-	}
-	
-	# I am not the coup leader
-	option = {
-		trigger = { NOT = { has_character_flag = flag_coup_leader } }
-		name = "EVTOPTACOUP307"
-		if = {
-			limit = {
-				trait = confident
-				opinion = { who = FROMFROM value = 1 }
-				NOT = { trait = cold }
-			}
-			random_list = {
-				10 = { add_trait = depressed }
-				20 = { add_trait = stressed }
-				40 = { }
-			}
-		}
-		if = {
-			limit = {
-				NOT = { trait = confident }
-				NOT = { trait = neurotic }
-				NOT = { trait = cold }
-				opinion = { who = FROMFROM value = 1 }
-			}
-			random_list = {
-				10 = { add_trait = depressed }
-				20 = { add_trait = stressed }
-				30 = { }
-			}
-		}
-		if = {
-			limit = {
-				trait = neurotic
-				NOT = { trait = cold }
-				opinion = { who = FROMFROM value = 1 }
-			}
-			random_list = {
-				10 = { add_trait = depressed }
-				20 = { add_trait = stressed }
-				20 = { }
-			}
-		}
-		random_backed_character = {
-			limit = {
-				has_character_flag = flag_coup_leader
-				plot_target_char = { character = FROMFROM }
-			}
-			plot_target_char = {
-				imprison = PREV
-				hidden_tooltip = {
-					character_event = { id = coup.308 }
-					liege = { character_event = { id = coup.311 } }
-					any_vassal = {
-						limit = {
-							NOT = { has_character_flag = flag_coup_member }
-							NOT = { has_character_flag = flag_coup_leader }
-						}
-						character_event = { id = coup.311 }
-					}
-				}
-			}
-			hidden_tooltip = {
-				any_plot_backer = {
-					limit = { NOT = { character = ROOT } }
-					character_event = { id = coup.310 }
-				}
-			}
-			letter_event = { id = coup.309 tooltip = "EVTTOOLTIPCOUP309" }
-		}
-	}
-}
-
-# Lover coup succeeds - Inform Target
-narrative_event = {
-	title = "EVTNAMECOUP101"
-	id = coup.308
-	desc = "EVTDESCCOUP308"
-	picture = GFX_evt_betrayal
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTACOUP308"
-		if = {
-			limit = {
-				trait = confident
-				opinion = { who = FROM value = 1 }
-			}
-			random_list = {
-				10 = { add_trait = depressed }
-				20 = { add_trait = stressed }
-				40 = { }
-			}
-		}
-		if = {
-			limit = {
-				NOT = { trait = confident }
-				NOT = { trait = neurotic }
-				opinion = { who = FROM value = 1 }
-			}
-			random_list = {
-				10 = { add_trait = depressed }
-				20 = { add_trait = stressed }
-				30 = { }
-			}
-		}
-		if = {
-			limit = {
-				trait = neurotic
-				opinion = { who = FROM value = 1 }
-			}
-			random_list = {
-				10 = { add_trait = depressed }
-				20 = { add_trait = stressed }
-				20 = { }
-			}
-		}
-		opinion = { who = FROM modifier = opinion_attempted_coup }
-		opinion = { who = FROM modifier = opinion_heartbroken months = 2400 }
-	}
-}
-
-# Lover coup succeeds - Inform Plot Leader
-letter_event = {
-	id = coup.309
-	desc = "EVTDESCCOUP309"
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTACOUP309"
-		opinion = { who = FROM modifier = opinion_captured_coup_target }
-		character_event = { id = coup.5100 tooltip = "EVTTOOLTIPCOUP5100" }
-	}
-}
-
-# Lover coup succeeds - Inform Other Plotters
-character_event = {
-	id = coup.310
-	desc = "EVTDESCCOUP310"
-	picture = GFX_evt_betrayal
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
-}
-
-# Lover coup succeeds - Inform Bystandards
-character_event = {
-	id = coup.311
-	desc = "EVTDESCCOUP311"
-	picture = GFX_evt_betrayal
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
-}
-
-# Lover coup fails - inform lover
-narrative_event = {
-	title = "EVTNAMECOUP100"
-	id = coup.312
-	desc = "EVTDESCCOUP312"
-	picture = GFX_evt_betrayal
-	show_from_from = yes
-	is_triggered_only = yes
-	
-	immediate = { clr_character_flag = flag_coup_action_lover }
-	
-	# I am the coup leader
-	option = {
-		trigger = { has_character_flag = flag_coup_leader }
-		name = "EVTOPTACOUP312"
-		if = {
-			limit = {
-				trait = confident
-				opinion = { who = FROMFROM value = 1 }
-				NOT = { trait = cold }
-			}
-			random_list = {
-				10 = { add_trait = depressed }
-				20 = { add_trait = stressed }
-				40 = { }
-			}
-		}
-		if = {
-			limit = {
-				NOT = { trait = confident }
-				NOT = { trait = neurotic }
-				NOT = { trait = cold }
-				opinion = { who = FROMFROM value = 1 }
-			}
-			random_list = {
-				10 = { add_trait = depressed }
-				20 = { add_trait = stressed }
-				30 = { }
-			}
-		}
-		if = {
-			limit = {
-				trait = neurotic
-				NOT = { trait = cold }
-				opinion = { who = FROMFROM value = 1 }
-			}
-			random_list = {
-				10 = { add_trait = depressed }
-				20 = { add_trait = stressed }
-				20 = { }
-			}
-		}
-		character_event = { id = coup.5500 tooltip = "EVTTOOLTIPCOUP5500" }
-		FROM = { FROM = { narrative_event = { id = coup.313 tooltip = "EVTTOOLTIPCOUP313" } } }
-		hidden_tooltip = {
-			FROM = {
-				FROM = {
-					liege = { character_event = { id = coup.316 } }
-					any_vassal = {
-						limit = {
-							NOT = { has_character_flag = flag_coup_member }
-							NOT = { has_character_flag = flag_coup_leader }
-						}
-						character_event = { id = coup.316 }
-					}
-				}
-			}
-			any_plot_backer = { character_event = { id = coup.315 } }
-		}
-	}
-	
-	# I am not the coup leader
-	option = {
-		trigger = { NOT = { has_character_flag = flag_coup_leader } }
-		name = "EVTOPTACOUP312"
-		if = {
-			limit = {
-				trait = confident
-				opinion = { who = FROMFROM value = 1 }
-				NOT = { trait = cold }
-			}
-			random_list = {
-				10 = { add_trait = depressed }
-				20 = { add_trait = stressed }
-				40 = { }
-			}
-		}
-		if = {
-			limit = {
-				NOT = { trait = confident }
-				NOT = { trait = neurotic }
-				NOT = { trait = cold }
-				opinion = { who = FROMFROM value = 1 }
-			}
-			random_list = {
-				10 = { add_trait = depressed }
-				20 = { add_trait = stressed }
-				30 = { }
-			}
-		}
-		if = {
-			limit = {
-				trait = neurotic
-				NOT = { trait = cold }
-				opinion = { who = FROMFROM value = 1 }
-			}
-			random_list = {
-				10 = { add_trait = depressed }
-				20 = { add_trait = stressed }
-				20 = { }
-			}
-		}
-		random_backed_character = {
-			limit = {
-				has_character_flag = flag_coup_leader
-				plot_target_char = { character = FROMFROM }
-			}
-			plot_target_char = { narrative_event = { id = coup.313 tooltip = "EVTTOOLTIPCOUP313" } }
-			letter_event = { id = coup.314 tooltip = "EVTTOOLTIPCOUP314" }
-			hidden_tooltip = {
-				plot_target_char = {
-					liege = { character_event = { id = coup.316 } }
-					any_vassal = {
-						limit = {
-							NOT = { has_character_flag = flag_coup_member }
-							NOT = { has_character_flag = flag_coup_leader }
-						}
-						character_event = { id = coup.316 }
-					}
-				}
-				any_plot_backer = {
-					limit = { NOT = { character = ROOT } }
-					character_event = { id = coup.315 }
-				}
-			}
-		}
-	}
-}
-
-# Lover coup fails - inform target
-narrative_event = {
-	id = coup.313
-	title = "EVTNAMECOUP101"
-	desc = "EVTDESCCOUP313"
-	picture = GFX_evt_betrayal
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTACOUP313"
-		if = {
-			limit = {
-				trait = confident
-				opinion = { who = FROM value = 1 }
-			}
-			random_list = {
-				10 = { add_trait = depressed }
-				20 = { add_trait = stressed }
-				40 = { }
-			}
-		}
-		if = {
-			limit = {
-				NOT = { trait = confident }
-				NOT = { trait = neurotic }
-				opinion = { who = FROM value = 1 }
-			}
-			random_list = {
-				10 = { add_trait = depressed }
-				20 = { add_trait = stressed }
-				30 = { }
-			}
-		}
-		if = {
-			limit = {
-				trait = neurotic
-				opinion = { who = FROM value = 1 }
-			}
-			random_list = {
-				10 = { add_trait = depressed }
-				20 = { add_trait = stressed }
-				20 = { }
-			}
-		}
-		opinion = { who = FROM modifier = opinion_attempted_coup }
-		opinion = { who = FROM modifier = opinion_heartbroken months = 2400 }
-	}
-}
-
-# Lover coup fails - inform plot leader
-letter_event = {
-	id = coup.314
-	desc = "EVTDESCCOUP314"
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTACOUP314"
-		opinion = { who = FROM modifier = opinion_failed_to_capture_coup_target }
-		character_event = { id = coup.5500 tooltip = "EVTTOOLTIPCOUP5500" }
-	}
-}
-
-# Lover coup fails - inform plot backers
-character_event = {
-	id = coup.315
-	desc = "EVTDESCCOUP315"
-	picture = GFX_evt_betrayal
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
-}
-
-# Lover coup fails - inform bystanders
-character_event = {
-	id = coup.316
-	desc = "EVTDESCCOUP315"
-	picture = GFX_evt_betrayal
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
-}
-
-# MAIN COUP CONTROL EVENTS
-# Initiate Coup
-# Confirmation event for player
-character_event = {
-	id = coup.5000
-	desc = "EVTDESCCOUP5000"
-	picture = GFX_evt_cabal
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTCONFIRM"
-		activate_plot = yes
-		character_event = { id = coup.5001 tooltip = "EVTTOOLTIPCOUP5001" }
-	}
-	
-	option = {
-		name = "EVTOPTNEVERMIND"
-		ai_chance = { factor = 0 }
-	}
-}
-character_event = {
-	id = coup.5001
-	desc = "EVTDESCCOUP5001"
-	picture = GFX_evt_cabal
-	is_triggered_only = yes
-	
-	immediate = {
-		# Set flags and diplomatic immunity
-		set_character_flag = flag_coup_leader
-		diplomatic_immunity = yes
-		any_plot_backer = {
-			set_character_flag = flag_coup_member
-			diplomatic_immunity = yes
-		}
-	}
-	
-	# Send ultimatum immediately
-	option = {
-		trigger = {
-			NOT = { has_character_flag = flag_coup_plan_military }
-			NOT = { has_character_flag = flag_coup_plan_spymaster }
-			NOT = {
-				AND = {
-					has_character_flag = flag_coup_plan_lover
-					plot_target_char = { any_lover = { character = ROOT } }
-				}
-			}
-			NOT = {
-				any_plot_backer = {
-					OR = {
-						AND = {
-							same_liege = ROOT
-							has_character_flag = flag_coup_plan_military
-						}
-						AND = {
-							same_liege = ROOT
-							has_character_flag = flag_coup_plan_spymaster
-						}
-						AND = {
-							has_character_flag = flag_coup_plan_lover
-							any_lover = { ROOT = { plot_target_char = { character = PREVPREV } } }
-						}
-					}
-				}
-			}
-		}
-		name = "EVTOPTACOUP5001"
-		plot_target_char = { letter_event = { id = coup.5200 tooltip = "EVTTOOLTIP5200" } }
-	}
-	
-	# Lead off with a military attack
-	option = {
-		trigger = {
-			NOT = {
-				AND = {
-					has_character_flag = flag_coup_plan_lover
-					plot_target_char = { any_lover = { character = ROOT } }
-				}
-			}
-			NOT = {
-				any_plot_backer = {
-					has_character_flag = flag_coup_plan_lover
-					any_lover = { ROOT = { plot_target_char = { character = PREVPREV } } }
-				}
-			}
 			OR = {
-				has_character_flag = flag_coup_plan_military
-				any_plot_backer = {
-					has_character_flag = flag_coup_plan_military
-					same_liege = ROOT
-				}
-			}
-		}
-		name = "EVTOPTBCOUP5001"
-		if = {
-			limit = { has_character_flag = flag_coup_plan_military }
-			narrative_event = { id = coup.104 tooltip = "EVTTOOLTIPCOUP104" }
-		}
-		if = {
-			limit = { NOT = { has_character_flag = flag_coup_plan_military } }
-			# Grab a random military backer to lead the coup. Try to choose somebody not the worst.
-			random_plot_backer = {
-				limit = {
-					has_character_flag = flag_coup_plan_military
-					same_liege = ROOT
-					NOT = {
-						ROOT = {
-							any_plot_backer = {
-								has_character_flag = flag_coup_plan_military
-								same_liege = ROOT
-								attribute_diff = { character = PREVPREV attribute = martial value = 1 }
-							}
-							any_plot_backer = {
-								has_character_flag = flag_coup_plan_military
-								same_liege = ROOT
-								attribute_diff = { character = PREVPREV attribute = intrigue value = 1 }
-							}
-						}
-					}
-				}
-				narrative_event = { id = coup.104 tooltip = "EVTTOOLTIPCOUP104" }
+				has_plot = plot_coup
+				has_plot = plot_justified_coup
 			}
 		}
 	}
-	
-	# Call in the spymaster
-	option = {
-		trigger = {
-			NOT = {
-				AND = {
-					has_character_flag = flag_coup_plan_lover
-					plot_target_char = { any_lover = { character = ROOT } }
-				}
-			}
-			NOT = {
-				any_plot_backer = {
-					has_character_flag = flag_coup_plan_lover
-					any_lover = { ROOT = { plot_target_char = { character = PREVPREV } } }
-				}
-			}
-			OR = {
-				has_character_flag = flag_coup_plan_spymaster
-				any_plot_backer = {
-					has_character_flag = flag_coup_plan_spymaster
-					same_liege = ROOT
-				}
-			}
-		}
-		name = "EVTOPTCCOUP5001"
-		if = {
-			limit = { has_character_flag = flag_coup_plan_spymaster }
-			narrative_event = { id = coup.204 tooltip = "EVTTOOLTIPCOUP204" }
-		}
-		if = {
-			limit = { NOT = { has_character_flag = flag_coup_plan_spymaster } }
-			random_plot_backer = {
-				limit = {
-					has_character_flag = flag_coup_plan_spymaster
-					same_liege = ROOT
-				}
-				narrative_event = { id = coup.204 tooltip = "EVTTOOLTIPCOUP204" }
-			}
-		}
-	}
-	
-	# Have the target's lover lay a trap
-	option = {
-		trigger = {
-			OR = {
-				AND = {
-					has_character_flag = flag_coup_plan_lover
-					plot_target_char = { any_lover = { character = ROOT } }
-				}
-				any_plot_backer = {
-					has_character_flag = flag_coup_plan_lover
-					any_lover = { ROOT = { plot_target_char = { character = PREVPREV } } }
-				}
-			}
-		}
-		name = "EVTOPTDCOUP5001"
-		if = {
-			limit = {
-				has_character_flag = flag_coup_plan_lover
-				plot_target_char = { any_lover = { character = ROOT } }
-			}
-			narrative_event = { id = coup.304 tooltip = "EVTTOOLTIPCOUP304" }
-		}
-		if = {
-			limit = {
-				NOT = {
-					AND = {
-						has_character_flag = flag_coup_plan_lover
-						plot_target_char = { any_lover = { character = ROOT } }
-					}
-				}
-			}
-			random_plot_backer = {
-				limit = {
-					has_character_flag = flag_coup_plan_lover
-					any_lover = { ROOT = { plot_target_char = { character = PREVPREV } } }
-				}
-				narrative_event = { id = coup.304 tooltip = "EVTTOOLTIPCOUP304" }
-			}
-		}
-	}
-}
-# Resolve Captured Coup Target
-character_event = {
-	id = coup.5100
-	hide_window = yes
-	
-	trigger = {
-		OR = {
-			has_plot = plot_coup
-			has_plot = plot_justified_coup
-		}
-		plot_target_char = {
-			prisoner = yes
-			host = { character = ROOT }
-		}
-	}
-	
-	immediate = {
-		plot_target_char = { character_event = { id = coup.5101 } }
-	}
-}
-# Bounce to get target
-character_event = {
-	id = coup.5101
-	desc = "EVTDESCCOUP5101"
-	picture = GFX_evt_prison
-	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTACOUP5101"
-		host = { character_event = { id = coup.5300 tooltip = "EVTTOOLTIP5300" } }
-	}
-}
-# Coup Leader Delivers Ultimatum
-letter_event = {
-	id = coup.5200
-	desc = "EVTDESCCOUP5200"
-	is_triggered_only = yes
-	
-	option = {
-		# Concede to demands
-		name = "EVTOPTACCEPT"
+		name = "EVTOPTACCEPT" # Surrender
 		FROM = {
-			letter_event = { id = coup.5201 tooltip = "EVTTOOLTIPCOUP5201" } # FROM will get all your titles
-			any_plot_backer = { custom_tooltip = { text = "TOOLTIPBACKSCOUP" } } # List the plot backers
+			plot_target_title = { usurp_title_plus_barony_if_unlanded = PREV }
+			hidden_tooltip = { letter_event = { id = coup.10 } }
+		}
+		hidden_tooltip = {
+			any_vassal = {
+				limit = {
+					NOT = { character = FROM }
+					NOT = { any_backed_character = { character = FROM } }
+				}
+				character_event = { id = coup.11 }
+			}
+			liege = {
+				limit = {
+					NOT = { character = FROM }
+					NOT = { character = ROOT }
+					NOT = { any_backed_character = { character = FROM } }
+				}
+				character_event = { id = coup.11 }
+			}
 		}
 		ai_chance = {
 			factor = 10
-			# Personality Effects
+			# Plot strength
 			modifier = {
-				factor = 5
-				trait = craven
+				factor = 1.25
+				FROM = { plot_power = 0.2 }
 			}
 			modifier = {
-				factor = 0.2
-				trait = brave
+				factor = 1.25
+				FROM = { plot_power = 0.4 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { plot_power = 0.6 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { plot_power = 0.8 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { plot_power = 1 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { plot_power = 1.2 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { plot_power = 1.4 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { plot_power = 1.6 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { plot_power = 1.8 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { plot_power = 2 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { plot_power = 2.2 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { plot_power = 2.4 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { plot_power = 2.6 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { plot_power = 2.8 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { plot_power = 3 }
+			}
+			
+			# Personality
+			modifier = {
+				factor = 0.1
+				trait = ambitious
 			}
 			modifier = {
 				factor = 2
-				trait = friendly
-			}
-			modifier = {
-				factor = 0.5
-				trait = cold
-			}
-			modifier = {
-				factor = 2
-				trait = carefree
-			}
-			modifier = {
-				factor = 0.5
-				trait = disciplined
-			}
-			modifier = {
-				factor = 4
 				trait = content
 			}
 			modifier = {
-				factor = 0.25
-				trait = ambitious
+				factor = 0.5
+				trait = proud
 			}
 			modifier = {
 				factor = 2
 				trait = humble
 			}
 			modifier = {
-				factor = 0.5
-				trait = proud
+				factor = 0.25
+				trait = brave
+			}
+			modifier = {
+				factor = 4
+				trait = craven
 			}
 			
-			modifier = {
-				factor = 10
-				trait = lunatic
-			}
-			
-			# Plot Power Effects
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 0.1 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 0.2 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 0.3 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 0.4 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 0.5 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 0.6 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 0.7 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 0.8 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 0.9 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 1 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 1.1 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 1.2 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 1.3 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 1.4 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 1.5 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 1.6 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 1.7 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 1.8 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 1.9 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 2 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 2.1 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 2.2 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 2.3 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 2.4 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 2.5 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 2.6 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 2.7 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 2.8 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 2.9 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 3 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 3.1 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 3.2 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 3.3 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 3.4 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 3.5 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 3.6 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 3.7 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 3.8 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 3.9 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 4 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 4.1 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 4.2 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 4.3 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 4.4 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 4.5 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 4.6 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 4.7 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 4.8 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 4.9 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 1.25
-				FROM = { plot_power = 5 }
-				NOT = { trait = imbecile }
-				NOT = { trait = lunatic }
-			}
-			
-			# Ideological Effects
+			# Ideological effects
 			modifier = {
 				factor = 0.5
-				religion_authority = 0.1
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 0.5
-				religion_authority = 0.2
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 0.5
-				religion_authority = 0.3
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 0.5
-				religion_authority = 0.4
-				NOT = { trait = pragmatic }
+				religion_authority = 0.75
 			}
 			modifier = {
 				factor = 0.5
@@ -5244,533 +141,2567 @@ letter_event = {
 			}
 			modifier = {
 				factor = 0.5
-				religion_authority = 0.6
-				NOT = { trait = pragmatic }
+				religion_authority = 0.25
+				trait = radical
 			}
 			modifier = {
-				factor = 0.5
-				religion_authority = 0.7
-				NOT = { trait = pragmatic }
+				factor = 0
+				NOT = { religion = FROM }
+				trait = radical
+			}
+			
+			# Opinion of plotter
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 100 }
 			}
 			modifier = {
-				factor = 0.5
-				religion_authority = 0.8
-				NOT = { trait = pragmatic }
+				factor = 1.25
+				opinion = { who = FROM value = 90 }
 			}
 			modifier = {
-				factor = 0.5
-				religion_authority = 0.9
-				NOT = { trait = pragmatic }
+				factor = 1.25
+				opinion = { who = FROM value = 80 }
 			}
 			modifier = {
-				factor = 0.5
-				religion_authority = 1
-				NOT = { trait = pragmatic }
+				factor = 1.25
+				opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -99 } }
 			}
 		}
 	}
-	
 	option = {
-		# Reject Demands
-		name = "EVTOPTREFUSE"
-		FROM = { letter_event = { id = coup.5202 tooltip = "EVTTOOLTIP5202" } }
+		name = "EVTOPTDECLINE" # Go to war
+		FROM = {
+			letter_event = { id = coup.20 tooltip = "EVTTOOLTIPCOUP20" }
+			any_plot_backer = {
+				limit = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_backing_coup } }
+				custom_tooltip = { text = "EVTTOOLTIPBACKSCOUP" }
+			}
+			if = {
+				limit = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_scheming_bastard } }
+				any_plot_backer = {
+					limit = { NOT = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_backing_coup } } }
+					custom_tooltip = { text = "EVTTOOLTIPBACKSCOUP" }
+				}
+			}
+		}
 		ai_chance = { factor = 100 }
 	}
 }
 
-# Plot Target accepts ultimatum - inform coup leader
+# The enemy has surrendered!
 letter_event = {
-	id = coup.5201
-	desc = "EVTDESCCOUP5201"
+	id = coup.10
+	desc = "EVTDESCCOUP10"
+	border = GFX_evt_letter_frame_intrigue
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTACOUP5201"
-		hidden_tooltip = { ROOT = { character_event = { id = coup.5300 } } }
+		name = "EVTOPTCONFIRM"
+		hidden_tooltip = { any_plot_backer = { character_event = { id = coup.12 } } }
+	}
+}
+character_event = {
+	id = coup.11
+	desc = "EVTDESCCOUP11"
+	picture = GFX_evt_news
+	border = GFX_evt_normal_frame_intrigue
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+character_event = {
+	id = coup.12
+	desc = "EVTDESCCOUP12"
+	border = GFX_evt_normal_frame_intrigue
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+
+# Ultimatum declined
+letter_event = {
+	id = coup.20
+	desc = "EVTDESCCOUP20"
+	border = GFX_evt_letter_frame_intrigue
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACOUP20"
+		hide_tooltip = { character_event = { id = coup.100 } }
 	}
 }
 
-# Plot target rejects ultimatum - inform coup leader
-letter_event = {
-	id = coup.5202
-	desc = "EVTDESCCOUP5202"
+# Issue ultimatum
+character_event = {
+	id = coup.30
+	desc = "Issue Ultimatum"
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTACOUP5202" # Go to war
-		# Clear out unnessecary flags and immunities
-		hidden_tooltip = {
-			diplomatic_immunity = no
-			clr_character_flag = flag_coup_leader
-			any_plot_backer = {
-				diplomatic_immunity = no
-				clr_character_flag = flag_coup_member
-				# Also inform plot backers that war has started
-				character_event = { id = coup.5203 }
-				reverse_opinion = { who = FROM modifier = opinion_rebel_traitor }
-			}
+		set_character_flag = flag_issued_ultimatum
+		name = "EVTOPTCONFIRM"
+		diplomatic_immunity = yes
+		activate_plot = yes
+		clr_character_flag = flag_launching_coup
+		plot_target_char = { letter_event = { id = coup.0 tooltip = "EVTTOOLTIPCOUP0" } }
+	}
+	
+	option = {
+		name = "EVTOPTNEVERMIND"
+		clr_character_flag = flag_launching_coup
+	}
+}
+
+# Your first attempt at the coup has failed
+character_event = {
+	id = coup.100
+	desc = "EVTDESCCOUP100"
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			demesne_size = 1
+			NOT = { any_current_enemy = { always = yes } } # May not already be at war
 		}
-		reverse_opinion = { who = FROM modifier = opinion_rebel_traitor }
-		set_character_flag = flag_failed_coup
+		name = "OPTACOUP100" # Launch a civil war
 		set_character_flag = flag_launching_civil_war
-		# Apply a moral authority penalty based on rank of liege's title
-		if = {
-			limit = { FROM = { primary_title = { tier = EMPEROR } } }
-			religion_authority = { modifier = allowed_civil_war_empire years = 30 }
-		}
-		if = {
-			limit = { FROM = { primary_title = { tier = KING } } }
-			religion_authority = { modifier = allowed_civil_war_kingdom years = 30 }
-		}
-		if = {
-			limit = { FROM = { primary_title = { tier = DUKE } } }
-			religion_authority = { modifier = allowed_civil_war_duchy years = 30 }
-		}
-		if = {
-			limit = { FROM = { primary_title = { tier = COUNT } } }
-			religion_authority = { modifier = allowed_civil_war_county years = 30 }
-		}
-		# Start the war
-		FROM = {
-			hidden_tooltip = { character_event = { id = coup.5204 } } # Inform liege that war were declared
-			reverse_war = {
-				target = ROOT
-				casus_belli = civil_war
-				plot_backers = yes
+		set_character_flag = flag_failed_coup
+		diplomatic_immunity = no
+		plot_target_title = {
+			holder_scope = {
+				reverse_war = {
+					target = ROOT
+					casus_belli = civil_war
+					thirdparty_title = PREV
+				}
 			}
+		}
+		plot_target_char = {
+			hidden_tooltip = { letter_event = { id = coup.101 } } # Declaration of war
+			hidden_tooltip = {
+				any_vassal = {
+					limit = {
+						NOT = { character = ROOT }
+						NOT = { any_backed_character = { character = ROOT } }
+					}
+					character_event = { id = coup.104 }
+				}
+				liege = {
+					limit = {
+						NOT = { character = ROOT }
+						NOT = { character = PREV }
+						NOT = { any_backed_character = { character = ROOT } }
+					}
+					character_event = { id = coup.104 }
+				}
+			}
+		}
+		any_plot_backer = {
+			limit = { ROOT = { plot_target_char = { has_opinion_modifier = { who = PREVPREV modifier = opinion_backing_coup } } } }
+			diplomatic_immunity = no
+			character_event = { id = coup.102 tooltip = "EVTTOOLTIPCOUP102" }
+		}
+		any_plot_backer = {
+			limit = { NOT = { ROOT = { plot_target_char = { has_opinion_modifier = { who = PREVPREV modifier = opinion_backing_coup } } } } }
+			character_event = { id = coup.103 tooltip = "EVTTOOLTIPCOUP103" }
 		}
 		ai_chance = {
 			factor = 10
+			
+			# Military Power
 			modifier = {
-				factor = 0.5
+				factor = 1.25
+				relative_power_to_liege = 0.1
+			}
+			modifier = {
+				factor = 1.25
+				relative_power_to_liege = 0.2
+			}
+			modifier = {
+				factor = 1.25
+				relative_power_to_liege = 0.3
+			}
+			modifier = {
+				factor = 1.25
+				relative_power_to_liege = 0.4
+			}
+			modifier = {
+				factor = 1.25
+				relative_power_to_liege = 0.5
+			}
+			modifier = {
+				factor = 1.25
+				relative_power_to_liege = 0.6
+			}
+			modifier = {
+				factor = 1.25
+				relative_power_to_liege = 0.7
+			}
+			modifier = {
+				factor = 1.25
+				relative_power_to_liege = 0.8
+			}
+			modifier = {
+				factor = 1.25
+				relative_power_to_liege = 0.9
+			}
+			
+			modifier = {
+				factor = 1.25
+				any_plot_backer = {
+					same_liege = ROOT
+					relative_power_to_liege = 0.1
+				}
+			}
+			modifier = {
+				factor = 1.25
+				any_plot_backer = {
+					same_liege = ROOT
+					relative_power_to_liege = 0.2
+				}
+			}
+			modifier = {
+				factor = 1.25
+				any_plot_backer = {
+					same_liege = ROOT
+					relative_power_to_liege = 0.3
+				}
+			}
+			modifier = {
+				factor = 1.25
+				any_plot_backer = {
+					same_liege = ROOT
+					relative_power_to_liege = 0.4
+				}
+			}
+			modifier = {
+				factor = 1.25
+				any_plot_backer = {
+					same_liege = ROOT
+					relative_power_to_liege = 0.5
+				}
+			}
+			modifier = {
+				factor = 1.25
+				any_plot_backer = {
+					same_liege = ROOT
+					relative_power_to_liege = 0.6
+				}
+			}
+			modifier = {
+				factor = 1.25
+				any_plot_backer = {
+					same_liege = ROOT
+					relative_power_to_liege = 0.7
+				}
+			}
+			modifier = {
+				factor = 1.25
+				any_plot_backer = {
+					same_liege = ROOT
+					relative_power_to_liege = 0.8
+				}
+			}
+			modifier = {
+				factor = 1.25
+				any_plot_backer = {
+					same_liege = ROOT
+					relative_power_to_liege = 0.9
+				}
+			}
+			modifier = {
+				factor = 1.25
+				any_plot_backer = {
+					same_liege = ROOT
+					relative_power_to_liege = 0.1
+					count = 2
+				}
+			}
+			modifier = {
+				factor = 1.25
+				any_plot_backer = {
+					same_liege = ROOT
+					relative_power_to_liege = 0.1
+					count = 3
+				}
+			}
+			modifier = {
+				factor = 1.25
+				any_plot_backer = {
+					same_liege = ROOT
+					relative_power_to_liege = 0.1
+					count = 4
+				}
+			}
+			modifier = {
+				factor = 1.25
+				any_plot_backer = {
+					same_liege = ROOT
+					relative_power_to_liege = 0.1
+					count = 5
+				}
+			}
+			modifier = {
+				factor = 1.25
+				any_plot_backer = {
+					same_liege = ROOT
+					relative_power_to_liege = 0.1
+					count = 6
+				}
+			}
+			modifier = {
+				factor = 1.25
+				any_plot_backer = {
+					same_liege = ROOT
+					relative_power_to_liege = 0.1
+					count = 7
+				}
+			}
+			modifier = {
+				factor = 1.25
+				any_plot_backer = {
+					same_liege = ROOT
+					relative_power_to_liege = 0.1
+					count = 8
+				}
+			}
+			modifier = {
+				factor = 1.25
+				any_plot_backer = {
+					same_liege = ROOT
+					relative_power_to_liege = 0.1
+					count = 9
+				}
+			}
+			
+			# Personality
+			modifier = {
+				factor = 4
+				trait = brave
+			}
+			modifier = {
+				factor = 0.25
 				trait = craven
 			}
+			modifier = {
+				factor = 2
+				trait = friendly
+			}
+			modifier = {
+				factor = 0.5
+				trait = cold
+			}
+			
+			modifier = {
+				factor = 3
+				liege = { war = yes }
+			}
+		}
+	}
+	
+	# Surrender
+	option = {
+		name = "EVTOPTBCOUP100"
+		diplomatic_immunity = no
+		plot_target_char = {
+			hidden_tooltip = { letter_event = { id = coup.110 } }
+			ROOT = {
+				imprison = PREV
+				any_plot_backer = {
+					limit = { reverse_has_opinion_modifier = { who = PREVPREV modifier = opinion_backing_coup  } }
+					diplomatic_immunity = no
+					imprison = PREVPREV
+					opinion = { who = ROOT modifier = opinion_betrayed_supporter }
+					hidden_tooltip = { character_event = { id = coup.111 } }
+				}
+			}
+		}
+		# Mark your co-conspirators so that they can be potentially identified later
+		hidden_tooltip = { any_plot_backer = { reverse_opinion = { who = ROOT modifier = opinion_co_conspirator } } }
+		cancel_plot = plot_coup
+		cancel_plot = plot_justified_coup
+		ai_chance = { factor = 100 }
+	}
+}
+
+letter_event = {
+	id = coup.101
+	desc = "EVTDESCCOUP101"
+	border = GFX_event_letter_frame_war
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+
+character_event = {
+	id = coup.102
+	desc = "EVTDESCCOUP102"
+	picture = GFX_evt_battle
+	border = GFX_evt_normal_frame_war
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACOUP102"
+		hidden_tooltip = {
+			FROM = {
+				plot_target_char = {
+					remove_opinion = { who = ROOT modifier = opinion_backing_coup }
+					opinion = { who = ROOT modifier = opinion_attempted_coup }
+				}
+			}
+		}
+		join_attacker_wars = FROM
+	}
+}
+
+character_event = {
+	id = coup.103
+	desc = "EVTDESCCOUP103"
+	picture = GFX_evt_battle
+	border = GFX_evt_normal_frame_war
+	is_triggered_only = yes
+	
+	option = {
+		# Immediately declare for the rebels
+		trigger = {
+			is_landed = yes
+			same_liege = FROM
+		}
+		name = "EVTOPTACOUP103"
+		join_attacker_wars = FROM
+		FROM = { plot_target_char = { opinion = { who = ROOT modifier = opinion_attempted_coup } } }
+		ai_chance = {
+			factor = 100
+			# More military-oriented characters should do things straightforwardly
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.25
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.5
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege = 0.75
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					trait = misguided_warrior
+					trait = tough_soldier
+					trait = skilled_tactician
+					trait = brilliant_strategist
+				}
+			}
+			
+			# Sneakier characters should not
+			modifier = {
+				factor = 0.2
+				has_job_title = job_spymaster
+			}
+			modifier = {
+				factor = 0.25
+				has_job_title = job_treasurer
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					trait = naive_plotter
+					trait = flamboyant_schemer
+					trait = intricate_webweaver
+					trait = elusive_shadow
+				}
+			}
+		}
+	}
+	
+	option = {
+		# Pretend to be loyal for a while
+		name = "EVTOPTBCOUP103"
+		ai_chance = { factor = 50 }
+	}
+}
+
+character_event = {
+	id = coup.104
+	desc = "EVTDESCCOUP104"
+	picture = GFX_evt_news
+	border = GFX_evt_normal_frame_war
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+
+# The coup leader surrenders
+letter_event = {
+	id = coup.110
+	desc = "EVTDESCCOUP110"
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+
+character_event = {
+	id = coup.111
+	desc = "EVTDESCCOUP111"
+	picture = GFX_evt_thrown_into_dungeon
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACOUP111" }
+}
+
+# Opportunities for plot backers to defect
+# Mid-combat
+character_event = {
+	id = coup.120
+	desc = "EVTDESCCOUP120"
+	picture = GFX_evt_battle
+	border = GFX_evt_normal_frame_war
+	is_triggered_only = yes # Triggered on combat pulse
+	
+	trigger = {
+		demesne_size = 1
+		# Currently in battle with a coconspirator
+		any_backed_character = {
+			any_war = {
+				attacker = { character = PREV }
+				defender = { any_vassal = { character = ROOT } }
+				using_cb = civil_war
+			}
+			OR = {
+				character = FROM
+				any_vassal = { character = FROM }
+			}
+			# Good reason to defect in this particular battle:
+			#	- It is over a critical strategic target
+			#	- There are two or more people who will defect at once
+			#	- I command the largest squadron
+			OR = {
+				plot_target_char = { capital_scope = { ROOT = { location = { province_id = PREVPREV } } } }
+				capital_scope = { ROOT = { location = { province_id = PREVPREV } } }
+				any_plot_backer = {
+					at_location = ROOT
+					in_battle = yes
+					war_with = PREV
+					count = 2
+				}
+				ROOT = {
+					location = {
+						NOT = {
+							any_province_character = {
+								in_battle = yes
+								war_with = PREVPREVPREV
+								relative_power = { who = ROOT power = 1 }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTACOUP120"
+		hidden_tooltip = {
+			FROM = { character_event = { id = coup.121 } }
+			location = {
+				any_province_character = {
+					limit = {
+						in_battle = yes
+						NOT = { war_with = ROOT }
+					}
+					character_event = { id = coup.122 }
+				}
+			}
+		}
+		liege = {
+			opinion = { who = ROOT modifier = opinion_attempted_coup }
+			character_event = { id = coup.124 tooltip = "EVTTOOLTIPCOUP124" }
+		}
+		random_backed_character = {
+			limit = {
+				any_war = {
+					attacker = { character = PREV }
+					defender = { any_vassal = { character = ROOT } }
+					using_cb = civil_war
+				}
+				OR = {
+					character = FROM
+					any_vassal = { character = FROM }
+				}
+				OR = {
+					plot_target_char = { capital_scope = { ROOT = { location = { province_id = PREVPREV } } } }
+					capital_scope = { ROOT = { location = { province_id = PREVPREV } } }
+					any_plot_backer = {
+						at_location = ROOT
+						in_battle = yes
+						war_with = PREV
+						count = 2
+					}
+					ROOT = {
+						location = {
+							NOT = {
+								any_province_character = {
+									in_battle = yes
+									war_with = PREVPREVPREV
+									relative_power = { who = ROOT power = 1 }
+								}
+							}
+						}
+					}
+				}
+			}
+			ROOT = { join_attacker_wars = PREV }
+			character_event = { id = coup.123 tooltip = "EVTTOOLTIPCOUP123" }
+		}
+	}
+}
+
+# Inform various people
+character_event = {
+	id = coup.121
+	desc = "EVTDESCCOUP121"
+	picture = GFX_evt_battle
+	border = GFX_evt_normal_frame_war
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACOUP121" }
+}
+character_event = {
+	id = coup.122
+	desc = "EVTDESCCOUP122"
+	picture = GFX_evt_battle
+	border = GFX_evt_normal_frame_war
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACOUP122" }
+}
+character_event = {
+	id = coup.123
+	desc = "EVTDESCCOUP123"
+	picture = GFX_evt_battle
+	border = GFX_evt_normal_frame_war
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACOUP123" }
+}
+character_event = {
+	id = coup.124
+	desc = "EVTDESCCOUP124"
+	picture = GFX_evt_battle
+	border = GFX_evt_normal_frame_war
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACOUP124" }
+}
+
+# You are the steward; time to run off with the treasury!
+character_event = {
+	id = coup.130
+	desc = "EVTDESCCOUP130"
+	picture = GFX_evt_cabal
+	border = GFX_evt_normal_frame_war
+	
+	min_age = 16
+	prisoner = no
+	only_capable = yes
+	
+	trigger = {
+		any_backed_character = {
+			any_war = {
+				attacker = { character = PREV }
+				defender = {
+					job_treasurer = { character = ROOT }
+					NOT = { intrigue = ROOT }
+					NOT = { job_spymaster = { intrigue = ROOT } }
+					wealth = 100 # There must be some war chest worth stealing
+				}
+				using_cb = civil_war
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 0.1
+			liege = { NOT = { yearly_income = 0 } } # Massive damage potential
+		}
+		modifier = {
+			factor = 0.5
+			liege = { wealth = 250 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { wealth = 500 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { wealth = 750 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { wealth = 1000 }
+		}
+	}
+	
+	option = {
+		trigger = { is_ruler = yes }
+		name = "EVTOPTACOUP130"
+		random_backed_character = {
+			limit = {
+				any_war = {
+					attacker = { character = PREV }
+					defender = {
+						job_treasurer = { character = ROOT }
+						NOT = { intrigue = ROOT }
+						NOT = { job_spymaster = { intrigue = ROOT } }
+						wealth = 100 # There must be some war chest worth stealing
+					}
+					using_cb = civil_war
+				}
+			}
+			letter_event = { id = coup.131 tooltip = "EVTTOOLTIPCOUP131" }
+			plot_target_char = {
+				tooltip = {
+					transfer_scaled_wealth = { to = PREV value = 0.5 }
+					transfer_scaled_wealth = { to = ROOT value = 0.5 }
+				}
+				opinion = { who = ROOT modifier = opinion_attempted_coup }
+				character_event = { id = coup.133 tooltip = "EVTTOOLTIPCOUP133" }
+				hidden_tooltip = { any_vassal = { character_event = { id = coup.134 } } }
+			}
+			ROOT = { join_attacker_wars = PREV }
+		}
+	}
+	
+	option = {
+		trigger = { is_ruler = no }
+		name = "EVTOPTBCOUP130"
+		random_backed_character = {
+			limit = {
+				any_war = {
+					attacker = { character = PREV }
+					defender = {
+						job_treasurer = { character = ROOT }
+						NOT = { intrigue = ROOT }
+						NOT = { job_spymaster = { intrigue = ROOT } }
+						wealth = 100 # There must be some war chest worth stealing
+					}
+					using_cb = civil_war
+				}
+			}
+			letter_event = { id = coup.132 }
+			plot_target_char = {
+				opinion = { who = ROOT modifier = opinion_attempted_coup }
+				character_event = { id = coup.133 }
+				hidden_tooltip = { any_vassal = { character_event = { id = coup.134 } } }
+			}
+		}
+	}
+}
+
+# Inform various people
+letter_event = {
+	id = coup.131
+	desc = "EVTDESCCOUP131"
+	border = GFX_evt_letter_frame_war
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACOUP131"
+		plot_target_char = {
+			transfer_scaled_wealth = { to = ROOT value = 0.5 }
+			transfer_scaled_wealth = { to = FROM value = 0.5 }
+		}
+	}
+}
+letter_event = {
+	id = coup.132
+	desc = "EVTDESCCOUP132"
+	border = GFX_evt_letter_frame_war
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACOUP121"
+		plot_target_char = { transfer_scaled_wealth = { to = ROOT value = 1 } }
+		reverse_banish = FROM
+	}
+}
+character_event = {
+	id = coup.133
+	desc = "EVTDESCCOUP133"
+	picture = GFX_evt_battle
+	border = GFX_evt_normal_frame_war
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACOUP133" }
+}
+character_event = {
+	id = coup.134
+	desc = "EVTDESCCOUP134"
+	picture = GFX_evt_battle
+	border = GFX_evt_normal_frame_war
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTACOUP134" }
+}
+
+# # Treacherous garrison commander
+# character_event = {
+	# id = coup.140
+	# desc = "EVTDESCCOUP140"
+	# picture = GFX_evt_siege
+	# border = GFX_evt_normal_frame_war
+	# is_triggered_only = yes # Triggered on siege pulse
+	
+	# trigger = {
+		# is_attacker = no
+		# siege = {
+			# enemy = {
+				# leader = {
+					# ROOT = {
+						# any_backed_character = {
+							# any_war = {
+								# attacker = { character = PREV }
+								# defender = { ROOT = { is_liege_or_above = PREV } }
+								# using_cb = civil_war
+							# }
+							# OR = {
+								# character = PREVPREV
+								# is_vassal_or_below = PREVPREV
+							# }
+						# }
+					# }
+				# }
+			# }
+		# }
+	# }
+	
+	# option = {
+		# trigger = { is_ruler = yes }
+		# name = "EVTOPTACOUP140"
+		# siege = {
+			# morale = -1 # Instantly surrender
+			# enemy = {
+				# leader = {
+					# character_event = { id = coup.141 tooltip = "EVTTOOLTIPCOUP141" }
+					# ROOT = {
+						# any_backed_character = {
+							# limit = {
+								# any_war = {
+									# attacker = { character = PREV }
+									# defender = { ROOT = { is_liege_or_above = PREV } }
+									# using_cb = civil_war
+								# }
+								# OR = {
+									# character = PREVPREV
+									# is_vassal_or_below = PREVPREV
+								# }
+								# letter_event = { id = coup.142 tooltip = "EVTTOOLTIPCOUP142" }
+								# ROOT = { join_attacker_wars = PREV }
+								# plot_target_char = {
+									# opinion = { who = ROOT modifier = opinion_attempted_coup }
+									# character_event = { id = coup.144 tooltip = "EVTTOOLTIPCOUP144" }
+									# hidden_tooltip = { any_vassal = { character_event = { id = coup.145 } } }
+								# }
+							# }
+						# }
+					# }
+				# }
+			# }
+		# }
+	# }
+	
+	# option = {
+		# trigger = { is_ruler = no }
+		# name = "EVTOPTBCOUP140"
+		# siege = {
+			# morale = -1 # Instantly surrender
+			# enemy = {
+				# leader = {
+					# character_event = { id = coup.141 }
+					# ROOT = {
+						# any_backed_character = {
+							# limit = {
+								# any_war = {
+									# attacker = { character = PREV }
+									# defender = { ROOT = { is_liege_or_above = PREV } }
+									# using_cb = civil_war
+								# }
+								# OR = {
+									# character = PREVPREV
+									# is_vassal_or_below = PREVPREV
+								# }
+								# letter_event = { id = coup.143 }
+								# plot_target_char = {
+									# opinion = { who = ROOT modifier = opinion_attempted_coup }
+									# character_event = { id = coup.144 }
+									# any_vassal = { character_event = { id = coup.145 } }
+								# }
+							# }
+						# }
+					# }
+				# }
+			# }
+		# }
+	# }
+# }
+# # Inform various people
+# character_event = {
+	# id = coup.141
+	# desc = "EVTDESCCOUP141"
+	# picture = GFX_evt_siege
+	# border = GFX_evt_normal_frame_war
+	# is_triggered_only = yes
+	
+	# option = { name = "EVTOPTACOUP141" }
+# }
+# letter_event = {
+	# id = coup.142
+	# desc = "EVTDESCCOUP142"
+	# border = GFX_evt_letter_frame_war
+	# is_triggered_only = yes
+	
+	# option = {
+		# name = "EVTOPTACOUP142"
+	# }
+# }
+# letter_event = {
+	# id = coup.143
+	# desc = "EVTDESCCOUP143"
+	# border = GFX_evt_letter_frame_war
+	# is_triggered_only = yes
+	
+	# option = {
+		# name = "EVTOPTACOUP143"
+		# reverse_banish = FROM
+	# }
+# }
+# character_event = {
+	# id = coup.144
+	# desc = "EVTDESCCOUP144"
+	# picture = GFX_evt_siege
+	# border = GFX_evt_normal_frame_war
+	# is_triggered_only = yes
+	
+	# option = { name = "EVTOPTACOUP144" }
+# }
+# character_event = {
+	# id = coup.145
+	# desc = "EVTDESCCOUP145"
+	# picture = GFX_evt_siege
+	# border = GFX_evt_normal_frame_war
+	# is_triggered_only = yes
+	
+	# option = { name = "EVTOPTACOUP145" }
+# }
+
+# # The war is going badly, now's your last chance to make a difference
+# character_event = {
+	# id = coup.150
+	# desc = "EVTDESCCOUP150"
+	# picture = GFX_evt_battle
+	# border = GFX_evt_normal_frame_war
+	# is_triggered_only = yes
+	
+	# min_age = 16
+	# only_rulers = yes
+	# prisoner = no
+	# capable_only = yes
+	
+	# trigger = {
+		# demesne_size = 1
+		# any_backed_character = {
+			# any_war = {
+				# attacker = { character = PREV }
+				# defender = { any_vassal = { character = ROOT } }
+				# using_cb = civil_war
+				# NOT = { war_score = -75 }
+			# }
+		# }
+	# }
+	
+	# mean_time_to_happen = {
+		# months = 24
+	# }
+	
+	# option = {
+		# name = "EVTOPTACOUP150"
+		# random_backed_character = {
+			# limit = {
+				# any_war = {
+					# attacker = { character = PREV }
+					# defender = { any_vassal = { character = ROOT } }
+					# using_cb = civil_war
+					# NOT = { war_score = -75 }
+				# }
+			# }
+			# letter_event = { id = coup.151 tooltip = "EVTTOOLTIPCOUP151" }
+			# ROOT = { join_attacker_wars = PREV }
+			# plot_target_char = {
+				# opinion = { who = ROOT modifier = opinion_attempted_coup }
+				# letter_event = { id = coup.152 tooltip = "EVTTOOLTIPCOUP152" }
+				# hidden_tooltip = { any_vassal = { character_event = { id = coup.153 } } }
+			# }
+		# }
+	# }
+# }
+# letter_event = {
+	# id = coup.151
+	# desc = "EVTDESCCOUP151"
+	# border = GFX_evt_letter_frame_war
+	# is_triggered_only = yes
+	
+	# option = { name = "EVTOPTACOUP151" }
+# }
+# letter_event = {
+	# id = coup.152
+	# desc = "EVTDESCCOUP152"
+	# border = GFX_evt_letter_frame_war
+	# is_triggered_only = yes
+	
+	# option = { name = "EVTOPTACOUP152" }
+# }
+# character_event = {
+	# id = coup.153
+	# desc = "EVTDESCCOUP153"
+	# picture = GFX_evt_battle
+	# border = GFX_evt_normal_frame_war
+	# is_triggered_only = yes
+	
+	# option = { name = "EVTOPTACOUP153" }
+# }
+
+# Plot leader has the opportunity to carry out a military coup
+character_event = {
+	id = coup.200
+	desc = "EVTDESCCOUP200"
+	picture = GFX_evt_battle
+	border = GFX_evt_character_frame_intrigue
+	
+	min_age = 16
+	only_playable = yes
+	prisoner = no
+	capable_only = yes
+	
+	trigger = {
+		OR = {
+			has_plot = plot_coup
+			has_plot = plot_justified_coup
+		}
+		NOT = { any_current_enemy = { always = yes } }
+		is_plot_active = no
+		
+		is_feudal = yes # Must have a military command
+		is_patrician = no
+		
+		# Must be within strike distance of the capital
+		# (strike distance set at two jumps for now)
+		plot_target_char = {
+			location = { # The current ruler is the primary target
+				OR = {
+					any_province_character = { character = ROOT }
+					any_neighbor_province = {
+						OR = {
+							any_province_character = { character = ROOT }
+							any_neighbor_province = { any_province_character = { character = ROOT } }
+						}
+					}
+				}
+			}
+			
+			# Must not already be imprisoned
+			prison = no
+		}
+		
+		# Avoid spamming
+		OR = {
+			NOT = { has_character_flag = flag_coup_delay }
+			had_character_flag = { flag = flag_coup_delay days = 720 }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 0.5
+			plot_power = 0.25
+		}
+		modifier = {
+			factor = 0.5
+			plot_power = 0.5
+		}
+		modifier = {
+			factor = 0.5
+			plot_power = 0.75
+		}
+		modifier = {
+			factor = 0.5
+			plot_power = 1
+		}
+		modifier = {
+			factor = 0.5
+			plot_power = 1.25
+		}
+		modifier = {
+			factor = 0.5
+			plot_power = 1.5
+		}
+		modifier = {
+			factor = 0.5
+			plot_power = 1.75
+		}
+		modifier = {
+			factor = 0.5
+			plot_power = 2
+		}
+	}
+	
+	option = {
+		name = "EVTOPTACOUP200"
+		activate_plot = yes
+		diplomatic_immunity = yes
+		plot_target_char = {
+			character_event = { id = coup.203 tooltip = "EVTTOOLTIPCOUP203" days = 5 random = 3 }
+			# Grab a random intervener, if there is one
+			random_vassal = {
+				limit = {
+					# Military and capable
+					is_feudal = yes
+					is_patrician = no
+					age = 16
+					NOT = { trait = incapable }
+					prisoner = no
+					
+					# Not a plot backer
+					NOT = { any_backed_character = { character = FROM } }
+					
+ 					# No more than one jump away
+					location = {
+						OR = {
+							any_province_character = { character = PREVPREVPREV }
+							any_neighbor_province = { any_province_character = { character = PREVPREVPREVPREV } }
+						}
+					}
+					
+					# Intrigue greater than plotter's
+					ROOT = { NOT = { intrigue = PREV } }
+					
+					# Comparable military power to plotter's
+					relative_power = { who = ROOT power = 0.75 }
+				}
+				character_event = { id = coup.202 days = 2 tooltip = "EVTTOOLTIPCOUP202" }
+			}
+		}
+		any_plot_backer = { letter_event = { id = coup.201 tooltip = "EVTTOOLTIPCOUP201" } }
+		ai_chance = {
+			factor = 50
 			modifier = {
 				factor = 2
 				trait = brave
 			}
 			modifier = {
 				factor = 0.5
-				trait = friendly
+				trait = craven
 			}
 			modifier = {
 				factor = 2
-				trait = cold
+				trait = open_minded
 			}
 			modifier = {
-				factor = 1.25
-				plot_power = 0.1
+				factor = 0.5
+				trait = close_minded
 			}
 			modifier = {
-				factor = 1.25
-				plot_power = 0.2
+				factor = 4
+				plot_power = 1.0
 			}
 			modifier = {
-				factor = 1.25
-				plot_power = 0.3
-			}
-			modifier = {
-				factor = 1.25
-				plot_power = 0.4
-			}
-			modifier = {
-				factor = 1.25
-				plot_power = 0.5
-			}
-			modifier = {
-				factor = 1.25
-				plot_power = 0.6
-			}
-			modifier = {
-				factor = 1.25
-				plot_power = 0.7
-			}
-			modifier = {
-				factor = 1.25
-				plot_power = 0.8
-			}
-			modifier = {
-				factor = 1.25
-				plot_power = 0.9
-			}
-			modifier = {
-				factor = 1.25
-				plot_power = 1
-			}
-			modifier = {
-				factor = 1.25
-				plot_power = 1.1
-			}
-			modifier = {
-				factor = 1.25
-				plot_power = 1.2
-			}
-			modifier = {
-				factor = 1.25
-				plot_power = 1.3
-			}
-			modifier = {
-				factor = 1.25
-				plot_power = 1.4
-			}
-			modifier = {
-				factor = 1.25
-				plot_power = 1.5
-			}
-			modifier = {
-				factor = 1.25
-				plot_power = 1.6
-			}
-			modifier = {
-				factor = 1.25
-				plot_power = 1.7
-			}
-			modifier = {
-				factor = 1.25
-				plot_power = 1.8
-			}
-			modifier = {
-				factor = 1.25
-				plot_power = 1.9
-			}
-			modifier = {
-				factor = 1.25
-				plot_power = 2
+				factor = 2
+				has_plot = plot_justified_coup
 			}
 		}
 	}
 	
 	option = {
-		name = "EVTOPTBCOUP5203" # Don't go to war
-		character_event = { id = coup.5400 tooltip = "EVTTOOLTIPCOUP5400" }
-		ai_chance = {
-			factor = 100
-			modifier = {
-				factor = 0
-				trait = ambitious
-			}
-		}
+		name = "EVTOPTBCOUP200"
+		clr_character_flag = flag_coup_delay
+		set_character_flag = flag_coup_delay
 	}
-}
-#5300	The coup was successful!
-character_event = {
-	id = coup.5300
-	desc = "EVTDESCCOUP5300"
-	picture = GFX_evt_military_coup
-	is_triggered_only = yes
-	
-	option = {
-		# This difference is just for flavor, but it's fun anyway
-		trigger = {
-			OR = {
-				trait = content
-				AND = {
-					NOT = { trait = ambitious }
-					NOT = { trait = pragmatic }
-				}
-			}
-		}
-		name = "EVTOPTACOUP5300"
-		plot_target_char = {
-			hidden_tooltip = {
-				clr_character_flag = flag_failed_purge
-				clr_character_flag = flag_launching_civil_war
-				any_vassal = {
-					clr_character_flag = flag_coup_intervener
-					clr_character_flag = flag_coup_loyalist
-				}
-			}
-			imprison = ROOT
-			# Usurp titles using whatever event is appropriate
-			character_event = { id = usurpation.0 tooltip = "EVTTOOLTIPUSURPATION0" }
-			character_event = { id = usurpation.1 tooltip = "EVTTOOLTIPUSURPATION0" }
-			character_event = { id = usurpation.2 tooltip = "EVTTOOLTIPUSURPATION0" }
-			character_event = { id = coup.5301 tooltip = "EVTTOOLTIPCOUP5301" }
-			hidden_tooltip = {
-				any_realm_character = {
-					limit = {
-						NOT = { character = ROOT }
-						NOT = { character = PREV }
-						NOT = { any_backed_character = { character = ROOT } }
-					}
-					character_event = { id = coup.5303 }
-				}
-			}
-		}
-		hidden_tooltip = {
-			diplomatic_immunity = no
-			clr_character_flag = flag_coup_leader
-			clr_character_flag = flag_coup_plan_military
-			clr_character_flag = flag_coup_action_military
-			clr_character_flag = flag_coup_plan_spymaster
-			clr_character_flag = flag_coup_action_spymaster
-			clr_character_flag = flag_coup_plan_lover
-			clr_character_flag = flag_coup_action_lover
-			clr_character_flag = flag_failed_coup
-			clr_character_flag = flag_launching_civil_war
-			any_plot_backers = {
-				diplomatic_immunity = no
-				clr_character_flag = flag_coup_member
-				clr_character_flag = flag_coup_plan_military
-				clr_character_flag = flag_coup_action_military
-				clr_character_flag = flag_coup_plan_spymaster
-				clr_character_flag = flag_coup_action_spymaster
-				clr_character_flag = flag_coup_plan_lover
-				clr_character_flag = flag_coup_action_lover
-				clr_character_flag = flag_failed_coup
-				character_event = { id = coup.5302 }
-			}
-		}
-		set_character_flag = flag_successful_coup
-	}
-	
-	option = {
-		# This difference is just for flavor, but it's fun anyway
-		trigger = {
-			NOT = { trait = content }
-			OR = {
-				trait = ambitious
-				trait = pragmatic
-			}
-		}
-		name = "EVTOPTBCOUP5300"
-		plot_target_char = {
-			hidden_tooltip = {
-				clr_character_flag = flag_failed_purge
-				clr_character_flag = flag_launching_civil_war
-				any_vassal = {
-					clr_character_flag = flag_coup_intervener
-					clr_character_flag = flag_coup_loyalist
-				}
-			}
-			imprison = ROOT
-			# Usurp titles using whatever event is appropriate
-			character_event = { id = coup.5301 tooltip = "EVTTOOLTIPCOUP5301" }
-			hidden_tooltip = {
-				character_event = { id = usurpation.0 }
-				character_event = { id = usurpation.1 }
-				character_event = { id = usurpation.2 }
-				any_realm_character = {
-					limit = {
-						NOT = { character = ROOT }
-						NOT = { character = PREV }
-						NOT = { any_backed_character = { character = ROOT } }
-					}
-					character_event = { id = coup.5303 }
-				}
-			}
-		}
-		hidden_tooltip = {
-			diplomatic_immunity = no
-			clr_character_flag = flag_coup_leader
-			clr_character_flag = flag_coup_plan_military
-			clr_character_flag = flag_coup_action_military
-			clr_character_flag = flag_coup_plan_spymaster
-			clr_character_flag = flag_coup_action_spymaster
-			clr_character_flag = flag_coup_plan_lover
-			clr_character_flag = flag_coup_action_lover
-			clr_character_flag = flag_failed_coup
-			clr_character_flag = flag_launching_civil_war
-			any_plot_backers = {
-				diplomatic_immunity = no
-				clr_character_flag = flag_coup_member
-				clr_character_flag = flag_coup_plan_military
-				clr_character_flag = flag_coup_action_military
-				clr_character_flag = flag_coup_plan_spymaster
-				clr_character_flag = flag_coup_action_spymaster
-				clr_character_flag = flag_coup_plan_lover
-				clr_character_flag = flag_coup_action_lover
-				clr_character_flag = flag_failed_coup
-				character_event = { id = coup.5302 }
-			}
-		}
-		set_character_flag = flag_successful_coup
-	}
-}
-# Inform everyone that the coup was successful
-character_event = {
-	id = coup.5301
-	desc = "EVTDESCCOUP5301"
-	picture = GFX_evt_prison
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTACOUP5301" }
-}
-character_event = {
-	id = coup.5302
-	desc = "EVTDESCCOUP5302"
-	picture = GFX_evt_speech
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTACOUP5302" }
-}
-character_event = {
-	id = coup.5303
-	desc = "EVTDESCCOUP5303"
-	picture = GFX_evt_military_coup
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTACOUP5303" }
 }
 
-# The coup failed
+letter_event = {
+	id = coup.201
+	desc = "EVTDESCCOUP201"
+	border = GFX_evt_letter_frame_intrigue
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+
+# Chance to intervene
 character_event = {
-	id = coup.5400
-	desc = "EVTDESCCOUP5400"
-	picture = GFX_evt_prison
+	id = coup.202
+	desc = "EVTDESCCOUP202"
+	picture = GFX_evt_military_parade
+	border = GFX_evt_normal_frame_intrigue
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTACOUP5400"
-		# Clear out unnessecary flags and immunities
-		hidden_tooltip = {
-			diplomatic_immunity = no
-			clr_character_flag = flag_coup_leader
-			clr_character_flag = flag_coup_plan_military
-			clr_character_flag = flag_coup_action_military
-			clr_character_flag = flag_coup_plan_spymaster
-			clr_character_flag = flag_coup_action_spymaster
-			clr_character_flag = flag_coup_plan_lover
-			clr_character_flag = flag_coup_action_lover
-			clr_character_flag = flag_failed_coup
-			clr_character_flag = flag_launching_civil_war
-			any_plot_backer = {
-				diplomatic_immunity = no
-				clr_character_flag = flag_coup_member
-				clr_character_flag = flag_coup_plan_military
-				clr_character_flag = flag_coup_action_military
-				clr_character_flag = flag_coup_plan_spymaster
-				clr_character_flag = flag_coup_action_spymaster
-				clr_character_flag = flag_coup_plan_lover
-				clr_character_flag = flag_coup_action_lover
-				clr_character_flag = flag_failed_coup
-				# Also inform plot backers that their leader failed
-				character_event = { id = coup.5402 }
-				ROOT = { plot_target_char = { opinion = { who = PREVPREV modifier = opinion_traitor } } }
+		name = "EVTOPTACOUP202" # Stop them
+		set_character_flag = flag_coup_intervener
+		ai_chance = {
+			factor = 50
+			
+			# Personality
+			modifier = {
+				factor = 2
+				trait = disciplined
 			}
-		}
-		plot_target_char = {
-			opinion = { who = ROOT modifier = opinion_traitor }
-			hidden_tooltip = {
-				character_event = { id = coup.5401 }
-				any_realm_character = {
-					limit = {
-						NOT = { character = ROOT }
-						NOT = { character = PREV }
-						NOT = { any_backed_character = { character = ROOT } }
-					}
-					character_event = { id = coup.5403 }
+			modifier = {
+				factor = 0.5
+				trait = carefree
+			}
+			
+			# Sense of Duty
+			modifier = {
+				factor = 2
+				liege = {
+					religion = ROOT
+					religion_authority = 0.75
 				}
 			}
+			modifier = {
+				factor = 2
+				liege = {
+					religion = ROOT
+					religion_authority = 0.5
+				}
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 2
+				liege = {
+					religion = ROOT
+					religion_authority = 0.25
+				}
+				trait = radical
+			}
+			modifier = {
+				factor = 2
+				liege = { religion = ROOT }
+				trait = radical
+			}
+			
+			# Opinions
+			modifier = {
+				factor = 1.25
+				opinion = { who = liege value = 100 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = liege value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = liege value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = liege value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = liege value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = liege value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = liege value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = liege value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = liege value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = liege value = 10 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = liege value = -9 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = liege value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = liege value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = liege value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = liege value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = liege value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = liege value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = liege value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = liege value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = liege value = -99 } }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 100 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = liege value = -9 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = liege value = -19 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = liege value = -29 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = liege value = -39 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = liege value = -49 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = liege value = -59 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = liege value = -69 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = liege value = -79 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = liege value = -89 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = liege value = -99 } }
+			}
 		}
-		cancel_plot = plot_coup
-		cancel_plot = plot_justified_coup
+	}
+	
+	option = {
+		# Do nothing
+		name = "EVTOPTBCOUP202"
 	}
 }
-#5500	Choose next coup action
+
+# Resolve coup?
 character_event = {
-	id = coup.5500
-	desc = "EVTDESCCOUP5500"
-	picture = GFX_evt_cabal
+	id = coup.203
+	hide_window = yes
 	is_triggered_only = yes
 	
-	# Send ultimatum immediately
-	option = {
-		trigger = {
-			NOT = { has_character_flag = flag_coup_plan_military }
-			NOT = { has_character_flag = flag_coup_plan_spymaster }
-			NOT = {
-				any_plot_backer = {
-					OR = {
-						AND = {
-							has_character_flag = flag_coup_plan_military
-							same_liege = ROOT
-						}
-						AND = {
-							has_character_flag = flag_coup_plan_spymaster
-							same_liege = ROOT
-						}
-					}
-				}
-			}
-		}
-		name = "EVTOPTACOUP5000"
-		plot_target_char = { letter_event = { id = coup.5200 tooltip = "EVTTOOLTIP5200" } }
-	}
-	
-	# Launch another military attack
-	option = {
-		trigger = {
-			OR = {
-				has_character_flag = flag_coup_plan_military
-				any_plot_backer = {
-					has_character_flag = flag_coup_plan_military
-					same_liege = ROOT
-				}
-			}
-		}
-		name = "EVTOPTBCOUP5001"
+	immediate = {
 		if = {
-			limit = { has_character_flag = flag_coup_plan_military }
-			narrative_event = { id = coup.117 tooltip = "EVTTOOLTIPCOUP117" }
-		}
-		if = {
-			limit = { NOT = { has_character_flag = flag_coup_plan_military } }
-			# Grab a random military backer to lead the coup. Try to choose somebody not the worst.
-			random_plot_backer = {
-				limit = {
-					has_character_flag = flag_coup_plan_military
-					same_liege = ROOT
-					NOT = {
-						ROOT = {
-							any_plot_backer = {
-								has_character_flag = flag_coup_plan_military
-								same_liege = ROOT
-								attribute_diff = { character = PREVPREV attribute = martial value = 1 }
-							}
-							any_plot_backer = {
-								has_character_flag = flag_coup_plan_military
-								same_liege = ROOT
-								attribute_diff = { character = PREVPREV attribute = intrigue value = 1 }
-							}
-						}
-					}
-				}
-				narrative_event = { id = coup.117 tooltip = "EVTTOOLTIPCOUP117" }
+			limit = {
+				prisoner = no
+				FROM = { plot_target_title = { holder_scope = { character = ROOT } } }
 			}
-		}
-	}
-	
-	# Call in the spymaster
-	option = {
-		trigger = {
-			OR = {
-				has_character_flag = flag_coup_plan_spymaster
-				any_plot_backer = {
-					has_character_flag = flag_coup_plan_spymaster
-					same_liege = ROOT
-				}
-			}
-		}
-		name = "EVTOPTCCOUP5001"
-		if = {
-			limit = { has_character_flag = flag_coup_plan_spymaster }
-			narrative_event = { id = coup.217 tooltip = "EVTTOOLTIPCOUP217" }
+			e_rebels = { holder_scope = { character_event = { id = coup.205 } } }
 		}
 		if = {
 			limit = {
-				any_plot_backer = {
-					has_character_flag = flag_coup_plan_spymaster
-					same_liege = ROOT
+				NOT = {
+					AND = {
+						prisoner = no
+						FROM = { plot_target_title = { holder_scope = { character = ROOT } } }
+					}
 				}
 			}
-			random_plot_backer = {
-				limit = {
-					has_character_flag = flag_coup_plan_spymaster
-					same_liege = ROOT
+			FROM = { character_event = { id = coup.204 } } # Wait, nevermind, abort, abort
+			any_vassal = { clr_character_flag = flag_coup_intervener }
+		}
+	}
+}
+
+# Target became invalid
+character_event = {
+	id = coup.204
+	desc = "EVTDESCCOUP204"
+	picture = GFX_evt_council
+	border = GFX_evt_normal_frame_intrigue
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACOUP204"
+		activate_plot = no
+		diplomatic_immunity = no
+	}
+}
+
+# Resolve coup
+character_event = {
+	id = coup.205
+	hide_window = yes
+	is_triggered_only = yes
+	
+	option = {
+		# Coup successful!
+		FROM = { FROM = { narrative_event = { id = coup.210 } } }
+		ai_chance = { factor = 50 }
+	}
+	
+	option = {
+		# Coup foiled by target
+		FROM = { FROM = { narrative_event = { id = coup.220 } } }
+		ai_chance = {
+			factor = 50
+			# Too trusting
+			modifier = {
+				factor = 0.5
+				FROM = {
+					opinion = { who = FROMFROM value = 50 }
+					NOT = { trait = cold }
 				}
-				narrative_event = { id = coup.217 tooltip = "EVTTOOLTIPCOUP217" }
+			}
+			modifier = {
+				factor = 0.5
+				FROM= {
+					opinion = { who = FROMFROM value = 50 }
+					trait = friendly
+				}
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					opinion = { who = FROMFROM value = 75 }
+					NOT = { trait = cold }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					opinion = { who = FROMFROM value = 75 }
+					trait = friendly
+				}
+			}
+			
+			# Compared Intrigue
+			modifier = {
+				factor = 1.25
+				FROM = {
+					attribute_diff = {
+						character = FROMFROM
+						attribute = intrigue
+						value = 10
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					attribute_diff = {
+						character = FROMFROM
+						attribute = intrigue
+						value = 9
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					attribute_diff = {
+						character = FROMFROM
+						attribute = intrigue
+						value = 8
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					attribute_diff = {
+						character = FROMFROM
+						attribute = intrigue
+						value = 7
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					attribute_diff = {
+						character = FROMFROM
+						attribute = intrigue
+						value = 6
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					attribute_diff = {
+						character = FROMFROM
+						attribute = intrigue
+						value = 5
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					attribute_diff = {
+						character = FROMFROM
+						attribute = intrigue
+						value = 4
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					attribute_diff = {
+						character = FROMFROM
+						attribute = intrigue
+						value = 3
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					attribute_diff = {
+						character = FROMFROM
+						attribute = intrigue
+						value = 2
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					attribute_diff = {
+						character = FROMFROM
+						attribute = intrigue
+						value = 1
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROMFROM = {
+					attribute_diff = {
+						character = FROM
+						attribute = intrigue
+						value = 1
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROMFROM = {
+					attribute_diff = {
+						character = FROM
+						attribute = intrigue
+						value = 2
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROMFROM = {
+					attribute_diff = {
+						character = FROM
+						attribute = intrigue
+						value = 3
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROMFROM = {
+					attribute_diff = {
+						character = FROM
+						attribute = intrigue
+						value = 4
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROMFROM = {
+					attribute_diff = {
+						character = FROM
+						attribute = intrigue
+						value = 5
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROMFROM = {
+					attribute_diff = {
+						character = FROM
+						attribute = intrigue
+						value = 6
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROMFROM = {
+					attribute_diff = {
+						character = FROM
+						attribute = intrigue
+						value = 7
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROMFROM = {
+					attribute_diff = {
+						character = FROM
+						attribute = intrigue
+						value = 8
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROMFROM = {
+					attribute_diff = {
+						character = FROM
+						attribute = intrigue
+						value = 9
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROMFROM = {
+					attribute_diff = {
+						character = FROM
+						attribute = intrigue
+						value = 10
+					}
+				}
+			}
+			# Compared Martial
+			modifier = {
+				factor = 1.25
+				FROM = {
+					attribute_diff = {
+						character = FROMFROM
+						attribute = martial
+						value = 10
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					attribute_diff = {
+						character = FROMFROM
+						attribute = martial
+						value = 9
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					attribute_diff = {
+						character = FROMFROM
+						attribute = martial
+						value = 8
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					attribute_diff = {
+						character = FROMFROM
+						attribute = martial
+						value = 7
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					attribute_diff = {
+						character = FROMFROM
+						attribute = martial
+						value = 6
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					attribute_diff = {
+						character = FROMFROM
+						attribute = martial
+						value = 5
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					attribute_diff = {
+						character = FROMFROM
+						attribute = martial
+						value = 4
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					attribute_diff = {
+						character = FROMFROM
+						attribute = martial
+						value = 3
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					attribute_diff = {
+						character = FROMFROM
+						attribute = martial
+						value = 2
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					attribute_diff = {
+						character = FROMFROM
+						attribute = martial
+						value = 1
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROMFROM = {
+					attribute_diff = {
+						character = FROM
+						attribute = martial
+						value = 1
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROMFROM = {
+					attribute_diff = {
+						character = FROM
+						attribute = martial
+						value = 2
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROMFROM = {
+					attribute_diff = {
+						character = FROM
+						attribute = martial
+						value = 3
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROMFROM = {
+					attribute_diff = {
+						character = FROM
+						attribute = martial
+						value = 4
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROMFROM = {
+					attribute_diff = {
+						character = FROM
+						attribute = martial
+						value = 5
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROMFROM = {
+					attribute_diff = {
+						character = FROM
+						attribute = martial
+						value = 6
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROMFROM = {
+					attribute_diff = {
+						character = FROM
+						attribute = martial
+						value = 7
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROMFROM = {
+					attribute_diff = {
+						character = FROM
+						attribute = martial
+						value = 8
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROMFROM = {
+					attribute_diff = {
+						character = FROM
+						attribute = martial
+						value = 9
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROMFROM = {
+					attribute_diff = {
+						character = FROM
+						attribute = martial
+						value = 10
+					}
+				}
 			}
 		}
+	}
+	
+	option = {
+		# Coup foiled by intervener
+		limit = { FROM = { any_vassal = { has_character_flag = flag_coup_intervener } } }
+		FROM = { FROM = { character_event = { id = coup.230 } } }
+		ai_chance = {
+			factor = 50
+			# Compared martial score
+			modifier = {
+				factor = 1.25
+				FROM = {
+					any_vassal = {
+						has_character_flag = flag_coup_intervener
+						attribute_diff = {
+							character = FROMFROM
+							attribute = martial
+							value = 10
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					any_vassal = {
+						has_character_flag = flag_coup_intervener
+						attribute_diff = {
+							character = FROMFROM
+							attribute = martial
+							value = 9
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					any_vassal = {
+						has_character_flag = flag_coup_intervener
+						attribute_diff = {
+							character = FROMFROM
+							attribute = martial
+							value = 8
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					any_vassal = {
+						has_character_flag = flag_coup_intervener
+						attribute_diff = {
+							character = FROMFROM
+							attribute = martial
+							value = 7
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					any_vassal = {
+						has_character_flag = flag_coup_intervener
+						attribute_diff = {
+							character = FROMFROM
+							attribute = martial
+							value = 6
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					any_vassal = {
+						has_character_flag = flag_coup_intervener
+						attribute_diff = {
+							character = FROMFROM
+							attribute = martial
+							value = 5
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					any_vassal = {
+						has_character_flag = flag_coup_intervener
+						attribute_diff = {
+							character = FROMFROM
+							attribute = martial
+							value = 4
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					any_vassal = {
+						has_character_flag = flag_coup_intervener
+						attribute_diff = {
+							character = FROMFROM
+							attribute = martial
+							value = 3
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					any_vassal = {
+						has_character_flag = flag_coup_intervener
+						attribute_diff = {
+							character = FROMFROM
+							attribute = martial
+							value = 2
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					any_vassal = {
+						has_character_flag = flag_coup_intervener
+						attribute_diff = {
+							character = FROMFROM
+							attribute = martial
+							value = 1
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					any_vassal = {
+						has_character_flag = flag_coup_intervener
+						FROMFROM = {
+							attribute_diff = {
+								character = PREV
+								attribute = martial
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					any_vassal = {
+						has_character_flag = flag_coup_intervener
+						FROMFROM = {
+							attribute_diff = {
+								character = PREV
+								attribute = martial
+								value = 2
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					any_vassal = {
+						has_character_flag = flag_coup_intervener
+						FROMFROM = {
+							attribute_diff = {
+								character = PREV
+								attribute = martial
+								value = 3
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					any_vassal = {
+						has_character_flag = flag_coup_intervener
+						FROMFROM = {
+							attribute_diff = {
+								character = PREV
+								attribute = martial
+								value = 4
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					any_vassal = {
+						has_character_flag = flag_coup_intervener
+						FROMFROM = {
+							attribute_diff = {
+								character = PREV
+								attribute = martial
+								value = 5
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					any_vassal = {
+						has_character_flag = flag_coup_intervener
+						FROMFROM = {
+							attribute_diff = {
+								character = PREV
+								attribute = martial
+								value = 6
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					any_vassal = {
+						has_character_flag = flag_coup_intervener
+						FROMFROM = {
+							attribute_diff = {
+								character = PREV
+								attribute = martial
+								value = 7
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					any_vassal = {
+						has_character_flag = flag_coup_intervener
+						FROMFROM = {
+							attribute_diff = {
+								character = PREV
+								attribute = martial
+								value = 8
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					any_vassal = {
+						has_character_flag = flag_coup_intervener
+						FROMFROM = {
+							attribute_diff = {
+								character = PREV
+								attribute = martial
+								value = 9
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				FROM = {
+					any_vassal = {
+						has_character_flag = flag_coup_intervener
+						FROMFROM = {
+							attribute_diff = {
+								character = PREV
+								attribute = martial
+								value = 10
+							}
+						}
+					}
+				}
+			}
+			
+			# Comparative military strength
+			modifier = {
+				factor = 4
+				FROM = {
+					any_vassal = {
+						has_character_flag = flag_coup_intervener
+						relative_power = {
+							who = FROMFROM
+							power = 4
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				FROM = {
+					any_vassal = {
+						has_character_flag = flag_coup_intervener
+						relative_power = {
+							who = FROMFROM
+							power = 3
+						}
+						NOT = {
+							relative_power = {
+								who = FROMFROM
+								power = 4
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					any_vassal = {
+						has_character_flag = flag_coup_intervener
+						relative_power = {
+							who = FROMFROM
+							power = 2
+						}
+						NOT = {
+							relative_power = {
+								who = FROMFROM
+								power = 3
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.75 # Characters with less than 75% of the relevant forces can't do anything anyway
+				FROM = {
+					any_vassal = {
+						has_character_flag = flag_coup_intervener
+						NOT = { relative_power = { who = FROMFROM power = 1 } }
+					}
+				}
+			}
+		}
+	}
+}
+
+# Successful coup!
+narrative_event = {
+	id = coup.210
+	title = "OP_ROOT"
+	desc = "EVTDESCCOUP210"
+	picture = GFX_evt_military_coup
+	border = GFX_evt_narrative_frame_intrigue
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACOUP210"
+		plot_target_char = {
+			imprison = ROOT
+			opinion = { who = ROOT modifier = opinion_attempted_coup }
+			narrative_event = { id = coup.211 tooltip = "EVTTOOLTIPCOUP211" }
+		}
+	}
+}
+narrative_event = {
+	id = coup.211
+	title = "OP_FROM"
+	desc = "EVTDESCCOUP211"
+	picture = GFX_evt_military_coup
+	border = GFX_evt_narrative_frame_intrigue
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACOUP211"
+		imprison = FROM
+		hidden_tooltip = {
+			any_vassal = {
+				limit = { NOT = { character = FROM } }
+				narrative_event = { id = coup.212 }
+			}
+		}
+		FROM = { plot_target_title = { usurp_title_plus_barony_if_unlanded = PREV } }
+	}
+}
+narrative_event = {
+	id = coup.212
+	title = "OP_FROMFROM"
+	desc = "EVTDESCCOUP212"
+	picture = GFX_evt_military_coup
+	border = GFX_evt_narrative_frame_intrigue
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			NOT = { any_backed_character = { character = FROMFROM } }
+			NOT = { has_character_flag = flag_coup_intervener }
+		}
+		name = "EVTOPTACOUP212"
+	}
+	
+	option = {
+		trigger = { any_backed_character = { character = FROMFROM } }
+		name = "EVTOPTBCOUP212"
+	}
+	
+	option = {
+		trigger = { has_character_flag = flag_coup_intervener }
+		clr_character_flag = flag_coup_intervener
+		name = "EVTOPTCCOUP212"
+	}
+}
+
+# Coup foiled by target
+narrative_event = {
+	id = coup.220
+	title = "OP_ROOT"
+	desc = "EVTDESCCOUP220"
+	picture = GFX_evt_military_coup
+	border = GFX_evt_narrative_frame_intrigue
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACOUP220"
+		plot_target_char = {
+			opinion = { who = ROOT modifier = opinion_attempted_coup }
+			narrative_event = { id = coup.221 tooltip = "EVTTOOLTIPCOUP221" }
+		}
+	}
+}
+narrative_event = {
+	id = coup.221
+	title = "OP_FROM"
+	desc = "EVTDESCCOUP211"
+	picture = GFX_evt_military_coup
+	border = GFX_evt_narrative_frame_intrigue
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACOUP211"
+		imprison = FROM
+		hidden_tooltip = {
+			any_vassal = {
+				limit = { NOT = { character = FROM } }
+				narrative_event = { id = coup.222 }
+			}
+		}
+		FROM = { character_event = { id = coup.100 tooltip = "EVTTOOLTIPCOUP100" } }
+	}
+}
+narrative_event = {
+	id = coup.222
+	title = "OP_FROMFROM"
+	desc = "EVTDESCCOUP222"
+	picture = GFX_evt_military_coup
+	border = GFX_evt_narrative_frame_intrigue
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			NOT = { any_backed_character = { character = FROMFROM } }
+			NOT = { has_character_flag = flag_coup_intervener }
+		}
+		clr_character_flag = flag_coup_intervener
+		name = "EVTOPTACOUP222"
+	}
+	
+	option = {
+		trigger = { any_backed_character = { character = FROMFROM } }
+		clr_character_flag = flag_coup_intervener
+		name = "EVTOPTBCOUP222"
+	}
+	
+	option = {
+		trigger = { has_character_flag = flag_coup_intervener }
+		clr_character_flag = flag_coup_intervener
+		name = "EVTOPTCCOUP222"
+	}
+}
+# Coup foiled by intervener
+character_event = {
+	id = coup.230
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		plot_target_char = {
+			random_vassal = {
+				limit = { has_character_flag = flag_coup_intervener }
+				narrative_event = { id = coup.231 }
+			}
+		}
+	}
+}
+narrative_event = {
+	id = coup.231
+	title = "OP_FROM"
+	desc = "EVTDESCCOUP231"
+	picture = GFX_evt_military_coup
+	border = GFX_evt_narrative_frame_intrigue
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACOUP231"
+		clr_character_flag = flag_coup_intervener
+		prestige = 100
+		if = {
+			limit = { FROM = { plot_target_char = { religion = ROOT } } }
+			piety = 100
+		}
+		religion_authority = { modifier = foiled_coup years = 30 }
+		narrative_event = { id = coup.232 tooltip = "EVTTOOLTIPCOUP232" }
+		FROM = {
+			plot_target_char = {
+				opinion = { who = ROOT modifier = opinion_thwarted_coup }
+			}
+		}
+	}
+}
+narrative_event = {
+	id = coup.232
+	title = "OP_ROOT"
+	desc = "EVTDESCCOUP232"
+	picture = GFX_evt_military_coup
+	border = GFX_evt_narrative_frame_intrigue
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACOUP232"
+		plot_target_char = {
+			opinion = { who = ROOT modifier = opinion_attempted_coup }
+			narrative_event = { id = coup.234 tooltip = "EVTTOOLTIPCOUP234" }
+			hidden_tooltip = {
+				any_vassal = {
+					limit = {
+						NOT = { character = ROOT }
+						NOT = { character = FROM }
+					}
+					narrative_event = { id = coup.233 }
+				}
+			}
+		}
+	}
+}
+narrative_event = {
+	id = coup.233
+	title = "OP_FROM"
+	desc = "EVTDESCCOUP233"
+	picture = GFX_evt_military_coup
+	border = GFX_evt_narrative_frame_intrigue
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { NOT = { any_backed_character = { character = FROM } } }
+		name = "EVTOPTACOUP233"
+	}
+	
+	option = {
+		trigger = { any_backed_character = { character = FROM } }
+		name = "EVTOPTBCOUP233"
+	}
+}
+narrative_event = {
+	id = coup.234
+	title = "OP_FROM"
+	desc = "EVTDESCCOUP234"
+	picture = GFX_evt_military_coup
+	border = GFX_evt_narrative_frame_intrigue
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACOUP234"
+		FROM = { character_event = { id = coup.100 tooltip = "EVTTOOLTIPCOUP100" } }
+		FROMFROM = { custom_tooltip = { text = "EVTTOOLTIPCOUP231" } }
 	}
 }

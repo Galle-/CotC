@@ -1,5 +1,5 @@
 plot_coup = {
-	type = liege_titles
+	type = realm_titles
 	murder_plot = yes # Non-justified coups are immoral and characters with moral qualms won't back them
 	military_plot = yes
 	intrigue_plot = yes
@@ -9,7 +9,16 @@ plot_coup = {
 		NOT = { trait = incapable }
 		prisoner = no
 	}
-	allow = {		
+	allow = {
+		holder_scope = { FROM = { liege = { character = PREVPREV } } }
+		higher_tier_than = baron
+		is_primary_holder_title_tier = yes
+		FROM = {
+			OR = {
+				dejure_liege_title = { title = ROOT }
+				primary_title = { de_jure_vassal_or_below = ROOT }
+			}
+		}
 		# Non-justified coups can't be initiated in circumstances where justified coups could be
 		holder_scope = { NOT = { religion = space_pirate } }
 		OR = {
@@ -31,8 +40,97 @@ plot_coup = {
 		}
 		holder_scope = { religion_authority = 0.1 }
 	}
+	creation_effect = {
+		if = {
+			limit = {
+				holder_scope = {
+					religion_group = FROM
+					piety = 0
+				}
+			}
+			FROM = { set_character_flag = flag_same_ideology_coup }
+		}
+		# If the plot is still hopeless after a few years, the AI
+		# should give up
+		if = {
+			limit = { FROM = { ai = yes } }
+			FROM = {
+				clr_character_flag = flag_ai_plot_timer
+				set_character_flag = flag_ai_plot_timer
+			}
+		}
+	}
 	chance = {
 		factor = 1
+		
+		# Plotter strength
+		# The plotter needs to have SOMETHING going for them
+		modifier = {
+			factor = 0
+			higher_tier_than = baron
+			FROM = {
+				NOT = { higher_tier_than = baron }
+				NOT = {
+					AND = {
+						diplomacy = 20
+						wealth = 500
+					}
+				}
+			}
+		}
+		# More powerful characters should be more likely to take this plot
+		modifier = {
+			factor = 1.25
+			FROM = { relative_power_to_liege = 0.1 }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { relative_power_to_liege = 0.2 }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { relative_power_to_liege = 0.3 }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { relative_power_to_liege = 0.4 }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { relative_power_to_liege = 0.5 }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { relative_power_to_liege = 0.6 }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { relative_power_to_liege = 0.7 }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { relative_power_to_liege = 0.8 }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { relative_power_to_liege = 0.9 }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { relative_power_to_liege = 1 }
+		}
+		
+		# Ambition Effects
+		modifier = {
+			factor = 10
+			FROM = { has_ambition = obj_become_king }
+			capital_scope = { kingdom = { title = PREVPREV } }
+		}
+		modifier = {
+			factor = 10
+			FROM = { has_ambition = obj_become_emperor }
+			capital_scope = { empire = { title = PREVPREV } }
+		}
 		
 		# Personality Effects
 		modifier = {
@@ -54,6 +152,10 @@ plot_coup = {
 		modifier = {
 			factor = 2
 			FROM = { trait = cold }
+		}
+		modifier = {
+			factor = 2
+			FROM = { trait = brave }
 		}
 		modifier = {
 			factor = 2
@@ -107,6 +209,7 @@ plot_coup = {
 		modifier = {
 			factor = 0
 			holder_scope = { reverse_opinion = { who = FROM value = 1 } }
+			FROM = { NOT = { trait = cold } }
 		}
 		modifier = {
 			factor = 1.25
@@ -149,43 +252,87 @@ plot_coup = {
 			holder_scope = { NOT = { reverse_opinion = { who = FROM value = -99 } } }
 		}
 	}
-	success = { FROM = { has_character_flag = flag_successful_coup } }
-	effect = { FROM = { clr_character_flag = flag_successful_coup } }
-	abort = { 
+	success = { holder_scope = { character = FROM } }
+	effect = {
+		# Unjustified coups degrade moral authority if the target was of the same ideology
+		if = {
+			limit = {
+				FROM = { has_character_flag = flag_same_ideology_coup }
+				higher_tier_than = count
+			}
+			FROM = { religion_authority = { modifier = successful_unjustified_coup years = 30 } }
+		}
+		if = {
+			limit = {
+				FROM = { has_character_flag = flag_same_ideology_coup }
+				higher_tier_than = duke
+			}
+			FROM = { religion_authority = { modifier = successful_unjustified_coup years = 30 } }
+		}
+		if = {
+			limit = {
+				FROM = { has_character_flag = flag_same_ideology_coup }
+				tier = emperor
+			}
+			FROM = { religion_authority = { modifier = successful_unjustified_coup years = 30 } }
+		}
+		FROM = {
+			clr_character_flag = flag_ai_plot_timer
+			clr_character_flag = flag_same_ideology_coup
+			clr_character_flag = flag_launching_civil_war
+			clr_character_flag = flag_failed_coup
+			clr_character_flag = flag_launching_coup
+		}
+	}
+	abort = {
 		OR = {
-			NOT = { holder_scope = { always = yes } } # Title must actually exist and be held by someone
+			NOT = { holder_scope = { always = yes } }
+			NOT = {
+				holder_scope = {
+					FROM = {
+						OR = {
+							character = PREV
+							liege = { character = PREVPREV }
+							liege_before_war = { character = PREVPREV }
+						}
+					}
+				}
+			}
 			AND = {
-				FROM = { NOT = { has_character_flag = flag_coup_leader } } # Once the coup is underway, it can't be aborted
-				NOT = { holder_scope = { any_vassal = { character = FROM } } }
+				FROM = {
+					ai = yes
+					is_plot_active = no
+					NOT = { trait = cold }
+				}
+				holder_scope = { reverse_opinion = { who = FROM value = 1 } }
+			}
+			FROM = {
+				ai = yes
+				is_plot_active = no
+				had_character_flag = { flag = flag_ai_plot_timer days = 365 }
+				NOT = { plot_power = 0.5 }
+			}
+			FROM = {
+				ai = yes
+				is_plot_active = no
+				had_character_flag = { flag = flag_ai_plot_timer days = 1825 }
+				NOT = { plot_power = 1 }
 			}
 		}
 	}
 	abort_effect = {
 		FROM = {
-			clr_character_flag = flag_coup_leader
-			clr_character_flag = flag_coup_plan_military
-			clr_character_flag = flag_coup_plan_spymaster
-			any_plot_backer = {
-				limit = {
-					NOT = {
-						any_backed_character = {
-							OR = {
-								has_plot = plot_coup
-								has_plot = plot_justified_coup
-							}
-							NOT = { character = FROM }
-						}
-					}
-				}
-				clr_character_flag = flag_coup_plan_military
-				clr_character_flag = flag_coup_plan_spymaster
-			}
+			clr_character_flag = flag_ai_plot_timer
+			clr_character_flag = flag_same_ideology_coup
+			clr_character_flag = flag_launching_civil_war
+			clr_character_flag = flag_failed_coup
+			clr_character_flag = flag_launching_coup
 		}
 	}
 }
 
 plot_justified_coup = {
-	type = liege_titles
+	type = realm_titles
 	military_plot = yes
 	intrigue_plot = yes
 	
@@ -195,7 +342,14 @@ plot_justified_coup = {
 		prisoner = no
 	}
 	allow = {
-		is_primary_holder_title = yes
+		holder_scope = { FROM = { liege = { character = PREVPREV } } }
+		higher_tier_than = baron
+		FROM = {
+			OR = {
+				dejure_liege_title = { title = ROOT }
+				primary_title = { de_jure_vassal_or_below = ROOT }
+			}
+		}
 		OR = {
 			holder_scope = { religion = space_pirate }
 			holder_scope = {
@@ -220,8 +374,99 @@ plot_justified_coup = {
 			holder_scope = { NOT = { religion_authority = 0.1 } }
 		}
 	}
+	creation_effect = {
+		if = {
+			limit = {
+				holder_scope = {
+					OR = {
+						NOT = { religion = FROM }
+						NOT = { piety = 0 }
+					}
+				}
+			}
+			FROM = { set_character_flag = flag_other_ideology_coup }
+		}
+		# If the plot is still hopeless after a few years, the AI
+		# should give up
+		if = {
+			limit = { FROM = { ai = yes } }
+			FROM = {
+				clr_character_flag = flag_ai_plot_timer
+				set_character_flag = flag_ai_plot_timer
+			}
+		}
+	}
 	chance = {
 		factor = 10
+		
+		# Plotter strength
+		# The plotter needs to have SOMETHING going for them
+		modifier = {
+			factor = 0
+			higher_tier_than = baron
+			FROM = {
+				NOT = { higher_tier_than = baron }
+				NOT = {
+					AND = {
+						diplomacy = 20
+						wealth = 500
+					}
+				}
+			}
+		}
+		# More powerful characters should be more likely to take this plot
+		modifier = {
+			factor = 1.25
+			FROM = { relative_power_to_liege = 0.1 }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { relative_power_to_liege = 0.2 }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { relative_power_to_liege = 0.3 }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { relative_power_to_liege = 0.4 }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { relative_power_to_liege = 0.5 }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { relative_power_to_liege = 0.6 }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { relative_power_to_liege = 0.7 }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { relative_power_to_liege = 0.8 }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { relative_power_to_liege = 0.9 }
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { relative_power_to_liege = 1 }
+		}
+		
+		# Ambition Effects
+		modifier = {
+			factor = 10
+			FROM = { has_ambition = obj_become_king }
+			capital_scope = { kingdom = { title = PREVPREV } }
+		}
+		modifier = {
+			factor = 10
+			FROM = { has_ambition = obj_become_emperor }
+			capital_scope = { empire = { title = PREVPREV } }
+		}
 		
 		# Constitutional Crisis Factor
 		modifier = {
@@ -540,17 +785,53 @@ plot_justified_coup = {
 			}
 		}
 	}
-	success = { FROM = { has_character_flag = flag_successful_coup } }
-	effect = { FROM = { clr_character_flag = flag_successful_coup } }
+	success = { holder_scope = { character = FROM } }
+	effect = {
+		# Justified coups, if against other ideologies, are actually
+		# good for moral authority, because you're deposing tyrants
+		if = {
+			limit = {
+				FROM = { has_character_flag = flag_other_ideology_coup }
+				higher_tier_than = count
+			}
+			FROM = { religion_authority = { modifier = successful_justified_coup years = 30 } }
+		}
+		if = {
+			limit = {
+				FROM = { has_character_flag = flag_other_ideology_coup }
+				higher_tier_than = duke
+			}
+			FROM = { religion_authority = { modifier = successful_justified_coup years = 30 } }
+		}
+		if = {
+			limit = {
+				FROM = { has_character_flag = flag_other_ideology_coup }
+				tier = emperor
+			}
+			FROM = { religion_authority = { modifier = successful_justified_coup years = 30 } }
+		}
+		FROM = {
+			clr_character_flag = flag_other_ideology_coup
+			clr_character_flag = flag_ai_plot_timer
+			clr_character_flag = flag_launching_coup
+		}
+	}
 	abort = {
 		OR = {
 			NOT = { holder_scope = { always = yes } } # Title must actually exist and be held by someone
-			AND = {
-				FROM = { NOT = { has_character_flag = flag_coup_leader } } # Once the coup is underway, it can't be aborted
-				NOT = { holder_scope = { any_vassal = { character = FROM } } }
+			NOT = {
+				holder_scope = {
+					FROM = {
+						OR = {
+							character = PREV
+							liege = { character = PREVPREV }
+							liege_before_war = { character = PREVPREV }
+						}
+					}
+				}
 			}
 			AND = {
-				FROM = { NOT = { has_character_flag = flag_coup_leader } } # Once the coup is underway, it can't be aborted
+				FROM = { is_plot_active = no } # Justified coups can't be canceled like this once begun
 				holder_scope = { NOT = { religion = space_pirate } }
 				OR = {
 					holder_scope = { religion_authority = 0.8 }
@@ -571,28 +852,27 @@ plot_justified_coup = {
 				}
 				holder_scope = { religion_authority = 0.1 }
 			}
+			FROM = {
+				ai = yes
+				is_plot_active = no
+				had_character_flag = { flag = flag_ai_plot_timer days = 365 }
+				NOT = { plot_power = 0.5 }
+			}
+			FROM = {
+				ai = yes
+				is_plot_active = no
+				had_character_flag = { flag = flag_ai_plot_timer days = 1825 }
+				NOT = { plot_power = 1 }
+			}
 		}
 	}
 	abort_effect = {
 		FROM = {
-			clr_character_flag = flag_coup_leader
-			clr_character_flag = flag_coup_plan_military
-			clr_character_flag = flag_coup_plan_spymaster
-			any_plot_backer = {
-				limit = {
-					NOT = {
-						any_backed_character = {
-							OR = {
-								has_plot = plot_coup
-								has_plot = plot_justified_coup
-							}
-							NOT = { character = FROM }
-						}
-					}
-				}
-				clr_character_flag = flag_coup_plan_military
-				clr_character_flag = flag_coup_plan_spymaster
-			}
+			clr_character_flag = flag_other_ideology_coup
+			clr_character_flag = flag_ai_plot_timer
+			clr_character_flag = flag_launching_civil_war
+			clr_character_flag = flag_failed_coup
+			clr_character_flag = flag_launching_coup
 		}
 	}
 }

@@ -1,0 +1,2349 @@
+# Supported types:
+# character, spouse, rivals, friends, liege_titles, vassal_titles, realm_titles, realm_characters, realm_characters_plus, independent_rulers
+
+# Master list of ambitions
+# Job Ambitions
+#	Become Chancellor
+#	Become Marshal
+#	Become Steward
+#	Become Spymaster
+#	Become Scientist
+
+# Currency Ambitions
+#	Amass Wealth
+#	Become Famed Across the Stars
+#	Become Paragon of Virtue
+
+# Romance and Domestic Ambitions
+#	Marry For Love (be in love with your spouse)
+#	Marry For Power (marry a ruler who is of your own rank or higher)
+#	Have a Child
+#	Have Five Children
+
+# Title Ambitions
+#	Become Ruler
+#	Become Heir
+#	Become King
+#	Become Emperor
+#	Gain Independence
+
+# Stat Ambitions
+#	Improve Diplomacy
+#	Improve Martial
+#	Improve Stewardship
+#	Improve Intrigue
+#	Improve Learning
+
+# Ideology-Specific
+#	Secure Strong Succession (get an heir with Genius or Quick and no bad congenital traits)
+#	Transcend Mortality (get a Full Cybernetic Conversion)
+#	Fight For Freedom (your top-level liege is a republic)
+#	Fight For Strength (your top-level liege is feudal)
+#	Fight For Virtue (your top-level liege is a theocracy)
+#	Reform the Faith
+
+###############
+# AMBITIONS
+###############
+
+# Job Ambitions
+
+obj_become_chancellor = {
+	type = character
+	
+	expectation_of_liege = yes
+
+	allow = {
+		prisoner = no
+		is_adult = yes
+		is_councillor = no
+		independent = no
+		NOT = { trait = incapable }
+		OR = {
+			trait = naive_appeaser
+			trait = underhanded_rogue
+			trait = charismatic_negotiator
+			trait = grey_eminence
+			trait = ambitious
+			trait = lunatic
+			liege = { job_chancellor = { NOT = { diplomacy = ROOT } } }
+		}
+	}
+	chance = {
+		factor = 10
+		
+		# Personality
+		modifier = {
+			factor = 10
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.1
+			trait = content
+		}
+		modifier = {
+			factor = 4
+			trait = extraverted
+		}
+		modifier = {
+			factor = 0.25
+			trait = introverted
+		}
+		modifier = {
+			factor = 2
+			trait = disciplined
+		}
+		modifier = {
+			factor = 0.5
+			trait = carefree
+		}
+		modifier = {
+			factor = 2
+			trait = confident
+		}
+		modifier = {
+			factor = 0.5
+			trait = neurotic
+		}
+		modifier = {
+			factor = 0.1
+			trait = cold
+		}
+		
+		# Diplomacy
+		modifier = {
+			factor = 0
+			liege = { job_chancellor = { ROOT = { NOT = { diplomacy = PREV } } } }
+			OR = {
+				trait = humble
+				trait = neurotic
+			}
+			NOT = { trait = proud }
+		}
+		modifier = {
+			factor = 3
+			liege = { job_chancellor = { NOT = { diplomacy = ROOT } } }
+		}
+		modifier = {
+			factor = 2
+			liege = { job_chancellor = { NOT = { diplomacy = ROOT } } }
+			OR = {
+				trait = confident
+				trait = proud
+			}
+		}
+		modifier = {
+			factor = 2
+			diplomacy = 10
+		}
+		modifier = {
+			factor = 2
+			diplomacy = 12
+		}
+		modifier = {
+			factor = 2
+			diplomacy = 14
+		}
+		modifier = {
+			factor = 2
+			diplomacy = 16
+		}
+		modifier = {
+			factor = 2
+			diplomacy = 18
+		}
+		modifier = {
+			factor = 2
+			diplomacy = 20
+		}
+		
+		# Opinion of incumbent
+		modifier = {
+			factor = 0
+			liege = { job_chancellor = { reverse_opinion = { who = ROOT value = 75 } } }
+			NOT = { trait = cold }
+		}
+	}
+	success = {
+		has_job_title = job_chancellor
+	}
+	abort = {
+		OR = {
+			independent = yes
+			AND = {
+				is_councillor = yes
+				NOT = { has_job_title = job_chancellor }
+			}
+			trait = incapable
+		}
+	}
+	abort_effect = {
+	}
+	effect = {
+		if = {
+			limit = { NOT = { has_character_flag = successful_council_ambition } }
+			change_diplomacy = 1
+		}
+		opinion = {
+			who = liege
+			modifier = opinion_ambition_fulfilled
+			months = 24
+		}
+		set_character_flag = successful_council_ambition
+	}
+}
+
+
+obj_become_marshal = {
+	type = character
+	
+	allow = {
+		prisoner = no
+		is_adult = yes
+		is_councillor = no
+		independent = no
+		NOT = { trait = incapable }
+		OR = {
+			trait = misguided_warrior
+			trait = tough_soldier
+			trait = skilled_tactician
+			trait = brilliant_strategist
+			trait = ambitious
+			trait = lunatic
+			liege = { job_marshal = { NOT = { martial = ROOT } } }
+			AND = {
+				is_feudal = yes
+				liege = { job_marshal = { is_feudal = no } }
+			}
+		}
+	}
+	chance = {
+		factor = 10
+		
+		# Personality
+		modifier = {
+			factor = 10
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.1
+			trait = content
+		}
+		modifier = {
+			factor = 4
+			trait = brave
+		}
+		modifier = {
+			factor = 0.25
+			trait = craven
+		}
+		modifier = {
+			factor = 2
+			trait = disciplined
+		}
+		modifier = {
+			factor = 0.5
+			trait = carefree
+		}
+		modifier = {
+			factor = 2
+			trait = confident
+		}
+		modifier = {
+			factor = 0.5
+			trait = neurotic
+		}
+		
+		# Martial
+		modifier = {
+			factor = 0
+			liege = { job_marshal = { ROOT = { NOT = { martial = PREV } } } }
+			OR = {
+				trait = humble
+				trait = neurotic
+			}
+			NOT = { trait = proud }
+		}
+		modifier = {
+			factor = 3
+			liege = { job_marshal = { NOT = { martial = ROOT } } }
+		}
+		modifier = {
+			factor = 2
+			liege = { job_marshal = { NOT = { martial = ROOT } } }
+			OR = {
+				trait = confident
+				trait = proud
+			}
+		}
+		modifier = {
+			factor = 2
+			martial = 10
+		}
+		modifier = {
+			factor = 2
+			martial = 12
+		}
+		modifier = {
+			factor = 2
+			martial = 14
+		}
+		modifier = {
+			factor = 2
+			martial = 16
+		}
+		modifier = {
+			factor = 2
+			martial = 18
+		}
+		modifier = {
+			factor = 2
+			martial = 20
+		}
+		
+		# Opinion of incumbent
+		modifier = {
+			factor = 0
+			liege = { job_marshal = { reverse_opinion = { who = ROOT value = 75 } } }
+			NOT = { trait = cold }
+		}
+	}
+	success = {
+		has_job_title = job_marshal
+	}
+	abort = {
+		OR = {
+			independent = yes
+			AND = {
+				is_councillor = yes
+				NOT = { has_job_title = job_marshal }
+			}
+			trait = incapable
+		}
+	}
+	abort_effect = {
+	}
+	effect = {
+		if = {
+			limit = {
+				NOT = { has_character_flag = successful_council_ambition }
+			}
+			change_martial = 1
+		}
+		opinion = {
+			who = liege
+			modifier = opinion_ambition_fulfilled
+			months = 24
+		}
+		set_character_flag = successful_council_ambition
+	}
+}
+
+
+obj_become_treasurer = {
+	type = character
+	
+	allow = {
+		prisoner = no
+		is_adult = yes
+		is_councillor = no
+		independent = no
+		NOT = { trait = incapable }
+		OR = {
+			trait = indulgent_wastrel
+			trait = thrifty_clerk
+			trait = fortune_builder
+			trait = midas_touched
+			trait = ambitious
+			trait = lunatic
+			liege = { job_treasurer = { NOT = { stewardship = ROOT } } }
+		}
+	}
+	chance = {
+		factor = 10
+		
+		# Personality
+		modifier = {
+			factor = 10
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.1
+			trait = content
+		}
+		modifier = {
+			factor = 5
+			trait = disciplined
+		}
+		modifier = {
+			factor = 0.25
+			trait = carefree
+		}
+		modifier = {
+			factor = 2
+			trait = confident
+		}
+		modifier = {
+			factor = 0.5
+			trait = neurotic
+		}
+		
+		# Martial
+		modifier = {
+			factor = 0
+			liege = { job_treasurer = { ROOT = { NOT = { stewardship = PREV } } } }
+			OR = {
+				trait = humble
+				trait = neurotic
+			}
+			NOT = { trait = proud }
+		}
+		modifier = {
+			factor = 3
+			liege = { job_treasurer = { NOT = { stewardship = ROOT } } }
+		}
+		modifier = {
+			factor = 2
+			liege = { job_treasurer = { NOT = { stewardship = ROOT } } }
+			OR = {
+				trait = confident
+				trait = proud
+			}
+		}
+		modifier = {
+			factor = 2
+			stewardship = 10
+		}
+		modifier = {
+			factor = 2
+			stewardship = 12
+		}
+		modifier = {
+			factor = 2
+			stewardship = 14
+		}
+		modifier = {
+			factor = 2
+			stewardship = 16
+		}
+		modifier = {
+			factor = 2
+			stewardship = 18
+		}
+		modifier = {
+			factor = 2
+			stewardship = 20
+		}
+		
+		# Opinion of incumbent
+		modifier = {
+			factor = 0
+			liege = { job_treasurer = { reverse_opinion = { who = ROOT value = 75 } } }
+			NOT = { trait = cold }
+		}
+	}
+	success = {
+		has_job_title = job_treasurer
+	}
+	abort = {
+		OR = {
+			independent = yes
+			AND = {
+				is_councillor = yes
+				NOT = { has_job_title = job_treasurer }
+			}
+			trait = incapable
+		}
+	}
+	abort_effect = {
+	}
+	effect = {
+		if = {
+			limit = {
+				NOT = { has_character_flag = successful_council_ambition }
+			}
+			change_stewardship = 1
+		}
+		opinion = {
+			who = liege
+			modifier = opinion_ambition_fulfilled
+			months = 24
+		}
+		set_character_flag = successful_council_ambition
+	}
+}
+
+obj_become_spymaster = {
+	type = character
+	allow = {
+		prisoner = no
+		is_adult = yes
+		is_councillor = no
+		independent = no
+		NOT = { trait = incapable }
+		OR = {
+			trait = amateurish_plotter
+			trait = flamboyant_schemer
+			trait = intricate_webweaver
+			trait = elusive_shadow
+			trait = ambitious
+			trait = lunatic
+			liege = { job_spymaster = { NOT = { intrigue = ROOT } } }
+		}
+	}
+	chance = {
+		factor = 10
+		
+		# Personality
+		modifier = {
+			factor = 10
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.1
+			trait = content
+		}
+		modifier = {
+			factor = 4
+			trait = cold
+		}
+		modifier = {
+			factor = 0.25
+			trait = friendly
+		}
+		modifier = {
+			factor = 2
+			trait = introverted
+		}
+		modifier = {
+			factor = 0.5
+			trait = extraverted
+		}
+		modifier = {
+			factor = 2
+			trait = disciplined
+		}
+		modifier = {
+			factor = 0.5
+			trait = carefree
+		}
+		modifier = {
+			factor = 2
+			trait = confident
+		}
+		modifier = {
+			factor = 0.5
+			trait = neurotic
+		}
+		
+		# Martial
+		modifier = {
+			factor = 0
+			liege = { job_spymaster = { ROOT = { NOT = { intrigue = PREV } } } }
+			OR = {
+				trait = humble
+				trait = neurotic
+			}
+			NOT = { trait = proud }
+		}
+		modifier = {
+			factor = 3
+			liege = { job_spymaster = { NOT = { intrigue = ROOT } } }
+		}
+		modifier = {
+			factor = 2
+			liege = { job_spymaster = { NOT = { intrigue = ROOT } } }
+			OR = {
+				trait = confident
+				trait = proud
+			}
+		}
+		modifier = {
+			factor = 2
+			intrigue = 10
+		}
+		modifier = {
+			factor = 2
+			intrigue = 12
+		}
+		modifier = {
+			factor = 2
+			intrigue = 14
+		}
+		modifier = {
+			factor = 2
+			intrigue = 16
+		}
+		modifier = {
+			factor = 2
+			intrigue = 18
+		}
+		modifier = {
+			factor = 2
+			intrigue = 20
+		}
+		
+		# Opinion of incumbent
+		modifier = {
+			factor = 0
+			liege = { job_spymaster = { reverse_opinion = { who = ROOT value = 75 } } }
+			NOT = { trait = cold }
+		}
+	}
+	success = {
+		has_job_title = job_spymaster
+	}
+	abort = {
+		OR = {
+			independent = yes
+			AND = {
+				is_councillor = yes
+				NOT = { has_job_title = job_spymaster }
+			}
+			trait = incapable
+		}
+	}
+	abort_effect = {
+	}
+	effect = {
+		if = {
+			limit = { NOT = { has_character_flag = successful_council_ambition } }
+			change_intrigue = 1
+		}
+		opinion = {
+			who = liege
+			modifier = opinion_ambition_fulfilled
+			months = 24
+		}
+		set_character_flag = successful_council_ambition
+	}
+}
+obj_become_spiritual = {
+	
+	allow = {
+		prisoner = no
+		is_adult = yes
+		is_councillor = no
+		independent = no
+		NOT = { trait = incapable }
+		OR = {
+			trait = incompetent_scientist
+			trait = dutiful_academic
+			trait = expert_scientist
+			trait = mastermind_scholar
+			trait = ambitious
+			trait = lunatic
+			liege = { job_spiritual = { NOT = { stewardship = ROOT } } }
+		}
+	}
+	chance = {
+		factor = 10
+		
+		# Personality
+		modifier = {
+			factor = 10
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.1
+			trait = content
+		}
+		modifier = {
+			factor = 4
+			trait = open_minded
+		}
+		modifier = {
+			factor = 0.25
+			trait = close_minded
+		}
+		modifier = {
+			factor = 2
+			trait = skeptical
+		}
+		modifier = {
+			factor = 0.5
+			trait = spiritual
+		}
+		modifier = {
+			factor = 2
+			trait = disciplined
+		}
+		modifier = {
+			factor = 0.5
+			trait = carefree
+		}
+		modifier = {
+			factor = 2
+			trait = confident
+		}
+		modifier = {
+			factor = 0.5
+			trait = neurotic
+		}
+		modifier = {
+			factor = 4
+			trait = intellectual
+		}
+		
+		# Martial
+		modifier = {
+			factor = 0
+			liege = { job_spiritual = { ROOT = { NOT = { learning = PREV } } } }
+			OR = {
+				trait = humble
+				trait = neurotic
+			}
+			NOT = { trait = proud }
+		}
+		modifier = {
+			factor = 3
+			liege = { job_spiritual = { NOT = { learning = ROOT } } }
+		}
+		modifier = {
+			factor = 2
+			liege = { job_spiritual = { NOT = { learning = ROOT } } }
+			OR = {
+				trait = confident
+				trait = proud
+			}
+		}
+		modifier = {
+			factor = 2
+			learning = 10
+		}
+		modifier = {
+			factor = 2
+			learning = 12
+		}
+		modifier = {
+			factor = 2
+			learning = 14
+		}
+		modifier = {
+			factor = 2
+			learning = 16
+		}
+		modifier = {
+			factor = 2
+			learning = 18
+		}
+		modifier = {
+			factor = 2
+			learning = 20
+		}
+		
+		# Opinion of incumbent
+		modifier = {
+			factor = 0
+			liege = { job_spiritual = { reverse_opinion = { who = ROOT value = 75 } } }
+			NOT = { trait = cold }
+		}
+	}
+	success = {
+		has_job_title = job_spiritual
+	}
+	abort = {
+		OR = {
+			independent = yes
+			AND = {
+				is_councillor = yes
+				NOT = { has_job_title = job_spiritual }
+			}
+			trait = incapable
+		}
+	}
+	abort_effect = {
+	}
+	effect = {
+		if = {
+			limit = {
+				NOT = { has_character_flag = successful_council_ambition }
+			}
+			change_learning = 1
+		}
+		opinion = {
+			who = liege
+			modifier = opinion_ambition_fulfilled
+			months = 24
+		}
+		set_character_flag = successful_council_ambition
+	}
+}
+
+# Misc Ambitions
+obj_amass_wealth = {
+	type = character
+	
+	potential = { NOT = { has_character_flag = amassed_wealth } }
+	
+	allow = {
+		is_adult = yes
+		NOT = { wealth = 200 }
+		is_ruler = yes
+		NOT = { trait = incapable }
+	}
+	chance = {
+		factor = 100
+		
+		modifier = {
+			factor = 2
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.5
+			trait = content
+		}
+		modifier = {
+			factor = 2
+			trait = friendly
+		}
+		modifier = {
+			factor = 0.5
+			trait = cold
+		}
+		modifier = {
+			factor = 2
+			trait = disciplined
+		}
+		modifier = {
+			factor = 0.5
+			trait = carefree
+		}
+		modifier = {
+			factor = 0
+			religion = neo_socialist
+			NOT = { trait = pragmatic }
+		}
+	}
+	success = {
+		wealth = 500
+	}
+	abort = {
+		OR = {
+			trait = incapable
+			is_ruler = no
+		}
+	}
+	abort_effect = {
+	}
+	effect = {
+		change_stewardship = 1
+		set_character_flag = amassed_wealth
+	}
+}
+
+
+obj_become_paragon_of_virtue = {
+	type = character
+	
+	allow = {
+		is_adult = yes
+		NOT = { piety = 100 }
+		is_ruler = yes
+		NOT = { trait = pragmatic }
+		NOT = { trait = incapable }
+	}
+	chance = {
+		factor = 50
+		# Personality
+		modifier = {
+			factor = 5
+			trait = radical
+		}
+		modifier = {
+			factor = 2
+			trait = disciplined
+		}
+		modifier = {
+			factor = 0.5
+			trait = carefree
+		}
+		modifier = {
+			factor = 2
+			trait = skeptical
+			religion_group = transhumanist_group
+			NOT = { religion = machine_cultist }
+		}
+		modifier = {
+			factor = 0.5
+			trait = skeptical
+			OR = {
+				religion_group = religious_group
+				religion = machine_cultist
+			}
+		}
+		modifier = {
+			factor = 0.5
+			trait = spiritual
+			religion_group = transhumanist_group
+			NOT = { religion = machine_cultist }
+		}
+		modifier = {
+			factor = 2
+			trait = spiritual
+			OR = {
+				religion_group = religious_group
+				religion = machine_cultist
+			}
+		}
+		
+		
+		# Ideological Authority
+		modifier = {
+			factor = 1.25
+			religion_authority = 0.1
+		}
+		modifier = {
+			factor = 1.25
+			religion_authority = 0.2
+		}
+		modifier = {
+			factor = 1.25
+			religion_authority = 0.3
+		}
+		modifier = {
+			factor = 1.25
+			religion_authority = 0.4
+		}
+		modifier = {
+			factor = 1.25
+			religion_authority = 0.5
+		}
+		modifier = {
+			factor = 1.25
+			religion_authority = 0.6
+		}
+		modifier = {
+			factor = 1.25
+			religion_authority = 0.7
+		}
+		modifier = {
+			factor = 1.25
+			religion_authority = 0.8
+		}
+		modifier = {
+			factor = 1.25
+			religion_authority = 0.9
+		}
+		modifier = {
+			factor = 1.25
+			religion_authority = 1
+		}
+	}
+	success = {
+		piety = 500
+	}
+	abort = {
+		OR = {
+			is_ruler = no
+			trait = pragmatic
+			trait = incapable
+		}
+	}
+	abort_effect = {
+	}
+	effect = {
+		change_learning = 1
+		piety = 100
+		if = {
+			limit = {
+				has_nickname = no
+				OR = {
+					religion_group = religious_group
+					religion = machine_cultist
+				}
+			}
+			give_nickname = nick_the_holy
+		}
+		religion_authority = {
+			modifier = paragon_of_virtue
+			years = 20
+		}
+		religion_head = {
+			opinion = {
+				who = ROOT
+				modifier = opinion_paragon
+				months = 1200
+			}
+		}
+		any_vassal = {
+			limit = {
+				is_theocracy = yes
+				religion = ROOT
+			}
+			opinion = {
+				who = ROOT
+				modifier = opinion_paragon
+				months = 1200
+			}
+		}
+		# Achievement
+		hidden_tooltip = {
+			if = {
+				limit = { ai = no }
+				set_character_flag = achievement_become_paragon_of_virtue
+			}
+		}
+	}
+}
+
+obj_become_exalted = {
+	type = character
+	
+	allow = {
+		is_adult = yes
+		NOT = { prestige = 200 }
+		is_ruler = yes
+		NOT = { trait = content }
+		NOT = { trait = humble }
+		NOT = { trait = incapable }
+	}
+	chance = {
+		factor = 50
+		modifier = {
+			factor = 4
+			trait = ambitious
+		}
+		modifier = {
+			factor = 4
+			trait = proud
+		}
+	}
+	success = {
+		prestige = 1000
+	}
+	abort = {
+		OR = {
+			is_ruler = no
+			trait = content
+			trait = humble
+			trait = incapable
+		}
+	}
+	abort_effect = {
+	}
+	effect = {
+		change_diplomacy = 1
+		prestige = 100
+		if = {
+			limit = {
+				has_nickname = no
+				OR = {
+					religion = terran_imperial
+					religion = astrist
+					religion = neo_feudal
+					is_feudal = yes
+				}
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = colonial_separatist }
+				NOT = { religion = neo_socialist }
+			}
+			give_nickname = nick_the_great
+		}
+		any_vassal = {
+			opinion = {
+				who = ROOT
+				modifier = opinion_exalted
+				months = 1200
+			}
+		}
+		# Achievement
+		hidden_tooltip = {
+			if = {
+				limit = { ai = no }
+				set_character_flag = achievement_become_exalted
+			}
+		}
+	}
+}
+
+obj_marry_for_love = {
+	type = character
+	
+	allow = {
+		prisoner = no
+		is_marriage_adult = yes
+		NOT = { trait = celibate }
+		NOT = { trait = incapable }
+		NOT = { trait = eunuch }
+		NOT = { trait = depressed }
+		NOT = { spouse = { any_lover = { character = ROOT } } }
+	}
+	chance = {
+		factor = 100
+		
+		# Opinion of current spouse
+		modifier = {
+			factor = 0.8
+			spouse = { reverse_opinion = { who = ROOT value = 100 } }
+		}
+		modifier = {
+			factor = 0.8
+			spouse = { reverse_opinion = { who = ROOT value = 90 } }
+		}
+		modifier = {
+			factor = 0.8
+			spouse = { reverse_opinion = { who = ROOT value = 80 } }
+		}
+		modifier = {
+			factor = 0.8
+			spouse = { reverse_opinion = { who = ROOT value = 70 } }
+		}
+		modifier = {
+			factor = 0.8
+			spouse = { reverse_opinion = { who = ROOT value = 60 } }
+		}
+		modifier = {
+			factor = 0.8
+			spouse = { reverse_opinion = { who = ROOT value = 50 } }
+		}
+		modifier = {
+			factor = 0.8
+			spouse = { reverse_opinion = { who = ROOT value = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			spouse = { reverse_opinion = { who = ROOT value = 30 } }
+		}
+		modifier = {
+			factor = 0.8
+			spouse = { reverse_opinion = { who = ROOT value = 20 } }
+		}
+		modifier = {
+			factor = 0.8
+			spouse = { reverse_opinion = { who = ROOT value = 10 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { spouse = { reverse_opinion = { who = ROOT value = -9 } } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { spouse = { reverse_opinion = { who = ROOT value = -19 } } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { spouse = { reverse_opinion = { who = ROOT value = -29 } } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { spouse = { reverse_opinion = { who = ROOT value = -39 } } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { spouse = { reverse_opinion = { who = ROOT value = -49 } } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { spouse = { reverse_opinion = { who = ROOT value = -59 } } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { spouse = { reverse_opinion = { who = ROOT value = -69 } } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { spouse = { reverse_opinion = { who = ROOT value = -79 } } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { spouse = { reverse_opinion = { who = ROOT value = -89 } } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { spouse = { reverse_opinion = { who = ROOT value = -99 } } }
+		}
+		
+		modifier = {
+			factor = 4
+			trait = extraverted
+		}
+		modifier = {
+			factor = 0.25
+			trait = introverted
+		}
+		modifier = {
+			factor = 2
+			trait = disciplined
+		}
+		modifier = {
+			factor = 0.25
+			trait = carefree
+		}
+		modifier = {
+			factor = 5
+			has_lover = yes
+		}
+		modifier = {
+			factor = 5
+			age = 30
+		}
+		modifier = {
+			factor = 5
+			age = 50
+		}
+	}
+	success = {
+		is_married = yes
+		spouse = { any_lover = { character = ROOT } }
+	}
+	abort = {
+		OR = {
+			prisoner = yes
+			trait = celibate
+			trait = incapable
+			trait = eunuch
+			trait = depressed
+		}
+	}
+	abort_effect = {
+		clr_character_flag = flag_promised_marriage
+		clr_character_flag = flag_denied_marriage
+		remove_character_modifier = promised_a_marriage
+	}
+	effect = {
+		piety = 10
+		if = {
+			limit = { independent = no }
+			opinion = {
+				who = liege
+				modifier = opinion_fulfilled_marriage_wish
+				months = 24
+			}
+		}
+		hidden_tooltip = {
+			clr_character_flag = flag_promised_marriage
+			clr_character_flag = flag_denied_marriage
+			remove_character_modifier = promised_a_marriage
+		}
+	}
+}
+
+obj_marry_for_power = {
+	type = character
+	
+	allow = {
+		prisoner = no
+		is_marriage_adult = yes
+		OR = {
+			is_married = no
+			AND = {
+				is_ruler = no
+				spouse = { is_ruler = yes }
+			}
+			AND = {
+				primary_title = { tier = count }
+				spouse = { primary_title = { higher_tier_than = baron } }
+			}
+			AND = {
+				primary_title = { tier = duke }
+				spouse = { primary_title = { higher_tier_than = count } }
+			}
+			AND = {
+				primary_title = { tier = king }
+				spouse = { primary_title = { higher_tier_than = duke } }
+			}
+			AND = {
+				primary_title = { tier = emperor }
+				spouse = { primary_title = { tier = emperor } }
+			}
+		}
+		OR = {
+			NOT = { spouse = { reverse_opinion = { who = ROOT value = 75 } } }
+			trait = cold
+		}
+		NOT = { trait = celibate }
+		NOT = { trait = incapable }
+		NOT = { trait = content }
+	}
+	chance = {
+		factor = 25
+		
+		# Political marriage vs marriage for love
+		modifier = {
+			factor = 0.2
+			trait = content
+		}
+		modifier = {
+			factor = 5
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.25
+			trait = friendly
+		}
+		modifier = {
+			factor = 4
+			trait = cold
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				religion = neo_feudal
+				religion = terran_imperial
+				trait = pragmatic
+			}
+		}
+		modifier = {
+			factor = 4
+			primary_title = {
+				OR = {
+					has_law = succ_gavelkind
+					has_law = succ_primogeniture
+					has_law = succ_ultimogeniture
+				}
+			}
+		}
+		
+		# Opinion of current spouse
+		modifier = {
+			factor = 0.8
+			spouse = { reverse_opinion = { who = ROOT value = 70 } }
+		}
+		modifier = {
+			factor = 0.8
+			spouse = { reverse_opinion = { who = ROOT value = 60 } }
+		}
+		modifier = {
+			factor = 0.8
+			spouse = { reverse_opinion = { who = ROOT value = 50 } }
+		}
+		modifier = {
+			factor = 0.8
+			spouse = { reverse_opinion = { who = ROOT value = 40 } }
+		}
+		modifier = {
+			factor = 0.8
+			spouse = { reverse_opinion = { who = ROOT value = 30 } }
+		}
+		modifier = {
+			factor = 0.8
+			spouse = { reverse_opinion = { who = ROOT value = 20 } }
+		}
+		modifier = {
+			factor = 0.8
+			spouse = { reverse_opinion = { who = ROOT value = 10 } }
+		}
+		modifier = {
+			factor = 0.8
+			spouse = { reverse_opinion = { who = ROOT value = 0 } }
+		}
+		
+		# General Marriage Stuff
+		modifier = {
+			factor = 4
+			trait = extraverted
+		}
+		modifier = {
+			factor = 0.25
+			trait = introverted
+		}
+		modifier = {
+			factor = 2
+			trait = disciplined
+		}
+		modifier = {
+			factor = 0.25
+			trait = carefree
+		}
+		modifier = {
+			factor = 5
+			age = 30
+		}
+		modifier = {
+			factor = 5
+			age = 50
+		}
+	}
+	success = {
+		is_married = yes
+		spouse = {
+			is_ruler = yes
+		}
+	}
+	abort = {
+		OR = {
+			AND = {
+				is_priest = yes
+				can_marry = no
+			}
+			AND = {
+				is_female = yes
+				is_ruler = no
+				age = 45
+			}
+			trait = celibate
+			trait = incapable
+		}
+	}
+	abort_effect = {
+	}
+	effect = {
+		prestige = 20
+	}
+}
+
+
+obj_have_a_child = {
+	type = character
+	
+	fertility = 0.25
+	
+	allow = {
+		prisoner = no
+		is_marriage_adult = yes
+		OR = {
+			wealth = 500 # Can afford cloning
+			is_married = yes
+			is_consort = yes
+		}
+		NOT = { num_of_children = 1 }
+		NOT = { trait = incapable }
+	}
+	chance = {
+		factor = 50
+		# Political pressure
+		modifier = {
+			factor = 5
+			primary_title = {
+				OR = {
+					has_law = succ_gavelkind
+					has_law = succ_primogeniture
+					has_law = succ_ultimogeniture
+				}
+			}
+		}
+		
+		# Personality
+		modifier = {
+			factor = 4
+			trait = friendly
+		}
+		modifier = {
+			factor = 0.25
+			trait = cold
+		}
+		modifier = {
+			factor = 2
+			trait = extraverted
+		}
+		modifier = {
+			factor = 0.5
+			trait = introverted
+		}
+		
+		modifier = {
+			factor = 5
+			age = 20
+			NOT = { age = 30 }
+		}
+	}
+	success = { num_of_children = 1 }
+	abort = { trait = incapable }
+	abort_effect = {
+	}
+	effect = {
+		piety = 10
+	}
+}
+
+obj_become_ruler = {
+	type = character
+	
+	allow = {
+		prisoner = no
+		is_adult = yes
+		is_ruler = no
+		NOT = { trait = incapable }
+		NOT = { has_minor_title = title_expected_successor }
+		NOT = { any_heir_title = { always = yes } }
+		NOT = { trait = content }
+		liege = {
+			OR = {
+				is_close_relative = ROOT
+				any_friend = { character = ROOT }
+			}
+			num_of_extra_landed_titles = 1
+		}
+	}
+	
+	chance = {
+		factor = 100
+		
+		modifier = {
+			factor = 0.5
+			trait = humble
+		}
+		modifier = {
+			factor = 1.25
+			trait = proud
+		}
+		modifier = {
+			factor = 3.0
+			trait = ambitious
+		}
+	}
+	success = { is_ruler = yes }
+	abort = {
+		OR = {
+			trait = content
+			liege = {
+				OR = {
+					NOT = {
+						OR = {
+							is_close_relative = ROOT
+							any_friend = { character = ROOT }
+						}
+					}
+					NOT = { num_of_extra_landed_titles = 1 }
+				}
+			}
+		}
+	}
+	abort_effect = {
+		clr_character_flag = flag_denied_title
+		clr_character_flag = flag_promised_title
+		remove_character_modifier = promised_a_title
+		clr_character_flag = flag_later_title
+	}
+	effect = {
+		prestige = 50
+		opinion = {
+			who = liege
+			modifier = opinion_generous_relative
+			months = 60
+		}
+		hidden_tooltip = {
+			clr_character_flag = flag_denied_title
+			clr_character_flag = flag_promised_title
+			remove_character_modifier = promised_a_title
+			clr_character_flag = flag_later_title
+			remove_opinion = { who = liege modifier = opinion_promised_title }
+		}
+	}
+}
+obj_become_heir = {
+	type = character
+	
+	allow = {
+		prisoner = no
+		is_adult = yes
+		is_primary_heir = no
+		NOT = { trait = incapable }
+		any_pretender_title = {
+			current_heir = {
+				is_primary_heir = yes
+				OR = {
+					has_epidemic = yes
+					is_ill = yes
+					trait = lunatic
+					trait = possessed
+					trait = incapable
+					trait = infirm
+					any_rival = { character = ROOT }
+				}
+			}
+		}
+	}
+	chance = {
+		factor = 50
+		
+		modifier = {
+			factor = 2.0
+			trait = ambitious
+		}
+		modifier = {
+			factor = 2
+			trait = disciplined
+		}
+		modifier = {
+			factor = 0.5
+			trait = carefree
+		}
+		modifier = {
+			factor = 2
+			trait = cold
+		}
+		modifier = {
+			factor = 0.5
+			trait = friendly
+		}
+		modifier = {
+			factor = 1.5
+			trait = proud
+		}
+		modifier = {
+			factor = 0.01
+			trait = content
+		}
+	}
+	success = {
+		is_primary_heir = yes
+	}
+	abort = {
+		trait = incapable
+	}
+	abort_effect = {
+	}
+	effect = {
+		change_intrigue = 1
+	}
+}
+
+# Become King
+obj_become_king = {
+	type = character
+	ai_capital_kingdom_focus = yes # AI characters with this ambition will actually focus on taking the kingdom
+	
+	potential = {
+		is_adult = yes
+		is_playable = yes
+		higher_tier_than = BARON
+		lower_tier_than = KING
+		NOT = { any_heir_title = { higher_tier_than = DUKE } }
+		# AI logic - don't try to replace a king you like!
+		NOT = {
+			AND = {
+				ai = yes
+				NOT = { trait = cold }
+				capital_scope = {
+					kingdom = {
+						has_holder = yes
+						holder_scope = { reverse_opinion = { who = ROOT value = 1 } }
+					}
+				}
+			}
+		}
+	}
+	
+	allow = { NOT = { trait = incapable } }
+	
+	chance = {
+		factor = 10
+		
+		# Situational
+		modifier = {
+			factor = 4
+			tier = duke
+		}
+		modifier = {
+			factor = 5
+			capital_scope = { kingdom = { has_holder = no } }
+		}
+		
+		# Opinion of current king
+		modifier = {
+			factor = 1.25
+			capital_scope = {
+				kingdom = {
+					has_holder = yes
+					holder_scope = { NOT = { reverse_opinion = { who = ROOT value = -99 } } }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			capital_scope = {
+				kingdom = {
+					has_holder = yes
+					holder_scope = { NOT = { reverse_opinion = { who = ROOT value = -89 } } }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			capital_scope = {
+				kingdom = {
+					has_holder = yes
+					holder_scope = { NOT = { reverse_opinion = { who = ROOT value = -79 } } }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			capital_scope = {
+				kingdom = {
+					has_holder = yes
+					holder_scope = { NOT = { reverse_opinion = { who = ROOT value = -69 } } }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			capital_scope = {
+				kingdom = {
+					has_holder = yes
+					holder_scope = { NOT = { reverse_opinion = { who = ROOT value = -59 } } }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			capital_scope = {
+				kingdom = {
+					has_holder = yes
+					holder_scope = { NOT = { reverse_opinion = { who = ROOT value = -49 } } }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			capital_scope = {
+				kingdom = {
+					has_holder = yes
+					holder_scope = { NOT = { reverse_opinion = { who = ROOT value = -39 } } }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			capital_scope = {
+				kingdom = {
+					has_holder = yes
+					holder_scope = { NOT = { reverse_opinion = { who = ROOT value = -29 } } }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			capital_scope = {
+				kingdom = {
+					has_holder = yes
+					holder_scope = { NOT = { reverse_opinion = { who = ROOT value = -19 } } }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			capital_scope = {
+				kingdom = {
+					has_holder = yes
+					holder_scope = { NOT = { reverse_opinion = { who = ROOT value = -9 } } }
+				}
+			}
+		}
+		
+		# Claims
+		modifier = {
+			factor = 2
+			capital_scope = { kingdom = { ROOT = { has_weak_claim = PREV } } }
+		}
+		modifier = {
+			factor = 5
+			capital_scope = { kingdom = { ROOT = { has_strong_claim = PREV } } }
+		}
+		
+		# Personality
+		modifier = {
+			factor = 0.1
+			trait = content
+		}
+		modifier = {
+			factor = 10
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.5
+			trait = humble
+		}
+		modifier = {
+			factor = 2
+			trait = proud
+		}
+		modifier = {
+			factor = 0.5
+			trait = neurotic
+		}
+		modifier = {
+			factor = 2
+			trait = confident
+		}
+		modifier = {
+			factor = 0.5
+			trait = friendly
+		}
+		modifier = {
+			factor = 2
+			trait = cold
+		}
+	}
+	
+	success = {
+		custom_tooltip = {
+			text = obj_become_king_tip
+			hidden_tooltip = { capital_scope = { kingdom = { holder_scope = { character = ROOT } } } }
+		}
+	}
+	
+	abort = {
+		OR = {
+			trait = incapable
+			is_playable = no
+			is_landed = no
+			AND = {
+				higher_tier_than = DUKE
+				primary_title = {
+					temporary = no
+				}
+			}
+			any_heir_title = {
+				higher_tier_than = DUKE
+				temporary = no
+			}
+			AND = {
+				ai = yes
+				NOT = { trait = cold }
+				capital_scope = {
+					kingdom = {
+						has_holder = yes
+						holder_scope = { reverse_opinion = { who = ROOT value = 1 } }
+					}
+				}
+			}
+		}
+	}
+	
+	abort_effect = {
+	}
+	
+	effect = {
+		prestige = 1000
+	}
+}
+obj_become_emperor = {
+	type = character
+	ai_capital_empire_focus = yes # I doubt this actually does anything, but it's worth a try!
+	
+	potential = {
+		is_adult = yes
+		is_playable = yes
+		higher_tier_than = COUNT
+		lower_tier_than = EMPEROR
+		NOT = { any_heir_title = { tier = EMPEROR } }
+		# AI logic - don't try to replace a king you like!
+		NOT = {
+			AND = {
+				ai = yes
+				NOT = { trait = cold }
+				capital_scope = {
+					empire = {
+						has_holder = yes
+						holder_scope = { reverse_opinion = { who = ROOT value = 1 } }
+					}
+				}
+			}
+		}
+	}
+	
+	allow = { NOT = { trait = incapable } }
+	
+	chance = {
+		factor = 10
+		
+		# Situational
+		modifier = {
+			factor = 4
+			tier = king
+		}
+		modifier = {
+			factor = 5
+			capital_scope = { empire = { has_holder = no } }
+		}
+		
+		# Opinion of current emperor
+		modifier = {
+			factor = 1.25
+			capital_scope = {
+				empire = {
+					has_holder = yes
+					holder_scope = { NOT = { reverse_opinion = { who = ROOT value = -99 } } }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			capital_scope = {
+				empire = {
+					has_holder = yes
+					holder_scope = { NOT = { reverse_opinion = { who = ROOT value = -89 } } }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			capital_scope = {
+				empire = {
+					has_holder = yes
+					holder_scope = { NOT = { reverse_opinion = { who = ROOT value = -79 } } }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			capital_scope = {
+				empire = {
+					has_holder = yes
+					holder_scope = { NOT = { reverse_opinion = { who = ROOT value = -69 } } }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			capital_scope = {
+				empire = {
+					has_holder = yes
+					holder_scope = { NOT = { reverse_opinion = { who = ROOT value = -59 } } }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			capital_scope = {
+				empire = {
+					has_holder = yes
+					holder_scope = { NOT = { reverse_opinion = { who = ROOT value = -49 } } }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			capital_scope = {
+				empire = {
+					has_holder = yes
+					holder_scope = { NOT = { reverse_opinion = { who = ROOT value = -39 } } }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			capital_scope = {
+				empire = {
+					has_holder = yes
+					holder_scope = { NOT = { reverse_opinion = { who = ROOT value = -29 } } }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			capital_scope = {
+				empire = {
+					has_holder = yes
+					holder_scope = { NOT = { reverse_opinion = { who = ROOT value = -19 } } }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			capital_scope = {
+				empire = {
+					has_holder = yes
+					holder_scope = { NOT = { reverse_opinion = { who = ROOT value = -9 } } }
+				}
+			}
+		}
+		
+		# Claims
+		modifier = {
+			factor = 2
+			capital_scope = { empire = { ROOT = { has_weak_claim = PREV } } }
+		}
+		modifier = {
+			factor = 5
+			capital_scope = { empire = { ROOT = { has_strong_claim = PREV } } }
+		}
+		
+		# Personality
+		modifier = {
+			factor = 0.1
+			trait = content
+		}
+		modifier = {
+			factor = 10
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.5
+			trait = humble
+		}
+		modifier = {
+			factor = 2
+			trait = proud
+		}
+		modifier = {
+			factor = 0.5
+			trait = neurotic
+		}
+		modifier = {
+			factor = 2
+			trait = confident
+		}
+		modifier = {
+			factor = 0.5
+			trait = friendly
+		}
+		modifier = {
+			factor = 2
+			trait = cold
+		}
+	}
+	
+	success = {
+		custom_tooltip = {
+			text = obj_become_emperor_tip
+			hidden_tooltip = { capital_scope = { empire = { holder_scope = { character = ROOT } } } }
+		}
+	}
+	
+	abort = {
+		OR = {
+			trait = incapable
+			is_playable = no
+			is_landed = no
+			AND = {
+				tier = emperor
+				primary_title = {
+					temporary = no
+				}
+			}
+			any_heir_title = {
+				tier = emperor
+				temporary = no
+			}
+			AND = {
+				ai = yes
+				NOT = { trait = cold }
+				capital_scope = {
+					empire = {
+						has_holder = yes
+						holder_scope = { reverse_opinion = { who = ROOT value = 1 } }
+					}
+				}
+			}
+		}
+	}
+	
+	abort_effect = {
+	}
+	
+	effect = {
+		prestige = 1000
+	}
+}
+
+### Ambitions to improve abilitites
+
+# Martial
+obj_improve_martial = {
+	type = character
+	
+	potential = {
+		age = 16
+		is_playable = yes
+	}
+	
+	allow = {
+		NOT = { martial = 8 }
+		NOT = { trait = incapable }
+		NOT = { trait = infirm }
+		prisoner = no
+	}
+	chance = {
+		factor = 100
+		
+		modifier = {
+			factor = 1.25
+			trait = disciplined
+		}
+		modifier = {
+			factor = 1.25
+			trait = misguided_warrior
+		}
+		modifier = {
+			factor = 1.5
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.01
+			trait = content
+		}
+		modifier = {
+			factor = 0.01
+			trait = carefree
+		}
+	}
+	success = {
+		martial = 8
+	}
+	abort = {
+		OR = {
+			trait = incapable
+			trait = infirm
+		}
+	}
+	abort_effect = {
+		clr_character_flag = improve_martial_success
+		clr_character_flag = toy_army_prepare
+		clr_character_flag = toy_army
+		clr_character_flag = street_ruffians
+	}
+	effect = {
+		prestige = 100
+		clr_character_flag = improve_martial_success
+		clr_character_flag = toy_army_prepare
+		clr_character_flag = toy_army
+		clr_character_flag = street_ruffians
+	}
+}
+
+# Stewardship
+obj_improve_stewardship = {
+	type = character
+	
+	potential = {
+		age = 16
+		is_playable = yes
+	}
+	
+	allow = {
+		NOT = { stewardship = 8 }
+		NOT = { trait = incapable }
+		NOT = { trait = infirm }
+		prisoner = no
+	}
+	chance = {
+		factor = 100
+		
+		modifier = {
+			factor = 1.25
+			trait = disciplined
+		}
+		modifier = {
+			factor = 1.25
+			trait = indulgent_wastrel
+		}
+		modifier = {
+			factor = 1.5
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.01
+			trait = content
+		}
+		modifier = {
+			factor = 0.01
+			trait = carefree
+		}
+	}
+	success = {
+		stewardship = 8
+	}
+	abort = {
+		OR = {
+			trait = incapable
+			trait = infirm
+		}
+	}
+	abort_effect = {
+		clr_character_flag = 10_salt
+		clr_character_flag = 20_salt
+		clr_character_flag = 30_salt
+		clr_character_flag = all_salt
+		clr_character_flag = the_inn
+		clr_character_flag = the_garden
+		clr_character_flag = the_survey
+	}
+	effect = {
+		prestige = 100
+		clr_character_flag = improve_stewardship_success
+		clr_character_flag = the_inn
+		clr_character_flag = the_garden
+		clr_character_flag = the_survey
+	}
+}
+
+# Learning
+obj_improve_learning = {
+	type = character
+	
+	potential = {
+		age = 16
+		is_playable = yes
+	}
+	
+	allow = {
+		NOT = { learning = 8 }
+		NOT = { trait = incapable }
+		NOT = { trait = infirm }
+		prisoner = no
+	}
+	chance = {
+		factor = 100
+		
+		modifier = {
+			factor = 1.25
+			trait = disciplined
+		}
+		modifier = {
+			factor = 1.25
+			trait = incompetent_scientist
+		}
+		modifier = {
+			factor = 1.5
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.01
+			trait = content
+		}
+		modifier = {
+			factor = 0.01
+			trait = carefree
+		}
+	}
+	success = {
+		learning = 8
+	}
+	abort = {
+		OR = {
+			trait = incapable
+			trait = infirm
+		}
+	}
+	abort_effect = {
+		clr_character_flag = flying_machine
+		clr_character_flag = ancient_tome
+		clr_character_flag = hermit_visit
+	}
+	effect = {
+		prestige = 100
+		clr_character_flag = improve_learning_success
+		clr_character_flag = flying_machine
+		clr_character_flag = ancient_tome
+		clr_character_flag = hermit_visit
+	}
+}
+
+# Diplomacy
+obj_improve_diplomacy = {
+	type = character
+	
+	potential = {
+		age = 16
+		is_playable = yes
+	}
+	
+	allow = {
+		NOT = { diplomacy = 8 }
+		NOT = { trait = incapable }
+		NOT = { trait = infirm }
+		prisoner = no
+	}
+	chance = {
+		factor = 100
+		
+		modifier = {
+			factor = 1.25
+			trait = disciplined
+		}
+		modifier = {
+			factor = 1.25
+			trait = naive_appeaser
+		}
+		modifier = {
+			factor = 1.5
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.01
+			trait = content
+		}
+		modifier = {
+			factor = 0.01
+			trait = carefree
+		}
+	}
+	success = {
+		diplomacy = 8
+	}
+	abort = {
+		OR = {
+			trait = incapable
+			trait = infirm
+		}
+	}
+	abort_effect = {
+		clr_character_flag = the_feud
+		clr_character_flag = the_mirror
+		clr_character_flag = the_suicide
+	}
+	effect = {
+		prestige = 100
+		clr_character_flag = improve_diplomacy_success
+		clr_character_flag = the_feud
+		clr_character_flag = the_mirror
+		clr_character_flag = the_suicide
+	}
+}
+
+# Intrigue
+obj_improve_intrigue = {
+	type = character
+	
+	potential = {
+		age = 16
+		is_playable = yes
+	}
+	
+	allow = {
+		NOT = { intrigue = 8 }
+		NOT = { trait = incapable }
+		NOT = { trait = infirm }
+		prisoner = no
+	}
+	chance = {
+		factor = 100
+		
+		modifier = {
+			factor = 1.25
+			trait = disciplined
+		}
+		modifier = {
+			factor = 1.25
+			trait = naive_appeaser
+		}
+		modifier = {
+			factor = 1.5
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.01
+			trait = content
+		}
+		modifier = {
+			factor = 0.01
+			trait = carefree
+		}
+	}
+	success = {
+		intrigue = 8
+	}
+	abort = {
+		OR = {
+			trait = incapable
+			trait = infirm
+		}
+	}
+	abort_effect = {
+		clr_character_flag = the_necklace
+		clr_character_flag = gossip
+		clr_character_flag = old_spymaster
+	}
+	effect = {
+		prestige = 100
+		clr_character_flag = improve_intrigue_success
+		clr_character_flag = the_necklace
+		clr_character_flag = gossip
+		clr_character_flag = old_spymaster
+	}
+}
