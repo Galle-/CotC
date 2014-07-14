@@ -24,7 +24,7 @@ spriteTypes = {
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
-			"GFX_character_blinded_eyes:p10"
+			"GFX_character_implants:p10"
 			"GFX_confederate_male_clothes:p3:c2"
 			"GFX_confederate_male_headgear_mid:p5:c3"
 			"GFX_mongol_male_ear:d7"			
@@ -70,7 +70,7 @@ spriteTypes = {
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"							#20
 			"GFX_character_boils:p9"
-			"GFX_character_blinded_eyes:p10"
+			"GFX_character_implants:p10"
 			"GFX_confederate_male_clothes:p3:c2"
 			"GFX_confederate_male_headgear_mid:p5:c3"
 			"GFX_mongol_male_ear_midage:d7"					#15
@@ -117,7 +117,7 @@ spriteTypes = {
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
-			"GFX_character_blinded_eyes:p10"
+			"GFX_character_implants:p10"
 			"GFX_confederate_male_clothes:p3:c2"
 			"GFX_confederate_male_headgear_mid:p5:c3"
 			"GFX_mongol_male_ear_oldage:d7"
@@ -162,7 +162,7 @@ spriteTypes = {
 			"GFX_character_scars:p7:y"                            #16
 			"GFX_character_reddots:p8"                          #17
 			"GFX_character_boils:p9"                            #18
-			"GFX_character_blinded_eyes:p10"
+			"GFX_character_implants:p10"
 			"GFX_confederate_female_clothes:p3:c2"                  #12
 			"GFX_mongol_female_ear:d7"                         #13
 			"GFX_empty:p3:c4"
@@ -206,7 +206,7 @@ spriteTypes = {
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
-			"GFX_character_blinded_eyes:p10"
+			"GFX_character_implants:p10"
 			"GFX_confederate_female_clothes:p3:c2"			
 			"GFX_mongol_female_ear_midage:d7"
 			"GFX_empty:p3:c4"
@@ -250,7 +250,7 @@ spriteTypes = {
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
-			"GFX_character_blinded_eyes:p10"
+			"GFX_character_implants:p10"
 			"GFX_confederate_female_clothes:p3:c2"			
 			"GFX_mongol_female_ear_oldage:d7"
 			"GFX_empty:p3:c4"
@@ -297,7 +297,7 @@ spriteTypes = {
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
-			"GFX_character_blinded_eyes:p10"
+			"GFX_character_implants:p10"
 			"GFX_frontier_male_clothes:p3:c2"
 			"GFX_frontier_male_headgear_mid:p5:c3"
 			"GFX_mongol_male_ear:d7"			
@@ -343,7 +343,7 @@ spriteTypes = {
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"							#20
 			"GFX_character_boils:p9"
-			"GFX_character_blinded_eyes:p10"
+			"GFX_character_implants:p10"
 			"GFX_frontier_male_clothes:p3:c2"
 			"GFX_frontier_male_headgear_mid:p5:c3"
 			"GFX_mongol_male_ear_midage:d7"					#15
@@ -390,7 +390,7 @@ spriteTypes = {
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
-			"GFX_character_blinded_eyes:p10"
+			"GFX_character_implants:p10"
 			"GFX_frontier_male_clothes:p3:c2"
 			"GFX_frontier_male_headgear_mid:p5:c3"
 			"GFX_mongol_male_ear_oldage:d7"
@@ -435,7 +435,7 @@ spriteTypes = {
 			"GFX_character_scars:p7:y"                            #16
 			"GFX_character_reddots:p8"                          #17
 			"GFX_character_boils:p9"                            #18
-			"GFX_character_blinded_eyes:p10"
+			"GFX_character_implants:p10"
 			"GFX_frontier_female_clothes:p3:c2"                  #12
 			"GFX_mongol_female_ear:d7"                         #13
 			"GFX_empty:p3:c4"
@@ -479,7 +479,7 @@ spriteTypes = {
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
-			"GFX_character_blinded_eyes:p10"
+			"GFX_character_implants:p10"
 			"GFX_frontier_female_clothes:p3:c2"			
 			"GFX_mongol_female_ear_midage:d7"
 			"GFX_empty:p3:c4"
@@ -523,7 +523,7 @@ spriteTypes = {
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
-			"GFX_character_blinded_eyes:p10"
+			"GFX_character_implants:p10"
 			"GFX_frontier_female_clothes:p3:c2"			
 			"GFX_mongol_female_ear_oldage:d7"
 			"GFX_empty:p3:c4"
@@ -570,7 +570,7 @@ spriteTypes = {
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
-			"GFX_character_blinded_eyes:p10"
+			"GFX_character_implants:p10"
 			"GFX_samawati_male_clothes:p3:c2"
 			"GFX_samawati_male_headgear_mid:p5:c3"
 			"GFX_mongol_male_ear:d7"			
@@ -616,7 +616,7 @@ spriteTypes = {
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"							#20
 			"GFX_character_boils:p9"
-			"GFX_character_blinded_eyes:p10"
+			"GFX_character_implants:p10"
 			"GFX_samawati_male_clothes:p3:c2"
 			"GFX_samawati_male_headgear_mid:p5:c3"
 			"GFX_mongol_male_ear_midage:d7"					#15
@@ -663,7 +663,7 @@ spriteTypes = {
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
-			"GFX_character_blinded_eyes:p10"
+			"GFX_character_implants:p10"
 			"GFX_samawati_male_clothes:p3:c2"
 			"GFX_samawati_male_headgear_mid:p5:c3"
 			"GFX_mongol_male_ear_oldage:d7"
@@ -708,7 +708,7 @@ spriteTypes = {
 			"GFX_character_scars:p7:y"                            #16
 			"GFX_character_reddots:p8"                          #17
 			"GFX_character_boils:p9"                            #18
-			"GFX_character_blinded_eyes:p10"
+			"GFX_character_implants:p10"
 			"GFX_samawati_female_clothes:p3:c2"                  #12
 			"GFX_mongol_female_ear:d7"                         #13
 			"GFX_empty:p3:c4"
@@ -752,7 +752,7 @@ spriteTypes = {
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
-			"GFX_character_blinded_eyes:p10"
+			"GFX_character_implants:p10"
 			"GFX_samawati_female_clothes:p3:c2"			
 			"GFX_mongol_female_ear_midage:d7"
 			"GFX_empty:p3:c4"
@@ -796,7 +796,7 @@ spriteTypes = {
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
-			"GFX_character_blinded_eyes:p10"
+			"GFX_character_implants:p10"
 			"GFX_samawati_female_clothes:p3:c2"			
 			"GFX_mongol_female_ear_oldage:d7"
 			"GFX_empty:p3:c4"

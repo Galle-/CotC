@@ -1,5 +1,13 @@
 # New CotC Sprites
 spriteTypes = {
+	### UNIVERSAL ###
+	spriteType = {
+		name = "GFX_character_implants"
+		texturefile = "gfx\\characters\\IMPLANTS_REVISED.dds"
+		noOfFrames = 24
+		norefcount = yes
+		can_be_lowres = yes
+	}
 	### CONFEDERATE MALE ###
 	spriteType = {
 		name = "GFX_confederate_male_clothes_behind"
