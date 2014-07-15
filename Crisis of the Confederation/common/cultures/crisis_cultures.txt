@@ -337,7 +337,8 @@ terran_group = {
 		modifier = default_culture_modifier
 	}
 	russo_terran = {
-		graphical_culture = angloconfederategfx
+		graphical_culture = russoconfederategfx
+		second_graphical_culture = angloconfederategfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -775,7 +776,8 @@ xingjie_group = {
 		modifier = default_culture_modifier
 	}
 	russo_xingjie = {
-		graphical_culture = angloconfederategfx
+		graphical_culture = russoconfederategfx
+		second_graphical_culture = angloconfederategfx
 		
 		color = { 0.95 0.5 0.5 }
 		
@@ -1218,7 +1220,8 @@ second_graphical_culture = mideastconfederategfx
 		modifier = default_culture_modifier
 	}
 	russo_celestean = {
-		graphical_culture = angloconfederategfx
+		graphical_culture = russoconfederategfx
+		second_graphical_culture = angloconfederategfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -1639,7 +1642,8 @@ second_graphical_culture = mideastconfederategfx
 		modifier = default_culture_modifier
 	}
 	russo_sexto_solar = {
-		graphical_culture = angloconfederategfx
+		graphical_culture = russoconfederategfx
+		second_graphical_culture = angloconfederategfx
 		
 		color = { 0.5 0.5 0.95 }
 		
@@ -2073,7 +2077,8 @@ samawati_group = {
 		modifier = default_culture_modifier
 	}
 	russo_samawati = {
-		graphical_culture = anglosamawatigfx
+		graphical_culture = russosamawatigfx
+		second_graphical_culture = anglosamawatigfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -2525,7 +2530,8 @@ second_graphical_culture = mideastconfederategfx
 		modifier = default_culture_modifier
 	}
 	russo_angani = {
-		graphical_culture = angloconfederategfx
+		graphical_culture = russoconfederategfx
+		second_graphical_culture = angloconfederategfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -2985,7 +2991,8 @@ frontiersman_group = {
 		modifier = default_culture_modifier
 	}
 	russo_frontiersman = {
-		graphical_culture = anglofrontiergfx
+		graphical_culture = russofrontiergfx
+		second_graphical_culture = anglofrontiergfx
 		
 		color = { 0.5 0.5 0.95 }
 		male_names = {
@@ -3472,7 +3479,8 @@ second_graphical_culture = mideastconfederategfx
 		modifier = default_culture_modifier
 	}
 	russo_centauri = {
-		graphical_culture = angloconfederategfx
+		graphical_culture = russoconfederategfx
+		second_graphical_culture = angloconfederategfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -3959,7 +3967,8 @@ second_graphical_culture = mideastconfederategfx
 		modifier = default_culture_modifier
 	}
 	russo_tengoku = {
-		graphical_culture = angloconfederategfx
+		graphical_culture = russoconfederategfx
+		second_graphical_culture = angloconfederategfx
 		
 		color = { 0.5 0.5 0.95 }
 		
@@ -4412,7 +4421,8 @@ second_graphical_culture = mideastconfederategfx
 		modifier = default_culture_modifier
 	}
 	russo_bianjiangese = {
-		graphical_culture = angloconfederategfx
+		graphical_culture = russoconfederategfx
+		second_graphical_culture = angloconfederategfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -4857,7 +4867,8 @@ second_graphical_culture = mideastconfederategfx
 		modifier = default_culture_modifier
 	}
 	russo_orion = {
-		graphical_culture = angloconfederategfx
+		graphical_culture = russoconfederategfx
+		second_graphical_culture = angloconfederategfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -5302,7 +5313,8 @@ second_graphical_culture = mideastconfederategfx
 		modifier = default_culture_modifier
 	}
 	russo_mukta = {
-		graphical_culture = angloconfederategfx
+		graphical_culture = russoconfederategfx
+		second_graphical_culture = angloconfederategfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -5747,7 +5759,8 @@ second_graphical_culture = mideastconfederategfx
 		modifier = default_culture_modifier
 	}
 	russo_tarkan = {
-		graphical_culture = angloconfederategfx
+		graphical_culture = russoconfederategfx
+		second_graphical_culture = angloconfederategfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -6192,7 +6205,8 @@ second_graphical_culture = mideastconfederategfx
 		modifier = default_culture_modifier
 	}
 	russo_avalonian = {
-		graphical_culture = angloconfederategfx
+		graphical_culture = russoconfederategfx
+		second_graphical_culture = angloconfederategfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -6676,7 +6690,8 @@ second_graphical_culture = mideastconfederategfx
 		modifier = default_culture_modifier
 	}
 	russo_strugatskite = {
-		graphical_culture = angloconfederategfx
+		graphical_culture = russoconfederategfx
+		second_graphical_culture = angloconfederategfx
 		
 		color = { 0.5 0.5 0.95 }
 
@@ -7172,7 +7187,8 @@ second_graphical_culture = mideastconfederategfx
 		modifier = default_culture_modifier
 	}
 	russo_edemite = {
-		graphical_culture = angloconfederategfx
+		graphical_culture = russoconfederategfx
+		second_graphical_culture = angloconfederategfx
 		
 		color = { 0.5 0.5 0.95 }
 

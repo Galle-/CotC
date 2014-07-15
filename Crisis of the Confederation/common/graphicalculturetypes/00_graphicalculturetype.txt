@@ -22,6 +22,9 @@ mideastconfederategfx = {
 persianconfederategfx = {
 	skin_tone = 0
 }
+russoconfederategfx = {
+	skin_tone = 0
+}
 sinoconfederategfx = {
 	skin_tone = 1
 }
@@ -47,6 +50,9 @@ mideastfrontiergfx = {
 persianfrontiergfx = {
 	skin_tone = 0
 }
+russofrontiergfx = {
+	skin_tone = 0
+}
 sinofrontiergfx = {
 	skin_tone = 1
 }
@@ -70,6 +76,9 @@ mideastsamawatigfx = {
 	skin_tone = 2
 }
 persiansamawatigfx = {
+	skin_tone = 0
+}
+russosamawatigfx = {
 	skin_tone = 0
 }
 sinosamawatigfx = {
