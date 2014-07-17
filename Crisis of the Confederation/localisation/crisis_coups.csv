@@ -34,3 +34,29 @@ EVTDESCCOUP120;Tracer beams glitter in the dark skies over the third world of th
 EVTOPTACOUP120;Open fire! Target the Loyalists!;;;;;;;;;;;;;x
 EVTDESCCOUP121;Things are beginning to look bleak, as yet another squadron of Loyalist reinforcements jump in, led by a ship you recognize as the [From.Religon.GetRandomEvilGodName], [From.GetFullName]'s flagship. You are about to order a missile salvo when they open fire - on the other Loyalists. Your crew cheers as Loyalist ships explode.;;;;;;;;;;;;;x
 EVTOPTACOUP121;Reset IFF, tag the [From.PrimaryTitle.GetAdjective] forces as friendlies!;;;;;;;;;;;;;x
+EVTDESCCOUP200;You lay aside the latest intelligence reports. You know that [Root.PlotTarget.GetFullName] is in the [Root.PlotTarget.Location.GetName] System, and your forces are already in position to strike. With one swift move, you could capture the [Root.PlotTarget.GetTitle] and accomplish your goals before any loyalists could react.;;;;;;;;;;;;;x
+EVTOPTACOUP200;All units, move out!;;;;;;;;;;;;;x
+EVTOPTBCOUP200;No, the time is not yet right.;;;;;;;;;;;;;x
+EVTTOOLTIPCOUP201;is informed of your plans.;;;;;;;;;;;;;x
+EVTTOOLTIPCOUP202;will detect your incoming fleet.;;;;;;;;;;;;;x
+EVTTOOLTIPCOUP203;comes under attack by your forces.;;;;;;;;;;;;;x
+EVTDESCCOUP201;TO: [Root.GetFullName]\nFROM: [From.GetFullName]\nRE: Events in motion\nMy forces are on their way to the [From.PlotTarget.Location.GetName] System to apprehend [From.PlotTarget.GetFullName]. Be prepared to move should the initial strike fail.;;;;;;;;;;;;;x
+EVTDESCCOUP202;Something is wrong. Over the past two days, [From.GetTitle] [From.GetFullName] has been bringing more and more ships into the [From.PlotTarget.Location.GetName] System - ships that are urgently needed elsewhere, and captained by officers who have often spoken out publicly against the [From.PlotTarget.GetTitle].;;;;;;;;;;;;;x
+EVTOPTACOUP202;Put all squadrons on high alert.;;;;;;;;;;;;;x
+EVTOPTBCOUP202;I'm sure it's nothing.;;;;;;;;;;;;;x
+EVTDESCCOUP204;Typical. You put all that effort into a plan to seize power from [FromFrom.GetFullName], and then [FromFrom.GetSheHe] has the nerve to fall from power on [FromFrom.GetHerHis] own time.;;;;;;;;;;;;;x
+EVTOPTACOUP204;You have got to be kidding me.;;;;;;;;;;;;;x
+EVTDESCCOUP210;You stand in your command center, leaning over a holotank console, listening to reports filter in from [Root.PlotTarget.Location.GetName]. You could cut the tension with a knife. Early combat reports were only sporadic, but it's only a matter of time before someone realizes what your marines are up to. That is, until a flickering image of a marine captain appears in the air before you.\n\n'[Root.PrimaryTitle.GetFOA], he says, 'we've got [Root.PlotTarget.GetHerHim]. We're returning to command now.';;;;;;;;;;;;;x
+EVTOPTACOUP210;Well done, captain, mission accomplished.;;;;;;;;;;;;;x
+EVTTOOLTIPCOUP211;surrenders the [Root.PlotTargetTitle.GetFullName].;;;;;;;;;;;;;x
+EVTDESCCOUP211;An explosion rocks you from your sleep.\n\nYou sit up, still not quite awake. It's the middle of the night, and you're beginning to wonder just what the hell that noise was. You almost think you hear gunfire, but that would be absurd, wouldn't it?\n\nA loud bang catches your attention, and you turn to see the entrance to your quarters slide open and a junior aide step through, only to fall immediately to the ground, blood pouring from [Root.job_chancellor.GetHerHis] chest. The [From.PrimaryTitle.GetAdjective] marine behind [Root.job_chancellor.GetHerHim] walks into the room and pulls you from your bed before tapping [From.GetHerHis] comlink.\n\n'[From.PrimaryTitle.GetFOA], we've got [Root.GetHerHim].';;;;;;;;;;;;;x
+EVTOPTACOUP211;This... this is treason! I'll have your head for this, [From.GetOnlyDynastyName]!;;;;;;;;;;;;;x
+EVTDESCCOUP212;Breaking news, live from the [From.Location.GetName] System! We're still getting only scattered reports, but it appears that forces under the command of [FromFrom.GetTitle] [FromFrom.GetFullName] have opened fire on other [From.PrimaryTitle.GetAdjective] units.\n\nThere is no clear word yet on the status of [From.GetTitle] [From.GetFullName], but all signs suggest that [From.GetSheHe] may have already been captured by [FromFrom.GetOnlyDynastyName]'s forces.;;;;;;;;;;;;;x
+EVTOPTACOUP212;...what will happen to us now?;;;;;;;;;;;;;x
+EVTOPTBCOUP212;Victory is ours!;;;;;;;;;;;;;x
+EVTOPTCCOUP212;Damn, we were too late!;;;;;;;;;;;;;x
+EVTDESCCOUP220;You stand in your command center, leaning over a holotank console, listening to reports filter in from the capital. You could cut the tension with a knife. Early combat reports were only sporadic, but it's only a matter of time before someone realizes what your marines are up to. That is, until a flickering image of a marine captain appears in the air before you.\n\n'[Root.PrimaryTitle.GetFOA]! [Root.PrimaryTitle.GetFOA], [FromFrom.GetSheHe]'s not here! [FromFrom.GetSheCap] got away!';;;;;;;;;;;;;x
+EVTOPTACOUP220;Then FIND [FromFrom.GetHerHim]! NOW!;;;;;;;;;;;;;x
+EVTTOOLTIPCOUP221;escapes!;;;;;;;;;;;;;x
+EVTDESCCOUP222;A pleasant night's sleep is cut short by someone shaking you awake. You manage to stir yourself to consciousness, making out the vague form of one of your junior aides. 'It's important, [Root.PrimaryTitle.GetFOA],' [Root.job_chancellor.GetSheHe] says in a hushed whisper.\n\nYou manage to regain enough clarity to ask for details. 'It's... it's the [From.PrimaryTitle.GetFullName],' [Root.job_chancellor.GetSheHe] says, 'security caught one of their SpecOps teams on the palace grounds, planting explosives. [From.GetOnlyDynastyName]'s already landed an armor column. We need to get you to a secure location right now, [Root.PrimaryTitle.GetFOA]!';;;;;;;;;;;;;x
+EVTOPTACOUP223;So it's come to this...;;;;;;;;;;;;;x

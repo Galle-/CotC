@@ -1163,81 +1163,81 @@ character_event = {
 	# option = { name = "EVTOPTACOUP145" }
 # }
 
-# # The war is going badly, now's your last chance to make a difference
-# character_event = {
-	# id = coup.150
-	# desc = "EVTDESCCOUP150"
-	# picture = GFX_evt_battle
-	# border = GFX_evt_normal_frame_war
-	# is_triggered_only = yes
+# The war is going badly, now's your last chance to make a difference
+character_event = {
+	id = coup.150
+	desc = "EVTDESCCOUP150"
+	picture = GFX_evt_battle
+	border = GFX_evt_normal_frame_war
+	is_triggered_only = yes
 	
-	# min_age = 16
-	# only_rulers = yes
-	# prisoner = no
-	# capable_only = yes
+	min_age = 16
+	only_rulers = yes
+	prisoner = no
+	capable_only = yes
 	
-	# trigger = {
-		# demesne_size = 1
-		# any_backed_character = {
-			# any_war = {
-				# attacker = { character = PREV }
-				# defender = { any_vassal = { character = ROOT } }
-				# using_cb = civil_war
-				# NOT = { war_score = -75 }
-			# }
-		# }
-	# }
+	trigger = {
+		demesne_size = 1
+		any_backed_character = {
+			any_war = {
+				attacker = { character = PREV }
+				defender = { any_vassal = { character = ROOT } }
+				using_cb = civil_war
+				NOT = { war_score = -75 }
+			}
+		}
+	}
 	
-	# mean_time_to_happen = {
-		# months = 24
-	# }
+	mean_time_to_happen = {
+		months = 24
+	}
 	
-	# option = {
-		# name = "EVTOPTACOUP150"
-		# random_backed_character = {
-			# limit = {
-				# any_war = {
-					# attacker = { character = PREV }
-					# defender = { any_vassal = { character = ROOT } }
-					# using_cb = civil_war
-					# NOT = { war_score = -75 }
-				# }
-			# }
-			# letter_event = { id = coup.151 tooltip = "EVTTOOLTIPCOUP151" }
-			# ROOT = { join_attacker_wars = PREV }
-			# plot_target_char = {
-				# opinion = { who = ROOT modifier = opinion_attempted_coup }
-				# letter_event = { id = coup.152 tooltip = "EVTTOOLTIPCOUP152" }
-				# hidden_tooltip = { any_vassal = { character_event = { id = coup.153 } } }
-			# }
-		# }
-	# }
-# }
-# letter_event = {
-	# id = coup.151
-	# desc = "EVTDESCCOUP151"
-	# border = GFX_evt_letter_frame_war
-	# is_triggered_only = yes
+	option = {
+		name = "EVTOPTACOUP150"
+		random_backed_character = {
+			limit = {
+				any_war = {
+					attacker = { character = PREV }
+					defender = { any_vassal = { character = ROOT } }
+					using_cb = civil_war
+					NOT = { war_score = -75 }
+				}
+			}
+			letter_event = { id = coup.151 tooltip = "EVTTOOLTIPCOUP151" }
+			ROOT = { join_attacker_wars = PREV }
+			plot_target_char = {
+				opinion = { who = ROOT modifier = opinion_attempted_coup }
+				letter_event = { id = coup.152 tooltip = "EVTTOOLTIPCOUP152" }
+				hidden_tooltip = { any_vassal = { character_event = { id = coup.153 } } }
+			}
+		}
+	}
+}
+letter_event = {
+	id = coup.151
+	desc = "EVTDESCCOUP151"
+	border = GFX_evt_letter_frame_war
+	is_triggered_only = yes
 	
-	# option = { name = "EVTOPTACOUP151" }
-# }
-# letter_event = {
-	# id = coup.152
-	# desc = "EVTDESCCOUP152"
-	# border = GFX_evt_letter_frame_war
-	# is_triggered_only = yes
+	option = { name = "EVTOPTACOUP151" }
+}
+letter_event = {
+	id = coup.152
+	desc = "EVTDESCCOUP152"
+	border = GFX_evt_letter_frame_war
+	is_triggered_only = yes
 	
-	# option = { name = "EVTOPTACOUP152" }
-# }
-# character_event = {
-	# id = coup.153
-	# desc = "EVTDESCCOUP153"
-	# picture = GFX_evt_battle
-	# border = GFX_evt_normal_frame_war
-	# is_triggered_only = yes
+	option = { name = "EVTOPTACOUP152" }
+}
+character_event = {
+	id = coup.153
+	desc = "EVTDESCCOUP153"
+	picture = GFX_evt_battle
+	border = GFX_evt_normal_frame_war
+	is_triggered_only = yes
 	
-	# option = { name = "EVTOPTACOUP153" }
-# }
+	option = { name = "EVTOPTACOUP153" }
+}
 
 # Plot leader has the opportunity to carry out a military coup
 character_event = {
@@ -1642,6 +1642,7 @@ character_event = {
 				prisoner = no
 				FROM = { plot_target_title = { holder_scope = { character = ROOT } } }
 			}
+			FROM = { set_character_flag = flag_coup_went_to_resolution }
 			e_rebels = { holder_scope = { character_event = { id = coup.205 } } }
 		}
 		if = {
@@ -1654,6 +1655,7 @@ character_event = {
 				}
 			}
 			FROM = { character_event = { id = coup.204 } } # Wait, nevermind, abort, abort
+			FROM = { set_character_flag = flag_coup_returned_from_resolution }
 			any_vassal = { clr_character_flag = flag_coup_intervener }
 		}
 	}
@@ -1683,12 +1685,14 @@ character_event = {
 	option = {
 		# Coup successful!
 		FROM = { FROM = { narrative_event = { id = coup.210 } } }
+		FROM = { FROM = { set_character_flag = flag_coup_successful } }
 		ai_chance = { factor = 50 }
 	}
 	
 	option = {
 		# Coup foiled by target
 		FROM = { FROM = { narrative_event = { id = coup.220 } } }
+		FROM = { FROM = { set_character_flag = flag_foiled_by_target } }
 		ai_chance = {
 			factor = 50
 			# Too trusting
@@ -2128,8 +2132,9 @@ character_event = {
 	
 	option = {
 		# Coup foiled by intervener
-		limit = { FROM = { any_vassal = { has_character_flag = flag_coup_intervener } } }
+		trigger = { FROM = { any_vassal = { has_character_flag = flag_coup_intervener } } }
 		FROM = { FROM = { character_event = { id = coup.230 } } }
+		FROM = { FROM = { set_character_flag = flag_foiled_by_intervener } }
 		ai_chance = {
 			factor = 50
 			# Compared martial score
@@ -2569,7 +2574,6 @@ narrative_event = {
 	
 	option = {
 		name = "EVTOPTACOUP211"
-		imprison = FROM
 		hidden_tooltip = {
 			any_vassal = {
 				limit = { NOT = { character = FROM } }
