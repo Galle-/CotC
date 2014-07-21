@@ -22,21 +22,30 @@ constitutional_crisis = {
 	general_opinion = -10
 	global_revolt_risk = 0.1
 }
+crisis_term_limit_defied = {
+	icon = 29
+}
+crisis_dissolved_legislature = {
+	icon = 29
+}
+crisis_refused_democratic_legislature_demand = {
+	icon = 29
+}
 
-crisis_liege_for_ruler = {
+liege_for_ruler = {
 	icon = 19
 	liege_opinion = 10
 }
-crisis_liege_against_ruler = {
+liege_against_ruler = {
 	icon = 29
 	liege_opinion = -10
 }
-crisis_law_for_ruler = {
+law_for_ruler = {
 	icon = 11
 	monthly_character_piety = 0.1
 	general_opinion = 10
 }
-crisis_law_against_ruler = {
+law_against_ruler = {
 	icon = 29
 	monthly_character_piety = -0.1
 	general_opinion = -10

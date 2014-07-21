@@ -108,3 +108,90 @@ character_event = {
 		ai_chance = { factor = 0 }
 	}
 }
+
+# Event - marry your (same-sex) lover
+# This is decision triggered
+character_event = {
+	id = marriage.100
+	desc = "EVTDESCMARRIAGE100"
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAMARRIAGE100"
+		random_lover = { character_event = { id = marriage.101 tooltip = "EVTTOOLTIPMARRIAGE101" } }
+	}
+	
+	option = {
+		name = "EVTOPTNEVERMIND"
+		clr_character_flag = flag_marry_your_lover
+		ai_chance = { factor = 0 }
+	}
+}
+
+character_event = {
+	id = marriage.101
+	desc = "EVTDESCMARRIAGE101"
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAMARRIAGE101"
+		add_spouse = FROM
+		hidden_tooltip = { FROM = { character_event = { id = marriage.102 } } }
+		any_lover = {
+			limit = { NOT = { character = FROM } }
+			opinion = { who = ROOT modifier = opinion_heartbroken }
+			hidden_tooltip = { character_event = { id = marriage.103 } }
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0.5
+				num_of_lovers = 2
+			}
+			modifier = {
+				factor = 0
+				NOT = { opinion = { who = FROM value = 0 } }
+			}
+			modifier = {
+				factor = 0
+				has_ambition = obj_marry_for_power
+				OR = {
+					FROM = { is_ruler = no }
+					AND = {
+						higher_tier_than = baron
+						FROM = { tier = baron }
+					}
+					AND = {
+						higher_tier_than = count
+						FROM = { tier = count }
+					}
+					AND = {
+						higher_tier_than = duke
+						FROM = { tier = duke }
+					}
+					AND = {
+						higher_tier_than = king
+						FROM = { tier = king }
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBMARRIAGE102"
+		FROM = {
+			opinion = { who = ROOT modifier = opinion_heartbroken }
+			hidden_tooltip = { character_event = { id = marriage.104 } }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_ambition = obj_marry_for_love
+			}
+		}
+	}
+}

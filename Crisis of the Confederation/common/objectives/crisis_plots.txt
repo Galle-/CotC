@@ -23,7 +23,7 @@ plot_coup = {
 		holder_scope = { NOT = { religion = space_pirate } }
 		OR = {
 			holder_scope = { religion_authority = 0.8 }
-			NOT = { FROM = { trait = anti_ruler } }
+			NOT = { FROM = { in_faction = faction_anti_ruler } }
 		}
 		OR = {
 			holder_scope = { religion_authority = 0.5 }
@@ -354,7 +354,7 @@ plot_justified_coup = {
 			holder_scope = { religion = space_pirate }
 			holder_scope = {
 				NOT = { religion_authority = 0.8 }
-				FROM = { trait = anti_ruler }
+				FROM = { in_faction = faction_anti_ruler }
 			}
 			AND = {
 				holder_scope = {
@@ -471,11 +471,11 @@ plot_justified_coup = {
 		# Constitutional Crisis Factor
 		modifier = {
 			factor = 10
-			FROM = { trait = anti_ruler }
+			FROM = { in_faction = faction_anti_ruler }
 		}
 		modifier = {
 			factor = 0
-			FROM = { trait = pro_ruler }
+			FROM = { in_faction = faction_pro_ruler }
 		}
 		
 		# Try to avoid splitting the plot up if possible
@@ -835,7 +835,7 @@ plot_justified_coup = {
 				holder_scope = { NOT = { religion = space_pirate } }
 				OR = {
 					holder_scope = { religion_authority = 0.8 }
-					NOT = { FROM = { trait = anti_ruler } }
+					NOT = { FROM = { in_faction = faction_anti_ruler } }
 				}
 				OR = {
 					holder_scope = { religion_authority = 0.5 }

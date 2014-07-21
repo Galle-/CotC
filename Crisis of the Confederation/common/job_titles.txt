@@ -52,6 +52,22 @@ job_marshal = {
 		is_adult = yes
 		prisoner = no
 		NOT = { trait = incapable }
+		
+		# Special limitations to prevent civilians leading fleets
+		OR = {
+			FROM = {
+				is_feudal = yes
+				is_patrician = no
+			}
+			AND = {
+				is_feudal = yes
+				is_patrician = no
+			}
+			trait = misguided_warrior
+			trait = tough_soldier
+			trait = skilled_tactician
+			trait = brilliant_strategist
+		}
 	}
 	
 	gain_effect = {

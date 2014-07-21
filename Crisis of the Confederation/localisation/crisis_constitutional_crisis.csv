@@ -1,6 +1,12 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
 constitutional_crisis;Constitutional Crisis;;;;;;;;;;;;;x
 constitutional_crisis_desc;This character is the nominal leader of a government currently undergoing a constitutional crisis.;;;;;;;;;;;;;x
+crisis_term_limit_defied;Crisis: Defied Term Limit;;;;;;;;;;;;;x
+crisis_term_limit_defied_desc;This character has reached the end of their current term of office, but has refused to hold elections, triggering a constitutional crisis.;;;;;;;;;;;;;x
+crisis_dissolved_legislature;Crisis: Dissolved the Senate;;;;;;;;;;;;;x
+crisis_dissolved_legislature_desc;This character has unilaterally dissolved the democratically elected legislature of their government, triggering a constitutional crisis.;;;;;;;;;;;;;x
+crisis_refused_democratic_legislature_demand;Crisis: Refused to Found Democratic Legislature;;;;;;;;;;;;;x
+crisis_refused_democratic_legislature_demand_desc;This character has refused a demand by their key local governors to create a democratically-elected legislature, triggering a constitutional crisis.;;;;;;;;;;;;;x
 crisis_liege_for_ruler;Support From Superiors;;;;;;;;;;;;;x
 crisis_liege_for_ruler_desc;This character's actions in the current constitutional crisis have been officially endorsed by their superiors.;;;;;;;;;;;;;x
 crisis_liege_against_ruler;Opposition From Superiors;;;;;;;;;;;;;x

@@ -54,11 +54,19 @@ plot_decisions = {
 		
 		effect = {
 			set_character_flag = flag_making_faction_ultimatum
+			set_character_flag = flag_sent_anti_centralization_ultimatum
 			character_event = { id = laws.10000 tooltip = "EVTTOOLTIPLAWS10000" }
 		}
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_opinion_modifier = { who = liege modifier = opinion_lowered_crown_authority_good }
+					has_opinion_modifier = { who = liege modifier = opinion_lowered_crown_authority_bad }
+				}
+			}
 		}
 	}
 	faction_anti_centralization_demand = {
@@ -93,6 +101,7 @@ plot_decisions = {
 		
 		effect = {
 			set_character_flag = flag_making_faction_ultimatum
+			set_character_flag = flag_sent_anti_centralization_ultimatum
 			character_event = { id = laws.10050 tooltip = "EVTTOOLTIPLAWS10050" }
 		}
 		
@@ -196,11 +205,19 @@ plot_decisions = {
 		
 		effect = {
 			set_character_flag = flag_making_faction_ultimatum
+			set_character_flag = flag_sent_pro_centralization_ultimatum
 			character_event = { id = laws.10100 tooltip = "EVTTOOLTIPLAWS10100" }
 		}
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_opinion_modifier = { who = liege modifier = opinion_raised_crown_authority_good }
+					has_opinion_modifier = { who = liege modifier = opinion_raised_crown_authority_bad }
+				}
+			}
 		}
 	}
 	faction_pro_centralization_demand = {
@@ -242,6 +259,7 @@ plot_decisions = {
 		
 		effect = {
 			set_character_flag = flag_making_faction_ultimatum
+			set_character_flag = flag_sent_pro_centralization_ultimatum
 			character_event = { id = laws.10150 tooltip = "EVTTOOLTIPLAWS10150" }
 		}
 		
@@ -330,6 +348,7 @@ plot_decisions = {
 		
 		effect = {
 			set_character_flag = flag_making_faction_ultimatum
+			set_character_flag = flag_sent_democratic_legislature_ultimatum
 			character_event = { id = laws.10250 tooltip = "EVTTOOLTIPLAWS10250" }
 		}
 		

@@ -58,58 +58,54 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+			# No reason to get a DNI
 			modifier = {
-				factor = 0.25
+				factor = 0
+				NOT = { has_ambition = obj_become_marshal }
+				NOT = { has_ambition = obj_become_chancellor }
+				NOT = { has_ambition = obj_become_spymaster }
+				NOT = { has_ambition = obj_become_treasurer }
+				NOT = { has_ambition = obj_become_spiritual }
+				NOT = { has_ambition = obj_improve_martial }
+				NOT = { has_ambition = obj_improve_diplomacy }
+				NOT = { has_ambition = obj_improve_stewardship }
+				NOT = { has_ambition = obj_improve_intrigue }
+				NOT = { has_ambition = obj_improve_learning }
+				NOT = { religion = cyberneticist }
+				NOT = { religion = machine_cultist }
+				NOT = { religion = hiver }
+				NOT = { trait = open_minded }
+				NOT = { trait = ambitious }
 			}
+			
+			# Can't afford one
 			modifier = {
-				factor = 5
-				religion_group = transhumanist_group
-				NOT = { religion = bio_directionist }
+				factor = 0
+				NOT = { wealth = 200 }
+				OR = {
+					NOT = { monthly_income = 0 }
+					has_ambition = obj_amass_wealth
+				}
 			}
+			
+			# Ideological concerns
 			modifier = {
-				factor = 0.2
+				factor = 0
 				religion_group = religious_group
 				NOT = { trait = pragmatic }
 			}
+			
+			# Just plain squeamish
 			modifier = {
-				factor = 4
-				trait = open_minded
-			}
-			modifier = {
-				factor = 0.25
-				trait = close_minded
-			}
-			modifier = {
-				factor = 2
-				trait = introverted
-			}
-			modifier = {
-				factor = 0.5
-				trait = extraverted
-			}
-			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 0.5
-				trait = content
-			}
-			modifier = {
-				factor = 2
-				trait = brave
-			}
-			modifier = {
-				factor = 0.5
-				trait = craven
-			}
-			modifier = {
-				factor = 2
-				trait = skeptical
-			}
-			modifier = {
-				factor = 0.5
-				trait = spiritual
+				factor = 0
+				OR = {
+					trait = close_minded
+					trait = spiritual
+				}
+				NOT = { trait = open_minded }
+				NOT = { religion = cyberneticist }
+				NOT = { religion = machine_cultist }
+				NOT = { religion = hiver }
 			}
 		}
 	}
@@ -167,96 +163,67 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.1
-			}
-			modifier = {
-				factor = 5
-				religion_group = transhumanist_group
-				NOT = { religion = bio_directionist }
-			}
-			modifier = {
-				factor = 0.2
-				religion_group = religious_group
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 4
-				OR = {
-					has_objective = obj_improve_diplomacy
-					has_objective = obj_become_chancellor
+				factor = 0
+				NOT = { has_ambition = obj_improve_diplomacy }
+				NOT = { has_ambition = obj_become_chancellor }
+				NOT = { has_job_title = job_chancellor }
+				NOT = { any_allied_character = { NOT = { opinion = { who = ROOT value = 0 } } } }
+				NOT = {
+					any_vassal = {
+						NOT = { opinion = { who = ROOT value = 0 } }
+						relative_power_to_liege = 0.2
+					}
 				}
 			}
 			modifier = {
-				factor = 4
-				has_job_title = job_chancellor
+				factor = 0
+				OR = {
+					has_ambition = obj_improve_martial
+					has_ambition = obj_improve_stewardship
+					has_ambition = obj_improve_intrigue
+					has_ambition = obj_improve_learning
+				}
 			}
 			modifier = {
-				factor = 0.5
-				trait = introverted
+				factor = 0
+				NOT = { wealth = 400 }
+				NOT = { monthly_income = 0 }
 			}
 			modifier = {
-				factor = 2
-				trait = extraverted
-			}
-			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 0.5
-				trait = content
-			}
-			modifier = {
-				factor = 2
-				trait = brave
-			}
-			modifier = {
-				factor = 0.5
-				trait = craven
-			}
-			modifier = {
-				factor = 2
-				trait = skeptical
-			}
-			modifier = {
-				factor = 0.5
-				trait = spiritual
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 2 }
+				monthly_income = 1
+				NOT = { trait = odin_mk_ii }
+				NOT = { trait = pci_mk_ii }
+				NOT = { trait = pluto_mk_ii }
+				NOT = { trait = thoth_mk_ii }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 2 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 4 }
+				monthly_income = 2
+				NOT = { trait = odin_mk_iii }
+				NOT = { trait = pci_mk_iii }
+				NOT = { trait = pluto_mk_iii }
+				NOT = { trait = thoth_mk_iii }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 4 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 6 }
+				monthly_income = 3
+				NOT = { trait = odin_mk_iv }
+				NOT = { trait = pci_mk_iv }
+				NOT = { trait = pluto_mk_iv }
+				NOT = { trait = thoth_mk_iv }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 6 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 8 }
-			}
-			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 8 }
-				trait = proud
+				monthly_income = 4
+				NOT = { trait = odin_mk_v }
+				NOT = { trait = pci_mk_v }
+				NOT = { trait = pluto_mk_v }
+				NOT = { trait = thoth_mk_v }
 			}
 		}
 	}
@@ -269,6 +236,10 @@ decisions = {
 			NOT = { trait = iaei_mk_iii }
 			NOT = { trait = iaei_mk_iv }
 			NOT = { trait = iaei_mk_v }
+			NOT = { trait = odin_mk_ii }
+			NOT = { trait = pci_mk_ii }
+			NOT = { trait = pluto_mk_ii }
+			NOT = { trait = thoth_mk_ii }
 			age = 16
 			NOT = { trait = incapable }
 			prisoner = no
@@ -311,87 +282,58 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.1
-			}
-			modifier = {
-				factor = 5
-				religion_group = transhumanist_group
-				NOT = { religion = bio_directionist }
-			}
-			modifier = {
-				factor = 0.2
-				religion_group = religious_group
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 4
-				OR = {
-					has_objective = obj_improve_diplomacy
-					has_objective = obj_become_chancellor
+				factor = 0
+				NOT = { has_ambition = obj_improve_diplomacy }
+				NOT = { has_ambition = obj_become_chancellor }
+				NOT = { has_job_title = job_chancellor }
+				NOT = { any_allied_character = { NOT = { opinion = { who = ROOT value = 0 } } } }
+				NOT = {
+					any_vassal = {
+						NOT = { opinion = { who = ROOT value = 0 } }
+						relative_power_to_liege = 0.2
+					}
 				}
 			}
 			modifier = {
-				factor = 4
-				has_job_title = job_chancellor
+				factor = 0
+				NOT = { wealth = 500 }
+				NOT = { monthly_income = 0 }
 			}
 			modifier = {
-				factor = 0.5
-				trait = introverted
+				factor = 0
+				OR = {
+					has_ambition = obj_improve_martial
+					has_ambition = obj_improve_stewardship
+					has_ambition = obj_improve_intrigue
+					has_ambition = obj_improve_learning
+				}
 			}
 			modifier = {
-				factor = 2
-				trait = extraverted
-			}
-			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 0.5
-				trait = content
-			}
-			modifier = {
-				factor = 2
-				trait = brave
-			}
-			modifier = {
-				factor = 0.5
-				trait = craven
-			}
-			modifier = {
-				factor = 2
-				trait = skeptical
-			}
-			modifier = {
-				factor = 0.5
-				trait = spiritual
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 4 }
+				monthly_income = 2
+				NOT = { trait = odin_mk_iii }
+				NOT = { trait = pci_mk_iii }
+				NOT = { trait = pluto_mk_iii }
+				NOT = { trait = thoth_mk_iii }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 4 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 6 }
+				monthly_income = 3
+				NOT = { trait = odin_mk_iv }
+				NOT = { trait = pci_mk_iv }
+				NOT = { trait = pluto_mk_iv }
+				NOT = { trait = thoth_mk_iv }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 6 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 8 }
-			}
-			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 8 }
-				trait = proud
+				monthly_income = 4
+				NOT = { trait = odin_mk_v }
+				NOT = { trait = pci_mk_v }
+				NOT = { trait = pluto_mk_v }
+				NOT = { trait = thoth_mk_v }
 			}
 		}
 	}
@@ -403,6 +345,10 @@ decisions = {
 			NOT = { trait = iaei_mk_iii }
 			NOT = { trait = iaei_mk_iv }
 			NOT = { trait = iaei_mk_v }
+			NOT = { trait = odin_mk_iii }
+			NOT = { trait = pci_mk_iii }
+			NOT = { trait = pluto_mk_iii }
+			NOT = { trait = thoth_mk_iii }
 			age = 16
 			NOT = { trait = incapable }
 			prisoner = no
@@ -446,78 +392,49 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.1
-			}
-			modifier = {
-				factor = 5
-				religion_group = transhumanist_group
-				NOT = { religion = bio_directionist }
-			}
-			modifier = {
-				factor = 0.2
-				religion_group = religious_group
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 4
-				OR = {
-					has_objective = obj_improve_diplomacy
-					has_objective = obj_become_chancellor
+				factor = 0
+				NOT = { has_ambition = obj_improve_diplomacy }
+				NOT = { has_ambition = obj_become_chancellor }
+				NOT = { has_job_title = job_chancellor }
+				NOT = { any_allied_character = { NOT = { opinion = { who = ROOT value = 0 } } } }
+				NOT = {
+					any_vassal = {
+						NOT = { opinion = { who = ROOT value = 0 } }
+						relative_power_to_liege = 0.2
+					}
 				}
 			}
 			modifier = {
-				factor = 4
-				has_job_title = job_chancellor
+				factor = 0
+				OR = {
+					has_ambition = obj_improve_martial
+					has_ambition = obj_improve_stewardship
+					has_ambition = obj_improve_intrigue
+					has_ambition = obj_improve_learning
+				}
 			}
 			modifier = {
-				factor = 0.5
-				trait = introverted
+				factor = 0
+				NOT = { wealth = 600 }
+				NOT = { monthly_income = 0 }
 			}
 			modifier = {
-				factor = 2
-				trait = extraverted
-			}
-			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 0.5
-				trait = content
-			}
-			modifier = {
-				factor = 2
-				trait = brave
-			}
-			modifier = {
-				factor = 0.5
-				trait = craven
-			}
-			modifier = {
-				factor = 2
-				trait = skeptical
-			}
-			modifier = {
-				factor = 0.5
-				trait = spiritual
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 6 }
+				monthly_income = 3
+				NOT = { trait = odin_mk_iv }
+				NOT = { trait = pci_mk_iv }
+				NOT = { trait = pluto_mk_iv }
+				NOT = { trait = thoth_mk_iv }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 6 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 8 }
-			}
-			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 8 }
-				trait = proud
+				monthly_income = 4
+				NOT = { trait = odin_mk_v }
+				NOT = { trait = pci_mk_v }
+				NOT = { trait = pluto_mk_v }
+				NOT = { trait = thoth_mk_v }
 			}
 		}
 	}
@@ -528,6 +445,10 @@ decisions = {
 			location = { TECH_POPULAR_CUSTOMS = 6 }
 			NOT = { trait = iaei_mk_iv }
 			NOT = { trait = iaei_mk_v }
+			NOT = { trait = odin_mk_iv }
+			NOT = { trait = pci_mk_iv }
+			NOT = { trait = pluto_mk_iv }
+			NOT = { trait = thoth_mk_iv }
 			age = 16
 			NOT = { trait = incapable }
 			prisoner = no
@@ -572,69 +493,40 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.1
-			}
-			modifier = {
-				factor = 5
-				religion_group = transhumanist_group
-				NOT = { religion = bio_directionist }
-			}
-			modifier = {
-				factor = 0.2
-				religion_group = religious_group
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 4
-				OR = {
-					has_objective = obj_improve_diplomacy
-					has_objective = obj_become_chancellor
+				factor = 0
+				NOT = { has_ambition = obj_improve_diplomacy }
+				NOT = { has_ambition = obj_become_chancellor }
+				NOT = { has_job_title = job_chancellor }
+				NOT = { any_allied_character = { NOT = { opinion = { who = ROOT value = 0 } } } }
+				NOT = {
+					any_vassal = {
+						NOT = { opinion = { who = ROOT value = 0 } }
+						relative_power_to_liege = 0.2
+					}
 				}
 			}
 			modifier = {
-				factor = 4
-				has_job_title = job_chancellor
+				factor = 0
+				OR = {
+					has_ambition = obj_improve_martial
+					has_ambition = obj_improve_stewardship
+					has_ambition = obj_improve_intrigue
+					has_ambition = obj_improve_learning
+				}
 			}
 			modifier = {
-				factor = 0.5
-				trait = introverted
+				factor = 0
+				NOT = { wealth = 700 }
+				NOT = { monthly_income = 0 }
 			}
 			modifier = {
-				factor = 2
-				trait = extraverted
-			}
-			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 0.5
-				trait = content
-			}
-			modifier = {
-				factor = 2
-				trait = brave
-			}
-			modifier = {
-				factor = 0.5
-				trait = craven
-			}
-			modifier = {
-				factor = 2
-				trait = skeptical
-			}
-			modifier = {
-				factor = 0.5
-				trait = spiritual
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 8 }
-			}
-			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 8 }
-				trait = proud
+				monthly_income = 4
+				NOT = { trait = odin_mk_v }
+				NOT = { trait = pci_mk_v }
+				NOT = { trait = pluto_mk_v }
+				NOT = { trait = thoth_mk_v }
 			}
 		}
 	}
@@ -644,6 +536,10 @@ decisions = {
 			trait = dni
 			location = { TECH_POPULAR_CUSTOMS = 8 }
 			NOT = { trait = iaei_mk_v }
+			NOT = { trait = odin_mk_v }
+			NOT = { trait = pluto_mk_v }
+			NOT = { trait = thoth_mk_v }
+			NOT = { trait = pci_mk_v }
 			age = 16
 			NOT = { trait = incapable }
 			prisoner = no
@@ -688,60 +584,31 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.1
-			}
-			modifier = {
-				factor = 5
-				religion_group = transhumanist_group
-				NOT = { religion = bio_directionist }
-			}
-			modifier = {
-				factor = 0.2
-				religion_group = religious_group
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 4
-				OR = {
-					has_objective = obj_improve_diplomacy
-					has_objective = obj_become_chancellor
+				factor = 0
+				NOT = { has_ambition = obj_improve_diplomacy }
+				NOT = { has_ambition = obj_become_chancellor }
+				NOT = { has_job_title = job_chancellor }
+				NOT = { any_allied_character = { NOT = { opinion = { who = ROOT value = 0 } } } }
+				NOT = {
+					any_vassal = {
+						NOT = { opinion = { who = ROOT value = 0 } }
+						relative_power_to_liege = 0.2
+					}
 				}
 			}
 			modifier = {
-				factor = 4
-				has_job_title = job_chancellor
+				factor = 0
+				OR = {
+					has_ambition = obj_improve_martial
+					has_ambition = obj_improve_stewardship
+					has_ambition = obj_improve_intrigue
+					has_ambition = obj_improve_learning
+				}
 			}
 			modifier = {
-				factor = 0.5
-				trait = introverted
-			}
-			modifier = {
-				factor = 2
-				trait = extraverted
-			}
-			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 0.5
-				trait = content
-			}
-			modifier = {
-				factor = 2
-				trait = brave
-			}
-			modifier = {
-				factor = 0.5
-				trait = craven
-			}
-			modifier = {
-				factor = 2
-				trait = skeptical
-			}
-			modifier = {
-				factor = 0.5
-				trait = spiritual
+				factor = 0
+				NOT = { wealth = 900 }
+				NOT = { monthly_income = 0 }
 			}
 		}
 	}
@@ -799,88 +666,62 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.1
+				factor = 0
+				NOT = { has_ambition = obj_improve_martial }
+				NOT = { has_ambition = obj_become_marshal }
+				NOT = { has_job_title = job_marshal }
+				is_feudal = no
+				NOT = { any_current_enemy = { ROOT = { NOT = { martial = PREV } } } }
 			}
 			modifier = {
-				factor = 5
-				religion_group = transhumanist_group
-				NOT = { religion = bio_directionist }
-			}
-			modifier = {
-				factor = 0.2
-				religion_group = religious_group
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 4
+				factor = 0
 				OR = {
-					has_objective = obj_improve_martial
-					has_objective = obj_become_marshal
+					has_ambition = obj_improve_diplomacy
+					has_ambition = obj_improve_stewardship
+					has_ambition = obj_improve_intrigue
+					has_ambition = obj_improve_learning
 				}
 			}
 			modifier = {
-				factor = 4
-				has_job_title = job_marshal
+				factor = 0
+				NOT = { wealth = 400 }
+				NOT = { monthly_income = 0 }
 			}
 			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 0.5
-				trait = content
-			}
-			modifier = {
-				factor = 4
-				trait = brave
-			}
-			modifier = {
-				factor = 0.25
-				trait = craven
-			}
-			modifier = {
-				factor = 2
-				trait = skeptical
-			}
-			modifier = {
-				factor = 0.5
-				trait = spiritual
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 2 }
+				monthly_income = 1
+				NOT = { trait = iaei_mk_ii }
+				NOT = { trait = pci_mk_ii }
+				NOT = { trait = pluto_mk_ii }
+				NOT = { trait = thoth_mk_ii }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 2 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 4 }
+				monthly_income = 2
+				NOT = { trait = iaei_mk_iii }
+				NOT = { trait = pci_mk_iii }
+				NOT = { trait = pluto_mk_iii }
+				NOT = { trait = thoth_mk_iii }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 4 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 6 }
+				monthly_income = 3
+				NOT = { trait = iaei_mk_iv }
+				NOT = { trait = pci_mk_iv }
+				NOT = { trait = pluto_mk_iv }
+				NOT = { trait = thoth_mk_iv }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 6 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 8 }
-			}
-			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 8 }
-				trait = proud
+				monthly_income = 4
+				NOT = { trait = iaei_mk_v }
+				NOT = { trait = pci_mk_v }
+				NOT = { trait = pluto_mk_v }
+				NOT = { trait = thoth_mk_v }
 			}
 		}
 	}
@@ -893,6 +734,10 @@ decisions = {
 			NOT = { trait = odin_mk_iii }
 			NOT = { trait = odin_mk_iv }
 			NOT = { trait = odin_mk_v }
+			NOT = { trait = iaei_mk_ii }
+			NOT = { trait = pci_mk_ii }
+			NOT = { trait = pluto_mk_ii }
+			NOT = { trait = thoth_mk_ii }
 			age = 16
 			NOT = { trait = incapable }
 			prisoner = no
@@ -933,81 +778,54 @@ decisions = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
 			modifier = {
-				factor = 0.1
+				factor = 0
+				NOT = { has_ambition = obj_improve_martial }
+				NOT = { has_ambition = obj_become_marshal }
+				NOT = { has_job_title = job_marshal }
+				is_feudal = no
+				NOT = { any_current_enemy = { ROOT = { NOT = { martial = PREV } } } }
 			}
 			modifier = {
-				factor = 5
-				religion_group = transhumanist_group
-				NOT = { religion = bio_directionist }
-			}
-			modifier = {
-				factor = 0.2
-				religion_group = religious_group
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 4
+				factor = 0
 				OR = {
-					has_objective = obj_improve_martial
-					has_objective = obj_become_marshal
+					has_ambition = obj_improve_diplomacy
+					has_ambition = obj_improve_stewardship
+					has_ambition = obj_improve_intrigue
+					has_ambition = obj_improve_learning
 				}
 			}
 			modifier = {
-				factor = 4
-				has_job_title = job_marshal
+				factor = 0
+				NOT = { wealth = 500 }
+				NOT = { monthly_income = 0 }
 			}
 			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 0.5
-				trait = content
-			}
-			modifier = {
-				factor = 4
-				trait = brave
-			}
-			modifier = {
-				factor = 0.25
-				trait = craven
-			}
-			modifier = {
-				factor = 2
-				trait = skeptical
-			}
-			modifier = {
-				factor = 0.5
-				trait = spiritual
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 4 }
+				monthly_income = 2
+				NOT = { trait = iaei_mk_iii }
+				NOT = { trait = pci_mk_iii }
+				NOT = { trait = pluto_mk_iii }
+				NOT = { trait = thoth_mk_iii }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 4 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 6 }
+				monthly_income = 3
+				NOT = { trait = iaei_mk_iv }
+				NOT = { trait = pci_mk_iv }
+				NOT = { trait = pluto_mk_iv }
+				NOT = { trait = thoth_mk_iv }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 6 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 8 }
-			}
-			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 8 }
-				trait = proud
+				monthly_income = 4
+				NOT = { trait = iaei_mk_v }
+				NOT = { trait = pci_mk_v }
+				NOT = { trait = pluto_mk_v }
+				NOT = { trait = thoth_mk_v }
 			}
 		}
 	}
@@ -1019,6 +837,10 @@ decisions = {
 			NOT = { trait = odin_mk_iii }
 			NOT = { trait = odin_mk_iv }
 			NOT = { trait = odin_mk_v }
+			NOT = { trait = iaei_mk_iii }
+			NOT = { trait = pci_mk_iii }
+			NOT = { trait = pluto_mk_iii }
+			NOT = { trait = thoth_mk_iii }
 			age = 16
 			NOT = { trait = incapable }
 			prisoner = no
@@ -1060,72 +882,45 @@ decisions = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
 			modifier = {
-				factor = 0.1
+				factor = 0
+				NOT = { has_ambition = obj_improve_martial }
+				NOT = { has_ambition = obj_become_marshal }
+				NOT = { has_job_title = job_marshal }
+				is_feudal = no
+				NOT = { any_current_enemy = { ROOT = { NOT = { martial = PREV } } } }
 			}
 			modifier = {
-				factor = 5
-				religion_group = transhumanist_group
-				NOT = { religion = bio_directionist }
-			}
-			modifier = {
-				factor = 0.2
-				religion_group = religious_group
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 4
+				factor = 0
 				OR = {
-					has_objective = obj_improve_martial
-					has_objective = obj_become_marshal
+					has_ambition = obj_improve_diplomacy
+					has_ambition = obj_improve_stewardship
+					has_ambition = obj_improve_intrigue
+					has_ambition = obj_improve_learning
 				}
 			}
 			modifier = {
-				factor = 4
-				has_job_title = job_marshal
+				factor = 0
+				NOT = { wealth = 600 }
+				NOT = { monthly_income = 0 }
 			}
 			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 0.5
-				trait = content
-			}
-			modifier = {
-				factor = 4
-				trait = brave
-			}
-			modifier = {
-				factor = 0.25
-				trait = craven
-			}
-			modifier = {
-				factor = 2
-				trait = skeptical
-			}
-			modifier = {
-				factor = 0.5
-				trait = spiritual
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 6 }
+				monthly_income = 3
+				NOT = { trait = iaei_mk_iv }
+				NOT = { trait = pci_mk_iv }
+				NOT = { trait = pluto_mk_iv }
+				NOT = { trait = thoth_mk_iv }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 6 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 8 }
-			}
-			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 8 }
-				trait = proud
+				monthly_income = 4
+				NOT = { trait = iaei_mk_v }
+				NOT = { trait = pci_mk_v }
+				NOT = { trait = pluto_mk_v }
+				NOT = { trait = thoth_mk_v }
 			}
 		}
 	}
@@ -1136,6 +931,10 @@ decisions = {
 			location = { TECH_POPULAR_CUSTOMS = 6 }
 			NOT = { trait = odin_mk_iv }
 			NOT = { trait = odin_mk_v }
+			NOT = { trait = iaei_mk_iv }
+			NOT = { trait = pci_mk_iv }
+			NOT = { trait = pluto_mk_iv }
+			NOT = { trait = thoth_mk_iv }
 			age = 16
 			NOT = { trait = incapable }
 			prisoner = no
@@ -1178,63 +977,36 @@ decisions = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
 			modifier = {
-				factor = 0.1
+				factor = 0
+				NOT = { has_ambition = obj_improve_martial }
+				NOT = { has_ambition = obj_become_marshal }
+				NOT = { has_job_title = job_marshal }
+				is_feudal = no
+				NOT = { any_current_enemy = { ROOT = { NOT = { martial = PREV } } } }
 			}
 			modifier = {
-				factor = 5
-				religion_group = transhumanist_group
-				NOT = { religion = bio_directionist }
-			}
-			modifier = {
-				factor = 0.2
-				religion_group = religious_group
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 4
+				factor = 0
 				OR = {
-					has_objective = obj_improve_martial
-					has_objective = obj_become_marshal
+					has_ambition = obj_improve_diplomacy
+					has_ambition = obj_improve_stewardship
+					has_ambition = obj_improve_intrigue
+					has_ambition = obj_improve_learning
 				}
 			}
 			modifier = {
-				factor = 4
-				has_job_title = job_marshal
+				factor = 0
+				NOT = { wealth = 700 }
+				NOT = { monthly_income = 0 }
 			}
 			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 0.5
-				trait = content
-			}
-			modifier = {
-				factor = 4
-				trait = brave
-			}
-			modifier = {
-				factor = 0.25
-				trait = craven
-			}
-			modifier = {
-				factor = 2
-				trait = skeptical
-			}
-			modifier = {
-				factor = 0.5
-				trait = spiritual
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 8 }
-			}
-			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 8 }
-				trait = proud
+				monthly_income = 4
+				NOT = { trait = iaei_mk_v }
+				NOT = { trait = pci_mk_v }
+				NOT = { trait = pluto_mk_v }
+				NOT = { trait = thoth_mk_v }
 			}
 		}
 	}
@@ -1244,6 +1016,10 @@ decisions = {
 			trait = dni
 			location = { TECH_POPULAR_CUSTOMS = 8 }
 			NOT = { trait = odin_mk_v }
+			NOT = { trait = iaei_mk_v }
+			NOT = { trait = pci_mk_v }
+			NOT = { trait = pluto_mk_v }
+			NOT = { trait = thoth_mk_v }
 			age = 16
 			NOT = { trait = incapable }
 			prisoner = no
@@ -1288,52 +1064,26 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.1
+				factor = 0
+				NOT = { has_ambition = obj_improve_martial }
+				NOT = { has_ambition = obj_become_marshal }
+				NOT = { has_job_title = job_marshal }
+				is_feudal = no
+				NOT = { any_current_enemy = { ROOT = { NOT = { martial = PREV } } } }
 			}
 			modifier = {
-				factor = 5
-				religion_group = transhumanist_group
-				NOT = { religion = bio_directionist }
-			}
-			modifier = {
-				factor = 0.2
-				religion_group = religious_group
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 4
+				factor = 0
 				OR = {
-					has_objective = obj_improve_martial
-					has_objective = obj_become_marshal
+					has_ambition = obj_improve_diplomacy
+					has_ambition = obj_improve_stewardship
+					has_ambition = obj_improve_intrigue
+					has_ambition = obj_improve_learning
 				}
 			}
 			modifier = {
-				factor = 4
-				has_job_title = job_marshal
-			}
-			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 0.5
-				trait = content
-			}
-			modifier = {
-				factor = 4
-				trait = brave
-			}
-			modifier = {
-				factor = 0.25
-				trait = craven
-			}
-			modifier = {
-				factor = 2
-				trait = skeptical
-			}
-			modifier = {
-				factor = 0.5
-				trait = spiritual
+				factor = 0
+				NOT = { wealth = 850 }
+				NOT = { monthly_income = 0 }
 			}
 		}
 	}
@@ -1391,96 +1141,61 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.1
+				factor = 0
+				NOT = { has_ambition = obj_improve_stewardship }
+				NOT = { has_ambition = obj_become_treasurer }
+				NOT = { has_job_title = job_treasurer }
+				is_patrician = yes
 			}
 			modifier = {
-				factor = 5
-				religion_group = transhumanist_group
-				NOT = { religion = bio_directionist }
-			}
-			modifier = {
-				factor = 0.2
-				religion_group = religious_group
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 4
+				factor = 0
 				OR = {
-					has_objective = obj_improve_stewardship
-					has_objective = obj_become_treasurer
+					has_ambition = obj_improve_diplomacy
+					has_ambition = obj_improve_martial
+					has_ambition = obj_improve_intrigue
+					has_ambition = obj_improve_learning
 				}
 			}
 			modifier = {
-				factor = 4
-				has_job_title = job_treasurer
+				factor = 0
+				NOT = { wealth = 400 }
+				NOT = { monthly_income = 0 }
 			}
 			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 0.5
-				trait = content
-			}
-			modifier = {
-				factor = 2
-				trait = disciplined
-			}
-			modifier = {
-				factor = 0.5
-				trait = carefree
-			}
-			modifier = {
-				factor = 2
-				trait = brave
-			}
-			modifier = {
-				factor = 0.5
-				trait = craven
-			}
-			modifier = {
-				factor = 2
-				trait = skeptical
-			}
-			modifier = {
-				factor = 0.5
-				trait = spiritual
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 2 }
+				monthly_income = 1
+				NOT = { trait = iaei_mk_ii }
+				NOT = { trait = odin_mk_ii }
+				NOT = { trait = pluto_mk_ii }
+				NOT = { trait = thoth_mk_ii }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 2 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 4 }
+				monthly_income = 2
+				NOT = { trait = iaei_mk_iii }
+				NOT = { trait = odin_mk_iii }
+				NOT = { trait = pluto_mk_iii }
+				NOT = { trait = thoth_mk_iii }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 4 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 6 }
+				monthly_income = 3
+				NOT = { trait = iaei_mk_iv }
+				NOT = { trait = odin_mk_iv }
+				NOT = { trait = pluto_mk_iv }
+				NOT = { trait = thoth_mk_iv }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 6 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 8 }
-			}
-			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 8 }
-				trait = proud
+				monthly_income = 4
+				NOT = { trait = iaei_mk_v }
+				NOT = { trait = odin_mk_v }
+				NOT = { trait = pluto_mk_v }
+				NOT = { trait = thoth_mk_v }
 			}
 		}
 	}
@@ -1493,6 +1208,10 @@ decisions = {
 			NOT = { trait = pci_mk_iii }
 			NOT = { trait = pci_mk_iv }
 			NOT = { trait = pci_mk_v }
+			NOT = { trait = iaei_mk_ii }
+			NOT = { trait = odin_mk_ii }
+			NOT = { trait = pluto_mk_ii }
+			NOT = { trait = thoth_mk_ii }
 			age = 16
 			NOT = { trait = incapable }
 			prisoner = no
@@ -1535,87 +1254,52 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.1
+				factor = 0
+				NOT = { has_ambition = obj_improve_stewardship }
+				NOT = { has_ambition = obj_become_treasurer }
+				NOT = { has_job_title = job_treasurer }
+				is_patrician = yes
 			}
 			modifier = {
-				factor = 5
-				religion_group = transhumanist_group
-				NOT = { religion = bio_directionist }
-			}
-			modifier = {
-				factor = 0.2
-				religion_group = religious_group
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 4
+				factor = 0
 				OR = {
-					has_objective = obj_improve_stewardship
-					has_objective = obj_become_treasurer
+					has_ambition = obj_improve_diplomacy
+					has_ambition = obj_improve_martial
+					has_ambition = obj_improve_intrigue
+					has_ambition = obj_improve_learning
 				}
 			}
 			modifier = {
-				factor = 4
-				has_job_title = job_treasurer
+				factor = 0
+				NOT = { wealth = 500 }
+				NOT = { monthly_income = 0 }
 			}
 			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 0.5
-				trait = content
-			}
-			modifier = {
-				factor = 2
-				trait = disciplined
-			}
-			modifier = {
-				factor = 0.5
-				trait = carefree
-			}
-			modifier = {
-				factor = 2
-				trait = brave
-			}
-			modifier = {
-				factor = 0.5
-				trait = craven
-			}
-			modifier = {
-				factor = 2
-				trait = skeptical
-			}
-			modifier = {
-				factor = 0.5
-				trait = spiritual
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 4 }
+				monthly_income = 2
+				NOT = { trait = iaei_mk_iii }
+				NOT = { trait = odin_mk_iii }
+				NOT = { trait = pluto_mk_iii }
+				NOT = { trait = thoth_mk_iii }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 4 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 6 }
+				monthly_income = 3
+				NOT = { trait = iaei_mk_iv }
+				NOT = { trait = odin_mk_iv }
+				NOT = { trait = pluto_mk_iv }
+				NOT = { trait = thoth_mk_iv }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 6 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 8 }
-			}
-			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 8 }
-				trait = proud
+				monthly_income = 4
+				NOT = { trait = iaei_mk_v }
+				NOT = { trait = odin_mk_v }
+				NOT = { trait = pluto_mk_v }
+				NOT = { trait = thoth_mk_v }
 			}
 		}
 	}
@@ -1627,6 +1311,10 @@ decisions = {
 			NOT = { trait = pci_mk_iii }
 			NOT = { trait = pci_mk_iv }
 			NOT = { trait = pci_mk_v }
+			NOT = { trait = iaei_mk_iii }
+			NOT = { trait = odin_mk_iii }
+			NOT = { trait = pluto_mk_iii }
+			NOT = { trait = thoth_mk_iii }
 			age = 16
 			NOT = { trait = incapable }
 			prisoner = no
@@ -1670,78 +1358,43 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.1
+				factor = 0
+				NOT = { has_ambition = obj_improve_stewardship }
+				NOT = { has_ambition = obj_become_treasurer }
+				NOT = { has_job_title = job_treasurer }
+				is_patrician = yes
 			}
 			modifier = {
-				factor = 5
-				religion_group = transhumanist_group
-				NOT = { religion = bio_directionist }
-			}
-			modifier = {
-				factor = 0.2
-				religion_group = religious_group
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 4
+				factor = 0
 				OR = {
-					has_objective = obj_improve_stewardship
-					has_objective = obj_become_treasurer
+					has_ambition = obj_improve_diplomacy
+					has_ambition = obj_improve_martial
+					has_ambition = obj_improve_intrigue
+					has_ambition = obj_improve_learning
 				}
 			}
 			modifier = {
-				factor = 4
-				has_job_title = job_treasurer
+				factor = 0
+				NOT = { wealth = 600 }
+				NOT = { monthly_income = 0 }
 			}
 			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 0.5
-				trait = content
-			}
-			modifier = {
-				factor = 2
-				trait = disciplined
-			}
-			modifier = {
-				factor = 0.5
-				trait = carefree
-			}
-			modifier = {
-				factor = 2
-				trait = brave
-			}
-			modifier = {
-				factor = 0.5
-				trait = craven
-			}
-			modifier = {
-				factor = 2
-				trait = skeptical
-			}
-			modifier = {
-				factor = 0.5
-				trait = spiritual
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 6 }
+				monthly_income = 3
+				NOT = { trait = iaei_mk_iv }
+				NOT = { trait = odin_mk_iv }
+				NOT = { trait = pluto_mk_iv }
+				NOT = { trait = thoth_mk_iv }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 6 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 8 }
-			}
-			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 8 }
-				trait = proud
+				monthly_income = 4
+				NOT = { trait = iaei_mk_v }
+				NOT = { trait = odin_mk_v }
+				NOT = { trait = pluto_mk_v }
+				NOT = { trait = thoth_mk_v }
 			}
 		}
 	}
@@ -1752,6 +1405,10 @@ decisions = {
 			location = { TECH_POPULAR_CUSTOMS = 6 }
 			NOT = { trait = pci_mk_iv }
 			NOT = { trait = pci_mk_v }
+			NOT = { trait = iaei_mk_iv }
+			NOT = { trait = odin_mk_iv }
+			NOT = { trait = pluto_mk_iv }
+			NOT = { trait = thoth_mk_iv }
 			age = 16
 			NOT = { trait = incapable }
 			prisoner = no
@@ -1796,69 +1453,34 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.1
+				factor = 0
+				NOT = { has_ambition = obj_improve_stewardship }
+				NOT = { has_ambition = obj_become_treasurer }
+				NOT = { has_job_title = job_treasurer }
+				is_patrician = yes
 			}
 			modifier = {
-				factor = 5
-				religion_group = transhumanist_group
-				NOT = { religion = bio_directionist }
-			}
-			modifier = {
-				factor = 0.2
-				religion_group = religious_group
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 4
+				factor = 0
 				OR = {
-					has_objective = obj_improve_stewardship
-					has_objective = obj_become_treasurer
+					has_ambition = obj_improve_diplomacy
+					has_ambition = obj_improve_martial
+					has_ambition = obj_improve_intrigue
+					has_ambition = obj_improve_learning
 				}
 			}
 			modifier = {
-				factor = 4
-				has_job_title = job_treasurer
+				factor = 0
+				NOT = { wealth = 700 }
+				NOT = { monthly_income = 0 }
 			}
 			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 0.5
-				trait = content
-			}
-			modifier = {
-				factor = 2
-				trait = disciplined
-			}
-			modifier = {
-				factor = 0.5
-				trait = carefree
-			}
-			modifier = {
-				factor = 2
-				trait = brave
-			}
-			modifier = {
-				factor = 0.5
-				trait = craven
-			}
-			modifier = {
-				factor = 2
-				trait = skeptical
-			}
-			modifier = {
-				factor = 0.5
-				trait = spiritual
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 8 }
-			}
-			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 8 }
-				trait = proud
+				monthly_income = 4
+				NOT = { trait = iaei_mk_v }
+				NOT = { trait = odin_mk_v }
+				NOT = { trait = pluto_mk_v }
+				NOT = { trait = thoth_mk_v }
 			}
 		}
 	}
@@ -1868,6 +1490,10 @@ decisions = {
 			trait = dni
 			location = { TECH_POPULAR_CUSTOMS = 8 }
 			NOT = { trait = pci_mk_v }
+			NOT = { trait = iaei_mk_v }
+			NOT = { trait = odin_mk_v }
+			NOT = { trait = pluto_mk_v }
+			NOT = { trait = thoth_mk_v }
 			age = 16
 			NOT = { trait = incapable }
 			prisoner = no
@@ -1912,60 +1538,25 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.1
+				factor = 0
+				NOT = { has_ambition = obj_improve_stewardship }
+				NOT = { has_ambition = obj_become_treasurer }
+				NOT = { has_job_title = job_treasurer }
+				is_patrician = yes
 			}
 			modifier = {
-				factor = 5
-				religion_group = transhumanist_group
-				NOT = { religion = bio_directionist }
-			}
-			modifier = {
-				factor = 0.2
-				religion_group = religious_group
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 4
+				factor = 0
 				OR = {
-					has_objective = obj_improve_stewardship
-					has_objective = obj_become_treasurer
+					has_ambition = obj_improve_diplomacy
+					has_ambition = obj_improve_martial
+					has_ambition = obj_improve_intrigue
+					has_ambition = obj_improve_learning
 				}
 			}
 			modifier = {
-				factor = 4
-				has_job_title = job_treasurer
-			}
-			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 0.5
-				trait = content
-			}
-			modifier = {
-				factor = 2
-				trait = disciplined
-			}
-			modifier = {
-				factor = 0.5
-				trait = carefree
-			}
-			modifier = {
-				factor = 2
-				trait = brave
-			}
-			modifier = {
-				factor = 0.5
-				trait = craven
-			}
-			modifier = {
-				factor = 2
-				trait = skeptical
-			}
-			modifier = {
-				factor = 0.5
-				trait = spiritual
+				factor = 0
+				NOT = { wealth = 850 }
+				NOT = { monthly_income = 0 }
 			}
 		}
 	}
@@ -2023,76 +1614,61 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.1
+				factor = 0
+				NOT = { has_ambition = obj_improve_intrigue }
+				NOT = { has_ambition = obj_become_spymaster }
+				NOT = { has_job_title = job_spymaster }
+				NOT = { plot_target_char = { ROOT = { NOT = { intrigue = PREV } } } }
 			}
 			modifier = {
-				factor = 5
-				religion_group = transhumanist_group
-				NOT = { religion = bio_directionist }
-			}
-			modifier = {
-				factor = 0.2
-				religion_group = religious_group
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 4
+				factor = 0
 				OR = {
-					has_objective = obj_improve_intrigue
-					has_objective = obj_become_spymaster
+					has_ambition = obj_improve_diplomacy
+					has_ambition = obj_improve_martial
+					has_ambition = obj_improve_stewardship
+					has_ambition = obj_improve_learning
 				}
 			}
 			modifier = {
-				factor = 4
-				has_job_title = job_spymaster
+				factor = 0
+				NOT = { wealth = 400 }
+				NOT = { monthly_income = 0 }
 			}
 			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 2
-				trait = skeptical
-			}
-			modifier = {
-				factor = 0.5
-				trait = spiritual
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 2 }
+				monthly_income = 1
+				NOT = { trait = iaei_mk_ii }
+				NOT = { trait = odin_mk_ii }
+				NOT = { trait = pci_mk_ii }
+				NOT = { trait = thoth_mk_ii }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 2 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 4 }
+				monthly_income = 2
+				NOT = { trait = iaei_mk_iii }
+				NOT = { trait = odin_mk_iii }
+				NOT = { trait = pci_mk_iii }
+				NOT = { trait = thoth_mk_iii }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 4 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 6 }
+				monthly_income = 3
+				NOT = { trait = iaei_mk_iv }
+				NOT = { trait = odin_mk_iv }
+				NOT = { trait = pci_mk_iv }
+				NOT = { trait = thoth_mk_iv }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 6 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 8 }
-			}
-			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 8 }
-				trait = proud
+				monthly_income = 4
+				NOT = { trait = iaei_mk_v }
+				NOT = { trait = odin_mk_v }
+				NOT = { trait = pci_mk_v }
+				NOT = { trait = thoth_mk_v }
 			}
 		}
 	}
@@ -2105,6 +1681,10 @@ decisions = {
 			NOT = { trait = pluto_mk_iii }
 			NOT = { trait = pluto_mk_iv }
 			NOT = { trait = pluto_mk_v }
+			NOT = { trait = iaei_mk_ii }
+			NOT = { trait = odin_mk_ii }
+			NOT = { trait = pci_mk_ii }
+			NOT = { trait = thoth_mk_ii }
 			age = 16
 			NOT = { trait = incapable }
 			prisoner = no
@@ -2147,71 +1727,52 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.1
+				factor = 0
+				NOT = { has_ambition = obj_improve_intrigue }
+				NOT = { has_ambition = obj_become_spymaster }
+				NOT = { has_job_title = job_spymaster }
+				NOT = { plot_target_char = { ROOT = { NOT = { intrigue = PREV } } } }
 			}
 			modifier = {
-				factor = 5
-				religion_group = transhumanist_group
-				NOT = { religion = bio_directionist }
-			}
-			modifier = {
-				factor = 0.2
-				religion_group = religious_group
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 4
+				factor = 0
 				OR = {
-					has_objective = obj_improve_intrigue
-					has_objective = obj_become_spymaster
+					has_ambition = obj_improve_diplomacy
+					has_ambition = obj_improve_martial
+					has_ambition = obj_improve_stewardship
+					has_ambition = obj_improve_learning
 				}
 			}
 			modifier = {
-				factor = 4
-				has_job_title = job_spymaster
+				factor = 0
+				NOT = { wealth = 500 }
+				NOT = { monthly_income = 0 }
 			}
 			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 0.5
-				trait = content
-			}
-			modifier = {
-				factor = 2
-				trait = skeptical
-			}
-			modifier = {
-				factor = 0.5
-				trait = spiritual
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 4 }
+				monthly_income = 2
+				NOT = { trait = iaei_mk_iii }
+				NOT = { trait = odin_mk_iii }
+				NOT = { trait = pci_mk_iii }
+				NOT = { trait = thoth_mk_iii }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 4 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 6 }
+				monthly_income = 3
+				NOT = { trait = iaei_mk_iv }
+				NOT = { trait = odin_mk_iv }
+				NOT = { trait = pci_mk_iv }
+				NOT = { trait = thoth_mk_iv }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 6 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 8 }
-			}
-			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 8 }
-				trait = proud
+				monthly_income = 4
+				NOT = { trait = iaei_mk_v }
+				NOT = { trait = odin_mk_v }
+				NOT = { trait = pci_mk_v }
+				NOT = { trait = thoth_mk_v }
 			}
 		}
 	}
@@ -2223,6 +1784,10 @@ decisions = {
 			NOT = { trait = pluto_mk_iii }
 			NOT = { trait = pluto_mk_iv }
 			NOT = { trait = pluto_mk_v }
+			NOT = { trait = iaei_mk_iii }
+			NOT = { trait = odin_mk_iii }
+			NOT = { trait = pci_mk_iii }
+			NOT = { trait = thoth_mk_iii }
 			age = 16
 			NOT = { trait = incapable }
 			prisoner = no
@@ -2266,62 +1831,43 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.1
+				factor = 0
+				NOT = { has_ambition = obj_improve_intrigue }
+				NOT = { has_ambition = obj_become_spymaster }
+				NOT = { has_job_title = job_spymaster }
+				NOT = { plot_target_char = { ROOT = { NOT = { intrigue = PREV } } } }
 			}
 			modifier = {
-				factor = 5
-				religion_group = transhumanist_group
-				NOT = { religion = bio_directionist }
-			}
-			modifier = {
-				factor = 0.2
-				religion_group = religious_group
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 4
+				factor = 0
 				OR = {
-					has_objective = obj_improve_intrigue
-					has_objective = obj_become_spymaster
+					has_ambition = obj_improve_diplomacy
+					has_ambition = obj_improve_martial
+					has_ambition = obj_improve_stewardship
+					has_ambition = obj_improve_learning
 				}
 			}
 			modifier = {
-				factor = 4
-				has_job_title = job_spymaster
+				factor = 0
+				NOT = { wealth = 600 }
+				NOT = { monthly_income = 0 }
 			}
 			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 0.5
-				trait = content
-			}
-			modifier = {
-				factor = 2
-				trait = skeptical
-			}
-			modifier = {
-				factor = 0.5
-				trait = spiritual
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 6 }
+				monthly_income = 3
+				NOT = { trait = iaei_mk_iv }
+				NOT = { trait = odin_mk_iv }
+				NOT = { trait = pci_mk_iv }
+				NOT = { trait = thoth_mk_iv }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 6 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 8 }
-			}
-			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 8 }
-				trait = proud
+				monthly_income = 4
+				NOT = { trait = iaei_mk_v }
+				NOT = { trait = odin_mk_v }
+				NOT = { trait = pci_mk_v }
+				NOT = { trait = thoth_mk_v }
 			}
 		}
 	}
@@ -2332,6 +1878,10 @@ decisions = {
 			location = { TECH_POPULAR_CUSTOMS = 6 }
 			NOT = { trait = pluto_mk_iv }
 			NOT = { trait = pluto_mk_v }
+			NOT = { trait = iaei_mk_iv }
+			NOT = { trait = odin_mk_iv }
+			NOT = { trait = pci_mk_iv }
+			NOT = { trait = thoth_mk_iv }
 			age = 16
 			NOT = { trait = incapable }
 			prisoner = no
@@ -2376,53 +1926,34 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.1
+				factor = 0
+				NOT = { has_ambition = obj_improve_intrigue }
+				NOT = { has_ambition = obj_become_spymaster }
+				NOT = { has_job_title = job_spymaster }
+				NOT = { plot_target_char = { ROOT = { NOT = { intrigue = PREV } } } }
 			}
 			modifier = {
-				factor = 5
-				religion_group = transhumanist_group
-				NOT = { religion = bio_directionist }
-			}
-			modifier = {
-				factor = 0.2
-				religion_group = religious_group
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 4
+				factor = 0
 				OR = {
-					has_objective = obj_improve_intrigue
-					has_objective = obj_become_spymaster
+					has_ambition = obj_improve_diplomacy
+					has_ambition = obj_improve_martial
+					has_ambition = obj_improve_stewardship
+					has_ambition = obj_improve_learning
 				}
 			}
 			modifier = {
-				factor = 4
-				has_job_title = job_spymaster
+				factor = 0
+				NOT = { wealth = 700 }
+				NOT = { monthly_income = 0 }
 			}
 			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 0.5
-				trait = content
-			}
-			modifier = {
-				factor = 2
-				trait = skeptical
-			}
-			modifier = {
-				factor = 0.5
-				trait = spiritual
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 8 }
-			}
-			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 8 }
-				trait = proud
+				monthly_income = 4
+				NOT = { trait = iaei_mk_v }
+				NOT = { trait = odin_mk_v }
+				NOT = { trait = pci_mk_v }
+				NOT = { trait = thoth_mk_v }
 			}
 		}
 	}
@@ -2432,6 +1963,10 @@ decisions = {
 			trait = dni
 			location = { TECH_POPULAR_CUSTOMS = 8 }
 			NOT = { trait = pluto_mk_v }
+			NOT = { trait = iaei_mk_v }
+			NOT = { trait = odin_mk_v }
+			NOT = { trait = pci_mk_v }
+			NOT = { trait = thoth_mk_v }
 			age = 16
 			NOT = { trait = incapable }
 			prisoner = no
@@ -2476,44 +2011,25 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.1
+				factor = 0
+				NOT = { has_ambition = obj_improve_intrigue }
+				NOT = { has_ambition = obj_become_spymaster }
+				NOT = { has_job_title = job_spymaster }
+				NOT = { plot_target_char = { ROOT = { NOT = { intrigue = PREV } } } }
 			}
 			modifier = {
-				factor = 5
-				religion_group = transhumanist_group
-				NOT = { religion = bio_directionist }
-			}
-			modifier = {
-				factor = 0.2
-				religion_group = religious_group
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 4
+				factor = 0
 				OR = {
-					has_objective = obj_improve_intrigue
-					has_objective = obj_become_spymaster
+					has_ambition = obj_improve_diplomacy
+					has_ambition = obj_improve_martial
+					has_ambition = obj_improve_stewardship
+					has_ambition = obj_improve_learning
 				}
 			}
 			modifier = {
-				factor = 4
-				has_job_title = job_spymaster
-			}
-			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 0.5
-				trait = content
-			}
-			modifier = {
-				factor = 2
-				trait = skeptical
-			}
-			modifier = {
-				factor = 0.5
-				trait = spiritual
+				factor = 0
+				NOT = { wealth = 850 }
+				NOT = { monthly_income = 0 }
 			}
 		}
 	}
@@ -2571,92 +2087,62 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.1
+				factor = 0
+				NOT = { has_ambition = obj_improve_learning }
+				NOT = { has_ambition = obj_become_spiritual }
+				NOT = { has_job_title = job_spiritual }
+				NOT = { trait = open_minded }
+				NOT = { trait = intellectual }
 			}
 			modifier = {
-				factor = 5
-				religion_group = transhumanist_group
-				NOT = { religion = bio_directionist }
-			}
-			modifier = {
-				factor = 0.2
-				religion_group = religious_group
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 4
+				factor = 0
 				OR = {
-					has_objective = obj_improve_learning
-					has_objective = obj_become_scientist
+					has_ambition = obj_improve_diplomacy
+					has_ambition = obj_improve_martial
+					has_ambition = obj_improve_stewardship
+					has_ambition = obj_improve_intrigue
 				}
 			}
 			modifier = {
-				factor = 4
-				has_job_title = job_scientist
+				factor = 0
+				NOT = { wealth = 400 }
+				NOT = { monthly_income = 0 }
 			}
 			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 4
-				trait = open_minded
-			}
-			modifier = {
-				factor = 0.25
-				trait = close_minded
-			}
-			modifier = {
-				factor = 2
-				trait = brave
-			}
-			modifier = {
-				factor = 0.5
-				trait = craven
-			}
-			modifier = {
-				factor = 2
-				trait = skeptical
-			}
-			modifier = {
-				factor = 0.5
-				trait = spiritual
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 2 }
+				monthly_income = 1
+				NOT = { trait = iaei_mk_ii }
+				NOT = { trait = odin_mk_ii }
+				NOT = { trait = pci_mk_ii }
+				NOT = { trait = pluto_mk_ii }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 2 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 4 }
+				monthly_income = 2
+				NOT = { trait = iaei_mk_iii }
+				NOT = { trait = odin_mk_iii }
+				NOT = { trait = pci_mk_iii }
+				NOT = { trait = pluto_mk_iii }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 4 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 6 }
+				monthly_income = 3
+				NOT = { trait = iaei_mk_iv }
+				NOT = { trait = odin_mk_iv }
+				NOT = { trait = pci_mk_iv }
+				NOT = { trait = pluto_mk_iv }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 6 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 8 }
-			}
-			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 8 }
-				trait = proud
+				monthly_income = 4
+				NOT = { trait = iaei_mk_v }
+				NOT = { trait = odin_mk_v }
+				NOT = { trait = pci_mk_v }
+				NOT = { trait = pluto_mk_v }
 			}
 		}
 	}
@@ -2669,6 +2155,10 @@ decisions = {
 			NOT = { trait = thoth_mk_iii }
 			NOT = { trait = thoth_mk_iv }
 			NOT = { trait = thoth_mk_v }
+			NOT = { trait = iaei_mk_ii }
+			NOT = { trait = odin_mk_ii }
+			NOT = { trait = pci_mk_ii }
+			NOT = { trait = pluto_mk_ii }
 			age = 16
 			NOT = { trait = incapable }
 			prisoner = no
@@ -2711,87 +2201,53 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.1
+				factor = 0
+				NOT = { has_ambition = obj_improve_learning }
+				NOT = { has_ambition = obj_become_spiritual }
+				NOT = { has_job_title = job_spiritual }
+				NOT = { trait = open_minded }
+				NOT = { trait = intellectual }
 			}
 			modifier = {
-				factor = 5
-				religion_group = transhumanist_group
-				NOT = { religion = bio_directionist }
-			}
-			modifier = {
-				factor = 0.2
-				religion_group = religious_group
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 4
+				factor = 0
 				OR = {
-					has_objective = obj_improve_learning
-					has_objective = obj_become_scientist
+					has_ambition = obj_improve_diplomacy
+					has_ambition = obj_improve_martial
+					has_ambition = obj_improve_stewardship
+					has_ambition = obj_improve_intrigue
 				}
 			}
 			modifier = {
-				factor = 4
-				has_job_title = job_scientist
+				factor = 0
+				NOT = { wealth = 500 }
+				NOT = { monthly_income = 0 }
 			}
 			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 0.5
-				trait = content
-			}
-			modifier = {
-				factor = 4
-				trait = open_minded
-			}
-			modifier = {
-				factor = 0.25
-				trait = close_minded
-			}
-			modifier = {
-				factor = 2
-				trait = brave
-			}
-			modifier = {
-				factor = 0.5
-				trait = craven
-			}
-			modifier = {
-				factor = 2
-				trait = skeptical
-			}
-			modifier = {
-				factor = 0.5
-				trait = spiritual
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 4 }
+				monthly_income = 2
+				NOT = { trait = iaei_mk_iii }
+				NOT = { trait = odin_mk_iii }
+				NOT = { trait = pci_mk_iii }
+				NOT = { trait = pluto_mk_iii }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 4 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 6 }
+				monthly_income = 3
+				NOT = { trait = iaei_mk_iv }
+				NOT = { trait = odin_mk_iv }
+				NOT = { trait = pci_mk_iv }
+				NOT = { trait = pluto_mk_iv }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 6 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 8 }
-			}
-			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 8 }
-				trait = proud
+				monthly_income = 4
+				NOT = { trait = iaei_mk_v }
+				NOT = { trait = odin_mk_v }
+				NOT = { trait = pci_mk_v }
+				NOT = { trait = pluto_mk_v }
 			}
 		}
 	}
@@ -2803,6 +2259,10 @@ decisions = {
 			NOT = { trait = thoth_mk_iii }
 			NOT = { trait = thoth_mk_iv }
 			NOT = { trait = thoth_mk_v }
+			NOT = { trait = iaei_mk_iii }
+			NOT = { trait = odin_mk_iii }
+			NOT = { trait = pci_mk_iii }
+			NOT = { trait = pluto_mk_iii }
 			age = 16
 			NOT = { trait = incapable }
 			prisoner = no
@@ -2846,78 +2306,44 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.1
+				factor = 0
+				NOT = { has_ambition = obj_improve_learning }
+				NOT = { has_ambition = obj_become_spiritual }
+				NOT = { has_job_title = job_spiritual }
+				NOT = { trait = open_minded }
+				NOT = { trait = intellectual }
 			}
 			modifier = {
-				factor = 5
-				religion_group = transhumanist_group
-				NOT = { religion = bio_directionist }
-			}
-			modifier = {
-				factor = 0.2
-				religion_group = religious_group
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 4
+				factor = 0
 				OR = {
-					has_objective = obj_improve_learning
-					has_objective = obj_become_scientist
+					has_ambition = obj_improve_diplomacy
+					has_ambition = obj_improve_martial
+					has_ambition = obj_improve_stewardship
+					has_ambition = obj_improve_intrigue
 				}
 			}
 			modifier = {
-				factor = 4
-				has_job_title = job_scientist
+				factor = 0
+				NOT = { wealth = 600 }
+				NOT = { monthly_income = 0 }
 			}
 			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 0.5
-				trait = content
-			}
-			modifier = {
-				factor = 4
-				trait = open_minded
-			}
-			modifier = {
-				factor = 0.25
-				trait = close_minded
-			}
-			modifier = {
-				factor = 2
-				trait = brave
-			}
-			modifier = {
-				factor = 0.5
-				trait = craven
-			}
-			modifier = {
-				factor = 2
-				trait = skeptical
-			}
-			modifier = {
-				factor = 0.5
-				trait = spiritual
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 6 }
+				monthly_income = 3
+				NOT = { trait = iaei_mk_iv }
+				NOT = { trait = odin_mk_iv }
+				NOT = { trait = pci_mk_iv }
+				NOT = { trait = pluto_mk_iv }
 			}
 			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 6 }
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 8 }
-			}
-			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 8 }
-				trait = proud
+				monthly_income = 4
+				NOT = { trait = iaei_mk_v }
+				NOT = { trait = odin_mk_v }
+				NOT = { trait = pci_mk_v }
+				NOT = { trait = pluto_mk_v }
 			}
 		}
 	}
@@ -2928,6 +2354,10 @@ decisions = {
 			location = { TECH_POPULAR_CUSTOMS = 6 }
 			NOT = { trait = thoth_mk_iv }
 			NOT = { trait = thoth_mk_v }
+			NOT = { trait = iaei_mk_iv }
+			NOT = { trait = odin_mk_iv }
+			NOT = { trait = pci_mk_iv }
+			NOT = { trait = pluto_mk_iv }
 			age = 16
 			NOT = { trait = incapable }
 			prisoner = no
@@ -2972,69 +2402,35 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.1
+				factor = 0
+				NOT = { has_ambition = obj_improve_learning }
+				NOT = { has_ambition = obj_become_spiritual }
+				NOT = { has_job_title = job_spiritual }
+				NOT = { trait = open_minded }
+				NOT = { trait = intellectual }
 			}
 			modifier = {
-				factor = 5
-				religion_group = transhumanist_group
-				NOT = { religion = bio_directionist }
-			}
-			modifier = {
-				factor = 0.2
-				religion_group = religious_group
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 4
+				factor = 0
 				OR = {
-					has_objective = obj_improve_learning
-					has_objective = obj_become_scientist
+					has_ambition = obj_improve_diplomacy
+					has_ambition = obj_improve_martial
+					has_ambition = obj_improve_stewardship
+					has_ambition = obj_improve_intrigue
 				}
 			}
 			modifier = {
-				factor = 4
-				has_job_title = job_scientist
+				factor = 0
+				NOT = { wealth = 700 }
+				NOT = { monthly_income = 0 }
 			}
 			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 0.5
-				trait = content
-			}
-			modifier = {
-				factor = 4
-				trait = open_minded
-			}
-			modifier = {
-				factor = 0.25
-				trait = close_minded
-			}
-			modifier = {
-				factor = 2
-				trait = brave
-			}
-			modifier = {
-				factor = 0.5
-				trait = craven
-			}
-			modifier = {
-				factor = 2
-				trait = skeptical
-			}
-			modifier = {
-				factor = 0.5
-				trait = spiritual
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				location = { TECH_POPULAR_CUSTOMS = 8 }
-			}
-			modifier = {
-				factor = 0.5
-				location = { TECH_POPULAR_CUSTOMS = 8 }
-				trait = proud
+				monthly_income = 4
+				NOT = { trait = iaei_mk_v }
+				NOT = { trait = odin_mk_v }
+				NOT = { trait = pci_mk_v }
+				NOT = { trait = pluto_mk_v }
 			}
 		}
 	}
@@ -3044,6 +2440,10 @@ decisions = {
 			trait = dni
 			location = { TECH_POPULAR_CUSTOMS = 8 }
 			NOT = { trait = thoth_mk_v }
+			NOT = { trait = iaei_mk_v }
+			NOT = { trait = odin_mk_v }
+			NOT = { trait = pci_mk_v }
+			NOT = { trait = pluto_mk_v }
 			age = 16
 			NOT = { trait = incapable }
 			prisoner = no
@@ -3086,62 +2486,27 @@ decisions = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
 			modifier = {
-				factor = 0.1
+				factor = 0
+				NOT = { has_ambition = obj_improve_learning }
+				NOT = { has_ambition = obj_become_spiritual }
+				NOT = { has_job_title = job_spiritual }
+				NOT = { trait = open_minded }
+				NOT = { trait = intellectual }
 			}
 			modifier = {
-				factor = 5
-				religion_group = transhumanist_group
-				NOT = { religion = bio_directionist }
-			}
-			modifier = {
-				factor = 0.2
-				religion_group = religious_group
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 4
+				factor = 0
 				OR = {
-					has_objective = obj_improve_learning
-					has_objective = obj_become_scientist
+					has_ambition = obj_improve_diplomacy
+					has_ambition = obj_improve_martial
+					has_ambition = obj_improve_stewardship
+					has_ambition = obj_improve_intrigue
 				}
 			}
 			modifier = {
-				factor = 4
-				has_job_title = job_scientist
-			}
-			modifier = {
-				factor = 2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 0.5
-				trait = content
-			}
-			modifier = {
-				factor = 4
-				trait = open_minded
-			}
-			modifier = {
-				factor = 0.25
-				trait = close_minded
-			}
-			modifier = {
-				factor = 2
-				trait = brave
-			}
-			modifier = {
-				factor = 0.5
-				trait = craven
-			}
-			modifier = {
-				factor = 2
-				trait = skeptical
-			}
-			modifier = {
-				factor = 0.5
-				trait = spiritual
+				factor = 0
+				NOT = { wealth = 850 }
+				NOT = { monthly_income = 0 }
 			}
 		}
 	}
@@ -3192,53 +2557,20 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.25
-			}
-			modifier = {
-				factor = 5
-				religion_group = transhumanist_group
-				NOT = { religion = bio_directionist }
-			}
-			modifier = {
-				factor = 0.2
+				factor = 0
 				religion_group = religious_group
 				NOT = { trait = pragmatic }
+				health = 1
 			}
 			modifier = {
-				factor = 4
-				trait = open_minded
-			}
-			modifier = {
-				factor = 0.25
+				factor = 0
 				trait = close_minded
+				health = 2
 			}
 			modifier = {
-				factor = 4
-				trait = craven
-			}
-			modifier = {
-				factor = 0.5
-				trait = brave
-			}
-			modifier = {
-				factor = 2
-				NOT = { health = 5 }
-			}
-			modifier = {
-				factor = 2
-				NOT = { health = 4 }
-			}
-			modifier = {
-				factor = 2
-				NOT = { health = 3 }
-			}
-			modifier = {
-				factor = 2
-				NOT = { health = 2 }
-			}
-			modifier = {
-				factor = 2
-				NOT = { health = 1 }
+				factor = 0
+				religion_group = religious_group
+				trait = radical
 			}
 		}
 	}

@@ -1,0 +1,4313 @@
+faction_pro_ruler = {
+	type = character
+	potential = {
+		age = 16
+		prisoner = no
+		NOT = { trait = incapable }
+		NOT = { in_faction = faction_anti_ruler }
+		liege = { has_character_modifier = constitutional_crisis }
+	}
+	allow_join = {
+		age = 16
+		prisoner = no
+		NOT = { trait = incapable }
+		NOT = { in_faction = faction_anti_ruler }
+		liege = { has_character_modifier = constitutional_crisis }
+	}
+	chance = {
+		factor = 10
+		
+		# Legality
+		modifier = {
+			factor = 5
+			liege = { has_character_modifier = law_for_ruler }
+			NOT = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 0.2
+			liege = { has_character_modifier = law_against_ruler }
+			NOT = { trait = pragmatic }
+		}
+		
+		# Crisis - Defied term limit
+		modifier = {
+			factor = 2
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+		}
+		modifier = {
+			factor = 2
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+			NOT = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 2
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+			trait = radical
+		}
+		modifier = {
+			factor = 4
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			trait = close_minded
+		}
+		modifier = {
+			factor = 0.5
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+				religion = neo_socialist
+			}
+		}
+		modifier = {
+			factor = 0.5
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+				religion = neo_socialist
+			}
+			NOT = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+				religion = neo_socialist
+			}
+			trait = radical
+		}
+		modifier = {
+			factor = 0.2
+			liege = {
+				has_character_modifier = crisis_term_limit_defied
+				any_demesne_title = { current_heir = { character = ROOT } }
+			}
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				has_character_modifier = crisis_term_limit_defied
+				any_demesne_title = { current_heir = { character = ROOT } }
+			}
+			trait = ambitious
+		}
+		
+		# Crisis - Legislature-related
+		modifier = {
+			factor = 2
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+		}
+		modifier = {
+			factor = 2
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+			NOT = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 2
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+			trait = radical
+		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+				religion = neo_socialist
+			}
+		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+				religion = neo_socialist
+			}
+			NOT = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+				religion = neo_socialist
+			}
+			trait = radical
+		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			trait = proud
+		}
+		
+		# Opinion of liege
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 100 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 90 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 80 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 70 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 60 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 50 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 40 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 30 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 20 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 10 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -9 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -19 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -29 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -39 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -49 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -59 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -69 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -79 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -89 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -99 } }
+		}
+		
+		# Pressure to resolve the crisis
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 3
+					}
+				}
+			}
+		}
+	}
+	
+	membership = {
+		factor = 10
+		
+		# Legality
+		modifier = {
+			factor = 5
+			liege = { has_character_modifier = law_for_ruler }
+			NOT = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 0.2
+			liege = { has_character_modifier = law_against_ruler }
+			NOT = { trait = pragmatic }
+		}
+		
+		# Crisis - Defied term limit
+		modifier = {
+			factor = 2
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+		}
+		modifier = {
+			factor = 2
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+			NOT = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 2
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+			trait = radical
+		}
+		modifier = {
+			factor = 4
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			trait = close_minded
+		}
+		modifier = {
+			factor = 0.5
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+				religion = neo_socialist
+			}
+		}
+		modifier = {
+			factor = 0.5
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+				religion = neo_socialist
+			}
+			NOT = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+				religion = neo_socialist
+			}
+			trait = radical
+		}
+		modifier = {
+			factor = 0.2
+			liege = {
+				has_character_modifier = crisis_term_limit_defied
+				any_demesne_title = { current_heir = { character = ROOT } }
+			}
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				has_character_modifier = crisis_term_limit_defied
+				any_demesne_title = { current_heir = { character = ROOT } }
+			}
+			trait = ambitious
+		}
+		
+		# Crisis - Legislature-related
+		modifier = {
+			factor = 2
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+		}
+		modifier = {
+			factor = 2
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+			NOT = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 2
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+			trait = radical
+		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+				religion = neo_socialist
+			}
+		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+				religion = neo_socialist
+			}
+			NOT = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+				religion = neo_socialist
+			}
+			trait = radical
+		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			trait = proud
+		}
+		
+		# Opinion of liege
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 100 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 90 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 80 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 70 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 60 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 50 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 40 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 30 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 20 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 10 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -9 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -19 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -29 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -39 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -49 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -59 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -69 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -79 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -89 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -99 } }
+		}
+		
+		# Pressure to resolve the crisis
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 3
+					}
+				}
+			}
+		}
+	}
+	
+	success = { always = no }
+	abort = { always = no }
+	effect = { }
+	abort_effect = { }
+}
+
+faction_anti_ruler = {
+	type = character
+	potential = {
+		age = 16
+		prisoner = no
+		NOT = { trait = incapable }
+		NOT = { in_faction = faction_pro_ruler }
+		liege = { has_character_modifier = constitutional_crisis }
+	}
+	allow_join = {
+		age = 16
+		prisoner = no
+		NOT = { trait = incapable }
+		NOT = { in_faction = faction_pro_ruler }
+		liege = { has_character_modifier = constitutional_crisis }
+	}
+	chance = {
+		factor = 10
+		
+		modifier = {
+			factor = 0
+			has_opinion_modifier = { who = liege modifier = opinion_coerced_into_leaving_faction }
+		}
+		
+		# Legality
+		modifier = {
+			factor = 0.2
+			liege = { has_character_modifier = law_for_ruler }
+			NOT = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 5
+			liege = { has_character_modifier = law_against_ruler }
+			NOT = { trait = pragmatic }
+		}
+		
+		# Crisis - Defied term limit
+		modifier = {
+			factor = 0.5
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+		}
+		modifier = {
+			factor = 0.5
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+			NOT = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+			trait = radical
+		}
+		modifier = {
+			factor = 0.25
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			trait = close_minded
+		}
+		modifier = {
+			factor = 2
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+				religion = neo_socialist
+			}
+		}
+		modifier = {
+			factor = 2
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+				religion = neo_socialist
+			}
+			NOT = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 2
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+				religion = neo_socialist
+			}
+			trait = radical
+		}
+		modifier = {
+			factor = 5
+			liege = {
+				has_character_modifier = crisis_term_limit_defied
+				any_demesne_title = { current_heir = { character = ROOT } }
+			}
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 2
+			liege = {
+				has_character_modifier = crisis_term_limit_defied
+				any_demesne_title = { current_heir = { character = ROOT } }
+			}
+			trait = ambitious
+		}
+		
+		# Crisis - Legislature-related
+		modifier = {
+			factor = 0.5
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+			NOT = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+			trait = radical
+		}
+		modifier = {
+			factor = 2
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+				religion = neo_socialist
+			}
+		}
+		modifier = {
+			factor = 2
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+				religion = neo_socialist
+			}
+			NOT = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 2
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+				religion = neo_socialist
+			}
+			trait = radical
+		}
+		modifier = {
+			factor = 2
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			trait = ambitious
+		}
+		modifier = {
+			factor = 2
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			trait = proud
+		}
+		
+		# Opinion of liege
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 100 }
+		}
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 90 }
+		}
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 80 }
+		}
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 70 }
+		}
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 60 }
+		}
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 50 }
+		}
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 40 }
+		}
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 30 }
+		}
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 20 }
+		}
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 10 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -9 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -19 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -29 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -39 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -49 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -59 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -69 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -79 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -89 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -99 } }
+		}
+		
+		# Pressure to resolve the crisis
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 3
+					}
+				}
+			}
+		}
+	}
+	
+	membership = {
+		factor = 10
+		
+		modifier = {
+			factor = 0
+			has_opinion_modifier = { who = liege modifier = opinion_coerced_into_leaving_faction }
+		}
+		
+		# Legality
+		modifier = {
+			factor = 0.2
+			liege = { has_character_modifier = law_for_ruler }
+			NOT = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 5
+			liege = { has_character_modifier = law_against_ruler }
+			NOT = { trait = pragmatic }
+		}
+		
+		# Crisis - Defied term limit
+		modifier = {
+			factor = 0.5
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+		}
+		modifier = {
+			factor = 0.5
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+			NOT = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+			trait = radical
+		}
+		modifier = {
+			factor = 0.25
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			trait = close_minded
+		}
+		modifier = {
+			factor = 2
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+				religion = neo_socialist
+			}
+		}
+		modifier = {
+			factor = 2
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+				religion = neo_socialist
+			}
+			NOT = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 2
+			liege = { has_character_modifier = crisis_term_limit_defied }
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+				religion = neo_socialist
+			}
+			trait = radical
+		}
+		modifier = {
+			factor = 5
+			liege = {
+				has_character_modifier = crisis_term_limit_defied
+				any_demesne_title = { current_heir = { character = ROOT } }
+			}
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 2
+			liege = {
+				has_character_modifier = crisis_term_limit_defied
+				any_demesne_title = { current_heir = { character = ROOT } }
+			}
+			trait = ambitious
+		}
+		
+		# Crisis - Legislature-related
+		modifier = {
+			factor = 0.5
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+			NOT = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			OR = {
+				religion = terran_imperial
+				religion = astrist
+				religion = neo_feudal
+			}
+			trait = radical
+		}
+		modifier = {
+			factor = 2
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+				religion = neo_socialist
+			}
+		}
+		modifier = {
+			factor = 2
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+				religion = neo_socialist
+			}
+			NOT = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 2
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			OR = {
+				religion = terran_federalist
+				religion = terran_republican
+				religion = colonial_separatist
+				religion = neo_socialist
+			}
+			trait = radical
+		}
+		modifier = {
+			factor = 2
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			trait = ambitious
+		}
+		modifier = {
+			factor = 2
+			liege = {
+				OR = {
+					has_character_modifier = crisis_dissolved_legislature
+					has_character_modifier = crisis_refused_democratic_legislature_demand
+				}
+			}
+			trait = proud
+		}
+		
+		# Opinion of liege
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 100 }
+		}
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 90 }
+		}
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 80 }
+		}
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 70 }
+		}
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 60 }
+		}
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 50 }
+		}
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 40 }
+		}
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 30 }
+		}
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 20 }
+		}
+		modifier = {
+			factor = 0.8
+			opinion = { who = liege value = 10 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -9 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -19 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -29 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -39 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -49 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -59 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -69 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -79 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -89 } }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { opinion = { who = liege value = -99 } }
+		}
+		
+		# Pressure to resolve the crisis
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_anti_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.25 }
+			NOT = { trait = brave }
+			NOT = { trait = proud }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			NOT = { trait = slow }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.5 }
+			NOT = { trait = brave }
+			NOT = { trait = lunatic }
+			NOT = { trait = imbecile }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { revolt_risk = 0.75 }
+			NOT = { trait = lunatic }
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 0.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2.5
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			any_war = {
+				defender = { character = ROOT }
+				OR = {
+					using_cb = democratic_rebellion
+					using_cb = autocratic_rebellion
+					using_cb = theocratic_rebellion
+				}
+			}
+			liege = {
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 3
+					}
+				}
+			}
+		}
+	}
+	
+	success = { always = no }
+	abort = { always = no }
+	effect = { }
+	abort_effect = { }
+}

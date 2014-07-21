@@ -1402,13 +1402,31 @@ on_create_title = {
 
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
 on_new_holder = {
+	events = {
+		# Inherit old constitutional crises
+		laws.10
+		laws.20
+		laws.30
+	}
 }
 
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
 on_new_holder_inheritance = {
+	events = {
+		# Inherit old constitutional crises
+		laws.10
+		laws.20
+		laws.30
+	}
 }
 
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
 on_new_holder_usurpation = {
+	events = {
+		# Inherit old constitutional crises
+		laws.10
+		laws.20
+		laws.30
+	}
 }
 

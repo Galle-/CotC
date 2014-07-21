@@ -274,218 +274,6 @@ character_event = {
 				}
 			}
 		}
-		ai_chance = {
-			# This is the lawful method, so there's an initial chance of 75% to accept,
-			# and a bonus with the caller's moral authority
-			factor = 75
-			modifier = {
-				factor = 2
-				FROM = { religion_authority = 0.1 }
-			}
-			modifier = {
-				factor = 2
-				FROM = { religion_authority = 0.2 }
-			}
-			modifier = {
-				factor = 2
-				FROM = { religion_authority = 0.3 }
-			}
-			modifier = {
-				factor = 2
-				FROM = { religion_authority = 0.4 }
-			}
-			modifier = {
-				factor = 2
-				FROM = { religion_authority = 0.5 }
-			}
-			modifier = {
-				factor = 2
-				FROM = { religion_authority = 0.6 }
-			}
-			modifier = {
-				factor = 2
-				FROM = { religion_authority = 0.7 }
-			}
-			modifier = {
-				factor = 2
-				FROM = { religion_authority = 0.8 }
-			}
-			modifier = {
-				factor = 2
-				FROM = { religion_authority = 0.9 }
-			}
-			modifier = {
-				factor = 2
-				FROM = { religion_authority = 1 }
-			}
-			
-			# Personality
-			modifier = {
-				factor = 2
-				trait = humble
-			}
-			modifier = {
-				factor = 0.5
-				trait = proud
-			}
-			modifier = {
-				factor = 2
-				trait = content
-			}
-			modifier = {
-				factor = 0.5
-				trait = ambitious
-			}
-			modifier = {
-				factor = 2
-				trait = carefree
-			}
-			modifier = {
-				factor = 0.5
-				trait = disciplined
-			}
-			modifier = {
-				factor = 2
-				trait = friendly
-			}
-			modifier = {
-				factor = 0.5
-				trait = cold
-			}
-			
-			# Ideological Preferences
-			modifier = {
-				factor = 2
-				OR = {
-					religion = terran_federalist
-					religion = colonial_separatist
-					religion = neo_feudal
-					religion = adoptionist_cultist
-					religion = adoptionist
-					religion = xenoterran
-				}
-				religion_authority = 0.5
-			}
-			modifier = {
-				factor = 2
-				OR = {
-					religion = terran_federalist
-					religion = colonial_separatist
-					religion = neo_feudal
-					religion = adoptionist_cultist
-					religion = adoptionist
-					religion = xenoterran
-				}
-				religion_authority = 0.25
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 2
-				OR = {
-					religion = terran_federalist
-					religion = colonial_separatist
-					religion = neo_feudal
-					religion = adoptionist_cultist
-					religion = adoptionist
-					religion = xenoterran
-				}
-				trait = radical
-			}
-			modifier = {
-				factor = 0.5
-				OR = {
-					religion = terran_republican
-					religion = terran_imperial
-					religion = astrist
-					religion = neo_socialist
-					religion = orthodox
-					religion = solarian
-				}
-				religion_authority = 0.5
-			}
-			modifier = {
-				factor = 0.5
-				OR = {
-					religion = terran_republican
-					religion = terran_imperial
-					religion = astrist
-					religion = neo_socialist
-					religion = orthodox
-					religion = solarian
-				}
-				religion_authority = 0.25
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 0.5
-				OR = {
-					religion = terran_republican
-					religion = terran_imperial
-					religion = astrist
-					religion = neo_socialist
-					religion = orthodox
-					religion = solarian
-				}
-				trait = radical
-			}
-			
-			# This weakens the realm either way, so situational bonuses do not apply
-		}
-	}
-	
-	option = {
-		name = "EVTOPTREFUSE"
-		# Starts a constitutional crisis
-		add_character_modifier = { name = constitutional_crisis duration = -1 }
-		add_character_modifier = { name = crisis_law_against_ruler duration = -1 }
-		clr_character_flag = flag_crisis_timer
-		set_character_flag = flag_crisis_timer
-		
-		set_character_flag = flag_crisis_refused_anti_centralization_demand
-		
-		if = {
-			limit = { primary_title = { tier = EMPEROR } }
-			set_character_flag = flag_crisis_emperor
-		}
-		if = {
-			limit = { primary_title = { tier = KING } }
-			set_character_flag = flag_crisis_king
-		}
-		religion_authority = { modifier = legal_demand_refused years = 10 }
-		if = {
-			limit = {
-				NOT = { religion = terran_imperial }
-				NOT = { religion = neo_feudal }
-				NOT = { religion = astrist }
-			}
-			piety = -200
-		}
-		if = {
-			limit = {
-				OR = {
-					religion = terran_federalist
-					religion = terran_republican
-					religion = colonial_separatist
-				}
-			}
-			piety = -300
-		}
-		FROM = {
-			character_event = { id = laws.407 tooltip = "EVTTOOLTIPLAWS407" } # Automatically oppose ruler
-			opinion = { who = ROOT modifier = opinion_tyrant }
-			any_faction_backer = {
-				faction = faction_anti_centralization
-				opinion = { who = ROOT modifier = opinion_tyrant }
-				character_event = { id = laws.407 tooltip = "EVTTOOLTIPLAWS407" } # Automatically oppose ruler
-			}
-		}
-		hidden_tooltip = {
-			any_realm_character = {
-				limit = { liege = { character = ROOT } }
-				character_event = { id = laws.10012 } # Inform vassals
-				character_event = { id = laws.500 days = 30 random = 15 } # AI takes sides for or against
-			}
-		}
 	}
 }
 
@@ -495,6 +283,13 @@ character_event = {
 	desc = "EVTDESCLAWS10011"
 	picture = GFX_evt_speech
 	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { leads_faction = faction_anti_centralization }
+			clr_character_flag = flag_making_faction_ultimatum
+		}
+	}
 	
 	option = {
 		trigger = { NOT = { in_faction = faction_pro_centralization } }
@@ -528,64 +323,6 @@ character_event = {
 				}
 			}
 		}
-	}
-}
-
-# The liege has refused to implement a bill lowering centralization
-character_event = {
-	id = laws.10012
-	desc = "EVTDESCLAWS10012"
-	picture = GFX_evt_speech
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
-}
-
-# MAKE ANTI-CENTRALIZATION DEMAND
-character_event = {
-	id = laws.10050
-	desc = "EVTDESCLAWS10050"
-	picture = GFX_evt_speech
-	is_triggered_only = yes
-	
-	# Liege has no regent
-	option = {
-		trigger = {
-			NOT = {
-				any_realm_character = {
-					has_minor_title = title_regent
-					same_liege = ROOT
-				}
-			}
-		}
-		name = "EVTOPTACONFIRM"
-		liege = { character_event = { id = laws.10060 tooltip = "EVTTOOLTIPLAWS10060" } }
-	}
-	
-	# Liege has a regent, who is in the faction and can pass the bill automatically
-	option = {
-		trigger = {
-			any_realm_character = {
-				has_minor_title = title_regent
-				same_liege = ROOT
-			}
-		}
-		name = "EVTOPTBLAWS10050"
-		random_realm_character = {
-			limit = {
-				has_minor_title = title_regent
-				same_liege = ROOT
-			}
-			character_event = { id = laws.10051 tooltip = "EVTTOOLTIPLAWS10051" }
-		}
-		clr_character_flag = flag_making_faction_ultimatum
-	}
-	
-	# Nevermind
-	option = {
-		name = "EVTOPTNEVERMIND"
-		clr_character_flag = flag_making_faction_ultimatum
-		ai_chance = { factor = 0 }
 	}
 }
 
@@ -816,9 +553,6 @@ character_event = {
 			}
 		}
 		ai_chance = {
-			# This is a demand being made of the liege without legal force,
-			# so the starting odds are much lower and the faction does not
-			# get a moral authority bonus
 			factor = 25
 			
 			# Personality
@@ -850,6 +584,8 @@ character_event = {
 			# Faction Strength Evaluation
 			modifier = {
 				factor = 2
+				NOT = { trait = imbecile }
+				NOT = { trait = slow }
 				OR = {
 					AND = {
 						NOT = { trait = proud }
@@ -866,6 +602,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 2
+				NOT = { trait = imbecile }
 				OR = {
 					AND = {
 						NOT = { trait = proud }
@@ -1347,36 +1084,13 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTREFUSE"
-		# Starts a constitutional crisis
-		add_character_modifier = { name = constitutional_crisis duration = -1 }
-		add_character_modifier = { name = crisis_law_for_ruler duration = -1 }
-		clr_character_flag = flag_crisis_timer
-		set_character_flag = flag_crisis_timer
-		
-		set_character_flag = flag_crisis_refused_anti_centralization_demand
-		
-		if = {
-			limit = { primary_title = { tier = EMPEROR } }
-			set_character_flag = flag_crisis_emperor
-		}
-		if = {
-			limit = { primary_title = { tier = KING } }
-			set_character_flag = flag_crisis_king
-		}
 		FROM = {
-			character_event = { id = laws.407 tooltip = "EVTTOOLTIPLAWS407" } # Automatically oppose ruler
-			opinion = { who = ROOT modifier = opinion_tyrant }
+			opinion = { who = ROOT modifier = opinion_vetoed_my_proposal }
+			hidden_tooltip = { character_event = { id = laws.10062 } }
 			any_faction_backer = {
 				faction = faction_anti_centralization
-				opinion = { who = ROOT modifier = opinion_tyrant }
-				character_event = { id = laws.407 tooltip = "EVTTOOLTIPLAWS407" } # Automatically oppose ruler
-			}
-		}
-		hidden_tooltip = {
-			any_realm_character = {
-				limit = { liege = { character = ROOT } }
-				character_event = { id = laws.10062 } # Inform vassals
-				character_event = { id = laws.500 days = 30 random = 15 } # AI takes sides for or against
+				opinion = { who = ROOT modifier = opinion_vetoed_my_proposal }
+				hidden_tooltip = { character_event = { id = laws.10062 } }
 			}
 		}
 	}
@@ -1388,6 +1102,13 @@ character_event = {
 	desc = "EVTDESCLAWS10061"
 	picture = GFX_evt_speech
 	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { leads_faction = faction_anti_centralization }
+			clr_character_flag = flag_making_faction_ultimatum
+		}
+	}
 	
 	option = {
 		trigger = { NOT = { in_faction = faction_pro_centralization } }
@@ -1408,6 +1129,13 @@ character_event = {
 	desc = "EVTDESCLAWS10062"
 	picture = GFX_evt_speech
 	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { leads_faction = faction_anti_centralization }
+			clr_character_flag = flag_making_faction_ultimatum
+		}
+	}
 	
 	option = { name = "EVTOPTCONFIRM" }
 }
@@ -1696,213 +1424,6 @@ character_event = {
 				}
 			}
 		}
-		ai_chance = {
-			# This is the lawful method, so there's an initial chance of 75% to accept,
-			# and a bonus with the caller's moral authority
-			factor = 75
-			modifier = {
-				factor = 2
-				FROM = { religion_authority = 0.1 }
-			}
-			modifier = {
-				factor = 2
-				FROM = { religion_authority = 0.2 }
-			}
-			modifier = {
-				factor = 2
-				FROM = { religion_authority = 0.3 }
-			}
-			modifier = {
-				factor = 2
-				FROM = { religion_authority = 0.4 }
-			}
-			modifier = {
-				factor = 2
-				FROM = { religion_authority = 0.5 }
-			}
-			modifier = {
-				factor = 2
-				FROM = { religion_authority = 0.6 }
-			}
-			modifier = {
-				factor = 2
-				FROM = { religion_authority = 0.7 }
-			}
-			modifier = {
-				factor = 2
-				FROM = { religion_authority = 0.8 }
-			}
-			modifier = {
-				factor = 2
-				FROM = { religion_authority = 0.9 }
-			}
-			modifier = {
-				factor = 2
-				FROM = { religion_authority = 1 }
-			}
-			
-			# Personality
-			modifier = {
-				factor = 2
-				trait = humble
-			}
-			modifier = {
-				factor = 0.5
-				trait = proud
-			}
-			modifier = {
-				factor = 0.5
-				trait = carefree
-			}
-			modifier = {
-				factor = 2
-				trait = disciplined
-			}
-			
-			# Self-Interest
-			modifier = {
-				factor = 5
-				NOT = { trait = lunatic }
-				NOT = { trait = content }
-			}
-			
-			# Ideological Preferences
-			modifier = {
-				factor = 0.5
-				OR = {
-					religion = terran_federalist
-					religion = colonial_separatist
-					religion = neo_feudal
-					religion = adoptionist_cultist
-					religion = adoptionist
-					religion = xenoterran
-				}
-				religion_authority = 0.5
-			}
-			modifier = {
-				factor = 0.5
-				OR = {
-					religion = terran_federalist
-					religion = colonial_separatist
-					religion = neo_feudal
-					religion = adoptionist_cultist
-					religion = adoptionist
-					religion = xenoterran
-				}
-				religion_authority = 0.25
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 0.5
-				OR = {
-					religion = terran_federalist
-					religion = colonial_separatist
-					religion = neo_feudal
-					religion = adoptionist_cultist
-					religion = adoptionist
-					religion = xenoterran
-				}
-				trait = radical
-			}
-			modifier = {
-				factor = 2
-				OR = {
-					religion = terran_republican
-					religion = terran_imperial
-					religion = astrist
-					religion = neo_socialist
-					religion = orthodox
-					religion = solarian
-				}
-				religion_authority = 0.5
-			}
-			modifier = {
-				factor = 2
-				OR = {
-					religion = terran_republican
-					religion = terran_imperial
-					religion = astrist
-					religion = neo_socialist
-					religion = orthodox
-					religion = solarian
-				}
-				religion_authority = 0.25
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 2
-				OR = {
-					religion = terran_republican
-					religion = terran_imperial
-					religion = astrist
-					religion = neo_socialist
-					religion = orthodox
-					religion = solarian
-				}
-				trait = radical
-			}
-			
-			# Situational bonus - don't risk weakening the realm
-			modifier = {
-				factor = 4
-				war = yes
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTREFUSE"
-		# Starts a constitutional crisis
-		add_character_modifier = { name = constitutional_crisis duration = -1 }
-		add_character_modifier = { name = crisis_law_against_ruler duration = -1 }
-		clr_character_flag = flag_crisis_timer
-		set_character_flag = flag_crisis_timer
-		
-		set_character_flag = flag_crisis_refused_pro_centralization_demand
-		
-		if = {
-			limit = { primary_title = { tier = EMPEROR } }
-			set_character_flag = flag_crisis_emperor
-		}
-		if = {
-			limit = { primary_title = { tier = KING } }
-			set_character_flag = flag_crisis_king
-		}
-		religion_authority = { modifier = legal_demand_refused years = 10 }
-		if = {
-			limit = {
-				NOT = { religion = terran_imperial }
-				NOT = { religion = neo_feudal }
-				NOT = { religion = astrist }
-			}
-			piety = -200
-		}
-		if = {
-			limit = {
-				OR = {
-					religion = terran_federalist
-					religion = terran_republican
-					religion = colonial_separatist
-				}
-			}
-			piety = -300
-		}
-		FROM = {
-			character_event = { id = laws.407 tooltip = "EVTTOOLTIPLAWS407" } # Automatically oppose ruler
-			opinion = { who = ROOT modifier = opinion_tyrant }
-			any_faction_backer = {
-				faction = faction_pro_centralization
-				opinion = { who = ROOT modifier = opinion_tyrant }
-				character_event = { id = laws.407 tooltip = "EVTTOOLTIPLAWS407" } # Automatically oppose ruler
-			}
-		}
-		hidden_tooltip = {
-			any_realm_character = {
-				limit = { liege = { character = ROOT } }
-				character_event = { id = laws.10112 } # Inform vassals
-				character_event = { id = laws.500 days = 30 random = 15 } # AI takes sides for or against
-			}
-		}
 	}
 }
 
@@ -1912,6 +1433,13 @@ character_event = {
 	desc = "EVTDESCLAWS10111"
 	picture = GFX_evt_speech
 	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { leads_faction = faction_pro_centralization }
+			clr_character_flag = flag_making_faction_ultimatum
+		}
+	}
 	
 	option = {
 		trigger = { NOT = { in_faction = faction_pro_centralization } }
@@ -1946,16 +1474,6 @@ character_event = {
 			}
 		}
 	}
-}
-
-# The liege has refused to implement a bill increasing centralization
-character_event = {
-	id = laws.10112
-	desc = "EVTDESCLAWS10112"
-	picture = GFX_evt_speech
-	is_triggered_only = yes
-	
-	option = { name = "EVTOPTCONFIRM" }
 }
 
 # MAKE PRO-CENTRALIZATION DEMAND
@@ -2267,6 +1785,8 @@ character_event = {
 			# Faction Strength Evaluation
 			modifier = {
 				factor = 2
+				NOT = { trait = imbecile }
+				NOT = { trait = slow }
 				OR = {
 					AND = {
 						NOT = { trait = proud }
@@ -2282,6 +1802,7 @@ character_event = {
 				}
 			}
 			modifier = {
+				NOT = { trait = imbecile }
 				factor = 2
 				OR = {
 					AND = {
@@ -2363,6 +1884,8 @@ character_event = {
 			}
 			modifier = {
 				factor = 0.5
+				NOT = { trait = imbecile }
+				NOT = { trait = slow }
 				OR = {
 					AND = {
 						NOT = { trait = proud }
@@ -2379,6 +1902,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0.5
+				NOT = { trait = imbecile }
 				OR = {
 					AND = {
 						NOT = { trait = proud }
@@ -2450,7 +1974,7 @@ character_event = {
 					}
 					trait = craven
 				}
-				any_vassal = { 
+				any_vassal = {
 					faction_power = {
 						faction = faction_anti_centralization
 						power = 3
@@ -2764,36 +2288,11 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTREFUSE"
-		# Starts a constitutional crisis
-		add_character_modifier = { name = constitutional_crisis duration = -1 }
-		add_character_modifier = { name = crisis_law_for_ruler duration = -1 }
-		clr_character_flag = flag_crisis_timer
-		set_character_flag = flag_crisis_timer
-		
-		set_character_flag = flag_crisis_refused_pro_centralization_demand
-		
-		if = {
-			limit = { primary_title = { tier = EMPEROR } }
-			set_character_flag = flag_crisis_emperor
-		}
-		if = {
-			limit = { primary_title = { tier = KING } }
-			set_character_flag = flag_crisis_king
-		}
 		FROM = {
-			character_event = { id = laws.407 tooltip = "EVTTOOLTIPLAWS407" } # Automatically oppose ruler
-			opinion = { who = ROOT modifier = opinion_tyrant }
+			opinion = { who = ROOT modifier = opinion_vetoed_my_proposal }
 			any_faction_backer = {
 				faction = faction_pro_centralization
-				opinion = { who = ROOT modifier = opinion_tyrant }
-				character_event = { id = laws.407 tooltip = "EVTTOOLTIPLAWS407" } # Automatically oppose ruler
-			}
-		}
-		hidden_tooltip = {
-			any_realm_character = {
-				limit = { liege = { character = ROOT } }
-				character_event = { id = laws.10162 } # Inform vassals
-				character_event = { id = laws.500 days = 30 random = 15 } # AI takes sides for or against
+				opinion = { who = ROOT modifier = opinion_vetoed_my_proposal }
 			}
 		}
 	}
@@ -2805,6 +2304,13 @@ character_event = {
 	desc = "EVTDESCLAWS10161"
 	picture = GFX_evt_speech
 	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { leads_faction = faction_pro_centralization }
+			clr_character_flag = flag_making_faction_ultimatum
+		}
+	}
 	
 	option = {
 		trigger = { NOT = { in_faction = faction_pro_centralization } }
@@ -2825,6 +2331,13 @@ character_event = {
 	desc = "EVTDESCLAWS10162"
 	picture = GFX_evt_speech
 	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { leads_faction = faction_pro_centralization }
+			clr_character_flag = flag_making_faction_ultimatum
+		}
+	}
 	
 	option = { name = "EVTOPTCONFIRM" }
 }
@@ -3314,11 +2827,10 @@ character_event = {
 		name = "EVTOPTREFUSE"
 		# Starts a constitutional crisis
 		add_character_modifier = { name = constitutional_crisis duration = -1 }
+		add_character_modifier = { name = crisis_refused_democratic_legislature_demand duration = -1 }
 		add_character_modifier = { name = crisis_law_for_ruler duration = -1 }
 		clr_character_flag = flag_crisis_timer
 		set_character_flag = flag_crisis_timer
-		
-		set_character_flag = flag_crisis_refused_democratic_legislature_demand
 		
 		if = {
 			limit = { primary_title = { tier = EMPEROR } }
@@ -3329,19 +2841,16 @@ character_event = {
 			set_character_flag = flag_crisis_king
 		}
 		FROM = {
-			character_event = { id = laws.407 tooltip = "EVTTOOLTIPLAWS407" } # Automatically oppose ruler
 			opinion = { who = ROOT modifier = opinion_tyrant }
 			any_faction_backer = {
-				faction = faction_pro_centralization
+				faction = faction_democratic_legislature
 				opinion = { who = ROOT modifier = opinion_tyrant }
-				character_event = { id = laws.407 tooltip = "EVTTOOLTIPLAWS407" } # Automatically oppose ruler
 			}
 		}
 		hidden_tooltip = {
 			any_realm_character = {
 				limit = { liege = { character = ROOT } }
 				character_event = { id = laws.10262 } # Inform vassals
-				character_event = { id = laws.500 days = 30 random = 15 } # AI takes sides for or against
 			}
 		}
 	}
@@ -3353,6 +2862,13 @@ character_event = {
 	desc = "EVTDESCLAWS10261"
 	picture = GFX_evt_speech
 	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { leads_faction = faction_democratic_legislature }
+			clr_character_flag = flag_making_faction_ultimatum
+		}
+	}
 	
 	option = {
 		trigger = { NOT = { in_faction = faction_democratic_legislature } }
@@ -3372,6 +2888,13 @@ character_event = {
 	desc = "EVTDESCLAWS10262"
 	picture = GFX_evt_speech
 	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { leads_faction = faction_democratic_legislature }
+			clr_character_flag = flag_making_faction_ultimatum
+		}
+	}
 	
 	option = { name = "EVTOPTCONFIRM" }
 }

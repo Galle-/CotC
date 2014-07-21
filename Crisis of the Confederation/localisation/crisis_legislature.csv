@@ -1,6 +1,16 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
-faction_anti_centralization;Anti-Centralization Faction;;;;;;;;;;;;;x
-faction_anti_centralization_desc;This faction opposes the centralization of the ;;;;;;;;;;;;;x
+faction_anti_centralization_short;Anti-Centralization;;;;;;;;;;;;;x
+faction_anti_centralization_title;Anti-Centralization in [This.GetName];;;;;;;;;;;;;x
+faction_anti_centralization_desc;This faction opposes the centralization of the [This.GetAdjective] government and wishes to grant greater autonomy to local governments.;;;;;;;;;;;;;x
+faction_pro_centralization_short;Pro-Centralization;;;;;;;;;;;;;x
+faction_pro_centralization_title;Pro-Centralization in [This.GetName];;;;;;;;;;;;;x
+faction_pro_centralization_desc;This faction supports the centralization of the [This.GetFullName] and wishes to reduce the autonomy of local governments and increase the authority of the central government.;;;;;;;;;;;;;x
+faction_democratic_legislature_short;Parliamentarian;;;;;;;;;;;;;x
+faction_democratic_legislature_title;Democratic Senate for [This.GetName];;;;;;;;;;;;;x
+faction_democratic_legislature_desc;This faction opposes the current power of dictatorship that [This.Holder.GetFullName] holds over the [This.GetFullName], and wishes to found a democratic legislature by which any future laws must be approved.;;;;;;;;;;;;;x
+faction_devolve_local_government_short;Devolve Local Government;;;;;;;;;;;;;x
+faction_devolve_local_government_title;Devolve [This.GetName] to [New.GetFullName];;;;;;;;;;;;;x
+faction_devolve_local_government_desc;The members of this faction believe that the [This.GetFullName] should be allowed to become a self-governing province of the [This.Holder.PrimaryTitle.GetFullName], and support [New.GetFullName], [New.GetTitle] of [New.PrimaryTitle.GetName], as its first leader.;;;;;;;;;;;;;x
 open_decree_menu_decision;Open Decrees Menu;;;;;;;;;;;;;x
 open_decree_menu_decision_desc;Who's [Root.GetTitle], again? This menu opens decisions allowing you to change crown laws without needing to confirm them through a vote - although not always without consequences.;;;;;;;;;;;;;x
 close_decree_menu_decision;Close Decrees Menu;;;;;;;;;;;;;x

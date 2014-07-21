@@ -48,6 +48,18 @@ decisions = {
 				NOT = {
 					AND = {
 						is_female = yes
+						spouse = { is_female = yes }
+					}
+				}
+				NOT = {
+					AND = {
+						is_female = no
+						spouse = { is_female = no }
+					}
+				}
+				NOT = {
+					AND = {
+						is_female = yes
 						age = 45
 					}
 				}
@@ -72,13 +84,8 @@ decisions = {
 					NOT = { trait = incapable }
 					NOT = { trait = bastard }
 				}
-				NOT = {
-					AND = {
-						is_female = no
-						has_ambition = obj_have_a_son
-					}
-				}
-				NOT = { has_ambition = obj_have_a_daughter }
+				NOT = { has_ambition = obj_have_a_child }
+				NOT = { has_ambition = obj_have_five_children }
 			}
 		}
 	}

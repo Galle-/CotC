@@ -2,3 +2,7 @@
 # decisions and suchlike
 
 opinion_appointment_nominee = { opinion = 10 months = 2400 }
+opinion_acting_plotter = {
+	opinion = 0
+	months = 1
+}

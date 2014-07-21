@@ -1,0 +1,311 @@
+decisions = {
+	# Improve public order
+	# Since public order is not actually a law, you can do this regardless
+	# of what the Senate looks like.
+	improve_public_order_decision = {
+		is_high_prio = yes
+		potential = {
+			any_demesne_title = {
+				crownlaw_title = { title = PREV } # Must be own crownlaw title
+				has_law = public_order_0 # Must have zero public order
+			}
+		}
+		allow = {
+			any_demesne_title = {
+				crownlaw_title = { title = PREV } # Must be own crownlaw title
+				has_law = public_order_0 # Must have zero public order
+			}
+			religion_authority = 0.25 # Minimum 25% moral authority
+			NOT = { any_vassal = { any_current_enemy = { liege = { character = ROOT } } } } # No vassals at war
+			NOT = { has_character_modifier = constitutional_crisis } # No constitutional crisis
+			NOT = { any_demesne_province = { revolt_risk = 0.5 } } # No demesne revolt risk above 50%
+			# Not in a civil war
+			NOT = { any_current_enemy = { liege_before_war = { character = ROOT } } }
+			NOT = { any_current_enemy = { ROOT = { liege_before_war = { character = PREVPREV } } } }
+		}
+		effect = {
+			any_demesne_title = {
+				limit = {
+					crownlaw_title = { title = PREV } # Must be own crownlaw title
+					has_law = public_order_0 # Must have zero public order
+				}
+				add_law = public_order_1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	# Menu Controls
+	open_decree_menu = {
+		potential = {
+			ai = no
+			NOT = { has_character_flag = flag_decree_menu_open }
+		}
+		allow = { always = yes }
+		effect = { set_character_flag = flag_decree_menu_open }
+		ai_will_do = { factor = 0 }
+	}
+	close_decree_menu = {
+		is_high_prio = yes
+		potential = {
+			ai = no
+			has_character_flag = flag_decree_menu_open
+		}
+		allow = { always = yes }
+		effect = { clr_character_flag = flag_decree_menu_open }
+		ai_will_do = { factor = 1 }
+	}
+	# Decrees
+	dissolve_legislature_decision = {
+		potential = {
+			OR = {
+				ai = yes
+				has_character_flag = flag_decree_menu_open
+			}
+			any_demesne_title = {
+				crownlaw_title = { title = PREV } # Must be own crownlaw title
+				has_law = legislative_authority_1 # Must have a legislature to dissolve
+			}
+		}
+		allow = {
+			NOT = { has_character_modifier = constitutional_crisis } # No constitutional crisis
+			
+			# Sees this as immoral
+			OR = {
+				AND = {
+					NOT = { religion = terran_federalist }
+					NOT = { religion = terran_republican }
+					NOT = { religion = colonial_separatist }
+					NOT = { religion = neo_socialist }
+				}
+				trait = pragmatic
+			}
+			
+			# Too weak-willed to actually do it
+			NOT = { trait = craven }
+			NOT = { trait = neurotic }
+			
+			# Doesn't have the authority to do it
+			has_regent = no
+		}
+		effect = {
+			# Begin a constitutional crisis
+			add_character_modifier = { name = constitutional_crisis days = -1 }
+			add_character_modifier = { name = crisis_dissolved_legislature days = -1 }
+			add_character_modifier = { name = law_against_ruler days = -1 }
+			clr_character_flag = flag_crisis_timer
+			set_character_flag = flag_crisis_timer
+			if = {
+				limit = { tier = emperor }
+				set_character_flag = flag_crisis_emperor
+			}
+			if = {
+				limit = { tier = king }
+				set_character_flag = flag_crisis_king
+			}
+			# Democratic ideologies take a piety and moral authority hit
+			if = {
+				limit = {
+					OR = {
+						religion = terran_federalist
+						religion = terran_republican
+						religion = colonial_separatist
+						religion = neo_socialist
+					}
+				}
+				piety = -500
+				religion_authority = { modifier = major_hypocritical_reform years = 50 }
+			}
+			# Autocratic ideologies get a piety and moral authority bonus
+			if = {
+				limit = {
+					OR = {
+						religion = terran_imperial
+						religion = astrist
+						religion = neo_feudal
+					}
+				}
+				piety = 500
+				religion_authority = { modifier = major_compatible_reform years = 50 }
+			}
+			# Vassals react
+			any_vassal = {
+				limit = {
+					OR = {
+						AND = {
+							NOT = { religion = terran_imperial }
+							NOT = { religion = astrist }
+							NOT = { religion = neo_feudal }
+						}
+						trait = pragmatic
+					}
+				}
+				opinion = { who = ROOT modifier = opinion_tyrant }
+			}
+			any_vassal = {
+				limit = {
+					OR = {
+						religion = terran_federalist
+						religion = terran_republican
+						religion = colonial_separatist
+						religion = neo_socialist
+					}
+				}
+				opinion = { who = ROOT modifier = opinion_tyrant }
+			}
+			any_vassal = {
+				limit = {
+					OR = {
+						religion = terran_federalist
+						religion = terran_republican
+						religion = colonial_separatist
+						religion = neo_socialist
+					}
+					trait = radical
+				}
+				opinion = { who = ROOT modifier = opinion_tyrant }
+			}
+			any_vassal = {
+				limit = { trait = ambitious }
+				opinion = { who = ROOT modifier = opinion_tyrant }
+			}
+			any_vassal = {
+				limit = { trait = proud }
+				opinion = { who = ROOT modifier = opinion_tyrant }
+			}
+			hidden_tooltip = { any_vassal = { character_event = { id = laws.20000 } } } # Inform vassals
+		}
+		ai_will_do = {
+			factor = 1
+			# No reason to dissolve the legislature
+			modifier = {
+				factor = 0
+				NOT = { any_vassal = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_passed_bad_bill } } }
+				NOT = {
+					AND = {
+						OR = {
+							religion = terran_imperial
+							religion = astrist
+							religion = neo_feudal
+						}
+						trait = radical
+					}
+				}
+				NOT = { trait = ambitious }
+			}
+			
+			# Likes everyone in the legislature
+			modifier = {
+				factor = 0
+				NOT = { any_vassal = { NOT = { reverse_opinion = { who = ROOT value = 0 } } } }
+				NOT = { trait = cold }
+			}
+			
+			# Likes a senator who opposes this
+			modifier = {
+				factor = 0
+				trait = friendly
+				any_vassal = {
+					reverse_opinion = { who = ROOT value = 25 }
+					relative_power_to_liege = 0.1
+					OR = {
+						religion = terran_federalist
+						religion = terran_republican
+						religion = colonial_separatist
+						religion = neo_socialist
+						trait = ambitious
+						trait = proud
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = { trait = cold }
+				any_vassal = {
+					reverse_opinion = { who = ROOT value = 75 }
+					relative_power_to_liege = 0.1
+					OR = {
+						religion = terran_federalist
+						religion = terran_republican
+						religion = colonial_separatist
+						religion = neo_socialist
+						trait = ambitious
+						trait = proud
+					}
+				}
+			}
+			
+			# Won't risk the crisis
+			modifier = {
+				factor = 0
+				any_vassal = {
+					OR = {
+						religion = terran_federalist
+						religion = terran_republican
+						religion = colonial_separatist
+						religion = neo_socialist
+						trait = ambitious
+						trait = proud
+					}
+					relative_power_to_liege = 0.75
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = { trait = lunatic }
+				NOT = { trait = imbecile }
+				any_vassal = {
+					OR = {
+						religion = terran_federalist
+						religion = terran_republican
+						religion = colonial_separatist
+						religion = neo_socialist
+						trait = ambitious
+						trait = proud
+					}
+					relative_power_to_liege = 0.5
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = { trait = lunatic }
+				NOT = { trait = imbecile }
+				NOT = { trait = slow }
+				NOT = { trait = brave }
+				any_vassal = {
+					OR = {
+						religion = terran_federalist
+						religion = terran_republican
+						religion = colonial_separatist
+						religion = neo_socialist
+						trait = ambitious
+						trait = proud
+					}
+					relative_power_to_liege = 0.25
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					any_vassal = {
+						relative_power_to_liege = 0.1
+						OR = {
+							religion = terran_imperial
+							religion = astrist
+							religion = neo_feudal
+							trait = content
+							trait = craven
+							trait = neurotic
+						}
+					}
+				}
+			}
+			
+			# Once you've founded a legislature, let it stick around for at least five years
+			modifier = {
+				factor = 0
+				has_character_flag = flag_founded_legislature
+				NOT = { had_character_flag = { flag = flag_founded_legislature days = 1825 } }
+			}
+		}
+	}
+}

@@ -34,6 +34,7 @@
 	dynasty = 10155
 	female = yes
 	
+	culture = russo_orion
 	religion = colonial_separatist
 	
 	father = 11010155 # Juan Lebedev
@@ -47,6 +48,7 @@
 	dynasty = 10155
 	female = no
 	
+	culture = russo_orion
 	religion = colonial_separatist
 	
 	father = 11010155 # Juan Lebedev
@@ -60,6 +62,7 @@
 	dynasty = 10155
 	female = no
 	
+	culture = russo_orion
 	religion = colonial_separatist
 	
 	father = 11010155 # Juan Lebedev
@@ -343,6 +346,7 @@
 	dynasty = 3131 # Abu Abed
 	female = no
 	
+	culture = arab_orion
 	religion = colonial_separatist
 	
 	father = 11010475 # Gabriel Belinsky
@@ -356,6 +360,7 @@
 	dynasty = 3131 # Abu Abed
 	female = no
 	
+	culture = arab_orion
 	religion = colonial_separatist
 	
 	father = 11010475 # Gabriel Belinsky
@@ -514,6 +519,7 @@
 	dynasty = 5579 # Joshi
 	female = yes
 	
+	culture = indo_orion
 	religion = colonial_separatist
 	
 	father = 1224331 # David Ramirez
@@ -527,6 +533,7 @@
 	dynasty = 5579 # Joshi
 	female = yes
 	
+	culture = indo_orion
 	religion = colonial_separatist
 	
 	father = 1224331 # David Ramirez

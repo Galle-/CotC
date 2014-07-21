@@ -1,529 +1,6 @@
 # Decisions for people involved in constitutional crises
 
 decisions = {
-	# Undecided Vassals
-	side_with_liege_decision = {
-		is_high_prio = yes
-		potential = {
-			# Must actually be someone important
-			OR = {
-				AND = {
-					demesne_size = 1
-					OR = {
-						any_demesne_title = { higher_tier_than = BARON }
-						liege = { primary_title = { tier = COUNT } }
-					}
-				}
-				is_councillor = yes
-			}
-			liege = {
-				NOT = { character = ROOT } # Apparently I do, in fact, have to specify this
-				has_character_modifier = constitutional_crisis
-			}
-			NOT = { trait = pro_ruler }
-			NOT = { trait = anti_ruler }
-			NOT = { has_character_flag = flag_making_crisis_decision }
-		}
-		effect = {
-			set_character_flag = flag_making_crisis_decision
-			character_event = { id = laws.300 tooltip = "EVTTOOLTIPLAWS300" } # Decide whether or not to involve favors
-		}
-		ai_will_do = { factor = 0 } # The AI uses a different interface to trigger the faction joining/leaving events.
-	}
-	side_against_ruler_decision = {
-		is_high_prio = yes
-		potential = {
-			# Must actually be someone important
-			OR = {
-				AND = {
-					demesne_size = 1
-					OR = {
-						any_demesne_title = { higher_tier_than = BARON }
-						liege = { primary_title = { tier = COUNT } }
-					}
-				}
-				is_councillor = yes
-			}
-			liege = {
-				NOT = { character = ROOT } # Apparently I do, in fact, have to specify this
-				has_character_modifier = constitutional_crisis
-			}
-			NOT = { trait = pro_ruler }
-			NOT = { trait = anti_ruler }
-			NOT = { has_character_flag = flag_making_crisis_decision }
-		}
-		effect = {
-			set_character_flag = flag_making_crisis_decision
-			character_event = { id = laws.310 tooltip = "EVTTOOLTIPLAWS310" } # Confirmation event
-		}
-		ai_will_do = { factor = 0 } # The AI uses a different interface to trigger the faction joining/leaving events.
-	}
-	
-	# Leaving Factions Once In Them
-	withdraw_support_for_ruler_decision = {
-		is_high_prio = yes
-		potential = {
-			trait = pro_ruler
-			NOT = { has_character_flag = flag_making_crisis_decision }
-		}
-		effect = {
-			set_character_flag = flag_making_crisis_decision
-			character_event = { id = laws.320 tooltip = "EVTTOOLTIP320" }
-		}
-		ai_will_do = { factor = 0 } # The AI uses a different interface to trigger the faction joining/leaving events.
-	}
-	withdraw_opposition_to_liege_decision = {
-		is_high_prio = yes
-		potential = {
-			trait = anti_ruler
-			NOT = { has_character_flag = flag_making_crisis_decision }
-		}
-		effect = {
-			set_character_flag = flag_making_crisis_decision
-			character_event = { id = laws.321 tooltip = "EVTTOOLTIP321" }
-		}
-		ai_will_do = { factor = 0 } # The AI uses a different interface to trigger the faction joining/leaving events.
-	}
-	
-	# Pro-ruler and anti-ruler speeches
-	make_pro_ruler_speech = {
-		is_high_prio = yes
-		potential = {
-			trait = pro_ruler
-			NOT = { has_character_flag = flag_making_crisis_decision }
-		}
-		allow = {
-			prisoner = no
-			NOT = { trait = incapable }
-			age = 16
-			liege = {
-				ROOT = { location = { any_province_lord = { character = PREVPREVPREV } } }
-				OR = {
-					AND = {
-						primary_title = { tier = EMPEROR }
-						ROOT = {
-							location = {
-								NOT = { has_province_modifier = public_for_emperor }
-								NOT = { has_province_modifier = recent_failed_pro_emperor_speech }
-							}
-						}
-					}
-					AND = {
-						primary_title = { tier = KING }
-						ROOT = {
-							location = {
-								NOT = { has_province_modifier = public_for_king }
-								NOT = { has_province_modifier = recent_failed_pro_king_speech }
-							}
-						}
-					}
-					AND = {
-						primary_title = { tier = DUKE }
-						ROOT = {
-							location = {
-								NOT = { has_province_modifier = public_for_duke }
-								NOT = { has_province_modifier = recent_failed_pro_duke_speech }
-							}
-						}
-					}
-					AND = {
-						primary_title = { tier = COUNT }
-						ROOT = {
-							location = {
-								NOT = { has_province_modifier = public_for_count }
-								NOT = { has_province_modifier = recent_failed_pro_count_speech }
-							}
-						}
-					}
-				}
-			}
-		}
-		effect = {
-			set_character_flag = flag_making_crisis_decision
-			character_event = { id = politics.250 tooltip = "EVTTOOLTIPPOLITICS250" }
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.1
-			}
-			
-			# Personality
-			modifier = {
-				factor = 0.5
-				trait = craven
-			}
-			modifier = {
-				factor = 2
-				trait = brave
-			}
-			modifier = {
-				factor = 0.5
-				trait = neurotic
-			}
-			modifier = {
-				factor = 2
-				trait = confident
-			}
-			modifier = {
-				factor = 0.8
-				trait = introverted
-			}
-			modifier = {
-				factor = 1.25
-				trait = extraverted
-			}
-			
-			# Chance of Success
-			modifier = {
-				factor = 1.25
-				diplomacy = 2
-			}
-			modifier = {
-				factor = 1.25
-				diplomacy = 4
-			}
-			modifier = {
-				factor = 1.25
-				diplomacy = 6
-			}
-			modifier = {
-				factor = 1.25
-				diplomacy = 8
-			}
-			modifier = {
-				factor = 1.25
-				diplomacy = 10
-			}
-			modifier = {
-				factor = 1.25
-				diplomacy = 12
-			}
-			modifier = {
-				factor = 1.25
-				diplomacy = 14
-			}
-			modifier = {
-				factor = 1.25
-				diplomacy = 16
-			}
-			modifier = {
-				factor = 1.25
-				diplomacy = 18
-			}
-			modifier = {
-				factor = 1.25
-				diplomacy = 20
-			}
-			
-			# Ideological effects
-			modifier = {
-				factor = 2
-				OR = {
-					religion = terran_federalist
-					religion = terran_republican
-					religion = colonial_separatist
-				}
-				OR = {
-					religion_authority = 0.25
-					trait = radical
-				}
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 2
-				OR = {
-					religion = terran_federalist
-					religion = terran_republican
-					religion = colonial_separatist
-				}
-				religion_authority = 0.5
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 2
-				OR = {
-					religion = terran_federalist
-					religion = terran_republican
-					religion = colonial_separatist
-				}
-				religion_authority = 0.75
-			}
-			modifier = {
-				factor = 0.5
-				OR = {
-					religion = terran_imperial
-					religion = neo_feudal
-					religion = astrist
-				}
-				OR = {
-					religion_authority = 0.25
-					trait = radical
-				}
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 0.5
-				OR = {
-					religion = terran_imperial
-					religion = neo_feudal
-					religion = astrist
-				}
-				religion_authority = 0.5
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 0.5
-				OR = {
-					religion = terran_imperial
-					religion = neo_feudal
-					religion = astrist
-				}
-				religion_authority = 0.75
-			}
-			
-			# Revolt risk effects
-			modifier = {
-				factor = 2
-				location = { revolt_risk = 0.1 }
-			}
-			modifier = {
-				factor = 2
-				location = { revolt_risk = 0.2 }
-			}
-			modifier = {
-				factor = 2
-				location = { revolt_risk = 0.3 }
-			}
-			modifier = {
-				factor = 2
-				location = { revolt_risk = 0.4 }
-			}
-			modifier = {
-				factor = 2
-				location = { revolt_risk = 0.5 }
-			}
-		}
-	}
-	make_anti_ruler_speech = {
-		is_high_prio = yes
-		potential = {
-			trait = anti_ruler
-			NOT = { has_character_flag = flag_making_crisis_decision }
-		}
-		allow = {
-			prisoner = no
-			NOT = { trait = incapable }
-			age = 16
-			liege = {
-				ROOT = { location = { any_province_lord = { character = PREVPREVPREV } } }
-				OR = {
-					AND = {
-						primary_title = { tier = EMPEROR }
-						ROOT = {
-							location = {
-								NOT = { has_province_modifier = public_against_emperor }
-								NOT = { has_province_modifier = recent_failed_anti_emperor_speech }
-							}
-						}
-					}
-					AND = {
-						primary_title = { tier = KING }
-						ROOT = {
-							location = {
-								NOT = { has_province_modifier = public_against_king }
-								NOT = { has_province_modifier = recent_failed_anti_king_speech }
-							}
-						}
-					}
-					AND = {
-						primary_title = { tier = DUKE }
-						ROOT = {
-							location = {
-								NOT = { has_province_modifier = public_against_duke }
-								NOT = { has_province_modifier = recent_failed_anti_duke_speech }
-							}
-						}
-					}
-					AND = {
-						primary_title = { tier = COUNT }
-						ROOT = {
-							location = {
-								NOT = { has_province_modifier = public_against_count }
-								NOT = { has_province_modifier = recent_failed_anti_count_speech }
-							}
-						}
-					}
-				}
-			}
-		}
-		effect = {
-			set_character_flag = flag_making_crisis_decision
-			character_event = { id = politics.260 tooltip = "EVTTOOLTIPPOLITICS260" }
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.1
-			}
-			
-			# Personality
-			modifier = {
-				factor = 0.5
-				trait = craven
-			}
-			modifier = {
-				factor = 2
-				trait = brave
-			}
-			modifier = {
-				factor = 0.5
-				trait = neurotic
-			}
-			modifier = {
-				factor = 2
-				trait = confident
-			}
-			modifier = {
-				factor = 0.8
-				trait = introverted
-			}
-			modifier = {
-				factor = 1.25
-				trait = extraverted
-			}
-			
-			# Chance of Success
-			modifier = {
-				factor = 1.25
-				diplomacy = 2
-			}
-			modifier = {
-				factor = 1.25
-				diplomacy = 4
-			}
-			modifier = {
-				factor = 1.25
-				diplomacy = 6
-			}
-			modifier = {
-				factor = 1.25
-				diplomacy = 8
-			}
-			modifier = {
-				factor = 1.25
-				diplomacy = 10
-			}
-			modifier = {
-				factor = 1.25
-				diplomacy = 12
-			}
-			modifier = {
-				factor = 1.25
-				diplomacy = 14
-			}
-			modifier = {
-				factor = 1.25
-				diplomacy = 16
-			}
-			modifier = {
-				factor = 1.25
-				diplomacy = 18
-			}
-			modifier = {
-				factor = 1.25
-				diplomacy = 20
-			}
-			
-			# Ideological effects
-			modifier = {
-				factor = 2
-				OR = {
-					religion = terran_federalist
-					religion = terran_republican
-					religion = colonial_separatist
-				}
-				OR = {
-					religion_authority = 0.25
-					trait = radical
-				}
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 2
-				OR = {
-					religion = terran_federalist
-					religion = terran_republican
-					religion = colonial_separatist
-				}
-				religion_authority = 0.5
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 2
-				OR = {
-					religion = terran_federalist
-					religion = terran_republican
-					religion = colonial_separatist
-				}
-				religion_authority = 0.75
-			}
-			modifier = {
-				factor = 0.5
-				OR = {
-					religion = terran_imperial
-					religion = neo_feudal
-					religion = astrist
-				}
-				OR = {
-					religion_authority = 0.25
-					trait = radical
-				}
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 0.5
-				OR = {
-					religion = terran_imperial
-					religion = neo_feudal
-					religion = astrist
-				}
-				religion_authority = 0.5
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 0.5
-				OR = {
-					religion = terran_imperial
-					religion = neo_feudal
-					religion = astrist
-				}
-				religion_authority = 0.75
-			}
-			
-			# Revolt risk effects
-			modifier = {
-				factor = 2
-				location = { revolt_risk = 0.1 }
-			}
-			modifier = {
-				factor = 2
-				location = { revolt_risk = 0.2 }
-			}
-			modifier = {
-				factor = 2
-				location = { revolt_risk = 0.3 }
-			}
-			modifier = {
-				factor = 2
-				location = { revolt_risk = 0.4 }
-			}
-			modifier = {
-				factor = 2
-				location = { revolt_risk = 0.5 }
-			}
-		}
-	}
 	# Non-Vassal Based Decisions Ruler Can Make
 	back_down_decision = {
 		is_high_prio = yes
@@ -537,837 +14,161 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+			# No reason to back down
 			modifier = {
-				factor = 0.1
-			}
-			
-			# Ruler's personality
-			modifier = {
-				factor = 5
-				trait = content
-			}
-			modifier = {
-				factor = 0.2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 4
-				trait = humble
-			}
-			modifier = {
-				factor = 0.25
-				trait = content
-			}
-			modifier = {
-				factor = 2
-				trait = craven
-			}
-			modifier = {
-				factor = 0.5
-				trait = brave
-			}
-			modifier = {
-				factor = 2
-				trait = friendly
-			}
-			modifier = {
-				factor = 0.5
-				trait = cold
-			}
-			
-			# Strength of liege's faction
-			modifier = {
-				factor = 0.5
-				any_vassal = {
-					trait = pro_ruler
-					count = 2
-				}
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-				NOT = { trait = slow }
-			}
-			modifier = {
-				factor = 0.5
-				any_vassal = {
-					trait = pro_ruler
-					count = 4
-				}
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-				NOT = { trait = slow }
-			}
-			modifier = {
-				factor = 0.5
-				any_vassal = {
-					trait = pro_ruler
-					count = 6
-				}
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-				NOT = { trait = slow }
-			}
-			modifier = {
-				factor = 0.5
-				any_vassal = {
-					trait = pro_ruler
-					count = 8
-				}
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-			}
-			modifier = {
-				factor = 0.5
-				any_vassal = {
-					trait = pro_ruler
-					count = 10
-				}
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-			}
-			modifier = {
-				factor = 0.5
-				any_vassal = {
-					trait = pro_ruler
-					count = 12
-				}
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-			}
-			modifier = {
-				factor = 0.5
-				any_vassal = {
-					trait = pro_ruler
-					count = 14
-				}
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-			}
-			modifier = {
-				factor = 0.5
-				any_vassal = {
-					trait = pro_ruler
-					count = 16
-				}
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 0.5
-				any_vassal = {
-					trait = pro_ruler
-					count = 18
-				}
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 0.5
-				any_vassal = {
-					trait = pro_ruler
-					count = 20
-				}
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 0.5
-				any_vassal = {
-					power_relative_to_liege = 0.1
-					trait = pro_ruler
-				}
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-				NOT = { trait = slow }
-			}
-			modifier = {
-				factor = 0.5
-				any_vassal = {
-					power_relative_to_liege = 0.2
-					trait = pro_ruler
-				}
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-				NOT = { trait = slow }
-			}
-			modifier = {
-				factor = 0.5
-				any_vassal = {
-					power_relative_to_liege = 0.3
-					trait = pro_ruler
-				}
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-				NOT = { trait = slow }
-			}
-			modifier = {
-				factor = 0.5
-				any_vassal = {
-					power_relative_to_liege = 0.4
-					trait = pro_ruler
-				}
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-			}
-			modifier = {
-				factor = 0.5
-				any_vassal = {
-					power_relative_to_liege = 0.5
-					trait = pro_ruler
-				}
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-			}
-			modifier = {
-				factor = 0.5
-				any_vassal = {
-					power_relative_to_liege = 0.6
-					trait = pro_ruler
-				}
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-			}
-			modifier = {
-				factor = 0.5
-				any_vassal = {
-					power_relative_to_liege = 0.7
-					trait = pro_ruler
-				}
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 0.5
-				any_vassal = {
-					power_relative_to_liege = 0.8
-					trait = pro_ruler
-				}
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 0.5
-				any_vassal = {
-					power_relative_to_liege = 0.9
-					trait = pro_ruler
-				}
-				NOT = { trait = lunatic }
-			}
-			
-			# Strength of opposition
-			modifier = {
-				factor = 2
-				any_vassal = {
-					trait = anti_ruler
-					count = 2
-				}
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-				NOT = { trait = slow }
-			}
-			modifier = {
-				factor = 2
-				any_vassal = {
-					trait = anti_ruler
-					count = 4
-				}
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-				NOT = { trait = slow }
-			}
-			modifier = {
-				factor = 2
-				any_vassal = {
-					trait = anti_ruler
-					count = 6
-				}
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-				NOT = { trait = slow }
-			}
-			modifier = {
-				factor = 2
-				any_vassal = {
-					trait = anti_ruler
-					count = 8
-				}
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-			}
-			modifier = {
-				factor = 2
-				any_vassal = {
-					trait = anti_ruler
-					count = 10
-				}
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-			}
-			modifier = {
-				factor = 2
-				any_vassal = {
-					trait = anti_ruler
-					count = 12
-				}
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-			}
-			modifier = {
-				factor = 2
-				any_vassal = {
-					trait = anti_ruler
-					count = 14
-				}
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-			}
-			modifier = {
-				factor = 2
-				any_vassal = {
-					trait = anti_ruler
-					count = 16
-				}
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 2
-				any_vassal = {
-					trait = anti_ruler
-					count = 18
-				}
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 2
-				any_vassal = {
-					trait = anti_ruler
-					count = 20
-				}
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 2
-				any_vassal = {
-					power_relative_to_liege = 0.1
-					trait = anti_ruler
-				}
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-				NOT = { trait = slow }
-			}
-			modifier = {
-				factor = 2
-				any_vassal = {
-					power_relative_to_liege = 0.2
-					trait = anti_ruler
-				}
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-				NOT = { trait = slow }
-			}
-			modifier = {
-				factor = 2
-				any_vassal = {
-					power_relative_to_liege = 0.3
-					trait = anti_ruler
-				}
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-				NOT = { trait = slow }
-			}
-			modifier = {
-				factor = 2
-				any_vassal = {
-					power_relative_to_liege = 0.4
-					trait = anti_ruler
-				}
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-			}
-			modifier = {
-				factor = 2
-				any_vassal = {
-					power_relative_to_liege = 0.5
-					trait = anti_ruler
-				}
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-			}
-			modifier = {
-				factor = 2
-				any_vassal = {
-					power_relative_to_liege = 0.6
-					trait = anti_ruler
-				}
-				NOT = { trait = lunatic }
-				NOT = { trait = imbecile }
-			}
-			modifier = {
-				factor = 2
-				any_vassal = {
-					power_relative_to_liege = 0.7
-					trait = anti_ruler
-				}
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 2
-				any_vassal = {
-					power_relative_to_liege = 0.8
-					trait = anti_ruler
-				}
-				NOT = { trait = lunatic }
-			}
-			modifier = {
-				factor = 2
-				any_vassal = {
-					power_relative_to_liege = 0.9
-					trait = anti_ruler
-				}
-				NOT = { trait = lunatic }
-			}
-			
-			# Opinion of opponents
-			modifier = {
-				factor = 0.8
+				factor = 0
+				NOT = { capital_scope = { revolt_risk = 0.5 } }
 				NOT = {
-					any_vassal = {
-						trait = anti_ruler
-						reverse_opinion = { who = ROOT value = -99 }
+					AND = {
+						any_vassal = {
+							in_faction = faction_anti_ruler
+							reverse_opinion = { who = ROOT value = 90 }
+						}
+						trait = friendly
 					}
 				}
-			}
-			modifier = {
-				factor = 0.8
 				NOT = {
 					any_vassal = {
-						trait = anti_ruler
-						reverse_opinion = { who = ROOT value = -89 }
+						faction_power = {
+							faction = faction_anti_ruler
+							power = 1
+						}
 					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				NOT = {
-					any_vassal = {
-						trait = anti_ruler
-						reverse_opinion = { who = ROOT value = -79 }
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				NOT = {
-					any_vassal = {
-						trait = anti_ruler
-						reverse_opinion = { who = ROOT value = -69 }
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				NOT = {
-					any_vassal = {
-						trait = anti_ruler
-						reverse_opinion = { who = ROOT value = -59 }
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				NOT = {
-					any_vassal = {
-						trait = anti_ruler
-						reverse_opinion = { who = ROOT value = -49 }
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				NOT = {
-					any_vassal = {
-						trait = anti_ruler
-						reverse_opinion = { who = ROOT value = -39 }
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				NOT = {
-					any_vassal = {
-						trait = anti_ruler
-						reverse_opinion = { who = ROOT value = -29 }
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				NOT = {
-					any_vassal = {
-						trait = anti_ruler
-						reverse_opinion = { who = ROOT value = -19 }
-					}
-				}
-			}
-			modifier = {
-				factor = 0.8
-				NOT = {
-					any_vassal = {
-						trait = anti_ruler
-						reverse_opinion = { who = ROOT value = -9 }
-					}
-				}
-			}
-			modifier = {
-				factor = 1.25
-				any_vassal = {
-					trait = anti_ruler
-					reverse_opinion = { who = ROOT value = 10 }
-				}
-			}
-			modifier = {
-				factor = 1.25
-				any_vassal = {
-					trait = anti_ruler
-					reverse_opinion = { who = ROOT value = 20 }
-				}
-			}
-			modifier = {
-				factor = 1.25
-				any_vassal = {
-					trait = anti_ruler
-					reverse_opinion = { who = ROOT value = 30 }
-				}
-			}
-			modifier = {
-				factor = 1.25
-				any_vassal = {
-					trait = anti_ruler
-					reverse_opinion = { who = ROOT value = 40 }
-				}
-			}
-			modifier = {
-				factor = 1.25
-				any_vassal = {
-					trait = anti_ruler
-					reverse_opinion = { who = ROOT value = 50 }
-				}
-			}
-			modifier = {
-				factor = 1.25
-				any_vassal = {
-					trait = anti_ruler
-					reverse_opinion = { who = ROOT value = 60 }
-				}
-			}
-			modifier = {
-				factor = 1.25
-				any_vassal = {
-					trait = anti_ruler
-					reverse_opinion = { who = ROOT value = 70 }
-				}
-			}
-			modifier = {
-				factor = 1.25
-				any_vassal = {
-					trait = anti_ruler
-					reverse_opinion = { who = ROOT value = 80 }
-				}
-			}
-			modifier = {
-				factor = 1.25
-				any_vassal = {
-					trait = anti_ruler
-					reverse_opinion = { who = ROOT value = 90 }
-				}
-			}
-			modifier = {
-				factor = 1.25
-				any_vassal = {
-					trait = anti_ruler
-					reverse_opinion = { who = ROOT value = 100 }
 				}
 			}
 			
-			# Key crisis advantages
+			# Pro-ruler faction is very strong
 			modifier = {
-				factor = 2
-				has_character_modifier = crisis_law_against_ruler
-				OR = {
-					religion_authority = 0.25
-					trait = radical
-				}
-			}
-			modifier = {
-				factor = 2
-				has_character_modifier = crisis_law_against_ruler
-				religion_authority = 0.5
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 2
-				has_character_modifier = crisis_law_against_ruler
-				religion_authority = 0.75
-			}
-			modifier = {
-				factor = 0.5
-				has_character_modifier = crisis_law_for_ruler
-				OR = {
-					religion_authority = 0.25
-					trait = radical
-				}
-			}
-			modifier = {
-				factor = 0.5
-				has_character_modifier = crisis_law_for_ruler
-				religion_authority = 0.5
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 0.5
-				has_character_modifier = crisis_law_for_ruler
-				religion_authority = 0.75
-			}
-			modifier = {
-				factor = 2
-				OR = {
+				factor = 0
+				NOT = {
 					AND = {
-						has_character_flag = flag_crisis_emperor
-						capital_scope = { has_province_modifier = public_against_emperor }
-					}
-					AND = {
-						has_character_flag = flag_crisis_king
-						capital_scope = { has_province_modifier = public_against_king }
-					}
-					AND = {
-						has_character_flag = flag_crisis_duke
-						capital_scope = { has_province_modifier = public_against_duke }
-					}
-					AND = {
-						has_character_flag = flag_crisis_count
-						capital_scope = { has_province_modifier = public_against_count }
+						any_vassal = {
+							in_faction = faction_anti_ruler
+							reverse_opinion = { who = ROOT value = 90 }
+						}
+						trait = friendly
 					}
 				}
-				NOT = { religion = terran_imperial }
-				NOT = { religion = neo_feudal }
-				NOT = { religion = astrist }
-			}
-			modifier = {
-				factor = 2
-				OR = {
-					AND = {
-						has_character_flag = flag_crisis_emperor
-						capital_scope = { has_province_modifier = public_against_emperor }
-					}
-					AND = {
-						has_character_flag = flag_crisis_king
-						capital_scope = { has_province_modifier = public_against_king }
-					}
-					AND = {
-						has_character_flag = flag_crisis_duke
-						capital_scope = { has_province_modifier = public_against_duke }
-					}
-					AND = {
-						has_character_flag = flag_crisis_count
-						capital_scope = { has_province_modifier = public_against_count }
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 3
 					}
 				}
-				OR = {
-					religion = terran_federalist
-					religion = terran_republican
-					religion = colonial_separatist
-				}
-				OR = {
-					religion_authority = 0.25
-					trait = radical
-				}
-			}
-			modifier = {
-				factor = 2
-				OR = {
-					AND = {
-						has_character_flag = flag_crisis_emperor
-						capital_scope = { has_province_modifier = public_against_emperor }
-					}
-					AND = {
-						has_character_flag = flag_crisis_king
-						capital_scope = { has_province_modifier = public_against_king }
-					}
-					AND = {
-						has_character_flag = flag_crisis_duke
-						capital_scope = { has_province_modifier = public_against_duke }
-					}
-					AND = {
-						has_character_flag = flag_crisis_count
-						capital_scope = { has_province_modifier = public_against_count }
-					}
-				}
-				OR = {
-					religion = terran_federalist
-					religion = terran_republican
-					religion = colonial_separatist
-				}
-				religion_authority = 0.5
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 2
-				OR = {
-					AND = {
-						has_character_flag = flag_crisis_emperor
-						capital_scope = { has_province_modifier = public_against_emperor }
-					}
-					AND = {
-						has_character_flag = flag_crisis_king
-						capital_scope = { has_province_modifier = public_against_king }
-					}
-					AND = {
-						has_character_flag = flag_crisis_duke
-						capital_scope = { has_province_modifier = public_against_duke }
-					}
-					AND = {
-						has_character_flag = flag_crisis_count
-						capital_scope = { has_province_modifier = public_against_count }
-					}
-				}
-				OR = {
-					religion = terran_federalist
-					religion = terran_republican
-					religion = colonial_separatist
-				}
-				religion_authority = 0.75
-			}
-			modifier = {
-				factor = 0.5
-				OR = {
-					AND = {
-						has_character_flag = flag_crisis_emperor
-						capital_scope = { has_province_modifier = public_for_emperor }
-					}
-					AND = {
-						has_character_flag = flag_crisis_king
-						capital_scope = { has_province_modifier = public_for_king }
-					}
-					AND = {
-						has_character_flag = flag_crisis_duke
-						capital_scope = { has_province_modifier = public_for_duke }
-					}
-					AND = {
-						has_character_flag = flag_crisis_count
-						capital_scope = { has_province_modifier = public_for_count }
-					}
-				}
-				NOT = { religion = terran_imperial }
-				NOT = { religion = neo_feudal }
-				NOT = { religion = astrist }
-			}
-			modifier = {
-				factor = 0.5
-				OR = {
-					AND = {
-						has_character_flag = flag_crisis_emperor
-						capital_scope = { has_province_modifier = public_for_emperor }
-					}
-					AND = {
-						has_character_flag = flag_crisis_king
-						capital_scope = { has_province_modifier = public_for_king }
-					}
-					AND = {
-						has_character_flag = flag_crisis_duke
-						capital_scope = { has_province_modifier = public_for_duke }
-					}
-					AND = {
-						has_character_flag = flag_crisis_count
-						capital_scope = { has_province_modifier = public_for_count }
-					}
-				}
-				OR = {
-					religion = terran_federalist
-					religion = terran_republican
-					religion = colonial_separatist
-				}
-				OR = {
-					religion_authority = 0.25
-					trait = radical
-				}
-			}
-			modifier = {
-				factor = 0.5
-				OR = {
-					AND = {
-						has_character_flag = flag_crisis_emperor
-						capital_scope = { has_province_modifier = public_for_emperor }
-					}
-					AND = {
-						has_character_flag = flag_crisis_king
-						capital_scope = { has_province_modifier = public_for_king }
-					}
-					AND = {
-						has_character_flag = flag_crisis_duke
-						capital_scope = { has_province_modifier = public_for_duke }
-					}
-					AND = {
-						has_character_flag = flag_crisis_count
-						capital_scope = { has_province_modifier = public_for_count }
-					}
-				}
-				OR = {
-					religion = terran_federalist
-					religion = terran_republican
-					religion = colonial_separatist
-				}
-				religion_authority = 0.5
-				NOT = { trait = pragmatic }
-			}
-			modifier = {
-				factor = 0.5
-				OR = {
-					AND = {
-						has_character_flag = flag_crisis_emperor
-						capital_scope = { has_province_modifier = public_for_emperor }
-					}
-					AND = {
-						has_character_flag = flag_crisis_king
-						capital_scope = { has_province_modifier = public_for_king }
-					}
-					AND = {
-						has_character_flag = flag_crisis_duke
-						capital_scope = { has_province_modifier = public_for_duke }
-					}
-					AND = {
-						has_character_flag = flag_crisis_count
-						capital_scope = { has_province_modifier = public_for_count }
-					}
-				}
-				OR = {
-					religion = terran_federalist
-					religion = terran_republican
-					religion = colonial_separatist
-				}
-				religion_authority = 0.75
 			}
 			
-			# Rising Pressure
+			# Pro-ruler faction is moderately strong
 			modifier = {
-				factor = 2
-				capital_scope = { revolt_risk = 0.1 }
-			}
-			modifier = {
-				factor = 2
-				capital_scope = { revolt_risk = 0.2 }
-			}
-			modifier = {
-				factor = 2
-				capital_scope = { revolt_risk = 0.3 }
-			}
-			modifier = {
-				factor = 2
-				capital_scope = { revolt_risk = 0.4 }
-			}
-			modifier = {
-				factor = 2
-				capital_scope = { revolt_risk = 0.5 }
+				factor = 0
+				NOT = {
+					AND = {
+						any_vassal = {
+							in_faction = faction_anti_ruler
+							reverse_opinion = { who = ROOT value = 90 }
+						}
+						trait = friendly
+					}
+				}
+				NOT = { trait = craven }
+				OR = {
+					NOT = { capital_scope = { revolt_risk = 0.5 } }
+					trait = lunatic
+					trait = brave
+					trait = proud
+				}
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 2
+					}
+				}
+				NOT = {
+					any_vassal = {
+						faction_power = {
+							faction = faction_anti_ruler
+							power = 3
+						}
+					}
+				}
 			}
 			
-			# Lunatics
+			# Pro-ruler faction is somewhat strong
 			modifier = {
-				factor = 10
+				NOT = {
+					AND = {
+						any_vassal = {
+							in_faction = faction_anti_ruler
+							reverse_opinion = { who = ROOT value = 90 }
+						}
+						trait = friendly
+					}
+				}
+				NOT = { trait = craven }
+				NOT = { trait = neurotic }
+				NOT = { trait = humble }
+				factor = 0
+				NOT = {
+					AND = {
+						any_vassal = {
+							in_faction = faction_anti_ruler
+							reverse_opinion = { who = ROOT value = 90 }
+						}
+						trait = friendly
+					}
+				}
+				NOT = { trait = craven }
+				NOT = { trait = neurotic }
+				NOT = { trait = humble }
+				OR = {
+					trait = lunatic
+					trait = brave
+					trait = proud
+					trait = confident
+					trait = ambitious
+				}
+				OR = {
+					NOT = { capital_scope = { revolt_risk = 0.75 } }
+					trait = lunatic
+				}
+				OR = {
+					NOT = { capital_scope = { revolt_risk = 0.5 } }
+					trait = lunatic
+					trait = brave
+					trait = proud
+				}
+				any_vassal = {
+					faction_power = {
+						faction = faction_pro_ruler
+						power = 1
+					}
+				}
+				NOT = {
+					any_vassal = {
+						faction_power = {
+							faction = faction_anti_ruler
+							power = 2
+						}
+					}
+				}
+			}
+			# Pro-ruler faction exists
+			modifier = {
+				factor = 0
+				NOT = {
+					AND = {
+						any_vassal = {
+							in_faction = faction_anti_ruler
+							reverse_opinion = { who = ROOT value = 90 }
+						}
+						trait = friendly
+					}
+				}
+				NOT = { trait = craven }
+				NOT = { trait = neurotic }
+				NOT = { trait = humble }
+				NOT = { trait = content }
 				trait = lunatic
-				random = 1
+				any_vassal = { in_faction = faction_pro_ruler }
 			}
 		}
 	}

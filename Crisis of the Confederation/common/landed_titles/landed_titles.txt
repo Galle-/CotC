@@ -205,13 +205,23 @@ e_terran_confederation = {
 				used_for_dynasty_names = no
 				
 				b_earth = {
-					holy_site = terran_federalist
+					# Earth is a holy site for TONNES of
+					# ideologies
 					holy_site = terran_republican
 					holy_site = terran_imperial
+					holy_site = neo_feudal
+					holy_site = astrist
+					holy_site = neo_socialist
 					holy_site = pilgrim
 					holy_site = solar_cultist
 					holy_site = orthodox
 					holy_site = solarian
+					holy_site = adoptionist
+					holy_site = sect_adoptionist
+					holy_site = cyberneticist
+					holy_site = machine_cultist
+					holy_site = hiver
+					holy_site = bio_directionist
 					used_for_dynasty_names = no
 				}
 				b_moon = {
@@ -222,7 +232,10 @@ e_terran_confederation = {
 					holy_site = solarian
 					used_for_dynasty_names = no
 				}
-				b_mars = { used_for_dynasty_names = no }
+				b_mars = {
+					holy_site = terran_imperial
+					used_for_dynasty_names = no
+				}
 				b_ceres = { used_for_dynasty_names = no }
 				b_europa = { used_for_dynasty_names = no }
 				b_ganymede = { used_for_dynasty_names = no }
@@ -361,9 +374,7 @@ e_terran_confederation = {
 				used_for_dynasty_names = no
 				
 				b_huangjing_iii = {
-					# Traditional regional capital
-					holy_site = terran_federalist
-					holy_site = terran_republican
+					holy_site = terran_federalist # Traditional regional capital
 					holy_site = terran_imperial
 					used_for_dynasty_names = no
 				}
@@ -600,10 +611,8 @@ e_terran_confederation = {
 				used_for_dynasty_names = no
 				
 				b_encrucijada_iv = {
-					# Traditional regional capital
-					holy_site = terran_federalist
+					holy_site = terran_federalist # Traditional regional capital
 					holy_site = terran_republican
-					holy_site = terran_imperial
 					used_for_dynasty_names = no
 				}
 				b_encrucijada_iv_b = { used_for_dynasty_names = no }
@@ -899,14 +908,11 @@ e_terran_confederation = {
 				used_for_dynasty_names = no
 				
 				b_makkat_al_jadiida = {
+					holy_site = terran_federalist # Traditional regional capital
+					holy_site = terran_imperial
 					holy_site = pilgrim
 					holy_site = orthodox
 					holy_site = adoptionist
-					
-					# Traditional regional capital
-					holy_site = terran_federalist
-					holy_site = terran_republican
-					holy_site = terran_imperial
 					used_for_dynasty_names = no
 				}
 				b_makkat_al_jadiida_b = { used_for_dynasty_names = no }
@@ -1155,10 +1161,8 @@ e_terran_confederation = {
 				used_for_dynasty_names = no
 				
 				b_mpya_ya_zanzibar_prime = {
-					# Traditional regional capital
-					holy_site = terran_federalist
+					holy_site = terran_federalist # Traditional regional capital
 					holy_site = terran_republican
-					holy_site = terran_imperial
 					used_for_dynasty_names = no
 				}
 				b_mpya_ya_zanzibar_ii = { used_for_dynasty_names = no }
@@ -1399,10 +1403,8 @@ e_terran_confederation = {
 				used_for_dynasty_names = no
 				
 				b_armstrong_iii = {
-					# Traditional regional capital
-					holy_site = terran_federalist
+					holy_site = terran_federalist # Traditional regional capital
 					holy_site = terran_republican
-					holy_site = terran_imperial
 					used_for_dynasty_names = no
 				}
 				b_armstrong_iii_b = { used_for_dynasty_names = no }
@@ -1638,7 +1640,13 @@ e_terran_confederation = {
 				color = { 40 40 40 }
 				color2 = { 200 200 200 }
 				used_for_dynasty_names = no
-				b_gagarin_prime = { used_for_dynasty_names = no }
+				b_gagarin_prime = {
+					used_for_dynasty_names = no
+					holy_site = terran_republican
+					holy_site = neo_socialist
+					holy_site = colonial_separatist
+					holy_site = astrist
+				}
 				b_gagarin_prime_b = { used_for_dynasty_names = no }
 				b_gagarin_vi_c = { used_for_dynasty_names = no }
 				b_gagarin_vi_d = { used_for_dynasty_names = no }
@@ -2206,7 +2214,14 @@ e_terran_confederation = {
 				color2 = { 0 200 200 }
 				used_for_dynasty_names = no
 				
-				b_eye_of_god = { used_for_dynasty_names = no }
+				b_eye_of_god = {
+					# Location of the Eye of God monastery
+					holy_site = orthodox
+					holy_site = pilgrim
+					holy_site = solarian
+					holy_site = solar_cultist
+					used_for_dynasty_names = no
+				}
 				b_eye_of_god_waystation = { used_for_dynasty_names = no }
 			}
 			c_he_843 = {
@@ -2319,7 +2334,11 @@ e_terran_confederation = {
 				color2 = { 20 20 20 }
 				used_for_dynasty_names = no
 				
-				b_novyy_edem_prime = { used_for_dynasty_names = no }
+				b_novyy_edem_prime = {
+					holy_site = astrist
+					holy_site = neo_feudal
+					used_for_dynasty_names = no
+				}
 				b_novyy_edem_prime_b = { used_for_dynasty_names = no }
 				b_novyy_edem_prime_orbital = { used_for_dynasty_names = no }
 				b_novyy_edem_ii = { used_for_dynasty_names = no }
@@ -2712,7 +2731,10 @@ e_terran_confederation = {
 				used_for_dynasty_names = no
 				
 				# Asteroid, temple
-				b_fukuoka_prime = { used_for_dynasty_names = no }
+				b_fukuoka_prime = {
+					holy_site = space_pirate
+					used_for_dynasty_names = no
+				}
 				# Pirate bases
 				b_fukuoka_station_alpha = { used_for_dynasty_names = no }
 				b_fukuoka_station_beta = { used_for_dynasty_names = no }
@@ -2836,7 +2858,11 @@ e_terran_confederation = {
 				color2 = { 200 200 200 }
 				used_for_dynasty_names = no
 				
-				b_avalon_iii = { used_for_dynasty_names = no }
+				b_avalon_iii = {
+					holy_site = bio_directionist
+					holy_site = neo_feudal
+					used_for_dynasty_names = no
+				}
 				b_avalon_iii_orbital = { used_for_dynasty_names = no }
 				b_avalon_iii_b = { used_for_dynasty_names = no }
 				b_avalon_vi_b = { used_for_dynasty_names = no }
@@ -3015,7 +3041,10 @@ e_terran_confederation = {
 				used_for_dynasty_names = no
 				
 				b_galahad_citadel = { used_for_dynasty_names = no }
-				b_galahad_iii = { used_for_dynasty_names = no }
+				b_galahad_iii = {
+					holy_site = neo_feudal
+					used_for_dynasty_names = no
+				}
 				b_galahad_iii_b = { used_for_dynasty_names = no }
 				b_galahad_iv = { used_for_dynasty_names = no }
 				b_galahad_vii_b = { used_for_dynasty_names = no }
@@ -3152,7 +3181,11 @@ e_terran_confederation = {
 				color2 = { 128 0 0 }
 				used_for_dynasty_names = no
 				
-				b_jion_iii = { used_for_dynasty_names = no }
+				b_jion_iii = {
+					used_for_dynasty_names = no
+					holy_site = colonial_separatist
+					holy_site = astrist
+				}
 				b_jion_iii_orbital_alpha = { used_for_dynasty_names = no }
 				b_jion_iii_orbital_beta = { used_for_dynasty_names = no }
 				b_jion_iii_orbital_gamma = { used_for_dynasty_names = no }
@@ -3437,7 +3470,13 @@ e_terran_confederation = {
 				color = { 216 216 200 }
 				color2 = { 255 255 0 }
 				used_for_dynasty_names = no
-				b_meissa_ii = { used_for_dynasty_names = no }
+				b_meissa_ii = {
+					used_for_dynasty_names = no
+					# Due to its role in the Crisis, has significance
+					# to both the Imperials and Separatists
+					holy_site = colonial_separatist
+					holy_site = terran_imperial
+				}
 				b_meissa_ii_b = { used_for_dynasty_names = no }
 				b_meissa_ii_c = { used_for_dynasty_names = no }
 				b_meissa_iii = { used_for_dynasty_names = no }

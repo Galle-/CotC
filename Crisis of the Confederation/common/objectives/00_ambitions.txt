@@ -619,6 +619,7 @@ obj_become_spymaster = {
 	}
 }
 obj_become_spiritual = {
+	type = character
 	
 	allow = {
 		prisoner = no
@@ -1071,7 +1072,7 @@ obj_marry_for_love = {
 		NOT = { spouse = { any_lover = { character = ROOT } } }
 	}
 	chance = {
-		factor = 100
+		factor = 25
 		
 		# Opinion of current spouse
 		modifier = {
@@ -1258,7 +1259,7 @@ obj_marry_for_power = {
 		NOT = { trait = content }
 	}
 	chance = {
-		factor = 25
+		factor = 10
 		
 		# Political marriage vs marriage for love
 		modifier = {
