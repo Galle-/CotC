@@ -1,0 +1,46 @@
+decisions = {
+	assimilate_demesne = {
+		is_high_prio = yes
+		potential = {
+			religion = hiver
+			trait = hiver_implant
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+		allow = {
+			any_demesne_province = {
+				owner = { character = ROOT }
+				NOT = { religion = hiver }
+				NOT = { has_province_modifier = assimilation_campaign }
+			}
+		}
+		effect = {
+			random_demesne_province = {
+				limit = {
+					owner = { character = ROOT }
+					NOT = { religion = hiver }
+					NOT = { has_province_modifier = assimilation_campaign }
+				}
+				province_event = { id = hiver.400 tooltip = "EVTTOOLTIPHIVER400" }
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	implant_self = {
+		is_high_prio = yes
+		potential = {
+			religion = hiver
+			NOT = { trait = hiver_implant }
+			age = 16
+			NOT = { trait = incapable }
+			prisoner = no
+			NOT = { has_character_flag = flag_recovering_hiver }
+		}
+		allow = {
+			prisoner = no
+		}
+		effect = { character_event = { id = hiver.0 tooltip = "EVTTOOLTIPHIVER0" } }
+		ai_will_do = { factor = 1 }
+	}
+}

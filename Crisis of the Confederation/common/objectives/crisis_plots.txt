@@ -10,6 +10,12 @@ plot_coup = {
 		prisoner = no
 	}
 	allow = {
+		NOT = {
+			AND = {
+				holder_scope = { trait = hiver_implant }
+				FROM = { trait = hiver_implant }
+			}
+		}
 		holder_scope = { FROM = { liege = { character = PREVPREV } } }
 		higher_tier_than = baron
 		is_primary_holder_title_tier = yes
@@ -287,6 +293,10 @@ plot_coup = {
 	abort = {
 		OR = {
 			NOT = { holder_scope = { always = yes } }
+			AND = {
+				holder_scope = { trait = hiver_implant }
+				FROM = { trait = hiver_implant }
+			}
 			NOT = {
 				holder_scope = {
 					FROM = {
@@ -342,6 +352,12 @@ plot_justified_coup = {
 		prisoner = no
 	}
 	allow = {
+		NOT = {
+			AND = {
+				holder_scope = { trait = hiver_implant }
+				FROM = { trait = hiver_implant }
+			}
+		}
 		holder_scope = { FROM = { liege = { character = PREVPREV } } }
 		higher_tier_than = baron
 		FROM = {
@@ -829,6 +845,10 @@ plot_justified_coup = {
 						}
 					}
 				}
+			}
+			AND = {
+				holder_scope = { trait = hiver_implant }
+				FROM = { trait = hiver_implant }
 			}
 			AND = {
 				FROM = { is_plot_active = no } # Justified coups can't be canceled like this once begun

@@ -1,0 +1,2183 @@
+namespace = hiver
+
+# Installing a hiver implant (voluntary)
+character_event = {
+	id = hiver.0
+	desc = "EVTDESCHIVER0"
+	picture = GFX_evt_cybernetics
+	is_triggered_only = yes
+	
+	trigger = { religion = hiver }
+	
+	option = {
+		name = "EVTOPTAHIVER0"
+		add_trait = hiver_implant
+		piety = 100
+		if = {
+			limit = { trait = neurotic }
+			random = {
+				chance = 20
+				add_trait = lunatic
+			}
+		}
+	}
+}
+
+# Installing a hiver implant (by force)
+character_event = {
+	id = hiver.1
+	desc = "EVTDESCHIVER1"
+	picture = GFX_evt_cybernetics
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAHIVER1"
+		add_trait = hiver_implant
+		if = {
+			limit = {
+				NOT = { religion = hiver }
+				NOT = { trait = radical }
+			}
+			religion = hiver
+		}
+		if = {
+			limit = {
+				NOT = { religion = hiver }
+				trait = radical
+				NOT = { trait = lunatic }
+			}
+			religion = hiver
+			remove_trait = radical
+			add_trait = lunatic
+		}
+		if = {
+			limit = { trait = neurotic }
+			add_trait = lunatic
+		}
+		if = {
+			limit = { trait = craven }
+			add_trait = lunatic
+		}
+		if = {
+			limit = {
+				prisoner = yes
+				is_landed = no
+			}
+			host = {
+				piety = 100
+				ROOT = { prisoner = no }
+				reverse_banish = ROOT
+			}
+		}
+		if = {
+			limit = {
+				prisoner = yes
+				is_landed = yes
+				OR = {
+					AND = {
+						tier = baron
+						host = { higher_tier_than = baron }
+					}
+					AND = {
+						tier = count
+						host = { higher_tier_than = count }
+					}
+					AND = {
+						tier = duke
+						host = { higher_tier_than = duke }
+					}
+					AND = {
+						tier = king
+						host = { tier = emperor }
+					}
+				}
+			}
+			host = {
+				piety = 100
+				ROOT = {
+					prisoner = no
+					set_defacto_liege = PREV
+				}
+			}
+		}
+		if = {
+			limit = {
+				prisoner = yes
+				is_landed = yes
+				NOT = {
+					AND = {
+						tier = baron
+						host = { higher_tier_than = baron }
+					}
+				}
+				NOT = {
+					AND = {
+						tier = count
+						host = { higher_tier_than = count }
+					}
+				}
+				NOT = {
+					AND = {
+						tier = duke
+						host = { higher_tier_than = duke }
+					}
+				}
+				NOT = {
+					AND = {
+						tier = king
+						host = { tier = emperor }
+					}
+				}
+			}
+			host = { piety = 100 }
+			prisoner = no
+		}
+	}
+}
+
+# Someone connected to you has been assimilated
+character_event = {
+	id = hiver.2
+	desc = "EVTDESCHIVER2"
+	picture = GFX_evt_cybernetics
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+	}
+}
+
+# Hiver implant - benefits - extra education traits
+# Diplomacy
+character_event = {
+	id = hiver.100
+	desc = "EVTDESCHIVER100"
+	picture = GFX_evt_cybernetics
+	
+	min_age = 16
+	capable_only = yes
+	
+	trigger = {
+		trait = hiver_implant
+		OR = {
+			AND = {
+				NOT = { trait = naive_appeaser }
+				NOT = { trait = underhanded_rogue }
+				NOT = { trait = charismatic_negotiator }
+				NOT = { trait = grey_eminence }
+				hiver_implant = { trait = naive_appeaser }
+			}
+			AND = {
+				NOT = { trait = underhanded_rogue }
+				NOT = { trait = charismatic_negotiator }
+				NOT = { trait = grey_eminence }
+				hiver_implant = { trait = underhanded_rogue }
+			}
+			AND = {
+				NOT = { trait = charismatic_negotiator }
+				NOT = { trait = grey_eminence }
+				hiver_implant = { trait = charismatic_negotiator }
+			}
+			AND = {
+				NOT = { trait = grey_eminence }
+				hiver_implant = { trait = grey_eminence }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 30
+	}
+	
+	option = {
+		trigger = {
+			hiver_implant = { trait = naive_appeaser }
+			NOT = { hiver_implant = { trait = underhanded_rogue } }
+			NOT = { hiver_implant = { trait = charismatic_negotiator } }
+			NOT = { hiver_implant = { trait = grey_eminence } }
+		}
+		name = "EVTOPTCONFIRM"
+		add_trait = naive_appeaser
+	}
+	
+	option = {
+		trigger = {
+			hiver_implant = { trait = underhanded_rogue }
+			NOT = { hiver_implant = { trait = charismatic_negotiator } }
+			NOT = { hiver_implant = { trait = grey_eminence } }
+		}
+		name = "EVTOPTCONFIRM"
+		add_trait = underhanded_rogue
+	}
+	
+	option = {
+		trigger = {
+			hiver_implant = { trait = charismatic_negotiator }
+			NOT = { hiver_implant = { trait = grey_eminence } }
+		}
+		name = "EVTOPTCONFIRM"
+		add_trait = charismatic_negotiator
+	}
+	
+	option = {
+		trigger = { hiver_implant = { trait = grey_eminence } }
+		name = "EVTOPTCONFIRM"
+		add_trait = grey_eminence
+	}
+}
+# Martial
+character_event = {
+	id = hiver.100
+	desc = "EVTDESCHIVER100"
+	picture = GFX_evt_cybernetics
+	
+	min_age = 16
+	capable_only = yes
+	
+	trigger = {
+		trait = hiver_implant
+		OR = {
+			AND = {
+				NOT = { trait = misguided_warrior }
+				NOT = { trait = tough_soldier }
+				NOT = { trait = skilled_tactician }
+				NOT = { trait = brilliant_strategist }
+				hiver_implant = { trait = misguided_warrior }
+			}
+			AND = {
+				NOT = { trait = tough_soldier }
+				NOT = { trait = skilled_tactician }
+				NOT = { trait = brilliant_strategist }
+				hiver_implant = { trait = tough_soldier }
+			}
+			AND = {
+				NOT = { trait = skilled_tactician }
+				NOT = { trait = brilliant_strategist }
+				hiver_implant = { trait = skilled_tactician }
+			}
+			AND = {
+				NOT = { trait = brilliant_strategist }
+				hiver_implant = { trait = brilliant_strategist }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 30
+	}
+	
+	option = {
+		trigger = {
+			hiver_implant = { trait = misguided_warrior }
+			NOT = { hiver_implant = { trait = tough_soldier } }
+			NOT = { hiver_implant = { trait = skilled_tactician } }
+			NOT = { hiver_implant = { trait = brilliant_strategist } }
+		}
+		name = "EVTOPTCONFIRM"
+		add_trait = misguided_warrior
+	}
+	
+	option = {
+		trigger = {
+			hiver_implant = { trait = tough_soldier }
+			NOT = { hiver_implant = { trait = skilled_tactician } }
+			NOT = { hiver_implant = { trait = brilliant_strategist } }
+		}
+		name = "EVTOPTCONFIRM"
+		add_trait = tough_soldier
+	}
+	
+	option = {
+		trigger = {
+			hiver_implant = { trait = skilled_tactician }
+			NOT = { hiver_implant = { trait = brilliant_strategist } }
+		}
+		name = "EVTOPTCONFIRM"
+		add_trait = skilled_tactician
+	}
+	
+	option = {
+		trigger = { hiver_implant = { trait = brilliant_strategist } }
+		name = "EVTOPTCONFIRM"
+		add_trait = brilliant_strategist
+	}
+}
+# Stewardship
+character_event = {
+	id = hiver.100
+	desc = "EVTDESCHIVER100"
+	picture = GFX_evt_cybernetics
+	
+	min_age = 16
+	capable_only = yes
+	
+	trigger = {
+		trait = hiver_implant
+		OR = {
+			AND = {
+				NOT = { trait = indulgent_wastrel }
+				NOT = { trait = thrifty_clerk }
+				NOT = { trait = fortune_builder }
+				NOT = { trait = midas_touched }
+				hiver_implant = { trait = indulgent_wastrel }
+			}
+			AND = {
+				NOT = { trait = thrifty_clerk }
+				NOT = { trait = fortune_builder }
+				NOT = { trait = midas_touched }
+				hiver_implant = { trait = thrifty_clerk }
+			}
+			AND = {
+				NOT = { trait = fortune_builder }
+				NOT = { trait = midas_touched }
+				hiver_implant = { trait = fortune_builder }
+			}
+			AND = {
+				NOT = { trait = midas_touched }
+				hiver_implant = { trait = midas_touched }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 30
+	}
+	
+	option = {
+		trigger = {
+			hiver_implant = { trait = indulgent_wastrel }
+			NOT = { hiver_implant = { trait = thrifty_clerk } }
+			NOT = { hiver_implant = { trait = fortune_builder } }
+			NOT = { hiver_implant = { trait = midas_touched } }
+		}
+		name = "EVTOPTCONFIRM"
+		add_trait = indulgent_wastrel
+	}
+	
+	option = {
+		trigger = {
+			hiver_implant = { trait = thrifty_clerk }
+			NOT = { hiver_implant = { trait = fortune_builder } }
+			NOT = { hiver_implant = { trait = midas_touched } }
+		}
+		name = "EVTOPTCONFIRM"
+		add_trait = thrifty_clerk
+	}
+	
+	option = {
+		trigger = {
+			hiver_implant = { trait = fortune_builder }
+			NOT = { hiver_implant = { trait = midas_touched } }
+		}
+		name = "EVTOPTCONFIRM"
+		add_trait = fortune_builder
+	}
+	
+	option = {
+		trigger = { hiver_implant = { trait = midas_touched } }
+		name = "EVTOPTCONFIRM"
+		add_trait = midas_touched
+	}
+}
+# Intrigue
+character_event = {
+	id = hiver.100
+	desc = "EVTDESCHIVER100"
+	picture = GFX_evt_cybernetics
+	
+	min_age = 16
+	capable_only = yes
+	
+	trigger = {
+		trait = hiver_implant
+		OR = {
+			AND = {
+				NOT = { trait = amateurish_plotter }
+				NOT = { trait = flamboyant_schemer }
+				NOT = { trait = intricate_webweaver }
+				NOT = { trait = elusive_shadow }
+				hiver_implant = { trait = amateurish_plotter }
+			}
+			AND = {
+				NOT = { trait = flamboyant_schemer }
+				NOT = { trait = intricate_webweaver }
+				NOT = { trait = elusive_shadow }
+				hiver_implant = { trait = flamboyant_schemer }
+			}
+			AND = {
+				NOT = { trait = intricate_webweaver }
+				NOT = { trait = elusive_shadow }
+				hiver_implant = { trait = intricate_webweaver }
+			}
+			AND = {
+				NOT = { trait = elusive_shadow }
+				hiver_implant = { trait = elusive_shadow }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 30
+	}
+	
+	option = {
+		trigger = {
+			hiver_implant = { trait = amateurish_plotter }
+			NOT = { hiver_implant = { trait = flamboyant_schemer } }
+			NOT = { hiver_implant = { trait = intricate_webweaver } }
+			NOT = { hiver_implant = { trait = elusive_shadow } }
+		}
+		name = "EVTOPTCONFIRM"
+		add_trait = amateurish_plotter
+	}
+	
+	option = {
+		trigger = {
+			hiver_implant = { trait = flamboyant_schemer }
+			NOT = { hiver_implant = { trait = intricate_webweaver } }
+			NOT = { hiver_implant = { trait = elusive_shadow } }
+		}
+		name = "EVTOPTCONFIRM"
+		add_trait = flamboyant_schemer
+	}
+	
+	option = {
+		trigger = {
+			hiver_implant = { trait = intricate_webweaver }
+			NOT = { hiver_implant = { trait = elusive_shadow } }
+		}
+		name = "EVTOPTCONFIRM"
+		add_trait = intricate_webweaver
+	}
+	
+	option = {
+		trigger = { hiver_implant = { trait = elusive_shadow } }
+		name = "EVTOPTCONFIRM"
+		add_trait = elusive_shadow
+	}
+}
+# Learning
+character_event = {
+	id = hiver.100
+	desc = "EVTDESCHIVER100"
+	picture = GFX_evt_cybernetics
+	
+	min_age = 16
+	capable_only = yes
+	
+	trigger = {
+		trait = hiver_implant
+		OR = {
+			AND = {
+				NOT = { trait = incompetent_scientist }
+				NOT = { trait = dutiful_academic }
+				NOT = { trait = expert_scientist }
+				NOT = { trait = mastermind_scholar }
+				hiver_implant = { trait = incompetent_scientist }
+			}
+			AND = {
+				NOT = { trait = dutiful_academic }
+				NOT = { trait = expert_scientist }
+				NOT = { trait = mastermind_scholar }
+				hiver_implant = { trait = dutiful_academic }
+			}
+			AND = {
+				NOT = { trait = expert_scientist }
+				NOT = { trait = mastermind_scholar }
+				hiver_implant = { trait = expert_scientist }
+			}
+			AND = {
+				NOT = { trait = mastermind_scholar }
+				hiver_implant = { trait = mastermind_scholar }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 30
+	}
+	
+	option = {
+		trigger = {
+			hiver_implant = { trait = incompetent_scientist }
+			NOT = { hiver_implant = { trait = dutiful_academic } }
+			NOT = { hiver_implant = { trait = expert_scientist } }
+			NOT = { hiver_implant = { trait = mastermind_scholar } }
+		}
+		name = "EVTOPTCONFIRM"
+		add_trait = incompetent_scientist
+	}
+	
+	option = {
+		trigger = {
+			hiver_implant = { trait = dutiful_academic }
+			NOT = { hiver_implant = { trait = expert_scientist } }
+			NOT = { hiver_implant = { trait = mastermind_scholar } }
+		}
+		name = "EVTOPTCONFIRM"
+		add_trait = dutiful_academic
+	}
+	
+	option = {
+		trigger = {
+			hiver_implant = { trait = expert_scientist }
+			NOT = { hiver_implant = { trait = mastermind_scholar } }
+		}
+		name = "EVTOPTCONFIRM"
+		add_trait = expert_scientist
+	}
+	
+	option = {
+		trigger = { hiver_implant = { trait = mastermind_scholar } }
+		name = "EVTOPTCONFIRM"
+		add_trait = mastermind_scholar
+	}
+}
+
+# Implant effects - negative - personality conflicts
+character_event = {
+	id = hiver.200
+	desc = "EVTDESCHIVER200"
+	picture = GFX_evt_cybernetics
+	
+	min_age = 16
+	capable_only = yes
+	
+	trigger = {
+		NOT = { trait = open_minded }
+		hiver_implant = { trait = open_minded }
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 4
+			trait = close_minded
+		}
+		modifier = {
+			factor = 2
+			trait = confident
+		}
+		modifier = {
+			factor = 0.5
+			trait = neurotic
+		}
+		modifier = {
+			factor = 0.5
+			trait = stressed
+		}
+		modifier = {
+			factor = 0.5
+			hiver_implant = {
+				trait = open_minded
+				trait = confident
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				hiver_implant = {
+					trait = open_minded
+					NOT = { trait = neurotic }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				hiver_implant = {
+					trait = open_minded
+					NOT = { trait = stressed }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			hiver_implant = {
+				trait = close_minded
+				trait = confident
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				hiver_implant = {
+					trait = close_minded
+					NOT = { trait = neurotic }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				hiver_implant = {
+					trait = close_minded
+					NOT = { trait = stressed }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		if = {
+			limit = {
+				trait = close_minded
+				trait = confident
+				trait = stressed
+			}
+			remove_trait = close_minded
+			random = {
+				chance = 25
+				remove_trait = stressed
+				add_trait = lunatic
+			}
+		}
+		if = {
+			limit = {
+				trait = close_minded
+				trait = confident
+				NOT = { trait = stressed }
+			}
+			remove_trait = close_minded
+			random = {
+				chance = 25
+				add_trait = stressed
+			}
+		}
+		if = {
+			limit = {
+				trait = close_minded
+				NOT = { trait = confident }
+				NOT = { trait = neurotic }
+				trait = stressed
+			}
+			remove_trait = close_minded
+			random = {
+				chance = 50
+				remove_trait = stressed
+				add_trait = lunatic
+			}
+		}
+		if = {
+			limit = {
+				trait = close_minded
+				NOT = { trait = confident }
+				NOT = { trait = neurotic }
+				NOT = { trait = stressed }
+			}
+			remove_trait = close_minded
+			random = {
+				chance = 50
+				add_trait = stressed
+			}
+		}
+		if = {
+			limit = {
+				trait = close_minded
+				trait = neurotic
+				trait = stressed
+			}
+			remove_trait = close_minded
+			random = {
+				chance = 75
+				remove_trait = stressed
+				add_trait = lunatic
+			}
+		}
+		if = {
+			limit = {
+				trait = close_minded
+				trait = neurotic
+				NOT = { trait = stressed }
+			}
+			remove_trait = close_minded
+			random = {
+				chance = 75
+				add_trait = stressed
+			}
+		}
+		add_trait = open_minded
+	}
+}
+character_event = {
+	id = hiver.201
+	desc = "EVTDESCHIVER200"
+	picture = GFX_evt_cybernetics
+	
+	min_age = 16
+	capable_only = yes
+	
+	trigger = {
+		NOT = { trait = close_minded }
+		hiver_implant = { trait = close_minded }
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 4
+			trait = open_minded
+		}
+		modifier = {
+			factor = 2
+			trait = confident
+		}
+		modifier = {
+			factor = 0.5
+			trait = neurotic
+		}
+		modifier = {
+			factor = 0.5
+			trait = stressed
+		}
+		modifier = {
+			factor = 0.5
+			hiver_implant = {
+				trait = close_minded
+				trait = confident
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				hiver_implant = {
+					trait = close_minded
+					NOT = { trait = neurotic }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				hiver_implant = {
+					trait = close_minded
+					NOT = { trait = stressed }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			hiver_implant = {
+				trait = open_minded
+				trait = confident
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				hiver_implant = {
+					trait = open_minded
+					NOT = { trait = neurotic }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				hiver_implant = {
+					trait = open_minded
+					NOT = { trait = stressed }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		if = {
+			limit = {
+				trait = open_minded
+				trait = confident
+				trait = stressed
+			}
+			remove_trait = open_minded
+			random = {
+				chance = 25
+				remove_trait = stressed
+				add_trait = lunatic
+			}
+		}
+		if = {
+			limit = {
+				trait = open_minded
+				trait = confident
+				NOT = { trait = stressed }
+			}
+			remove_trait = open_minded
+			random = {
+				chance = 25
+				add_trait = stressed
+			}
+		}
+		if = {
+			limit = {
+				trait = open_minded
+				NOT = { trait = confident }
+				NOT = { trait = neurotic }
+				trait = stressed
+			}
+			remove_trait = open_minded
+			random = {
+				chance = 50
+				remove_trait = stressed
+				add_trait = lunatic
+			}
+		}
+		if = {
+			limit = {
+				trait = open_minded
+				NOT = { trait = confident }
+				NOT = { trait = neurotic }
+				NOT = { trait = stressed }
+			}
+			remove_trait = open_minded
+			random = {
+				chance = 50
+				add_trait = stressed
+			}
+		}
+		if = {
+			limit = {
+				trait = open_minded
+				trait = neurotic
+				trait = stressed
+			}
+			remove_trait = open_minded
+			random = {
+				chance = 75
+				remove_trait = stressed
+				add_trait = lunatic
+			}
+		}
+		if = {
+			limit = {
+				trait = open_minded
+				trait = neurotic
+				NOT = { trait = stressed }
+			}
+			remove_trait = open_minded
+			random = {
+				chance = 75
+				add_trait = stressed
+			}
+		}
+		add_trait = close_minded
+	}
+}
+character_event = {
+	id = hiver.202
+	desc = "EVTDESCHIVER200"
+	picture = GFX_evt_cybernetics
+	
+	min_age = 16
+	capable_only = yes
+	
+	trigger = {
+		NOT = { trait = disciplined }
+		hiver_implant = { trait = disciplined }
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 4
+			trait = carefree
+		}
+		modifier = {
+			factor = 2
+			trait = confident
+		}
+		modifier = {
+			factor = 0.5
+			trait = neurotic
+		}
+		modifier = {
+			factor = 0.5
+			trait = stressed
+		}
+		modifier = {
+			factor = 0.5
+			hiver_implant = {
+				trait = disciplined
+				trait = confident
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				hiver_implant = {
+					trait = disciplined
+					NOT = { trait = neurotic }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				hiver_implant = {
+					trait = disciplined
+					NOT = { trait = stressed }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			hiver_implant = {
+				trait = carefree
+				trait = confident
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				hiver_implant = {
+					trait = carefree
+					NOT = { trait = neurotic }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				hiver_implant = {
+					trait = carefree
+					NOT = { trait = stressed }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		if = {
+			limit = {
+				trait = carefree
+				trait = confident
+				trait = stressed
+			}
+			remove_trait = carefree
+			random = {
+				chance = 25
+				remove_trait = stressed
+				add_trait = lunatic
+			}
+		}
+		if = {
+			limit = {
+				trait = carefree
+				trait = confident
+				NOT = { trait = stressed }
+			}
+			remove_trait = carefree
+			random = {
+				chance = 25
+				add_trait = stressed
+			}
+		}
+		if = {
+			limit = {
+				trait = carefree
+				NOT = { trait = confident }
+				NOT = { trait = neurotic }
+				trait = stressed
+			}
+			remove_trait = carefree
+			random = {
+				chance = 50
+				remove_trait = stressed
+				add_trait = lunatic
+			}
+		}
+		if = {
+			limit = {
+				trait = carefree
+				NOT = { trait = confident }
+				NOT = { trait = neurotic }
+				NOT = { trait = stressed }
+			}
+			remove_trait = carefree
+			random = {
+				chance = 50
+				add_trait = stressed
+			}
+		}
+		if = {
+			limit = {
+				trait = carefree
+				trait = neurotic
+				trait = stressed
+			}
+			remove_trait = carefree
+			random = {
+				chance = 75
+				remove_trait = stressed
+				add_trait = lunatic
+			}
+		}
+		if = {
+			limit = {
+				trait = carefree
+				trait = neurotic
+				NOT = { trait = stressed }
+			}
+			remove_trait = carefree
+			random = {
+				chance = 75
+				add_trait = stressed
+			}
+		}
+		add_trait = disciplined
+	}
+}
+character_event = {
+	id = hiver.203
+	desc = "EVTDESCHIVER200"
+	picture = GFX_evt_cybernetics
+	
+	min_age = 16
+	capable_only = yes
+	
+	trigger = {
+		NOT = { trait = carefree }
+		hiver_implant = { trait = carefree }
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 4
+			trait = disciplined
+		}
+		modifier = {
+			factor = 2
+			trait = confident
+		}
+		modifier = {
+			factor = 0.5
+			trait = neurotic
+		}
+		modifier = {
+			factor = 0.5
+			trait = stressed
+		}
+		modifier = {
+			factor = 0.5
+			hiver_implant = {
+				trait = carefree
+				trait = confident
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				hiver_implant = {
+					trait = carefree
+					NOT = { trait = neurotic }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				hiver_implant = {
+					trait = carefree
+					NOT = { trait = stressed }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			hiver_implant = {
+				trait = disciplined
+				trait = confident
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				hiver_implant = {
+					trait = disciplined
+					NOT = { trait = neurotic }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				hiver_implant = {
+					trait = disciplined
+					NOT = { trait = stressed }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		if = {
+			limit = {
+				trait = disciplined
+				trait = confident
+				trait = stressed
+			}
+			remove_trait = disciplined
+			random = {
+				chance = 25
+				remove_trait = stressed
+				add_trait = lunatic
+			}
+		}
+		if = {
+			limit = {
+				trait = disciplined
+				trait = confident
+				NOT = { trait = stressed }
+			}
+			remove_trait = disciplined
+			random = {
+				chance = 25
+				add_trait = stressed
+			}
+		}
+		if = {
+			limit = {
+				trait = disciplined
+				NOT = { trait = confident }
+				NOT = { trait = neurotic }
+				trait = stressed
+			}
+			remove_trait = disciplined
+			random = {
+				chance = 50
+				remove_trait = stressed
+				add_trait = lunatic
+			}
+		}
+		if = {
+			limit = {
+				trait = disciplined
+				NOT = { trait = confident }
+				NOT = { trait = neurotic }
+				NOT = { trait = stressed }
+			}
+			remove_trait = disciplined
+			random = {
+				chance = 50
+				add_trait = stressed
+			}
+		}
+		if = {
+			limit = {
+				trait = disciplined
+				trait = neurotic
+				trait = stressed
+			}
+			remove_trait = disciplined
+			random = {
+				chance = 75
+				remove_trait = stressed
+				add_trait = lunatic
+			}
+		}
+		if = {
+			limit = {
+				trait = disciplined
+				trait = neurotic
+				NOT = { trait = stressed }
+			}
+			remove_trait = disciplined
+			random = {
+				chance = 75
+				add_trait = stressed
+			}
+		}
+		add_trait = carefree
+	}
+}
+character_event = {
+	id = hiver.204
+	desc = "EVTDESCHIVER200"
+	picture = GFX_evt_cybernetics
+	
+	min_age = 16
+	capable_only = yes
+	
+	trigger = {
+		NOT = { trait = friendly }
+		hiver_implant = { trait = friendly }
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 4
+			trait = cold
+		}
+		modifier = {
+			factor = 2
+			trait = confident
+		}
+		modifier = {
+			factor = 0.5
+			trait = neurotic
+		}
+		modifier = {
+			factor = 0.5
+			trait = stressed
+		}
+		modifier = {
+			factor = 0.5
+			hiver_implant = {
+				trait = friendly
+				trait = confident
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				hiver_implant = {
+					trait = friendly
+					NOT = { trait = neurotic }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				hiver_implant = {
+					trait = friendly
+					NOT = { trait = stressed }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			hiver_implant = {
+				trait = cold
+				trait = confident
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				hiver_implant = {
+					trait = cold
+					NOT = { trait = neurotic }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				hiver_implant = {
+					trait = cold
+					NOT = { trait = stressed }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		if = {
+			limit = {
+				trait = cold
+				trait = confident
+				trait = stressed
+			}
+			remove_trait = cold
+			random = {
+				chance = 25
+				remove_trait = stressed
+				add_trait = lunatic
+			}
+		}
+		if = {
+			limit = {
+				trait = cold
+				trait = confident
+				NOT = { trait = stressed }
+			}
+			remove_trait = cold
+			random = {
+				chance = 25
+				add_trait = stressed
+			}
+		}
+		if = {
+			limit = {
+				trait = cold
+				NOT = { trait = confident }
+				NOT = { trait = neurotic }
+				trait = stressed
+			}
+			remove_trait = cold
+			random = {
+				chance = 50
+				remove_trait = stressed
+				add_trait = lunatic
+			}
+		}
+		if = {
+			limit = {
+				trait = cold
+				NOT = { trait = confident }
+				NOT = { trait = neurotic }
+				NOT = { trait = stressed }
+			}
+			remove_trait = cold
+			random = {
+				chance = 50
+				add_trait = stressed
+			}
+		}
+		if = {
+			limit = {
+				trait = cold
+				trait = neurotic
+				trait = stressed
+			}
+			remove_trait = cold
+			random = {
+				chance = 75
+				remove_trait = stressed
+				add_trait = lunatic
+			}
+		}
+		if = {
+			limit = {
+				trait = cold
+				trait = neurotic
+				NOT = { trait = stressed }
+			}
+			remove_trait = cold
+			random = {
+				chance = 75
+				add_trait = stressed
+			}
+		}
+		add_trait = friendly
+	}
+}
+character_event = {
+	id = hiver.205
+	desc = "EVTDESCHIVER200"
+	picture = GFX_evt_cybernetics
+	
+	min_age = 16
+	capable_only = yes
+	
+	trigger = {
+		NOT = { trait = cold }
+		hiver_implant = { trait = cold }
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 4
+			trait = friendly
+		}
+		modifier = {
+			factor = 2
+			trait = confident
+		}
+		modifier = {
+			factor = 0.5
+			trait = neurotic
+		}
+		modifier = {
+			factor = 0.5
+			trait = stressed
+		}
+		modifier = {
+			factor = 0.5
+			hiver_implant = {
+				trait = cold
+				trait = confident
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				hiver_implant = {
+					trait = cold
+					NOT = { trait = neurotic }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				hiver_implant = {
+					trait = cold
+					NOT = { trait = stressed }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			hiver_implant = {
+				trait = friendly
+				trait = confident
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				hiver_implant = {
+					trait = friendly
+					NOT = { trait = neurotic }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				hiver_implant = {
+					trait = friendly
+					NOT = { trait = stressed }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		if = {
+			limit = {
+				trait = friendly
+				trait = confident
+				trait = stressed
+			}
+			remove_trait = friendly
+			random = {
+				chance = 25
+				remove_trait = stressed
+				add_trait = lunatic
+			}
+		}
+		if = {
+			limit = {
+				trait = friendly
+				trait = confident
+				NOT = { trait = stressed }
+			}
+			remove_trait = friendly
+			random = {
+				chance = 25
+				add_trait = stressed
+			}
+		}
+		if = {
+			limit = {
+				trait = friendly
+				NOT = { trait = confident }
+				NOT = { trait = neurotic }
+				trait = stressed
+			}
+			remove_trait = friendly
+			random = {
+				chance = 50
+				remove_trait = stressed
+				add_trait = lunatic
+			}
+		}
+		if = {
+			limit = {
+				trait = friendly
+				NOT = { trait = confident }
+				NOT = { trait = neurotic }
+				NOT = { trait = stressed }
+			}
+			remove_trait = friendly
+			random = {
+				chance = 50
+				add_trait = stressed
+			}
+		}
+		if = {
+			limit = {
+				trait = friendly
+				trait = neurotic
+				trait = stressed
+			}
+			remove_trait = friendly
+			random = {
+				chance = 75
+				remove_trait = stressed
+				add_trait = lunatic
+			}
+		}
+		if = {
+			limit = {
+				trait = friendly
+				trait = neurotic
+				NOT = { trait = stressed }
+			}
+			remove_trait = friendly
+			random = {
+				chance = 75
+				add_trait = stressed
+			}
+		}
+		add_trait = cold
+	}
+}
+character_event = {
+	id = hiver.206
+	desc = "EVTDESCHIVER200"
+	picture = GFX_evt_cybernetics
+	
+	min_age = 16
+	capable_only = yes
+	
+	trigger = {
+		NOT = { trait = introverted }
+		hiver_implant = { trait = introverted }
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 4
+			trait = extraverted
+		}
+		modifier = {
+			factor = 2
+			trait = confident
+		}
+		modifier = {
+			factor = 0.5
+			trait = neurotic
+		}
+		modifier = {
+			factor = 0.5
+			trait = stressed
+		}
+		modifier = {
+			factor = 0.5
+			hiver_implant = {
+				trait = introverted
+				trait = confident
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				hiver_implant = {
+					trait = introverted
+					NOT = { trait = neurotic }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				hiver_implant = {
+					trait = introverted
+					NOT = { trait = stressed }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			hiver_implant = {
+				trait = extraverted
+				trait = confident
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				hiver_implant = {
+					trait = extraverted
+					NOT = { trait = neurotic }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				hiver_implant = {
+					trait = extraverted
+					NOT = { trait = stressed }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		if = {
+			limit = {
+				trait = extraverted
+				trait = confident
+				trait = stressed
+			}
+			remove_trait = extraverted
+			random = {
+				chance = 25
+				remove_trait = stressed
+				add_trait = lunatic
+			}
+		}
+		if = {
+			limit = {
+				trait = extraverted
+				trait = confident
+				NOT = { trait = stressed }
+			}
+			remove_trait = extraverted
+			random = {
+				chance = 25
+				add_trait = stressed
+			}
+		}
+		if = {
+			limit = {
+				trait = extraverted
+				NOT = { trait = confident }
+				NOT = { trait = neurotic }
+				trait = stressed
+			}
+			remove_trait = extraverted
+			random = {
+				chance = 50
+				remove_trait = stressed
+				add_trait = lunatic
+			}
+		}
+		if = {
+			limit = {
+				trait = extraverted
+				NOT = { trait = confident }
+				NOT = { trait = neurotic }
+				NOT = { trait = stressed }
+			}
+			remove_trait = extraverted
+			random = {
+				chance = 50
+				add_trait = stressed
+			}
+		}
+		if = {
+			limit = {
+				trait = extraverted
+				trait = neurotic
+				trait = stressed
+			}
+			remove_trait = extraverted
+			random = {
+				chance = 75
+				remove_trait = stressed
+				add_trait = lunatic
+			}
+		}
+		if = {
+			limit = {
+				trait = extraverted
+				trait = neurotic
+				NOT = { trait = stressed }
+			}
+			remove_trait = extraverted
+			random = {
+				chance = 75
+				add_trait = stressed
+			}
+		}
+		add_trait = introverted
+	}
+}
+character_event = {
+	id = hiver.207
+	desc = "EVTDESCHIVER200"
+	picture = GFX_evt_cybernetics
+	
+	min_age = 16
+	capable_only = yes
+	
+	trigger = {
+		NOT = { trait = extraverted }
+		hiver_implant = { trait = extraverted }
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 4
+			trait = introverted
+		}
+		modifier = {
+			factor = 2
+			trait = confident
+		}
+		modifier = {
+			factor = 0.5
+			trait = neurotic
+		}
+		modifier = {
+			factor = 0.5
+			trait = stressed
+		}
+		modifier = {
+			factor = 0.5
+			hiver_implant = {
+				trait = extraverted
+				trait = confident
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				hiver_implant = {
+					trait = extraverted
+					NOT = { trait = neurotic }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				hiver_implant = {
+					trait = extraverted
+					NOT = { trait = stressed }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			hiver_implant = {
+				trait = introverted
+				trait = confident
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				hiver_implant = {
+					trait = introverted
+					NOT = { trait = neurotic }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				hiver_implant = {
+					trait = introverted
+					NOT = { trait = stressed }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		if = {
+			limit = {
+				trait = introverted
+				trait = confident
+				trait = stressed
+			}
+			remove_trait = introverted
+			random = {
+				chance = 25
+				remove_trait = stressed
+				add_trait = lunatic
+			}
+		}
+		if = {
+			limit = {
+				trait = introverted
+				trait = confident
+				NOT = { trait = stressed }
+			}
+			remove_trait = introverted
+			random = {
+				chance = 25
+				add_trait = stressed
+			}
+		}
+		if = {
+			limit = {
+				trait = introverted
+				NOT = { trait = confident }
+				NOT = { trait = neurotic }
+				trait = stressed
+			}
+			remove_trait = introverted
+			random = {
+				chance = 50
+				remove_trait = stressed
+				add_trait = lunatic
+			}
+		}
+		if = {
+			limit = {
+				trait = introverted
+				NOT = { trait = confident }
+				NOT = { trait = neurotic }
+				NOT = { trait = stressed }
+			}
+			remove_trait = introverted
+			random = {
+				chance = 50
+				add_trait = stressed
+			}
+		}
+		if = {
+			limit = {
+				trait = introverted
+				trait = neurotic
+				trait = stressed
+			}
+			remove_trait = introverted
+			random = {
+				chance = 75
+				remove_trait = stressed
+				add_trait = lunatic
+			}
+		}
+		if = {
+			limit = {
+				trait = introverted
+				trait = neurotic
+				NOT = { trait = stressed }
+			}
+			remove_trait = introverted
+			random = {
+				chance = 75
+				add_trait = stressed
+			}
+		}
+		add_trait = extraverted
+	}
+}
+
+# The hiver implant does not permit conversions
+character_event = {
+	id = hiver.300
+	hide_window = yes
+	
+	trigger = {
+		trait = hiver_implant
+		NOT = { religion = hiver }
+	}
+	
+	immediate = { religion = hiver }
+}
+
+# Assimilation campaign in a province
+province_event = {
+	id = hiver.400
+	desc = "EVTDESCHIVER400"
+	picture = GFX_evt_assimilation
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = assimilation_campaign duration = -1 }
+		owner = { liege = { character_event = { id = hiver.401 } } }
+	}
+}
+# One of your vassals is carrying out an assimilation campaign
+character_event = {
+	id = hiver.401
+	desc = "EVTDESCHIVER401"
+	picture = GFX_evt_assimilation
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { NOT = { religion = hiver } }
+		name = "EVTOPTAHIVER401"
+		FROM = { owner = { reverse_opinion = { who = ROOT modifier = opinion_crimes_against_humanity } } }
+	}
+	option = {
+		trigger = { religion = hiver }
+		name = "EVTOPTBHIVER401"
+	}
+}
+province_event = {
+	id = hiver.402
+	desc = "EVTDESCHIVER402"
+	picture = GFX_evt_assimilation
+	
+	trigger = { has_province_modifier = assimilation_campaign }
+	mean_time_to_happen = { months = 30 }
+	option = {
+		name = "EVTOPTAHIVER402"
+		remove_province_modifier = assimilation_campaign
+		religion = hiver
+	}
+}
+province_event = {
+	id = hiver.403
+	desc = "EVTDESCHIVER403"
+	picture = GFX_evt_assimilation
+	
+	trigger = {
+		has_province_modifier = assimilation_campaign
+		owner = {
+			NOT = { religion = hiver }
+			NOT = { trait = hiver_implant }
+		}
+	}
+	option = {
+		name = "EVTOPTCONFIRM"
+		remove_province_modifier = assimilation_campaign
+		piety = 100
+	}
+}
+# Hiver provinces are automatically rebellious under non-hiver rulers
+province_event = {
+	id = hiver.410
+	desc = "EVTDESCHIVER410"
+	picture = GFX_evt_assimilation
+	
+	trigger = {
+		religion = hiver
+		owner = { NOT = { trait = hiver_implant } }
+		NOT = { has_province_modifier = hiver_resistance }
+	}
+	option = {
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = hiver_resistance duration = -1 }
+	}
+}
+province_event = {
+	id = hiver.411
+	desc = "EVTDESCHIVER411"
+	picture = GFX_evt_assimilation
+	
+	trigger = {
+		OR = {
+			NOT = { religion = hiver }
+			owner = { trait = hiver_implant }
+		}
+		has_province_modifier = hiver_resistance
+	}
+	option = {
+		name = "EVTOPTCONFIRM"
+		remove_province_modifier = hiver_resistance
+	}
+}
+# And automatically loyal to hiver ones
+province_event = {
+	id = hiver.420
+	desc = "EVTDESCHIVER420"
+	picture = GFX_evt_assimilation
+	
+	trigger = {
+		religion = hiver
+		owner = { trait = hiver_implant }
+		NOT = { has_province_modifier = hiver_loyalty }
+	}
+	option = {
+		name = "EVTOPTCONFIRM"
+		add_province_modifier = { name = hiver_loyalty duration = -1 }
+	}
+}
+province_event = {
+	id = hiver.421
+	desc = "EVTDESCHIVER421"
+	picture = GFX_evt_assimilation
+	
+	trigger = {
+		OR = {
+			NOT = { religion = hiver }
+			NOT = { owner = { trait = hiver_implant } }
+		}
+		has_province_modifier = hiver_loyalty
+	}
+	option = {
+		name = "EVTOPTCONFIRM"
+		remove_province_modifier = hiver_loyalty
+	}
+}
+
+# Inventing the hiver implant
+character_event = {
+	id = hiver.1000
+	desc = "EVTDESCHIVER1000"
+	picture = GFX_evt_cybernetics
+	
+	min_age = 16
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		religion = cyberneticist
+		NOT = { has_global_flag = flag_hiver_implant_invented }
+		capital_scope = { TECH_POPULAR_CUSTOM = 5 }
+		learning = 20
+		NOT = { has_character_flag = flag_refused_hiver_implant_invention }
+	}
+	
+	mean_time_to_happen = {
+		months = 480
+		modifier = {
+			factor = 0.8
+			learning = 21
+		}
+		modifier = {
+			factor = 0.8
+			learning = 22
+		}
+		modifier = {
+			factor = 0.8
+			learning = 23
+		}
+		modifier = {
+			factor = 0.8
+			learning = 24
+		}
+		modifier = {
+			factor = 0.8
+			learning = 25
+		}
+		modifier = {
+			factor = 0.8
+			learning = 26
+		}
+		modifier = {
+			factor = 0.8
+			learning = 27
+		}
+		modifier = {
+			factor = 0.8
+			learning = 28
+		}
+		modifier = {
+			factor = 0.8
+			learning = 29
+		}
+		modifier = {
+			factor = 0.8
+			learning = 30
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { TECH_POPULAR_CUSTOMS = 6 }
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { TECH_POPULAR_CUSTOMS = 7 }
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { TECH_POPULAR_CUSTOMS = 8 }
+		}
+	}
+	
+	# Do it, what could possibly go wrong?
+	option = {
+		name = "EVTOPTAHIVER1000"
+		set_global_flag = flag_hiver_implant_invented
+		religion = hiver
+		set_parent_religion = { religion = hiver parent = cyberneticist }
+		add_trait = hiver_implant
+		prestige = 1000
+		piety = 1000
+		set_character_flag = flag_founder_of_the_hive
+		hidden_tooltip = { character_event = { id = hiver.1001 } }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = open_minded
+			}
+			modifier = {
+				factor = 0.5
+				trait = close_minded
+			}
+			modifier = {
+				factor = 2
+				trait = extraverted
+			}
+			modifier = {
+				factor = 0.5
+				trait = introverted
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = radical
+			}
+			modifier = {
+				factor = 0.5
+				trait = pragmatic
+			}
+			modifier = {
+				factor = 5
+				trait = lunatic
+			}
+		}
+	}
+	
+	# This sounds like a bad idea
+	option = {
+		name = "EVTOPTBHIVER1000"
+		set_character_flag = flag_refused_hiver_implant_invention
+		ai_chance = { factor = 50 }
+	}
+}
+
+# The hiver implant has been invented, inventor claims great benefits, yadda yadda yadda
+character_event = {
+	id = hiver.1001
+	desc = "EVTDESCHIVER1001"
+	picture = GFX_evt_cybernetics
+	is_triggered_only = yes
+	major = yes # Show to everyone
+	
+	option = {
+		trigger = { religion = hiver }
+		name = "EVTOPTAHIVER1001"
+	}
+	option = {
+		trigger = { religion = cyberneticist }
+		name = "EVTOPTBHIVER1001"
+		religion = hiver
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = open_minded
+			}
+			modifier = {
+				factor = 0.5
+				trait = close_minded
+			}
+			modifier = {
+				factor = 2
+				trait = radical
+			}
+			modifier = {
+				factor = 0.5
+				trait = pragmatic
+			}
+		}
+	}
+	option = {
+		trigger = { religion = cyberneticist }
+		name = "EVTOPTCHIVER1001"
+		ai_chance = { factor = 50 }
+	}
+	option = {
+		trigger = {
+			NOT = { religion = hiver }
+			NOT = { religion = cyberneticist }
+		}
+		name = "EVTOPTDHIVER1001"
+	}
+}

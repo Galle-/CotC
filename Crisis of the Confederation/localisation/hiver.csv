@@ -1,0 +1,27 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+assimilation_campaign;Assimilation Campaign;;;;;;;;;;;;;x
+assimilation_campaign_desc;This system has become a bloodbath, as its ruling power attempts to force Hiver implants on its citizens. Those who resist are hunted down. The lucky ones are killed.;;;;;;;;;;;;;x
+hiver_resistance;Hiver Resistance;;;;;;;;;;;;;x
+hiver_resistance_desc;Most of this system's population have received the Hiver implant. While perfectly loyal under a fellow hiver, they will refuse to obey orders from the unaugmented.;;;;;;;;;;;;;x
+hiver_loyalty;Hiver Loyalty;;;;;;;;;;;;;x
+hiver_loyalty_desc;The majority of this system's population has been assimilated into the Hive. They will obey its mad dictates without question.;;;;;;;;;;;;;x
+implant_prisoner;Assimilate [This.GetFullName];;;;;;;;;;;;;x
+implant_prisoner_desc;[This.GetFullName] is at your mercy. Have your surgeons implant [This.GetHerHim] with a hiver implant.;;;;;;;;;;;;;x
+EVTDESCHIVER0;You let yourself drift into a gentle sleep as the sedatives take hold. Through a hazy veil of consciousness, you hear the clacking of the surgeon's claws. Then you begin to here the voices. Thousands of them. Millions. All screaming desperate to be heard. They didn't say it would be like this!;;;;;;;;;;;;;x
+EVTOPTAHIVER0;Who's there? What's going on?;;;;;;;;;;;;;x
+EVTDESCHIVER1;You scream when you realize what the surgeon is holding in its claw. You shriek and struggle against your bonds. You will not be taken! Not like this! In the end, your resistance is futile. As you begin to come to, you hear a thousand voices singing in a mockery of harmony.;;;;;;;;;;;;;x
+EVTOPTAHIVER1;Make them stop. MAKE THEM STOP!;;;;;;;;;;;;;x
+EVTDESCHIVER2;Your spies bring word that the worst has happened. Your [GetFromRelation] [From.GetFullName] has been assimilated into the Hive.;;;;;;;;;;;;;x
+EVTDESCHIVER100;The thousand voices of the Hive are ever with you. They are your constant companion, day and night. No matter where you hide, you cannot escape the voices. Sometimes, every so often, you manage to make out something useful.;;;;;;;;;;;;;x
+EVTDESCHIVER200;The voices of the Hive never cease. Sometimes, you forget which one is yours.;;;;;;;;;;;;;x
+EVTDESCHIVER400;The people of the [Root.GetName] System have not yet heard the voices. It is time to address this most grievous error.;;;;;;;;;;;;;
+EVTDESCHIVER401;One of your subordinates, [From.Owner.GetFullName], has begun carrying out a campaign of assimilation in the [From.GetName] System, forcibly implanting hiver implants and executing those who resist.;;;;;;;;;;;;;x
+EVTOPTAHIVER401;This crime is unforgivable!;;;;;;;;;;;;;x
+EVTOPTBHIVER401;Good, good.;;;;;;;;;;;;;x
+EVTDESCHIVER402;The people of the [Root.GetName] System have now heard the voices.;;;;;;;;;;;;;x
+EVTOPTAHIVER402;Resistance is futile.;;;;;;;;;;;;;x
+EVTDESCHIVER403;The situation in the [Root.GetName] System was horrible. The government had mandated Hiver implants, and were rounding up those who dissented. Those who were executed were the lucky ones. You have put a stop to these atrocities.;;;;;;;;;;;;;x
+EVTDESCHIVER410;Hivers might hold absolute loyalty to the Hive, but they see no particular point in following a merely ordinary leader. The Hivers who populate the [Root.GetName] System refuse to obey your commands.;;;;;;;;;;;;;x
+EVTDESCHIVER411;The Hivers in the [Root.GetName] System have been either eliminated or pacified.;;;;;;;;;;;;;x
+EVTDESCHIVER420;You and the people of the [Root.GetName] System sing together in a twisted parody of harmony.;;;;;;;;;;;;;x
+EVTDESCHIVER421;Whatever madness previously drove the people of the [Root.GetName] System to their acts of extreme loyalty has passed.;;;;;;;;;;;;;x

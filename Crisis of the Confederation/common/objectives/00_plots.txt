@@ -34,6 +34,12 @@ plot_gain_vassal_title = {
 	
 	# Target scope
 	allow = {
+		NOT = {
+			AND = {
+				holder_scope = { trait = hiver_implant }
+				FROM = { trait = hiver_implant }
+			}
+		}
 		# No barony titles
 		higher_tier_than = BARON
 		is_primary_type_title = no
@@ -211,6 +217,10 @@ plot_gain_vassal_title = {
 	}
 	abort = {
 		OR = {
+			AND = {
+				holder_scope = { trait = hiver_implant }
+				FROM = { trait = hiver_implant }
+			}
 			has_law = succ_appointment
 			FROM = {
 				ai = yes
@@ -361,6 +371,12 @@ plot_kill_character = {
 	# Target allow trigger for when players target a specific character in the GUI
 	
 	player_allow = {
+		NOT = {
+			AND = {
+				trait = hiver_implant
+				FROM = { trait = hiver_implant }
+			}
+		}
 		NOT = { is_child_of = FROM } # Not my own children
 		NOT = { any_spouse = { character = FROM } } # This case is covered by another plot
 		is_within_diplo_range = FROM
@@ -378,6 +394,12 @@ plot_kill_character = {
 	
 	# Target character scope
 	allow = {
+		NOT = {
+			AND = {
+				trait = hiver_implant
+				FROM = { trait = hiver_implant }
+			}
+		}
 		NOT = { reverse_opinion = { who = FROM value = 75 } } # Don't kill these people at all!
 		NOT = { is_child_of = FROM } # Not my own children
 		OR = {
@@ -670,6 +692,10 @@ plot_kill_character = {
 	}
 	abort = {
 		OR = {
+			AND = {
+				trait = hiver_implant
+				FROM = { trait = hiver_implant }
+			}
 			is_alive = no
 			# AI should give after a while if things look hopeless
 			FROM = {
@@ -740,11 +766,23 @@ plot_kill_spouse = {
 	
 	# Target allow trigger for when players target a specific character in the GUI
 	player_allow = {
+		NOT = {
+			AND = {
+				trait = hiver_implant
+				FROM = { trait = hiver_implant }
+			}
+		}
 		always = yes
 	}
 	
 	# Target character scope
 	allow = {
+		NOT = {
+			AND = {
+				trait = hiver_implant
+				FROM = { trait = hiver_implant }
+			}
+		}
 		OR = {
 			FROM = { ai = no }
 			FROM = { has_ambition = obj_marry_for_love }
@@ -933,6 +971,10 @@ plot_kill_spouse = {
 	}
 	abort = {
 		OR = {
+			AND = {
+				trait = hiver_implant
+				FROM = { trait = hiver_implant }
+			}
 			is_alive = no
 			FROM = {
 				ai = yes
@@ -1025,6 +1067,12 @@ plot_weaken_fellow_vassal = {
 	
 	# Target scope
 	allow = {
+		NOT = {
+			AND = {
+				holder_scope = { trait = hiver_implant }
+				FROM = { trait = hiver_implant }
+			}
+		}
 		higher_tier_than = COUNT
 		is_primary_holder_title = no
 		current_heir = {
@@ -1336,6 +1384,10 @@ plot_weaken_fellow_vassal = {
 	}
 	abort = {
 		OR = {
+			AND = {
+				holder_scope = { trait = hiver_implant }
+				FROM = { trait = hiver_implant }
+			}
 			holder_scope = { spouse = { character = FROM } }
 			FROM = {
 				OR = {
@@ -1419,6 +1471,12 @@ plot_gain_liege_title = {
 	
 	# Target scope
 	allow = {
+		NOT = {
+			AND = {
+				holder_scope = { trait = hiver_implant }
+				FROM = { trait = hiver_implant }
+			}
+		}
 		NOT = { claimed_by = FROM }
 		current_heir = { NOT = { character = FROM } }
 		FROM = {
@@ -1573,6 +1631,10 @@ plot_gain_liege_title = {
 	}
 	abort = {
 		OR = {
+			AND = {
+				holder_scope = { trait = hiver_implant }
+				FROM = { trait = hiver_implant }
+			}
 			FROM = {
 				ai = yes
 				had_character_flag = { flag = flag_ai_plot_timer days = 365 }
@@ -1635,6 +1697,12 @@ plot_gain_fellow_vassal_title = {
 	
 	# Target scope
 	allow = {
+		NOT = {
+			AND = {
+				holder_scope = { trait = hiver_implant }
+				FROM = { trait = hiver_implant }
+			}
+		}
 		NOT = { claimed_by = FROM }
 		current_heir = {
 			NOT = { character = FROM }
@@ -1797,6 +1865,10 @@ plot_gain_fellow_vassal_title = {
 	}
 	abort = {
 		OR = {
+			AND = {
+				holder_scope = { trait = hiver_implant }
+				FROM = { trait = hiver_implant }
+			}
 			FROM = {
 				ai = yes
 				had_character_flag = { flag = flag_ai_plot_timer days = 365 }
@@ -1863,6 +1935,12 @@ plot_seize_trade_post = {
 	
 	# Target scope
 	allow = {
+		NOT = {
+			AND = {
+				trade_post_owner = { trait = hiver_implant }
+				FROM = { trait = hiver_implant }
+			}
+		}
 		has_trade_post = yes
 		trade_post_owner = {
 			OR = {
@@ -2137,6 +2215,10 @@ plot_seize_trade_post = {
 	}
 	abort = {
 		OR = {
+			AND = {
+				holder_scope = { trait = hiver_implant }
+				FROM = { trait = hiver_implant }
+			}
 			FROM = {
 				ai = yes
 				had_character_flag = { flag = flag_ai_plot_timer days = 365 }

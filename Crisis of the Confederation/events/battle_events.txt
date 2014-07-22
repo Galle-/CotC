@@ -1787,6 +1787,13 @@ character_event = {
 
 	weight_multiplier = {
 		days = 1
+		
+		# Prioritize taking prisoners for assimilation
+		modifier = {
+			factor = 10
+			FROM = { trait = hiver_implant }
+			NOT = { trait = hiver_implant }
+		}
 
 		modifier = {
 			factor = 1.25
@@ -1889,7 +1896,6 @@ character_event = {
 			factor = 0.125
 			tier = emperor
 		}
-
 	}
 
 	option = {

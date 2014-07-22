@@ -192,3 +192,26 @@ failed_revolt = {
 	icon = 31
 	local_revolt_risk = -1
 }
+
+# Hivers
+assimilation_campaign = {
+	icon = 36
+	local_revolt_risk = 0.5
+	local_tax_modifier = -10
+	local_build_time_modifier = 10
+	local_build_cost_modifier = 10
+}
+hiver_resistance = {
+	icon = 36
+	local_revolt_risk = 0.5
+	local_tax_modifier = -10
+	local_build_time_modifier = 10
+	local_build_cost_modifier = 10
+}
+hiver_loyalty = {
+	icon = 18
+	local_revolt_risk = -100
+	local_tax_modifier = 1
+	local_build_time_modifier = 0.5
+	local_build_cost_modifier = 0.5
+}

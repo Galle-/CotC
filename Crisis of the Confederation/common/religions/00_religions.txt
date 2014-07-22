@@ -3,7 +3,7 @@ political_group = {
 	graphical_culture = westerngfx
 	playable = yes
 	
-	ai_convert_same_group = 2
+	ai_convert_same_group = 1
 	ai_convert_other_group = 1
 	
 	terran_federalist = {
@@ -198,7 +198,7 @@ religious_group = {
 	graphical_culture = muslimgfx
 	playable = yes
 	
-	ai_convert_same_group = 2
+	ai_convert_same_group = 1
 	ai_convert_other_group = 1
 	
 	orthodox = {
@@ -407,7 +407,7 @@ transhumanist_group = {
 	graphical_culture = westerngfx
 	playable = yes
 	
-	ai_convert_same_group = 2
+	ai_convert_same_group = 1
 	ai_convert_other_group = 1
 	
 	cyberneticist = {
@@ -476,8 +476,6 @@ transhumanist_group = {
 		graphical_culture = westerngfx
 		icon = 3
 		heresy_icon = 8
-		
-		parent = cyberneticist
 		
 		color = { 0.1 0.1 0.1 }
 		evil_god_names = {

@@ -392,6 +392,111 @@ duke_female_space_pirate;Pirate Overlord;;;;;;;;;;;;;x
 duke_deed_space_pirate;Control of;;;;;;;;;;;;;x
 count_space_pirate;Pirate Lord;;;;;;;;;;;;;x
 count_female_space_pirate;Pirate Lady;;;;;;;;;;;;;x
+emperor_hiver;C0 Node;;;;;;;;;;;;;x
+emperor_female_hiver;C0 Node;;;;;;;;;;;;;x
+emperor_foa_hiver;C0;;;;;;;;;;;;;x
+emperor_foa_female_hiver;C0;;;;;;;;;;;;;x
+empire_of_hiver;C0 Network;;;;;;;;;;;;;x
+empire_hiver;C0 Network;;;;;;;;;;;;;x
+empires_hiver;C0 Networks;;;;;;;;;;;;;x
+king_hiver;C1 Node;;;;;;;;;;;;;x
+king_female_hiver;C1 Node;;;;;;;;;;;;;x
+king_foa_hiver;C1;;;;;;;;;;;;;x
+king_foa_female_hiver;C1;;;;;;;;;;;;;x
+kingdom_of_hiver;C1 Network;;;;;;;;;;;;;x
+kingdom_hiver;C1 Network;;;;;;;;;;;;;x
+kingdoms_hiver;C1 Networks;;;;;;;;;;;;;x
+duke_hiver;C2 Node;;;;;;;;;;;;;x
+duke_female_hiver;C2 Node;;;;;;;;;;;;;x
+duke_foa_hiver;C2;;;;;;;;;;;;;x
+duke_foa_female_hiver;C2;;;;;;;;;;;;;x
+duchy_of_hiver;C2 Network;;;;;;;;;;;;;x
+duchy_hiver;C2 Network;;;;;;;;;;;;;x
+duchies_hiver;C2 Networks;;;;;;;;;;;;;x
+count_hiver;CS Node;;;;;;;;;;;;;x
+count_female_hiver;CS Node;;;;;;;;;;;;;x
+count_foa_hiver;CS;;;;;;;;;;;;;x
+count_foa_female_hiver;CS;;;;;;;;;;;;;x
+county_of_hiver;CS Network;;;;;;;;;;;;;x
+county_hiver;CS Network;;;;;;;;;;;;;x
+counties_hiver;CS Networks;;;;;;;;;;;;;x
+baron_hiver;CP Node;;;;;;;;;;;;;x
+baron_female_hiver;CP Node;;;;;;;;;;;;;x
+baron_foa_hiver;CP;;;;;;;;;;;;;x
+baron_foa_female_hiver;CP;;;;;;;;;;;;;x
+barony_of_hiver;CP Network;;;;;;;;;;;;;x
+barony_hiver;CP Network;;;;;;;;;;;;;x
+baronies_hiver;CP Networks;;;;;;;;;;;;;x
+city_emperor_hiver;I0 Node;;;;;;;;;;;;;x
+city_emperor_female_hiver;I0 Node;;;;;;;;;;;;;x
+city_emperor_foa_hiver;I0;;;;;;;;;;;;;x
+city_emperor_foa_female_hiver;I0;;;;;;;;;;;;;x
+city_empire_of_hiver;I0 Network;;;;;;;;;;;;;x
+city_empire_hiver;I0 Network;;;;;;;;;;;;;x
+city_empires_hiver;I0 Networks;;;;;;;;;;;;;x
+city_king_hiver;I1 Node;;;;;;;;;;;;;x
+city_king_female_hiver;I1 Node;;;;;;;;;;;;;x
+city_king_foa_hiver;I1;;;;;;;;;;;;;x
+city_king_foa_female_hiver;I1;;;;;;;;;;;;;x
+city_kingdom_of_hiver;I1 Network;;;;;;;;;;;;;x
+city_kingdom_hiver;I1 Network;;;;;;;;;;;;;x
+city_kingdoms_hiver;I1 Networks;;;;;;;;;;;;;x
+city_duke_hiver;I2 Node;;;;;;;;;;;;;x
+city_city_duke_female_hiver;I2 Node;;;;;;;;;;;;;x
+city_duke_foa_hiver;I2;;;;;;;;;;;;;x
+city_duke_foa_female_hiver;I2;;;;;;;;;;;;;x
+city_duchy_of_hiver;I2 Network;;;;;;;;;;;;;x
+city_duchy_hiver;I2 Network;;;;;;;;;;;;;x
+city_duchies_hiver;I2 Networks;;;;;;;;;;;;;x
+city_count_hiver;IS Node;;;;;;;;;;;;;x
+city_count_female_hiver;IS Node;;;;;;;;;;;;;x
+city_count_foa_hiver;IS;;;;;;;;;;;;;x
+city_count_foa_female_hiver;IS;;;;;;;;;;;;;x
+city_county_of_hiver;IS Network;;;;;;;;;;;;;x
+city_county_hiver;IS Network;;;;;;;;;;;;;x
+city_counties_hiver;IS Networks;;;;;;;;;;;;;x
+city_baron_hiver;IP Node;;;;;;;;;;;;;x
+city_baron_female_hiver;IP Node;;;;;;;;;;;;;x
+city_baron_foa_hiver;IP;;;;;;;;;;;;;x
+city_baron_foa_female_hiver;IP;;;;;;;;;;;;;x
+city_barony_of_hiver;IP Network;;;;;;;;;;;;;x
+city_barony_hiver;IP Network;;;;;;;;;;;;;x
+city_baronies_hiver;IP Networks;;;;;;;;;;;;;x
+temple_emperor_hiver;A0 Node;;;;;;;;;;;;;x
+temple_emperor_female_hiver;A0 Node;;;;;;;;;;;;;x
+temple_emperor_foa_hiver;A0;;;;;;;;;;;;;x
+temple_emperor_foa_female_hiver;A0;;;;;;;;;;;;;x
+temple_empire_of_hiver;A0 Network;;;;;;;;;;;;;x
+temple_empire_hiver;A0 Network;;;;;;;;;;;;;x
+temple_empires_hiver;A0 Networks;;;;;;;;;;;;;x
+temple_king_hiver;A1 Node;;;;;;;;;;;;;x
+temple_king_female_hiver;A1 Node;;;;;;;;;;;;;x
+temple_king_foa_hiver;A1;;;;;;;;;;;;;x
+temple_king_foa_female_hiver;A1;;;;;;;;;;;;;x
+temple_kingdom_of_hiver;A1 Network;;;;;;;;;;;;;x
+temple_kingdom_hiver;A1 Network;;;;;;;;;;;;;x
+temple_kingdoms_hiver;A1 Networks;;;;;;;;;;;;;x
+temple_duke_hiver;A2 Node;;;;;;;;;;;;;x
+temple_temple_duke_female_hiver;A2 Node;;;;;;;;;;;;;x
+temple_duke_foa_hiver;A2;;;;;;;;;;;;;x
+temple_duke_foa_female_hiver;A2;;;;;;;;;;;;;x
+temple_duchy_of_hiver;A2 Network;;;;;;;;;;;;;x
+temple_duchy_hiver;A2 Network;;;;;;;;;;;;;x
+temple_duchies_hiver;A2 Networks;;;;;;;;;;;;;x
+temple_count_hiver;AS Node;;;;;;;;;;;;;x
+temple_count_female_hiver;AS Node;;;;;;;;;;;;;x
+temple_count_foa_hiver;AS;;;;;;;;;;;;;x
+temple_count_foa_female_hiver;AS;;;;;;;;;;;;;x
+temple_county_of_hiver;AS Network;;;;;;;;;;;;;x
+temple_county_hiver;AS Network;;;;;;;;;;;;;x
+temple_counties_hiver;AS Networks;;;;;;;;;;;;;x
+temple_baron_hiver;AP Node;;;;;;;;;;;;;x
+temple_baron_female_hiver;AP Node;;;;;;;;;;;;;x
+temple_baron_foa_hiver;AP;;;;;;;;;;;;;x
+temple_baron_foa_female_hiver;AP;;;;;;;;;;;;;x
+temple_barony_of_hiver;AP Network;;;;;;;;;;;;;x
+temple_barony_hiver;AP Network;;;;;;;;;;;;;x
+temple_baronies_hiver;AP Networks;;;;;;;;;;;;;x
 job_chancellor;Secretary of State;Secrétaire de l'état;;;;;;;;;;;;x;
 job_marshal;Secretary of Defense;Secrétaire de la défense;;;;;;;;;;;;x;
 job_treasurer;Secretary of the Treasury;Secrétaire du budget;;;;;;;;;;;;x;
@@ -412,6 +517,11 @@ job_marshal_space_pirate;Chief Enforcer;;;;;;;;;;;;;x
 job_treasurer_space_pirate;Quartermaster;;;;;;;;;;;;;x
 job_spymaster_space_pirate;Consigliere;;;;;;;;;;;;;x
 job_spiritual_space_pirate;Chief Engineer;;;;;;;;;;;;;x
+job_chancellor_hiver;Primary Interface Node;;;;;;;;;;;;;x
+job_marshal_hiver;Central Command Node;;;;;;;;;;;;;x
+job_treasurer_hiver;Central Infrastructure Node;;;;;;;;;;;;;x
+job_spymaster_hiver;Secondary Interface Node;;;;;;;;;;;;;x
+job_spiritual_hiver;Auxiliary Infrastructure Node;;;;;;;;;;;;;x
 GRANDADMIRAL;Grand Admiral;Grand amiral;;;;;;;;;;;;x
 GRANDADMIRALFOA;Admiral;Amiral;;;;;;;;;;;;x
 GRANDADMIRAL_female;Grand Admiral;Grand amiral;;;;;;;;;;;;x

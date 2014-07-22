@@ -310,15 +310,13 @@ full_cybernetic_conversion = {
 }
 # HIVER IMPLANT - MASSIVELY PLOT IMPORTANT
 hiver_implant = {
-
-	potential = { 
-		religion_group = transhumanist_group
-	}
+	potential = { has_global_flag = flag_hiver_implant_invented }
 
 	customizer = no
 	random = no
 	cached = yes
-	ai_ambition = 100 # We are the Borg.
+	ai_ambition = 100 
+	ai_zeal = 100 # We are the Borg.
 	general_opinion = -100 # Resistance is futile.
 	same_opinion = 10000 # You will be assimilated.
 }

@@ -1,0 +1,19 @@
+prisoner_decisions = {
+	implant_prisoner = {
+		potential = {
+			FROM = { religion = hiver }
+			NOT = { trait = hiver_implant }
+			age = 16
+			NOT = { trait = incapable }
+		}
+		allow = { always = yes }
+		effect = { character_event = { id = hiver.1 tooltip = "EVTTOOLTIPHIVER1" } }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				any_current_enemy = { character = FROM }
+			}
+		}
+	}
+}
