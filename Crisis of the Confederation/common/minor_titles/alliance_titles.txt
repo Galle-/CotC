@@ -3,13 +3,9 @@
 # ########################################################
 
 title_ally = {
-	dignity = 0.1
 	grant_limit = 1
 	revoke_allowed = no
 	opinion_effect = 10
-	
-	monthly_salary = 0.1
-	monthly_prestige = 0.1
 	
 	allow = {
 		is_ruler = yes
