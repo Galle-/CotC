@@ -163,13 +163,12 @@ From;To;Type;Through;-1;-1;-1;-1;Comment
 178;180;sea;989;-1;-1;-1;-1;Pandora-Yalla
 178;177;sea;989;-1;-1;-1;-1;Pandora-Arkanar
 180;177;sea;989;-1;-1;-1;-1;Yalla-Arkanar
-177;185;sea;;-1;-1;-1;-1;Arkanar-Novyy Sol
+177;181;sea;989;-1;-1;-1;-1;Arkanar-Katerin Vselennaya
 188;186;sea;;-1;-1;-1;-1;236-Vladislava
 186;185;sea;991;-1;-1;-1;-1;Vladislava-Novyy Sol
 186;184;sea;991;-1;-1;-1;-1;Vladislava-Nad'ezhda
 185;184;sea;991;-1;-1;-1;-1;Novyy Sol-Nad'ezhda
 185;183;sea;;-1;-1;-1;-1;Novyy Sol-Kovcheg
-180;183;sea;;-1;-1;-1;-1;Yalla-Kovcheg
 183;181;sea;990;-1;-1;-1;-1;Kovcheg-221
 183;182;sea;990;-1;-1;-1;-1;Kovcheg-222
 184;191;sea;;-1;-1;-1;-1;Nad'ezhda-225
@@ -485,7 +484,6 @@ From;To;Type;Through;-1;-1;-1;-1;Comment
 181;114;sea;;-1;-1;-1;-1;221-HE-219
 182;105;sea;;-1;-1;-1;-1;222-HE-843
 182;176;sea;;-1;-1;-1;-1;222-Vozneseniye
-192;176;sea;;-1;-1;-1;-1;Saula-Vozneseniye
 192;165;sea;;-1;-1;-1;-1;Saula-Vera
 174;104;sea;;-1;-1;-1;-1;Sashi Zvezdy-HE-794
 170;104;sea;;-1;-1;-1;-1;Glaz Boga-HE-794

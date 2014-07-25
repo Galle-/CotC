@@ -1,0 +1,16 @@
+#180 - Yaila
+
+# County Title
+title = c_yaila
+
+# Settlements
+max_settlements = 4
+b_yaila_i = castle
+b_yaila_ii = city
+b_yaila_iii = temple
+
+# Misc
+culture = russo_strugatskite
+religion = neo_socialist
+
+# History

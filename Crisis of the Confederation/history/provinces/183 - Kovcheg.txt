@@ -1,0 +1,17 @@
+# 183 - Kovcheg
+
+# County Title
+title = c_kovcheg
+
+# Settlements
+max_settlements = 5
+b_kovcheg_i = castle
+b_kovcheg_ii = city
+b_kovcheg_iii = temple
+b_kovcheg_iv = city
+
+# Misc
+culture = russo_strugatskite
+religion = neo_socialist
+
+# History

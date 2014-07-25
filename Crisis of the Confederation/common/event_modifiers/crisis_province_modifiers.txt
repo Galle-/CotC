@@ -1,3 +1,41 @@
+# Budget Items
+health_care_budget_1 = {
+	icon = 4
+	local_tax_modifier = -0.05
+	disease_defence = 0.25
+}
+health_care_budget_2 = {
+	icon = 4
+	local_tax_modifier = -0.1
+	disease_defence = 0.5
+}
+health_care_budget_3 = {
+	icon = 4
+	local_tax_modifier = -0.2
+	disease_defence = 0.75
+}
+education_budget_1 = {
+	icon = 12
+	local_tax_modifier = -0.05
+	tech_growth_modifier_military = 0.05
+	tech_growth_modifier_economic = 0.05
+	tech_growth_modifier_cultural = 0.05
+}
+education_budget_2 = {
+	icon = 12
+	local_tax_modifier = -0.1
+	tech_growth_modifier_military = 0.1
+	tech_growth_modifier_economic = 0.1
+	tech_growth_modifier_cultural = 0.1
+}
+education_budget_3 = {
+	icon = 12
+	local_tax_modifier = -0.2
+	tech_growth_modifier_military = 0.15
+	tech_growth_modifier_economic = 0.15
+	tech_growth_modifier_cultural = 0.15
+}
+
 # Job Actions
 military_conservatives = {
 	icon = 36

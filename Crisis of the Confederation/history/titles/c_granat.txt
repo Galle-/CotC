@@ -1,0 +1,7 @@
+2900.1.1 = {
+	law = succ_appointment
+	law = true_cognatic_succession
+	liege = "d_raduga"
+}
+
+2998.1.1 = { holder = "1108911" } # Margarita Uchida

@@ -159,6 +159,26 @@ claim = {
 	defender_ai_defeat_worth = {
 		factor = 100
 	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			tier = baron
+		}
+		modifier = {
+			factor = 2
+			tier = duke
+		}
+		modifier = {
+			factor = 4
+			tier = king
+		}
+		modifier = {
+			factor = 8
+			tier = emperor
+		}
+	}
 }
 
 other_claim = {
@@ -424,6 +444,15 @@ other_claim = {
 			}
 		}
 	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { higher_tier_than = count }
+			NOT = { location = { any_neighbor_province = { any_realm_lord = { character = ROOT } } } }
+		}
+	}
 }
 
 claim_all = {
@@ -564,6 +593,10 @@ claim_all = {
 	
 	defender_ai_defeat_worth = {
 		factor = 100
+	}
+	
+	ai_will_do = {
+		factor = 10
 	}
 }
 
@@ -1222,7 +1255,7 @@ religious = {
 	}
 	
 	ai_will_do = { 
-		factor = 1
+		factor = 2
 	}
 }
 
@@ -2726,7 +2759,12 @@ dejure_duchy_claim = {
 	}
 	
 	ai_will_do = {
-		factor = 1
+		factor = 2
+		# Prefer border duchies
+		modifier = {
+			factor = 0.2
+			NOT = { any_de_jure_vassal_title = { location = { any_neighbor_province = { any_realm_lord = { character = ROOT } } } } }
+		}
 	}
 }
 
@@ -2871,7 +2909,46 @@ dejure_county_claim = {
 	
 	defender_ai_defeat_worth = {
 		factor = 100
-	}	
+	}
+	
+	ai_will_do = {
+		factor = 1
+		# Prefer border counties
+		modifier = {
+			factor = 0.2
+			NOT = { location = { any_neighbor_province = { any_realm_lord = { character = ROOT } } } }
+		}
+		# Don't attack counties when you could attack a duchy
+		modifier = {
+			factor = 0
+			duchy = {
+				OR = {
+					FROM = { has_landed_title = PREV }
+					holder_scope = { is_liege_or_above = FROM }
+				}
+				
+				OR = {
+					kingdom = { holder = ROOT }
+					empire = { holder = ROOT }
+				}
+
+				NOT = {
+					OR = {
+						ROOT = { has_landed_title = PREV }
+						holder_scope = { is_liege_or_above = ROOT }
+					}
+				}
+				
+				FROM = {
+					OR = {
+						holy_order = no
+						NOT = { religion = ROOT }
+						NOT = { has_dlc = "Sons of Abraham" }
+					}
+				}
+			}
+		}
+	}
 }
 
 dejure_barony_claim = {
@@ -2980,6 +3057,73 @@ dejure_barony_claim = {
 	
 	defender_ai_defeat_worth = {
 		factor = 75
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+		}
+		# Don't attack baronies when you could attack a duchy or county
+		modifier = {
+			factor = 0
+			duchy = {
+				OR = {
+					FROM = { has_landed_title = PREV }
+					holder_scope = { is_liege_or_above = FROM }
+				}
+				
+				OR = {
+					kingdom = { holder = ROOT }
+					empire = { holder = ROOT }
+				}
+
+				NOT = {
+					OR = {
+						ROOT = { has_landed_title = PREV }
+						holder_scope = { is_liege_or_above = ROOT }
+					}
+				}
+				
+				FROM = {
+					OR = {
+						holy_order = no
+						NOT = { religion = ROOT }
+						NOT = { has_dlc = "Sons of Abraham" }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			county = {
+				OR = {
+					FROM = { has_landed_title = PREV }
+					holder_scope = { is_liege_or_above = FROM }
+				}
+				
+				OR = {
+					kingdom = { holder = ROOT }
+					empire = { holder = ROOT }
+					dejure_liege_title = { holder = ROOT }
+				}
+
+				NOT = {
+					OR = {
+						ROOT = { has_landed_title = PREV }
+						holder_scope = { is_liege_or_above = ROOT }
+					}
+				}
+				
+				FROM = {
+					OR = {
+						holy_order = no
+						NOT = { religion = ROOT }
+						NOT = { has_dlc = "Sons of Abraham" }
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -3851,6 +3995,9 @@ cb_military_campaign = {
 			factor = 1.25
 			ROOT = { NOT = { opinion = { who = FROM value = -99 } } }
 		}
+	}
+	ai_will_do = {
+		factor = 3
 	}
 }
 

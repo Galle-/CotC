@@ -1427,6 +1427,9 @@ on_new_holder_usurpation = {
 		laws.10
 		laws.20
 		laws.30
+		
+		# Possible intervention by liege
+		usurpation.200
 	}
 }
 

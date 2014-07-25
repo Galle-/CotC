@@ -1,0 +1,16 @@
+# 190 - Raduga
+
+# County Title
+title = c_raduga
+
+# Settlements
+max_settlements = 6
+b_raduga_i = castle
+b_raduga_ii = city
+b_raduga_iii = temple
+
+# Misc
+culture = russo_strugatskite
+religion = neo_socialist
+
+# History

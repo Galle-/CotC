@@ -14,94 +14,23 @@ succ_patrician_elective_desc;Rulers are nominally elected by popular vote. In pr
 tanistry;Dynastic Elective;Dynastie ÈlÈctive;;;;;;;;;;;;x
 succ_tanistry;Dynastic Elective;Dynastie ÈlÈctive;;;;;;;;;;;;x
 succ_tanistry_desc;Rulers are elected by a federal council, but only members of a specific ruling family are eligible for election.;Les dirigeants sont Èlus par un conseil fÈdÈral, mais seuls les membres d'une famille rÈgnante spÈcifiques sont elligibles.;;;;;;;;;;;;x
-legitimacy_law;Legitimacy;LÈgitimitÈ;;;;;;;;;;;;x
-legitimacy_law_desc;The legitimate source of power and authority, as perceived by your people. Legitimacy determines what succession laws you may use, and which legitimacy types are available depends on your ideology and government type.;La source lÈgitime du pouvoir et de l'autoritÈ, telle que perÁue par votre peuple. La lÈgitimitÈ dÈtermine quelles sont les lois de succession que vous pouvez utiliser, et quels types de lÈgitimitÈ sont disponibles en fonction de votre idÈologie et type de gouvernement.;;;;;;;;;;;;x1
-legitimacy_law_0;Hereditary Succession;Succession hÈrÈditaire;;;;;;;;;;;;x
-legitimacy_law_0_option;Hereditary;HÈrÈditÈ;;;;;;;;;;;;x
-legitimacy_law_0_desc;Political legitimacy is conferred by descent from previous rulers.;La lÈgitimitÈ politique est confÈrÈe par l'hÈrÈditÈ des dirigeants prÈcÈdants.;;;;;;;;;;;;x
-legitimacy_law_1;Democractic Succession;Succession dÈmocratique;;;;;;;;;;;;x
-legitimacy_law_1_option;Elective;ElÈction;;;;;;;;;;;;x
-legitimacy_law_1_desc;Political legitimacy comes from the consent of the people.;La lÈgimitÈ politique provient du consentement du peuple.;;;;;;;;;;;;x
-legitimacy_law_2;Appointment;Nomination;;;;;;;;;;;;x
-legitimacy_law_2_option;Appointment;Nomination;;;;;;;;;;;;x
-legitimacy_law_2_desc;Political legitimacy comes from being appointed by a recognized authority - either one's predecessor or one's superior.;La lÈgÈtimitÈ politique provient du mandat dÈlivrÈ par une autoritÈ reconnue.;;;;;;;;;;;;x
-local_legitimacy_law;Legitimacy;LÈgitimitÅE;;;;;;;;;;;x
-local_legitimacy_law_desc;The legitimate source of power and authority, as perceived by your people. Legitimacy determines what succession laws you may use, and which legitimacy types are available depends on your ideology and government type.;La source lÈgitime du pouvoir et de l'autoritÅE telle que perÁue par votre peuple. La lÈgitimitÅEdÈtermine quelles sont les lois de succession que vous pouvez utiliser, et quels types de lÈgitimitÅEsont disponibles en fonction de votre idÈologie et type de gouvernement.;;;;;;;;;;;;x1
-local_legitimacy_law_0;Hereditary Succession;Succession hÈrÈditaire;;;;;;;;;;;;x
-local_legitimacy_law_0_option;Hereditary;HÈrÈditÅE;;;;;;;;;;;x
-local_legitimacy_law_0_desc;Political legitimacy is conferred by descent from previous rulers.;La lÈgitimitÅEpolitique est confÈrÈe par l'hÈrÈditÅEdes dirigeants prÈcÈdants.;;;;;;;;;;;;x
-local_legitimacy_law_1;Democractic Succession;Succession dÈmocratique;;;;;;;;;;;;x
-local_legitimacy_law_1_option;Elective;ElÈction;;;;;;;;;;;;x
-local_legitimacy_law_1_desc;Political legitimacy comes from the consent of the people.;La lÈgimitÅEpolitique provient du consentement du peuple.;;;;;;;;;;;;x
-local_legitimacy_law_2;Appointment;Nomination;;;;;;;;;;;;x
-local_legitimacy_law_2_option;Appointment;Nomination;;;;;;;;;;;;x
-local_legitimacy_law_2_desc;Political legitimacy comes from being appointed by a recognized authority - either one's predecessor or one's superior.;La lÈgÈtimitÅEpolitique provient du mandat dÈlivrÅEpar une autoritÅEreconnue.;;;;;;;;;;;;x
-inheritance_law;Inheritance Law;Lois de succession;;;;;;;;;;;;x
-inheritance_law_desc;The process by which the high offices are inherited.;Le processus par lequel les hautes fonctions sont hÈritÈes.;;;;;;;;;;;;x
-inheritance_law_0;No Inheritance;Pas d'hÈritage;;;;;;;;;;;;x
-inheritance_law_0_option;None;Rien;;;;;;;;;;;;x
-inheritance_law_0_desc;Our people regard hereditary succession to be the basis of political legitimacy, but our current constitution does not protect the right to inheritance. We should rectify this immediately, or risk revolution.;Notre peuple considËre la succession hÈrÈditaire comme base de la lÈgitimitÈ politique, mais notre constitution actuelle ne protËge pas le droit ‡ l'hÈritage. Nous devons remÈdier ‡ cette situation immÈdiatement ou nous risquons la rÈvolution.;;;;;;;;;;;;x
-inheritance_law_1;Gavelkind Inheritance;Gavelkind;;;;;;;;;;;;x
-inheritance_law_1_option;Gavelkind;Gavelkind;;;;;;;;;;;;x
-inheritance_law_1_desc;Upon a ruler's death, their estate is divided evenly among their children.;A la mort d'un dirigeant, ses possessions sont divisÈes entre ses enfants.;;;;;;;;;;;;x
-inheritance_law_2;Seniority Inheritance;AnciennetÈ;;;;;;;;;;;;x
-inheritance_law_2_option;Seniority;AnciennetÈ;;;;;;;;;;;;x
-inheritance_law_2_desc;Upon a ruler's death, control of their estate passes to their oldest living relative.;A la mort du dirigeant, ses possessions vont ‡ son parent le plus agÈ.;;;;;;;;;;;;x
-inheritance_law_3;Primogeniture Inheritance;PrimogÈniture;;;;;;;;;;;;x
-inheritance_law_3_option;Prim.;Prim.;;;;;;;;;;;;x
-inheritance_law_3_desc;Upon a ruler's death, control of their estate passes to their oldest child.;A la mort du dirigeant, ses possessions vont ‡ son enfant le plus agÈ.;;;;;;;;;;;;x
-inheritance_law_4;Ultimogeniture Inheritance;UltimogÈniture;;;;;;;;;;;;x
-inheritance_law_4_option;Ultim.;Ultim.;;;;;;;;;;;;x
-inheritance_law_4_desc;Upon a ruler's death, control of their estate passes to their youngest child or most recent clone.;A la mort du dirigeant, ses possessions vont ‡ son enfant le plus jeune, ou ‡ son plus rÈcent clÙne;;;;;;;;;;;;x
-local_inheritance_law;Inheritance Law;Lois de succession;;;;;;;;;;;;x
-local_inheritance_law_desc;The process by which the high offices are inherited.;Le processus par lequel les hautes fonctions sont hÈritÈes.;;;;;;;;;;;;x
-local_inheritance_law_0;No Inheritance;Pas d'hÈritage;;;;;;;;;;;;x
-local_inheritance_law_0_option;None;Rien;;;;;;;;;;;;x
-local_inheritance_law_0_desc;Our people regard hereditary succession to be the basis of political legitimacy, but our current constitution does not protect the right to inheritance. We should rectify this immediately, or risk revolution.;Notre peuple considËre la succession hÈrÈditaire comme base de la lÈgitimitÅEpolitique, mais notre constitution actuelle ne protËge pas le droit ÅEl'hÈritage. Nous devons remÈdier ÅEcette situation immÈdiatement ou nous risquons la rÈvolution.;;;;;;;;;;;;x
-local_inheritance_law_1;Gavelkind Inheritance;Gavelkind;;;;;;;;;;;;x
-local_inheritance_law_1_option;Gavelkind;Gavelkind;;;;;;;;;;;;x
-local_inheritance_law_1_desc;Upon a ruler's death, their estate is divided evenly among their children.;A la mort d'un dirigeant, ses possessions sont divisÈes entre ses enfants.;;;;;;;;;;;;x
-local_inheritance_law_2;Seniority Inheritance;AnciennetÅE;;;;;;;;;;;x
-local_inheritance_law_2_option;Seniority;AnciennetÅE;;;;;;;;;;;x
-local_inheritance_law_2_desc;Upon a ruler's death, control of their estate passes to their oldest living relative.;A la mort du dirigeant, ses possessions vont ÅEson parent le plus agÅE;;;;;;;;;;;;x
-local_inheritance_law_3;Primogeniture Inheritance;PrimogÈniture;;;;;;;;;;;;x
-local_inheritance_law_3_option;Prim.;Prim.;;;;;;;;;;;;x
-local_inheritance_law_3_desc;Upon a ruler's death, control of their estate passes to their oldest child.;A la mort du dirigeant, ses possessions vont ÅEson enfant le plus agÅE;;;;;;;;;;;;x
-local_inheritance_law_4;Ultimogeniture Inheritance;UltimogÈniture;;;;;;;;;;;;x
-local_inheritance_law_4_option;Ultim.;Ultim.;;;;;;;;;;;;x
-local_inheritance_law_4_desc;Upon a ruler's death, control of their estate passes to their youngest child or most recent clone.;A la mort du dirigeant, ses possessions vont ÅEson enfant le plus jeune, ou ÅEson plus rÈcent clÙne;;;;;;;;;;;;x
-election_law;Election Law;Lois Èlectorales;;;;;;;;;;;;x
-election_law_desc;The process by which the state's leaders are elected.;Le processus par lequel les dirigeants des Ètats sont Èlus.;;;;;;;;;;;;x
-election_law_0;No Elections;Pas d'ÈlÈction;;;;;;;;;;;;x
-election_law_0_option;None;Rien;;;;;;;;;;;;x
-election_law_0_desc;Our country regards government without the consent of the governed to be illegitimate, but our current constitution does not permit elections of any sort. We should rectify this immediately, or risk revolution.;Notre pays considËre que gourvener sans le consentement des gouvernÈs est illÈgitime, mais notre constitution actuelle ne nous permet pas d'organiser des ÈlÈctions. Nous devons remÈdier ‡ cette situation immÈdiatement ou nous risquons la rÈvolution.;;;;;;;;;;;;x
-election_law_1;Popular Vote;Vote populaire;;;;;;;;;;;;x
-election_law_1_option;Free;Libre;;;;;;;;;;;;x
-election_law_1_desc;Each ruler is elected by popular vote, and the voting process is carefully protected from meddling by the rich and powerful.;Chaque dirigeant est Èlu par vote populaire, et le processus de vote est soigneusement protÈgÈ contre l'ingÈrences des riches et puissants.;;;;;;;;;;;;x
-election_law_2;Oligarchy;Oligarchie;;;;;;;;;;;;x
-election_law_2_option;Semi-Free;Semi-libre;;;;;;;;;;;;x
-election_law_2_desc;The ruler is nominally elected by popular vote, but active intervention and campaigning means that in practice, the government is monopolized by a few wealthy families.;Le dirigeant est thÈoriquement Èlu par vote populaire, mais un interventionisme actif et des campagnes de pressions signifient que dans la pratique, le gouvernement est monopolisÈ par quelques familles aisÈes.;;;;;;;;;;;;x
-election_law_3;Federal Elective;FÈdÈration ÈlÈctive;;;;;;;;;;;;x
-election_law_3_option;Federal;FÈdÈral;;;;;;;;;;;;x
-election_law_3_desc;The ruler is elected by a federal council, consisting of both regional governors and the previous ruler.;Le dirigeant est Èlu par un conseil fÈdÈral, composÈ ‡ la fois des gouverneurs rÈgionaux et du prÈcÈdent dirigeant.;;;;;;;;;;;;x
-election_law_4;Dynastic Elections;ElÈctions dynastiques;;;;;;;;;;;;x
-election_law_4_option;The ruler is elected by a federal council, but candidacy is restricted to members of a specific family.;Le dirigeant est Èlu par un conseil fÈdÈral, mais les candidatures sont rÈservÈes aux membres d'une famille spÈcifique.;;;;;;;;;;;;x
-local_election_law;Election Law;Lois Èlectorales;;;;;;;;;;;;x
-local_election_law_desc;The process by which the state's leaders are elected.;Le processus par lequel les dirigeants des Ètats sont Èlus.;;;;;;;;;;;;x
-local_election_law_0;No Elections;Pas d'ÈlÈction;;;;;;;;;;;;x
-local_election_law_0_option;None;Rien;;;;;;;;;;;;x
-local_election_law_0_desc;Our country regards government without the consent of the governed to be illegitimate, but our current constitution does not permit elections of any sort. We should rectify this immediately, or risk revolution.;Notre pays considËre que gourvener sans le consentement des gouvernÈs est illÈgitime, mais notre constitution actuelle ne nous permet pas d'organiser des ÈlÈctions. Nous devons remÈdier ÅEcette situation immÈdiatement ou nous risquons la rÈvolution.;;;;;;;;;;;;x
-local_election_law_1;Popular Vote;Vote populaire;;;;;;;;;;;;x
-local_election_law_1_option;Free;Libre;;;;;;;;;;;;x
-local_election_law_1_desc;Each ruler is elected by popular vote, and the voting process is carefully protected from meddling by the rich and powerful.;Chaque dirigeant est Èlu par vote populaire, et le processus de vote est soigneusement protÈgÅEcontre l'ingÈrences des riches et puissants.;;;;;;;;;;;;x
-local_election_law_2;Oligarchy;Oligarchie;;;;;;;;;;;;x
-local_election_law_2_option;Semi-Free;Semi-libre;;;;;;;;;;;;x
-local_election_law_2_desc;The ruler is nominally elected by popular vote, but active intervention and campaigning means that in practice, the government is monopolized by a few wealthy families.;Le dirigeant est thÈoriquement Èlu par vote populaire, mais un interventionisme actif et des campagnes de pressions signifient que dans la pratique, le gouvernement est monopolisÅEpar quelques familles aisÈes.;;;;;;;;;;;;x
-local_election_law_3;Federal Elective;FÈdÈration ÈlÈctive;;;;;;;;;;;;x
-local_election_law_3_option;Federal;FÈdÈral;;;;;;;;;;;;x
-local_election_law_3_desc;The ruler is elected by a federal council, consisting of both regional governors and the previous ruler.;Le dirigeant est Èlu par un conseil fÈdÈral, composÅEÅEla fois des gouverneurs rÈgionaux et du prÈcÈdent dirigeant.;;;;;;;;;;;;x
-local_election_law_4;Dynastic Elections;ElÈctions dynastiques;;;;;;;;;;;;x
-local_election_law_4_option;The ruler is elected by a federal council, but candidacy is restricted to members of a specific family.;Le dirigeant est Èlu par un conseil fÈdÈral, mais les candidatures sont rÈservÈes aux membres d'une famille spÈcifique.;;;;;;;;;;;;x
+centralization;Centralization;;;;;;;;;;;;;x
+centralization_desc;Managing an interstellar state, with populations that can be numbered in the trillions, is a difficult task. Most such states grant broad autonomy to local governments for practical reasons if nothing else, but some attempt to form a strong centralized government.;;;;;;;;;;;;;x
+centralization_0;Coalition;;;;;;;;;;;;;x
+centralization_0_option;None;;;;;;;;;;;;;x
+centralization_0_desc;This state is less of a state ad more of a loose military alliance. There is a central government, but it is almost completely powerless.;;;;;;;;;;;;;x
+centralization_1;Confederation;;;;;;;;;;;;;x
+centralization_1_option;Low;;;;;;;;;;;;;x
+centralization_1_desc;Member-states are required to obey the central government in the most critical matters, such as military and diplomatic duties, but are still granted almost completely autonomy in domestic issues.;;;;;;;;;;;;;x
+centralization_2;Federation;;;;;;;;;;;;;x
+centralization_2_option;Medium;;;;;;;;;;;;;x
+centralization_2_desc;This state's central government and local governments are roughly equal in prestige and power.;;;;;;;;;;;;;x
+centralization_3;Hegemony;;;;;;;;;;;;;x
+centralization_3_option;High;;;;;;;;;;;;;x
+centralization_3_desc;This state's local governments are allowed some rights and autonomy, but this is mostly honorary.;;;;;;;;;;;;;x
+centralization_4;Unitary State;;;;;;;;;;;;;x
+centralization_4_option;Max;;;;;;;;;;;;;x
+centralization_4_desc;This state has a single legitimate central government. Local governments serve only administrative purposes and have no authority to pass their own laws.;;;;;;;;;;;;;x
 military_vassal_legitimacy;Military Government;;;;;;;;;;;;;x
 military_vassal_legitimacy_desc;The general principles used to determine how military commands and offices are assigned.;;;;;;;;;;;;;x
 military_vassal_legitimacy_0;Hereditary Officers;;;;;;;;;;;;;x
@@ -198,9 +127,60 @@ public_order_desc;Whether or not the government is able to enforce its control o
 public_order_0;Weak Civil Order;;;;;;;;;;;;;x
 public_order_0_option;Weak;;;;;;;;;;;;;x
 public_order_0_desc;The government has little de facto control over its territory, and local governors are largely autonomous. Vassals may wage private wars within the realm, and local militias cannot be relied upon for support.;;;;;;;;;;;;;x
-public_order_0;Strong Civil Order;;;;;;;;;;;;;x
-public_order_0_option;Strong;;;;;;;;;;;;;x
-public_order_0_desc;The government is strong and steady. Vassals cannot wage autonomous wars within the realm, for fear of a swift and strong reprisal from the capital.;;;;;;;;;;;;;x
+public_order_1;Strong Civil Order;;;;;;;;;;;;;x
+public_order_1_option;Strong;;;;;;;;;;;;;x
+public_order_1_desc;The government is strong and steady. Vassals cannot wage autonomous wars within the realm, for fear of a swift and strong reprisal from the capital.;;;;;;;;;;;;;x
+feudal_tax;Military Budget;;;;;;;;;;;;;x
+feudal_tax_desc;Whether this government subsidizes or taxes its military vassals, and by how much.;;;;;;;;;;;;;x
+feudal_tax_0;Heavy Military Spending;;;;;;;;;;;;;x
+feudal_tax_0_option;--;;;;;;;;;;;;;x
+feudal_tax_0_desc;This government heavily subsidizes its military vassals.;;;;;;;;;;;;;x
+feudal_tax_1;Light Military Spending;;;;;;;;;;;;;x
+feudal_tax_1_option;-;;;;;;;;;;;;;x
+feudal_tax_1_desc;This government lightly subsidizes its military vassals.;;;;;;;;;;;;;x
+feudal_tax_2;No Military Budget;;;;;;;;;;;;;x
+feudal_tax_2_option;Neutral;;;;;;;;;;;;;x
+feudal_tax_2_desc;This government neither subsidizes nor taxes its military vassals.;;;;;;;;;;;;;x
+feudal_tax_3;Light Military Taxes;;;;;;;;;;;;;x
+feudal_tax_3_option;+;;;;;;;;;;;;;x
+feudal_tax_3_desc;This government lightly taxes its military vassals.;;;;;;;;;;;;;x
+feudal_tax_4;Heavy Military Taxes;;;;;;;;;;;;;x
+feudal_tax_4_option;++;;;;;;;;;;;;;x
+feudal_tax_4_desc;This government heavily taxes its military vassals.;;;;;;;;;;;;;x
+city_tax;Commerce Budget;;;;;;;;;;;;;x
+city_tax_desc;Whether this government subsidizes or taxes commerce, and by how much.;;;;;;;;;;;;;x
+city_tax_0;Heavy Commerce Spending;;;;;;;;;;;;;x
+city_tax_0_option;--;;;;;;;;;;;;;x
+city_tax_0_desc;This government heavily subsidizes commerce.;;;;;;;;;;;;;x
+city_tax_1;Light Commerce Spending;;;;;;;;;;;;;x
+city_tax_1_option;-;;;;;;;;;;;;;x
+city_tax_1_desc;This government lightly subsidizes commerce.;;;;;;;;;;;;;x
+city_tax_2;No Commerce Budget;;;;;;;;;;;;;x
+city_tax_2_option;Neutral;;;;;;;;;;;;;x
+city_tax_2_desc;This government neither subsidizes nor taxes commerce.;;;;;;;;;;;;;x
+city_tax_3;Light Commerce Taxes;;;;;;;;;;;;;x
+city_tax_3_option;+;;;;;;;;;;;;;x
+city_tax_3_desc;This government lightly taxes commerce.;;;;;;;;;;;;;x
+city_tax_4;Heavy Commerce Taxes;;;;;;;;;;;;;x
+city_tax_4_option;++;;;;;;;;;;;;;x
+city_tax_4_desc;This government heavily taxes commerce.;;;;;;;;;;;;;x
+temple_tax;Admin Budget;;;;;;;;;;;;;x
+temple_tax_desc;Whether this government subsidizes or taxes religious colonies, research centers, and administrative centers, and by how much.;;;;;;;;;;;;;x
+temple_tax_0;Heavy Administrative Spending;;;;;;;;;;;;;x
+temple_tax_0_option;--;;;;;;;;;;;;;x
+temple_tax_0_desc;This government heavily subsidizes religious colonies, research centers, and administrative centers.;;;;;;;;;;;;;x
+temple_tax_1;Light Administrative Spending;;;;;;;;;;;;;x
+temple_tax_1_option;-;;;;;;;;;;;;;x
+temple_tax_1_desc;This government lightly subsidizes religious colonies, research centers, and administrative centers.;;;;;;;;;;;;;x
+temple_tax_2;No Administrative Budget;;;;;;;;;;;;;x
+temple_tax_2_option;Neutral;;;;;;;;;;;;;x
+temple_tax_2_desc;This government neither subsidizes nor taxes religious colonies, research centers, and administrative centers.;;;;;;;;;;;;;x
+temple_tax_3;Light Administrative Taxes;;;;;;;;;;;;;x
+temple_tax_3_option;+;;;;;;;;;;;;;x
+temple_tax_3_desc;This government lightly taxes religious colonies, research centers, and administrative centers.;;;;;;;;;;;;;x
+temple_tax_4;Heavy Administrative Taxes;;;;;;;;;;;;;x
+temple_tax_4_option;++;;;;;;;;;;;;;x
+temple_tax_4_desc;This government heavily taxes religious colonies, research centers, and administrative centers.;;;;;;;;;;;;;x
 civil_unrest_0;Insignificant Civil Unrest;;;;;;;;;;;;;x
 civil_unrest_1;Trivial Civil Unrest;;;;;;;;;;;;;x
 civil_unrest_2;Mild Civil Unrest;;;;;;;;;;;;;x

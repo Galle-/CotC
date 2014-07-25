@@ -1,0 +1,7 @@
+2900.1.1 = {
+	law = succ_appointment
+	law = true_cognatic_succession
+	liege = "d_kovcheg"
+}
+
+2998.1.1 = { holder = "12111279" } # Dominika Lin

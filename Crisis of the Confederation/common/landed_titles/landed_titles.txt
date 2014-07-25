@@ -668,7 +668,10 @@ e_terran_confederation = {
 				color2 = { 255 255 255 }
 				used_for_dynasty_names = no
 				
-				b_vega_prime = { used_for_dynasty_names = no }
+				b_vega_prime = {
+					used_for_dynasty_names = no
+					holy_site = neo_socialist # Site of a notorious labor revolt
+				}
 				b_vega_prime_b = { used_for_dynasty_names = no }
 				b_vega_prime_c = { used_for_dynasty_names = no }
 				b_vega_iv = { used_for_dynasty_names = no }
@@ -3782,6 +3785,226 @@ e_terran_confederation = {
 				b_anilam_vi_c = { used_for_dynasty_names = no }
 				b_anilam_vi_d = { used_for_dynasty_names = no }
 				b_anilam_vi_e = { used_for_dynasty_names = no }
+			}
+		}
+	}
+	k_strugatsky = {
+		color = { 100 0 0 }
+		color2 = { 100 100 0 }
+		
+		culture = russo_strugatskite
+		
+		capital = 185 # Novyy Sol
+		
+		d_strugatsky_fleet = {
+			color = { 50 0 0 }
+			color2 = { 0 0 0 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 185
+			landless = yes
+			tribe = yes
+		}
+		
+		d_novyy_sol = {
+			color = { 100 16 0 }
+			color2 = { 100 100 0 }
+			
+			capital = 185 # Novyy Sol
+			
+			c_novyy_sol = {
+				color = { 100 16 16 }
+				color2 = { 100 100 0 }
+				
+				b_novyy_sol_i = {
+					used_for_dynasty_names = no
+					holy_site = neo_socialist
+				}
+				b_novyy_sol_ii = { used_for_dynasty_names = no }
+				b_novyy_sol_iii = { used_for_dynasty_names = no }
+				b_novyy_sol_iv = { used_for_dynasty_names = no }
+				b_novyy_sol_v = { used_for_dynasty_names = no }
+				b_novyy_sol_vi = { used_for_dynasty_names = no }
+				b_novyy_sol_vii = { used_for_dynasty_names = no }
+			}
+			c_vladislava = {
+				color = { 100 16 32 }
+				color2 = { 100 100 0 }
+				
+				b_vladislava_i = { used_for_dynasty_names = no }
+				b_vladislava_ii = { used_for_dynasty_names = no }
+				b_vladislava_iii = { used_for_dynasty_names = no }
+				b_vladislava_iv = { used_for_dynasty_names = no }
+			}
+			c_nadezhda = {
+				color = { 100 16 48 }
+				color2 = { 100 100 0 }
+			
+				b_nadezhda_i = { used_for_dynasty_names = no }
+				b_nadezhda_ii = { used_for_dynasty_names = no }
+				b_nadezhda_iii = { used_for_dynasty_names = no }
+				b_nadezhda_iv = { used_for_dynasty_names = no }
+			}
+		}
+		
+		d_raduga = {
+			color = { 100 32 0 }
+			color2 = { 100 100 0 }
+			
+			capital = 190 # Raduga
+			
+			c_raduga = {
+				color = { 100 32 16 }
+				color2 = { 100 100 0 }
+			
+				b_raduga_i = { used_for_dynasty_names = no }
+				b_raduga_ii = { used_for_dynasty_names = no }
+				b_raduga_iii = { used_for_dynasty_names = no }
+				b_raduga_iv = { used_for_dynasty_names = no }
+				b_raduga_v = { used_for_dynasty_names = no }
+				b_raduga_vi = { used_for_dynasty_names = no }
+			}
+			c_granat = {
+				color = { 100 32 32 }
+				color2 = { 100 100 0 }
+			
+				b_granat_i = { used_for_dynasty_names = no }
+				b_granat_ii = { used_for_dynasty_names = no }
+				b_granat_iii = { used_for_dynasty_names = no }
+				b_granat_iv = { used_for_dynasty_names = no }
+			}
+			c_luch = {
+				color = { 100 32 48 }
+				color2 = { 100 100 0 }
+			
+				b_luch_i = { used_for_dynasty_names = no }
+				b_luch_ii = { used_for_dynasty_names = no }
+				b_luch_iii = { used_for_dynasty_names = no }
+				b_luch_iv = { used_for_dynasty_names = no }
+			}
+			c_kristal = {
+				color = { 100 32 64 }
+				color2 = { 100 100 0 }
+			
+				b_kristal_i = { used_for_dynasty_names = no }
+				b_kristal_ii = { used_for_dynasty_names = no }
+				b_kristal_iii = { used_for_dynasty_names = no }
+				b_kristal_iv = { used_for_dynasty_names = no }
+			}
+		}
+		
+		d_arkanar = {
+			color = { 100 48 0 }
+			color2 = { 100 100 0 }
+			
+			capital = 177 # Arkanar
+			
+			c_arkanar = {
+				color = { 100 48 16 }
+				color2 = { 100 100 0 }
+			
+				b_arkanar_i = {
+					used_for_dynasty_names = no
+					holy_site = neo_socialist
+				}
+				b_arkanar_ii = { used_for_dynasty_names = no }
+				b_arkanar_iii = { used_for_dynasty_names = no }
+				b_arkanar_iv = { used_for_dynasty_names = no }
+				b_arkanar_v = { used_for_dynasty_names = no }
+				b_arkanar_vi = { used_for_dynasty_names = no }
+			}
+			c_pandora = {
+				color = { 100 48 32 }
+				color2 = { 100 100 0 }
+			
+				b_pandora_i = { used_for_dynasty_names = no }
+				b_pandora_ii = { used_for_dynasty_names = no }
+				b_pandora_iii = { used_for_dynasty_names = no }
+				b_pandora_iv = { used_for_dynasty_names = no }
+			}
+			c_ruzhena = {
+				color = { 100 48 48 }
+				color2 = { 100 100 0 }
+			
+				b_ruzhena_i = { used_for_dynasty_names = no }
+				b_ruzhena_ii = { used_for_dynasty_names = no }
+				b_ruzhena_iii = { used_for_dynasty_names = no }
+				b_ruzhena_iv = { used_for_dynasty_names = no }
+			}
+			c_yaila = {
+				color = { 100 48 64 }
+				color2 = { 100 100 0 }
+			
+				b_yaila_i = { used_for_dynasty_names = no }
+				b_yaila_ii = { used_for_dynasty_names = no }
+				b_yaila_iii = { used_for_dynasty_names = no }
+				b_yaila_iv = { used_for_dynasty_names = no }
+			}
+		}
+		
+		d_kovcheg = {
+			color = { 100 64 0 }
+			color2 = { 100 100 0 }
+			
+			capital = 183 #Kovcheg
+			
+			c_kovcheg = {
+				color = { 100 64 16 }
+				color2 = { 100 100 0 }
+			
+				b_kovcheg_i = { used_for_dynasty_names = no }
+				b_kovcheg_ii = { used_for_dynasty_names = no }
+				b_kovcheg_iii = { used_for_dynasty_names = no }
+				b_kovcheg_iv = { used_for_dynasty_names = no }
+				b_kovcheg_v = { used_for_dynasty_names = no }
+			}
+			c_migdal = {
+				color = { 100 64 32 }
+				color2 = { 100 100 0 }
+			
+				b_migdal_i = { used_for_dynasty_names = no }
+				b_migdal_ii = { used_for_dynasty_names = no }
+				b_migdal_iii = { used_for_dynasty_names = no }
+				b_migdal_iv = { used_for_dynasty_names = no }
+			}
+			c_katerin_vselennaya = {
+				color = { 100 64 48 }
+				color2 = { 100 100 0 }
+			
+				b_katerin_vselennaya_i = { used_for_dynasty_names = no }
+				b_katerin_vselennaya_ii = { used_for_dynasty_names = no }
+				b_katerin_vselennaya_iii = { used_for_dynasty_names = no }
+				b_katerin_vselennaya_iv = { used_for_dynasty_names = no }
+			}
+		}
+		
+		d_saula = {
+			color = { 100 80 0 }
+			color2 = { 100 100 0 }
+			
+			capital = 192 #Saula
+			
+			c_saula = {
+				color = { 100 80 16 }
+				color2 = { 100 100 0 }
+			
+				b_saula_i = { used_for_dynasty_names = no }
+				b_saula_ii = { used_for_dynasty_names = no }
+				b_saula_iii = { used_for_dynasty_names = no }
+				b_saula_iv = { used_for_dynasty_names = no }
+				b_saula_v = { used_for_dynasty_names = no }
+			}
+			c_solonichenko_pas = {
+				color = { 100 80 32 }
+				color2 = { 100 100 0 }
+			
+				b_solonichenko_pas_i = { used_for_dynasty_names = no }
+				b_solonichenko_pas_ii = { used_for_dynasty_names = no }
+				b_solonichenko_pas_iii = { used_for_dynasty_names = no }
+				b_solonichenko_pas_iv = { used_for_dynasty_names = no }
 			}
 		}
 	}

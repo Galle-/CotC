@@ -1,0 +1,17 @@
+# 179 - Ruzhena
+
+# County Title
+title = c_ruzhena
+
+# Settlements
+max_settlements = 4
+b_ruzhena_i = castle
+b_ruzhena_ii = city
+b_ruzhena_iii = temple
+b_ruzhena_iv = temple
+
+# Misc
+culture = russo_strugatskite
+religion = neo_socialist
+
+# History

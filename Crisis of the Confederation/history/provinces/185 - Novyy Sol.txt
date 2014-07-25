@@ -1,0 +1,19 @@
+# 185 - Novyy Sol
+
+# County Title
+title = c_novyy_sol
+
+# Settlements
+max_settlements = 4
+b_novyy_sol_i = temple
+b_novyy_sol_ii = city
+b_novyy_sol_iii = castle
+b_novyy_sol_iv = castle
+b_novyy_sol_v = city
+b_novyy_sol_vi = temple
+
+# Misc
+culture = russo_strugatskite
+religion = neo_socialist
+
+# History

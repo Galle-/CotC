@@ -2,6 +2,11 @@
 # RELIGIOUS AUTHORITY MODIFIERS - fully scriptable
 ##########################################################################
 
+peacekeeping = {
+	authority = 1
+	years = 30
+}
+
 # For successfully deposing a bad ruler
 successful_justified_coup = {
 	authority = 2

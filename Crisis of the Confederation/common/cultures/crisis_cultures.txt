@@ -887,7 +887,7 @@ celestean_group = {
 	
 	anglo_celestean = {
 		graphical_culture = angloconfederategfx
-		color = { 0.5 0.5 0.95 }
+		color = { 1.0 1.0 0 }
 
 		male_names = {
 			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
@@ -921,8 +921,7 @@ celestean_group = {
 	
 	arab_celestean = {
 		graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 1.0 1.0 0 }
 
 		male_names = {
 			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
@@ -962,9 +961,8 @@ celestean_group = {
 
 	east_afro_celestean = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 1.0 1.0 0 }
 
 		male_names = {
 			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
@@ -1001,9 +999,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	ethiopian_celestean = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 1.0 1.0 0 }
 
 		male_names = {
 			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
@@ -1040,9 +1037,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	hispanic_celestean = {
 		graphical_culture = hispanicconfederategfx
-second_graphical_culture = angloconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = angloconfederategfx
+		color = { 1.0 1.0 0 }
 
 		male_names = {
 			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
@@ -1078,8 +1074,8 @@ second_graphical_culture = angloconfederategfx
 	
 	indo_celestean = {
 		graphical_culture = indoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 1.0 1.0 0 }
 
 		male_names = {
 			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
@@ -1113,8 +1109,7 @@ second_graphical_culture = mideastconfederategfx
 	iranian_celestean = {
 		graphical_culture = persianconfederategfx
 		second_graphical_culture = mideastconfederategfx
-
-		color = { 0.5 0.5 0.95 }
+		color = { 1.0 1.0 0 }
 
 		male_names = {
 			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
@@ -1150,9 +1145,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	japanese_celestean = {
 		graphical_culture = sinoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 1.0 1.0 0 }
 
 		male_names = {
 			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
@@ -1185,7 +1179,7 @@ second_graphical_culture = mideastconfederategfx
 	}
 	mesoamerican_celestean = {
 		graphical_culture = americonfederategfx
-		color = { 0.5 0.5 0.95 }
+		color = { 1.0 1.0 0 }
 
 		male_names = {
 			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
@@ -1222,8 +1216,7 @@ second_graphical_culture = mideastconfederategfx
 	russo_celestean = {
 		graphical_culture = russoconfederategfx
 		second_graphical_culture = angloconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 1.0 1.0 0 }
 
 		male_names = {
 			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
@@ -1262,8 +1255,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	sino_celestean = {
 		graphical_culture = sinoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 1.0 1.0 0 }
 
 		male_names = {
 			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
@@ -1296,9 +1289,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	west_afro_celestean = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 1.0 1.0 0 }
 
 		male_names = {
 			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
@@ -1336,7 +1328,7 @@ sexto_solar_group = {
 	
 	anglo_sexto_solar = {
 		graphical_culture = angloconfederategfx
-		color = { 0.5 0.5 0.95 }
+		color = { 1.0 0.75 0 }
 		
 		male_names = {
 			Acalan Acacitli Acamapichtli Acolmiztli Aculnahuacatl Ahuiliztli Ahuitzotl Atl Axayacatl Cacamatzin Chimalli Chimalpilli Chimalpopoca Cipac Coanacoch Coatl Cozahtli Cuauhtemoc Cuauhtl Cuetlachtli Cuetzpalli Cuixtli Cuitlahuac 
@@ -1367,8 +1359,7 @@ sexto_solar_group = {
 	
 	arab_sexto_solar = {
 		graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 1.0 0.75 0 }
 		
 		male_names = {
 			Acalan Acacitli Acamapichtli Acolmiztli Aculnahuacatl Ahuiliztli Ahuitzotl Atl Axayacatl Cacamatzin Chimalli Chimalpilli Chimalpopoca Cipac Coanacoch Coatl Cozahtli Cuauhtemoc Cuauhtl Cuetlachtli Cuetzpalli Cuixtli Cuitlahuac 
@@ -1405,9 +1396,8 @@ sexto_solar_group = {
 
 	east_afro_sexto_solar = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 1.0 0.75 0 }
 		
 		male_names = {
 			Acalan Acacitli Acamapichtli Acolmiztli Aculnahuacatl Ahuiliztli Ahuitzotl Atl Axayacatl Cacamatzin Chimalli Chimalpilli Chimalpopoca Cipac Coanacoch Coatl Cozahtli Cuauhtemoc Cuauhtl Cuetlachtli Cuetzpalli Cuixtli Cuitlahuac 
@@ -1441,9 +1431,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	ethiopian_sexto_solar = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 1.0 0.75 0 }
 		
 		male_names = {
 			Acalan Acacitli Acamapichtli Acolmiztli Aculnahuacatl Ahuiliztli Ahuitzotl Atl Axayacatl Cacamatzin Chimalli Chimalpilli Chimalpopoca Cipac Coanacoch Coatl Cozahtli Cuauhtemoc Cuauhtl Cuetlachtli Cuetzpalli Cuixtli Cuitlahuac 
@@ -1477,9 +1466,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	hispanic_sexto_solar = {
 		graphical_culture = hispanicconfederategfx
-second_graphical_culture = angloconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = angloconfederategfx
+		color = { 1.0 0.75 0 }
 		
 		male_names = {
 			Acalan Acacitli Acamapichtli Acolmiztli Aculnahuacatl Ahuiliztli Ahuitzotl Atl Axayacatl Cacamatzin Chimalli Chimalpilli Chimalpopoca Cipac Coanacoch Coatl Cozahtli Cuauhtemoc Cuauhtl Cuetlachtli Cuetzpalli Cuixtli Cuitlahuac 
@@ -1512,8 +1500,8 @@ second_graphical_culture = angloconfederategfx
 	
 	indo_sexto_solar = {
 		graphical_culture = indoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 1.0 0.75 0 }
 		
 		male_names = {
 			Acalan Acacitli Acamapichtli Acolmiztli Aculnahuacatl Ahuiliztli Ahuitzotl Atl Axayacatl Cacamatzin Chimalli Chimalpilli Chimalpopoca Cipac Coanacoch Coatl Cozahtli Cuauhtemoc Cuauhtl Cuetlachtli Cuetzpalli Cuixtli Cuitlahuac 
@@ -1544,8 +1532,7 @@ second_graphical_culture = mideastconfederategfx
 	iranian_sexto_solar = {
 		graphical_culture = persianconfederategfx
 		second_graphical_culture = mideastconfederategfx
-
-		color = { 0.5 0.5 0.95 }
+		color = { 1.0 0.75 0 }
 		
 		male_names = {
 			Acalan Acacitli Acamapichtli Acolmiztli Aculnahuacatl Ahuiliztli Ahuitzotl Atl Axayacatl Cacamatzin Chimalli Chimalpilli Chimalpopoca Cipac Coanacoch Coatl Cozahtli Cuauhtemoc Cuauhtl Cuetlachtli Cuetzpalli Cuixtli Cuitlahuac 
@@ -1578,9 +1565,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	japanese_sexto_solar = {
 		graphical_culture = sinoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 1.0 0.75 0 }
 		
 		male_names = {
 			Acalan Acacitli Acamapichtli Acolmiztli Aculnahuacatl Ahuiliztli Ahuitzotl Atl Axayacatl Cacamatzin Chimalli Chimalpilli Chimalpopoca Cipac Coanacoch Coatl Cozahtli Cuauhtemoc Cuauhtl Cuetlachtli Cuetzpalli Cuixtli Cuitlahuac 
@@ -1610,7 +1596,7 @@ second_graphical_culture = mideastconfederategfx
 	}
 	mesoamerican_sexto_solar = {
 		graphical_culture = americonfederategfx
-		color = { 0.5 0.5 0.95 }
+		color = { 1.0 0.75 0 }
 		
 		male_names = {
 			Acalan Acacitli Acamapichtli Acolmiztli Aculnahuacatl Ahuiliztli Ahuitzotl Atl Axayacatl Cacamatzin Chimalli Chimalpilli Chimalpopoca Cipac Coanacoch Coatl Cozahtli Cuauhtemoc Cuauhtl Cuetlachtli Cuetzpalli Cuixtli Cuitlahuac 
@@ -1644,8 +1630,7 @@ second_graphical_culture = mideastconfederategfx
 	russo_sexto_solar = {
 		graphical_culture = russoconfederategfx
 		second_graphical_culture = angloconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 1.0 0.75 0 }
 		
 		male_names = {
 			Acalan Acacitli Acamapichtli Acolmiztli Aculnahuacatl Ahuiliztli Ahuitzotl Atl Axayacatl Cacamatzin Chimalli Chimalpilli Chimalpopoca Cipac Coanacoch Coatl Cozahtli Cuauhtemoc Cuauhtl Cuetlachtli Cuetzpalli Cuixtli Cuitlahuac 
@@ -1681,8 +1666,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	sino_sexto_solar = {
 		graphical_culture = sinoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 1.0 0.75 0 }
 		
 		male_names = {
 			Acalan Acacitli Acamapichtli Acolmiztli Aculnahuacatl Ahuiliztli Ahuitzotl Atl Axayacatl Cacamatzin Chimalli Chimalpilli Chimalpopoca Cipac Coanacoch Coatl Cozahtli Cuauhtemoc Cuauhtl Cuetlachtli Cuetzpalli Cuixtli Cuitlahuac 
@@ -1712,9 +1697,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	west_afro_sexto_solar = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 1.0 0.75 0 }
 		
 		male_names = {
 			Acalan Acacitli Acamapichtli Acolmiztli Aculnahuacatl Ahuiliztli Ahuitzotl Atl Axayacatl Cacamatzin Chimalli Chimalpilli Chimalpopoca Cipac Coanacoch Coatl Cozahtli Cuauhtemoc Cuauhtl Cuetlachtli Cuetzpalli Cuixtli Cuitlahuac 
@@ -1749,7 +1733,7 @@ samawati_group = {
 	
 	anglo_samawati = {
 		graphical_culture = anglosamawatigfx
-		color = { 0.5 0.5 0.95 }
+		color = { 0 1.0 0 }
 
 		male_names = {
 			Amir Ammar Adam_Adam Ahmed_Ahmad Ali_Ali Abdulrahman_Abdulrahman Abdullah_Abdullah Aziz Bilal
@@ -1783,7 +1767,7 @@ samawati_group = {
 	arab_samawati = {
 		graphical_culture = mideastsamawatigfx
 		
-		color = { 0.5 0.5 0.95 }
+		color = { 0 1.0 0 }
 
 		male_names = {
 			Amir Ammar Adam_Adam Ahmed_Ahmad Ali_Ali Abdulrahman_Abdulrahman Abdullah_Abdullah Aziz Bilal
@@ -1824,7 +1808,7 @@ samawati_group = {
 		graphical_culture = afrosamawatigfx
 		second_graphical_culture = mideastsamawatigfx
 		
-		color = { 0.5 0.5 0.95 }
+		color = { 0 1.0 0 }
 
 		male_names = {
 			Amir Ammar Adam_Adam Ahmed_Ahmad Ali_Ali Abdulrahman_Abdulrahman Abdullah_Abdullah Aziz Bilal
@@ -1862,7 +1846,7 @@ samawati_group = {
 		graphical_culture = afrosamawatigfx
 		second_graphical_culture = mideastsamawatigfx
 		
-		color = { 0.5 0.5 0.95 }
+		color = { 0 1.0 0 }
 
 		male_names = {
 			Amir Ammar Adam_Adam Ahmed_Ahmad Ali_Ali Abdulrahman_Abdulrahman Abdullah_Abdullah Aziz Bilal
@@ -1900,7 +1884,7 @@ samawati_group = {
 		graphical_culture = hispanicsamawatigfx
 		second_graphical_culture = anglosamawatigfx
 		
-		color = { 0.5 0.5 0.95 }
+		color = { 0 1.0 0 }
 
 		male_names = {
 			Amir Ammar Adam_Adam Ahmed_Ahmad Ali_Ali Abdulrahman_Abdulrahman Abdullah_Abdullah Aziz Bilal
@@ -1936,7 +1920,7 @@ samawati_group = {
 	indo_samawati = {
 		graphical_culture = indosamawatigfx
 		second_graphical_culture = mideastsamawatigfx
-		color = { 0.5 0.5 0.95 }
+		color = { 0 1.0 0 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
 			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
@@ -1971,8 +1955,7 @@ samawati_group = {
 	iranian_samawati = {
 		graphical_culture = persiansamawatigfx
 		second_graphical_culture = mideastsamawatigfx
-
-		color = { 0.5 0.5 0.95 }
+		color = { 0 1.0 0 }
 
 		male_names = {
 			Abbas Abolhassan Afshar_Afshar Ahmad_Ahmad Akbar_Akbar Ali Allahyar Amin Anushirvan_Anushirvan Aram Ardahan_Ardahan Ardavan_Ardavan Ardeshir_Ardeshir Assad Aurang Ayeshah Babak_Babak Bahman
@@ -2009,8 +1992,7 @@ samawati_group = {
 	japanese_samawati = {
 		graphical_culture = sinosamawatigfx
 		second_graphical_culture = mideastsamawatigfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 0 1.0 0 }
 
 		male_names = {
 			Amir Ammar Adam_Adam Ahmed_Ahmad Ali_Ali Abdulrahman_Abdulrahman Abdullah_Abdullah Aziz Bilal
@@ -2043,7 +2025,7 @@ samawati_group = {
 	mesoamerican_samawati = {
 		graphical_culture = amerisamawatigfx
 		second_graphical_culture = mideastsamawatigfx
-		color = { 0.5 0.5 0.95 }
+		color = { 0 1.0 0 }
 
 		male_names = {
 			Amir Ammar Adam_Adam Ahmed_Ahmad Ali_Ali Abdulrahman_Abdulrahman Abdullah_Abdullah Aziz Bilal
@@ -2079,8 +2061,7 @@ samawati_group = {
 	russo_samawati = {
 		graphical_culture = russosamawatigfx
 		second_graphical_culture = anglosamawatigfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 0 1.0 0 }
 
 		male_names = {
 			Amir Ammar Adam_Adam Ahmed_Ahmad Ali_Ali Abdulrahman_Abdulrahman Abdullah_Abdullah Aziz Bilal
@@ -2119,7 +2100,7 @@ samawati_group = {
 	sino_samawati = {
 		graphical_culture = sinosamawatigfx
 		second_graphical_culture = mideastsamawatigfx
-		color = { 0.5 0.5 0.95 }
+		color = { 0 1.0 0 }
 		
 
 		male_names = {
@@ -2153,8 +2134,7 @@ samawati_group = {
 	west_afro_samawati = {
 		graphical_culture = afrosamawatigfx
 		second_graphical_culture = mideastsamawatigfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 0 1.0 0 }
 
 		male_names = {
 			Amir Ammar Adam_Adam Ahmed_Ahmad Ali_Ali Abdulrahman_Abdulrahman Abdullah_Abdullah Aziz Bilal
@@ -2191,7 +2171,7 @@ angani_group = {
 	
 	anglo_angani = {
 		graphical_culture = angloconfederategfx
-		color = { 0.5 0.5 0.95 }
+		color = { 0.9 0.9 0.9 }
 
 		male_names = {
 			Amani Anasa Azize Baraka Darweshi Elimu Enzi
@@ -2226,8 +2206,7 @@ angani_group = {
 	
 	arab_angani = {
 		graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 0.9 0.9 0.9 }
 
 		male_names = {
 			Amani Anasa Azize Baraka Darweshi Elimu Enzi
@@ -2268,9 +2247,8 @@ angani_group = {
 
 	east_afro_angani = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.9 0.9 0.9 }
 
 		male_names = {
 			Amani Anasa Azize Baraka Darweshi Elimu Enzi
@@ -2308,9 +2286,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	ethiopian_angani = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.9 0.9 0.9 }
 
 		male_names = {
 			Amare Dahnay Desta Getachew Geteye Girma Iskinder Abai Abebe Afework Aman Assefa Atoberhan Azmera Bekele Benaim Berhanu
@@ -2345,9 +2322,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	hispanic_angani = {
 		graphical_culture = hispanicconfederategfx
-second_graphical_culture = angloconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = angloconfederategfx
+		color = { 0.9 0.9 0.9 }
 
 		male_names = {
 			Amani Anasa Azize Baraka Darweshi Elimu Enzi
@@ -2384,8 +2360,8 @@ second_graphical_culture = angloconfederategfx
 	
 	indo_angani = {
 		graphical_culture = indoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.9 0.9 0.9 }
 
 		male_names = {
 			Amani Anasa Azize Baraka Darweshi Elimu Enzi
@@ -2420,8 +2396,7 @@ second_graphical_culture = mideastconfederategfx
 	iranian_angani = {
 		graphical_culture = persianconfederategfx
 		second_graphical_culture = mideastconfederategfx
-
-		color = { 0.5 0.5 0.95 }
+		color = { 0.9 0.9 0.9 }
 
 		male_names = {
 			Amani Anasa Azize Baraka Darweshi Elimu Enzi
@@ -2458,9 +2433,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	japanese_angani = {
 		graphical_culture = sinoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.9 0.9 0.9 }
 
 		male_names = {
 			Amani Anasa Azize Baraka Darweshi Elimu Enzi
@@ -2494,7 +2468,7 @@ second_graphical_culture = mideastconfederategfx
 	}
 	mesoamerican_angani = {
 		graphical_culture = americonfederategfx
-		color = { 0.5 0.5 0.95 }
+		color = { 0.9 0.9 0.9 }
 
 		male_names = {
 			Amani Anasa Azize Baraka Darweshi Elimu Enzi
@@ -2532,8 +2506,7 @@ second_graphical_culture = mideastconfederategfx
 	russo_angani = {
 		graphical_culture = russoconfederategfx
 		second_graphical_culture = angloconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 0.9 0.9 0.9 }
 
 		male_names = {
 			Amani Anasa Azize Baraka Darweshi Elimu Enzi
@@ -2573,8 +2546,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	sino_angani = {
 		graphical_culture = sinoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.9 0.9 0.9 }
 
 		male_names = {
 			Amani Anasa Azize Baraka Darweshi Elimu Enzi
@@ -2608,9 +2581,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	west_afro_angani = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.9 0.9 0.9 }
 
 		male_names = {
 			Abi-Bakr Abubakari Akoi Alayaman Ali_Ali Ali-Fay Ali-Kolon Ali-Zalil Bad・Bakr Bakr-Kanbu Bamari Bankanu
@@ -2647,7 +2619,7 @@ frontiersman_group = {
 	
 	anglo_frontiersman = {
 		graphical_culture = anglofrontiergfx
-		color = { 0.5 0.5 0.95 }
+		color = { 0 0 1.0 }
 		male_names = {
 			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
 			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
@@ -2682,8 +2654,7 @@ frontiersman_group = {
 	
 	arab_frontiersman = {
 		graphical_culture = mideastfrontiergfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 0 0 1.0 }
 		male_names = {
 			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
 			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
@@ -2725,8 +2696,7 @@ frontiersman_group = {
 	east_afro_frontiersman = {
 		graphical_culture = afrofrontiergfx
 		second_graphical_culture = mideastfrontiergfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 0 0 1.0 }
 		male_names = {
 			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
 			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
@@ -2765,8 +2735,7 @@ frontiersman_group = {
 	ethiopian_frontiersman = {
 		graphical_culture = afrofrontiergfx
 		second_graphical_culture = mideastfrontiergfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 0 0 1.0 }
 		male_names = {
 			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
 			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
@@ -2805,8 +2774,7 @@ frontiersman_group = {
 	hispanic_frontiersman = {
 		graphical_culture = hispanicfrontiergfx
 		second_graphical_culture = anglofrontiergfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 0 0 1.0 }
 		male_names = {
 			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
 			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
@@ -2844,7 +2812,7 @@ frontiersman_group = {
 	indo_frontiersman = {
 		graphical_culture = indofrontiergfx
 		second_graphical_culture = mideastfrontiergfx
-		color = { 0.5 0.5 0.95 }
+		color = { 0 0 1.0 }
 		male_names = {
 			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
 			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
@@ -2879,8 +2847,7 @@ frontiersman_group = {
 	iranian_frontiersman = {
 		graphical_culture = persianfrontiergfx
 		second_graphical_culture = mideastfrontiergfx
-
-		color = { 0.5 0.5 0.95 }
+		color = { 0 0 1.0 }
 		male_names = {
 			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
 			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
@@ -2918,8 +2885,7 @@ frontiersman_group = {
 	japanese_frontiersman = {
 		graphical_culture = sinofrontiergfx
 		second_graphical_culture = mideastfrontiergfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 0 0 1.0 }
 		male_names = {
 			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
 			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
@@ -2954,8 +2920,7 @@ frontiersman_group = {
 	mesoamerican_frontiersman = {
 		graphical_culture = amerifrontiergfx
 		second_graphical_culture = mideastfrontiergfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 0 0 1.0 }
 		male_names = {
 			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
 			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
@@ -2993,8 +2958,7 @@ frontiersman_group = {
 	russo_frontiersman = {
 		graphical_culture = russofrontiergfx
 		second_graphical_culture = anglofrontiergfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 0 0 1.0 }
 		male_names = {
 			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
 			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
@@ -3035,7 +2999,7 @@ frontiersman_group = {
 	sino_frontiersman = {
 		graphical_culture = sinofrontiergfx
 		second_graphical_culture = mideastfrontiergfx
-		color = { 0.5 0.5 0.95 }
+		color = { 0 0 1.0 }
 		male_names = {
 			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
 			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
@@ -3070,8 +3034,7 @@ frontiersman_group = {
 	west_afro_frontiersman = {
 		graphical_culture = afrofrontiergfx
 		second_graphical_culture = mideastfrontiergfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 0 0 1.0 }
 		male_names = {
 			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
 			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
@@ -3110,7 +3073,7 @@ centauri_group = {
 	
 	anglo_centauri = {
 		graphical_culture = angloconfederategfx
-		color = { 0.5 0.5 0.95 }
+		color = { 0.1 0.1 0.1 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -3148,8 +3111,7 @@ centauri_group = {
 	
 	arab_centauri = {
 		graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 0.1 0.1 0.1 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -3193,9 +3155,8 @@ centauri_group = {
 
 	east_afro_centauri = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.1 0.1 0.1 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -3236,9 +3197,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	ethiopian_centauri = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.1 0.1 0.1 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -3279,9 +3239,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	hispanic_centauri = {
 		graphical_culture = hispanicconfederategfx
-second_graphical_culture = angloconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = angloconfederategfx
+		color = { 0.1 0.1 0.1 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -3321,8 +3280,8 @@ second_graphical_culture = angloconfederategfx
 	
 	indo_centauri = {
 		graphical_culture = indoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.1 0.1 0.1 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -3360,8 +3319,7 @@ second_graphical_culture = mideastconfederategfx
 	iranian_centauri = {
 		graphical_culture = persianconfederategfx
 		second_graphical_culture = mideastconfederategfx
-
-		color = { 0.5 0.5 0.95 }
+		color = { 0.1 0.1 0.1 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -3401,9 +3359,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	japanese_centauri = {
 		graphical_culture = sinoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.1 0.1 0.1 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -3440,7 +3397,7 @@ second_graphical_culture = mideastconfederategfx
 	}
 	mesoamerican_centauri = {
 		graphical_culture = americonfederategfx
-		color = { 0.5 0.5 0.95 }
+		color = { 0.1 0.1 0.1 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -3481,8 +3438,7 @@ second_graphical_culture = mideastconfederategfx
 	russo_centauri = {
 		graphical_culture = russoconfederategfx
 		second_graphical_culture = angloconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 0.1 0.1 0.1 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -3525,8 +3481,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	sino_centauri = {
 		graphical_culture = sinoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.1 0.1 0.1 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -3563,9 +3519,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	west_afro_centauri = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.1 0.1 0.1 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -3607,7 +3562,7 @@ tengoku_group = {
 	
 	anglo_tengoku = {
 		graphical_culture = angloconfederategfx
-		color = { 0.5 0.5 0.95 }
+		color = { 0 0.25 0 }
 		
 		male_names = {
 			Hiroshi Akira Kazuo Takashi Toshio Yoshio Hideo Masao Kiyoshi
@@ -3644,8 +3599,7 @@ tengoku_group = {
 	
 	arab_tengoku = {
 		graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 0 0.25 0 }
 		
 		male_names = {
 			Hiroshi Akira Kazuo Takashi Toshio Yoshio Hideo Masao Kiyoshi
@@ -3688,9 +3642,8 @@ tengoku_group = {
 
 	east_afro_tengoku = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0 0.25 0 }
 		
 		male_names = {
 			Hiroshi Akira Kazuo Takashi Toshio Yoshio Hideo Masao Kiyoshi
@@ -3730,9 +3683,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	ethiopian_tengoku = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0 0.25 0 }
 		
 		male_names = {
 			Hiroshi Akira Kazuo Takashi Toshio Yoshio Hideo Masao Kiyoshi
@@ -3772,9 +3724,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	hispanic_tengoku = {
 		graphical_culture = hispanicconfederategfx
-second_graphical_culture = angloconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = angloconfederategfx
+		color = { 0 0.25 0 }
 		
 		male_names = {
 			Hiroshi Akira Kazuo Takashi Toshio Yoshio Hideo Masao Kiyoshi
@@ -3813,8 +3764,8 @@ second_graphical_culture = angloconfederategfx
 	
 	indo_tengoku = {
 		graphical_culture = indoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0 0.25 0 }
 		
 		male_names = {
 			Hiroshi Akira Kazuo Takashi Toshio Yoshio Hideo Masao Kiyoshi
@@ -3851,8 +3802,7 @@ second_graphical_culture = mideastconfederategfx
 	iranian_tengoku = {
 		graphical_culture = persianconfederategfx
 		second_graphical_culture = mideastconfederategfx
-
-		color = { 0.5 0.5 0.95 }
+		color = { 0 0.25 0 }
 		
 		male_names = {
 			Hiroshi Akira Kazuo Takashi Toshio Yoshio Hideo Masao Kiyoshi
@@ -3891,9 +3841,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	japanese_tengoku = {
 		graphical_culture = sinoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0 0.25 0 }
 		
 		male_names = {
 			Hiroshi Akira Kazuo Takashi Toshio Yoshio Hideo Masao Kiyoshi
@@ -3929,7 +3878,7 @@ second_graphical_culture = mideastconfederategfx
 	}
 	mesoamerican_tengoku = {
 		graphical_culture = americonfederategfx
-		color = { 0.5 0.5 0.95 }
+		color = { 0 0.25 0 }
 		
 		male_names = {
 			Hiroshi Akira Kazuo Takashi Toshio Yoshio Hideo Masao Kiyoshi
@@ -3969,8 +3918,7 @@ second_graphical_culture = mideastconfederategfx
 	russo_tengoku = {
 		graphical_culture = russoconfederategfx
 		second_graphical_culture = angloconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 0 0.25 0 }
 		
 		male_names = {
 			Hiroshi Akira Kazuo Takashi Toshio Yoshio Hideo Masao Kiyoshi
@@ -4012,8 +3960,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	sino_tengoku = {
 		graphical_culture = sinoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0 0.25 0 }
 		
 		male_names = {
 			Hiroshi Akira Kazuo Takashi Toshio Yoshio Hideo Masao Kiyoshi
@@ -4049,9 +3997,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	west_afro_tengoku = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0 0.25 0 }
 		
 		male_names = {
 			Hiroshi Akira Kazuo Takashi Toshio Yoshio Hideo Masao Kiyoshi
@@ -4092,7 +4039,7 @@ bianjiangese_group = {
 	
 	anglo_bianjiangese = {
 		graphical_culture = angloconfederategfx
-		color = { 0.5 0.5 0.95 }
+		color = { 0.5 0 0.5 }
 		male_names = {
 			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
 			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
@@ -4127,8 +4074,7 @@ bianjiangese_group = {
 	
 	arab_bianjiangese = {
 		graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 0.5 0 0.5 }
 
 		male_names = {
 			Amir Ammar Adam_Adam Ahmed_Ahmad Ali_Ali Abdulrahman_Abdulrahman Abdullah_Abdullah Aziz Bilal
@@ -4167,9 +4113,8 @@ bianjiangese_group = {
 
 	east_afro_bianjiangese = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.5 0 0.5 }
 
 		male_names = {
 			Amani Anasa Azize Baraka Darweshi Elimu Enzi
@@ -4207,9 +4152,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	ethiopian_bianjiangese = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.5 0 0.5 }
 
 		male_names = {
 			Amare Dahnay Desta Getachew Geteye Girma Iskinder Abai Abebe Afework Aman Assefa Atoberhan Azmera Bekele Benaim Berhanu Berhanua Berihun Berta Bworo Daniachew Dawit Demissie Eremias Ezana Fasilidas Fethee Gabra Gebereal Gebre Gondar Hackeem Haeran Hagos Hakeem Hakiem Hakim Hakym Iskander_Alexander Iskinder_Alexander Iyasu Jima Kafa Kaleb Kelile Kelyle Kifle Lebna Lema Loua Mamo Mekonnen Melaku Mengesha Merille Miruts Negash Negasi Negus Ogbae Ogbai Oromo Rahad Selassie Semer Semere Sisay Tamirat Tariku Taye Tefere Teferi Teka Tekle Tengene Teruworq Tesfaye Tessema Tewodros Yacob Yohannas Yonas Zula
@@ -4240,9 +4184,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	hispanic_bianjiangese = {
 		graphical_culture = hispanicconfederategfx
-second_graphical_culture = angloconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = angloconfederategfx
+		color = { 0.5 0 0.5 }
 
 		male_names = {
 			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
@@ -4278,8 +4221,8 @@ second_graphical_culture = angloconfederategfx
 	
 	indo_bianjiangese = {
 		graphical_culture = indoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.5 0 0.5 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
 			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
@@ -4314,8 +4257,7 @@ second_graphical_culture = mideastconfederategfx
 	iranian_bianjiangese = {
 		graphical_culture = persianconfederategfx
 		second_graphical_culture = mideastconfederategfx
-
-		color = { 0.5 0.5 0.95 }
+		color = { 0.5 0 0.5 }
 
 		male_names = {
 			Abbas Abolhassan Afshar_Afshar Ahmad_Ahmad Akbar_Akbar Ali Allahyar Amin Anushirvan_Anushirvan Aram Ardahan_Ardahan Ardavan_Ardavan Ardeshir_Ardeshir Assad Aurang Ayeshah Babak_Babak Bahman
@@ -4351,9 +4293,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	japanese_bianjiangese = {
 		graphical_culture = sinoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.5 0 0.5 }
 		
 		male_names = {
 			Hiroshi Akira Kazuo Takashi Toshio Yoshio Hideo Masao Kiyoshi
@@ -4389,7 +4330,7 @@ second_graphical_culture = mideastconfederategfx
 	}
 	mesoamerican_bianjiangese = {
 		graphical_culture = americonfederategfx
-		color = { 0.5 0.5 0.95 }
+		color = { 0.5 0 0.5 }
 		
 		male_names = {
 			Acalan Acacitli Acamapichtli Acolmiztli Aculnahuacatl Ahuiliztli Ahuitzotl Atl Axayacatl Cacamatzin Chimalli Chimalpilli Chimalpopoca Cipac Coanacoch Coatl Cozahtli Cuauhtemoc Cuauhtl Cuetlachtli Cuetzpalli Cuixtli Cuitlahuac 
@@ -4423,8 +4364,7 @@ second_graphical_culture = mideastconfederategfx
 	russo_bianjiangese = {
 		graphical_culture = russoconfederategfx
 		second_graphical_culture = angloconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 0.5 0 0.5 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -4467,8 +4407,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	sino_bianjiangese = {
 		graphical_culture = sinoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.5 0 0.5 }
 		
 		male_names = {
 			An Bo Bin Cheng
@@ -4499,9 +4439,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	west_afro_bianjiangese = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.5 0 0.5 }
 
 		male_names = {
 			Abi-Bakr Abubakari Akoi Alayaman Ali_Ali Ali-Fay Ali-Kolon Ali-Zalil Bad・Bakr Bakr-Kanbu Bamari Bankanu
@@ -4538,7 +4477,7 @@ orion_group = {
 	
 	anglo_orion = {
 		graphical_culture = angloconfederategfx
-		color = { 0.5 0.5 0.95 }
+		color = { 0.25 0.25 0.25 }
 		male_names = {
 			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
 			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
@@ -4573,8 +4512,7 @@ orion_group = {
 	
 	arab_orion = {
 		graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 0.25 0.25 0.25 }
 
 		male_names = {
 			Amir Ammar Adam_Adam Ahmed_Ahmad Ali_Ali Abdulrahman_Abdulrahman Abdullah_Abdullah Aziz Bilal
@@ -4613,9 +4551,8 @@ orion_group = {
 
 	east_afro_orion = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.25 0.25 0.25 }
 
 		male_names = {
 			Amani Anasa Azize Baraka Darweshi Elimu Enzi
@@ -4653,9 +4590,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	ethiopian_orion = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.25 0.25 0.25 }
 
 		male_names = {
 			Amare Dahnay Desta Getachew Geteye Girma Iskinder Abai Abebe Afework Aman Assefa Atoberhan Azmera Bekele Benaim Berhanu Berhanua Berihun Berta Bworo Daniachew Dawit Demissie Eremias Ezana Fasilidas Fethee Gabra Gebereal Gebre Gondar Hackeem Haeran Hagos Hakeem Hakiem Hakim Hakym Iskander_Alexander Iskinder_Alexander Iyasu Jima Kafa Kaleb Kelile Kelyle Kifle Lebna Lema Loua Mamo Mekonnen Melaku Mengesha Merille Miruts Negash Negasi Negus Ogbae Ogbai Oromo Rahad Selassie Semer Semere Sisay Tamirat Tariku Taye Tefere Teferi Teka Tekle Tengene Teruworq Tesfaye Tessema Tewodros Yacob Yohannas Yonas Zula
@@ -4686,9 +4622,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	hispanic_orion = {
 		graphical_culture = hispanicconfederategfx
-second_graphical_culture = angloconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = angloconfederategfx
+		color = { 0.25 0.25 0.25 }
 
 		male_names = {
 			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
@@ -4724,8 +4659,8 @@ second_graphical_culture = angloconfederategfx
 	
 	indo_orion = {
 		graphical_culture = indoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.25 0.25 0.25 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
 			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
@@ -4761,7 +4696,7 @@ second_graphical_culture = mideastconfederategfx
 		graphical_culture = persianconfederategfx
 		second_graphical_culture = mideastconfederategfx
 
-		color = { 0.5 0.5 0.95 }
+		color = { 0.25 0.25 0.25 }
 
 		male_names = {
 			Abbas Abolhassan Afshar_Afshar Ahmad_Ahmad Akbar_Akbar Ali Allahyar Amin Anushirvan_Anushirvan Aram Ardahan_Ardahan Ardavan_Ardavan Ardeshir_Ardeshir Assad Aurang Ayeshah Babak_Babak Bahman
@@ -4797,9 +4732,9 @@ second_graphical_culture = mideastconfederategfx
 	}
 	japanese_orion = {
 		graphical_culture = sinoconfederategfx
-second_graphical_culture = mideastconfederategfx
+		second_graphical_culture = mideastconfederategfx
 		
-		color = { 0.5 0.5 0.95 }
+		color = { 0.25 0.25 0.25 }
 		
 		male_names = {
 			Hiroshi Akira Kazuo Takashi Toshio Yoshio Hideo Masao Kiyoshi
@@ -4835,7 +4770,7 @@ second_graphical_culture = mideastconfederategfx
 	}
 	mesoamerican_orion = {
 		graphical_culture = americonfederategfx
-		color = { 0.5 0.5 0.95 }
+		color = { 0.25 0.25 0.25 }
 		
 		male_names = {
 			Acalan Acacitli Acamapichtli Acolmiztli Aculnahuacatl Ahuiliztli Ahuitzotl Atl Axayacatl Cacamatzin Chimalli Chimalpilli Chimalpopoca Cipac Coanacoch Coatl Cozahtli Cuauhtemoc Cuauhtl Cuetlachtli Cuetzpalli Cuixtli Cuitlahuac 
@@ -4870,7 +4805,7 @@ second_graphical_culture = mideastconfederategfx
 		graphical_culture = russoconfederategfx
 		second_graphical_culture = angloconfederategfx
 		
-		color = { 0.5 0.5 0.95 }
+		color = { 0.25 0.25 0.25 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -4913,8 +4848,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	sino_orion = {
 		graphical_culture = sinoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.25 0.25 0.25 }
 		
 		male_names = {
 			An Bo Bin Cheng
@@ -4945,9 +4880,9 @@ second_graphical_culture = mideastconfederategfx
 	}
 	west_afro_orion = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
+		second_graphical_culture = mideastconfederategfx
 		
-		color = { 0.5 0.5 0.95 }
+		color = { 0.25 0.25 0.25 }
 
 		male_names = {
 			Abi-Bakr Abubakari Akoi Alayaman Ali_Ali Ali-Fay Ali-Kolon Ali-Zalil Bad・Bakr Bakr-Kanbu Bamari Bankanu
@@ -5876,7 +5811,7 @@ avalonian_group = {
 	
 	anglo_avalonian = {
 		graphical_culture = angloconfederategfx
-		color = { 0.5 0.5 0.95 }
+		color = { 0.25 0 0 }
 		male_names = {
 			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
 			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
@@ -5911,8 +5846,7 @@ avalonian_group = {
 	
 	arab_avalonian = {
 		graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 0.25 0 0 }
 
 		male_names = {
 			Amir Ammar Adam_Adam Ahmed_Ahmad Ali_Ali Abdulrahman_Abdulrahman Abdullah_Abdullah Aziz Bilal
@@ -5951,9 +5885,8 @@ avalonian_group = {
 
 	east_afro_avalonian = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.25 0 0 }
 
 		male_names = {
 			Amani Anasa Azize Baraka Darweshi Elimu Enzi
@@ -5991,9 +5924,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	ethiopian_avalonian = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.25 0 0 }
 
 		male_names = {
 			Amare Dahnay Desta Getachew Geteye Girma Iskinder Abai Abebe Afework Aman Assefa Atoberhan Azmera Bekele Benaim Berhanu Berhanua Berihun Berta Bworo Daniachew Dawit Demissie Eremias Ezana Fasilidas Fethee Gabra Gebereal Gebre Gondar Hackeem Haeran Hagos Hakeem Hakiem Hakim Hakym Iskander_Alexander Iskinder_Alexander Iyasu Jima Kafa Kaleb Kelile Kelyle Kifle Lebna Lema Loua Mamo Mekonnen Melaku Mengesha Merille Miruts Negash Negasi Negus Ogbae Ogbai Oromo Rahad Selassie Semer Semere Sisay Tamirat Tariku Taye Tefere Teferi Teka Tekle Tengene Teruworq Tesfaye Tessema Tewodros Yacob Yohannas Yonas Zula
@@ -6024,9 +5956,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	hispanic_avalonian = {
 		graphical_culture = hispanicconfederategfx
-second_graphical_culture = angloconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = angloconfederategfx
+		color = { 0.25 0 0 }
 
 		male_names = {
 			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
@@ -6062,8 +5993,8 @@ second_graphical_culture = angloconfederategfx
 	
 	indo_avalonian = {
 		graphical_culture = indoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.25 0 0 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
 			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
@@ -6098,8 +6029,7 @@ second_graphical_culture = mideastconfederategfx
 	iranian_avalonian = {
 		graphical_culture = persianconfederategfx
 		second_graphical_culture = mideastconfederategfx
-
-		color = { 0.5 0.5 0.95 }
+		color = { 0.25 0 0 }
 
 		male_names = {
 			Abbas Abolhassan Afshar_Afshar Ahmad_Ahmad Akbar_Akbar Ali Allahyar Amin Anushirvan_Anushirvan Aram Ardahan_Ardahan Ardavan_Ardavan Ardeshir_Ardeshir Assad Aurang Ayeshah Babak_Babak Bahman
@@ -6135,9 +6065,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	japanese_avalonian = {
 		graphical_culture = sinoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.25 0 0 }
 		
 		male_names = {
 			Hiroshi Akira Kazuo Takashi Toshio Yoshio Hideo Masao Kiyoshi
@@ -6173,7 +6102,7 @@ second_graphical_culture = mideastconfederategfx
 	}
 	mesoamerican_avalonian = {
 		graphical_culture = americonfederategfx
-		color = { 0.5 0.5 0.95 }
+		color = { 0.25 0 0 }
 		
 		male_names = {
 			Acalan Acacitli Acamapichtli Acolmiztli Aculnahuacatl Ahuiliztli Ahuitzotl Atl Axayacatl Cacamatzin Chimalli Chimalpilli Chimalpopoca Cipac Coanacoch Coatl Cozahtli Cuauhtemoc Cuauhtl Cuetlachtli Cuetzpalli Cuixtli Cuitlahuac 
@@ -6207,8 +6136,7 @@ second_graphical_culture = mideastconfederategfx
 	russo_avalonian = {
 		graphical_culture = russoconfederategfx
 		second_graphical_culture = angloconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 0.25 0 0 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -6251,8 +6179,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	sino_avalonian = {
 		graphical_culture = sinoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.25 0 0 }
 		
 		male_names = {
 			An Bo Bin Cheng
@@ -6283,9 +6211,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	west_afro_avalonian = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.25 0 0 }
 
 		male_names = {
 			Abi-Bakr Abubakari Akoi Alayaman Ali_Ali Ali-Fay Ali-Kolon Ali-Zalil Bad・Bakr Bakr-Kanbu Bamari Bankanu
@@ -6322,6 +6249,7 @@ strugatskite_group = {
 	
 	anglo_strugatskite = {
 		graphical_culture = angloconfederategfx
+		color = { 1.0 0 0 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -6359,8 +6287,7 @@ strugatskite_group = {
 	
 	arab_strugatskite = {
 		graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 1.0 0 0 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -6404,9 +6331,8 @@ strugatskite_group = {
 
 	east_afro_strugatskite = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 1.0 0 0 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -6447,9 +6373,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	ethiopian_strugatskite = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 1.0 0 0 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -6490,9 +6415,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	hispanic_strugatskite = {
 		graphical_culture = hispanicconfederategfx
-second_graphical_culture = angloconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = angloconfederategfx
+		color = { 1.0 0 0 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -6532,8 +6456,8 @@ second_graphical_culture = angloconfederategfx
 	
 	indo_strugatskite = {
 		graphical_culture = indoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 1.0 0 0 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -6571,8 +6495,7 @@ second_graphical_culture = mideastconfederategfx
 	iranian_strugatskite = {
 		graphical_culture = persianconfederategfx
 		second_graphical_culture = mideastconfederategfx
-
-		color = { 0.5 0.5 0.95 }
+		color = { 1.0 0 0 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -6612,9 +6535,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	japanese_strugatskite = {
 		graphical_culture = sinoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 1.0 0 0 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -6651,7 +6573,7 @@ second_graphical_culture = mideastconfederategfx
 	}
 	mesoamerican_strugatskite = {
 		graphical_culture = americonfederategfx
-		color = { 0.5 0.5 0.95 }
+		color = { 1.0 0 0 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -6692,8 +6614,7 @@ second_graphical_culture = mideastconfederategfx
 	russo_strugatskite = {
 		graphical_culture = russoconfederategfx
 		second_graphical_culture = angloconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 1.0 0 0 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -6736,8 +6657,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	sino_strugatskite = {
 		graphical_culture = sinoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 1.0 0 0 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -6774,9 +6695,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	west_afro_strugatskite = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 1.0 0 0 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -6818,7 +6738,7 @@ edemite_group = {
 	
 	anglo_edemite = {
 		graphical_culture = angloconfederategfx
-		color = { 0.5 0.5 0.95 }
+		color = { 0 0.5 0 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -6856,8 +6776,7 @@ edemite_group = {
 	
 	arab_edemite = {
 		graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 0 0.5 0 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -6901,9 +6820,8 @@ edemite_group = {
 
 	east_afro_edemite = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0 0.5 0 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -6944,9 +6862,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	ethiopian_edemite = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0 0.5 0 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -6987,9 +6904,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	hispanic_edemite = {
 		graphical_culture = hispanicconfederategfx
-second_graphical_culture = angloconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = angloconfederategfx
+		color = { 0 0.5 0 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -7029,8 +6945,8 @@ second_graphical_culture = angloconfederategfx
 	
 	indo_edemite = {
 		graphical_culture = indoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0 0.5 0 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -7068,8 +6984,7 @@ second_graphical_culture = mideastconfederategfx
 	iranian_edemite = {
 		graphical_culture = persianconfederategfx
 		second_graphical_culture = mideastconfederategfx
-
-		color = { 0.5 0.5 0.95 }
+		color = { 0 0.5 0 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -7109,9 +7024,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	japanese_edemite = {
 		graphical_culture = sinoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0 0.5 0 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -7148,7 +7062,7 @@ second_graphical_culture = mideastconfederategfx
 	}
 	mesoamerican_edemite = {
 		graphical_culture = americonfederategfx
-		color = { 0.5 0.5 0.95 }
+		color = { 0 0.5 0 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -7189,8 +7103,7 @@ second_graphical_culture = mideastconfederategfx
 	russo_edemite = {
 		graphical_culture = russoconfederategfx
 		second_graphical_culture = angloconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		color = { 0 0.5 0 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -7233,8 +7146,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	sino_edemite = {
 		graphical_culture = sinoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0 0.5 0 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
@@ -7271,9 +7184,8 @@ second_graphical_culture = mideastconfederategfx
 	}
 	west_afro_edemite = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0 0.5 0 }
 
 		male_names = {
 			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom

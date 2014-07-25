@@ -170,290 +170,419 @@ character_event = {
 	}
 }
 
-# # Special: Strictly speaking, usurping things IS against the law
-# character_event = {
-	# id = usurpation.200
-	# desc = "EVTDESCUSURPATION200"
-	# picture = GFX_evt_scandal
-	# is_triggered_only = yes
+# Special: Strictly speaking, usurping things IS against the law
+character_event = {
+	id = usurpation.200
+	desc = "EVTDESCUSURPATION200"
+	picture = GFX_evt_scandal
+	is_triggered_only = yes
 	
-	# trigger = {
-		# independent = no
-		# NOT = { liege = { character = FROMFROM } }
-		# same_realm = FROMFROM
-	# }
+	trigger = {
+		independent = no
+		NOT = { liege = { character = FROMFROM } }
+		same_realm = FROMFROM
+	}
 	
-	# option = {
-		# name = "EVTOPTAUSURPATION200"
-		# hidden_tooltip = { FROMFROM = { character_event = { id = usurpation.201 } } }
-	# }
-# }
+	option = {
+		name = "EVTOPTAUSURPATION200"
+		hidden_tooltip = { FROMFROM = { character_event = { id = usurpation.201 } } }
+	}
+}
 
-# character_event = {
-	# id = usurpation.201
-	# hide_window = yes
-	# is_triggered_only = yes
+character_event = {
+	id = usurpation.201
+	hide_window = yes
+	is_triggered_only = yes
 	
-	# immediate = { FROM = { liege = { character_event = { id = usurpation.202 } } } }
-# }
+	immediate = { FROM = { liege = { character_event = { id = usurpation.202 } } } }
+}
 
-# # A vassal of yours has usurped a title
-# character_event = {
-	# id = usurpation.202
-	# desc = "EVTDESCUSURPATION202"
-	# picture = GFX_evt_scandal
-	# is_triggered_only = yes
+# A vassal of yours has usurped a title
+character_event = {
+	id = usurpation.202
+	desc = "EVTDESCUSURPATION202"
+	picture = GFX_evt_scandal
+	is_triggered_only = yes
 	
-	# option = {
-		# name = "EVTOPTAUSURPATION202" # I'll have no such treachery in my realm
-		# religion_authority = { modifier = peacekeeping years = 10 }
-		# FROMFROM = {
-			# opinion = { who = ROOT modifier = opinion_denounced_attack_by_me }
-			# character_event = { id = usurpation.203 tooltip = "EVTTOOLTIPUSURPATION203" }
-		# }
-		# FROM = {
-			# opinion = { who = ROOT modifier = opinion_denounced_attack_on_me }
-			# character_event = { id = usurpation.204 tooltip = "EVTTOOLTIPUSURPATION204" }
-		# }
-		# ai_chance = {
-			# factor = 50
-			# # Opinion of those involved
-			# modifier = {
-				# factor = 1.25
-				# opinion = { who = FROM value = 100 }
-			# }
-			# modifier = {
-				# factor = 1.25
-				# opinion = { who = FROM value = 90 }
-			# }
-			# modifier = {
-				# factor = 1.25
-				# opinion = { who = FROM value = 80 }
-			# }
-			# modifier = {
-				# factor = 1.25
-				# opinion = { who = FROM value = 70 }
-			# }
-			# modifier = {
-				# factor = 1.25
-				# opinion = { who = FROM value = 60 }
-			# }
-			# modifier = {
-				# factor = 1.25
-				# opinion = { who = FROM value = 50 }
-			# }
-			# modifier = {
-				# factor = 1.25
-				# opinion = { who = FROM value = 40 }
-			# }
-			# modifier = {
-				# factor = 1.25
-				# opinion = { who = FROM value = 30 }
-			# }
-			# modifier = {
-				# factor = 1.25
-				# opinion = { who = FROM value = 20 }
-			# }
-			# modifier = {
-				# factor = 1.25
-				# opinion = { who = FROM value = 10 }
-			# }
-			# modifier = {
-				# factor = 0.8
-				# NOT = { opinion = { who = FROM value = -9 } }
-			# }
-			# modifier = {
-				# factor = 0.8
-				# NOT = { opinion = { who = FROM value = -19 } }
-			# }
-			# modifier = {
-				# factor = 0.8
-				# NOT = { opinion = { who = FROM value = -29 } }
-			# }
-			# modifier = {
-				# factor = 0.8
-				# NOT = { opinion = { who = FROM value = -39 } }
-			# }
-			# modifier = {
-				# factor = 0.8
-				# NOT = { opinion = { who = FROM value = -49 } }
-			# }
-			# modifier = {
-				# factor = 0.8
-				# NOT = { opinion = { who = FROM value = -59 } }
-			# }
-			# modifier = {
-				# factor = 0.8
-				# NOT = { opinion = { who = FROM value = -69 } }
-			# }
-			# modifier = {
-				# factor = 0.8
-				# NOT = { opinion = { who = FROM value = -79 } }
-			# }
-			# modifier = {
-				# factor = 0.8
-				# NOT = { opinion = { who = FROM value = -89 } }
-			# }
-			# modifier = {
-				# factor = 0.8
-				# NOT = { opinion = { who = FROM value = -99 } }
-			# }
-			# modifier = {
-				# factor = 0.8
-				# opinion = { who = FROMFROM value = 100 }
-			# }
-			# modifier = {
-				# factor = 0.8
-				# opinion = { who = FROMFROM value = 90 }
-			# }
-			# modifier = {
-				# factor = 0.8
-				# opinion = { who = FROMFROM value = 80 }
-			# }
-			# modifier = {
-				# factor = 0.8
-				# opinion = { who = FROMFROM value = 70 }
-			# }
-			# modifier = {
-				# factor = 0.8
-				# opinion = { who = FROMFROM value = 60 }
-			# }
-			# modifier = {
-				# factor = 0.8
-				# opinion = { who = FROMFROM value = 50 }
-			# }
-			# modifier = {
-				# factor = 0.8
-				# opinion = { who = FROMFROM value = 40 }
-			# }
-			# modifier = {
-				# factor = 0.8
-				# opinion = { who = FROMFROM value = 30 }
-			# }
-			# modifier = {
-				# factor = 0.8
-				# opinion = { who = FROMFROM value = 20 }
-			# }
-			# modifier = {
-				# factor = 0.8
-				# opinion = { who = FROMFROM value = 10 }
-			# }
-			# modifier = {
-				# factor = 1.25
-				# NOT = { opinion = { who = FROMFROM value = -9 } }
-			# }
-			# modifier = {
-				# factor = 1.25
-				# NOT = { opinion = { who = FROMFROM value = -19 } }
-			# }
-			# modifier = {
-				# factor = 1.25
-				# NOT = { opinion = { who = FROMFROM value = -29 } }
-			# }
-			# modifier = {
-				# factor = 1.25
-				# NOT = { opinion = { who = FROMFROM value = -39 } }
-			# }
-			# modifier = {
-				# factor = 1.25
-				# NOT = { opinion = { who = FROMFROM value = -49 } }
-			# }
-			# modifier = {
-				# factor = 1.25
-				# NOT = { opinion = { who = FROMFROM value = -59 } }
-			# }
-			# modifier = {
-				# factor = 1.25
-				# NOT = { opinion = { who = FROMFROM value = -69 } }
-			# }
-			# modifier = {
-				# factor = 1.25
-				# NOT = { opinion = { who = FROMFROM value = -79 } }
-			# }
-			# modifier = {
-				# factor = 1.25
-				# NOT = { opinion = { who = FROMFROM value = -89 } }
-			# }
-			# modifier = {
-				# factor = 1.25
-				# NOT = { opinion = { who = FROMFROM value = -99 } }
-			# }
-			# # Political concerns
-			# modifier = {
-				# factor = 2
-				# NOT = { trait = imbecile }
-				# NOT = { trait = slow }
-				# NOT = { trait = lunatic }
-				# NOT = { trait = radical }
-				# FROM = {
-					# liege = { character = ROOT }
-					# relative_power_to_liege = 0.25
-				# }
-			# }
-			# modifier = {
-				# factor = 2
-				# NOT = { trait = imbecile }
-				# NOT = { trait = slow }
-				# NOT = { trait = lunatic }
-				# NOT = { trait = radical }
-				# FROM = {
-					# liege = { character = ROOT }
-					# relative_power_to_liege = 0.5
-				# }
-			# }
-			# modifier = {
-				# factor = 2
-				# NOT = { trait = imbecile }
-				# NOT = { trait = lunatic }
-				# NOT = { trait = radical }
-				# FROM = {
-					# liege = { character = ROOT }
-					# relative_power_to_liege = 0.75
-				# }
-			# }
-			# modifier = {
-				# factor = 2
-				# NOT = { trait = imbecile }
-				# NOT = { trait = lunatic }
-				# NOT = { trait = radical }
-				# FROM = {
-					# liege = { character = ROOT }
-					# relative_power_to_liege = 1
-				# }
-			# }
-			# modifier = {
-				# factor = 0.5
-				# NOT = { trait = imbecile }
-				# NOT = { trait = slow }
-				# NOT = { trait = lunatic }
-				# NOT = { trait = radical }
-				# FROMFROM = { relative_power_to_liege = 0.25 }
-			# }
-			# modifier = {
-				# factor = 0.5
-				# NOT = { trait = imbecile }
-				# NOT = { trait = slow }
-				# NOT = { trait = lunatic }
-				# NOT = { trait = radical }
-				# FROMFROM = { relative_power_to_liege = 0.5 }
-			# }
-			# modifier = {
-				# factor = 0.5
-				# NOT = { trait = imbecile }
-				# NOT = { trait = lunatic }
-				# NOT = { trait = radical }
-				# FROMFROM = { relative_power_to_liege = 0.75 }
-			# }
-			# modifier = {
-				# factor = 0.5
-				# NOT = { trait = imbecile }
-				# NOT = { trait = lunatic }
-				# NOT = { trait = radical }
-				# FROMFROM = { relative_power_to_liege = 1 }
-			# }
-		# }
-	# }
+	option = {
+		name = "EVTOPTAUSURPATION202" # I'll have no such treachery in my realm
+		religion_authority = { modifier = peacekeeping years = 30 }
+		FROMFROM = {
+			opinion = { who = ROOT modifier = opinion_denounced_attack_by_me }
+			hidden_tooltip = { reverse_opinion = { who = ROOT modifier = opinion_criminal_treason } }
+			character_event = { id = usurpation.203 tooltip = "EVTTOOLTIPUSURPATION203" }
+		}
+		FROM = {
+			opinion = { who = ROOT modifier = opinion_denounced_attack_on_me }
+			character_event = { id = usurpation.204 tooltip = "EVTTOOLTIPUSURPATION204" }
+		}
+		ai_chance = {
+			factor = 50
+			# Opinion of those involved
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 100 }
+				NOT = { trait = cold }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 90 }
+				NOT = { trait = cold }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 80 }
+				NOT = { trait = cold }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 70 }
+				NOT = { trait = cold }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 60 }
+				NOT = { trait = cold }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 50 }
+				NOT = { trait = cold }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 40 }
+				NOT = { trait = cold }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 30 }
+				NOT = { trait = cold }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 20 }
+				NOT = { trait = cold }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 10 }
+				NOT = { trait = cold }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -9 } }
+				NOT = { trait = friendly }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -19 } }
+				NOT = { trait = friendly }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -29 } }
+				NOT = { trait = friendly }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -39 } }
+				NOT = { trait = friendly }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -49 } }
+				NOT = { trait = friendly }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -59 } }
+				NOT = { trait = friendly }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -69 } }
+				NOT = { trait = friendly }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -79 } }
+				NOT = { trait = friendly }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -89 } }
+				NOT = { trait = friendly }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -99 } }
+				NOT = { trait = friendly }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -99 } }
+				NOT = { trait = friendly }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -89 } }
+				NOT = { trait = friendly }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -79 } }
+				NOT = { trait = friendly }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -69 } }
+				NOT = { trait = friendly }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -59 } }
+				NOT = { trait = friendly }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -49 } }
+				NOT = { trait = friendly }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -39 } }
+				NOT = { trait = friendly }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -29 } }
+				NOT = { trait = friendly }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -19 } }
+				NOT = { trait = friendly }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -9 } }
+				NOT = { trait = friendly }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 10 }
+				NOT = { trait = cold }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 20 }
+				NOT = { trait = cold }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 30 }
+				NOT = { trait = cold }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 40 }
+				NOT = { trait = cold }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 50 }
+				NOT = { trait = cold }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 60 }
+				NOT = { trait = cold }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 70 }
+				NOT = { trait = cold }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 80 }
+				NOT = { trait = cold }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 90 }
+				NOT = { trait = cold }
+			}
+			modifier = {
+				factor = 0.8
+				opinion = { who = FROMFROM value = 100 }
+				NOT = { trait = cold }
+			}
+			# Political concerns
+			modifier = {
+				factor = 0.5
+				FROMFROM = {
+					liege = { character = ROOT }
+					relative_power_to_liege = 0.2
+				}
+				NOT = { trait = lunatic }
+				NOT = { trait = imbecile }
+				NOT = { trait = proud }
+				NOT = { trait = radical }
+			}
+			modifier = {
+				factor = 0.5
+				FROMFROM = {
+					liege = { character = ROOT }
+					relative_power_to_liege = 0.4
+				}
+				NOT = { trait = lunatic }
+				NOT = { trait = imbecile }
+				NOT = { trait = proud }
+				NOT = { trait = radical }
+			}
+			modifier = {
+				factor = 0.5
+				FROMFROM = {
+					liege = { character = ROOT }
+					relative_power_to_liege = 0.6
+				}
+				NOT = { trait = lunatic }
+				NOT = { trait = imbecile }
+				NOT = { trait = proud }
+				NOT = { trait = radical }
+			}
+			modifier = {
+				factor = 0.5
+				FROMFROM = {
+					liege = { character = ROOT }
+					relative_power_to_liege = 0.8
+				}
+				NOT = { trait = lunatic }
+				NOT = { trait = imbecile }
+				NOT = { trait = proud }
+				NOT = { trait = radical }
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					liege = { character = ROOT }
+					relative_power_to_liege = 0.2
+				}
+				NOT = { trait = lunatic }
+				NOT = { trait = imbecile }
+				NOT = { trait = proud }
+				NOT = { trait = radical }
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					liege = { character = ROOT }
+					relative_power_to_liege = 0.4
+				}
+				NOT = { trait = lunatic }
+				NOT = { trait = imbecile }
+				NOT = { trait = proud }
+				NOT = { trait = radical }
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					liege = { character = ROOT }
+					relative_power_to_liege = 0.6
+				}
+				NOT = { trait = lunatic }
+				NOT = { trait = imbecile }
+				NOT = { trait = proud }
+				NOT = { trait = radical }
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					liege = { character = ROOT }
+					relative_power_to_liege = 0.8
+				}
+				NOT = { trait = lunatic }
+				NOT = { trait = imbecile }
+				NOT = { trait = proud }
+				NOT = { trait = radical }
+			}
+			modifier = {
+				factor = 0.2
+				any_allied_character = { character = FROMFROM }
+				NOT = { trait = radical }
+				NOT = { trait = cold }
+			}
+			modifier = {
+				factor = 5
+				any_allied_character = { character = FROM }
+				NOT = { trait = radical }
+				NOT = { trait = cold }
+			}
+			
+			# Duty
+			modifier = {
+				factor = 2
+				religion_authority = 0.25
+			}
+			modifier = {
+				factor = 2
+				religion_authority = 0.5
+			}
+			modifier = {
+				factor = 2
+				religion_authority = 0.75
+			}
+			modifier = {
+				factor = 2
+				trait = radical
+			}
+		}
+	}
 	
-	# success = {
-	# }
-# }
+	option = {
+		name = "EVTOPTBUSURPATION202" # None of my business
+		FROMFROM = {
+			opinion = { who = ROOT modifier = opinion_ignored_attack_by_me }
+			character_event = { id = usurpation.205 tooltip = "EVTTOOLTIPUSURPATION205" }
+		}
+		FROM = {
+			opinion = { who = ROOT modifier = opinion_ignored_attack_on_me }
+			character_event = { id = usurpation.206 tooltip = "EVTTOOLTIPUSURPATION206" }
+		}
+		ai_chance = { factor = 50 }
+	}
+}
+character_event = {
+	id = usurpation.203
+	desc = "EVTDESCUSURPATION203"
+	picture = GFX_evt_scandal
+	is_triggered_only = yes
+	
+	option = { name = "EVOPTCONFIRM" }
+}
+character_event = {
+	id = usurpation.204
+	desc = "EVTDESCUSURPATION204"
+	picture = GFX_evt_scandal
+	is_triggered_only = yes
+	
+	option = { name = "EVOPTCONFIRM" }
+}
+character_event = {
+	id = usurpation.205
+	desc = "EVTDESCUSURPATION205"
+	picture = GFX_evt_scandal
+	is_triggered_only = yes
+	
+	option = { name = "EVOPTCONFIRM" }
+}
+character_event = {
+	id = usurpation.206
+	desc = "EVTDESCUSURPATION206"
+	picture = GFX_evt_scandal
+	is_triggered_only = yes
+	
+	option = { name = "EVOPTCONFIRM" }
+}

@@ -1,0 +1,18 @@
+# 177 - Arkanar
+
+# County Title
+title = c_arkanar
+
+# Settlements
+max_settlements = 6
+b_arkanar_i = temple
+b_arkanar_ii = city
+b_arkanar_iii = castle
+b_arkanar_iv = city
+b_arkanar_v = temple
+
+# Misc
+culture = russo_strugatskite
+religion = neo_socialist
+
+# History

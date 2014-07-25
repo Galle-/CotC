@@ -1,0 +1,11 @@
+2900.1.1 = {
+	law = succ_open_elective
+	law = true_cognatic_succession
+	law = centralization_4
+	law = military_vassal_legitimacy_2
+	law = republic_vassal_legitimacy_1
+	law = theocracy_vassal_legitimacy_2
+	liege = "e_terran_confederation"
+}
+
+2998.1.1 = { holder = "11011583" } # Kirill Pozharsky

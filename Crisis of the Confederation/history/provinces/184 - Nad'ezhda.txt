@@ -1,0 +1,16 @@
+# 184 - Nad'ezhda
+
+# County Title
+title = c_nadezhda
+
+# Settlements
+max_settlements = 4
+b_nadezhda_i = temple
+b_nadezhda_ii = city
+b_nadezhda_iii = castle
+
+# Misc
+culture = russo_strugatskite
+religion = neo_socialist
+
+# History

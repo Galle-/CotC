@@ -1,0 +1,376 @@
+11011583 = {
+	# Director-General of Strugatsky
+	name = "Kirill"
+	dynasty = 11583 # Pozharsky
+	female = no
+	
+	religion = neo_socialist
+	culture = russo_strugatskite
+	
+	2957.1.1 = { birth = "2957.1.1" }
+}
+
+1208911 = {
+	# Father of Margita and Igor Uchida
+	# Chief scientist for Strugatsky
+	name = "Dmitriy"
+	dynasty = 8911 # Uchida
+	female = no
+	
+	religion = neo_socialist
+	culture = japanese_strugatskite
+	
+	trait = mastermind_scholar
+	trait = intellectual
+	trait = open_minded
+	trait = skeptical
+	trait = carefree
+	
+	employer = 11011583 # Kirill Pozharsky
+	
+	2924.1.1 = { birth = "2924.1.1" }
+	2948.1.1 = {
+		add_spouse = 11013551 # Alexandra Xiong
+		effect = { spouse = { add_lover = ROOT } }
+	}
+}
+11013551 = {
+	# Wife of Dmitriy Uchida
+	name = "Alexandra"
+	dynasty = 13551 # Xiong
+	female = yes
+	
+	religion = neo_socialist
+	culture = sino_strugatskite
+	
+	2926.1.1 = { birth = "2926.1.1" }
+}
+
+11011279 = {
+	# Commander of the Strugatsky Armed Forces
+	name = "Viktor"
+	dynasty = 11279 # Loban
+	female = no
+	
+	religion = neo_socialist
+	culture = russo_strugatskite
+	
+	trait = brilliant_strategist
+	trait = fighter_pilot
+	trait = radical
+	trait = proud
+	
+	father = 11010783 # Nikolai Yefimov
+	mother = 12011279 # Galina Loban
+	
+	2947.1.1 = { birth = "2947.1.1" }
+}
+
+12011279 = {
+	# Mother of Viktor and Dominika Loban
+	# Secretary of State for Strugatsky
+	name = "Galina"
+	dynasty = 11279 # Loban
+	female = yes
+	
+	religion = neo_socialist
+	culture = russo_strugatskite
+	
+	trait = grey_eminence
+	trait = extraverted
+	trait = spiritual
+	trait = radical
+	
+	employer = 11011583 # Kirill Pozharsky
+	
+	2927.1.1 = { birth = "2927.1.1" }
+	# 2946.1.1 = {
+		# add_spouse_matrilineal = 11010783 # Nikolai Yefimov
+		# effect = { spouse = { add_lover = { character = ROOT } } }
+	# }
+}
+
+11010783 = {
+	# Husband of Galina Loban
+	name = "Nikolai"
+	dynasty = 10783 # Yefimov
+	female = no
+	
+	religion = neo_socialist
+	culture = russo_strugatskite
+	
+	2928.1.1 = { birth = "2928.1.1" }
+	2996.1.1 = { death = { death_reason = death_accident } }
+}
+
+1101375 = {
+	# Commander of Raduga
+	name = "Mikhail"
+	dynasty = 1375 # Ryan
+	female = no
+	
+	religion = neo_socialist
+	culture = anglo_strugatskite
+	
+	trait = misguided_warrior
+	trait = marine_colonel
+	
+	2956.1.1 = { birth = "2956.1.1" }
+}
+
+1101775 = {
+	# Commander of Ruzhena
+	name = "Rozalina"
+	dynasty = 1775 # Beckett
+	female = yes
+	
+	religion = neo_socialist
+	culture = anglo_strugatskite
+	
+	trait = tough_soldier
+	trait = marine_colonel
+	
+	2967.1.1 = { birth = "2967.1.1" }
+}
+
+11010687 = {
+	# Commander of Yaila
+	name = "Maya"
+	dynasty = 10687 # Dolgorukov
+	female = yes
+	
+	religion = neo_socialist
+	culture = russo_strugatskite
+	
+	trait = homosexual
+	trait = skilled_tactician
+	trait = fighter_pilot
+	
+	2968.1.1 = { birth = "2968.1.1" }
+}
+
+11011695 = {
+	# Commissioner of Nad'ezhda
+	name = "Lilya"
+	dynasty = 11695 # Rogov
+	female = yes
+	
+	religion = neo_socialist
+	culture = russo_strugatskite
+	
+	2956.1.1 = { birth = "2956.1.1" }
+}
+
+11010879 = {
+	# Administrator of Raduga/Commissioner for Kristal
+	name = "Timofei"
+	dynasty = 10879 # Zhirov
+	female = no
+	
+	religion = neo_socialist
+	culture = russo_strugatskite
+	
+	2959.1.1 = { birth = "2959.1.1" }
+}
+
+1108911 = {
+	# Commissioner for Granat
+	name = "Margarita"
+	dynasty = 8911 # Uchida
+	female = yes
+	
+	religion = neo_socialist
+	culture = japanese_strugatskite
+	
+	father = 1208911 # Dmitriy Uchida
+	mother = 11013551 # Alexandra Xiong
+	
+	trait = twin
+	
+	2950.1.1 = { birth = "2950.1.1" }
+}
+
+110735 = {
+	# Commissioner for Luch
+	name = "Mariya"
+	dynasty = 735 # Morris
+	female = yes
+	
+	religion = neo_socialist
+	culture = anglo_strugatskite
+	
+	2958.1.1 = { birth = "2958.1.1" }
+}
+
+11010383 = {
+	# Administrator of Arkanar
+	name = "Vasily"
+	dynasty = 10383 # Vorbyov
+	female = no
+	
+	religion = neo_socialist
+	culture = russo_strugatskite
+	
+	2941.1.1 = { birth = "2941.1.1" }
+}
+
+1218911 = {
+	# Commissioner for Pandora
+	name = "Igor"
+	dynasty = 8911 # Uchida
+	female = no
+	
+	religion = neo_socialist
+	culture = japanese_strugatskite
+	
+	father = 1208911 # Dmitriy Uchida
+	mother = 11013551 # Alexandra Xiong
+	
+	trait = twin
+	
+	2950.1.1 = { birth = "2950.1.1" }
+}
+
+11013599 = {
+	# Defense Zone Commander, Kovcehg
+	name = "Gavriil"
+	dynasty = 13599 # Yin
+	female = no
+	
+	religion = neo_socialist
+	culture = sino_strugatskite
+	
+	trait = tough_soldier
+	trait = marine_colonel
+	
+	2943.1.1 = { birth = "2943.1.1" }
+}
+
+12111279 = {
+	# Commander, Katerin Vselennaya, sister of Viktor Loban
+	name = "Dominika"
+	dynasty = 11279 # Loban
+	female = yes
+	
+	religion = neo_socialist
+	culture = russo_strugatskite
+	
+	trait = skilled_tactician
+	trait = marine_colonel
+	
+	father = 11010783 # Nikolai Yefimov
+	mother = 12011279 # Galina Loban
+	
+	2952.1.1 = { birth = "2952.1.1" }
+}
+
+11011839 = {
+	# Commander of Migdal
+	name = "Alyona"
+	dynasty = 11839 # Sobolev
+	female = yes
+	
+	religion = neo_socialist
+	culture = russo_strugatskite
+	
+	trait = tough_soldier
+	trait = warship_captain
+	
+	2955.1.1 = { birth = "2955.1.1" }
+}
+
+11013407 = {
+	# Defense Zone Commander, Saula
+	name = "Sergei"
+	dynasty = 13407 # Shi
+	female = no
+	
+	religion = neo_socialist
+	culture = sino_strugatskite
+	
+	trait = skilled_tactician
+	trait = warship_captain
+	trait = strong
+	trait = brave
+	trait = radical
+	trait = content
+	trait = friendly
+	
+	2945.1.1 = { birth = "2945.1.1" }
+	2972.1.1 = {
+		add_spouse = 11012271 # Ekateirna Chernov
+		effect = { spouse = { add_lover = ROOT } }
+	}
+}
+
+11012271 = {
+	# Wife of Sergei Shi
+	name = "Ekateirna"
+	dynasty = 12271 # Chernov
+	female = yes
+	
+	religion = neo_socialist
+	culture = russo_strugatskite
+	
+	2947.1.1 = { birth = "2947.1.1" }
+}
+
+11113407 = {
+	# Son of Sergei Shi
+	name = "Andrei"
+	dynasty = 13407 # Shi
+	female = no
+	
+	religion = neo_socialist
+	culture = sino_strugatskite
+	
+	trait = strong
+	trait = misguided_warrior
+	trait = warship_captain
+	trait = neurotic
+	trait = proud
+	trait = radical
+	trait = friendly
+	
+	father = 11013407 # Sergei Shi
+	mother = 11012271 # Ekateirna Chernov
+	
+	2975.1.1 = { birth = "2975.1.1" }
+}
+
+11213407 = {
+	# Daughter of Sergei Shi
+	name = "Sofia"
+	dynasty = 13407 # Shi
+	female = yes
+	
+	religion = neo_socialist
+	culture = sino_strugatskite
+	
+	trait = brilliant_strategist
+	trait = warship_captain
+	trait = disciplined
+	trait = neurotic
+	trait = friendly
+	
+	father = 11013407 # Sergei Shi
+	mother = 11012271 # Ekateirna Chernov
+	
+	2978.1.1 = { birth = "2978.1.1" }
+}
+
+11013343 = {
+	# Commander of Solonichenko Pas
+	name = "Anastasiya"
+	dynasty = 13343 # Zhong
+	female = yes
+	
+	religion = neo_socialist
+	culture = sino_strugatskite
+	
+	trait = homosexual
+	trait = tough_soldier
+	trait = fighter_pilot
+	
+	2954.1.1 = { birth = "2954.1.1" }
+}

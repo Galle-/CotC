@@ -5,6 +5,10 @@ opinion_disapproves_of_reform = { opinion = -25 months = 240 }
 opinion_hates_reform = { opinion = -100 months = 240 }
 
 # Law and order and so on
+opinion_denounced_attack_by_me = { opinion = -50 months = 240 }
+opinion_denounced_attack_on_me = { opinion = 25 months = 240 }
+opinion_ignored_attack_by_me = { opinion = 25 months = 240 }
+opinion_ignored_attack_on_me = { opinion = -50 months = 240 }
 opinion_criminal = { opinion = -25 months = 2400 prison_reason = yes }
 opinion_criminal_treason = { opinion = -75 months = 2400 prison_reason = yes revoke_reason = yes banish_reason = yes inherit = yes }
 opinion_criminal_murder = { opinion = -50 months = 2400 prison_reason = yes revoke_reason = yes banish_reason = yes inherit = yes }

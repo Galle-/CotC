@@ -1,0 +1,16 @@
+# 182 - Migdal
+
+# County Title
+title = c_migdal
+
+# Settlements
+max_settlements = 4
+b_migdal_i = castle
+b_migdal_ii = city
+b_migdal_iii = temple
+
+# Misc
+culture = russo_strugatskite
+religion = neo_socialist
+
+# History

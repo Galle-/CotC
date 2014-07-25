@@ -10,8 +10,6 @@
 # This file will need to be re-written over time to be more space-y
 # TRIGGERED ONLY
 nick_the_worldbreaker = { } # Awarded For: Blowing up Earth. Congratulations, you asshole.
-nick_the_serpent = { } # Awarded For: Deviousness above and beyond the call of duty.
-nick_the_black_tiger = { }
 
 # TRIGGERED ONLY
 ################
@@ -54,6 +52,478 @@ nick_the_younger = {}
 nick_the_saoshyant = {}
 nick_hardeknud = {}
 
+# Assorted animal nicknames
+nick_the_serpent = {
+	allow = {
+		age = 16
+		intrigue = 20
+	}
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 2
+			trait = cold
+		}
+		modifier = {
+			factor = 2
+			trait = ambitious
+		}
+		modifier = {
+			factor = 2
+			trait = kinslayer
+		}
+	}
+}
+nick_the_black_hawk = {
+	allow = {
+		age = 16
+		is_feudal = yes
+		is_patrician = no
+		OR = {
+			religion = space_pirate
+			trait = cold
+		}
+		OR = {
+			trait = fighter_pilot
+			intrigue = 20
+		}
+		NOT = { trait = imbecile }
+		NOT = { trait = slow }
+		NOT = { trait = incapable }
+	}
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 0.5
+			trait = friendly
+		}
+		modifier = {
+			factor = 0.5
+			trait = content
+		}
+		modifier = {
+			factor = 2
+			trait = ambitious
+		}
+	}
+}
+nick_the_wild_hawk = {
+	allow = {
+		age = 16
+		trait = brave
+		is_feudal = yes
+		is_patrician = no
+		OR = {
+			trait = fighter_pilot
+			intrigue = 20
+		}
+		NOT = { trait = imbecile }
+		NOT = { trait = slow }
+		NOT = { trait = incapable }
+	}
+	chance = {
+		factor = 3
+	}
+}
+nick_the_white_hawk = {
+	allow = {
+		age = 16
+		trait = brave
+		is_feudal = yes
+		is_patrician = no
+		OR = {
+			religion_group = religious_group
+			trait = friendly
+			age = 60
+		}
+		OR = {
+			trait = fighter_pilot
+			intrigue = 20
+		}
+		NOT = { religion = space_pirate }
+		NOT = { trait = imbecile }
+		NOT = { trait = slow }
+		NOT = { trait = incapable }
+	}
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 2
+			piety = 500
+		}
+		modifier = {
+			factor = 2
+			piety = 1000
+		}
+		modifier = {
+			factor = 2
+			age = 65
+		}
+		modifier = {
+			factor = 2
+			age = 70
+		}
+		modifier = {
+			factor = 2
+			age = 75
+		}
+	}
+}
+nick_the_black_wolf = {
+	allow = {
+		age = 16
+		is_feudal = yes
+		is_patrician = no
+		OR = {
+			religion = space_pirate
+			trait = cold
+		}
+		martial = 15
+		intrigue = 15
+		NOT = { trait = imbecile }
+		NOT = { trait = slow }
+		NOT = { trait = incapable }
+	}
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 0.5
+			trait = friendly
+		}
+		modifier = {
+			factor = 0.5
+			trait = content
+		}
+		modifier = {
+			factor = 2
+			trait = ambitious
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				culture = anglo_terran
+				culture_group = frontier_group
+				culture_group = avalonian_group
+			}
+		}
+	}
+}
+nick_the_wild_wolf = {
+	allow = {
+		age = 16
+		trait = brave
+		is_feudal = yes
+		is_patrician = no
+		martial = 15
+		intrigue = 15
+		NOT = { trait = imbecile }
+		NOT = { trait = slow }
+		NOT = { trait = incapable }
+	}
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 3
+			OR = {
+				culture = anglo_terran
+				culture_group = frontier_group
+				culture_group = avalonian_group
+			}
+		}
+	}
+}
+nick_the_white_wolf = {
+	allow = {
+		age = 16
+		trait = brave
+		is_feudal = yes
+		is_patrician = no
+		OR = {
+			religion_group = religious_group
+			trait = friendly
+			age = 60
+		}
+		martial = 15
+		intrigue = 15
+		NOT = { religion = space_pirate }
+		NOT = { trait = imbecile }
+		NOT = { trait = slow }
+		NOT = { trait = incapable }
+	}
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 3
+			OR = {
+				culture = anglo_terran
+				culture_group = frontier_group
+				culture_group = avalonian_group
+			}
+		}
+		modifier = {
+			factor = 2
+			piety = 500
+		}
+		modifier = {
+			factor = 2
+			piety = 1000
+		}
+		modifier = {
+			factor = 2
+			age = 65
+		}
+		modifier = {
+			factor = 2
+			age = 70
+		}
+		modifier = {
+			factor = 2
+			age = 75
+		}
+	}
+}
+nick_the_black_bear = {
+	allow = {
+		age = 16
+		is_feudal = yes
+		is_patrician = no
+		OR = {
+			religion = space_pirate
+			trait = cold
+		}
+		martial = 20
+		NOT = { trait = imbecile }
+		NOT = { trait = slow }
+		NOT = { trait = incapable }
+	}
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 0.5
+			trait = friendly
+		}
+		modifier = {
+			factor = 0.5
+			trait = content
+		}
+		modifier = {
+			factor = 2
+			trait = ambitious
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				culture = russo_terran
+				culture_group = strugatskite_group
+				culture_group = centauri_group
+				culture_group = edemite_group
+			}
+		}
+	}
+}
+nick_the_wild_bear = {
+	allow = {
+		age = 16
+		trait = brave
+		is_feudal = yes
+		is_patrician = no
+		martial = 20
+		NOT = { trait = imbecile }
+		NOT = { trait = slow }
+		NOT = { trait = incapable }
+	}
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 3
+			OR = {
+				culture = russo_terran
+				culture_group = strugatskite_group
+				culture_group = centauri_group
+				culture_group = edemite_group
+			}
+		}
+	}
+}
+nick_the_white_bear = {
+	allow = {
+		age = 16
+		trait = brave
+		is_feudal = yes
+		is_patrician = no
+		OR = {
+			religion_group = religious_group
+			trait = friendly
+			age = 60
+		}
+		martial = 20
+		NOT = { religion = space_pirate }
+		NOT = { trait = imbecile }
+		NOT = { trait = slow }
+		NOT = { trait = incapable }
+	}
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 3
+			OR = {
+				culture = russo_terran
+				culture_group = strugatskite_group
+				culture_group = centauri_group
+				culture_group = edemite_group
+			}
+		}
+		modifier = {
+			factor = 2
+			piety = 500
+		}
+		modifier = {
+			factor = 2
+			piety = 1000
+		}
+		modifier = {
+			factor = 2
+			age = 65
+		}
+		modifier = {
+			factor = 2
+			age = 70
+		}
+		modifier = {
+			factor = 2
+			age = 75
+		}
+	}
+}
+nick_the_black_tiger = {
+	allow = {
+		age = 16
+		is_feudal = yes
+		is_patrician = no
+		OR = {
+			religion = space_pirate
+			trait = cold
+		}
+		martial = 10
+		OR = {
+			trait = attractive
+			trait = beautiful
+			diplomacy = 20
+		}
+		NOT = { trait = imbecile }
+		NOT = { trait = slow }
+		NOT = { trait = incapable }
+	}
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 0.5
+			trait = friendly
+		}
+		modifier = {
+			factor = 0.5
+			trait = content
+		}
+		modifier = {
+			factor = 2
+			trait = ambitious
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				culture = indo_terran
+				culture = indo_samawati
+				culture_group = mukta_group
+				culture_group = tarkan_group
+			}
+		}
+	}
+}
+nick_the_wild_tiger = {
+	allow = {
+		age = 16
+		trait = brave
+		is_feudal = yes
+		is_patrician = no
+		martial = 10
+		OR = {
+			trait = attractive
+			trait = beautiful
+			diplomacy = 20
+		}
+		NOT = { trait = imbecile }
+		NOT = { trait = slow }
+		NOT = { trait = incapable }
+	}
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 3
+			OR = {
+				culture = indo_terran
+				culture = indo_samawati
+				culture_group = mukta_group
+				culture_group = tarkan_group
+			}
+		}
+	}
+}
+nick_the_white_tiger = {
+	allow = {
+		age = 16
+		trait = brave
+		is_feudal = yes
+		is_patrician = no
+		OR = {
+			religion_group = religious_group
+			trait = friendly
+			age = 60
+		}
+		martial = 10
+		OR = {
+			trait = attractive
+			trait = beautiful
+			diplomacy = 20
+		}
+		NOT = { religion = space_pirate }
+		NOT = { trait = imbecile }
+		NOT = { trait = slow }
+		NOT = { trait = incapable }
+	}
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 3
+			OR = {
+				culture = indo_terran
+				culture = indo_samawati
+				culture_group = mukta_group
+				culture_group = tarkan_group
+			}
+		}
+		modifier = {
+			factor = 2
+			piety = 500
+		}
+		modifier = {
+			factor = 2
+			piety = 1000
+		}
+		modifier = {
+			factor = 2
+			age = 65
+		}
+		modifier = {
+			factor = 2
+			age = 70
+		}
+		modifier = {
+			factor = 2
+			age = 75
+		}
+	}
+}
+
 # GIVEN BY TRAITS
 #################
 nick_the_lisp_and_lame = {
@@ -70,7 +540,7 @@ nick_the_lisp_and_lame = {
 nick_the_able = {
 	allow = {
 		age = 20
-		trait = diligent
+		trait = disciplined
 		trait = ambitious
 	}
 	chance = {
@@ -81,8 +551,7 @@ nick_the_able = {
 nick_the_kind = {
 	allow = {
 		age = 20
-		trait = charitable
-		trait = kind
+		trait = friendly
 	}
 	chance = {
 		factor = 1
@@ -92,8 +561,8 @@ nick_the_kind = {
 nick_the_good = {
 	allow = {
 		age = 20
-		trait = charitable
-		trait = just
+		trait = friendly
+		trait = radical
 	}
 	chance = {
 		factor = 1
@@ -103,8 +572,8 @@ nick_the_good = {
 nick_the_troubadour = {
 	allow = {
 		age = 20
-		trait = poet
-		trait = gregarious
+		trait = artist
+		trait = extraverted
 	}
 	chance = {
 		factor = 1
@@ -128,7 +597,7 @@ nick_the_strong = {
 nick_the_magnanimous = {
 	allow = {
 		age = 20
-		trait = charitable
+		trait = friendly
 		trait = brave
 	}
 	chance = {
@@ -150,8 +619,8 @@ nick_the_simple = {
 nick_the_merry = {
 	allow = {
 		age = 20
-		trait = gregarious
-		trait = kind
+		trait = extraverted
+		trait = friendly
 	}
 	chance = {
 		factor = 1
@@ -180,26 +649,11 @@ nick_the_noble = {
 	}
 }
 
-nick_the_blind = {
-	allow = {
-		age = 20
-		OR = {
-			trait = maimed
-			trait = inbred
-			trait = leper
-			trait = blinded
-		}
-	}
-	chance = {
-		factor = 1
-	}
-}
-
 nick_the_gentle = {
 	allow = {
 		age = 20
-		trait = kind
-		trait = gregarious
+		trait = friendly
+		trait = extraverted
 	}
 	chance = {
 		factor = 1
@@ -210,7 +664,7 @@ nick_the_proud = {
 	allow = {
 		age = 20
 		trait = proud
-		trait = envious
+		trait = cold
 	}
 	chance = {
 		factor = 1
@@ -220,9 +674,9 @@ nick_the_proud = {
 nick_the_silent = {
 	allow = {
 		age = 20
-		trait = shy
+		trait = introverted
 		OR = {
-			trait = patient
+			trait = disciplined
 			trait = humble
 		}
 	}
@@ -262,55 +716,12 @@ nick_half_hand = {
 	}
 }
 
-nick_the_chaste = {
-	allow = {
-		age = 15
-		OR = {
-			trait = chaste
-			trait = celibate
-		}
-		piety = 50
-	}
-	chance = {
-		factor = 2
-	}
-}
-
-nick_the_hunter = {
-	allow = {
-		age = 15
-		trait = hunter
-		NOT = { trait = infirm }
-		NOT = { trait = incapable }
-		NOT = { trait = blinded }
-	}
-	chance = {
-		factor = 3
-	}
-}
-
-nick_the_fowler = {
-	allow = {
-		age = 15
-		OR = {
-			trait = falconer
-			trait = hunter
-		}
-		NOT = { trait = infirm }
-		NOT = { trait = incapable }
-		NOT = { trait = blinded }
-	}
-	chance = {
-		factor = 2
-	}
-}
-
 nick_the_just = {
 	allow = {
 		age = 15
-		trait = just
+		trait = radical
 		stewardship = 5
-		NOT = { trait = deceitful }
+		NOT = { trait = cold }
 		NOT = { trait = imbecile }
 		NOT = { trait = slow }
 		NOT = { trait = incapable }
@@ -335,7 +746,7 @@ nick_the_just = {
 		}
 		modifier = {
 			factor = 2.0
-			trait = honest
+			trait = friendly
 		}
 	}
 }
@@ -361,7 +772,10 @@ nick_the_handsome = {
 	allow = {
 		age = 15
 		is_female = no
-		trait = fair
+		OR = {
+			trait = fair
+			trait = beautiful
+		}
 		NOT = { trait = dwarf }
 		NOT = { trait = inbred }
 		NOT = { trait = harelip }
@@ -377,7 +791,10 @@ nick_the_fair = {
 	allow = {
 		age = 15
 		is_female = yes
-		trait = fair
+		OR = {
+			trait = fair
+			trait = beautiful
+		}
 		NOT = { trait = dwarf }
 		NOT = { trait = inbred }
 		NOT = { trait = harelip }
@@ -399,94 +816,20 @@ nick_the_mad = {
 	}
 }
 
-nick_the_fat = {
-	allow = {
-		age = 15
-		OR = {
-			trait = gluttonous
-			trait = hedonist
-			trait = drunkard
-		}
-	}
-	chance = {
-		factor = 2
-		modifier = {
-			factor = 2.0
-			trait = gluttonous
-		}
-		modifier = {
-			factor = 2.0
-			trait = hedonist
-		}
-		modifier = {
-			factor = 2.0
-			trait = drunkard
-		}
-	}
-}
-
-nick_the_drunkard = {
-	allow = {
-		age = 15
-		OR = {
-			trait = gluttonous
-			trait = hedonist
-			trait = drunkard
-		}
-	}
-	chance = {
-		factor = 1
-		modifier = {
-			factor = 1.1
-			trait = gluttonous
-		}
-		modifier = {
-			factor = 1.1
-			trait = hedonist
-		}
-		modifier = {
-			factor = 5.0
-			trait = drunkard
-		}
-	}
-}
-
 nick_the_cruel = {
 	allow = {
 		age = 20
-		NOT = { trait = kind }
-		NOT = { trait = charitable }
-		OR = {
-			trait = cruel
-			trait = wroth
-			trait = impaler
-		}
+		trait = cold
 	}
 	chance = {
 		factor = 1
 		modifier = {
-			factor = 5.0
-			trait = impaler
+			factor = 2
+			trait = ambitious
 		}
 		modifier = {
-			factor = 2.0
-			trait = cruel
-		}
-		modifier = {
-			factor = 2.0
-			trait = wroth
-		}
-		modifier = {
-			factor = 2.0
-			trait = envious
-		}
-		modifier = {
-			factor = 2.0
-			trait = deceitful
-		}
-		modifier = {
-			factor = 2.0
-			trait = greedy
+			factor = 2
+			trait = pragmatic
 		}
 	}
 }
@@ -494,8 +837,7 @@ nick_the_cruel = {
 nick_the_wise = {
 	allow = {
 		age = 20
-		NOT = { trait = arbitrary }
-		NOT = { trait = wroth }
+		NOT = { trait = close_minded }
 		NOT = { trait = slow }
 		NOT = { trait = imbecile }
 		NOT = { trait = inbred }
@@ -503,9 +845,7 @@ nick_the_wise = {
 		OR = {
 			trait = quick
 			trait = genius
-			trait = just
-			trait = patient
-			trait = scholar
+			trait = intellectual
 		}
 	}
 	chance = {
@@ -520,15 +860,11 @@ nick_the_wise = {
 		}
 		modifier = {
 			factor = 2.0
-			trait = just
+			trait = open_minded
 		}
 		modifier = {
 			factor = 2.0
-			trait = patient
-		}
-		modifier = {
-			factor = 2.0
-			trait = scholar
+			trait = intellectual
 		}
 	}
 }
@@ -540,6 +876,10 @@ nick_the_accursed = {
 	allow = {
 		age = 20
 		OR = {
+			religion_group = religious_group
+			religion = machine_cultist
+		}
+		OR = {
 			NOT = { piety = -50 }
 			trait = possessed
 			trait = kinslayer
@@ -560,24 +900,16 @@ nick_the_accursed = {
 			NOT = { piety = -300 }
 		}
 		modifier = {
-			factor = 2.0
-			trait = hedonist
+			factor = 5.0
+			trait = cold
 		}
 		modifier = {
 			factor = 2.0
-			trait = gluttonous
+			trait = pragmatic
 		}
 		modifier = {
 			factor = 2.0
-			trait = greedy
-		}
-		modifier = {
-			factor = 2.0
-			trait = envious
-		}
-		modifier = {
-			factor = 2.0
-			trait = cynical
+			trait = skeptical
 		}
 	}
 }
@@ -586,51 +918,9 @@ nick_the_wicked = {
 	allow = {
 		age = 20
 		OR = {
-			NOT = { piety = -50 }
-			trait = possessed
-			trait = kinslayer
+			religion_group = religious_group
+			religion = machine_cultist
 		}
-	}
-	chance = {
-		factor = 1
-		modifier = {
-			factor = 2.0
-			NOT = { piety = -100 }
-		}
-		modifier = {
-			factor = 2.0
-			NOT = { piety = -200 }
-		}
-		modifier = {
-			factor = 2.0
-			NOT = { piety = -300 }
-		}
-		modifier = {
-			factor = 2.0
-			trait = hedonist
-		}
-		modifier = {
-			factor = 2.0
-			trait = gluttonous
-		}
-		modifier = {
-			factor = 2.0
-			trait = greedy
-		}
-		modifier = {
-			factor = 2.0
-			trait = envious
-		}
-		modifier = {
-			factor = 2.0
-			trait = cynical
-		}
-	}
-}
-
-nick_the_bewitched = {
-	allow = {
-		age = 20
 		OR = {
 			NOT = { piety = -50 }
 			trait = possessed
@@ -652,24 +942,58 @@ nick_the_bewitched = {
 			NOT = { piety = -300 }
 		}
 		modifier = {
-			factor = 2.0
-			trait = hedonist
+			factor = 5.0
+			trait = cold
 		}
 		modifier = {
 			factor = 2.0
-			trait = gluttonous
+			trait = pragmatic
 		}
 		modifier = {
 			factor = 2.0
-			trait = greedy
+			trait = skeptical
+		}
+	}
+}
+
+nick_the_bewitched = {
+	allow = {
+		age = 20
+		OR = {
+			religion_group = religious_group
+			religion = machine_cultist
+		}
+		OR = {
+			NOT = { piety = -50 }
+			trait = possessed
+			trait = kinslayer
+		}
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2.0
+			NOT = { piety = -100 }
 		}
 		modifier = {
 			factor = 2.0
-			trait = envious
+			NOT = { piety = -200 }
 		}
 		modifier = {
 			factor = 2.0
-			trait = cynical
+			NOT = { piety = -300 }
+		}
+		modifier = {
+			factor = 5.0
+			trait = cold
+		}
+		modifier = {
+			factor = 2.0
+			trait = pragmatic
+		}
+		modifier = {
+			factor = 2.0
+			trait = skeptical
 		}
 	}
 }
@@ -677,8 +1001,15 @@ nick_the_bewitched = {
 nick_priest_hater = {
 	allow = {
 		age = 20
+		OR = {
+			religion_group = religious_group
+			religion = machine_cultist
+		}
 		NOT = { piety = -100 }
-		trait = cynical
+		OR = {
+			trait = pragmatic
+			trait = skeptical
+		}
 	}
 	chance = {
 		factor = 1
@@ -695,24 +1026,16 @@ nick_priest_hater = {
 			NOT = { piety = -200 }
 		}
 		modifier = {
-			factor = 2.0
-			trait = hedonist
+			factor = 5.0
+			trait = cold
 		}
 		modifier = {
 			factor = 2.0
-			trait = gluttonous
+			trait = pragmatic
 		}
 		modifier = {
 			factor = 2.0
-			trait = greedy
-		}
-		modifier = {
-			factor = 2.0
-			trait = envious
-		}
-		modifier = {
-			factor = 2.0
-			trait = arbitrary
+			trait = skeptical
 		}
 	}
 }
@@ -720,6 +1043,10 @@ nick_priest_hater = {
 nick_the_pious = {
 	allow = {
 		age = 20
+		OR = {
+			religion_group = religious_group
+			religion = machine_cultist
+		}
 		piety = 1000
 	}
 	chance = {
@@ -742,6 +1069,10 @@ nick_the_pious = {
 nick_the_apostle = {
 	allow = {
 		age = 20
+		OR = {
+			religion_group = religious_group
+			religion = machine_cultist
+		}
 		piety = 1000
 	}
 	chance = {
@@ -764,6 +1095,10 @@ nick_the_apostle = {
 nick_the_blessed = {
 	allow = {
 		age = 20
+		OR = {
+			religion_group = religious_group
+			religion = machine_cultist
+		}
 		piety = 1000
 	}
 	chance = {
@@ -786,6 +1121,10 @@ nick_the_blessed = {
 nick_the_confessor = {
 	allow = {
 		age = 20
+		OR = {
+			religion_group = religious_group
+			religion = machine_cultist
+		}
 		piety = 1000
 	}
 	chance = {
@@ -805,32 +1144,6 @@ nick_the_confessor = {
 	}
 }
 
-nick_the_monk = {
-	allow = {
-		age = 20
-		piety = 500
-		OR = {
-			trait = chaste
-			trait = celibate
-		}
-	}
-	chance = {
-		factor = 3
-		modifier = {
-			factor = 2.0
-			piety = 1000
-		}
-		modifier = {
-			factor = 2.0
-			piety = 2000
-		}
-		modifier = {
-			factor = 2.0
-			piety = 4000
-		}
-	}
-}
-
 # GIVEN BY RULE
 ################
 
@@ -843,15 +1156,22 @@ nick_the_ironside = {
 			trait = brave
 			trait = strong
 		}
-		NOT = {
-			trait = weak
-		}
+		NOT = { trait = weak }
+		NOT = { trait = craven }
 	}
 	chance = {
 		factor = 2
 		modifier = {
 			factor = 2.0
 			NOT = { age = 20 }
+		}
+		modifier = {
+			factor = 0.5
+			is_republic = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_theocracy = yes
 		}
 	}
 }
@@ -867,9 +1187,8 @@ nick_the_lion = {
 			trait = skilled_tactician
 			trait = brilliant_strategist
 		}
-		NOT = {
-			trait = weak
-		}
+		NOT = { trait = weak }
+		NOT = { trait = craven }
 	}
 	chance = {
 		factor = 3
@@ -887,9 +1206,8 @@ nick_the_lionheart = {
 			trait = skilled_tactician
 			trait = brilliant_strategist
 		}
-		NOT = {
-			trait = weak
-		}
+		NOT = { trait = weak }
+		NOT = { trait = craven }
 	}
 	chance = {
 		factor = 4
@@ -909,39 +1227,8 @@ nick_the_bold = {
 			trait = brave
 			trait = strong
 		}
-		NOT = {
-			trait = paranoid
-		}
-	}
-	chance = {
-		factor = 2
-		modifier = {
-			factor = 2.0
-			NOT = { age = 15 }
-		}
-	}
-}
-
-nick_the_unready = {
-	allow = {
-		age = 11
-		ruled_years = 1
-		trait = arbitrary
-	}
-	chance = {
-		factor = 2
-		modifier = {
-			factor = 2.0
-			NOT = { age = 15 }
-		}
-	}
-}
-
-nick_the_ill_ruler = {
-	allow = {
-		age = 11
-		ruled_years = 1
-		trait = arbitrary
+		NOT = { trait = neurotic }
+		NOT = { trait = craven }
 	}
 	chance = {
 		factor = 2
@@ -957,11 +1244,12 @@ nick_the_terrible = {
 		age = 30
 		ruled_years = 10
 		OR = {
-			trait = wroth
+			trait = cold
 			trait = lunatic
-			trait = cruel
-			trait = impaler
 		}
+		NOT = { trait = friendly }
+		NOT = { trait = humble }
+		NOT = { trait = content }
 		any_vassal = {
 			has_opinion_modifier = { who = ROOT modifier = opinion_tyrant }
 		}
@@ -997,46 +1285,13 @@ nick_the_magnificent = {
 	}
 }
 
-nick_the_quarreller = {
-	allow = {
-		age = 30
-		ruled_years = 15
-		trait = arbitrary
-	}
-	chance = {
-		factor = 2
-	}
-}
-
-# the Builder
-nick_the_devil = {
-	allow = {
-		ruled_years = 10
-		trait = wroth
-		OR = {
-			trait = kinslayer
-			trait = excommunicated
-			trait = impaler
-		}
-	}
-	chance = {
-		factor = 2
-		modifier = {
-			factor = 2
-			trait = kinslayer
-			trait = excommunicated
-		}
-	}
-}
-
 nick_the_dragon = {
 	allow = {
 		ruled_years = 10
-		trait = wroth
+		trait = cold
 		OR = {
 			trait = kinslayer
 			trait = excommunicated
-			trait = impaler
 		}
 	}
 	chance = {
@@ -1053,11 +1308,11 @@ nick_the_careless = {
 		age = 30
 		ruled_years = 10
 		OR = {
-			trait = weak
+			trait = carefree
 			trait = content
 		}
 		NOT = {
-			trait = diligent
+			trait = disciplined
 			trait = ambitious
 		}
 	}
@@ -1068,16 +1323,12 @@ nick_the_careless = {
 			trait = incapable
 		}
 		modifier = {
-			factor = 2
-			trait = deceitful
+			factor = 4
+			trait = cold
 		}
 		modifier = {
 			factor = 2
-			trait = envious
-		}
-		modifier = {
-			factor = 2
-			trait = cynical
+			trait = skeptical
 		}
 		modifier = {
 			factor = 2

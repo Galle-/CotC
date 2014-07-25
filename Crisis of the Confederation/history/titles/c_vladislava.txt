@@ -1,0 +1,7 @@
+2900.1.1 = {
+	law = succ_appointment
+	law = true_cognatic_succession
+	liege = "d_strugatsky_fleet"
+}
+
+2998.1.1 = { holder = "11011279" } # Viktor Loban

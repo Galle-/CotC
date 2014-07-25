@@ -1036,7 +1036,7 @@ character_event = {
 	option = {
 		name = "EVTOPTACONVERSION10010"
 		religion = space_pirate
-		hidden_tooltip = { any_vassal = { character_event = { id = conversion.10011 } }
+		hidden_tooltip = { any_vassal = { character_event = { id = conversion.10011 } } }
 	}
 }
 
