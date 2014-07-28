@@ -1,0 +1,22 @@
+# 13 - Omid
+
+# County Title
+title = c_omid
+
+# Settlements
+max_settlements = 5
+
+b_omid_station_alpha = castle
+b_omid_iii = city
+b_omid_iii_b = temple
+
+# Misc
+culture = iranian_tarkan # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

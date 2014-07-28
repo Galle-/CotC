@@ -1,0 +1,22 @@
+# 6 - Unnati
+
+# County Title
+title = c_unnati
+
+# Settlements
+max_settlements = 4
+
+b_unnati_ii_b = castle
+b_unnati_ii = city
+b_unnati_ii_c = temple
+
+# Misc
+culture = indo_tarkan # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

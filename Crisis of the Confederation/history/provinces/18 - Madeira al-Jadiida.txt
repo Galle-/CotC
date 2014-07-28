@@ -1,0 +1,22 @@
+# 18 - Madeira al-Jadiida
+
+# County Title
+title = c_madeira_al_jadiida
+
+# Settlements
+max_settlements = 4
+
+b_madeira_al_jadiida_observatory = temple
+b_madeira_al_jadiida_ii = city
+b_madeira_al_jadiida_ii_b = castle
+
+# Misc
+culture = arab_tarkan # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

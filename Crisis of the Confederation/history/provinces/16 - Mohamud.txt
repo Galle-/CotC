@@ -1,0 +1,22 @@
+# 16 - Mohamud
+
+# County Title
+title = c_mohamud
+
+# Settlements
+max_settlements = 4
+
+b_mohamud_iv_b = temple
+b_mohamud_iv = city
+b_mohamud_iv_c = castle
+
+# Misc
+culture = east_afro_tarkan # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

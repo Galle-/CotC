@@ -1,0 +1,22 @@
+# 19 - Kaksa ki Vismata'em
+
+# County Title
+title = c_kaksa_ki_vismataem
+
+# Settlements
+max_settlements = 4
+
+b_kaksa_observatory = temple
+b_kaksa_trade_station = city
+b_kaksa_waystation = castle
+
+# Misc
+culture = indo_tarkan # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

@@ -1,0 +1,22 @@
+# 3 - Talon
+
+# County Title
+title = c_talon
+
+# Settlements
+max_settlements = 5
+
+b_talon_ii_b = temple
+b_talon_ii = city
+b_talon_iv = castle
+
+# Misc
+culture = indo_tarkan # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

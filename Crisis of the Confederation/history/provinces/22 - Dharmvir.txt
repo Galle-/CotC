@@ -1,0 +1,22 @@
+# 22 - Dharmvir
+
+# County Title
+title = c_dharmvir
+
+# Settlements
+max_settlements = 4
+
+b_dharmvir_waystation = castle
+b_dharmvir_iii = city
+b_dharmvir_iii_b = temple
+
+# Misc
+culture = indo_tarkan # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

@@ -1,0 +1,22 @@
+# 12 - Al-Dabaran
+
+# County Title
+title = c_al_dabaran
+
+# Settlements
+max_settlements = 4
+
+b_al_dabaran_prime = temple
+b_al_dabaran_ii = city
+b_al_dabaran_iii = castle
+
+# Misc
+culture = arab_tarkan # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

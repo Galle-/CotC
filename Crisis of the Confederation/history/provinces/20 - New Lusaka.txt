@@ -1,0 +1,22 @@
+# 20 - New Lusaka
+
+# County Title
+title = c_new_lusaka
+
+# Settlements
+max_settlements = 5
+
+b_new_lusaka_iii_b = temple
+b_new_lusaka_iii = city
+b_new_lusaka_iv = castle
+
+# Misc
+culture = indo_tarkan # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

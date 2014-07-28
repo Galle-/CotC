@@ -1,0 +1,11 @@
+2900.1.1 = {
+	law = succ_appointment
+	law = true_cognatic_succession
+	law = centralization_3
+	law = military_vassal_legitimacy_2
+	law = republic_vassal_legitimacy_1
+	law = theocracy_vassal_legitimacy_2
+	liege = "e_terran_confederation"
+}
+
+2998.1.1 = { holder = "1105933" } # Raja Sharma

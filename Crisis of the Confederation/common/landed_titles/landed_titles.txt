@@ -913,12 +913,19 @@ e_terran_confederation = {
 				b_makkat_al_jadiida = {
 					holy_site = terran_federalist # Traditional regional capital
 					holy_site = terran_imperial
+					used_for_dynasty_names = no
+				}
+				b_makkat_al_jadiida_b = {
 					holy_site = pilgrim
 					holy_site = orthodox
 					holy_site = adoptionist
+					
+					# Another early cybernetics leader
+					holy_site = cyberneticist
+					holy_site = hiver
+					holy_site = machine_cultist
 					used_for_dynasty_names = no
 				}
-				b_makkat_al_jadiida_b = { used_for_dynasty_names = no }
 				b_makkat_al_jadiida_iii = { used_for_dynasty_names = no }
 				b_makkat_al_jadiida_iii_b = { used_for_dynasty_names = no }
 				b_makkat_al_jadiida_iv_b = { used_for_dynasty_names = no }
@@ -1727,7 +1734,13 @@ e_terran_confederation = {
 				used_for_dynasty_names = no
 				
 				b_tengoku_iii = { used_for_dynasty_names = no }
-				b_tengoku_iii_b = { used_for_dynasty_names = no }
+				b_tengoku_iii_b = {
+					# Early center of cybernetics research
+					holy_site = cyberneticist
+					holy_site = hiver
+					holy_site = machine_cultist
+					used_for_dynasty_names = no
+				}
 				b_orbital_station_alpha = { used_for_dynasty_names = no }
 				b_orbital_station_beta = { used_for_dynasty_names = no }
 				b_orbital_station_gamma = { used_for_dynasty_names = no }
@@ -4005,6 +4018,363 @@ e_terran_confederation = {
 				b_solonichenko_pas_ii = { used_for_dynasty_names = no }
 				b_solonichenko_pas_iii = { used_for_dynasty_names = no }
 				b_solonichenko_pas_iv = { used_for_dynasty_names = no }
+			}
+		}
+	}
+	k_tarka = {
+		color = { 100 100 100 }
+		color2 = { 255 255 255 }
+		
+		religion = cyberneticist
+		culture = indo_tarkan
+		
+		capital = 10 # Tarka
+		
+		d_tarka_fleet = {
+			color = { 50 50 50 }
+			color2 = { 255 255 255 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 10
+			landless = yes
+			tribe = yes
+		}
+		
+		d_tarka = {
+			color = { 116 100 100 }
+			color2 = { 255 255 255 }
+			
+			capital = 10 # Tarka
+			
+			c_tarka = {
+				color = { 116 100 116 }
+				color2 = { 255 255 255 }
+				
+				used_for_dynasty_names = no
+				
+				b_tarka_iii = { used_for_dynasty_names = no }
+				b_tarka_iii_b = {
+					holy_site = cyberneticist
+					holy_site = hiver
+					holy_site = machine_cultist
+					used_for_dynasty_names = no
+				}
+				b_tarka_iv = { used_for_dynasty_names = no }
+				b_tarka_iv_b = { used_for_dynasty_names = no }
+				b_tarka_iv_c = { used_for_dynasty_names = no }
+				b_tarka_vii_b = { used_for_dynasty_names = no }
+			}
+			
+			c_marrakesh_al_jadiida = {
+				color = { 116 100 132 }
+				color2 = { 255 255 255 }
+				
+				used_for_dynasty_names = no
+				
+				b_marrakesh_al_jadiida_iv = { used_for_dynasty_names = no }
+				b_marrakesh_al_jadiida_iv_b = { used_for_dynasty_names = no }
+				b_marrakesh_al_jadiida_iv_c = { used_for_dynasty_names = no }
+				b_marrakesh_al_jadiida_v = { used_for_dynasty_names = no }
+			}
+			
+			c_al_dabaran = {
+				color = { 116 100 148 }
+				color2 = { 255 255 255 }
+				
+				used_for_dynasty_names = no
+				
+				b_al_dabaran_prime = { used_for_dynasty_names = no }
+				b_al_dabaran_ii = { used_for_dynasty_names = no }
+				b_al_dabaran_iii = { used_for_dynasty_names = no }
+				b_al_dabaran_iv = { used_for_dynasty_names = no }
+			}
+		}
+		
+		d_talon = {
+			color = { 100 116 100 }
+			color2 = { 255 255 255 }
+			
+			capital = 3 # Talon
+			
+			c_talon = {
+				color = { 100 116 116 }
+				color2 = { 255 255 255 }
+				
+				used_for_dynasty_names = no
+				
+				b_talon_ii = { used_for_dynasty_names = no }
+				b_talon_ii_b = { used_for_dynasty_names = no }
+				b_talon_iii = { used_for_dynasty_names = no }
+				b_talon_iii_b = { used_for_dynasty_names = no }
+				b_talon_iv = {
+					holy_site = space_pirate
+					used_for_dynasty_names = no
+				}
+			}
+			
+			c_ksora = {
+				color = { 100 116 132 }
+				color2 = { 255 255 255 }
+				
+				used_for_dynasty_names = no
+				
+				b_ksora_vii_b = { used_for_dynasty_names = no }
+				b_ksora_vii_c = { used_for_dynasty_names = no }
+				b_ksora_vii_d = { used_for_dynasty_names = no }
+				b_ksora_vii_e = { used_for_dynasty_names = no }
+			}
+			
+			c_oran = {
+				color = { 100 116 148 }
+				color2 = { 255 255 255 }
+				
+				used_for_dynasty_names = no
+				
+				b_oran_iii = { used_for_dynasty_names = no }
+				b_oran_iii_b = { used_for_dynasty_names = no }
+				b_oran_waystation = { used_for_dynasty_names = no }
+				b_oran_iv = { used_for_dynasty_names = no }
+			}
+			
+			c_fezzan = {
+				color = { 100 116 164 }
+				color2 = { 255 255 255 }
+				
+				used_for_dynasty_names = no
+				
+				b_fezzan_iv = { used_for_dynasty_names = no }
+				b_fezzan_iv_b = { used_for_dynasty_names = no }
+				b_fezzan_v = { used_for_dynasty_names = no }
+				b_fezzan_v_b = { used_for_dynasty_names = no }
+			}
+		}
+		
+		d_yeni_istanbul = {
+			color = { 116 116 100 }
+			color2 = { 255 255 255 }
+			
+			capital = 9 # Yeni Istanbul
+			
+			c_yeni_istanbul = {
+				color = { 116 116 116 }
+				color2 = { 255 255 255 }
+				
+				used_for_dynasty_names = no
+				
+				b_yeni_istanbul_viii_b = {
+					holy_site = cyberneticist
+					used_for_dynasty_names = no
+				}
+				b_yeni_istanbul_viii_c = { used_for_dynasty_names = no }
+				b_yeni_istanbul_viii_d = { used_for_dynasty_names = no }
+				b_yeni_istanbul_viii_e = { used_for_dynasty_names = no }
+				b_yeni_istanbul_viii_f = { used_for_dynasty_names = no }
+				b_yeni_istanbul_viii_g = { used_for_dynasty_names = no }
+			}
+			
+			c_madaar_shaadhdh = {
+				color = { 116 116 132 }
+				color2 = { 255 255 255 }
+				
+				used_for_dynasty_names = no
+				
+				b_madaar_shaadhdh_prime = { used_for_dynasty_names = no }
+				b_madaar_shaadhdh_ii = { used_for_dynasty_names = no }
+				b_madaar_shaadhdh_iii = { used_for_dynasty_names = no }
+				b_madaar_shaadhdh_iv = { used_for_dynasty_names = no }
+			}
+			
+			c_unnati = {
+				color = { 116 116 148 }
+				color2 = { 255 255 255 }
+				
+				used_for_dynasty_names = no
+				
+				b_unnati_ii = { used_for_dynasty_names = no }
+				b_unnati_ii_b = { used_for_dynasty_names = no }
+				b_unnati_ii_c = { used_for_dynasty_names = no }
+				b_unnati_iii = { used_for_dynasty_names = no }
+			}
+			
+			c_porfoad = {
+				color = { 116 116 164 }
+				color2 = { 255 255 255 }
+				
+				used_for_dynasty_names = no
+				
+				b_porfoad_iii = { used_for_dynasty_names = no }
+				b_porfoad_iii_b = { used_for_dynasty_names = no }
+				b_porfoad_iv = { used_for_dynasty_names = no }
+				b_porfoad_v = { used_for_dynasty_names = no }
+			}
+			
+			c_porsaid = {
+				color = { 116 116 180 }
+				color2 = { 255 255 255 }
+				
+				used_for_dynasty_names = no
+				
+				b_porsaid_iii = { used_for_dynasty_names = no }
+				b_porsaid_iii_b = { used_for_dynasty_names = no }
+				b_porsaid_iv = { used_for_dynasty_names = no }
+				b_porsaid_v = { used_for_dynasty_names = no }
+			}
+		}
+		
+		d_qoqnoos = {
+			color = { 132 100 100 }
+			color2 = { 255 255 255 }
+			
+			capital = 14 # Qoqnoos
+			
+			c_qoqnoos = {
+				color = { 132 100 116 }
+				color2 = { 255 255 255 }
+				
+				used_for_dynasty_names = no
+				
+				b_qoqnoos_iv = { used_for_dynasty_names = no }
+				b_qoqnoos_iv_b = { used_for_dynasty_names = no }
+				b_qoqnoos_iv_c = { used_for_dynasty_names = no }
+				b_qoqnoos_v = { used_for_dynasty_names = no }
+				b_qoqnoos_v_b = { used_for_dynasty_names = no }
+			}
+			
+			c_omid = {
+				color = { 132 100 132 }
+				color2 = { 255 255 255 }
+				
+				used_for_dynasty_names = no
+				
+				b_omid_iii = { used_for_dynasty_names = no }
+				b_omid_iii_b = { used_for_dynasty_names = no }
+				b_omid_station_alpha = { used_for_dynasty_names = no }
+				b_omid_station_beta = { used_for_dynasty_names = no }
+				b_omid_station_gamma = { used_for_dynasty_names = no }
+			}
+			
+			c_ushirikiao = {
+				color = { 132 100 148 }
+				color2 = { 255 255 255 }
+				
+				used_for_dynasty_names = no
+				
+				b_ushirikiao_prime = { used_for_dynasty_names = no }
+				b_ushirikiao_ii = { used_for_dynasty_names = no }
+				b_ushirikiao_iii = { used_for_dynasty_names = no }
+				b_ushirikiao_iv = { used_for_dynasty_names = no }
+			}
+		}
+		
+		d_mandela = {
+			color = { 132 116 100 }
+			color2 = { 255 255 255 }
+			
+			capital = 17 # Mandela
+			
+			c_mandela = {
+				color = { 132 116 116 }
+				color2 = { 255 255 255 }
+				
+				used_for_dynasty_names = no
+				
+				b_mandela_iii = { used_for_dynasty_names = no }
+				b_mandela_iii_b = { used_for_dynasty_names = no }
+				b_mandela_iv = { used_for_dynasty_names = no }
+				b_mandela_iv_b = { used_for_dynasty_names = no }
+			}
+			c_mohamud = {
+				color = { 132 116 132 }
+				color2 = { 255 255 255 }
+				
+				used_for_dynasty_names = no
+				
+				b_mohamud_iv = { used_for_dynasty_names = no }
+				b_mohamud_iv_b = { used_for_dynasty_names = no }
+				b_mohamud_iv_c = { used_for_dynasty_names = no }
+				b_mohamud_iv_d = { used_for_dynasty_names = no }
+			}
+		}
+		
+		d_new_lusaka = {
+			color = { 100 132 100 }
+			color2 = { 255 255 255 }
+			
+			capital = 20 # New Lusaka
+			
+			c_new_lusaka = {
+				color = { 100 132 116 }
+				color2 = { 255 255 255 }
+				
+				used_for_dynasty_names = no
+				
+				b_new_lusaka_iii = { used_for_dynasty_names = no }
+				b_new_lusaka_iii_b = { used_for_dynasty_names = no }
+				b_new_lusaka_iv = { used_for_dynasty_names = no }
+				b_new_lusaka_iv_b = { used_for_dynasty_names = no }
+				b_new_lusaka_v = { used_for_dynasty_names = no }
+			}
+			
+			c_madeira_al_jadiida = {
+				color = { 100 132 132 }
+				color2 = { 255 255 255 }
+				
+				used_for_dynasty_names = no
+				
+				b_madeira_al_jadiida_ii = { used_for_dynasty_names = no }
+				b_madeira_al_jadiida_ii_b = { used_for_dynasty_names = no }
+				b_madeira_al_jadiida_observatory = { used_for_dynasty_names = no }
+				b_madeira_al_jadiida_iv = { used_for_dynasty_names = no }
+			}
+			
+			c_kaksa_ki_vismataem = {
+				color = { 100 132 148 }
+				color2 = { 255 255 255 }
+				
+				used_for_dynasty_names = no
+				
+				b_kaksa_waystation = { used_for_dynasty_names = no }
+				b_kaksa_observatory = { used_for_dynasty_names = no }
+				b_kaksa_trade_station = { used_for_dynasty_names = no }
+				b_kaksa_prime = { used_for_dynasty_names = no }
+			}
+		}
+		
+		d_dhartvir = {
+			color = { 116 132 100 }
+			color2 = { 255 255 255 }
+			
+			capital = 21 # Dhartvir
+			
+			c_dhartvir = {
+				color = { 116 132 116 }
+				color2 = { 255 255 255 }
+				
+				used_for_dynasty_names = no
+				
+				b_dhartvir_prime = { used_for_dynasty_names = no }
+				b_dhartvir_prime_b = {
+					holy_site = machine_cultist
+					holy_site = hiver
+					used_for_dynasty_names = no
+				}
+				b_dhartvir_ii = { used_for_dynasty_names = no }
+				b_dhartvir_iii = { used_for_dynasty_names = no }
+			}
+			
+			c_dharmvir = {
+				color = { 116 132 132 }
+				color2 = { 255 255 255 }
+				
+				used_for_dynasty_names = no
+				
+				b_dharmvir_waystation = { used_for_dynasty_names = no }
+				b_dharmvir_iii = { used_for_dynasty_names = no }
+				b_dharmvir_iii_b = { used_for_dynasty_names = no }
+				b_dharmvir_iii_c = { used_for_dynasty_names = no }
 			}
 		}
 	}

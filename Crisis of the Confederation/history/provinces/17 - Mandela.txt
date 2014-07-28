@@ -1,0 +1,22 @@
+# 17 - Mandela
+
+# County Title
+title = c_mandela
+
+# Settlements
+max_settlements = 4
+
+b_mandela_iii_b = temple
+b_mandela_iii = city
+b_mandela_iv = castle
+
+# Misc
+culture = east_afro_tarkan # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

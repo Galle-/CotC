@@ -1,0 +1,22 @@
+# 4 - Fezzan
+
+# County Title
+title = c_fezzan
+
+# Settlements
+max_settlements = 4
+
+b_fezzan_iv_b = temple
+b_fezzan_iv = city
+b_fezzan_v = castle
+
+# Misc
+culture = indo_tarkan # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

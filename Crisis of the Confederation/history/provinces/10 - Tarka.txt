@@ -1,0 +1,22 @@
+# 10 - Tarka
+
+# County Title
+title = c_tarka
+
+# Settlements
+max_settlements = 6
+
+b_tarka_iii_b = temple
+b_tarka_iii = city
+b_tarka_iv = castle
+
+# Misc
+culture = indo_tarkan # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

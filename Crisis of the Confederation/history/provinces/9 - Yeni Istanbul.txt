@@ -1,0 +1,22 @@
+# 9 - Yeni Istanbul
+
+# County Title
+title = c_yeni_istanbul
+
+# Settlements
+max_settlements = 6
+
+b_yeni_istanbul_viii_b = city
+b_yeni_istanbul_viii_c = temple
+b_yeni_istanbul_viii_d = castle
+
+# Misc
+culture = indo_tarkan # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

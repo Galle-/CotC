@@ -1,0 +1,22 @@
+# 8 - Porsa'id
+
+# County Title
+title = c_porsaid
+
+# Settlements
+max_settlements = 4
+
+b_porsaid_iii_b = temple
+b_porsaid_iii = city
+b_porsaid_iv = castle
+
+# Misc
+culture = indo_tarkan # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

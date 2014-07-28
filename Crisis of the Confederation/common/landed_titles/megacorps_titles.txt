@@ -135,3 +135,25 @@ b_omosun = {
 	culture = west_afro_frontiersman
 	religion = colonial_separatist
 }
+
+# Yeni Istanbul megacorps
+b_sarkar = {
+	culture = indo_tarkan
+	religion = cyberneticist
+}
+b_rathore = {
+	culture = indo_tarkan
+	religion = cyberneticist
+}
+b_tehrani = {
+	culture = iranian_tarkan
+	religion = cyberneticist
+}
+b_sinha = {
+	culture = indo_tarkan
+	religion = cyberneticist
+}
+b_iyer = {
+	culture = indo_tarkan
+	religion = cyberneticist
+}

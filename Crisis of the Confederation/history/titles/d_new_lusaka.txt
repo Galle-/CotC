@@ -1,0 +1,7 @@
+2900.1.1 = {
+	law = succ_appointment
+	law = true_cognatic_succession
+	liege = "k_tarka"
+}
+
+2998.1.1 = { holder = "1101981" } # Riya MacTavish

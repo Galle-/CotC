@@ -1,0 +1,22 @@
+# 11 - Marrakesh al-Jadiida
+
+# County Title
+title = c_marrakesh_al_jadiida
+
+# Settlements
+max_settlements = 4
+
+b_marrakesh_al_jadiida_iv_c = castle
+b_marrakesh_al_jadiida_iv = city
+b_marrakesh_al_jadiida_iv_b = temple
+
+# Misc
+culture = arab_tarkan # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

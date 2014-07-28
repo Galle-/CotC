@@ -1,0 +1,22 @@
+# 21 - Dhartvir
+
+# County Title
+title = c_dhartvir
+
+# Settlements
+max_settlements = 4
+
+b_dhartvir_prime_b = temple
+b_dhartvir_prime = city
+b_dhartvir_ii = castle
+
+# Misc
+culture = indo_tarkan # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

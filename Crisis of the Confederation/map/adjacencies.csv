@@ -37,26 +37,26 @@ From;To;Type;Through;-1;-1;-1;-1;Comment
 31;24;sea;;-1;-1;-1;-1;Mary's Star-Etherland
 24;23;sea;943;-1;-1;-1;-1;Etherland-Alfred
 23;38;sea;;-1;-1;-1;-1;Alfred-Robinson
-1;2;sea;936;-1;-1;-1;-1;328-329
-1;3;sea;936;-1;-1;-1;-1;328-330
-2;4;sea;936;-1;-1;-1;-1;329-331
-4;3;sea;936;-1;-1;-1;-1;331-330
-3;5;sea;;-1;-1;-1;-1;330-332
-5;9;sea;937;-1;-1;-1;-1;332-336
-5;7;sea;937;-1;-1;-1;-1;332-334
-9;6;sea;937;-1;-1;-1;-1;336-333
-9;8;sea;937;-1;-1;-1;-1;336-335
-9;7;sea;937;-1;-1;-1;-1;336-334
-7;8;sea;937;-1;-1;-1;-1;334-335
-8;6;sea;937;-1;-1;-1;-1;335-333
-6;18;sea;;-1;-1;-1;-1;333-340
-18;19;sea;941;-1;-1;-1;-1;340-341
-18;20;sea;941;-1;-1;-1;-1;340-342
-19;20;sea;941;-1;-1;-1;-1;341-342
-19;21;sea;;-1;-1;-1;-1;341-343
+1;2;sea;936;-1;-1;-1;-1;Ksora-Oran
+1;3;sea;936;-1;-1;-1;-1;Ksora-Talon
+2;4;sea;936;-1;-1;-1;-1;Oran-Fezzan
+4;3;sea;936;-1;-1;-1;-1;Fezzan-Talon
+3;5;sea;;-1;-1;-1;-1;Talon-Madaar Shaadhdh
+5;9;sea;937;-1;-1;-1;-1;Madaar Shaadhdh-Yeni Istanbul
+5;7;sea;937;-1;-1;-1;-1;Madaar Shaadhdh-Porfo'ad
+9;6;sea;937;-1;-1;-1;-1;Yeni Istanbul-Unnati
+9;8;sea;937;-1;-1;-1;-1;Yeni Istanbul-Porsa'id
+9;7;sea;937;-1;-1;-1;-1;Yeni Istanbul-Porfo'ad
+7;8;sea;937;-1;-1;-1;-1;Porfo'ad-Porsa'id
+8;6;sea;937;-1;-1;-1;-1;Porsa'id-Unnati
+6;18;sea;;-1;-1;-1;-1;Unnati-Madeira al-Jadiida
+18;19;sea;941;-1;-1;-1;-1;Madeira al-Jadiida-Kaksa ki Vismata'em
+18;20;sea;941;-1;-1;-1;-1;Madeira al-Jadiida-New Lusaka
+19;20;sea;941;-1;-1;-1;-1;Kaksa ki Vismata'em-New Lusaka
+19;21;sea;;-1;-1;-1;-1;Kaksa ki Vismata'em-343
 21;22;sea;942;-1;-1;-1;-1;343-344
-8;10;sea;;-1;-1;-1;-1;335-337
-7;11;sea;;-1;-1;-1;-1;334-338
+8;10;sea;;-1;-1;-1;-1;Porsa'id-337
+7;11;sea;;-1;-1;-1;-1;Porfo'ad-338
 10;11;sea;938;-1;-1;-1;-1;337-338
 10;12;sea;938;-1;-1;-1;-1;337-339
 11;12;sea;938;-1;-1;-1;-1;338-339
@@ -460,8 +460,8 @@ From;To;Type;Through;-1;-1;-1;-1;Comment
 261;263;sea;1014;-1;-1;-1;-1;368-Xin Qin
 262;238;sea;;-1;-1;-1;-1;369-391
 262;263;sea;1014;-1;-1;-1;-1;369-Xin Qin
-23;2;sea;;-1;-1;-1;-1;Afred-329
-23;4;sea;;-1;-1;-1;-1;Alfred-331
+23;1;sea;;-1;-1;-1;-1;Alfred-Ksora
+23;2;sea;;-1;-1;-1;-1;Afred-Oran
 24;280;sea;;-1;-1;-1;-1;Etherland-Abbaba
 44;280;sea;;-1;-1;-1;-1;Victoria-Abbaba
 42;96;sea;;-1;-1;-1;-1;Endeavor-Liberty

@@ -1,0 +1,22 @@
+# 15 - Ushirikiao
+
+# County Title
+title = c_ushirikiao
+
+# Settlements
+max_settlements = 4
+
+b_ushirikiao_prime = castle
+b_ushirikiao_ii = city
+b_ushirikiao_iii = temple
+
+# Misc
+culture = east_afro_tarkan # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

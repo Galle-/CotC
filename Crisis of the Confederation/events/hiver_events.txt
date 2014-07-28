@@ -2011,7 +2011,7 @@ character_event = {
 	trigger = {
 		religion = cyberneticist
 		NOT = { has_global_flag = flag_hiver_implant_invented }
-		capital_scope = { TECH_POPULAR_CUSTOM = 5 }
+		capital_scope = { TECH_POPULAR_CUSTOMS = 5 }
 		learning = 20
 		NOT = { has_character_flag = flag_refused_hiver_implant_invention }
 	}

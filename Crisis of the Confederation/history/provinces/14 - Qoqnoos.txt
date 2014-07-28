@@ -1,0 +1,22 @@
+# 14 - Qoqnoos
+
+# County Title
+title = c_qoqnoos
+
+# Settlements
+max_settlements = 5
+
+b_qoqnoos_iv_b = temple
+b_qoqnoos_iv = city
+b_qoqnoos_iv_c = castle
+
+# Misc
+culture = iranian_tarkan # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

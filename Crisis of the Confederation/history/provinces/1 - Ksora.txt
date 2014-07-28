@@ -1,0 +1,22 @@
+# 1 - Ksora
+
+# County Title
+title = c_ksora
+
+# Settlements
+max_settlements = 4
+
+b_ksora_vii_b = castle
+b_ksora_vii_c = city
+b_ksora_vii_d = temple
+
+# Misc
+culture = indo_tarkan # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

@@ -1,0 +1,22 @@
+# 5 - Madaar Shaadhdh
+
+# County Title
+title = c_madaar_shaadhdh
+
+# Settlements
+max_settlements = 4
+
+b_madaar_shaadhdh_prime = temple
+b_madaar_shaadhdh_ii = city
+b_madaar_shaadhdh_iii = castle
+
+# Misc
+culture = indo_tarkan # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}
