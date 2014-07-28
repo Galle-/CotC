@@ -898,6 +898,13 @@ character_event = {
 	}
 	
 	option = {
+		trigger = {
+			OR = {
+				liege = { religion = space_pirate }
+				any_independent_ruler = { religion = space_pirate }
+				NOT = { has_dlc = "The Old Gods" }
+			}
+		}
 		name = "EVTOPTACONVERSION10000"
 		religion = space_pirate
 		if = {
@@ -908,6 +915,276 @@ character_event = {
 			}
 			liege = { character_event = { id = conversion.10001 } }
 		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = content
+			}
+			modifier = {
+				factor = 0.5
+				trait = ambitious
+			}
+			modifier = {
+				factor = 2
+				trait = craven
+			}
+			modifier = {
+				factor = 0.5
+				trait = brave
+			}
+			modifier = {
+				factor = 2
+				trait = humble
+			}
+			modifier = {
+				factor = 0.5
+				trait = proud
+			}
+			modifier = {
+				factor = 2
+				trait = neurotic
+			}
+			modifier = {
+				factor = 0.5
+				trait = confident
+			}
+		}
+	}
+	
+	# Carve out my own pirate kingdom
+	option = {
+		trigger = {
+			has_dlc = "The Old Gods"
+			OR = {
+				AND = {
+					NOT = { liege { religion = space_pirate } }
+					NOT = { any_independent_ruler = { religion = space_pirate } }
+				}
+				martial = 20
+			}
+		}
+		name = "EVTOPTBCONVERSION10000"
+		religion = space_pirate
+		liege = {
+			character_event = { id = conversion.10003 }
+			capital_scope = {
+				random_independent_ruler = {
+					limit = {
+						# Prefer not to attack other space pirates
+						OR = {
+							NOT = { religion = space_pirate }
+							NOT = {
+								any_independent_ruler = {
+									NOT = { religion = space_pirate }
+									OR = {
+										# Go after either neighboring provinces or deep nebula provinces
+										# Helix Nebula
+										province_id = 102
+										province_id = 109
+										
+										# Witchhead Nebula
+										province_id = 214
+										province_id = 215
+										province_id = 216
+										province_id = 223
+										province_id = 224
+										
+										any_neighbor_province = { owner = { same_realm = ROOT } }
+									}
+								}
+							}
+						}
+						any_realm_province = {
+							OR = {
+								# Go after either neighboring provinces or deep nebula provinces
+								# Helix Nebula
+								province_id = 102
+								province_id = 109
+								
+								# Witchhead Nebula
+								province_id = 214
+								province_id = 215
+								province_id = 216
+								province_id = 223
+								province_id = 224
+								
+								any_neighbor_province = { owner = { same_realm = ROOT } }
+							}
+						}
+					}
+					random_realm_province = {
+						limit = {
+							OR = {
+								# Go after either neighboring provinces or deep nebula provinces
+								# Helix Nebula
+								province_id = 102
+								province_id = 109
+								
+								# Witchhead Nebula
+								province_id = 214
+								province_id = 215
+								province_id = 216
+								province_id = 223
+								province_id = 224
+								
+								any_neighbor_province = { owner = { same_realm = ROOT } }
+							}
+						}
+						ROOT = {
+							set_defacto_liege = ROOT
+							create_title = {
+								tier = DUKE
+								landless = yes
+								temporary = yes
+								culture = ROOT
+								name = "PIRATE_ADVENTURE"
+								holder = ROOT
+							}
+							set_character_flag = flag_duchy_adventurer
+							
+							# Any landless friends may be invited to come along
+							any_friend = {
+								limit = { is_landed = no }
+								character_event = { id = conversion.10002 }
+							}
+							
+							# Also spawn three random mercs
+							random_list = {
+								50 = {
+									create_random_soldier = {
+										age = 30
+										random_traits = yes
+										culture = ROOT
+										dynasty = culture
+										religion = space_pirate
+										female = yes
+										trait = warship_captain
+									}
+								}
+								50 = {
+									create_random_soldier = {
+										age = 30
+										random_traits = yes
+										culture = ROOT
+										dynasty = culture
+										religion = space_pirate
+										female = no
+										trait = warship_captain
+									}
+								}
+							}
+							random_list = {
+								50 = {
+									create_random_soldier = {
+										age = 30
+										random_traits = yes
+										culture = ROOT
+										dynasty = culture
+										religion = space_pirate
+										female = yes
+										trait = fighter_pilot
+									}
+								}
+								50 = {
+									create_random_soldier = {
+										age = 30
+										random_traits = yes
+										culture = ROOT
+										dynasty = culture
+										religion = space_pirate
+										female = no
+										trait = fighter_pilot
+									}
+								}
+							}
+							random_list = {
+								50 = {
+									create_random_soldier = {
+										age = 30
+										random_traits = yes
+										culture = ROOT
+										dynasty = culture
+										religion = space_pirate
+										female = yes
+										trait = marine_colonel
+									}
+								}
+								50 = {
+									create_random_soldier = {
+										age = 30
+										random_traits = yes
+										culture = ROOT
+										dynasty = culture
+										religion = space_pirate
+										female = no
+										trait = marine_colonel
+									}
+								}
+							}
+							
+							# Spawn a fleet: 1 DN, 5 BCs, 10 TTs, 500 Fighters, 500 Bombers, 25 Galleys
+							spawn_fleet = {
+								province = closest # closest sea zone
+								owner = ROOT
+								disband_on_peace = yes
+								troops = { galleys = { 25 25 } }
+							}
+							spawn_unit = {
+								province = PREVPREVPREV
+								home = PREVPREVPREV
+								owner = THIS
+								leader = THIS
+								troops = { dreadnoughts = { 1 1 } }
+								attrition = 0.0
+								disband_on_peace = no
+							}
+							spawn_unit = {
+								province = PREVPREVPREV
+								home = PREVPREVPREV
+								owner = THIS
+								troops = { knights = { 5 5 } }
+								attrition = 0.0
+								disband_on_peace = no
+							}
+							spawn_unit = {
+								province = PREVPREVPREV
+								home = PREVPREVPREV
+								owner = THIS
+								troops = { archers = { 10 10 } }
+								attrition = 0.0
+								disband_on_peace = no
+							}
+							spawn_unit = {
+								province = PREVPREVPREV
+								home = PREVPREVPREV
+								owner = THIS
+								troops = { light_infantry = { 500 500 } }
+								attrition = 0.0
+								disband_on_peace = no
+							}
+							spawn_unit = {
+								province = PREVPREVPREV
+								home = PREVPREVPREV
+								owner = THIS
+								troops = { heavy_infantry = { 500 500 } }
+								attrition = 0.0
+								disband_on_peace = no
+							}
+							
+							# Declare War
+							war = {
+								target = PREVPREV
+								casus_belli = duchy_adventure
+								thirdparty_title = PREV
+								tier = DUKE
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_chance = { factor = 50 }
 	}
 }
 
@@ -919,6 +1196,316 @@ character_event = {
 	
 	option = { name = "EVTOPTCONFIRM" }
 }
+
+# Your friend asks you to join their pirate adventure
+character_event = {
+	id = conversion.10002
+	desc = "EVTDESCCONVERSION10002"
+	picture = GFX_evt_pirate
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACONVERSION10002"
+		religion = space_pirate
+		liege = { character_event = { id = conversion.10004 } }
+		FROM = { reverse_banish = ROOT }
+		
+		# Military characters spawn an appropriate new unit under FROM's command
+		if = {
+			limit = { trait = warship_captain }
+			FROM = {
+				location = {
+					FROM = {
+						spawn_unit = {
+							province = PREV
+							home = PREV
+							owner = FROM
+							leader = ROOT
+							troops = { dreadnoughts = { 1 1 } }
+							attrition = 0.0
+							disband_on_peace = no
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = { trait = fighter_pilot }
+			FROM = {
+				location = {
+					FROM = {
+						spawn_unit = {
+							province = PREV
+							home = PREV
+							owner = FROM
+							leader = ROOT
+							troops = { light_infantry = { 50 50 } }
+							attrition = 0.0
+							disband_on_peace = no
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = { trait = marine_colonel }
+			FROM = {
+				location = {
+					FROM = {
+						spawn_unit = {
+							province = PREV
+							home = PREV
+							owner = FROM
+							leader = ROOT
+							troops = { archers = { 5 5 } }
+							attrition = 0.0
+							disband_on_peace = no
+						}
+					}
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				NOT = { religion = space_pirate }
+				religion_authority = 0.1
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = space_pirate }
+				religion_authority = 0.2
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = space_pirate }
+				religion_authority = 0.3
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = space_pirate }
+				religion_authority = 0.4
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = space_pirate }
+				religion_authority = 0.5
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = space_pirate }
+				religion_authority = 0.6
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = space_pirate }
+				religion_authority = 0.7
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = space_pirate }
+				religion_authority = 0.8
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = space_pirate }
+				religion_authority = 0.9
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = space_pirate }
+				religion_authority = 1
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = space_pirate }
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { religion = space_pirate }
+				trait = radical
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.1 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.2 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.3 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.4 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.5 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.6 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.7 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.8 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 0.9 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { religion_authority = 1 }
+			}
+			modifier = {
+				factor = 5
+				religion = space_pirate
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 100 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 4
+				trait = ambitious
+				NOT = { any_heir_title = { always = yes } }
+				NOT = { has_minor_title = title_expected_successor }
+			}
+			modifier = {
+				factor = 4
+				trait = ambitious
+				NOT = { any_heir_title = { always = yes } }
+				NOT = { has_minor_title = title_expected_successor }
+				NOT = { any_pretender_title = { always = yes } }
+			}
+			modifier = {
+				factor = 0.1
+				any_heir_title = { always = yes }
+			}
+			modifier = {
+				factor = 0.1
+				has_minor_title = title_expected_successor
+			}
+			modifier = {
+				factor = 0.25
+				any_pretender_title = { always = yes }
+			}
+			modifier = {
+				factor = 0.5
+				is_councillor = yes
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTBCONVERSION10003"
+		ai_chance = { factor = 50 }
+	}
+}
+
+character_event = {
+	id = conversion.10003
+	desc = "EVTDESCCONVERSION10003"
+	picture = GFX_evt_pirate
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+character_event = {
+	id = conversion.10004
+	desc = "EVTDESCCONVERSION10004"
+	picture = GFX_evt_pirate
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+
 
 # Special Conversion: Devolved naval commander turns space pirate
 character_event = {
@@ -1366,7 +1953,7 @@ character_event = {
 				culture_group = mukta_group
 				culture_group = tarkan_group
 				culture_group = avalonian_group
-				culture_group = jionese_group
+				culture_group = tengoku_group
 				culture_group = strugatskite_group
 				culture_group = edemite_group
 			}
@@ -1384,7 +1971,7 @@ character_event = {
 				culture_group = mukta_group
 				culture_group = tarkan_group
 				culture_group = avalonian_group
-				culture_group = jionese_group
+				culture_group = tengoku_group
 				culture_group = strugatskite_group
 				culture_group = edemite_group
 			}
@@ -1400,7 +1987,7 @@ character_event = {
 				culture_group = mukta_group
 				culture_group = tarkan_group
 				culture_group = avalonian_group
-				culture_group = jionese_group
+				culture_group = tengoku_group
 				culture_group = strugatskite_group
 				culture_group = edemite_group
 			}
@@ -1416,7 +2003,7 @@ character_event = {
 				culture_group = mukta_group
 				culture_group = tarkan_group
 				culture_group = avalonian_group
-				culture_group = jionese_group
+				culture_group = tengoku_group
 				culture_group = strugatskite_group
 				culture_group = edemite_group
 			}
@@ -1980,7 +2567,7 @@ character_event = {
 				culture_group = mukta_group
 				culture_group = tarkan_group
 				culture_group = avalonian_group
-				culture_group = jionese_group
+				culture_group = tengoku_group
 				culture_group = strugatskite_group
 				culture_group = edemite_group
 			}
@@ -1995,7 +2582,7 @@ character_event = {
 				culture_group = mukta_group
 				culture_group = tarkan_group
 				culture_group = avalonian_group
-				culture_group = jionese_group
+				culture_group = tengoku_group
 				culture_group = strugatskite_group
 				culture_group = edemite_group
 			}
@@ -2559,7 +3146,7 @@ character_event = {
 				culture_group = mukta_group
 				culture_group = tarkan_group
 				culture_group = avalonian_group
-				culture_group = jionese_group
+				culture_group = tengoku_group
 				culture_group = strugatskite_group
 				culture_group = edemite_group
 			}
@@ -2574,7 +3161,7 @@ character_event = {
 				culture_group = mukta_group
 				culture_group = tarkan_group
 				culture_group = avalonian_group
-				culture_group = jionese_group
+				culture_group = tengoku_group
 				culture_group = strugatskite_group
 				culture_group = edemite_group
 			}
@@ -3120,7 +3707,7 @@ character_event = {
 				culture_group = mukta_group
 				culture_group = tarkan_group
 				culture_group = avalonian_group
-				culture_group = jionese_group
+				culture_group = tengoku_group
 				culture_group = strugatskite_group
 				culture_group = edemite_group
 			}
@@ -3138,7 +3725,7 @@ character_event = {
 				culture_group = mukta_group
 				culture_group = tarkan_group
 				culture_group = avalonian_group
-				culture_group = jionese_group
+				culture_group = tengoku_group
 				culture_group = strugatskite_group
 				culture_group = edemite_group
 			}
@@ -3157,7 +3744,7 @@ character_event = {
 				culture_group = mukta_group
 				culture_group = tarkan_group
 				culture_group = avalonian_group
-				culture_group = jionese_group
+				culture_group = tengoku_group
 				culture_group = strugatskite_group
 				culture_group = edemite_group
 			}
@@ -3176,7 +3763,7 @@ character_event = {
 				culture_group = mukta_group
 				culture_group = tarkan_group
 				culture_group = avalonian_group
-				culture_group = jionese_group
+				culture_group = tengoku_group
 				culture_group = strugatskite_group
 				culture_group = edemite_group
 			}
@@ -4186,7 +4773,7 @@ character_event = {
 				culture_group = mukta_group
 				culture_group = tarkan_group
 				culture_group = avalonian_group
-				culture_group = jionese_group
+				culture_group = tengoku_group
 				culture_group = strugatskite_group
 				culture_group = edemite_group
 			}
@@ -4204,7 +4791,7 @@ character_event = {
 				culture_group = mukta_group
 				culture_group = tarkan_group
 				culture_group = avalonian_group
-				culture_group = jionese_group
+				culture_group = tengoku_group
 				culture_group = strugatskite_group
 				culture_group = edemite_group
 			}
@@ -4223,7 +4810,7 @@ character_event = {
 				culture_group = mukta_group
 				culture_group = tarkan_group
 				culture_group = avalonian_group
-				culture_group = jionese_group
+				culture_group = tengoku_group
 				culture_group = strugatskite_group
 				culture_group = edemite_group
 			}
@@ -4242,7 +4829,7 @@ character_event = {
 				culture_group = mukta_group
 				culture_group = tarkan_group
 				culture_group = avalonian_group
-				culture_group = jionese_group
+				culture_group = tengoku_group
 				culture_group = strugatskite_group
 				culture_group = edemite_group
 			}

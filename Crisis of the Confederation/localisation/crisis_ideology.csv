@@ -1,4 +1,7 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+CB_NAME_RELIGIOUS_LIBERATION;Ideological Liberation;;;;;;;;;;;;;x
+religious_liberation_desc;Many followers of the [Root.GetReligion] ideology labor under the corrupt government of the [This.GetFullName]. It is our duty to liberate them.;;;;;;;;;;;;x
+WAR_NAME_RELIGIOUS_LIBERATION;$ORDER$[Actor.Religion.GetName] Liberation of $OTHER_TITLE$;;;;;;;;;;;;;x
 political_group;Political;;;;;;;;;;;;;x
 terran_federalist;Terran Federalism;;;;;;;;;;;;;x
 terran_republican;Terran Republicanism;;;;;;;;;;;;;x
@@ -26,6 +29,7 @@ hiver;The Hive;;;;;;;;;;;;;x
 bio_directionist;Bio-Directionism;;;;;;;;;;;;;x
 outlaw_group;Outlaw;;;;;;;;;;;;;x
 space_pirate;Space Piracy;;;;;;;;;;;;;x
+PIRATE_ADVENTURE;[Root.GetFullName]'s Pirate Fleet;;;;;;;;;;;;;x
 STAT_PIETY_CREDIBILITY;Credibility;;;;;;;;;;;;;x
 STAT_PIETY_DESC_CREDIBILITY;Political credibility is respected by other followers of your ideology. Like Prestige, it is added to your score on the death of a ruler.;;;;;;;;;;;;;x
 MONTHLY_PIETY_CREDIBILITY;Monthly Credibility Increase;;;;.;;;;;;;;;x

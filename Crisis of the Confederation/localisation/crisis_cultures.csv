@@ -1,4 +1,7 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+CB_NAME_CULTURAL_LIBERATION;National Liberation;;;;;;;;;;;;;x
+cultural_liberation_desc;The [Root.Culture.GetGroupName] people of the [This.GetFullName] labor under foreign oppressors. They must be liberated!;;;;;;;;;;;;x
+WAR_NAME_CULTURAL_LIBERATION;$ORDER$[Actor.Culture.GetGroupName] Nationalist War for $OTHER_TITLE$;;;;;;;;;;;;;x
 terran_group;Terrans;Terriens;Terraner;;Terrícolas;;;;;;;;;x
 anglo_terran;Anglo-American;Terrien;Anglo-Terraner;;Terrícola;;;;;;;;;x
 arab_terran;Arab;Terrien;Arabischer Terraner;;Terrícola;;;;;;;;;x

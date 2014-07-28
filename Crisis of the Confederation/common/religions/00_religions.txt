@@ -435,7 +435,7 @@ transhumanist_group = {
 		#can_grant_invasion_cb = no #wants a cb
 		can_call_crusade = no
 		can_grant_claim = no
-		can_hold_temples = yes
+		#can_hold_temples = yes
 		priests_can_marry = yes
 		female_temple_holders = yes
 		feminist = yes
@@ -467,7 +467,7 @@ transhumanist_group = {
 		can_call_crusade = yes
 		can_grant_claim = no
 		
-		can_hold_temples = yes
+		#can_hold_temples = yes
 		priests_can_marry = yes
 		female_temple_holders = yes
 		feminist = yes
@@ -499,7 +499,7 @@ transhumanist_group = {
 		can_call_crusade = yes
 		can_grant_claim = no
 		
-		can_hold_temples = yes
+		#can_hold_temples = yes
 		priests_can_marry = yes
 		female_temple_holders = yes
 		feminist = yes
@@ -533,7 +533,7 @@ transhumanist_group = {
 		can_call_crusade = no
 		can_grant_claim = yes
 		
-		can_hold_temples = yes
+		#can_hold_temples = yes
 		priests_can_marry = yes
 		female_temple_holders = yes
 		feminist = yes

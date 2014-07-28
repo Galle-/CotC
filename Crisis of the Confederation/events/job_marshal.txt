@@ -380,6 +380,6 @@ letter_event = {
 	
 	option = {
 		name = "EVTOPTAMARSHAL111"
-		military_techpoints = 50
+		military_techpoints = 10
 	}
 }

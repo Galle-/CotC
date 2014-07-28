@@ -97,7 +97,7 @@ character_event = {
 			}
 		}
 		name = "EVTOPTBSCIENTIST100"
-		military_techpoints = 50
+		military_techpoints = 10
 	}
 }
 
@@ -108,7 +108,7 @@ letter_event = {
 	
 	option = {
 		name = "EVTOPTCONFIRM"
-		military_techpoints = 50
+		military_techpoints = 10
 	}
 }
 
@@ -209,7 +209,7 @@ character_event = {
 			}
 		}
 		name = "EVTOPTBSCIENTIST100"
-		economy_techpoints = 50
+		economy_techpoints = 10
 	}
 }
 
@@ -220,7 +220,7 @@ letter_event = {
 	
 	option = {
 		name = "EVTOPTCONFIRM"
-		economy_techpoints = 50
+		economy_techpoints = 10
 	}
 }
 
@@ -321,7 +321,7 @@ character_event = {
 			}
 		}
 		name = "EVTOPTBSCIENTIST100"
-		cultural_techpoints = 50
+		cultural_techpoints = 10
 	}
 }
 
@@ -332,7 +332,7 @@ letter_event = {
 	
 	option = {
 		name = "EVTOPTCONFIRM"
-		cultural_techpoints = 50
+		cultural_techpoints = 10
 	}
 }
 

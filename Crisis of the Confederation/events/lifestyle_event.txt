@@ -1908,7 +1908,7 @@ character_event = {
 		name = "EVTOPTALIFESTYLE4000"
 		random_list = {
 			33 = {
-				military_techpoints = 100
+				military_techpoints = 25
 				custom_tooltip = {
 					text = "EVTTOOLTIPLIFESTYLE4001"
 					hidden_tooltip = {
@@ -1920,7 +1920,7 @@ character_event = {
 				}
 			}
 			33 = {
-				economy_techpoints = 100
+				economy_techpoints = 25
 				custom_tooltip = {
 					text = "EVTTOOLTIPLIFESTYLE4002"
 					hidden_tooltip = {
@@ -1932,7 +1932,7 @@ character_event = {
 				}
 			}
 			33 = {
-				culture_techpoints = 100
+				culture_techpoints = 25
 				custom_tooltip = {
 					text = "EVTTOOLTIPLIFESTYLE4003"
 					hidden_tooltip = {
@@ -1975,9 +1975,9 @@ character_event = {
 		# This is a strategic advantage, we should keep it to ourselves
 		name = "EVTOPTBLIFESTYLE4000"
 		random_list = {
-			33 = { military_techpoints = 100 }
-			33 = { economy_techpoints = 100 }
-			33 = { culture_techpoints = 100 }
+			33 = { military_techpoints = 25 }
+			33 = { economy_techpoints = 25 }
+			33 = { culture_techpoints = 25 }
 		}
 		ai_chance = { factor = 25 }
 	}
@@ -1990,7 +1990,7 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTCONFIRM"
-		military_techpoints = 100
+		military_techpoints = 25
 	}
 }
 character_event = {
@@ -2001,7 +2001,7 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTCONFIRM"
-		economy_techpoints = 100
+		economy_techpoints = 25
 	}
 }
 character_event = {
@@ -2012,7 +2012,7 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTCONFIRM"
-		culture_techpoints = 100
+		culture_techpoints = 25
 	}
 }
 
@@ -2165,7 +2165,7 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTALIFESTYLE4204"
-		military_techpoints = 50
+		military_techpoints = 10
 	}
 }
 character_event = {
@@ -2176,8 +2176,8 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTALIFESTYLE4205"
-		economy_techpoints = 50
-		culture_techpoints = 50
+		economy_techpoints = 10
+		culture_techpoints = 10
 	}
 }
 
@@ -2236,7 +2236,7 @@ character_event = {
 		# Well, I'll show them! I'LL SHOW THEM ALL!
 		name = "EVOPTALIFESTYLE4300"
 		add_trait = lunatic
-		culture_techpoints = 300
+		culture_techpoints = 100
 	}
 }
 
