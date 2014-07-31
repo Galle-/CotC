@@ -56,56 +56,183 @@ vassal_decisions = {
 			hidden_tooltip = { character_event = { id = military.100 } }
 		}
 		ai_will_do = {
-			factor = 100 # Do this sort of thing ASAP
-			modifier = { # More likely to command top-level militaries directly
-				factor = 0.1
-				is_feudal = yes
+			factor = 1
+			# Whether to assign the title at all
+			modifier = {
+				factor = 0
+				FROM = {
+					is_feudal = yes
+					is_patrician = no
+					has_landed_title = k_terran_navy
+					NOT = { trait = craven }
+					NOT = { trait = neurotic }
+					NOT = { trait = humble }
+					NOT = { trait = friendly }
+				}
+			}
+			# Whether to even consider this commander
+			modifier = {
+				factor = 0
+				NOT = { capital_scope = { empire = { title = e_terran_confederation } } }
+			}
+			# Reasons to prefer this commander
+			modifier = {
+				factor = 5
+				dynasty = FROM
 			}
 			modifier = {
-				factor = 0.5
-				FROM = {
-					any_vassal = {
-						is_feudal = yes
-						is_patrician = no
-						NOT = { any_demesne_title = { higher_tier_than = duke } }
-						age = 16
-						prisoner = no
-						NOT = { trait = incapable }
-						attribute_diff = {
-							who = ROOT
-							attribute = martial
-							value = 1
-						}
-					}
+				factor = 5
+				is_close_relative = FROM
+			}
+			modifier = {
+				factor = 5
+				OR = {
+					has_landed_title = d_terran_first_fleet
+					has_landed_title = d_terran_second_fleet
+					has_landed_title = d_terran_third_fleet
+					has_landed_title = d_terran_fourth_fleet
+					has_landed_title = d_terran_fifth_fleet
 				}
 			}
 			modifier = {
-				factor = 2
-				reverse_has_opinion_modifier = { who = FROM modifier = opinion_owes_me_a_favor }
+				factor = 1.25
+				martial = 2
 			}
 			modifier = {
-				factor = 0.5
-				NOT = { opinion = { who = FROM value = 0 } }
+				factor = 1.25
+				martial = 4
 			}
 			modifier = {
-				factor = 0.5
-				NOT = { opinion = { who = FROM value = -49 } }
+				factor = 1.25
+				martial = 6
 			}
 			modifier = {
-				factor = 0.5
-				NOT = { culture_group = terran_group }
-				NOT = { culture_group = xingjie_group }
-				NOT = { culture_group = celestean_group }
-				NOT = { culture_group = sexto_solar_group }
-				NOT = { culture_group = samawati_group }
-				NOT = { culture_group = angani_group }
-				NOT = { culture_group = frontier_group }
-				NOT = { culture_group = tengoku_group }
-				NOT = { culture_group = centauri_group }
+				factor = 1.25
+				martial = 8
 			}
 			modifier = {
-				factor = 0.5
-				NOT = { capital_scope = { empire = { title = e_terran_confederation } } }
+				factor = 1.25
+				martial = 10
+			}
+			modifier = {
+				factor = 1.25
+				martial = 12
+			}
+			modifier = {
+				factor = 1.25
+				martial = 14
+			}
+			modifier = {
+				factor = 1.25
+				martial = 16
+			}
+			modifier = {
+				factor = 1.25
+				martial = 18
+			}
+			modifier = {
+				factor = 1.25
+				martial = 20
+			}
+			modifier = {
+				factor = 1.25
+				martial = 22
+			}
+			modifier = {
+				factor = 1.25
+				martial = 24
+			}
+			modifier = {
+				factor = 1.25
+				martial = 26
+			}
+			modifier = {
+				factor = 1.25
+				martial = 28
+			}
+			modifier = {
+				factor = 1.25
+				martial = 30
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 100 }
 			}
 		}
 	}
@@ -142,52 +269,160 @@ vassal_decisions = {
 			hidden_tooltip = { character_event = { id = military.101 } }
 		}
 		ai_will_do = {
-			factor = 100 # Do this sort of thing ASAP
+			factor = 1
+			# Whether to even consider this commander
 			modifier = {
-				factor = 0.5
-				FROM = {
-					any_vassal = {
-						is_feudal = yes
-						is_patrician = no
-						NOT = { any_demesne_title = { higher_tier_than = count } }
-						age = 16
-						prisoner = no
-						NOT = { trait = incapable }
-						attribute_diff = {
-							who = ROOT
-							attribute = martial
-							value = 1
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 2
-				reverse_has_opinion_modifier = { who = FROM modifier = opinion_owes_me_a_favor }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { opinion = { who = FROM value = 0 } }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { opinion = { who = FROM value = -49 } }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { culture_group = terran_group }
-				NOT = { culture_group = xingjie_group }
-				NOT = { culture_group = celestean_group }
-				NOT = { culture_group = sexto_solar_group }
-				NOT = { culture_group = samawati_group }
-				NOT = { culture_group = angani_group }
-				NOT = { culture_group = frontier_group }
-				NOT = { culture_group = tengoku_group }
-				NOT = { culture_group = centauri_group }
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				NOT = { capital_scope = { empire = { title = e_terran_confederation } } }
+			}
+			# Reasons to prefer this commander
+			modifier = {
+				factor = 5
+				dynasty = FROM
+			}
+			modifier = {
+				factor = 5
+				is_close_relative = FROM
+			}
+			modifier = {
+				factor = 1.25
+				martial = 2
+			}
+			modifier = {
+				factor = 1.25
+				martial = 4
+			}
+			modifier = {
+				factor = 1.25
+				martial = 6
+			}
+			modifier = {
+				factor = 1.25
+				martial = 8
+			}
+			modifier = {
+				factor = 1.25
+				martial = 10
+			}
+			modifier = {
+				factor = 1.25
+				martial = 12
+			}
+			modifier = {
+				factor = 1.25
+				martial = 14
+			}
+			modifier = {
+				factor = 1.25
+				martial = 16
+			}
+			modifier = {
+				factor = 1.25
+				martial = 18
+			}
+			modifier = {
+				factor = 1.25
+				martial = 20
+			}
+			modifier = {
+				factor = 1.25
+				martial = 22
+			}
+			modifier = {
+				factor = 1.25
+				martial = 24
+			}
+			modifier = {
+				factor = 1.25
+				martial = 26
+			}
+			modifier = {
+				factor = 1.25
+				martial = 28
+			}
+			modifier = {
+				factor = 1.25
+				martial = 30
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 100 }
 			}
 		}
 	}
@@ -224,52 +459,160 @@ vassal_decisions = {
 			hidden_tooltip = { character_event = { id = military.102 } }
 		}
 		ai_will_do = {
-			factor = 100 # Do this sort of thing ASAP
+			factor = 1
+			# Whether to even consider this commander
 			modifier = {
-				factor = 0.5
-				FROM = {
-					any_vassal = {
-						is_feudal = yes
-						is_patrician = no
-						NOT = { any_demesne_title = { higher_tier_than = count } }
-						age = 16
-						prisoner = no
-						NOT = { trait = incapable }
-						attribute_diff = {
-							who = ROOT
-							attribute = martial
-							value = 1
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 2
-				reverse_has_opinion_modifier = { who = FROM modifier = opinion_owes_me_a_favor }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { opinion = { who = FROM value = 0 } }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { opinion = { who = FROM value = -49 } }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { culture_group = terran_group }
-				NOT = { culture_group = xingjie_group }
-				NOT = { culture_group = celestean_group }
-				NOT = { culture_group = sexto_solar_group }
-				NOT = { culture_group = samawati_group }
-				NOT = { culture_group = angani_group }
-				NOT = { culture_group = frontier_group }
-				NOT = { culture_group = tengoku_group }
-				NOT = { culture_group = centauri_group }
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				NOT = { capital_scope = { empire = { title = e_terran_confederation } } }
+			}
+			# Reasons to prefer this commander
+			modifier = {
+				factor = 5
+				dynasty = FROM
+			}
+			modifier = {
+				factor = 5
+				is_close_relative = FROM
+			}
+			modifier = {
+				factor = 1.25
+				martial = 2
+			}
+			modifier = {
+				factor = 1.25
+				martial = 4
+			}
+			modifier = {
+				factor = 1.25
+				martial = 6
+			}
+			modifier = {
+				factor = 1.25
+				martial = 8
+			}
+			modifier = {
+				factor = 1.25
+				martial = 10
+			}
+			modifier = {
+				factor = 1.25
+				martial = 12
+			}
+			modifier = {
+				factor = 1.25
+				martial = 14
+			}
+			modifier = {
+				factor = 1.25
+				martial = 16
+			}
+			modifier = {
+				factor = 1.25
+				martial = 18
+			}
+			modifier = {
+				factor = 1.25
+				martial = 20
+			}
+			modifier = {
+				factor = 1.25
+				martial = 22
+			}
+			modifier = {
+				factor = 1.25
+				martial = 24
+			}
+			modifier = {
+				factor = 1.25
+				martial = 26
+			}
+			modifier = {
+				factor = 1.25
+				martial = 28
+			}
+			modifier = {
+				factor = 1.25
+				martial = 30
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 100 }
 			}
 		}
 	}
@@ -306,52 +649,160 @@ vassal_decisions = {
 			hidden_tooltip = { character_event = { id = military.103 } }
 		}
 		ai_will_do = {
-			factor = 100 # Do this sort of thing ASAP
+			factor = 1
+			# Whether to even consider this commander
 			modifier = {
-				factor = 0.5
-				FROM = {
-					any_vassal = {
-						is_feudal = yes
-						is_patrician = no
-						NOT = { any_demesne_title = { higher_tier_than = count } }
-						age = 16
-						prisoner = no
-						NOT = { trait = incapable }
-						attribute_diff = {
-							who = ROOT
-							attribute = martial
-							value = 1
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 2
-				reverse_has_opinion_modifier = { who = FROM modifier = opinion_owes_me_a_favor }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { opinion = { who = FROM value = 0 } }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { opinion = { who = FROM value = -49 } }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { culture_group = terran_group }
-				NOT = { culture_group = xingjie_group }
-				NOT = { culture_group = celestean_group }
-				NOT = { culture_group = sexto_solar_group }
-				NOT = { culture_group = samawati_group }
-				NOT = { culture_group = angani_group }
-				NOT = { culture_group = frontier_group }
-				NOT = { culture_group = tengoku_group }
-				NOT = { culture_group = centauri_group }
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				NOT = { capital_scope = { empire = { title = e_terran_confederation } } }
+			}
+			# Reasons to prefer this commander
+			modifier = {
+				factor = 5
+				dynasty = FROM
+			}
+			modifier = {
+				factor = 5
+				is_close_relative = FROM
+			}
+			modifier = {
+				factor = 1.25
+				martial = 2
+			}
+			modifier = {
+				factor = 1.25
+				martial = 4
+			}
+			modifier = {
+				factor = 1.25
+				martial = 6
+			}
+			modifier = {
+				factor = 1.25
+				martial = 8
+			}
+			modifier = {
+				factor = 1.25
+				martial = 10
+			}
+			modifier = {
+				factor = 1.25
+				martial = 12
+			}
+			modifier = {
+				factor = 1.25
+				martial = 14
+			}
+			modifier = {
+				factor = 1.25
+				martial = 16
+			}
+			modifier = {
+				factor = 1.25
+				martial = 18
+			}
+			modifier = {
+				factor = 1.25
+				martial = 20
+			}
+			modifier = {
+				factor = 1.25
+				martial = 22
+			}
+			modifier = {
+				factor = 1.25
+				martial = 24
+			}
+			modifier = {
+				factor = 1.25
+				martial = 26
+			}
+			modifier = {
+				factor = 1.25
+				martial = 28
+			}
+			modifier = {
+				factor = 1.25
+				martial = 30
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 100 }
 			}
 		}
 	}
@@ -388,52 +839,160 @@ vassal_decisions = {
 			hidden_tooltip = { character_event = { id = military.104 } }
 		}
 		ai_will_do = {
-			factor = 100 # Do this sort of thing ASAP
+			factor = 1
+			# Whether to even consider this commander
 			modifier = {
-				factor = 0.5
-				FROM = {
-					any_vassal = {
-						is_feudal = yes
-						is_patrician = no
-						NOT = { any_demesne_title = { higher_tier_than = count } }
-						age = 16
-						prisoner = no
-						NOT = { trait = incapable }
-						attribute_diff = {
-							who = ROOT
-							attribute = martial
-							value = 1
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 2
-				reverse_has_opinion_modifier = { who = FROM modifier = opinion_owes_me_a_favor }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { opinion = { who = FROM value = 0 } }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { opinion = { who = FROM value = -49 } }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { culture_group = terran_group }
-				NOT = { culture_group = xingjie_group }
-				NOT = { culture_group = celestean_group }
-				NOT = { culture_group = sexto_solar_group }
-				NOT = { culture_group = samawati_group }
-				NOT = { culture_group = angani_group }
-				NOT = { culture_group = frontier_group }
-				NOT = { culture_group = tengoku_group }
-				NOT = { culture_group = centauri_group }
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				NOT = { capital_scope = { empire = { title = e_terran_confederation } } }
+			}
+			# Reasons to prefer this commander
+			modifier = {
+				factor = 5
+				dynasty = FROM
+			}
+			modifier = {
+				factor = 5
+				is_close_relative = FROM
+			}
+			modifier = {
+				factor = 1.25
+				martial = 2
+			}
+			modifier = {
+				factor = 1.25
+				martial = 4
+			}
+			modifier = {
+				factor = 1.25
+				martial = 6
+			}
+			modifier = {
+				factor = 1.25
+				martial = 8
+			}
+			modifier = {
+				factor = 1.25
+				martial = 10
+			}
+			modifier = {
+				factor = 1.25
+				martial = 12
+			}
+			modifier = {
+				factor = 1.25
+				martial = 14
+			}
+			modifier = {
+				factor = 1.25
+				martial = 16
+			}
+			modifier = {
+				factor = 1.25
+				martial = 18
+			}
+			modifier = {
+				factor = 1.25
+				martial = 20
+			}
+			modifier = {
+				factor = 1.25
+				martial = 22
+			}
+			modifier = {
+				factor = 1.25
+				martial = 24
+			}
+			modifier = {
+				factor = 1.25
+				martial = 26
+			}
+			modifier = {
+				factor = 1.25
+				martial = 28
+			}
+			modifier = {
+				factor = 1.25
+				martial = 30
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 100 }
 			}
 		}
 	}
@@ -470,52 +1029,161 @@ vassal_decisions = {
 			hidden_tooltip = { character_event = { id = military.105 } }
 		}
 		ai_will_do = {
-			factor = 100 # Do this sort of thing ASAP
+			factor = 1
+			# Whether to even consider this commander
 			modifier = {
-				factor = 0.5
-				FROM = {
-					any_vassal = {
-						is_feudal = yes
-						is_patrician = no
-						NOT = { any_demesne_title = { higher_tier_than = count } }
-						age = 16
-						prisoner = no
-						NOT = { trait = incapable }
-						attribute_diff = {
-							who = ROOT
-							attribute = martial
-							value = 1
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 2
-				reverse_has_opinion_modifier = { who = FROM modifier = opinion_owes_me_a_favor }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { opinion = { who = FROM value = 0 } }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { opinion = { who = FROM value = -49 } }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { culture_group = terran_group }
-				NOT = { culture_group = xingjie_group }
-				NOT = { culture_group = celestean_group }
-				NOT = { culture_group = sexto_solar_group }
-				NOT = { culture_group = samawati_group }
-				NOT = { culture_group = angani_group }
-				NOT = { culture_group = frontier_group }
-				NOT = { culture_group = tengoku_group }
-				NOT = { culture_group = centauri_group }
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				NOT = { capital_scope = { empire = { title = e_terran_confederation } } }
+			}
+			# Reasons to prioritize this particular commander
+			modifier = {
+				factor = 1.25
+				martial = 2
+			}
+			modifier = {
+				factor = 1.25
+				martial = 4
+			}
+			modifier = {
+				factor = 1.25
+				martial = 6
+			}
+			modifier = {
+				factor = 1.25
+				martial = 8
+			}
+			modifier = {
+				factor = 1.25
+				martial = 10
+			}
+			modifier = {
+				factor = 1.25
+				martial = 12
+			}
+			modifier = {
+				factor = 1.25
+				martial = 14
+			}
+			modifier = {
+				factor = 1.25
+				martial = 16
+			}
+			modifier = {
+				factor = 1.25
+				martial = 18
+			}
+			modifier = {
+				factor = 1.25
+				martial = 20
+			}
+			modifier = {
+				factor = 1.25
+				martial = 22
+			}
+			modifier = {
+				factor = 1.25
+				martial = 24
+			}
+			modifier = {
+				factor = 1.25
+				martial = 26
+			}
+			modifier = {
+				factor = 1.25
+				martial = 28
+			}
+			modifier = {
+				factor = 1.25
+				martial = 30
+			}
+			# Reasons to prefer this commander
+			modifier = {
+				factor = 5
+				dynasty = FROM
+			}
+			modifier = {
+				factor = 5
+				is_close_relative = FROM
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 100 }
 			}
 		}
 	}
@@ -552,48 +1220,178 @@ vassal_decisions = {
 			hidden_tooltip = { character_event = { id = military.106 } }
 		}
 		ai_will_do = {
-			factor = 100 # Do this sort of thing ASAP
-			modifier = { # More likely to command top-level militaries directly
-				factor = 0.1
-				is_feudal = yes
-			}
+			factor = 1
+			# Whether to assign the title at all
 			modifier = {
-				factor = 0.5
+				factor = 0
 				FROM = {
-					any_vassal = {
-						is_feudal = yes
-						is_patrician = no
-						NOT = { any_demesne_title = { higher_tier_than = count } }
-						age = 16
-						prisoner = no
-						NOT = { trait = incapable }
-						attribute_diff = {
-							who = ROOT
-							attribute = martial
-							value = 1
-						}
-					}
+					is_feudal = yes
+					is_patrician = no
+					has_landed_title = d_terran_commonwealth_fleet
+					NOT = { trait = craven }
+					NOT = { trait = neurotic }
+					NOT = { trait = humble }
+					NOT = { trait = friendly }
 				}
 			}
+			# Whether to even consider this commander
 			modifier = {
-				factor = 2
-				reverse_has_opinion_modifier = { who = FROM modifier = opinion_owes_me_a_favor }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { opinion = { who = FROM value = 0 } }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { opinion = { who = FROM value = -49 } }
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				NOT = { culture_group = terran_group }
+				NOT = { culture_group = FROM }
 			}
 			modifier = {
-				factor = 0.5
+				factor = 0
 				NOT = { capital_scope = { kingdom = { title = k_terran_commonwealth } } }
+			}
+			modifier = {
+				factor = 1.25
+				martial = 2
+			}
+			modifier = {
+				factor = 1.25
+				martial = 4
+			}
+			modifier = {
+				factor = 1.25
+				martial = 6
+			}
+			modifier = {
+				factor = 1.25
+				martial = 8
+			}
+			modifier = {
+				factor = 1.25
+				martial = 10
+			}
+			modifier = {
+				factor = 1.25
+				martial = 12
+			}
+			modifier = {
+				factor = 1.25
+				martial = 14
+			}
+			modifier = {
+				factor = 1.25
+				martial = 16
+			}
+			modifier = {
+				factor = 1.25
+				martial = 18
+			}
+			modifier = {
+				factor = 1.25
+				martial = 20
+			}
+			modifier = {
+				factor = 1.25
+				martial = 22
+			}
+			modifier = {
+				factor = 1.25
+				martial = 24
+			}
+			modifier = {
+				factor = 1.25
+				martial = 26
+			}
+			modifier = {
+				factor = 1.25
+				martial = 28
+			}
+			modifier = {
+				factor = 1.25
+				martial = 30
+			}
+			# Reasons to prefer this commander
+			modifier = {
+				factor = 5
+				dynasty = FROM
+			}
+			modifier = {
+				factor = 5
+				is_close_relative = FROM
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 100 }
 			}
 		}
 	}
@@ -630,48 +1428,178 @@ vassal_decisions = {
 			hidden_tooltip = { character_event = { id = military.107 } }
 		}
 		ai_will_do = {
-			factor = 100 # Do this sort of thing ASAP
-			modifier = { # More likely to command top-level militaries directly
-				factor = 0.1
-				is_feudal = yes
-			}
+			factor = 1
+			# Whether to assign the title at all
 			modifier = {
-				factor = 0.5
+				factor = 0
 				FROM = {
-					any_vassal = {
-						is_feudal = yes
-						is_patrician = no
-						NOT = { any_demesne_title = { higher_tier_than = count } }
-						age = 16
-						prisoner = no
-						NOT = { trait = incapable }
-						attribute_diff = {
-							who = ROOT
-							attribute = martial
-							value = 1
-						}
-					}
+					is_feudal = yes
+					is_patrician = no
+					has_landed_title = d_xingjie_fleet
+					NOT = { trait = craven }
+					NOT = { trait = neurotic }
+					NOT = { trait = humble }
+					NOT = { trait = friendly }
 				}
 			}
+			# Whether to even consider this commander
 			modifier = {
-				factor = 2
-				reverse_has_opinion_modifier = { who = FROM modifier = opinion_owes_me_a_favor }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { opinion = { who = FROM value = 0 } }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { opinion = { who = FROM value = -49 } }
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				NOT = { culture_group = xingjie_group }
+				NOT = { culture_group = FROM }
 			}
 			modifier = {
-				factor = 0.5
+				factor = 0
 				NOT = { capital_scope = { kingdom = { title = k_xingjie } } }
+			}
+			modifier = {
+				factor = 1.25
+				martial = 2
+			}
+			modifier = {
+				factor = 1.25
+				martial = 4
+			}
+			modifier = {
+				factor = 1.25
+				martial = 6
+			}
+			modifier = {
+				factor = 1.25
+				martial = 8
+			}
+			modifier = {
+				factor = 1.25
+				martial = 10
+			}
+			modifier = {
+				factor = 1.25
+				martial = 12
+			}
+			modifier = {
+				factor = 1.25
+				martial = 14
+			}
+			modifier = {
+				factor = 1.25
+				martial = 16
+			}
+			modifier = {
+				factor = 1.25
+				martial = 18
+			}
+			modifier = {
+				factor = 1.25
+				martial = 20
+			}
+			modifier = {
+				factor = 1.25
+				martial = 22
+			}
+			modifier = {
+				factor = 1.25
+				martial = 24
+			}
+			modifier = {
+				factor = 1.25
+				martial = 26
+			}
+			modifier = {
+				factor = 1.25
+				martial = 28
+			}
+			modifier = {
+				factor = 1.25
+				martial = 30
+			}
+			# Reasons to prefer this commander
+			modifier = {
+				factor = 5
+				dynasty = FROM
+			}
+			modifier = {
+				factor = 5
+				is_close_relative = FROM
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 100 }
 			}
 		}
 	}
@@ -708,49 +1636,179 @@ vassal_decisions = {
 			hidden_tooltip = { character_event = { id = military.108 } }
 		}
 		ai_will_do = {
-			factor = 100 # Do this sort of thing ASAP
-			modifier = { # More likely to command top-level militaries directly
-				factor = 0.1
-				is_feudal = yes
-			}
+			factor = 1
+			# Whether to assign the title at all
 			modifier = {
-				factor = 0.5
+				factor = 0
 				FROM = {
-					any_vassal = {
-						is_feudal = yes
-						is_patrician = no
-						NOT = { any_demesne_title = { higher_tier_than = count } }
-						age = 16
-						prisoner = no
-						NOT = { trait = incapable }
-						attribute_diff = {
-							who = ROOT
-							attribute = martial
-							value = 1
-						}
-					}
+					is_feudal = yes
+					is_patrician = no
+					has_landed_title = d_tierra_celeste_fleet
+					NOT = { trait = craven }
+					NOT = { trait = neurotic }
+					NOT = { trait = humble }
+					NOT = { trait = friendly }
 				}
 			}
+			# Whether to even consider this commander
 			modifier = {
-				factor = 2
-				reverse_has_opinion_modifier = { who = FROM modifier = opinion_owes_me_a_favor }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { opinion = { who = FROM value = 0 } }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { opinion = { who = FROM value = -49 } }
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				NOT = { culture_group = celestean_group }
 				NOT = { culture_group = sexto_solar_group }
+				NOT = { culture_group = FROM }
 			}
 			modifier = {
-				factor = 0.5
+				factor = 0
 				NOT = { capital_scope = { kingdom = { title = k_tierra_celeste } } }
+			}
+			# Reasons to prefer this commander
+			modifier = {
+				factor = 5
+				dynasty = FROM
+			}
+			modifier = {
+				factor = 5
+				is_close_relative = FROM
+			}
+			modifier = {
+				factor = 1.25
+				martial = 2
+			}
+			modifier = {
+				factor = 1.25
+				martial = 4
+			}
+			modifier = {
+				factor = 1.25
+				martial = 6
+			}
+			modifier = {
+				factor = 1.25
+				martial = 8
+			}
+			modifier = {
+				factor = 1.25
+				martial = 10
+			}
+			modifier = {
+				factor = 1.25
+				martial = 12
+			}
+			modifier = {
+				factor = 1.25
+				martial = 14
+			}
+			modifier = {
+				factor = 1.25
+				martial = 16
+			}
+			modifier = {
+				factor = 1.25
+				martial = 18
+			}
+			modifier = {
+				factor = 1.25
+				martial = 20
+			}
+			modifier = {
+				factor = 1.25
+				martial = 22
+			}
+			modifier = {
+				factor = 1.25
+				martial = 24
+			}
+			modifier = {
+				factor = 1.25
+				martial = 26
+			}
+			modifier = {
+				factor = 1.25
+				martial = 28
+			}
+			modifier = {
+				factor = 1.25
+				martial = 30
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 100 }
 			}
 		}
 	}
@@ -787,48 +1845,178 @@ vassal_decisions = {
 			hidden_tooltip = { character_event = { id = military.109 } }
 		}
 		ai_will_do = {
-			factor = 100 # Do this sort of thing ASAP
-			modifier = { # More likely to command top-level militaries directly
-				factor = 0.1
-				is_feudal = yes
-			}
+			factor = 1
+			# Whether to assign the title at all
 			modifier = {
-				factor = 0.5
+				factor = 0
 				FROM = {
-					any_vassal = {
-						is_feudal = yes
-						is_patrician = no
-						NOT = { any_demesne_title = { higher_tier_than = count } }
-						age = 16
-						prisoner = no
-						NOT = { trait = incapable }
-						attribute_diff = {
-							who = ROOT
-							attribute = martial
-							value = 1
-						}
-					}
+					is_feudal = yes
+					is_patrician = no
+					has_landed_title = d_al_samawat_fleet
+					NOT = { trait = craven }
+					NOT = { trait = neurotic }
+					NOT = { trait = humble }
+					NOT = { trait = friendly }
 				}
 			}
+			# Whether to even consider this commander
 			modifier = {
-				factor = 2
-				reverse_has_opinion_modifier = { who = FROM modifier = opinion_owes_me_a_favor }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { opinion = { who = FROM value = 0 } }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { opinion = { who = FROM value = -49 } }
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				NOT = { culture_group = samawati_group }
+				NOT = { culture_group = FROM }
 			}
 			modifier = {
-				factor = 0.5
-				NOT = { capital_scope = { kingdom = { title = k_al_samawati } } }
+				factor = 0
+				NOT = { capital_scope = { kingdom = { title = k_al_samawat } } }
+			}
+			# Reasons to prefer this commander
+			modifier = {
+				factor = 5
+				dynasty = FROM
+			}
+			modifier = {
+				factor = 5
+				is_close_relative = FROM
+			}
+			modifier = {
+				factor = 1.25
+				martial = 2
+			}
+			modifier = {
+				factor = 1.25
+				martial = 4
+			}
+			modifier = {
+				factor = 1.25
+				martial = 6
+			}
+			modifier = {
+				factor = 1.25
+				martial = 8
+			}
+			modifier = {
+				factor = 1.25
+				martial = 10
+			}
+			modifier = {
+				factor = 1.25
+				martial = 12
+			}
+			modifier = {
+				factor = 1.25
+				martial = 14
+			}
+			modifier = {
+				factor = 1.25
+				martial = 16
+			}
+			modifier = {
+				factor = 1.25
+				martial = 18
+			}
+			modifier = {
+				factor = 1.25
+				martial = 20
+			}
+			modifier = {
+				factor = 1.25
+				martial = 22
+			}
+			modifier = {
+				factor = 1.25
+				martial = 24
+			}
+			modifier = {
+				factor = 1.25
+				martial = 26
+			}
+			modifier = {
+				factor = 1.25
+				martial = 28
+			}
+			modifier = {
+				factor = 1.25
+				martial = 30
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 100 }
 			}
 		}
 	}
@@ -865,48 +2053,178 @@ vassal_decisions = {
 			hidden_tooltip = { character_event = { id = military.110 } }
 		}
 		ai_will_do = {
-			factor = 100 # Do this sort of thing ASAP
-			modifier = { # More likely to command top-level militaries directly
-				factor = 0.1
-				is_feudal = yes
-			}
+			factor = 1
+			# Whether to assign the title at all
 			modifier = {
-				factor = 0.5
+				factor = 0
 				FROM = {
-					any_vassal = {
-						is_feudal = yes
-						is_patrician = no
-						NOT = { any_demesne_title = { higher_tier_than = count } }
-						age = 16
-						prisoner = no
-						NOT = { trait = incapable }
-						attribute_diff = {
-							who = ROOT
-							attribute = martial
-							value = 1
-						}
-					}
+					is_feudal = yes
+					is_patrician = no
+					has_landed_title = d_zenye_nyota_angani_fleet
+					NOT = { trait = craven }
+					NOT = { trait = neurotic }
+					NOT = { trait = humble }
+					NOT = { trait = friendly }
 				}
 			}
+			# Whether to even consider this commander
 			modifier = {
-				factor = 2
-				reverse_has_opinion_modifier = { who = FROM modifier = opinion_owes_me_a_favor }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { opinion = { who = FROM value = 0 } }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { opinion = { who = FROM value = -49 } }
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				NOT = { culture_group = angani_group }
+				NOT = { culture_group = FROM }
 			}
 			modifier = {
-				factor = 0.5
+				factor = 0
 				NOT = { capital_scope = { kingdom = { title = k_zenye_nyota_angani } } }
+			}
+			# Reasons to prefer this commander
+			modifier = {
+				factor = 5
+				dynasty = FROM
+			}
+			modifier = {
+				factor = 5
+				is_close_relative = FROM
+			}
+			modifier = {
+				factor = 1.25
+				martial = 2
+			}
+			modifier = {
+				factor = 1.25
+				martial = 4
+			}
+			modifier = {
+				factor = 1.25
+				martial = 6
+			}
+			modifier = {
+				factor = 1.25
+				martial = 8
+			}
+			modifier = {
+				factor = 1.25
+				martial = 10
+			}
+			modifier = {
+				factor = 1.25
+				martial = 12
+			}
+			modifier = {
+				factor = 1.25
+				martial = 14
+			}
+			modifier = {
+				factor = 1.25
+				martial = 16
+			}
+			modifier = {
+				factor = 1.25
+				martial = 18
+			}
+			modifier = {
+				factor = 1.25
+				martial = 20
+			}
+			modifier = {
+				factor = 1.25
+				martial = 22
+			}
+			modifier = {
+				factor = 1.25
+				martial = 24
+			}
+			modifier = {
+				factor = 1.25
+				martial = 26
+			}
+			modifier = {
+				factor = 1.25
+				martial = 28
+			}
+			modifier = {
+				factor = 1.25
+				martial = 30
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 100 }
 			}
 		}
 	}
@@ -943,48 +2261,1634 @@ vassal_decisions = {
 			hidden_tooltip = { character_event = { id = military.111 } }
 		}
 		ai_will_do = {
-			factor = 100 # Do this sort of thing ASAP
-			modifier = { # More likely to command top-level militaries directly
-				factor = 0.1
-				is_feudal = yes
-			}
+			factor = 1
+			# Whether to assign the title at all
 			modifier = {
-				factor = 0.5
+				factor = 0
 				FROM = {
-					any_vassal = {
-						is_feudal = yes
-						is_patrician = no
-						NOT = { any_demesne_title = { higher_tier_than = count } }
-						age = 16
-						prisoner = no
-						NOT = { trait = incapable }
-						attribute_diff = {
-							who = ROOT
-							attribute = martial
-							value = 1
-						}
-					}
+					is_feudal = yes
+					is_patrician = no
+					has_landed_title = d_frontier_fleet
+					NOT = { trait = craven }
+					NOT = { trait = neurotic }
+					NOT = { trait = humble }
+					NOT = { trait = friendly }
 				}
 			}
+			# Whether to even consider this commander
 			modifier = {
-				factor = 2
-				reverse_has_opinion_modifier = { who = FROM modifier = opinion_owes_me_a_favor }
+				factor = 0
+				NOT = { culture_group = frontiersman_group }
+				NOT = { culture_group = FROM }
 			}
 			modifier = {
-				factor = 0.5
-				NOT = { opinion = { who = FROM value = 0 } }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { opinion = { who = FROM value = -49 } }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = { culture_group = frontier_group }
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0
 				NOT = { capital_scope = { kingdom = { title = k_frontier } } }
+			}
+			# Reasons to prefer this commander
+			modifier = {
+				factor = 5
+				dynasty = FROM
+			}
+			modifier = {
+				factor = 5
+				is_close_relative = FROM
+			}
+			modifier = {
+				factor = 1.25
+				martial = 2
+			}
+			modifier = {
+				factor = 1.25
+				martial = 4
+			}
+			modifier = {
+				factor = 1.25
+				martial = 6
+			}
+			modifier = {
+				factor = 1.25
+				martial = 8
+			}
+			modifier = {
+				factor = 1.25
+				martial = 10
+			}
+			modifier = {
+				factor = 1.25
+				martial = 12
+			}
+			modifier = {
+				factor = 1.25
+				martial = 14
+			}
+			modifier = {
+				factor = 1.25
+				martial = 16
+			}
+			modifier = {
+				factor = 1.25
+				martial = 18
+			}
+			modifier = {
+				factor = 1.25
+				martial = 20
+			}
+			modifier = {
+				factor = 1.25
+				martial = 22
+			}
+			modifier = {
+				factor = 1.25
+				martial = 24
+			}
+			modifier = {
+				factor = 1.25
+				martial = 26
+			}
+			modifier = {
+				factor = 1.25
+				martial = 28
+			}
+			modifier = {
+				factor = 1.25
+				martial = 30
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 100 }
+			}
+		}
+	}
+	# Xin Zizhiqu Peacekeepers
+	assign_command_xin_zizhiqu_fleet = {
+		is_high_prio = yes
+		potential = {
+			d_xin_zizhiqu_fleet = {
+				OR = {
+					AND = {
+						has_holder = no
+						FROM = { has_landed_title = k_xin_zizhiqu }
+					}
+					holder_scope = { character = FROM }
+				}
+			}
+			FROM = {
+				any_demesne_title = { higher_tier_than = DUKE }
+				OR = {
+					ai = yes
+					has_character_flag = flag_military_command_menu_open
+				}
+			}
+			is_feudal = yes
+			is_patrician = no
+			NOT = { any_demesne_title = { higher_tier_than = count } }
+			age = 16
+			prisoner = no
+			NOT = { trait = incapable }
+		}
+		allow = { always = yes }
+		effect = {
+			d_xin_zizhiqu_fleet = { grant_title = ROOT }
+			hidden_tooltip = { character_event = { id = military.112 } }
+		}
+		ai_will_do = {
+			factor = 1
+			# Whether to assign the title at all
+			modifier = {
+				factor = 0
+				FROM = {
+					is_feudal = yes
+					is_patrician = no
+					has_landed_title = d_xin_zizhiqu_fleet
+					NOT = { trait = craven }
+					NOT = { trait = neurotic }
+					NOT = { trait = humble }
+					NOT = { trait = friendly }
+				}
+			}
+			# Whether to even consider this commander
+			modifier = {
+				factor = 0
+				NOT = { culture_group = bianjiangese_group }
+				NOT = { culture_group = FROM }
+			}
+			modifier = {
+				factor = 0
+				NOT = { capital_scope = { kingdom = { title = k_xin_zizhiqu } } }
+			}
+			# Reasons to prefer this commander
+			modifier = {
+				factor = 5
+				dynasty = FROM
+			}
+			modifier = {
+				factor = 5
+				is_close_relative = FROM
+			}
+			modifier = {
+				factor = 1.25
+				martial = 2
+			}
+			modifier = {
+				factor = 1.25
+				martial = 4
+			}
+			modifier = {
+				factor = 1.25
+				martial = 6
+			}
+			modifier = {
+				factor = 1.25
+				martial = 8
+			}
+			modifier = {
+				factor = 1.25
+				martial = 10
+			}
+			modifier = {
+				factor = 1.25
+				martial = 12
+			}
+			modifier = {
+				factor = 1.25
+				martial = 14
+			}
+			modifier = {
+				factor = 1.25
+				martial = 16
+			}
+			modifier = {
+				factor = 1.25
+				martial = 18
+			}
+			modifier = {
+				factor = 1.25
+				martial = 20
+			}
+			modifier = {
+				factor = 1.25
+				martial = 22
+			}
+			modifier = {
+				factor = 1.25
+				martial = 24
+			}
+			modifier = {
+				factor = 1.25
+				martial = 26
+			}
+			modifier = {
+				factor = 1.25
+				martial = 28
+			}
+			modifier = {
+				factor = 1.25
+				martial = 30
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 100 }
+			}
+		}
+	}
+	# Orion Armada
+	assign_command_orion_reach_fleet = {
+		is_high_prio = yes
+		potential = {
+			d_orion_reach_fleet = {
+				OR = {
+					AND = {
+						has_holder = no
+						FROM = { has_landed_title = k_orion_reach }
+					}
+					holder_scope = { character = FROM }
+				}
+			}
+			FROM = {
+				any_demesne_title = { higher_tier_than = DUKE }
+				OR = {
+					ai = yes
+					has_character_flag = flag_military_command_menu_open
+				}
+			}
+			is_feudal = yes
+			is_patrician = no
+			NOT = { any_demesne_title = { higher_tier_than = count } }
+			age = 16
+			prisoner = no
+			NOT = { trait = incapable }
+		}
+		allow = { always = yes }
+		effect = {
+			d_orion_reach_fleet = { grant_title = ROOT }
+			hidden_tooltip = { character_event = { id = military.113 } }
+		}
+		ai_will_do = {
+			factor = 1
+			# Whether to assign the title at all
+			modifier = {
+				factor = 0
+				FROM = {
+					is_feudal = yes
+					is_patrician = no
+					has_landed_title = d_orion_reach_fleet
+					NOT = { trait = craven }
+					NOT = { trait = neurotic }
+					NOT = { trait = humble }
+					NOT = { trait = friendly }
+				}
+			}
+			# Whether to even consider this commander
+			modifier = {
+				factor = 0
+				NOT = { culture_group = orion_group }
+				NOT = { culture_group = FROM }
+			}
+			modifier = {
+				factor = 0
+				NOT = { capital_scope = { kingdom = { title = k_orion_reach } } }
+			}
+			# Reasons to prefer this commander
+			modifier = {
+				factor = 5
+				dynasty = FROM
+			}
+			modifier = {
+				factor = 5
+				is_close_relative = FROM
+			}
+			modifier = {
+				factor = 1.25
+				martial = 2
+			}
+			modifier = {
+				factor = 1.25
+				martial = 4
+			}
+			modifier = {
+				factor = 1.25
+				martial = 6
+			}
+			modifier = {
+				factor = 1.25
+				martial = 8
+			}
+			modifier = {
+				factor = 1.25
+				martial = 10
+			}
+			modifier = {
+				factor = 1.25
+				martial = 12
+			}
+			modifier = {
+				factor = 1.25
+				martial = 14
+			}
+			modifier = {
+				factor = 1.25
+				martial = 16
+			}
+			modifier = {
+				factor = 1.25
+				martial = 18
+			}
+			modifier = {
+				factor = 1.25
+				martial = 20
+			}
+			modifier = {
+				factor = 1.25
+				martial = 22
+			}
+			modifier = {
+				factor = 1.25
+				martial = 24
+			}
+			modifier = {
+				factor = 1.25
+				martial = 26
+			}
+			modifier = {
+				factor = 1.25
+				martial = 28
+			}
+			modifier = {
+				factor = 1.25
+				martial = 30
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 100 }
+			}
+		}
+	}
+	# Tarkan Armed Forces
+	assign_command_tarka_fleet = {
+		is_high_prio = yes
+		potential = {
+			d_tarka_fleet = {
+				OR = {
+					AND = {
+						has_holder = no
+						FROM = { has_landed_title = k_tarka }
+					}
+					holder_scope = { character = FROM }
+				}
+			}
+			FROM = {
+				any_demesne_title = { higher_tier_than = DUKE }
+				OR = {
+					ai = yes
+					has_character_flag = flag_military_command_menu_open
+				}
+			}
+			is_feudal = yes
+			is_patrician = no
+			NOT = { any_demesne_title = { higher_tier_than = count } }
+			age = 16
+			prisoner = no
+			NOT = { trait = incapable }
+		}
+		allow = { always = yes }
+		effect = {
+			d_tarka_fleet = { grant_title = ROOT }
+			hidden_tooltip = { character_event = { id = military.114 } }
+		}
+		ai_will_do = {
+			factor = 1
+			# Whether to assign the title at all
+			modifier = {
+				factor = 0
+				FROM = {
+					is_feudal = yes
+					is_patrician = no
+					has_landed_title = d_tarka_fleet
+					NOT = { trait = craven }
+					NOT = { trait = neurotic }
+					NOT = { trait = humble }
+					NOT = { trait = friendly }
+				}
+			}
+			# Whether to even consider this commander
+			modifier = {
+				factor = 0
+				NOT = { culture_group = tarkan_group }
+				NOT = { culture_group = FROM }
+			}
+			modifier = {
+				factor = 0
+				NOT = { capital_scope = { kingdom = { title = k_tarka } } }
+			}
+			# Reasons to prefer this commander
+			modifier = {
+				factor = 5
+				dynasty = FROM
+			}
+			modifier = {
+				factor = 5
+				is_close_relative = FROM
+			}
+			modifier = {
+				factor = 1.25
+				martial = 2
+			}
+			modifier = {
+				factor = 1.25
+				martial = 4
+			}
+			modifier = {
+				factor = 1.25
+				martial = 6
+			}
+			modifier = {
+				factor = 1.25
+				martial = 8
+			}
+			modifier = {
+				factor = 1.25
+				martial = 10
+			}
+			modifier = {
+				factor = 1.25
+				martial = 12
+			}
+			modifier = {
+				factor = 1.25
+				martial = 14
+			}
+			modifier = {
+				factor = 1.25
+				martial = 16
+			}
+			modifier = {
+				factor = 1.25
+				martial = 18
+			}
+			modifier = {
+				factor = 1.25
+				martial = 20
+			}
+			modifier = {
+				factor = 1.25
+				martial = 22
+			}
+			modifier = {
+				factor = 1.25
+				martial = 24
+			}
+			modifier = {
+				factor = 1.25
+				martial = 26
+			}
+			modifier = {
+				factor = 1.25
+				martial = 28
+			}
+			modifier = {
+				factor = 1.25
+				martial = 30
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 100 }
+			}
+		}
+	}
+	# Military Order of Avalon
+	assign_command_avalon_fleet = {
+		is_high_prio = yes
+		potential = {
+			d_avalon_fleet = {
+				OR = {
+					AND = {
+						has_holder = no
+						FROM = { has_landed_title = k_avalon }
+					}
+					holder_scope = { character = FROM }
+				}
+			}
+			FROM = {
+				any_demesne_title = { higher_tier_than = DUKE }
+				OR = {
+					ai = yes
+					has_character_flag = flag_military_command_menu_open
+				}
+			}
+			is_feudal = yes
+			is_patrician = no
+			NOT = { any_demesne_title = { higher_tier_than = count } }
+			age = 16
+			prisoner = no
+			NOT = { trait = incapable }
+		}
+		allow = { always = yes }
+		effect = {
+			d_avalon_fleet = { grant_title = ROOT }
+			hidden_tooltip = { character_event = { id = military.115 } }
+		}
+		ai_will_do = {
+			factor = 1
+			# Whether to assign the title at all
+			modifier = {
+				factor = 0
+				FROM = {
+					is_feudal = yes
+					is_patrician = no
+					has_landed_title = d_avalon_fleet
+					NOT = { trait = craven }
+					NOT = { trait = neurotic }
+					NOT = { trait = humble }
+					NOT = { trait = friendly }
+				}
+			}
+			# Whether to even consider this commander
+			modifier = {
+				factor = 0
+				NOT = { culture_group = avalonian_group }
+				NOT = { culture_group = FROM }
+			}
+			modifier = {
+				factor = 0
+				NOT = { capital_scope = { kingdom = { title = k_avalon } } }
+			}
+			# Reasons to prefer this commander
+			modifier = {
+				factor = 5
+				dynasty = FROM
+			}
+			modifier = {
+				factor = 5
+				is_close_relative = FROM
+			}
+			modifier = {
+				factor = 1.25
+				martial = 2
+			}
+			modifier = {
+				factor = 1.25
+				martial = 4
+			}
+			modifier = {
+				factor = 1.25
+				martial = 6
+			}
+			modifier = {
+				factor = 1.25
+				martial = 8
+			}
+			modifier = {
+				factor = 1.25
+				martial = 10
+			}
+			modifier = {
+				factor = 1.25
+				martial = 12
+			}
+			modifier = {
+				factor = 1.25
+				martial = 14
+			}
+			modifier = {
+				factor = 1.25
+				martial = 16
+			}
+			modifier = {
+				factor = 1.25
+				martial = 18
+			}
+			modifier = {
+				factor = 1.25
+				martial = 20
+			}
+			modifier = {
+				factor = 1.25
+				martial = 22
+			}
+			modifier = {
+				factor = 1.25
+				martial = 24
+			}
+			modifier = {
+				factor = 1.25
+				martial = 26
+			}
+			modifier = {
+				factor = 1.25
+				martial = 28
+			}
+			modifier = {
+				factor = 1.25
+				martial = 30
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 100 }
+			}
+		}
+	}
+	# Jion Space Attack Force
+	assign_command_jion_fleet = {
+		is_high_prio = yes
+		potential = {
+			d_jion_fleet = {
+				OR = {
+					AND = {
+						has_holder = no
+						FROM = { has_landed_title = k_jion }
+					}
+					holder_scope = { character = FROM }
+				}
+			}
+			FROM = {
+				any_demesne_title = { higher_tier_than = DUKE }
+				OR = {
+					ai = yes
+					has_character_flag = flag_military_command_menu_open
+				}
+			}
+			is_feudal = yes
+			is_patrician = no
+			NOT = { any_demesne_title = { higher_tier_than = count } }
+			age = 16
+			prisoner = no
+			NOT = { trait = incapable }
+		}
+		allow = { always = yes }
+		effect = {
+			d_jion_fleet = { grant_title = ROOT }
+			hidden_tooltip = { character_event = { id = military.116 } }
+		}
+		ai_will_do = {
+			factor = 1
+			# Whether to assign the title at all
+			modifier = {
+				factor = 0
+				FROM = {
+					is_feudal = yes
+					is_patrician = no
+					has_landed_title = d_jion_fleet
+					NOT = { trait = craven }
+					NOT = { trait = neurotic }
+					NOT = { trait = humble }
+					NOT = { trait = friendly }
+				}
+			}
+			# Whether to even consider this commander
+			modifier = {
+				factor = 0
+				NOT = { culture_group = tengoku_group }
+				NOT = { culture_group = FROM }
+			}
+			modifier = {
+				factor = 0
+				NOT = { capital_scope = { kingdom = { title = k_jion } } }
+			}
+			# Reasons to prefer this commander
+			modifier = {
+				factor = 5
+				dynasty = FROM
+			}
+			modifier = {
+				factor = 5
+				is_close_relative = FROM
+			}
+			modifier = {
+				factor = 1.25
+				martial = 2
+			}
+			modifier = {
+				factor = 1.25
+				martial = 4
+			}
+			modifier = {
+				factor = 1.25
+				martial = 6
+			}
+			modifier = {
+				factor = 1.25
+				martial = 8
+			}
+			modifier = {
+				factor = 1.25
+				martial = 10
+			}
+			modifier = {
+				factor = 1.25
+				martial = 12
+			}
+			modifier = {
+				factor = 1.25
+				martial = 14
+			}
+			modifier = {
+				factor = 1.25
+				martial = 16
+			}
+			modifier = {
+				factor = 1.25
+				martial = 18
+			}
+			modifier = {
+				factor = 1.25
+				martial = 20
+			}
+			modifier = {
+				factor = 1.25
+				martial = 22
+			}
+			modifier = {
+				factor = 1.25
+				martial = 24
+			}
+			modifier = {
+				factor = 1.25
+				martial = 26
+			}
+			modifier = {
+				factor = 1.25
+				martial = 28
+			}
+			modifier = {
+				factor = 1.25
+				martial = 30
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 100 }
+			}
+		}
+	}
+	# Strugatsky Armed Forces
+	assign_command_strugatsky_fleet = {
+		is_high_prio = yes
+		potential = {
+			d_strugatsky_fleet = {
+				OR = {
+					AND = {
+						has_holder = no
+						FROM = { has_landed_title = k_strugatsky }
+					}
+					holder_scope = { character = FROM }
+				}
+			}
+			FROM = {
+				any_demesne_title = { higher_tier_than = DUKE }
+				OR = {
+					ai = yes
+					has_character_flag = flag_military_command_menu_open
+				}
+			}
+			is_feudal = yes
+			is_patrician = no
+			NOT = { any_demesne_title = { higher_tier_than = count } }
+			age = 16
+			prisoner = no
+			NOT = { trait = incapable }
+		}
+		allow = { always = yes }
+		effect = {
+			d_strugatsky_fleet = { grant_title = ROOT }
+			hidden_tooltip = { character_event = { id = military.117 } }
+		}
+		ai_will_do = {
+			factor = 1
+			# Whether to assign the title at all
+			modifier = {
+				factor = 0
+				FROM = {
+					is_feudal = yes
+					is_patrician = no
+					has_landed_title = d_strugatsky_fleet
+					NOT = { trait = craven }
+					NOT = { trait = neurotic }
+					NOT = { trait = humble }
+					NOT = { trait = friendly }
+				}
+			}
+			# Whether to even consider this commander
+			modifier = {
+				factor = 0
+				NOT = { culture_group = strugatskite_group }
+				NOT = { culture_group = FROM }
+			}
+			modifier = {
+				factor = 0
+				NOT = { capital_scope = { kingdom = { title = k_strugatsky } } }
+			}
+			# Reasons to prefer this commander
+			modifier = {
+				factor = 5
+				dynasty = FROM
+			}
+			modifier = {
+				factor = 5
+				is_close_relative = FROM
+			}
+			modifier = {
+				factor = 1.25
+				martial = 2
+			}
+			modifier = {
+				factor = 1.25
+				martial = 4
+			}
+			modifier = {
+				factor = 1.25
+				martial = 6
+			}
+			modifier = {
+				factor = 1.25
+				martial = 8
+			}
+			modifier = {
+				factor = 1.25
+				martial = 10
+			}
+			modifier = {
+				factor = 1.25
+				martial = 12
+			}
+			modifier = {
+				factor = 1.25
+				martial = 14
+			}
+			modifier = {
+				factor = 1.25
+				martial = 16
+			}
+			modifier = {
+				factor = 1.25
+				martial = 18
+			}
+			modifier = {
+				factor = 1.25
+				martial = 20
+			}
+			modifier = {
+				factor = 1.25
+				martial = 22
+			}
+			modifier = {
+				factor = 1.25
+				martial = 24
+			}
+			modifier = {
+				factor = 1.25
+				martial = 26
+			}
+			modifier = {
+				factor = 1.25
+				martial = 28
+			}
+			modifier = {
+				factor = 1.25
+				martial = 30
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 100 }
+			}
+		}
+	}
+	# Edemite Guard
+	assign_command_novyy_edem_fleet = {
+		is_high_prio = yes
+		potential = {
+			d_novyy_edem_fleet = {
+				OR = {
+					AND = {
+						has_holder = no
+						FROM = { has_landed_title = k_novyy_edem }
+					}
+					holder_scope = { character = FROM }
+				}
+			}
+			FROM = {
+				any_demesne_title = { higher_tier_than = DUKE }
+				OR = {
+					ai = yes
+					has_character_flag = flag_military_command_menu_open
+				}
+			}
+			is_feudal = yes
+			is_patrician = no
+			NOT = { any_demesne_title = { higher_tier_than = count } }
+			age = 16
+			prisoner = no
+			NOT = { trait = incapable }
+		}
+		allow = { always = yes }
+		effect = {
+			d_novyy_edem_fleet = { grant_title = ROOT }
+			hidden_tooltip = { character_event = { id = military.112 } }
+		}
+		ai_will_do = {
+			factor = 1
+			# Whether to assign the title at all
+			modifier = {
+				factor = 0
+				FROM = {
+					is_feudal = yes
+					is_patrician = no
+					has_landed_title = d_novyy_edem_fleet
+					NOT = { trait = craven }
+					NOT = { trait = neurotic }
+					NOT = { trait = humble }
+					NOT = { trait = friendly }
+				}
+			}
+			# Whether to even consider this commander
+			modifier = {
+				factor = 0
+				NOT = { culture_group = edemite_group }
+				NOT = { culture_group = FROM }
+			}
+			modifier = {
+				factor = 0
+				NOT = { capital_scope = { kingdom = { title = k_novyy_edem } } }
+			}
+			# Reasons to prefer this commander
+			modifier = {
+				factor = 5
+				dynasty = FROM
+			}
+			modifier = {
+				factor = 5
+				is_close_relative = FROM
+			}
+			modifier = {
+				factor = 1.25
+				martial = 2
+			}
+			modifier = {
+				factor = 1.25
+				martial = 4
+			}
+			modifier = {
+				factor = 1.25
+				martial = 6
+			}
+			modifier = {
+				factor = 1.25
+				martial = 8
+			}
+			modifier = {
+				factor = 1.25
+				martial = 10
+			}
+			modifier = {
+				factor = 1.25
+				martial = 12
+			}
+			modifier = {
+				factor = 1.25
+				martial = 14
+			}
+			modifier = {
+				factor = 1.25
+				martial = 16
+			}
+			modifier = {
+				factor = 1.25
+				martial = 18
+			}
+			modifier = {
+				factor = 1.25
+				martial = 20
+			}
+			modifier = {
+				factor = 1.25
+				martial = 22
+			}
+			modifier = {
+				factor = 1.25
+				martial = 24
+			}
+			modifier = {
+				factor = 1.25
+				martial = 26
+			}
+			modifier = {
+				factor = 1.25
+				martial = 28
+			}
+			modifier = {
+				factor = 1.25
+				martial = 30
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -99 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { reverse_opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				reverse_opinion = { who = FROM value = 100 }
 			}
 		}
 	}

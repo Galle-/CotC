@@ -5,10 +5,7 @@ e_xingjie = {
 	
 	capital = 267
 	
-	allow = {
-		primary_title = { title = k_xingjie }
-		num_of_king_titles = 3
-	}
+	allow = { is_titular = no }
 	
 	# Navy
 	k_xingjie_navy = {
@@ -23,7 +20,6 @@ e_xingjie = {
 		title_foa = "GRANDADMIRALFOA"
 		title_foa_female = "GRANDADMIRALFOA_female"
 		capital = 267
-		landless = yes
 		tribe = yes
 		
 		d_xingjie_first_fleet = {
@@ -36,7 +32,6 @@ e_xingjie = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 267
-			landless = yes
 			tribe = yes
 		}
 		d_xingjie_second_fleet = {
@@ -49,7 +44,6 @@ e_xingjie = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 267
-			landless = yes
 			tribe = yes
 		}
 		d_xingjie_third_fleet = {
@@ -62,7 +56,6 @@ e_xingjie = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 267
-			landless = yes
 			tribe = yes
 		}
 		d_xingjie_fourth_fleet = {
@@ -75,7 +68,6 @@ e_xingjie = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 267
-			landless = yes
 			tribe = yes
 		}
 		d_xingjie_fifth_fleet = {
@@ -88,7 +80,6 @@ e_xingjie = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 267
-			landless = yes
 			tribe = yes
 		}
 	}
@@ -99,10 +90,7 @@ e_tierra_celeste = {
 	
 	capital = 70 # Encrucijada
 	
-	allow = {
-		primary_title = { title = k_tierra_celeste }
-		num_of_king_titles = 3
-	}
+	allow = { is_titular = no }
 	
 	# Navy
 	k_tierra_celeste_navy = {
@@ -117,7 +105,6 @@ e_tierra_celeste = {
 		title_foa = "GRANDADMIRALFOA"
 		title_foa_female = "GRANDADMIRALFOA_female"
 		capital = 70
-		landless = yes
 		tribe = yes
 		
 		d_tierra_celeste_first_fleet = {
@@ -130,7 +117,6 @@ e_tierra_celeste = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 70
-			landless = yes
 			tribe = yes
 		}
 		d_tierra_celeste_second_fleet = {
@@ -143,7 +129,6 @@ e_tierra_celeste = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 70
-			landless = yes
 			tribe = yes
 		}
 		d_tierra_celeste_third_fleet = {
@@ -156,7 +141,6 @@ e_tierra_celeste = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 70
-			landless = yes
 			tribe = yes
 		}
 		d_tierra_celeste_fourth_fleet = {
@@ -169,7 +153,6 @@ e_tierra_celeste = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 70
-			landless = yes
 			tribe = yes
 		}
 		d_tierra_celeste_fifth_fleet = {
@@ -182,7 +165,6 @@ e_tierra_celeste = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 70
-			landless = yes
 			tribe = yes
 		}
 	}
@@ -192,11 +174,8 @@ e_al_samawat = {
 	color2 = { 255 255 255 }
 	
 	capital = 307 # Makkat al-Jadiida
-
-	allow = {
-		primary_title = { title = k_al_samawat }
-		num_of_king_titles = 3
-	}
+	
+	allow = { is_titular = no }
 	
 	# Navy
 	k_al_samawat_navy = {
@@ -211,7 +190,6 @@ e_al_samawat = {
 		title_foa = "GRANDADMIRALFOA"
 		title_foa_female = "GRANDADMIRALFOA_female"
 		capital = 307
-		landless = yes
 		tribe = yes
 		
 		d_al_samawat_first_fleet = {
@@ -224,7 +202,6 @@ e_al_samawat = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 307
-			landless = yes
 			tribe = yes
 		}
 		d_al_samawat_second_fleet = {
@@ -237,7 +214,6 @@ e_al_samawat = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 307
-			landless = yes
 			tribe = yes
 		}
 		d_al_samawat_third_fleet = {
@@ -250,7 +226,6 @@ e_al_samawat = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 307
-			landless = yes
 			tribe = yes
 		}
 		d_al_samawat_fourth_fleet = {
@@ -263,7 +238,6 @@ e_al_samawat = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 307
-			landless = yes
 			tribe = yes
 		}
 		d_al_samawat_fifth_fleet = {
@@ -276,7 +250,6 @@ e_al_samawat = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 307
-			landless = yes
 			tribe = yes
 		}
 	}
@@ -287,10 +260,7 @@ e_zenye_nyota_angani = {
 		
 	capital = 289 # Mpya ya Zanzibar
 	
-	allow = {
-		primary_title = { title = k_zenye_nyota_angani }
-		num_of_king_titles = 3
-	}
+	allow = { is_titular = no }
 	
 	# Navy
 	k_angani_navy = {
@@ -305,7 +275,6 @@ e_zenye_nyota_angani = {
 		title_foa = "GRANDADMIRALFOA"
 		title_foa_female = "GRANDADMIRALFOA_female"
 		capital = 289
-		landless = yes
 		tribe = yes
 		
 		d_angani_first_fleet = {
@@ -318,7 +287,6 @@ e_zenye_nyota_angani = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 289
-			landless = yes
 			tribe = yes
 		}
 		d_angani_second_fleet = {
@@ -331,7 +299,6 @@ e_zenye_nyota_angani = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 289
-			landless = yes
 			tribe = yes
 		}
 		d_angani_third_fleet = {
@@ -344,7 +311,6 @@ e_zenye_nyota_angani = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 289
-			landless = yes
 			tribe = yes
 		}
 		d_angani_fourth_fleet = {
@@ -357,7 +323,6 @@ e_zenye_nyota_angani = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 289
-			landless = yes
 			tribe = yes
 		}
 		d_angani_fifth_fleet = {
@@ -370,7 +335,6 @@ e_zenye_nyota_angani = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 289
-			landless = yes
 			tribe = yes
 		}
 	}
@@ -381,10 +345,7 @@ e_frontier = {
 	
 	capital = 87 # Armstrong
 	
-	allow = {
-		primary_title = { title = k_frontier }
-		num_of_king_titles = 3
-	}
+	allow = { is_titular = no }
 	
 	# Navy
 	k_frontier_navy = {
@@ -399,7 +360,6 @@ e_frontier = {
 		title_foa = "GRANDADMIRALFOA"
 		title_foa_female = "GRANDADMIRALFOA_female"
 		capital = 87
-		landless = yes
 		tribe = yes
 		
 		d_frontier_first_fleet = {
@@ -412,7 +372,6 @@ e_frontier = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 87
-			landless = yes
 			tribe = yes
 		}
 		d_frontier_second_fleet = {
@@ -425,7 +384,6 @@ e_frontier = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 87
-			landless = yes
 			tribe = yes
 		}
 		d_frontier_third_fleet = {
@@ -438,7 +396,6 @@ e_frontier = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 87
-			landless = yes
 			tribe = yes
 		}
 		d_frontier_fourth_fleet = {
@@ -451,7 +408,6 @@ e_frontier = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 87
-			landless = yes
 			tribe = yes
 		}
 		d_frontier_fifth_fleet = {
@@ -464,7 +420,6 @@ e_frontier = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 87
-			landless = yes
 			tribe = yes
 		}
 	}
@@ -475,10 +430,7 @@ e_centauri_reach = {
 	
 	capital = 206 # Gagarin
 	
-	allow = {
-		primary_title = { title = k_centauri_reach }
-		num_of_king_titles = 3
-	}
+	allow = { is_titular = no }
 	
 	# Navy
 	k_centauri_navy = {
@@ -493,7 +445,6 @@ e_centauri_reach = {
 		title_foa = "GRANDADMIRALFOA"
 		title_foa_female = "GRANDADMIRALFOA_female"
 		capital = 206
-		landless = yes
 		tribe = yes
 		
 		d_centauri_first_fleet = {
@@ -506,7 +457,6 @@ e_centauri_reach = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 206
-			landless = yes
 			tribe = yes
 		}
 		d_centauri_second_fleet = {
@@ -519,7 +469,6 @@ e_centauri_reach = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 206
-			landless = yes
 			tribe = yes
 		}
 		d_centauri_third_fleet = {
@@ -532,7 +481,6 @@ e_centauri_reach = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 206
-			landless = yes
 			tribe = yes
 		}
 		d_centauri_fourth_fleet = {
@@ -545,7 +493,6 @@ e_centauri_reach = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 206
-			landless = yes
 			tribe = yes
 		}
 		d_centauri_fifth_fleet = {
@@ -558,7 +505,6 @@ e_centauri_reach = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 206
-			landless = yes
 			tribe = yes
 		}
 	}
@@ -569,10 +515,7 @@ e_xin_zizhiqu = {
 	
 	capital = 263 # Xin Qin
 	
-	allow = {
-		primary_title = { title = k_xin_zizhiqu }
-		num_of_king_titles = 3
-	}
+	allow = { is_titular = no }
 	
 	# Navy
 	k_xin_zizhiqu_navy = {
@@ -587,7 +530,6 @@ e_xin_zizhiqu = {
 		title_foa = "GRANDADMIRALFOA"
 		title_foa_female = "GRANDADMIRALFOA_female"
 		capital = 263
-		landless = yes
 		tribe = yes
 		
 		d_xin_zizhiqu_first_fleet = {
@@ -600,7 +542,6 @@ e_xin_zizhiqu = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 263
-			landless = yes
 			tribe = yes
 		}
 		d_xin_zizhiqu_second_fleet = {
@@ -613,7 +554,6 @@ e_xin_zizhiqu = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 263
-			landless = yes
 			tribe = yes
 		}
 		d_xin_zizhiqu_third_fleet = {
@@ -626,7 +566,6 @@ e_xin_zizhiqu = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 263
-			landless = yes
 			tribe = yes
 		}
 		d_xin_zizhiqu_fourth_fleet = {
@@ -639,7 +578,6 @@ e_xin_zizhiqu = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 263
-			landless = yes
 			tribe = yes
 		}
 		d_xin_zizhiqu_fifth_fleet = {
@@ -652,7 +590,6 @@ e_xin_zizhiqu = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 263
-			landless = yes
 			tribe = yes
 		}
 	}
@@ -663,10 +600,7 @@ e_helix = {
 	
 	capital = 102 # Eye of God
 	
-	allow = {
-		primary_title = { title = k_helix }
-		num_of_king_titles = 3
-	}
+	allow = { is_titular = no }
 	
 	# Navy
 	k_helix_navy = {
@@ -681,7 +615,6 @@ e_helix = {
 		title_foa = "GRANDADMIRALFOA"
 		title_foa_female = "GRANDADMIRALFOA_female"
 		capital = 102
-		landless = yes
 		tribe = yes
 		
 		d_helix_first_fleet = {
@@ -694,7 +627,6 @@ e_helix = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 102
-			landless = yes
 			tribe = yes
 		}
 		d_helix_second_fleet = {
@@ -707,7 +639,6 @@ e_helix = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 102
-			landless = yes
 			tribe = yes
 		}
 		d_helix_third_fleet = {
@@ -720,7 +651,6 @@ e_helix = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 102
-			landless = yes
 			tribe = yes
 		}
 		d_helix_fourth_fleet = {
@@ -733,7 +663,6 @@ e_helix = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 102
-			landless = yes
 			tribe = yes
 		}
 		d_helix_fifth_fleet = {
@@ -746,7 +675,6 @@ e_helix = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 102
-			landless = yes
 			tribe = yes
 		}
 	}
@@ -757,10 +685,7 @@ e_novyy_edem = {
 	
 	capital = 162 # Novyy Edem
 	
-	allow = {
-		primary_title = { title = k_novyy_edem }
-		num_of_king_titles = 3
-	}
+	allow = { is_titular = no }
 	
 	# Navy
 	k_novyy_edem_navy = {
@@ -775,7 +700,6 @@ e_novyy_edem = {
 		title_foa = "GRANDADMIRALFOA"
 		title_foa_female = "GRANDADMIRALFOA_female"
 		capital = 162
-		landless = yes
 		tribe = yes
 		
 		d_novyy_edem_first_fleet = {
@@ -788,7 +712,6 @@ e_novyy_edem = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 162
-			landless = yes
 			tribe = yes
 		}
 		d_novyy_edem_second_fleet = {
@@ -801,7 +724,6 @@ e_novyy_edem = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 162
-			landless = yes
 			tribe = yes
 		}
 		d_novyy_edem_third_fleet = {
@@ -814,7 +736,6 @@ e_novyy_edem = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 162
-			landless = yes
 			tribe = yes
 		}
 		d_novyy_edem_fourth_fleet = {
@@ -827,7 +748,6 @@ e_novyy_edem = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 162
-			landless = yes
 			tribe = yes
 		}
 		d_novyy_edem_fifth_fleet = {
@@ -840,7 +760,6 @@ e_novyy_edem = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 162
-			landless = yes
 			tribe = yes
 		}
 	}
@@ -851,10 +770,7 @@ e_witchhead_nebula = {
 	
 	capital = 215 # Fukuoka
 	
-	allow = {
-		primary_title = { title = k_witchhead_nebula }
-		num_of_king_titles = 3
-	}
+	allow = { is_titular = no }
 	
 	# Navy
 	k_witchhead_navy = {
@@ -869,7 +785,6 @@ e_witchhead_nebula = {
 		title_foa = "GRANDADMIRALFOA"
 		title_foa_female = "GRANDADMIRALFOA_female"
 		capital = 215
-		landless = yes
 		tribe = yes
 		
 		d_witchhead_first_fleet = {
@@ -882,7 +797,6 @@ e_witchhead_nebula = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 215
-			landless = yes
 			tribe = yes
 		}
 		d_witchhead_second_fleet = {
@@ -895,7 +809,6 @@ e_witchhead_nebula = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 215
-			landless = yes
 			tribe = yes
 		}
 		d_witchhead_third_fleet = {
@@ -908,7 +821,6 @@ e_witchhead_nebula = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 215
-			landless = yes
 			tribe = yes
 		}
 		d_witchhead_fourth_fleet = {
@@ -921,7 +833,6 @@ e_witchhead_nebula = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 215
-			landless = yes
 			tribe = yes
 		}
 		d_witchhead_fifth_fleet = {
@@ -934,7 +845,6 @@ e_witchhead_nebula = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 215
-			landless = yes
 			tribe = yes
 		}
 	}
@@ -945,10 +855,7 @@ e_avalon = {
 	
 	capital = 25 # Avalon
 	
-	allow = {
-		primary_title = { title = k_avalon }
-		num_of_king_titles = 3
-	}
+	allow = { is_titular = no }
 	
 	# Navy
 	k_avalon_navy = {
@@ -976,7 +883,6 @@ e_avalon = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 25
-			landless = yes
 			tribe = yes
 		}
 		d_avalon_second_fleet = {
@@ -989,7 +895,6 @@ e_avalon = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 25
-			landless = yes
 			tribe = yes
 		}
 		d_avalon_third_fleet = {
@@ -1002,7 +907,6 @@ e_avalon = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 25
-			landless = yes
 			tribe = yes
 		}
 		d_avalon_fourth_fleet = {
@@ -1015,7 +919,6 @@ e_avalon = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 25
-			landless = yes
 			tribe = yes
 		}
 		d_avalon_fifth_fleet = {
@@ -1028,7 +931,6 @@ e_avalon = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 25
-			landless = yes
 			tribe = yes
 		}
 	}
@@ -1039,10 +941,7 @@ e_jion = {
 	
 	capital = 126 # Jion
 	
-	allow = {
-		primary_title = { title = k_jion }
-		num_of_king_titles = 3
-	}
+	allow = { is_titular = no }
 	
 	# Navy
 	k_jion_navy = {
@@ -1058,7 +957,6 @@ e_jion = {
 		title_foa = "GRANDADMIRALFOA"
 		title_foa_female = "GRANDADMIRALFOA_female"
 		capital = 126
-		landless = yes
 		tribe = yes
 		
 		d_jion_first_fleet = {
@@ -1071,7 +969,6 @@ e_jion = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 126
-			landless = yes
 			tribe = yes
 		}
 		d_jion_second_fleet = {
@@ -1084,7 +981,6 @@ e_jion = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 126
-			landless = yes
 			tribe = yes
 		}
 		d_jion_third_fleet = {
@@ -1097,7 +993,6 @@ e_jion = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 126
-			landless = yes
 			tribe = yes
 		}
 		d_jion_fourth_fleet = {
@@ -1110,7 +1005,6 @@ e_jion = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 126
-			landless = yes
 			tribe = yes
 		}
 		d_jion_fifth_fleet = {
@@ -1123,7 +1017,6 @@ e_jion = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 126
-			landless = yes
 			tribe = yes
 		}
 	}
@@ -1133,11 +1026,8 @@ e_orion_reach = {
 	color2 = { 255 255 0 }
 	
 	capital = 404 # Meissa
-
-	allow = {
-		primary_title = { title = k_orion_reach }
-		num_of_king_titles = 3
-	}
+	
+	allow = { is_titular = no }
 	
 	# Navy
 	k_orion_reach_navy = {
@@ -1152,7 +1042,6 @@ e_orion_reach = {
 		title_foa = "GRANDADMIRALFOA"
 		title_foa_female = "GRANDADMIRALFOA_female"
 		capital = 404
-		landless = yes
 		tribe = yes
 		
 		d_orion_reach_first_fleet = {
@@ -1165,7 +1054,6 @@ e_orion_reach = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 404
-			landless = yes
 			tribe = yes
 		}
 		d_orion_reach_second_fleet = {
@@ -1178,7 +1066,6 @@ e_orion_reach = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 404
-			landless = yes
 			tribe = yes
 		}
 		d_orion_reach_third_fleet = {
@@ -1191,7 +1078,6 @@ e_orion_reach = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 404
-			landless = yes
 			tribe = yes
 		}
 		d_orion_reach_fourth_fleet = {
@@ -1204,7 +1090,6 @@ e_orion_reach = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 404
-			landless = yes
 			tribe = yes
 		}
 		d_orion_reach_fifth_fleet = {
@@ -1217,7 +1102,177 @@ e_orion_reach = {
 			title_foa = "FLEETADMIRALFOA"
 			title_foa_female = "FLEETADMIRALFOA_female"
 			capital = 404
-			landless = yes
+			tribe = yes
+		}
+	}
+}
+
+e_tarka = {
+	color = { 100 100 100 }
+	color2 = { 255 255 255 }
+	
+	capital = 10 # Tarka
+	
+	allow = { is_titular = no }
+	
+	# Navy
+	k_tarka_navy = {
+		allow = { has_landed_title = e_tarka }
+		color = { 92 92 92 }
+		color2 = { 255 255 255 }
+		
+		short_name = yes
+		
+		title = "GRANDADMIRAL"
+		title_female = "GRANDADMIRAL_female"
+		title_foa = "GRANDADMIRALFOA"
+		title_foa_female = "GRANDADMIRALFOA_female"
+		capital = 10
+		tribe = yes
+		
+		d_tarka_first_fleet = {
+			allow = { has_landed_title = k_tarka_navy }
+			color = { 84 84 84 }
+			color2 = { 255 255 255 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 10
+			tribe = yes
+		}
+		d_tarka_second_fleet = {
+			allow = { has_landed_title = k_tarka_navy }
+			color = { 76 76 76 }
+			color2 = { 255 255 255 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 10
+			tribe = yes
+		}
+		d_tarka_third_fleet = {
+			allow = { has_landed_title = k_tarka_navy }
+			color = { 68 68 68 }
+			color2 = { 255 255 255 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 10
+			tribe = yes
+		}
+		d_tarka_fourth_fleet = {
+			allow = { has_landed_title = k_tarka_navy }
+			color = { 60 60 60 }
+			color2 = { 255 255 255 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 10
+			tribe = yes
+		}
+		d_tarka_fifth_fleet = {
+			allow = { has_landed_title = k_tarka_navy }
+			color = { 52 52 52 }
+			color2 = { 255 255 255 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 10
+			tribe = yes
+		}
+	}
+}
+e_strugatsky = {
+	color = { 100 0 0 }
+	color2 = { 100 100 0 }
+	
+	capital = 185 # Novyy Sol
+	
+	allow = { is_titular = no }
+	
+	# Navy
+	k_strugatsky_navy = {
+		allow = { has_landed_title = e_strugatsky }
+		color = { 116 0 0 }
+		color2 = { 100 100 0 }
+		
+		short_name = yes
+		
+		title = "GRANDADMIRAL"
+		title_female = "GRANDADMIRAL_female"
+		title_foa = "GRANDADMIRALFOA"
+		title_foa_female = "GRANDADMIRALFOA_female"
+		capital = 185
+		tribe = yes
+		
+		d_strugatsky_first_fleet = {
+			allow = { has_landed_title = k_strugatsky_navy }
+			color = { 132 0 0 }
+			color2 = { 100 100 0 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 185
+			tribe = yes
+		}
+		d_strugatsky_second_fleet = {
+			allow = { has_landed_title = k_strugatsky_navy }
+			color = { 148 0 0 }
+			color2 = { 100 100 0 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 185
+			tribe = yes
+		}
+		d_strugatsky_third_fleet = {
+			allow = { has_landed_title = k_strugatsky_navy }
+			color = { 164 0 0 }
+			color2 = { 100 100 0 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 185
+			tribe = yes
+		}
+		d_strugatsky_fourth_fleet = {
+			allow = { has_landed_title = k_strugatsky_navy }
+			color = { 180 0 0 }
+			color2 = { 100 100 0 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 185
+			tribe = yes
+		}
+		d_strugatsky_fifth_fleet = {
+			allow = { has_landed_title = k_strugatsky_navy }
+			color = { 196 0 0 }
+			color2 = { 100 100 0 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 185
 			tribe = yes
 		}
 	}

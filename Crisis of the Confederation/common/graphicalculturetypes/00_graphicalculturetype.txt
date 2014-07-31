@@ -84,6 +84,62 @@ russosamawatigfx = {
 sinosamawatigfx = {
 	skin_tone = 1
 }
+# Avalonian
+afroavalongfx = {
+	skin_tone = 3
+}
+ameriavalongfx = {
+	skin_tone = 1
+}
+angloavalongfx = {
+	skin_tone = 0
+}
+hispanicavalongfx = {
+	skin_tone = 1
+}
+indoavalongfx = {
+	skin_tone = 2
+}
+mideastavalongfx = {
+	skin_tone = 2
+}
+persianavalongfx = {
+	skin_tone = 0
+}
+russoavalongfx = {
+	skin_tone = 0
+}
+sinoavalongfx = {
+	skin_tone = 1
+}
+# Tengoku
+afrojiongfx = {
+	skin_tone = 3
+}
+amerijiongfx = {
+	skin_tone = 1
+}
+anglojiongfx = {
+	skin_tone = 0
+}
+hispanicjiongfx = {
+	skin_tone = 1
+}
+indojiongfx = {
+	skin_tone = 2
+}
+mideastjiongfx = {
+	skin_tone = 2
+}
+persianjiongfx = {
+	skin_tone = 0
+}
+russojiongfx = {
+	skin_tone = 0
+}
+sinojiongfx = {
+	skin_tone = 1
+}
 # Western
 
 frankishgfx = {

@@ -958,7 +958,7 @@ character_event = {
 			has_dlc = "The Old Gods"
 			OR = {
 				AND = {
-					NOT = { liege { religion = space_pirate } }
+					NOT = { liege = { religion = space_pirate } }
 					NOT = { any_independent_ruler = { religion = space_pirate } }
 				}
 				martial = 20

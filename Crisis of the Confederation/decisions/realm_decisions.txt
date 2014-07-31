@@ -1,5 +1,804 @@
 decisions = {
-	
+	found_terran_empire = {
+		is_high_prio = yes
+		potential = {
+			primary_title = { title = k_terran_commonwealth }
+			independent = yes
+			age = 16
+			NOT = { trait = incapable }
+			NOT = { k_terran_commonwealth = { dejure_liege_title = { title = e_terran_confederation } } }
+		}
+		allow = {
+			e_terran_confederation = { has_holder = no }
+			realm_size = 150
+		}
+		effect = {
+			k_terran_commonwealth = { de_jure_liege = e_terran_confederation }
+			e_terran_confederation = {
+				grant_title = ROOT
+				copy_title_laws = k_terran_commonwealth
+			}
+			prestige = 1000
+		}
+		ai_will_do = { factor = 1 }
+	}
+	found_xingjie_empire = {
+		is_high_prio = yes
+		potential = {
+			primary_title = { title = k_xingjie }
+			independent = yes
+			age = 16
+			NOT = { trait = incapable }
+			NOT = { k_xingjie = { dejure_liege_title = { title = e_xingjie } } }
+		}
+		allow = {
+			e_xingjie = { has_holder = no }
+			realm_size = 150
+			NOT = { religion = terran_federalist }
+			NOT = { religion = terran_republican }
+			NOT = { religion = terran_imperial }
+			NOT = { religion = pilgrim }
+			NOT = { religion = orthodox }
+		}
+		effect = {
+			k_xingjie = { de_jure_liege = e_xingjie }
+			e_xingjie = {
+				grant_title = ROOT
+				copy_title_laws = k_xingjie
+			}
+			prestige = 1000
+		}
+		ai_will_do = { factor = 1 }
+	}
+	found_celestean_empire = {
+		is_high_prio = yes
+		potential = {
+			primary_title = { title = k_tierra_celeste }
+			independent = yes
+			age = 16
+			NOT = { trait = incapable }
+			NOT = { k_tierra_celeste = { dejure_liege_title = { title = e_tierra_celeste } } }
+		}
+		allow = {
+			e_tierra_celeste = { has_holder = no }
+			realm_size = 150
+			NOT = { religion = terran_federalist }
+			NOT = { religion = terran_republican }
+			NOT = { religion = terran_imperial }
+			NOT = { religion = pilgrim }
+			NOT = { religion = orthodox }
+		}
+		effect = {
+			k_tierra_celeste = { de_jure_liege = e_tierra_celeste }
+			e_tierra_celeste = {
+				grant_title = ROOT
+				copy_title_laws = k_tierra_celeste
+			}
+			prestige = 1000
+		}
+		ai_will_do = { factor = 1 }
+	}
+	found_samawati_empire = {
+		is_high_prio = yes
+		potential = {
+			primary_title = { title = k_al_samawat }
+			independent = yes
+			age = 16
+			NOT = { trait = incapable }
+			NOT = { k_al_samawat = { dejure_liege_title = { title = e_al_samawat } } }
+		}
+		allow = {
+			e_al_samawat = { has_holder = no }
+			realm_size = 150
+			NOT = { religion = terran_federalist }
+			NOT = { religion = terran_republican }
+			NOT = { religion = terran_imperial }
+			NOT = { religion = pilgrim }
+			NOT = { religion = orthodox }
+		}
+		effect = {
+			k_al_samawat = { de_jure_liege = e_al_samawat }
+			e_al_samawat = {
+				grant_title = ROOT
+				copy_title_laws = k_al_samawat
+			}
+			prestige = 1000
+		}
+		ai_will_do = { factor = 1 }
+	}
+	found_angani_empire = {
+		is_high_prio = yes
+		potential = {
+			primary_title = { title = k_zenye_nyota_angani }
+			independent = yes
+			age = 16
+			NOT = { trait = incapable }
+			NOT = { k_zenye_nyota_angani = { dejure_liege_title = { title = e_zenye_nyota_angani } } }
+		}
+		allow = {
+			e_zenye_nyota_angani = { has_holder = no }
+			realm_size = 150
+			NOT = { religion = terran_federalist }
+			NOT = { religion = terran_republican }
+			NOT = { religion = terran_imperial }
+			NOT = { religion = pilgrim }
+			NOT = { religion = orthodox }
+		}
+		effect = {
+			k_zenye_nyota_angani = { de_jure_liege = e_zenye_nyota_angani }
+			e_zenye_nyota_angani = {
+				grant_title = ROOT
+				copy_title_laws = k_zenye_nyota_angani
+			}
+			prestige = 1000
+		}
+		ai_will_do = { factor = 1 }
+	}
+	found_frontier_empire = {
+		is_high_prio = yes
+		potential = {
+			primary_title = { title = k_frontier }
+			independent = yes
+			age = 16
+			NOT = { trait = incapable }
+			NOT = { k_frontier = { dejure_liege_title = { title = e_frontier } } }
+		}
+		allow = {
+			e_frontier = { has_holder = no }
+			realm_size = 150
+			NOT = { religion = terran_federalist }
+			NOT = { religion = terran_republican }
+			NOT = { religion = terran_imperial }
+			NOT = { religion = pilgrim }
+			NOT = { religion = orthodox }
+		}
+		effect = {
+			k_frontier = { de_jure_liege = e_frontier }
+			e_frontier = {
+				grant_title = ROOT
+				copy_title_laws = k_frontier
+			}
+			prestige = 1000
+		}
+		ai_will_do = { factor = 1 }
+	}
+	found_centauri_empire = {
+		is_high_prio = yes
+		potential = {
+			primary_title = { title = k_centauri_reach }
+			independent = yes
+			age = 16
+			NOT = { trait = incapable }
+			NOT = { k_centauri_reach = { dejure_liege_title = { title = e_centauri_reach } } }
+		}
+		allow = {
+			e_centauri_reach = { has_holder = no }
+			realm_size = 150
+			NOT = { religion = terran_federalist }
+			NOT = { religion = terran_republican }
+			NOT = { religion = terran_imperial }
+			NOT = { religion = pilgrim }
+			NOT = { religion = orthodox }
+		}
+		effect = {
+			k_centauri_reach = { de_jure_liege = e_centauri_reach }
+			e_centauri_reach = {
+				grant_title = ROOT
+				copy_title_laws = k_centauri_reach
+			}
+			prestige = 1000
+		}
+		ai_will_do = { factor = 1 }
+	}
+	found_xin_zizhiqu_empire = {
+		is_high_prio = yes
+		potential = {
+			primary_title = { title = k_xin_zizhiqu }
+			independent = yes
+			age = 16
+			NOT = { trait = incapable }
+			NOT = { k_xin_zizhiqu = { dejure_liege_title = { title = e_xin_zizhiqu } } }
+		}
+		allow = {
+			e_xin_zizhiqu = { has_holder = no }
+			realm_size = 150
+			NOT = { religion = terran_federalist }
+			NOT = { religion = terran_republican }
+			NOT = { religion = terran_imperial }
+			NOT = { religion = pilgrim }
+			NOT = { religion = orthodox }
+		}
+		effect = {
+			k_xin_zizhiqu = { de_jure_liege = e_xin_zizhiqu }
+			e_xin_zizhiqu = {
+				grant_title = ROOT
+				copy_title_laws = k_xin_zizhiqu
+			}
+			prestige = 1000
+		}
+		ai_will_do = { factor = 1 }
+	}
+	found_helix_empire = {
+		is_high_prio = yes
+		potential = {
+			primary_title = { title = k_helix }
+			independent = yes
+			age = 16
+			NOT = { trait = incapable }
+			NOT = { k_helix = { dejure_liege_title = { title = e_helix } } }
+		}
+		allow = {
+			e_helix = { has_holder = no }
+			realm_size = 150
+			NOT = { religion = terran_federalist }
+			NOT = { religion = terran_republican }
+			NOT = { religion = terran_imperial }
+			NOT = { religion = pilgrim }
+			NOT = { religion = orthodox }
+		}
+		effect = {
+			k_helix = { de_jure_liege = e_helix }
+			e_helix = {
+				grant_title = ROOT
+				copy_title_laws = k_helix
+			}
+			prestige = 1000
+		}
+		ai_will_do = { factor = 1 }
+	}
+	found_orion_empire = {
+		is_high_prio = yes
+		potential = {
+			primary_title = { title = k_orion_reach }
+			independent = yes
+			age = 16
+			NOT = { trait = incapable }
+			NOT = { k_orion_reach = { dejure_liege_title = { title = e_orion_reach } } }
+		}
+		allow = {
+			e_orion_reach = { has_holder = no }
+			realm_size = 150
+			NOT = { religion = terran_federalist }
+			NOT = { religion = terran_republican }
+			NOT = { religion = terran_imperial }
+			NOT = { religion = pilgrim }
+			NOT = { religion = orthodox }
+		}
+		effect = {
+			k_orion_reach = { de_jure_liege = e_orion_reach }
+			e_orion_reach = {
+				grant_title = ROOT
+				copy_title_laws = k_orion_reach
+			}
+			prestige = 1000
+		}
+		ai_will_do = { factor = 1 }
+	}
+	found_tarkan_empire = {
+		is_high_prio = yes
+		potential = {
+			primary_title = { title = k_tarka }
+			independent = yes
+			age = 16
+			NOT = { trait = incapable }
+			NOT = { k_tarka = { dejure_liege_title = { title = e_tarka } } }
+		}
+		allow = {
+			e_tarka = { has_holder = no }
+			realm_size = 150
+			NOT = { religion = terran_federalist }
+			NOT = { religion = terran_republican }
+			NOT = { religion = terran_imperial }
+			NOT = { religion = pilgrim }
+			NOT = { religion = orthodox }
+		}
+		effect = {
+			k_tarka = { de_jure_liege = e_tarka }
+			e_tarka = {
+				grant_title = ROOT
+				copy_title_laws = k_tarka
+			}
+			prestige = 1000
+		}
+		ai_will_do = { factor = 1 }
+	}
+	found_avalonian_empire = {
+		is_high_prio = yes
+		potential = {
+			primary_title = { title = k_avalon }
+			independent = yes
+			age = 16
+			NOT = { trait = incapable }
+			NOT = { k_avalon = { dejure_liege_title = { title = e_avalon } } }
+		}
+		allow = {
+			e_avalon = { has_holder = no }
+			realm_size = 150
+			NOT = { religion = terran_federalist }
+			NOT = { religion = terran_republican }
+			NOT = { religion = terran_imperial }
+			NOT = { religion = pilgrim }
+			NOT = { religion = orthodox }
+		}
+		effect = {
+			k_avalon = { de_jure_liege = e_avalon }
+			e_avalon = {
+				grant_title = ROOT
+				copy_title_laws = k_avalon
+			}
+			prestige = 1000
+		}
+		ai_will_do = { factor = 1 }
+	}
+	found_jionese_empire = {
+		is_high_prio = yes
+		potential = {
+			primary_title = { title = k_jion }
+			independent = yes
+			age = 16
+			NOT = { trait = incapable }
+			NOT = { k_jion = { dejure_liege_title = { title = e_jion } } }
+		}
+		allow = {
+			e_jion = { has_holder = no }
+			realm_size = 150
+			NOT = { religion = terran_federalist }
+			NOT = { religion = terran_republican }
+			NOT = { religion = terran_imperial }
+			NOT = { religion = pilgrim }
+			NOT = { religion = orthodox }
+		}
+		effect = {
+			k_jion = { de_jure_liege = e_jion }
+			e_jion = {
+				grant_title = ROOT
+				copy_title_laws = k_jion
+			}
+			prestige = 1000
+		}
+		ai_will_do = { factor = 1 }
+	}
+	found_strugatskite_empire = {
+		is_high_prio = yes
+		potential = {
+			primary_title = { title = k_strugatsky }
+			independent = yes
+			age = 16
+			NOT = { trait = incapable }
+			NOT = { k_strugatsky = { dejure_liege_title = { title = e_strugatsky } } }
+		}
+		allow = {
+			e_strugatsky = { has_holder = no }
+			realm_size = 150
+			NOT = { religion = terran_federalist }
+			NOT = { religion = terran_republican }
+			NOT = { religion = terran_imperial }
+			NOT = { religion = pilgrim }
+			NOT = { religion = orthodox }
+		}
+		effect = {
+			k_strugatsky = { de_jure_liege = e_strugatsky }
+			e_strugatsky = {
+				grant_title = ROOT
+				copy_title_laws = k_strugatsky
+			}
+			prestige = 1000
+		}
+		ai_will_do = { factor = 1 }
+	}
+	found_edemite_empire = {
+		is_high_prio = yes
+		potential = {
+			primary_title = { title = k_novyy_edem }
+			independent = yes
+			age = 16
+			NOT = { trait = incapable }
+			NOT = { k_novyy_edem = { dejure_liege_title = { title = e_novyy_edem } } }
+		}
+		allow = {
+			e_novyy_edem = { has_holder = no }
+			realm_size = 150
+			NOT = { religion = terran_federalist }
+			NOT = { religion = terran_republican }
+			NOT = { religion = terran_imperial }
+			NOT = { religion = pilgrim }
+			NOT = { religion = orthodox }
+		}
+		effect = {
+			k_novyy_edem = { de_jure_liege = e_novyy_edem }
+			e_novyy_edem = {
+				grant_title = ROOT
+				copy_title_laws = k_novyy_edem
+			}
+			prestige = 1000
+		}
+		ai_will_do = { factor = 1 }
+	}
+	# found_terran_empire = {
+		# is_high_prio = yes
+		# potential = {
+			# primary_title = { title = k_terran_commonwealth }
+			# independent = yes
+			# age = 16
+			# prisoner = no
+			# NOT = { trait = incapable }
+			# e_terran_confederation = { NOT = { any_de_jure_vassal_title  = { NOT = { title = k_terran_navy } } } }
+		# }
+		# allow = { realm_size = 50 }
+		# effect = {
+			# k_terran_commonwealth = { de_jure_liege = e_terran_confederation }
+			# e_terran_confederation = {
+				# grant_title = ROOT
+				# copy_title_laws = k_terran_commonwealth
+			# }
+			# prestige = 1000
+		# }
+		# ai_will_do = { factor = 1 }
+	# }
+	# found_xingjie_empire = {
+		# is_high_prio = yes
+		# potential = {
+			# primary_title = { title = k_xingjie }
+			# independent = yes
+			# age = 16
+			# prisoner = no
+			# NOT = { trait = incapable }
+			# e_xingjie = { NOT = { any_de_jure_vassal_title  = { NOT = { title = k_xingjie_navy } } } }
+		# }
+		# allow = {
+			# realm_size = 50
+			# NOT = { religion = terran_federalist }
+			# NOT = { religion = terran_republican }
+			# NOT = { religion = terran_imperial }
+			# NOT = { religion = pilgrim }
+			# NOT = { religion = orthodox }
+		# }
+		# effect = {
+			# k_xingjie = { de_jure_liege = e_xingjie }
+			# e_xingjie = {
+				# grant_title = ROOT
+				# copy_title_laws = k_xingjie
+			# }
+			# prestige = 1000
+		# }
+		# ai_will_do = { factor = 1 }
+	# }
+	# found_celestean_empire = {
+		# is_high_prio = yes
+		# potential = {
+			# primary_title = { title = k_tierra_celeste }
+			# independent = yes
+			# age = 16
+			# prisoner = no
+			# NOT = { trait = incapable }
+			# e_tierra_celeste = { NOT = { any_de_jure_vassal_title  = { NOT = { title = k_tierra_celeste_navy } } } }
+		# }
+		# allow = {
+			# realm_size = 50
+			# NOT = { religion = terran_federalist }
+			# NOT = { religion = terran_republican }
+			# NOT = { religion = terran_imperial }
+			# NOT = { religion = pilgrim }
+			# NOT = { religion = orthodox }
+		# }
+		# effect = {
+			# k_tierra_celeste = { de_jure_liege = e_tierra_celeste }
+			# e_tierra_celeste = {
+				# grant_title = ROOT
+				# copy_title_laws = k_tierra_celeste
+			# }
+			# prestige = 1000
+		# }
+		# ai_will_do = { factor = 1 }
+	# }
+	# found_samawati_empire = {
+		# is_high_prio = yes
+		# potential = {
+			# primary_title = { title = k_al_samawat }
+			# independent = yes
+			# age = 16
+			# prisoner = no
+			# NOT = { trait = incapable }
+			# e_al_samawat = { NOT = { any_de_jure_vassal_title  = { NOT = { title = k_al_samawat_navy } } } }
+		# }
+		# allow = {
+			# realm_size = 50
+			# NOT = { religion = terran_federalist }
+			# NOT = { religion = terran_republican }
+			# NOT = { religion = terran_imperial }
+			# NOT = { religion = pilgrim }
+			# NOT = { religion = orthodox }
+		# }
+		# effect = {
+			# k_al_samawat = { de_jure_liege = e_al_samawat }
+			# e_al_samawat = {
+				# grant_title = ROOT
+				# copy_title_laws = k_al_samawat
+			# }
+			# prestige = 1000
+		# }
+		# ai_will_do = { factor = 1 }
+	# }
+	# found_angani_empire = {
+		# is_high_prio = yes
+		# potential = {
+			# primary_title = { title = k_zenye_nyota_angani }
+			# independent = yes
+			# age = 16
+			# prisoner = no
+			# NOT = { trait = incapable }
+			# e_zenye_nyota_angani = { NOT = { any_de_jure_vassal_title  = { NOT = { title = k_angani_navy } } } }
+		# }
+		# allow = {
+			# realm_size = 50
+			# NOT = { religion = terran_federalist }
+			# NOT = { religion = terran_republican }
+			# NOT = { religion = terran_imperial }
+			# NOT = { religion = pilgrim }
+			# NOT = { religion = orthodox }
+		# }
+		# effect = {
+			# k_zenye_nyota_angani = { de_jure_liege = e_zenye_nyota_angani }
+			# e_zenye_nyota_angani = {
+				# grant_title = ROOT
+				# copy_title_laws = k_zenye_nyota_angani
+			# }
+			# prestige = 1000
+		# }
+		# ai_will_do = { factor = 1 }
+	# }
+	# found_frontier_empire = {
+		# is_high_prio = yes
+		# potential = {
+			# primary_title = { title = k_frontier }
+			# independent = yes
+			# age = 16
+			# prisoner = no
+			# NOT = { trait = incapable }
+			# e_frontier = { NOT = { any_de_jure_vassal_title  = { NOT = { title = k_frontier_navy } } } }
+		# }
+		# allow = {
+			# realm_size = 50
+			# NOT = { religion = terran_federalist }
+			# NOT = { religion = terran_republican }
+			# NOT = { religion = terran_imperial }
+			# NOT = { religion = pilgrim }
+			# NOT = { religion = orthodox }
+		# }
+		# effect = {
+			# k_frontier = { de_jure_liege = e_frontier }
+			# e_frontier = {
+				# grant_title = ROOT
+				# copy_title_laws = k_frontier
+			# }
+			# prestige = 1000
+		# }
+		# ai_will_do = { factor = 1 }
+	# }
+	# found_centauri_empire = {
+		# is_high_prio = yes
+		# potential = {
+			# primary_title = { title = k_centauri_reach }
+			# independent = yes
+			# age = 16
+			# prisoner = no
+			# NOT = { trait = incapable }
+			# e_centauri_reach = { NOT = { any_de_jure_vassal_title  = { NOT = { title = k_centauri_navy } } } }
+		# }
+		# allow = {
+			# realm_size = 50
+			# NOT = { religion = terran_federalist }
+			# NOT = { religion = terran_republican }
+			# NOT = { religion = terran_imperial }
+			# NOT = { religion = pilgrim }
+			# NOT = { religion = orthodox }
+		# }
+		# effect = {
+			# k_centauri_reach = { de_jure_liege = e_centauri_reach }
+			# e_centauri_reach = {
+				# grant_title = ROOT
+				# copy_title_laws = k_centauri_reach
+			# }
+			# prestige = 1000
+		# }
+		# ai_will_do = { factor = 1 }
+	# }
+	# found_xin_zizhiqu_empire = {
+		# is_high_prio = yes
+		# potential = {
+			# primary_title = { title = k_xin_zizhiqu }
+			# independent = yes
+			# age = 16
+			# prisoner = no
+			# NOT = { trait = incapable }
+			# e_xin_zizhiqu = { NOT = { any_de_jure_vassal_title  = { NOT = { title = k_xin_zizhiqu_navy } } } }
+		# }
+		# allow = {
+			# realm_size = 50
+			# NOT = { religion = terran_federalist }
+			# NOT = { religion = terran_republican }
+			# NOT = { religion = terran_imperial }
+			# NOT = { religion = pilgrim }
+			# NOT = { religion = orthodox }
+		# }
+		# effect = {
+			# k_xin_zizhiqu = { de_jure_liege = e_xin_zizhiqu }
+			# e_xin_zizhiqu = {
+				# grant_title = ROOT
+				# copy_title_laws = k_xin_zizhiqu
+			# }
+			# prestige = 1000
+		# }
+		# ai_will_do = { factor = 1 }
+	# }
+	# found_orion_empire = {
+		# is_high_prio = yes
+		# potential = {
+			# primary_title = { title = k_orion_reach }
+			# independent = yes
+			# age = 16
+			# prisoner = no
+			# NOT = { trait = incapable }
+			# e_orion_reach = { NOT = { any_de_jure_vassal_title = { NOT = { title = k_orion_reach_navy } } } }
+		# }
+		# allow = {
+			# realm_size = 50
+			# NOT = { religion = terran_federalist }
+			# NOT = { religion = terran_republican }
+			# NOT = { religion = terran_imperial }
+			# NOT = { religion = pilgrim }
+			# NOT = { religion = orthodox }
+		# }
+		# effect = {
+			# k_orion_reach = { de_jure_liege = e_orion_reach }
+			# e_orion_reach = {
+				# grant_title = ROOT
+				# copy_title_laws = k_orion_reach
+			# }
+			# prestige = 1000
+		# }
+		# ai_will_do = { factor = 1 }
+	# }
+	# found_tarkan_empire = {
+		# is_high_prio = yes
+		# potential = {
+			# primary_title = { title = k_tarka }
+			# independent = yes
+			# age = 16
+			# prisoner = no
+			# NOT = { trait = incapable }
+			# e_tarka = { NOT = { any_de_jure_vassal_title  = { NOT = { title = k_tarka_navy } } } }
+		# }
+		# allow = {
+			# realm_size = 50
+			# NOT = { religion = terran_federalist }
+			# NOT = { religion = terran_republican }
+			# NOT = { religion = terran_imperial }
+			# NOT = { religion = pilgrim }
+			# NOT = { religion = orthodox }
+		# }
+		# effect = {
+			# k_tarka = { de_jure_liege = e_tarka }
+			# e_tarka = {
+				# grant_title = ROOT
+				# copy_title_laws = k_tarka
+			# }
+			# prestige = 1000
+		# }
+		# ai_will_do = { factor = 1 }
+	# }
+	# found_avalonian_empire = {
+		# is_high_prio = yes
+		# potential = {
+			# primary_title = { title = k_avalon }
+			# independent = yes
+			# age = 16
+			# prisoner = no
+			# NOT = { trait = incapable }
+			# e_avalon = { NOT = { any_de_jure_vassal_title  = { NOT = { title = k_avalon_navy } } } }
+		# }
+		# allow = {
+			# realm_size = 50
+			# NOT = { religion = terran_federalist }
+			# NOT = { religion = terran_republican }
+			# NOT = { religion = terran_imperial }
+			# NOT = { religion = pilgrim }
+			# NOT = { religion = orthodox }
+		# }
+		# effect = {
+			# k_avalon = { de_jure_liege = e_avalon }
+			# e_avalon = {
+				# grant_title = ROOT
+				# copy_title_laws = k_avalon
+			# }
+			# prestige = 1000
+		# }
+		# ai_will_do = { factor = 1 }
+	# }
+	# found_jionese_empire = {
+		# is_high_prio = yes
+		# potential = {
+			# primary_title = { title = k_jion }
+			# independent = yes
+			# age = 16
+			# prisoner = no
+			# NOT = { trait = incapable }
+			# e_jion = { NOT = { any_de_jure_vassal_title  = { NOT = { title = k_jion_navy } } } }
+		# }
+		# allow = {
+			# realm_size = 50
+			# NOT = { religion = terran_federalist }
+			# NOT = { religion = terran_republican }
+			# NOT = { religion = terran_imperial }
+			# NOT = { religion = pilgrim }
+			# NOT = { religion = orthodox }
+		# }
+		# effect = {
+			# k_jion = { de_jure_liege = e_jion }
+			# e_jion = {
+				# grant_title = ROOT
+				# copy_title_laws = k_jion
+			# }
+			# prestige = 1000
+		# }
+		# ai_will_do = { factor = 1 }
+	# }
+	# found_strugatskite_empire = {
+		# is_high_prio = yes
+		# potential = {
+			# primary_title = { title = k_strugatsky }
+			# independent = yes
+			# age = 16
+			# prisoner = no
+			# NOT = { trait = incapable }
+			# e_strugatsky = { NOT = { any_de_jure_vassal_title  = { NOT = { title = k_strugatsky_navy } } } }
+		# }
+		# allow = {
+			# realm_size = 50
+			# NOT = { religion = terran_federalist }
+			# NOT = { religion = terran_republican }
+			# NOT = { religion = terran_imperial }
+			# NOT = { religion = pilgrim }
+			# NOT = { religion = orthodox }
+		# }
+		# effect = {
+			# k_strugatsky = { de_jure_liege = e_strugatsky }
+			# e_strugatsky = {
+				# grant_title = ROOT
+				# copy_title_laws = k_strugatsky
+			# }
+			# prestige = 1000
+		# }
+		# ai_will_do = { factor = 1 }
+	# }
+	# found_edemite_empire = {
+		# is_high_prio = yes
+		# potential = {
+			# primary_title = { title = k_novyy_edem }
+			# independent = yes
+			# age = 16
+			# prisoner = no
+			# NOT = { trait = incapable }
+			# e_novyy_edem = { NOT = { any_de_jure_vassal_title  = { NOT = { title = k_novyy_edem_navy } } } }
+		# }
+		# allow = {
+			# realm_size = 50
+			# NOT = { religion = terran_federalist }
+			# NOT = { religion = terran_republican }
+			# NOT = { religion = terran_imperial }
+			# NOT = { religion = pilgrim }
+			# NOT = { religion = orthodox }
+		# }
+		# effect = {
+			# k_novyy_edem = { de_jure_liege = e_novyy_edem }
+			# e_novyy_edem = {
+				# grant_title = ROOT
+				# copy_title_laws = k_novyy_edem
+			# }
+			# prestige = 1000
+		# }
+		# ai_will_do = { factor = 1 }
+	# }
 	petition_doge_for_tp = {
 		is_high_prio = yes
 		potential = {

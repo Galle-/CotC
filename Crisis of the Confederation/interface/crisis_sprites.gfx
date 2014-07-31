@@ -248,4 +248,164 @@ spriteTypes = {
 		norefcount = yes
 		can_be_lowres = yes
 	}
+	### AVALONIAN MALE ###
+	spriteType = {
+		name = "GFX_avalon_male_clothes_behind"
+		texturefile = "gfx\\characters\\avalon_male_clothes_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_avalon_male_clothes"
+		texturefile = "gfx\\characters\\avalon_male_clothes.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_avalon_male_clothes_infront"
+		texturefile = "gfx\\characters\\avalon_male_clothes_infront.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_avalon_male_headgear_behind"
+		texturefile = "gfx\\characters\\avalon_male_headgear_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_avalon_male_headgear"
+		texturefile = "gfx\\characters\\avalon_male_headgear.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_avalon_male_headgear_mid"
+		texturefile = "gfx\\characters\\avalon_male_headgear_mid.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	
+	### AVALONIAN FEMALE ###
+	spriteType = {
+		name = "GFX_avalon_female_clothes_behind"
+		texturefile = "gfx\\characters\\avalon_female_clothes_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_avalon_female_clothes"
+		texturefile = "gfx\\characters\\avalon_female_clothes.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_avalon_female_headgear_behind"
+		texturefile = "gfx\\characters\\avalon_female_headgear_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_avalon_female_headgear"
+		texturefile = "gfx\\characters\\avalon_female_headgear.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_avalon_female_headgear_mid"
+		texturefile = "gfx\\characters\\avalon_female_headgear_mid.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	### JIONESE MALE ###
+	spriteType = {
+		name = "GFX_jion_male_clothes_behind"
+		texturefile = "gfx\\characters\\jion_male_clothes_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_jion_male_clothes"
+		texturefile = "gfx\\characters\\jion_male_clothes.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_jion_male_clothes_infront"
+		texturefile = "gfx\\characters\\jion_male_clothes_infront.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_jion_male_headgear_behind"
+		texturefile = "gfx\\characters\\jion_male_headgear_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_jion_male_headgear"
+		texturefile = "gfx\\characters\\jion_male_headgear.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_jion_male_headgear_mid"
+		texturefile = "gfx\\characters\\jion_male_headgear_mid.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	
+	### JIONESE FEMALE ###
+	spriteType = {
+		name = "GFX_jion_female_clothes_behind"
+		texturefile = "gfx\\characters\\jion_female_clothes_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_jion_female_clothes"
+		texturefile = "gfx\\characters\\jion_female_clothes.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_jion_female_headgear_behind"
+		texturefile = "gfx\\characters\\jion_female_headgear_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_jion_female_headgear"
+		texturefile = "gfx\\characters\\jion_female_headgear.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_jion_female_headgear_mid"
+		texturefile = "gfx\\characters\\jion_female_headgear_mid.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
 }

@@ -3558,10 +3558,10 @@ centauri_group = {
 	}
 }
 tengoku_group = {
-	graphical_culture = angloconfederategfx
+	graphical_culture = anglojiongfx
 	
 	anglo_tengoku = {
-		graphical_culture = angloconfederategfx
+		graphical_culture = anglojiongfx
 		color = { 0 0.25 0 }
 		
 		male_names = {
@@ -3598,7 +3598,7 @@ tengoku_group = {
 	}
 	
 	arab_tengoku = {
-		graphical_culture = mideastconfederategfx
+		graphical_culture = mideastjiongfx
 		color = { 0 0.25 0 }
 		
 		male_names = {
@@ -3641,8 +3641,8 @@ tengoku_group = {
 	}
 
 	east_afro_tengoku = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afrojiongfx
+		second_graphical_culture = mideastjiongfx
 		color = { 0 0.25 0 }
 		
 		male_names = {
@@ -3682,8 +3682,8 @@ tengoku_group = {
 		modifier = default_culture_modifier
 	}
 	ethiopian_tengoku = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afrojiongfx
+		second_graphical_culture = mideastjiongfx
 		color = { 0 0.25 0 }
 		
 		male_names = {
@@ -3723,8 +3723,8 @@ tengoku_group = {
 		modifier = default_culture_modifier
 	}
 	hispanic_tengoku = {
-		graphical_culture = hispanicconfederategfx
-		second_graphical_culture = angloconfederategfx
+		graphical_culture = hispanicjiongfx
+		second_graphical_culture = anglojiongfx
 		color = { 0 0.25 0 }
 		
 		male_names = {
@@ -3763,8 +3763,8 @@ tengoku_group = {
 	}
 	
 	indo_tengoku = {
-		graphical_culture = indoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = indojiongfx
+		second_graphical_culture = mideastjiongfx
 		color = { 0 0.25 0 }
 		
 		male_names = {
@@ -3800,8 +3800,8 @@ tengoku_group = {
 		modifier = default_culture_modifier
 	}
 	iranian_tengoku = {
-		graphical_culture = persianconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = persianjiongfx
+		second_graphical_culture = mideastjiongfx
 		color = { 0 0.25 0 }
 		
 		male_names = {
@@ -3840,8 +3840,8 @@ tengoku_group = {
 		modifier = default_culture_modifier
 	}
 	japanese_tengoku = {
-		graphical_culture = sinoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = sinojiongfx
+		second_graphical_culture = mideastjiongfx
 		color = { 0 0.25 0 }
 		
 		male_names = {
@@ -3877,7 +3877,7 @@ tengoku_group = {
 		modifier = default_culture_modifier
 	}
 	mesoamerican_tengoku = {
-		graphical_culture = americonfederategfx
+		graphical_culture = amerijiongfx
 		color = { 0 0.25 0 }
 		
 		male_names = {
@@ -3916,8 +3916,8 @@ tengoku_group = {
 		modifier = default_culture_modifier
 	}
 	russo_tengoku = {
-		graphical_culture = russoconfederategfx
-		second_graphical_culture = angloconfederategfx
+		graphical_culture = russojiongfx
+		second_graphical_culture = anglojiongfx
 		color = { 0 0.25 0 }
 		
 		male_names = {
@@ -3959,8 +3959,8 @@ tengoku_group = {
 		modifier = default_culture_modifier
 	}
 	sino_tengoku = {
-		graphical_culture = sinoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = sinojiongfx
+		second_graphical_culture = mideastjiongfx
 		color = { 0 0.25 0 }
 		
 		male_names = {
@@ -3996,8 +3996,8 @@ tengoku_group = {
 		modifier = default_culture_modifier
 	}
 	west_afro_tengoku = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afrojiongfx
+		second_graphical_culture = mideastjiongfx
 		color = { 0 0.25 0 }
 		
 		male_names = {
@@ -5807,10 +5807,10 @@ second_graphical_culture = mideastconfederategfx
 	}
 }
 avalonian_group = {
-	graphical_culture = angloconfederategfx
+	graphical_culture = angloavalongfx
 	
 	anglo_avalonian = {
-		graphical_culture = angloconfederategfx
+		graphical_culture = angloavalongfx
 		color = { 0.25 0 0 }
 		male_names = {
 			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
@@ -5845,7 +5845,7 @@ avalonian_group = {
 	}
 	
 	arab_avalonian = {
-		graphical_culture = mideastconfederategfx
+		graphical_culture = mideastavalongfx
 		color = { 0.25 0 0 }
 
 		male_names = {
@@ -5884,8 +5884,8 @@ avalonian_group = {
 	}
 
 	east_afro_avalonian = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afroavalongfx
+		second_graphical_culture = mideastavalongfx
 		color = { 0.25 0 0 }
 
 		male_names = {
@@ -5923,8 +5923,8 @@ avalonian_group = {
 		modifier = default_culture_modifier
 	}
 	ethiopian_avalonian = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afroavalongfx
+		second_graphical_culture = mideastavalongfx
 		color = { 0.25 0 0 }
 
 		male_names = {
@@ -5955,8 +5955,8 @@ avalonian_group = {
 		modifier = default_culture_modifier
 	}
 	hispanic_avalonian = {
-		graphical_culture = hispanicconfederategfx
-		second_graphical_culture = angloconfederategfx
+		graphical_culture = hispanicavalongfx
+		second_graphical_culture = angloavalongfx
 		color = { 0.25 0 0 }
 
 		male_names = {
@@ -5992,8 +5992,8 @@ avalonian_group = {
 	}
 	
 	indo_avalonian = {
-		graphical_culture = indoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = indoavalongfx
+		second_graphical_culture = mideastavalongfx
 		color = { 0.25 0 0 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -6027,8 +6027,8 @@ avalonian_group = {
 		modifier = default_culture_modifier
 	}
 	iranian_avalonian = {
-		graphical_culture = persianconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = persianavalongfx
+		second_graphical_culture = mideastavalongfx
 		color = { 0.25 0 0 }
 
 		male_names = {
@@ -6064,8 +6064,8 @@ avalonian_group = {
 		modifier = default_culture_modifier
 	}
 	japanese_avalonian = {
-		graphical_culture = sinoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = sinoavalongfx
+		second_graphical_culture = mideastavalongfx
 		color = { 0.25 0 0 }
 		
 		male_names = {
@@ -6101,7 +6101,7 @@ avalonian_group = {
 		modifier = default_culture_modifier
 	}
 	mesoamerican_avalonian = {
-		graphical_culture = americonfederategfx
+		graphical_culture = ameriavalongfx
 		color = { 0.25 0 0 }
 		
 		male_names = {
@@ -6134,8 +6134,8 @@ avalonian_group = {
 		modifier = default_culture_modifier
 	}
 	russo_avalonian = {
-		graphical_culture = russoconfederategfx
-		second_graphical_culture = angloconfederategfx
+		graphical_culture = russoavalongfx
+		second_graphical_culture = angloavalongfx
 		color = { 0.25 0 0 }
 
 		male_names = {
@@ -6178,8 +6178,8 @@ avalonian_group = {
 		modifier = default_culture_modifier
 	}
 	sino_avalonian = {
-		graphical_culture = sinoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = sinoavalongfx
+		second_graphical_culture = mideastavalongfx
 		color = { 0.25 0 0 }
 		
 		male_names = {
@@ -6210,8 +6210,8 @@ avalonian_group = {
 		modifier = default_culture_modifier
 	}
 	west_afro_avalonian = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afroavalongfx
+		second_graphical_culture = mideastavalongfx
 		color = { 0.25 0 0 }
 
 		male_names = {

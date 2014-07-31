@@ -15,12 +15,40 @@ EVTDESCFACTIONNAMES12;Due to changes in ideology and its form of government, the
 EVTDESCFACTIONNAMES13;Due to changes in ideology and its form of government, the Terran state has been renamed the Terran People's Union.;En raison de changements idéologiques et gouvernementaux, l'état terrien a été rennomé Union des peuples terriens.;;;;;;;;;;;;x
 EVTDESCFACTIONNAMES14;Due to changes in ideology and its form of government, the [From.GetName] has been renamed the Terran People's Republic.;En raison de changements idéologiques et gouvernementaux, le [From.GetName] a été rennomé République populaire terrienne.;;;;;;;;;;;;x
 EVTDESCFACTIONNAMES15;Due to changes in ideology and its form of government, the Terran state has been renamed the Terran People's Republic.;En raison de changements idéologiques et gouvernementaux, l'état terrien a été rennomé République populaire terrienne.;;;;;;;;;;;;x
+found_terran_empire;Found Terran Empire;;;;;;;;;;;;x
+found_terran_empire_desc;The Terran Confederation no longer exists in any meaningful capacity. As the ruler of an empire centered on Earth, you hold the right to lay claim to its legacy.;;;;;;;;;;;;x
+found_xingjie_empire;Found Xingjie Empire;;;;;;;;;;;;x
+found_xingjie_empire_desc;Xingjie is ascendant, a great empire among the stars. It is as powerful a nation as the old Confederation ever was, and now is the time to proclaim that to the galaxy.;;;;;;;;;;;;x
+found_celestean_empire;Found Celestean Empire;;;;;;;;;;;;x
+found_celestean_empire_desc;Tierra Celeste is ascendant, a great empire among the stars. It is as powerful a nation as the old Confederation ever was, and now is the time to proclaim that to the galaxy.;;;;;;;;;;;;x
+found_samawati_empire;Found Samawati Empire;;;;;;;;;;;;x
+found_samawati_empire_desc;al-Samawat is ascendant, a great empire among the stars. It is as powerful a nation as the old Confederation ever was, and now is the time to proclaim that to the galaxy.;;;;;;;;;;;;x
+found_angani_empire;Found Angani Empire;;;;;;;;;;;;x
+found_angani_empire_desc;Zenye Nyota Angani is ascendant, a great empire among the stars. It is as powerful a nation as the old Confederation ever was, and now is the time to proclaim that to the galaxy.;;;;;;;;;;;;x
+found_frontier_empire;Found Frontier Empire;;;;;;;;;;;;x
+found_frontier_empire_desc;The Frontier is ascendant, a great empire among the stars. It is as powerful a nation as the old Confederation ever was, and now is the time to proclaim that to the galaxy.;;;;;;;;;;;;x
+found_centauri_empire;Found Centauri Empire;;;;;;;;;;;;x
+found_centauri_empire_desc;The Centauri Reach is ascendant, a great empire among the stars. It is as powerful a nation as the old Confederation ever was, and now is the time to proclaim that to the galaxy.;;;;;;;;;;;;x
+found_xin_zizhiqu_empire;Found Xin Zizhiqu Empire;;;;;;;;;;;;x
+found_xin_zizhiqu_empire_desc;Xin Zizhiqu is ascendant, a great empire among the stars. It is as powerful a nation as the old Confederation ever was, and now is the time to proclaim that to the galaxy.;;;;;;;;;;;;x
+found_orion_empire;Found Orion Empire;;;;;;;;;;;;x
+found_orion_empire_desc;The Orion Reach is ascendant, a great empire among the stars. It is as powerful a nation as the old Confederation ever was, and now is the time to proclaim that to the galaxy.;;;;;;;;;;;;x
+found_tarkan_empire;Found Tarkan Empire;;;;;;;;;;;;x
+found_tarkan_empire_desc;Tarka is ascendant, a great empire among the stars. It is as powerful a nation as the old Confederation ever was, and now is the time to proclaim that to the galaxy.;;;;;;;;;;;;x
+found_avalonian_empire;Found Avalonian Empire;;;;;;;;;;;;x
+found_avalonian_empire_desc;Avalon is ascendant, a great empire among the stars. It is as powerful a nation as the old Confederation ever was, and now is the time to proclaim that to the galaxy.;;;;;;;;;;;;x
+found_jionese_empire;Found Jionese Empire;;;;;;;;;;;;x
+found_jionese_empire_desc;Jion is ascendant, a great empire among the stars. It is as powerful a nation as the old Confederation ever was, and now is the time to proclaim that to the galaxy.;;;;;;;;;;;;x
+found_strugatskite_empire;Found Strugatskite Empire;;;;;;;;;;;;x
+found_strugatskite_empire_desc;Strugatsky is ascendant, a great empire among the stars. It is as powerful a nation as the old Confederation ever was, and now is the time to proclaim that to the galaxy.;;;;;;;;;;;;x
+found_edemite_empire;Found Edemite Empire;;;;;;;;;;;;x
+found_edemite_empire_desc;Novyy Edem is ascendant, a great empire among the stars. It is as powerful a nation as the old Confederation ever was, and now is the time to proclaim that to the galaxy.;;;;;;;;;;;;x
 d_pilgrimage;The Pilgrimage;;;;;;;;;;;;x
 d_pilgrimage_adj;Pilgrimage;;;;;;;;;;;;x
 k_orthodoxy;The Orthodoxy;;;;;;;;;;;;x
 k_orthodoxy_adj;Orthodoxy;;;;;;;;;;;;x
 e_terran_confederation;Terran Confederation;Confédération terrienne;;;;;;;;;;;;x
-e_terran_confederation_adj;Terran Confederate;Confédéré;;;;;;;;;;;;x
+e_terran_confederation_adj;Confederate;Confédéré;;;;;;;;;;;;x
 k_terran_navy;Confederate Space Command;Commandement spatial confédéré;;;;;;;;;;;;x
 k_terran_navy_adj;Confederate Naval;naval confédéré;;;;;;;;;;;;x
 d_terran_first_fleet;First Confederate Fleet;Première flotte confédérée;;;;;;;;;;;;x
@@ -293,12 +321,12 @@ d_qinglong;Qinglong;;;;;;;;;;;;;x
 d_qinglong_adj;Qinglong;;;;;;;;;;;;;x
 c_qinglong;Qinglong;;;;;;;;;;;;;x
 c_qinglong_adj;Qinglong;;;;;;;;;;;;;x
-e_tierra_celeste;Tierra Celeste;Cielia;;;;;;;;;;;;x
-e_tierra_celeste_adj;Celestean;Cielien;;;;;;;;;;;;x
-k_tierra_celeste;Tierra Celeste;Cielia;;;;;;;;;;;;x
-k_tierra_celeste_adj;Celestean;Cielien;;;;;;;;;;;;x
-d_cielia_fleet;Celestean Armada;Armada Cielienne;;;;;;;;;;;;x
-d_tierra_celeste_fleet_adj;Celestean Armada;Armada Cielienne;;;;;;;;;;;;x
+e_tierra_celeste;Tierra Celeste;Tierra Celeste;;;;;;;;;;;;x
+e_tierra_celeste_adj;Celestean;Celestean;;;;;;;;;;;;x
+k_tierra_celeste;Tierra Celeste;Tierra Celeste;;;;;;;;;;;;x
+k_tierra_celeste_adj;Celestean;Celestean;;;;;;;;;;;;x
+d_tierra_celeste_fleet;Celestean Armada;Armada Celestean;;;;;;;;;;;;x
+d_tierra_celeste_fleet_adj;Celestean Armada;Armada Celestean;;;;;;;;;;;;x
 d_encrucijada;Encrucijada;;;;;;;;;;;;;x
 d_encrucijada_adj;Encrucijadan;;;;;;;;;;;;;x
 c_encrucijada;Encrucijada;;;;;;;;;;;;;x
@@ -365,7 +393,7 @@ c_afolayan;Afolayan;;;;;;;;;;;;;x
 c_afolayan_adj;Afolayan;;;;;;;;;;;;;x
 d_adwa;Adwa;;;;;;;;;;;;;x
 d_adwa_adj;Adwan;;;;;;;;;;;;;x
-e_frontier;Frontier;Bordure;;;;;;;;;;;;x
+e_frontier;The Frontier;Bordure;;;;;;;;;;;;x
 e_frontier_adj;Frontier;Bordure;;;;;;;;;;;;x
 k_frontier;Frontier;Bordure;;;;;;;;;;;;x
 k_frontier_adj;Frontier;Bordure;;;;;;;;;;;;x
@@ -419,6 +447,12 @@ b_kojima;Kojima Robotics;Kojima Robotique;;;;;;;;;;;;x
 b_kojima_adj;Kojima;Kojima;;;;;;;;;;;;x
 b_afolayan;Afolayan Corporation;Corporation Afolayan ;;;;;;;;;;;;x
 b_afolayan_adj;Afolayan;Afolayan;;;;;;;;;;;;x
+e_helix;Helix Empire;;;;;;;;;;;;;x
+e_helix_adj;Helixian;;;;;;;;;;;;;x
+k_helix;Helix Nebula;;;;;;;;;;;;;x
+k_helix_adj;Helixian;;;;;;;;;;;;;x
+d_helix_fleet;Helix Rangers;;;;;;;;;;;;;x
+d_helix_fleet_adj;Helix Rangers;;;;;;;;;;;;;x
 e_xin_zizhiqu;Xin Zizhiqu;;;;;;;;;;;;;x
 e_xin_zizhiqu_adj;Xin Zizhiqu;;;;;;;;;;;;;x
 k_xin_zizhiqu;Xin Zizhiqu;;;;;;;;;;;;;x
@@ -807,9 +841,21 @@ c_saula;Saula;;;;;;;;;;;;;x
 c_saula_adj;Saulan;;;;;;;;;;;;;x
 c_solonichenko_pas;Solonichenko Pas;;;;;;;;;;;;;x
 c_solonichenko_pas_adj;Solonichenko;;;;;;;;;;;;;x
+e_tarka;Tarka;;;;;;;;;;;;;x
+e_tarka_adj;Tarkan;;;;;;;;;;;;;x
+k_tarka_navy;Tarkan Imperial Navy;;;;;;;;;;;;;x
+k_tarka_navy_adj;Tarkan Imperial Naval;;;;;;;;;;;;;x
+k_tarka_first_fleet;First Tarkan Fleet;;;;;;;;;;;;;x
+k_tarka_first_fleet_adj;First Tarkan Fleet;;;;;;;;;;;;;x
+k_tarka_second_fleet;Second Tarkan Fleet;;;;;;;;;;;;;x
+k_tarka_second_fleet_adj;Second Tarkan Fleet;;;;;;;;;;;;;x
+k_tarka_third_fleet;Third Tarkan Fleet;;;;;;;;;;;;;x
+k_tarka_third_fleet_adj;Third Tarkan Fleet;;;;;;;;;;;;;x
+k_tarka_fourth_fleet;Fourth Tarkan Fleet;;;;;;;;;;;;;x
+k_tarka_fourth_fleet_adj;Fourth Tarkan Fleet;;;;;;;;;;;;;x
 k_tarka;Tarka;;;;;;;;;;;;;x
 k_tarka_adj;Tarkan;;;;;;;;;;;;;x
-d_tarka_fleet;Tarkan Armed Forces;;;;;;;;;;;;;x
+d_tarka_fleet;The Tarkan Armed Forces;;;;;;;;;;;;;x
 d_tarka_fleet_adj;Tarkan Military;;;;;;;;;;;;;x
 d_tarka;Tarka;;;;;;;;;;;;;x
 d_tarka_adj;Tarkan;;;;;;;;;;;;;x
