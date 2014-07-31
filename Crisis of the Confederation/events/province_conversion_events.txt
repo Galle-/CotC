@@ -13,11 +13,11 @@ province_event = {
 	
 	trigger = {
 		NOT = { religion = terran_federalist }
+		NOT = { religion = hiver }
 		OR = {
 			religion = terran_republican
 			religion = terran_imperial
 			religion = colonial_separatist
-			#religion = 
 			province_id = 202 # Terran ideologies are always available to Earth
 			any_province_lord = { religion = terran_federalist }
 			any_neighbor_province = { religion = terran_federalist }
@@ -371,6 +371,7 @@ province_event = {
 	
 	trigger = {
 		NOT = { religion = terran_republican }
+		NOT = { religion = hiver }
 		OR = {
 			religion = terran_federalist
 			religion = terran_imperial
@@ -688,6 +689,7 @@ province_event = {
 	
 	trigger = {
 		NOT = { religion = terran_imperial }
+		NOT = { religion = hiver }
 		OR = {
 			religion = astrist
 			religion = neo_feudal
@@ -1001,7 +1003,7 @@ province_event = {
 		religion = terran_imperial
 	}
 }
-# Colonial Seperatism
+# Colonial Separatism
 province_event = {
 	id = conversion.103
 	desc = "EVTDESCCONVERSION103"
@@ -1009,6 +1011,7 @@ province_event = {
 	
 	trigger = {
 		NOT = { religion = colonial_separatist }
+		NOT = { religion = hiver }
 		NOT = { kingdom = { title = k_terran_commonwealth } } # Never going to happen.
 		NOT = { province_id = 202 } # Earth is never going to follow an inherently anti-Terran ideology.
 		OR = {
@@ -1283,6 +1286,7 @@ province_event = {
 	
 	trigger = {
 		NOT = { religion = neo_feudal }
+		NOT = { religion = hiver }
 		OR = {
 			religion = terran_imperial
 			religion = colonial_separatist
@@ -1582,6 +1586,7 @@ province_event = {
 	
 	trigger = {
 		NOT = { religion = neo_socialist }
+		NOT = { religion = hiver }
 		OR = {
 			religion = terran_republican
 			religion = terran_federalist
@@ -1922,6 +1927,7 @@ province_event = {
 	
 	trigger = {
 		NOT = { religion = astrist }
+		NOT = { religion = hiver }
 		OR = {
 			religion = terran_imperial
 			religion = neo_feudal
@@ -2269,9 +2275,9 @@ province_event = {
 	
 	trigger = {
 		NOT = { religion = cyberneticist }
+		NOT = { religion = hiver }
 		OR = {
 			religion = machine_cultist
-			religion = hiver
 			TECH_POPULAR_CUSTOMS = 0.5
 			any_province_lord = { religion = cyberneticist }
 			any_neighbor_province = { religion = cyberneticist }
@@ -2899,6 +2905,7 @@ province_event = {
 	picture = GFX_evt_speech
 	
 	trigger = {
+		NOT = { religion = hiver }
 		OR = {
 			AND = {
 				religion = cyberneticist
@@ -3172,6 +3179,7 @@ province_event = {
 	picture = GFX_evt_speech
 	
 	trigger = {
+		NOT = { religion = hiver }
 		NOT = { religion = bio_directionist }
 		OR = {
 			religion = neo_feudal
@@ -3533,6 +3541,7 @@ province_event = {
 	picture = GFX_evt_speech
 	
 	trigger = {
+		NOT = { religion = hiver }
 		NOT = { religion = orthodox }
 		has_global_flag = flag_orthodox_reformation # Pilgrimage must have been reformed to form Orthodoxy
 		OR = {
@@ -3814,6 +3823,7 @@ province_event = {
 	picture = GFX_evt_speech
 	
 	trigger = {
+		NOT = { religion = hiver }
 		NOT = { religion = pilgrim }
 		OR = {
 			religion = orthodox
@@ -4100,6 +4110,7 @@ province_event = {
 	picture = GFX_evt_speech
 	
 	trigger = {
+		NOT = { religion = hiver }
 		NOT = { religion = adoptionist_cultist }
 		OR = {
 			religion = adoptionist
@@ -4391,6 +4402,7 @@ province_event = {
 	picture = GFX_evt_speech
 	
 	trigger = {
+		NOT = { religion = hiver }
 		NOT = { religion = adoptionist }
 		has_global_flag = flag_pilgrim_reformation
 		OR = {

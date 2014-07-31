@@ -544,6 +544,7 @@ character_event = {
 	capable_only = yes
 	
 	trigger = {
+		trait = hiver_implant
 		NOT = { trait = open_minded }
 		hiver_implant = { trait = open_minded }
 	}
@@ -709,6 +710,7 @@ character_event = {
 	capable_only = yes
 	
 	trigger = {
+		trait = hiver_implant
 		NOT = { trait = close_minded }
 		hiver_implant = { trait = close_minded }
 	}
@@ -874,6 +876,7 @@ character_event = {
 	capable_only = yes
 	
 	trigger = {
+		trait = hiver_implant
 		NOT = { trait = disciplined }
 		hiver_implant = { trait = disciplined }
 	}
@@ -1039,6 +1042,7 @@ character_event = {
 	capable_only = yes
 	
 	trigger = {
+		trait = hiver_implant
 		NOT = { trait = carefree }
 		hiver_implant = { trait = carefree }
 	}
@@ -1204,6 +1208,7 @@ character_event = {
 	capable_only = yes
 	
 	trigger = {
+		trait = hiver_implant
 		NOT = { trait = friendly }
 		hiver_implant = { trait = friendly }
 	}
@@ -1369,6 +1374,7 @@ character_event = {
 	capable_only = yes
 	
 	trigger = {
+		trait = hiver_implant
 		NOT = { trait = cold }
 		hiver_implant = { trait = cold }
 	}
@@ -1534,6 +1540,7 @@ character_event = {
 	capable_only = yes
 	
 	trigger = {
+		trait = hiver_implant
 		NOT = { trait = introverted }
 		hiver_implant = { trait = introverted }
 	}
@@ -1699,6 +1706,7 @@ character_event = {
 	capable_only = yes
 	
 	trigger = {
+		trait = hiver_implant
 		NOT = { trait = extraverted }
 		hiver_implant = { trait = extraverted }
 	}
