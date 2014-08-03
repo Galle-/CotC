@@ -10,8 +10,8 @@ opinion_competent_scientist = { opinion = 10 months = 30 }
 opinion_meddling_propaganda = { opinion = -25 months = 60 }
 opinion_newfangled_ideas = { opinion = -25 months = 30 }
 opinion_in_love = { opinion = 50 }
-opinion_heartbroken = { opinion = -50 }
-opinion_stole_my_love = { opinion = -50 }
+opinion_heartbroken = { opinion = -50 months = 60 }
+opinion_stole_my_love = { opinion = -50 months = 120 }
 opinion_backing_coup = {
 	opinion = -25
 	months = 120

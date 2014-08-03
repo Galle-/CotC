@@ -431,6 +431,7 @@ on_five_year_pulse = {
 		
 		40 = 0
 	}
+	events = { maintenance.200 } # Balance out overpopulated and underpopulated courts
 }
 
 #character

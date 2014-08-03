@@ -80,7 +80,7 @@ character_event = {
 province_event = {
 	id = laws.200
 	desc = "EVTDESCLAWS200"
-	picture = GFX_evt_protest
+	notification = yes
 	
 	trigger = { NOT = { has_province_modifier = civil_unrest_9 } }
 	
@@ -566,8 +566,7 @@ province_event = {
 		}
 	}
 	
-	option = {
-		name = "EVTOPTCONFIRM"
+	immediate = {
 		if = {
 			limit = { has_province_modifier = civil_unrest_8 }
 			remove_province_modifier = civil_unrest_8
@@ -629,13 +628,15 @@ province_event = {
 			add_province_modifier = { name = civil_unrest_0 duration = -1 }
 		}
 	}
+	
+	option = { name = "EVTOPTCONFIRM" }
 }
 
 # Decline of civil unrest
 province_event = {
 	id = laws.201
 	desc = "EVTDESCLAWS201"
-	picture = GFX_evt_protest
+	notification = yes
 	
 	trigger = {
 		OR = {
@@ -880,8 +881,7 @@ province_event = {
 		}
 	}
 	
-	option = {
-		name = "EVTOPTALAWS201"
+	immediate = {
 		if = {
 			limit = { has_province_modifier = civil_unrest_0 }
 			remove_province_modifier = civil_unrest_0
@@ -932,6 +932,8 @@ province_event = {
 			add_province_modifier = { name = civil_unrest_8 duration = -1 }
 		}
 	}
+	
+	option = { name = "EVTOPTCONFIRM" }
 }
 
 # End constitutional crisis - ruler victorious!

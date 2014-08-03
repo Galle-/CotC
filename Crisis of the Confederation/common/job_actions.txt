@@ -43,7 +43,7 @@ action_fabricate_claims = {
 }
 
 # Marshal
-action_distribute_mil_tech = {
+action_improve_rel_relations = {
 	attribute = martial
 
 	trigger = {
@@ -61,7 +61,7 @@ action_distribute_mil_tech = {
 	events = { marshal.100 marshal.110 }
 }
 
-action_recruiting_drive = {
+action_train_troops = {
 	attribute = martial
 
 	trigger = { any_province_lord = { character = FROM } }
@@ -72,7 +72,7 @@ action_recruiting_drive = {
 	events = { 941 942 }
 }
 
-action_suppress_revolts = {
+action_assist_arrest = {
 	attribute = martial
 	
 	trigger = {
@@ -101,7 +101,7 @@ action_oversee_construction = {
 	
 	events = { 923 924 }
 }
-action_improve_education = {
+action_squeeze_peasants = {
 	attribute = stewardship
 
 	trigger = {
@@ -119,7 +119,7 @@ action_improve_education = {
 	
 	events = { }
 }
-action_maintain_infrastructure = {
+action_charity = {
 	attribute = stewardship
 
 	trigger = { any_province_lord = { character = FROM } }
@@ -128,7 +128,7 @@ action_maintain_infrastructure = {
 }
 
 # Spymaster
-action_counterintelligence = {
+action_uncover_plots = {
 	attribute = intrigue
 	
 	trigger = {
@@ -155,7 +155,7 @@ action_organize_spies = {
 	events = { 935 936 }
 }
 
-action_spread_propaganda = {
+action_inquisition = {
 	attribute = intrigue
 	
 	trigger = {
@@ -167,7 +167,7 @@ action_spread_propaganda = {
 }
 
 # Scientist
-action_research_mil_tech = {
+action_advance_mil_tech = {
 	attribute = learning
 	
 	trigger = { FROM = { capital_scope = { province_id = ROOT } } }
@@ -176,7 +176,7 @@ action_research_mil_tech = {
 	
 	events = { scientist.100 }
 }
-action_research_eco_tech = {
+action_advance_eco_tech = {
 	attribute = learning
 	
 	trigger = { FROM = { capital_scope = { province_id = ROOT } } }
@@ -185,7 +185,7 @@ action_research_eco_tech = {
 	
 	events = { scientist.200 }
 }
-action_research_cul_tech = {
+action_advance_cul_tech = {
 	attribute = learning
 	
 	trigger = { FROM = { capital_scope = { province_id = ROOT } } }

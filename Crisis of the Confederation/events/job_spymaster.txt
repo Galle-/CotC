@@ -456,7 +456,7 @@ letter_event = {
 
 # ##############################
 # # SPYMASTER
-# # JOB: action_counterintelligence
+# # JOB: action_uncover_plots
 # ##############################
 
 # spymaster.100 - Plot Uncovered
@@ -471,7 +471,7 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		has_job_action = action_counterintelligence
+		has_job_action = action_uncover_plots
 		location = {
 			any_province_character = {
 				NOT = { is_liege_of = ROOT }
@@ -624,7 +624,7 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		has_job_action = action_spread_propaganda
+		has_job_action = action_inquisition
 		location = {
 			NOT = { religion = ROOT }
 			ROOT = { liege = { NOT = { religion = PREVPREV } } }
@@ -1021,7 +1021,7 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		has_job_action = action_spread_propaganda
+		has_job_action = action_inquisition
 		location = {
 			NOT = { religion = ROOT }
 			ROOT = { liege = { NOT = { religion = PREVPREV } } }

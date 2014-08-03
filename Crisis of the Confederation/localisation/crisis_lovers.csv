@@ -1,4 +1,18 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+not_ready_to_marry;Seeking Marriage of Love;;;;;;;;;;;;;x
+not_ready_to_marry_desc;This character wants to marriage someone of their own choice, and will currently not agree to a political marriage. Given time, they may change their mind.;;;;;;;;;;;;;x
+EVTDESCLOVERS0;You've been spending a lot of time in the company of [From.GetFullName] lately, and you're starting to think you might be developing romantic feelings for [From.GetHerHim].;;;;;;;;;;;;;x
+EVTOPTALOVERS0;I must confess my love!;;;;;;;;;;;;;x
+EVTOPTBLOVERS0;It's not appropriate.;;;;;;;;;;;;;x
+EVTTOOLTIPLOVERS1;will be told of your love for [This.GetHerHim].;;;;;;;;;;;;;x
+EVTDESCLOVERS1;You've been spending a lot of time in the company of [From.GetFullName] lately, but this is the first time [From.GetSheHe] has ever opened up to you so dramatically. After an oddly romantic evening, [From.GetSheHe] finally opens up [From.GetHerHis] heart.\n'I love you, [Root.GetFirstName].';;;;;;;;;;;;;x
+EVTOPTALOVERS1;I know.;;;;;;;;;;;;;x
+EVTOPTBLOVERS1;I... I'm sorry, [From.GetFirstName].;;;;;;;;;;;;;x
+EVTTOOLTIPLOVERS2;will become your lover.;;;;;;;;;;;;;x
+EVTDESCLOVERS2;You take [From.GetFirstName] out on a whirlwind romantic tour, before finally confessing your love - and to your joy [From.GetSheHe] returns it.;;;;;;;;;;;;;x
+EVTOPTALOVERS2;This is the happiest day of my life!;;;;;;;;;;;;;x
+EVTTOOLTIPLOVERS3;will be heartbroken.;;;;;;;;;;;;;x
+EVTTOOLTIPLOVERS6;will not be happy about this.;;;;;;;;;;;;;x
 EVTDESCLOVERS6;[From.GetFirstName] has left you for the love of another!;[From.GetFirstName] vous a quitter pour quelqu'un d'autre!;;;;;;;;;;;;x
 EVTOPTALOVERS6;I suppose it's time to let go.;Je suppose qu'il est temps de laisser [From.GetFirstName] partir.;;;;;;;;;;;;x
 EVTOPTBLOVERS6;That traitor! I'll never forgive [From.GetHerHim]!;Quel traitre!Je n'oublierais jamais [From.GetHerHim]!;;;;;;;;;;;;x
@@ -12,3 +26,24 @@ EVTOPTBLOVERS200;Perhaps I don't love [From.GetHerHim] that much after all.;Peu-
 EVTDESCLOVERS201;You had been enjoying the day, up until [From.GetFullName] burst into your chambers in a rage. 'Did you think I wouldn't notice?' [From.GetSheHe] demands, '[FromFrom.GetFirstName] is MINE, do you understand? I love [FromFrom.GetHerHim], and [FromFrom.GetSheHe] loves me, and we'll do just fine without you!';Vous goûtier une agréable journée, jusqu'à ce qu' [From.GetFullName] déboule dans votre chambre comme une furie. Vous pensiez que je ne remarquerais pas? demande [From.GetSheHe], '[FromFrom.GetFirstName] est à MOI, c'est bien compris. J'aime [FromFrom.GetHerHim], et [FromFrom.GetSheHe] m'aime, et nous ferons très bien sans vous!';;;;;;;;;;;;x
 EVTOPTALOVERS201;How dare you stand in the way of my love?;Comment osez-vous vous mettre en travers de mon amour?;;;;;;;;;;;;x
 EVTOPTBLOVERS201;Perhaps I don't love [FromFrom.GetHerHim] that much after all.;Peu-être que je n'aime pas [From.GetHerHim] tant que ça.;;;;;;;;;;;;x
+marry_your_lover_same_sex;Marry Your Lover;;;;;;;;;;;;;x
+marry_your_lover_male;Marry Your Lover;;;;;;;;;;;;;x
+marry_your_lover_female;Marry Your Lover;;;;;;;;;;;;;x
+EVTDESCMARRIAGE100;You are considering proposing to your lover.;;;;;;;;;;;;;x
+EVTOPTAMARRIAGE100;Will you marry me?;;;;;;;;;;;;;x
+EVTTOOLTIPMARRIAGE101;will be asked to marry you. §YThis will be a same-sex marriage. You will not be able to produce biological children.§!;;;;;;;;;;;;;x
+EVTDESCMARRIAGE101;Your [From.GetGirlBoy]friend [From.GetFirstName] has taken you out on the date of a lifetime. An outing to the latest holofilm, a long walk through a beautiful garden, and finally dinner at the most expensive restaurant in town. It's here, finally, that [From.GetSheHe] opens up a small box, and reveals a narrow golden ring. '[Root.GetFirstName],' [From.GetSheHe] says, 'will you marry me?';;;;;;;;;;;;;x
+EVTOPTAMARRIAGE101;Of course!;;;;;;;;;;;;;x
+EVTOPTBMARRIAGE101;...I'm sorry, [From.GetFirstName]...;;;;;;;;;;;;;x
+EVTDESCMARRIAGE105;Treachery! The love of your life, [From.GetFullName], has married another!;;;;;;;;;;;;;x
+EVTOPTAMARRIAGE105;Damn them both to the blackest pits of hell!;;;;;;;;;;;;;x
+EVTOPTBMARRIAGE105;How could [From.GetSheHe], that traitor?!;;;;;;;;;;;;;x
+EVTOPTCMARRIAGE105;[FromFrom.GetOnlyDynastyName], [From.GetFirstName] is mine and mine alone!;;;;;;;;;;;;;x
+EVTOPTDMARRIAGE105;Perhaps it would be best just to let it go.;;;;;;;;;;;;;x
+EVTTOOLTIPMARRIAGE102;will marry you. §YThis will be a same-sex marriage. You will not be able to produce biological children.§!;;;;;;;;;;;;;x
+EVTTOOLTIPMARRIAGE201;will be asked to marry you. §YThis will be a patrilineal marriage. All biological children will be of your dynasty.§!;;;;;;;;;;;;;x
+EVTTOOLTIPMARRIAGE202;will marry you. §RTHIS WILL BE A PATRILINEAL MARRIAGE. ALL BIOLOGICAL CHILDREN WILL BE OF HIS DYNASTY.§!;;;;;;;;;;;;;x
+EVTTOOLTIPMARRIAGE211;will be asked to marry you. §RTHIS WILL BE A MATRILINEAL MARRIAGE. ALL BIOLOGICAL CHILDREN WILL BE OF HER DYNASTY.§!;;;;;;;;;;;;;x
+EVTTOOLTIPMARRIAGE212;will marry you. §YThis will be a matrilineal marriage. All biological children will be of your dynasty.§!;;;;;;;;;;;;;x
+EVTTOOLTIPMARRIAGE302;will marry you. §RTHIS WILL BE A MATRILINEAL MARRIAGE. ALL BIOLOGICAL CHILDREN WILL BE OF HER DYNASTY.§!;;;;;;;;;;;;;x
+EVTTOOLTIPMARRIAGE312;will marry you. §YThis will be a patrilineal marriage. All biological children will be of your dynasty.§!;;;;;;;;;;;;;x

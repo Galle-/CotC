@@ -500,7 +500,7 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 	spriteType = {
-		name = "GFX_trait_celibate"
+		name = "GFX_trait_not_ready_to_marry"
 		texturefile = "gfx/traits/celibate.tga"
 		noOfFrames = 1
 		norefcount = yes

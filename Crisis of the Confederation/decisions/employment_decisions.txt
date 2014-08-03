@@ -2,6 +2,7 @@ decisions = {
 	employ_new_diplomat = {
 		potential = {
 			is_ruler = yes
+			demesne_size = 1
 		}
 		allow = {
 			wealth = 50
@@ -17,88 +18,78 @@ decisions = {
 		effect = {
 			clr_character_flag = flag_employment_cooldown
 			set_character_flag = flag_employment_cooldown
+			set_character_flag = flag_hired_diplomat
 			wealth = -50
 			random_list = {
-				# 1: ROOT's culture and religion
-				# 2: ROOT's location's culture and religion
-				# 3: Random adjacent province's culture and religion
-				10 = {
-					create_random_diplomat = {
-						age = 30
-						female = no
-						culture = ROOT
-						religion = ROOT
-						dynasty = culture
-						random_traits = yes
-					}
-				}
-				10 = {
-					create_random_diplomat = {
-						age = 30
-						female = yes
-						culture = ROOT
-						religion = ROOT
-						dynasty = culture
-						random_traits = yes
-					}
-				}
-				20 = {
+				50 = {
 					location = {
 						ROOT = {
 							create_random_diplomat = {
 								age = 30
 								female = no
-								culture = PREVPREV
-								religion = PREVPREV
+								culture = PREV
+								religion = PREV
 								dynasty = culture
 								random_traits = yes
 							}
-						}
-					}
-				}
-				20 = {
-					location = {
-						ROOT = {
-							create_random_diplomat = {
-								age = 30
-								female = yes
-								culture = PREVPREV
-								religion = PREVPREV
-								dynasty = culture
-								random_traits = yes
-							}
-						}
-					}
-				}
-				30 = {
-					location = {
-						random_neighbor_province = {
-							limit = { is_land = yes } # Must grab an actual inhabited province!
-							ROOT = {
-								create_random_diplomat = {
-									age = 30
-									female = no
-									culture = PREVPREV
-									religion = PREVPREV
-									dynasty = culture
-									random_traits = yes
+							new_character = {
+								hidden_tooltip = {
+									random = {
+										chance = 10
+										add_trait = homosexual
+									}
+									if = {
+										limit = { religion = hiver }
+										add_trait = hiver_implant
+									}
+									if = {
+										limit = {
+											OR = {
+												religion = cyberneticist
+												religion = hiver
+												religion = machine_cultist
+											}
+										}
+										add_trait = dni
+										add_trait = iaei_mk_i
+									}
 								}
 							}
 						}
 					}
 				}
-				30 = {
+				50 = {
 					location = {
-						random_neighbor_province = {
-							limit = { is_land = yes } # Must grab an actual inhabited province!
-							ROOT = {
-								create_random_diplomat = {
-									age = 30
-									female = yes
-									culture = PREVPREV
-									religion = PREVPREV
-									dynasty = culture
-									random_traits = yes
+						ROOT = {
+							create_random_diplomat = {
+								age = 30
+								female = yes
+								culture = PREV
+								religion = PREV
+								dynasty = culture
+								random_traits = yes
+							}
+							new_character = {
+								hidden_tooltip = {
+									random = {
+										chance = 10
+										add_trait = homosexual
+									}
+									if = {
+										limit = { religion = hiver }
+										add_trait = hiver_implant
+									}
+									if = {
+										limit = {
+											OR = {
+												religion = cyberneticist
+												religion = hiver
+												religion = machine_cultist
+											}
+										}
+										add_trait = dni
+										add_trait = iaei_mk_i
+									}
 								}
 							}
 						}
@@ -107,24 +98,13 @@ decisions = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				any_vassal = {
-					has_job_title = job_chancellor
-					diplomacy = 10
-				}
-			}
-			modifier = {
-				factor = 0
-				has_character_flag = flag_employment_cooldown
-				NOT = { had_character_flag = { flag = flag_employment_cooldown days = 365 } }
-			}
+			factor = 0
 		}
 	}
 	employ_new_soldier = {
 		potential = {
 			is_ruler = yes
+			demesne_size = 1
 		}
 		allow = {
 			wealth = 50
@@ -140,88 +120,78 @@ decisions = {
 		effect = {
 			clr_character_flag = flag_employment_cooldown
 			set_character_flag = flag_employment_cooldown
+			set_character_flag = flag_hired_soldier
 			wealth = -50
 			random_list = {
-				# 1: ROOT's culture and religion
-				# 2: ROOT's location's culture and religion
-				# 3: Random adjacent province's culture and religion
-				10 = {
-					create_random_soldier = {
-						age = 30
-						female = no
-						culture = ROOT
-						religion = ROOT
-						dynasty = culture
-						random_traits = yes
-					}
-				}
-				10 = {
-					create_random_soldier = {
-						age = 30
-						female = yes
-						culture = ROOT
-						religion = ROOT
-						dynasty = culture
-						random_traits = yes
-					}
-				}
-				20 = {
+				50 = {
 					location = {
 						ROOT = {
 							create_random_soldier = {
 								age = 30
 								female = no
-								culture = PREVPREV
-								religion = PREVPREV
+								culture = PREV
+								religion = PREV
 								dynasty = culture
 								random_traits = yes
 							}
-						}
-					}
-				}
-				20 = {
-					location = {
-						ROOT = {
-							create_random_soldier = {
-								age = 30
-								female = yes
-								culture = PREVPREV
-								religion = PREVPREV
-								dynasty = culture
-								random_traits = yes
-							}
-						}
-					}
-				}
-				30 = {
-					location = {
-						random_neighbor_province = {
-							limit = { is_land = yes } # Must grab an actual inhabited province!
-							ROOT = {
-								create_random_soldier = {
-									age = 30
-									female = no
-									culture = PREVPREV
-									religion = PREVPREV
-									dynasty = culture
-									random_traits = yes
+							new_character = {
+								hidden_tooltip = {
+									random = {
+										chance = 10
+										add_trait = homosexual
+									}
+									if = {
+										limit = { religion = hiver }
+										add_trait = hiver_implant
+									}
+									if = {
+										limit = {
+											OR = {
+												religion = cyberneticist
+												religion = hiver
+												religion = machine_cultist
+											}
+										}
+										add_trait = dni
+										add_trait = odin_mk_i
+									}
 								}
 							}
 						}
 					}
 				}
-				30 = {
+				50 = {
 					location = {
-						random_neighbor_province = {
-							limit = { is_land = yes } # Must grab an actual inhabited province!
-							ROOT = {
-								create_random_soldier = {
-									age = 30
-									female = yes
-									culture = PREVPREV
-									religion = PREVPREV
-									dynasty = culture
-									random_traits = yes
+						ROOT = {
+							create_random_soldier = {
+								age = 30
+								female = yes
+								culture = PREV
+								religion = PREV
+								dynasty = culture
+								random_traits = yes
+							}
+							new_character = {
+								hidden_tooltip = {
+									random = {
+										chance = 10
+										add_trait = homosexual
+									}
+									if = {
+										limit = { religion = hiver }
+										add_trait = hiver_implant
+									}
+									if = {
+										limit = {
+											OR = {
+												religion = cyberneticist
+												religion = hiver
+												religion = machine_cultist
+											}
+										}
+										add_trait = dni
+										add_trait = odin_mk_i
+									}
 								}
 							}
 						}
@@ -230,24 +200,13 @@ decisions = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				any_vassal = {
-					has_job_title = job_marshal
-					martial = 10
-				}
-			}
-			modifier = {
-				factor = 0
-				has_character_flag = flag_employment_cooldown
-				NOT = { had_character_flag = { flag = flag_employment_cooldown days = 365 } }
-			}
+			factor = 0
 		}
 	}
 	employ_new_steward = {
 		potential = {
 			is_ruler = yes
+			demesne_size = 1
 		}
 		allow = {
 			wealth = 50
@@ -263,88 +222,78 @@ decisions = {
 		effect = {
 			clr_character_flag = flag_employment_cooldown
 			set_character_flag = flag_employment_cooldown
+			set_character_flag = flag_hired_steward
 			wealth = -50
 			random_list = {
-				# 1: ROOT's culture and religion
-				# 2: ROOT's location's culture and religion
-				# 3: Random adjacent province's culture and religion
-				10 = {
-					create_random_steward = {
-						age = 30
-						female = no
-						culture = ROOT
-						religion = ROOT
-						dynasty = culture
-						random_traits = yes
-					}
-				}
-				10 = {
-					create_random_steward = {
-						age = 30
-						female = yes
-						culture = ROOT
-						religion = ROOT
-						dynasty = culture
-						random_traits = yes
-					}
-				}
-				20 = {
+				50 = {
 					location = {
 						ROOT = {
 							create_random_steward = {
 								age = 30
 								female = no
-								culture = PREVPREV
-								religion = PREVPREV
+								culture = PREV
+								religion = PREV
 								dynasty = culture
 								random_traits = yes
 							}
-						}
-					}
-				}
-				20 = {
-					location = {
-						ROOT = {
-							create_random_steward = {
-								age = 30
-								female = yes
-								culture = PREVPREV
-								religion = PREVPREV
-								dynasty = culture
-								random_traits = yes
-							}
-						}
-					}
-				}
-				30 = {
-					location = {
-						random_neighbor_province = {
-							limit = { is_land = yes } # Must grab an actual inhabited province!
-							ROOT = {
-								create_random_steward = {
-									age = 30
-									female = no
-									culture = PREVPREV
-									religion = PREVPREV
-									dynasty = culture
-									random_traits = yes
+							new_character = {
+								hidden_tooltip = {
+									random = {
+										chance = 10
+										add_trait = homosexual
+									}
+									if = {
+										limit = { religion = hiver }
+										add_trait = hiver_implant
+									}
+									if = {
+										limit = {
+											OR = {
+												religion = cyberneticist
+												religion = hiver
+												religion = machine_cultist
+											}
+										}
+										add_trait = dni
+										add_trait = pci_mk_i
+									}
 								}
 							}
 						}
 					}
 				}
-				30 = {
+				50 = {
 					location = {
-						random_neighbor_province = {
-							limit = { is_land = yes } # Must grab an actual inhabited province!
-							ROOT = {
-								create_random_steward = {
-									age = 30
-									female = yes
-									culture = PREVPREV
-									religion = PREVPREV
-									dynasty = culture
-									random_traits = yes
+						ROOT = {
+							create_random_steward = {
+								age = 30
+								female = yes
+								culture = PREV
+								religion = PREV
+								dynasty = culture
+								random_traits = yes
+							}
+							new_character = {
+								hidden_tooltip = {
+									random = {
+										chance = 10
+										add_trait = homosexual
+									}
+									if = {
+										limit = { religion = hiver }
+										add_trait = hiver_implant
+									}
+									if = {
+										limit = {
+											OR = {
+												religion = cyberneticist
+												religion = hiver
+												religion = machine_cultist
+											}
+										}
+										add_trait = dni
+										add_trait = pci_mk_i
+									}
 								}
 							}
 						}
@@ -353,24 +302,13 @@ decisions = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				any_vassal = {
-					has_job_title = job_treasurer
-					stewardship = 10
-				}
-			}
-			modifier = {
-				factor = 0
-				has_character_flag = flag_employment_cooldown
-				NOT = { had_character_flag = { flag = flag_employment_cooldown days = 365 } }
-			}
+			factor = 0
 		}
 	}
 	employ_new_intriguer = {
 		potential = {
 			is_ruler = yes
+			demesne_size = 1
 		}
 		allow = {
 			wealth = 50
@@ -386,88 +324,78 @@ decisions = {
 		effect = {
 			clr_character_flag = flag_employment_cooldown
 			set_character_flag = flag_employment_cooldown
+			set_character_flag = flag_hired_intriguer
 			wealth = -50
 			random_list = {
-				# 1: ROOT's culture and religion
-				# 2: ROOT's location's culture and religion
-				# 3: Random adjacent province's culture and religion
-				10 = {
-					create_random_intriguer = {
-						age = 30
-						female = no
-						culture = ROOT
-						religion = ROOT
-						dynasty = culture
-						random_traits = yes
-					}
-				}
-				10 = {
-					create_random_intriguer = {
-						age = 30
-						female = yes
-						culture = ROOT
-						religion = ROOT
-						dynasty = culture
-						random_traits = yes
-					}
-				}
-				20 = {
+				50 = {
 					location = {
 						ROOT = {
 							create_random_intriguer = {
 								age = 30
 								female = no
-								culture = PREVPREV
-								religion = PREVPREV
+								culture = PREV
+								religion = PREV
 								dynasty = culture
 								random_traits = yes
 							}
-						}
-					}
-				}
-				20 = {
-					location = {
-						ROOT = {
-							create_random_intriguer = {
-								age = 30
-								female = yes
-								culture = PREVPREV
-								religion = PREVPREV
-								dynasty = culture
-								random_traits = yes
-							}
-						}
-					}
-				}
-				30 = {
-					location = {
-						random_neighbor_province = {
-							limit = { is_land = yes } # Must grab an actual inhabited province!
-							ROOT = {
-								create_random_intriguer = {
-									age = 30
-									female = no
-									culture = PREVPREV
-									religion = PREVPREV
-									dynasty = culture
-									random_traits = yes
+							new_character = {
+								hidden_tooltip = {
+									random = {
+										chance = 10
+										add_trait = homosexual
+									}
+									if = {
+										limit = { religion = hiver }
+										add_trait = hiver_implant
+									}
+									if = {
+										limit = {
+											OR = {
+												religion = cyberneticist
+												religion = hiver
+												religion = machine_cultist
+											}
+										}
+										add_trait = dni
+										add_trait = pluto_mk_i
+									}
 								}
 							}
 						}
 					}
 				}
-				30 = {
+				50 = {
 					location = {
-						random_neighbor_province = {
-							limit = { is_land = yes } # Must grab an actual inhabited province!
-							ROOT = {
-								create_random_intriguer = {
-									age = 30
-									female = yes
-									culture = PREVPREV
-									religion = PREVPREV
-									dynasty = culture
-									random_traits = yes
+						ROOT = {
+							create_random_intriguer = {
+								age = 30
+								female = yes
+								culture = PREV
+								religion = PREV
+								dynasty = culture
+								random_traits = yes
+							}
+							new_character = {
+								hidden_tooltip = {
+									random = {
+										chance = 10
+										add_trait = homosexual
+									}
+									if = {
+										limit = { religion = hiver }
+										add_trait = hiver_implant
+									}
+									if = {
+										limit = {
+											OR = {
+												religion = cyberneticist
+												religion = hiver
+												religion = machine_cultist
+											}
+										}
+										add_trait = dni
+										add_trait = pluto_mk_i
+									}
 								}
 							}
 						}
@@ -476,24 +404,13 @@ decisions = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				any_vassal = {
-					has_job_title = job_spymaster
-					intrigue = 10
-				}
-			}
-			modifier = {
-				factor = 0
-				has_character_flag = flag_employment_cooldown
-				NOT = { had_character_flag = { flag = flag_employment_cooldown days = 365 } }
-			}
+			factor = 0
 		}
 	}
 	employ_new_priest = {
 		potential = {
 			is_ruler = yes
+			demesne_size = 1
 		}
 		allow = {
 			wealth = 50
@@ -509,88 +426,78 @@ decisions = {
 		effect = {
 			clr_character_flag = flag_employment_cooldown
 			set_character_flag = flag_employment_cooldown
+			set_character_flag = flag_hired_priest
 			wealth = -50
 			random_list = {
-				# 1: ROOT's culture and religion
-				# 2: ROOT's location's culture and religion
-				# 3: Random adjacent province's culture and religion
-				10 = {
-					create_random_priest = {
-						age = 30
-						female = no
-						culture = ROOT
-						religion = ROOT
-						dynasty = culture
-						random_traits = yes
-					}
-				}
-				10 = {
-					create_random_priest = {
-						age = 30
-						female = yes
-						culture = ROOT
-						religion = ROOT
-						dynasty = culture
-						random_traits = yes
-					}
-				}
-				20 = {
+				50 = {
 					location = {
 						ROOT = {
 							create_random_priest = {
 								age = 30
 								female = no
-								culture = PREVPREV
-								religion = PREVPREV
+								culture = PREV
+								religion = PREV
 								dynasty = culture
 								random_traits = yes
 							}
-						}
-					}
-				}
-				20 = {
-					location = {
-						ROOT = {
-							create_random_priest = {
-								age = 30
-								female = yes
-								culture = PREVPREV
-								religion = PREVPREV
-								dynasty = culture
-								random_traits = yes
-							}
-						}
-					}
-				}
-				30 = {
-					location = {
-						random_neighbor_province = {
-							limit = { is_land = yes } # Must grab an actual inhabited province!
-							ROOT = {
-								create_random_priest = {
-									age = 30
-									female = no
-									culture = PREVPREV
-									religion = PREVPREV
-									dynasty = culture
-									random_traits = yes
+							new_character = {
+								hidden_tooltip = {
+									random = {
+										chance = 10
+										add_trait = homosexual
+									}
+									if = {
+										limit = { religion = hiver }
+										add_trait = hiver_implant
+									}
+									if = {
+										limit = {
+											OR = {
+												religion = cyberneticist
+												religion = hiver
+												religion = machine_cultist
+											}
+										}
+										add_trait = dni
+										add_trait = thoth_mk_i
+									}
 								}
 							}
 						}
 					}
 				}
-				30 = {
+				50 = {
 					location = {
-						random_neighbor_province = {
-							limit = { is_land = yes } # Must grab an actual inhabited province!
-							ROOT = {
-								create_random_priest = {
-									age = 30
-									female = yes
-									culture = PREVPREV
-									religion = PREVPREV
-									dynasty = culture
-									random_traits = yes
+						ROOT = {
+							create_random_priest = {
+								age = 30
+								female = yes
+								culture = PREV
+								religion = PREV
+								dynasty = culture
+								random_traits = yes
+							}
+							new_character = {
+								hidden_tooltip = {
+									random = {
+										chance = 10
+										add_trait = homosexual
+									}
+									if = {
+										limit = { religion = hiver }
+										add_trait = hiver_implant
+									}
+									if = {
+										limit = {
+											OR = {
+												religion = cyberneticist
+												religion = hiver
+												religion = machine_cultist
+											}
+										}
+										add_trait = dni
+										add_trait = thoth_mk_i
+									}
 								}
 							}
 						}
@@ -599,19 +506,7 @@ decisions = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				any_vassal = {
-					has_job_title = job_scientist
-					learning = 10
-				}
-			}
-			modifier = {
-				factor = 0
-				has_character_flag = flag_employment_cooldown
-				NOT = { had_character_flag = { flag = flag_employment_cooldown days = 365 } }
-			}
+			factor = 0
 		}
 	}
 }

@@ -542,7 +542,7 @@
 	
 	0 = { # Formal Clothes A
 		factor = 1
-		modifier = {
+		modifier = { # Feudal
 			factor = 0
 			NOT = { any_demesne_title = { always = yes } }
 			NOT = { any_heir_title = { always = yes } }
@@ -550,6 +550,17 @@
 			NOT = { has_minor_title = title_regent }
 			NOT = { has_minor_title = title_prime_minister }
 			is_councillor = no
+		}
+		modifier = {
+			factor = 100
+			is_patrician = yes
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion = terran_imperial }
+			NOT = { religion = neo_feudal }
+			NOT = { religion = machine_cultist }
+			NOT = { religion_group = religious_group }
 		}
 		modifier = {
 			factor = 2
@@ -609,6 +620,17 @@
 			is_councillor = no
 		}
 		modifier = {
+			factor = 100
+			is_patrician = yes
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				religion = terran_imperial
+				religion = neo_feudal
+			}
+		}
+		modifier = {
 			factor = 2
 			trait = disciplined
 		}
@@ -666,6 +688,13 @@
 			is_councillor = no
 		}
 		modifier = {
+			factor = 0
+			OR = {
+				religion = terran_imperial
+				religion = neo_feudal
+			}
+		}
+		modifier = {
 			factor = 2
 			trait = disciplined
 		}
@@ -714,19 +743,19 @@
 	3 = { # Casual Clothes A
 		factor = 1
 		modifier = {
-			factor = 4
+			factor = 2
 			trait = carefree
 		}
 		modifier = {
-			factor = 4
+			factor = 2
 			trait = content
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.5
 			trait = disciplined
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.5
 			trait = ambitious
 		}
 		modifier = {
@@ -742,19 +771,19 @@
 	4 = { # Casual Clothes B
 		factor = 1
 		modifier = {
-			factor = 4
+			factor = 2
 			trait = carefree
 		}
 		modifier = {
-			factor = 4
+			factor = 2
 			trait = content
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.5
 			trait = disciplined
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.5
 			trait = ambitious
 		}
 		modifier = {
@@ -770,19 +799,19 @@
 	5 = { # Casual Clothes C
 		factor = 1
 		modifier = {
-			factor = 4
+			factor = 2
 			trait = carefree
 		}
 		modifier = {
-			factor = 4
+			factor = 2
 			trait = content
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.5
 			trait = disciplined
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.5
 			trait = ambitious
 		}
 		modifier = {
@@ -803,6 +832,7 @@
 			NOT = { trait = dutiful_academic }
 			NOT = { trait = expert_scientist }
 			NOT = { trait = mastermind_scholar }
+			NOT = { trait = intellectual }
 			NOT = {
 				AND = {
 					religion_group = transhumanist_group
@@ -811,23 +841,27 @@
 			}
 		}
 		modifier = {
-			factor = 4
+			factor = 2
 			trait = open_minded
 		}
 		modifier = {
-			factor = 4
+			factor = 2
 			trait = skeptical
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.5
 			trait = close_minded
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.5
 			trait = spiritual
 		}
 		modifier = {
-			factor = 4
+			factor = 2
+			trait = intellectual
+		}
+		modifier = {
+			factor = 2
 			has_job_title = job_scientist
 		}
 	}
@@ -847,23 +881,27 @@
 			}
 		}
 		modifier = {
-			factor = 4
+			factor = 2
 			trait = open_minded
 		}
 		modifier = {
-			factor = 4
+			factor = 2
 			trait = skeptical
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.5
 			trait = close_minded
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.5
 			trait = spiritual
 		}
 		modifier = {
-			factor = 4
+			factor = 2
+			trait = intellectual
+		}
+		modifier = {
+			factor = 2
 			has_job_title = job_scientist
 		}
 	}
@@ -871,6 +909,10 @@
 	# Martial
 	8 = { # Spacesuit
 		factor = 100
+		modifier = {
+			factor = 0
+			prisoner = yes
+		}
 		modifier = {
 			factor = 0
 			NOT = { trait = fighter_pilot }
@@ -882,6 +924,10 @@
 	}
 	9 = { # Body Armor
 		factor = 100
+		modifier = {
+			factor = 0
+			prisoner = yes
+		}
 		modifier = {
 			factor = 0
 			NOT = { trait = marine_colonel }
@@ -896,48 +942,38 @@
 		factor = 100
 		modifier = {
 			factor = 0
-			NOT = { trait = warship_captain }
-			NOT = { trait = marine_colonel }
-			NOT = {
-				AND = {
-					OR = {
-						is_feudal = yes
-						trait = misguided_warrior
-						trait = tough_soldier
-						trait = skilled_tactician
-						trait = brilliant_strategist
-						has_job_title = job_marshal
-					}
-					OR = {
-						any_demesne_title = { is_tribal_type_title = yes }
-						liege = { any_demesne_title = { is_tribal_type_title = yes } }
-						liege = { liege = { any_demesne_title = { is_tribal_type_title = yes } } }
-						liege = { liege = { liege = { any_demesne_title = { is_tribal_type_title = yes } } } }
-					}
-				}
-			}
+			prisoner = yes
 		}
 		modifier = {
-			factor = 0.5
-			in_command = no
-			NOT = {
-				AND = {
-					OR = {
-						is_feudal = yes
-						trait = misguided_warrior
-						trait = tough_soldier
-						trait = skilled_tactician
-						trait = brilliant_strategist
-						has_job_title = job_marshal
-					}
-					OR = {
-						any_demesne_title = { is_tribal_type_title = yes }
-						liege = { any_demesne_title = { is_tribal_type_title = yes } }
-						liege = { liege = { any_demesne_title = { is_tribal_type_title = yes } } }
-						liege = { liege = { liege = { any_demesne_title = { is_tribal_type_title = yes } } } }
-					}
-				}
+			factor = 0
+			is_feudal = no
+			NOT = { trait = misguided_warrior }
+			NOT = { trait = tough_soldier }
+			NOT = { trait = skilled_tactician }
+			NOT = { trait = brilliant_strategy }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				is_republic = yes
+				is_theocracy = yes
 			}
+			NOT = { trait = misguided_warrior }
+			NOT = { trait = tough_soldier }
+			NOT = { trait = skilled_tactician }
+			NOT = { trait = brilliant_strategy }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				religion = terran_imperial
+				religion = neo_feudal
+				religion = machine_cultist
+				religion = space_pirate
+				religion_group = religious_group
+			}
+			NOT = { primary_title = { is_tribal_type_title = yes } }
+			NOT = { liege = { primary_title = { is_tribal_type_title = yes } } }
 		}
 	}
 	
@@ -1251,33 +1287,37 @@
 		factor = 100
 		modifier = {
 			factor = 0
-			NOT = { trait = warship_captain }
-			NOT = { trait = marine_colonel }
-			NOT = {
-				AND = {
-					OR = {
-						is_feudal = yes
-						trait = misguided_warrior
-						trait = tough_soldier
-						trait = skilled_tactician
-						trait = brilliant_strategist
-						has_job_title = job_marshal
-					}
-					OR = {
-						any_demesne_title = { is_tribal_type_title = yes }
-						liege = { any_demesne_title = { is_tribal_type_title = yes } }
-						liege = { liege = { any_demesne_title = { is_tribal_type_title = yes } } }
-						liege = { liege = { liege = { any_demesne_title = { is_tribal_type_title = yes } } } }
-					}
-				}
+			is_feudal = no
+			NOT = { trait = misguided_warrior }
+			NOT = { trait = tough_soldier }
+			NOT = { trait = skilled_tactician }
+			NOT = { trait = brilliant_strategy }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				is_republic = yes
+				is_theocracy = yes
 			}
+			NOT = { trait = misguided_warrior }
+			NOT = { trait = tough_soldier }
+			NOT = { trait = skilled_tactician }
+			NOT = { trait = brilliant_strategy }
 		}
 		modifier = {
-			factor = 0.5
-			in_command = no
+			factor = 0
+			OR = {
+				religion = terran_imperial
+				religion = neo_feudal
+				religion = space_pirate
+				religion = machine_cultist
+				religion_group = religious_group
+			}
+			NOT = { primary_title = { is_tribal_type_title = yes } }
+			NOT = { liege = { primary_title = { is_tribal_type_title = yes } } }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0
 			trait = carefree
 		}
 	}
@@ -1285,6 +1325,10 @@
 	# Blank
 	11 = {
 		factor = 20
+		modifier = {
+			factor = 100
+			is_patrician = yes
+		}
 	}
 }
 

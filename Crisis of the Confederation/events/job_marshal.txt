@@ -257,7 +257,7 @@ character_event = {
 	min_age = 16
 	
 	trigger = {
-		has_job_action = action_distribute_mil_tech
+		has_job_action = action_improve_rel_relations
 	}
 	
 	mean_time_to_happen = {

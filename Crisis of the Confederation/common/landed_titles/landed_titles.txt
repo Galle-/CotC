@@ -1399,7 +1399,7 @@ e_terran_confederation = {
 			c_armstrong = {
 				color = { 16 16 255 }
 				color2 = { 255 255 0 }
-				used_for_dynasty_names = no
+				#used_for_dynasty_names = no
 				
 				b_armstrong_iii = {
 					holy_site = terran_federalist # Traditional regional capital

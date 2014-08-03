@@ -280,3 +280,93 @@ character_event = {
 		}
 	}
 }
+character_event = {
+	id = maintenance.300
+	hide_window = yes
+	
+	min_age = 18
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		num_of_children = 1
+		NOT = { has_character_modifier = not_having_babies_1 }
+	}
+	
+	immediate = { add_character_modifier = { name = not_having_babies_1 duration = -1 } }
+}
+character_event = {
+	id = maintenance.301
+	hide_window = yes
+	
+	min_age = 18
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		NOT = { num_of_children = 1 }
+		has_character_modifier = not_having_babies_1
+	}
+	
+	immediate = { remove_character_modifier = not_having_babies_1 }
+}
+character_event = {
+	id = maintenance.302
+	hide_window = yes
+	
+	min_age = 18
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		num_of_children = 2
+		NOT = { has_character_modifier = not_having_babies_2 }
+	}
+	
+	immediate = { add_character_modifier = { name = not_having_babies_2 duration = -1 } }
+}
+character_event = {
+	id = maintenance.303
+	hide_window = yes
+	
+	min_age = 18
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		NOT = { num_of_children = 2 }
+		has_character_modifier = not_having_babies_2
+	}
+	
+	immediate = { remove_character_modifier = not_having_babies_2 }
+}
+character_event = {
+	id = maintenance.304
+	hide_window = yes
+	
+	min_age = 18
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		num_of_children = 3
+		NOT = { has_character_modifier = not_having_babies_3 }
+	}
+	
+	immediate = { add_character_modifier = { name = not_having_babies_3 duration = -1 } }
+}
+character_event = {
+	id = maintenance.305
+	hide_window = yes
+	
+	min_age = 18
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		NOT = { num_of_children = 3 }
+		has_character_modifier = not_having_babies_3
+	}
+	
+	immediate = { remove_character_modifier = not_having_babies_3 }
+}

@@ -48,7 +48,7 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTALOVERS0"
-		FROM = { character_event = { id = lovers.1 } }
+		FROM = { character_event = { id = lovers.1 tooltip = "EVTTOOLTIPLOVERS1" } }
 		ai_chance = {
 			factor = 50
 			
@@ -1162,89 +1162,47 @@ character_event = {
 	option = { name = "EVTOPTALOVERS9" }
 }
 
-# Various "character might be attractive to another character" events
-# Teenage students of the same guardian
+# Adults in the same location
 character_event = {
 	id = lovers.10
 	hide_window = yes
 	
-	min_age = 12
-	max_age = 16
+	min_age = 20
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
-		has_guardian = yes
-		guardian = {
-			any_ward = {
-				NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+		location = {
+			any_province_character = {
 				NOT = { character = ROOT }
-				age = 12
-				NOT = { age = 16 }
-				NOT = { trait = incapable }
+				NOT = { is_close_relative = ROOT }
+				NOT = { num_of_lovers = 1 }
+				age = 20
 				prisoner = no
-			}
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 36
-		modifier = {
-			factor = 0.5
-			trait = beautiful
-		}
-		modifier = {
-			factor = 0.8
-			trait = fair
-		}
-		modifier = {
-			factor = 1.25
-			trait = homely
-		}
-		modifier = {
-			factor = 2
-			trait = ugly
-		}
-	}
-	
-	immediate = {
-		guardian = {
-			random_ward = {
-				limit = {
-					NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
-					NOT = { character = ROOT }
-					age = 12
-					NOT = { age = 16 }
-					NOT = { trait = incapable }
-					prisoner = no
+				NOT = { trait = incapable }
+				NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_heartbroken } }
+				OR = {
+					AND = {
+						is_female = yes
+						ROOT = { is_female = no }
+						NOT = { trait = homosexual }
+					}
+					AND = {
+						is_female = no
+						ROOT = { is_female = yes }
+						NOT = { trait = homosexual }
+					}
+					AND = {
+						is_female = yes
+						ROOT = { is_female = yes }
+						trait = homosexual
+					}
+					AND = {
+						is_female = no
+						ROOT = { is_female = no }
+						trait = homosexual
+					}
 				}
-				character_event = { id = lovers.0 }
-			}
-		}
-	}
-}
-
-# Teenagers in the same court
-character_event = {
-	id = lovers.11
-	hide_window = yes
-	
-	min_age = 12
-	max_age = 20
-	capable_only = yes
-	prisoner = no
-	
-	trigger = {
-		liege = { any_courtier = { character = ROOT } }
-		liege = {
-			any_courtier = {
-				NOT = { any_lover = { character = ROOT } }
-				NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
-				NOT = { character = ROOT }
-				age = 12
-				NOT = { age = 20 }
-				NOT = { trait = incapable }
-				prisoner = no
 			}
 		}
 	}
@@ -1270,281 +1228,38 @@ character_event = {
 	}
 	
 	immediate = {
-		liege = {
-			random_courtier = {
+		location = {
+			any_province_character = {
 				limit = {
-					NOT = { any_lover = { character = ROOT } }
-					NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
 					NOT = { character = ROOT }
-					age = 12
-					NOT = { age = 20 }
-					NOT = { trait = incapable }
-					prisoner = no
-				}
-				character_event = { id = lovers.0 }
-			}
-		}
-	}
-}
-
-# Teenage friends
-character_event = {
-	id = lovers.12
-	hide_window = yes
-	
-	min_age = 12
-	max_age = 20
-	capable_only = yes
-	prisoner = no
-	
-	trigger = {
-		any_friend = {
-			NOT = { any_lover = { character = ROOT } }
-			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
-			age = 12
-			NOT = { age = 20 }
-			NOT = { trait = incapable }
-			prisoner = no
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 24
-		modifier = {
-			factor = 0.5
-			trait = beautiful
-		}
-		modifier = {
-			factor = 0.8
-			trait = fair
-		}
-		modifier = {
-			factor = 1.25
-			trait = homely
-		}
-		modifier = {
-			factor = 2
-			trait = ugly
-		}
-	}
-	
-	immediate = {
-		random_friend = {
-			limit = {
-				NOT = { any_lover = { character = ROOT } }
-				NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
-				age = 12
-				NOT = { age = 20 }
-				NOT = { trait = incapable }
-				prisoner = no
-			}
-			character_event = { id = lovers.0 }
-		}
-	}
-}
-
-# Teenage liege toward courtier
-character_event = {
-	id = lovers.13
-	hide_window = yes
-	
-	min_age = 12
-	max_age = 20
-	only_rulers = yes
-	capable_only = yes
-	prisoner = no
-	
-	trigger = {
-		any_courtier = {
-			NOT = { any_lover = { character = ROOT } }
-			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
-			age = 12
-			NOT = { age = 20 }
-			NOT = { trait = incapable }
-			prisoner = no
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 24
-		modifier = {
-			factor = 0.5
-			trait = beautiful
-		}
-		modifier = {
-			factor = 0.8
-			trait = fair
-		}
-		modifier = {
-			factor = 1.25
-			trait = homely
-		}
-		modifier = {
-			factor = 2
-			trait = ugly
-		}
-	}
-	
-	immediate = {
-		random_courtier = {
-			limit = {
-				NOT = { any_lover = { character = ROOT } }
-				NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
-				age = 12
-				NOT = { age = 20 }
-				NOT = { trait = incapable }
-				prisoner = no
-			}
-			character_event = { id = lovers.0 }
-		}
-	}
-}
-# Teenage courtier toward liege
-character_event = {
-	id = lovers.14
-	hide_window = yes
-	
-	min_age = 12
-	max_age = 20
-	capable_only = yes
-	prisoner = no
-	
-	trigger = {
-		liege = {
-			NOT = { any_lover = { character = ROOT } }
-			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
-			any_courtier = { character = ROOT }
-			age = 12
-			NOT = { age = 20 }
-			NOT = { trait = incapable }
-			prisoner = no
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 30
-		modifier = {
-			factor = 0.5
-			trait = beautiful
-		}
-		modifier = {
-			factor = 0.8
-			trait = fair
-		}
-		modifier = {
-			factor = 1.25
-			trait = homely
-		}
-		modifier = {
-			factor = 2
-			trait = ugly
-		}
-	}
-	
-	immediate = {
-		liege = { character_event = { id = lovers.0 } }
-	}
-}
-
-# Teenager toward spouse
-character_event = {
-	id = lovers.15
-	hide_window = yes
-	
-	min_age = 12
-	max_age = 20
-	capable_only = yes
-	prisoner = no
-	
-	trigger = {
-		is_married = yes
-		spouse = {
-			NOT = { any_lover = { character = ROOT } }
-			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
-			age = 12
-			NOT = { age = 20 }
-			NOT = { trait = incapable }
-			prisoner = no
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 24
-		modifier = {
-			factor = 0.5
-			trait = beautiful
-		}
-		modifier = {
-			factor = 0.8
-			trait = fair
-		}
-		modifier = {
-			factor = 1.25
-			trait = homely
-		}
-		modifier = {
-			factor = 2
-			trait = ugly
-		}
-	}
-	
-	immediate = {
-		spouse = { character_event = { id = lovers.0 } }
-	}
-}
-# Adults in the same court
-character_event = {
-	id = lovers.16
-	hide_window = yes
-	
-	min_age = 20
-	capable_only = yes
-	prisoner = no
-	
-	trigger = {
-		liege = { any_courtier = { character = ROOT } }
-		liege = {
-			any_courtier = {
-				NOT = { any_lover = { character = ROOT } }
-				NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
-				NOT = { character = ROOT }
-				age = 20
-				NOT = { trait = incapable }
-				prisoner = no
-			}
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 24
-		modifier = {
-			factor = 0.5
-			trait = beautiful
-		}
-		modifier = {
-			factor = 0.8
-			trait = fair
-		}
-		modifier = {
-			factor = 1.25
-			trait = homely
-		}
-		modifier = {
-			factor = 2
-			trait = ugly
-		}
-	}
-	
-	immediate = {
-		liege = {
-			random_courtier = {
-				limit = {
-					NOT = { any_lover = { character = ROOT } }
-					NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
-					NOT = { character = ROOT }
+					NOT = { is_close_relative = ROOT }
+					NOT = { num_of_lovers = 1 }
 					age = 20
-					NOT = { trait = incapable }
 					prisoner = no
+					NOT = { trait = incapable }
+					NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_heartbroken } }
+					OR = {
+						AND = {
+							is_female = yes
+							ROOT = { is_female = no }
+							NOT = { trait = homosexual }
+						}
+						AND = {
+							is_female = no
+							ROOT = { is_female = yes }
+							NOT = { trait = homosexual }
+						}
+						AND = {
+							is_female = yes
+							ROOT = { is_female = yes }
+							trait = homosexual
+						}
+						AND = {
+							is_female = no
+							ROOT = { is_female = no }
+							trait = homosexual
+						}
+					}
 				}
 				character_event = { id = lovers.0 }
 			}
@@ -1552,200 +1267,1020 @@ character_event = {
 	}
 }
 
-# Adult friends
-character_event = {
-	id = lovers.17
-	hide_window = yes
+# # Various "character might be attractive to another character" events
+# # Teenage students of the same guardian
+# character_event = {
+	# id = lovers.10
+	# hide_window = yes
 	
-	min_age = 20
-	capable_only = yes
-	prisoner = no
+	# min_age = 12
+	# max_age = 16
+	# capable_only = yes
+	# prisoner = no
 	
-	trigger = {
-		any_friend = {
-			NOT = { any_lover = { character = ROOT } }
-			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
-			age = 20
-			NOT = { trait = incapable }
-			prisoner = no
-		}
-	}
+	# trigger = {
+		# has_guardian = yes
+		# guardian = {
+			# any_ward = {
+				# NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+				# NOT = { character = ROOT }
+				# age = 12
+				# NOT = { age = 16 }
+				# NOT = { trait = incapable }
+				# prisoner = no
+				# NOT = { any_lover = { spouse = { character = PREV } } }
+				# NOT = { num_of_lovers = 1 }
+				# OR = {
+					# AND = {
+						# is_female = yes
+						# ROOT = { is_female = no }
+						# NOT = { trait = homosexual }
+					# }
+					# AND = {
+						# is_female = no
+						# ROOT = { is_female = yes }
+						# NOT = { trait = homosexual }
+					# }
+					# AND = {
+						# is_female = yes
+						# ROOT = { is_female = yes }
+						# NOT = { trait = homosexual }
+					# }
+					# AND = {
+						# is_female = no
+						# ROOT = { is_female = no }
+						# NOT = { trait = homosexual }
+					# }
+				# }
+			# }
+		# }
+	# }
 	
-	mean_time_to_happen = {
-		months = 30
-		modifier = {
-			factor = 0.5
-			trait = beautiful
-		}
-		modifier = {
-			factor = 0.8
-			trait = fair
-		}
-		modifier = {
-			factor = 1.25
-			trait = homely
-		}
-		modifier = {
-			factor = 2
-			trait = ugly
-		}
-	}
+	# mean_time_to_happen = {
+		# months = 36
+		# modifier = {
+			# factor = 0.5
+			# trait = beautiful
+		# }
+		# modifier = {
+			# factor = 0.8
+			# trait = fair
+		# }
+		# modifier = {
+			# factor = 1.25
+			# trait = homely
+		# }
+		# modifier = {
+			# factor = 2
+			# trait = ugly
+		# }
+	# }
 	
-	immediate = {
-		random_friend = {
-			limit = {
-				NOT = { any_lover = { character = ROOT } }
-				NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
-				age = 20
-				NOT = { trait = incapable }
-				prisoner = no
-			}
-			character_event = { id = lovers.0 }
-		}
-	}
-}
+	# immediate = {
+		# guardian = {
+			# random_ward = {
+				# limit = {
+					# NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+					# NOT = { character = ROOT }
+					# age = 12
+					# NOT = { age = 16 }
+					# NOT = { trait = incapable }
+					# prisoner = no
+					# NOT = { any_lover = { spouse = { character = PREV } } }
+					# NOT = { num_of_lovers = 1 }
+					# OR = {
+						# AND = {
+							# is_female = yes
+							# ROOT = { is_female = no }
+							# NOT = { trait = homosexual }
+						# }
+						# AND = {
+							# is_female = no
+							# ROOT = { is_female = yes }
+							# NOT = { trait = homosexual }
+						# }
+						# AND = {
+							# is_female = yes
+							# ROOT = { is_female = yes }
+							# NOT = { trait = homosexual }
+						# }
+						# AND = {
+							# is_female = no
+							# ROOT = { is_female = no }
+							# NOT = { trait = homosexual }
+						# }
+					# }
+				# }
+				# character_event = { id = lovers.0 }
+			# }
+		# }
+	# }
+# }
 
-# Adult liege toward courtier
-character_event = {
-	id = lovers.18
-	hide_window = yes
+# # Teenagers in the same court
+# character_event = {
+	# id = lovers.11
+	# hide_window = yes
 	
-	min_age = 20
-	only_rulers = yes
-	capable_only = yes
-	prisoner = no
+	# min_age = 12
+	# max_age = 20
+	# capable_only = yes
+	# prisoner = no
 	
-	trigger = {
-		any_courtier = {
-			NOT = { any_lover = { character = ROOT } }
-			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
-			age = 20
-			NOT = { trait = incapable }
-			prisoner = no
-		}
-	}
+	# trigger = {
+		# liege = { any_courtier = { character = ROOT } }
+		# liege = {
+			# any_courtier = {
+				# NOT = { any_lover = { character = ROOT } }
+				# NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+				# NOT = { character = ROOT }
+				# age = 12
+				# NOT = { age = 20 }
+				# NOT = { trait = incapable }
+				# prisoner = no
+				# NOT = { any_lover = { spouse = { character = PREV } } }
+				# NOT = { num_of_lovers = 1 }
+				# OR = {
+					# AND = {
+						# is_female = yes
+						# ROOT = { is_female = no }
+						# NOT = { trait = homosexual }
+					# }
+					# AND = {
+						# is_female = no
+						# ROOT = { is_female = yes }
+						# NOT = { trait = homosexual }
+					# }
+					# AND = {
+						# is_female = yes
+						# ROOT = { is_female = yes }
+						# NOT = { trait = homosexual }
+					# }
+					# AND = {
+						# is_female = no
+						# ROOT = { is_female = no }
+						# NOT = { trait = homosexual }
+					# }
+				# }
+			# }
+		# }
+	# }
 	
-	mean_time_to_happen = {
-		months = 30
-		modifier = {
-			factor = 0.5
-			trait = beautiful
-		}
-		modifier = {
-			factor = 0.8
-			trait = fair
-		}
-		modifier = {
-			factor = 1.25
-			trait = homely
-		}
-		modifier = {
-			factor = 2
-			trait = ugly
-		}
-	}
+	# mean_time_to_happen = {
+		# months = 36
+		# modifier = {
+			# factor = 0.5
+			# trait = beautiful
+		# }
+		# modifier = {
+			# factor = 0.8
+			# trait = fair
+		# }
+		# modifier = {
+			# factor = 1.25
+			# trait = homely
+		# }
+		# modifier = {
+			# factor = 2
+			# trait = ugly
+		# }
+	# }
 	
-	immediate = {
-		random_courtier = {
-			limit = {
-				NOT = { any_lover = { character = ROOT } }
-				NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
-				age = 20
-				NOT = { trait = incapable }
-				prisoner = no
-			}
-			character_event = { id = lovers.0 }
-		}
-	}
-}
-# Adult courtier toward liege
-character_event = {
-	id = lovers.19
-	hide_window = yes
-	
-	min_age = 20
-	capable_only = yes
-	prisoner = no
-	
-	trigger = {
-		liege = {
-			NOT = { any_lover = { character = ROOT } }
-			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
-			any_courtier = { character = ROOT }
-			age = 20
-			NOT = { trait = incapable }
-			prisoner = no
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 120
-		modifier = {
-			factor = 0.5
-			trait = beautiful
-		}
-		modifier = {
-			factor = 0.8
-			trait = fair
-		}
-		modifier = {
-			factor = 1.25
-			trait = homely
-		}
-		modifier = {
-			factor = 2
-			trait = ugly
-		}
-	}
-	
-	immediate = {
-		liege = { character_event = { id = lovers.0 } }
-	}
-}
+	# immediate = {
+		# liege = {
+			# random_courtier = {
+				# limit = {
+					# NOT = { any_lover = { character = ROOT } }
+					# NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+					# NOT = { character = ROOT }
+					# age = 12
+					# NOT = { age = 20 }
+					# NOT = { trait = incapable }
+					# prisoner = no
+					# NOT = { any_lover = { spouse = { character = PREV } } }
+					# NOT = { num_of_lovers = 1 }
+					# OR = {
+						# AND = {
+							# is_female = yes
+							# ROOT = { is_female = no }
+							# NOT = { trait = homosexual }
+						# }
+						# AND = {
+							# is_female = no
+							# ROOT = { is_female = yes }
+							# NOT = { trait = homosexual }
+						# }
+						# AND = {
+							# is_female = yes
+							# ROOT = { is_female = yes }
+							# NOT = { trait = homosexual }
+						# }
+						# AND = {
+							# is_female = no
+							# ROOT = { is_female = no }
+							# NOT = { trait = homosexual }
+						# }
+					# }
+				# }
+				# character_event = { id = lovers.0 }
+			# }
+		# }
+	# }
+# }
 
-# Adult toward spouse
-character_event = {
-	id = lovers.20
-	hide_window = yes
+# # Teenage friends
+# character_event = {
+	# id = lovers.12
+	# hide_window = yes
 	
-	min_age = 20
-	capable_only = yes
-	prisoner = no
+	# min_age = 12
+	# max_age = 20
+	# capable_only = yes
+	# prisoner = no
 	
-	trigger = {
-		spouse = {
-			NOT = { any_lover = { character = ROOT } }
-			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
-			age = 20
-			NOT = { trait = incapable }
-			prisoner = no
-		}
-	}
+	# trigger = {
+		# any_friend = {
+			# NOT = { any_lover = { character = ROOT } }
+			# NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+			# age = 12
+			# NOT = { age = 20 }
+			# NOT = { trait = incapable }
+			# prisoner = no
+			# NOT = { any_lover = { spouse = { character = PREV } } }
+			# NOT = { num_of_lovers = 1 }
+			# OR = {
+				# AND = {
+					# is_female = yes
+					# ROOT = { is_female = no }
+					# NOT = { trait = homosexual }
+				# }
+				# AND = {
+					# is_female = no
+					# ROOT = { is_female = yes }
+					# NOT = { trait = homosexual }
+				# }
+				# AND = {
+					# is_female = yes
+					# ROOT = { is_female = yes }
+					# NOT = { trait = homosexual }
+				# }
+				# AND = {
+					# is_female = no
+					# ROOT = { is_female = no }
+					# NOT = { trait = homosexual }
+				# }
+			# }
+		# }
+	# }
 	
-	mean_time_to_happen = {
-		months = 120
-		modifier = {
-			factor = 0.5
-			trait = beautiful
-		}
-		modifier = {
-			factor = 0.8
-			trait = fair
-		}
-		modifier = {
-			factor = 1.25
-			trait = homely
-		}
-		modifier = {
-			factor = 2
-			trait = ugly
-		}
-	}
+	# mean_time_to_happen = {
+		# months = 36
+		# modifier = {
+			# factor = 0.5
+			# trait = beautiful
+		# }
+		# modifier = {
+			# factor = 0.8
+			# trait = fair
+		# }
+		# modifier = {
+			# factor = 1.25
+			# trait = homely
+		# }
+		# modifier = {
+			# factor = 2
+			# trait = ugly
+		# }
+	# }
 	
-	immediate = {
-		spouse = { character_event = { id = lovers.0 } }
-	}
-}
+	# immediate = {
+		# random_friend = {
+			# limit = {
+				# NOT = { any_lover = { character = ROOT } }
+				# NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+				# age = 12
+				# NOT = { age = 20 }
+				# NOT = { trait = incapable }
+				# prisoner = no
+				# NOT = { any_lover = { spouse = { character = PREV } } }
+				# NOT = { num_of_lovers = 1 }
+				# OR = {
+					# AND = {
+						# is_female = yes
+						# ROOT = { is_female = no }
+						# NOT = { trait = homosexual }
+					# }
+					# AND = {
+						# is_female = no
+						# ROOT = { is_female = yes }
+						# NOT = { trait = homosexual }
+					# }
+					# AND = {
+						# is_female = yes
+						# ROOT = { is_female = yes }
+						# NOT = { trait = homosexual }
+					# }
+					# AND = {
+						# is_female = no
+						# ROOT = { is_female = no }
+						# NOT = { trait = homosexual }
+					# }
+				# }
+			# }
+			# character_event = { id = lovers.0 }
+		# }
+	# }
+# }
+
+# # Teenage liege toward courtier
+# character_event = {
+	# id = lovers.13
+	# hide_window = yes
+	
+	# min_age = 12
+	# max_age = 20
+	# only_rulers = yes
+	# capable_only = yes
+	# prisoner = no
+	
+	# trigger = {
+		# any_courtier = {
+			# NOT = { any_lover = { character = ROOT } }
+			# NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+			# age = 12
+			# NOT = { age = 20 }
+			# NOT = { trait = incapable }
+			# prisoner = no
+			# NOT = { any_lover = { spouse = { character = PREV } } }
+			# NOT = { num_of_lovers = 1 }
+			# OR = {
+				# AND = {
+					# is_female = yes
+					# ROOT = { is_female = no }
+					# NOT = { trait = homosexual }
+				# }
+				# AND = {
+					# is_female = no
+					# ROOT = { is_female = yes }
+					# NOT = { trait = homosexual }
+				# }
+				# AND = {
+					# is_female = yes
+					# ROOT = { is_female = yes }
+					# NOT = { trait = homosexual }
+				# }
+				# AND = {
+					# is_female = no
+					# ROOT = { is_female = no }
+					# NOT = { trait = homosexual }
+				# }
+			# }
+		# }
+	# }
+	
+	# mean_time_to_happen = {
+		# months = 24
+		# modifier = {
+			# factor = 0.5
+			# trait = beautiful
+		# }
+		# modifier = {
+			# factor = 0.8
+			# trait = fair
+		# }
+		# modifier = {
+			# factor = 1.25
+			# trait = homely
+		# }
+		# modifier = {
+			# factor = 2
+			# trait = ugly
+		# }
+	# }
+	
+	# immediate = {
+		# random_courtier = {
+			# limit = {
+				# NOT = { any_lover = { character = ROOT } }
+				# NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+				# age = 12
+				# NOT = { age = 20 }
+				# NOT = { trait = incapable }
+				# prisoner = no
+				# NOT = { any_lover = { spouse = { character = PREV } } }
+				# NOT = { num_of_lovers = 1 }
+				# OR = {
+					# AND = {
+						# is_female = yes
+						# ROOT = { is_female = no }
+						# NOT = { trait = homosexual }
+					# }
+					# AND = {
+						# is_female = no
+						# ROOT = { is_female = yes }
+						# NOT = { trait = homosexual }
+					# }
+					# AND = {
+						# is_female = yes
+						# ROOT = { is_female = yes }
+						# NOT = { trait = homosexual }
+					# }
+					# AND = {
+						# is_female = no
+						# ROOT = { is_female = no }
+						# NOT = { trait = homosexual }
+					# }
+				# }
+			# }
+			# character_event = { id = lovers.0 }
+		# }
+	# }
+# }
+# # Teenage courtier toward liege
+# character_event = {
+	# id = lovers.14
+	# hide_window = yes
+	
+	# min_age = 12
+	# max_age = 20
+	# capable_only = yes
+	# prisoner = no
+	
+	# trigger = {
+		# liege = {
+			# NOT = { any_lover = { character = ROOT } }
+			# NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+			# any_courtier = { character = ROOT }
+			# age = 12
+			# NOT = { age = 20 }
+			# NOT = { trait = incapable }
+			# prisoner = no
+			# NOT = { any_lover = { spouse = { character = PREV } } }
+			# NOT = { num_of_lovers = 1 }
+			# OR = {
+				# AND = {
+					# is_female = yes
+					# ROOT = { is_female = no }
+					# NOT = { trait = homosexual }
+				# }
+				# AND = {
+					# is_female = no
+					# ROOT = { is_female = yes }
+					# NOT = { trait = homosexual }
+				# }
+				# AND = {
+					# is_female = yes
+					# ROOT = { is_female = yes }
+					# NOT = { trait = homosexual }
+				# }
+				# AND = {
+					# is_female = no
+					# ROOT = { is_female = no }
+					# NOT = { trait = homosexual }
+				# }
+			# }
+		# }
+	# }
+	
+	# mean_time_to_happen = {
+		# months = 30
+		# modifier = {
+			# factor = 0.5
+			# trait = beautiful
+		# }
+		# modifier = {
+			# factor = 0.8
+			# trait = fair
+		# }
+		# modifier = {
+			# factor = 1.25
+			# trait = homely
+		# }
+		# modifier = {
+			# factor = 2
+			# trait = ugly
+		# }
+	# }
+	
+	# immediate = {
+		# liege = { character_event = { id = lovers.0 } }
+	# }
+# }
+
+# # Teenager toward spouse
+# character_event = {
+	# id = lovers.15
+	# hide_window = yes
+	
+	# min_age = 12
+	# max_age = 20
+	# capable_only = yes
+	# prisoner = no
+	
+	# trigger = {
+		# is_married = yes
+		# spouse = {
+			# NOT = { any_lover = { character = ROOT } }
+			# NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+			# age = 12
+			# NOT = { age = 20 }
+			# NOT = { trait = incapable }
+			# prisoner = no
+			# NOT = { num_of_lovers = 1 }
+			# OR = {
+				# AND = {
+					# is_female = yes
+					# ROOT = { is_female = no }
+					# NOT = { trait = homosexual }
+				# }
+				# AND = {
+					# is_female = no
+					# ROOT = { is_female = yes }
+					# NOT = { trait = homosexual }
+				# }
+				# AND = {
+					# is_female = yes
+					# ROOT = { is_female = yes }
+					# NOT = { trait = homosexual }
+				# }
+				# AND = {
+					# is_female = no
+					# ROOT = { is_female = no }
+					# NOT = { trait = homosexual }
+				# }
+			# }
+		# }
+	# }
+	
+	# mean_time_to_happen = {
+		# months = 24
+		# modifier = {
+			# factor = 0.5
+			# trait = beautiful
+		# }
+		# modifier = {
+			# factor = 0.8
+			# trait = fair
+		# }
+		# modifier = {
+			# factor = 1.25
+			# trait = homely
+		# }
+		# modifier = {
+			# factor = 2
+			# trait = ugly
+		# }
+	# }
+	
+	# immediate = {
+		# spouse = { character_event = { id = lovers.0 } }
+	# }
+# }
+# # Adults in the same court
+# character_event = {
+	# id = lovers.16
+	# hide_window = yes
+	
+	# min_age = 20
+	# capable_only = yes
+	# prisoner = no
+	
+	# trigger = {
+		# liege = { any_courtier = { character = ROOT } }
+		# liege = {
+			# any_courtier = {
+				# NOT = { any_lover = { character = ROOT } }
+				# NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+				# NOT = { character = ROOT }
+				# age = 20
+				# NOT = { trait = incapable }
+				# prisoner = no
+				# NOT = { any_lover = { spouse = { character = PREV } } }
+				# NOT = { num_of_lovers = 1 }
+				# OR = {
+					# AND = {
+						# is_female = yes
+						# ROOT = { is_female = no }
+						# NOT = { trait = homosexual }
+					# }
+					# AND = {
+						# is_female = no
+						# ROOT = { is_female = yes }
+						# NOT = { trait = homosexual }
+					# }
+					# AND = {
+						# is_female = yes
+						# ROOT = { is_female = yes }
+						# NOT = { trait = homosexual }
+					# }
+					# AND = {
+						# is_female = no
+						# ROOT = { is_female = no }
+						# NOT = { trait = homosexual }
+					# }
+				# }
+			# }
+		# }
+	# }
+	
+	# mean_time_to_happen = {
+		# months = 24
+		# modifier = {
+			# factor = 0.5
+			# trait = beautiful
+		# }
+		# modifier = {
+			# factor = 0.8
+			# trait = fair
+		# }
+		# modifier = {
+			# factor = 1.25
+			# trait = homely
+		# }
+		# modifier = {
+			# factor = 2
+			# trait = ugly
+		# }
+	# }
+	
+	# immediate = {
+		# liege = {
+			# random_courtier = {
+				# limit = {
+					# NOT = { any_lover = { character = ROOT } }
+					# NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+					# NOT = { character = ROOT }
+					# age = 20
+					# NOT = { trait = incapable }
+					# prisoner = no
+					# NOT = { any_lover = { spouse = { character = PREV } } }
+					# NOT = { num_of_lovers = 1 }
+					# OR = {
+						# AND = {
+							# is_female = yes
+							# ROOT = { is_female = no }
+							# NOT = { trait = homosexual }
+						# }
+						# AND = {
+							# is_female = no
+							# ROOT = { is_female = yes }
+							# NOT = { trait = homosexual }
+						# }
+						# AND = {
+							# is_female = yes
+							# ROOT = { is_female = yes }
+							# NOT = { trait = homosexual }
+						# }
+						# AND = {
+							# is_female = no
+							# ROOT = { is_female = no }
+							# NOT = { trait = homosexual }
+						# }
+					# }
+				# }
+				# character_event = { id = lovers.0 }
+			# }
+		# }
+	# }
+# }
+
+# # Adult friends
+# character_event = {
+	# id = lovers.17
+	# hide_window = yes
+	
+	# min_age = 20
+	# capable_only = yes
+	# prisoner = no
+	
+	# trigger = {
+		# any_friend = {
+			# NOT = { any_lover = { character = ROOT } }
+			# NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+			# age = 20
+			# NOT = { trait = incapable }
+			# prisoner = no
+			# NOT = { any_lover = { spouse = { character = PREV } } }
+			# NOT = { num_of_lovers = 1 }
+			# OR = {
+				# AND = {
+					# is_female = yes
+					# ROOT = { is_female = no }
+					# NOT = { trait = homosexual }
+				# }
+				# AND = {
+					# is_female = no
+					# ROOT = { is_female = yes }
+					# NOT = { trait = homosexual }
+				# }
+				# AND = {
+					# is_female = yes
+					# ROOT = { is_female = yes }
+					# NOT = { trait = homosexual }
+				# }
+				# AND = {
+					# is_female = no
+					# ROOT = { is_female = no }
+					# NOT = { trait = homosexual }
+				# }
+			# }
+		# }
+	# }
+	
+	# mean_time_to_happen = {
+		# months = 30
+		# modifier = {
+			# factor = 0.5
+			# trait = beautiful
+		# }
+		# modifier = {
+			# factor = 0.8
+			# trait = fair
+		# }
+		# modifier = {
+			# factor = 1.25
+			# trait = homely
+		# }
+		# modifier = {
+			# factor = 2
+			# trait = ugly
+		# }
+	# }
+	
+	# immediate = {
+		# random_friend = {
+			# limit = {
+				# NOT = { any_lover = { character = ROOT } }
+				# NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+				# age = 20
+				# NOT = { trait = incapable }
+				# prisoner = no
+				# NOT = { any_lover = { spouse = { character = PREV } } }
+				# NOT = { num_of_lovers = 1 }
+				# OR = {
+					# AND = {
+						# is_female = yes
+						# ROOT = { is_female = no }
+						# NOT = { trait = homosexual }
+					# }
+					# AND = {
+						# is_female = no
+						# ROOT = { is_female = yes }
+						# NOT = { trait = homosexual }
+					# }
+					# AND = {
+						# is_female = yes
+						# ROOT = { is_female = yes }
+						# NOT = { trait = homosexual }
+					# }
+					# AND = {
+						# is_female = no
+						# ROOT = { is_female = no }
+						# NOT = { trait = homosexual }
+					# }
+				# }
+			# }
+			# character_event = { id = lovers.0 }
+		# }
+	# }
+# }
+
+# # Adult liege toward courtier
+# character_event = {
+	# id = lovers.18
+	# hide_window = yes
+	
+	# min_age = 20
+	# only_rulers = yes
+	# capable_only = yes
+	# prisoner = no
+	
+	# trigger = {
+		# any_courtier = {
+			# NOT = { any_lover = { character = ROOT } }
+			# NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+			# age = 20
+			# NOT = { trait = incapable }
+			# prisoner = no
+			# NOT = { any_lover = { spouse = { character = PREV } } }
+			# NOT = { num_of_lovers = 1 }
+			# OR = {
+				# AND = {
+					# is_female = yes
+					# ROOT = { is_female = no }
+					# NOT = { trait = homosexual }
+				# }
+				# AND = {
+					# is_female = no
+					# ROOT = { is_female = yes }
+					# NOT = { trait = homosexual }
+				# }
+				# AND = {
+					# is_female = yes
+					# ROOT = { is_female = yes }
+					# NOT = { trait = homosexual }
+				# }
+				# AND = {
+					# is_female = no
+					# ROOT = { is_female = no }
+					# NOT = { trait = homosexual }
+				# }
+			# }
+		# }
+	# }
+	
+	# mean_time_to_happen = {
+		# months = 30
+		# modifier = {
+			# factor = 0.5
+			# trait = beautiful
+		# }
+		# modifier = {
+			# factor = 0.8
+			# trait = fair
+		# }
+		# modifier = {
+			# factor = 1.25
+			# trait = homely
+		# }
+		# modifier = {
+			# factor = 2
+			# trait = ugly
+		# }
+	# }
+	
+	# immediate = {
+		# random_courtier = {
+			# limit = {
+				# NOT = { any_lover = { character = ROOT } }
+				# NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+				# age = 20
+				# NOT = { trait = incapable }
+				# prisoner = no
+				# NOT = { any_lover = { spouse = { character = PREV } } }
+				# NOT = { num_of_lovers = 1 }
+				# OR = {
+					# AND = {
+						# is_female = yes
+						# ROOT = { is_female = no }
+						# NOT = { trait = homosexual }
+					# }
+					# AND = {
+						# is_female = no
+						# ROOT = { is_female = yes }
+						# NOT = { trait = homosexual }
+					# }
+					# AND = {
+						# is_female = yes
+						# ROOT = { is_female = yes }
+						# NOT = { trait = homosexual }
+					# }
+					# AND = {
+						# is_female = no
+						# ROOT = { is_female = no }
+						# NOT = { trait = homosexual }
+					# }
+				# }
+			# }
+			# character_event = { id = lovers.0 }
+		# }
+	# }
+# }
+# # Adult courtier toward liege
+# character_event = {
+	# id = lovers.19
+	# hide_window = yes
+	
+	# min_age = 20
+	# capable_only = yes
+	# prisoner = no
+	
+	# trigger = {
+		# liege = {
+			# NOT = { any_lover = { character = ROOT } }
+			# NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+			# any_courtier = { character = ROOT }
+			# age = 20
+			# NOT = { trait = incapable }
+			# prisoner = no
+			# NOT = { any_lover = { spouse = { character = PREV } } }
+			# NOT = { num_of_lovers = 1 }
+			# OR = {
+				# AND = {
+					# is_female = yes
+					# ROOT = { is_female = no }
+					# NOT = { trait = homosexual }
+				# }
+				# AND = {
+					# is_female = no
+					# ROOT = { is_female = yes }
+					# NOT = { trait = homosexual }
+				# }
+				# AND = {
+					# is_female = yes
+					# ROOT = { is_female = yes }
+					# NOT = { trait = homosexual }
+				# }
+				# AND = {
+					# is_female = no
+					# ROOT = { is_female = no }
+					# NOT = { trait = homosexual }
+				# }
+			# }
+		# }
+	# }
+	
+	# mean_time_to_happen = {
+		# months = 120
+		# modifier = {
+			# factor = 0.5
+			# trait = beautiful
+		# }
+		# modifier = {
+			# factor = 0.8
+			# trait = fair
+		# }
+		# modifier = {
+			# factor = 1.25
+			# trait = homely
+		# }
+		# modifier = {
+			# factor = 2
+			# trait = ugly
+		# }
+	# }
+	
+	# immediate = {
+		# liege = { character_event = { id = lovers.0 } }
+	# }
+# }
+
+# # Adult toward spouse
+# character_event = {
+	# id = lovers.20
+	# hide_window = yes
+	
+	# min_age = 20
+	# capable_only = yes
+	# prisoner = no
+	
+	# trigger = {
+		# spouse = {
+			# NOT = { any_lover = { character = ROOT } }
+			# NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_in_love } }
+			# age = 20
+			# NOT = { trait = incapable }
+			# NOT = { num_of_lovers = 1 }
+			# prisoner = no
+			# OR = {
+				# AND = {
+					# is_female = yes
+					# ROOT = { is_female = no }
+					# NOT = { trait = homosexual }
+				# }
+				# AND = {
+					# is_female = no
+					# ROOT = { is_female = yes }
+					# NOT = { trait = homosexual }
+				# }
+				# AND = {
+					# is_female = yes
+					# ROOT = { is_female = yes }
+					# NOT = { trait = homosexual }
+				# }
+				# AND = {
+					# is_female = no
+					# ROOT = { is_female = no }
+					# NOT = { trait = homosexual }
+				# }
+			# }
+		# }
+	# }
+	
+	# mean_time_to_happen = {
+		# months = 120
+		# modifier = {
+			# factor = 0.5
+			# trait = beautiful
+		# }
+		# modifier = {
+			# factor = 0.8
+			# trait = fair
+		# }
+		# modifier = {
+			# factor = 1.25
+			# trait = homely
+		# }
+		# modifier = {
+			# factor = 2
+			# trait = ugly
+		# }
+	# }
+	
+	# immediate = {
+		# spouse = { character_event = { id = lovers.0 } }
+	# }
+# }
 
 # # Possibly confess love
 # character_event = {

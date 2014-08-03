@@ -53,6 +53,7 @@ vassal_decisions = {
 		allow = { always = yes }
 		effect = {
 			k_terran_navy = { grant_title = ROOT }
+			set_defacto_liege = FROM
 			hidden_tooltip = { character_event = { id = military.100 } }
 		}
 		ai_will_do = {
@@ -266,6 +267,7 @@ vassal_decisions = {
 		allow = { always = yes }
 		effect = {
 			d_terran_first_fleet = { grant_title = ROOT }
+			set_defacto_liege = FROM
 			hidden_tooltip = { character_event = { id = military.101 } }
 		}
 		ai_will_do = {
@@ -456,6 +458,7 @@ vassal_decisions = {
 		allow = { always = yes }
 		effect = {
 			d_terran_second_fleet = { grant_title = ROOT }
+			set_defacto_liege = FROM
 			hidden_tooltip = { character_event = { id = military.102 } }
 		}
 		ai_will_do = {
@@ -646,6 +649,7 @@ vassal_decisions = {
 		allow = { always = yes }
 		effect = {
 			d_terran_third_fleet = { grant_title = ROOT }
+			set_defacto_liege = FROM
 			hidden_tooltip = { character_event = { id = military.103 } }
 		}
 		ai_will_do = {
@@ -836,6 +840,7 @@ vassal_decisions = {
 		allow = { always = yes }
 		effect = {
 			d_terran_fourth_fleet = { grant_title = ROOT }
+			set_defacto_liege = FROM
 			hidden_tooltip = { character_event = { id = military.104 } }
 		}
 		ai_will_do = {
@@ -1026,6 +1031,7 @@ vassal_decisions = {
 		allow = { always = yes }
 		effect = {
 			d_terran_fifth_fleet = { grant_title = ROOT }
+			set_defacto_liege = FROM
 			hidden_tooltip = { character_event = { id = military.105 } }
 		}
 		ai_will_do = {
@@ -1217,6 +1223,7 @@ vassal_decisions = {
 		allow = { always = yes }
 		effect = {
 			d_terran_commonwealth_fleet = { grant_title = ROOT }
+			set_defacto_liege = FROM
 			hidden_tooltip = { character_event = { id = military.106 } }
 		}
 		ai_will_do = {
@@ -1425,6 +1432,7 @@ vassal_decisions = {
 		allow = { always = yes }
 		effect = {
 			d_xingjie_fleet = { grant_title = ROOT }
+			set_defacto_liege = FROM
 			hidden_tooltip = { character_event = { id = military.107 } }
 		}
 		ai_will_do = {
@@ -1633,6 +1641,7 @@ vassal_decisions = {
 		allow = { always = yes }
 		effect = {
 			d_tierra_celeste_fleet = { grant_title = ROOT }
+			set_defacto_liege = FROM
 			hidden_tooltip = { character_event = { id = military.108 } }
 		}
 		ai_will_do = {
@@ -1842,6 +1851,7 @@ vassal_decisions = {
 		allow = { always = yes }
 		effect = {
 			d_al_samawat_fleet = { grant_title = ROOT }
+			set_defacto_liege = FROM
 			hidden_tooltip = { character_event = { id = military.109 } }
 		}
 		ai_will_do = {
@@ -2050,6 +2060,7 @@ vassal_decisions = {
 		allow = { always = yes }
 		effect = {
 			d_zenye_nyota_angani_fleet = { grant_title = ROOT }
+			set_defacto_liege = FROM
 			hidden_tooltip = { character_event = { id = military.110 } }
 		}
 		ai_will_do = {
@@ -2258,6 +2269,7 @@ vassal_decisions = {
 		allow = { always = yes }
 		effect = {
 			d_frontier_fleet = { grant_title = ROOT }
+			set_defacto_liege = FROM
 			hidden_tooltip = { character_event = { id = military.111 } }
 		}
 		ai_will_do = {
@@ -2466,6 +2478,7 @@ vassal_decisions = {
 		allow = { always = yes }
 		effect = {
 			d_xin_zizhiqu_fleet = { grant_title = ROOT }
+			set_defacto_liege = FROM
 			hidden_tooltip = { character_event = { id = military.112 } }
 		}
 		ai_will_do = {
@@ -2674,6 +2687,7 @@ vassal_decisions = {
 		allow = { always = yes }
 		effect = {
 			d_orion_reach_fleet = { grant_title = ROOT }
+			set_defacto_liege = FROM
 			hidden_tooltip = { character_event = { id = military.113 } }
 		}
 		ai_will_do = {
@@ -2882,6 +2896,7 @@ vassal_decisions = {
 		allow = { always = yes }
 		effect = {
 			d_tarka_fleet = { grant_title = ROOT }
+			set_defacto_liege = FROM
 			hidden_tooltip = { character_event = { id = military.114 } }
 		}
 		ai_will_do = {
@@ -3090,6 +3105,7 @@ vassal_decisions = {
 		allow = { always = yes }
 		effect = {
 			d_avalon_fleet = { grant_title = ROOT }
+			set_defacto_liege = FROM
 			hidden_tooltip = { character_event = { id = military.115 } }
 		}
 		ai_will_do = {
@@ -3298,6 +3314,7 @@ vassal_decisions = {
 		allow = { always = yes }
 		effect = {
 			d_jion_fleet = { grant_title = ROOT }
+			set_defacto_liege = FROM
 			hidden_tooltip = { character_event = { id = military.116 } }
 		}
 		ai_will_do = {
@@ -3506,6 +3523,7 @@ vassal_decisions = {
 		allow = { always = yes }
 		effect = {
 			d_strugatsky_fleet = { grant_title = ROOT }
+			set_defacto_liege = FROM
 			hidden_tooltip = { character_event = { id = military.117 } }
 		}
 		ai_will_do = {
@@ -3714,6 +3732,7 @@ vassal_decisions = {
 		allow = { always = yes }
 		effect = {
 			d_novyy_edem_fleet = { grant_title = ROOT }
+			set_defacto_liege = FROM
 			hidden_tooltip = { character_event = { id = military.112 } }
 		}
 		ai_will_do = {

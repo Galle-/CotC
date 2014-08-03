@@ -1,8 +1,79 @@
 namespace = marriage
 
-# Marriage on-action scopes
-# ROOT: Authorizing party
-# FROM, new_character
+# Give characters a chance to arrange romantic marriages instead of political ones
+character_event = {
+	id = marriage.0
+	hide_window = yes
+	
+	min_age = 18
+	max_age = 40
+	only_capable = yes
+	prisoner = no
+	
+	trigger = {
+		is_married = no
+		NOT = { trait = not_ready_to_marry }
+		NOT = { has_character_flag = flag_ready_to_marry }
+	}
+	
+	immediate = { add_trait = not_ready_to_marry }
+}
+
+# Give up on romantic marriage
+character_event = {
+	id = marriage.1
+	desc = "EVTDESCMARRIAGE1"
+	picture = GFX_evt_marriage
+	
+	min_age = 18
+	only_capable = yes
+	prisoner = no
+	
+	mean_time_to_happen = {
+		months = 240
+		modifier = {
+			factor = 2
+			has_ambition = obj_marry_for_love
+		}
+		modifier = {
+			factor = 2
+			num_of_lovers = 1
+		}
+		modifier = {
+			factor = 0.1
+			has_ambition = obj_marry_for_power
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				religion = terran_imperial
+				religion = neo_feudal
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				religion = terran_imperial
+				religion = neo_feudal
+			}
+			not = { trait = pragmatic }
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				religion = terran_imperial
+				religion = neo_feudal
+			}
+			trait = radical
+		}
+	}
+	
+	option = {
+		name = "EVTOPTAMARRIAGE1"
+		remove_trait = not_ready_to_marry
+		set_character_flag = flag_ready_to_marry
+	}
+}
 
 # Only women left in patrician dynasty
 character_event = {
@@ -54,10 +125,6 @@ character_event = {
 			factor = 10
 			has_character_flag = flag_ignore_patrician_matrilineal_marriage_request
 		}
-		modifier = {
-			factor = 0.5
-			has_ambition = obj_get_married
-		}
 	}
 	
 	immediate = {
@@ -99,7 +166,13 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTAMARRIAGE52"
-		FROM = { FROM = { add_spouse_matrilineal = PREV } }
+		FROM = {
+			remove_trait = not_ready_to_marry
+			FROM = {
+				remove_trait = not_ready_to_marry
+				add_spouse_matrilineal = PREV
+			}
+		}
 	}
 	
 	option = {
@@ -137,12 +210,21 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTAMARRIAGE101"
-		add_spouse = FROM
-		hidden_tooltip = { FROM = { character_event = { id = marriage.102 } } }
+		FROM = { character_event = { id = marriage.102 tooltip = "EVTTOOLTIPMARRIAGE102" } }
+		hidden_tooltip = {
+			any_dynasty_member = {
+				limit = {
+					NOT = { character = FROM }
+					NOT = { character = ROOT }
+				}
+				character_event = { id = marriage.103 }
+			}
+		}
 		any_lover = {
 			limit = { NOT = { character = FROM } }
 			opinion = { who = ROOT modifier = opinion_heartbroken }
-			hidden_tooltip = { character_event = { id = marriage.103 } }
+			opinion = { who = FROM modifier = opinion_stole_my_love }
+			hidden_tooltip = { character_event = { id = marriage.105 } }
 		}
 		ai_chance = {
 			factor = 100
@@ -181,7 +263,7 @@ character_event = {
 	}
 	
 	option = {
-		name = "EVTOPTBMARRIAGE102"
+		name = "EVTOPTBMARRIAGE101"
 		FROM = {
 			opinion = { who = ROOT modifier = opinion_heartbroken }
 			hidden_tooltip = { character_event = { id = marriage.104 } }
@@ -193,5 +275,1046 @@ character_event = {
 				has_ambition = obj_marry_for_love
 			}
 		}
+	}
+}
+
+character_event = {
+	id = marriage.102
+	desc = "EVTDESCMARRIAGE102"
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAMARRIAGE102"
+		remove_trait = not_ready_to_marry
+		FROM = { remove_trait = not_ready_to_marry }
+		add_spouse = FROM
+		hidden_tooltip = {
+			any_dynasty_member = {
+				limit = {
+					NOT = { character = ROOT }
+					NOT = { character = FROM }
+				}
+				character_event = { id = marriage.103 }
+			}
+		}
+		clr_character_flag = flag_marry_your_lover
+	}
+}
+
+character_event = {
+	id = marriage.103
+	desc = "EVTDESCMARRIAGE103"
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+	show_from_from = yes
+	
+	option = { name = "EVTOPTAMARRIAGE104" }
+}
+
+character_event = {
+	id = marriage.104
+	desc = "EVTDESCMARRIAGE104"
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAMARRIAGE104"
+		clr_character_flag = flag_marry_your_lover
+	}
+}
+
+# Your love has married another!
+character_event = {
+	id = marriage.105
+	desc = "EVTDESCMARRIAGE105"
+	picture = GFX_evt_quarrel
+	is_triggered_only = yes
+	
+	option = {
+		# Damn them both!
+		name = "EVTOPTAMARRIAGE105"
+		add_rival = FROM
+		add_rival = FROMFROM
+		remove_lover = FROM
+		hidden_tooltip = {
+			FROM = { character_event = { id = marriage.106 } }
+			FROMFROM = { character_event = { id = marriage.107 } }
+		}
+		ai_chance = {	
+			factor = 50
+			modifier = {
+				factor = 0
+				opinion = { who = FROM value = 0 }
+			}
+			modifier = {
+				factor = 0
+				opinion = { who = FROMFROM value = 0 }
+			}
+		}
+	}
+	option = {
+		# Traitor!
+		name = "EVTOPTBMARRIAGE105"
+		add_rival = FROM
+		remove_lover = FROM
+		hidden_tooltip = { FROM = { character_event = { id = marriage.106 } } }
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				opinion = { who = FROM value = 0 }
+			}
+		}
+	}
+	option = {
+		# Thief!
+		name = "EVTOPTCMARRIAGE105"
+		add_rival = FROMFROM
+		remove_lover = FROM
+		hidden_tooltip = { FROMFROM = { character_event = { id = marriage.107 } } }
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				opinion = { who = FROMFROM value = 0 }
+			}
+		}
+	}
+	option = {
+		# Perhaps it is not so bad
+		name = "EVTOPTDMARRIAGE105"
+		remove_lover = FROM
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				num_of_lovers = 2
+			}
+			modifier = {
+				factor = 2
+				is_married = yes
+			}
+			modifier = {
+				factor = 4
+				trait = friendly
+			}
+			modifier = {
+				factor = 0.25
+				trait = cold
+			}
+			modifier = {
+				factor = 2
+				trait = confident
+			}
+			modifier = {
+				factor = 0.5
+				trait = neurotic
+			}
+		}
+	}
+}
+
+character_event = {
+	id = marriage.106
+	desc = "EVTDESCMARRIAGE106"
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAMARRIAGE106"
+		add_rival = FROM
+	}
+}
+character_event = {
+	id = marriage.107
+	desc = "EVTDESCMARRIAGE107"
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAMARRIAGE107"
+		add_rival = FROM
+	}
+}
+
+# Event - man proposes to woman
+# This is decision triggered
+character_event = {
+	id = marriage.200
+	desc = "EVTDESCMARRIAGE200"
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+	
+	option = {
+		# Propose patrilineal marriage - must be same-or-higher-ranking
+		trigger = {
+			OR = {
+				higher_tier_than = king
+				AND = {
+					OR = {
+						higher_tier_than = duke
+						any_heir_title = { higher_tier_than = king }
+						AND = {
+							has_minor_title = title_expected_successor
+							liege = { higher_tier_than = king }
+						}
+					}
+					any_lover = { NOT = { higher_tier_than = king } }
+				}
+				AND = {
+					OR = {
+						higher_tier_than = count
+						any_heir_title = { higher_tier_than = duke }
+						AND = {
+							has_minor_title = title_expected_successor
+							liege = { higher_tier_than = duke }
+						}
+					}
+					any_lover = {
+						NOT = { higher_tier_than = duke }
+						NOT = { any_heir_title = { higher_tier_than = king } }
+						NOT = {
+							AND = {
+								has_minor_title = title_expected_successor
+								liege = { higher_tier_than = king }
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						higher_tier_than = baron
+						any_heir_title = { higher_tier_than = count }
+						AND = {
+							has_minor_title = title_expected_successor
+							liege = { higher_tier_than = count }
+						}
+					}
+					any_lover = {
+						NOT = { higher_tier_than = count }
+						NOT = { any_heir_title = { higher_tier_than = duke } }
+						NOT = {
+							AND = {
+								has_minor_title = title_expected_successor
+								liege = { higher_tier_than = duke }
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						is_landed = yes
+						any_heir_title = { higher_tier_than = baron }
+						AND = {
+							has_minor_title = title_expected_successor
+							liege = { higher_tier_than = baron }
+						}
+					}
+					any_lover = {
+						NOT = { higher_tier_than = baron }
+						NOT = { any_heir_title = { higher_tier_than = count } }
+						NOT = {
+							AND = {
+								has_minor_title = title_expected_successor
+								liege = { higher_tier_than = count }
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						any_heir_title = { always = yes }
+						has_minor_title = title_expected_successor
+					}
+					any_lover = {
+						NOT = { is_landed = yes }
+						NOT = { any_heir_title = { higher_tier_than = baron } }
+						NOT = {
+							AND = {
+								has_minor_title = title_expected_successor
+								liege = { higher_tier_than = baron }
+							}
+						}
+					}
+				}
+				AND = {
+					any_lover = {
+						NOT = { is_landed = yes }
+						NOT = { any_heir_title = { always = yes } }
+						NOT = { has_minor_title = title_expected_successor }
+					}
+				}
+			}
+		}
+		name = "EVTOPTAMARRIAGE200"
+		random_lover = { character_event = { id = marriage.201 tooltip = "EVTTOOLTIPMARRIAGE201" } }
+	}
+	
+	option = {
+		# Propose matrilineal marriage - must be lower-ranking
+		trigger = {
+			NOT = { higher_tier_than = king }
+			NOT = {
+				AND = {
+					OR = {
+						higher_tier_than = duke
+						any_heir_title = { higher_tier_than = king }
+						AND = {
+							has_minor_title = title_expected_successor
+							liege = { higher_tier_than = king }
+						}
+					}
+					any_lover = { NOT = { higher_tier_than = king } }
+				}
+			}
+			NOT = {
+				AND = {
+					OR = {
+						higher_tier_than = count
+						any_heir_title = { higher_tier_than = duke }
+						AND = {
+							has_minor_title = title_expected_successor
+							liege = { higher_tier_than = duke }
+						}
+					}
+					any_lover = {
+						NOT = { higher_tier_than = duke }
+						NOT = { any_heir_title = { higher_tier_than = king } }
+						NOT = {
+							AND = {
+								has_minor_title = title_expected_successor
+								liege = { higher_tier_than = king }
+							}
+						}
+					}
+				}
+			}
+			NOT = {
+				AND = {
+					OR = {
+						higher_tier_than = baron
+						any_heir_title = { higher_tier_than = count }
+						AND = {
+							has_minor_title = title_expected_successor
+							liege = { higher_tier_than = count }
+						}
+					}
+					any_lover = {
+						NOT = { higher_tier_than = count }
+						NOT = { any_heir_title = { higher_tier_than = duke } }
+						NOT = {
+							AND = {
+								has_minor_title = title_expected_successor
+								liege = { higher_tier_than = duke }
+							}
+						}
+					}
+				}
+			}
+			NOT = {
+				AND = {
+					OR = {
+						is_landed = yes
+						any_heir_title = { higher_tier_than = baron }
+						AND = {
+							has_minor_title = title_expected_successor
+							liege = { higher_tier_than = baron }
+						}
+					}
+					any_lover = {
+						NOT = { higher_tier_than = baron }
+						NOT = { any_heir_title = { higher_tier_than = count } }
+						NOT = {
+							AND = {
+								has_minor_title = title_expected_successor
+								liege = { higher_tier_than = count }
+							}
+						}
+					}
+				}
+			}
+			NOT = {
+				AND = {
+					OR = {
+						any_heir_title = { always = yes }
+						has_minor_title = title_expected_successor
+					}
+					any_lover = {
+						NOT = { is_landed = yes }
+						NOT = { any_heir_title = { higher_tier_than = baron } }
+						NOT = {
+							AND = {
+								has_minor_title = title_expected_successor
+								liege = { higher_tier_than = baron }
+							}
+						}
+					}
+				}
+			}
+			NOT = {
+				AND = {
+					any_lover = {
+						NOT = { is_landed = yes }
+						NOT = { any_heir_title = { always = yes } }
+						NOT = { has_minor_title = title_expected_successor }
+					}
+				}
+			}
+		}
+		name = "EVTOPTBMARRIAGE200"
+		random_lover = { character_event = { id = marriage.211 tooltip = "EVTTOOLTIPMARRIAGE211" } }
+	}
+	
+	option = {
+		name = "EVTOPTNEVERMIND"
+		clr_character_flag = flag_marry_your_lover
+		ai_chance = { factor = 0 }
+	}
+}
+
+character_event = {
+	id = marriage.201
+	desc = "EVTDESCMARRIAGE101"
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAMARRIAGE101"
+		FROM = { character_event = { id = marriage.202 tooltip = "EVTTOOLTIPMARRIAGE202" } }
+		hidden_tooltip = {
+			any_dynasty_member = {
+				limit = {
+					NOT = { character = FROM }
+					NOT = { character = ROOT }
+				}
+				character_event = { id = marriage.203 }
+			}
+		}
+		any_lover = {
+			limit = { NOT = { character = FROM } }
+			opinion = { who = ROOT modifier = opinion_heartbroken }
+			opinion = { who = FROM modifier = opinion_stole_my_love }
+			hidden_tooltip = { character_event = { id = marriage.105 } }
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0.5
+				num_of_lovers = 2
+			}
+			modifier = {
+				factor = 0
+				NOT = { opinion = { who = FROM value = 0 } }
+			}
+			modifier = {
+				factor = 0
+				has_ambition = obj_marry_for_power
+				FROM = { is_ruler = no }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBMARRIAGE102"
+		FROM = {
+			opinion = { who = ROOT modifier = opinion_heartbroken }
+			hidden_tooltip = { character_event = { id = marriage.204 } }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_ambition = obj_marry_for_love
+			}
+		}
+	}
+}
+
+character_event = {
+	id = marriage.202
+	desc = "EVTDESCMARRIAGE102"
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAMARRIAGE102"
+		remove_trait = not_ready_to_marry
+		FROM = { remove_trait = not_ready_to_marry }
+		add_spouse = FROM
+		hidden_tooltip = {
+			any_dynasty_member = {
+				limit = {
+					NOT = { character = ROOT }
+					NOT = { character = FROM }
+				}
+				character_event = { id = marriage.203 }
+			}
+		}
+		clr_character_flag = flag_marry_your_lover
+	}
+}
+
+character_event = {
+	id = marriage.203
+	desc = "EVTDESCMARRIAGE203"
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+	show_from_from = yes
+	
+	option = { name = "EVTOPTAMARRIAGE103" }
+}
+
+character_event = {
+	id = marriage.204
+	desc = "EVTDESCMARRIAGE104"
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAMARRIAGE104"
+		clr_character_flag = flag_marry_your_lover
+	}
+}
+character_event = {
+	id = marriage.211
+	desc = "EVTDESCMARRIAGE101"
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAMARRIAGE101"
+		FROM = { character_event = { id = marriage.212 tooltip = "EVTTOOLTIPMARRIAGE212" } }
+		hidden_tooltip = {
+			any_dynasty_member = {
+				limit = {
+					NOT = { character = FROM }
+					NOT = { character = ROOT }
+				}
+				character_event = { id = marriage.213 }
+			}
+		}
+		any_lover = {
+			limit = { NOT = { character = FROM } }
+			opinion = { who = ROOT modifier = opinion_heartbroken }
+			opinion = { who = FROM modifier = opinion_stole_my_love }
+			hidden_tooltip = { character_event = { id = marriage.105 } }
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0.5
+				num_of_lovers = 2
+			}
+			modifier = {
+				factor = 0
+				NOT = { opinion = { who = FROM value = 0 } }
+			}
+			modifier = {
+				factor = 0
+				has_ambition = obj_marry_for_power
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBMARRIAGE101"
+		FROM = {
+			opinion = { who = ROOT modifier = opinion_heartbroken }
+			hidden_tooltip = { character_event = { id = marriage.214 } }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_ambition = obj_marry_for_love
+			}
+		}
+	}
+}
+
+character_event = {
+	id = marriage.212
+	desc = "EVTDESCMARRIAGE102"
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAMARRIAGE102"
+		remove_trait = not_ready_to_marry
+		FROM = { remove_trait = not_ready_to_marry }
+		add_spouse_matrilineal = FROM
+		hidden_tooltip = {
+			any_dynasty_member = {
+				limit = {
+					NOT = { character = ROOT }
+					NOT = { character = FROM }
+				}
+				character_event = { id = marriage.213 }
+			}
+		}
+		clr_character_flag = flag_marry_your_lover
+	}
+}
+
+character_event = {
+	id = marriage.213
+	desc = "EVTDESCMARRIAGE213"
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+	show_from_from = yes
+	
+	option = { name = "EVTOPTAMARRIAGE103" }
+}
+
+character_event = {
+	id = marriage.214
+	desc = "EVTDESCMARRIAGE104"
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAMARRIAGE104"
+		clr_character_flag = flag_marry_your_lover
+	}
+}
+# Event - woman proposes to man
+# This is decision triggered
+character_event = {
+	id = marriage.300
+	desc = "EVTDESCMARRIAGE300"
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+	
+	option = {
+		# Propose matrilineal marriage - must be same-or-higher-ranking
+		trigger = {
+			OR = {
+				higher_tier_than = king
+				AND = {
+					OR = {
+						higher_tier_than = duke
+						any_heir_title = { higher_tier_than = king }
+						AND = {
+							has_minor_title = title_expected_successor
+							liege = { higher_tier_than = king }
+						}
+					}
+					any_lover = { NOT = { higher_tier_than = king } }
+				}
+				AND = {
+					OR = {
+						higher_tier_than = count
+						any_heir_title = { higher_tier_than = duke }
+						AND = {
+							has_minor_title = title_expected_successor
+							liege = { higher_tier_than = duke }
+						}
+					}
+					any_lover = {
+						NOT = { higher_tier_than = duke }
+						NOT = { any_heir_title = { higher_tier_than = king } }
+						NOT = {
+							AND = {
+								has_minor_title = title_expected_successor
+								liege = { higher_tier_than = king }
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						higher_tier_than = baron
+						any_heir_title = { higher_tier_than = count }
+						AND = {
+							has_minor_title = title_expected_successor
+							liege = { higher_tier_than = count }
+						}
+					}
+					any_lover = {
+						NOT = { higher_tier_than = count }
+						NOT = { any_heir_title = { higher_tier_than = duke } }
+						NOT = {
+							AND = {
+								has_minor_title = title_expected_successor
+								liege = { higher_tier_than = duke }
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						is_landed = yes
+						any_heir_title = { higher_tier_than = baron }
+						AND = {
+							has_minor_title = title_expected_successor
+							liege = { higher_tier_than = baron }
+						}
+					}
+					any_lover = {
+						NOT = { higher_tier_than = baron }
+						NOT = { any_heir_title = { higher_tier_than = count } }
+						NOT = {
+							AND = {
+								has_minor_title = title_expected_successor
+								liege = { higher_tier_than = count }
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						any_heir_title = { always = yes }
+						has_minor_title = title_expected_successor
+					}
+					any_lover = {
+						NOT = { is_landed = yes }
+						NOT = { any_heir_title = { higher_tier_than = baron } }
+						NOT = {
+							AND = {
+								has_minor_title = title_expected_successor
+								liege = { higher_tier_than = baron }
+							}
+						}
+					}
+				}
+				AND = {
+					any_lover = {
+						NOT = { is_landed = yes }
+						NOT = { any_heir_title = { always = yes } }
+						NOT = { has_minor_title = title_expected_successor }
+					}
+				}
+			}
+		}
+		name = "EVTOPTAMARRIAGE300"
+		random_lover = { character_event = { id = marriage.301 tooltip = "EVTTOOLTIPMARRIAGE301" } }
+	}
+	
+	option = {
+		# Propose patrilineal marriage - must be lower-ranking
+		trigger = {
+			NOT = { higher_tier_than = king }
+			NOT = {
+				AND = {
+					OR = {
+						higher_tier_than = duke
+						any_heir_title = { higher_tier_than = king }
+						AND = {
+							has_minor_title = title_expected_successor
+							liege = { higher_tier_than = king }
+						}
+					}
+					any_lover = { NOT = { higher_tier_than = king } }
+				}
+			}
+			NOT = {
+				AND = {
+					OR = {
+						higher_tier_than = count
+						any_heir_title = { higher_tier_than = duke }
+						AND = {
+							has_minor_title = title_expected_successor
+							liege = { higher_tier_than = duke }
+						}
+					}
+					any_lover = {
+						NOT = { higher_tier_than = duke }
+						NOT = { any_heir_title = { higher_tier_than = king } }
+						NOT = {
+							AND = {
+								has_minor_title = title_expected_successor
+								liege = { higher_tier_than = king }
+							}
+						}
+					}
+				}
+			}
+			NOT = {
+				AND = {
+					OR = {
+						higher_tier_than = baron
+						any_heir_title = { higher_tier_than = count }
+						AND = {
+							has_minor_title = title_expected_successor
+							liege = { higher_tier_than = count }
+						}
+					}
+					any_lover = {
+						NOT = { higher_tier_than = count }
+						NOT = { any_heir_title = { higher_tier_than = duke } }
+						NOT = {
+							AND = {
+								has_minor_title = title_expected_successor
+								liege = { higher_tier_than = duke }
+							}
+						}
+					}
+				}
+			}
+			NOT = {
+				AND = {
+					OR = {
+						is_landed = yes
+						any_heir_title = { higher_tier_than = baron }
+						AND = {
+							has_minor_title = title_expected_successor
+							liege = { higher_tier_than = baron }
+						}
+					}
+					any_lover = {
+						NOT = { higher_tier_than = baron }
+						NOT = { any_heir_title = { higher_tier_than = count } }
+						NOT = {
+							AND = {
+								has_minor_title = title_expected_successor
+								liege = { higher_tier_than = count }
+							}
+						}
+					}
+				}
+			}
+			NOT = {
+				AND = {
+					OR = {
+						any_heir_title = { always = yes }
+						has_minor_title = title_expected_successor
+					}
+					any_lover = {
+						NOT = { is_landed = yes }
+						NOT = { any_heir_title = { higher_tier_than = baron } }
+						NOT = {
+							AND = {
+								has_minor_title = title_expected_successor
+								liege = { higher_tier_than = baron }
+							}
+						}
+					}
+				}
+			}
+			NOT = {
+				AND = {
+					any_lover = {
+						NOT = { is_landed = yes }
+						NOT = { any_heir_title = { always = yes } }
+						NOT = { has_minor_title = title_expected_successor }
+					}
+				}
+			}
+		}
+		name = "EVTOPTBMARRIAGE300"
+		random_lover = { character_event = { id = marriage.311 tooltip = "EVTTOOLTIPMARRIAGE311" } }
+	}
+	
+	option = {
+		name = "EVTOPTNEVERMIND"
+		clr_character_flag = flag_marry_your_lover
+		ai_chance = { factor = 0 }
+	}
+}
+
+character_event = {
+	id = marriage.301
+	desc = "EVTDESCMARRIAGE101"
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAMARRIAGE101"
+		FROM = { character_event = { id = marriage.302 tooltip = "EVTTOOLTIPMARRIAGE302" } }
+		hidden_tooltip = {
+			any_dynasty_member = {
+				limit = {
+					NOT = { character = FROM }
+					NOT = { character = ROOT }
+				}
+				character_event = { id = marriage.303 }
+			}
+		}
+		any_lover = {
+			limit = { NOT = { character = FROM } }
+			opinion = { who = ROOT modifier = opinion_heartbroken }
+			opinion = { who = FROM modifier = opinion_stole_my_love }
+			hidden_tooltip = { character_event = { id = marriage.105 } }
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0.5
+				num_of_lovers = 2
+			}
+			modifier = {
+				factor = 0
+				NOT = { opinion = { who = FROM value = 0 } }
+			}
+			modifier = {
+				factor = 0
+				has_ambition = obj_marry_for_power
+				FROM = { is_ruler = no }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBMARRIAGE101"
+		FROM = {
+			opinion = { who = ROOT modifier = opinion_heartbroken }
+			hidden_tooltip = { character_event = { id = marriage.304 } }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_ambition = obj_marry_for_love
+			}
+		}
+	}
+}
+
+character_event = {
+	id = marriage.302
+	desc = "EVTDESCMARRIAGE102"
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAMARRIAGE102"
+		remove_trait = not_ready_to_marry
+		FROM = { remove_trait = not_ready_to_marry }
+		add_spouse_matrilineal = FROM
+		hidden_tooltip = {
+			any_dynasty_member = {
+				limit = {
+					NOT = { character = ROOT }
+					NOT = { character = FROM }
+				}
+				character_event = { id = marriage.303 }
+			}
+		}
+		clr_character_flag = flag_marry_your_lover
+	}
+}
+
+character_event = {
+	id = marriage.303
+	desc = "EVTDESCMARRIAGE303"
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+	show_from_from = yes
+	
+	option = { name = "EVTOPTAMARRIAGE103" }
+}
+
+character_event = {
+	id = marriage.304
+	desc = "EVTDESCMARRIAGE104"
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAMARRIAGE104"
+		clr_character_flag = flag_marry_your_lover
+	}
+}
+character_event = {
+	id = marriage.311
+	desc = "EVTDESCMARRIAGE101"
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAMARRIAGE101"
+		FROM = { character_event = { id = marriage.312 tooltip = "EVTTOOLTIPMARRIAGE312" } }
+		hidden_tooltip = {
+			any_dynasty_member = {
+				limit = {
+					NOT = { character = FROM }
+					NOT = { character = ROOT }
+				}
+				character_event = { id = marriage.313 }
+			}
+		}
+		any_lover = {
+			limit = { NOT = { character = FROM } }
+			opinion = { who = ROOT modifier = opinion_heartbroken }
+			opinion = { who = FROM modifier = opinion_stole_my_love }
+			hidden_tooltip = { character_event = { id = marriage.105 } }
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0.5
+				num_of_lovers = 2
+			}
+			modifier = {
+				factor = 0
+				NOT = { opinion = { who = FROM value = 0 } }
+			}
+			modifier = {
+				factor = 0
+				has_ambition = obj_marry_for_power
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBMARRIAGE101"
+		FROM = {
+			opinion = { who = ROOT modifier = opinion_heartbroken }
+			hidden_tooltip = { character_event = { id = marriage.314 } }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_ambition = obj_marry_for_love
+			}
+		}
+	}
+}
+
+character_event = {
+	id = marriage.312
+	desc = "EVTDESCMARRIAGE102"
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAMARRIAGE102"
+		remove_trait = not_ready_to_marry
+		FROM = { remove_trait = not_ready_to_marry }
+		add_spouse = FROM
+		hidden_tooltip = {
+			any_dynasty_member = {
+				limit = {
+					NOT = { character = ROOT }
+					NOT = { character = FROM }
+				}
+				character_event = { id = marriage.313 }
+			}
+		}
+		clr_character_flag = flag_marry_your_lover
+	}
+}
+
+character_event = {
+	id = marriage.313
+	desc = "EVTDESCMARRIAGE313"
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+	show_from_from = yes
+	
+	option = { name = "EVTOPTAMARRIAGE103" }
+}
+
+character_event = {
+	id = marriage.314
+	desc = "EVTDESCMARRIAGE104"
+	picture = GFX_evt_marriage
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAMARRIAGE104"
+		clr_character_flag = flag_marry_your_lover
 	}
 }

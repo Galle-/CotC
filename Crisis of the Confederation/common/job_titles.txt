@@ -78,9 +78,9 @@ job_marshal = {
 	#dismiss_trigger = {
 	#}
 	
-	action = action_distribute_mil_tech
-	action = action_recruiting_drive
-	action = action_suppress_revolts
+	action = action_improve_rel_relations
+	action = action_train_troops
+	action = action_assist_arrest
 
 	lift_fow = yes
 }
@@ -108,8 +108,8 @@ job_treasurer = {
 	#}
 	
 	action = action_oversee_construction
-	action = action_improve_education
-	action = action_maintain_infrastructure
+	action = action_squeeze_peasants
+	action = action_charity
 
 	lift_fow = yes
 }
@@ -135,9 +135,9 @@ job_spymaster = {
 	#dismiss_trigger = {
 	#}
 	
-	action = action_counterintelligence
+	action = action_uncover_plots
 	action = action_organize_spies
-	action = action_spread_propaganda
+	action = action_inquisition
 
 	lift_neighbor_fow = yes
 }
@@ -166,7 +166,7 @@ job_spiritual = {
 
 	lift_fow = yes
 	
-	action = action_research_mil_tech
-	action = action_research_eco_tech
-	action = action_research_cul_tech
+	action = action_advance_mil_tech
+	action = action_advance_eco_tech
+	action = action_advance_cul_tech
 }

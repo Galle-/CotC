@@ -1,4 +1,13 @@
 decisions = {
+	adopt_real_dynasty = {
+		potential = {
+			ai = yes
+			dynasty = 0
+		}
+		allow = { always = yes }
+		effect = { dynasty = father_bastard }
+		ai_will_do = { factor = 1 }
+	}
 	marry_your_lover_same_sex = {
 		is_high_prio = yes
 		potential = {
@@ -68,7 +77,137 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				any_lover = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_heartbreaker } }
+				any_lover = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_heartbroken } }
+			}
+		}
+	}
+	marry_your_lover_male = {
+		is_high_prio = yes
+		potential = {
+			NOT = { has_character_flag = flag_marry_your_lover }
+			age = 18
+			prisoner = no
+			NOT = { trait = incapable }
+			is_married = no
+			num_of_lovers = 1
+			NOT = { num_of_lovers = 2 }
+			is_female = no
+			any_lover = {
+				is_female = yes
+				age = 18
+				prisoner = no
+				NOT = { trait = incapable }
+				is_married = no
+			}
+		}
+		allow = { always = yes }
+		effect = {
+			set_character_flag = flag_marry_your_lover
+			character_event = { id = marriage.200 tooltip = "EVTTOOLTIPMARRIAGE200" }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_ambition = obj_marry_for_power
+				OR = {
+					any_lover = { is_ruler = no }
+					AND = {
+						higher_tier_than = baron
+						any_lover = { tier = baron }
+					}
+					AND = {
+						higher_tier_than = count
+						any_lover = { tier = count }
+					}
+					AND = {
+						higher_tier_than = duke
+						any_lover = { tier = duke }
+					}
+					AND = {
+						higher_tier_than = king
+						any_lover = { tier = king }
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					trait = neurotic
+					trait = craven
+					NOT = { age = 23 }
+				}
+				NOT = { has_ambition = obj_marry_for_love }
+				NOT = { has_ambition = obj_marry_for_power }
+			}
+			modifier = {
+				factor = 0
+				any_lover = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_heartbroken } }
+			}
+		}
+	}
+	marry_your_lover_female = {
+		is_high_prio = yes
+		potential = {
+			NOT = { has_character_flag = flag_marry_your_lover }
+			age = 18
+			prisoner = no
+			NOT = { trait = incapable }
+			is_married = no
+			num_of_lovers = 1
+			NOT = { num_of_lovers = 2 }
+			is_female = yes
+			any_lover = {
+				is_female = no
+				age = 18
+				prisoner = no
+				NOT = { trait = incapable }
+				is_married = no
+			}
+		}
+		allow = { always = yes }
+		effect = {
+			set_character_flag = flag_marry_your_lover
+			character_event = { id = marriage.200 tooltip = "EVTTOOLTIPMARRIAGE200" }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_ambition = obj_marry_for_power
+				OR = {
+					any_lover = { is_ruler = no }
+					AND = {
+						higher_tier_than = baron
+						any_lover = { tier = baron }
+					}
+					AND = {
+						higher_tier_than = count
+						any_lover = { tier = count }
+					}
+					AND = {
+						higher_tier_than = duke
+						any_lover = { tier = duke }
+					}
+					AND = {
+						higher_tier_than = king
+						any_lover = { tier = king }
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					trait = neurotic
+					trait = craven
+					NOT = { age = 23 }
+				}
+				NOT = { has_ambition = obj_marry_for_love }
+				NOT = { has_ambition = obj_marry_for_power }
+			}
+			modifier = {
+				factor = 0
+				any_lover = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_heartbroken } }
 			}
 		}
 	}

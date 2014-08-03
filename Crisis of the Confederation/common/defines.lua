@@ -493,8 +493,8 @@ NCharacter = {
 	AGE_VERY_OLD = 80,								-- Non-child characters below this age have the 'old' static modifier applied
 	MAX_CHILD_BIRTH_AGE = 50,						-- Female menopause age.
 	CHILD_BIRTH_TO_PREGNANCY_WAIT = 3,
-	BASE_NR_OF_CHILDREN_PER_COUPLE = 2,
-	EXTRA_NR_OF_CHILDREN_FOR_PLAYERS = 2,
+	BASE_NR_OF_CHILDREN_PER_COUPLE = 0,
+	EXTRA_NR_OF_CHILDREN_FOR_PLAYERS = 0,
 	COURT_SIZE_CHILD_PENALTY_THRESHOLD = 30,
 	DYNASTY_CONTROLS_HOLY_ORDER_PRESTIGE = 2,		-- Monthly Prestige from a dynasty member as head of a Holy Order (only for counts+ and if the same religion)
 	DYNASTY_CONTROLS_HOLY_ORDER_PIETY = 1,			-- Monthly Piety from a dynasty member as head of a Holy Order (only for counts+ and if the same religion)
@@ -511,10 +511,10 @@ NCharacter = {
 	NATURAL_DEATH_CHANCE_AGE_80 = 2040,				-- Natural deaths per decade out of 10000 people: Age 80-90
 	NATURAL_DEATH_CHANCE_AGE_90 = 4080,				-- Natural deaths per decade out of 10000 people: Age 90-99
 	NATURAL_DEATH_CHANCE_AGE_100 = 8160,			-- Natural deaths per decade out of 10000 people: Age 100+
-	FERTILITY_BASE_MULT = 0.1,						-- Base fertility multiplier to adjust the base chance of impregnation
-	SECONDARY_SPOUSE_FERTILITY_MULT = 0.1,			-- Applied to fertility of secondary spouses and concubines
-	NOT_SPOUSE_FERTILITY_MULT = 0.1,				-- Applied to fertility when the two characters are not married
-	MARRIED_LOVERS_FERTILITY_MULT = 2,			-- Applied to fertility when lovers are married
+	FERTILITY_BASE_MULT = 0.25,						-- Base fertility multiplier to adjust the base chance of impregnation
+	SECONDARY_SPOUSE_FERTILITY_MULT = 0.25,			-- Applied to fertility of secondary spouses and concubines
+	NOT_SPOUSE_FERTILITY_MULT = 0.25,				-- Applied to fertility when the two characters are not married
+	MARRIED_LOVERS_FERTILITY_MULT = 1.5,			-- Applied to fertility when lovers are married
 	INFANT_DEATH_CHANCE = 0.0,						-- Chance of stillbirth / death at birth
 },
 

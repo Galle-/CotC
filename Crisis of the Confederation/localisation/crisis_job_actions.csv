@@ -1,26 +1,26 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
 action_sabotage_relations;Sabotage Relations;;;;;;;;;;;;;x
 action_sabotage_relations_desc;Send the [From.GetChancellorName] on a diplomatic mission to undermine relations between a system's ruler and their superiors and allies.;;;;;;;;;;;;;x
-action_distribute_mil_tech;Distribute Military Technology;;;;;;;;;;;;;x
-action_distribute_mil_tech_desc;Send the [From.GetMarshalName] to instruct military personal in a system on the latest military innovations made in the capital.;;;;;;;;;;;;;x
-action_recruiting_drive;Drive Recruitment;;;;;;;;;;;;;x
-action_recruiting_drive_desc;Send the [From.GetMarshalName] to run a recruiting drive in a system and shore up your manpower.;;;;;;;;;;;;;x
-action_suppress_revolts;Suppress Revolts;;;;;;;;;;;;;x
-action_suppress_revolts_desc;Send the [From.GetMarshalName] to oversee counter-insurgency operations in a system.;;;;;;;;;;;;;x
-action_improve_education;Improve Education;;;;;;;;;;;;;x
-action_improve_education_desc;Send the [From.GetTreasurerName] to bring a system's educational standards up to par with those of the capital.;;;;;;;;;;;;;x
-action_maintain_infrastructure;Maintain Infrastructure;;;;;;;;;;;;;x
-action_maintain_infrastructure_desc;Send the [From.GetTreasurerName] to make sure nothing in a system is falling apart due to shoddy maintenance.;;;;;;;;;;;;;x
-action_counterintelligence;Run Counterintelligence;;;;;;;;;;;;;x
-action_counterintelligence_desc;Order [From.PrimaryTitle.GetAdjective] Intelligence to focus on seeking out foreign spies and domestic terrorists in a system.;;;;;;;;;;;;;x
-action_spread_propaganda;Spread Propaganda;;;;;;;;;;;;;x
-action_spread_propaganda_desc;Order [From.PrimaryTitle.GetAdjective] intelligence to spread [From.Religion.GetName] propaganda in a system.;;;;;;;;;;;;;x
-action_research_mil_tech;Research Military Technology;;;;;;;;;;;;;x
-action_research_mil_tech_desc;Order your [From.GetSpiritualName] to design new weapons, defensive systems, and propulsion techniques.;;;;;;;;;;;;;x
-action_research_eco_tech;Research Social Sciences;;;;;;;;;;;;;x
-action_research_eco_tech_desc;Order your [From.GetSpiritualName] to focus on researching economics, psychology, and related matters.;;;;;;;;;;;;;x
-action_research_cul_tech;Research Hard Sciences;;;;;;;;;;;;;x
-action_research_cul_tech_desc;Order your [From.GetSpiritualName] to focus on researching physics, biology, and related matters.;;;;;;;;;;;;;x
+action_improve_rel_relations;Distribute Military Technology;;;;;;;;;;;;;x
+action_improve_rel_relations_desc;Send the [From.GetMarshalName] to instruct military personal in a system on the latest military innovations made in the capital.;;;;;;;;;;;;;x
+action_train_troops;Drive Recruitment;;;;;;;;;;;;;x
+action_train_troops_desc;Send the [From.GetMarshalName] to run a recruiting drive in a system and shore up your manpower.;;;;;;;;;;;;;x
+action_assist_arrest;Suppress Revolts;;;;;;;;;;;;;x
+action_assist_arrest_desc;Send the [From.GetMarshalName] to oversee counter-insurgency operations in a system.;;;;;;;;;;;;;x
+action_squeeze_peasants;Improve Education;;;;;;;;;;;;;x
+action_squeeze_peasants_desc;Send the [From.GetTreasurerName] to bring a system's educational standards up to par with those of the capital.;;;;;;;;;;;;;x
+action_charity;Maintain Infrastructure;;;;;;;;;;;;;x
+action_charity_desc;Send the [From.GetTreasurerName] to make sure nothing in a system is falling apart due to shoddy maintenance.;;;;;;;;;;;;;x
+action_uncover_plots;Run Counterintelligence;;;;;;;;;;;;;x
+action_uncover_plots_desc;Order [From.PrimaryTitle.GetAdjective] Intelligence to focus on seeking out foreign spies and domestic terrorists in a system.;;;;;;;;;;;;;x
+action_inquisition;Spread Propaganda;;;;;;;;;;;;;x
+action_inquisition_desc;Order [From.PrimaryTitle.GetAdjective] intelligence to spread [From.Religion.GetName] propaganda in a system.;;;;;;;;;;;;;x
+action_advance_mil_tech;Research Military Technology;;;;;;;;;;;;;x
+action_advance_mil_tech_desc;Order your [From.GetSpiritualName] to design new weapons, defensive systems, and propulsion techniques.;;;;;;;;;;;;;x
+action_advance_eco_tech;Research Social Sciences;;;;;;;;;;;;;x
+action_advance_eco_tech_desc;Order your [From.GetSpiritualName] to focus on researching economics, psychology, and related matters.;;;;;;;;;;;;;x
+action_advance_cul_tech;Research Hard Sciences;;;;;;;;;;;;;x
+action_advance_cul_tech_desc;Order your [From.GetSpiritualName] to focus on researching physics, biology, and related matters.;;;;;;;;;;;;;x
 EVTDESCSPYMASTER0;You have discovered a plot where [FromFrom.GetFullName] seeks to [FromFrom.Plot.GetName].;;;;;;;;;;;;;x
 EVTOPTASPYMASTER0;I will report this to the [Liege.GetTitle].;;;;;;;;;;;;;x
 EVTOPTBSPYMASTER0;I wonder how much that secret is worth to [FromFrom.GetHerHim]?;;;;;;;;;;;;;x
