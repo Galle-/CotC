@@ -1,5 +1,17 @@
 # New CotC Sprites
 spriteTypes = {
+	spriteType = {
+		name = "GFX_merchant_male_clothes_behind"
+		texturefile = "gfx\\characters\\merchant_male\\CotCMaleSuit_Test_01.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_merchant_male_clothes"
+		texturefile = "gfx\\characters\\merchant_male\\CotCMaleSuit_Test_01.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
 	### UNIVERSAL ###
 	spriteType = {
 		name = "GFX_character_implants"

@@ -1,0 +1,16 @@
+# 51 - Chengdu
+
+# County Title
+title = c_chengdu
+
+# Settlements
+max_settlements = 4
+b_chengdu_i = castle
+b_chengdu_ii = city
+b_chengdu_iii = temple
+
+# Misc
+culture = sino_bianjiangese
+religion = colonial_separatist
+
+# History

@@ -2,6 +2,35 @@
 # Also remember to tell the landed title to use this mercenary type instead.
 # Several titles can refer to the same type as well now.
 
+pmc_fighters = {
+	levy_size = 2
+	light_infantry = 200
+	heavy_infantry = 100
+	galleys = 10
+}
+pmc_marines = {
+	levy_size = 3
+	archers = 50
+	galleys = 10
+}
+pmc_ships = {
+	levy_size = 2
+	light_cavalry = 25
+	knights = 10
+	dreadnoughts = 1
+	galleys = 10
+}
+pmc_general = {
+	levy_size = 2
+	light_infantry = 200
+	heavy_infantry = 100
+	archers = 50
+	light_cavalry = 25
+	knights = 10
+	dreadnoughts = 1
+	galleys = 20
+}
+
 knights_templar_composition = {
 	levy_size = 6
 	heavy_infantry = 600

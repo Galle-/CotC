@@ -146,7 +146,7 @@
 	father = 1107945 # Ryusei Sato
 	
 	2974.1.1 = { birth = "2974.1.1" }
-	2998.1.1 = { effect = { give_job_title = job_scientist } }
+	2998.1.1 = { effect = { give_job_title = job_spiritual } }
 }
 
 1147945 = {
@@ -236,7 +236,7 @@
 	culture = japanese_tengoku
 	religion = colonial_separatist
 	
-	trait = trained_soldier
+	trait = tough_soldier
 	trait = fighter_pilot
 	
 	2962.1.1 = { birth = "2962.1.1" }
@@ -272,6 +272,7 @@
 	dynasty = 8665 # Miura
 	female = no
 	
+	culture = japanese_tengoku
 	religion = astrist
 	
 	trait = flamboyant_schemer
@@ -381,7 +382,7 @@
 	culture = anglo_tengoku
 	religion = astrist
 	
-	trait = trained_soldier
+	trait = tough_soldier
 	trait = marine_colonel
 	trait = radical
 	trait = content
@@ -472,7 +473,7 @@
 	culture = russo_tengoku
 	religion = astrist
 	
-	trait = trained_soldier
+	trait = tough_soldier
 	trait = fighter_pilot
 	
 	2961.1.1 = { birth = "2961.1.1" }

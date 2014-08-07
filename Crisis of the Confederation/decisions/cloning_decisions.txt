@@ -17,6 +17,10 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+			# Note: This ai_will_do block is actually an elaborate magic spell
+			# that keeps the game from being massively slowed down by population
+			# explosions. Probably. It might be something else doing that. Either
+			# way, best not to mess with it.
 			modifier = {
 				factor = 0
 				religion_group = religious_group
@@ -84,8 +88,14 @@ decisions = {
 					NOT = { trait = incapable }
 					NOT = { trait = bastard }
 				}
-				NOT = { has_ambition = obj_have_a_child }
-				NOT = { has_ambition = obj_have_five_children }
+			}
+			modifier = {
+				factor = 0
+				num_of_children = 5 # Oh just GIVE UP already
+			}
+			modifier = {
+				factor = 0
+				has_character_flag = flag_cloning_in_progress
 			}
 		}
 	}

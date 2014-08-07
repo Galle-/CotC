@@ -1,0 +1,16 @@
+# 58 - Tianjin
+
+# County Title
+title = c_tianjin
+
+# Settlements
+max_settlements = 4
+b_tianjin_i = castle
+b_tianjin_ii = city
+b_tianjin_iii = temple
+
+# Misc
+culture = sino_bianjiangese
+religion = colonial_separatist
+
+# History

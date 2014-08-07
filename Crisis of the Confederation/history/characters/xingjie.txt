@@ -138,7 +138,37 @@
 	culture = sino_xingjie
 	religion = terran_federalist
 	
+	father = 12013426 # Tao Jia
+	mother = 11013714 # Shu Gu
+	
 	2952.1.1 = { birth = 2952.1.1 }
+}
+
+12013426 = {
+	# Father of Fang and Yong Jia
+	name = "Tao"
+	dynasty = 13426 # Jia
+	female = no
+	
+	culture = sino_xingjie
+	religion = terran_federalist
+	
+	2920.1.1 = { birth = 2920.1.1 }
+	2946.1.1 = { add_spouse = 11013714 } # Shu Gu
+	2946.1.1 = { effect = { spouse = { add_lover = ROOT } } }
+	2996.1.1 = { death = "2996.1.1" }
+}
+
+11013714 = {
+	# Mother of Fang and Yong Jia
+	name = "Shu"
+	dynasty = 13714 # Gu
+	female = yes
+	
+	culture = sino_xingjie
+	religion = terran_federalist
+	
+	2922.1.1 = { birth = "2922.1.1" }
 }
 
 1104578 = {

@@ -1,0 +1,411 @@
+# PMCs
+
+d_militaires_sans_frontieres = {
+	color = { 200 200 0 }
+	color2 = { 25 25 25 }
+	
+	capital = 202 # Sol, for now
+	
+	# Hire Trigger
+	allow = { always = yes }
+	
+	# Parent Religion
+	religion = astrist
+	
+	mercenary = yes
+	
+	title = "FLEETADMIRAL"
+	title_female = "FLEETADMIRAL_female"
+	title_foa = "FLEETADMIRALFOA"
+	title_foa_female = "FLEETADMIRALFOA_female"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+
+	mercenary_type = pmc_general
+}
+d_aegis_security = {
+	color = { 225 225 225 }
+	color2 = { 150 200 200 }
+	
+	capital = 202 # Sol, for now
+	
+	# Hire Trigger
+	allow = { is_primary_war_attacker = no } # Defensive purposes only
+	
+	# Parent Religion
+	religion = terran_federalist
+	
+	mercenary = yes
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+
+	mercenary_type = pmc_marines
+}
+d_yibai_lin_ba_xing = {
+	color = { 225 50 50 }
+	color2 = { 200 225 50 }
+	
+	capital = 267 # Huangjing
+	
+	# Hire Trigger
+	allow = { NOT = { top_liege = { tier = emperor } } }
+	
+	# Parent Religion
+	culture = sino_xingjie
+	religion = colonial_separatist
+	
+	mercenary = yes
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+
+	mercenary_type = pmc_fighters
+}
+d_razin_security = {
+	color = { 225 150 200 }
+	color2 = { 0 0 0 }
+	
+	capital = 206 # Gagarin
+	
+	# Hire Trigger
+	allow = { is_primary_war_attacker = no } # Defensive purposes only
+	
+	# Parent Religion
+	culture = russo_centauri
+	religion = terran_republican
+	
+	mercenary = yes
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+
+	mercenary_type = pmc_fighters
+}
+d_hawkwood_hazard_and_risk = {
+	color = { 128 32 32 }
+	color2 = { 32 128 128 }
+	
+	capital = 315 # Hawkwood, naturally
+	
+	# Hire Trigger
+	allow = { NOT = { any_current_enemy = { culture_group = avalonian_group } } }
+	
+	culture = anglo_avalonian
+	religion = colonial_separatist
+	
+	mercenary = yes
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+
+	mercenary_type = pmc_warships
+}
+d_executive_operations = {
+	color = { 50 100 50 }
+	color2 = { 200 200 200 }
+	
+	capital = 202 # Sol, for now
+	
+	# Hire Trigger
+	allow = { always = yes }
+	
+	religion = terran_federalist
+	
+	mercenary = yes
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+
+	mercenary_type = pmc_marines
+}
+d_strategic_solutions = {
+	color = { 50 50 100 }
+	color2 = { 200 200 200 }
+	
+	capital = 202 # Sol, for now
+	
+	# Hire Trigger
+	allow = { always = yes }
+	
+	religion = terran_federalist
+	
+	mercenary = yes
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+
+	mercenary_type = pmc_ships
+}
+d_interstar_tactical = {
+	color = { 100 50 50 }
+	color2 = { 200 200 200 }
+	
+	capital = 202 # Sol, for now
+	
+	# Hire Trigger
+	allow = { always = yes }
+	
+	religion = terran_federalist
+	
+	mercenary = yes
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+
+	mercenary_type = pmc_fighters
+}
+d_taiwo_international = {
+	color = { 75 15 75 }
+	color2 = { 200 200 200 }
+	
+	capital = 285 # Afolayan
+	
+	# Hire Trigger
+	allow = { always = yes }
+	
+	culture = west_afro_angani
+	religion = terran_federalist
+	
+	mercenary = yes
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+
+	mercenary_type = pmc_ships
+}
+d_tannhauser_international = {
+	color = { 75 75 15 }
+	color2 = { 200 200 200 }
+	
+	capital = 212 # Tannhauser Gate
+	
+	# Hire Trigger
+	allow = { NOT = { culture_group = xingjie_group } } # Ancient grudges
+	
+	culture = anglo_centauri
+	religion = terran_federalist
+	
+	mercenary = yes
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+
+	mercenary_type = pmc_fighters
+}
+d_nan_men_fuzhu_hui = {
+	color = { 15 15 75 }
+	color2 = { 200 200 200 }
+	
+	capital = 207 # Hu Lao Gate
+	
+	# Hire Trigger
+	allow = { NOT = { culture_group = frontiersman_group } } # Ancient grudges
+	
+	culture = sino_centauri
+	religion = terran_federalist
+	
+	mercenary = yes
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+
+	mercenary_type = pmc_marines
+}
+d_sakamoto_enterprises = {
+	color = { 250 175 225 }
+	color2 = { 255 255 255 }
+	
+	capital = 210 # Tengoku
+	
+	# Hire Trigger
+	allow = { always = yes }
+	
+	culture = japanese_tengoku
+	religion = terran_federalist
+	
+	mercenary = yes
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+
+	mercenary_type = pmc_general
+}
+d_outworlds_security = {
+	color = { 250 175 225 }
+	color2 = { 255 255 255 }
+	
+	capital = 363 # Paraiso
+	
+	# Hire Trigger
+	allow = { is_primary_war_attacker = no } # Defensive purposes only
+	
+	culture = hispanic_celestean
+	religion = colonial_separatist
+	
+	mercenary = yes
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+
+	mercenary_type = pmc_ships
+}
+d_zahran_defense_industries = {
+	color = { 80 200 55 }
+	color2 = { 200 50 50 }
+	
+	capital = 301 # Sakina
+	
+	# Hire Trigger
+	allow = { NOT = { culture_group = celestean_group } }
+	
+	culture = arab_samawati
+	religion = pilgrim
+	
+	mercenary = yes
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+
+	mercenary_type = pmc_fighters
+}
+d_san_miguel_international = {
+	color = { 250 250 250 }
+	color2 = { 250 225 50 }
+	
+	capital = 74 # Illuminacion
+	
+	# Hire Trigger
+	allow = { NOT = { culture_group = samawati_group } }
+	
+	culture = hispanic_celestean
+	religion = pilgrim
+	
+	mercenary = yes
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+
+	mercenary_type = pmc_ships
+}

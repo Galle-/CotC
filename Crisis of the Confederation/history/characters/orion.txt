@@ -17,15 +17,19 @@
 	trait = ambitious
 	trait = proud
 	
+	health = 10 # Prevent sudden, anticlimactic deaths
+	
 	2949.1.1 = { birth = "2949.1.1" }
 	2981.1.1 = { add_spouse = 1214331 } # Ximena Ramirez
 	2997.5.5 = {
 		# Failed assassination attempt
-		add_trait = maimed
+		effect = { add_trait = maimed }
 	}
 	2997.10.32 = {
-		remove_trait = maimed
-		add_trait = cybernetic_limb
+		effect = {
+			remove_trait = maimed
+			add_trait = cybernetic_limb
+		}
 	}
 }
 11110155 = {
@@ -310,9 +314,13 @@
 	dynasty = 4475
 	female = no
 	
+	culture = hispanic_orion
 	religion = colonial_separatist
+	
 	father = 1104475 # Miguel Ortiz
 	mother = 1107083 # Amanda Javadi
+	
+	2975.1.1 = { birth = "2975.1.1" }
 }
 1103131 = {
 	# CEO of Abu Abed, Governor of Santiago
@@ -354,7 +362,7 @@
 	
 	2988.1.1 = { birth = "2988.1.1" }
 }
-1113131 = {
+1123131 = {
 	# Second son of Amanda Abu Abed
 	name = "David"
 	dynasty = 3131 # Abu Abed
@@ -435,7 +443,7 @@
 	culture = hispanic_orion
 	religion = colonial_separatist
 	
-	trait = trained_soldier
+	trait = tough_soldier
 	trait = marine_colonel
 	
 	2951.1.1 = { birth = "2951.1.1" }
@@ -449,7 +457,7 @@
 	culture = sino_orion
 	religion = colonial_separatist
 	
-	trait = trained_soldier
+	trait = tough_soldier
 	trait = marine_colonel
 	
 	2975.1.1 = { birth = "2975.1.1" }
@@ -477,7 +485,7 @@
 	culture = sino_orion
 	religion = colonial_separatist
 	
-	trait = trained_soldier
+	trait = tough_soldier
 	trait = warship_captain
 	trait = homosexual
 	
@@ -511,7 +519,7 @@
 	trait = warship_captain
 	
 	2948.1.1 = { birth = "2948.1.1" }
-	2960.1.1 = { add_spouse_matrilineal = 1224331 } # David Ramirez
+	2970.1.1 = { add_spouse_matrilineal = 1224331 } # David Ramirez
 }
 1115579 = {
 	# First daughter of Emma Joshi
@@ -525,9 +533,9 @@
 	father = 1224331 # David Ramirez
 	mother = 1105579 # Emma Joshi
 	
-	2962.1.1 = { birth = "2962.1.1" }
+	2972.1.1 = { birth = "2962.1.1" }
 }
-1115579 = {
+1125579 = {
 	# Second daughter of Emma Joshi
 	name = "Catalina"
 	dynasty = 5579 # Joshi
@@ -539,7 +547,7 @@
 	father = 1224331 # David Ramirez
 	mother = 1105579 # Emma Joshi
 	
-	2965.1.1 = { birth = "2965.1.1" }
+	2975.1.1 = { birth = "2965.1.1" }
 }
 11012939 = {
 	# Governor of Seldon
@@ -580,7 +588,7 @@
 	
 	2978.1.1 = { birth = "2978.1.1" }
 }
-1115707 = {
+1125707 = {
 	# Second clone of Joaquin Purohit
 	name = "Lucas"
 	dynasty = 5707 # Purohit

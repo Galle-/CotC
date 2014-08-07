@@ -1,0 +1,16 @@
+# 54 - Fangqu Liehuzuo
+
+# County Title
+title = c_fangqu_liehuzuo
+
+# Settlements
+max_settlements = 4
+b_fangqu_liehuzuo_i = castle
+b_fangqu_liehuzuo_ii = city
+b_fangqu_liehuzuo_iii = temple
+
+# Misc
+culture = sino_bianjiangese
+religion = colonial_separatist
+
+# History

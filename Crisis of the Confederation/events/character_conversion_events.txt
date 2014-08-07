@@ -772,8 +772,16 @@ character_event = {
 	
 	trigger = {
 		is_ruler = no
+		is_councillor = no
+		NOT = { any_heir_title = { always = yes } }
+		NOT = { has_minor_title = { title_regent } }
+		NOT = { has_minor_title = { title_prime_minister } }
+		NOT = { has_minor_title = { title_expected_successor } }
+		NOT = { any_lover = { at_location = ROOT } }
 		not = { religion = space_pirate }
 		NOT = { trait = radical }
+		NOT = { trait = craven }
+		NOT = { trait = content }
 		OR = {
 			NOT = {  religion_authority = 0.5 }
 			trait = pragmatic
@@ -830,7 +838,7 @@ character_event = {
 			trait = pragmatic
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.5
 			trait = open_minded
 		}
 		modifier = {
@@ -858,34 +866,11 @@ character_event = {
 			trait = brave
 		}
 		modifier = {
-			factor = 10
-			trait = craven
-		}
-		modifier = {
-			factor = 0.1
+			factor = 0.25
 			trait = ambitious
-		}
-		modifier = {	
-			factor = 10
-			trait = content
 		}
 		
 		# Self-interest
-		modifier = {
-			factor = 5
-			OR = {
-				any_heir_title = { always = yes }
-				has_minor_title = title_expected_successor
-			}
-		}
-		modifier = {
-			factor = 5
-			trait = ambitious
-			OR = {
-				any_heir_title = { always = yes }
-				has_minor_title = title_expected_successor
-			}
-		}
 		modifier = {
 			factor = 5
 			any_pretender_title = { always = yes }
@@ -894,6 +879,88 @@ character_event = {
 			factor = 2
 			trait = ambitious
 			any_pretender_title = { always = yes }
+		}
+		
+		# Opinion of current liege
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 100 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 90 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 80 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 70 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 60 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 50 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 40 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 30 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 20 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = liege value = 10 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -9 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -19 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -29 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -39 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -49 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -59 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -69 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -79 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -89 } }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { opinion = { who = liege value = -99 } }
 		}
 	}
 	

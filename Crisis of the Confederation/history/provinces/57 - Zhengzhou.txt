@@ -1,0 +1,16 @@
+# 57 - Zhengzhou
+
+# County Title
+title = c_zhengzhou
+
+# Settlements
+max_settlements = 4
+b_zhengzhou_i = castle
+b_zhengzhou_ii = city
+b_zhengzhou_iii = temple
+
+# Misc
+culture = sino_bianjiangese
+religion = colonial_separatist
+
+# History

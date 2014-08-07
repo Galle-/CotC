@@ -71,3 +71,6 @@ HOLDING_COURT_DESC;Reigning on $BARONY$, $LOCATION$;RËgne sur $BARONY$, $LOCATIO
 LANDLESS_COURT_DESC;Residing in $LOCATION$;RÈside ÅE$LOCATION$;Residiert in $LOCATION$;;Residiendo en $LOCATION$;;;;;;;;;x
 DEAD_SINCE_DESC;Dead since $DATE$;Mort(e) depuis $DATE$;Tot seit $DATE$;;Muerto desde el $DATE$;;;;;;;;;x
 SIEGE_OF;Invasion of $PROVINCE$;SiËge de $PROVINCE$;Belagerung von $PROVINCE$;;Asedio de $PROVINCE$;;;;;;;;;x
+MERCENARIES;PMCs;PMCs;PMCs;;PMCs;;;;;;;;;x
+MERCENARIES_CAP;PMCs;PMCs;PMCs;;PMCs;;;;;;;;;x
+MIL_MERCANARIES;PMCs;PMCs;PMCs;;PMCs;;;;;;;;;x

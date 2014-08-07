@@ -1030,3 +1030,144 @@ character_event = {
 	
 	option = { name = "EVTOPTCONFIRM" }
 }
+
+# Fleet commander with no proper liege turns mercenary
+character_event = {
+	id = military.500
+	desc = "EVTDESCMILITARY500"
+	picture = GFX_evt_mercenary
+	
+	min_age = 18
+	only_rulers = yes
+	only_capable = yes
+	prisoner = no
+	
+	trigger = {
+		independent = yes
+		war = no
+		primary_title = {
+			tier = duke
+			is_tribal_type_title = yes
+			is_mercenary = no
+			kingdom = { has_holder = no }
+			empire = { has_holder = no }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = "EVTOPTAMILITARY500"
+		primary_title = {
+			mercenary = yes
+			landless = yes
+			strength_growth_per_century = 1.0
+			mercenary_type = pmc_general
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 4
+				trait = pragmatic
+			}
+			modifier = {
+				factor = 0.25
+				trait = radical
+			}
+			modifier = {
+				factor = 2
+				trait = open_minded
+			}
+			modifier = {
+				factor = 0.5
+				trait = close_minded
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBMILITARY500"
+		piety = 100
+		ai_chance = { factor = 50 }
+	}
+}
+
+# Navy commander with no proper liege turns mercenary
+character_event = {
+	id = military.501
+	desc = "EVTDESCMILITARY501"
+	picture = GFX_evt_mercenary
+	
+	min_age = 18
+	only_rulers = yes
+	only_capable = yes
+	prisoner = no
+	
+	trigger = {
+		independent = yes
+		war = no
+		primary_title = {
+			tier = king
+			is_tribal_type_title = yes
+			is_mercenary = no
+			empire = { has_holder = no }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = "EVTOPTAMILITARY500"
+		primary_title = {
+			mercenary = yes
+			landless = yes
+			strength_growth_per_century = 1.0
+			mercenary_type = pmc_general
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 4
+				trait = pragmatic
+			}
+			modifier = {
+				factor = 0.25
+				trait = radical
+			}
+			modifier = {
+				factor = 2
+				trait = open_minded
+			}
+			modifier = {
+				factor = 0.5
+				trait = close_minded
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBMILITARY500"
+		piety = 100
+		ai_chance = { factor = 50 }
+	}
+}

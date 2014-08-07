@@ -70,6 +70,7 @@ e_terran_confederation = {
 	color = { 0 128 255 }
 	color2 = { 192 192 192 }
 	
+	dignity = 1000
 	capital = 202 # Sol
 	
 	short_name = yes
@@ -4356,6 +4357,262 @@ e_terran_confederation = {
 				b_dharmvir_iii = { used_for_dynasty_names = no }
 				b_dharmvir_iii_b = { used_for_dynasty_names = no }
 				b_dharmvir_iii_c = { used_for_dynasty_names = no }
+			}
+		}
+	}
+	k_bianjiang = {
+		color = { 225 15 100 }
+		color2 = { 200 200 50 }
+		
+		culture = sino_bianjiangese
+		
+		capital = 55 # Xie Xi'an
+		
+		d_bianjiang_fleet = {
+			color = { 110 7 50 }
+			color2 = { 200 200 50 }
+			short_name = yes
+			title = "FLEETADMIRAL"
+			title_female = "FLEETADMIRAL_female"
+			title_foa = "FLEETADMIRALFOA"
+			title_foa_female = "FLEETADMIRALFOA_female"
+			capital = 55
+			landless = yes
+			tribe = yes
+		}
+		
+		d_shaanxi = {
+			color = { 225 75 100 }
+			color2 = { 200 200 50 }
+			
+			capital = 55 # Xie Xi'an
+			
+			c_xie_xian = {
+				color = { 225 75 116 }
+				color2 = { 200 200 50 }
+				
+				b_xie_xian_i = { used_for_dynasty_names = no }
+				b_xie_xian_ii = { used_for_dynasty_names = no }
+				b_xie_xian_iii = { used_for_dynasty_names = no }
+				b_xie_xian_iv = { used_for_dynasty_names = no }
+				b_xie_xian_v = { used_for_dynasty_names = no }
+				b_xie_xian_vi = { used_for_dynasty_names = no }
+			}
+			c_nanchong = {
+				color = { 225 75 132 }
+				color2 = { 200 200 50 }
+				
+				b_nanchong_i = { used_for_dynasty_names = no }
+				b_nanchong_ii = { used_for_dynasty_names = no }
+				b_nanchong_iii = { used_for_dynasty_names = no }
+				b_nanchong_iv = { used_for_dynasty_names = no }
+			}
+			c_chongqing = {
+				color = { 225 75 148 }
+				color2 = { 200 200 50 }
+			
+				b_chongqing_i = { used_for_dynasty_names = no }
+				b_chongqing_ii = { used_for_dynasty_names = no }
+				b_chongqing_iii = { used_for_dynasty_names = no }
+				b_chongqing_iv = { used_for_dynasty_names = no }
+			}
+			c_fangqu_liehuzuo = {
+				color = { 225 75 164 }
+				color2 = { 200 200 50 }
+					
+				b_fangqu_liehuzuo_i = { used_for_dynasty_names = no }
+				b_fangqu_liehuzuo_ii = { used_for_dynasty_names = no }
+				b_fangqu_liehuzuo_iii = { used_for_dynasty_names = no }
+				b_fangqu_liehuzuo_iv = { used_for_dynasty_names = no }
+			}
+			c_zhengzhou = {
+				color = { 225 75 180 }
+				color2 = { 200 200 50 }
+			
+				b_zhengzhou_i = { used_for_dynasty_names = no }
+				b_zhengzhou_ii = { used_for_dynasty_names = no }
+				b_zhengzhou_iii = { used_for_dynasty_names = no }
+				b_zhengzhou_iv = { used_for_dynasty_names = no }
+			}
+		}
+		
+		d_heibei = {
+			color = { 150 15 100 }
+			color2 = { 200 200 50 }
+			
+			capital = 59 # Xie Beijing
+			
+			c_xie_beijing = {
+				color = { 150 15 116 }
+				color2 = { 200 200 50 }
+			
+				b_xie_beijing_i = { used_for_dynasty_names = no }
+				b_xie_beijing_ii = { used_for_dynasty_names = no }
+				b_xie_beijing_iii = { used_for_dynasty_names = no }
+				b_xie_beijing_iv = { used_for_dynasty_names = no }
+				b_xie_beijing_v = { used_for_dynasty_names = no }
+			}
+			c_tianjin = {
+				color = { 150 15 132 }
+				color2 = { 200 200 50 }
+			
+				b_tianjin_i = { used_for_dynasty_names = no }
+				b_tianjin_ii = { used_for_dynasty_names = no }
+				b_tianjin_iii = { used_for_dynasty_names = no }
+				b_tianjin_iv = { used_for_dynasty_names = no }
+			}
+			c_shenyang = {
+				color = { 150 15 148 }
+				color2 = { 200 200 50 }
+			
+				b_shenyang_i = { used_for_dynasty_names = no }
+				b_shenyang_ii = { used_for_dynasty_names = no }
+				b_shenyang_iii = { used_for_dynasty_names = no }
+				b_shenyang_iv = { used_for_dynasty_names = no }
+			}
+		}
+		
+		d_sichuan = {
+			color = { 150 75 100 }
+			color2 = { 200 200 50 }
+			
+			capital = 50 # Bolivar fangyuqu (Note that this has accents on the vowels in definition.csv)
+			
+			c_bolivar_fangyuqu = {
+				color = { 150 75 116 }
+				color2 = { 200 200 50 }
+			
+				b_bolivar_fangyuqu_i = { used_for_dynasty_names = no }
+				b_bolivar_fangyuqu_ii = { used_for_dynasty_names = no }
+				b_bolivar_fangyuqu_iii = { used_for_dynasty_names = no }
+				b_bolivar_fangyuqu_iv = { used_for_dynasty_names = no }
+				b_bolivar_fangyuqu_v = { used_for_dynasty_names = no }
+			}
+			c_chengdu = {
+				color = { 150 75 132 }
+				color2 = { 200 200 50 }
+			
+				b_chengdu_i = { used_for_dynasty_names = no }
+				b_chengdu_ii = { used_for_dynasty_names = no }
+				b_chengdu_iii = { used_for_dynasty_names = no }
+				b_chengdu_iv = { used_for_dynasty_names = no }
+			}
+			c_xie_lanzhou = {
+				color = { 150 75 148 }
+				color2 = { 200 200 50 }
+			
+				b_xie_lanzhou_i = { used_for_dynasty_names = no }
+				b_xie_lanzhou_ii = { used_for_dynasty_names = no }
+				b_xie_lanzhou_iii = { used_for_dynasty_names = no }
+				b_xie_lanzhou_iv = { used_for_dynasty_names = no }
+			}
+		}
+		
+		d_yunnan = {
+			color = { 250 15 100 }
+			color2 = { 200 200 50 }
+			
+			capital = 49 # Kunming
+			
+			c_kunming = {
+				color = { 250 15 116 }
+				color2 = { 200 200 50 }
+			
+				b_kunming_i = { used_for_dynasty_names = no }
+				b_kunming_ii = { used_for_dynasty_names = no }
+				b_kunming_iii = { used_for_dynasty_names = no }
+				b_kunming_iv = { used_for_dynasty_names = no }
+				b_kunming_v = { used_for_dynasty_names = no }
+			}
+			c_wuha = {
+				color = { 250 15 132 }
+				color2 = { 200 200 50 }
+			
+				b_wuha_i = { used_for_dynasty_names = no }
+				b_wuha_ii = { used_for_dynasty_names = no }
+				b_wuha_iii = { used_for_dynasty_names = no }
+				b_wuha_iv = { used_for_dynasty_names = no }
+			}
+		}
+		
+		d_guangdong = {
+			color = { 250 75 100 }
+			color2 = { 200 200 50 }
+			
+			capital = 45 # Tsim Sha Tsui
+			
+			c_tsim_sha_tsui = {
+				color = { 250 75 116 }
+				color2 = { 200 200 50 }
+			
+				b_tsim_sha_tsui_i = { used_for_dynasty_names = no }
+				b_tsim_sha_tsui_ii = { used_for_dynasty_names = no }
+				b_tsim_sha_tsui_iii = { used_for_dynasty_names = no }
+				b_tsim_sha_tsui_iv = { used_for_dynasty_names = no }
+				b_tsim_sha_tsui_v = { used_for_dynasty_names = no }
+			}
+			c_guanzhou = {
+				color = { 250 75 132 }
+				color2 = { 200 200 50 }
+			
+				b_guanzhou_i = { used_for_dynasty_names = no }
+				b_guanzhou_ii = { used_for_dynasty_names = no }
+				b_guanzhou_iii = { used_for_dynasty_names = no }
+				b_guanzhou_iv = { used_for_dynasty_names = no }
+			}
+			c_quanzhou = {
+				color = { 250 75 148 }
+				color2 = { 200 200 50 }
+			
+				b_quanzhou_i = { used_for_dynasty_names = no }
+				b_quanzhou_ii = { used_for_dynasty_names = no }
+				b_quanzhou_iii = { used_for_dynasty_names = no }
+				b_quanzhou_iv = { used_for_dynasty_names = no }
+			}
+		}
+		
+		d_shanghai = {
+			color = { 225 100 100 }
+			color2 = { 200 200 50 }
+			
+			capital = 62 # Shanghai
+			
+			c_shanghai = {
+				color = { 225 100 116 }
+				color2 = { 200 200 50 }
+			
+				b_shanghai_i = { used_for_dynasty_names = no }
+				b_shanghai_ii = { used_for_dynasty_names = no }
+				b_shanghai_iii = { used_for_dynasty_names = no }
+				b_shanghai_iv = { used_for_dynasty_names = no }
+				b_shanghai_v = { used_for_dynasty_names = no }
+			}
+			c_nanjing = {
+				color = { 225 100 132 }
+				color2 = { 200 200 50 }
+			
+				b_nanjing_i = { used_for_dynasty_names = no }
+				b_nanjing_ii = { used_for_dynasty_names = no }
+				b_nanjing_iii = { used_for_dynasty_names = no }
+				b_nanjing_iv = { used_for_dynasty_names = no }
+			}
+			c_hangzhou = {
+				color = { 225 100 148 }
+				color2 = { 200 200 50 }
+			
+				b_hangzhou_i = { used_for_dynasty_names = no }
+				b_hangzhou_ii = { used_for_dynasty_names = no }
+				b_hangzhou_iii = { used_for_dynasty_names = no }
+				b_hangzhou_iv = { used_for_dynasty_names = no }
+			}
+			c_fangqu_huoyan_xingyun = {
+				color = { 225 100 164 }
+				color2 = { 200 200 50 }
+			
+				b_fangqu_huoyan_xingyun_i = { used_for_dynasty_names = no }
+				b_fangqu_huoyan_xingyun_ii = { used_for_dynasty_names = no }
+				b_fangqu_huoyan_xingyun_iii = { used_for_dynasty_names = no }
+				b_fangqu_huoyan_xingyun_iv = { used_for_dynasty_names = no }
 			}
 		}
 	}

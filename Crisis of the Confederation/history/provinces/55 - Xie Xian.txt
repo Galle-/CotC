@@ -1,0 +1,17 @@
+# 55 - Xie Xian
+
+# County Title
+title = c_xie_xian
+
+# Settlements
+max_settlements = 6
+b_xie_xian_i = temple
+b_xie_xian_ii = city
+b_xie_xian_iii = castle
+
+# Misc
+culture = sino_bianjiangese
+religion = colonial_separatist
+
+# History
+2997.11.23 = { capital = b_xie_xian_iii } # Qian Deng's Coup

@@ -1,0 +1,16 @@
+# 46 - Quanzhou
+
+# County Title
+title = c_quanzhou
+
+# Settlements
+max_settlements = 4
+b_quanzhou_i = castle
+b_quanzhou_ii = city
+b_quanzhou_iii = temple
+
+# Misc
+culture = sino_bianjiangese
+religion = colonial_separatist
+
+# History

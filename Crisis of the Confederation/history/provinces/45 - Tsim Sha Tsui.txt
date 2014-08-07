@@ -1,0 +1,16 @@
+# 45 - Tsim Sha Tsui
+
+# County Title
+title = c_tsim_sha_tsui
+
+# Settlements
+max_settlements = 5
+b_tsim_sha_tsui_i = castle
+b_tsim_sha_tsui_ii = city
+b_tsim_sha_tsui_iii = temple
+
+# Misc
+culture = sino_bianjiangese
+religion = colonial_separatist
+
+# History

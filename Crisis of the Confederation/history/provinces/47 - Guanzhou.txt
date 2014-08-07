@@ -1,0 +1,16 @@
+# 47 - Guanzhou
+
+# County Title
+title = c_guanzhou
+
+# Settlements
+max_settlements = 4
+b_guanzhou_i = castle
+b_guanzhou_ii = city
+b_guanzhou_iii = temple
+
+# Misc
+culture = sino_bianjiangese
+religion = colonial_separatist
+
+# History

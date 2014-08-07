@@ -1,0 +1,16 @@
+# 48 - Wuha
+
+# County Title
+title = c_wuha
+
+# Settlements
+max_settlements = 4
+b_wuha_i = castle
+b_wuha_ii = city
+b_wuha_iii = temple
+
+# Misc
+culture = sino_bianjiangese
+religion = colonial_separatist
+
+# History

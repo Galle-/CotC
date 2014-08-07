@@ -1603,6 +1603,14 @@ obj_become_king = {
 		higher_tier_than = BARON
 		lower_tier_than = KING
 		NOT = { any_heir_title = { higher_tier_than = DUKE } }
+		capital_scope = {
+			kingdom = {
+				OR = {
+					has_holder = no
+					holder_scope = { is_vassal_or_below = ROOT }
+				}
+			}
+		}
 		# AI logic - don't try to replace a king you like!
 		NOT = {
 			AND = {
@@ -1792,6 +1800,12 @@ obj_become_king = {
 				higher_tier_than = DUKE
 				temporary = no
 			}
+			capital_scope = {
+				kingdom = {
+					has_holder = yes
+					holder_scope = { NOT = { is_vassal_or_below = ROOT } }
+				}
+			}
 			AND = {
 				ai = yes
 				NOT = { trait = cold }
@@ -1822,6 +1836,14 @@ obj_become_emperor = {
 		higher_tier_than = COUNT
 		lower_tier_than = EMPEROR
 		NOT = { any_heir_title = { tier = EMPEROR } }
+		capital_scope = {
+			empire = {
+				OR = {
+					has_holder = no
+					holder_scope = { is_vassal_or_below = ROOT }
+				}
+			}
+		}
 		# AI logic - don't try to replace a king you like!
 		NOT = {
 			AND = {
@@ -2010,6 +2032,12 @@ obj_become_emperor = {
 			any_heir_title = {
 				tier = emperor
 				temporary = no
+			}
+			capital_scope = {
+				empire = {
+					has_holder = yes
+					holder_scope = { NOT = { is_vassal_or_below = ROOT } }
+				}
 			}
 			AND = {
 				ai = yes

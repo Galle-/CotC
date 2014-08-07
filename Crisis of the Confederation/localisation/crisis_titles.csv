@@ -449,7 +449,7 @@ b_afolayan;Afolayan Corporation;Corporation Afolayan ;;;;;;;;;;;;x
 b_afolayan_adj;Afolayan;Afolayan;;;;;;;;;;;;x
 e_helix;Helix Empire;;;;;;;;;;;;;x
 e_helix_adj;Helixian;;;;;;;;;;;;;x
-k_helix;Helix Nebula;;;;;;;;;;;;;x
+k_helix;Helix Nebula;Nébuleuse de l'Hélice;Helixnebel;;Nebulosa Helix;;;;;;;;;x
 k_helix_adj;Helixian;;;;;;;;;;;;;x
 d_helix_fleet;Helix Rangers;;;;;;;;;;;;;x
 d_helix_fleet_adj;Helix Rangers;;;;;;;;;;;;;x
@@ -595,9 +595,9 @@ c_moegara;Moegara;;;;;;;;;;;;;x
 c_moegara_adj;Moegara;;;;;;;;;;;;;x
 c_rasen;Rasen;;;;;;;;;;;;;x
 c_rasen_adj;Rasen;;;;;;;;;;;;;x
-e_witchhead;Witchhead Nebula;;;;;;;;;;;;;x
+e_witchhead;Witchhead Nebula;Tête de Sorcière;Hexenkopfnebel;;Nebulosa Cabeza de Bruja;;;;;;;;;x
 e_witchhead_adj;Witchhead;;;;;;;;;;;;;x
-k_witchhead;Witchhead Nebula;;;;;;;;;;;;;x
+k_witchhead;Witchhead Nebula;Tête de Sorcière;Hexenkopfnebel;;Nebulosa Cabeza de Bruja;;;;;;;;;x
 k_witchhead_adj;Witchhead;;;;;;;;;;;;;x
 d_upper_witchhead;Upper Witchhead;;;;;;;;;;;;;x
 d_upper_witchhead_adj;Upper Witchhead;;;;;;;;;;;;;x
@@ -887,3 +887,48 @@ c_dhartvir;Dhartvir;;;;;;;;;;;;;x
 c_dhartvir_adj;Dhartviri;;;;;;;;;;;;;x
 c_dharmvir;Dharmvir;;;;;;;;;;;;;x
 c_dharmvir_adj;Dharmviri;;;;;;;;;;;;;x
+k_bianjiang;Bianjiang;;;;;;;;;;;;;x
+k_bianjiang_adj;Bianjiangese;;;;;;;;;;;;;x
+d_bianjiang_fleet;Bianjiang People's Militia;;;;;;;;;;;;;x
+d_bianjiang_fleet_adj;Bianjiangese Military;;;;;;;;;;;;;x
+d_shaanxi;Shaanxi;;;;;;;;;;;;;x
+d_shaanxi_ADJ;Shaanxi;;;;;;;;;;;;;x
+d_heibei;Heibei;;;;;;;;;;;;;x
+d_heibei_ADJ;Heibei;;;;;;;;;;;;;x
+d_sichuan;Sichuan;;;;;;;;;;;;;x
+d_sichuan_ADJ;Sichuanese;;;;;;;;;;;;;x
+d_yunnan;Yunnan;;;;;;;;;;;;;x
+d_yunnan_ADJ;Yunnanese;;;;;;;;;;;;;x
+d_guangdong;Guangdong;;;;;;;;;;;;;x
+d_guangdong_ADJ;Guangdongese;;;;;;;;;;;;;x
+d_shanghai;Shanghai;;;;;;;;;;;;;x
+d_militaires_sans_frontieres;Militaires Sans Frontières;Militaires Sans Frontières;Militaires Sans Frontières;;Militaires Sans Frontières;;;;;;;;;x
+d_militaires_sans_frontieres_ADJ;MSF;MSF;MSF;;MSF;;;;;;;;;x
+d_aegis_security;Aegis Security;;;;;;;;;;;;;x
+d_aegis_security_adj;Aegis;;;;;;;;;;;;;x
+d_yibai_lin_ba_xing;Yibai Lin Ba Xing;;;;;;;;;;;;;x
+d_yibai_lin_ba_xing_adj;Yibai Lin Ba Xing;;;;;;;;;;;;;x
+d_razin_security;Razin Security;;;;;;;;;;;;;x
+d_razin_security_adj;Razin;;;;;;;;;;;;;x
+d_hawkwood_hazard_and_risk;Hawkwood Hazard and Risk;;;;;;;;;;;;;x
+d_hawkwood_hazard_and_risk_ADJ;Hawkwood Hazard;;;;;;;;;;;;;x
+d_executive_operations;Executive Operations;;;;;;;;;;;;;x
+d_executive_operations_ADJ;ExOps;;;;;;;;;;;;;x
+d_strategic_solutions;Strategic Solutions;;;;;;;;;;;;;x
+d_strategic_solutions_ADJ;StratSol;;;;;;;;;;;;;x
+d_interstar_tactical;Interstar Tactical;;;;;;;;;;;;;x
+d_interstar_tactical_ADJ;Interstar;;;;;;;;;;;;;x
+d_taiwo_international;Taiwo International;;;;;;;;;;;;;x
+d_taiwo_international_ADJ;Taiwo;;;;;;;;;;;;;x
+d_tannhauser_international;Tannhauser International;;;;;;;;;;;;;x
+d_tannhauser_international_ADJ;Tannhauser;;;;;;;;;;;;;x
+d_nan_men_fuzhu_hui;Nán Mén Fuzhù Huì;;;;;;;;;;;;;x
+d_nan_men_fuzhu_hui_ADJ;Nán Mén Fuzhù Huì;;;;;;;;;;;;;x
+d_sakamoto_enterprises;Sakamoto Enterprises;;;;;;;;;;;;;x
+d_sakamoto_enterprises_ADJ;Sakamoto;;;;;;;;;;;;;x
+d_outworlds_security;Outworlds Security;;;;;;;;;;;;;x
+d_outworlds_security_adj;Outworlds;;;;;;;;;;;;;x
+d_zahran_defense_industries;Zahran Defense Industries;;;;;;;;;;;;;x
+d_zahran_defense_industries_adj;Zahran;;;;;;;;;;;;;x
+d_san_miguel_international;San Miguel International;;;;;;;;;;;;;x
+d_san_miguel_international_ADJ;San Miguel;;;;;;;;;;;;;x

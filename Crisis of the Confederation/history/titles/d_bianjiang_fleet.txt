@@ -1,0 +1,8 @@
+2613.1.1 = {
+	liege = "k_bianjiang"
+	law = true_cognatic_succession
+	law = succ_appointment
+}
+2990.1.1 = { holder = "12012810" } # Xinyi Gao
+2994.5.13 = { holder = "11012970" } # Qian Deng
+2997.11.23 = { law = succ_feudal_elective }

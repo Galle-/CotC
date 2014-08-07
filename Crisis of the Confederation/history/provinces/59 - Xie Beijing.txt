@@ -1,0 +1,17 @@
+# 59 - Xie Beijing
+
+# County Title
+title = c_xie_beijing
+
+# Settlements
+max_settlements = 5
+b_xie_beijing_i = castle
+b_xie_beijing_ii = city
+b_xie_beijing_iii = temple
+b_xie_beijing_iv = city
+
+# Misc
+culture = sino_bianjiangese
+religion = colonial_separatist
+
+# History

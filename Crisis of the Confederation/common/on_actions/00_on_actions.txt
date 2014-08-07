@@ -665,6 +665,7 @@ on_birth = {
 		312 # The child of a consort is born		
 		318 # A Bastard is born, but is not recognized as such by the mother's spouse (cuckoo!)
 		#TOG.3206 # Child Perceived to be Demon Born
+		maintenance.5 # Yoruba twin names
 	}
 	random_events = {
 		#200 = 0

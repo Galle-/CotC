@@ -1,0 +1,16 @@
+# 49 - Kunming
+
+# County Title
+title = c_kunming
+
+# Settlements
+max_settlements = 5
+b_kunming_i = castle
+b_kunming_ii = city
+b_kunming_iii = temple
+
+# Misc
+culture = sino_bianjiangese
+religion = colonial_separatist
+
+# History

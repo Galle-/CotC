@@ -1,0 +1,16 @@
+# 53 - Nanchong
+
+# County Title
+title = c_nanchong
+
+# Settlements
+max_settlements = 4
+b_nanchong_i = castle
+b_nanchong_ii = city
+b_nanchong_iii = temple
+
+# Misc
+culture = sino_bianjiangese
+religion = colonial_separatist
+
+# History

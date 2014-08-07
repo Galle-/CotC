@@ -47,6 +47,35 @@ character_event = {
 	}
 }
 
+# Minor cultural bit - Yoruba twin names. Call on birth.
+character_event = {
+	id = maintenance.5
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = twin
+		NOT = { has_character_flag = flag_yoruba_twin_name }
+		OR = {
+			culture = west_afro_angani
+			culture = west_afro_terran
+		}
+	}
+	
+	immediate = {
+		set_name = "Taiyewo"
+		set_character_flag = flag_yoruba_twin_name
+		any_sibling = {
+			limit = {
+				age = 0
+				trait = twin
+			}
+			set_name = "Kehinde"
+			set_character_flag = flag_yoruba_twin_name
+		}
+	}
+}
+
 # Wrong holding type management for the AI
 character_event = { # Theocracies - these are particularly troubling
 	id = maintenance.20

@@ -143,14 +143,30 @@
 	culture = sino_bianjiangese
 	religion = terran_federalist
 	
+	add_trait = twin
 	add_trait = charismatic_negotiator
 	add_trait = disciplined
 	add_trait = open_minded
 	add_trait = confident
 	add_trait = content
-	2967.5.13 = {birth = "2967.5.13"}
+	
+	father = 12013162 # Bo Du
+	
+	2967.5.13 = { birth = "2967.5.13" }
 	2985.6.16 = {religion = colonial_separatist}
-	}
+}
+
+12013162 = {
+	# Father of An-Nan and Liang Du
+	name = "Bo"
+	dynasty = 13162 # Du
+	female = no
+	
+	culture = sino_xingjie
+	religion = terran_federalist
+	
+	2929.1.1 = { birth = "2929.1.1" }
+}
 
 12013178 = {
 	# Lead Scientist and administrator at XueYuan Academy.

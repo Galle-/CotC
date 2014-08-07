@@ -1,0 +1,16 @@
+# 63 - Nanjing
+
+# County Title
+title = c_nanjing
+
+# Settlements
+max_settlements = 4
+b_nanjing_i = castle
+b_nanjing_ii = city
+b_nanjing_iii = temple
+
+# Misc
+culture = sino_bianjiangese
+religion = colonial_separatist
+
+# History

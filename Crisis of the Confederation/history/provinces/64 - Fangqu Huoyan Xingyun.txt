@@ -1,0 +1,16 @@
+# 64 - Fangqu Huoyan Xingyun
+
+# County Title
+title = c_fangqu_huoyan_xingyun
+
+# Settlements
+max_settlements = 4
+b_fangqu_huoyan_xingyun_i = castle
+b_fangqu_huoyan_xingyun_ii = city
+b_fangqu_huoyan_xingyun_iii = temple
+
+# Misc
+culture = sino_bianjiangese
+religion = colonial_separatist
+
+# History
