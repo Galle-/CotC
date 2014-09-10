@@ -1,0 +1,19 @@
+# 140 - Franklin
+
+# County Title
+title = c_franklin
+
+# Settlements
+max_settlements = 7
+b_franklin_ii = city
+b_franklin_iii = castle
+b_franklin_prime = temple
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = colonial_separatist
+
+# History
+
+2998.1.1 = {
+}

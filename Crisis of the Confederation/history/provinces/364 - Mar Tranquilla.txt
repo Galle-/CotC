@@ -1,0 +1,20 @@
+# 364 - Mar Tranquilla
+
+# County Title
+title = c_mar_tranquila
+
+# Settlements
+max_settlements = 3
+
+b_mar_tranquila_waystation = castle
+
+# Misc
+culture = hispanic_celestean # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

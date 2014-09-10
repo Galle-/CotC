@@ -1,0 +1,22 @@
+# 358 - Cyrus
+
+# County Title
+title = c_cyrus
+
+# Settlements
+max_settlements = 4
+
+b_cyrus_iv = castle
+b_cyrus_iv_b = temple
+b_cyrus_iii = city
+
+# Misc
+culture = iranian_samawati # Initial culture
+religion = adoptionist_cultist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

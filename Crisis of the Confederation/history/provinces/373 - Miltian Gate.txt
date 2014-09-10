@@ -1,0 +1,20 @@
+# 373 - Miltian Gate
+
+# County Title
+title = c_miltian_gate
+
+# Settlements
+max_settlements = 4
+
+b_miltian_gate_alpha = castle
+
+# Misc
+culture = hispanic_mukta # Initial culture
+religion = machine_cultist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

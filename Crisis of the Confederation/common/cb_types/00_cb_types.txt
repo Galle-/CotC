@@ -178,6 +178,13 @@ claim = {
 			factor = 8
 			tier = emperor
 		}
+		modifier = {
+			factor = 0
+			ROOT = {
+				religion = colonial_separatist
+				primary_title = { title = e_terran_confederation }
+			}
+		}
 	}
 }
 
@@ -451,6 +458,13 @@ other_claim = {
 			factor = 0
 			NOT = { higher_tier_than = count }
 			NOT = { location = { any_neighbor_province = { any_realm_lord = { character = ROOT } } } }
+		}
+		modifier = {
+			factor = 0
+			ROOT = {
+				religion = colonial_separatist
+				primary_title = { title = e_terran_confederation }
+			}
 		}
 	}
 }
@@ -1733,18 +1747,6 @@ bid_for_independence = {
 		}
 	}
 
-	on_attacker_leader_death = {
-		hidden_tooltip = {
-			any_defender = {
-				letter_event = {
-					id = 251
-				}
-			}
-		}
-
-		end_war = invalid
-	}
-
 	attacker_ai_victory_worth = {
 		factor = -1 # always accept
 	}
@@ -2932,7 +2934,7 @@ county_conquest = {
 
 dejure_duchy_claim = {
 	name = CB_NAME_DEJURECLAIM
-	war_name = WAR_NAME_DEJURECLAIM
+	war_name = WAR_NAME_DEJUREDUCHYCLAIM
 	sprite = 16
 	truce_days = 3650
 	hostile_against_others = yes
@@ -2943,6 +2945,7 @@ dejure_duchy_claim = {
 
 	can_use_title = {
 		tier = duke
+		is_tribal_type_title = no
 		OR = {
 			FROM = { has_landed_title = PREV }
 			holder_scope = { is_liege_or_above = FROM }
@@ -3728,7 +3731,7 @@ other_dejure_county_claim = {
 
 other_dejure_duchy_claim = {
 	name = CB_NAME_DEJURECLAIM
-	war_name = WAR_NAME_OTHER_DEJURECLAIM
+	war_name = WAR_NAME_OTHER_DEJUREDUCHYCLAIM
 	sprite = 16
 	truce_days = 3650
 	hostile_against_others = yes
@@ -3751,6 +3754,7 @@ other_dejure_duchy_claim = {
 
 	can_use_title = {
 		tier = duke
+		is_tribal_type_title = no
 		dejure_liege_title = {
 			AND = {
 				has_holder = yes

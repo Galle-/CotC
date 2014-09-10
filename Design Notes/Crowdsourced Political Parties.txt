@@ -1,0 +1,48 @@
+gja102
+    IMHO having Parties rather than single-issue factions sounds like it would be the more interesting way to go. Have 4-5 Parties with fixed positions on every policy. Characters can only join one at a time, based on traits, ideologies, and the current realm laws. I assume that will mean characters will join the one that closest matches their goals, though by necessity there will always be compromise between character beliefs and Party programmes.
+
+    On gaining power, the successful Party passes ONE of its policies, then disbands (having to regain support for the next term). This will make it increasingly harder for a Party to keep being re-elected and enforce its entire agenda, so the political landscape should stay dynamic.
+
+    Quick suggestions for Parties that anyone could join without breaking immersion:
+
+    Progress Party - Supports admin vassals, supports education, bio and cyber tech
+    Prosperity Party - Supports republic vassals, opposes education and health spending, opposes centralisation
+    Integrity Party - supports health, opposes bio and cyber tech
+    Security Party - Supports military vassals, interventionist CBs
+
+    Obviously this is just illustrative of how things might work, these platforms would need to be changed / fleshed out a lot more, provided that the basic concept is valid. 
+
+Bj0rn
+    It would be interesting if the Head of State, in some level of Centralization, could Veto a bill. That could give a malus in opinion with everyone that supported the bill but would give a % chance that the bill will not pass (taking into account the strength of the faction, you could make a % chance that the Veto would be nullified by parliament). That makes you more of a participant in the Legislative power and also makes you have to think a bit sometimes "Is it worth it for me to try and take out this bill?"
+
+    EDIT: You COULD also get a malus for all the characters that are of the same ideolagy as you if the bill you veto'd is in agreeance with your ideology (in that way, ideology must be better managed by the player, he wouldn't be able to simply Ignore it) 
+
+
+TSSL
+    I have some thoughts about political parties/factions!
+
+    First off, do you suppose you might include some ideology-specific factions? There could be more than one of them per ideology, so they wouldn't have to lead to the sudden change followed by stasis problem. E.g. there could be a Militant Socialist party, a Reformer Socialist party, a Pragmatic Socialist party, etc. So that way socialist-themed parties will dominate in socialist-majority areas, while still allowing some variety, and helping different ideologies play differently. (The same, naturally, would apply to other ideologies, though perhaps with different focuses: say, for example, Purity Pilgrims, Mystic Pilgrims, Scholar Pilgrims.) I think a system like this could add a lot of flavor.
+
+    I was also thinking about what might be a good basis for party allegiance. Probably your personality traits system would be a good place to look. Some of the most party-relevant traits could be Intellectual, Mystic, Open-Minded, Close-Minded, Spiritual, Skeptical, Radical and Pragmatic. There could also be multiple traits encouraging the same party (military education, proud, ambitious, and brave might encourage various Militant parties; diplomatic, open-minded, and pragmatic might encourage Reformer parties).
+
+    One source which I would recommend for party ideas are the Moral Foundations (care, fairness, liberty, loyalty, authority and sanctity) which can provide very different goals. Another is Schwartz's Universal Values; I'd say the most political party-relevant ones are Self-Direction, Universalism, Benevolence, Tradition, Conformity and Security.
+
+    ~~~
+
+    In an entirely different topic: I notice that in your randomly-generating-systems post you mention assigning a 10% chance of homosexuality. Have you modded the game in such a way that there ends up being a roughly 10% prevalence in characters throughout play? Just wondering, since in vanilla I'm certain it's quite a bit less, and the trait's acquistion is all muddled up with a bunch of other traits increasing or decreasing its likelihood.
+
+    And in another topic, while looking through your list of traits, I noticed that you still include "harelip." I would suggest that if you retain this trait (not sure if you need to, considering medical advancement, but if you do) you probably should use the more modern term "cleft palate." Otherwise it doesn't fit the future tone nearly so well. 
+	
+Jorlem
+I think this is unrealistic, and would break my suspension of disbelief.
+
+
+More seriously, could you do something with those hidden modifiers that only show up when relevant, like Amoral for plotters, and use those to control how people vote? We can call them Leanings.
+
+Let's say you have nine total, divided up into groups of three, in which each character only has one from each group. So there'd be
+[A,B,C]
+[H,I, J]
+[X,Y,Z]
+
+Then, you would just need to put a factor modifier for each Leaning in the votes (willingness to join the faction), and similar people would tend to vote in blocks, or join parties with like minded people. For the spymaster, you could change the event to allow you to pick one of their Leanings to temporarily change, either to match your own (if you are a vassal), or to any of the ones he doesn't already have (if you are the liege.) To better simulate parties, you could add an opinion modifier or a temporary character modifier when a vote finishes to all those that voted for that, which would be unique for each sort of vote, and would make them want to join votes in the future that others with the same modifier are running. 	
+

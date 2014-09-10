@@ -1,0 +1,22 @@
+# 375 - Arjona
+
+# County Title
+title = c_arjona
+
+# Settlements
+max_settlements = 5
+
+b_arjona_ii = city
+b_arjona_ii_b = castle
+b_arjona_ii_c = temple
+
+# Misc
+culture = hispanic_mukta # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

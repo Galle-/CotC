@@ -1,0 +1,20 @@
+# 425 - ON-567
+
+# County Title
+title = c_on_567
+
+# Settlements
+max_settlements = 4
+
+b_on_567_station_alpha = castle
+
+# Misc
+culture = sino_bianjiangese # Initial culture
+religion = space_pirate
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

@@ -1,0 +1,21 @@
+# 343 - Ghandi
+
+# County Title
+title = c_ghandi
+
+# Settlements
+max_settlements = 5
+
+b_ghandi_iii = city
+b_ghandi_iii_b = temple
+
+# Misc
+culture = indo_mukta # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

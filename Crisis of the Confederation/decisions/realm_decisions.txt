@@ -1,4 +1,199 @@
 decisions = {
+	apply_to_join_empire = {
+		is_high_prio = yes
+		potential = {
+			# Eligible to join empire
+			independent = yes
+			higher_tier_than = baron
+			not = { tier = emperor }
+			demesne_size = 1
+			capital_scope = { empire = { has_holder = yes } }
+		}
+		allow = {
+			# Not at war with emperor
+			capital_scope = { empire = { holder_scope = { NOT = { any_current_enemy = { character = ROOT } } } } }
+			# Can afford the piety hit
+			OR = {
+				AND = {
+					NOT = { religion = colonial_separatist }
+					NOT = { religion = neo_feudal }
+				}
+				piety = 100
+				trait = pragmatic
+			}
+			# Can afford the prestige hit
+			OR = {
+				prestige = 500
+				trait = humble
+			}
+			custom_tooltip = {
+				text = "FIVEYEARCOOLDOWN"
+				hidden_tooltip = {
+					OR = {
+						NOT = { has_character_flag = flag_empire_application }
+						had_character_flag = { flag = flag_empire_application days = 1825 }
+					}
+				}
+			}
+		}
+		effect = {
+			clr_character_flag = flag_empire_application
+			set_character_flag = flag_empire_application
+			character_event = { id = diplomacy.100 tooltip = "EVTTOOLTIPDIPLOMACY100" }
+		}
+		ai_will_do = {
+			factor = 1
+			# Must have a positive reason to join
+			modifier = {
+				factor = 0
+				
+				# Personal
+				capital_scope = {
+					empire = {
+						holder_scope = {
+							NOT = { any_friend = { character = ROOT } }
+							NOT = { any_lover = { character = ROOT } }
+							NOT = { any_allied_character = { character = ROOT } }
+						}
+					}
+				}
+				
+				# Ideology
+				NOT = { religion = terran_federalist }
+				NOT = { religion = terran_republican }
+				NOT = { religion = terran_imperial }
+				NOT = { religion = pilgrim }
+				NOT = { religion = orthodox }
+				
+				# Pragmatic
+				OR = {
+					NOT = { has_ambition = obj_become_emperor }
+					capital_scope = { empire = { holder_scope = { NOT = { relative_power = { who = ROOT power = 1 } } } } }
+				}
+				NOT = {
+					OR = {
+						AND = {
+							is_primary_war_defender = yes
+							any_current_enemy = { relative_power = { who = ROOT power = 2 } }
+						}
+						trait = proud
+						trait = imbecile
+						trait = lunatic
+					}
+				}
+			}
+			# Opinion of ruler
+			modifier = {
+				factor = 0
+				capital_scope = { empire = { holder_scope = { NOT = { reverse_opinion = { who = ROOT value = 75 } } } } }
+				NOT = {
+					AND = {
+						OR = {
+							religion = terran_federalist
+							religion = terran_republican
+							religion = terran_imperial
+							religion = pilgrim
+							religion = orthodox
+						}
+						OR = {
+							religion_authority = 0.25
+							trait = radical
+						}
+					}
+				}
+				OR = {
+					NOT = { has_ambition = obj_become_emperor }
+					capital_scope = { empire = { holder_scope = { NOT = { relative_power = { who = ROOT power = 1 } } } } }
+				}
+				NOT = {
+					OR = {
+						AND = {
+							is_primary_war_defender = yes
+							any_current_enemy = { relative_power = { who = ROOT power = 2 } }
+						}
+						trait = proud
+						trait = imbecile
+						trait = lunatic
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				capital_scope = { empire = { holder_scope = { NOT = { reverse_opinion = { who = ROOT value = 50 } } } } }
+				NOT = {
+					AND = {
+						OR = {
+							religion = terran_federalist
+							religion = terran_republican
+							religion = terran_imperial
+							religion = pilgrim
+							religion = orthodox
+						}
+						religion_authority = 0.5
+						NOT = { trait = pragmatic }
+					}
+				}
+				OR = {
+					NOT = { has_ambition = obj_become_emperor }
+					capital_scope = { empire = { holder_scope = { NOT = { relative_power = { who = ROOT power = 1 } } } } }
+				}
+				NOT = {
+					OR = {
+						AND = {
+							is_primary_war_defender = yes
+							any_current_enemy = { relative_power = { who = ROOT power = 2 } }
+						}
+						trait = proud
+						trait = brave
+						trait = imbecile
+						trait = slow
+						trait = lunatic
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				capital_scope = { empire = { holder_scope = { NOT = { reverse_opinion = { who = ROOT value = 25 } } } } }
+				NOT = {
+					AND = {
+						OR = {
+							religion = terran_federalist
+							religion = terran_republican
+							religion = terran_imperial
+							religion = pilgrim
+							religion = orthodox
+						}
+						religion_authority = 0.75
+					}
+				}
+				OR = {
+					NOT = { has_ambition = obj_become_emperor }
+					capital_scope = { empire = { holder_scope = { NOT = { relative_power = { who = ROOT power = 1 } } } } }
+				}
+				NOT = {
+					OR = {
+						AND = {
+							is_primary_war_defender = yes
+							any_current_enemy = { relative_power = { who = ROOT power = 2 } }
+							trait = craven
+						}
+						trait = proud
+						trait = imbecile
+						trait = slow
+						trait = lunatic
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					religion = colonial_separatist
+					religion = neo_feudal
+				}
+				trait = radical
+			}
+		}
+	}
 	found_terran_empire = {
 		is_high_prio = yes
 		potential = {

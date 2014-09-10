@@ -1,0 +1,6 @@
+2950.1.1 = {
+	liege = "e_terran_confederation"
+	law = succ_open_elective
+	law = true_cognatic_succession
+}
+2992.1.1 = { holder = 1103429 } # Lian Manasir

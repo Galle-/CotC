@@ -1,0 +1,22 @@
+# 367 - Sulaha
+
+# County Title
+title = c_sulaha
+
+# Settlements
+max_settlements = 4
+
+b_sulaha_viii_b = temple
+b_sulaha_viii_c = city
+b_sulaha_viii_d = castle
+
+# Misc
+culture = arab_samawati # Initial culture
+religion = adoptionist_cultist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

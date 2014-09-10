@@ -34,22 +34,8 @@ plot_decisions = {
 				NOT = { has_character_modifier = constitutional_crisis }
 			}
 			capital_holding = { controller = { character = ROOT } }
-			
-			# Must have a majority in the Senate, as represented abstractly
-			faction_power = {
-				faction = faction_anti_centralization
-				power = 1.01
-			}
-			NOT = {
-				any_realm_character = {
-					leads_faction = faction_pro_centralization
-					same_liege = ROOT
-					faction_power = {
-						faction = faction_pro_centralization
-						power = 1.01
-					}
-				}
-			}
+			# Must have a majority in the Senate
+			liege = { check_variable = { which = "var_anti_centralization" value = 0 } }
 		}
 		
 		effect = {
@@ -197,10 +183,8 @@ plot_decisions = {
 				NOT = { has_character_modifier = constitutional_crisis }
 			}
 			capital_holding = { controller = { character = ROOT } }
-			faction_power = {
-				faction = faction_pro_centralization
-				power = 1.0
-			}
+			# Must have a majority in the Senate
+			liege = { check_variable = { which = "var_pro_centralization" value = 0 } }
 		}
 		
 		effect = {
@@ -399,6 +383,206 @@ plot_decisions = {
 			}
 		}
 	}
+	faction_devolve_local_government_bill = {
+		is_high_prio = yes
+		
+		potential = {
+			leads_faction = faction_devolve_local_government
+			NOT = { has_character_flag = flag_making_faction_ultimatum }
+			faction_devolve_local_government = { has_law = legislative_authority_1 }
+		}
+		
+		allow = {
+			prisoner = no
+			# Can't propose if there's an opposing regent or prime minister
+			# More sophisticated mechanisms for these would be nice, but one step
+			# at a time
+			NOT = {
+				any_realm_character = {
+					has_minor_title = title_regent
+					same_liege = ROOT
+					NOT = { in_faction = faction_pro_centralization }
+				}
+			}
+			NOT = {
+				any_realm_character = {
+					has_minor_title = title_prime_minister
+					same_liege = ROOT
+					NOT = { in_faction = faction_pro_centralization }
+				}
+			}
+			liege = {
+				NOT = { war_with = ROOT }
+				NOT = { reverse_has_truce = ROOT }
+				NOT = { has_character_modifier = constitutional_crisis }
+			}
+			capital_holding = { controller = { character = ROOT } }
+			
+			# Must have a majority in the Senate, as represented abstractly
+			faction_power = {
+				faction = faction_devolve_local_government
+				power = 1.01
+			}
+			NOT = {
+				any_realm_character = {
+					leads_faction = faction_pro_centralization
+					same_liege = ROOT
+					faction_power = {
+						faction = faction_pro_centralization
+						power = 1.01
+					}
+				}
+			}
+		}
+		
+		effect = {
+			set_character_flag = flag_making_faction_ultimatum
+			set_character_flag = flag_sent_devole_local_government_ultimatum
+			character_event = { id = laws.10300 tooltip = "EVTTOOLTIPLAWS10300" }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	faction_independence_bill = {
+		is_high_prio = yes
+		
+		potential = {
+			leads_faction = faction_independence
+			crownlaw_title = { has_law = legislative_authority_1 }
+			NOT = { has_character_flag = flag_making_faction_ultimatum }
+		}
+		
+		allow = {
+			prisoner = no
+			liege = {
+				NOT = { war_with = ROOT }
+				NOT = { reverse_has_truce = ROOT }
+				NOT = { has_character_modifier = constitutional_crisis }
+			}
+			capital_holding = { controller = { character = ROOT } }
+			NOT = {
+				any_realm_character = {
+					has_minor_title = title_regent
+					same_liege = ROOT
+					NOT = { in_faction = faction_independence }
+				}
+			}
+			NOT = {
+				any_realm_character = {
+					has_minor_title = title_prime_minister
+					same_liege = ROOT
+					NOT = { in_faction = faction_independence }
+				}
+			}
+			# Must have a majority in the Senate
+			liege = {
+				check_variable = { which = "var_independence" value = 0 }
+			}
+		}
+		
+		effect = {
+			set_character_flag = flag_making_faction_ultimatum
+			set_character_flag = flag_sent_independence_ultimatum
+			character_event = { id = laws.10400 tooltip = "EVTTOOLTIPLAWS10400" }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			# The liege is defending in a war we'd rather they win
+			modifier = {
+				factor = 0
+				liege = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_defending_my_titles } }
+				NOT = { trait = lunatic }
+			}
+			modifier = {
+				factor = 0
+				liege = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_defending_vs_infidels } }
+				NOT = { trait = pragmatic }
+			}
+		}
+	}
+	faction_independence_demand = {
+		is_high_prio = yes
+		
+		potential = {
+			leads_faction = faction_independence
+			NOT = { has_character_flag = flag_making_faction_ultimatum }
+			NOT = { crownlaw_title = { has_law = legislative_authority_1 } }
+		}
+		
+		allow = {
+			prisoner = no
+			# Can't propose if there's an opposing regent
+			# More sophisticated mechanisms for these would be nice, but one step
+			# at a time
+			NOT = {
+				any_realm_character = {
+					has_minor_title = title_regent
+					same_liege = ROOT
+					NOT = { in_faction = faction_independence }
+				}
+			}
+			liege = {
+				NOT = { war_with = ROOT }
+				NOT = { reverse_has_truce = ROOT }
+				NOT = { has_character_modifier = constitutional_crisis }
+			}
+			capital_holding = { controller = { character = ROOT } }
+		}
+		
+		effect = {
+			set_character_flag = flag_making_faction_ultimatum
+			set_character_flag = flag_sent_independence_ultimatum
+			character_event = { id = laws.10450 days = 3 tooltip = "EVTTOOLTIPLAWS10450" }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+			}
+			modifier = {
+				factor = 2
+				faction_power = {
+					faction = faction_independence
+					power = 1
+				}
+			}
+			modifier = {
+				factor = 2
+				faction_power = {
+					faction = faction_independence
+					power = 2
+				}
+			}
+			modifier = {
+				factor = 2
+				faction_power = {
+					faction = faction_independence
+					power = 3
+				}
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			# The liege is defending in a war we'd rather they win
+			modifier = {
+				factor = 0
+				liege = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_defending_my_titles } }
+				NOT = { trait = lunatic }
+			}
+			modifier = {
+				factor = 0
+				liege = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_defending_vs_infidels } }
+				NOT = { trait = pragmatic }
+			}
+		}
+	}
 }
-
-

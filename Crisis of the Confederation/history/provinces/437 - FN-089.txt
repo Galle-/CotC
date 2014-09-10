@@ -1,0 +1,20 @@
+# 437 - FN-089
+
+# County Title
+title = c_fn_089
+
+# Settlements
+max_settlements = 4
+
+b_fn_089_station_alpha = castle
+
+# Misc
+culture = sino_bianjiangese # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

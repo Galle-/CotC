@@ -1,0 +1,20 @@
+# 419 - ON-19
+
+# County Title
+title = c_on_19
+
+# Settlements
+max_settlements = 4
+
+b_on_19_station_alpha = castle
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

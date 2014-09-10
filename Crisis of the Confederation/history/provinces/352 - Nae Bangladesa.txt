@@ -1,0 +1,22 @@
+# 352 - Nae Bangladesa
+
+# County Title
+title = c_nae_bangladesa
+
+# Settlements
+max_settlements = 5
+
+b_nae_bangladesa_ii = city
+b_nae_bangladesa_ii_b = temple
+b_nae_bangladesa_ii_c = castle
+
+# Misc
+culture = indo_mukta # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

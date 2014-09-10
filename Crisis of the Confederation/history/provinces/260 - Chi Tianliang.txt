@@ -7,12 +7,10 @@ title = c_chi_tianliang
 max_settlements = 4
 b_chi_tianliang_prime = city
 b_chi_tianliang_prime_b = temple
-b_chi_tianliang_iii = castle
-b_chi_tianliang_iv = city
 
 # Misc
 culture = sino_bianjiangese # Initial culture
-religion = colonial_seperatist
+religion = colonial_separatist
 
 # History
 1.1.1 = {
@@ -53,20 +51,13 @@ religion = colonial_seperatist
 2510.4.2 = {b_chi_tianliang_prime = ct_colony_0}
 2540.5.3 = {b_chi_tianliang_prime = ct_colony_1}
 2632.7.3 = {b_chi_tianliang_prime = ct_colony_2}
-	
 2710.1.28 = { b_chi_tianliang_prime_b = tp_colony_0}
+2712.3.1 = { trade_post = b_zhang }
 2730.7.23 = {b_chi_tianliang_prime_b = tp_trace_water}
-2802.2.14 = {b_chi_tianliang_prime_b = tp_optimal_hot}
-2840.3.21 = {b_chi_tianliang_prime_b = tp_colony_1}
-	
 2760.3.17 = {b_chi_tianliang_iii = ca_colony_0}
-2810.5.11 = {b_chi_tianliang_iii = ca_colony_1}
-
 2780.2.12 = {b_chi_tianliang_iv = ct_colony_0}
 2793.7.16 = {b_chi_tianliang_iv = ct_trace_water}
+2802.2.14 = {b_chi_tianliang_prime_b = tp_optimal_hot}
+2810.5.11 = {b_chi_tianliang_iii = ca_colony_1}
 2820.7.17 = {b_chi_tianliang_iv = ct_no_atmosphere_domes}
-
-
-2712.3.1 = {
-	trade_post = b_zhang
-}
+2840.3.21 = {b_chi_tianliang_prime_b = tp_colony_1}

@@ -1,0 +1,18 @@
+# 330 - VN-1780
+
+# County Title
+title = c_vn_1780
+
+# Settlements
+max_settlements = 4
+
+b_vn_1780_outpost = castle
+b_vn_1780 = city
+
+
+# Misc
+culture = anglo_mukta # Initial culture
+religion = space_pirate
+
+1.1.1 = {
+}

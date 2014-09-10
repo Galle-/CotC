@@ -1741,7 +1741,7 @@ character_event = {
 			trait = open_minded
 		}
 		modifier = {
-			factor = 4
+			factor = 10
 			trait = radical
 		}
 		modifier = {
@@ -2316,6 +2316,7 @@ character_event = {
 	option = {
 		name = "EVTOPTACONVERSION10100"
 		religion = terran_federalist
+		remove_trait = radical
 		hidden_tooltip = { any_vassal = { character_event = { id = conversion.10101 } } }
 	}
 }
@@ -2367,7 +2368,7 @@ character_event = {
 			trait = open_minded
 		}
 		modifier = {
-			factor = 4
+			factor = 10
 			trait = radical
 		}
 		modifier = {
@@ -2895,6 +2896,7 @@ character_event = {
 	option = {
 		name = "EVTOPTACONVERSION10200"
 		religion = terran_republican
+		remove_trait = radical
 		hidden_tooltip = { any_vassal = { character_event = { id = conversion.10201 } } }
 	}
 }
@@ -2946,7 +2948,7 @@ character_event = {
 			trait = open_minded
 		}
 		modifier = {
-			factor = 4
+			factor = 10
 			trait = radical
 		}
 		modifier = {
@@ -3474,6 +3476,7 @@ character_event = {
 	option = {
 		name = "EVTOPTACONVERSION10300"
 		religion = terran_imperial
+		remove_trait = radical
 		hidden_tooltip = { any_vassal = { character_event = { id = conversion.10301 } } }
 	}
 }
@@ -3525,7 +3528,7 @@ character_event = {
 			trait = open_minded
 		}
 		modifier = {
-			factor = 4
+			factor = 10
 			trait = radical
 		}
 		modifier = {
@@ -4076,6 +4079,7 @@ character_event = {
 	option = {
 		name = "EVTOPTACONVERSION10400"
 		religion = colonial_separatist
+		remove_trait = radical
 		hidden_tooltip = { any_vassal = { character_event = { id = conversion.10401 } } }
 	}
 }
@@ -4127,7 +4131,7 @@ character_event = {
 			trait = open_minded
 		}
 		modifier = {
-			factor = 4
+			factor = 10
 			trait = radical
 		}
 		modifier = {
@@ -4532,6 +4536,7 @@ character_event = {
 	option = {
 		name = "EVTOPTACONVERSION10500"
 		religion = astrist
+		remove_trait = radical
 		hidden_tooltip = { any_vassal = { character_event = { id = conversion.10501 } } }
 	}
 }
@@ -4583,7 +4588,7 @@ character_event = {
 			trait = open_minded
 		}
 		modifier = {
-			factor = 4
+			factor = 10
 			trait = radical
 		}
 		modifier = {
@@ -5142,6 +5147,7 @@ character_event = {
 	option = {
 		name = "EVTOPTACONVERSION10600"
 		religion = neo_feudal
+		remove_trait = radical
 		hidden_tooltip = { any_vassal = { character_event = { id = conversion.10601 } } }
 	}
 }
@@ -5193,7 +5199,7 @@ character_event = {
 			trait = open_minded
 		}
 		modifier = {
-			factor = 4
+			factor = 10
 			trait = radical
 		}
 		modifier = {
@@ -5613,6 +5619,7 @@ character_event = {
 	option = {
 		name = "EVTOPTACONVERSION10700"
 		religion = neo_socialist
+		remove_trait = radical
 		hidden_tooltip = { any_vassal = { character_event = { id = conversion.10701 } } }
 	}
 }

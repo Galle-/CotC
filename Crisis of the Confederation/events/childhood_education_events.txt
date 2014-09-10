@@ -64,11 +64,11 @@ character_event = {
 			guardian = { trait = open_minded }
 		}
 		modifier = {
-			factor = 2
-			father = { trait = open_minded }
+			factor = 4
+			real_father = { trait = open_minded }
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			mother = { trait = open_minded }
 		}
 		modifier = {
@@ -84,11 +84,11 @@ character_event = {
 			guardian = { trait = close_minded }
 		}
 		modifier = {
-			factor = 0.5
-			father = { trait = close_minded }
+			factor = 0.25
+			real_father = { trait = close_minded }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			mother = { trait = close_minded }
 		}
 		modifier = {
@@ -344,11 +344,11 @@ character_event = {
 			guardian = { trait = close_minded }
 		}
 		modifier = {
-			factor = 2
-			father = { trait = close_minded }
+			factor = 4
+			real_father = { trait = close_minded }
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			mother = { trait = close_minded }
 		}
 		modifier = {
@@ -364,11 +364,11 @@ character_event = {
 			guardian = { trait = open_minded }
 		}
 		modifier = {
-			factor = 0.5
-			father = { trait = open_minded }
+			factor = 0.25
+			real_father = { trait = open_minded }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			mother = { trait = open_minded }
 		}
 		modifier = {
@@ -624,11 +624,11 @@ character_event = {
 			guardian = { trait = disciplined }
 		}
 		modifier = {
-			factor = 2
-			father = { trait = disciplined }
+			factor = 4
+			real_father = { trait = disciplined }
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			mother = { trait = disciplined }
 		}
 		modifier = {
@@ -644,11 +644,11 @@ character_event = {
 			guardian = { trait = carefree }
 		}
 		modifier = {
-			factor = 0.5
-			father = { trait = carefree }
+			factor = 0.25
+			real_father = { trait = carefree }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			mother = { trait = carefree }
 		}
 		modifier = {
@@ -752,7 +752,7 @@ character_event = {
 				60 = { hidden_tooltip = { character_event = { id = childhood_education.37 } } }
 			}
 			random = {
-				chance = 10
+				chance = 20
 				add_trait = neurotic
 				hidden_tooltip = { character_event = { id = childhood_education.0 } }
 			}
@@ -900,11 +900,11 @@ character_event = {
 			guardian = { trait = carefree }
 		}
 		modifier = {
-			factor = 2
-			father = { trait = carefree }
+			factor = 4
+			real_father = { trait = carefree }
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			mother = { trait = carefree }
 		}
 		modifier = {
@@ -920,11 +920,11 @@ character_event = {
 			guardian = { trait = disciplined }
 		}
 		modifier = {
-			factor = 0.5
-			father = { trait = disciplined }
+			factor = 0.25
+			real_father = { trait = disciplined }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			mother = { trait = disciplined }
 		}
 		modifier = {
@@ -1172,11 +1172,11 @@ character_event = {
 			guardian = { trait = extraverted }
 		}
 		modifier = {
-			factor = 2
-			father = { trait = extraverted }
+			factor = 4
+			real_father = { trait = extraverted }
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			mother = { trait = extraverted }
 		}
 		modifier = {
@@ -1192,11 +1192,11 @@ character_event = {
 			guardian = { trait = introverted }
 		}
 		modifier = {
-			factor = 0.5
-			father = { trait = introverted }
+			factor = 0.25
+			real_father = { trait = introverted }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			mother = { trait = introverted }
 		}
 		modifier = {
@@ -1464,11 +1464,11 @@ character_event = {
 			guardian = { trait = introverted }
 		}
 		modifier = {
-			factor = 2
-			father = { trait = introverted }
+			factor = 4
+			real_father = { trait = introverted }
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			mother = { trait = introverted }
 		}
 		modifier = {
@@ -1484,11 +1484,11 @@ character_event = {
 			guardian = { trait = extraverted }
 		}
 		modifier = {
-			factor = 0.5
-			father = { trait = extraverted }
+			factor = 0.25
+			real_father = { trait = extraverted }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			mother = { trait = extraverted }
 		}
 		modifier = {
@@ -1787,11 +1787,11 @@ character_event = {
 			guardian = { trait = friendly }
 		}
 		modifier = {
-			factor = 2
-			father = { trait = friendly }
+			factor = 4
+			real_father = { trait = friendly }
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			mother = { trait = friendly }
 		}
 		modifier = {
@@ -1807,11 +1807,11 @@ character_event = {
 			guardian = { trait = cold }
 		}
 		modifier = {
-			factor = 0.5
-			father = { trait = cold }
+			factor = 0.25
+			real_father = { trait = cold }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			mother = { trait = cold }
 		}
 		modifier = {
@@ -2074,11 +2074,11 @@ character_event = {
 			guardian = { trait = cold }
 		}
 		modifier = {
-			factor = 2
-			father = { trait = cold }
+			factor = 4
+			real_father = { trait = cold }
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			mother = { trait = cold }
 		}
 		modifier = {
@@ -2094,11 +2094,11 @@ character_event = {
 			guardian = { trait = friendly }
 		}
 		modifier = {
-			factor = 0.5
-			father = { trait = friendly }
+			factor = 0.25
+			real_father = { trait = friendly }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			mother = { trait = friendly }
 		}
 		modifier = {
@@ -2339,11 +2339,11 @@ character_event = {
 			guardian = { trait = spiritual }
 		}
 		modifier = {
-			factor = 2
-			father = { trait = spiritual }
+			factor = 4
+			real_father = { trait = spiritual }
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			mother = { trait = spiritual }
 		}
 		modifier = {
@@ -2359,11 +2359,11 @@ character_event = {
 			guardian = { trait = skeptical }
 		}
 		modifier = {
-			factor = 0.5
-			father = { trait = skeptical }
+			factor = 0.25
+			real_father = { trait = skeptical }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			mother = { trait = skeptical }
 		}
 		modifier = {
@@ -2661,11 +2661,11 @@ character_event = {
 			guardian = { trait = skeptical }
 		}
 		modifier = {
-			factor = 2
-			father = { trait = skeptical }
+			factor = 4
+			real_father = { trait = skeptical }
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			mother = { trait = skeptical }
 		}
 		modifier = {
@@ -2681,11 +2681,11 @@ character_event = {
 			guardian = { trait = spiritual }
 		}
 		modifier = {
-			factor = 0.5
-			father = { trait = spiritual }
+			factor = 0.25
+			real_father = { trait = spiritual }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			mother = { trait = spiritual }
 		}
 		modifier = {
@@ -3027,18 +3027,12 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 2
-			father = {
-				religion = ROOT
-				trait = radical
-			}
+			factor = 4
+			real_father = { trait = radical }
 		}
 		modifier = {
-			factor = 2
-			mother = {
-				religion = ROOT
-				trait = radical
-			}
+			factor = 4
+			mother = { trait = radical }
 		}
 		modifier = {
 			factor = 2
@@ -3064,22 +3058,12 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 0.5
-			father = {
-				OR = {
-					trait = pragmatic
-					NOT = { religion = ROOT }
-				}
-			}
+			factor = 0.25
+			real_father = { trait = pragmatic }
 		}
 		modifier = {
-			factor = 0.5
-			mother = {
-				OR = {
-					trait = pragmatic
-					NOT = { religion = ROOT }
-				}
-			}
+			factor = 0.25
+			mother = { trait = pragmatic }
 		}
 		modifier = {
 			factor = 0.5
@@ -3466,11 +3450,11 @@ character_event = {
 			guardian = { trait = pragmatic }
 		}
 		modifier = {
-			factor = 2
-			father = { trait = pragmatic }
+			factor = 4
+			real_father = { trait = pragmatic }
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			mother = { trait = pragmatic }
 		}
 		modifier = {
@@ -3489,18 +3473,12 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 0.5
-			father = {
-				trait = radical
-				religion = ROOT
-			}
+			factor = 0.25
+			real_father = { trait = radical }
 		}
 		modifier = {
-			factor = 0.5
-			mother = {
-				trait = radical
-				religion = ROOT
-			}
+			factor = 0.25
+			mother = { trait = radical }
 		}
 		modifier = {
 			factor = 0.5
@@ -3867,11 +3845,11 @@ character_event = {
 			guardian = { trait = humble }
 		}
 		modifier = {
-			factor = 2
-			father = { trait = humble }
+			factor = 4
+			real_father = { trait = humble }
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			mother = { trait = humble }
 		}
 		modifier = {
@@ -3887,11 +3865,11 @@ character_event = {
 			guardian = { trait = proud }
 		}
 		modifier = {
-			factor = 0.5
-			father = { trait = proud }
+			factor = 0.25
+			real_father = { trait = proud }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			mother = { trait = proud }
 		}
 		modifier = {
@@ -4218,11 +4196,11 @@ character_event = {
 			guardian = { trait = proud }
 		}
 		modifier = {
-			factor = 2
-			father = { trait = proud }
+			factor = 4
+			real_father = { trait = proud }
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			mother = { trait = proud }
 		}
 		modifier = {
@@ -4238,11 +4216,11 @@ character_event = {
 			guardian = { trait = humble }
 		}
 		modifier = {
-			factor = 0.5
-			father = { trait = humble }
+			factor = 0.25
+			real_father = { trait = humble }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			mother = { trait = humble }
 		}
 		modifier = {
@@ -4564,11 +4542,11 @@ character_event = {
 			guardian = { trait = content }
 		}
 		modifier = {
-			factor = 2
-			father = { trait = content }
+			factor = 4
+			real_father = { trait = content }
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			mother = { trait = content }
 		}
 		modifier = {
@@ -4584,11 +4562,11 @@ character_event = {
 			guardian = { trait = ambitious }
 		}
 		modifier = {
-			factor = 0.5
-			father = { trait = ambitious }
+			factor = 0.25
+			real_father = { trait = ambitious }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			mother = { trait = ambitious }
 		}
 		modifier = {
@@ -4859,11 +4837,11 @@ character_event = {
 			guardian = { trait = ambitious }
 		}
 		modifier = {
-			factor = 2
-			father = { trait = ambitious }
+			factor = 4
+			real_father = { trait = ambitious }
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			mother = { trait = ambitious }
 		}
 		modifier = {
@@ -4879,11 +4857,11 @@ character_event = {
 			guardian = { trait = content }
 		}
 		modifier = {
-			factor = 0.5
-			father = { trait = content }
+			factor = 0.25
+			real_father = { trait = content }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			mother = { trait = content }
 		}
 		modifier = {
@@ -5214,11 +5192,11 @@ character_event = {
 			guardian = { trait = brave }
 		}
 		modifier = {
-			factor = 2
-			father = { trait = brave }
+			factor = 4
+			real_father = { trait = brave }
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			mother = { trait = brave }
 		}
 		modifier = {
@@ -5234,11 +5212,11 @@ character_event = {
 			guardian = { trait = craven }
 		}
 		modifier = {
-			factor = 0.5
-			father = { trait = craven }
+			factor = 0.25
+			real_father = { trait = craven }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			mother = { trait = craven }
 		}
 		modifier = {
@@ -5523,11 +5501,11 @@ character_event = {
 			guardian = { trait = craven }
 		}
 		modifier = {
-			factor = 2
-			father = { trait = craven }
+			factor = 4
+			real_father = { trait = craven }
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			mother = { trait = craven }
 		}
 		modifier = {
@@ -5543,11 +5521,11 @@ character_event = {
 			guardian = { trait = brave }
 		}
 		modifier = {
-			factor = 0.5
-			father = { trait = brave }
+			factor = 0.25
+			real_father = { trait = brave }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			mother = { trait = brave }
 		}
 		modifier = {

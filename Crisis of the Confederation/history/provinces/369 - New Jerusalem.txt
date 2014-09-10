@@ -1,0 +1,22 @@
+# 369 - New Jerusalem
+
+# County Title
+title = c_new_jerusalem
+
+# Settlements
+max_settlements = 5
+
+b_new_jerusalem_iii = temple
+b_new_jerusalem_ii = city
+b_new_jerusalem_iv = castle
+
+# Misc
+culture = arab_samawati # Initial culture
+religion = adoptionist_cultist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

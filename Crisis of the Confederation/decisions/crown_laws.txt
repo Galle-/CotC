@@ -406,31 +406,6 @@ de_jure_laws = {
 			factor = 0
 		}
 		pass_effect = {
-		}
-		effect = {
-			hidden_tooltip = {
-				holder_scope = {
-					set_character_flag = flag_decreased_crown_authority
-					any_vassal = {
-						limit = {
-							crownlaw_title = { title = PREVPREVPREV }
-							NOT = { in_faction = faction_pro_centralization }
-						}
-						opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good  }
-						remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
-						remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
-					}
-					any_vassal = {
-						limit = {
-							crownlaw_title = { title = PREVPREVPREV }
-							in_faction = faction_pro_centralization
-						}
-						opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
-						remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
-						remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
-					}
-				}
-			}
 			if = {
 				limit = {
 					holder_scope = {
@@ -465,6 +440,31 @@ de_jure_laws = {
 				holder_scope = {
 					piety = -100
 					religion_authority = { modifier = major_hypocritical_reform years = 50 }
+				}
+			}
+		}
+		effect = {
+			hidden_tooltip = {
+				holder_scope = {
+					set_character_flag = flag_decreased_crown_authority
+					any_vassal = {
+						limit = {
+							crownlaw_title = { title = PREVPREVPREV }
+							NOT = { in_faction = faction_pro_centralization }
+						}
+						opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good  }
+						remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
+						remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
+					}
+					any_vassal = {
+						limit = {
+							crownlaw_title = { title = PREVPREVPREV }
+							in_faction = faction_pro_centralization
+						}
+						opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
+						remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
+						remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
+					}
 				}
 			}
 			hidden_tooltip = {
@@ -1314,58 +1314,6 @@ de_jure_laws = {
 			factor = 0
 		}
 		pass_effect = {
-		}
-		effect = {
-			hidden_tooltip = {
-				if = {
-					limit = { has_law = centralization_0 }
-					holder_scope = {
-						set_character_flag = flag_increased_crown_authority
-						any_vassal = {
-							limit = {
-								crownlaw_title = { title = PREVPREVPREV }
-								NOT = { in_faction = faction_pro_centralization }
-							}
-							opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
-							remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good }
-							remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
-						}
-						any_vassal = {
-							limit = {
-								crownlaw_title = { title = PREVPREVPREV }
-								in_faction = faction_pro_centralization
-							}
-							opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
-							remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good }
-							remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
-						}
-					}
-				}
-				if = {
-					limit = { has_law = centralization_2 }
-					holder_scope = {
-						set_character_flag = flag_decreased_crown_authority
-						any_vassal = {
-							limit = {
-								crownlaw_title = { title = PREVPREVPREV }
-								NOT = { in_faction = faction_pro_centralization }
-							}
-							opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
-							remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
-							remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
-						}
-						any_vassal = {
-							limit = {
-								crownlaw_title = { title = PREVPREVPREV }
-								in_faction = faction_pro_centralization
-							}
-							opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good }
-							remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
-							remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
-						}
-					}
-				}
-			}
 			if = {
 				limit = {
 					OR = {
@@ -1436,6 +1384,58 @@ de_jure_laws = {
 				holder_scope = {
 					piety = 100
 					religion_authority = { modifier = major_compatible_reform years = 50 }
+				}
+			}
+		}
+		effect = {
+			hidden_tooltip = {
+				if = {
+					limit = { has_law = centralization_0 }
+					holder_scope = {
+						set_character_flag = flag_increased_crown_authority
+						any_vassal = {
+							limit = {
+								crownlaw_title = { title = PREVPREVPREV }
+								NOT = { in_faction = faction_pro_centralization }
+							}
+							opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
+							remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good }
+							remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
+						}
+						any_vassal = {
+							limit = {
+								crownlaw_title = { title = PREVPREVPREV }
+								in_faction = faction_pro_centralization
+							}
+							opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
+							remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good }
+							remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
+						}
+					}
+				}
+				if = {
+					limit = { has_law = centralization_2 }
+					holder_scope = {
+						set_character_flag = flag_decreased_crown_authority
+						any_vassal = {
+							limit = {
+								crownlaw_title = { title = PREVPREVPREV }
+								NOT = { in_faction = faction_pro_centralization }
+							}
+							opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
+							remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
+							remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
+						}
+						any_vassal = {
+							limit = {
+								crownlaw_title = { title = PREVPREVPREV }
+								in_faction = faction_pro_centralization
+							}
+							opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good }
+							remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
+							remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
+						}
+					}
 				}
 			}
 			hidden_tooltip = {
@@ -2284,58 +2284,6 @@ de_jure_laws = {
 			factor = 0
 		}
 		pass_effect = {
-		}
-		effect = {
-			hidden_tooltip = {
-				if = {
-					limit = { has_law = centralization_1 }
-					holder_scope = {
-						set_character_flag = flag_increased_crown_authority
-						any_vassal = {
-							limit = {
-								crownlaw_title = { title = PREVPREVPREV }
-								NOT = { in_faction = faction_pro_centralization }
-							}
-							opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
-							remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good }
-							remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
-						}
-						any_vassal = {
-							limit = {
-								crownlaw_title = { title = PREVPREVPREV }
-								in_faction = faction_pro_centralization
-							}
-							opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
-							remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good }
-							remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
-						}
-					}
-				}
-				if = {
-					limit = { has_law = centralization_3 }
-					holder_scope = {
-						set_character_flag = flag_decreased_crown_authority
-						any_vassal = {
-							limit = {
-								crownlaw_title = { title = PREVPREVPREV }
-								NOT = { in_faction = faction_pro_centralization }
-							}
-							opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
-							remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
-							remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
-						}
-						any_vassal = {
-							limit = {
-								crownlaw_title = { title = PREVPREVPREV }
-								in_faction = faction_pro_centralization
-							}
-							opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good }
-							remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
-							remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
-						}
-					}
-				}
-			}
 			if = {
 				limit = {
 					OR = {
@@ -2406,6 +2354,58 @@ de_jure_laws = {
 				holder_scope = {
 					piety = 100
 					religion_authority = { modifier = major_compatible_reform years = 50 }
+				}
+			}
+		}
+		effect = {
+			hidden_tooltip = {
+				if = {
+					limit = { has_law = centralization_1 }
+					holder_scope = {
+						set_character_flag = flag_increased_crown_authority
+						any_vassal = {
+							limit = {
+								crownlaw_title = { title = PREVPREVPREV }
+								NOT = { in_faction = faction_pro_centralization }
+							}
+							opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
+							remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good }
+							remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
+						}
+						any_vassal = {
+							limit = {
+								crownlaw_title = { title = PREVPREVPREV }
+								in_faction = faction_pro_centralization
+							}
+							opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
+							remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good }
+							remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
+						}
+					}
+				}
+				if = {
+					limit = { has_law = centralization_3 }
+					holder_scope = {
+						set_character_flag = flag_decreased_crown_authority
+						any_vassal = {
+							limit = {
+								crownlaw_title = { title = PREVPREVPREV }
+								NOT = { in_faction = faction_pro_centralization }
+							}
+							opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
+							remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
+							remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
+						}
+						any_vassal = {
+							limit = {
+								crownlaw_title = { title = PREVPREVPREV }
+								in_faction = faction_pro_centralization
+							}
+							opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good }
+							remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
+							remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
+						}
+					}
 				}
 			}
 			hidden_tooltip = {
@@ -3254,58 +3254,6 @@ de_jure_laws = {
 			factor = 0
 		}
 		pass_effect = {
-		}
-		effect = {
-			hidden_tooltip = {
-				if = {
-					limit = { has_law = centralization_2 }
-					holder_scope = {
-						set_character_flag = flag_increased_crown_authority
-						any_vassal = {
-							limit = {
-								crownlaw_title = { title = PREVPREVPREV }
-								NOT = { in_faction = faction_pro_centralization }
-							}
-							opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
-							remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good }
-							remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
-						}
-						any_vassal = {
-							limit = {
-								crownlaw_title = { title = PREVPREVPREV }
-								in_faction = faction_pro_centralization
-							}
-							opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
-							remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good }
-							remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
-						}
-					}
-				}
-				if = {
-					limit = { has_law = centralization_4 }
-					holder_scope = {
-						set_character_flag = flag_decreased_crown_authority
-						any_vassal = {
-							limit = {
-								crownlaw_title = { title = PREVPREVPREV }
-								NOT = { in_faction = faction_pro_centralization }
-							}
-							opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
-							remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
-							remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
-						}
-						any_vassal = {
-							limit = {
-								crownlaw_title = { title = PREVPREVPREV }
-								in_faction = faction_pro_centralization
-							}
-							opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good }
-							remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
-							remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
-						}
-					}
-				}
-			}
 			if = {
 				limit = {
 					OR = {
@@ -3376,6 +3324,58 @@ de_jure_laws = {
 				holder_scope = {
 					piety = 100
 					religion_authority = { modifier = major_compatible_reform years = 50 }
+				}
+			}
+		}
+		effect = {
+			hidden_tooltip = {
+				if = {
+					limit = { has_law = centralization_2 }
+					holder_scope = {
+						set_character_flag = flag_increased_crown_authority
+						any_vassal = {
+							limit = {
+								crownlaw_title = { title = PREVPREVPREV }
+								NOT = { in_faction = faction_pro_centralization }
+							}
+							opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
+							remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good }
+							remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
+						}
+						any_vassal = {
+							limit = {
+								crownlaw_title = { title = PREVPREVPREV }
+								in_faction = faction_pro_centralization
+							}
+							opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
+							remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good }
+							remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
+						}
+					}
+				}
+				if = {
+					limit = { has_law = centralization_4 }
+					holder_scope = {
+						set_character_flag = flag_decreased_crown_authority
+						any_vassal = {
+							limit = {
+								crownlaw_title = { title = PREVPREVPREV }
+								NOT = { in_faction = faction_pro_centralization }
+							}
+							opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
+							remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
+							remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
+						}
+						any_vassal = {
+							limit = {
+								crownlaw_title = { title = PREVPREVPREV }
+								in_faction = faction_pro_centralization
+							}
+							opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good }
+							remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
+							remove_opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
+						}
+					}
 				}
 			}
 			hidden_tooltip = {
@@ -3802,31 +3802,6 @@ de_jure_laws = {
 			factor = 0
 		}
 		pass_effect = {
-		}
-		effect = {
-			hidden_tooltip = {
-				holder_scope = {
-					set_character_flag = flag_increased_crown_authority
-					any_vassal = {
-						limit = {
-							crownlaw_title = { title = PREVPREVPREV }
-							NOT = { in_faction = faction_pro_centralization }
-						}
-						opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
-						remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good }
-						remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
-					}
-					any_vassal = {
-						limit = {
-							crownlaw_title = { title = PREVPREVPREV }
-							in_faction = faction_pro_centralization
-						}
-						opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
-						remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good }
-						remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
-					}
-				}
-			}
 			if = {
 				limit = {
 					holder_scope = {
@@ -3861,6 +3836,31 @@ de_jure_laws = {
 				holder_scope = {
 					piety = 100
 					religion_authority = { modifier = major_compatible_reform years = 50 }
+				}
+			}
+		}
+		effect = {
+			hidden_tooltip = {
+				holder_scope = {
+					set_character_flag = flag_increased_crown_authority
+					any_vassal = {
+						limit = {
+							crownlaw_title = { title = PREVPREVPREV }
+							NOT = { in_faction = faction_pro_centralization }
+						}
+						opinion = { who = ROOT modifier = opinion_raised_crown_authority_bad }
+						remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good }
+						remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
+					}
+					any_vassal = {
+						limit = {
+							crownlaw_title = { title = PREVPREVPREV }
+							in_faction = faction_pro_centralization
+						}
+						opinion = { who = ROOT modifier = opinion_raised_crown_authority_good }
+						remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_good }
+						remove_opinion = { who = ROOT modifier = opinion_lowered_crown_authority_bad }
+					}
 				}
 			}
 			hidden_tooltip = {
@@ -4757,6 +4757,7 @@ de_jure_laws = {
 			holder_scope = {
 				clr_character_flag = flag_founded_legislature
 				set_character_flag = flag_founded_legislature
+				hidden_tooltip = { character_event = { id = maintenance.900 } } # calculate initial senate
 			}
 		}
 	}
@@ -4941,13 +4942,16 @@ de_jure_laws = {
 		
 		ai_will_do = { factor = 0 }
 		
-		effect = {
-			hidden_tooltip = { revoke_law = public_order_1 }
-			set_the_kings_peace = no
+		pass_effect = {
 			holder_scope = {
 				prestige = -250
 				religion_authority = { modifier = public_order_collapsed years = 100 }
 			}
+		}
+		
+		effect = {
+			hidden_tooltip = { revoke_law = public_order_1 }
+			set_the_kings_peace = no
 		}
 		
 		# The military can't be relied on to take orders
@@ -4982,13 +4986,16 @@ de_jure_laws = {
 		
 		ai_will_do = { factor = 1 } # Always do this if possible
 		
-		effect = {
-			hidden_tooltip = { revoke_law = public_order_0 }
-			set_the_kings_peace = yes
+		pass_effect = {
 			holder_scope = {
 				prestige = 250
 				religion_authority = { modifier = public_order_restored years = 100 }
 			}
+		}
+		
+		effect = {
+			hidden_tooltip = { revoke_law = public_order_0 }
+			set_the_kings_peace = yes
 		}
 	}
 }

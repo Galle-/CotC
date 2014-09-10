@@ -1,0 +1,22 @@
+# 348 - Nai Dunya
+
+# County Title
+title = c_nai_dunya
+
+# Settlements
+max_settlements = 6
+
+b_nai_dunya_iii = city
+b_nai_dunya_iii_b = castle
+b_nai_dunya_vii_b = temple
+
+# Misc
+culture = indo_mukta # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

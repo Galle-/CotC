@@ -1,0 +1,18 @@
+# 334 - VN-362
+
+# County Title
+title = c_vn_362
+
+# Settlements
+max_settlements = 5
+
+b_vn_362_outpost = castle
+b_vn_362_observatory = temple
+
+
+# Misc
+culture = indo_mukta # Initial culture
+religion = space_pirate
+
+1.1.1 = {
+}

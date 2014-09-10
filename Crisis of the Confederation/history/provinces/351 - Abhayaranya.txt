@@ -1,0 +1,22 @@
+# 351 - Abhayaranya
+
+# County Title
+title = c_abhayaranya
+
+# Settlements
+max_settlements = 4
+
+b_abhayaranya_iii_b = temple
+b_abhayaranya_iii = city
+b_abhayaranya_iv = castle
+
+# Misc
+culture = indo_mukta # Initial culture
+religion = adoptionist_cultist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

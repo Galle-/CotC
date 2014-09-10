@@ -25,7 +25,7 @@
 		# Failed assassination attempt
 		effect = { add_trait = maimed }
 	}
-	2997.10.32 = {
+	2997.10.23 = {
 		effect = {
 			remove_trait = maimed
 			add_trait = cybernetic_limb
@@ -96,7 +96,7 @@
 	
 	2943.1.1 = { birth = "2943.1.1" }
 	2965.1.1 = {
-		add_spouse_matrilineal = 1234331 # Lucas Ramirez
+		add_matrilineal_spouse = 1234331 # Lucas Ramirez
 		effect = { spouse = { add_lover = ROOT } }
 	}
 }
@@ -291,11 +291,42 @@
 	culture = hispanic_orion
 	religion = colonial_separatist
 	
+	father = 1204475 # Lucas Ortiz
+	mother = 1104443 # Camila Cruz
+	
 	2957.1.1 = { birth = "2957.1.1" }
 	2973.1.1 = {
 		add_spouse = 1107083 # Amanda Javadi
 		effect = { spouse = { add_lover = ROOT } }
 	}
+}
+1204475 = {
+	# Father of Miguel and Samuel Ortiz
+	name = "Lucas"
+	dynasty = 4475 # Ortiz
+	female = no
+	
+	culture = hispanic_orion
+	religion = terran_federalist
+	
+	2932.1.1 = { birth = "2932.1.1" }
+	2955.1.1 = {
+		add_spouse = 1104443 # Camila Cruz
+		effect = { spouse = { add_lover = ROOT } }
+	}
+	2995.1.1 = { trait = ill }
+	2996.1.1 = { death = { death_reason = death_trait } }
+}
+1104443 = {
+	# Mother of Miguel and Samuel Ortiz
+	name = "Camila"
+	dynasty = 4443 # Cruz
+	female = yes
+	
+	culture = hispanic_orion
+	religion = terran_federalist
+	
+	2934.1.1 = { birth = "2934.1.1" }
 }
 1107083 = {
 	# Wife of Miguel Ortiz
@@ -333,7 +364,7 @@
 	
 	2959.1.1 = { birth = "2959.1.1" }
 	2984.1.1 = {
-		add_spouse_matrilineal = 11010475 # Gabriel Belinsky
+		add_matrilineal_spouse = 11010475 # Gabriel Belinsky
 		effect = { spouse = { add_lover = ROOT } }
 	}
 }
@@ -405,7 +436,7 @@
 	
 	2972.1.1 = { birth = "2972.1.1" }
 	2995.1.1 = {
-		add_spouse_matrilineal = 11010587 # Miguel Voronin
+		add_matrilineal_spouse = 11010587 # Miguel Voronin
 		effect = { spouse = { add_lover = ROOT } }
 	}
 }
@@ -519,7 +550,7 @@
 	trait = warship_captain
 	
 	2948.1.1 = { birth = "2948.1.1" }
-	2970.1.1 = { add_spouse_matrilineal = 1224331 } # David Ramirez
+	2970.1.1 = { add_matrilineal_spouse = 1224331 } # David Ramirez
 }
 1115579 = {
 	# First daughter of Emma Joshi
@@ -533,7 +564,7 @@
 	father = 1224331 # David Ramirez
 	mother = 1105579 # Emma Joshi
 	
-	2972.1.1 = { birth = "2962.1.1" }
+	2972.1.1 = { birth = "2972.1.1" }
 }
 1125579 = {
 	# Second daughter of Emma Joshi
@@ -547,7 +578,7 @@
 	father = 1224331 # David Ramirez
 	mother = 1105579 # Emma Joshi
 	
-	2975.1.1 = { birth = "2965.1.1" }
+	2975.1.1 = { birth = "2975.1.1" }
 }
 11012939 = {
 	# Governor of Seldon

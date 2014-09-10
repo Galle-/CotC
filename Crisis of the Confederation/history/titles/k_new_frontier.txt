@@ -1,0 +1,9 @@
+2900.1.1 = {
+	law = true_cognatic_succession
+	law = succ_feudal_elective
+	law = centralization_1
+}
+2998.1.1 = {
+	holder = 12000100
+	liege = "e_terran_confederation"
+}

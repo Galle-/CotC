@@ -1,0 +1,19 @@
+# 152 - Delaware
+
+# County Title
+title = c_delaware
+
+# Settlements
+max_settlements = 4
+b_delaware_prime = temple
+b_delaware_ii = city
+b_delaware_iii = castle
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = colonial_separatist
+
+# History
+
+2998.1.1 = {
+}

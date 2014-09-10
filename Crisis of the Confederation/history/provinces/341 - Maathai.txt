@@ -1,0 +1,21 @@
+# 341 - Maathai
+
+# County Title
+title = c_maathai
+
+# Settlements
+max_settlements = 4
+
+b_maathai_ii = temple
+b_maathai_iii = city
+
+# Misc
+culture = indo_mukta # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

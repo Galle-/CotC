@@ -1,0 +1,22 @@
+# 339 - Sarabhai
+
+# County Title
+title = c_sarabhai
+
+# Settlements
+max_settlements = 4
+
+b_sarabhai_vi_b = castle
+b_sarabhai_vi_c = city
+b_sarabhai_vi_d = temple
+
+# Misc
+culture = indo_mukta # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

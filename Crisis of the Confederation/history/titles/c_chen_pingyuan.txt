@@ -1,0 +1,7 @@
+2900.1.1={
+	liege = "d_wu_ren_zhi_ah"
+	law = succ_appointment
+	law = true_cognatic_succession
+}
+
+2996.1.1 = { holder = "100320027" }

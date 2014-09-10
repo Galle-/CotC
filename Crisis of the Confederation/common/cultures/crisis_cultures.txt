@@ -205,12 +205,14 @@ terran_group = {
 			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
 			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
 			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
 		}
 		female_names = {
 			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
 			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
 			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
 			Vaishnavi
+			Nilana Samaya # Same
 		}
 		dukes_called_kings = yes
 		from_dynasty_prefix = "na "
@@ -1179,6 +1181,7 @@ celestean_group = {
 	}
 	mesoamerican_celestean = {
 		graphical_culture = americonfederategfx
+		second_graphical_culture = mideastconfederategfx
 		color = { 1.0 1.0 0 }
 
 		male_names = {
@@ -1596,6 +1599,7 @@ sexto_solar_group = {
 	}
 	mesoamerican_sexto_solar = {
 		graphical_culture = americonfederategfx
+		second_graphical_culture = mideastconfederategfx
 		color = { 1.0 0.75 0 }
 		
 		male_names = {
@@ -1931,12 +1935,14 @@ samawati_group = {
 			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
 			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
 			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
 		}
 		female_names = {
 			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
 			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
 			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
 			Vaishnavi
+			Nilana Samaya # Same
 		}
 		dukes_called_kings = yes
 		from_dynasty_prefix = "na "
@@ -2167,10 +2173,11 @@ samawati_group = {
 	}
 }
 angani_group = {
-	graphical_culture = angloconfederategfx
+	graphical_culture = afroanganigfx
+	second_graphical_culture = mideastanganigfx
 	
 	anglo_angani = {
-		graphical_culture = angloconfederategfx
+		graphical_culture = angloanganigfx
 		color = { 0.9 0.9 0.9 }
 
 		male_names = {
@@ -2205,7 +2212,7 @@ angani_group = {
 	}
 	
 	arab_angani = {
-		graphical_culture = mideastconfederategfx
+		graphical_culture = mideastanganigfx
 		color = { 0.9 0.9 0.9 }
 
 		male_names = {
@@ -2246,8 +2253,8 @@ angani_group = {
 	}
 
 	east_afro_angani = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afroanganigfx
+		second_graphical_culture = mideastanganigfx
 		color = { 0.9 0.9 0.9 }
 
 		male_names = {
@@ -2285,8 +2292,8 @@ angani_group = {
 		modifier = default_culture_modifier
 	}
 	ethiopian_angani = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afroanganigfx
+		second_graphical_culture = mideastanganigfx
 		color = { 0.9 0.9 0.9 }
 
 		male_names = {
@@ -2321,8 +2328,8 @@ angani_group = {
 		modifier = default_culture_modifier
 	}
 	hispanic_angani = {
-		graphical_culture = hispanicconfederategfx
-		second_graphical_culture = angloconfederategfx
+		graphical_culture = hispanicanganigfx
+		second_graphical_culture = angloanganigfx
 		color = { 0.9 0.9 0.9 }
 
 		male_names = {
@@ -2359,8 +2366,8 @@ angani_group = {
 	}
 	
 	indo_angani = {
-		graphical_culture = indoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = indoanganigfx
+		second_graphical_culture = mideastanganigfx
 		color = { 0.9 0.9 0.9 }
 
 		male_names = {
@@ -2394,8 +2401,8 @@ angani_group = {
 		modifier = default_culture_modifier
 	}
 	iranian_angani = {
-		graphical_culture = persianconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = persiananganigfx
+		second_graphical_culture = mideastanganigfx
 		color = { 0.9 0.9 0.9 }
 
 		male_names = {
@@ -2432,8 +2439,8 @@ angani_group = {
 		modifier = default_culture_modifier
 	}
 	japanese_angani = {
-		graphical_culture = sinoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = sinoanganigfx
+		second_graphical_culture = mideastanganigfx
 		color = { 0.9 0.9 0.9 }
 
 		male_names = {
@@ -2467,7 +2474,8 @@ angani_group = {
 		modifier = default_culture_modifier
 	}
 	mesoamerican_angani = {
-		graphical_culture = americonfederategfx
+		graphical_culture = amerianganigfx
+		second_graphical_culture = mideastanganigfx
 		color = { 0.9 0.9 0.9 }
 
 		male_names = {
@@ -2504,8 +2512,8 @@ angani_group = {
 		modifier = default_culture_modifier
 	}
 	russo_angani = {
-		graphical_culture = russoconfederategfx
-		second_graphical_culture = angloconfederategfx
+		graphical_culture = russoanganigfx
+		second_graphical_culture = angloanganigfx
 		color = { 0.9 0.9 0.9 }
 
 		male_names = {
@@ -2545,8 +2553,8 @@ angani_group = {
 		modifier = default_culture_modifier
 	}
 	sino_angani = {
-		graphical_culture = sinoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = sinoanganigfx
+		second_graphical_culture = mideastanganigfx
 		color = { 0.9 0.9 0.9 }
 
 		male_names = {
@@ -2580,8 +2588,8 @@ angani_group = {
 		modifier = default_culture_modifier
 	}
 	west_afro_angani = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afroanganigfx
+		second_graphical_culture = mideastanganigfx
 		color = { 0.9 0.9 0.9 }
 
 		male_names = {
@@ -3069,10 +3077,11 @@ frontiersman_group = {
 	}
 }
 centauri_group = {
-	graphical_culture = angloconfederategfx
+	graphical_culture = russocentaurigfx
+	second_graphical_culture = anglocentaurigfx
 	
 	anglo_centauri = {
-		graphical_culture = angloconfederategfx
+		graphical_culture = anglocentaurigfx
 		color = { 0.1 0.1 0.1 }
 
 		male_names = {
@@ -3110,7 +3119,7 @@ centauri_group = {
 	}
 	
 	arab_centauri = {
-		graphical_culture = mideastconfederategfx
+		graphical_culture = mideastcentaurigfx
 		color = { 0.1 0.1 0.1 }
 
 		male_names = {
@@ -3154,8 +3163,8 @@ centauri_group = {
 	}
 
 	east_afro_centauri = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afrocentaurigfx
+		second_graphical_culture = mideastcentaurigfx
 		color = { 0.1 0.1 0.1 }
 
 		male_names = {
@@ -3196,8 +3205,8 @@ centauri_group = {
 		modifier = default_culture_modifier
 	}
 	ethiopian_centauri = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afrocentaurigfx
+		second_graphical_culture = mideastcentaurigfx
 		color = { 0.1 0.1 0.1 }
 
 		male_names = {
@@ -3238,8 +3247,8 @@ centauri_group = {
 		modifier = default_culture_modifier
 	}
 	hispanic_centauri = {
-		graphical_culture = hispanicconfederategfx
-		second_graphical_culture = angloconfederategfx
+		graphical_culture = hispaniccentaurigfx
+		second_graphical_culture = anglocentaurigfx
 		color = { 0.1 0.1 0.1 }
 
 		male_names = {
@@ -3279,8 +3288,8 @@ centauri_group = {
 	}
 	
 	indo_centauri = {
-		graphical_culture = indoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = indocentaurigfx
+		second_graphical_culture = mideastcentaurigfx
 		color = { 0.1 0.1 0.1 }
 
 		male_names = {
@@ -3317,8 +3326,8 @@ centauri_group = {
 		modifier = default_culture_modifier
 	}
 	iranian_centauri = {
-		graphical_culture = persianconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = persiancentaurigfx
+		second_graphical_culture = mideastcentaurigfx
 		color = { 0.1 0.1 0.1 }
 
 		male_names = {
@@ -3358,8 +3367,8 @@ centauri_group = {
 		modifier = default_culture_modifier
 	}
 	japanese_centauri = {
-		graphical_culture = sinoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = sinocentaurigfx
+		second_graphical_culture = mideastcentaurigfx
 		color = { 0.1 0.1 0.1 }
 
 		male_names = {
@@ -3396,7 +3405,8 @@ centauri_group = {
 		modifier = default_culture_modifier
 	}
 	mesoamerican_centauri = {
-		graphical_culture = americonfederategfx
+		graphical_culture = americentaurigfx
+		second_graphical_culture = mideastcentaurigfx
 		color = { 0.1 0.1 0.1 }
 
 		male_names = {
@@ -3436,8 +3446,8 @@ centauri_group = {
 		modifier = default_culture_modifier
 	}
 	russo_centauri = {
-		graphical_culture = russoconfederategfx
-		second_graphical_culture = angloconfederategfx
+		graphical_culture = russocentaurigfx
+		second_graphical_culture = anglocentaurigfx
 		color = { 0.1 0.1 0.1 }
 
 		male_names = {
@@ -3480,8 +3490,8 @@ centauri_group = {
 		modifier = default_culture_modifier
 	}
 	sino_centauri = {
-		graphical_culture = sinoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = sinocentaurigfx
+		second_graphical_culture = mideastcentaurigfx
 		color = { 0.1 0.1 0.1 }
 
 		male_names = {
@@ -3518,8 +3528,8 @@ centauri_group = {
 		modifier = default_culture_modifier
 	}
 	west_afro_centauri = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afrocentaurigfx
+		second_graphical_culture = mideastcentaurigfx
 		color = { 0.1 0.1 0.1 }
 
 		male_names = {
@@ -3558,7 +3568,8 @@ centauri_group = {
 	}
 }
 tengoku_group = {
-	graphical_culture = anglojiongfx
+	graphical_culture = sinojiongfx
+	second_graphical_culture = mideastjiongfx
 	
 	anglo_tengoku = {
 		graphical_culture = anglojiongfx
@@ -3878,6 +3889,7 @@ tengoku_group = {
 	}
 	mesoamerican_tengoku = {
 		graphical_culture = amerijiongfx
+		second_graphical_culture = mideastjiongfx
 		color = { 0 0.25 0 }
 		
 		male_names = {
@@ -4040,22 +4052,19 @@ bianjiangese_group = {
 	anglo_bianjiangese = {
 		graphical_culture = angloconfederategfx
 		color = { 0.5 0 0.5 }
+		
 		male_names = {
-			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
-			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
-			Charles_Charles Daniel_Daniel David_David Duncan Edward_Edward Edgar Ethan
-			Gabriel_Gabriel Gregory_Gregory George_George Harry Henry_Henry Jack Jacob_Jacob
-			James_James John_John Joseph_Joseph Joshua_Joshua Liam Luke_Lucas Lucas_Lucas Logan
-			Malcolm Matthew_Matthew Michael_Michael Nathan_Nathan Noah Patrick Philip_Philip Peter_Peter
-			Oliver Owen Robert_Robert Richard_Richard Samuel_Samuel Thomas_Thomas Stephen_Stephen
-			William_William Wilfred Victor Vincent Zachary
+			An Bo Bin Cheng
+			De Dong Feng Gang Guo Hui Hao
+			Jian Jie Jun Kang Liang Lei Ning
+			Peng Tao Wei Yong Yi Wen
 		}
 		female_names = {
-			Abigail_Abigail Alice Catherine_Catherine Chloe Barbara Dorothy
-			Emma Emily_Emily Isabella_Elisabeth Elisabeth_Elisabeth Eliza_Elisabeth Elizabeth_Elizabeth Ellen
-			Grace Hannah Jennifer_Jennifer Jessica Lily Lucy Linda Katherine_Catherine
-			Mary_Maria Margaret_Margaret Melissa Morgan Patricia_Patricia Ruby Stephany
-			Sarah_Sarah Sophia Susan_Susan Zoe Simone
+			Ai Bi Cai Dan Fang
+			Hong Hui Juan Jing Jie
+			Lan Li Lian Na Ni
+			Qian Qiong Shan Shu Ting
+			Xia Xian Xiaoyan Xiaomei Xinyi Yan Yun Ying Zhen
 		}
 		
 		dukes_called_kings = yes
@@ -4076,19 +4085,19 @@ bianjiangese_group = {
 		graphical_culture = mideastconfederategfx
 		color = { 0.5 0 0.5 }
 
+		
 		male_names = {
-			Amir Ammar Adam_Adam Ahmed_Ahmad Ali_Ali Abdulrahman_Abdulrahman Abdullah_Abdullah Aziz Bilal
-			Hamdan Hamid Hamza Hussein_Hussayn Hasan Halim Kathem Khaled Ibrahim_Abraham Karim
-			Mahmud Majid Muhammad_Muhammed Mustafa Murad Omar Rashid
-			Said Selim Tarek Taha Yasin Yousouf_Joseph
+			An Bo Bin Cheng
+			De Dong Feng Gang Guo Hui Hao
+			Jian Jie Jun Kang Liang Lei Ning
+			Peng Tao Wei Yong Yi Wen
 		}
 		female_names = {
-			Ashraqat Aya Aicha Amina
-			Dalal Doha Eisha Fajr Fatima Farida Fatin
-			Gamila Gamalat Gazel Hala Habiba Hosniya Hasnaa Hoda Layan Leen Lian Khadija Karima Jana
-			Malika Maha Marwa Maryam_Maria Malak Mona Naima Nesreen Nadia Noor
-			Rachida Reem Salma Saida Sahar Shaimaa Shahd Suha Sarah_Sarah
-			Yara
+			Ai Bi Cai Dan Fang
+			Hong Hui Juan Jing Jie
+			Lan Li Lian Na Ni
+			Qian Qiong Shan Shu Ting
+			Xia Xian Xiaoyan Xiaomei Xinyi Yan Yun Ying Zhen
 		}
 		
 		dukes_called_kings = yes
@@ -4115,22 +4124,19 @@ bianjiangese_group = {
 		graphical_culture = afroconfederategfx
 		second_graphical_culture = mideastconfederategfx
 		color = { 0.5 0 0.5 }
-
+		
 		male_names = {
-			Amani Anasa Azize Baraka Darweshi Elimu Enzi
-			Fanana Faraji Hamisi Husani Issa Jahleel Jina Juma Jumaane
-			Khalfani Kitwana Kondo Kwanza Mbwana Mhina Mosi Musa
-			Rhamadhani Salehe Sefu Shani Simba Taji Tambo
+			An Bo Bin Cheng
+			De Dong Feng Gang Guo Hui Hao
+			Jian Jie Jun Kang Liang Lei Ning
+			Peng Tao Wei Yong Yi Wen
 		}
 		female_names = {
-			Afiya Akina Amana Angalia Arusi Ashura Asya
-			Bahati Busara Chiku Dafina Dalila Fanaka Faraja Fatuma Fikira
-			Hadiya Halima Halisi Haoniya Hasina Hawa Imani Imara Inira Jaha Jina
-			Kakena Kalere Kamaria Karama Kesi Khadija Kibibi Kijakazi Kinaya Kinjia Kito
-			Malika Malkia Marjani Marini Masika Maulidi Mwamini Mwasaa
-			Najma Nbushe Neema Panya Pasua Penda Rashida Raziya Rehema Rukiya
-			Saada Salama Sanura Sauda Shani Sikudhani Siti Tabia Waseme
-			Zakiya Zawadi Zuwena
+			Ai Bi Cai Dan Fang
+			Hong Hui Juan Jing Jie
+			Lan Li Lian Na Ni
+			Qian Qiong Shan Shu Ting
+			Xia Xian Xiaoyan Xiaomei Xinyi Yan Yun Ying Zhen
 		}
 		dukes_called_kings = yes
 		founder_named_dynasties = yes
@@ -4154,15 +4160,18 @@ bianjiangese_group = {
 		graphical_culture = afroconfederategfx
 		second_graphical_culture = mideastconfederategfx
 		color = { 0.5 0 0.5 }
-
 		male_names = {
-			Amare Dahnay Desta Getachew Geteye Girma Iskinder Abai Abebe Afework Aman Assefa Atoberhan Azmera Bekele Benaim Berhanu Berhanua Berihun Berta Bworo Daniachew Dawit Demissie Eremias Ezana Fasilidas Fethee Gabra Gebereal Gebre Gondar Hackeem Haeran Hagos Hakeem Hakiem Hakim Hakym Iskander_Alexander Iskinder_Alexander Iyasu Jima Kafa Kaleb Kelile Kelyle Kifle Lebna Lema Loua Mamo Mekonnen Melaku Mengesha Merille Miruts Negash Negasi Negus Ogbae Ogbai Oromo Rahad Selassie Semer Semere Sisay Tamirat Tariku Taye Tefere Teferi Teka Tekle Tengene Teruworq Tesfaye Tessema Tewodros Yacob Yohannas Yonas Zula
+			An Bo Bin Cheng
+			De Dong Feng Gang Guo Hui Hao
+			Jian Jie Jun Kang Liang Lei Ning
+			Peng Tao Wei Yong Yi Wen
 		}
 		female_names = {
-			Habesha Abeba Abrihet Adanech Adina Alaworld Alitash Amhara Ayana Bathsheba Bekele Belkis Berhane Berta Cheren China Debre Debtera Desse
-			Desta Dilla Falasha Falashina Fana Fannah Genat Hagos Jahzara Jazarah Kayla Kelile Kelyle Keren Kess Kifle Lishan Louama Magdala Maharene
-			Makda Makeda Mandera Melesse Mellesse Misrak Negasi Nishan Nyala Qwara Retta Seble Sela Selamawit Selassie Semhar Senalat Sheba Shinasha
-			Sisay Tavavich Teru Totit Tsage Wagaye Yehudit Zala Zauditu Zeina Zena Zenia
+			Ai Bi Cai Dan Fang
+			Hong Hui Juan Jing Jie
+			Lan Li Lian Na Ni
+			Qian Qiong Shan Shu Ting
+			Xia Xian Xiaoyan Xiaomei Xinyi Yan Yun Ying Zhen
 		}
 		dukes_called_kings = yes
 		founder_named_dynasties = yes
@@ -4186,21 +4195,19 @@ bianjiangese_group = {
 		graphical_culture = hispanicconfederategfx
 		second_graphical_culture = angloconfederategfx
 		color = { 0.5 0 0.5 }
-
+		
 		male_names = {
-			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
-			Bruno Carlos Christopher_Christopher Daniel_Daniel David_David Diego Dylan
-			Emilio Emiliano_Emiliano Emmanuel Felipe_Philip Gabriel_Gabriel
-			Ignacio Juan_John Juan-Pablo Juan-Jose Juan-Diego Joaquin Jeronimo Lucas Leonardo
-			Maximiliano_Max Martin Matias_Matthew Mateo_Matthew Miguel_Michael Miguel-Angel Nicolas
-			Rodrigo Pablo Samuel_Samuel Santiago Sebastian Tomas_Thomas Thiago
+			An Bo Bin Cheng
+			De Dong Feng Gang Guo Hui Hao
+			Jian Jie Jun Kang Liang Lei Ning
+			Peng Tao Wei Yong Yi Wen
 		}
 		female_names = {
-			Sofia_Sophia Isabella Camila Valentina Valeria Mariana Luciana
-			Daniela_Danielle Gabriela Victoria_Victoria Martina Lucia Ximena Sara_Sarah
-			Samantha Maria-Jose Emma Catalina Julieta Mia Antonella Renata Emilia_Emily
-			Natalia Zoe Nicole Paula Amanda Maria-Fernanda Antonia Alejandra Juana Andrea
-			Manuela Ana-Sofia Guadalupe Agustina Elena Maria_Maria Beatriz_Beatrice
+			Ai Bi Cai Dan Fang
+			Hong Hui Juan Jing Jie
+			Lan Li Lian Na Ni
+			Qian Qiong Shan Shu Ting
+			Xia Xian Xiaoyan Xiaomei Xinyi Yan Yun Ying Zhen
 		}
 		dukes_called_kings = yes
 		from_dynasty_prefix = "de "
@@ -4223,22 +4230,19 @@ bianjiangese_group = {
 		graphical_culture = indoconfederategfx
 		second_graphical_culture = mideastconfederategfx
 		color = { 0.5 0 0.5 }
+		
 		male_names = {
-			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
-			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
-			Bhushan Deepak Devansh Dhruv
-			Gaurav Gokul Hari Harish Hemanth Inder Ishan Jeevan Jatin
-			Karthik Kapil Kumar Kali
-			Mohit Manish Manoj Naveen Nikhil Nithin
-			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
-			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
-			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			An Bo Bin Cheng
+			De Dong Feng Gang Guo Hui Hao
+			Jian Jie Jun Kang Liang Lei Ning
+			Peng Tao Wei Yong Yi Wen
 		}
 		female_names = {
-			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
-			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
-			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
-			Vaishnavi
+			Ai Bi Cai Dan Fang
+			Hong Hui Juan Jing Jie
+			Lan Li Lian Na Ni
+			Qian Qiong Shan Shu Ting
+			Xia Xian Xiaoyan Xiaomei Xinyi Yan Yun Ying Zhen
 		}
 		dukes_called_kings = yes
 		from_dynasty_prefix = "na "
@@ -4258,21 +4262,19 @@ bianjiangese_group = {
 		graphical_culture = persianconfederategfx
 		second_graphical_culture = mideastconfederategfx
 		color = { 0.5 0 0.5 }
-
+		
 		male_names = {
-			Abbas Abolhassan Afshar_Afshar Ahmad_Ahmad Akbar_Akbar Ali Allahyar Amin Anushirvan_Anushirvan Aram Ardahan_Ardahan Ardavan_Ardavan Ardeshir_Ardeshir Assad Aurang Ayeshah Babak_Babak Bahman
-			Bahram_Bahram Bakhtiar_Bakhtiar Behrad Behrouz Bozorg Danush_Danush Darab Dariush_Darius Davud_David Djamasp Ebrahim_Abraham Ehsan Esfandiar_Esfandiar Eskander_Alexander Esma'il_Ismail Faramarz_Faramarz Faraz_Faraz Fareed_Farid Farhad_Farhad Fariborz_Fariborz
-			Farroukh_Farroukh Farrukhzad_Farrukhzad Farzad_Farzad Fath Ferdows_Ferdows Fereedun_Feridun Ghobad Gholam Godarz Goshtasb_Goshtasb Hafez Hassan_Hasan Hazarasp_Hazarasp Hedayat Hooshyar_Hooshyar Hormazd_Hormazd Hormoz Hossein_Hossein
-			Humayun Jahandar_Jahandar Jahangir_Jahangir Jahanshah_Jahanshah Jamshid_Jamshid Javeed_Javeed Kambiz Kamran Kavoos_Kavoos Keyghobad Keykhosrau_Keykhosrau Kharmandar_Kharmandar Khashayar_Khashayar Kavadh Khodadad_Khodadad Khosrau_Khosrau
-			Khudayar_Khudayar Khurshid_Khurshid Kurush_Cyrus Mahmud Manuchihr_Manuchihr Manushihr_Manushihr Marzuban_Marzuban Mashad_Mashad Maziar Mehrab Mehrzad Mohammed_Muhammad Morad_Morad Morteza Mozaffar Nard Naveed Nawid Nezam Parviz Pashang_Pashang Peroz_Peroz
-			Pujman Reza Rostam_Rostam Ruhollah Sadri Salman Shahab_Shahab Shahbaz_Shahbaz Shahin_Shahin Shahram_Shahram Shahrokh_Sharokh Shahruz_Shahruz Shahryar_Shahryar Shapur_Shapur Shayan_Shayan Sina Tahmasb_Tahmasb Vahhab_Vahhab Vahid
-			Vali Vandad Varshasb_Varshasb Vishtasb_Vishtasb Yazdegerd Yousef_Joseph Zahak Zakaria Zand Zartosht_Zartosht Zia
+			An Bo Bin Cheng
+			De Dong Feng Gang Guo Hui Hao
+			Jian Jie Jun Kang Liang Lei Ning
+			Peng Tao Wei Yong Yi Wen
 		}
 		female_names = {
-			Afsaneh Ahu Arghavan Azarmidokht Asa Azadeh Bahar Banafsheh Behnaz Burandokht Darya Delaram Delbar Dinah Donya Elham Elnaz Farah Fareedeh Farnaz Farrin Farva
-			Furuzan Ghamze Ghazal Ghoncheh_Ghoncheh Golbahar_Golbahar Golnaz_Golnaz Golpari Golshan Hamdam Hurmat Irandokht Jamileh Javaneh Leila Mahdokht Mahtab Mariam_Mariam
-			Navvaba Nazgol_Nazgol Nazilla Noor Parvaneh_Parvaneh Parvin Pertevniyal Pourandokht_Pourandokht Roshanora Roxana Salomeh Shahrzad Shahzadeh Shirin Soraya Touran
-			Tourandokht Yasaman Yekta Zarrindokht Zeynab Zohreh
+			Ai Bi Cai Dan Fang
+			Hong Hui Juan Jing Jie
+			Lan Li Lian Na Ni
+			Qian Qiong Shan Shu Ting
+			Xia Xian Xiaoyan Xiaomei Xinyi Yan Yun Ying Zhen
 		}
 		dukes_called_kings = yes
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
@@ -4297,22 +4299,17 @@ bianjiangese_group = {
 		color = { 0.5 0 0.5 }
 		
 		male_names = {
-			Hiroshi Akira Kazuo Takashi Toshio Yoshio Hideo Masao Kiyoshi
-			Takeshi Minoru Shigeru Tadashi Kenji Koichi Takeo Ichiro Makoto
-			Yasuo Yukio Yutaka Osamu Saburo Koji Susumu Toru Shigeo Isao
-			Tatsuo Shiro Noboru Hajime Mitsuo Jiro Tsutomu Shoji Nobuo Takao
-			Tetsuo Shinichi Fumio Kenichi Akio Seiichi Tadao Kunio Eiichi
-			Ryotaro Ryusei
+			An Bo Bin Cheng
+			De Dong Feng Gang Guo Hui Hao
+			Jian Jie Jun Kang Liang Lei Ning
+			Peng Tao Wei Yong Yi Wen
 		}
-		
 		female_names = {
-			Keiko Yoko Kazuko Hiroko Kaoru Yoshiko Michiko Masako
-			Akiko Reiko Kyoko Noriko Toshiko Atsuko Ayako Chieko
-			Chizuko Eiko Emiko Eri Fumi Fumiko Hana Hanako Haru
-			Haruko Hitomi Junko Kaoru Kazue Kimiko Mari Mariko
-			Mayumi Mika Miyuki Rie Sachiko Satomi
-			Seiko Sumiko Tomoko Yasuko Yoshie
-			Yumi Yumiko Yuriko
+			Ai Bi Cai Dan Fang
+			Hong Hui Juan Jing Jie
+			Lan Li Lian Na Ni
+			Qian Qiong Shan Shu Ting
+			Xia Xian Xiaoyan Xiaomei Xinyi Yan Yun Ying Zhen
 		}
 		dukes_called_kings = yes
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
@@ -4330,21 +4327,23 @@ bianjiangese_group = {
 	}
 	mesoamerican_bianjiangese = {
 		graphical_culture = americonfederategfx
+		second_graphical_culture = mideastconfederategfx
 		color = { 0.5 0 0.5 }
 		
+		
 		male_names = {
-			Acalan Acacitli Acamapichtli Acolmiztli Aculnahuacatl Ahuiliztli Ahuitzotl Atl Axayacatl Cacamatzin Chimalli Chimalpilli Chimalpopoca Cipac Coanacoch Coatl Cozahtli Cuauhtemoc Cuauhtl Cuetlachtli Cuetzpalli Cuixtli Cuitlahuac 
-			Huitzilin Huitzilihuitl Huitzitl Huitztecol Iquehuacatzin Itzcoatl Itzli Itzcuintli Ixtlilxochitl Mahchimaleh Matlal Mazatl Matlalihuitl Matlatzincatzin Maxtla Miztli Moctezuma Moquihuix Necuametl Nezahualcoyotl Nezahualpilli Nochehuatl 
-			Ocuil Olli Opochtli Ozomatli Quauhtli Tapayaxi Tecocoltzin Tecolotl Tetlepanquetzaltzin Tezozomoc Tizoc Tizocic Tlacaelel Tlacaeleltzin Tlalli Tlaloc Tochtli Tototl Tzompantzin Tlilpotonqui Topiltzin Totoquihuaztli 
-			Ueman Yaotl Yayauhqui Yolotli Yolyamanitzin Xicohtencatl Xiuhpilli Xihuitl Xipil Xipilli Xochitl Xochipepe Xochipilli Yaotl Zipactonal Zolin
+			An Bo Bin Cheng
+			De Dong Feng Gang Guo Hui Hao
+			Jian Jie Jun Kang Liang Lei Ning
+			Peng Tao Wei Yong Yi Wen
 		}
 		female_names = {
-			Achcauhtli Acxocueitl Ahuiliztli Amoxtli Atl Atotoztli Ayauhcihuatl Azcalxochitzin Centehua Cihuaton Citlalmina Chalchiuitl Chicahua Chichimecacihuatzin Chipahua Chicomecoatl Chimalma Cihuaton Citlali Citlalli Citlalmina Coaxoch Coszcatl 
-			Cozamalotl Cuicatl Eleuia Eloxochitl Etalpalli Eztli Huehue-Zaca Itotia Iuitl Ixcatzin Izel Malinalxochitl Manauia Matlalatzin Mecatl Meztli Miahuaxiuitl Miyaoaxochitl Mizquixahual Momoztli Nahuatl Necahual Nelli Ohtli Papa Patli
-			Quiauhxochitl Sacnite Techichpotzin Tezozomoc Tziquetzalpoztectzin Teiuc Teicuih Teyacapan Tepin Tezcatlan Tlacotl Tlahco Tlahcoehua Toltecatl Tonalnan Tlazozomizqui
-			Yoltzin Xilonen Xiloxoch Xiuhtomiyauhtzin Xochitl Xocoh Xocoyotl Yaretzi Zeltzin Zyanya
+			Ai Bi Cai Dan Fang
+			Hong Hui Juan Jing Jie
+			Lan Li Lian Na Ni
+			Qian Qiong Shan Shu Ting
+			Xia Xian Xiaoyan Xiaomei Xinyi Yan Yun Ying Zhen
 		}
-		
 		dukes_called_kings = yes
 		
 		from_dynasty_prefix = "of "
@@ -4365,25 +4364,19 @@ bianjiangese_group = {
 		graphical_culture = russoconfederategfx
 		second_graphical_culture = angloconfederategfx
 		color = { 0.5 0 0.5 }
-
+		
 		male_names = {
-			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
-			Bogdan Boris Valentin Valery Vasily Viktor Vladimir_Vladimir
-			Gavriil_Gabriel Gennady Georgy_George Grigory_Gregory
-			David_David Daniil_Daniel Dmitry Ivan_John Igor Iosif_Joseph
-			Immanuil_Emmanuel Kirill_Cyril Konstantin Lev Leonid Maxim
-			Matvei Mikhail_Michael Nikita Nikolai_Nicolas Oleg Pavel
-			Pyotr_Peter Roman Sergei Stepan_Stephen Timofei Eduard_Edward Erik_Eric
-			Yulian Yuri Yakov
+			An Bo Bin Cheng
+			De Dong Feng Gang Guo Hui Hao
+			Jian Jie Jun Kang Liang Lei Ning
+			Peng Tao Wei Yong Yi Wen
 		}
 		female_names = {
-			Alexandra Alina Alyona Anastasiya_Anastasia Anna_Anna
-			Vera Valeriya Vasilisa Veronika Valentina Viktoriya_Victoria
-			Galina Dina Dominika Ekateirna_Catherine Elizaveta_Elisabeth Eva
-			Zhanna Zoya Inessa Izabella_Isabel Izolda Klara Klavdiya
-			Kristina Larisa Lidiya Lilya Ludmila Margarita Maya
-			Mariya_Maria Natalya Nina Nika Olga Olesya Raisa Rozalina
-			Svetlana Sofia_Sophia Tamara Tatyana Ulyana Florentina
+			Ai Bi Cai Dan Fang
+			Hong Hui Juan Jing Jie
+			Lan Li Lian Na Ni
+			Qian Qiong Shan Shu Ting
+			Xia Xian Xiaoyan Xiaomei Xinyi Yan Yun Ying Zhen
 		}
 		
 		dukes_called_kings = yes
@@ -4441,20 +4434,19 @@ bianjiangese_group = {
 		graphical_culture = afroconfederategfx
 		second_graphical_culture = mideastconfederategfx
 		color = { 0.5 0 0.5 }
-
+		
 		male_names = {
-			Abi-Bakr Abubakari Akoi Alayaman Ali_Ali Ali-Fay Ali-Kolon Ali-Zalil Bad・Bakr Bakr-Kanbu Bamari Bankanu
-			Bannu Bassarou Bassi Birama Bisi Biyu Bonga Cisse Dankaran Daoud_David Dawud_David Demba Diara D・u
-			Faga-Laye Fatta Fodi Fuluku F臈azu Gane Gao Hargani Harun Igoumou Ishaq_Isaac Ismail_Ismail Kabayo Kalabi Kambine
-			Kanafa Kassa Kasse・Kaya Kayna Kinkin Kisha Kodama Ko・・Kukuray Kusoy Lahiltoul M'Bali Maammarou Maghan
-			Mahmud_Mahmud Majan Malla Mamadi Mamoudou Manding-Bory Mari-Djata Maroumfa Missi-Iz・Morobani Musa_Moses
-			Nintasanay Nuh Ouali Ouanko Ouati Reidja Sakoura Salman_Solomon Samsou-B駻i Samsou-Ke・a Sandaki Soumaba
-			Soumaoro Soundiata Sulayman_Solomon Takoi Tib Tomo_Thomas Tunka Umar_Umar Yama Yaqub_Jacob Yasiboy Zakoi Zenku
+			An Bo Bin Cheng
+			De Dong Feng Gang Guo Hui Hao
+			Jian Jie Jun Kang Liang Lei Ning
+			Peng Tao Wei Yong Yi Wen
 		}
 		female_names = {
-			Adja Aichata Aissata Alima Aminata Amita Aoua Barakissa Bintou Deye Djeneba Djenly Djire Fadima
-			Fatim Fatoumata Halima Hawa Ina Kadi Kilia Kolonkan Lorane Mariam Nafissa Namandj・Namiss Nana
-			Safiatou Salimata Sassouma Sidib・Siya Sogolon Tekhaye Youma Ze・ab
+			Ai Bi Cai Dan Fang
+			Hong Hui Juan Jing Jie
+			Lan Li Lian Na Ni
+			Qian Qiong Shan Shu Ting
+			Xia Xian Xiaoyan Xiaomei Xinyi Yan Yun Ying Zhen
 		}
 		
 		dukes_called_kings = yes
@@ -4477,23 +4469,22 @@ orion_group = {
 	
 	anglo_orion = {
 		graphical_culture = angloconfederategfx
-		color = { 0.25 0.25 0.25 }
+		color = { 0.75 0.75 0.75 }
+
 		male_names = {
-			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
-			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
-			Charles_Charles Daniel_Daniel David_David Duncan Edward_Edward Edgar Ethan
-			Gabriel_Gabriel Gregory_Gregory George_George Harry Henry_Henry Jack Jacob_Jacob
-			James_James John_John Joseph_Joseph Joshua_Joshua Liam Luke_Lucas Lucas_Lucas Logan
-			Malcolm Matthew_Matthew Michael_Michael Nathan_Nathan Noah Patrick Philip_Philip Peter_Peter
-			Oliver Owen Robert_Robert Richard_Richard Samuel_Samuel Thomas_Thomas Stephen_Stephen
-			William_William Wilfred Victor Vincent Zachary
+			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
+			Bruno Carlos Christopher_Christopher Daniel_Daniel David_David Diego Dylan
+			Emilio Emiliano_Emiliano Emmanuel Felipe_Philip Gabriel_Gabriel
+			Ignacio Juan_John Juan-Pablo Juan-Jose Juan-Diego Joaquin Jeronimo Lucas Leonardo
+			Maximiliano_Max Martin Matias_Matthew Mateo_Matthew Miguel_Michael Miguel-Angel Nicolas
+			Rodrigo Pablo Samuel_Samuel Santiago Sebastian Tomas_Thomas Thiago
 		}
 		female_names = {
-			Abigail_Abigail Alice Catherine_Catherine Chloe Barbara Dorothy
-			Emma Emily_Emily Isabella_Elisabeth Elisabeth_Elisabeth Eliza_Elisabeth Elizabeth_Elizabeth Ellen
-			Grace Hannah Jennifer_Jennifer Jessica Lily Lucy Linda Katherine_Catherine
-			Mary_Maria Margaret_Margaret Melissa Morgan Patricia_Patricia Ruby Stephany
-			Sarah_Sarah Sophia Susan_Susan Zoe Simone
+			Sofia_Sophia Isabella Camila Valentina Valeria Mariana Luciana
+			Daniela_Danielle Gabriela Victoria_Victoria Martina Lucia Ximena Sara_Sarah
+			Samantha Maria-Jose Emma Catalina Julieta Mia Antonella Renata Emilia_Emily
+			Natalia Zoe Nicole Paula Amanda Maria-Fernanda Antonia Alejandra Juana Andrea
+			Manuela Ana-Sofia Guadalupe Agustina Elena Maria_Maria Beatriz_Beatrice
 		}
 		
 		dukes_called_kings = yes
@@ -4512,23 +4503,23 @@ orion_group = {
 	
 	arab_orion = {
 		graphical_culture = mideastconfederategfx
-		color = { 0.25 0.25 0.25 }
+		color = { 0.75 0.75 0.75 }
 
 		male_names = {
-			Amir Ammar Adam_Adam Ahmed_Ahmad Ali_Ali Abdulrahman_Abdulrahman Abdullah_Abdullah Aziz Bilal
-			Hamdan Hamid Hamza Hussein_Hussayn Hasan Halim Kathem Khaled Ibrahim_Abraham Karim
-			Mahmud Majid Muhammad_Muhammed Mustafa Murad Omar Rashid
-			Said Selim Tarek Taha Yasin Yousouf_Joseph
+			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
+			Bruno Carlos Christopher_Christopher Daniel_Daniel David_David Diego Dylan
+			Emilio Emiliano_Emiliano Emmanuel Felipe_Philip Gabriel_Gabriel
+			Ignacio Juan_John Juan-Pablo Juan-Jose Juan-Diego Joaquin Jeronimo Lucas Leonardo
+			Maximiliano_Max Martin Matias_Matthew Mateo_Matthew Miguel_Michael Miguel-Angel Nicolas
+			Rodrigo Pablo Samuel_Samuel Santiago Sebastian Tomas_Thomas Thiago
 		}
 		female_names = {
-			Ashraqat Aya Aicha Amina
-			Dalal Doha Eisha Fajr Fatima Farida Fatin
-			Gamila Gamalat Gazel Hala Habiba Hosniya Hasnaa Hoda Layan Leen Lian Khadija Karima Jana
-			Malika Maha Marwa Maryam_Maria Malak Mona Naima Nesreen Nadia Noor
-			Rachida Reem Salma Saida Sahar Shaimaa Shahd Suha Sarah_Sarah
-			Yara
+			Sofia_Sophia Isabella Camila Valentina Valeria Mariana Luciana
+			Daniela_Danielle Gabriela Victoria_Victoria Martina Lucia Ximena Sara_Sarah
+			Samantha Maria-Jose Emma Catalina Julieta Mia Antonella Renata Emilia_Emily
+			Natalia Zoe Nicole Paula Amanda Maria-Fernanda Antonia Alejandra Juana Andrea
+			Manuela Ana-Sofia Guadalupe Agustina Elena Maria_Maria Beatriz_Beatrice
 		}
-		
 		dukes_called_kings = yes
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
 		pat_grf_name_chance = 40
@@ -4552,23 +4543,22 @@ orion_group = {
 	east_afro_orion = {
 		graphical_culture = afroconfederategfx
 		second_graphical_culture = mideastconfederategfx
-		color = { 0.25 0.25 0.25 }
+		color = { 0.75 0.75 0.75 }
 
 		male_names = {
-			Amani Anasa Azize Baraka Darweshi Elimu Enzi
-			Fanana Faraji Hamisi Husani Issa Jahleel Jina Juma Jumaane
-			Khalfani Kitwana Kondo Kwanza Mbwana Mhina Mosi Musa
-			Rhamadhani Salehe Sefu Shani Simba Taji Tambo
+			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
+			Bruno Carlos Christopher_Christopher Daniel_Daniel David_David Diego Dylan
+			Emilio Emiliano_Emiliano Emmanuel Felipe_Philip Gabriel_Gabriel
+			Ignacio Juan_John Juan-Pablo Juan-Jose Juan-Diego Joaquin Jeronimo Lucas Leonardo
+			Maximiliano_Max Martin Matias_Matthew Mateo_Matthew Miguel_Michael Miguel-Angel Nicolas
+			Rodrigo Pablo Samuel_Samuel Santiago Sebastian Tomas_Thomas Thiago
 		}
 		female_names = {
-			Afiya Akina Amana Angalia Arusi Ashura Asya
-			Bahati Busara Chiku Dafina Dalila Fanaka Faraja Fatuma Fikira
-			Hadiya Halima Halisi Haoniya Hasina Hawa Imani Imara Inira Jaha Jina
-			Kakena Kalere Kamaria Karama Kesi Khadija Kibibi Kijakazi Kinaya Kinjia Kito
-			Malika Malkia Marjani Marini Masika Maulidi Mwamini Mwasaa
-			Najma Nbushe Neema Panya Pasua Penda Rashida Raziya Rehema Rukiya
-			Saada Salama Sanura Sauda Shani Sikudhani Siti Tabia Waseme
-			Zakiya Zawadi Zuwena
+			Sofia_Sophia Isabella Camila Valentina Valeria Mariana Luciana
+			Daniela_Danielle Gabriela Victoria_Victoria Martina Lucia Ximena Sara_Sarah
+			Samantha Maria-Jose Emma Catalina Julieta Mia Antonella Renata Emilia_Emily
+			Natalia Zoe Nicole Paula Amanda Maria-Fernanda Antonia Alejandra Juana Andrea
+			Manuela Ana-Sofia Guadalupe Agustina Elena Maria_Maria Beatriz_Beatrice
 		}
 		dukes_called_kings = yes
 		founder_named_dynasties = yes
@@ -4591,16 +4581,22 @@ orion_group = {
 	ethiopian_orion = {
 		graphical_culture = afroconfederategfx
 		second_graphical_culture = mideastconfederategfx
-		color = { 0.25 0.25 0.25 }
+		color = { 0.75 0.75 0.75 }
 
 		male_names = {
-			Amare Dahnay Desta Getachew Geteye Girma Iskinder Abai Abebe Afework Aman Assefa Atoberhan Azmera Bekele Benaim Berhanu Berhanua Berihun Berta Bworo Daniachew Dawit Demissie Eremias Ezana Fasilidas Fethee Gabra Gebereal Gebre Gondar Hackeem Haeran Hagos Hakeem Hakiem Hakim Hakym Iskander_Alexander Iskinder_Alexander Iyasu Jima Kafa Kaleb Kelile Kelyle Kifle Lebna Lema Loua Mamo Mekonnen Melaku Mengesha Merille Miruts Negash Negasi Negus Ogbae Ogbai Oromo Rahad Selassie Semer Semere Sisay Tamirat Tariku Taye Tefere Teferi Teka Tekle Tengene Teruworq Tesfaye Tessema Tewodros Yacob Yohannas Yonas Zula
+			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
+			Bruno Carlos Christopher_Christopher Daniel_Daniel David_David Diego Dylan
+			Emilio Emiliano_Emiliano Emmanuel Felipe_Philip Gabriel_Gabriel
+			Ignacio Juan_John Juan-Pablo Juan-Jose Juan-Diego Joaquin Jeronimo Lucas Leonardo
+			Maximiliano_Max Martin Matias_Matthew Mateo_Matthew Miguel_Michael Miguel-Angel Nicolas
+			Rodrigo Pablo Samuel_Samuel Santiago Sebastian Tomas_Thomas Thiago
 		}
 		female_names = {
-			Habesha Abeba Abrihet Adanech Adina Alaworld Alitash Amhara Ayana Bathsheba Bekele Belkis Berhane Berta Cheren China Debre Debtera Desse
-			Desta Dilla Falasha Falashina Fana Fannah Genat Hagos Jahzara Jazarah Kayla Kelile Kelyle Keren Kess Kifle Lishan Louama Magdala Maharene
-			Makda Makeda Mandera Melesse Mellesse Misrak Negasi Nishan Nyala Qwara Retta Seble Sela Selamawit Selassie Semhar Senalat Sheba Shinasha
-			Sisay Tavavich Teru Totit Tsage Wagaye Yehudit Zala Zauditu Zeina Zena Zenia
+			Sofia_Sophia Isabella Camila Valentina Valeria Mariana Luciana
+			Daniela_Danielle Gabriela Victoria_Victoria Martina Lucia Ximena Sara_Sarah
+			Samantha Maria-Jose Emma Catalina Julieta Mia Antonella Renata Emilia_Emily
+			Natalia Zoe Nicole Paula Amanda Maria-Fernanda Antonia Alejandra Juana Andrea
+			Manuela Ana-Sofia Guadalupe Agustina Elena Maria_Maria Beatriz_Beatrice
 		}
 		dukes_called_kings = yes
 		founder_named_dynasties = yes
@@ -4623,7 +4619,7 @@ orion_group = {
 	hispanic_orion = {
 		graphical_culture = hispanicconfederategfx
 		second_graphical_culture = angloconfederategfx
-		color = { 0.25 0.25 0.25 }
+		color = { 0.75 0.75 0.75 }
 
 		male_names = {
 			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
@@ -4660,23 +4656,22 @@ orion_group = {
 	indo_orion = {
 		graphical_culture = indoconfederategfx
 		second_graphical_culture = mideastconfederategfx
-		color = { 0.25 0.25 0.25 }
+		color = { 0.75 0.75 0.75 }
+
 		male_names = {
-			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
-			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
-			Bhushan Deepak Devansh Dhruv
-			Gaurav Gokul Hari Harish Hemanth Inder Ishan Jeevan Jatin
-			Karthik Kapil Kumar Kali
-			Mohit Manish Manoj Naveen Nikhil Nithin
-			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
-			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
-			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
+			Bruno Carlos Christopher_Christopher Daniel_Daniel David_David Diego Dylan
+			Emilio Emiliano_Emiliano Emmanuel Felipe_Philip Gabriel_Gabriel
+			Ignacio Juan_John Juan-Pablo Juan-Jose Juan-Diego Joaquin Jeronimo Lucas Leonardo
+			Maximiliano_Max Martin Matias_Matthew Mateo_Matthew Miguel_Michael Miguel-Angel Nicolas
+			Rodrigo Pablo Samuel_Samuel Santiago Sebastian Tomas_Thomas Thiago
 		}
 		female_names = {
-			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
-			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
-			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
-			Vaishnavi
+			Sofia_Sophia Isabella Camila Valentina Valeria Mariana Luciana
+			Daniela_Danielle Gabriela Victoria_Victoria Martina Lucia Ximena Sara_Sarah
+			Samantha Maria-Jose Emma Catalina Julieta Mia Antonella Renata Emilia_Emily
+			Natalia Zoe Nicole Paula Amanda Maria-Fernanda Antonia Alejandra Juana Andrea
+			Manuela Ana-Sofia Guadalupe Agustina Elena Maria_Maria Beatriz_Beatrice
 		}
 		dukes_called_kings = yes
 		from_dynasty_prefix = "na "
@@ -4695,23 +4690,22 @@ orion_group = {
 	iranian_orion = {
 		graphical_culture = persianconfederategfx
 		second_graphical_culture = mideastconfederategfx
-
-		color = { 0.25 0.25 0.25 }
+		color = { 0.75 0.75 0.75 }
 
 		male_names = {
-			Abbas Abolhassan Afshar_Afshar Ahmad_Ahmad Akbar_Akbar Ali Allahyar Amin Anushirvan_Anushirvan Aram Ardahan_Ardahan Ardavan_Ardavan Ardeshir_Ardeshir Assad Aurang Ayeshah Babak_Babak Bahman
-			Bahram_Bahram Bakhtiar_Bakhtiar Behrad Behrouz Bozorg Danush_Danush Darab Dariush_Darius Davud_David Djamasp Ebrahim_Abraham Ehsan Esfandiar_Esfandiar Eskander_Alexander Esma'il_Ismail Faramarz_Faramarz Faraz_Faraz Fareed_Farid Farhad_Farhad Fariborz_Fariborz
-			Farroukh_Farroukh Farrukhzad_Farrukhzad Farzad_Farzad Fath Ferdows_Ferdows Fereedun_Feridun Ghobad Gholam Godarz Goshtasb_Goshtasb Hafez Hassan_Hasan Hazarasp_Hazarasp Hedayat Hooshyar_Hooshyar Hormazd_Hormazd Hormoz Hossein_Hossein
-			Humayun Jahandar_Jahandar Jahangir_Jahangir Jahanshah_Jahanshah Jamshid_Jamshid Javeed_Javeed Kambiz Kamran Kavoos_Kavoos Keyghobad Keykhosrau_Keykhosrau Kharmandar_Kharmandar Khashayar_Khashayar Kavadh Khodadad_Khodadad Khosrau_Khosrau
-			Khudayar_Khudayar Khurshid_Khurshid Kurush_Cyrus Mahmud Manuchihr_Manuchihr Manushihr_Manushihr Marzuban_Marzuban Mashad_Mashad Maziar Mehrab Mehrzad Mohammed_Muhammad Morad_Morad Morteza Mozaffar Nard Naveed Nawid Nezam Parviz Pashang_Pashang Peroz_Peroz
-			Pujman Reza Rostam_Rostam Ruhollah Sadri Salman Shahab_Shahab Shahbaz_Shahbaz Shahin_Shahin Shahram_Shahram Shahrokh_Sharokh Shahruz_Shahruz Shahryar_Shahryar Shapur_Shapur Shayan_Shayan Sina Tahmasb_Tahmasb Vahhab_Vahhab Vahid
-			Vali Vandad Varshasb_Varshasb Vishtasb_Vishtasb Yazdegerd Yousef_Joseph Zahak Zakaria Zand Zartosht_Zartosht Zia
+			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
+			Bruno Carlos Christopher_Christopher Daniel_Daniel David_David Diego Dylan
+			Emilio Emiliano_Emiliano Emmanuel Felipe_Philip Gabriel_Gabriel
+			Ignacio Juan_John Juan-Pablo Juan-Jose Juan-Diego Joaquin Jeronimo Lucas Leonardo
+			Maximiliano_Max Martin Matias_Matthew Mateo_Matthew Miguel_Michael Miguel-Angel Nicolas
+			Rodrigo Pablo Samuel_Samuel Santiago Sebastian Tomas_Thomas Thiago
 		}
 		female_names = {
-			Afsaneh Ahu Arghavan Azarmidokht Asa Azadeh Bahar Banafsheh Behnaz Burandokht Darya Delaram Delbar Dinah Donya Elham Elnaz Farah Fareedeh Farnaz Farrin Farva
-			Furuzan Ghamze Ghazal Ghoncheh_Ghoncheh Golbahar_Golbahar Golnaz_Golnaz Golpari Golshan Hamdam Hurmat Irandokht Jamileh Javaneh Leila Mahdokht Mahtab Mariam_Mariam
-			Navvaba Nazgol_Nazgol Nazilla Noor Parvaneh_Parvaneh Parvin Pertevniyal Pourandokht_Pourandokht Roshanora Roxana Salomeh Shahrzad Shahzadeh Shirin Soraya Touran
-			Tourandokht Yasaman Yekta Zarrindokht Zeynab Zohreh
+			Sofia_Sophia Isabella Camila Valentina Valeria Mariana Luciana
+			Daniela_Danielle Gabriela Victoria_Victoria Martina Lucia Ximena Sara_Sarah
+			Samantha Maria-Jose Emma Catalina Julieta Mia Antonella Renata Emilia_Emily
+			Natalia Zoe Nicole Paula Amanda Maria-Fernanda Antonia Alejandra Juana Andrea
+			Manuela Ana-Sofia Guadalupe Agustina Elena Maria_Maria Beatriz_Beatrice
 		}
 		dukes_called_kings = yes
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
@@ -4733,26 +4727,22 @@ orion_group = {
 	japanese_orion = {
 		graphical_culture = sinoconfederategfx
 		second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.25 0.25 0.25 }
-		
+		color = { 0.75 0.75 0.75 }
+
 		male_names = {
-			Hiroshi Akira Kazuo Takashi Toshio Yoshio Hideo Masao Kiyoshi
-			Takeshi Minoru Shigeru Tadashi Kenji Koichi Takeo Ichiro Makoto
-			Yasuo Yukio Yutaka Osamu Saburo Koji Susumu Toru Shigeo Isao
-			Tatsuo Shiro Noboru Hajime Mitsuo Jiro Tsutomu Shoji Nobuo Takao
-			Tetsuo Shinichi Fumio Kenichi Akio Seiichi Tadao Kunio Eiichi
-			Ryotaro Ryusei
+			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
+			Bruno Carlos Christopher_Christopher Daniel_Daniel David_David Diego Dylan
+			Emilio Emiliano_Emiliano Emmanuel Felipe_Philip Gabriel_Gabriel
+			Ignacio Juan_John Juan-Pablo Juan-Jose Juan-Diego Joaquin Jeronimo Lucas Leonardo
+			Maximiliano_Max Martin Matias_Matthew Mateo_Matthew Miguel_Michael Miguel-Angel Nicolas
+			Rodrigo Pablo Samuel_Samuel Santiago Sebastian Tomas_Thomas Thiago
 		}
-		
 		female_names = {
-			Keiko Yoko Kazuko Hiroko Kaoru Yoshiko Michiko Masako
-			Akiko Reiko Kyoko Noriko Toshiko Atsuko Ayako Chieko
-			Chizuko Eiko Emiko Eri Fumi Fumiko Hana Hanako Haru
-			Haruko Hitomi Junko Kaoru Kazue Kimiko Mari Mariko
-			Mayumi Mika Miyuki Rie Sachiko Satomi
-			Seiko Sumiko Tomoko Yasuko Yoshie
-			Yumi Yumiko Yuriko
+			Sofia_Sophia Isabella Camila Valentina Valeria Mariana Luciana
+			Daniela_Danielle Gabriela Victoria_Victoria Martina Lucia Ximena Sara_Sarah
+			Samantha Maria-Jose Emma Catalina Julieta Mia Antonella Renata Emilia_Emily
+			Natalia Zoe Nicole Paula Amanda Maria-Fernanda Antonia Alejandra Juana Andrea
+			Manuela Ana-Sofia Guadalupe Agustina Elena Maria_Maria Beatriz_Beatrice
 		}
 		dukes_called_kings = yes
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
@@ -4770,21 +4760,24 @@ orion_group = {
 	}
 	mesoamerican_orion = {
 		graphical_culture = americonfederategfx
-		color = { 0.25 0.25 0.25 }
-		
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.75 0.75 0.75 }
+
 		male_names = {
-			Acalan Acacitli Acamapichtli Acolmiztli Aculnahuacatl Ahuiliztli Ahuitzotl Atl Axayacatl Cacamatzin Chimalli Chimalpilli Chimalpopoca Cipac Coanacoch Coatl Cozahtli Cuauhtemoc Cuauhtl Cuetlachtli Cuetzpalli Cuixtli Cuitlahuac 
-			Huitzilin Huitzilihuitl Huitzitl Huitztecol Iquehuacatzin Itzcoatl Itzli Itzcuintli Ixtlilxochitl Mahchimaleh Matlal Mazatl Matlalihuitl Matlatzincatzin Maxtla Miztli Moctezuma Moquihuix Necuametl Nezahualcoyotl Nezahualpilli Nochehuatl 
-			Ocuil Olli Opochtli Ozomatli Quauhtli Tapayaxi Tecocoltzin Tecolotl Tetlepanquetzaltzin Tezozomoc Tizoc Tizocic Tlacaelel Tlacaeleltzin Tlalli Tlaloc Tochtli Tototl Tzompantzin Tlilpotonqui Topiltzin Totoquihuaztli 
-			Ueman Yaotl Yayauhqui Yolotli Yolyamanitzin Xicohtencatl Xiuhpilli Xihuitl Xipil Xipilli Xochitl Xochipepe Xochipilli Yaotl Zipactonal Zolin
+			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
+			Bruno Carlos Christopher_Christopher Daniel_Daniel David_David Diego Dylan
+			Emilio Emiliano_Emiliano Emmanuel Felipe_Philip Gabriel_Gabriel
+			Ignacio Juan_John Juan-Pablo Juan-Jose Juan-Diego Joaquin Jeronimo Lucas Leonardo
+			Maximiliano_Max Martin Matias_Matthew Mateo_Matthew Miguel_Michael Miguel-Angel Nicolas
+			Rodrigo Pablo Samuel_Samuel Santiago Sebastian Tomas_Thomas Thiago
 		}
 		female_names = {
-			Achcauhtli Acxocueitl Ahuiliztli Amoxtli Atl Atotoztli Ayauhcihuatl Azcalxochitzin Centehua Cihuaton Citlalmina Chalchiuitl Chicahua Chichimecacihuatzin Chipahua Chicomecoatl Chimalma Cihuaton Citlali Citlalli Citlalmina Coaxoch Coszcatl 
-			Cozamalotl Cuicatl Eleuia Eloxochitl Etalpalli Eztli Huehue-Zaca Itotia Iuitl Ixcatzin Izel Malinalxochitl Manauia Matlalatzin Mecatl Meztli Miahuaxiuitl Miyaoaxochitl Mizquixahual Momoztli Nahuatl Necahual Nelli Ohtli Papa Patli
-			Quiauhxochitl Sacnite Techichpotzin Tezozomoc Tziquetzalpoztectzin Teiuc Teicuih Teyacapan Tepin Tezcatlan Tlacotl Tlahco Tlahcoehua Toltecatl Tonalnan Tlazozomizqui
-			Yoltzin Xilonen Xiloxoch Xiuhtomiyauhtzin Xochitl Xocoh Xocoyotl Yaretzi Zeltzin Zyanya
+			Sofia_Sophia Isabella Camila Valentina Valeria Mariana Luciana
+			Daniela_Danielle Gabriela Victoria_Victoria Martina Lucia Ximena Sara_Sarah
+			Samantha Maria-Jose Emma Catalina Julieta Mia Antonella Renata Emilia_Emily
+			Natalia Zoe Nicole Paula Amanda Maria-Fernanda Antonia Alejandra Juana Andrea
+			Manuela Ana-Sofia Guadalupe Agustina Elena Maria_Maria Beatriz_Beatrice
 		}
-		
 		dukes_called_kings = yes
 		
 		from_dynasty_prefix = "of "
@@ -4804,29 +4797,24 @@ orion_group = {
 	russo_orion = {
 		graphical_culture = russoconfederategfx
 		second_graphical_culture = angloconfederategfx
-		
-		color = { 0.25 0.25 0.25 }
+		color = { 0.75 0.75 0.75 }
+
 
 		male_names = {
-			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
-			Bogdan Boris Valentin Valery Vasily Viktor Vladimir_Vladimir
-			Gavriil_Gabriel Gennady Georgy_George Grigory_Gregory
-			David_David Daniil_Daniel Dmitry Ivan_John Igor Iosif_Joseph
-			Immanuil_Emmanuel Kirill_Cyril Konstantin Lev Leonid Maxim
-			Matvei Mikhail_Michael Nikita Nikolai_Nicolas Oleg Pavel
-			Pyotr_Peter Roman Sergei Stepan_Stephen Timofei Eduard_Edward Erik_Eric
-			Yulian Yuri Yakov
+			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
+			Bruno Carlos Christopher_Christopher Daniel_Daniel David_David Diego Dylan
+			Emilio Emiliano_Emiliano Emmanuel Felipe_Philip Gabriel_Gabriel
+			Ignacio Juan_John Juan-Pablo Juan-Jose Juan-Diego Joaquin Jeronimo Lucas Leonardo
+			Maximiliano_Max Martin Matias_Matthew Mateo_Matthew Miguel_Michael Miguel-Angel Nicolas
+			Rodrigo Pablo Samuel_Samuel Santiago Sebastian Tomas_Thomas Thiago
 		}
 		female_names = {
-			Alexandra Alina Alyona Anastasiya_Anastasia Anna_Anna
-			Vera Valeriya Vasilisa Veronika Valentina Viktoriya_Victoria
-			Galina Dina Dominika Ekateirna_Catherine Elizaveta_Elisabeth Eva
-			Zhanna Zoya Inessa Izabella_Isabel Izolda Klara Klavdiya
-			Kristina Larisa Lidiya Lilya Ludmila Margarita Maya
-			Mariya_Maria Natalya Nina Nika Olga Olesya Raisa Rozalina
-			Svetlana Sofia_Sophia Tamara Tatyana Ulyana Florentina
+			Sofia_Sophia Isabella Camila Valentina Valeria Mariana Luciana
+			Daniela_Danielle Gabriela Victoria_Victoria Martina Lucia Ximena Sara_Sarah
+			Samantha Maria-Jose Emma Catalina Julieta Mia Antonella Renata Emilia_Emily
+			Natalia Zoe Nicole Paula Amanda Maria-Fernanda Antonia Alejandra Juana Andrea
+			Manuela Ana-Sofia Guadalupe Agustina Elena Maria_Maria Beatriz_Beatrice
 		}
-		
 		dukes_called_kings = yes
 		from_dynasty_prefix = "of "
 		
@@ -4849,20 +4837,23 @@ orion_group = {
 	sino_orion = {
 		graphical_culture = sinoconfederategfx
 		second_graphical_culture = mideastconfederategfx
-		color = { 0.25 0.25 0.25 }
+		color = { 0.75 0.75 0.75 }
 		
+
 		male_names = {
-			An Bo Bin Cheng
-			De Dong Feng Gang Guo Hui Hao
-			Jian Jie Jun Kang Liang Lei Ning
-			Peng Tao Wei Yong Yi Wen
+			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
+			Bruno Carlos Christopher_Christopher Daniel_Daniel David_David Diego Dylan
+			Emilio Emiliano_Emiliano Emmanuel Felipe_Philip Gabriel_Gabriel
+			Ignacio Juan_John Juan-Pablo Juan-Jose Juan-Diego Joaquin Jeronimo Lucas Leonardo
+			Maximiliano_Max Martin Matias_Matthew Mateo_Matthew Miguel_Michael Miguel-Angel Nicolas
+			Rodrigo Pablo Samuel_Samuel Santiago Sebastian Tomas_Thomas Thiago
 		}
 		female_names = {
-			Ai Bi Cai Dan Fang
-			Hong Hui Juan Jing Jie
-			Lan Li Lian Na Ni
-			Qian Qiong Shan Shu Ting
-			Xia Xian Xiaoyan Xiaomei Xinyi Yan Yun Ying Zhen
+			Sofia_Sophia Isabella Camila Valentina Valeria Mariana Luciana
+			Daniela_Danielle Gabriela Victoria_Victoria Martina Lucia Ximena Sara_Sarah
+			Samantha Maria-Jose Emma Catalina Julieta Mia Antonella Renata Emilia_Emily
+			Natalia Zoe Nicole Paula Amanda Maria-Fernanda Antonia Alejandra Juana Andrea
+			Manuela Ana-Sofia Guadalupe Agustina Elena Maria_Maria Beatriz_Beatrice
 		}
 		
 		dukes_called_kings = yes
@@ -4881,22 +4872,22 @@ orion_group = {
 	west_afro_orion = {
 		graphical_culture = afroconfederategfx
 		second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.25 0.25 0.25 }
+		color = { 0.75 0.75 0.75 }
 
 		male_names = {
-			Abi-Bakr Abubakari Akoi Alayaman Ali_Ali Ali-Fay Ali-Kolon Ali-Zalil Bad・Bakr Bakr-Kanbu Bamari Bankanu
-			Bannu Bassarou Bassi Birama Bisi Biyu Bonga Cisse Dankaran Daoud_David Dawud_David Demba Diara D・u
-			Faga-Laye Fatta Fodi Fuluku F臈azu Gane Gao Hargani Harun Igoumou Ishaq_Isaac Ismail_Ismail Kabayo Kalabi Kambine
-			Kanafa Kassa Kasse・Kaya Kayna Kinkin Kisha Kodama Ko・・Kukuray Kusoy Lahiltoul M'Bali Maammarou Maghan
-			Mahmud_Mahmud Majan Malla Mamadi Mamoudou Manding-Bory Mari-Djata Maroumfa Missi-Iz・Morobani Musa_Moses
-			Nintasanay Nuh Ouali Ouanko Ouati Reidja Sakoura Salman_Solomon Samsou-B駻i Samsou-Ke・a Sandaki Soumaba
-			Soumaoro Soundiata Sulayman_Solomon Takoi Tib Tomo_Thomas Tunka Umar_Umar Yama Yaqub_Jacob Yasiboy Zakoi Zenku
+			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
+			Bruno Carlos Christopher_Christopher Daniel_Daniel David_David Diego Dylan
+			Emilio Emiliano_Emiliano Emmanuel Felipe_Philip Gabriel_Gabriel
+			Ignacio Juan_John Juan-Pablo Juan-Jose Juan-Diego Joaquin Jeronimo Lucas Leonardo
+			Maximiliano_Max Martin Matias_Matthew Mateo_Matthew Miguel_Michael Miguel-Angel Nicolas
+			Rodrigo Pablo Samuel_Samuel Santiago Sebastian Tomas_Thomas Thiago
 		}
 		female_names = {
-			Adja Aichata Aissata Alima Aminata Amita Aoua Barakissa Bintou Deye Djeneba Djenly Djire Fadima
-			Fatim Fatoumata Halima Hawa Ina Kadi Kilia Kolonkan Lorane Mariam Nafissa Namandj・Namiss Nana
-			Safiatou Salimata Sassouma Sidib・Siya Sogolon Tekhaye Youma Ze・ab
+			Sofia_Sophia Isabella Camila Valentina Valeria Mariana Luciana
+			Daniela_Danielle Gabriela Victoria_Victoria Martina Lucia Ximena Sara_Sarah
+			Samantha Maria-Jose Emma Catalina Julieta Mia Antonella Renata Emilia_Emily
+			Natalia Zoe Nicole Paula Amanda Maria-Fernanda Antonia Alejandra Juana Andrea
+			Manuela Ana-Sofia Guadalupe Agustina Elena Maria_Maria Beatriz_Beatrice
 		}
 		
 		dukes_called_kings = yes
@@ -4919,23 +4910,25 @@ mukta_group = {
 	
 	anglo_mukta = {
 		graphical_culture = angloconfederategfx
-		color = { 0.5 0.5 0.95 }
+		color = { 0.95 0.5 0.1 }
 		male_names = {
-			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
-			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
-			Charles_Charles Daniel_Daniel David_David Duncan Edward_Edward Edgar Ethan
-			Gabriel_Gabriel Gregory_Gregory George_George Harry Henry_Henry Jack Jacob_Jacob
-			James_James John_John Joseph_Joseph Joshua_Joshua Liam Luke_Lucas Lucas_Lucas Logan
-			Malcolm Matthew_Matthew Michael_Michael Nathan_Nathan Noah Patrick Philip_Philip Peter_Peter
-			Oliver Owen Robert_Robert Richard_Richard Samuel_Samuel Thomas_Thomas Stephen_Stephen
-			William_William Wilfred Victor Vincent Zachary
+			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
+			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
+			Bhushan Deepak Devansh Dhruv
+			Gaurav Gokul Hari Harish Hemanth Inder Ishan Jeevan Jatin
+			Karthik Kapil Kumar Kali
+			Mohit Manish Manoj Naveen Nikhil Nithin
+			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
+			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
+			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
 		}
 		female_names = {
-			Abigail_Abigail Alice Catherine_Catherine Chloe Barbara Dorothy
-			Emma Emily_Emily Isabella_Elisabeth Elisabeth_Elisabeth Eliza_Elisabeth Elizabeth_Elizabeth Ellen
-			Grace Hannah Jennifer_Jennifer Jessica Lily Lucy Linda Katherine_Catherine
-			Mary_Maria Margaret_Margaret Melissa Morgan Patricia_Patricia Ruby Stephany
-			Sarah_Sarah Sophia Susan_Susan Zoe Simone
+			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
+			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
+			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
+			Vaishnavi
+			Nilana Samaya # Same
 		}
 		
 		dukes_called_kings = yes
@@ -4954,22 +4947,25 @@ mukta_group = {
 	
 	arab_mukta = {
 		graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
-
+		color = { 0.95 0.5 0.1 }
 		male_names = {
-			Amir Ammar Adam_Adam Ahmed_Ahmad Ali_Ali Abdulrahman_Abdulrahman Abdullah_Abdullah Aziz Bilal
-			Hamdan Hamid Hamza Hussein_Hussayn Hasan Halim Kathem Khaled Ibrahim_Abraham Karim
-			Mahmud Majid Muhammad_Muhammed Mustafa Murad Omar Rashid
-			Said Selim Tarek Taha Yasin Yousouf_Joseph
+			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
+			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
+			Bhushan Deepak Devansh Dhruv
+			Gaurav Gokul Hari Harish Hemanth Inder Ishan Jeevan Jatin
+			Karthik Kapil Kumar Kali
+			Mohit Manish Manoj Naveen Nikhil Nithin
+			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
+			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
+			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
 		}
 		female_names = {
-			Ashraqat Aya Aicha Amina
-			Dalal Doha Eisha Fajr Fatima Farida Fatin
-			Gamila Gamalat Gazel Hala Habiba Hosniya Hasnaa Hoda Layan Leen Lian Khadija Karima Jana
-			Malika Maha Marwa Maryam_Maria Malak Mona Naima Nesreen Nadia Noor
-			Rachida Reem Salma Saida Sahar Shaimaa Shahd Suha Sarah_Sarah
-			Yara
+			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
+			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
+			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
+			Vaishnavi
+			Nilana Samaya # Same
 		}
 		
 		dukes_called_kings = yes
@@ -4994,25 +4990,26 @@ mukta_group = {
 
 	east_afro_mukta = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
-
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.95 0.5 0.1 }
 		male_names = {
-			Amani Anasa Azize Baraka Darweshi Elimu Enzi
-			Fanana Faraji Hamisi Husani Issa Jahleel Jina Juma Jumaane
-			Khalfani Kitwana Kondo Kwanza Mbwana Mhina Mosi Musa
-			Rhamadhani Salehe Sefu Shani Simba Taji Tambo
+			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
+			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
+			Bhushan Deepak Devansh Dhruv
+			Gaurav Gokul Hari Harish Hemanth Inder Ishan Jeevan Jatin
+			Karthik Kapil Kumar Kali
+			Mohit Manish Manoj Naveen Nikhil Nithin
+			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
+			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
+			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
 		}
 		female_names = {
-			Afiya Akina Amana Angalia Arusi Ashura Asya
-			Bahati Busara Chiku Dafina Dalila Fanaka Faraja Fatuma Fikira
-			Hadiya Halima Halisi Haoniya Hasina Hawa Imani Imara Inira Jaha Jina
-			Kakena Kalere Kamaria Karama Kesi Khadija Kibibi Kijakazi Kinaya Kinjia Kito
-			Malika Malkia Marjani Marini Masika Maulidi Mwamini Mwasaa
-			Najma Nbushe Neema Panya Pasua Penda Rashida Raziya Rehema Rukiya
-			Saada Salama Sanura Sauda Shani Sikudhani Siti Tabia Waseme
-			Zakiya Zawadi Zuwena
+			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
+			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
+			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
+			Vaishnavi
+			Nilana Samaya # Same
 		}
 		dukes_called_kings = yes
 		founder_named_dynasties = yes
@@ -5034,18 +5031,26 @@ second_graphical_culture = mideastconfederategfx
 	}
 	ethiopian_mukta = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
-
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.95 0.5 0.1 }
 		male_names = {
-			Amare Dahnay Desta Getachew Geteye Girma Iskinder Abai Abebe Afework Aman Assefa Atoberhan Azmera Bekele Benaim Berhanu Berhanua Berihun Berta Bworo Daniachew Dawit Demissie Eremias Ezana Fasilidas Fethee Gabra Gebereal Gebre Gondar Hackeem Haeran Hagos Hakeem Hakiem Hakim Hakym Iskander_Alexander Iskinder_Alexander Iyasu Jima Kafa Kaleb Kelile Kelyle Kifle Lebna Lema Loua Mamo Mekonnen Melaku Mengesha Merille Miruts Negash Negasi Negus Ogbae Ogbai Oromo Rahad Selassie Semer Semere Sisay Tamirat Tariku Taye Tefere Teferi Teka Tekle Tengene Teruworq Tesfaye Tessema Tewodros Yacob Yohannas Yonas Zula
+			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
+			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
+			Bhushan Deepak Devansh Dhruv
+			Gaurav Gokul Hari Harish Hemanth Inder Ishan Jeevan Jatin
+			Karthik Kapil Kumar Kali
+			Mohit Manish Manoj Naveen Nikhil Nithin
+			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
+			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
+			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
 		}
 		female_names = {
-			Habesha Abeba Abrihet Adanech Adina Alaworld Alitash Amhara Ayana Bathsheba Bekele Belkis Berhane Berta Cheren China Debre Debtera Desse
-			Desta Dilla Falasha Falashina Fana Fannah Genat Hagos Jahzara Jazarah Kayla Kelile Kelyle Keren Kess Kifle Lishan Louama Magdala Maharene
-			Makda Makeda Mandera Melesse Mellesse Misrak Negasi Nishan Nyala Qwara Retta Seble Sela Selamawit Selassie Semhar Senalat Sheba Shinasha
-			Sisay Tavavich Teru Totit Tsage Wagaye Yehudit Zala Zauditu Zeina Zena Zenia
+			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
+			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
+			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
+			Vaishnavi
+			Nilana Samaya # Same
 		}
 		dukes_called_kings = yes
 		founder_named_dynasties = yes
@@ -5067,24 +5072,26 @@ second_graphical_culture = mideastconfederategfx
 	}
 	hispanic_mukta = {
 		graphical_culture = hispanicconfederategfx
-second_graphical_culture = angloconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
-
+		second_graphical_culture = angloconfederategfx
+		color = { 0.95 0.5 0.1 }
 		male_names = {
-			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
-			Bruno Carlos Christopher_Christopher Daniel_Daniel David_David Diego Dylan
-			Emilio Emiliano_Emiliano Emmanuel Felipe_Philip Gabriel_Gabriel
-			Ignacio Juan_John Juan-Pablo Juan-Jose Juan-Diego Joaquin Jeronimo Lucas Leonardo
-			Maximiliano_Max Martin Matias_Matthew Mateo_Matthew Miguel_Michael Miguel-Angel Nicolas
-			Rodrigo Pablo Samuel_Samuel Santiago Sebastian Tomas_Thomas Thiago
+			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
+			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
+			Bhushan Deepak Devansh Dhruv
+			Gaurav Gokul Hari Harish Hemanth Inder Ishan Jeevan Jatin
+			Karthik Kapil Kumar Kali
+			Mohit Manish Manoj Naveen Nikhil Nithin
+			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
+			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
+			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
 		}
 		female_names = {
-			Sofia_Sophia Isabella Camila Valentina Valeria Mariana Luciana
-			Daniela_Danielle Gabriela Victoria_Victoria Martina Lucia Ximena Sara_Sarah
-			Samantha Maria-Jose Emma Catalina Julieta Mia Antonella Renata Emilia_Emily
-			Natalia Zoe Nicole Paula Amanda Maria-Fernanda Antonia Alejandra Juana Andrea
-			Manuela Ana-Sofia Guadalupe Agustina Elena Maria_Maria Beatriz_Beatrice
+			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
+			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
+			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
+			Vaishnavi
+			Nilana Samaya # Same
 		}
 		dukes_called_kings = yes
 		from_dynasty_prefix = "de "
@@ -5105,8 +5112,8 @@ second_graphical_culture = angloconfederategfx
 	
 	indo_mukta = {
 		graphical_culture = indoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.95 0.5 0.1 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
 			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
@@ -5117,12 +5124,14 @@ second_graphical_culture = mideastconfederategfx
 			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
 			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
 			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
 		}
 		female_names = {
 			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
 			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
 			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
 			Vaishnavi
+			Nilana Samaya # Same
 		}
 		dukes_called_kings = yes
 		from_dynasty_prefix = "na "
@@ -5141,23 +5150,25 @@ second_graphical_culture = mideastconfederategfx
 	iranian_mukta = {
 		graphical_culture = persianconfederategfx
 		second_graphical_culture = mideastconfederategfx
-
-		color = { 0.5 0.5 0.95 }
-
+		color = { 0.95 0.5 0.1 }
 		male_names = {
-			Abbas Abolhassan Afshar_Afshar Ahmad_Ahmad Akbar_Akbar Ali Allahyar Amin Anushirvan_Anushirvan Aram Ardahan_Ardahan Ardavan_Ardavan Ardeshir_Ardeshir Assad Aurang Ayeshah Babak_Babak Bahman
-			Bahram_Bahram Bakhtiar_Bakhtiar Behrad Behrouz Bozorg Danush_Danush Darab Dariush_Darius Davud_David Djamasp Ebrahim_Abraham Ehsan Esfandiar_Esfandiar Eskander_Alexander Esma'il_Ismail Faramarz_Faramarz Faraz_Faraz Fareed_Farid Farhad_Farhad Fariborz_Fariborz
-			Farroukh_Farroukh Farrukhzad_Farrukhzad Farzad_Farzad Fath Ferdows_Ferdows Fereedun_Feridun Ghobad Gholam Godarz Goshtasb_Goshtasb Hafez Hassan_Hasan Hazarasp_Hazarasp Hedayat Hooshyar_Hooshyar Hormazd_Hormazd Hormoz Hossein_Hossein
-			Humayun Jahandar_Jahandar Jahangir_Jahangir Jahanshah_Jahanshah Jamshid_Jamshid Javeed_Javeed Kambiz Kamran Kavoos_Kavoos Keyghobad Keykhosrau_Keykhosrau Kharmandar_Kharmandar Khashayar_Khashayar Kavadh Khodadad_Khodadad Khosrau_Khosrau
-			Khudayar_Khudayar Khurshid_Khurshid Kurush_Cyrus Mahmud Manuchihr_Manuchihr Manushihr_Manushihr Marzuban_Marzuban Mashad_Mashad Maziar Mehrab Mehrzad Mohammed_Muhammad Morad_Morad Morteza Mozaffar Nard Naveed Nawid Nezam Parviz Pashang_Pashang Peroz_Peroz
-			Pujman Reza Rostam_Rostam Ruhollah Sadri Salman Shahab_Shahab Shahbaz_Shahbaz Shahin_Shahin Shahram_Shahram Shahrokh_Sharokh Shahruz_Shahruz Shahryar_Shahryar Shapur_Shapur Shayan_Shayan Sina Tahmasb_Tahmasb Vahhab_Vahhab Vahid
-			Vali Vandad Varshasb_Varshasb Vishtasb_Vishtasb Yazdegerd Yousef_Joseph Zahak Zakaria Zand Zartosht_Zartosht Zia
+			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
+			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
+			Bhushan Deepak Devansh Dhruv
+			Gaurav Gokul Hari Harish Hemanth Inder Ishan Jeevan Jatin
+			Karthik Kapil Kumar Kali
+			Mohit Manish Manoj Naveen Nikhil Nithin
+			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
+			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
+			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
 		}
 		female_names = {
-			Afsaneh Ahu Arghavan Azarmidokht Asa Azadeh Bahar Banafsheh Behnaz Burandokht Darya Delaram Delbar Dinah Donya Elham Elnaz Farah Fareedeh Farnaz Farrin Farva
-			Furuzan Ghamze Ghazal Ghoncheh_Ghoncheh Golbahar_Golbahar Golnaz_Golnaz Golpari Golshan Hamdam Hurmat Irandokht Jamileh Javaneh Leila Mahdokht Mahtab Mariam_Mariam
-			Navvaba Nazgol_Nazgol Nazilla Noor Parvaneh_Parvaneh Parvin Pertevniyal Pourandokht_Pourandokht Roshanora Roxana Salomeh Shahrzad Shahzadeh Shirin Soraya Touran
-			Tourandokht Yasaman Yekta Zarrindokht Zeynab Zohreh
+			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
+			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
+			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
+			Vaishnavi
+			Nilana Samaya # Same
 		}
 		dukes_called_kings = yes
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
@@ -5178,27 +5189,26 @@ second_graphical_culture = mideastconfederategfx
 	}
 	japanese_mukta = {
 		graphical_culture = sinoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
-		
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.95 0.5 0.1 }
 		male_names = {
-			Hiroshi Akira Kazuo Takashi Toshio Yoshio Hideo Masao Kiyoshi
-			Takeshi Minoru Shigeru Tadashi Kenji Koichi Takeo Ichiro Makoto
-			Yasuo Yukio Yutaka Osamu Saburo Koji Susumu Toru Shigeo Isao
-			Tatsuo Shiro Noboru Hajime Mitsuo Jiro Tsutomu Shoji Nobuo Takao
-			Tetsuo Shinichi Fumio Kenichi Akio Seiichi Tadao Kunio Eiichi
-			Ryotaro Ryusei
+			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
+			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
+			Bhushan Deepak Devansh Dhruv
+			Gaurav Gokul Hari Harish Hemanth Inder Ishan Jeevan Jatin
+			Karthik Kapil Kumar Kali
+			Mohit Manish Manoj Naveen Nikhil Nithin
+			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
+			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
+			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
 		}
-		
 		female_names = {
-			Keiko Yoko Kazuko Hiroko Kaoru Yoshiko Michiko Masako
-			Akiko Reiko Kyoko Noriko Toshiko Atsuko Ayako Chieko
-			Chizuko Eiko Emiko Eri Fumi Fumiko Hana Hanako Haru
-			Haruko Hitomi Junko Kaoru Kazue Kimiko Mari Mariko
-			Mayumi Mika Miyuki Rie Sachiko Satomi
-			Seiko Sumiko Tomoko Yasuko Yoshie
-			Yumi Yumiko Yuriko
+			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
+			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
+			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
+			Vaishnavi
+			Nilana Samaya # Same
 		}
 		dukes_called_kings = yes
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
@@ -5216,19 +5226,26 @@ second_graphical_culture = mideastconfederategfx
 	}
 	mesoamerican_mukta = {
 		graphical_culture = americonfederategfx
-		color = { 0.5 0.5 0.95 }
-		
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.95 0.5 0.1 }
 		male_names = {
-			Acalan Acacitli Acamapichtli Acolmiztli Aculnahuacatl Ahuiliztli Ahuitzotl Atl Axayacatl Cacamatzin Chimalli Chimalpilli Chimalpopoca Cipac Coanacoch Coatl Cozahtli Cuauhtemoc Cuauhtl Cuetlachtli Cuetzpalli Cuixtli Cuitlahuac 
-			Huitzilin Huitzilihuitl Huitzitl Huitztecol Iquehuacatzin Itzcoatl Itzli Itzcuintli Ixtlilxochitl Mahchimaleh Matlal Mazatl Matlalihuitl Matlatzincatzin Maxtla Miztli Moctezuma Moquihuix Necuametl Nezahualcoyotl Nezahualpilli Nochehuatl 
-			Ocuil Olli Opochtli Ozomatli Quauhtli Tapayaxi Tecocoltzin Tecolotl Tetlepanquetzaltzin Tezozomoc Tizoc Tizocic Tlacaelel Tlacaeleltzin Tlalli Tlaloc Tochtli Tototl Tzompantzin Tlilpotonqui Topiltzin Totoquihuaztli 
-			Ueman Yaotl Yayauhqui Yolotli Yolyamanitzin Xicohtencatl Xiuhpilli Xihuitl Xipil Xipilli Xochitl Xochipepe Xochipilli Yaotl Zipactonal Zolin
+			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
+			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
+			Bhushan Deepak Devansh Dhruv
+			Gaurav Gokul Hari Harish Hemanth Inder Ishan Jeevan Jatin
+			Karthik Kapil Kumar Kali
+			Mohit Manish Manoj Naveen Nikhil Nithin
+			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
+			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
+			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
 		}
 		female_names = {
-			Achcauhtli Acxocueitl Ahuiliztli Amoxtli Atl Atotoztli Ayauhcihuatl Azcalxochitzin Centehua Cihuaton Citlalmina Chalchiuitl Chicahua Chichimecacihuatzin Chipahua Chicomecoatl Chimalma Cihuaton Citlali Citlalli Citlalmina Coaxoch Coszcatl 
-			Cozamalotl Cuicatl Eleuia Eloxochitl Etalpalli Eztli Huehue-Zaca Itotia Iuitl Ixcatzin Izel Malinalxochitl Manauia Matlalatzin Mecatl Meztli Miahuaxiuitl Miyaoaxochitl Mizquixahual Momoztli Nahuatl Necahual Nelli Ohtli Papa Patli
-			Quiauhxochitl Sacnite Techichpotzin Tezozomoc Tziquetzalpoztectzin Teiuc Teicuih Teyacapan Tepin Tezcatlan Tlacotl Tlahco Tlahcoehua Toltecatl Tonalnan Tlazozomizqui
-			Yoltzin Xilonen Xiloxoch Xiuhtomiyauhtzin Xochitl Xocoh Xocoyotl Yaretzi Zeltzin Zyanya
+			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
+			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
+			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
+			Vaishnavi
+			Nilana Samaya # Same
 		}
 		
 		dukes_called_kings = yes
@@ -5250,27 +5267,25 @@ second_graphical_culture = mideastconfederategfx
 	russo_mukta = {
 		graphical_culture = russoconfederategfx
 		second_graphical_culture = angloconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
-
+		color = { 0.95 0.5 0.1 }
 		male_names = {
-			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
-			Bogdan Boris Valentin Valery Vasily Viktor Vladimir_Vladimir
-			Gavriil_Gabriel Gennady Georgy_George Grigory_Gregory
-			David_David Daniil_Daniel Dmitry Ivan_John Igor Iosif_Joseph
-			Immanuil_Emmanuel Kirill_Cyril Konstantin Lev Leonid Maxim
-			Matvei Mikhail_Michael Nikita Nikolai_Nicolas Oleg Pavel
-			Pyotr_Peter Roman Sergei Stepan_Stephen Timofei Eduard_Edward Erik_Eric
-			Yulian Yuri Yakov
+			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
+			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
+			Bhushan Deepak Devansh Dhruv
+			Gaurav Gokul Hari Harish Hemanth Inder Ishan Jeevan Jatin
+			Karthik Kapil Kumar Kali
+			Mohit Manish Manoj Naveen Nikhil Nithin
+			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
+			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
+			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
 		}
 		female_names = {
-			Alexandra Alina Alyona Anastasiya_Anastasia Anna_Anna
-			Vera Valeriya Vasilisa Veronika Valentina Viktoriya_Victoria
-			Galina Dina Dominika Ekateirna_Catherine Elizaveta_Elisabeth Eva
-			Zhanna Zoya Inessa Izabella_Isabel Izolda Klara Klavdiya
-			Kristina Larisa Lidiya Lilya Ludmila Margarita Maya
-			Mariya_Maria Natalya Nina Nika Olga Olesya Raisa Rozalina
-			Svetlana Sofia_Sophia Tamara Tatyana Ulyana Florentina
+			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
+			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
+			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
+			Vaishnavi
+			Nilana Samaya # Same
 		}
 		
 		dukes_called_kings = yes
@@ -5294,21 +5309,26 @@ second_graphical_culture = mideastconfederategfx
 	}
 	sino_mukta = {
 		graphical_culture = sinoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		color = { 0.5 0.5 0.95 }
-		
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.95 0.5 0.1 }
 		male_names = {
-			An Bo Bin Cheng
-			De Dong Feng Gang Guo Hui Hao
-			Jian Jie Jun Kang Liang Lei Ning
-			Peng Tao Wei Yong Yi Wen
+			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
+			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
+			Bhushan Deepak Devansh Dhruv
+			Gaurav Gokul Hari Harish Hemanth Inder Ishan Jeevan Jatin
+			Karthik Kapil Kumar Kali
+			Mohit Manish Manoj Naveen Nikhil Nithin
+			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
+			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
+			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
 		}
 		female_names = {
-			Ai Bi Cai Dan Fang
-			Hong Hui Juan Jing Jie
-			Lan Li Lian Na Ni
-			Qian Qiong Shan Shu Ting
-			Xia Xian Xiaoyan Xiaomei Xinyi Yan Yun Ying Zhen
+			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
+			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
+			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
+			Vaishnavi
+			Nilana Samaya # Same
 		}
 		
 		dukes_called_kings = yes
@@ -5326,23 +5346,26 @@ second_graphical_culture = mideastconfederategfx
 	}
 	west_afro_mukta = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
-
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.95 0.5 0.1 }
 		male_names = {
-			Abi-Bakr Abubakari Akoi Alayaman Ali_Ali Ali-Fay Ali-Kolon Ali-Zalil Bad・Bakr Bakr-Kanbu Bamari Bankanu
-			Bannu Bassarou Bassi Birama Bisi Biyu Bonga Cisse Dankaran Daoud_David Dawud_David Demba Diara D・u
-			Faga-Laye Fatta Fodi Fuluku F臈azu Gane Gao Hargani Harun Igoumou Ishaq_Isaac Ismail_Ismail Kabayo Kalabi Kambine
-			Kanafa Kassa Kasse・Kaya Kayna Kinkin Kisha Kodama Ko・・Kukuray Kusoy Lahiltoul M'Bali Maammarou Maghan
-			Mahmud_Mahmud Majan Malla Mamadi Mamoudou Manding-Bory Mari-Djata Maroumfa Missi-Iz・Morobani Musa_Moses
-			Nintasanay Nuh Ouali Ouanko Ouati Reidja Sakoura Salman_Solomon Samsou-B駻i Samsou-Ke・a Sandaki Soumaba
-			Soumaoro Soundiata Sulayman_Solomon Takoi Tib Tomo_Thomas Tunka Umar_Umar Yama Yaqub_Jacob Yasiboy Zakoi Zenku
+			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
+			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
+			Bhushan Deepak Devansh Dhruv
+			Gaurav Gokul Hari Harish Hemanth Inder Ishan Jeevan Jatin
+			Karthik Kapil Kumar Kali
+			Mohit Manish Manoj Naveen Nikhil Nithin
+			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
+			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
+			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
 		}
 		female_names = {
-			Adja Aichata Aissata Alima Aminata Amita Aoua Barakissa Bintou Deye Djeneba Djenly Djire Fadima
-			Fatim Fatoumata Halima Hawa Ina Kadi Kilia Kolonkan Lorane Mariam Nafissa Namandj・Namiss Nana
-			Safiatou Salimata Sassouma Sidib・Siya Sogolon Tekhaye Youma Ze・ab
+			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
+			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
+			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
+			Vaishnavi
+			Nilana Samaya # Same
 		}
 		
 		dukes_called_kings = yes
@@ -5365,23 +5388,25 @@ tarkan_group = {
 	
 	anglo_tarkan = {
 		graphical_culture = angloconfederategfx
-		color = { 0.5 0.5 0.95 }
+		color = { 0.5 0.5 0.5 }
 		male_names = {
-			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
-			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
-			Charles_Charles Daniel_Daniel David_David Duncan Edward_Edward Edgar Ethan
-			Gabriel_Gabriel Gregory_Gregory George_George Harry Henry_Henry Jack Jacob_Jacob
-			James_James John_John Joseph_Joseph Joshua_Joshua Liam Luke_Lucas Lucas_Lucas Logan
-			Malcolm Matthew_Matthew Michael_Michael Nathan_Nathan Noah Patrick Philip_Philip Peter_Peter
-			Oliver Owen Robert_Robert Richard_Richard Samuel_Samuel Thomas_Thomas Stephen_Stephen
-			William_William Wilfred Victor Vincent Zachary
+			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
+			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
+			Bhushan Deepak Devansh Dhruv
+			Gaurav Gokul Hari Harish Hemanth Inder Ishan Jeevan Jatin
+			Karthik Kapil Kumar Kali
+			Mohit Manish Manoj Naveen Nikhil Nithin
+			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
+			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
+			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
 		}
 		female_names = {
-			Abigail_Abigail Alice Catherine_Catherine Chloe Barbara Dorothy
-			Emma Emily_Emily Isabella_Elisabeth Elisabeth_Elisabeth Eliza_Elisabeth Elizabeth_Elizabeth Ellen
-			Grace Hannah Jennifer_Jennifer Jessica Lily Lucy Linda Katherine_Catherine
-			Mary_Maria Margaret_Margaret Melissa Morgan Patricia_Patricia Ruby Stephany
-			Sarah_Sarah Sophia Susan_Susan Zoe Simone
+			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
+			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
+			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
+			Vaishnavi
+			Nilana Samaya # Same
 		}
 		
 		dukes_called_kings = yes
@@ -5400,22 +5425,25 @@ tarkan_group = {
 	
 	arab_tarkan = {
 		graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
-
+		color = { 0.5 0.5 0.5 }
 		male_names = {
-			Amir Ammar Adam_Adam Ahmed_Ahmad Ali_Ali Abdulrahman_Abdulrahman Abdullah_Abdullah Aziz Bilal
-			Hamdan Hamid Hamza Hussein_Hussayn Hasan Halim Kathem Khaled Ibrahim_Abraham Karim
-			Mahmud Majid Muhammad_Muhammed Mustafa Murad Omar Rashid
-			Said Selim Tarek Taha Yasin Yousouf_Joseph
+			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
+			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
+			Bhushan Deepak Devansh Dhruv
+			Gaurav Gokul Hari Harish Hemanth Inder Ishan Jeevan Jatin
+			Karthik Kapil Kumar Kali
+			Mohit Manish Manoj Naveen Nikhil Nithin
+			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
+			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
+			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
 		}
 		female_names = {
-			Ashraqat Aya Aicha Amina
-			Dalal Doha Eisha Fajr Fatima Farida Fatin
-			Gamila Gamalat Gazel Hala Habiba Hosniya Hasnaa Hoda Layan Leen Lian Khadija Karima Jana
-			Malika Maha Marwa Maryam_Maria Malak Mona Naima Nesreen Nadia Noor
-			Rachida Reem Salma Saida Sahar Shaimaa Shahd Suha Sarah_Sarah
-			Yara
+			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
+			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
+			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
+			Vaishnavi
+			Nilana Samaya # Same
 		}
 		
 		dukes_called_kings = yes
@@ -5440,25 +5468,26 @@ tarkan_group = {
 
 	east_afro_tarkan = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
-
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.5 0.5 0.5 }
 		male_names = {
-			Amani Anasa Azize Baraka Darweshi Elimu Enzi
-			Fanana Faraji Hamisi Husani Issa Jahleel Jina Juma Jumaane
-			Khalfani Kitwana Kondo Kwanza Mbwana Mhina Mosi Musa
-			Rhamadhani Salehe Sefu Shani Simba Taji Tambo
+			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
+			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
+			Bhushan Deepak Devansh Dhruv
+			Gaurav Gokul Hari Harish Hemanth Inder Ishan Jeevan Jatin
+			Karthik Kapil Kumar Kali
+			Mohit Manish Manoj Naveen Nikhil Nithin
+			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
+			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
+			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
 		}
 		female_names = {
-			Afiya Akina Amana Angalia Arusi Ashura Asya
-			Bahati Busara Chiku Dafina Dalila Fanaka Faraja Fatuma Fikira
-			Hadiya Halima Halisi Haoniya Hasina Hawa Imani Imara Inira Jaha Jina
-			Kakena Kalere Kamaria Karama Kesi Khadija Kibibi Kijakazi Kinaya Kinjia Kito
-			Malika Malkia Marjani Marini Masika Maulidi Mwamini Mwasaa
-			Najma Nbushe Neema Panya Pasua Penda Rashida Raziya Rehema Rukiya
-			Saada Salama Sanura Sauda Shani Sikudhani Siti Tabia Waseme
-			Zakiya Zawadi Zuwena
+			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
+			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
+			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
+			Vaishnavi
+			Nilana Samaya # Same
 		}
 		dukes_called_kings = yes
 		founder_named_dynasties = yes
@@ -5480,18 +5509,26 @@ second_graphical_culture = mideastconfederategfx
 	}
 	ethiopian_tarkan = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
-
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.5 0.5 0.5 }
 		male_names = {
-			Amare Dahnay Desta Getachew Geteye Girma Iskinder Abai Abebe Afework Aman Assefa Atoberhan Azmera Bekele Benaim Berhanu Berhanua Berihun Berta Bworo Daniachew Dawit Demissie Eremias Ezana Fasilidas Fethee Gabra Gebereal Gebre Gondar Hackeem Haeran Hagos Hakeem Hakiem Hakim Hakym Iskander_Alexander Iskinder_Alexander Iyasu Jima Kafa Kaleb Kelile Kelyle Kifle Lebna Lema Loua Mamo Mekonnen Melaku Mengesha Merille Miruts Negash Negasi Negus Ogbae Ogbai Oromo Rahad Selassie Semer Semere Sisay Tamirat Tariku Taye Tefere Teferi Teka Tekle Tengene Teruworq Tesfaye Tessema Tewodros Yacob Yohannas Yonas Zula
+			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
+			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
+			Bhushan Deepak Devansh Dhruv
+			Gaurav Gokul Hari Harish Hemanth Inder Ishan Jeevan Jatin
+			Karthik Kapil Kumar Kali
+			Mohit Manish Manoj Naveen Nikhil Nithin
+			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
+			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
+			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
 		}
 		female_names = {
-			Habesha Abeba Abrihet Adanech Adina Alaworld Alitash Amhara Ayana Bathsheba Bekele Belkis Berhane Berta Cheren China Debre Debtera Desse
-			Desta Dilla Falasha Falashina Fana Fannah Genat Hagos Jahzara Jazarah Kayla Kelile Kelyle Keren Kess Kifle Lishan Louama Magdala Maharene
-			Makda Makeda Mandera Melesse Mellesse Misrak Negasi Nishan Nyala Qwara Retta Seble Sela Selamawit Selassie Semhar Senalat Sheba Shinasha
-			Sisay Tavavich Teru Totit Tsage Wagaye Yehudit Zala Zauditu Zeina Zena Zenia
+			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
+			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
+			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
+			Vaishnavi
+			Nilana Samaya # Same
 		}
 		dukes_called_kings = yes
 		founder_named_dynasties = yes
@@ -5513,24 +5550,26 @@ second_graphical_culture = mideastconfederategfx
 	}
 	hispanic_tarkan = {
 		graphical_culture = hispanicconfederategfx
-second_graphical_culture = angloconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
-
+		second_graphical_culture = angloconfederategfx
+		color = { 0.5 0.5 0.5 }
 		male_names = {
-			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
-			Bruno Carlos Christopher_Christopher Daniel_Daniel David_David Diego Dylan
-			Emilio Emiliano_Emiliano Emmanuel Felipe_Philip Gabriel_Gabriel
-			Ignacio Juan_John Juan-Pablo Juan-Jose Juan-Diego Joaquin Jeronimo Lucas Leonardo
-			Maximiliano_Max Martin Matias_Matthew Mateo_Matthew Miguel_Michael Miguel-Angel Nicolas
-			Rodrigo Pablo Samuel_Samuel Santiago Sebastian Tomas_Thomas Thiago
+			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
+			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
+			Bhushan Deepak Devansh Dhruv
+			Gaurav Gokul Hari Harish Hemanth Inder Ishan Jeevan Jatin
+			Karthik Kapil Kumar Kali
+			Mohit Manish Manoj Naveen Nikhil Nithin
+			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
+			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
+			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
 		}
 		female_names = {
-			Sofia_Sophia Isabella Camila Valentina Valeria Mariana Luciana
-			Daniela_Danielle Gabriela Victoria_Victoria Martina Lucia Ximena Sara_Sarah
-			Samantha Maria-Jose Emma Catalina Julieta Mia Antonella Renata Emilia_Emily
-			Natalia Zoe Nicole Paula Amanda Maria-Fernanda Antonia Alejandra Juana Andrea
-			Manuela Ana-Sofia Guadalupe Agustina Elena Maria_Maria Beatriz_Beatrice
+			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
+			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
+			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
+			Vaishnavi
+			Nilana Samaya # Same
 		}
 		dukes_called_kings = yes
 		from_dynasty_prefix = "de "
@@ -5551,8 +5590,8 @@ second_graphical_culture = angloconfederategfx
 	
 	indo_tarkan = {
 		graphical_culture = indoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		color = { 0.5 0.5 0.95 }
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.5 0.5 0.5 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
 			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
@@ -5563,12 +5602,14 @@ second_graphical_culture = mideastconfederategfx
 			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
 			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
 			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
 		}
 		female_names = {
 			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
 			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
 			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
 			Vaishnavi
+			Nilana Samaya # Same
 		}
 		dukes_called_kings = yes
 		from_dynasty_prefix = "na "
@@ -5587,23 +5628,25 @@ second_graphical_culture = mideastconfederategfx
 	iranian_tarkan = {
 		graphical_culture = persianconfederategfx
 		second_graphical_culture = mideastconfederategfx
-
-		color = { 0.5 0.5 0.95 }
-
+		color = { 0.5 0.5 0.5 }
 		male_names = {
-			Abbas Abolhassan Afshar_Afshar Ahmad_Ahmad Akbar_Akbar Ali Allahyar Amin Anushirvan_Anushirvan Aram Ardahan_Ardahan Ardavan_Ardavan Ardeshir_Ardeshir Assad Aurang Ayeshah Babak_Babak Bahman
-			Bahram_Bahram Bakhtiar_Bakhtiar Behrad Behrouz Bozorg Danush_Danush Darab Dariush_Darius Davud_David Djamasp Ebrahim_Abraham Ehsan Esfandiar_Esfandiar Eskander_Alexander Esma'il_Ismail Faramarz_Faramarz Faraz_Faraz Fareed_Farid Farhad_Farhad Fariborz_Fariborz
-			Farroukh_Farroukh Farrukhzad_Farrukhzad Farzad_Farzad Fath Ferdows_Ferdows Fereedun_Feridun Ghobad Gholam Godarz Goshtasb_Goshtasb Hafez Hassan_Hasan Hazarasp_Hazarasp Hedayat Hooshyar_Hooshyar Hormazd_Hormazd Hormoz Hossein_Hossein
-			Humayun Jahandar_Jahandar Jahangir_Jahangir Jahanshah_Jahanshah Jamshid_Jamshid Javeed_Javeed Kambiz Kamran Kavoos_Kavoos Keyghobad Keykhosrau_Keykhosrau Kharmandar_Kharmandar Khashayar_Khashayar Kavadh Khodadad_Khodadad Khosrau_Khosrau
-			Khudayar_Khudayar Khurshid_Khurshid Kurush_Cyrus Mahmud Manuchihr_Manuchihr Manushihr_Manushihr Marzuban_Marzuban Mashad_Mashad Maziar Mehrab Mehrzad Mohammed_Muhammad Morad_Morad Morteza Mozaffar Nard Naveed Nawid Nezam Parviz Pashang_Pashang Peroz_Peroz
-			Pujman Reza Rostam_Rostam Ruhollah Sadri Salman Shahab_Shahab Shahbaz_Shahbaz Shahin_Shahin Shahram_Shahram Shahrokh_Sharokh Shahruz_Shahruz Shahryar_Shahryar Shapur_Shapur Shayan_Shayan Sina Tahmasb_Tahmasb Vahhab_Vahhab Vahid
-			Vali Vandad Varshasb_Varshasb Vishtasb_Vishtasb Yazdegerd Yousef_Joseph Zahak Zakaria Zand Zartosht_Zartosht Zia
+			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
+			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
+			Bhushan Deepak Devansh Dhruv
+			Gaurav Gokul Hari Harish Hemanth Inder Ishan Jeevan Jatin
+			Karthik Kapil Kumar Kali
+			Mohit Manish Manoj Naveen Nikhil Nithin
+			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
+			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
+			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
 		}
 		female_names = {
-			Afsaneh Ahu Arghavan Azarmidokht Asa Azadeh Bahar Banafsheh Behnaz Burandokht Darya Delaram Delbar Dinah Donya Elham Elnaz Farah Fareedeh Farnaz Farrin Farva
-			Furuzan Ghamze Ghazal Ghoncheh_Ghoncheh Golbahar_Golbahar Golnaz_Golnaz Golpari Golshan Hamdam Hurmat Irandokht Jamileh Javaneh Leila Mahdokht Mahtab Mariam_Mariam
-			Navvaba Nazgol_Nazgol Nazilla Noor Parvaneh_Parvaneh Parvin Pertevniyal Pourandokht_Pourandokht Roshanora Roxana Salomeh Shahrzad Shahzadeh Shirin Soraya Touran
-			Tourandokht Yasaman Yekta Zarrindokht Zeynab Zohreh
+			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
+			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
+			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
+			Vaishnavi
+			Nilana Samaya # Same
 		}
 		dukes_called_kings = yes
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
@@ -5624,27 +5667,26 @@ second_graphical_culture = mideastconfederategfx
 	}
 	japanese_tarkan = {
 		graphical_culture = sinoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
-		
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.5 0.5 0.5 }
 		male_names = {
-			Hiroshi Akira Kazuo Takashi Toshio Yoshio Hideo Masao Kiyoshi
-			Takeshi Minoru Shigeru Tadashi Kenji Koichi Takeo Ichiro Makoto
-			Yasuo Yukio Yutaka Osamu Saburo Koji Susumu Toru Shigeo Isao
-			Tatsuo Shiro Noboru Hajime Mitsuo Jiro Tsutomu Shoji Nobuo Takao
-			Tetsuo Shinichi Fumio Kenichi Akio Seiichi Tadao Kunio Eiichi
-			Ryotaro Ryusei
+			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
+			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
+			Bhushan Deepak Devansh Dhruv
+			Gaurav Gokul Hari Harish Hemanth Inder Ishan Jeevan Jatin
+			Karthik Kapil Kumar Kali
+			Mohit Manish Manoj Naveen Nikhil Nithin
+			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
+			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
+			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
 		}
-		
 		female_names = {
-			Keiko Yoko Kazuko Hiroko Kaoru Yoshiko Michiko Masako
-			Akiko Reiko Kyoko Noriko Toshiko Atsuko Ayako Chieko
-			Chizuko Eiko Emiko Eri Fumi Fumiko Hana Hanako Haru
-			Haruko Hitomi Junko Kaoru Kazue Kimiko Mari Mariko
-			Mayumi Mika Miyuki Rie Sachiko Satomi
-			Seiko Sumiko Tomoko Yasuko Yoshie
-			Yumi Yumiko Yuriko
+			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
+			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
+			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
+			Vaishnavi
+			Nilana Samaya # Same
 		}
 		dukes_called_kings = yes
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
@@ -5662,19 +5704,26 @@ second_graphical_culture = mideastconfederategfx
 	}
 	mesoamerican_tarkan = {
 		graphical_culture = americonfederategfx
-		color = { 0.5 0.5 0.95 }
-		
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.5 0.5 0.5 }
 		male_names = {
-			Acalan Acacitli Acamapichtli Acolmiztli Aculnahuacatl Ahuiliztli Ahuitzotl Atl Axayacatl Cacamatzin Chimalli Chimalpilli Chimalpopoca Cipac Coanacoch Coatl Cozahtli Cuauhtemoc Cuauhtl Cuetlachtli Cuetzpalli Cuixtli Cuitlahuac 
-			Huitzilin Huitzilihuitl Huitzitl Huitztecol Iquehuacatzin Itzcoatl Itzli Itzcuintli Ixtlilxochitl Mahchimaleh Matlal Mazatl Matlalihuitl Matlatzincatzin Maxtla Miztli Moctezuma Moquihuix Necuametl Nezahualcoyotl Nezahualpilli Nochehuatl 
-			Ocuil Olli Opochtli Ozomatli Quauhtli Tapayaxi Tecocoltzin Tecolotl Tetlepanquetzaltzin Tezozomoc Tizoc Tizocic Tlacaelel Tlacaeleltzin Tlalli Tlaloc Tochtli Tototl Tzompantzin Tlilpotonqui Topiltzin Totoquihuaztli 
-			Ueman Yaotl Yayauhqui Yolotli Yolyamanitzin Xicohtencatl Xiuhpilli Xihuitl Xipil Xipilli Xochitl Xochipepe Xochipilli Yaotl Zipactonal Zolin
+			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
+			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
+			Bhushan Deepak Devansh Dhruv
+			Gaurav Gokul Hari Harish Hemanth Inder Ishan Jeevan Jatin
+			Karthik Kapil Kumar Kali
+			Mohit Manish Manoj Naveen Nikhil Nithin
+			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
+			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
+			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
 		}
 		female_names = {
-			Achcauhtli Acxocueitl Ahuiliztli Amoxtli Atl Atotoztli Ayauhcihuatl Azcalxochitzin Centehua Cihuaton Citlalmina Chalchiuitl Chicahua Chichimecacihuatzin Chipahua Chicomecoatl Chimalma Cihuaton Citlali Citlalli Citlalmina Coaxoch Coszcatl 
-			Cozamalotl Cuicatl Eleuia Eloxochitl Etalpalli Eztli Huehue-Zaca Itotia Iuitl Ixcatzin Izel Malinalxochitl Manauia Matlalatzin Mecatl Meztli Miahuaxiuitl Miyaoaxochitl Mizquixahual Momoztli Nahuatl Necahual Nelli Ohtli Papa Patli
-			Quiauhxochitl Sacnite Techichpotzin Tezozomoc Tziquetzalpoztectzin Teiuc Teicuih Teyacapan Tepin Tezcatlan Tlacotl Tlahco Tlahcoehua Toltecatl Tonalnan Tlazozomizqui
-			Yoltzin Xilonen Xiloxoch Xiuhtomiyauhtzin Xochitl Xocoh Xocoyotl Yaretzi Zeltzin Zyanya
+			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
+			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
+			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
+			Vaishnavi
+			Nilana Samaya # Same
 		}
 		
 		dukes_called_kings = yes
@@ -5696,27 +5745,25 @@ second_graphical_culture = mideastconfederategfx
 	russo_tarkan = {
 		graphical_culture = russoconfederategfx
 		second_graphical_culture = angloconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
-
+		color = { 0.5 0.5 0.5 }
 		male_names = {
-			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
-			Bogdan Boris Valentin Valery Vasily Viktor Vladimir_Vladimir
-			Gavriil_Gabriel Gennady Georgy_George Grigory_Gregory
-			David_David Daniil_Daniel Dmitry Ivan_John Igor Iosif_Joseph
-			Immanuil_Emmanuel Kirill_Cyril Konstantin Lev Leonid Maxim
-			Matvei Mikhail_Michael Nikita Nikolai_Nicolas Oleg Pavel
-			Pyotr_Peter Roman Sergei Stepan_Stephen Timofei Eduard_Edward Erik_Eric
-			Yulian Yuri Yakov
+			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
+			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
+			Bhushan Deepak Devansh Dhruv
+			Gaurav Gokul Hari Harish Hemanth Inder Ishan Jeevan Jatin
+			Karthik Kapil Kumar Kali
+			Mohit Manish Manoj Naveen Nikhil Nithin
+			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
+			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
+			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
 		}
 		female_names = {
-			Alexandra Alina Alyona Anastasiya_Anastasia Anna_Anna
-			Vera Valeriya Vasilisa Veronika Valentina Viktoriya_Victoria
-			Galina Dina Dominika Ekateirna_Catherine Elizaveta_Elisabeth Eva
-			Zhanna Zoya Inessa Izabella_Isabel Izolda Klara Klavdiya
-			Kristina Larisa Lidiya Lilya Ludmila Margarita Maya
-			Mariya_Maria Natalya Nina Nika Olga Olesya Raisa Rozalina
-			Svetlana Sofia_Sophia Tamara Tatyana Ulyana Florentina
+			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
+			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
+			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
+			Vaishnavi
+			Nilana Samaya # Same
 		}
 		
 		dukes_called_kings = yes
@@ -5740,23 +5787,27 @@ second_graphical_culture = mideastconfederategfx
 	}
 	sino_tarkan = {
 		graphical_culture = sinoconfederategfx
-second_graphical_culture = mideastconfederategfx
-		color = { 0.5 0.5 0.95 }
-		
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.5 0.5 0.5 }
 		male_names = {
-			An Bo Bin Cheng
-			De Dong Feng Gang Guo Hui Hao
-			Jian Jie Jun Kang Liang Lei Ning
-			Peng Tao Wei Yong Yi Wen
+			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
+			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
+			Bhushan Deepak Devansh Dhruv
+			Gaurav Gokul Hari Harish Hemanth Inder Ishan Jeevan Jatin
+			Karthik Kapil Kumar Kali
+			Mohit Manish Manoj Naveen Nikhil Nithin
+			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
+			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
+			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
 		}
 		female_names = {
-			Ai Bi Cai Dan Fang
-			Hong Hui Juan Jing Jie
-			Lan Li Lian Na Ni
-			Qian Qiong Shan Shu Ting
-			Xia Xian Xiaoyan Xiaomei Xinyi Yan Yun Ying Zhen
+			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
+			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
+			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
+			Vaishnavi
+			Nilana Samaya # Same
 		}
-		
 		dukes_called_kings = yes
 		
 		from_dynasty_prefix = "of "
@@ -5772,23 +5823,26 @@ second_graphical_culture = mideastconfederategfx
 	}
 	west_afro_tarkan = {
 		graphical_culture = afroconfederategfx
-second_graphical_culture = mideastconfederategfx
-		
-		color = { 0.5 0.5 0.95 }
-
+		second_graphical_culture = mideastconfederategfx
+		color = { 0.5 0.5 0.5 }
 		male_names = {
-			Abi-Bakr Abubakari Akoi Alayaman Ali_Ali Ali-Fay Ali-Kolon Ali-Zalil Bad・Bakr Bakr-Kanbu Bamari Bankanu
-			Bannu Bassarou Bassi Birama Bisi Biyu Bonga Cisse Dankaran Daoud_David Dawud_David Demba Diara D・u
-			Faga-Laye Fatta Fodi Fuluku F臈azu Gane Gao Hargani Harun Igoumou Ishaq_Isaac Ismail_Ismail Kabayo Kalabi Kambine
-			Kanafa Kassa Kasse・Kaya Kayna Kinkin Kisha Kodama Ko・・Kukuray Kusoy Lahiltoul M'Bali Maammarou Maghan
-			Mahmud_Mahmud Majan Malla Mamadi Mamoudou Manding-Bory Mari-Djata Maroumfa Missi-Iz・Morobani Musa_Moses
-			Nintasanay Nuh Ouali Ouanko Ouati Reidja Sakoura Salman_Solomon Samsou-B駻i Samsou-Ke・a Sandaki Soumaba
-			Soumaoro Soundiata Sulayman_Solomon Takoi Tib Tomo_Thomas Tunka Umar_Umar Yama Yaqub_Jacob Yasiboy Zakoi Zenku
+			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
+			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
+			Bhushan Deepak Devansh Dhruv
+			Gaurav Gokul Hari Harish Hemanth Inder Ishan Jeevan Jatin
+			Karthik Kapil Kumar Kali
+			Mohit Manish Manoj Naveen Nikhil Nithin
+			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
+			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
+			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
 		}
 		female_names = {
-			Adja Aichata Aissata Alima Aminata Amita Aoua Barakissa Bintou Deye Djeneba Djenly Djire Fadima
-			Fatim Fatoumata Halima Hawa Ina Kadi Kilia Kolonkan Lorane Mariam Nafissa Namandj・Namiss Nana
-			Safiatou Salimata Sassouma Sidib・Siya Sogolon Tekhaye Youma Ze・ab
+			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
+			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
+			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
+			Vaishnavi
+			Nilana Samaya # Same
 		}
 		
 		dukes_called_kings = yes
@@ -5847,20 +5901,22 @@ avalonian_group = {
 	arab_avalonian = {
 		graphical_culture = mideastavalongfx
 		color = { 0.25 0 0 }
-
 		male_names = {
-			Amir Ammar Adam_Adam Ahmed_Ahmad Ali_Ali Abdulrahman_Abdulrahman Abdullah_Abdullah Aziz Bilal
-			Hamdan Hamid Hamza Hussein_Hussayn Hasan Halim Kathem Khaled Ibrahim_Abraham Karim
-			Mahmud Majid Muhammad_Muhammed Mustafa Murad Omar Rashid
-			Said Selim Tarek Taha Yasin Yousouf_Joseph
+			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
+			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
+			Charles_Charles Daniel_Daniel David_David Duncan Edward_Edward Edgar Ethan
+			Gabriel_Gabriel Gregory_Gregory George_George Harry Henry_Henry Jack Jacob_Jacob
+			James_James John_John Joseph_Joseph Joshua_Joshua Liam Luke_Lucas Lucas_Lucas Logan
+			Malcolm Matthew_Matthew Michael_Michael Nathan_Nathan Noah Patrick Philip_Philip Peter_Peter
+			Oliver Owen Robert_Robert Richard_Richard Samuel_Samuel Thomas_Thomas Stephen_Stephen
+			William_William Wilfred Victor Vincent Zachary
 		}
 		female_names = {
-			Ashraqat Aya Aicha Amina
-			Dalal Doha Eisha Fajr Fatima Farida Fatin
-			Gamila Gamalat Gazel Hala Habiba Hosniya Hasnaa Hoda Layan Leen Lian Khadija Karima Jana
-			Malika Maha Marwa Maryam_Maria Malak Mona Naima Nesreen Nadia Noor
-			Rachida Reem Salma Saida Sahar Shaimaa Shahd Suha Sarah_Sarah
-			Yara
+			Abigail_Abigail Alice Catherine_Catherine Chloe Barbara Dorothy
+			Emma Emily_Emily Isabella_Elisabeth Elisabeth_Elisabeth Eliza_Elisabeth Elizabeth_Elizabeth Ellen
+			Grace Hannah Jennifer_Jennifer Jessica Lily Lucy Linda Katherine_Catherine
+			Mary_Maria Margaret_Margaret Melissa Morgan Patricia_Patricia Ruby Stephany
+			Sarah_Sarah Sophia Susan_Susan Zoe Simone
 		}
 		
 		dukes_called_kings = yes
@@ -5887,22 +5943,22 @@ avalonian_group = {
 		graphical_culture = afroavalongfx
 		second_graphical_culture = mideastavalongfx
 		color = { 0.25 0 0 }
-
 		male_names = {
-			Amani Anasa Azize Baraka Darweshi Elimu Enzi
-			Fanana Faraji Hamisi Husani Issa Jahleel Jina Juma Jumaane
-			Khalfani Kitwana Kondo Kwanza Mbwana Mhina Mosi Musa
-			Rhamadhani Salehe Sefu Shani Simba Taji Tambo
+			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
+			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
+			Charles_Charles Daniel_Daniel David_David Duncan Edward_Edward Edgar Ethan
+			Gabriel_Gabriel Gregory_Gregory George_George Harry Henry_Henry Jack Jacob_Jacob
+			James_James John_John Joseph_Joseph Joshua_Joshua Liam Luke_Lucas Lucas_Lucas Logan
+			Malcolm Matthew_Matthew Michael_Michael Nathan_Nathan Noah Patrick Philip_Philip Peter_Peter
+			Oliver Owen Robert_Robert Richard_Richard Samuel_Samuel Thomas_Thomas Stephen_Stephen
+			William_William Wilfred Victor Vincent Zachary
 		}
 		female_names = {
-			Afiya Akina Amana Angalia Arusi Ashura Asya
-			Bahati Busara Chiku Dafina Dalila Fanaka Faraja Fatuma Fikira
-			Hadiya Halima Halisi Haoniya Hasina Hawa Imani Imara Inira Jaha Jina
-			Kakena Kalere Kamaria Karama Kesi Khadija Kibibi Kijakazi Kinaya Kinjia Kito
-			Malika Malkia Marjani Marini Masika Maulidi Mwamini Mwasaa
-			Najma Nbushe Neema Panya Pasua Penda Rashida Raziya Rehema Rukiya
-			Saada Salama Sanura Sauda Shani Sikudhani Siti Tabia Waseme
-			Zakiya Zawadi Zuwena
+			Abigail_Abigail Alice Catherine_Catherine Chloe Barbara Dorothy
+			Emma Emily_Emily Isabella_Elisabeth Elisabeth_Elisabeth Eliza_Elisabeth Elizabeth_Elizabeth Ellen
+			Grace Hannah Jennifer_Jennifer Jessica Lily Lucy Linda Katherine_Catherine
+			Mary_Maria Margaret_Margaret Melissa Morgan Patricia_Patricia Ruby Stephany
+			Sarah_Sarah Sophia Susan_Susan Zoe Simone
 		}
 		dukes_called_kings = yes
 		founder_named_dynasties = yes
@@ -5926,15 +5982,22 @@ avalonian_group = {
 		graphical_culture = afroavalongfx
 		second_graphical_culture = mideastavalongfx
 		color = { 0.25 0 0 }
-
 		male_names = {
-			Amare Dahnay Desta Getachew Geteye Girma Iskinder Abai Abebe Afework Aman Assefa Atoberhan Azmera Bekele Benaim Berhanu Berhanua Berihun Berta Bworo Daniachew Dawit Demissie Eremias Ezana Fasilidas Fethee Gabra Gebereal Gebre Gondar Hackeem Haeran Hagos Hakeem Hakiem Hakim Hakym Iskander_Alexander Iskinder_Alexander Iyasu Jima Kafa Kaleb Kelile Kelyle Kifle Lebna Lema Loua Mamo Mekonnen Melaku Mengesha Merille Miruts Negash Negasi Negus Ogbae Ogbai Oromo Rahad Selassie Semer Semere Sisay Tamirat Tariku Taye Tefere Teferi Teka Tekle Tengene Teruworq Tesfaye Tessema Tewodros Yacob Yohannas Yonas Zula
+			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
+			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
+			Charles_Charles Daniel_Daniel David_David Duncan Edward_Edward Edgar Ethan
+			Gabriel_Gabriel Gregory_Gregory George_George Harry Henry_Henry Jack Jacob_Jacob
+			James_James John_John Joseph_Joseph Joshua_Joshua Liam Luke_Lucas Lucas_Lucas Logan
+			Malcolm Matthew_Matthew Michael_Michael Nathan_Nathan Noah Patrick Philip_Philip Peter_Peter
+			Oliver Owen Robert_Robert Richard_Richard Samuel_Samuel Thomas_Thomas Stephen_Stephen
+			William_William Wilfred Victor Vincent Zachary
 		}
 		female_names = {
-			Habesha Abeba Abrihet Adanech Adina Alaworld Alitash Amhara Ayana Bathsheba Bekele Belkis Berhane Berta Cheren China Debre Debtera Desse
-			Desta Dilla Falasha Falashina Fana Fannah Genat Hagos Jahzara Jazarah Kayla Kelile Kelyle Keren Kess Kifle Lishan Louama Magdala Maharene
-			Makda Makeda Mandera Melesse Mellesse Misrak Negasi Nishan Nyala Qwara Retta Seble Sela Selamawit Selassie Semhar Senalat Sheba Shinasha
-			Sisay Tavavich Teru Totit Tsage Wagaye Yehudit Zala Zauditu Zeina Zena Zenia
+			Abigail_Abigail Alice Catherine_Catherine Chloe Barbara Dorothy
+			Emma Emily_Emily Isabella_Elisabeth Elisabeth_Elisabeth Eliza_Elisabeth Elizabeth_Elizabeth Ellen
+			Grace Hannah Jennifer_Jennifer Jessica Lily Lucy Linda Katherine_Catherine
+			Mary_Maria Margaret_Margaret Melissa Morgan Patricia_Patricia Ruby Stephany
+			Sarah_Sarah Sophia Susan_Susan Zoe Simone
 		}
 		dukes_called_kings = yes
 		founder_named_dynasties = yes
@@ -5958,21 +6021,22 @@ avalonian_group = {
 		graphical_culture = hispanicavalongfx
 		second_graphical_culture = angloavalongfx
 		color = { 0.25 0 0 }
-
 		male_names = {
-			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
-			Bruno Carlos Christopher_Christopher Daniel_Daniel David_David Diego Dylan
-			Emilio Emiliano_Emiliano Emmanuel Felipe_Philip Gabriel_Gabriel
-			Ignacio Juan_John Juan-Pablo Juan-Jose Juan-Diego Joaquin Jeronimo Lucas Leonardo
-			Maximiliano_Max Martin Matias_Matthew Mateo_Matthew Miguel_Michael Miguel-Angel Nicolas
-			Rodrigo Pablo Samuel_Samuel Santiago Sebastian Tomas_Thomas Thiago
+			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
+			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
+			Charles_Charles Daniel_Daniel David_David Duncan Edward_Edward Edgar Ethan
+			Gabriel_Gabriel Gregory_Gregory George_George Harry Henry_Henry Jack Jacob_Jacob
+			James_James John_John Joseph_Joseph Joshua_Joshua Liam Luke_Lucas Lucas_Lucas Logan
+			Malcolm Matthew_Matthew Michael_Michael Nathan_Nathan Noah Patrick Philip_Philip Peter_Peter
+			Oliver Owen Robert_Robert Richard_Richard Samuel_Samuel Thomas_Thomas Stephen_Stephen
+			William_William Wilfred Victor Vincent Zachary
 		}
 		female_names = {
-			Sofia_Sophia Isabella Camila Valentina Valeria Mariana Luciana
-			Daniela_Danielle Gabriela Victoria_Victoria Martina Lucia Ximena Sara_Sarah
-			Samantha Maria-Jose Emma Catalina Julieta Mia Antonella Renata Emilia_Emily
-			Natalia Zoe Nicole Paula Amanda Maria-Fernanda Antonia Alejandra Juana Andrea
-			Manuela Ana-Sofia Guadalupe Agustina Elena Maria_Maria Beatriz_Beatrice
+			Abigail_Abigail Alice Catherine_Catherine Chloe Barbara Dorothy
+			Emma Emily_Emily Isabella_Elisabeth Elisabeth_Elisabeth Eliza_Elisabeth Elizabeth_Elizabeth Ellen
+			Grace Hannah Jennifer_Jennifer Jessica Lily Lucy Linda Katherine_Catherine
+			Mary_Maria Margaret_Margaret Melissa Morgan Patricia_Patricia Ruby Stephany
+			Sarah_Sarah Sophia Susan_Susan Zoe Simone
 		}
 		dukes_called_kings = yes
 		from_dynasty_prefix = "de "
@@ -5996,21 +6060,21 @@ avalonian_group = {
 		second_graphical_culture = mideastavalongfx
 		color = { 0.25 0 0 }
 		male_names = {
-			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
-			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
-			Bhushan Deepak Devansh Dhruv
-			Gaurav Gokul Hari Harish Hemanth Inder Ishan Jeevan Jatin
-			Karthik Kapil Kumar Kali
-			Mohit Manish Manoj Naveen Nikhil Nithin
-			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
-			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
-			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
+			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
+			Charles_Charles Daniel_Daniel David_David Duncan Edward_Edward Edgar Ethan
+			Gabriel_Gabriel Gregory_Gregory George_George Harry Henry_Henry Jack Jacob_Jacob
+			James_James John_John Joseph_Joseph Joshua_Joshua Liam Luke_Lucas Lucas_Lucas Logan
+			Malcolm Matthew_Matthew Michael_Michael Nathan_Nathan Noah Patrick Philip_Philip Peter_Peter
+			Oliver Owen Robert_Robert Richard_Richard Samuel_Samuel Thomas_Thomas Stephen_Stephen
+			William_William Wilfred Victor Vincent Zachary
 		}
 		female_names = {
-			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
-			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
-			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
-			Vaishnavi
+			Abigail_Abigail Alice Catherine_Catherine Chloe Barbara Dorothy
+			Emma Emily_Emily Isabella_Elisabeth Elisabeth_Elisabeth Eliza_Elisabeth Elizabeth_Elizabeth Ellen
+			Grace Hannah Jennifer_Jennifer Jessica Lily Lucy Linda Katherine_Catherine
+			Mary_Maria Margaret_Margaret Melissa Morgan Patricia_Patricia Ruby Stephany
+			Sarah_Sarah Sophia Susan_Susan Zoe Simone
 		}
 		dukes_called_kings = yes
 		from_dynasty_prefix = "na "
@@ -6030,21 +6094,22 @@ avalonian_group = {
 		graphical_culture = persianavalongfx
 		second_graphical_culture = mideastavalongfx
 		color = { 0.25 0 0 }
-
 		male_names = {
-			Abbas Abolhassan Afshar_Afshar Ahmad_Ahmad Akbar_Akbar Ali Allahyar Amin Anushirvan_Anushirvan Aram Ardahan_Ardahan Ardavan_Ardavan Ardeshir_Ardeshir Assad Aurang Ayeshah Babak_Babak Bahman
-			Bahram_Bahram Bakhtiar_Bakhtiar Behrad Behrouz Bozorg Danush_Danush Darab Dariush_Darius Davud_David Djamasp Ebrahim_Abraham Ehsan Esfandiar_Esfandiar Eskander_Alexander Esma'il_Ismail Faramarz_Faramarz Faraz_Faraz Fareed_Farid Farhad_Farhad Fariborz_Fariborz
-			Farroukh_Farroukh Farrukhzad_Farrukhzad Farzad_Farzad Fath Ferdows_Ferdows Fereedun_Feridun Ghobad Gholam Godarz Goshtasb_Goshtasb Hafez Hassan_Hasan Hazarasp_Hazarasp Hedayat Hooshyar_Hooshyar Hormazd_Hormazd Hormoz Hossein_Hossein
-			Humayun Jahandar_Jahandar Jahangir_Jahangir Jahanshah_Jahanshah Jamshid_Jamshid Javeed_Javeed Kambiz Kamran Kavoos_Kavoos Keyghobad Keykhosrau_Keykhosrau Kharmandar_Kharmandar Khashayar_Khashayar Kavadh Khodadad_Khodadad Khosrau_Khosrau
-			Khudayar_Khudayar Khurshid_Khurshid Kurush_Cyrus Mahmud Manuchihr_Manuchihr Manushihr_Manushihr Marzuban_Marzuban Mashad_Mashad Maziar Mehrab Mehrzad Mohammed_Muhammad Morad_Morad Morteza Mozaffar Nard Naveed Nawid Nezam Parviz Pashang_Pashang Peroz_Peroz
-			Pujman Reza Rostam_Rostam Ruhollah Sadri Salman Shahab_Shahab Shahbaz_Shahbaz Shahin_Shahin Shahram_Shahram Shahrokh_Sharokh Shahruz_Shahruz Shahryar_Shahryar Shapur_Shapur Shayan_Shayan Sina Tahmasb_Tahmasb Vahhab_Vahhab Vahid
-			Vali Vandad Varshasb_Varshasb Vishtasb_Vishtasb Yazdegerd Yousef_Joseph Zahak Zakaria Zand Zartosht_Zartosht Zia
+			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
+			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
+			Charles_Charles Daniel_Daniel David_David Duncan Edward_Edward Edgar Ethan
+			Gabriel_Gabriel Gregory_Gregory George_George Harry Henry_Henry Jack Jacob_Jacob
+			James_James John_John Joseph_Joseph Joshua_Joshua Liam Luke_Lucas Lucas_Lucas Logan
+			Malcolm Matthew_Matthew Michael_Michael Nathan_Nathan Noah Patrick Philip_Philip Peter_Peter
+			Oliver Owen Robert_Robert Richard_Richard Samuel_Samuel Thomas_Thomas Stephen_Stephen
+			William_William Wilfred Victor Vincent Zachary
 		}
 		female_names = {
-			Afsaneh Ahu Arghavan Azarmidokht Asa Azadeh Bahar Banafsheh Behnaz Burandokht Darya Delaram Delbar Dinah Donya Elham Elnaz Farah Fareedeh Farnaz Farrin Farva
-			Furuzan Ghamze Ghazal Ghoncheh_Ghoncheh Golbahar_Golbahar Golnaz_Golnaz Golpari Golshan Hamdam Hurmat Irandokht Jamileh Javaneh Leila Mahdokht Mahtab Mariam_Mariam
-			Navvaba Nazgol_Nazgol Nazilla Noor Parvaneh_Parvaneh Parvin Pertevniyal Pourandokht_Pourandokht Roshanora Roxana Salomeh Shahrzad Shahzadeh Shirin Soraya Touran
-			Tourandokht Yasaman Yekta Zarrindokht Zeynab Zohreh
+			Abigail_Abigail Alice Catherine_Catherine Chloe Barbara Dorothy
+			Emma Emily_Emily Isabella_Elisabeth Elisabeth_Elisabeth Eliza_Elisabeth Elizabeth_Elizabeth Ellen
+			Grace Hannah Jennifer_Jennifer Jessica Lily Lucy Linda Katherine_Catherine
+			Mary_Maria Margaret_Margaret Melissa Morgan Patricia_Patricia Ruby Stephany
+			Sarah_Sarah Sophia Susan_Susan Zoe Simone
 		}
 		dukes_called_kings = yes
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
@@ -6067,24 +6132,22 @@ avalonian_group = {
 		graphical_culture = sinoavalongfx
 		second_graphical_culture = mideastavalongfx
 		color = { 0.25 0 0 }
-		
 		male_names = {
-			Hiroshi Akira Kazuo Takashi Toshio Yoshio Hideo Masao Kiyoshi
-			Takeshi Minoru Shigeru Tadashi Kenji Koichi Takeo Ichiro Makoto
-			Yasuo Yukio Yutaka Osamu Saburo Koji Susumu Toru Shigeo Isao
-			Tatsuo Shiro Noboru Hajime Mitsuo Jiro Tsutomu Shoji Nobuo Takao
-			Tetsuo Shinichi Fumio Kenichi Akio Seiichi Tadao Kunio Eiichi
-			Ryotaro Ryusei
+			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
+			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
+			Charles_Charles Daniel_Daniel David_David Duncan Edward_Edward Edgar Ethan
+			Gabriel_Gabriel Gregory_Gregory George_George Harry Henry_Henry Jack Jacob_Jacob
+			James_James John_John Joseph_Joseph Joshua_Joshua Liam Luke_Lucas Lucas_Lucas Logan
+			Malcolm Matthew_Matthew Michael_Michael Nathan_Nathan Noah Patrick Philip_Philip Peter_Peter
+			Oliver Owen Robert_Robert Richard_Richard Samuel_Samuel Thomas_Thomas Stephen_Stephen
+			William_William Wilfred Victor Vincent Zachary
 		}
-		
 		female_names = {
-			Keiko Yoko Kazuko Hiroko Kaoru Yoshiko Michiko Masako
-			Akiko Reiko Kyoko Noriko Toshiko Atsuko Ayako Chieko
-			Chizuko Eiko Emiko Eri Fumi Fumiko Hana Hanako Haru
-			Haruko Hitomi Junko Kaoru Kazue Kimiko Mari Mariko
-			Mayumi Mika Miyuki Rie Sachiko Satomi
-			Seiko Sumiko Tomoko Yasuko Yoshie
-			Yumi Yumiko Yuriko
+			Abigail_Abigail Alice Catherine_Catherine Chloe Barbara Dorothy
+			Emma Emily_Emily Isabella_Elisabeth Elisabeth_Elisabeth Eliza_Elisabeth Elizabeth_Elizabeth Ellen
+			Grace Hannah Jennifer_Jennifer Jessica Lily Lucy Linda Katherine_Catherine
+			Mary_Maria Margaret_Margaret Melissa Morgan Patricia_Patricia Ruby Stephany
+			Sarah_Sarah Sophia Susan_Susan Zoe Simone
 		}
 		dukes_called_kings = yes
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
@@ -6102,19 +6165,24 @@ avalonian_group = {
 	}
 	mesoamerican_avalonian = {
 		graphical_culture = ameriavalongfx
+		second_graphical_culture = mideastavalongfx
 		color = { 0.25 0 0 }
-		
 		male_names = {
-			Acalan Acacitli Acamapichtli Acolmiztli Aculnahuacatl Ahuiliztli Ahuitzotl Atl Axayacatl Cacamatzin Chimalli Chimalpilli Chimalpopoca Cipac Coanacoch Coatl Cozahtli Cuauhtemoc Cuauhtl Cuetlachtli Cuetzpalli Cuixtli Cuitlahuac 
-			Huitzilin Huitzilihuitl Huitzitl Huitztecol Iquehuacatzin Itzcoatl Itzli Itzcuintli Ixtlilxochitl Mahchimaleh Matlal Mazatl Matlalihuitl Matlatzincatzin Maxtla Miztli Moctezuma Moquihuix Necuametl Nezahualcoyotl Nezahualpilli Nochehuatl 
-			Ocuil Olli Opochtli Ozomatli Quauhtli Tapayaxi Tecocoltzin Tecolotl Tetlepanquetzaltzin Tezozomoc Tizoc Tizocic Tlacaelel Tlacaeleltzin Tlalli Tlaloc Tochtli Tototl Tzompantzin Tlilpotonqui Topiltzin Totoquihuaztli 
-			Ueman Yaotl Yayauhqui Yolotli Yolyamanitzin Xicohtencatl Xiuhpilli Xihuitl Xipil Xipilli Xochitl Xochipepe Xochipilli Yaotl Zipactonal Zolin
+			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
+			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
+			Charles_Charles Daniel_Daniel David_David Duncan Edward_Edward Edgar Ethan
+			Gabriel_Gabriel Gregory_Gregory George_George Harry Henry_Henry Jack Jacob_Jacob
+			James_James John_John Joseph_Joseph Joshua_Joshua Liam Luke_Lucas Lucas_Lucas Logan
+			Malcolm Matthew_Matthew Michael_Michael Nathan_Nathan Noah Patrick Philip_Philip Peter_Peter
+			Oliver Owen Robert_Robert Richard_Richard Samuel_Samuel Thomas_Thomas Stephen_Stephen
+			William_William Wilfred Victor Vincent Zachary
 		}
 		female_names = {
-			Achcauhtli Acxocueitl Ahuiliztli Amoxtli Atl Atotoztli Ayauhcihuatl Azcalxochitzin Centehua Cihuaton Citlalmina Chalchiuitl Chicahua Chichimecacihuatzin Chipahua Chicomecoatl Chimalma Cihuaton Citlali Citlalli Citlalmina Coaxoch Coszcatl 
-			Cozamalotl Cuicatl Eleuia Eloxochitl Etalpalli Eztli Huehue-Zaca Itotia Iuitl Ixcatzin Izel Malinalxochitl Manauia Matlalatzin Mecatl Meztli Miahuaxiuitl Miyaoaxochitl Mizquixahual Momoztli Nahuatl Necahual Nelli Ohtli Papa Patli
-			Quiauhxochitl Sacnite Techichpotzin Tezozomoc Tziquetzalpoztectzin Teiuc Teicuih Teyacapan Tepin Tezcatlan Tlacotl Tlahco Tlahcoehua Toltecatl Tonalnan Tlazozomizqui
-			Yoltzin Xilonen Xiloxoch Xiuhtomiyauhtzin Xochitl Xocoh Xocoyotl Yaretzi Zeltzin Zyanya
+			Abigail_Abigail Alice Catherine_Catherine Chloe Barbara Dorothy
+			Emma Emily_Emily Isabella_Elisabeth Elisabeth_Elisabeth Eliza_Elisabeth Elizabeth_Elizabeth Ellen
+			Grace Hannah Jennifer_Jennifer Jessica Lily Lucy Linda Katherine_Catherine
+			Mary_Maria Margaret_Margaret Melissa Morgan Patricia_Patricia Ruby Stephany
+			Sarah_Sarah Sophia Susan_Susan Zoe Simone
 		}
 		
 		dukes_called_kings = yes
@@ -6137,27 +6205,23 @@ avalonian_group = {
 		graphical_culture = russoavalongfx
 		second_graphical_culture = angloavalongfx
 		color = { 0.25 0 0 }
-
 		male_names = {
-			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
-			Bogdan Boris Valentin Valery Vasily Viktor Vladimir_Vladimir
-			Gavriil_Gabriel Gennady Georgy_George Grigory_Gregory
-			David_David Daniil_Daniel Dmitry Ivan_John Igor Iosif_Joseph
-			Immanuil_Emmanuel Kirill_Cyril Konstantin Lev Leonid Maxim
-			Matvei Mikhail_Michael Nikita Nikolai_Nicolas Oleg Pavel
-			Pyotr_Peter Roman Sergei Stepan_Stephen Timofei Eduard_Edward Erik_Eric
-			Yulian Yuri Yakov
+			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
+			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
+			Charles_Charles Daniel_Daniel David_David Duncan Edward_Edward Edgar Ethan
+			Gabriel_Gabriel Gregory_Gregory George_George Harry Henry_Henry Jack Jacob_Jacob
+			James_James John_John Joseph_Joseph Joshua_Joshua Liam Luke_Lucas Lucas_Lucas Logan
+			Malcolm Matthew_Matthew Michael_Michael Nathan_Nathan Noah Patrick Philip_Philip Peter_Peter
+			Oliver Owen Robert_Robert Richard_Richard Samuel_Samuel Thomas_Thomas Stephen_Stephen
+			William_William Wilfred Victor Vincent Zachary
 		}
 		female_names = {
-			Alexandra Alina Alyona Anastasiya_Anastasia Anna_Anna
-			Vera Valeriya Vasilisa Veronika Valentina Viktoriya_Victoria
-			Galina Dina Dominika Ekateirna_Catherine Elizaveta_Elisabeth Eva
-			Zhanna Zoya Inessa Izabella_Isabel Izolda Klara Klavdiya
-			Kristina Larisa Lidiya Lilya Ludmila Margarita Maya
-			Mariya_Maria Natalya Nina Nika Olga Olesya Raisa Rozalina
-			Svetlana Sofia_Sophia Tamara Tatyana Ulyana Florentina
+			Abigail_Abigail Alice Catherine_Catherine Chloe Barbara Dorothy
+			Emma Emily_Emily Isabella_Elisabeth Elisabeth_Elisabeth Eliza_Elisabeth Elizabeth_Elizabeth Ellen
+			Grace Hannah Jennifer_Jennifer Jessica Lily Lucy Linda Katherine_Catherine
+			Mary_Maria Margaret_Margaret Melissa Morgan Patricia_Patricia Ruby Stephany
+			Sarah_Sarah Sophia Susan_Susan Zoe Simone
 		}
-		
 		dukes_called_kings = yes
 		from_dynasty_prefix = "of "
 		
@@ -6181,21 +6245,23 @@ avalonian_group = {
 		graphical_culture = sinoavalongfx
 		second_graphical_culture = mideastavalongfx
 		color = { 0.25 0 0 }
-		
 		male_names = {
-			An Bo Bin Cheng
-			De Dong Feng Gang Guo Hui Hao
-			Jian Jie Jun Kang Liang Lei Ning
-			Peng Tao Wei Yong Yi Wen
+			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
+			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
+			Charles_Charles Daniel_Daniel David_David Duncan Edward_Edward Edgar Ethan
+			Gabriel_Gabriel Gregory_Gregory George_George Harry Henry_Henry Jack Jacob_Jacob
+			James_James John_John Joseph_Joseph Joshua_Joshua Liam Luke_Lucas Lucas_Lucas Logan
+			Malcolm Matthew_Matthew Michael_Michael Nathan_Nathan Noah Patrick Philip_Philip Peter_Peter
+			Oliver Owen Robert_Robert Richard_Richard Samuel_Samuel Thomas_Thomas Stephen_Stephen
+			William_William Wilfred Victor Vincent Zachary
 		}
 		female_names = {
-			Ai Bi Cai Dan Fang
-			Hong Hui Juan Jing Jie
-			Lan Li Lian Na Ni
-			Qian Qiong Shan Shu Ting
-			Xia Xian Xiaoyan Xiaomei Xinyi Yan Yun Ying Zhen
+			Abigail_Abigail Alice Catherine_Catherine Chloe Barbara Dorothy
+			Emma Emily_Emily Isabella_Elisabeth Elisabeth_Elisabeth Eliza_Elisabeth Elizabeth_Elizabeth Ellen
+			Grace Hannah Jennifer_Jennifer Jessica Lily Lucy Linda Katherine_Catherine
+			Mary_Maria Margaret_Margaret Melissa Morgan Patricia_Patricia Ruby Stephany
+			Sarah_Sarah Sophia Susan_Susan Zoe Simone
 		}
-		
 		dukes_called_kings = yes
 		
 		from_dynasty_prefix = "of "
@@ -6215,20 +6281,22 @@ avalonian_group = {
 		color = { 0.25 0 0 }
 
 		male_names = {
-			Abi-Bakr Abubakari Akoi Alayaman Ali_Ali Ali-Fay Ali-Kolon Ali-Zalil Bad・Bakr Bakr-Kanbu Bamari Bankanu
-			Bannu Bassarou Bassi Birama Bisi Biyu Bonga Cisse Dankaran Daoud_David Dawud_David Demba Diara D・u
-			Faga-Laye Fatta Fodi Fuluku F臈azu Gane Gao Hargani Harun Igoumou Ishaq_Isaac Ismail_Ismail Kabayo Kalabi Kambine
-			Kanafa Kassa Kasse・Kaya Kayna Kinkin Kisha Kodama Ko・・Kukuray Kusoy Lahiltoul M'Bali Maammarou Maghan
-			Mahmud_Mahmud Majan Malla Mamadi Mamoudou Manding-Bory Mari-Djata Maroumfa Missi-Iz・Morobani Musa_Moses
-			Nintasanay Nuh Ouali Ouanko Ouati Reidja Sakoura Salman_Solomon Samsou-B駻i Samsou-Ke・a Sandaki Soumaba
-			Soumaoro Soundiata Sulayman_Solomon Takoi Tib Tomo_Thomas Tunka Umar_Umar Yama Yaqub_Jacob Yasiboy Zakoi Zenku
+			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
+			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
+			Charles_Charles Daniel_Daniel David_David Duncan Edward_Edward Edgar Ethan
+			Gabriel_Gabriel Gregory_Gregory George_George Harry Henry_Henry Jack Jacob_Jacob
+			James_James John_John Joseph_Joseph Joshua_Joshua Liam Luke_Lucas Lucas_Lucas Logan
+			Malcolm Matthew_Matthew Michael_Michael Nathan_Nathan Noah Patrick Philip_Philip Peter_Peter
+			Oliver Owen Robert_Robert Richard_Richard Samuel_Samuel Thomas_Thomas Stephen_Stephen
+			William_William Wilfred Victor Vincent Zachary
 		}
 		female_names = {
-			Adja Aichata Aissata Alima Aminata Amita Aoua Barakissa Bintou Deye Djeneba Djenly Djire Fadima
-			Fatim Fatoumata Halima Hawa Ina Kadi Kilia Kolonkan Lorane Mariam Nafissa Namandj・Namiss Nana
-			Safiatou Salimata Sassouma Sidib・Siya Sogolon Tekhaye Youma Ze・ab
+			Abigail_Abigail Alice Catherine_Catherine Chloe Barbara Dorothy
+			Emma Emily_Emily Isabella_Elisabeth Elisabeth_Elisabeth Eliza_Elisabeth Elizabeth_Elizabeth Ellen
+			Grace Hannah Jennifer_Jennifer Jessica Lily Lucy Linda Katherine_Catherine
+			Mary_Maria Margaret_Margaret Melissa Morgan Patricia_Patricia Ruby Stephany
+			Sarah_Sarah Sophia Susan_Susan Zoe Simone
 		}
-		
 		dukes_called_kings = yes
 		
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
@@ -6245,10 +6313,11 @@ avalonian_group = {
 	}
 }
 strugatskite_group = {
-	graphical_culture = angloconfederategfx
+	graphical_culture = russocentaurigfx
+	second_graphical_culture = anglocentaurigfx
 	
 	anglo_strugatskite = {
-		graphical_culture = angloconfederategfx
+		graphical_culture = anglocentaurigfx
 		color = { 1.0 0 0 }
 
 		male_names = {
@@ -6286,7 +6355,7 @@ strugatskite_group = {
 	}
 	
 	arab_strugatskite = {
-		graphical_culture = mideastconfederategfx
+		graphical_culture = mideastcentaurigfx
 		color = { 1.0 0 0 }
 
 		male_names = {
@@ -6330,8 +6399,8 @@ strugatskite_group = {
 	}
 
 	east_afro_strugatskite = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afrocentaurigfx
+		second_graphical_culture = mideastcentaurigfx
 		color = { 1.0 0 0 }
 
 		male_names = {
@@ -6372,8 +6441,8 @@ strugatskite_group = {
 		modifier = default_culture_modifier
 	}
 	ethiopian_strugatskite = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afrocentaurigfx
+		second_graphical_culture = mideastcentaurigfx
 		color = { 1.0 0 0 }
 
 		male_names = {
@@ -6414,8 +6483,8 @@ strugatskite_group = {
 		modifier = default_culture_modifier
 	}
 	hispanic_strugatskite = {
-		graphical_culture = hispanicconfederategfx
-		second_graphical_culture = angloconfederategfx
+		graphical_culture = hispaniccentaurigfx
+		second_graphical_culture = anglocentaurigfx
 		color = { 1.0 0 0 }
 
 		male_names = {
@@ -6455,8 +6524,8 @@ strugatskite_group = {
 	}
 	
 	indo_strugatskite = {
-		graphical_culture = indoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = indocentaurigfx
+		second_graphical_culture = mideastcentaurigfx
 		color = { 1.0 0 0 }
 
 		male_names = {
@@ -6493,8 +6562,8 @@ strugatskite_group = {
 		modifier = default_culture_modifier
 	}
 	iranian_strugatskite = {
-		graphical_culture = persianconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = persiancentaurigfx
+		second_graphical_culture = mideastcentaurigfx
 		color = { 1.0 0 0 }
 
 		male_names = {
@@ -6534,8 +6603,8 @@ strugatskite_group = {
 		modifier = default_culture_modifier
 	}
 	japanese_strugatskite = {
-		graphical_culture = sinoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = sinocentaurigfx
+		second_graphical_culture = mideastcentaurigfx
 		color = { 1.0 0 0 }
 
 		male_names = {
@@ -6572,7 +6641,8 @@ strugatskite_group = {
 		modifier = default_culture_modifier
 	}
 	mesoamerican_strugatskite = {
-		graphical_culture = americonfederategfx
+		graphical_culture = americentaurigfx
+		second_graphical_culture = mideastcentaurigfx
 		color = { 1.0 0 0 }
 
 		male_names = {
@@ -6612,8 +6682,8 @@ strugatskite_group = {
 		modifier = default_culture_modifier
 	}
 	russo_strugatskite = {
-		graphical_culture = russoconfederategfx
-		second_graphical_culture = angloconfederategfx
+		graphical_culture = russocentaurigfx
+		second_graphical_culture = anglocentaurigfx
 		color = { 1.0 0 0 }
 
 		male_names = {
@@ -6656,8 +6726,8 @@ strugatskite_group = {
 		modifier = default_culture_modifier
 	}
 	sino_strugatskite = {
-		graphical_culture = sinoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = sinocentaurigfx
+		second_graphical_culture = mideastcentaurigfx
 		color = { 1.0 0 0 }
 
 		male_names = {
@@ -6694,8 +6764,8 @@ strugatskite_group = {
 		modifier = default_culture_modifier
 	}
 	west_afro_strugatskite = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afrocentaurigfx
+		second_graphical_culture = mideastcentaurigfx
 		color = { 1.0 0 0 }
 
 		male_names = {
@@ -6734,10 +6804,11 @@ strugatskite_group = {
 	}
 }
 edemite_group = {
-	graphical_culture = angloconfederategfx
+	graphical_culture = russocentaurigfx
+	second_graphical_culture = anglocentaurigfx
 	
 	anglo_edemite = {
-		graphical_culture = angloconfederategfx
+		graphical_culture = anglocentaurigfx
 		color = { 0 0.5 0 }
 
 		male_names = {
@@ -6775,7 +6846,7 @@ edemite_group = {
 	}
 	
 	arab_edemite = {
-		graphical_culture = mideastconfederategfx
+		graphical_culture = mideastcentaurigfx
 		color = { 0 0.5 0 }
 
 		male_names = {
@@ -6819,8 +6890,8 @@ edemite_group = {
 	}
 
 	east_afro_edemite = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afrocentaurigfx
+		second_graphical_culture = mideastcentaurigfx
 		color = { 0 0.5 0 }
 
 		male_names = {
@@ -6861,8 +6932,8 @@ edemite_group = {
 		modifier = default_culture_modifier
 	}
 	ethiopian_edemite = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afrocentaurigfx
+		second_graphical_culture = mideastcentaurigfx
 		color = { 0 0.5 0 }
 
 		male_names = {
@@ -6903,8 +6974,8 @@ edemite_group = {
 		modifier = default_culture_modifier
 	}
 	hispanic_edemite = {
-		graphical_culture = hispanicconfederategfx
-		second_graphical_culture = angloconfederategfx
+		graphical_culture = hispaniccentaurigfx
+		second_graphical_culture = anglocentaurigfx
 		color = { 0 0.5 0 }
 
 		male_names = {
@@ -6944,8 +7015,8 @@ edemite_group = {
 	}
 	
 	indo_edemite = {
-		graphical_culture = indoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = indocentaurigfx
+		second_graphical_culture = mideastcentaurigfx
 		color = { 0 0.5 0 }
 
 		male_names = {
@@ -6982,8 +7053,8 @@ edemite_group = {
 		modifier = default_culture_modifier
 	}
 	iranian_edemite = {
-		graphical_culture = persianconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = persiancentaurigfx
+		second_graphical_culture = mideastcentaurigfx
 		color = { 0 0.5 0 }
 
 		male_names = {
@@ -7023,8 +7094,8 @@ edemite_group = {
 		modifier = default_culture_modifier
 	}
 	japanese_edemite = {
-		graphical_culture = sinoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = sinocentaurigfx
+		second_graphical_culture = mideastcentaurigfx
 		color = { 0 0.5 0 }
 
 		male_names = {
@@ -7061,7 +7132,8 @@ edemite_group = {
 		modifier = default_culture_modifier
 	}
 	mesoamerican_edemite = {
-		graphical_culture = americonfederategfx
+		graphical_culture = americentaurigfx
+		second_graphical_culture = mideastcentaurigfx
 		color = { 0 0.5 0 }
 
 		male_names = {
@@ -7101,8 +7173,8 @@ edemite_group = {
 		modifier = default_culture_modifier
 	}
 	russo_edemite = {
-		graphical_culture = russoconfederategfx
-		second_graphical_culture = angloconfederategfx
+		graphical_culture = russocentaurigfx
+		second_graphical_culture = anglocentaurigfx
 		color = { 0 0.5 0 }
 
 		male_names = {
@@ -7145,8 +7217,8 @@ edemite_group = {
 		modifier = default_culture_modifier
 	}
 	sino_edemite = {
-		graphical_culture = sinoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = sinocentaurigfx
+		second_graphical_culture = mideastcentaurigfx
 		color = { 0 0.5 0 }
 
 		male_names = {
@@ -7183,8 +7255,8 @@ edemite_group = {
 		modifier = default_culture_modifier
 	}
 	west_afro_edemite = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afrocentaurigfx
+		second_graphical_culture = mideastcentaurigfx
 		color = { 0 0.5 0 }
 
 		male_names = {

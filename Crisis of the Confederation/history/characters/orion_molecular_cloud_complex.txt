@@ -1,0 +1,1092 @@
+11012578 = {
+	# Fleet Admiral, Flame Rangers
+	name = "Shu"
+	dynasty = 12578 # Liu
+	female = yes
+	
+	culture = sino_xingjie
+	religion = terran_federalist
+	
+	trait = misguided_warrior
+	trait = marine_colonel
+	
+	2953.1.1 = { birth = "2953.1.1" }
+}
+1104338 = {
+	# Commander, FN-287
+	name = "Peng"
+	dynasty = 4338 # Flores
+	female = no
+	
+	culture = hispanic_xingjie
+	religion = terran_federalist
+	
+	trait = tough_soldier
+	trait = fighter_pilot
+	
+	2960.1.1 = { birth = "2960.1.1" }
+}
+1108082 = {
+	# Commander, FN-331
+	name = "Yun"
+	dynasty = 8082 # Kato
+	female = yes
+	
+	culture = japanese_xingjie
+	religion = terran_federalist
+	
+	trait = misguided_warrior
+	trait = fighter_pilot
+	
+	2956.1.1 = { birth = "2956.1.1" }
+}
+1104882 = {
+	# Commander, FN-089
+	name = "Qiong"
+	dynasty = 4882 # Espinoza
+	female = yes
+	
+	culture = hispanic_xingjie
+	religion = terran_federalist
+	
+	trait = bisexual
+	trait = skilled_tactician
+	trait = warship_captain
+	
+	2960.1.1 = { birth = "2960.1.1" }
+}
+11012914 = {
+	# Commander, Xiao Mei
+	name = "Shan"
+	dynasty = 12914 # Tang
+	female = yes
+	
+	culture = sino_xingjie
+	religion = terran_federalist
+	
+	trait = brilliant_strategist
+	trait = warship_captain
+	
+	2971.1.1 = { birth = "2971.1.1" }
+}
+1105723 = {
+	# Governor, Chui
+	name = "Valeria"
+	dynasty = 5723 # Rana
+	female = yes
+	
+	culture = indo_orion
+	religion = colonial_separatist
+	
+	2948.1.1 = { birth = "2948.1.1" }
+}
+11011034 = {
+	# Governor, Shihai
+	name = "Liang"
+	dynasty = 11034 # Kazakov
+	female = no
+	
+	culture = russo_bianjiangese
+	religion = colonial_separatist
+	
+	trait = bisexual
+	
+	2954.1.1 = { birth = "2954.1.1" }
+}
+11010138 = {
+	# Governor, FN-071
+	name = "Hao"
+	dynasty = 10138 # Sokolov
+	female = no
+	
+	culture = russo_bianjiangese
+	religion = colonial_separatist
+	
+	2963.1.1 = { birth = "2963.1.1" }
+}
+1106523 = {
+	# Pirate King of Hades
+	name = "Diego"
+	dynasty = 6523 # Najafi
+	female = no
+	
+	culture = indo_orion
+	religion = space_pirate
+	
+	trait = brilliant_strategist
+	trait = fighter_pilot
+	trait = ambitious
+	trait = proud
+	trait = brave
+	trait = carefree
+	trait = open_minded
+	trait = extraverted
+	trait = dni
+	trait = pluto_mk_i
+	
+	2971.1.1 = { birth = "2971.1.1" }
+	2998.1.1 = { effect = { c_fn_1237 = { holder_scope = { add_lover = ROOT } } } } # Amanda Alvarado
+}
+1104763 = {
+	# Pirate Lady of FN-940
+	name = "Paula"
+	dynasty = 4763 # Escobar
+	female = yes
+	
+	culture = hispanic_orion
+	religion = space_pirate
+	
+	2952.1.1 = { birth = "2952.1.1" }
+}
+1104827 = {
+	# Pirate Lady of FN-1237
+	name = "Amanda"
+	dynasty = 4827 # Alvarado
+	female = yes
+	
+	culture = hispanic_orion
+	religion = space_pirate
+	
+	trait = bisexual
+	trait = brilliant_strategist
+	trait = warship_captain
+	trait = confident
+	trait = extraverted
+	trait = carefree
+	trait = open_minded
+	trait = dni
+	trait = odin_mk_i
+	
+	2969.1.1 = { birth = "2969.1.1" }
+}
+11012682 = {
+	# Pirate Lord of FN-379
+	name = "Kang"
+	dynasty = 12682 # Zhou
+	female = no
+	
+	culture = sino_bianjiangese
+	religion = space_pirate
+	
+	2968.1.1 = { birth = "2968.1.1" }
+}
+11012698 = {
+	# Abbot of Diyu
+	name = "Jie"
+	dynasty = 12698 # Xu
+	female = no
+	
+	culture = sino_bianjiangese
+	religion = xenoterran
+	
+	2955.1.1 = { birth = "2955.1.1" }
+}
+11012906 = {
+	# Pirate Lord of FN-122
+	name = "Ning"
+	dynasty = 12906 # Song
+	female = no
+	
+	culture = sino_bianjiangese
+	religion = space_pirate
+	
+	trait = homosexual
+	
+	2962.1.1 = { birth = "2962.1.1" }
+}
+11013050 = {
+	# Pirate Lord of FN-664
+	name = "Cheng"
+	dynasty = 13050 # Tian
+	female = no
+	
+	culture = sino_bianjiangese
+	religion = space_pirate
+	
+	2953.1.1 = { birth = "2953.1.1" }
+}
+1104651 = {
+	# Pirate Lady of Infierno
+	name = "Ximena"
+	dynasty = 4651 # Herrera
+	female = yes
+	
+	culture = hispanic_orion
+	religion = space_pirate
+	
+	2951.1.1 = { birth = "2951.1.1" }
+}
+
+11013051 = {
+	# Fleet Admiral, Defense Zone Melilla
+	name = "Mariana"
+	dynasty = 13051 # Tian
+	female = yes
+	
+	culture = sino_orion
+	religion = colonial_separatist
+	
+	trait = skilled_tactician
+	trait = marine_colonel
+	
+	mother = 12013051 # Mariana Tian
+	father = 1106235 # Adrian Ahmadi
+	
+	2948.1.1 = { birth = "2948.1.1" }
+}
+
+12013051 = {
+	# Former commander of the Celestean Armada
+	# Mother of Mariana Jr and Dylan Tian
+	name = "Mariana"
+	dynasty = 13051 # Tian
+	female = yes
+	
+	culture = sino_celestean
+	religion = terran_federalist
+	
+	trait = skilled_tactician
+	trait = warship_captain
+	
+	2924.1.1 = { birth = "2924.1.1" }
+	2945.1.1 = {
+		add_matrilineal_spouse = 1106235 # Adrian Ahmadi
+		effect = { spouse = { add_lover = ROOT } }
+	}
+	2994.1.1 = { death = "2994.1.1" }
+}
+
+1106235 = {
+	# Husband of Mariana Tian Sr, father of Mariana Jr and Dylan Tian
+	name = "Adrian"
+	dynasty = 6235 # Ahmadi
+	female = no
+	
+	culture = iranian_orion
+	religion = terran_federalist
+	
+	2925.1.1 = { birth = "2925.1.1" }
+	2997.1.1 = { death = "2997.1.1" }
+}
+
+1105595 = {
+	# Commander, ON-82
+	name = "Gabriela"
+	dynasty = 5595 # Kamat
+	female = yes
+	
+	culture = indo_orion
+	religion = colonial_separatist
+	
+	trait = bisexual
+	trait = skilled_tactician
+	trait = marine_colonel
+	
+	2972.1.1 = { birth = "2972.1.1" }
+	2998.1.1 = { effect = { liege = { add_friend = ROOT } } } # Admiral Tian's protege
+}
+
+12113051 = {
+	# Fleet Admiral, Defense Zone Sortelha
+	name = "Dylan"
+	dynasty = 13051 # Tian
+	female = no
+	
+	culture = sino_orion
+	religion = colonial_separatist
+	
+	trait = homosexual
+	trait = skilled_tactician
+	trait = fighter_pilot
+	
+	mother = 12013051 # Mariana Tian
+	father = 1106235 # Adrian Ahmadi
+	
+	2952.1.1 = { birth = "2952.1.1" }
+}
+
+12213051 = {
+	# Clone of Dylan Tian
+	name = "Adrian"
+	dynasty = 13051
+	female = no
+	
+	culture = sino_orion
+	religion = colonial_separatist
+	
+	trait = clone
+	trait = homosexual
+	
+	father = 12113051 # Dylan Tian
+	
+	2984.1.1 = { birth = "2984.1.1" }
+}
+
+1214475 = {
+	# Commander, ON-19
+	name = "Samuel"
+	dynasty = 4475 # Ortiz
+	female = no
+	
+	culture = hispanic_orion
+	religion = colonial_separatist
+	
+	trait = tough_soldier
+	trait = marine_colonel
+	
+	father = 1204475 # Lucas Ortiz
+	mother = 1104443 # Camila Cruz
+	
+	2958.1.1 = { birth = "2958.1.1" }
+}
+
+1104619 = {
+	# Admiral, Defense Zone Manticore
+	# Assigned to Defense Zone Manticore by his rivals in the Celestean Armada
+	name = "Juan"
+	dynasty = 4619 # Valverde
+	female = no
+	
+	culture = hispanic_orion
+	religion = colonial_separatist
+	
+	trait = skilled_tactician
+	trait = warship_captain
+	trait = disciplined
+	trait = close_minded
+	
+	2966.1.1 = { birth = "2966.1.1" }
+	2998.1.1 = { effect = { d_tierra_celeste_fleet = { holder_scope = { add_rival = ROOT } } } }
+}
+
+1109899 = {
+	# Commander, San Mateo
+	name = "Pablo"
+	dynasty = 9899 # Quauhtli
+	female = no
+	
+	culture = mesoamerican_orion
+	religion = colonial_separatist
+	
+	trait = tough_soldier
+	trait = fighter_pilot
+	
+	2966.1.1 = { birth = "2966.1.1" }
+	2998.1.1 = {
+		effect = {
+			liege = { add_friend = ROOT } # Best friend and XO of Admiral Valverde
+			c_basilisco = { holder_scope = { add_lover = ROOT } }
+		}
+	}
+}
+
+1109867 = {
+	# Commander, HH-72
+	name = "Ignacio"
+	dynasty = 9867 # Pipiltin
+	female = no
+	
+	culture = mesoamerican_orion
+	religion = colonial_separatist
+	
+	trait = misguided_warrior
+	trait = fighter_pilot
+	
+	2972.1.1 = { birth = "2972.1.1" }
+}
+
+1104747 = {
+	# Commander, Antevas
+	name = "Felipe"
+	dynasty = 4747 # Portillo
+	female = no
+	
+	culture = hispanic_orion
+	religion = colonial_separatist
+	
+	trait = misguided_warrior
+	trait = fighter_pilot
+	
+	2975.1.1 = { birth = "2975.1.1" }
+}
+
+11010059 = {
+	# Commander, HH-106
+	name = "Valeria"
+	dynasty = 10059 # Xochitl
+	female = yes
+	
+	culture = mesoamerican_orion
+	religion = colonial_separatist
+	
+	trait = misguided_warrior
+	trait = fighter_pilot
+	
+	2974.1.1 = { birth = "2974.1.1" }
+}
+
+1104811 = {
+	# Commander, Basilisco
+	name = "Valentina"
+	dynasty = 4811 # Aguilar
+	female = yes
+	
+	culture = hispanic_orion
+	religion = colonial_separatist
+	
+	trait = skilled_tactician
+	trait = marine_colonel
+	
+	2969.1.1 = { birth = "2969.1.1" }
+}
+
+1104859 = {
+	# Ruler of Freeport Principito
+	name = "Renata"
+	dynasty = 4859 # Mendoza
+	female = yes
+	
+	culture = hispanic_orion
+	religion = space_pirate
+	
+	2947.1.1 = { birth = "2947.1.1" }
+}
+
+1109860 = {
+	# Principitan Smuggler
+	name = "Tapayaxi"
+	dynasty = 9860 # Pipiltin
+	female = no
+	
+	culture = mesoamerican_sexto_solar
+	religion = space_pirate
+	
+	2949.1.1 = { birth = "2949.1.1" }
+}
+
+11013146 = {
+	# Principitan Smuggler
+	name = "Kang"
+	dynasty = 13146 # Cai
+	female = no
+	
+	culture = sino_bianjiangese
+	religion = space_pirate
+	
+	2945.1.1 = { birth = "2945.1.1" }
+}
+
+1105868 = {
+	# Principitan Smuggler
+	name = "Rishika"
+	dynasty = 5868 # Sandhu
+	female = yes
+	
+	culture = indo_mukta
+	religion = space_pirate
+	
+	2952.1.1 = { birth = "2952.1.1" }
+}
+
+1102949 = {
+	# Principitan Smuggler
+	name = "Eisha"
+	dynasty = 2949 # Hayek
+	female = yes
+	
+	culture = arab_samawati
+	religion = space_pirate
+	
+	2973.1.1 = { birth = "2973.1.1" }
+}
+
+11020068 = {
+	# Pirate King of Mar del Tyken
+	name = "Tufani"
+	dynasty = 20068 # Varundra
+	female = no
+	
+	culture = indo_mukta
+	religion = space_pirate
+	
+	2957.1.1 = { birth = "2957.1.1" }
+	2977.1.1 = {
+		add_spouse = 1105340 # Nilana Dravid
+		effect = { spouse = { add_lover = ROOT } }
+	}
+}
+1105340 = {
+	# Wife of Tufani Varundra
+	name = "Nilana"
+	dynasty = 5340 # Dravid
+	female = yes
+	
+	culture = indo_mukta
+	religion = space_pirate
+	
+	2955.1.1 = { birth = "2955.1.1" }
+}
+12020068 = {
+	# Son and heir of Tufani Varundra
+	# A shameless cameo appearance by a friend's RPG character
+	name = "Andhi"
+	dynasty = 20068 # Varundra
+	female = no
+	
+	culture = indo_mukta
+	religion = space_pirate
+	
+	trait = skilled_tactician
+	trait = fighter_pilot
+	trait = friendly
+	trait = carefree
+	trait = extraverted
+	trait = confident
+	trait = open_minded
+	trait = brave
+	
+	father = 11020068 # Tufani Varundra
+	mother = 1105340 # Nilana Dravid
+	
+	2979.1.1 = { birth = "2979.1.1" }
+}
+11120068 = {
+	# Daughter of Tufani Varundra
+	name = "Samaya"
+	dynasty = 20068 # Varundra
+	female = yes
+	
+	culture = indo_mukta
+	religion = space_pirate
+	
+	father = 11020068 # Tufani Varundra
+	mother = 1105340 # Nilana Dravid
+	
+	2981.1.1 = { birth = "2981.1.1" }
+}
+11012811 = {
+	# Pirate Lord of ON-567
+	name = "Juan-Diego"
+	dynasty = 12811 # Gao
+	female = no
+	
+	culture = sino_orion
+	religion = space_pirate
+	
+	2964.1.1 = { birth = "2964.1.1" }
+}
+1105482 = {
+	# Pirate Lord of ON-47
+	name = "Lei"
+	dynasty = 5482 # Gowda
+	female = no
+	
+	culture = indo_bianjiangese
+	religion = space_pirate
+	
+	2967.1.1 = { birth = "2967.1.1" }
+}
+11012747 = {
+	# Pirate Lady of Yunque and ON-94, 2962-2994
+	name = "Lucia"
+	dynasty = 12571 # Zhu
+	female = yes
+	
+	culture = sino_orion
+	religion = space_pirate
+	
+	2927.1.1 = { birth = "2927.1.1" }
+	2994.1.1 = { death = { death_reason = death_execution killer = 12113051 } } # Executed by Dylan Tian
+}
+1103675 = {
+	# Husband of Lucia Zhu
+	name = "Diego"
+	dynasty = 3675 # Haddad
+	female = no
+	
+	culture = arab_orion
+	religion = space_pirate
+	
+	2931.1.1 = { birth = "2931.1.1" }
+	2955.1.1 = {
+		add_matrilineal_spouse = 11012747 # Lucia Zhu
+		effect = { spouse = { add_lover = ROOT } }
+	}
+	2994.1.1 = { add_trait = depressed }
+	2997.1.1 = { death = { death_reason = death_trait } }
+}
+11112747 = {
+	# Pirate Lady of Yunque
+	name = "Isabella"
+	dynasty = 12747 # Zhu
+	female = yes
+	
+	culture = sino_orion
+	religion = space_pirate
+	
+	trait = twin
+	
+	father = 1103675 # Diego Haddad
+	mother = 11012747 # Lucia Zhu
+	
+	2958.1.1 = { birth = "2958.1.1" }
+}
+11212747 = {
+	# Pirate Lady of ON-94
+	name = "Amanda"
+	dynasty = 12747 # Zhu
+	female = yes
+	
+	culture = sino_orion
+	religion = space_pirate
+	
+	trait = twin
+	
+	father = 1103675 # Diego Haddad
+	mother = 11012747 # Lucia Zhu
+	
+	2958.1.1 = { birth = "2958.1.1" }
+}
+1104779 = {
+	# Pirate Lord of Martillo
+	name = "Miguel"
+	dynasty = 4779 # Orellana
+	female = no
+	
+	culture = hispanic_orion
+	religion = space_pirate
+	
+	2945.1.1 = { birth = "2945.1.1" }
+}
+11013420 = {
+	# Abbess of La Forja
+	name = "Navya"
+	dynasty = 13420 # Liao
+	female = yes
+	
+	culture = sino_mukta
+	religion = xenoterran
+	
+	trait = bisexual
+	
+	2970.1.1 = { birth = "2970.1.1" }
+}
+1326139 = {
+	# Director-General of Miltia
+	name = "Julieta"
+	dynasty = 6139 # Trivedi
+	female = yes
+	
+	culture = indo_orion
+	religion = machine_cultist
+	
+	trait = homosexual
+	trait = dni
+	trait = thoth_mk_i
+	trait = mastermind_scholar
+	trait = open_minded
+	trait = spiritual
+	trait = radical
+	
+	father = 1104427 # Joaquin Reyes
+	mother = 1316139 # Pari Trivedi
+	
+	2963.1.1 = { birth = "2963.1.1" }
+}
+1406139 = {
+	# Clone of Julieta Trivedi
+	name = "Valeria"
+	dynasty = 6139 # Trivedi
+	female = yes
+	
+	culture = indo_orion
+	religion = machine_cultist
+	
+	trait = homosexual
+	trait = clone
+	trait = spiritual
+	trait = open_minded
+	
+	mother = 1326139 # Julieta Trivedi
+	
+	2988.1.1 = { birth = "2988.1.1" }
+}
+1107132 = {
+	# Commander of the Miltian Gate
+	name = "Vaishnavi"
+	dynasty = 7132 # Kashani
+	female = yes
+	
+	culture = iranian_mukta
+	religion = machine_cultist
+	
+	trait = misguided_warrior
+	trait = warship_captain
+	trait = dni
+	trait = odin_mk_i
+	
+	2946.1.1 = { birth = "2946.1.1" }
+}
+1105276 = {
+	# Husband of Vaishnavi Kashani
+	name = "Sai"
+	dynasty = 5276 # Chatterjee
+	female = no
+	
+	culture = indo_mukta
+	religion = cyberneticist
+	
+	2948.1.1 = { birth = "2948.1.1" }
+	2970.1.1 = {
+		add_matrilineal_spouse = 1107132 # Vaishnavi Kashani
+		effect = { spouse = { add_lover = ROOT } }
+	}
+}
+1207132 = {
+	# Daughter of Vaishnavi Kashani and Sai Chatterjee
+	name = "Rhea"
+	dynasty = 7132 # Kashani
+	female = yes
+	
+	culture = iranian_mukta
+	religion = machine_cultist
+	
+	trait = skilled_tactician
+	trait = warship_captain
+	
+	trait = dni
+	trait = odin_mk_i
+	
+	mother = 1107132 # Vaishnavi Kashani
+	father = 1105276 # Sai Chatterjee
+	
+	2975.1.1 = { birth = "2975.1.1" }
+}
+1105371 = {
+	# Administrator of Cedillo
+	name = "Diego"
+	dynasty = 5371 # Desai
+	female = no
+	
+	culture = indo_orion
+	religion = cyberneticist
+	
+	trait = close_minded
+	trait = skeptical
+	
+	2963.1.1 = { birth = "2963.1.1" }
+}
+11020069 = {
+	# Administrator of Haidel
+	name = "Hemanth"
+	dynasty = 20069 # Elimu
+	female = no
+	
+	culture = east_afro_mukta
+	religion = machine_cultist
+	
+	trait = bisexual
+	trait = spiritual
+	trait = dni
+	trait = iaei_mk_i
+	
+	2945.1.1 = { birth = "2945.1.1" }
+}
+1104507 = {
+	# Governor-General of Arjona
+	name = "Tomas"
+	dynasty = 4507 # Dia
+	female = no
+	
+	culture = hispanic_orion
+	religion = pilgrim
+	
+	2964.1.1 = { birth = "2964.1.1" }
+}
+1106124 = {
+	# Head of Thakur
+	name = "Samaya"
+	dynasty = 6124 # Thakur
+	female = yes
+	
+	culture = indo_mukta
+	religion = pilgrim
+	
+	2963.1.1 = { birth = "2963.1.1" }
+}
+11020070 = {
+	# Head of Zula
+	name = "Shashank"
+	dynasty = 20070 # Zula
+	female = no
+	
+	culture = ethiopian_mukta
+	religion = pilgrim
+	
+	trait = homosexual
+	
+	2946.1.1 = { birth = "2946.1.1" }
+}
+1104891 = {
+	# Head of Espinoza
+	name = "Nicolas"
+	dynasty = 4891 # Espinoza
+	female = no
+	
+	culture = hispanic_orion
+	religion = pilgrim
+	
+	2955.1.1 = { birth = "2955.1.1" }
+}
+1105548 = {
+	# Head of Jadhav
+	name = "Gauran"
+	dynasty = 5548 # Jadhav
+	female = no
+	
+	culture = indo_mukta
+	religion = pilgrim
+	
+	2970.1.1 = { birth = "2970.1.1" }
+}
+1104795 = {
+	# Governor of Marley
+	name = "Juana"
+	dynasty = 4795 # Romero
+	female = yes
+	
+	culture = hispanic_orion
+	religion = pilgrim
+	
+	father = 1204795 # Christopher Romero
+	mother = 1104699 # Catalina Mejia
+	
+	2965.1.1 = { birth = "2965.1.1" }
+}
+1214795 = {
+	# Commander of HH-464
+	name = "Antonia"
+	dynasty = 4795 # Romero
+	female = yes
+	
+	culture = hispanic_orion
+	religion = pilgrim
+	
+	father = 1204795 # Christopher Romero
+	mother = 1104699 # Catalina Mejia
+	
+	trait = misguided_warrior
+	trait = warship_captain
+	
+	2968.1.1 = { birth = "2968.1.1" }
+}
+1204795 = {
+	# Father of Juana and Antonia Romero
+	name = "Christopher"
+	dynasty = 7436 # Romero
+	female = no
+	
+	culture = hispanic_orion
+	religion = pilgrim
+	
+	2942.1.1 = { birth = "2942.1.1" }
+	2964.1.1 = {
+		effect = {
+			add_spouse = 1104699 # Catalina Mejia
+			spouse = { add_lover = ROOT }
+		}
+	}
+	2995.1.1 = { death = { death_reason = death_accident } }
+}
+1104699 = {
+	# Mother of Juana and Antonia Romero
+	name = "Catalina"
+	dynasty = 4699
+	female = yes
+	
+	culture = hispanic_orion
+	religion = pilgrim
+	
+	2943.1.1 = { birth = "2943.1.1" }
+}
+1107436 = {
+	# Governor of Popper
+	name = "Kavya"
+	dynasty = 7436 # Namazi
+	female = yes
+	
+	culture = iranian_mukta
+	religion = pilgrim
+	
+	2964.1.1 = { birth = "2964.1.1" }
+}
+
+1105995 = {
+	# Governor of HH-871
+	name = "Joaquin"
+	dynasty = 5995 # Singhal
+	female = no
+	
+	culture = indo_orion
+	religion = colonial_separatist
+	
+	trait = bisexual
+	
+	mother = 1205995 # Emilia Singhal
+	father = 1104604 # Vivaan Segura
+	
+	2973.1.1 = { birth = "2973.1.1" }
+}
+1215995 = {
+	# Pirate Lord of HH-613
+	name = "Pablo"
+	dynasty = 5995 # Singhal
+	female = no
+	
+	culture = indo_orion
+	religion = space_pirate
+	
+	mother = 1205995 # Emilia Singhal
+	father = 1104604 # Vivaan Segura
+	
+	2971.1.1 = { birth = "2971.1.1" }
+}
+1205995 = {
+	# Mother of Joaquin and Pablo Singhal
+	name = "Emilia"
+	dynasty = 5995 # Singhal
+	female = yes
+	
+	culture = indo_orion
+	religion = colonial_separatist
+	
+	2949.1.1 = { birth = "2949.1.1" }
+}
+1104604 = {
+	# Father of Joaquin and Pablo Singhal
+	name = "Vivaan"
+	dynasty = 4604 # Segura
+	female = no
+	
+	culture = hispanic_mukta
+	religion = colonial_separatist
+	
+	2952.1.1 = { birth = "2952.1.1" }
+	2970.1.1 = {
+		add_matrilineal_spouse = 1205995 # Emilia Singhal
+		effect = { spouse = { add_lover = ROOT } }
+	}
+}
+
+1106012 = {
+	# Pirate Lady of HH-916
+	name = "Kavya"
+	dynasty = 6012 # Somani
+	female = yes
+	
+	culture = indo_mukta
+	religion = space_pirate
+	
+	2946.1.1 = { birth = "2946.1.1" }
+}
+
+1104715 = {
+	# Pirate Lord of HH-917
+	name = "Juan-Diego"
+	dynasty = 4715 # Rivas
+	female = no
+	
+	culture = hispanic_orion
+	religion = space_pirate
+	
+	trait = clone
+	
+	father = 1204715 # Samuel Rivas
+	
+	2957.1.1 = { birth = "2957.1.1" }
+	2994.1.1 = { effect = { add_rival = 1214715 } } # Father murdered by ambitious younger brother
+}
+1214715 = {
+	# Pirate Lord of HH-923
+	name = "Emmanuel"
+	dynasty = 4715 # Rivas
+	female = no
+	
+	culture = hispanic_orion
+	religion = space_pirate
+	
+	trait = clone
+	trait = ambitious
+	trait = cold
+	
+	father = 1204715 # Samuel Rivas
+	
+	2959.1.1 = { birth = "2959.1.1" }
+}
+1204715 = {
+	# Father of Juan-Diego and Emmanuel Rivas
+	name = "Samuel"
+	dynasty = 4715 # Rivas
+	female = no
+	
+	culture = hispanic_orion
+	religion = space_pirate
+	
+	2932.1.1 = { birth = "2932.1.1" }
+	2994.1.1 = { death = { death_reason = death_murder killer = 1214715 } } # Murdered by Emmanuel Rivas
+}
+1105884 = {
+	# Pirate Lady of HH-713
+	name = "Navya"
+	dynasty = 5884 # Sen
+	female = yes
+	
+	culture = indo_mukta
+	religion = space_pirate
+	
+	trait = homosexual
+	
+	2948.1.1 = { birth = "2948.1.1" }
+}
+1205884 = {
+	# Clone of Navya Sen
+	name = "Apoorva"
+	dynasty = 5884 # Sen
+	female = yes
+	
+	culture = indo_mukta
+	religion = space_pirate
+	
+	trait = homosexual
+	trait = clone
+	
+	mother = 1105884 # Navya Sen
+	
+	2972.1.1 = { birth = "2972.1.1" }
+}
+11020071 = {
+	# Pirate Lady of HH-562
+	name = "Pari"
+	dynasty = 20071 # Mbwana
+	female = yes
+	
+	culture = east_afro_mukta
+	religion = space_pirate
+	
+	2954.1.1 = { birth = "2954.1.1" }
+}
+1105708 = {
+	# Pirate Lord of HH-338
+	name = "Manoj"
+	dynasty = 5708 # Purohit
+	female = no
+	
+	culture = indo_mukta
+	religion = space_pirate
+	
+	trait = brilliant_strategist
+	trait = fighter_pilot
+	trait = ambitious
+	
+	2975.1.1 = { birth = "2975.1.1" }
+}

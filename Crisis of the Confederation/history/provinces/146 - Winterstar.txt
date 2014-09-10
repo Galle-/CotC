@@ -1,0 +1,19 @@
+# 146 - Winterstar
+
+# County Title
+title = c_winterstar
+
+# Settlements
+max_settlements = 4
+b_winterstar_iii = castle
+b_winterstar_prime = temple
+b_winterstar_ii = city
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = colonial_separatist
+
+# History
+
+2998.1.1 = {
+}

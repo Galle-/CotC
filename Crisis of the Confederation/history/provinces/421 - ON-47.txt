@@ -1,0 +1,20 @@
+# 421 - ON-47
+
+# County Title
+title = c_on_47
+
+# Settlements
+max_settlements = 4
+
+b_on_47_station_alpha = castle
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = space_pirate
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

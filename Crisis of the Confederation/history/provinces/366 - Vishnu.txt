@@ -1,0 +1,22 @@
+# 366 - Vishnu
+
+# County Title
+title = c_vishnu
+
+# Settlements
+max_settlements = 5
+
+b_vishnu_iii = city
+b_vishnu_iii_b = temple
+b_vishnu_iii_c = castle
+
+# Misc
+culture = indo_mukta # Initial culture
+religion = adoptionist_cultist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

@@ -1,0 +1,19 @@
+# 149 - silhouette
+
+# County Title
+title = c_silhouette
+
+# Settlements
+max_settlements = 4
+b_silhouette_ii = city
+b_silhouette_iii = castle
+b_silhouette_prime = temple
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = colonial_separatist
+
+# History
+
+2998.1.1 = {
+}

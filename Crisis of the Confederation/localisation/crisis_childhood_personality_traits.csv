@@ -33,4 +33,47 @@ EVTOPTACHILDHOODEDUCATION20;I want things to stay just the way they are.;;;;;;;;
 EVTOPTBCHILDHOODEDUCATION20;I don't WANT to go the park, I want to stay home!;;;;;;;;;;;;;x
 EVTTOOLTIPCHILDHOODEDUCATION21;reacts to your newfound cautiousness.;;;;;;;;;;;;;x
 EVTDESCCHILDHOODEDUCATION21;Your [GetFromRelation] [From.GetFirstName] has been growing more cautious and conservative lately. Today, when you told [From.GetHerHim] that you were going to the park, you thought [From.GetSheHe]'d be excited, but instead [From.GetSheHe] insisted that [From.GetSheHe] just wanted to stay home.;;;;;;;;;;;;;x
-EVTOPTACHILDHOODEDUCATION21;Well, at least [From.GetSheHe]'ll be safe.;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION21;Encourage [From.GetFirstName]'s caution.;;;;;;;;;;;;;x
+EVTOPTBCHILDHOODEDUCATION21;Try to persuade [From.GetFirstName] to take more risks.;;;;;;;;;;;;;x
+EVTOPTCCHILDHOODEDUCATION21;Punish [From.GetFirstName] for [From.GetHerHis] cowardice.;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION22;You were expecting your [GetFromRelation] to be angry when you refused to go to the park with [From.GetHerHim], but actually, [From.GetSheHe] was quite pleased! [From.GetSheHeCap] appears to approve of your wisdom and caution.;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION22;Safety first!;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION23;When you refused to go to the park, your [GetFromRelation] knelt down next to you and explained about the importance of trying new things. For the first time, you began to wonder if your caution was letting the world pass you by.;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION23;Nothing ventured, nothing gained.;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION24;When you refused to go to the park, your [GetFromRelation] knelt down next to you and started talking about how important it was to try new things. It took a while, but you finally begrudgingly agreed that maybe sometimes a little bit of risk was worthwhile.;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION24;It can't be that bad.;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION25;Your [GetFromRelation] is just as bad as the other children! When you refused to go to the park, [From.GetSheHe] started talking about how you should be willing to take risks and try new things, but it's clear that [From.GetSheHe] had no idea what [From.GetSheHe] was talking about.;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION25;I'm staying right here!;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION26;Your [GetFromRelation] was furious when you refused to go to the park. [From.GetSheHeCap] practically dragged you from your room and pulled you all the way there. You spent the entire afternoon outside against your will - but in hindsight, it wasn't as bad as you'd feared.;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION26;Maybe I was just a coward after all.;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION27;Your [GetFromRelation] was furious when you refused to go to the park. [From.GetSheHeCap] practically dragged you from your room and pulled you all the way there. You spent the entire afternoon in grudging misery.;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION27;This is the worst day of my life!;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION28;It seems that did the trick. [From.GetFirstName] may not have been too eager to jump into things at first, but [From.GetSheHe] seems more than willing to experiment now.;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION28;[From.GetSheHeCap] actually seems to enjoy it.;;;;;;;;;;;;;x
+EVTOPTBCHILDHOODEDUCATION28;At least [From.GetSheHe]'s getting some fresh air..;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION29;It's no use. No matter what you do, [From.GetFirstName] stubbornly refuses to leave the safety of [From.GetHerHis] quarters. You eventually dragged [From.GetHerHim] down to the park, but [From.GetSheHe] spent the entire cycle fuming.;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION29;What am I going to do with you?;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION30;You're a model student at school, and you diligently do your chores at home. Some of your friends tease you and call you a teacher's pet, but you're just doing what you're asked to do, right?;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION30;I'm a good [Root.GetGirlBoy].;;;;;;;;;;;;;x
+EVTTOOLTIPCHILDHOODEDUCATION31;reacts to your newfound discipline.;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION31;Your [GetFromRelation], [From.GetFirstName], is a model student, and [From.GetSheHe] always diligently does [From.GetHerHis] chores. You've never seen a more dutiful and responsible child.;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION31;Reward [From.GetFirstName]'s good behavior.;;;;;;;;;;;;;x
+EVTOPTBCHILDHOODEDUCATION31;Try to persuade [From.GetFirstName] to loosen up.;;;;;;;;;;;;;x
+EVTOPTCCHILDHOODEDUCATION31;Punish [From.GetFirstName] for [From.GetHerHis] brown-nosing.;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION32;Your [GetFromRelation] is exceptionally pleased with your good behavior - this morning, [From.GetSheHe] even bought you a brand new holosuite as a reward!;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION32;Hard work is the path to success.;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION33;You were surprised when your [GetFromRelation] came into your room this evening and sat down beside you. [From.GetSheHeCap] said that [From.GetSheHe] was worried about you - that [From.GetSheHe] thought you might be working yourself to hard. [From.GetSheCap] said that [From.GetSheHe] was worried you might burn yourself out.;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION33;I'm sorry! I promise I'll relax from now on.;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION34;Your [GetFromRelation] seemed mostly please with your hard work, but [From.GetSheHe] also seemed a bit worried. [From.GetSheHeCap] explained to you that while hard work is important, so is pacing yourself to make sure you don't burn out.;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION34;I guess [From.GetSheHe]'s right.;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION35;Your [GetFromRelation] doesn't seem to appreciate your good behavior at all! [From.GetSheHeCap] said that you should take a break and relax.;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION35;Maybe it's some kind of test?;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION36;You're so confused! You'd thought you were making your [GetFromRelation] happy, but just this morning, [From.GetSheHe] grounded you for a week! It almost seems like [From.GetSheHe] resents your hard work!;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION36;This isn't worth it.;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION37;You're so confused! You'd thought you were making your [GetFromRelation] happy, but just this morning, [From.GetSheHe] grounded you for a week! Maybe you weren't as well-behaved as you thought?;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION37;I'll have to try harder.;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION38;It seems that did the trick. [From.GetFirstName] is no longer anywhere near as wound up, and seems happy to take things easy.;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION38;Maybe a little too happy...;;;;;;;;;;;;;x
+EVTOPTBCHILDHOODEDUCATION38;Good.;;;;;;;;;;;;;x
+EVTDESCCHILDHOODEDUCATION39;You've accomplished nothing. [From.GetFirstName] is just as rigorous and disciplined as ever.;;;;;;;;;;;;;x
+EVTOPTACHILDHOODEDUCATION39;I'll just have to live with it, I suppose.;;;;;;;;;;;;;x

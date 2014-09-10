@@ -157,3 +157,47 @@ b_iyer = {
 	culture = indo_tarkan
 	religion = cyberneticist
 }
+
+# Smuggler families of Freeport Principito
+b_mendoza = {
+	culture = hispanic_orion
+	religion = space_pirate
+}
+b_pipiltin = {
+	culture = mesoamerican_sexto_solar
+	religion = space_pirate
+}
+b_cai = {
+	culture = sino_bianjiangese
+	religion = space_pirate
+}
+b_sandhu = {
+	culture = indo_mukta
+	religion = space_pirate
+}
+b_hayek = {
+	culture = arab_samawati
+	religion = space_pirate
+}
+
+# Arjonan Megacorps
+b_dia = {
+	culture = hispanic_orion
+	religion = pilgrim
+}
+b_thakur = {
+	culture = indo_mukta
+	religion = pilgrim
+}
+b_zula = {
+	culture = ethiopian_mukta
+	religion = pilgrim
+}
+b_espinoza = {
+	culture = hispanic_orion
+	religion = pilgrim
+}
+b_jadhav = {
+	culture = indo_mukta
+	religion = pilgrim
+}

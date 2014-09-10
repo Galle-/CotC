@@ -1,0 +1,17 @@
+# 333 - VN-1241
+
+# County Title
+title = c_vn_1241
+
+# Settlements
+max_settlements = 3
+
+b_vn_1241_outpost = castle
+
+
+# Misc
+culture = arab_tarkan # Initial culture
+religion = cyberneticist
+
+1.1.1 = {
+}

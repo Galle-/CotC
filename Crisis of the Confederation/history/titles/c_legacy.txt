@@ -1,0 +1,6 @@
+2998.1.1={
+	liege="d_new_frontier_fleet"
+	law = succ_appointment
+	law = true_cognatic_succession
+	holder = 12000101
+}

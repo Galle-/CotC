@@ -1,111 +1,390 @@
 From;To;Type;Through;-1;-1;-1;-1;Comment
-32;34;sea;946;-1;-1;-1;-1;Galahad-Virtue
-32;33;sea;946;-1;-1;-1;-1;Galahad-Shiverlight
-33;34;sea;946;-1;-1;-1;-1;Shiverlight-Virtue
-32;37;sea;;-1;-1;-1;-1;Galahad-Numenor
-34;37;sea;;-1;-1;-1;-1;Virtue-Numenor
-37;35;sea;947;-1;-1;-1;-1;Numenor-Henry's Star
-37;36;sea;947;-1;-1;-1;-1;Numenor-Lancelot
-35;36;sea;947;-1;-1;-1;-1;Henry's Star-Lancelot
-35;38;sea;947;-1;-1;-1;-1;Henry's Star-Robinson
-36;38;sea;947;-1;-1;-1;-1;Lancelot-Robinson
-36;30;sea;;-1;-1;-1;-1;Lancelot-Greywood
-34;30;sea;;-1;-1;-1;-1;Virtue-Greywood
-30;29;sea;945;-1;-1;-1;-1;Greywood-Caliburn
-30;31;sea;945;-1;-1;-1;-1;Greywood-Mary's Star
-31;29;sea;945;-1;-1;-1;-1;Mary's Star-Caliburn
-33;40;sea;;-1;-1;-1;-1;Shiverlight-Nelson
-40;41;sea;948;-1;-1;-1;-1;Nelson-Sherwood
-40;39;sea;948;-1;-1;-1;-1;Nelson-Chalice
-41;39;sea;948;-1;-1;-1;-1;Sherwood-Chalice
-39;29;sea;;-1;-1;-1;-1;Chalice-Caliburn
-39;27;sea;;-1;-1;-1;-1;Chalice-Merlin
-27;26;sea;944;-1;-1;-1;-1;Merlin-Camelot
-27;25;sea;944;-1;-1;-1;-1;Merlin-Avalon
-25;26;sea;944;-1;-1;-1;-1;Avalon-Camelot
-28;26;sea;944;-1;-1;-1;-1;Paladin-Camelot
-28;25;sea;944;-1;-1;-1;-1;Paladin-Avalon
-43;29;sea;;-1;-1;-1;-1;Garrison-Caliburn
-43;27;sea;;-1;-1;-1;-1;Garrison-Merlin
-43;25;sea;;-1;-1;-1;-1;Garrison-Avalon
-43;42;sea;949;-1;-1;-1;-1;Garrison-Endeavor
-43;315;sea;949;-1;-1;-1;-1;Garrison-Hawkwood
-42;315;sea;949;-1;-1;-1;-1;Endeavor-Hawkwood
-42;44;sea;949;-1;-1;-1;-1;Endeavor-Victoria
-315;44;sea;949;-1;-1;-1;-1;Hawkwood-Victoria
-315;31;sea;;-1;-1;-1;-1;Hawkwood-Mary's Star
-31;24;sea;;-1;-1;-1;-1;Mary's Star-Etherland
-24;23;sea;943;-1;-1;-1;-1;Etherland-Alfred
-23;38;sea;;-1;-1;-1;-1;Alfred-Robinson
-1;2;sea;936;-1;-1;-1;-1;Ksora-Oran
-1;3;sea;936;-1;-1;-1;-1;Ksora-Talon
-2;4;sea;936;-1;-1;-1;-1;Oran-Fezzan
-4;3;sea;936;-1;-1;-1;-1;Fezzan-Talon
-3;5;sea;;-1;-1;-1;-1;Talon-Madaar Shaadhdh
-5;9;sea;937;-1;-1;-1;-1;Madaar Shaadhdh-Yeni Istanbul
-5;7;sea;937;-1;-1;-1;-1;Madaar Shaadhdh-Porfo'ad
-9;6;sea;937;-1;-1;-1;-1;Yeni Istanbul-Unnati
-9;8;sea;937;-1;-1;-1;-1;Yeni Istanbul-Porsa'id
-9;7;sea;937;-1;-1;-1;-1;Yeni Istanbul-Porfo'ad
-7;8;sea;937;-1;-1;-1;-1;Porfo'ad-Porsa'id
-8;6;sea;937;-1;-1;-1;-1;Porsa'id-Unnati
-6;18;sea;;-1;-1;-1;-1;Unnati-Madeira al-Jadiida
-18;19;sea;941;-1;-1;-1;-1;Madeira al-Jadiida-Kaksa ki Vismata'em
-18;20;sea;941;-1;-1;-1;-1;Madeira al-Jadiida-New Lusaka
-19;20;sea;941;-1;-1;-1;-1;Kaksa ki Vismata'em-New Lusaka
-19;21;sea;;-1;-1;-1;-1;Kaksa ki Vismata'em-343
-21;22;sea;942;-1;-1;-1;-1;343-344
-8;10;sea;;-1;-1;-1;-1;Porsa'id-337
+1;2;sea;936;-1;-1;-1;-1;Ksora - Oran
+1;3;sea;936;-1;-1;-1;-1;Ksora - Talon
+1;23;sea;;-1;-1;-1;-1;Ksora - Alfred
+2;4;sea;936;-1;-1;-1;-1;Oran - Fezzan
+2;23;sea;;-1;-1;-1;-1;Oran - Alfred
+3;4;sea;936;-1;-1;-1;-1;Talon - Fezzan
+3;5;sea;;-1;-1;-1;-1;Talon - Madaar Shaadhdh
+5;7;sea;937;-1;-1;-1;-1;Madaar Shaadhdh - Porfo'ad
+5;9;sea;937;-1;-1;-1;-1;Madaar Shaadhdh - Yeni Istanbul
+6;8;sea;937;-1;-1;-1;-1;Unnati - Porsa'id
+6;9;sea;937;-1;-1;-1;-1;Unnati - Yeni Istanbul
+6;18;sea;;-1;-1;-1;-1;Unnati - Madeira al-Jadiida
+7;8;sea;937;-1;-1;-1;-1;Porfo'ad - Porsa'id
+7;9;sea;937;-1;-1;-1;-1;Porfo'ad - Yeni Istanbul
 7;11;sea;;-1;-1;-1;-1;Porfo'ad-338
+8;9;sea;937;-1;-1;-1;-1;Porsa'id - Yeni Istanbul
+8;10;sea;;-1;-1;-1;-1;Porsa'id-337
 10;11;sea;938;-1;-1;-1;-1;337-338
 10;12;sea;938;-1;-1;-1;-1;337-339
 11;12;sea;938;-1;-1;-1;-1;338-339
-12;21;sea;;-1;-1;-1;-1;339-343
 12;14;sea;;-1;-1;-1;-1;339-326
-14;15;sea;939;-1;-1;-1;-1;326-327
-14;13;sea;939;-1;-1;-1;-1;326-325
+12;21;sea;;-1;-1;-1;-1;339-343
+13;14;sea;939;-1;-1;-1;-1;325-326
 13;15;sea;939;-1;-1;-1;-1;325-327
+14;15;sea;939;-1;-1;-1;-1;326-327
 15;16;sea;;-1;-1;-1;-1;327-345
-15;17;sea;;-1;-1;-1;-1;327-346
-16;17;sea;940;-1;-1;-1;-1;345-346
-135;134;sea;975;-1;-1;-1;-1;Goldenroad-Deadwood
-135;136;sea;975;-1;-1;-1;-1;Goldenroad-Roosevelt
-134;136;sea;975;-1;-1;-1;-1;Deadwood-Roosevelt
-136;143;sea;;-1;-1;-1;-1;Roosevelt-Jefferson
-144;143;sea;978;-1;-1;-1;-1;Miracle-Jefferson
-144;145;sea;978;-1;-1;-1;-1;Miracle-Stacker
-143;145;sea;978;-1;-1;-1;-1;Jefferson-Stacker
-143;146;sea;978;-1;-1;-1;-1;Jefferson-Winterstar
-145;146;sea;978;-1;-1;-1;-1;Stacker-Winterstar
-144;131;sea;;-1;-1;-1;-1;Miracle-Adams
-131;130;sea;974;-1;-1;-1;-1;Adams-Abigail
-131;132;sea;974;-1;-1;-1;-1;Adams-Delphi
-130;132;sea;974;-1;-1;-1;-1;Abigail-Delphi
-130;133;sea;974;-1;-1;-1;-1;Abigail-Eagle
-132;133;sea;974;-1;-1;-1;-1;Delphi-Eagle
-132;140;sea;;-1;-1;-1;-1;Delphi-Franklin
-145;140;sea;;-1;-1;-1;-1;Stacker-Franklin
-140;142;sea;977;-1;-1;-1;-1;Franklin-Touchdown
-140;141;sea;977;-1;-1;-1;-1;Franklin-Legacy
-142;141;sea;977;-1;-1;-1;-1;Touchdown-Legacy
-142;133;sea;;-1;-1;-1;-1;Touchdown-Eagle
-145;141;sea;;-1;-1;-1;-1;Stacker-Legacy
-142;152;sea;;-1;-1;-1;-1;Touchdown-Washington
-133;152;sea;;-1;-1;-1;-1;Eagle-Washington
-152;150;sea;980;-1;-1;-1;-1;Washington-Delaware
-152;151;sea;980;-1;-1;-1;-1;Washington-Shadow's Rim
-150;151;sea;980;-1;-1;-1;-1;Delaware-Shadow's Rim
-148;142;sea;;-1;-1;-1;-1;Lafayette-Touchdown
-148;141;sea;;-1;-1;-1;-1;Lafayette-Legacy
-148;147;sea;979;-1;-1;-1;-1;Lafayette-De Gaulle
-148;149;sea;979;-1;-1;-1;-1;Lafayette-Silhouette
-149;147;sea;979;-1;-1;-1;-1;Silhouette-De Gaulle
-147;138;sea;;-1;-1;-1;-1;De Gaulle-Farland
-138;145;sea;;-1;-1;-1;-1;Farland-Stacker
-138;146;sea;;-1;-1;-1;-1;Farland-Winterstar
-138;139;sea;976;-1;-1;-1;-1;Farland-Overlook
-138;137;sea;976;-1;-1;-1;-1;Farland-Douglas
-139;137;sea;976;-1;-1;-1;-1;Overlook-Douglas
+15;17;sea;;-1;-1;-1;-1;327-Mandela
+16;17;sea;940;-1;-1;-1;-1;345-Mandela
+17;341;sea;;-1;-1;-1;-1;Mandela - Maathai
+18;19;sea;941;-1;-1;-1;-1;Madeira al-Jadiida - Kaksa ki Vismata'em
+18;20;sea;941;-1;-1;-1;-1;Madeira al-Jadiida - New Lusaka
+19;20;sea;941;-1;-1;-1;-1;Kaksa ki Vismata'em - New Lusaka
+19;21;sea;;-1;-1;-1;-1;Kaksa ki Vismata'em-343
+21;22;sea;942;-1;-1;-1;-1;343-Dharmvir
+22;331;sea;;-1;-1;-1;-1;Dharmvir - VN-381
+23;24;sea;943;-1;-1;-1;-1;Alfred - Etherland
+23;38;sea;;-1;-1;-1;-1;Alfred - Robinson
+24;31;sea;;-1;-1;-1;-1;Etherland - Mary's Star
+24;280;sea;;-1;-1;-1;-1;Etherland - Abbaba
+25;26;sea;944;-1;-1;-1;-1;Avalon - Camelot
+25;27;sea;944;-1;-1;-1;-1;Avalon - Merlin
+25;28;sea;944;-1;-1;-1;-1;Avalon - Paladin
+25;43;sea;;-1;-1;-1;-1;Avalon - Garrison
+26;27;sea;944;-1;-1;-1;-1;Camelot - Merlin
+26;28;sea;944;-1;-1;-1;-1;Camelot - Paladin
+26;134;sea;;-1;-1;-1;-1;Camelot - Deadwood
+27;39;sea;;-1;-1;-1;-1;Merlin - Chalice
+27;43;sea;;-1;-1;-1;-1;Merlin - Garrison
+28;92;sea;;-1;-1;-1;-1;Paladin - Touchstone
+29;30;sea;945;-1;-1;-1;-1;Caliburn - Greywood
+29;31;sea;945;-1;-1;-1;-1;Caliburn - Mary's Star
+29;39;sea;;-1;-1;-1;-1;Caliburn - Chalice
+29;43;sea;;-1;-1;-1;-1;Caliburn - Garrison
+30;31;sea;945;-1;-1;-1;-1;Greywood - Mary's Star
+30;36;sea;;-1;-1;-1;-1;Greywood - Lancelot
+30;34;sea;;-1;-1;-1;-1;Greywood - Virtue
+31;315;sea;;-1;-1;-1;-1;Mary's Star - Hawkwood
+32;33;sea;946;-1;-1;-1;-1;Galahad - Shiverlight
+32;34;sea;946;-1;-1;-1;-1;Galahad - Virtue
+32;37;sea;;-1;-1;-1;-1;Galahad - Numenor
+33;34;sea;946;-1;-1;-1;-1;Shiverlight - Virtue
+33;40;sea;;-1;-1;-1;-1;Shiverlight - Nelson
+34;37;sea;;-1;-1;-1;-1;Virtue - Numenor
+35;36;sea;947;-1;-1;-1;-1;Henry's Star - Lancelot
+35;37;sea;947;-1;-1;-1;-1;Henry's Star - Numenor
+35;38;sea;947;-1;-1;-1;-1;Henry's Star - Robinson
+36;37;sea;947;-1;-1;-1;-1;Lancelot - Numenor
+36;38;sea;947;-1;-1;-1;-1;Lancelot - Robinson
+39;40;sea;948;-1;-1;-1;-1;Chalice - Nelson
+39;41;sea;948;-1;-1;-1;-1;Chalice - Sherwood
+40;41;sea;948;-1;-1;-1;-1;Nelson - Sherwood
+41;135;sea;;-1;-1;-1;-1;Sherwood - Goldenroad
+42;43;sea;949;-1;-1;-1;-1;Endeavor - Garrison
+42;44;sea;949;-1;-1;-1;-1;Endeavor - Victoria
+42;95;sea;;-1;-1;-1;-1;Endeavor - Gemini
+42;96;sea;;-1;-1;-1;-1;Endeavor - Liberty
+42;315;sea;949;-1;-1;-1;-1;Endeavor - Hawkwood
+43;315;sea;949;-1;-1;-1;-1;Garrison - Hawkwood
+44;280;sea;;-1;-1;-1;-1;Victoria - Abbaba
+44;315;sea;949;-1;-1;-1;-1;Victoria - Hawkwood
+45;46;sea;950;-1;-1;-1;-1;Tsim Sha Tsui - Quanzhou
+45;47;sea;950;-1;-1;-1;-1;Tsim Sha Tsui - Guangzhou
+46;47;sea;950;-1;-1;-1;-1;Quanzhou - Guangzhou
+46;61;sea;;-1;-1;-1;-1;Quanzhou - Hangzhou
+46;277;sea;;-1;-1;-1;-1;Quanzhou - Wang Yaping
+47;53;sea;;-1;-1;-1;-1;Guangzhou - Nanchong
+48;49;sea;951;-1;-1;-1;-1;Wuhua - Kunming
+48;278;sea;;-1;-1;-1;-1;Wuhua - Zhang Xiaoguang
+49;53;sea;;-1;-1;-1;-1;Kunming - Nanchong
+50;51;sea;952;-1;-1;-1;-1;Bolivar Fangyuqu - Chengdu
+50;52;sea;952;-1;-1;-1;-1;Bolivar Fangyuqu - Xie Lanzhou
+50;65;sea;;-1;-1;-1;-1;Bolivar Fangyuqu - Ahora la Luz
+50;394;sea;;-1;-1;-1;-1;Bolivar Fàngyùqû - Nueva Galicia
+51;52;sea;952;-1;-1;-1;-1;Chengdu - Xie Lanzhou
+51;53;sea;;-1;-1;-1;-1;Chengdu - Nanchong
+52;56;sea;;-1;-1;-1;-1;Xie Lanzhou - Chongqing
+52;406;sea;;-1;-1;-1;-1;Xie Lanzhou - Reposo del Alcazar
+53;55;sea;953;-1;-1;-1;-1;Nanchong - Xie Xi'an
+53;56;sea;953;-1;-1;-1;-1;Nanchong - Chongqing
+54;55;sea;953;-1;-1;-1;-1;Fangqu Liehuzuo - Xie Xi'an
+54;56;sea;953;-1;-1;-1;-1;Fangqu Liehuzuo - Chongqing
+54;57;sea;953;-1;-1;-1;-1;Fangqu Liehuzuo - Zheng Zhou
+54;408;sea;;-1;-1;-1;-1;Fangqu Liehuzuo - Estrella del Anciano
+55;57;sea;953;-1;-1;-1;-1;Xie Xi'an - Zheng Zhou
+56;406;sea;;-1;-1;-1;-1;Chongqing - Reposo del Alcazar
+56;408;sea;;-1;-1;-1;-1;Chongqing - Estrella del Anciano
+57;58;sea;;-1;-1;-1;-1;Zheng Zhou - Tianjin
+58;59;sea;954;-1;-1;-1;-1;Tianjin - Xie Beijing
+58;60;sea;954;-1;-1;-1;-1;Tianjin - Shenyang
+59;60;sea;954;-1;-1;-1;-1;Xie Beijing - Shenyang
+59;61;sea;;-1;-1;-1;-1;Xie Beijing - Hangzhou
+59;64;sea;;-1;-1;-1;-1;Xie Beijing - Fangqu Huoyan Xìngqyùn
+61;63;sea;955;-1;-1;-1;-1;Hangzhou - Nanjing
+61;64;sea;955;-1;-1;-1;-1;Hangzhou - Fangqu Huoyan Xìngqyùn
+62;63;sea;955;-1;-1;-1;-1;Shanghai - Nanjing
+62;64;sea;955;-1;-1;-1;-1;Shanghai - Fangqu Huoyan Xìngqyùn
+63;64;sea;955;-1;-1;-1;-1;Nanjing - Fangqu Huoyan Xìngqyùn
+65;67;sea;956;-1;-1;-1;-1;Ahora la Luz - Estrella de Bolivar
+65;394;sea;;-1;-1;-1;-1;Ahora la Luz - Nueva Galicia
+66;67;sea;956;-1;-1;-1;-1;Esperanza - Estrella de Bolivar
+66;70;sea;;-1;-1;-1;-1;Esperanza - Ecrucijada
+67;68;sea;956;-1;-1;-1;-1;Estrella de Bolivar - Santa Maria
+67;81;sea;;-1;-1;-1;-1;Estrella de Bolivar - Nuevo Sol
+68;81;sea;;-1;-1;-1;-1;Santa Maria - Nuevo Sol
+68;278;sea;;-1;-1;-1;-1;Santa Maria - Zhang Xiaoguang
+69;71;sea;957;-1;-1;-1;-1;Escudo - Hermanes de Oro
+69;75;sea;;-1;-1;-1;-1;Escudo - Puerto del Cielo
+70;71;sea;957;-1;-1;-1;-1;Encrucijada-Hermanes de Oro
+70;72;sea;957;-1;-1;-1;-1;Encrucijada - Nuevo Santuario
+70;82;sea;;-1;-1;-1;-1;Encrucijada - Prosperidad
+71;72;sea;957;-1;-1;-1;-1;Hermanes de Oro - Nuevo Santuario
+72;75;sea;;-1;-1;-1;-1;Nuevo Santuario - Puerto del Cielo
+72;76;sea;;-1;-1;-1;-1;Nuevo Santuario - Huehca
+73;74;sea;958;-1;-1;-1;-1;Dom Frontera - Illuminacion
+73;75;sea;958;-1;-1;-1;-1;Dom Frontera - Puerto del Cielo
+73;302;sea;;-1;-1;-1;-1;Dom Frontera - al-Jisr
+73;358;sea;;-1;-1;-1;-1;Dom Frontera - Cyrus
+74;75;sea;958;-1;-1;-1;-1;Iluminacion - Puerto del Cielo
+74;358;sea;;-1;-1;-1;-1;Illuminacion - Cyrus
+75;76;sea;;-1;-1;-1;-1;Puerto del Cielo - Huehca
+76;77;sea;959;-1;-1;-1;-1;Huehca - Nahui-Ahtle
+76;80;sea;959;-1;-1;-1;-1;Huehca - Tlexoctii
+77;78;sea;959;-1;-1;-1;-1;Nahui-Ahtle - Nanti
+77;79;sea;959;-1;-1;-1;-1;Nahui-Ahtle - Tletioh
+77;80;sea;959;-1;-1;-1;-1;Nahui-Ahtle - Tlexochtii
+77;83;sea;;-1;-1;-1;-1;Nahui-Ahtle - Vega
+78;79;sea;959;-1;-1;-1;-1;Nanti - Tletlioh
+78;80;sea;959;-1;-1;-1;-1;Nanti - Tlexochtii
+78;306;sea;;-1;-1;-1;-1;Nantii - Janna
+79;195;sea;;-1;-1;-1;-1;Tletlioh - Beta Hydri
+81;82;sea;960;-1;-1;-1;-1;Nuevo Sol - Prosperidad
+81;83;sea;960;-1;-1;-1;-1;Nuevo Sol - Vega
+81;193;sea;;-1;-1;-1;-1;Nuevo Sol - Altair
+82;83;sea;960;-1;-1;-1;-1;Prosperidad - Vega
+83;193;sea;;-1;-1;-1;-1;Vega - Altair
+84;85;sea;961;-1;-1;-1;-1;Apollo - Beowulf
+84;86;sea;;-1;-1;-1;-1;Apollo - Aldrin
+85;87;sea;;-1;-1;-1;-1;Beowulf - Armstrong
+85;199;sea;;-1;-1;-1;-1;Beowulf - Procyon
+86;87;sea;962;-1;-1;-1;-1;Aldrin - Armstrong
+86;89;sea;962;-1;-1;-1;-1;Aldrin - Heartland
+87;88;sea;962;-1;-1;-1;-1;Armstrong - Collins
+87;89;sea;962;-1;-1;-1;-1;Armstrong - Heartland
+87;199;sea;;-1;-1;-1;-1;Armstrong - Procyon
+87;212;sea;;-1;-1;-1;-1;Armstrong - Tannhauser Gate
+88;89;sea;962;-1;-1;-1;-1;Collins - Heartland
+88;212;sea;;-1;-1;-1;-1;Collins - Tannhauser Gate
+89;90;sea;;-1;-1;-1;-1;Heartland - Glenn
+89;91;sea;;-1;-1;-1;-1;Heartland - John Henry
+89;101;sea;;-1;-1;-1;-1;Heartland - Shepard
+90;91;sea;963;-1;-1;-1;-1;Glenn - John Henry
+90;92;sea;963;-1;-1;-1;-1;Glenn - Touchstone
+90;93;sea;963;-1;-1;-1;-1;Glenn - Weyland
+90;101;sea;;-1;-1;-1;-1;Glenn - Shepard
+91;92;sea;963;-1;-1;-1;-1;John Henry - Touchstone
+91;97;sea;;-1;-1;-1;-1;John Henry - Lincoln
+92;93;sea;963;-1;-1;-1;-1;Touchstone - Weyland
+94;96;sea;964;-1;-1;-1;-1;Challenger - Liberty
+94;98;sea;964;-1;-1;-1;-1;Challenger - Ride
+95;96;sea;964;-1;-1;-1;-1;Gemini - Liberty
+95;97;sea;964;-1;-1;-1;-1;Gemini - Lincoln
+95;98;sea;964;-1;-1;-1;-1;Gemini - Ride
+96;98;sea;964;-1;-1;-1;-1;Libery - Ride
+97;98;sea;964;-1;-1;-1;-1;Lincoln - Ride
+99;100;sea;965;-1;-1;-1;-1;Jemison - Sharman
+99;101;sea;965;-1;-1;-1;-1;Jemison - Shepard
+100;101;sea;965;-1;-1;-1;-1;Sharman - Shepard
+102;109;sea;;-1;-1;-1;-1;Eye of God - Port Simon
+103;104;sea;966;-1;-1;-1;-1;HE-153 - HE-794
+103;108;sea;;-1;-1;-1;-1;HE-153 - HE-702
+104;105;sea;966;-1;-1;-1;-1;HE-794 - HE-843
+105;106;sea;;-1;-1;-1;-1;HE-843 - HE-219
+106;107;sea;967;-1;-1;-1;-1;HE-219 - HE-338
+107;108;sea;967;-1;-1;-1;-1;HE-338 - HE-702
+110;111;sea;968;-1;-1;-1;-1;Takagi - Sen Eisei
+110;112;sea;968;-1;-1;-1;-1;Takagi - Hiyokuoka
+111;112;sea;968;-1;-1;-1;-1;Sen Eisei - Hiyokuoka
+111;121;sea;;-1;-1;-1;-1;Sen Eisei-269
+112;125;sea;;-1;-1;-1;-1;Hiyokuoka - Akasei
+112;126;sea;;-1;-1;-1;-1;Hiyokuoka - Jion
+113;114;sea;969;-1;-1;-1;-1;218-219
+113;123;sea;;-1;-1;-1;-1;218-214
+115;118;sea;970;-1;-1;-1;-1;Shiga - Mie
+116;117;sea;970;-1;-1;-1;-1;Sabashi - Okyoto
+117;118;sea;970;-1;-1;-1;-1;Okyoto - Mie
+117;119;sea;970;-1;-1;-1;-1;Okyoto - Nara
+118;119;sea;970;-1;-1;-1;-1;Mie - Nara
+118;120;sea;;-1;-1;-1;-1;Mie - Fuyuki
+119;122;sea;;-1;-1;-1;-1;Nara - Iogi
+119;124;sea;;-1;-1;-1;-1;Nara - Uminoasa
+120;121;sea;971;-1;-1;-1;-1;Fuyuki-269
+120;122;sea;971;-1;-1;-1;-1;Fuyuki - Iogi
+121;122;sea;971;-1;-1;-1;-1;269-Iogi
+121;126;sea;;-1;-1;-1;-1;269-Jion
+123;124;sea;972;-1;-1;-1;-1;214-Uminoasa
+123;125;sea;972;-1;-1;-1;-1;214-Akasei
+123;126;sea;972;-1;-1;-1;-1;214-Jion
+124;126;sea;972;-1;-1;-1;-1;Uminoasa - Jion
+125;126;sea;972;-1;-1;-1;-1;Akasei - Jion
+125;127;sea;;-1;-1;-1;-1;Akasei - Moegara
+127;128;sea;973;-1;-1;-1;-1;Moegara - Rasen
+127;129;sea;973;-1;-1;-1;-1;Moegara - Taikun
+128;129;sea;973;-1;-1;-1;-1;Rasen - Taikun
+130;131;sea;974;-1;-1;-1;-1;Abigail - Adams
+130;132;sea;974;-1;-1;-1;-1;Abigail - Delphi
+130;133;sea;974;-1;-1;-1;-1;Abigail - Eagle
+131;132;sea;974;-1;-1;-1;-1;Adams - Delphi
+131;144;sea;;-1;-1;-1;-1;Adams - Miracle
+132;133;sea;974;-1;-1;-1;-1;Delphi - Eagle
+132;140;sea;;-1;-1;-1;-1;Delphi - Franklin
+133;150;sea;;-1;-1;-1;-1;Eagle - Delaware
+134;135;sea;975;-1;-1;-1;-1;Deadwood - Goldenroad
+134;136;sea;975;-1;-1;-1;-1;Deadwood - Roosevelt
+135;136;sea;975;-1;-1;-1;-1;Goldenroad - Roosevelt
+136;143;sea;;-1;-1;-1;-1;Roosevelt - Jefferson
+137;138;sea;976;-1;-1;-1;-1;Douglas - Farland
+137;139;sea;976;-1;-1;-1;-1;Douglas - Overlook
+138;139;sea;976;-1;-1;-1;-1;Farland - Overlook
+138;146;sea;;-1;-1;-1;-1;Farland - Winterstar
+138;147;sea;;-1;-1;-1;-1;Farland - De Gaulle
+140;141;sea;977;-1;-1;-1;-1;Franklin - Legacy
+140;142;sea;977;-1;-1;-1;-1;Franklin - Touchdown
+140;145;sea;;-1;-1;-1;-1;Franklin - Stacker
+141;142;sea;977;-1;-1;-1;-1;Legacy - Touchdown
+141;145;sea;;-1;-1;-1;-1;Legacy - Stacker
+141;148;sea;;-1;-1;-1;-1;Legacy - Lafayette
+142;148;sea;;-1;-1;-1;-1;Touchdown - Lafayette
+142;152;sea;;-1;-1;-1;-1;Touchdown - Washington
+143;144;sea;978;-1;-1;-1;-1;Jefferson - Miracle
+143;145;sea;978;-1;-1;-1;-1;Jefferson - Stacker
+143;146;sea;978;-1;-1;-1;-1;Jefferson - Winterstar
+144;145;sea;978;-1;-1;-1;-1;Miracle - Stacker
+145;146;sea;978;-1;-1;-1;-1;Stacker - Winterstar
+147;148;sea;979;-1;-1;-1;-1;De Gaulle - Lafayette
+147;149;sea;979;-1;-1;-1;-1;De Gaulle - Silhouette
+148;149;sea;979;-1;-1;-1;-1;Lafayette - Silhouette
+150;151;sea;980;-1;-1;-1;-1;Delaware - Shadow's Rim
+150;152;sea;980;-1;-1;-1;-1;Delaware - Washington
+151;152;sea;980;-1;-1;-1;-1;Shadow's Rim - Washington
+243;437;sea;;-1;-1;-1;-1;Wanguan - FN-089
+243;441;sea;;-1;-1;-1;-1;Wanguan - Xiao Mei
+298;342;sea;;-1;-1;-1;-1;Miixaa'iil - Ebadi
+299;342;sea;;-1;-1;-1;-1;at-Taw'amayn - Ebadi
+338;339;sea;1033;-1;-1;-1;-1;Ramanujan - Sarabhai
+338;340;sea;1033;-1;-1;-1;-1;Ramanujan - Chandrasekhar
+338;341;sea;;-1;-1;-1;-1;Ramanujan - Maathai
+339;340;sea;1033;-1;-1;-1;-1;Sarabhai - Chandrasekhar
+340;346;sea;;-1;-1;-1;-1;Chandrasekhar - Nai Haidarabada
+341;342;sea;1032;-1;-1;-1;-1;Maathai - Ebadi
+342;343;sea;1032;-1;-1;-1;-1;Ebadi - Ghandi
+342;344;sea;1032;-1;-1;-1;-1;Ebadi - Kanade
+343;344;sea;1032;-1;-1;-1;-1;Ghandi - Kanade
+343;345;sea;1032;-1;-1;-1;-1;Ghandi - Batra
+344;345;sea;1032;-1;-1;-1;-1;Kanade - Batra
+344;358;sea;;-1;-1;-1;-1;Kanade - Cyrus
+345;348;sea;;-1;-1;-1;-1;Batra - Nai Dunya
+345;351;sea;;-1;-1;-1;-1;Batra - Abhayaranya
+345;359;sea;;-1;-1;-1;-1;Batra - Darius
+346;347;sea;1034;-1;-1;-1;-1;Nai Haidarabada - Nai Varanasi
+347;350;sea;1034;-1;-1;-1;-1;Nai Haidarabada - Yathesta Bhumi
+347;348;sea;1034;-1;-1;-1;-1;Nai Varanasi - Nai Dunya
+347;349;sea;1034;-1;-1;-1;-1;Nai Varanasi - Yathesta Bhumi
+347;350;sea;1034;-1;-1;-1;-1;Nai Varanasi - Vikrama ke Graha
+348;350;sea;1034;-1;-1;-1;-1;Nai Dunya - Vikrama ke Graha
+349;350;sea;1034;-1;-1;-1;-1;Yathesta Bhumi - Vikrama ke Graha
+350;352;sea;;-1;-1;-1;-1;Vikrama ke Graha - Nae Bangladesa
+351;352;sea;1035;-1;-1;-1;-1;Abhayaranya - Nae Bangladesa
+351;353;sea;1035;-1;-1;-1;-1;Abhayaranya - Cauraha
+351;355;sea;1035;-1;-1;-1;-1;Abhayaranya - Saranyu
+351;359;sea;;-1;-1;-1;-1;Abhayaranya - Darius
+352;353;sea;1035;-1;-1;-1;-1;Nae Bangladesa - Cauraha
+352;354;sea;1035;-1;-1;-1;-1;Nae Bangladesa - Antariksa Khanana
+353;354;sea;1035;-1;-1;-1;-1;Cauraha - Antariksa Khanana
+353;355;sea;1035;-1;-1;-1;-1;Cauraha - Saranyu
+353;356;sea;1035;-1;-1;-1;-1;Cauraha - Chandrandake Sunya
+354;356;sea;1035;-1;-1;-1;-1;Antariksa Khanana - Chandrandake Sunya
+355;356;sea;1035;-1;-1;-1;-1;Saranyu - Chandrandake Sunya
+355;359;sea;;-1;-1;-1;-1;Saranyu - Darius
+356;357;sea;1035;-1;-1;-1;-1;Chandrandake Sunya - Pradana
+357;366;sea;;-1;-1;-1;-1;Pradana - Vishnu
+358;359;sea;1036;-1;-1;-1;-1;Cyrus - Darius
+358;360;sea;1036;-1;-1;-1;-1;Cyrus - Salah al-Din
+359;360;sea;1036;-1;-1;-1;-1;Darius - Salah al-Din
+360;361;sea;;-1;-1;-1;-1;Salah al-Din - Ta'ammul
+360;362;sea;;-1;-1;-1;-1;Salah al-Din - Sa'a
+361;362;sea;1037;-1;-1;-1;-1;Ta'ammul - Sa'a
+361;363;sea;1037;-1;-1;-1;-1;Ta'ammul - Paraiso
+362;363;sea;1037;-1;-1;-1;-1;Sa'a - Paraiso
+363;364;sea;1037;-1;-1;-1;-1;Paraiso - Mar Tranquila
+363;365;sea;1037;-1;-1;-1;-1;Paraiso - Dawaamah al-Lahib
+363;367;sea;;-1;-1;-1;-1;Paraiso - Sulaha
+364;397;sea;;-1;-1;-1;-1;Mar Tranquila - Santiago
+365;367;sea;;-1;-1;-1;-1;Dawaamah al-Lahib - Sulaha
+365;374;sea;;-1;-1;-1;-1;Dawaamah al-Lahib - Popper
+366;368;sea;1038;-1;-1;-1;-1;Vishnu - Chutti
+367;369;sea;1038;-1;-1;-1;-1;Sulaha - New Jerusalem
+368;369;sea;1038;-1;-1;-1;-1;Chutti - New Jerusalem
+370;371;sea;1039;-1;-1;-1;-1;Cedillo - Haidel
+371;372;sea;1039;-1;-1;-1;-1;Haidel - Miltia
+372;373;sea;1039;-1;-1;-1;-1;Miltia - Miltian Gate
+374;400;sea;;-1;-1;-1;-1;Popper - Komarr
+374;377;sea;1040;-1;-1;-1;-1;Popper - HH-464
+375;377;sea;1040;-1;-1;-1;-1;Arjona - HH-464
+376;377;sea;1040;-1;-1;-1;-1;Marley - HH-464
+379;384;sea;;-1;-1;-1;-1;Basilisco - San Mateo
+384;386;sea;1042;-1;-1;-1;-1;San Mateo - Manticore
+385;386;sea;1042;-1;-1;-1;-1;HH-72 - Manticore
+385;388;sea;1042;-1;-1;-1;-1;HH-72 - HH-106
+385;417;sea;;-1;-1;-1;-1;HH-72 - Anilam
+387;423;sea;;-1;-1;-1;-1;Antevas - ON-82
+387;388;sea;1042;-1;-1;-1;-1;Antevas - HH-106
+394;395;sea;;-1;-1;-1;-1;Nueva Galicia - Nueva Valencia
+394;396;sea;;-1;-1;-1;-1;Nueva Galicia - Suerte
+395;396;sea;;-1;-1;-1;-1;Nueva Valencia - Suerte
+395;397;sea;;-1;-1;-1;-1;Nueva Valencia - Santiago
+395;396;sea;;-1;-1;-1;-1;Nueva Valencia - Suerte
+396;406;sea;;-1;-1;-1;-1;Suerte - Reposo del Alcazar
+397;398;sea;;-1;-1;-1;-1;Santiago - Barrayar
+397;399;sea;;-1;-1;-1;-1;Santiago - El Didal
+398;399;sea;;-1;-1;-1;-1;Barrayar - El Didal
+398;400;sea;;-1;-1;-1;-1;Barrayar - Komarr
+398;401;sea;;-1;-1;-1;-1;Barrayar - Sergyar
+399;405;sea;;-1;-1;-1;-1;El Didal - Cisne
+401;402;sea;;-1;-1;-1;-1;Sergyar - Bellatrix
+402;403;sea;;-1;-1;-1;-1;Bellatrix - Hailu
+403;405;sea;;-1;-1;-1;-1;Hailu - Cisne
+403;416;sea;;-1;-1;-1;-1;Hailu - Dorter
+404;405;sea;;-1;-1;-1;-1;Meissa - Cisne
+404;407;sea;;-1;-1;-1;-1;Meissa - Betelgeuse
+405;409;sea;;-1;-1;-1;-1;Cisne - Ramon y Cajal
+405;413;sea;;-1;-1;-1;-1;Cisne - Mintaka
+406;407;sea;;-1;-1;-1;-1;Reposo del Acazar - Betelgeuse
+407;408;sea;;-1;-1;-1;-1;Betelgeuse - Estrella del Anciano
+408;410;sea;;-1;-1;-1;-1;Estrella del Anciano - Warshawski
+409;410;sea;;-1;-1;-1;-1;Ramon y Cajal - Warshawski
+409;411;sea;;-1;-1;-1;-1;Ramon y Cajal - Seldon
+409;415;sea;;-1;-1;-1;-1;Ramon y Cajal - Saiph
+410;411;sea;;-1;-1;-1;-1;Warshawski - Seldon
+410;412;sea;;-1;-1;-1;-1;Warshawski - Paulet
+411;412;sea;;-1;-1;-1;-1;Seldon - Paulet
+412;419;sea;;-1;-1;-1;-1;Paulet - ON-19
+412;435;sea;;-1;-1;-1;-1;Paulet - FN-071
+413;414;sea;;-1;-1;-1;-1;Mintaka - Genciana
+414;415;sea;;-1;-1;-1;-1;Genciana - Saiph
+414;416;sea;;-1;-1;-1;-1;Genciana - Dorter
+414;418;sea;;-1;-1;-1;-1;Genciana - Rigel
+416;417;sea;;-1;-1;-1;-1;Dorter - Anilam
+416;418;sea;;-1;-1;-1;-1;Dorter - Rigel
+417;418;sea;;-1;-1;-1;-1;Anilam - Rigel
+419;420;sea;1052;-1;-1;-1;-1;ON-19 - Sortelha
+420;422;sea;;-1;-1;-1;-1;Sortelha - Melila
+422;423;sea;1054;-1;-1;-1;-1;Melila - ON-82
+429;431;sea;1056;-1;-1;-1;-1;ON-137 - Principito
+431;432;sea;1056;-1;-1;-1;-1;Principito - ON-363
+431;433;sea;1056;-1;-1;-1;-1;Principito - ON-412
+434;435;sea;1058;-1;-1;-1;-1;Shihai - FN-071
+434;438;sea;;-1;-1;-1;-1;Shihai - Chuí
+437;438;sea;1057;-1;-1;-1;-1;FN-089 - Chuí
+437;441;sea;;-1;-1;-1;-1;FN-089 - Xiao Mei
+441;442;sea;;-1;-1;-1;-1;Xiao Mei - FN-287
+442;443;sea;1059;-1;-1;-1;-1;FN-289 - FN-331
+442;444;sea;1059;-1;-1;-1;-1;FN-289 - Iserlohn
+443;444;sea;1059;-1;-1;-1;-1;FN-331 - Iserlohn
+447;448;sea;1061;-1;-1;-1;-1;FN-940 - FN-1237
+447;449;sea;1061;-1;-1;-1;-1;FN-940 - Hades
+448;449;sea;1061;-1;-1;-1;-1;FN-1237 - Hades
 228;226;sea;1004;-1;-1;-1;-1;WH-253-WH-064
 228;227;sea;1004;-1;-1;-1;-1;WH-253-WH-229
 227;229;sea;1004;-1;-1;-1;-1;WH-229-WH-998
@@ -120,37 +399,6 @@ From;To;Type;Through;-1;-1;-1;-1;Comment
 218;220;sea;;-1;-1;-1;-1;WH-732-WH-178
 220;222;sea;1003;-1;-1;-1;-1;WH-178-WH-930
 221;222;sea;1003;-1;-1;-1;-1;WH-336-WH-930
-115;116;sea;970;-1;-1;-1;-1;Shiga-Sabashi
-115;117;sea;970;-1;-1;-1;-1;Shiga-Okyoto
-115;118;sea;970;-1;-1;-1;-1;Shiga-Mie
-116;117;sea;970;-1;-1;-1;-1;Sabashi-Okyoto
-117;118;sea;970;-1;-1;-1;-1;Okyoto-Mie
-117;119;sea;970;-1;-1;-1;-1;Okyoto-Nara
-118;119;sea;970;-1;-1;-1;-1;Mie-Nara
-118;120;sea;;-1;-1;-1;-1;Mie-Fuyuki
-119;124;sea;;-1;-1;-1;-1;Nara-Uminoasa
-119;122;sea;;-1;-1;-1;-1;Nara-Iogi
-120;122;sea;971;-1;-1;-1;-1;Fuyuki-Iogi
-120;121;sea;971;-1;-1;-1;-1;Fuyuki-269
-121;122;sea;971;-1;-1;-1;-1;269-Iogi
-121;111;sea;;-1;-1;-1;-1;269-Sen Eisei
-121;126;sea;;-1;-1;-1;-1;269-Jion
-111;110;sea;968;-1;-1;-1;-1;Sen Eisei-Takagi
-111;112;sea;968;-1;-1;-1;-1;Sen Eisei-Hiyokuoka
-110;112;sea;968;-1;-1;-1;-1;Takagi-Hiyokuoka
-112;126;sea;;-1;-1;-1;-1;Hiyokuoka-Jion
-112;125;sea;;-1;-1;-1;-1;Hiyokuoka-Akasei
-126;124;sea;972;-1;-1;-1;-1;Jion-Uminoasa
-126;123;sea;972;-1;-1;-1;-1;Jion-214
-126;125;sea;972;-1;-1;-1;-1;Jion-Akasei
-124;123;sea;972;-1;-1;-1;-1;Uminoasa-214
-123;125;sea;972;-1;-1;-1;-1;214-Akasei
-123;113;sea;;-1;-1;-1;-1;214-218
-125;127;sea;;-1;-1;-1;-1;Akasei-Moegara
-113;114;sea;969;-1;-1;-1;-1;218-219
-127;129;sea;973;-1;-1;-1;-1;Moegara-Taikun
-127;128;sea;973;-1;-1;-1;-1;Moegara-Rasen
-129;128;sea;973;-1;-1;-1;-1;Taikun-Rasen
 190;189;sea;992;-1;-1;-1;-1;Raduga-237
 190;188;sea;992;-1;-1;-1;-1;Raduga-236
 190;187;sea;992;-1;-1;-1;-1;Raduga-235
@@ -173,13 +421,6 @@ From;To;Type;Through;-1;-1;-1;-1;Comment
 183;182;sea;990;-1;-1;-1;-1;Kovcheg-222
 184;191;sea;;-1;-1;-1;-1;Nad'ezhda-225
 191;192;sea;993;-1;-1;-1;-1;225-Saula
-107;106;sea;967;-1;-1;-1;-1;HE-338-HE-219
-107;108;sea;967;-1;-1;-1;-1;HE-338-HE-702
-106;105;sea;;-1;-1;-1;-1;HE-219-HE-843
-109;102;sea;;-1;-1;-1;-1;Port Simon-Eye of God
-105;104;sea;966;-1;-1;-1;-1;HE-843-HE-794
-108;103;sea;;-1;-1;-1;-1;HE-702-HE-153
-104;103;sea;966;-1;-1;-1;-1;HE-794-HE-153
 165;164;sea;985;-1;-1;-1;-1;Vera-Tselostnost'
 165;163;sea;985;-1;-1;-1;-1;Vera-Pobeda
 164;163;sea;985;-1;-1;-1;-1;Tselostnost'-Pobeda
@@ -217,36 +458,6 @@ From;To;Type;Through;-1;-1;-1;-1;Comment
 154;155;sea;;-1;-1;-1;-1;Zhemchuzhina-Maoxian
 155;156;sea;982;-1;-1;-1;-1;Maoxian-Pei Cheng
 156;168;sea;;-1;-1;-1;-1;Pei Cheng-Stabilnost'
-93;92;sea;963;-1;-1;-1;-1;Weyland-Touchstone
-93;90;sea;963;-1;-1;-1;-1;Weyland-Glenn
-92;90;sea;963;-1;-1;-1;-1;Touchstone-Glenn
-92;92;sea;963;-1;-1;-1;-1;Touchstone-John Henry
-90;92;sea;963;-1;-1;-1;-1;Glenn-John Henry
-90;101;sea;;-1;-1;-1;-1;Glenn-Shepard
-101;100;sea;965;-1;-1;-1;-1;Shepard-Sharman
-101;99;sea;965;-1;-1;-1;-1;Shepard-Jemison
-100;99;sea;965;-1;-1;-1;-1;Sharman-Jemison
-92;95;sea;;-1;-1;-1;-1;Touchstone-Gemini
-95;96;sea;964;-1;-1;-1;-1;Gemini-Liberty
-95;97;sea;964;-1;-1;-1;-1;Gemini-Lincoln
-95;98;sea;964;-1;-1;-1;-1;Gemini-Ride
-95;94;sea;964;-1;-1;-1;-1;Gemini-Challenger
-91;97;sea;;-1;-1;-1;-1;John Henry-Lincoln
-97;98;sea;964;-1;-1;-1;-1;Lincoln-Ride
-98;94;sea;964;-1;-1;-1;-1;Ride-Challenger
-94;96;sea;964;-1;-1;-1;-1;Challenger-Liberty
-89;98;sea;;-1;-1;-1;-1;Heartland-Ride
-89;91;sea;;-1;-1;-1;-1;Heartland-John Henry
-89;90;sea;;-1;-1;-1;-1;Heartland-Glenn
-89;86;sea;962;-1;-1;-1;-1;Heartland-Aldrin
-89;88;sea;962;-1;-1;-1;-1;Heartland-Collins
-89;87;sea;962;-1;-1;-1;-1;Heartland-Armstrong
-89;101;sea;;-1;-1;-1;-1;Heartland-Shepard
-88;87;sea;962;-1;-1;-1;-1;Collins-Armstrong
-87;86;sea;962;-1;-1;-1;-1;Armstrong-Aldrin
-86;84;sea;;-1;-1;-1;-1;Aldrin-Apollo
-84;85;sea;961;-1;-1;-1;-1;Apollo-Beowulf
-85;87;sea;;-1;-1;-1;-1;Beowulf-Armstrong
 210;209;sea;1000;-1;-1;-1;-1;Tengoku-Sotogawa no Ten
 209;211;sea;;-1;-1;-1;-1;Sotogawa nop Ten-Korolev
 212;213;sea;1001;-1;-1;-1;-1;Tannhauser Gate-Tereshkova
@@ -329,35 +540,6 @@ From;To;Type;Through;-1;-1;-1;-1;Comment
 301;300;sea;1026;-1;-1;-1;-1;Sakiina-Jabra'iil
 301;302;sea;1026;-1;-1;-1;-1;Sakiina-al-Jisr
 300;302;sea;1026;-1;-1;-1;-1;Jabra'iil-al-Jisr
-69;75;sea;-1;-1;-1;-1;-1;Escudo-Puerto del Cielo
-78;80;sea;959;-1;-1;-1;-1;Nanti-Tlexochtii
-78;79;sea;959;-1;-1;-1;-1;Nanti-Tletlioh
-78;77;sea;959;-1;-1;-1;-1;Nanti-Nahui-Ahtle
-77;79;sea;959;-1;-1;-1;-1;Nahui-Ahtle-Tletioh
-77;80;sea;959;-1;-1;-1;-1;Nahui-Ahtle-Tlexochtii
-77;76;sea;959;-1;-1;-1;-1;Nahui-Ahtle-Huehca
-76;80;sea;959;-1;-1;-1;-1;Huehca-Tlexoctii
-76;75;sea;;-1;-1;-1;-1;Huehca-Puerto del Cielo
-76;72;sea;;-1;-1;-1;-1;Huehca-Nuevo Santuario
-73;74;sea;958;-1;-1;-1;-1;Dom Frontera-Illuminacion
-73;75;sea;958;-1;-1;-1;-1;Dom Frontera-Puerto del Cielo
-74;75;sea;958;-1;-1;-1;-1;Iluminacion-Puerto del Cielo
-75;72;sea;;-1;-1;-1;-1;Puerto del Cielo-Nuevo Santuario
-72;70;sea;957;-1;-1;-1;-1;Nuevo Santuario-Encrucijada
-72;71;sea;957;-1;-1;-1;-1;Nuevo Santuario-Hermanes de Oro
-70;71;sea;957;-1;-1;-1;-1;Encrucijada-Hermanes de Oro
-71;69;sea;957;-1;-1;-1;-1;Hermanes de Oro-Escudo
-70;82;sea;;-1;-1;-1;-1;Encrucijada-Prosperidad
-82;83;sea;960;-1;-1;-1;-1;Prosperidad-Vega
-82;81;sea;960;-1;-1;-1;-1;Prosperidad-Nuevo Sol
-83;77;sea;;-1;-1;-1;-1;Vega-Nahui-Ahtle
-83;81;sea;960;-1;-1;-1;-1;Vega-Nuevo Sol
-81;68;sea;;-1;-1;-1;-1;Nuevo Sol-Santa Maria
-81;67;sea;;-1;-1;-1;-1;Nuevo Sol-Estrella de Bolivar
-68;67;sea;956;-1;-1;-1;-1;Santa Maria-Estrella de Bolivar
-67;66;sea;956;-1;-1;-1;-1;Estrella de Bolivar-Esperanza
-67;65;sea;956;-1;-1;-1;-1;Estrella de Bolivar-Ahora la Luz
-70;66;sea;;-1;-1;-1;-1;Ecrucijada-Esperanza
 276;274;sea;1018;-1;-1;-1;-1;Zhai Zhigang-Liu Boming
 276;275;sea;1018;-1;-1;-1;-1;Zhai Zhigang-Xuanwu
 275;274;sea;1018;-1;-1;-1;-1;Xuanwu-Liu Boming
@@ -382,39 +564,6 @@ From;To;Type;Through;-1;-1;-1;-1;Comment
 269;279;sea;;-1;-1;-1;-1;Yang Liwei-Zhuque
 279;278;sea;1019;-1;-1;-1;-1;Zhuque-Zhang Xiaoguang
 279;277;sea;1019;-1;-1;-1;-1;Zhuque-Wang Yaping
-50;51;sea;952;-1;-1;-1;-1;Bolivar Fangyuqu-Chengdu
-50;52;sea;952;-1;-1;-1;-1;Bolivar Fangyuqu-Xie Lanzhou
-51;52;sea;952;-1;-1;-1;-1;Chengdu-Xie Lanzhou
-51;53;sea;-1;-1;-1;-1;-1;Chengdu-Nanchong
-52;56;sea;-1;-1;-1;-1;-1;Xie Lanzhou-Chongqing
-52;406;sea;-1;-1;-1;-1;-1;Xie Lanzhou-Reposo del Alcazar
-56;53;sea;953;-1;-1;-1;-1;Chongqing-Nanchong
-56;54;sea;953;-1;-1;-1;-1;Chongqing-Fangqu Liehuzuo
-56;406;sea;-1;-1;-1;-1;-1;Chongqing-Reposo del Alcazar
-56;408;sea;-1;-1;-1;-1;-1;Chongqing-Estrella del Anciano
-55;53;sea;953;-1;-1;-1;-1;Xie Xi'an-Nanchong
-55;54;sea;953;-1;-1;-1;-1;Xie Xi'an-Fangqu Liehuzuo
-55;57;sea;953;-1;-1;-1;-1;Xie Xi'an-Zheng Zhou
-54;57;sea;953;-1;-1;-1;-1;Fangqu Liehuzuo-Zheng Zhou
-54;408;sea;-1;-1;-1;-1;-1;Fangqu Liehuzuo-Estrella del Anciano
-53;49;sea;-1;-1;-1;-1;-1;Nanchong-Kunming
-49;48;sea;951;-1;-1;-1;-1;Kunming-Wuhua
-53;47;sea;;-1;-1;-1;-1;Nanchong-Guangzhou
-47;45;sea;950;-1;-1;-1;-1;Guangzhou-Tsim Sha Tsui
-47;46;sea;950;-1;-1;-1;-1;Guangzhou-Quanzhou
-45;46;sea;950;-1;-1;-1;-1;Tsim Sha Tsui-Quanzhou
-46;61;sea;-1;-1;-1;-1;-1;Quanzhou-Hangzhou
-61;59;sea;-1;-1;-1;-1;-1;Hangzhou-Xie Beijing
-61;62;sea;-1;-1;-1;-1;-1;Hangzhou-Shanghai
-61;63;sea;955;-1;-1;-1;-1;Hangzhou-Nanjing
-62;63;sea;955;-1;-1;-1;-1;Shanghai-Nanjing
-62;64;sea;955;-1;-1;-1;-1;Shanghai-Fangqu Huoyan Xìngqyùn
-63;64;sea;955;-1;-1;-1;-1;Nanjing-Fangqu Huoyan Xìngqyùn
-64;59;sea;-1;-1;-1;-1;-1;Fangqu Huoyan Xìngqyùn-Xie Beijing
-59;58;sea;954;-1;-1;-1;-1;Xie Beijing-Tianjin
-59;60;sea;954;-1;-1;-1;-1;Xie Beijing-Shenyang
-58;60;sea;954;-1;-1;-1;-1;Tianjin-Shenyang
-58;57;sea;-1;-1;-1;-1;-1;Tianjin-Zheng Zhou
 251;252;sea;1011;-1;-1;-1;-1;371-372
 251;253;sea;1011;-1;-1;-1;-1;371-373
 252;253;sea;1011;-1;-1;-1;-1;372-373
@@ -439,7 +588,7 @@ From;To;Type;Through;-1;-1;-1;-1;Comment
 235;236;sea;1006;-1;-1;-1;-1;Pu-Erh-Kantebolei
 235;231;sea;;-1;-1;-1;-1;Pu-Erh-Yonghengde Anbian
 236;239;sea;;-1;-1;-1;-1;Kantebolei-Yesushan
-237;234;sea;-1;-1;-1;-1;-1;Lasa-Macau
+237;234;sea;;-1;-1;-1;-1;Lasa-Macau
 237;238;sea;1007;-1;-1;-1;-1;Lasa-Yulin
 237;239;sea;1007;-1;-1;-1;-1;Lasa-Yesushan
 238;240;sea;1007;-1;-1;-1;-1;Yulin-Tian Yuan
@@ -474,15 +623,6 @@ From;To;Type;Through;-1;-1;-1;-1;Comment
 261;263;sea;1014;-1;-1;-1;-1;368-Xin Qin
 262;238;sea;;-1;-1;-1;-1;369-391
 262;263;sea;1014;-1;-1;-1;-1;369-Xin Qin
-23;1;sea;;-1;-1;-1;-1;Alfred-Ksora
-23;2;sea;;-1;-1;-1;-1;Afred-Oran
-24;280;sea;;-1;-1;-1;-1;Etherland-Abbaba
-44;280;sea;;-1;-1;-1;-1;Victoria-Abbaba
-42;96;sea;;-1;-1;-1;-1;Endeavor-Liberty
-42;95;sea;;-1;-1;-1;-1;Endeavor-Gemini
-28;92;sea;;-1;-1;-1;-1;Paladin-Touchstone
-26;134;sea;;-1;-1;-1;-1;Camelot-Deadwood
-41;135;sea;;-1;-1;-1;-1;Sherwood-Goldenroad
 139;93;sea;;-1;-1;-1;-1;Overlook-Weyland
 137;110;sea;;-1;-1;-1;-1;Douglas-Takagi
 137;111;sea;;-1;-1;-1;-1;Douglas-Sen Eisei
@@ -507,15 +647,6 @@ From;To;Type;Through;-1;-1;-1;-1;Comment
 156;251;sea;;-1;-1;-1;-1;Pei Cheng-Liuyang
 244;265;sea;;-1;-1;-1;-1;355-Liu Wang
 257;62;sea;;-1;-1;-1;-1;378-Shanghai
-46;277;sea;;-1;-1;-1;-1;Quanzhou-Wang Yaping
-48;278;sea;;-1;-1;-1;-1;419-Zhang Xiaoguang
-50;65;sea;;-1;-1;-1;-1;416-Ahora la Luz
-68;278;sea;;-1;-1;-1;-1;Santa Maria-Zhang Xiaoguang
-81;193;sea;;-1;-1;-1;-1;Nuevo Sol-Altair
-83;193;sea;;-1;-1;-1;-1;Vega-Altair
-79;195;sea;;-1;-1;-1;-1;Tletlioh-Beta Hydri
-73;302;sea;;-1;-1;-1;-1;Dom Frontera-al-Jisr
-78;306;sea;;-1;-1;-1;-1;Nantii-Janna
 307;205;sea;;-1;-1;-1;-1;Makkat al-Jadiida-Tau Ceti
 303;295;sea;;-1;-1;-1;-1;Burj Najmii-Nyota 'Mwisho
 304;295;sea;;-1;-1;-1;-1;Farah-Nyota 'Mwisho
@@ -538,11 +669,8 @@ From;To;Type;Through;-1;-1;-1;-1;Comment
 290;84;sea;;-1;-1;-1;-1;Upeo wa Macho-Apollo
 290;85;sea;;-1;-1;-1;-1;Upeo wa Macho-Beowulf
 290;203;sea;;-1;-1;-1;-1;Upeo wa Macho-Epsilon Eridani
-88;212;sea;;-1;-1;-1;-1;Collins-Tannhauser Gate
-87;212;sea;;-1;-1;-1;-1;Armstrong-Tannhauser Gate
-87;199;sea;;-1;-1;-1;-1;Armstrong-Procyon
-85;199;sea;;-1;-1;-1;-1;Beowulf-Procyon
 213;199;sea;;-1;-1;-1;-1;Tereshkova-Procyon
+339;337;sea;;-1;-1;-1;-1;Sarabhai-VN-732
 316;317;major_river;;-1;-1;-1;-1;316-317
 317;318;major_river;;-1;-1;-1;-1;317-318
 318;316;major_river;;-1;-1;-1;-1;318-316
@@ -562,42 +690,4 @@ From;To;Type;Through;-1;-1;-1;-1;Comment
 332;331;sea;;-1;-1;-1;-1;VN-32-VN-381
 331;335;sea;;-1;-1;-1;-1;VN-381-VN-128
 335;337;sea;;-1;-1;-1;-1;VN-128-VN-732
-50;394;sea;;-1;-1;-1;-1;Bolivar fàngyùqû - Nueva Galicia
-65;394;sea;;-1;-1;-1;-1;Ahora la Luz-Nueva Galicia
-394;395;sea;;-1;-1;-1;-1;Nueva Galicia - Nueva Valencia
-394;396;sea;;-1;-1;-1;-1;Nueva Galicia - Suerte
-395;396;sea;;-1;-1;-1;-1;Nueva Valencia - Suerte
-395;397;sea;;-1;-1;-1;-1;Nueva Valencia - Santiago
-395;396;sea;;-1;-1;-1;-1;Nueva Valencia - Suerte
-396;406;sea;;-1;-1;-1;-1;Suerte - Reposo del Alcazar
-397;398;sea;;-1;-1;-1;-1;Santiago - Barrayar
-397;399;sea;;-1;-1;-1;-1;Santiago - El Didal
-398;399;sea;;-1;-1;-1;-1;Barrayar - El Didal
-398;400;sea;;-1;-1;-1;-1;Barrayar - Komarr
-398;401;sea;;-1;-1;-1;-1;Barrayar - Sergyar
-399;405;sea;;-1;-1;-1;-1;El Didal - Cisne
-401;402;sea;;-1;-1;-1;-1;Sergyar - Bellatrix
-402;403;sea;;-1;-1;-1;-1;Bellatrix - Hailu
-403;405;sea;;-1;-1;-1;-1;Hailu - Cisne
-403;416;sea;;-1;-1;-1;-1;Hailu - Dorter
-404;405;sea;;-1;-1;-1;-1;Meissa - Cisne
-404;407;sea;;-1;-1;-1;-1;Meissa - Betelgeuse
-405;409;sea;;-1;-1;-1;-1;Cisne - Ramon y Cajal
-405;413;sea;;-1;-1;-1;-1;Cisne - Mintaka
-406;407;sea;;-1;-1;-1;-1;Reposo del Acazar - Betelgeuse
-407;408;sea;;-1;-1;-1;-1;Betelgeuse - Estrella del Anciano
-408;410;sea;;-1;-1;-1;-1;Estrella del Anciano - Warshawski
-409;410;sea;;-1;-1;-1;-1;Ramon y Cajal - Warshawski
-409;411;sea;;-1;-1;-1;-1;Ramon y Cajal - Seldon
-409;415;sea;;-1;-1;-1;-1;Ramon y Cajal - Saiph
-410;411;sea;;-1;-1;-1;-1;Warshawski - Seldon
-410;412;sea;;-1;-1;-1;-1;Warshawski - Paulet
-411;412;sea;;-1;-1;-1;-1;Seldon - Paulet
-413;414;sea;;-1;-1;-1;-1;Mintaka - Genciana
-414;415;sea;;-1;-1;-1;-1;Genciana - Saiph
-414;416;sea;;-1;-1;-1;-1;Genciana - Dorter
-414;418;sea;;-1;-1;-1;-1;Genciana - Rigel
-416;417;sea;;-1;-1;-1;-1;Dorter - Anilam
-416;418;sea;;-1;-1;-1;-1;Dorter - Rigel
-417;418;sea;;-1;-1;-1;-1;Anilam - Rigel
 -1;-1;;-1;-1;-1;-1;-1;-1

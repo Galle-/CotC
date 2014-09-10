@@ -1,0 +1,19 @@
+# 144 - Miracle
+
+# County Title
+title = c_miracle
+
+# Settlements
+max_settlements = 4
+b_miracle_ii = city
+b_miracle_iii = castle
+b_miracle_prime = temple
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = colonial_separatist
+
+# History
+
+2998.1.1 = {
+}

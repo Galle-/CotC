@@ -1,0 +1,19 @@
+# 147 - De Gaulle
+
+# County Title
+title = c_de_gaulle
+
+# Settlements
+max_settlements = 4
+b_de_gaulle_iii = castle
+b_de_gaulle_prime = temple
+b_de_gaulle_ii = city
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = colonial_separatist
+
+# History
+
+2998.1.1 = {
+}

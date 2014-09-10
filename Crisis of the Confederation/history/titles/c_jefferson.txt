@@ -1,0 +1,6 @@
+2998.1.1={
+	liege="d_jefferson"
+	law = succ_seniority
+	law = true_cognatic_succession
+	holder = 12000104
+}

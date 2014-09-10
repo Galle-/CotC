@@ -1,0 +1,20 @@
+# 393 - HH-916
+
+# County Title
+title = c_hh_916
+
+# Settlements
+max_settlements = 4
+
+b_hh_916_station_alpha = castle
+
+# Misc
+culture = indo_mukta # Initial culture
+religion = space_pirate
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

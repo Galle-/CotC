@@ -1,0 +1,21 @@
+# 344 - Kanade
+
+# County Title
+title = c_kanade
+
+# Settlements
+max_settlements = 4
+
+b_kanade_prime = temple
+b_kanade_ii = city
+
+# Misc
+culture = indo_mukta # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

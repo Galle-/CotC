@@ -1,0 +1,6 @@
+2998.1.1 = {
+	liege = "k_new_frontier"
+	law = true_cognatic_succession
+	law = succ_appointment
+	holder = 12000101 # James Bullock
+}

@@ -1,0 +1,22 @@
+# 368 - Chutti
+
+# County Title
+title = c_chutti
+
+# Settlements
+max_settlements = 4
+
+b_chutti_iii = temple
+b_chutti_iii_b = city
+b_chutti_iv = castle
+
+# Misc
+culture = indo_mukta # Initial culture
+religion = adoptionist_cultist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

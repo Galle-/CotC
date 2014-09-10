@@ -1,0 +1,20 @@
+# 382 - HH-613
+
+# County Title
+title = c_hh_613
+
+# Settlements
+max_settlements = 4
+
+b_hh_613_station_alpha = castle
+
+# Misc
+culture = indo_orion # Initial culture
+religion = space_pirate
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

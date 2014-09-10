@@ -1,6 +1,6 @@
 2995.1.1 = {
 	law = succ_feudal_elective
-	law = absolute_cognatic_succession
+	law = true_cognatic_succession
 	law = local_term_length_4
 	holder = 1108489 # Kaoru Maeda
 }

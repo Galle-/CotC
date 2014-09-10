@@ -1,0 +1,20 @@
+# 374 - Popper
+
+# County Title
+title = c_popper
+
+# Settlements
+max_settlements = 4
+
+b_popper_iii = city
+
+# Misc
+culture = hispanic_mukta # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

@@ -1,0 +1,17 @@
+# 335 - VN-128
+
+# County Title
+title = c_vn_128
+
+# Settlements
+max_settlements = 4
+
+b_vn_128_outpost = castle
+b_vn_128_observatory = temple
+
+# Misc
+culture = indo_mukta # Initial culture
+religion = colonial_separatist
+
+1.1.1 = {
+}

@@ -1,0 +1,6 @@
+2998.1.1 = {
+	liege = "d_paraiso"
+	law = succ_appointment
+	law = true_cognatic_succession
+	holder = 1104869 # Gazel Mendoza
+}

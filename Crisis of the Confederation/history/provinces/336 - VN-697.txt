@@ -1,0 +1,17 @@
+# 336 - VN-697
+
+# County Title
+title = c_vn_697
+
+# Settlements
+max_settlements = 4
+
+b_vn_697_observatory = temple
+b_vn_697 = city
+
+# Misc
+culture = east_afro_mukta # Initial culture
+religion = colonial_separatist
+
+1.1.1 = {
+}

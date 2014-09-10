@@ -1,0 +1,18 @@
+# 332 - VN-32
+
+# County Title
+title = c_vn_32
+
+# Settlements
+max_settlements = 4
+
+b_vn_32_outpost = castle
+b_vn_32 = city
+
+
+# Misc
+culture = indo_tarkan # Initial culture
+religion = cyberneticist
+
+1.1.1 = {
+}

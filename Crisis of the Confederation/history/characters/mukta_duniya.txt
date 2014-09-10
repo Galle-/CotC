@@ -1,0 +1,656 @@
+1106139 = {
+	# President of Mukta Duniya
+	name = "Anika"
+	dynasty = 6139 # Trivedi
+	female = yes
+	
+	culture = indo_mukta
+	religion = colonial_separatist
+	
+	trait = quick
+	trait = pragmatic
+	trait = extraverted
+	trait = carefree
+	trait = open_minded
+	
+	father = 1206139 # Devansh Trivedi
+	mother = 1105196 # Apoorva Bose
+	
+	2963.1.1 = { birth = "2963.1.1" }
+}
+1216139 = {
+	# Conservative brother of Anika Trivedi
+	name = "Hari"
+	dynasty = 6139 # Trivedi
+	female = no
+	
+	culture = indo_mukta
+	religion = terran_federalist
+	
+	trait = quick
+	trait = close_minded
+	trait = radical
+	trait = introverted
+	trait = disciplined
+	
+	father = 1206139 # Devansh Trivedi
+	mother = 1105196 # Apoorva Bose
+	
+	2966.1.1 = { birth = "2966.1.1" }
+}
+1226139 = {
+	# Apolitical brother of Anika and Hari Trivedi
+	name = "Jatin"
+	dynasty = 6139 # Trivedi
+	female = no
+	
+	culture = indo_mukta
+	religion = cyberneticist
+	
+	trait = quick
+	trait = dni
+	trait = thoth_mk_i
+	trait = open_minded
+	trait = introverted
+	trait = friendly
+	
+	father = 1206139 # Devansh Trivedi
+	mother = 1105196 # Apoorva Bose
+	
+	2969.1.1 = { birth = "2969.1.1" }
+}
+1206139 = {
+	# Previous head of Trivedi Corporation, retired
+	name = "Devansh"
+	dynasty = 6139 # Trivedi
+	female = no
+	
+	culture = indo_mukta
+	religion = terran_federalist
+	
+	father = 1306139 # Sagnik Trivedi
+	mother = 1105836 # Anjali Saxena
+	
+	trait = quick
+	
+	2932.1.1 = { birth = "2932.1.1" }
+	2959.1.1 = {
+		add_spouse = 1105196 # Apoorva Bose
+		effect = { spouse = { add_lover = ROOT } }
+	}
+}
+1105196 = {
+	# Wife of Devansh Trivedi, mother of Anika, Hari, and Jatin
+	name = "Apoorva"
+	dynasty = 5196 # Bose
+	female = yes
+	
+	culture = indo_mukta
+	religion = terran_federalist
+	
+	2933.1.1 = { birth = "2933.1.1" }
+}
+1306139 = {
+	# Founder of Trivedi Corporation
+	name = "Sagnik"
+	dynasty = 6139 # Trivedi
+	female = no
+	
+	culture = indo_mukta
+	religion = terran_federalist
+	
+	trait = bisexual
+	
+	2909.1.1 = { birth = "2909.1.1" }
+	2931.1.1 = {
+		add_spouse = 1105836 # Anjali Saxena
+		effect = { spouse = { add_lover = ROOT } }
+	}
+	2988.1.1 = { death = "2989.1.1" }
+}
+1105836 = {
+	# Mother of Devansh and Pari Trivedi
+	name = "Anjali"
+	dynasty = 5836 # Saxena
+	female = yes
+	
+	culture = indo_mukta
+	religion = terran_federalist
+	
+	2905.1.1 = { birth = "2905.1.1" }
+	2993.1.1 = { death = "2993.1.1" }
+}
+1316139 = {
+	# Mad scientist sister of Devansh Trivedi
+	name = "Pari"
+	dynasty = 6139 # Trivedi
+	female = yes
+	
+	culture = indo_mukta
+	religion = cyberneticist
+	
+	trait = mastermind_scholar
+	trait = lunatic
+	trait = depressed
+	
+	father = 1306139 # Sagnik Trivedi
+	mother = 1105836 # Anjali Saxena
+	
+	2937.1.1 = { birth = "2937.1.1" }
+	2960.1.1 = {
+		add_matrilineal_spouse = 1104427 # Joaquin Reyes
+		effect = { spouse = { add_lover = ROOT } }
+	}
+	2994.1.1 = { death = { death_reason = death_trait } }
+}
+1104427 = {
+	# Father of Julieta Trivedi
+	name = "Joaquin"
+	dynasty = 4427 # Reyes
+	female = no
+	
+	culture = hispanic_orion
+	religion = space_pirate
+	
+	trait = open_minded
+	trait = extraverted
+	trait = friendly
+	trait = pragmatic
+	
+	2937.1.1 = { birth = "2937.1.1" }
+}
+1104444 = {
+	# Ceo of Cruz
+	name = "Aarav"
+	dynasty = 4444 # Cruz
+	female = no
+	
+	culture = hispanic_mukta
+	religion = pilgrim
+	
+	trait = bisexual
+	
+	2966.1.1 = { birth = "2966.1.1" }
+}
+11014460 = {
+	# Ceo of Igwe
+	name = "Kali"
+	dynasty = 14460 # Igwe
+	female = no
+	
+	culture = east_afro_mukta
+	religion = terran_federalist
+	
+	2965.1.1 = { birth = "2965.1.1" }
+}
+1105804 = {
+	# Fleet Admiral, Mutka Duniya Peacekeepers
+	name = "Naveen"
+	dynasty = 5804 # Reddy
+	female = no
+	
+	culture = indo_mukta
+	religion = colonial_separatist
+	
+	trait = brilliant_strategist
+	trait = pragmatic
+	trait = brave
+	trait = confident
+	trait = fighter_pilot
+	
+	2957.1.1 = { birth = "2957.1.1" }
+}
+1106092 = {
+	# Commander, Ebadi
+	name = "Karthik"
+	dynasty = 6092 # Swamy
+	female = no
+	
+	culture = indo_mukta
+	religion = colonial_separatist
+	
+	trait = skilled_tactician
+	trait = fighter_pilot
+	trait = ambitious
+	trait = pragmatic
+	trait = cold
+	trait = brave
+	
+	2966.1.1 = { birth = "2966.1.1" }
+}
+1104396 = {
+	# Governor of Nai Haidarabada
+	name = "Mohit"
+	dynasty = 4396 # Gomez
+	female = no
+	
+	culture = hispanic_mukta
+	religion = colonial_separatist
+	
+	2946.1.1 = { birth = "2946.1.1" }
+}
+1107820 = {
+	# Governor of Yathesta Bhumi
+	name = "Priyanka"
+	dynasty = 7820 # Tabatabei
+	female = yes
+	
+	culture = iranian_mukta
+	religion = colonial_separatist
+	
+	2956.1.1 = { birth = "2956.1.1" }
+}
+1105820 = {
+	# Governor of Vikrama ke Graha, head of the Rizvi Corporation
+	name = "Sandeep"
+	dynasty = 5820 # Rizvi
+	female = no
+	
+	culture = indo_mukta
+	religion = colonial_separatist
+	
+	2964.1.1 = { birth = "2964.1.1" }
+}
+110380 = {
+	# Commander, Antariksa Khanana
+	name = "Sai"
+	dynasty = 380 # Walker
+	female = no
+	
+	culture = anglo_mukta
+	religion = cyberneticist
+	
+	2958.1.1 = { birth = "2958.1.1" }
+}
+1104844 = {
+	# Governor, Saranyu
+	name = "Kavya"
+	dynasty = 4844 # Chavez
+	female = yes
+	
+	culture = hispanic_mukta
+	religion = adoptionist_cultist
+	
+	2951.1.1 = { birth = "2951.1.1" }
+}
+1107468 = {
+	# Administrator, Adhayaranya
+	name = "Bhagirathy"
+	dynasty = 7468 # Nariman
+	female = yes
+	
+	culture = iranian_mukta
+	religion = adoptionist_cultist
+	
+	2954.1.1 = { birth = "2954.1.1" }
+}
+1106108 = {
+	# Newly-installed military dictator of Cauraha
+	name = "Nishi"
+	dynasty = 6108 # Sayyed
+	female = yes
+	
+	culture = indo_mukta
+	religion = adoptionist_cultist
+	
+	trait = brilliant_strategist
+	trait = radical
+	trait = close_minded
+	trait = confident
+	trait = disciplined
+	trait = brave
+	trait = fighter_pilot
+	
+	2972.1.1 = { birth = "2972.1.1" }
+}
+1107116 = {
+	# Governor-General of the Chandrasekhar Sector
+	name = "Kavitha"
+	dynasty = 7116 # Karimi
+	female = yes
+	
+	culture = iranian_mukta
+	religion = colonial_separatist
+	
+	2947.1.1 = { birth = "2947.1.1" }
+}
+1105372 = {
+	# Governor of Ramanujan
+	name = "Palash"
+	dynasty = 5372 # Desai
+	female = no
+	
+	culture = indo_mukta
+	religion = cyberneticist
+	
+	2962.1.1 = { birth = "2962.1.1" }
+}
+11020072 = {
+	# Commander of Sharabhai
+	name = "Shiva"
+	dynasty = 20072 # Khalfani
+	female = no
+	
+	culture = east_afro_mukta
+	religion = terran_federalist
+	
+	trait = skilled_tactician
+	trait = marine_colonel
+	
+	2966.1.1 = { birth = "2966.1.1" }
+}
+1105948 = {
+	# Governor-General of the Ghandi Sector
+	name = "Dhruv"
+	dynasty = 5948 # Shukia
+	female = no
+	
+	culture = indo_mukta
+	religion = terran_federalist
+	
+	trait = bisexual
+	trait = friendly
+	
+	2956.1.1 = { birth = "2956.1.1" }
+}
+1105228 = {
+	# Administrator of Maathai
+	name = "Miti"
+	dynasty = 5228 # Chauhan
+	female = yes
+	
+	culture = indo_mukta
+	religion = terran_federalist
+	
+	2963.1.1 = { birth = "2963.1.1" }
+}
+11014236 = {
+	# Administrator of Kanade
+	name = "Gokul"
+	dynasty = 14236 # Ogunleye
+	female = no
+	
+	culture = west_afro_mukta
+	religion = terran_federalist
+	
+	2960.1.1 = { birth = "2960.1.1" }
+}
+1104332 = {
+	# Administrator of Batra
+	name = "Deepak"
+	dynasty = 4332 # Ramirez
+	female = no
+	
+	culture = hispanic_mukta
+	religion = terran_federalist
+	
+	trait = confident
+	trait = ambitious
+	
+	2972.1.1 = { birth = "2972.1.1" }
+}
+1105996 = {
+	# "Governor-General" of New Jerusalem, Head of Singhal Corporation
+	name = "Ananya"
+	dynasty = 5996 # Singhal
+	female = yes
+	
+	culture = indo_mukta
+	religion = colonial_separatist
+	
+	trait = pragmatic
+	trait = ambitious
+	
+	2957.1.1 = { birth = "2957.1.1" }
+}
+1107692 = {
+	# Fleet Admiral, Sector Darius
+	name = "Zarrindokht"
+	dynasty = 7692 # Salehi
+	female = yes
+	
+	culture = iranian_samawati
+	religion = pilgrim
+	
+	trait = ambitious
+	trait = skilled_tactician
+	trait = warship_captain
+	trait = cold
+	trait = radical
+	
+	2964.1.1 = { birth = "2964.1.1" }
+	2988.1.1 = {
+		add_matrilineal_spouse = 11020073 # Tarek Darweshi
+		effect = { spouse = { add_lover = ROOT } }
+	}
+}
+11020073 = {
+	# Husband of Zarrindokht Salehi
+	name = "Tarek"
+	dynasty = 20073 # Darweshi
+	female = no
+	
+	culture = east_afro_samawati
+	religion = pilgrim
+	
+	2962.1.1 = { birth = "2962.1.1" }
+}
+1117692 = {
+	# First daughter of Zarrindokht Salehi
+	name = "Nazilla"
+	dynasty = 7692 # Salehi
+	female = yes
+	
+	culture = iranian_samwati
+	religion = pilgrim
+	
+	father = 11020073 # Tarek Darweshi
+	mother = 1107692 # Zarrindokht Salehi
+	
+	2990.1.1 = { birth = "2990.1.1" }
+}
+1127692 = {
+	# Second daughter of Zarrindokht Salehi
+	name = "Golshan"
+	dynasty = 7692 # Salehi
+	female = yes
+	
+	culture = iranian_samwati
+	religion = pilgrim
+	
+	father = 11020073 # Tarek Darweshi
+	mother = 1107692 # Zarrindokht Salehi
+	
+	2995.1.1 = { birth = "2995.1.1" }
+}
+1106652 = {
+	# Commander, Star System Cyrus
+	name = "Akbar"
+	dynasty = 6453 # Gilani
+	female = no
+	
+	culture = iranian_samawati
+	religion = pilgrim
+	
+	trait = ambitious
+	trait = brilliant_strategist
+	trait = warship_captain
+	trait = open_minded
+	trait = colonial_separatist
+	trait = friendly
+	
+	2975.1.1 = { birth = "2975.1.1" }
+}
+1103317 = {
+	# Commander, Star System Salah al-Din
+	name = "Farida"
+	dynasty = 3317 # Suaibat
+	female = yes
+	
+	culture = arab_samawati
+	religion = pilgrim
+	
+	2967.1.1 = { birth = "2967.1.1" }
+}
+1106853 = {
+	# Commander, Sa'aa
+	name = "Vali"
+	dynasty = 6853 # Fikri
+	female = no
+	
+	culture = iranian_samawati
+	religion = pilgrim
+	
+	trait = content
+	
+	2947.1.1 = { birth = "2947.1.1" }
+}
+1106981 = {
+	# Commander, Ta'ammul
+	name = "Kurush"
+	dynasty = 6981 # Banu Hashim
+	female = no
+	
+	culture = iranian_samawati
+	religion = pilgrim
+	
+	trait = cold
+	trait = radical
+	trait = ambitious
+	
+	2959.1.1 = { birth = "2959.1.1" }
+}
+1107045 = {
+	# Former administrator of Ta'ammul
+	name = "Yasaman"
+	dynasty = 7045 # Jalili
+	female = yes
+	
+	culture = iranian_samawati
+	religion = pilgrim
+	
+	trait = proud
+	trait = ambitious
+	trait = quick
+	trait = brave
+	trait = close_minded
+	
+	health = 10
+	
+	2949.1.1 = { birth = "2949.1.1" }
+	2989.1.1 = { effect = { c_taammul = { add_strong_claim = ROOT } } }
+}
+1103429 = {
+	# Director of Sector Paraiso
+	name = "Lian"
+	dynasty = 3429 # Manasir
+	female = yes
+	
+	culture = arab_samawati
+	religion = pilgrim
+	
+	2951.1.1 = { birth = "2959.1.1" }
+}
+1104869 = {
+	# Commander of Dawammah al-Lahib
+	name = "Gazel"
+	dynasty = 4869 # Mendoza
+	female = yes
+	
+	culture = hispanic_samawati
+	religion = pilgrim
+	
+	2951.1.1 = { birth = "2959.1.1" }
+	2973.1.1 = {
+		add_matrilineal_spouse = 1102981 # Selim Nsour
+		effect = { spouse = { add_lover = ROOT } }
+	}
+}
+1102981 = {
+	# Husband of Gazel Mendoza
+	name = "Selim"
+	dynasty = 2981 # Nsour
+	female = no
+	
+	culture = arab_samawati
+	religion = pilgrim
+	
+	2953.1.1 = { birth = "2953.1.1" }
+}
+1114869 = {
+	# First child of Gazel Mendoza
+	name = "Yousouf"
+	dynasty = 4869 # Mendoza
+	female = no
+	
+	culture = hispanic_samawati
+	religion = pilgrim
+	
+	father = 1102981 # Selim Nsour
+	mother = 1104869 # Gazel Mendoza
+	
+	2975.1.1 = { birth = "2975.1.1" }
+}
+1124869 = {
+	# Second child of Gazel Mendoza
+	name = "Malak"
+	dynasty = 4869 # Mendoza
+	female = yes
+	
+	culture = hispanic_samawati
+	religion = pilgrim
+	
+	father = 1102981 # Selim Nsour
+	mother = 1104869 # Gazel Mendoza
+	
+	2978.1.1 = { birth = "2978.1.1" }
+}
+1104277 = {
+	# Abbess of Chutti
+	name = "Malika"
+	dynasty = 4277 # Rodriguez
+	female = yes
+	
+	culture = hispanic_samawati
+	religion = adoptionist_cultist
+	
+	2965.1.1 = { birth = "2965.1.1" }
+}
+1101093 = {
+	# Abbess of New Jerusalem
+	name = "Eisha"
+	dynasty = 1093 # Myers
+	female = yes
+	
+	culture = anglo_samawati
+	religion = adoptionist_cultist
+	
+	2955.1.1 = { birth = "2955.1.1" }
+}
+1102917 = {
+	# Abbot of Sulaha
+	name = "Mahmud"
+	dynasty = 2917 # Zubi
+	female = no
+	
+	culture = arab_samawati
+	religion = adoptionist_cultist
+	
+	trait = bisexual
+	
+	2968.1.1 = { birth = "2968.1.1" }
+}
+1104411 = {
+	# Orion military officer in the wrong file because his post is in Paraiso
+	name = "Miguel"
+	dynasty = 4411 # Diaz
+	female = no
+	
+	culture = hispanic_orion
+	religion = colonial_separatist
+	
+	trait = skilled_tactician
+	trait = marine_colonel
+	
+	2953.1.1 = { birth = "2953.1.1" }
+}

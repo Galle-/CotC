@@ -41,7 +41,10 @@ character_event = {
 						is_female = no
 					}
 				}
-				trait = homosexual
+				OR = {
+					trait = homosexual
+					trait = bisexual
+				}
 			}
 		}
 	}
@@ -393,7 +396,10 @@ character_event = {
 							is_female = no
 						}
 					}
-					trait = homosexual
+					OR = {
+						trait = homosexual
+						trait = bisexual
+					}
 				}
 			}
 		}
@@ -1195,12 +1201,18 @@ character_event = {
 					AND = {
 						is_female = yes
 						ROOT = { is_female = yes }
-						trait = homosexual
+						OR = {
+							trait = homosexual
+							trait = bisexual
+						}
 					}
 					AND = {
 						is_female = no
 						ROOT = { is_female = no }
-						trait = homosexual
+						OR = {
+							trait = homosexual
+							trait = bisexual
+						}
 					}
 				}
 			}
@@ -1252,12 +1264,18 @@ character_event = {
 						AND = {
 							is_female = yes
 							ROOT = { is_female = yes }
-							trait = homosexual
+							OR = {
+								trait = homosexual
+								trait = bisexual
+							}
 						}
 						AND = {
 							is_female = no
 							ROOT = { is_female = no }
-							trait = homosexual
+							OR = {
+								trait = homosexual
+								trait = bisexual
+							}
 						}
 					}
 				}
@@ -3010,14 +3028,19 @@ character_event = {
 	picture = GFX_evt_lovers
 	
 	min_age = 16
-	max_age = 17
 	
-	trigger = { NOT = { has_character_flag = flag_sexual_orientation_set } }
+	trigger = {
+		NOT = { has_character_flag = flag_sexual_orientation_set }
+		NOT = { trait = heterosexual }
+		NOT = { trait = homosexual }
+		NOT = { trait = bisexual }
+		historical = no # Do not do this for historical characters!
+	}
 	
 	option = {
 		trigger = {
 			is_female = yes
-			random = 10
+			random = 25
 		}
 		name = "EVTOPTALOVERS100"
 		set_character_flag = flag_sexual_orientation_set
@@ -3025,7 +3048,7 @@ character_event = {
 	option = {
 		trigger = {
 			is_female = no
-			random = 10
+			random = 25
 		}
 		name = "EVTOPTBLOVERS100"
 		set_character_flag = flag_sexual_orientation_set
@@ -3046,6 +3069,15 @@ character_event = {
 		}
 		name = "EVTOPTALOVERS100"
 		add_trait = homosexual
+		set_character_flag = flag_sexual_orientation_set
+	}
+	option = {
+		trigger = {
+			random = 10
+			NOT = { random = 25 }
+		}
+		name = "EVTOPTCLOVERS100"
+		add_trait = bisexual
 		set_character_flag = flag_sexual_orientation_set
 	}
 }

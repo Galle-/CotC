@@ -1,0 +1,19 @@
+# 151 - Shadow's Rim
+
+# County Title
+title = c_shadows_rim
+
+# Settlements
+max_settlements = 4
+b_shadows_rim_iii = castle
+b_shadows_rim_prime = temple
+b_shadows_rim_ii = city
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = colonial_separatist
+
+# History
+
+2998.1.1 = {
+}

@@ -1,0 +1,22 @@
+# 338 - Ramanujan
+
+# County Title
+title = c_ramanujan
+
+# Settlements
+max_settlements = 4
+
+b_ramanujan_iv = city
+b_ramanujan_iv_b = castle
+b_ramanujan_v = temple
+
+# Misc
+culture = indo_mukta # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

@@ -1,0 +1,15 @@
+# 328 - VN-3110
+# County Title
+title = c_vn_3110
+
+# Settlements
+max_settlements = 3
+
+b_vn_3110_outpost = castle
+
+# Misc
+culture = iranian_tarkan # Initial culture
+religion = space_pirate
+
+1.1.1 = {
+}

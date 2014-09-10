@@ -1,0 +1,19 @@
+# 130 - Abigail
+
+# County Title
+title = c_abigail
+
+# Settlements
+max_settlements = 4
+b_abigail_prime = temple
+b_abigail_ii = city
+b_abigail_iii = castle
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = colonial_separatist
+
+# History
+
+2998.1.1 = {
+}

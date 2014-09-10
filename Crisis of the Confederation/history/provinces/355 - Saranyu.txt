@@ -1,0 +1,22 @@
+# 355 - Saranyu
+
+# County Title
+title = c_saranyu
+
+# Settlements
+max_settlements = 4
+
+b_saranyu_ii = city
+b_saranyu_ii_b = temple
+b_saranyu_orbital_station_alpha = castle
+
+# Misc
+culture = indo_mukta # Initial culture
+religion = adoptionist_cultist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

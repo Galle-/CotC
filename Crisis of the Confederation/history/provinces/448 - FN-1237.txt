@@ -1,0 +1,20 @@
+# 448 - 1237
+
+# County Title
+title = c_fn_1237
+
+# Settlements
+max_settlements = 4
+
+b_fn_1237_station_alpha = castle
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = space_pirate
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

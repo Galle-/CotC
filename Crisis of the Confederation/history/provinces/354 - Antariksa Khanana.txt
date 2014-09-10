@@ -1,0 +1,22 @@
+# 354 - Antariksa Khanana
+
+# County Title
+title = c_antariksa_khanana
+
+# Settlements
+max_settlements = 4
+
+b_antariksa_khanana_iii = castle
+b_antariksa_khanana_iv = city
+b_antariksa_khanana_iv_b = temple
+
+# Misc
+culture = indo_mukta # Initial culture
+religion = cyberneticist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

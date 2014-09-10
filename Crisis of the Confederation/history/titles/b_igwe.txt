@@ -1,0 +1,7 @@
+2998.1.1 = {
+	liege = "k_mukta_duniya"
+	holding_dynasty = 14460
+	law = succ_seniority
+	law = true_cognatic_succession
+	holder = 11014460 # Kali Igwe
+}

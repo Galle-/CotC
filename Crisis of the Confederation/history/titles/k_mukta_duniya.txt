@@ -1,0 +1,7 @@
+2998.1.1 = {
+	liege = "e_terran_confederation"
+	holder = 1106139 # Anika Trivedi
+	law = true_cognatic_succession
+	law = succ_feudal_elective
+	law = centralization_0
+}

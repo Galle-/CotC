@@ -1,0 +1,19 @@
+# 135 - Goldenroad
+
+# County Title
+title = c_goldenroad
+
+# Settlements
+max_settlements = 4
+b_goldenroad_iii = castle
+b_goldenroad_prime = temple
+b_goldenroad_ii = city
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = colonial_separatist
+
+# History
+
+2998.1.1 = {
+}

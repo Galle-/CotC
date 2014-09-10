@@ -5,4 +5,7 @@
 }
 2992.1.1 = { holder = 1208425 } # Yukio Hasegawa
 2997.6.5 = { holder = 11014089 } # Akiko Adeosun
-2997.7.7 = { holder = 1107945 } # Ryusei Sato
+2997.7.7 = {
+	law = succ_gavelkind
+	holder = 1107945 # Ryusei Sato
+} 

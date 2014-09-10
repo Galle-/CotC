@@ -1,0 +1,22 @@
+# 365 - Dawaamah al-Lahib
+
+# County Title
+title = c_dawaamah_al_lahib
+
+# Settlements
+max_settlements = 4
+
+b_dawaamah_al_lahib = castle
+b_dawaamah_al_lahib_b = city
+b_dawaamah_al_lahib_c = temple
+
+# Misc
+culture = arab_samawati # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

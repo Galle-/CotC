@@ -1,0 +1,22 @@
+# 359 - Darius
+
+# County Title
+title = c_darius
+
+# Settlements
+max_settlements = 5
+
+b_darius_iii = castle
+b_darius_iii_b = temple
+b_darius_v_b = city
+
+# Misc
+culture = iranian_samawati # Initial culture
+religion = adoptionist_cultist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

@@ -1,0 +1,27 @@
+# 362 - Sa'aa
+
+# County Title
+title = c_saaa
+
+# Settlements
+max_settlements = 4
+
+b_saaa_iv = temple
+b_saaa_iv_b = castle
+b_saaa_iii = city
+
+# Misc
+culture = arab_samawati # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+}
+
+2979.1.1 = {
+	# Annexed by the Darius Sector
+	capital = b_saaa_iv_b
+}
+
+2998.1.1 = {
+}

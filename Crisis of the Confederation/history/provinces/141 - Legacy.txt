@@ -1,0 +1,19 @@
+# 141 - Legacy
+
+# County Title
+title = c_legacy
+
+# Settlements
+max_settlements = 5
+b_legacy_iii = castle
+b_legacy_prime = temple
+b_legacy_ii = city
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = colonial_separatist
+
+# History
+
+2998.1.1 = {
+}

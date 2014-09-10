@@ -84,10 +84,10 @@
 	employer = 11011583 # Kirill Pozharsky
 	
 	2927.1.1 = { birth = "2927.1.1" }
-	# 2946.1.1 = {
-		# add_spouse_matrilineal = 11010783 # Nikolai Yefimov
-		# effect = { spouse = { add_lover = { character = ROOT } } }
-	# }
+	2946.1.1 = {
+		add_matrilineal_spouse = 11010783 # Nikolai Yefimov
+		effect = { spouse = { add_lover = ROOT } }
+	}
 }
 
 11010783 = {

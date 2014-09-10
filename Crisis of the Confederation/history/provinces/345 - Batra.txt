@@ -1,0 +1,21 @@
+# 345 - Batra
+
+# County Title
+title = c_batra
+
+# Settlements
+max_settlements = 4
+
+b_batra_iii = temple
+b_batra_iv = city
+
+# Misc
+culture = indo_mukta # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

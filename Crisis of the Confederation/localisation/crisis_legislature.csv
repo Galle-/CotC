@@ -1,4 +1,6 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+var_senate_majority;Senators Required For Majority Vote;;;;;;;;;;;;;x
+var_senate_majority_liege;Senators Required For Majority Vote;;;;;;;;;;;;;x
 faction_anti_centralization_short;Anti-Centralization;;;;;;;;;;;;;x
 faction_anti_centralization_title;Anti-Centralization in [This.GetName];;;;;;;;;;;;;x
 faction_anti_centralization_desc;This faction opposes the centralization of the [This.GetAdjective] government and wishes to grant greater autonomy to local governments.;;;;;;;;;;;;;x
@@ -8,9 +10,24 @@ faction_pro_centralization_desc;This faction supports the centralization of the 
 faction_democratic_legislature_short;Parliamentarian;;;;;;;;;;;;;x
 faction_democratic_legislature_title;Democratic Senate for [This.GetName];;;;;;;;;;;;;x
 faction_democratic_legislature_desc;This faction opposes the current power of dictatorship that [This.Holder.GetFullName] holds over the [This.GetFullName], and wishes to found a democratic legislature by which any future laws must be approved.;;;;;;;;;;;;;x
-faction_devolve_local_government_short;Devolve Local Government;;;;;;;;;;;;;x
+faction_devolve_local_government_short;Home Rule;;;;;;;;;;;;;x
 faction_devolve_local_government_title;Devolve [This.GetName] to [New.GetFullName];;;;;;;;;;;;;x
 faction_devolve_local_government_desc;The members of this faction believe that the [This.GetFullName] should be allowed to become a self-governing province of the [This.Holder.PrimaryTitle.GetFullName], and support [New.GetFullName], [New.GetTitle] of [New.PrimaryTitle.GetName], as its first leader.;;;;;;;;;;;;;x
+faction_independence_short;Independence;;;;;;;;;;;;;x
+faction_independence_title;Independence From the [This.Liege.PrimaryTitle.GetFullName];;;;;;;;;;;;;x
+faction_independence_desc;The members of this faction are no longer content with [This.Liege.GetFullName]'s administration or with [This.Liege.PrimaryTitle.GetAdjective] rule in general. They wish to declare independence and become their own sovereign states.;;;;;;;;;;;;;x
+faction_anti_war_short;Anti-War;;;;;;;;;;;;;x
+faction_anti_war_title;Anti-War;;;;;;;;;;;;;x
+faction_anti_war_desc;The members of this faction believe that the [This.Liege.PrimaryTitle.GetFullName] needs peace. Some are dedicated pacifists, while others simply tire of the current wars. In either case, they will not vote for any new declarations of war, and may vote to abandon ongoing offensive wars.;;;;;;;;;;;;;x
+faction_revanchist_short;Revanchist;;;;;;;;;;;;;x
+faction_revanchist_title;[This.Liege.PrimaryTitle.GetAdjective] Revanchism;;;;;;;;;;;;;x
+faction_revanchist_desc;The members of this faction are infuriated by the loss of [This.Liege.PrimaryTitle.GetAdjective] worlds to the enemy in recent years, and are willing to use military force to reclaim them. This faction supports Claim and De Jure wars.;;;;;;;;;;;;;x
+faction_nationalist_short;Nationalist;;;;;;;;;;;;;x
+faction_nationalist_title;[This.Liege.PrimaryTitle.GetAdjective] Nationalism;;;;;;;;;;;;;x
+faction_nationalist_desc;The members of this faction are proud [This.Liege.PrimaryTitle.GetAdjective] patriots who refuse to allow their fellow citizens to suffer under foreign occupation. This faction supports Cultural Liberation wars.;;;;;;;;;;;;;x
+faction_interventionist_short;Intervenionist;;;;;;;;;;;;;x
+faction_interventionist_title;[This.Liege.Religion.GetName] Radicals;;;;;;;;;;;;;x
+faction_secessionist_short;Secessionist;;;;;;;;;;;;;x
 open_decree_menu_decision;Open Decrees Menu;;;;;;;;;;;;;x
 open_decree_menu_decision_desc;Who's [Root.GetTitle], again? This menu opens decisions allowing you to change crown laws without needing to confirm them through a vote - although not always without consequences.;;;;;;;;;;;;;x
 close_decree_menu_decision;Close Decrees Menu;;;;;;;;;;;;;x
@@ -19,5 +36,13 @@ dissolve_legislature_decision;Dissolve the Senate;;;;;;;;;;;;;x
 dissolve_legislature_decision_desc;Order that the Senate dissolve and claim the power to rule by decree. This action will trigger a constitutional crisis.;;;;;;;;;;;;;x
 faction_anti_centralization_bill;Pass Decentralization Act;;;;;;;;;;;;;x
 faction_anti_centralization_bill_desc;You are the leader of the Anti-Centralization faction in the [Root.Liege.PrimaryTitle.GetAdjective] Senate. With a majority in the Senate, and the support of the Prime Minister and Regent should either exist, you could pass a bill weakening the central government and giving more power to outlying sectors.;;;;;;;;;;;;;x
+var_anti_centralization;Senators Against Centralization;;;;;;;;;;;;;x
+faction_pro_centralization_bill;Pass Centralization Act;;;;;;;;;;;;;x
+faction_pro_centralization_bill_desc;You are the leader of the Pro-Centralization faction in the [Root.Liege.PrimaryTitle.GetAdjective] Senate. With a majority in the Senate, and the support of the Prime Minister and Regent should either exist, you could pass a bill strengthening the central government and taking away the privileges of outlying sectors.;;;;;;;;;;;;;x
+var_pro_centralization;Senators For Centralization;;;;;;;;;;;;;x
+faction_devolve_local_government_bill;Pass Home Rule Act;;;;;;;;;;;;;x
+faction_devolve_local_government_bill_desc;You are the leader of a Home Rule faction in the [Root.Liege.PrimaryTitle.GetAdjective] Senate. With a majority in the Senate, and the support of the Prime Minister and Regent should either exist, you could pass a bill granting an autonomous government to your homeland.;;;;;;;;;;;;;x
+var_devolve_local_government;Senators For Home Rule;;;;;;;;;;;;;x
+var_independence;Senators For Secession;;;;;;;;;;;;;x
 EVTDESCLAWS10000;As leader of the Anti-Centralization faction in the [Root.Liege.PrimaryTitle.GetAdjective] Senate, you have carefully crafted a bill that will reform the [Root.Liege.PrimaryTitle.GetFullName], weakening the central government and increasing the autonomy of the outlying sectors. You have enough support to get this bill passed in the Senate.;;;;;;;;;;;;;x
 EVTOPTBLAWS10000;And [Root.Liege.Regent.GetFullName] is already on our side!;;;;;;;;;;;;;x

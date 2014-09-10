@@ -1,34 +1,42 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
-CB_NAME_RELIGIOUS_LIBERATION;Ideological Liberation;;;;;;;;;;;;;x
-religious_liberation_desc;Many followers of the [Root.GetReligion] ideology labor under the corrupt government of the [This.GetFullName]. It is our duty to liberate them.;;;;;;;;;;;;x
-WAR_NAME_RELIGIOUS_LIBERATION;$ORDER$[Actor.Religion.GetName] Liberation of $OTHER_TITLE$;;;;;;;;;;;;;x
+CB_NAME_RELIGIOUS_LIBERATION;Ideological Liberation of the [Title.GetBaseName] Sector;;;;;;;;;;;;;x
+religious_liberation_desc;Many followers of the [Root.GetReligion] ideology labor under a corrupt government in the [Title.GetBaseName] Sector. It is our duty to liberate them.;;;;;;;;;;;;x
+WAR_NAME_RELIGIOUS_LIBERATION;$ORDER$[Actor.Religion.GetName] Liberation of the $OTHER_TITLE$ Sector;;;;;;;;;;;;;x
 political_group;Political;;;;;;;;;;;;;x
-terran_federalist;Terran Federalism;;;;;;;;;;;;;x
-terran_republican;Terran Republicanism;;;;;;;;;;;;;x
-terran_imperial;Terran Imperialism;;;;;;;;;;;;;x
-colonial_separatist;Colonial Separatism;;;;;;;;;;;;;x
-neo_feudal;Neo-Feudalism;;;;;;;;;;;;;x
-astrist;Astrism;;;;;;;;;;;;;x
-neo_socialist;Neo-Socialism;;;;;;;;;;;;;x
+terran_federalist;Terran Federalist;;;;;;;;;;;;;x
+terran_federalist_desc;The Federalist Party was one of the two primary political parties of the Terran Confederation throughout most of its history. Terran Federalists support the ideal of a single, united human state, a democratic federation with its capital on Earth.;;;;;;;;;;;;;x
+terran_republican;Terran Republican;;;;;;;;;;;;;x
+terran_republican_desc;The Republican Party was one of the two primary political parties of the Terran Confederation throughout most of its history. Terran Republicans support the ideal of a highly centralized, democratic, united republic governing all humanity, with its capital on Earth.;;;;;;;;;;;;;x
+terran_imperial;Terran Imperialist;;;;;;;;;;;;;x
+terran_imperial_desc;The disasters of the late 30th century caused many Terrans to lose their faith in democracy. Terran Imperialists seek to unite humanity under the rule of a strong, authoritarian government centered on Earth.;;;;;;;;;;;;;x
+colonial_separatist;Colonial Separatist;;;;;;;;;;;;;x
+colonial_separatist_desc;Colonial Separatists believe that the notion of a single pan-human government is inherently flawed, and that Earth's colonies should be allowed to seek their own futures. They support free and independent democracies.;;;;;;;;;;;;;x
+neo_feudal;Neo-Feudalist;;;;;;;;;;;;;x
+neo_feudal_desc;Neo-Feudalists are a diverse lot. Some believe that the failures of the Confederation have proved that the Enlightenment itself was a mistake. Others simply prefer the romance of feudal titles to stark military ranks. Either way, they support independent and decentralized but autocratic governments.;;;;;;;;;;;;;x
+astrist;Astrist;;;;;;;;;;;;;x
+astrist_desc;The Astrist movement began when the first great wave of space explorers returned to Earth and found themselves unable to integrate with ordinary life. Astrists support the imposition of spacer values - loyalty to your crew, honesty and integrity in your dealings with others, responsibility to your subordinates and absolute and unquestioning obedience to your superiors - over everyday life. They support highly centralized autocratic dictatorships, but possess a distaste for Terrans in particular.;;;;;;;;;;;;;x
+neo_socialist;Neo-Socialist;;;;;;;;;;;;;x
+neo_socialist_desc;When Russia first began settling the Centauri Reach, many Russian communists fled Earth for the one place not yet corrupted by capitalism: space. Neo-socialists the modern heirs to the various socialist and Communist movements of the 20th century. In theory, they support democracy and autonomy, but they are often willing to sacrifice these things in the name of the greater good.;;;;;;;;;;;;;x
 religious_group;Religious;;;;;;;;;;;;;x
-pilgrim;Pilgrimagism;;;;;;;;;;;;;x
+pilgrim;Pilgrim;;;;;;;;;;;;;x
 pilgrim_DESC;While humanity follows many different religions, nearly all of them share one vital commonality - they all originated on Old Earth. Across the galaxy are billions of colonists who find themselves compelled to travel to the holy places on Earth, and over time, an infrastructure has evolved to support them. The largest organization responsible for the transportation of pilgrims is known simply as "the Pilgrimage.";;;;;;;;;;;;;x
-orthodox;Terran Orthodoxy;;;;;;;;;;;;;x
+orthodox;Terran Orthodox;;;;;;;;;;;;;x
 orthodox_DESC;Following the Edict of Reformation, the Pilgrimage transformed from a loose association of clerics into a true, united church. While the actual beliefs of followers of the Church of Holy Terra can very wildly, they all share a common veneration of humanity's homeworld and hold it as sacred.;;;;;;;;;;;;;x
-solar_cultist;Solar Cultism;;;;;;;;;;;;;x
-solarian;Solarianism;;;;;;;;;;;;;x
-xenoterran;Xenoterranism;;;;;;;;;;;;;x
-adoptionist_cultist;Sect Adoptionism;;;;;;;;;;;;;x
-adoptionist;Adoptionism;;;;;;;;;;;;;x
-mother_gaia_cultist;Matriarchy;;;;;;;;;;;;;x
-father_earth_cultist;Patriarchy;;;;;;;;;;;;;x
+solar_cultist;Solar Cultist;;;;;;;;;;;;;x
+solarian;Solarian;;;;;;;;;;;;;x
+xenoterran;Xenoterran;;;;;;;;;;;;;x
+adoptionist_cultist;Sect Adoptionist;;;;;;;;;;;;;x
+adoptionist;Adoptionist;;;;;;;;;;;;;x
+mother_gaia_cultist;Matriarch;;;;;;;;;;;;;x
+father_earth_cultist;Patriarch;;;;;;;;;;;;;x
 transhumanist_group;Transhumanist;;;;;;;;;;;;;x
-cyberneticist;Cyberneticism;;;;;;;;;;;;;x
-machine_cultist;Machine Cultism;;;;;;;;;;;;;x
-hiver;The Hive;;;;;;;;;;;;;x
-bio_directionist;Bio-Directionism;;;;;;;;;;;;;x
+cyberneticist;Cyberneticist;;;;;;;;;;;;;x
+machine_cultist;Machine Cultist;;;;;;;;;;;;;x
+hiver;Hiver;;;;;;;;;;;;;x
+hiver_desc;The Hive is a wonder of modern engineering. By integrating a DNI implant into an ansible wireless network, it is possible to directly join your mind with hundreds of billions of others, allowing you to call instantly upon the sum knowledge of humanity. And when has hearing voices in your head ever been a bad sign?;;;;;;;;;;;;;x
+bio_directionist;Bio-Directionist;;;;;;;;;;;;;x
 outlaw_group;Outlaw;;;;;;;;;;;;;x
-space_pirate;Space Piracy;;;;;;;;;;;;;x
+space_pirate;Space Pirate;;;;;;;;;;;;;x
 PIRATE_ADVENTURE;[Root.GetFullName]'s Pirate Fleet;;;;;;;;;;;;;x
 STAT_PIETY_CREDIBILITY;Credibility;;;;;;;;;;;;;x
 STAT_PIETY_DESC_CREDIBILITY;Political credibility is respected by other followers of your ideology. Like Prestige, it is added to your score on the death of a ruler.;;;;;;;;;;;;;x
@@ -161,4 +169,20 @@ EVTOPTACONVERSION5002;A job well done.;;;;;;;;;;;;;x
 EVTDESCCONVERSION5003;You tried to explain to your friend [From.GetFullName] why [From.GetHerHis] belief in [From.Religion.GetName] was misguided, but [From.GetSheHe] refused to listen to reason.;;;;;;;;;;;;;x
 EVTOPTACONVERSION5003;I suppose we'll have to agree to disagree.;;;;;;;;;;;;;x
 EVTOPTBCONVERSION5003;Then we can no longer be friends.;;;;;;;;;;;;;x
+EVTDESCCONVERSION100;The [This.GetName] System has traditionally been dominated by [This.GetReligion]s, but a series of major political upheavals have changed things, and the bulk of the system's population are now Terran Federalists.;;;;;;;;;;;;;x
+EVTDESCCONVERSION101;The [This.GetName] System has traditionally been dominated by [This.GetReligion]s, but a series of major political upheavals have changed things, and the bulk of the system's population are now Terran Republicans.;;;;;;;;;;;;;x
+EVTDESCCONVERSION102;The [This.GetName] System has traditionally been dominated by [This.GetReligion]s, but a series of major political upheavals have changed things, and the bulk of the system's population are now Terran Imperialists.;;;;;;;;;;;;;x
+EVTDESCCONVERSION103;The [This.GetName] System has traditionally been dominated by [This.GetReligion]s, but a series of major political upheavals have changed things, and the bulk of the system's population are now Colonial Separatists.;;;;;;;;;;;;;x
+EVTDESCCONVERSION104;The [This.GetName] System has traditionally been dominated by [This.GetReligion]s, but a series of major political upheavals have changed things, and the bulk of the system's population are now Neo-Feudalists.;;;;;;;;;;;;;x
+EVTDESCCONVERSION105;The [This.GetName] System has traditionally been dominated by [This.GetReligion]s, but a series of major political upheavals have changed things, and the bulk of the system's population are now Neo-Socialists.;;;;;;;;;;;;;x
+EVTDESCCONVERSION106;The [This.GetName] System has traditionally been dominated by [This.GetReligion]s, but a series of major political upheavals have changed things, and the bulk of the system's population are now Astrists.;;;;;;;;;;;;;x
+EVTDESCCONVERSION107;The [This.GetName] System has traditionally been dominated by [This.GetReligion]s, but recent transhumanist wave movement has changed things, and the bulk of the system's population are now Cyberneticists.;;;;;;;;;;;;;x
+EVTDESCCONVERSION108;The [This.GetName] System has traditionally been dominated by [This.GetReligion]s, but recent transhumanist wave movement has changed things, and the bulk of the system's population are now Hivers. By choice, no less.;;;;;;;;;;;;;x
+EVTDESCCONVERSION109;The [This.GetName] System has traditionally been dominated by [This.GetReligion]s, but a peculiar mixture of religious and transhumanist sentiments has changed things, and the bulk of the system's population are now Machine Cultists.;;;;;;;;;;;;;x
+EVTDESCCONVERSION110;The [This.GetName] System has traditionally been dominated by [This.GetReligion]s, but recent transhumanist wave movement has changed things, and the bulk of the system's population are now Bio-Directionists.;;;;;;;;;;;;;x
+EVTDESCCONVERSION111;The [This.GetName] System has traditionally been dominated by [This.GetReligion]s, but a recent spiritual awakening has changed things, and the bulk of the system's population are now devout Terran Orthodox.;;;;;;;;;;;;;x
+EVTDESCCONVERSION112;The [This.GetName] System has traditionally been dominated by [This.GetReligion]s, but a recent spiritual awakening has changed things, and the bulk of the system's population are now devout Pilgrims.;;;;;;;;;;;;;x
+EVTDESCCONVERSION113;The [This.GetName] System has traditionally been dominated by [This.GetReligion]s, but a recent spiritual awakening has changed things, and the bulk of the system's population are now devout Sect Adoptionists.;;;;;;;;;;;;;x
+EVTDESCCONVERSION114;The [This.GetName] System has traditionally been dominated by [This.GetReligion]s, but a recent spiritual awakening has changed things, and the bulk of the system's population are now devout Adoptionists.;;;;;;;;;;;;;x
+EVTDESCCONVERSION114;The [This.GetName] System has traditionally been dominated by [This.GetReligion]s, but a recent spiritual awakening has changed things, and the bulk of the system's population are now devout Xenoterrans.;;;;;;;;;;;;;x
 EVTDESCCONVERSION10001;Your [GetFromRelation], [From.GetFullName], has fled [Root.Location.GetName] to become a space pirate in the [From.Liege.PrimaryTitle.GetFullName]!;;;;;;;;;;;;;x

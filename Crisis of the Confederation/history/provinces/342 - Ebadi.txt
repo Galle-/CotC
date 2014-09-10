@@ -1,0 +1,23 @@
+# 342 - Ebadi
+
+# County Title
+title = c_ebadi
+
+# Settlements
+max_settlements = 5
+
+b_ebadi_prime_b = temple
+b_ebadi_prime = city
+
+# Misc
+culture = indo_mukta # Initial culture
+religion = terran_federalist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+	b_ebadi_waystation = castle
+	capital = b_ebadi_waystation
+}

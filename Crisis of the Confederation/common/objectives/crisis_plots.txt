@@ -292,6 +292,7 @@ plot_coup = {
 	}
 	abort = {
 		OR = {
+			is_primary_holder_title_tier = no
 			NOT = { holder_scope = { always = yes } }
 			AND = {
 				holder_scope = { trait = hiver_implant }
@@ -360,6 +361,7 @@ plot_justified_coup = {
 		}
 		holder_scope = { FROM = { liege = { character = PREVPREV } } }
 		higher_tier_than = baron
+		is_primary_holder_title_tier = yes
 		FROM = {
 			OR = {
 				dejure_liege_title = { title = ROOT }
@@ -834,6 +836,7 @@ plot_justified_coup = {
 	}
 	abort = {
 		OR = {
+			is_primary_holder_title_tier = no
 			NOT = { holder_scope = { always = yes } } # Title must actually exist and be held by someone
 			NOT = {
 				holder_scope = {

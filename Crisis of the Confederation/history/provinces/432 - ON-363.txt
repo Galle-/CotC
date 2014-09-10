@@ -1,0 +1,20 @@
+# 432 - ON-363
+
+# County Title
+title = c_on_363
+
+# Settlements
+max_settlements = 4
+
+b_on_363_station_alpha = city
+
+# Misc
+culture = sino_bianjiangese # Initial culture
+religion = space_pirate
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

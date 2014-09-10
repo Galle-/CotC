@@ -1,14 +1,14 @@
-# 116 - Sabashi
+# 117 - Okyoto
 
 # County Title
-title = c_sabashi
+title = c_okyoto
 
 # Settlements
 max_settlements = 4
 
-b_sabashi_iii = city
-b_sabashi_iii_b = castle
-b_sabashi_iii_c = temple
+b_okyoto_iii = city
+b_okyoto_iii_b = castle
+b_okyoto_ii = temple
 
 # Misc
 culture = japanese_tengoku # Initial culture

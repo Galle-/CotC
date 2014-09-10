@@ -1,0 +1,20 @@
+# 376 - Marley
+
+# County Title
+title = c_marley
+
+# Settlements
+max_settlements = 4
+
+b_marley_ii = city
+
+# Misc
+culture = hispanic_mukta # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

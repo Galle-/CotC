@@ -1,0 +1,20 @@
+# 435 - FN-071
+
+# County Title
+title = c_fn_071
+
+# Settlements
+max_settlements = 4
+
+b_fn_071_station_alpha = city
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

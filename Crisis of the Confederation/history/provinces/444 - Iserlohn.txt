@@ -1,0 +1,20 @@
+# 444 - Iserlohn
+
+# County Title
+title = c_iserlohn
+
+# Settlements
+max_settlements = 4
+
+b_iserlohn_fortress = castle
+
+# Misc
+culture = sino_bianjiangese # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

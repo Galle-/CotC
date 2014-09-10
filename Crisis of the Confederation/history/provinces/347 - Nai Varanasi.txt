@@ -1,0 +1,21 @@
+# 347 - Nai Varanasi
+
+# County Title
+title = c_nai_varanasi
+
+# Settlements
+max_settlements = 4
+
+b_nai_varanasi_waystation = castle
+b_nai_varanasi_tradepost = city
+
+# Misc
+culture = indo_mukta # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

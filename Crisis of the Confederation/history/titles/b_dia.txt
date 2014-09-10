@@ -1,0 +1,7 @@
+2998.1.1={
+	holding_dynasty = 4507
+	liege="d_arjona"
+	law = succ_seniority
+	law = true_cognatic_succession
+	holder = 1104507 # Tomas Dia
+}

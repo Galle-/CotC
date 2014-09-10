@@ -1,0 +1,19 @@
+# 136 - Roosevelt
+
+# County Title
+title = c_roosevelt
+
+# Settlements
+max_settlements = 4
+b_roosevelt_ii = city
+b_roosevelt_iii = castle
+b_roosevelt_prime = temple
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = colonial_separatist
+
+# History
+
+2998.1.1 = {
+}

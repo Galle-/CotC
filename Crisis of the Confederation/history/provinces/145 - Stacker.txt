@@ -1,0 +1,19 @@
+# 145 - Stacker
+
+# County Title
+title = c_stacker
+
+# Settlements
+max_settlements = 4
+b_stacker_ii = city
+b_stacker_iii = castle
+b_stacker_prime = temple
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = colonial_separatist
+
+# History
+
+2998.1.1 = {
+}

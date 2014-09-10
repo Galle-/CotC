@@ -1,0 +1,20 @@
+# 392 - HH-1702
+
+# County Title
+title = c_hh_1702
+
+# Settlements
+max_settlements = 4
+
+b_hh_1702_station_alpha = city
+
+# Misc
+culture = indo_mukta # Initial culture
+religion = space_pirate
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

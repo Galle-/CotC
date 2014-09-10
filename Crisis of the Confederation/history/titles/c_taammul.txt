@@ -1,0 +1,12 @@
+2960.1.1 = {
+	liege = "d_paraiso"
+	law = succ_open_elective
+	law = true_cognatic_succession
+	holder = 1107045 # Yasaman Jalil
+}
+2989.1.1 = {
+	liege = "d_darius"
+	law = succ_appointment
+	law = true_cognatic_succession
+	holder = 1106981 # Kurush Banu Hashim
+}

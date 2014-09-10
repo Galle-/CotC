@@ -1,0 +1,19 @@
+# 137 - Douglas
+
+# County Title
+title = c_douglas
+
+# Settlements
+max_settlements = 5
+b_douglas_ii = city
+b_douglas_iii = castle
+b_douglas_prime = temple
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = colonial_separatist
+
+# History
+
+2998.1.1 = {
+}

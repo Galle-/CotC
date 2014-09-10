@@ -1,0 +1,183 @@
+# Char_id's 12000000-
+# Tarkan Loyalists
+12000000 = {
+	# Military Commander of VN-32
+	name = "Jane"
+	dynasty = 20030 # Shepard
+	female = yes
+	
+	culture = anglo_tarkan
+	religion = cyberneticist
+	
+	trait = brilliant_strategist
+	trait = disciplined
+	trait = confident
+	trait = brave
+	trait = ambitious
+	trait = dni
+	
+	2977.1.1 = { birth = "2977.1.1" }
+}
+
+12000001 = {
+	# Civilian Governor of VN-381
+	name = "Ahmad"
+	dynasty = 20031 # Aali
+	female = no
+	
+	culture = indo_tarkan
+	religion = cyberneticist
+	
+	add_trait = charismatic_negotiator
+	add_trait = close_minded
+	add_trait = skeptical
+	add_trait = extraverted
+	add_trait = ambitious
+	
+	2976.1.1 = { birth = "2976.1.1" }
+}
+# Non-pirate Muktas
+12000002 = {
+	# Civilian Governor of VN-732
+	name = "Fakhri"
+	dynasty = 20032 # Darvish
+	female = yes
+	
+	culture = iranian_mukta
+	religion = colonial_separatist
+	
+	add_trait = intricate_webweaver
+	add_trait = open_minded
+	add_trait = ambitious
+	add_trait = proud
+	add_trait = scarred
+	
+	2957.1.1 = { birth = "2957.1.1" }
+}
+
+12000003 = {
+	# Military Commander of VN-128
+	name = "Inderpal"
+	dynasty = 20033 # Bhari
+	female = no
+	
+	culture = indo_mukta
+	religion = colonial_separatist
+	
+	add_trait = misguided_warrior
+	add_trait = proud
+	add_trait = scarred
+	add_trait = friendly
+	add_trait = pragmatic
+	
+	2955.1.1 = { birth = "2955.1.1" }
+}
+
+12000004 = {
+	# Administrator of VN-697
+	name = "Antonio"
+	dynasty = 20034 # Castellano
+	female = no
+	
+	culture = hispanic_mukta
+	religion = colonial_separatist
+	
+	add_trait = scholarly_theologian
+	add_trait = introverted
+	add_trait = humble
+	add_trait = skeptical
+	add_trait = content
+	
+	
+	2971.1.1 = { birth = "2971.1.1" }
+}
+
+# Mukta Pirates
+12000005 = {
+	# Commander of VN-1780
+	name = "Catherine"
+	dynasty = 20035 # Bird
+	female = yes
+	
+	culture = anglo_mukta	
+	religion = space_pirate
+	
+	add_trait = skilled_tactician
+	add_trait = disciplined
+	add_trait = introverted
+	add_trait = cold
+	add_trait = spiritual
+	
+	2954.1.1 = { birth = "2954.1.1" }
+}
+
+12000006 = {
+	# Commander of VN-362
+	name = "Gurjot"
+	dynasty = 20036 # Pansota
+	female = no
+	
+	culture = indo_mukta
+	religion = space_pirate
+	
+	add_trait = tough_soldier
+	add_trait = carefree
+	add_trait = extraverted
+	add_trait = confident
+	add_trait = proud
+	
+	2958.1.1 = { birth = "2958.1.1" }
+}
+
+# Tarkan Pirates
+12000007 = {
+	# Commander of VN-1241 + Petty Pirate King of Outer Veil
+	name = "Bilal"
+	dynasty = 20037 # Hawsawi
+	female = no
+	
+	culture = arab_tarkan
+	religion = space_pirate
+	
+	add_trait = skilled_tactician
+	add_trait = open_minded
+	add_trait = neurotic
+	add_trait = scarred
+	add_trait = craven
+	
+	2964.1.1 = { birth = "2964.1.1" }
+}
+
+12000008 = {
+	# Commander of VN-3110
+	name = "Laleh"
+	dynasty = 20038 # Tehrani
+	female = yes
+	
+	culture = iranian_tarkan
+	religion = space_pirate
+	
+	add_trait = tough_soldier
+	add_trait = introverted
+	add_trait = brave
+	add_trait = radical
+	
+	2951.1.1 = { birth = "2951.1.1" }
+}
+
+12000009 = {
+	# Commander of VN-1571
+	name = "Benazir"
+	dynasty = 20039 # Dibla
+	female = yes
+	
+	culture = indo_tarkan
+	religion = space_pirate
+	
+	add_trait = tough_soldier
+	add_trait = confident
+	add_trait = introverted
+	add_trait = cold
+	
+	2965.1.1 = { birth = "2965.1.1" }
+}

@@ -1,0 +1,203 @@
+namespace = maintenance
+# All of these should be triggered on a yearly pulse, at least for now
+# How many senators are necessary to pass a bill?
+character_event = {
+	id = maintenance.900
+	hide_window = yes
+	is_triggered_only = yes
+	
+	only_rulers = yes
+	trigger = {
+		higher_tier_than = count
+		crownlaw_title = { has_law = legislative_authority_1 }
+	}
+	immediate = {
+		set_variable = { which = "var_senate_majority" value = 0 }
+		any_realm_province = {
+			limit = {
+				owner = {
+					OR = {
+						character = ROOT
+						is_liege_or_above = ROOT
+					}
+				}
+				OR = {
+					empire = { holder_scope = { character = ROOT } }
+					kingdom = { holder_scope = { character = ROOT } }
+					duchy = { holder_scope = { character = ROOT } }
+				}
+			}
+			ROOT = { change_variable = { which = "var_senate_majority" value = 1 } }
+		}
+		divide_variable = { which = "var_senate_majority" value = 2 }
+		change_variable = { which = "var_senate_majority" value = 0.5 }
+		
+		# Calculate the representation of each faction in the Senate
+		character_event = { id = maintenance.1000 }
+		character_event = { id = maintenance.1050 }
+		character_event = { id = maintenance.1100 }
+		character_event = { id = maintenance.1150 }
+		character_event = { id = maintenance.1200 }
+		character_event = { id = maintenance.1250 }
+		character_event = { id = maintenance.1300 }
+		character_event = { id = maintenance.1350 }
+		character_event = { id = maintenance.1400 }
+		character_event = { id = maintenance.1450 }
+	}
+}
+# Wipe senators for the pro-centralization faction
+character_event = {
+	id = maintenance.1000
+	hide_window = yes
+	is_triggered_only = yes
+	only_rulers = yes
+	
+	trigger = {
+		NOT = { any_vassal = { in_faction = faction_pro_centralization } }
+		NOT = { is_variable_equal = { which = "var_pro_centralization" value = -1 } }
+	}
+	
+	immediate = { set_variable = { which = "var_pro_centralization" value = -1 } }
+}
+# Calculate senators for the pro-centralization faction
+character_event = {
+	id = maintenance.1050
+	hide_window = yes
+	is_triggered_only = yes
+	
+	only_rulers = yes
+	
+	trigger = {
+		higher_tier_than = count
+		crownlaw_title = { has_law = legislative_authority_1 }
+		any_vassal = { in_faction = faction_pro_centralization }
+	}
+	
+	immediate = {
+		set_variable = { which = "var_pro_centralization" value = 0 }
+		any_vassal = {
+			limit = { in_faction = faction_pro_centralization }
+			any_realm_province = {
+				limit = {
+					owner = {
+						OR = {
+							character = PREVPREV
+							is_liege_or_above = PREVPREV
+						}
+					}
+					OR = {
+						empire = { holder_scope = { character = ROOT } }
+						kingdom = { holder_scope = { character = ROOT } }
+						duchy = { holder_scope = { character = ROOT } }
+					}
+				}
+				ROOT = { change_variable = { which = "var_pro_centralization" value = 1 } }
+			}
+		}
+		subtract_variable = { which = "var_pro_centralization" which = "var_senate_majority" }
+	}
+}
+# Wipe senators for the anti-centralization faction
+character_event = {
+	id = maintenance.1100
+	hide_window = yes
+	is_triggered_only = yes
+	only_rulers = yes
+	
+	trigger = {
+		NOT = { any_vassal = { in_faction = faction_anti_centralization } }
+		NOT = { is_variable_equal = { which = "var_anti_centralization" value = -1 } }
+	}
+	
+	immediate = { set_variable = { which = "var_anti_centralization" value = -1 } }
+}
+# Calculate senators for the anti-centralization faction
+character_event = {
+	id = maintenance.1150
+	hide_window = yes
+	is_triggered_only = yes
+	
+	only_rulers = yes
+	
+	trigger = {
+		higher_tier_than = count
+		crownlaw_title = { has_law = legislative_authority_1 }
+		any_vassal = { in_faction = faction_anti_centralization }
+	}
+	
+	immediate = {
+		set_variable = { which = "var_anti_centralization" value = 0 }
+		any_vassal = {
+			limit = { in_faction = faction_anti_centralization }
+			any_realm_province = {
+				limit = {
+					owner = {
+						OR = {
+							character = PREVPREV
+							is_liege_or_above = PREVPREV
+						}
+					}
+					OR = {
+						empire = { holder_scope = { character = ROOT } }
+						kingdom = { holder_scope = { character = ROOT } }
+						duchy = { holder_scope = { character = ROOT } }
+					}
+				}
+				ROOT = { change_variable = { which = "var_anti_centralization" value = 1 } }
+			}
+		}
+		subtract_variable = { which = "var_anti_centralization" which = "var_senate_majority" }
+	}
+}
+# Wipe senators for the independence faction
+character_event = {
+	id = maintenance.1400
+	hide_window = yes
+	is_triggered_only = yes
+	only_rulers = yes
+	
+	trigger = {
+		NOT = { any_vassal = { in_faction = faction_independence } }
+		NOT = { is_variable_equal = { which = "var_independence" value = -1 } }
+	}
+	
+	immediate = { set_variable = { which = "var_independence" value = -1 } }
+}
+# Calculate senators for the independence faction
+character_event = {
+	id = maintenance.1450
+	hide_window = yes
+	is_triggered_only = yes
+	
+	only_rulers = yes
+	
+	trigger = {
+		higher_tier_than = count
+		crownlaw_title = { has_law = legislative_authority_1 }
+		any_vassal = { in_faction = faction_independence }
+	}
+	
+	immediate = {
+		set_variable = { which = "var_independence" value = 0 }
+		any_vassal = {
+			limit = { in_faction = faction_independence }
+			any_realm_province = {
+				limit = {
+					owner = {
+						OR = {
+							character = PREVPREV
+							is_liege_or_above = PREVPREV
+						}
+					}
+					OR = {
+						empire = { holder_scope = { character = ROOT } }
+						kingdom = { holder_scope = { character = ROOT } }
+						duchy = { holder_scope = { character = ROOT } }
+					}
+				}
+				ROOT = { change_variable = { which = "var_independence" value = 1 } }
+			}
+		}
+		subtract_variable = { which = "var_independence" which = "var_senate_majority" }
+	}
+}

@@ -1,0 +1,22 @@
+# 357 - Pradana
+
+# County Title
+title = c_pradana
+
+# Settlements
+max_settlements = 4
+
+b_pradana_iii = city
+b_pradana_iii_b = temple
+b_pradana_iv = castle
+
+# Misc
+culture = indo_mukta # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

@@ -1,0 +1,20 @@
+# 438 - Chuí
+
+# County Title
+title = c_chui
+
+# Settlements
+max_settlements = 4
+
+b_chui_station_alpha = city
+
+# Misc
+culture = sino_bianjiangese # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

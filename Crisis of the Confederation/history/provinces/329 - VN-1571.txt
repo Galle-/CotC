@@ -1,0 +1,16 @@
+# 329 - VN-1571
+# County Title
+title = c_vn_1571
+
+# Settlements
+max_settlements = 3
+
+b_vn_1571_outpost = castle
+
+
+# Misc
+culture = indo_tarkan # Initial culture
+religion = space_pirate
+
+1.1.1 = {
+}

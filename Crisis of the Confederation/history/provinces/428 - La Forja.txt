@@ -1,0 +1,20 @@
+# 428 - La Forja
+
+# County Title
+title = c_la_forja
+
+# Settlements
+max_settlements = 6
+
+b_la_forja_abbey = temple
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = xenoterran
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

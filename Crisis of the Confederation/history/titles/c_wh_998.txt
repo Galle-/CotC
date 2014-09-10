@@ -1,6 +1,6 @@
 2998.1.1 = {
 	law = succ_feudal_elective
 	law = local_term_length_4
-	law = absolute_cognatic_succession
+	law = true_cognatic_succession
 	holder = 1105143 # Malcolm Bhosle
 }

@@ -1,0 +1,21 @@
+# 370 - Cedillo
+
+# County Title
+title = c_cedillo
+
+# Settlements
+max_settlements = 4
+
+b_cedillo_prime = city
+b_cedillo_station_alpha = temple
+
+# Misc
+culture = hispanic_mukta # Initial culture
+religion = machine_cultist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

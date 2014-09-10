@@ -489,12 +489,25 @@ kinslayer = {
 	
 	dynasty_opinion = -25
 }
-homosexual = {	
-	fertility = -0.15
-	
-	cost = -10
+homosexual = {
+	opposites = {
+		bisexual
+		heterosexual
+	}
 }
-
+bisexual = {
+	opposites = {
+		homosexual
+		heterosexual
+	}
+}
+# For marking a character as heterosexual in the ruler designer
+heterosexual = {
+	opposites = {
+		homosexual
+		bisexual
+	}
+}
 ################################################
 # LIFESTYLE - Events - only 1 lifestyle (adult)
 ################################################

@@ -485,6 +485,21 @@ spriteTypes = {
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
+	# Incredibly silly choice of placeholders!
+	spriteType = {
+		name = "GFX_trait_bisexual"
+		texturefile = "gfx/traits/homosexual.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_heterosexual"
+		texturefile = "gfx/traits/homosexual.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
 	spriteType = {
 		name = "GFX_trait_inbred"
 		texturefile = "gfx/traits/inbred.tga"

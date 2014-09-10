@@ -1,0 +1,194 @@
+namespace = diplomacy
+
+# Independent ruler applies to join empire
+character_event = {
+	id = diplomacy.100
+	desc = "EVTDESCDIPLOMACY100"
+	picture = GFX_evt_council
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		if = {
+			limit = {
+				OR = {
+					religion = colonial_separatist
+					religion = neo_feudal
+				}
+			}
+			piety = -100
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = terran_imperial
+					religion = pilgrim
+					religion = orthodox
+				}
+			}
+			piety = 100
+		}
+		prestige = -500
+		capital_scope = { empire = { holder_scope = { character_event = { id = diplomacy.101 tooltip = "EVTTOOLTIPDIPLOMACY101" days = 7 random = 3 } } } }
+	}
+	
+	option = {
+		name = "EVTOPTNEVERMIND"
+		clr_character_flag = flag_empire_application
+		ai_chance = { factor = 0 }
+	}
+}
+
+character_event = {
+	id = diplomacy.101
+	desc = "EVTDESCDIPLOMACY101"
+	picture = GFX_evt_council
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACCEPT"
+		FROM = {
+			character_event = { id = diplomacy.102 tooltip = "EVTTOOLTIPDIPLOMACY102" }
+			any_current_enemy = { id = diplomacy.103 tooltip = "EVTTOOLTIPDIPLOMACY103" }
+			set_de_facto_liege = ROOT
+		}
+		prestige = 100
+		ai_chance = {
+			factor = 75
+			# Self-interest
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 2
+				trait = proud
+			}
+			# Ideology
+			modifier = {
+				factor = 4
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = terran_imperial
+					religion = pilgrim
+					religion = orthodox
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					religion = terran_federalist
+					religion = terran_republican
+					religion = terran_imperial
+					religion = pilgrim
+					religion = orthodox
+				}
+				trait = radical
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					religion = colonial_separatist
+					religion = neo_feudal
+				}
+				NOT = { trait = pragmatic }
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					religion = colonial_separatist
+					religion = neo_feudal
+				}
+				trait = radical
+			}
+			# Opinion of applier
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 100 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 90 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 70 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 30 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 10 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -9 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -29 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -69 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -89 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -99 } }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTREFUSE"
+		FROM = { character_event = { id = diplomacy.104 tooltip = "EVTTOOLTIPDIPLOMACY104" } }
+	}
+}

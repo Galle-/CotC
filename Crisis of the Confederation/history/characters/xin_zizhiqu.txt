@@ -588,7 +588,7 @@
 	dynasty = 20025 #Lim
 	female = no
 	
-	culture = sino_terran
+	culture = sino_bianjiangese
 	religion = terran_federalist
 	
 	add_trait = elusive_shadow
@@ -664,4 +664,89 @@
 		father = 90320025 #Hai-Lan Lim
 		2964.8.11 = {birth = "2964.8.11"}
 		
+}
+
+100320026 = {
+		# Fleet Admiral of Wu Ren Zhi Ah and Commander of Anquan Gang
+		name = "Alyona"
+		dynasty = 20063 #Baranovsky
+		female = yes
+		
+		culture = russo_bianjiangese
+		religion = colonial_separatist
+		
+		add_trait = brilliant_strategist
+		add_trait = disciplined
+		add_trait = brave
+		add_trait = open_minded
+		add_trait = ambitious
+		2964.1.1 = {birth = "2964.1.1"}
+}
+
+100320027 = {
+		# Commander of Chen Pingyuan
+		name = "Li"
+		dynasty = 20064 #Yu
+		female = yes
+		
+		culture = sino_bianjiangese
+		religion = colonial_separatist
+		
+		add_trait = tough_soldier
+		add_trait = disciplined
+		add_trait = brave
+		add_trait = spiritual
+		add_trait = humble
+		2969.1.1 = {birth = "2969.1.1"}
+}
+
+100320028 = {
+		# Commander of Yonghengde Anbian
+		name = "Alejandra"
+		dynasty = 20065 #Cabrera
+		female = yes
+		
+		culture = hispanic_bianjiangese
+		religion = colonial_separatist
+		
+		add_trait = skilled_tactician
+		add_trait = disciplined
+		add_trait = brave
+		add_trait = spiritual
+		add_trait = ambitious
+		2972.1.1 = {birth = "2972.1.1"}
+}
+
+100320029 = {
+		# Governor of Da Dianhai
+		name = "Valentin"
+		dynasty = 20066 #Dorofeyev
+		female = no
+		
+		culture = russo_bianjiangese
+		religion = colonial_separatist
+		
+		add_trait = charismatic_negotiator
+		add_trait = friendly
+		add_trait = open_minded
+		add_trait = introverted
+		add_trait = ambitious
+		2975.1.1 = {birth = "2975.1.1"}
+}
+
+100320030 = {
+		# Governor of Jiu Wangguan
+		name = "Jie"
+		dynasty = 20067 #Feng
+		female = no
+		
+		culture = sino_bianjiangese
+		religion = colonial_separatist
+		
+		add_trait = brilliant_strategist
+		add_trait = pragmatic
+		add_trait = open_minded
+		add_trait = scarred
+		add_trait = ambitious
+		2965.1.1 = {birth = "2965.1.1"}
 }

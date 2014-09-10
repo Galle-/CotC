@@ -1,0 +1,19 @@
+# 139 - Overlook
+
+# County Title
+title = c_overlook
+
+# Settlements
+max_settlements = 4
+b_overlook_ii = city
+b_overlook_iii = castle
+b_overlook_prime = temple
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = colonial_separatist
+
+# History
+
+2998.1.1 = {
+}

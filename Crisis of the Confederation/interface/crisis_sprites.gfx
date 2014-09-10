@@ -1,17 +1,5 @@
 # New CotC Sprites
 spriteTypes = {
-	spriteType = {
-		name = "GFX_merchant_male_clothes_behind"
-		texturefile = "gfx\\characters\\merchant_male\\CotCMaleSuit_Test_01.dds"
-		noOfFrames = 1
-		norefcount = yes
-	}
-	spriteType = {
-		name = "GFX_merchant_male_clothes"
-		texturefile = "gfx\\characters\\merchant_male\\CotCMaleSuit_Test_01.dds"
-		noOfFrames = 1
-		norefcount = yes
-	}
 	### UNIVERSAL ###
 	spriteType = {
 		name = "GFX_character_implants"
@@ -416,6 +404,166 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_jion_female_headgear_mid"
 		texturefile = "gfx\\characters\\jion_female_headgear_mid.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	### CENTAURI MALE ###
+	spriteType = {
+		name = "GFX_centauri_male_clothes_behind"
+		texturefile = "gfx\\characters\\centauri_male_clothes_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_centauri_male_clothes"
+		texturefile = "gfx\\characters\\centauri_male_clothes.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_centauri_male_clothes_infront"
+		texturefile = "gfx\\characters\\centauri_male_clothes_infront.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_centauri_male_headgear_behind"
+		texturefile = "gfx\\characters\\centauri_male_headgear_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_centauri_male_headgear"
+		texturefile = "gfx\\characters\\centauri_male_headgear.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_centauri_male_headgear_mid"
+		texturefile = "gfx\\characters\\centauri_male_headgear_mid.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	
+	### CENTAURI FEMALE ###
+	spriteType = {
+		name = "GFX_centauri_female_clothes_behind"
+		texturefile = "gfx\\characters\\centauri_female_clothes_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_centauri_female_clothes"
+		texturefile = "gfx\\characters\\centauri_female_clothes.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_centauri_female_headgear_behind"
+		texturefile = "gfx\\characters\\centauri_female_headgear_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_centauri_female_headgear"
+		texturefile = "gfx\\characters\\centauri_female_headgear.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_centauri_female_headgear_mid"
+		texturefile = "gfx\\characters\\centauri_female_headgear_mid.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	### ANGANI MALE ###
+	spriteType = {
+		name = "GFX_angani_male_clothes_behind"
+		texturefile = "gfx\\characters\\angani_male_clothes_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_angani_male_clothes"
+		texturefile = "gfx\\characters\\angani_male_clothes.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_angani_male_clothes_infront"
+		texturefile = "gfx\\characters\\angani_male_clothes_infront.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_angani_male_headgear_behind"
+		texturefile = "gfx\\characters\\angani_male_headgear_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_angani_male_headgear"
+		texturefile = "gfx\\characters\\angani_male_headgear.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_angani_male_headgear_mid"
+		texturefile = "gfx\\characters\\angani_male_headgear_mid.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	
+	### ANGANI FEMALE ###
+	spriteType = {
+		name = "GFX_angani_female_clothes_behind"
+		texturefile = "gfx\\characters\\angani_female_clothes_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_angani_female_clothes"
+		texturefile = "gfx\\characters\\angani_female_clothes.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_angani_female_headgear_behind"
+		texturefile = "gfx\\characters\\angani_female_headgear_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_angani_female_headgear"
+		texturefile = "gfx\\characters\\angani_female_headgear.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_angani_female_headgear_mid"
+		texturefile = "gfx\\characters\\angani_female_headgear_mid.dds"
 		noOfFrames = 12
 		norefcount = yes
 		can_be_lowres = yes

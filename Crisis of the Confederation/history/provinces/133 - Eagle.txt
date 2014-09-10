@@ -1,0 +1,19 @@
+# 133 - Eagle
+
+# County Title
+title = c_eagle
+
+# Settlements
+max_settlements = 4
+b_eagle_prime = city
+b_eagle_ii = temple
+b_eagle_iii = castle
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = colonial_separatist
+
+# History
+
+2998.1.1 = {
+}

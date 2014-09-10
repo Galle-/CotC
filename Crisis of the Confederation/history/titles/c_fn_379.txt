@@ -1,0 +1,6 @@
+2998.1.1 = {
+	law = succ_feudal_elective
+	law = true_cognatic_succession
+	liege = "d_hades"
+	holder = 11012682 # Kang Zhou
+}

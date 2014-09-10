@@ -1,0 +1,19 @@
+# 143 - Jefferson
+
+# County Title
+title = c_jefferson
+
+# Settlements
+max_settlements = 5
+b_jefferson_ii = city
+b_jefferson_iii = castle
+b_jefferson_prime = temple
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = colonial_separatist
+
+# History
+
+2998.1.1 = {
+}

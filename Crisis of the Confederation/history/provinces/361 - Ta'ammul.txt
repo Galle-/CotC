@@ -1,0 +1,27 @@
+# 361 - Ta'ammul
+
+# County Title
+title = c_taammul
+
+# Settlements
+max_settlements = 4
+
+b_taammul_iii = temple
+b_taammul_iii_b = castle
+b_taammul_iii_orbital_station_alpha = city
+
+# Misc
+culture = arab_samawati # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+}
+
+2989.1.1 = {
+	# Annexed by the Darius Sector
+	capital = b_taammul_iii_b
+}
+
+2998.1.1 = {
+}

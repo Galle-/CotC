@@ -1,0 +1,22 @@
+# 350 - Vikrama ke Graha
+
+# County Title
+title = c_vikrama_ke_graha
+
+# Settlements
+max_settlements = 4
+
+b_vikrama_vi_b = city
+b_vikrama_vi_c = temple
+b_vikrama_vi_d = castle
+
+# Misc
+culture = indo_mukta # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

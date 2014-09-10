@@ -1,0 +1,8 @@
+2962.1.1 = {
+	liege = "c_nae_bangladesa"
+	holder = 1306139 # Sagnik Trivedi
+	law = true_cognatic_succession
+	law = succ_patrician_elective
+}
+2965.1.1 = { holder = 1206139 } # Devansh Trivedi
+2994.1.1 = { holder = 1106139 } # Anika Trivedi

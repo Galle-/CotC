@@ -1,0 +1,20 @@
+# 377 - HH-464
+
+# County Title
+title = c_hh_464
+
+# Settlements
+max_settlements = 4
+
+b_hh_464_station_alpha = castle
+
+# Misc
+culture = hispanic_mukta # Initial culture
+religion = pilgrim
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

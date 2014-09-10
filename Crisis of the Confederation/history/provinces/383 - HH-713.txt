@@ -1,0 +1,20 @@
+# 383 - HH-713
+
+# County Title
+title = c_hh_713
+
+# Settlements
+max_settlements = 4
+
+b_hh_713_station_alpha = castle
+
+# Misc
+culture = indo_mukta # Initial culture
+religion = space_pirate
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

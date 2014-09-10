@@ -1,0 +1,22 @@
+# 372 - Miltia
+
+# County Title
+title = c_miltia
+
+# Settlements
+max_settlements = 5
+
+b_miltia_prime_c = temple
+b_miltia_prime = city
+b_miltia_prime_b = castle
+
+# Misc
+culture = hispanic_mukta # Initial culture
+religion = machine_cultist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

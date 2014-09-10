@@ -1,0 +1,22 @@
+# 431 - Principito
+
+# County Title
+title = c_principito
+
+# Settlements
+max_settlements = 5
+
+b_principito_iii = city
+b_principito_station_alpha = castle
+b_principito_station_beta = castle
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = space_pirate
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

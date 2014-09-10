@@ -1,0 +1,6 @@
+2989.1.1 = {
+	liege = "d_miltia"
+	holder = 1326139 # Julieta Trivedi
+	law = true_cognatic_succession
+	law = succ_appointment
+}

@@ -1,0 +1,22 @@
+# 349 - Yathesta Bhumi
+
+# County Title
+title = c_yathesta_bhumi
+
+# Settlements
+max_settlements = 4
+
+b_yathesta_bhumi_iii = city
+b_yathesta_bhumi_iv = temple
+b_yathesta_bhumi_iv_b = castle
+
+# Misc
+culture = indo_mukta # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

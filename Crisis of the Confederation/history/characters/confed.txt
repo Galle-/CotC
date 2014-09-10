@@ -328,20 +328,8 @@
 	father = 1104657 # Gabriel Madrigal
 	
 	2965.1.1 = { birth = "2965.1.1" }
-	2987.1.1 = { add_spouse = 11012913 } # Jun Tang
+	2987.1.1 = { add_matrilineal_spouse = 11012913 } # Jun Tang
 	2987.1.1 = { effect = { spouse = { add_lover = ROOT } } }
-	2987.1.1 = {
-		effect = {
-			set_character_flag = no_wedding_event
-			spouse = {
-				set_character_flag = no_wedding_event
-				remove_spouse = spouse
-				add_spouse_matrilineal = ROOT
-				clr_character_flag = no_wedding_event
-			}
-			clr_character_flag = no_wedding_event
-		}
-	}
 }
 
 1204931 = {
@@ -362,20 +350,8 @@
 	mother = 1304931
 	
 	2932.1.1 = { birth = "2932.1.1" }
-	2955.1.1 = { add_spouse = 1104657 } # Gabriel Madrigal
+	2955.1.1 = { add_matrilineal_spouse = 1104657 } # Gabriel Madrigal
 	2955.1.1 = { effect = { spouse = { add_lover = ROOT } } }
-	2955.1.1 = {
-		effect = {
-			set_character_flag = no_wedding_event
-			spouse = {
-				set_character_flag = no_wedding_event
-				remove_spouse = spouse
-				add_spouse_matrilineal = ROOT
-				clr_character_flag = no_wedding_event
-			}
-			clr_character_flag = no_wedding_event
-		}
-	}
 	2997.1.1 = { death = "2997.1.1" }
 }
 
@@ -798,7 +774,6 @@
 	
 	religion = terran_republican
 	culture = west_afro_angani
-	graphical_culture = afroconfederategfx
 	
 	add_trait = grey_eminence
 	add_trait = confident
@@ -814,9 +789,10 @@
 		birth = 2954.1.1
 		effect = { set_dynasty_flag = flag_dynasty_processed }
 	}
-	2980.1.1 = { effect = { add_spouse_matrilineal = 11020006 } } # Iskinder Desta
-	2980.1.1 = { effect = { spouse = { add_lover = ROOT } } }
-
+	2980.1.1 = {
+		add_matrilineal_spouse = 11020006 # Iskinder Desta
+		effect = { spouse = { add_lover = ROOT } }
+	}
 }
 11020006 = {
 	# Afolayan Marshal
@@ -1032,6 +1008,7 @@
 	religion = terran_republican
 	culture = sino_terran
 	
+	add_trait = genius
 	add_trait = brilliant_strategist
 	add_trait = warship_captain
 	add_trait = open_minded
@@ -1173,20 +1150,8 @@
 		birth = "2948.1.1"
 		effect = { set_dynasty_flag = flag_dynasty_processed }
 	}
-	2971.1.1 = { add_spouse = 1103249 } # Yousouf Maqableh
+	2971.1.1 = { add_matrilineal_spouse = 1103249 } # Yousouf Maqableh
 	2971.1.1 = { effect = { spouse = { add_lover = ROOT } } }
-	2971.1.1 = {
-		effect = {
-			set_character_flag = no_wedding_event
-			spouse = {
-				set_character_flag = no_wedding_event
-				remove_spouse = spouse
-				add_spouse_matrilineal = ROOT
-				clr_character_flag = no_wedding_event
-			}
-			clr_character_flag = no_wedding_event
-		}
-	}
 }
 
 1111329 = {
@@ -1235,20 +1200,8 @@
 		birth = "2948.1.1"
 		effect = { set_dynasty_flag = flag_dynasty_processed }
 	}
-	2969.1.1 = { add_spouse = 110833 } # John Reed
+	2969.1.1 = { add_matrilineal_spouse = 110833 } # John Reed
 	2969.1.1 = { effect = { spouse = { add_lover = ROOT } } }
-	2969.1.1 = {
-		effect = {
-			set_character_flag = no_wedding_event
-			spouse = {
-				set_character_flag = no_wedding_event
-				remove_spouse = spouse
-				add_spouse_matrilineal = ROOT
-				clr_character_flag = no_wedding_event
-			}
-			clr_character_flag = no_wedding_event
-		}
-	}
 }
 
 11112897 = {

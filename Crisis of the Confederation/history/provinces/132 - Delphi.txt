@@ -1,0 +1,19 @@
+# 132 - Delphi
+
+# County Title
+title = c_delphi
+
+# Settlements
+max_settlements = 4
+b_delphi_prime = city
+b_delphi_ii = temple
+b_delphi_iii = castle
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = colonial_separatist
+
+# History
+
+2998.1.1 = {
+}

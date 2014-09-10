@@ -140,6 +140,62 @@ russojiongfx = {
 sinojiongfx = {
 	skin_tone = 1
 }
+# Centauri
+afrocentaurigfx = {
+	skin_tone = 3
+}
+americentaurigfx = {
+	skin_tone = 1
+}
+anglocentaurigfx = {
+	skin_tone = 0
+}
+hispaniccentaurigfx = {
+	skin_tone = 1
+}
+indocentaurigfx = {
+	skin_tone = 2
+}
+mideastcentaurigfx = {
+	skin_tone = 2
+}
+persiancentaurigfx = {
+	skin_tone = 0
+}
+russocentaurigfx = {
+	skin_tone = 0
+}
+sinocentaurigfx = {
+	skin_tone = 1
+}
+# Angani
+afroanganigfx = {
+	skin_tone = 3
+}
+amerianganigfx = {
+	skin_tone = 1
+}
+angloanganigfx = {
+	skin_tone = 0
+}
+hispanicanganigfx = {
+	skin_tone = 1
+}
+indoanganigfx = {
+	skin_tone = 2
+}
+mideastanganigfx = {
+	skin_tone = 2
+}
+persiananganigfx = {
+	skin_tone = 0
+}
+russoanganigfx = {
+	skin_tone = 0
+}
+sinoanganigfx = {
+	skin_tone = 1
+}
 # Western
 
 frankishgfx = {

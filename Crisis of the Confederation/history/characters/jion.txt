@@ -76,7 +76,7 @@
 	
 	2970.1.1 = { birth = "2970.1.1" }
 	2989.1.1 = {
-		effect = { add_spouse_matrilineal = 11011449 }
+		add_matrilineal_spouse = 11011449
 		effect = { spouse = { add_lover = ROOT } }
 	}
 	2997.6.24 = { effect = { add_trait = wounded } }
@@ -189,7 +189,7 @@
 	trait = brilliant_strategist
 	trait = fighter_pilot
 	trait = trickster
-	trait = outgoing
+	trait = extraverted
 	trait = cold
 	trait = pragmatic
 	trait = brave

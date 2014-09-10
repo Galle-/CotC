@@ -1,0 +1,22 @@
+# 360 - Salah al-Din
+
+# County Title
+title = c_salah_al_din
+
+# Settlements
+max_settlements = 4
+
+b_salah_al_din_iv = castle
+b_salah_al_din_iv_b = temple
+b_salah_al_din_v = city
+
+# Misc
+culture = arab_samawati # Initial culture
+religion = adoptionist_cultist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

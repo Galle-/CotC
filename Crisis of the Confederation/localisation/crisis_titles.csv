@@ -465,8 +465,8 @@ d_hang_seng;Hang Seng;;;;;;;;;;;;;x
 d_hang_seng_adj;Hang Seng;;;;;;;;;;;;;x
 d_qiangying;Qiangying;;;;;;;;;;;;;x
 d_qiangying_adj;Qiangying;;;;;;;;;;;;;x
-d_wu_ren_zhi_an;Wu Ren Zhi An;;;;;;;;;;;;;x
-d_wu_ren_zhi_an_adj;Wu Ren Zhi An;;;;;;;;;;;;;x
+d_wu_ren_zhi_ah;Wu Ren Zhi Ah;;;;;;;;;;;;;x
+d_wu_ren_zhi_ah_adj;Wu Ren Zhi Ah;;;;;;;;;;;;;x
 d_macau;Macau;;;;;;;;;;;;;x
 d_macau_adj;Macau;;;;;;;;;;;;;x
 d_yingshi;Yingshi;;;;;;;;;;;;;x
@@ -932,3 +932,658 @@ d_zahran_defense_industries;Zahran Defense Industries;;;;;;;;;;;;;x
 d_zahran_defense_industries_adj;Zahran;;;;;;;;;;;;;x
 d_san_miguel_international;San Miguel International;;;;;;;;;;;;;x
 d_san_miguel_international_ADJ;San Miguel;;;;;;;;;;;;;x
+k_veil_nebula;Veil Nebula;;;;;;;;;;;;;x
+k_veil_nebula_adj;Veil;;;;;;;;;;;;;x
+d_veil_nebula_fleet;Veil Defense Force;;;;;;;;;;;;;x
+d_veil_nebula_fleet_adj;Veil Defense;;;;;;;;;;;;;x
+d_outer_veil;Outer Veil;;;;;;;;;;;;;x
+d_outer_veil_adj;Outer Veil;;;;;;;;;;;;;x
+c_vn_32;VN-32;;;;;;;;;;;;;x
+c_vn_32_adj;VN-32;;;;;;;;;;;;;x
+b_vn_32_outpost;VN-32 Prime;;;;;;;;;;;;;x
+b_vn_32_outpost_adj;VN-32 Prime;;;;;;;;;;;;;x
+b_vn_32;VN-32 Alpha;;;;;;;;;;;;;x
+b_vn_32_adj;VN-32 Alpha;;;;;;;;;;;;;x
+b_vn_32_ii;VN-32 Beta;;;;;;;;;;;;;x
+b_vn_32_ii_adj;VN-32 Beta;;;;;;;;;;;;;x
+b_vn_32_iii;VN-32 Delta;;;;;;;;;;;;;x
+b_vn_32_iii_adj;VN-32 Delta;;;;;;;;;;;;;x
+c_vn_381;VN-381;;;;;;;;;;;;;x
+c_vn_381_adj;VN-381;;;;;;;;;;;;;x
+b_vn_381_outpost;VN-381 Prime;;;;;;;;;;;;;x
+b_vn_381_outpost_adj;VN-381 Prime;;;;;;;;;;;;;x
+b_vn_381;VN-381 Alpha;;;;;;;;;;;;;x
+b_vn_381_adj;VN-381 Alpha;;;;;;;;;;;;;x
+b_vn_381_ii;VN-381 Beta;;;;;;;;;;;;;x
+b_vn_381_ii_adj;VN-381 Beta;;;;;;;;;;;;;x
+b_vn_381_iii;VN-381 Delta;;;;;;;;;;;;;x
+b_vn_381_iii_adj;VN-381 Delta;;;;;;;;;;;;;x
+b_vn_381_observatory;VN-381 Observatory;;;;;;;;;;;;;x
+b_vn_381_observatory_adj;VN-381 Observatory;;;;;;;;;;;;;x
+c_vn_1241;VN-1241;;;;;;;;;;;;;x
+c_vn_1241_adj;VN-1241;;;;;;;;;;;;;x
+b_vn_1241_outpost;VN-1241 Prime;;;;;;;;;;;;;x
+b_vn_1241_outpost_adj;VN-1241 Prime;;;;;;;;;;;;;x
+b_vn_1241;VN-1241 Alpha;;;;;;;;;;;;;x
+b_vn_1241_adj;VN-1241 Alpha;;;;;;;;;;;;;x
+b_vn_1241_ii;VN-1241 Beta;;;;;;;;;;;;;x
+b_vn_1241_ii_adj;VN-1241 Beta;;;;;;;;;;;;;x
+b_vn_1241_iii;VN-1241 Delta;;;;;;;;;;;;;x
+b_vn_1241_iii_adj;VN-1241 Delta;;;;;;;;;;;;;x
+b_vn_1241_observatory;VN-1241 Observatory;;;;;;;;;;;;;x
+b_vn_1241_observatory_adj;VN-1241 Observatory;;;;;;;;;;;;;x
+c_vn_362;VN-362;;;;;;;;;;;;;x
+c_vn_362_adj;VN-362;;;;;;;;;;;;;x
+b_vn_362_outpost;VN-362 Prime;;;;;;;;;;;;;x
+b_vn_362_outpost_adj;VN-362 Prime;;;;;;;;;;;;;x
+b_vn_362;VN-362 Alpha;;;;;;;;;;;;;x
+b_vn_362_adj;VN-362 Alpha;;;;;;;;;;;;;x
+b_vn_362_ii;VN-362 Beta;;;;;;;;;;;;;x
+b_vn_362_ii_adj;VN-362 Beta;;;;;;;;;;;;;x
+b_vn_362_iii;VN-362 Delta;;;;;;;;;;;;;x
+b_vn_362_iii_adj;VN-362 Delta;;;;;;;;;;;;;x
+b_vn_362_observatory;VN-362 Observatory;;;;;;;;;;;;;x
+b_vn_362_observatory_adj;VN-362 Observatory;;;;;;;;;;;;;x
+c_vn_128;VN-128;;;;;;;;;;;;;x
+c_vn_128_adj;VN-128;;;;;;;;;;;;;x
+b_vn_128_outpost;VN-128 Prime;;;;;;;;;;;;;x
+b_vn_128_outpost_adj;VN-128 Prime;;;;;;;;;;;;;x
+b_vn_128;VN-128 Alpha;;;;;;;;;;;;;x
+b_vn_128_adj;VN-128 Alpha;;;;;;;;;;;;;x
+b_vn_128_ii;VN-128 Beta;;;;;;;;;;;;;x
+b_vn_128_ii_adj;VN-128 Beta;;;;;;;;;;;;;x
+b_vn_128_iii;VN-128 Delta;;;;;;;;;;;;;x
+b_vn_128_iii_adj;VN-128 Delta;;;;;;;;;;;;;x
+b_vn_128_observatory;VN-128 Observatory;;;;;;;;;;;;;x
+b_vn_128_observatory_adj;VN-128 Observatory;;;;;;;;;;;;;x
+c_vn_697;VN-697;;;;;;;;;;;;;x
+c_vn_697_adj;VN-697;;;;;;;;;;;;;x
+b_vn_697_outpost;VN-697 Prime;;;;;;;;;;;;;x
+b_vn_697_outpost_adj;VN-697 Prime;;;;;;;;;;;;;x
+b_vn_697;VN-697 Alpha;;;;;;;;;;;;;x
+b_vn_697_adj;VN-697 Alpha;;;;;;;;;;;;;x
+b_vn_697_ii;VN-697 Beta;;;;;;;;;;;;;x
+b_vn_697_ii_adj;VN-697 Beta;;;;;;;;;;;;;x
+b_vn_697_iii;VN-697 Delta;;;;;;;;;;;;;x
+b_vn_697_iii_adj;VN-697 Delta;;;;;;;;;;;;;x
+b_vn_697_observatory;VN-697 Observatory;;;;;;;;;;;;;x
+b_vn_697_observatory_adj;VN-697 Observatory;;;;;;;;;;;;;x
+c_vn_732;VN-732;;;;;;;;;;;;;x
+c_vn_732_adj;VN-732;;;;;;;;;;;;;x
+b_vn_732_outpost;VN-732 Prime;;;;;;;;;;;;;x
+b_vn_732_outpost_adj;VN-732 Prime;;;;;;;;;;;;;x
+b_vn_732;VN-732 Alpha;;;;;;;;;;;;;x
+b_vn_732_adj;VN-732 Alpha;;;;;;;;;;;;;x
+b_vn_732_ii;VN-732 Beta;;;;;;;;;;;;;x
+b_vn_732_ii_adj;VN-732 Beta;;;;;;;;;;;;;x
+b_vn_732_iii;VN-732 Delta;;;;;;;;;;;;;x
+b_vn_732_iii_adj;VN-732 Delta;;;;;;;;;;;;;x
+b_vn_732_iv;VN-732 Gamma;;;;;;;;;;;;;x
+b_vn_732_iv_adj;VN-732 Gamma;;;;;;;;;;;;;x
+b_vn_732_observatory;VN-732 Observatory;;;;;;;;;;;;;x
+b_vn_732_observatory_adj;VN-732 Observatory;;;;;;;;;;;;;x
+d_the_remote;The Remote;;;;;;;;;;;;;x
+d_the_remote_adj;Remote;;;;;;;;;;;;;x
+c_vn_1780;VN-1780;;;;;;;;;;;;;x
+c_vn_1780_adj;VN-1780;;;;;;;;;;;;;x
+b_vn_1780_outpost;VN-1780 Prime;;;;;;;;;;;;;x
+b_vn_1780_outpost_adj;VN-1780 Prime;;;;;;;;;;;;;x
+b_vn_1780;VN-1780 Alpha;;;;;;;;;;;;;x
+b_vn_1780_adj;VN-1780 Alpha;;;;;;;;;;;;;x
+b_vn_1780_ii;VN-1780 Beta;;;;;;;;;;;;;x
+b_vn_1780_ii_adj;VN-1780 Beta;;;;;;;;;;;;;x
+b_vn_1780_iii;VN-1780 Delta;;;;;;;;;;;;;x
+b_vn_1780_iii_adj;VN-1780 Delta;;;;;;;;;;;;;x
+b_vn_1780_observatory;VN-1780 Observatory;;;;;;;;;;;;;x
+b_vn_1780_observatory_adj;VN-1780 Observatory;;;;;;;;;;;;;x
+c_vn_3110;VN-3110;;;;;;;;;;;;;x
+c_vn_3110_adj;VN-3110;;;;;;;;;;;;;x
+b_vn_3110_outpost;VN-3110 Prime;;;;;;;;;;;;;x
+b_vn_3110_outpost_adj;VN-3110 Prime;;;;;;;;;;;;;x
+b_vn_3110;VN-3110 Alpha;;;;;;;;;;;;;x
+b_vn_3110_adj;VN-3110 Alpha;;;;;;;;;;;;;x
+b_vn_3110_ii;VN-3110 Beta;;;;;;;;;;;;;x
+b_vn_3110_ii_adj;VN-3110 Beta;;;;;;;;;;;;;x
+b_vn_3110_iii;VN-3110 Delta;;;;;;;;;;;;;x
+b_vn_3110_iii_adj;VN-3110 Delta;;;;;;;;;;;;;x
+b_vn_3110_observatory;VN-3110 Observatory;;;;;;;;;;;;;x
+b_vn_3110_observatory_adj;VN-3110 Observatory;;;;;;;;;;;;;x
+c_vn_1571;VN-1571;;;;;;;;;;;;;x
+c_vn_1571_adj;VN-1571;;;;;;;;;;;;;x
+b_vn_1571_outpost;VN-1571 Prime;;;;;;;;;;;;;x
+b_vn_1571_outpost_adj;VN-1571 Prime;;;;;;;;;;;;;x
+b_vn_1571;VN-1571 Alpha;;;;;;;;;;;;;x
+b_vn_1571_adj;VN-1571 Alpha;;;;;;;;;;;;;x
+b_vn_1571_ii;VN-1571 Beta;;;;;;;;;;;;;x
+b_vn_1571_ii_adj;VN-1571 Beta;;;;;;;;;;;;;x
+b_vn_1571_iii;VN-1571 Delta;;;;;;;;;;;;;x
+b_vn_1571_iii_adj;VN-1571 Delta;;;;;;;;;;;;;x
+b_vn_1571_observatory;VN-1571 Observatory;;;;;;;;;;;;;x
+b_vn_1571_observatory_adj;VN-1571 Observatory;;;;;;;;;;;;;x
+k_new_frontier;New Frontier;;;;;;;;;;;;;x
+k_new_frontier_adj;New Frontier;;;;;;;;;;;;;x
+d_new_frontier_fleet;New Frontier Rangers;;;;;;;;;;;;;x
+d_new_frontier_fleet_adj;New Frontier Ranger;;;;;;;;;;;;;x
+d_franklin;Franklin;;;;;;;;;;;;;x
+d_franklin_adj;Franklin;;;;;;;;;;;;;x
+c_franklin;Franklin;;;;;;;;;;;;;x
+c_franklin_adj;Franklin;;;;;;;;;;;;;x
+c_legacy;Legacy;;;;;;;;;;;;;x
+c_legacy_adj;Legacy;;;;;;;;;;;;;x
+c_touchdown;Touchdown;;;;;;;;;;;;;x
+c_touchdown_adj;Touchdown;;;;;;;;;;;;;x
+d_douglas;Douglas;;;;;;;;;;;;;x
+d_douglas_adj;Douglas;;;;;;;;;;;;;x
+c_douglas;Douglas;;;;;;;;;;;;;x
+c_douglas_adj;Douglas;;;;;;;;;;;;;x
+c_farland;Farland;;;;;;;;;;;;;x
+c_farland_adj;Farland;;;;;;;;;;;;;x
+c_overlook;Overlook;;;;;;;;;;;;;x
+c_overlook_adj;Overlook;;;;;;;;;;;;;x
+d_jefferson;Jefferson;;;;;;;;;;;;;x
+d_jefferson_adj;Jefferson;;;;;;;;;;;;;x
+c_jefferson;Jefferson;;;;;;;;;;;;;x
+c_jefferson_adj;Jefferson;;;;;;;;;;;;;x
+c_miracle;Miracle;;;;;;;;;;;;;x
+c_miracle_adj;Miracle;;;;;;;;;;;;;x
+c_stacker;Stacker;;;;;;;;;;;;;x
+c_stacker_adj;Stacker;;;;;;;;;;;;;x
+c_winterstar;Winterstar;;;;;;;;;;;;;x
+c_winterstar_adj;Winterstar;;;;;;;;;;;;;x
+d_lafayette;Lafayette;;;;;;;;;;;;;x
+d_lafayette_adj;Lafayette;;;;;;;;;;;;;x
+c_lafayette;Lafayette;;;;;;;;;;;;;x
+c_lafayette_adj;Lafayette;;;;;;;;;;;;;x
+c_silhouette;Silhouette;;;;;;;;;;;;;x
+c_silhouette_adj;Silhouette;;;;;;;;;;;;;x
+c_de_gaulle;De Gaulle;;;;;;;;;;;;;x
+c_de_gaulle_adj;De Gaulle;;;;;;;;;;;;;x
+d_washington;Washington;;;;;;;;;;;;;x
+d_washington_adj;Washington;;;;;;;;;;;;;x
+c_washington;Washington;;;;;;;;;;;;;x
+c_washington_adj;Washington;;;;;;;;;;;;;x
+c_delaware;Delaware;;;;;;;;;;;;;x
+c_delaware_adj;Delaware;;;;;;;;;;;;;x
+c_shadows_rim;Shadow's Rim;;;;;;;;;;;;;x
+c_shadows_rim_adj;Shadow's Rim;;;;;;;;;;;;;x
+d_adams;Adams;;;;;;;;;;;;;x
+d_adams_adj;Adams;;;;;;;;;;;;;x
+c_adams;Adams;;;;;;;;;;;;;x
+c_adams_adj;Adams;;;;;;;;;;;;;x
+c_abigail;Abigail;;;;;;;;;;;;;x
+c_abigail_adj;Abigail;;;;;;;;;;;;;x
+c_delphi;Delphi;;;;;;;;;;;;;x
+c_delphi_adj;Delphi;;;;;;;;;;;;;x
+c_eagle;Eagle;;;;;;;;;;;;;x
+c_eagle_adj;Eagle;;;;;;;;;;;;;x
+d_deadwood;Deadwood;;;;;;;;;;;;;x
+d_deadwood_adj;Deadwood;;;;;;;;;;;;;x
+c_deadwood;Deadwood;;;;;;;;;;;;;x
+c_deadwood_adj;Deadwood;;;;;;;;;;;;;x
+c_goldenroad;Goldenroad;;;;;;;;;;;;;x
+c_goldenroad_adj;Goldenroad;;;;;;;;;;;;;x
+c_roosevelt;Roosevelt;;;;;;;;;;;;;x
+c_roosevelt_adj;Roosevelt;;;;;;;;;;;;;x
+b_hawking;Hawking Construction Industries;Industries Hawking;;;;;;;;;;;;x
+b_hawking_adj;Hawking;Weyland;;;;;;;;;;;;x
+b_cameron;Cameron Transportation;Transports Salazar;;;;;;;;;;;;x
+b_cameron_adj;Cameron;Salazar;;;;;;;;;;;;x
+b_davis;Davis Industries;IndustriesNazari ;;;;;;;;;;;;x
+b_davis_adj;Davis;Nazari;;;;;;;;;;;;x
+b_ishikawa;Ishikawa Bioindustry;Kojima Robotique;;;;;;;;;;;;x
+b_ishikawa_adj;Ishikawa;Kojima;;;;;;;;;;;;x
+b_omosun;Omosun Cybernetics;Corporation Afolayan ;;;;;;;;;;;;x
+b_omosun_adj;Omosun;Afolayan;;;;;;;;;;;;x
+k_flame_nebula;Flame Nebula;;;;;;;;;;;;;x
+k_flame_nebula_adj;Flame;;;;;;;;;;;;;x
+d_flame_nebula_fleet;Flame Rangers;;;;;;;;;;;;;x
+d_flame_nebula_fleet_adj;Flame Ranger;;;;;;;;;;;;;x
+d_chui;Chui;;;;;;;;;;;;;x
+d_chui_adj;Chui;;;;;;;;;;;;;x
+c_chui;Chui;;;;;;;;;;;;;x
+c_chui_adj;Chui;;;;;;;;;;;;;x
+c_fn_089;FN-089;;;;;;;;;;;;;x
+c_fn_089_adj;FN-089;;;;;;;;;;;;;x
+b_fn_089_station_alpha;FN-089 Station Alpha;;;;;;;;;;;;;x
+b_fn_089_station_alpha_adj;FN-089 Alphan;;;;;;;;;;;;;x
+b_fn_089_station_beta;FN-089 Station Beta;;;;;;;;;;;;;x
+b_fn_089_station_beta_adj;FN-089 Betan;;;;;;;;;;;;;x
+b_fn_089_station_gamma;FN-089 Station Gamma;;;;;;;;;;;;;x
+b_fn_089_station_gamma_adj;FN-089 Gamman;;;;;;;;;;;;;x
+b_fn_089_station_delta;FN-089 Station Delta;;;;;;;;;;;;;x
+b_fn_089_station_delta_adj;FN-089 Deltan;;;;;;;;;;;;;x
+c_fn_122;FN-122;;;;;;;;;;;;;x
+c_fn_122_adj;FN-122;;;;;;;;;;;;;x
+b_fn_122_station_alpha;FN-122 Station Alpha;;;;;;;;;;;;;x
+b_fn_122_station_alpha_adj;FN-122 Alphan;;;;;;;;;;;;;x
+b_fn_122_station_beta;FN-122 Station Beta;;;;;;;;;;;;;x
+b_fn_122_station_beta_adj;FN-122 Betan;;;;;;;;;;;;;x
+b_fn_122_station_gamma;FN-122 Station Gamma;;;;;;;;;;;;;x
+b_fn_122_station_gamma_adj;FN-122 Gamman;;;;;;;;;;;;;x
+b_fn_122_station_delta;FN-122 Station Delta;;;;;;;;;;;;;x
+b_fn_122_station_delta_adj;FN-122 Deltan;;;;;;;;;;;;;x
+d_diyu;Diyu;;;;;;;;;;;;;x
+d_diyu_adj;Diyu;;;;;;;;;;;;;x
+c_diyu;Diyu;;;;;;;;;;;;;x
+c_diyu_adj;Diyu;;;;;;;;;;;;;x
+c_xiao_mei;Xiao Mei;;;;;;;;;;;;;x
+c_xiao_mei_adj;Xiao Mei;;;;;;;;;;;;;x
+d_iserlohn;Iserlohn;;;;;;;;;;;;;x
+d_iserlohn_adj;Iserlohnian;;;;;;;;;;;;;x
+c_iserlohn;Iserlohn;;;;;;;;;;;;;x
+c_iserlohn_adj;Iserlohnian;;;;;;;;;;;;;x
+c_fn_287;FN-287;;;;;;;;;;;;;x
+c_fn_287_adj;FN-287;;;;;;;;;;;;;x
+b_fn_287_station_alpha;FN-287 Station Alpha;;;;;;;;;;;;;x
+b_fn_287_station_alpha_adj;FN-287 Alphan;;;;;;;;;;;;;x
+b_fn_287_station_beta;FN-287 Station Beta;;;;;;;;;;;;;x
+b_fn_287_station_beta_adj;FN-287 Betan;;;;;;;;;;;;;x
+b_fn_287_station_gamma;FN-287 Station Gamma;;;;;;;;;;;;;x
+b_fn_287_station_gamma_adj;FN-287 Gamman;;;;;;;;;;;;;x
+b_fn_287_station_delta;FN-287 Station Delta;;;;;;;;;;;;;x
+b_fn_287_station_delta_adj;FN-287 Deltan;;;;;;;;;;;;;x
+c_fn_331;FN-331;;;;;;;;;;;;;x
+c_fn_331_adj;FN-331;;;;;;;;;;;;;x
+b_fn_331_station_alpha;FN-331 Station Alpha;;;;;;;;;;;;;x
+b_fn_331_station_alpha_adj;FN-331 Alphan;;;;;;;;;;;;;x
+b_fn_331_station_beta;FN-331 Station Beta;;;;;;;;;;;;;x
+b_fn_331_station_beta_adj;FN-331 Betan;;;;;;;;;;;;;x
+b_fn_331_station_gamma;FN-331 Station Gamma;;;;;;;;;;;;;x
+b_fn_331_station_gamma_adj;FN-331 Gamman;;;;;;;;;;;;;x
+b_fn_331_station_delta;FN-331 Station Delta;;;;;;;;;;;;;x
+b_fn_331_station_delta_adj;FN-331 Deltan;;;;;;;;;;;;;x
+c_fn_379;FN-379;;;;;;;;;;;;;x
+c_fn_379_adj;FN-379;;;;;;;;;;;;;x
+b_fn_379_station_alpha;FN-379 Station Alpha;;;;;;;;;;;;;x
+b_fn_379_station_alpha_adj;FN-379 Alphan;;;;;;;;;;;;;x
+b_fn_379_station_beta;FN-379 Station Beta;;;;;;;;;;;;;x
+b_fn_379_station_beta_adj;FN-379 Betan;;;;;;;;;;;;;x
+b_fn_379_station_gamma;FN-379 Station Gamma;;;;;;;;;;;;;x
+b_fn_379_station_gamma_adj;FN-379 Gamman;;;;;;;;;;;;;x
+b_fn_379_station_delta;FN-379 Station Delta;;;;;;;;;;;;;x
+b_fn_379_station_delta_adj;FN-379 Deltan;;;;;;;;;;;;;x
+d_shihai;Shihai;;;;;;;;;;;;;x
+d_shihai_adj;Shihai;;;;;;;;;;;;;x
+c_shihai;Shihai;;;;;;;;;;;;;x
+c_shihai_adj;Shihai;;;;;;;;;;;;;x
+c_infierno;Infierno;;;;;;;;;;;;;x
+c_infierno_adj;Infiernal;;;;;;;;;;;;;x
+c_fn_071;FN-071;;;;;;;;;;;;;x
+c_fn_071_adj;FN-071;;;;;;;;;;;;;x
+b_fn_071_station_alpha;FN-071 Station Alpha;;;;;;;;;;;;;x
+b_fn_071_station_alpha_adj;FN-071 Alphan;;;;;;;;;;;;;x
+b_fn_071_station_beta;FN-071 Station Beta;;;;;;;;;;;;;x
+b_fn_071_station_beta_adj;FN-071 Betan;;;;;;;;;;;;;x
+b_fn_071_station_gamma;FN-071 Station Gamma;;;;;;;;;;;;;x
+b_fn_071_station_gamma_adj;FN-071 Gamman;;;;;;;;;;;;;x
+b_fn_071_station_delta;FN-071 Station Delta;;;;;;;;;;;;;x
+b_fn_071_station_delta_adj;FN-071 Deltan;;;;;;;;;;;;;x
+d_hades;Hades;;;;;;;;;;;;;x
+d_hades_adj;Hadesian;;;;;;;;;;;;;x
+c_hades;Hades;;;;;;;;;;;;;x
+c_hades_adj;Hadesian;;;;;;;;;;;;;x
+c_fn_664;FN-664;;;;;;;;;;;;;x
+c_fn_664_adj;FN-664;;;;;;;;;;;;;x
+b_fn_664_station_alpha;FN-664 Station Alpha;;;;;;;;;;;;;x
+b_fn_664_station_alpha_adj;FN-664 Alphan;;;;;;;;;;;;;x
+b_fn_664_station_beta;FN-664 Station Beta;;;;;;;;;;;;;x
+b_fn_664_station_beta_adj;FN-664 Betan;;;;;;;;;;;;;x
+b_fn_664_station_gamma;FN-664 Station Gamma;;;;;;;;;;;;;x
+b_fn_664_station_gamma_adj;FN-664 Gamman;;;;;;;;;;;;;x
+b_fn_664_station_delta;FN-664 Station Delta;;;;;;;;;;;;;x
+b_fn_664_station_delta_adj;FN-664 Deltan;;;;;;;;;;;;;x
+c_fn_940;FN-940;;;;;;;;;;;;;x
+c_fn_940_adj;FN-940;;;;;;;;;;;;;x
+b_fn_940_station_alpha;FN-940 Station Alpha;;;;;;;;;;;;;x
+b_fn_940_station_alpha_adj;FN-940 Alphan;;;;;;;;;;;;;x
+b_fn_940_station_beta;FN-940 Station Beta;;;;;;;;;;;;;x
+b_fn_940_station_beta_adj;FN-940 Betan;;;;;;;;;;;;;x
+b_fn_940_station_gamma;FN-940 Station Gamma;;;;;;;;;;;;;x
+b_fn_940_station_gamma_adj;FN-940 Gamman;;;;;;;;;;;;;x
+b_fn_940_station_delta;FN-940 Station Delta;;;;;;;;;;;;;x
+b_fn_940_station_delta_adj;FN-940 Deltan;;;;;;;;;;;;;x
+c_fn_1237;FN-1237;;;;;;;;;;;;;x
+c_fn_1237_adj;FN-1237;;;;;;;;;;;;;x
+b_fn_1237_station_alpha;FN-1237 Station Alpha;;;;;;;;;;;;;x
+b_fn_1237_station_alpha_adj;FN-1237 Alphan;;;;;;;;;;;;;x
+b_fn_1237_station_beta;FN-1237 Station Beta;;;;;;;;;;;;;x
+b_fn_1237_station_beta_adj;FN-1237 Betan;;;;;;;;;;;;;x
+b_fn_1237_station_gamma;FN-1237 Station Gamma;;;;;;;;;;;;;x
+b_fn_1237_station_gamma_adj;FN-1237 Gamman;;;;;;;;;;;;;x
+b_fn_1237_station_delta;FN-1237 Station Delta;;;;;;;;;;;;;x
+b_fn_1237_station_delta_adj;FN-1237 Deltan;;;;;;;;;;;;;x
+k_orion_nebula;Orion Nebula;;;;;;;;;;;;;x
+k_orion_nebula_adj;Orion;;;;;;;;;;;;;x
+d_orion_nebula_fleet;Orion Rangers;;;;;;;;;;;;;x
+d_orion_nebula_fleet_adj;Orion Ranger;;;;;;;;;;;;;x
+d_sortelha;Sortelha;;;;;;;;;;;;;x
+d_sortelha_adj;Sortellan;;;;;;;;;;;;;x
+c_sortelha;Sortelha;;;;;;;;;;;;;x
+c_sortelha_adj;Sortellan;;;;;;;;;;;;;x
+c_on_19;OR-19;;;;;;;;;;;;;x
+c_on_19_adj;OR-19;;;;;;;;;;;;;x
+b_on_19_station_alpha;OR-19 Station Alpha;;;;;;;;;;;;;x
+b_on_19_station_alpha_adj;OR-19 Alphan;;;;;;;;;;;;;x
+b_on_19_station_beta;OR-19 Station Beta;;;;;;;;;;;;;x
+b_on_19_station_beta_adj;OR-19 Betan;;;;;;;;;;;;;x
+b_on_19_station_gamma;OR-19 Station Gamma;;;;;;;;;;;;;x
+b_on_19_station_gamma_adj;OR-19 Gamman;;;;;;;;;;;;;x
+b_on_19_station_delta;OR-19 Station Delta;;;;;;;;;;;;;x
+b_on_19_station_delta_adj;OR-19 Deltan;;;;;;;;;;;;;x
+c_on_47;OR-47;;;;;;;;;;;;;x
+c_on_47_adj;OR-47;;;;;;;;;;;;;x
+b_on_47_station_alpha;OR-47 Station Alpha;;;;;;;;;;;;;x
+b_on_47_station_alpha_adj;OR-47 Alphan;;;;;;;;;;;;;x
+b_on_47_station_beta;OR-47 Station Beta;;;;;;;;;;;;;x
+b_on_47_station_beta_adj;OR-47 Betan;;;;;;;;;;;;;x
+b_on_47_station_gamma;OR-47 Station Gamma;;;;;;;;;;;;;x
+b_on_47_station_gamma_adj;OR-47 Gamman;;;;;;;;;;;;;x
+b_on_47_station_delta;OR-47 Station Delta;;;;;;;;;;;;;x
+b_on_47_station_delta_adj;OR-47 Deltan;;;;;;;;;;;;;x
+d_melilla;Melilla;;;;;;;;;;;;;x
+d_melilla_adj;Melillan;;;;;;;;;;;;;x
+c_melilla;Mellila;;;;;;;;;;;;;x
+c_melilla_adj;Mellilan;;;;;;;;;;;;;x
+c_on_82;OR-82;;;;;;;;;;;;;x
+c_on_82_adj;OR-82;;;;;;;;;;;;;x
+b_on_82_station_alpha;OR-82 Station Alpha;;;;;;;;;;;;;x
+b_on_82_station_alpha_adj;OR-82 Alphan;;;;;;;;;;;;;x
+b_on_82_station_beta;OR-82 Station Beta;;;;;;;;;;;;;x
+b_on_82_station_beta_adj;OR-82 Betan;;;;;;;;;;;;;x
+b_on_82_station_gamma;OR-82 Station Gamma;;;;;;;;;;;;;x
+b_on_82_station_gamma_adj;OR-82 Gamman;;;;;;;;;;;;;x
+b_on_82_station_delta;OR-82 Station Delta;;;;;;;;;;;;;x
+b_on_82_station_delta_adj;OR-82 Deltan;;;;;;;;;;;;;x
+d_mar_del_tyken;Mar del Tyken;;;;;;;;;;;;;x
+d_mar_del_tyken_adj;Tykenian;;;;;;;;;;;;;x
+c_on_567;OR-567;;;;;;;;;;;;;x
+c_on_567_adj;OR-567;;;;;;;;;;;;;x
+b_on_567_station_alpha;OR-567 Station Alpha;;;;;;;;;;;;;x
+b_on_567_station_alpha_adj;OR-567 Alphan;;;;;;;;;;;;;x
+b_on_567_station_beta;OR-567 Station Beta;;;;;;;;;;;;;x
+b_on_567_station_beta_adj;OR-567 Betan;;;;;;;;;;;;;x
+b_on_567_station_gamma;OR-567 Station Gamma;;;;;;;;;;;;;x
+b_on_567_station_gamma_adj;OR-567 Gamman;;;;;;;;;;;;;x
+b_on_567_station_delta;OR-567 Station Delta;;;;;;;;;;;;;x
+b_on_567_station_delta_adj;OR-567 Deltan;;;;;;;;;;;;;x
+c_on_793;OR-793;;;;;;;;;;;;;x
+c_on_793_adj;OR-793;;;;;;;;;;;;;x
+b_on_793_station_alpha;OR-793 Station Alpha;;;;;;;;;;;;;x
+b_on_793_station_alpha_adj;OR-793 Alphan;;;;;;;;;;;;;x
+b_on_793_station_beta;OR-793 Station Beta;;;;;;;;;;;;;x
+b_on_793_station_beta_adj;OR-793 Betan;;;;;;;;;;;;;x
+b_on_793_station_gamma;OR-793 Station Gamma;;;;;;;;;;;;;x
+b_on_793_station_gamma_adj;OR-793 Gamman;;;;;;;;;;;;;x
+b_on_793_station_delta;OR-793 Station Delta;;;;;;;;;;;;;x
+b_on_793_station_delta_adj;OR-793 Deltan;;;;;;;;;;;;;x
+d_la_forja_de_dios;Forja de Dios;;;;;;;;;;;;;x
+d_la_forja_de_dios_adj;La Forja;;;;;;;;;;;;;x
+c_la_forja;La Forja;;;;;;;;;;;;;x
+c_la_forja_adj;La Forja;;;;;;;;;;;;;x
+c_martillo;Martillo;;;;;;;;;;;;;x
+c_martillo_adj;Martillian;;;;;;;;;;;;;x
+c_yunque;Yunque;;;;;;;;;;;;;x
+c_yunque_adj;Yunque;;;;;;;;;;;;;x
+d_principito;Principito;;;;;;;;;;;;;x
+d_principito_adj;Principitian;;;;;;;;;;;;;x
+c_principito;Principito;;;;;;;;;;;;;x
+c_principito_adj;Principitian;;;;;;;;;;;;;x
+c_on_94;OR-94;;;;;;;;;;;;;x
+c_on_94_adj;OR-94;;;;;;;;;;;;;x
+b_on_94_station_alpha;OR-94 Station Alpha;;;;;;;;;;;;;x
+b_on_94_station_alpha_adj;OR-94 Alphan;;;;;;;;;;;;;x
+b_on_94_station_beta;OR-94 Station Beta;;;;;;;;;;;;;x
+b_on_94_station_beta_adj;OR-94 Betan;;;;;;;;;;;;;x
+b_on_94_station_gamma;OR-94 Station Gamma;;;;;;;;;;;;;x
+b_on_94_station_gamma_adj;OR-94 Gamman;;;;;;;;;;;;;x
+b_on_94_station_delta;OR-94 Station Delta;;;;;;;;;;;;;x
+b_on_94_station_delta_adj;OR-94 Deltan;;;;;;;;;;;;;x
+c_on_137;OR-137;;;;;;;;;;;;;x
+c_on_137_adj;OR-137;;;;;;;;;;;;;x
+b_on_137_station_alpha;OR-137 Station Alpha;;;;;;;;;;;;;x
+b_on_137_station_alpha_adj;OR-137 Alphan;;;;;;;;;;;;;x
+b_on_137_station_beta;OR-137 Station Beta;;;;;;;;;;;;;x
+b_on_137_station_beta_adj;OR-137 Betan;;;;;;;;;;;;;x
+b_on_137_station_gamma;OR-137 Station Gamma;;;;;;;;;;;;;x
+b_on_137_station_gamma_adj;OR-137 Gamman;;;;;;;;;;;;;x
+b_on_137_station_delta;OR-137 Station Delta;;;;;;;;;;;;;x
+b_on_137_station_delta_adj;OR-137 Deltan;;;;;;;;;;;;;x
+c_on_363;OR-363;;;;;;;;;;;;;x
+c_on_363_adj;OR-363;;;;;;;;;;;;;x
+b_on_363_station_alpha;OR-363 Station Alpha;;;;;;;;;;;;;x
+b_on_363_station_alpha_adj;OR-363 Alphan;;;;;;;;;;;;;x
+b_on_363_station_beta;OR-363 Station Beta;;;;;;;;;;;;;x
+b_on_363_station_beta_adj;OR-363 Betan;;;;;;;;;;;;;x
+b_on_363_station_gamma;OR-363 Station Gamma;;;;;;;;;;;;;x
+b_on_363_station_gamma_adj;OR-363 Gamman;;;;;;;;;;;;;x
+b_on_363_station_delta;OR-363 Station Delta;;;;;;;;;;;;;x
+b_on_363_station_delta_adj;OR-363 Deltan;;;;;;;;;;;;;x
+c_on_412;OR-412;;;;;;;;;;;;;x
+c_on_412_adj;OR-412;;;;;;;;;;;;;x
+b_on_412_station_alpha;OR-412 Station Alpha;;;;;;;;;;;;;x
+b_on_412_station_alpha_adj;OR-412 Alphan;;;;;;;;;;;;;x
+b_on_412_station_beta;OR-412 Station Beta;;;;;;;;;;;;;x
+b_on_412_station_beta_adj;OR-412 Betan;;;;;;;;;;;;;x
+b_on_412_station_gamma;OR-412 Station Gamma;;;;;;;;;;;;;x
+b_on_412_station_gamma_adj;OR-412 Gamman;;;;;;;;;;;;;x
+b_on_412_station_delta;OR-412 Station Delta;;;;;;;;;;;;;x
+b_on_412_station_delta_adj;OR-412 Deltan;;;;;;;;;;;;;x
+k_horsehead_nebula;Horsehead Nebula;;;;;;;;;;;;;x
+k_horsehead_nebula_adj;Horsehead;;;;;;;;;;;;;x
+d_horsehead_nebula_fleet;Horsehead Rangers;;;;;;;;;;;;;x
+d_horsehead_nebula_fleet_adj;Horsehead Ranger;;;;;;;;;;;;;x
+d_manticore;Manticore;;;;;;;;;;;;;x
+d_manticore_adj;Manticoran;;;;;;;;;;;;;x
+c_manticore;Manticore;;;;;;;;;;;;;x
+c_manticore_adj;Manticoran;;;;;;;;;;;;;x
+b_manticore;Manticore;;;;;;;;;;;;;x
+b_manticore_adj;Manticoran;;;;;;;;;;;;;x
+b_sphinx;Sphinx;;;;;;;;;;;;;x
+b_sphinx_adj;Sphinx;;;;;;;;;;;;;x
+b_gryphon;Gryphon;;;;;;;;;;;;;x
+b_gryphon_adj;Gryphon;;;;;;;;;;;;;x
+c_antevas;Antevas;;;;;;;;;;;;;x
+c_antevas_adj;Antivan;;;;;;;;;;;;;x
+c_san_mateo;San Mateo;;;;;;;;;;;;;x
+c_san_mateo_adj;San Matean;;;;;;;;;;;;;x
+c_hh_72;HH-72;;;;;;;;;;;;;x
+c_hh_72_adj;HH-72;;;;;;;;;;;;;x
+b_hh_72_station_alpha;HH-72 Station Alpha;;;;;;;;;;;;;x
+b_hh_72_station_alpha_adj;HH-72 Alphan;;;;;;;;;;;;;x
+b_hh_72_station_beta;HH-72 Station Beta;;;;;;;;;;;;;x
+b_hh_72_station_beta_adj;HH-72 Betan;;;;;;;;;;;;;x
+b_hh_72_station_gamma;HH-72 Station Gamma;;;;;;;;;;;;;x
+b_hh_72_station_gamma_adj;HH-72 Gamman;;;;;;;;;;;;;x
+b_hh_72_station_delta;HH-72 Station Delta;;;;;;;;;;;;;x
+b_hh_72_station_delta_adj;HH-72 Deltan;;;;;;;;;;;;;x
+c_hh_106;HH-106;;;;;;;;;;;;;x
+c_hh_106_adj;HH-106;;;;;;;;;;;;;x
+b_hh_106_station_alpha;HH-106 Station Alpha;;;;;;;;;;;;;x
+b_hh_106_station_alpha_adj;HH-106 Alphan;;;;;;;;;;;;;x
+b_hh_106_station_beta;HH-106 Station Beta;;;;;;;;;;;;;x
+b_hh_106_station_beta_adj;HH-106 Betan;;;;;;;;;;;;;x
+b_hh_106_station_gamma;HH-106 Station Gamma;;;;;;;;;;;;;x
+b_hh_106_station_gamma_adj;HH-106 Gamman;;;;;;;;;;;;;x
+b_hh_106_station_delta;HH-106 Station Delta;;;;;;;;;;;;;x
+b_hh_106_station_delta_adj;HH-106 Deltan;;;;;;;;;;;;;x
+d_basilisco;Basilisco;;;;;;;;;;;;;x
+d_basilisco_adj;Basiliscan;;;;;;;;;;;;;x
+c_basilisco;Basilisco;;;;;;;;;;;;;x
+c_basilisco_adj;Basiliscan;;;;;;;;;;;;;x
+b_basilisco_fortress;Basilisco Station;;;;;;;;;;;;;x
+b_basilisco_fortress_adj;Basilisco Station;;;;;;;;;;;;;x
+c_hh_871;HH-871;;;;;;;;;;;;;x
+c_hh_871_adj;HH-871;;;;;;;;;;;;;x
+b_hh_871_station_alpha;HH-871 Station Alpha;;;;;;;;;;;;;x
+b_hh_871_station_alpha_adj;HH-871 Alphan;;;;;;;;;;;;;x
+b_hh_871_station_beta;HH-871 Station Beta;;;;;;;;;;;;;x
+b_hh_871_station_beta_adj;HH-871 Betan;;;;;;;;;;;;;x
+b_hh_871_station_gamma;HH-871 Station Gamma;;;;;;;;;;;;;x
+b_hh_871_station_gamma_adj;HH-871 Gamman;;;;;;;;;;;;;x
+b_hh_871_station_delta;HH-871 Station Delta;;;;;;;;;;;;;x
+b_hh_871_station_delta_adj;HH-871 Deltan;;;;;;;;;;;;;x
+d_el_mar_del_crepusculo;Mar del Crepusculo;;;;;;;;;;;;;x
+d_el_mar_del_crepusculo_adj;Crepusculan;;;;;;;;;;;;;x
+d_basilisco_adj;Basiliscan;;;;;;;;;;;;;x
+c_hh_916;HH-916;;;;;;;;;;;;;x
+c_hh_916_adj;HH-916;;;;;;;;;;;;;x
+b_hh_916_station_alpha;HH-916 Station Alpha;;;;;;;;;;;;;x
+b_hh_916_station_alpha_adj;HH-916 Alphan;;;;;;;;;;;;;x
+b_hh_916_station_beta;HH-916 Station Beta;;;;;;;;;;;;;x
+b_hh_916_station_beta_adj;HH-916 Betan;;;;;;;;;;;;;x
+b_hh_916_station_gamma;HH-916 Station Gamma;;;;;;;;;;;;;x
+b_hh_916_station_gamma_adj;HH-916 Gamman;;;;;;;;;;;;;x
+b_hh_916_station_delta;HH-916 Station Delta;;;;;;;;;;;;;x
+b_hh_916_station_delta_adj;HH-916 Deltan;;;;;;;;;;;;;x
+c_hh_917;HH-917;;;;;;;;;;;;;x
+c_hh_917_adj;HH-917;;;;;;;;;;;;;x
+b_hh_917_station_alpha;HH-917 Station Alpha;;;;;;;;;;;;;x
+b_hh_917_station_alpha_adj;HH-917 Alphan;;;;;;;;;;;;;x
+b_hh_917_station_beta;HH-917 Station Beta;;;;;;;;;;;;;x
+b_hh_917_station_beta_adj;HH-917 Betan;;;;;;;;;;;;;x
+b_hh_917_station_gamma;HH-917 Station Gamma;;;;;;;;;;;;;x
+b_hh_917_station_gamma_adj;HH-917 Gamman;;;;;;;;;;;;;x
+b_hh_917_station_delta;HH-917 Station Delta;;;;;;;;;;;;;x
+b_hh_917_station_delta_adj;HH-917 Deltan;;;;;;;;;;;;;x
+c_hh_923;HH-923;;;;;;;;;;;;;x
+c_hh_923_adj;HH-923;;;;;;;;;;;;;x
+b_hh_923_station_alpha;HH-923 Station Alpha;;;;;;;;;;;;;x
+b_hh_923_station_alpha_adj;HH-923 Alphan;;;;;;;;;;;;;x
+b_hh_923_station_beta;HH-923 Station Beta;;;;;;;;;;;;;x
+b_hh_923_station_beta_adj;HH-923 Betan;;;;;;;;;;;;;x
+b_hh_923_station_gamma;HH-923 Station Gamma;;;;;;;;;;;;;x
+b_hh_923_station_gamma_adj;HH-923 Gamman;;;;;;;;;;;;;x
+b_hh_923_station_delta;HH-923 Station Delta;;;;;;;;;;;;;x
+b_hh_923_station_delta_adj;HH-923 Deltan;;;;;;;;;;;;;x
+c_hh_1362;HH-1362;;;;;;;;;;;;;x
+c_hh_1362_adj;HH-1362;;;;;;;;;;;;;x
+b_hh_1362_station_alpha;HH-1362 Station Alpha;;;;;;;;;;;;;x
+b_hh_1362_station_alpha_adj;HH-1362 Alphan;;;;;;;;;;;;;x
+b_hh_1362_station_beta;HH-1362 Station Beta;;;;;;;;;;;;;x
+b_hh_1362_station_beta_adj;HH-1362 Betan;;;;;;;;;;;;;x
+b_hh_1362_station_gamma;HH-1362 Station Gamma;;;;;;;;;;;;;x
+b_hh_1362_station_gamma_adj;HH-1362 Gamman;;;;;;;;;;;;;x
+b_hh_1362_station_delta;HH-1362 Station Delta;;;;;;;;;;;;;x
+b_hh_1362_station_delta_adj;HH-1362 Deltan;;;;;;;;;;;;;x
+c_hh_1702;HH-1702;;;;;;;;;;;;;x
+c_hh_1702_adj;HH-1702;;;;;;;;;;;;;x
+b_hh_1702_station_alpha;HH-1702 Station Alpha;;;;;;;;;;;;;x
+b_hh_1702_station_alpha_adj;HH-1702 Alphan;;;;;;;;;;;;;x
+b_hh_1702_station_beta;HH-1702 Station Beta;;;;;;;;;;;;;x
+b_hh_1702_station_beta_adj;HH-1702 Betan;;;;;;;;;;;;;x
+b_hh_1702_station_gamma;HH-1702 Station Gamma;;;;;;;;;;;;;x
+b_hh_1702_station_gamma_adj;HH-1702 Gamman;;;;;;;;;;;;;x
+b_hh_1702_station_delta;HH-1702 Station Delta;;;;;;;;;;;;;x
+b_hh_1702_station_delta_adj;HH-1702 Deltan;;;;;;;;;;;;;x
+d_el_brilliante_mar;Mar Brilliante;;;;;;;;;;;;;x
+d_el_brilliante_mar_adj;Brilliante;;;;;;;;;;;;;x
+c_hh_388;HH-388;;;;;;;;;;;;;x
+c_hh_388_adj;HH-388;;;;;;;;;;;;;x
+b_hh_388_station_alpha;HH-388 Station Alpha;;;;;;;;;;;;;x
+b_hh_388_station_alpha_adj;HH-388 Alphan;;;;;;;;;;;;;x
+b_hh_388_station_beta;HH-388 Station Beta;;;;;;;;;;;;;x
+b_hh_388_station_beta_adj;HH-388 Betan;;;;;;;;;;;;;x
+b_hh_388_station_gamma;HH-388 Station Gamma;;;;;;;;;;;;;x
+b_hh_388_station_gamma_adj;HH-388 Gamman;;;;;;;;;;;;;x
+b_hh_388_station_delta;HH-388 Station Delta;;;;;;;;;;;;;x
+b_hh_388_station_delta_adj;HH-388 Deltan;;;;;;;;;;;;;x
+c_hh_562;HH-562;;;;;;;;;;;;;x
+c_hh_562_adj;HH-562;;;;;;;;;;;;;x
+b_hh_562_station_alpha;HH-562 Station Alpha;;;;;;;;;;;;;x
+b_hh_562_station_alpha_adj;HH-562 Alphan;;;;;;;;;;;;;x
+b_hh_562_station_beta;HH-562 Station Beta;;;;;;;;;;;;;x
+b_hh_562_station_beta_adj;HH-562 Betan;;;;;;;;;;;;;x
+b_hh_562_station_gamma;HH-562 Station Gamma;;;;;;;;;;;;;x
+b_hh_562_station_gamma_adj;HH-562 Gamman;;;;;;;;;;;;;x
+b_hh_562_station_delta;HH-562 Station Delta;;;;;;;;;;;;;x
+b_hh_562_station_delta_adj;HH-562 Deltan;;;;;;;;;;;;;x
+c_hh_613;HH-613;;;;;;;;;;;;;x
+c_hh_613_adj;HH-613;;;;;;;;;;;;;x
+b_hh_613_station_alpha;HH-613 Station Alpha;;;;;;;;;;;;;x
+b_hh_613_station_alpha_adj;HH-613 Alphan;;;;;;;;;;;;;x
+b_hh_613_station_beta;HH-613 Station Beta;;;;;;;;;;;;;x
+b_hh_613_station_beta_adj;HH-613 Betan;;;;;;;;;;;;;x
+b_hh_613_station_gamma;HH-613 Station Gamma;;;;;;;;;;;;;x
+b_hh_613_station_gamma_adj;HH-613 Gamman;;;;;;;;;;;;;x
+b_hh_613_station_delta;HH-613 Station Delta;;;;;;;;;;;;;x
+b_hh_613_station_delta_adj;HH-613 Deltan;;;;;;;;;;;;;x
+c_hh_713;HH-713;;;;;;;;;;;;;x
+c_hh_713_adj;HH-713;;;;;;;;;;;;;x
+b_hh_713_station_alpha;HH-713 Station Alpha;;;;;;;;;;;;;x
+b_hh_713_station_alpha_adj;HH-713 Alphan;;;;;;;;;;;;;x
+b_hh_713_station_beta;HH-713 Station Beta;;;;;;;;;;;;;x
+b_hh_713_station_beta_adj;HH-713 Betan;;;;;;;;;;;;;x
+b_hh_713_station_gamma;HH-713 Station Gamma;;;;;;;;;;;;;x
+b_hh_713_station_gamma_adj;HH-713 Gamman;;;;;;;;;;;;;x
+b_hh_713_station_delta;HH-713 Station Delta;;;;;;;;;;;;;x
+b_hh_713_station_delta_adj;HH-713 Deltan;;;;;;;;;;;;;x
+d_arjona;Arjona;;;;;;;;;;;;;x
+d_arjona_adj;Arjonan;;;;;;;;;;;;;x
+c_arjona;Arjona;;;;;;;;;;;;;x
+c_arjona_adj;Arjonan;;;;;;;;;;;;;x
+c_marley;Marley;;;;;;;;;;;;;x
+c_marley_adj;Marleyan;;;;;;;;;;;;;x
+c_popper;Popper;;;;;;;;;;;;;x
+c_popper_adj;Popperian;;;;;;;;;;;;;x
+c_hh_464;HH-464;;;;;;;;;;;;;x
+c_hh_464_adj;HH-464;;;;;;;;;;;;;x
+b_hh_464_station_alpha;HH-464 Station Alpha;;;;;;;;;;;;;x
+b_hh_464_station_alpha_adj;HH-464 Alphan;;;;;;;;;;;;;x
+b_hh_464_station_beta;HH-464 Station Beta;;;;;;;;;;;;;x
+b_hh_464_station_beta_adj;HH-464 Betan;;;;;;;;;;;;;x
+b_hh_464_station_gamma;HH-464 Station Gamma;;;;;;;;;;;;;x
+b_hh_464_station_gamma_adj;HH-464 Gamman;;;;;;;;;;;;;x
+b_hh_464_station_delta;HH-464 Station Delta;;;;;;;;;;;;;x
+b_hh_464_station_delta_adj;HH-464 Deltan;;;;;;;;;;;;;x
+d_miltia;Miltia;;;;;;;;;;;;;x
+d_miltia_adj;Miltian;;;;;;;;;;;;;x
+c_miltia;Miltia;;;;;;;;;;;;;x
+c_miltia_adj;Miltian;;;;;;;;;;;;;x
+c_miltian_gate;Miltian Gate;;;;;;;;;;;;;x
+c_miltian_gate_adj;Miltian Gate;;;;;;;;;;;;;x
+c_cedillo;Cedillo;;;;;;;;;;;;;x
+c_cedillo_adj;Cedillian;;;;;;;;;;;;;x
+c_haidel;Haidel;;;;;;;;;;;;;x
+c_haidel_adj;Haidelian;;;;;;;;;;;;;x
+k_mukta_duniya;Mukta Duniya;;;;;;;;;;;;;x
+k_mukta_duniya_adj;Mukta Duniyan;;;;;;;;;;;;;x
+k_mukta_duniya_fleet;Mukta Duniya Peacekeepers;;;;;;;;;;;;;x
+k_mukta_duniya_fleet_adj;Mukta Duniya Military;;;;;;;;;;;;;x
+d_nai_dunya;Nai Dunya;;;;;;;;;;;;;x
+d_nai_dunya_adj;Nai Dunyan;;;;;;;;;;;;;x
+c_nai_dunya;Nai Dunya;;;;;;;;;;;;;x
+c_nai_dunya_adj;Nai Dunyan;;;;;;;;;;;;;x
+c_nai_haidarabada;Nai Haidarabada;;;;;;;;;;;;;x
+c_nai_haidarabada_adj;Nai Haidarabadan;;;;;;;;;;;;;x
+c_nai_varanasi;Nai Varanasi;;;;;;;;;;;;;x
+c_nai_varanasi_adj;Nai Varanasi;;;;;;;;;;;;;x
+c_vikrama_ke_graha;Vikrama ke Graha;;;;;;;;;;;;;x
+c_nai_vikrama_ke_graha_adj;Vikraman;;;;;;;;;;;;;x
+c_yathesta_bhumi;Yathesta Bhumi;;;;;;;;;;;;;x
+c_yathesta_bhumi_adj;Yathestan;;;;;;;;;;;;;x
+d_chandrasekhar;Chandrasekhar;;;;;;;;;;;;;x
+d_chandrasekhar_adj;Chandrasekharan;;;;;;;;;;;;;x
+c_chandrasekhar;Chandrasekhar;;;;;;;;;;;;;x
+c_chandrasekhar_adj;Chandrasekharan;;;;;;;;;;;;;x
+d_darius;Darius;;;;;;;;;;;;;x
+d_darius_adj;Darian;;;;;;;;;;;;;x
+c_darius;Darius;;;;;;;;;;;;;x
+c_darius_adj;Darian;;;;;;;;;;;;;x
+d_nae_bangladesa;Nae Bangladesa;;;;;;;;;;;;;x
+d_nae_bangladesa_adj;Nae Bangladesan;;;;;;;;;;;;;x
+c_nae_bangladesa;Nae Bangladesa;;;;;;;;;;;;;x
+c_nae_bangladesa_adj;Nae Bangladesan;;;;;;;;;;;;;x
+d_ghandi;Ghandi;;;;;;;;;;;;;x
+d_ghandi_adj;Ghandian;;;;;;;;;;;;;x
+c_ghandi;Ghandi;;;;;;;;;;;;;x
+c_ghandi_adj;Ghandian;;;;;;;;;;;;;x
+k_paraiso;Paraiso;;;;;;;;;;;;;x
+k_paraiso_adj;Paraisian;;;;;;;;;;;;;x
+d_paraiso;Paraiso;;;;;;;;;;;;;x
+d_paraiso_adj;Paraisian;;;;;;;;;;;;;x
+c_paraiso;Paraiso;;;;;;;;;;;;;x
+c_paraiso_adj;Paraisian;;;;;;;;;;;;;x
+d_new_jerusalem;New Jerusalem;;;;;;;;;;;;;x
+d_new_jerusalem_adj;New Jerusalemite;;;;;;;;;;;;;x
+c_new_jerusalem;New Jerusalem;;;;;;;;;;;;;x
+c_new_jerusalem_adj;New Jerusalemite;;;;;;;;;;;;;x

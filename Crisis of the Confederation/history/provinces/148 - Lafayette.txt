@@ -1,0 +1,19 @@
+# 148 - Lafayette
+
+# County Title
+title = c_lafayette
+
+# Settlements
+max_settlements = 5
+b_lafayette_ii = city
+b_lafayette_iii = castle
+b_lafayette_prime = temple
+
+# Misc
+culture = anglo_frontiersman # Initial culture
+religion = colonial_separatist
+
+# History
+
+2998.1.1 = {
+}

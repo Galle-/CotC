@@ -1,9 +1,11 @@
-2998.1.1 = {
-	liege = "e_terran_confederation"
+2900.1.1 = {
 	law = centralization_0
 	law = military_vassal_legitimacy_2
 	law = true_cognatic_succession
 	law = legislative_authority_1
 	law = succ_feudal_elective
+}
+2998.1.1 = {
+	liege = "e_terran_confederation"
 	holder = 11010155 # Juan Lebedev
 }

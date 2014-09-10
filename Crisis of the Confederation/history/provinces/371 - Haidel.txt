@@ -1,0 +1,21 @@
+# 371 - Haidel
+
+# County Title
+title = c_haidel
+
+# Settlements
+max_settlements = 4
+
+b_haidel_prime = city
+b_haidel_station_alpha = temple
+
+# Misc
+culture = indo_mukta # Initial culture
+religion = machine_cultist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

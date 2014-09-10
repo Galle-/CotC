@@ -1,6 +1,101 @@
 # Vassal decisions are listed for each courtier and direct vassal. The ruler is in the FROM scope.
 
 vassal_decisions = {
+	# Help the AI use basic UI features
+	vassal_independence_decision = {
+		from_potential = {
+			ai = yes
+			independent = yes
+			war = no
+			has_regent = no
+			NOT = { trait = hiver }
+		}
+		potential = {
+			has_regent = no
+			prisoner = no
+			NOT = { trait = incapable }
+		}
+		allow = {
+			# Democracy prevents it
+			NOT = {
+				FROM = {
+					any_vassal = {
+						faction_power = {
+							faction = faction_pro_centralization
+							power = 1.01
+						}
+					}
+				}
+			}
+			# Reasons why a character would not accept independence
+			NOT = { religion = terran_federalist }
+			NOT = { religion = terran_republican }
+			NOT = { religion = terran_imperialist }
+			NOT = { religion = orthodox }
+			NOT = { religion = astrist }
+			NOT = { trait = craven }
+			NOT = { trait = neurotic }
+			NOT = { trait = content }
+			NOT = { any_demesne_title = { is_tribal_type_title = yes } }
+			NOT = { is_close_relative = ROOT }
+			NOT = { any_heir_title = { holder_scope = { character = ROOT } } }
+			NOT = { any_pretender_title = { holder_scope = { character = ROOT } } }
+			is_patrician = no
+		}
+		effect = {
+			set_defacto_liege = none # Bit of a hack for now
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				FROM = {
+					OR = {
+						trait = pragmatic
+						AND = {
+							NOT = { religion = colonial_separatist }
+							NOT = { religion = xenoterran }
+						}
+					}
+				}
+				OR = {
+					opinion = { who = FROM value = -49 }
+					FROM = { NOT = { trait = craven } }
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					OR = {
+						religion = terran_federalist
+						religion = terran_republican
+						religion = terran_imperialist
+						religion = orthodox
+						religion = astrist
+						trait = ambitious
+						trait = cold
+						trait = proud
+					}
+					NOT = {
+						AND = {
+							trait = radical
+							OR = {
+								religion = colonial_separatist
+								religion = xenoterran
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				primary_title = {
+					NOT = { higher_tier_than = king }
+					kingdom = { holder_scope = { is_vassal_or_below = FROM } }
+				}
+			}
+		}
+	}
 	vassal_castrate_decision = {
 		from_potential = {
 			trait = impaler

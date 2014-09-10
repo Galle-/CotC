@@ -1,0 +1,20 @@
+# 429 - ON-137
+
+# County Title
+title = c_on_137
+
+# Settlements
+max_settlements = 4
+
+b_on_137_station_alpha = city
+
+# Misc
+culture = hispanic_orion # Initial culture
+religion = space_pirate
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

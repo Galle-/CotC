@@ -1,0 +1,22 @@
+# 340 - Chandrasekhar
+
+# County Title
+title = c_chandrasekhar
+
+# Settlements
+max_settlements = 5
+
+b_chandrasekhar_iii = city
+b_chandrasekhar_iv = castle
+b_chandrasekhar_iv_b = temple
+
+# Misc
+culture = indo_mukta # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

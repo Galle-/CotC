@@ -7,12 +7,10 @@ title = c_lasa
 max_settlements = 4
 				 							
 				b_lasa_prime = temple
-				b_lasa_ii = temple
-				b_lasa_iii = city
 				b_lasa_iv = castle
 # Misc
 culture = sino_xingjie # Initial culture
-religion = adoptionist
+religion = adoptionist_cultist
 
 # History
 1.1.1 = {

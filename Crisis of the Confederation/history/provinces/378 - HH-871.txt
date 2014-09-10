@@ -1,0 +1,20 @@
+# 378 - HH-871
+
+# County Title
+title = c_hh_871
+
+# Settlements
+max_settlements = 4
+
+b_hh_871_station_alpha = city
+
+# Misc
+culture = indo_mukta # Initial culture
+religion = colonial_separatist
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+}

@@ -1,0 +1,419 @@
+# Char_id's 12000100-12000121
+# King and Duke Tier
+12000100 = {
+	# President of the New Frontier
+	name = "Mary"
+	dynasty = 20040 # Hawking
+	female = yes
+	
+	culture = anglo_frontiersman
+	religion = colonial_separatist
+	
+	trait = grey_eminence
+	trait = proud
+	trait = extraverted
+	trait = radical
+	trait = content
+	
+	2957.1.1 = { birth = "2957.1.1" }
+}
+
+12000101 = {
+	# Admiral of the New Frontier Rangers
+	name = "James"
+	dynasty = 20041 # Bullock
+	female = no
+	
+	culture = anglo_frontiersman
+	religion = colonial_separatist
+	
+	add_trait = skilled_tactician
+	add_trait = proud
+	add_trait = cold
+	add_trait = skeptical
+	add_trait = pragmatic
+	
+	2936.1.1 = { birth = "2936.1.1" }
+}
+
+12000102 = {
+	# Governor of Sector Washington
+	name = "Christine"
+	dynasty = 20042 # Cameron
+	female = yes
+	
+	culture = anglo_frontiersman
+	religion = colonial_separatist
+	
+	add_trait = underhanded_rogue
+	add_trait = skeptical
+	add_trait = scarred
+	add_trait = extraverted
+	add_trait = pragmatic
+	
+	2967.1.1 = { birth = "2967.1.1" }
+}
+
+12000103 = {
+	# Governor of Sector Adams
+	name = "Sophia"
+	dynasty = 20043 # Davis
+	female = yes
+	
+	culture = anglo_frontiersman
+	religion = colonial_separatist
+	
+	add_trait = intricate_webweaver
+	add_trait = radical
+	add_trait = close_minded
+	add_trait = cold
+	add_trait = ambitious
+	
+	2969.1.1 = { birth = "2969.1.1" }
+}
+
+12000104 = {
+	# Governor of Sector Jefferson
+	name = "Shoutarou"
+	dynasty = 20044 # Ishikawa
+	female = no
+	
+	culture = japanese_frontiersman
+	religion = colonial_separatist
+	
+	add_trait = fortune_builder
+	add_trait = pragmatic
+	add_trait = ambitious
+	add_trait = cold
+	add_trait = spiritual
+	
+	
+	2971.1.1 = { birth = "2971.1.1" }
+}
+
+12000105 = {
+	# Governor of Sector Douglas
+	name = "Louise"
+	dynasty = 20045 # Omosun
+	female = yes
+	
+	culture = west_afro_frontiersman
+	religion = colonial_separatist
+	
+	add_trait = charismatic_negotiator
+	add_trait = close_minded
+	add_trait = content
+	add_trait = radical
+	add_trait = spiritual
+	
+	2954.1.1 = { birth = "2954.1.1" }
+}
+
+12000106 = {
+	# Governor of Sector Deadwood
+	name = "Geoff"
+	dynasty = 20046 # Butler
+	female = no
+	
+	culture = anglo_frontiersman
+	religion = colonial_separatist
+	
+	add_trait = expert_scientist
+	add_trait = open_minded
+	add_trait = content
+	add_trait = humble
+	add_trait = radical
+	
+	2978.1.1 = { birth = "2978.1.1" }
+}
+
+# Count Tier
+12000107 = {
+	# Governor of Touchdown
+	name = "Martin"
+	dynasty = 20047 # Clifford
+	female = no
+	
+	culture = anglo_frontiersman
+	religion = colonial_separatist
+	
+	add_trait = flamboyant_schemer
+	add_trait = radical
+	add_trait = humble
+	add_trait = close_minded
+	add_trait = extraverted
+	
+	2969.1.1 = { birth = "2969.1.1" }
+}
+
+12000108 = {
+	# Governor of Delaware
+	name = "Jenna"
+	dynasty = 20048 # Curtis
+	female = yes
+	
+	culture = anglo_frontiersman
+	religion = colonial_separatist
+	
+	add_trait = thrifty_clerk
+	add_trait = introverted
+	add_trait = humble
+	add_trait = disciplined
+	add_trait = confident
+	
+	2951.1.1 = { birth = "2951.1.1" }
+}
+
+12000109 = {
+	# Commander of Shadow's Rim
+	name = "Hope"
+	dynasty = 20049 # Draper
+	female = yes
+	
+	culture = anglo_frontiersman
+	religion = colonial_separatist
+	
+	add_trait = skilled_tactician
+	add_trait = close_minded
+	add_trait = humble
+	add_trait = craven
+	add_trait = radical
+	
+	2965.1.1 = { birth = "2965.1.1" }
+}
+
+12000110 = {
+	# Commander of De Gaulle
+	name = "Alexander"
+	dynasty = 20050 # Elliott
+	female = no
+	
+	culture = anglo_frontiersman
+	religion = colonial_separatist
+	
+	add_trait = tough_soldier
+	add_trait = neurotic
+	add_trait = pragmatic
+	add_trait = content
+	add_trait = dni
+	
+	2967.1.1 = { birth = "2967.1.1" }
+}
+
+12000111 = {
+	# Governor of Abigail
+	name = "Janet"
+	dynasty = 20051 # Gardener
+	female = yes
+	
+	culture = anglo_frontiersman
+	religion = colonial_separatist
+	
+	add_trait = elusive_shadow
+	add_trait = extraverted
+	add_trait = neurotic
+	add_trait = scarred
+	add_trait = skeptical
+	
+	2975.1.1 = { birth = "2975.1.1" }
+}
+
+12000112 = {
+	# Governor of Delphi
+	name = "Mikhail"
+	dynasty = 20052 # Vasilyev
+	female = no
+	
+	culture = russo_frontiersman
+	religion = colonial_separatist
+	
+	add_trait = underhanded_rogue
+	add_trait = skeptical
+	add_trait = proud
+	add_trait = content
+	add_trait = scarred
+	
+	2978.1.1 = { birth = "2978.1.1" }
+}
+
+12000113 = {
+	# Governor of Eagle
+	name = "Robert"
+	dynasty = 20053 # Foster
+	female = no
+	
+	culture = anglo_frontiersman
+	religion = colonial_separatist
+	
+	add_trait = thrifty_clerk
+	add_trait = friendly
+	add_trait = spiritual
+	add_trait = ambitious
+	add_trait = pragmatic
+	
+	2962.1.1 = { birth = "2962.1.1" }
+}
+
+12000114 = {
+	# Governor of Miracle
+	name = "Lee"
+	dynasty = 20054 # Everett
+	female = no
+	
+	culture = anglo_frontiersman
+	religion = colonial_separatist
+	
+	add_trait = fortune_builder
+	add_trait = ambitious
+	add_trait = proud
+	add_trait = craven
+	add_trait = extraverted
+	
+	2969.1.1 = { birth = "2969.1.1" }
+}
+
+12000115 = {
+	# Governor of Stacker
+	name = "Jinsei"
+	dynasty = 20055 # Himura
+	female = no
+	
+	culture = japanese_frontiersman
+	religion = colonial_separatist
+	
+	add_trait = flamboyant_schemer
+	add_trait = carefree
+	add_trait = proud
+	add_trait = extraverted
+	add_trait = friendly
+	
+	2961.1.1 = { birth = "2961.1.1" }
+}
+
+12000116 = {
+	# Commander of Winterstar
+	name = "Robin"
+	dynasty = 20056 # Fletcher
+	female = no
+	
+	culture = anglo_frontiersman
+	religion = colonial_separatist
+	
+	add_trait = tough_soldier
+	add_trait = disciplined
+	add_trait = content
+	add_trait = humble
+	add_trait = radical
+	
+	2956.1.1 = { birth = "2956.1.1" }
+}
+
+12000117 = {
+	# Governor of Farland
+	name = "Vanessa"
+	dynasty = 20057 # Hargrave
+	female = yes
+	
+	culture = anglo_frontiersman
+	religion = colonial_separatist
+	
+	add_trait = underhanded_rogue
+	add_trait = radical
+	add_trait = confident
+	add_trait = content
+	add_trait = disciplined
+	
+	2953.1.1 = { birth = "2953.1.1" }
+}
+
+12000118 = {
+	# Governor of Overlook
+	name = "Ryan"
+	dynasty = 20058 # LeTourneau
+	female = no
+	
+	culture = anglo_frontiersman
+	religion = colonial_separatist
+	
+	add_trait = charismatic_negotiator
+	add_trait = extraverted
+	add_trait = humble
+	add_trait = content
+	add_trait = friendly
+	add_trait = disciplined
+	
+	2969.1.1 = { birth = "2969.1.1" }
+}
+
+12000119 = {
+	# Commander of Goldenroad
+	name = "Rose"
+	dynasty = 20059 # Josephs
+	female = yes
+	
+	culture = anglo_frontiersman
+	religion = colonial_separatist
+	
+	add_trait = tough_soldier
+	add_trait = confident
+	add_trait = proud
+	add_trait = scarred
+	add_trait = radical
+	
+	2968.1.1 = { birth = "2968.1.1" }
+}
+
+12000120 = {
+	# Governor of Roosevelt
+	name = "Samantha"
+	dynasty = 20060 # Havelock
+	female = yes
+	
+	culture = anglo_frontiersman
+	religion = colonial_separatist
+	
+	add_trait = thrifty_clerk
+	add_trait = content
+	add_trait = humble
+	add_trait = brave
+	add_trait = close_minded
+	
+	2954.1.1 = { birth = "2954.1.1" }
+}
+
+12000121 = {
+	# Governor of Silhouette
+	name = "Ashley"
+	dynasty = 20061 # Shizuka
+	female = yes
+	
+	culture = japanese_frontiersman
+	religion = colonial_separatist
+	
+	add_trait = intricate_webweaver
+	add_trait = close_minded
+	add_trait = ambitious
+	add_trait = confident
+	add_trait = extraverted
+	
+	2965.1.1 = { birth = "2965.1.1" }
+}
+
+12000122 = {
+	# Governor of WH-021
+	name = "Josh"
+	dynasty = 20062 # Smith
+	female = no
+	
+	culture = anglo_frontiersman
+	religion = colonial_separatist
+	
+	add_trait = intricate_webweaver
+	add_trait = homosexual
+	add_trait = carefree
+	add_trait = ambitious
+	add_trait = extraverted
+	add_trait = friendly
+	
+	2967.1.1 = { birth = "2967.1.1" }
+}

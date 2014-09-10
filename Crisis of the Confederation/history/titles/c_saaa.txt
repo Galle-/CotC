@@ -1,0 +1,6 @@
+2979.1.1 = {
+	liege = "d_darius"
+	law = succ_appointment
+	law = true_cognatic_succession
+	holder = 1106853 # Vali Fikri
+}

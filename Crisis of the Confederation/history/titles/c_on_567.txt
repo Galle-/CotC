@@ -1,0 +1,7 @@
+2992.1.1 = {
+	liege = "d_mar_del_tyken"
+	holder = 11020068 # Tufani Varundra
+	law = true_cognatic_succession
+	law = succ_gavelkind
+}
+2993.1.1 = { holder = 11012811 } # Juan-Diego Gao
