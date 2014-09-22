@@ -100,6 +100,22 @@ character_event = {
 			set_graphical_culture = ROOT
 			dynasty = ROOT
 			add_trait = clone
+			# Chance of gaining cloning defects
+			if = {
+				limit = { ROOT = { trait = cloning_defects } }
+				add_trait = cloning_defects
+			}
+			if = {
+				limit = { ROOT = { trait = clone } }
+				random_list = {
+					90 = { }
+					10 = { add_trait = cloning_defects }
+				}
+			}
+			random_list = {
+				95 = { }
+				5 = { add_trait = cloning_defects }
+			}
 			# Copy genetic traits
 			if = {
 				limit = { ROOT = { trait = genius } }
@@ -280,6 +296,22 @@ character_event = {
 			set_graphical_culture = ROOT
 			dynasty = ROOT
 			add_trait = clone
+			# Chance of gaining cloning defects
+			if = {
+				limit = { ROOT = { trait = cloning_defects } }
+				add_trait = cloning_defects
+			}
+			if = {
+				limit = { ROOT = { trait = clone } }
+				random_list = {
+					90 = { }
+					10 = { add_trait = cloning_defects }
+				}
+			}
+			random_list = {
+				95 = { }
+				5 = { add_trait = cloning_defects }
+			}
 			# Copy genetic traits
 			if = {
 				limit = { ROOT = { trait = genius } }
@@ -447,10 +479,22 @@ character_event = {
 			set_father = ROOT
 			dynasty = ROOT
 			add_trait = clone
-			# Chance of genetic defects due to identical chromosomes
-			random = {
-				chance = 33
-				add_trait = inbred
+			# Chance of gaining cloning defects
+			if = {
+				limit = { ROOT = { trait = cloning_defects } }
+				add_trait = cloning_defects
+			}
+			# Increased chance of cloning defects due to doubled chromosomes
+			if = {
+				limit = { ROOT = { trait = clone } }
+				random_list = {
+					80 = { }
+					20 = { add_trait = cloning_defects }
+				}
+			}
+			random_list = {
+				80 = { }
+				20 = { add_trait = cloning_defects }
 			}
 			# Copy genetic traits
 			if = {
@@ -606,4 +650,219 @@ character_event = {
 		}
 		recalc_succession = yes
 	}
+}
+# Dealing with cloning defects
+character_event = {
+	id = clone.10
+	desc = "EVTDESCCLONE10"
+	picture = GFX_evt_birth
+	
+	min_age = 0
+	max_age = 1
+	
+	trigger = {
+		trait = cloning_defects
+		NOT = { has_character_flag = flag_cloning_defects_dealt_with }
+	}
+	
+	option = {
+		name = "EVTOPTACLONE10"
+		set_character_flag = flag_cloning_defects_dealt_with
+		hidden_tooltip = { character_event = { id = clone.13 days = 1 } } # Scramble DNA if necessary
+		# Chance of losing cloning defects due to local tech level
+		if = {
+			limit = { location = { NOT = { TECH_RELIGIOUS_CUSTOMS = 1 } } }
+			father = { character_event = { id = clone.11 tooltip = "EVTTOOLTIPCLONE11" } }
+			mother = { character_event = { id = clone.11 tooltip = "EVTTOOLTIPCLONE11" } }
+		}
+		if = {
+			limit = {
+				location = {
+					TECH_RELIGIOUS_CUSTOMS = 1
+					NOT = { TECH_RELIGIOUS_CUSTOMS = 2 }
+				}
+			}
+			random_list = {
+				90 = {
+					father = { character_event = { id = clone.11 tooltip = "EVTTOOLTIPCLONE11" } }
+					mother = { character_event = { id = clone.11 tooltip = "EVTTOOLTIPCLONE11" } }
+				}
+				10 = {
+					remove_trait = cloning_defects
+					father = { character_event = { id = clone.12 tooltip = "EVTTOOLTIPCLONE12" } }
+					mother = { character_event = { id = clone.12 tooltip = "EVTTOOLTIPCLONE12" } }
+				}
+			}
+		}
+		if = {
+			limit = {
+				location = {
+					TECH_RELIGIOUS_CUSTOMS = 2
+					NOT = { TECH_RELIGIOUS_CUSTOMS = 3 }
+				}
+			}
+			random_list = {
+				80 = {
+					set_dna = ROOT # Scrambled DNA
+					father = { character_event = { id = clone.11 tooltip = "EVTTOOLTIPCLONE11" } }
+					mother = { character_event = { id = clone.11 tooltip = "EVTTOOLTIPCLONE11" } }
+				}
+				20 = {
+					remove_trait = cloning_defects
+					father = { character_event = { id = clone.12 tooltip = "EVTTOOLTIPCLONE12" } }
+					mother = { character_event = { id = clone.12 tooltip = "EVTTOOLTIPCLONE12" } }
+				}
+			}
+		}
+		if = {
+			limit = {
+				location = {
+					TECH_RELIGIOUS_CUSTOMS = 3
+					NOT = { TECH_RELIGIOUS_CUSTOMS = 4 }
+				}
+			}
+			random_list = {
+				70 = {
+					set_dna = ROOT # Scrambled DNA
+					father = { character_event = { id = clone.11 tooltip = "EVTTOOLTIPCLONE11" } }
+					mother = { character_event = { id = clone.11 tooltip = "EVTTOOLTIPCLONE11" } }
+				}
+				30 = {
+					remove_trait = cloning_defects
+					father = { character_event = { id = clone.12 tooltip = "EVTTOOLTIPCLONE12" } }
+					mother = { character_event = { id = clone.12 tooltip = "EVTTOOLTIPCLONE12" } }
+				}
+			}
+		}
+		if = {
+			limit = {
+				location = {
+					TECH_RELIGIOUS_CUSTOMS = 4
+					NOT = { TECH_RELIGIOUS_CUSTOMS = 5 }
+				}
+			}
+			random_list = {
+				60 = {
+					set_dna = ROOT # Scrambled DNA
+					father = { character_event = { id = clone.11 tooltip = "EVTTOOLTIPCLONE11" } }
+					mother = { character_event = { id = clone.11 tooltip = "EVTTOOLTIPCLONE11" } }
+				}
+				40 = {
+					remove_trait = cloning_defects
+					father = { character_event = { id = clone.12 tooltip = "EVTTOOLTIPCLONE12" } }
+					mother = { character_event = { id = clone.12 tooltip = "EVTTOOLTIPCLONE12" } }
+				}
+			}
+		}
+		if = {
+			limit = {
+				location = {
+					TECH_RELIGIOUS_CUSTOMS = 5
+					NOT = { TECH_RELIGIOUS_CUSTOMS = 6 }
+				}
+			}
+			random_list = {
+				50 = {
+					set_dna = ROOT # Scrambled DNA
+					father = { character_event = { id = clone.11 tooltip = "EVTTOOLTIPCLONE11" } }
+					mother = { character_event = { id = clone.11 tooltip = "EVTTOOLTIPCLONE11" } }
+				}
+				50 = {
+					remove_trait = cloning_defects
+					father = { character_event = { id = clone.12 tooltip = "EVTTOOLTIPCLONE12" } }
+					mother = { character_event = { id = clone.12 tooltip = "EVTTOOLTIPCLONE12" } }
+				}
+			}
+		}
+		if = {
+			limit = {
+				location = {
+					TECH_RELIGIOUS_CUSTOMS = 6
+					NOT = { TECH_RELIGIOUS_CUSTOMS = 7 }
+				}
+			}
+			random_list = {
+				40 = {
+					set_dna = ROOT # Scrambled DNA
+					father = { character_event = { id = clone.11 tooltip = "EVTTOOLTIPCLONE11" } }
+					mother = { character_event = { id = clone.11 tooltip = "EVTTOOLTIPCLONE11" } }
+				}
+				60 = {
+					remove_trait = cloning_defects
+					father = { character_event = { id = clone.12 tooltip = "EVTTOOLTIPCLONE12" } }
+					mother = { character_event = { id = clone.12 tooltip = "EVTTOOLTIPCLONE12" } }
+				}
+			}
+		}
+		if = {
+			limit = {
+				location = {
+					TECH_RELIGIOUS_CUSTOMS = 7
+					NOT = { TECH_RELIGIOUS_CUSTOMS = 8 }
+				}
+			}
+			random_list = {
+				30 = {
+					set_dna = ROOT # Scrambled DNA
+					father = { character_event = { id = clone.11 tooltip = "EVTTOOLTIPCLONE11" } }
+					mother = { character_event = { id = clone.11 tooltip = "EVTTOOLTIPCLONE11" } }
+				}
+				70 = {
+					remove_trait = cloning_defects
+					father = { character_event = { id = clone.12 tooltip = "EVTTOOLTIPCLONE12" } }
+					mother = { character_event = { id = clone.12 tooltip = "EVTTOOLTIPCLONE12" } }
+				}
+			}
+		}
+		if = {
+			limit = { location = { TECH_RELIGIOUS_CUSTOMS = 8 } }
+			random_list = {
+				20 = {
+					set_dna = ROOT # Scrambled DNA
+					father = { character_event = { id = clone.11 tooltip = "EVTTOOLTIPCLONE11" } }
+					mother = { character_event = { id = clone.11 tooltip = "EVTTOOLTIPCLONE11" } }
+				}
+				80 = {
+					remove_trait = cloning_defects
+					father = { character_event = { id = clone.12 tooltip = "EVTTOOLTIPCLONE12" } }
+					mother = { character_event = { id = clone.12 tooltip = "EVTTOOLTIPCLONE12" } }
+				}
+			}
+		}
+	}
+}
+
+# Your new clone suffers from cloning defects
+character_event = {
+	id = clone.11
+	desc = "EVTDESCCLONE11"
+	picture = GFX_evt_birth
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+
+# Your new clone's cloning defects were corrected
+character_event = {
+	id = clone.12
+	desc = "EVTDESCCLONE12"
+	picture = GFX_evt_birth
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+
+# If this is a first-generation defective clone, scramble its DNA
+character_event = {
+	id = clone.13
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = clone
+		trait = cloning_defects
+		NOT = { father = { trait = cloning_defects } }
+		NOT = { mother = { trait = cloning_defects } }
+	}
+	
+	immediate = { set_DNA = ROOT } # Truncated DNA sequence for maximum terror later on
 }

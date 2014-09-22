@@ -1,0 +1,1184 @@
+###############################################################
+#
+#	Written by The Dark Master
+#
+###############################################################
+
+castle = {
+	ca_primary_q_0 = {
+		desc = ca_primary_q_0_desc
+		trigger = { TECH_LEGALISM = 0 }
+		potential = {  }
+		
+		build_cost = 0
+		build_time = 0
+		ai_creation_factor = 200
+		
+		extra_tech_building_start = 0
+	}
+	ca_primary_q_1 = {
+		desc = ca_primary_q_1_desc
+		trigger = {
+			TECH_LEGALISM = 0
+		}
+		potential = { 
+			FROMFROM = { 
+				OR = {
+					has_building = ca_volatiles_start0_level1
+					has_building = ca_volatiles_start1_level1
+					has_building = ca_volatiles_start2_level2
+					has_building = ca_volatiles_start3_level3
+				}
+			}
+		}
+		upgrades_from = ca_primary_q_0
+		build_cost = 200
+		build_time = 356
+		ai_creation_factor = 200
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_primary_q_2 = {
+		desc = ca_primary_q_2_desc
+		trigger = {
+			always = yes
+		}
+		potential = { 
+			FROMFROM = { 
+				OR = {
+					has_building = ca_launch_system_start0_level1
+					has_building = ca_launch_system_start1_level1
+					has_building = ca_launch_system_start2_level2
+					has_building = ca_launch_system_start3_level3
+				}
+				OR = {
+					has_building = ca_metals_start0_level1
+					has_building = ca_metals_start1_level1
+					has_building = ca_metals_start2_level2
+					has_building = ca_metals_start3_level3
+				}
+			}
+		}
+		upgrades_from = ca_primary_q_1	#Make sure all planets upgrade from each other in order
+		build_cost = 400
+		build_time = 1068
+		ai_creation_factor = 200
+		extra_tech_building_start = 10.0
+	}
+	ca_primary_q_3 = {
+		desc = ca_primary_q_3_desc
+		trigger = {
+			always = yes
+		}
+		potential = { 
+			FROMFROM = { 
+				OR = {
+					has_building = ca_volatiles_start0_level2
+					has_building = ca_volatiles_start1_level2
+					has_building = ca_volatiles_start2_level2
+					has_building = ca_volatiles_start3_level3
+				}
+			}
+		}
+		upgrades_from = ca_primary_q_2
+		build_cost = 600
+		build_time = 1825
+		ai_creation_factor = 200
+		extra_tech_building_start = 10.0
+	}
+	ca_primary_q_4 = {
+		desc = ca_primary_q_4_desc
+		trigger = {
+			always = yes
+		}
+		potential = { 
+			FROMFROM = { 
+				OR = {
+					has_building = ca_launch_system_start0_level2
+					has_building = ca_launch_system_start1_level2
+					has_building = ca_launch_system_start2_level2
+					has_building = ca_launch_system_start3_level3
+				}
+				OR = {
+					has_building = ca_metals_start0_level2
+					has_building = ca_metals_start1_level2
+					has_building = ca_metals_start2_level2
+					has_building = ca_metals_start3_level3
+				}
+			}
+		}
+		upgrades_from = ca_primary_q_3
+		build_cost = 800
+		build_time = 2555
+		ai_creation_factor = 200
+		extra_tech_building_start = 10.0
+	}
+	ca_primary_q_5 = {
+		desc = ca_primary_q_5_desc
+		trigger = {
+			always = yes
+		}
+		potential = { 
+			FROMFROM = { 
+				OR = {
+					has_building = ca_volatiles_start0_level3
+					has_building = ca_volatiles_start1_level3
+					has_building = ca_volatiles_start2_level3
+					has_building = ca_volatiles_start3_level3
+				}
+				OR = {
+					has_building = ca_launch_system_start0_level3
+					has_building = ca_launch_system_start1_level3
+					has_building = ca_launch_system_start2_level3
+					has_building = ca_launch_system_start3_level3
+				}
+				OR = {
+					has_building = ca_metals_start0_level3
+					has_building = ca_metals_start1_level3
+					has_building = ca_metals_start2_level3
+					has_building = ca_metals_start3_level3
+				}
+			}
+		}
+		upgrades_from = ca_primary_q_4
+		build_cost = 1000
+		build_time = 3285
+		ai_creation_factor = 200
+		extra_tech_building_start = 10.0
+	}
+	ca_fighter_hanger_q_1 = {
+		desc = ca_fighter_hanger_q_1_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 0
+		}
+		build_cost = 100
+		build_time = 365
+		light_infantry = 50
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.5
+	}
+	ca_fighter_hanger_q_2 = {
+		desc = ca_fighter_hanger_q_2_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 0
+		}
+		upgrades_from = ca_fighter_hanger_q_1
+		prerequisites = { ca_primary_q_1 }
+		build_cost = 150
+		build_time = 548
+		light_infantry = 60
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_fighter_hanger_q_3 = {
+		desc = ca_fighter_hanger_q_3_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 2
+		}
+		upgrades_from = ca_fighter_hanger_q_2
+		prerequisites = { ca_primary_q_2 }
+		build_cost = 200
+		build_time = 730
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_fighter_hanger_q_4 = {
+		desc = ca_fighter_hanger_q_4_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 4
+		}
+		upgrades_from = ca_fighter_hanger_q_3
+		prerequisites = { ca_primary_q_3 }
+		build_cost = 250
+		build_time = 913
+		light_infantry = 70
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_fighter_hanger_q_5 = {
+		desc = ca_fighter_hanger_q_5_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 6
+		}
+		build_cost = 300
+		build_time = 1095
+		light_infantry = 80
+		upgrades_from = ca_fighter_hanger_q_4
+		prerequisites = { ca_primary_q_4 }
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_fighter_hanger_q_6 = {
+		desc = ca_fighter_hanger_q_6_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 8
+		}
+		build_cost = 350
+		build_time = 1278
+		light_infantry = 90
+		upgrades_from = ca_fighter_hanger_q_5
+		prerequisites = { ca_primary_q_5 }
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_bomber_hanger_q_1 = {
+		desc = ca_bomber_hanger_q_1_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 0
+		}
+		prerequisites = { ca_primary_q_1 }
+		build_cost = 120
+		build_time = 365
+		heavy_infantry = 25
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_bomber_hanger_q_2 = {
+		desc = ca_bomber_hanger_q_2_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 1
+		}
+		upgrades_from = ca_bomber_hanger_q_1
+		prerequisites = { ca_primary_q_2 }
+		build_cost = 200
+		build_time = 720
+		heavy_infantry = 30
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_bomber_hanger_q_3 = {
+		desc = ca_bomber_hanger_q_3_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 3
+		}
+		upgrades_from = ca_bomber_hanger_q_2
+		prerequisites = { ca_primary_q_3 }
+		build_cost = 280
+		build_time = 1095
+		heavy_infantry = 35
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_bomber_hanger_q_4 = {
+		desc = ca_bomber_hanger_q_4_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 5
+		}
+		upgrades_from = ca_bomber_hanger_q_3
+		prerequisites = { ca_primary_q_4 }
+		build_cost = 360
+		build_time = 1460
+		heavy_infantry = 40
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_bomber_hanger_q_5 = {
+		desc = ca_bomber_hanger_q_5_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 1
+		}
+		upgrades_from = ca_bomber_hanger_q_4
+		prerequisites = { ca_primary_q_5 }
+		build_cost = 440
+		build_time = 1825
+		heavy_infantry = 45
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_destroyer_hanger_q_1 = {
+		desc = ca_destroyer_hanger_q_1_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 0
+		}
+		prerequisites = { ca_primary_q_1 }
+		build_cost = 150
+		build_time = 548
+		light_cavalry = 4
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_destroyer_hanger_q_2 = {
+		desc = ca_destroyer_hanger_q_2_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 1
+		}
+		upgrades_from = ca_destroyer_hanger_q_1
+		prerequisites = { ca_primary_q_2 }
+		build_cost = 300
+		build_time = 1096
+		light_cavalry = 6
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_destroyer_hanger_q_3 = {
+		desc = ca_destroyer_hanger_q_3_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 3
+		}
+		upgrades_from = ca_destroyer_hanger_q_2
+		prerequisites = { ca_primary_q_3 }
+		build_cost = 450
+		build_time = 1644
+		light_cavalry = 8
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_destroyer_hanger_q_4 = {
+		desc = ca_destroyer_hanger_q_4_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 5
+		}
+		upgrades_from = ca_destroyer_hanger_q_3
+		prerequisites = { ca_primary_q_4 }
+		build_cost = 600
+		build_time = 2192
+		light_cavalry = 10
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_destroyer_hanger_q_5 = {
+		desc = ca_destroyer_hanger_q_5_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 7
+		}
+		upgrades_from = ca_destroyer_hanger_q_4
+		prerequisites = { ca_primary_q_5 }
+		build_cost = 750
+		build_time = 2740
+		light_cavalry = 12
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_capital_factory_q_1 = {
+		desc = ca_capital_factory_q_1_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 1
+		}
+		prerequisites = { ca_primary_q_2 }
+		build_cost = 400
+		build_time = 1278
+		retinuesize = 100
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_capital_factory_q_2 = {
+		desc = ca_capital_factory_q_2_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 4
+		}
+		upgrades_from = ca_capital_factory_q_1
+		prerequisites = { ca_primary_q_3 }
+		build_cost = 800
+		build_time = 2556
+		retinuesize = 200
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_mining_drones_q_1 = {
+		desc = ca_mining_drones_q_1_desc
+		trigger = {
+			TECH_MAJESTY = 0
+		}
+		build_cost = 100
+		build_time = 365
+		pikemen = 10
+		tax_income = 0.5
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.5
+	}
+	ca_mining_drones_q_2 = {
+		desc = ca_mining_drones_q_2_desc
+		trigger = {
+			TECH_MAJESTY = 0
+		}
+		upgrades_from = ca_mining_drones_q_1
+		prerequisites = { ca_primary_q_1 }
+		build_cost = 120
+		build_time = 365
+		pikemen = 12
+		tax_income = 0.5
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_mining_drones_q_3 = {
+		desc = ca_mining_drones_q_3_desc
+		trigger = {
+			TECH_MAJESTY = 2
+		}
+		upgrades_from = ca_mining_drones_q_2
+		prerequisites = { ca_primary_q_1 }
+		build_cost = 150
+		build_time = 548
+		pikemen = 14
+		tax_income = 0.5
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_mining_drones_q_4 = {
+		desc = ca_mining_drones_q_4_desc
+		trigger = {
+			TECH_MAJESTY = 4
+		}
+		upgrades_from = ca_mining_drones_q_3
+		prerequisites = { ca_primary_q_2 }
+		build_cost = 200
+		build_time = 548
+		pikemen = 16
+		tax_income = 0.5
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_mining_drones_q_5 = {
+		desc = ca_mining_drones_q_5_desc
+		trigger = {
+			TECH_MAJESTY = 6
+		}
+		upgrades_from = ca_mining_drones_q_4
+		prerequisites = { ca_primary_q_2 }
+		build_cost = 280
+		build_time = 730
+		pikemen = 18
+		tax_income = 0.5
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_mining_drones_q_6 = {
+		desc = ca_mining_drones_q_6_desc
+		trigger = {
+			TECH_MAJESTY = 8
+		}
+		upgrades_from = ca_mining_drones_q_5
+		prerequisites = { ca_primary_q_3 }
+		build_cost = 400
+		build_time = 730
+		pikemen = 20
+		tax_income = 0.5
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_turrets_q_1 = {
+		desc = ca_turrets_q_1_desc
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+		}
+		build_cost = 75
+		build_time = 183
+		fort_level = 1.0
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.5
+	}
+	ca_turrets_q_2 = {
+		desc = ca_turrets_q_2_desc
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 1
+		}
+		upgrades_from = ca_turrets_q_1
+		prerequisites = { ca_primary_q_1 }
+		build_cost = 90
+		build_time = 183
+		fort_level = 1.0
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_turrets_q_3 = {
+		desc = ca_turrets_q_3_desc
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 3
+		}
+		upgrades_from = ca_turrets_q_2
+		prerequisites = { ca_primary_q_2 }
+		build_cost = 110
+		build_time = 365
+		fort_level = 1.0
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_turrets_q_4 = {
+		desc = ca_turrets_q_4_desc
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 5
+		}
+		upgrades_from = ca_turrets_q_3
+		prerequisites = { ca_primary_q_2 }
+		build_cost = 140
+		build_time = 365
+		fort_level = 1.0
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_turrets_q_5 = {
+		desc = ca_turrets_q_5_desc
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 7
+		}
+		upgrades_from = ca_turrets_q_4
+		prerequisites = { ca_primary_q_3 }
+		build_cost = 180
+		build_time = 548
+		fort_level = 1.0
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_scout_patrols_q_1 = {
+		desc = ca_scout_patrols_q_1_desc
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+		}
+		build_cost = 75
+		build_time = 183
+		fort_level = 0.5
+		tax_income = 0.2
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.5
+	}
+	ca_scout_patrols_q_2 = {
+		desc = ca_scout_patrols_q_2_desc
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 2
+		}
+		upgrades_from = ca_scout_patrols_q_1
+		prerequisites = { ca_primary_q_1 }
+		build_cost = 90
+		build_time = 183
+		fort_level = 0.5
+		tax_income = 0.2
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_scout_patrols_q_3 = {
+		desc = ca_scout_patrols_q_3_desc
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 4
+		}
+		upgrades_from = ca_scout_patrols_q_2
+		prerequisites = { ca_primary_q_2 }
+		build_cost = 110
+		build_time = 365
+		fort_level = 0.5
+		tax_income = 0.2
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_scout_patrols_q_4 = {
+		desc = ca_scout_patrols_q_4_desc
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 6
+		}
+		upgrades_from = ca_scout_patrols_q_3
+		prerequisites = { ca_primary_q_2 }
+		build_cost = 140
+		build_time = 365
+		fort_level = 0.5
+		tax_income = 0.2
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_scout_patrols_q_5 = {
+		desc = ca_scout_patrols_q_5_desc
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 8
+		}
+		upgrades_from = ca_scout_patrols_q_4
+		prerequisites = { ca_primary_q_3 }
+		build_cost = 180
+		build_time = 548
+		fort_level = 0.5
+		tax_income = 0.2
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_marine_quarters_q_1 = {
+		desc = ca_marine_quarters_q_1_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 0
+		}
+		prerequisites = { ca_primary_q_1 }
+		build_cost = 120
+		build_time = 365
+		garrison_size = 0.1
+		archers = 40
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.5
+	}
+	ca_marine_quarters_q_2 = {
+		desc = ca_marine_quarters_q_2_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 0
+		}
+		upgrades_from = ca_marine_quarters_q_1
+		prerequisites = { ca_primary_q_1 }
+		build_cost = 150
+		build_time = 365
+		garrison_size = 0.1
+		archers = 50
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_marine_quarters_q_3 = {
+		desc = ca_marine_quarters_q_3_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 1
+		}
+		upgrades_from = ca_marine_quarters_q_2
+		prerequisites = { ca_primary_q_1 }
+		build_cost = 200
+		build_time = 548
+		garrison_size = 0.1
+		archers = 60
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_marine_quarters_q_4 = {
+		desc = ca_marine_quarters_q_4_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 3
+		}
+		upgrades_from = ca_marine_quarters_q_3
+		prerequisites = { ca_primary_q_2 }
+		build_cost = 280
+		build_time = 730
+		garrison_size = 0.1
+		archers = 70
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_marine_quarters_q_5 = {
+		desc = ca_marine_quarters_q_5_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 5
+		}
+		upgrades_from = ca_marine_quarters_q_4
+		prerequisites = { ca_primary_q_2 }
+		build_cost = 400
+		build_time = 913
+		garrison_size = 0.1
+		archers = 80
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_marine_quarters_q_6 = {
+		desc = ca_marine_quarters_q_6_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 7
+		}
+		upgrades_from = ca_marine_quarters_q_5
+		prerequisites = { ca_primary_q_3 }
+		build_cost = 600
+		build_time = 1096
+		garrison_size = 0.1
+		archers = 90
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_tunneler_factory_q_1 = {
+		desc = ca_tunneler_factory_q_1_desc
+		trigger = {
+			TECH_CULTURE_FLEX = 1
+		}
+		prerequisites = { ca_primary_q_1 }
+		build_cost = 150
+		build_time = 183
+		galleys = 6
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_tunneler_factory_q_2 = {
+		desc = ca_tunneler_factory_q_2_desc
+		trigger = {
+			TECH_CULTURE_FLEX = 2
+		}
+		upgrades_from = ca_tunneler_factory_q_1
+		prerequisites = { ca_primary_q_1 }
+		build_cost = 200
+		build_time = 365
+		galleys = 8
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_tunneler_factory_q_3 = {
+		desc = ca_tunneler_factory_q_3_desc
+		trigger = {
+			TECH_CULTURE_FLEX = 3
+		}
+		upgrades_from = ca_tunneler_factory_q_2
+		prerequisites = { ca_primary_q_1 }
+		build_cost = 250
+		build_time = 548
+		galleys = 10
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_tunneler_factory_q_4 = {
+		desc = ca_tunneler_factory_q_4_desc
+		trigger = {
+			TECH_CULTURE_FLEX = 4
+		}
+		upgrades_from = ca_tunneler_factory_q_3
+		prerequisites = { ca_primary_q_1 }
+		build_cost = 300
+		build_time = 730
+		galleys = 12
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_tunneler_factory_q_5 = {
+		desc = ca_tunneler_factory_q_5_desc
+		trigger = {
+			TECH_CULTURE_FLEX = 5
+		}
+		upgrades_from = ca_tunneler_factory_q_4
+		prerequisites = { ca_primary_q_1 }
+		build_cost = 350
+		build_time = 913
+		galleys = 14
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_tunneler_factory_q_6 = {
+		desc = ca_tunneler_factory_q_6_desc
+		trigger = {
+			TECH_CULTURE_FLEX = 6
+		}
+		upgrades_from = ca_tunneler_factory_q_5
+		prerequisites = { ca_primary_q_1 }
+		build_cost = 400
+		build_time = 1096
+		galleys = 16
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_tunneler_factory_q_7 = {
+		desc = ca_tunneler_factory_q_7_desc
+		trigger = {
+			TECH_CULTURE_FLEX = 7
+		}
+		upgrades_from = ca_tunneler_factory_q_6
+		prerequisites = { ca_primary_q_6 }
+		build_cost = 450
+		build_time = 1278
+		galleys = 18
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_tunneler_factory_q_8 = {
+		desc = ca_tunneler_factory_q_8_desc
+		trigger = {
+			TECH_CULTURE_FLEX = 8
+		}
+		upgrades_from = ca_tunneler_factory_q_7
+		prerequisites = { ca_primary_q_1 }
+		build_cost = 500
+		build_time = 1460
+		galleys = 20
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_spaceyard_q_1 = {
+		desc = ca_spaceyard_q_1_desc
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+		}
+		prerequisites = { ca_primary_q_3 }
+		build_cost = 200
+		build_time = 730
+		levy_size = 0.1
+		levy_reinforce_rate = 0.1
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_spaceyard_q_2 = {
+		desc = ca_spaceyard_q_2_desc
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+		}
+		upgrades_from = ca_spaceyard_q_1
+		prerequisites = { ca_primary_q_4 }
+		build_cost = 280
+		build_time = 913
+		levy_size = 0.1
+		levy_reinforce_rate = 0.1
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_spaceyard_q_3 = {
+		desc = ca_spaceyard_q_3_desc
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 3
+		}
+		upgrades_from = ca_spaceyard_q_2
+		prerequisites = { ca_primary_q_4 }
+		build_cost = 400
+		build_time = 1096
+		levy_size = 0.1
+		levy_reinforce_rate = 0.1
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_spaceyard_q_4 = {
+		desc = ca_spaceyard_q_4_desc
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 5
+		}
+		upgrades_from = ca_spaceyard_q_3
+		prerequisites = { ca_primary_q_4 }
+		build_cost = 560
+		build_time = 1278
+		levy_size = 0.1
+		levy_reinforce_rate = 0.1
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_spaceyard_q_5 = {
+		desc = ca_spaceyard_q_5_desc
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 7
+		}
+		upgrades_from = ca_spaceyard_q_4
+		prerequisites = { ca_primary_q_5 }
+		build_cost = 760
+		build_time = 1460
+		levy_size = 0.1
+		levy_reinforce_rate = 0.1
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_command_center_q_1 = {
+		desc = ca_command_center_q_1_desc
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+		}
+		prerequisites = { ca_primary_q_4 }
+		build_cost = 200
+		build_time = 730
+		light_cavalry_defensive = 0.10
+		light_cavalry_offensive = 0.10
+		land_morale = 0.1
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_command_center_q_2 = {
+		desc = ca_command_center_q_2_desc
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 2
+		}
+		upgrades_from = ca_command_center_q_1
+		prerequisites = { ca_primary_q_4 }
+		build_cost = 280
+		build_time = 913
+		light_cavalry_defensive = 0.10
+		light_cavalry_offensive = 0.10
+		land_morale = 0.1
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_command_center_q_3 = {
+		desc = ca_command_center_q_3_desc
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 4
+		}
+		upgrades_from = ca_command_center_q_2
+		prerequisites = { ca_primary_q_4 }
+		build_cost = 400
+		build_time = 1096
+		light_cavalry_defensive = 0.10
+		light_cavalry_offensive = 0.10
+		land_morale = 0.15
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_command_center_q_4 = {
+		desc = ca_command_center_q_4_desc
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 6
+		}
+		upgrades_from = ca_command_center_q_3
+		prerequisites = { ca_primary_q_5 }
+		build_cost = 560
+		build_time = 1278
+		light_cavalry_defensive = 0.10
+		light_cavalry_offensive = 0.10
+		land_morale = 0.15
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_command_center_q_5 = {
+		desc = ca_command_center_q_5_desc
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 8
+		}
+		upgrades_from = ca_command_center_q_4
+		prerequisites = { ca_primary_q_5 }
+		build_cost = 760
+		build_time = 1460
+		light_cavalry_defensive = 0.10
+		light_cavalry_offensive = 0.10
+		land_morale = 0.2
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_ai_core_q_1 = {
+		desc = ca_ai_core_q_1_desc
+		trigger = {
+			TECH_MAJESTY = 0
+		}
+		build_cost = 200
+		build_time = 730
+		pikemen_defensive = 0.10
+		pikemen_offensive = 0.10
+		pikemen = 10
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_ai_core_q_2 = {
+		desc = ca_ai_core_q_2_desc
+		trigger = {
+			TECH_MAJESTY = 1
+		}
+		upgrades_from = ca_ai_core_q_1
+		prerequisites = { ca_primary_q_1 }
+		build_cost = 280
+		build_time = 913
+		pikemen_defensive = 0.10
+		pikemen_offensive = 0.10
+		pikemen = 12
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_ai_core_q_3 = {
+		desc = ca_ai_core_q_3_desc
+		trigger = {
+			TECH_MAJESTY = 3
+		}
+		upgrades_from = ca_ai_core_q_2
+		prerequisites = { ca_primary_q_2 }
+		build_cost = 400
+		build_time = 1096
+		pikemen_defensive = 0.10
+		pikemen_offensive = 0.10
+		pikemen = 14
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_ai_core_q_4 = {
+		desc = ca_ai_core_q_4_desc
+		trigger = {
+			TECH_MAJESTY = 5
+		}
+		upgrades_from = ca_ai_core_q_3
+		prerequisites = { ca_primary_q_3 }
+		build_cost = 560
+		build_time = 1278
+		pikemen_defensive = 0.10
+		pikemen_offensive = 0.10
+		pikemen = 16
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_ai_core_q_5 = {
+		desc = ca_ai_core_q_5_desc
+		trigger = {
+			TECH_MAJESTY = 7
+		}
+		upgrades_from = ca_ai_core_q_4
+		prerequisites = { ca_primary_q_4 }
+		build_cost = 760
+		build_time = 1460
+		pikemen_defensive = 0.10
+		pikemen_offensive = 0.10
+		pikemen = 18
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_fleet_support_q_1 = {
+		desc = ca_fleet_support_q_1_desc
+		trigger = {
+			TECH_CONSTRUCTION = 1
+		}
+		prerequisites = { ca_primary_q_1 }
+		build_cost = 150
+		build_time = 183
+		retinuesize = 50
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_fleet_support_q_2 = {
+		desc = ca_fleet_support_q_2_desc
+		trigger = {
+			TECH_CONSTRUCTION = 2
+		}
+		upgrades_from = ca_fleet_support_q_1
+		prerequisites = { ca_primary_q_1 }
+		build_cost = 200
+		build_time = 365
+		retinuesize = 50
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_fleet_support_q_3 = {
+		desc = ca_fleet_support_q_3_desc
+		trigger = {
+			TECH_CONSTRUCTION = 3
+		}
+		upgrades_from = ca_fleet_support_q_2
+		prerequisites = { ca_primary_q_1 }
+		build_cost = 250
+		build_time = 548
+		retinuesize = 50
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_fleet_support_q_4 = {
+		desc = ca_fleet_support_q_4_desc
+		trigger = {
+			TECH_CONSTRUCTION = 4
+		}
+		upgrades_from = ca_fleet_support_q_3
+		prerequisites = { ca_primary_q_1 }
+		build_cost = 300
+		build_time = 730
+		retinuesize = 50
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_fleet_support_q_5 = {
+		desc = ca_fleet_support_q_5_desc
+		trigger = {
+			TECH_CONSTRUCTION = 5
+		}
+		upgrades_from = ca_fleet_support_q_4
+		prerequisites = { ca_primary_q_1 }
+		build_cost = 350
+		build_time = 913
+		retinuesize = 50
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_fleet_support_q_6 = {
+		desc = ca_fleet_support_q_6_desc
+		trigger = {
+			TECH_CONSTRUCTION = 6
+		}
+		upgrades_from = ca_fleet_support_q_5
+		prerequisites = { ca_primary_q_1 }
+		build_cost = 400
+		build_time = 1096
+		retinuesize = 50
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_fleet_support_q_7 = {
+		desc = ca_fleet_support_q_7_desc
+		trigger = {
+			TECH_CONSTRUCTION = 7
+		}
+		upgrades_from = ca_fleet_support_q_6
+		prerequisites = { ca_primary_q_6 }
+		build_cost = 450
+		build_time = 1278
+		retinuesize = 50
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_fleet_support_q_8 = {
+		desc = ca_fleet_support_q_8_desc
+		trigger = {
+			TECH_CONSTRUCTION = 8
+		}
+		upgrades_from = ca_fleet_support_q_7
+		prerequisites = { ca_primary_q_1 }
+		build_cost = 500
+		build_time = 1460
+		retinuesize = 50
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_pilot_academy_q_1 = {
+		desc = ca_pilot_academy_q_1_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 0
+		}
+		prerequisites = { ca_primary_q_1 }
+		build_cost = 200
+		build_time = 730
+		light_infantry_defensive = 0.10
+		light_infantry_offensive = 0.10
+		heavy_infantry_defensive = 0.10
+		heavy_infantry_offensive = 0.10
+		light_infantry = 10
+		heavy_infantry = 5
+		ai_creation_factor = 100
+		extra_tech_building_start = 0.8
+	}
+	ca_pilot_academy_q_2 = {
+		desc = ca_pilot_academy_q_2_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 0
+		}
+		upgrades_from = ca_pilot_academy_q_1
+		prerequisites = { ca_primary_q_2 }
+		build_cost = 280
+		build_time = 913
+		light_infantry_defensive = 0.10
+		light_infantry_offensive = 0.10
+		heavy_infantry_defensive = 0.10
+		heavy_infantry_offensive = 0.10
+		light_infantry = 10
+		heavy_infantry = 5
+		ai_creation_factor = 100
+		extra_tech_building_start = 1
+	}
+	ca_pilot_academy_q_3 = {
+		desc = ca_pilot_academy_q_3_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 0
+		}
+		upgrades_from = ca_pilot_academy_q_2
+		prerequisites = { ca_primary_q_3 }
+		build_cost = 400
+		build_time = 1096
+		light_infantry_defensive = 0.10
+		light_infantry_offensive = 0.10
+		heavy_infantry_defensive = 0.10
+		heavy_infantry_offensive = 0.10
+		light_infantry = 10
+		heavy_infantry = 5
+		ai_creation_factor = 100
+		extra_tech_building_start = 2
+	}
+	ca_pilot_academy_q_4 = {
+		desc = ca_pilot_academy_q_4_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 0
+		}
+		upgrades_from = ca_pilot_academy_q_3
+		prerequisites = { ca_primary_q_4 }
+		build_cost = 560
+		build_time = 1278
+		light_infantry_defensive = 0.10
+		light_infantry_offensive = 0.10
+		heavy_infantry_defensive = 0.10
+		heavy_infantry_offensive = 0.10
+		light_infantry = 10
+		heavy_infantry = 5
+		ai_creation_factor = 100
+		extra_tech_building_start = 3
+	}
+	ca_pilot_academy_q_5 = {
+		desc = ca_pilot_academy_q_5_desc
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 0
+		}
+		upgrades_from = ca_pilot_academy_q_4
+		prerequisites = { ca_primary_q_5 }
+		build_cost = 760
+		build_time = 1460
+		light_infantry_defensive = 0.10
+		light_infantry_offensive = 0.10
+		heavy_infantry_defensive = 0.10
+		heavy_infantry_offensive = 0.10
+		light_infantry = 10
+		heavy_infantry = 5
+		ai_creation_factor = 100
+		extra_tech_building_start = 4
+	}
+}

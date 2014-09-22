@@ -13,13 +13,4 @@ max_settlements = 4
 culture = sino_bianjiangese # Initial culture
 religion = colonial_separatist
 
-# History
-1.1.1 = {
-	b_da_dianhai_waystation = ct_space_station_0
-	b_da_dianhai_waystation = ct_space_station_1
-	
-	}
-2998.1.1 = {
-	b_da_dianhai_waystation = ct_colony_0
-	b_da_dianhai_waystation = FL_01_ct
-	}
+1.1.1 = { }

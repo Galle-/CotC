@@ -2314,18 +2314,21 @@ character_event = {
 	}
 	
 	option = {
-		name = "EVTOPTACONVERSION10100"
+		name = "EVTOPTCONFIRM"
 		religion = terran_federalist
 		remove_trait = radical
-		hidden_tooltip = { any_vassal = { character_event = { id = conversion.10101 } } }
+		hidden_tooltip = {
+			liege = { character_event = { id = conversion.10101 } }
+			any_vassal = { character_event = { id = conversion.10101 } }
+		}
 	}
 }
 
 character_event = {
 	id = conversion.10101
 	desc = "EVTDESCCONVERSION10101"
-	picture = GFX_evt_conversion
 	is_triggered_only = yes
+	notification = yes
 	
 	option = { name = "EVTOPTCONFIRM" }
 }
@@ -2894,10 +2897,13 @@ character_event = {
 	}
 	
 	option = {
-		name = "EVTOPTACONVERSION10200"
+		name = "EVTOPTCONFIRM"
 		religion = terran_republican
 		remove_trait = radical
-		hidden_tooltip = { any_vassal = { character_event = { id = conversion.10201 } } }
+		hidden_tooltip = {
+			liege = { character_event = { id = conversion.10201 } }
+			any_vassal = { character_event = { id = conversion.10201 } }
+		}
 	}
 }
 
@@ -2906,6 +2912,7 @@ character_event = {
 	desc = "EVTDESCCONVERSION10201"
 	picture = GFX_evt_conversion
 	is_triggered_only = yes
+	notification = yes
 	
 	option = { name = "EVTOPTCONFIRM" }
 }
@@ -3113,6 +3120,16 @@ character_event = {
 		}
 		
 		# Self interest
+		modifier = {
+			factor = 0.25
+			has_landed_title = e_terran_confederation
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 0.25
+			has_landed_title = e_terran_confederation
+			trait = ambitious
+		}
 		modifier = {
 			factor = 0.5
 			NOT = { religion = terran_republican }
@@ -3474,18 +3491,21 @@ character_event = {
 	}
 	
 	option = {
-		name = "EVTOPTACONVERSION10300"
+		name = "EVTOPTCONFIRM"
 		religion = terran_imperial
 		remove_trait = radical
-		hidden_tooltip = { any_vassal = { character_event = { id = conversion.10301 } } }
+		hidden_tooltip = {
+			liege = { character_event = { id = conversion.10301 } }
+			any_vassal = { character_event = { id = conversion.10301 } }
+		}
 	}
 }
 
 character_event = {
 	id = conversion.10301
 	desc = "EVTDESCCONVERSION10301"
-	picture = GFX_evt_conversion
 	is_triggered_only = yes
+	notification = yes
 	
 	option = { name = "EVTOPTCONFIRM" }
 }
@@ -3692,6 +3712,16 @@ character_event = {
 		}
 		
 		# Self interest
+		modifier = {
+			factor = 4
+			has_landed_title = e_terran_confederation
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 4
+			has_landed_title = e_terran_confederation
+			trait = ambitious
+		}
 		modifier = {
 			factor = 4
 			NOT = { religion = neo_feudal }
@@ -4077,18 +4107,21 @@ character_event = {
 	}
 	
 	option = {
-		name = "EVTOPTACONVERSION10400"
+		name = "EVTOPTCONFIRM"
 		religion = colonial_separatist
 		remove_trait = radical
-		hidden_tooltip = { any_vassal = { character_event = { id = conversion.10401 } } }
+		hidden_tooltip = {
+			liege = { character_event = { id = conversion.10401 } }
+			any_vassal = { character_event = { id = conversion.10401 } }
+		}
 	}
 }
 
 character_event = {
 	id = conversion.10401
 	desc = "EVTDESCCONVERSION10401"
-	picture = GFX_evt_conversion
 	is_triggered_only = yes
+	notification = yes
 	
 	option = { name = "EVTOPTCONFIRM" }
 }
@@ -4534,18 +4567,21 @@ character_event = {
 	}
 	
 	option = {
-		name = "EVTOPTACONVERSION10500"
+		name = "EVTOPTCONFIRM"
 		religion = astrist
 		remove_trait = radical
-		hidden_tooltip = { any_vassal = { character_event = { id = conversion.10501 } } }
+		hidden_tooltip = {
+			liege = { character_event = { id = conversion.10501 } }
+			any_vassal = { character_event = { id = conversion.10501 } }
+		}
 	}
 }
 
 character_event = {
 	id = conversion.10501
 	desc = "EVTDESCCONVERSION10501"
-	picture = GFX_evt_conversion
 	is_triggered_only = yes
+	notification = yes
 	
 	option = { name = "EVTOPTCONFIRM" }
 }
@@ -5144,19 +5180,23 @@ character_event = {
 		}
 	}
 	
+	
 	option = {
-		name = "EVTOPTACONVERSION10600"
+		name = "EVTOPTCONFIRM"
 		religion = neo_feudal
 		remove_trait = radical
-		hidden_tooltip = { any_vassal = { character_event = { id = conversion.10601 } } }
+		hidden_tooltip = {
+			liege = { character_event = { id = conversion.10601 } }
+			any_vassal = { character_event = { id = conversion.10601 } }
+		}
 	}
 }
 
 character_event = {
 	id = conversion.10601
 	desc = "EVTDESCCONVERSION10601"
-	picture = GFX_evt_conversion
 	is_triggered_only = yes
+	notification = yes
 	
 	option = { name = "EVTOPTCONFIRM" }
 }
@@ -5617,18 +5657,21 @@ character_event = {
 	}
 	
 	option = {
-		name = "EVTOPTACONVERSION10700"
+		name = "EVTOPTCONFIRM"
 		religion = neo_socialist
 		remove_trait = radical
-		hidden_tooltip = { any_vassal = { character_event = { id = conversion.10701 } } }
+		hidden_tooltip = {
+			liege = { character_event = { id = conversion.10701 } }
+			any_vassal = { character_event = { id = conversion.10701 } }
+		}
 	}
 }
 
 character_event = {
 	id = conversion.10701
 	desc = "EVTDESCCONVERSION10701"
-	picture = GFX_evt_conversion
 	is_triggered_only = yes
+	notification = yes
 	
 	option = { name = "EVTOPTCONFIRM" }
 }

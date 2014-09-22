@@ -56,6 +56,7 @@ decisions = {
 	}
 	# Decrees
 	dissolve_legislature_decision = {
+		is_high_prio = yes
 		potential = {
 			OR = {
 				ai = yes
@@ -305,6 +306,302 @@ decisions = {
 				factor = 0
 				has_character_flag = flag_founded_legislature
 				NOT = { had_character_flag = { flag = flag_founded_legislature days = 1825 } }
+			}
+		}
+	}
+	# The following decrees require there to be no legislature
+	become_military_decision = {
+		is_high_prio = yes
+		potential = {
+			OR = {
+				ai = yes
+				has_character_flag = flag_decree_menu_open
+			}
+			is_feudal = no # Can't do this if already military
+			independent = yes
+			NOT = { crownlaw_title = { has_law = legislative_authority_1 } } # Must not have a legislature
+		}
+		allow = {
+			# Must not be engaged in an aggressive war
+			NOT = { any_war = { any_attacker = { character = ROOT } } }
+			
+			# There must be an available military holding in your capital
+			capital_scope = {
+				owner = { character = ROOT }
+				ROOT = {
+					any_realm_title = {
+						tier = baron
+						location = PREVPREV
+						is_feudal = yes
+						province_capital = no
+						holder_scope = {
+							OR = {
+								character = ROOT
+								AND = {
+									tier = baron
+									liege = { character = ROOT }
+								}
+							}
+						}
+					}
+				}
+			}
+			
+			# Needs to belong to an ideology that strongly favors a military government
+			OR = {
+				religion = terran_imperial
+				religion = neo_feudal
+				religion = astrist
+				# Neo-socialists normally disapprove, but they REALLY don't like patricians
+				AND = {
+					is_merchant_republic = yes
+					religion = neo_socialist
+				}
+			}
+			
+			# Too weak-willed to actually do it
+			NOT = { trait = craven }
+			NOT = { trait = neurotic }
+			
+			# Doesn't have the authority to do it
+			has_regent = no
+			
+			# Needs enough prestige to buy this
+			prestige = 250
+		}
+		effect = {
+			prestige = -250
+			# Switch to a more viable succession law for a military title
+			any_demesne_title = {
+				limit = { has_law = succ_patrician_elective }
+				add_law = succ_feudal_elective
+			}
+			# If you do not have your own feudal title, steal one from a baron
+			if = {
+				limit = {
+					NOT = {
+						capital_scope = {
+							ROOT = {
+								any_realm_title = {
+									tier = baron
+									location = PREVPREV
+									is_feudal = yes
+									province_capital = no
+									holder_scope = { character = ROOT }
+								}
+							}
+						}
+					}
+				}
+				capital_scope = {
+					ROOT = {
+						random_realm_title = {
+							limit = {
+								tier = baron
+								location = PREVPREV
+								is_feudal = yes
+								province_capital = no
+								holder_scope = {
+									tier = baron
+									liege = { character = ROOT }
+								}
+							}
+							grant_title = ROOT
+							province_capital = yes
+						}
+					}
+				}
+			}
+			# If you do, use it instead
+			if = {
+				limit = {
+					capital_scope = {
+						ROOT = {
+							any_realm_title = {
+								tier = baron
+								location = PREVPREV
+								is_feudal = yes
+								province_capital = no
+								owner = { character = ROOT }
+							}
+						}
+					}
+				}
+				capital_scope = {
+					ROOT = {
+						random_realm_title = {
+							limit = {
+								tier = baron
+								location = PREVPREV
+								is_feudal = yes
+								province_capital = no
+								owner = { character = ROOT }
+							}
+							province_capital = yes
+						}
+					}
+				}
+			}
+			hidden_tooltip = { character_event = { id = decrees.100 } }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { religion_authority = 0.25 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { trait = radical }
+				NOT = { religion_authority = 0.5 }
+			}
+			modifier = {
+				factor = 0
+				trait = pragmatic
+				NOT = { religion_authority = 0.75 }
+			}
+		}
+	}
+	become_republic_decision = {
+		is_high_prio = yes
+		potential = {
+			OR = {
+				ai = yes
+				has_character_flag = flag_decree_menu_open
+			}
+			is_republic = no # Can't do this if already republic
+			independent = yes
+			NOT = { crownlaw_title = { has_law = legislative_authority_1 } } # Must not have a legislature
+		}
+		allow = {
+			# Must not be engaged in ANY WAR AT ALL
+			war = no
+			
+			# There must be an available city holding in your capital
+			capital_scope = {
+				owner = { character = ROOT }
+				ROOT = {
+					any_realm_title = {
+						tier = baron
+						location = PREVPREV
+						is_republic = yes
+						province_capital = no
+						holder_scope = {
+							OR = {
+								character = ROOT
+								AND = {
+									tier = baron
+									liege = { character = ROOT }
+								}
+							}
+						}
+					}
+				}
+			}
+			
+			# Needs to belong to an ideology that strongly favors a republican government
+			OR = {
+				religion = terran_federal
+				religion = terran_republican
+				religion = colonial_separatist
+			}
+			
+			# Doesn't have the authority to do it
+			has_regent = no
+			
+			# Needs enough prestige to buy this
+			prestige = 250
+			
+			# You can't change to a  republic if it would cause a game over!
+			independent = yes
+			higher_tier_than = count
+			capital_scope = { port = yes }
+		}
+		effect = {
+			prestige = -250
+			# If you do not have your own republic title, steal one from a baron
+			if = {
+				limit = {
+					NOT = {
+						capital_scope = {
+							ROOT = {
+								any_realm_title = {
+									tier = baron
+									location = PREVPREV
+									is_republic = yes
+									province_capital = no
+									holder_scope = { character = ROOT }
+								}
+							}
+						}
+					}
+				}
+				capital_scope = {
+					ROOT = {
+						random_realm_title = {
+							limit = {
+								tier = baron
+								location = PREVPREV
+								is_republic = yes
+								province_capital = no
+								holder_scope = {
+									tier = baron
+									liege = { character = ROOT }
+								}
+							}
+							grant_title = ROOT
+							province_capital = yes
+						}
+					}
+				}
+			}
+			# If you do, use it instead
+			if = {
+				limit = {
+					capital_scope = {
+						ROOT = {
+							any_realm_title = {
+								tier = baron
+								location = PREVPREV
+								is_republic = yes
+								province_capital = no
+								owner = { character = ROOT }
+							}
+						}
+					}
+				}
+				capital_scope = {
+					ROOT = {
+						random_realm_title = {
+							limit = {
+								tier = baron
+								location = PREVPREV
+								is_republic = yes
+								province_capital = no
+								owner = { character = ROOT }
+							}
+							province_capital = yes
+						}
+					}
+				}
+			}
+			hidden_tooltip = { character_event = { id = decrees.200 } }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { religion_authority = 0.25 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { trait = radical }
+				NOT = { religion_authority = 0.5 }
+			}
+			modifier = {
+				factor = 0
+				trait = pragmatic
+				NOT = { religion_authority = 0.75 }
 			}
 		}
 	}

@@ -25,46 +25,46 @@ b_zhang = {
 	culture = sino_bianjiangese
 	religion = colonial_separatist
 }
-b_komissarov = {
-	culture = russo_bianjiangese
-	religion = colonial_separatist
-}
-b_xiang = {
-	culture = sino_bianjiangese
-	religion = colonial_separatist
-}
-b_cao = {
-	culture = sino_bianjiangese
-	religion = colonial_separatist
-}
-b_madrigal = {
-	culture = hispanic_bianjiangese
-	religion = colonial_separatist
-}
+# b_komissarov = {
+	# culture = russo_bianjiangese
+	# religion = colonial_separatist
+# }
+# b_xiang = {
+	# culture = sino_bianjiangese
+	# religion = colonial_separatist
+# }
+# b_cao = {
+	# culture = sino_bianjiangese
+	# religion = colonial_separatist
+# }
+# b_madrigal = {
+	# culture = hispanic_bianjiangese
+	# religion = colonial_separatist
+# }
 
 # Xin ZiZhiqu - d_tian_yuan Megacorps
-b_bakare = {
-	culture = east_afro_bianjiangese
-	religion = colonial_separatist
-}
+# b_bakare = {
+	# culture = east_afro_bianjiangese
+	# religion = colonial_separatist
+# }
 
-b_allen = {
-	culture = anglo_bianjiangese
-	religion = colonial_separatist
-	}
+# b_allen = {
+	# culture = anglo_bianjiangese
+	# religion = colonial_separatist
+	# }
 
-b_yudin = {
-		culture = sino_bianjiangese
-		religion = colonial_separatist
-	}
-b_khoury = {
-		culture = sino_bianjiangese
-		religion = colonial_separatist
-		}
-b_feng = {
-		culture = sino_bianjiangese
-		religion = colonial_separatist
-		}
+# b_yudin = {
+		# culture = sino_bianjiangese
+		# religion = colonial_separatist
+	# }
+# b_khoury = {
+		# culture = sino_bianjiangese
+		# religion = colonial_separatist
+		# }
+# b_feng = {
+		# culture = sino_bianjiangese
+		# religion = colonial_separatist
+		# }
 #dynasty = 2336 #Khoury
 #dynasty = 12426 #Yudin
 #dynasty = 426 #Allen
@@ -75,88 +75,88 @@ b_lebedev = {
 	culture = russo_orion
 	religion = colonial_separatist
 }
-b_ramirez = {
-	culture = hispanic_orion
-	religion = colonial_separatist
-}
-b_calderon = {
-	culture = hispanic_orion
-	religion = colonial_separatist
-}
-b_ortiz = {
-	culture = hispanic_orion
-	religion = colonial_separatist
-}
-b_abu_abed = {
-	culture = arab_orion
-	religion = colonial_separatist
-}
+# b_ramirez = {
+	# culture = hispanic_orion
+	# religion = colonial_separatist
+# }
+# b_calderon = {
+	# culture = hispanic_orion
+	# religion = colonial_separatist
+# }
+# b_ortiz = {
+	# culture = hispanic_orion
+	# religion = colonial_separatist
+# }
+# b_abu_abed = {
+	# culture = arab_orion
+	# religion = colonial_separatist
+# }
 
 # Mukta Duniya Megacorps
-b_rizvi = {
-	culture = indo_mukta
-	religion = colonial_separatist
-}
-b_singhal = {
-	culture = indo_mukta
-	religion = colonial_separatist
-}
+# b_rizvi = {
+	# culture = indo_mukta
+	# religion = colonial_separatist
+# }
+# b_singhal = {
+	# culture = indo_mukta
+	# religion = colonial_separatist
+# }
 b_trivedi = {
 	culture = indo_mukta
 	religion = colonial_separatist
 }
-b_cruz = {
-	culture = hispanic_mukta
-	religion = colonial_separatist
-}
-b_igwe = {
-	culture = west_afro_mukta
-	religion = colonial_separatist
-}
+# b_cruz = {
+	# culture = hispanic_mukta
+	# religion = colonial_separatist
+# }
+# b_igwe = {
+	# culture = west_afro_mukta
+	# religion = colonial_separatist
+# }
 
 # New Frontier Megacorps
 b_hawking = {
 	culture = anglo_frontiersman
 	religion = colonial_separatist
 }
-b_cameron = {
-	culture = anglo_frontiersman
-	religion = colonial_separatist
-}
-b_davis = {
-	culture = anglo_frontiersman
-	religion = colonial_separatist
-}
-b_ishikawa = {
-	culture = japanese_frontiersman
-	religion = colonial_separatist
-}
-b_omosun = {
-	culture = west_afro_frontiersman
-	religion = colonial_separatist
-}
+# b_cameron = {
+	# culture = anglo_frontiersman
+	# religion = colonial_separatist
+# }
+# b_davis = {
+	# culture = anglo_frontiersman
+	# religion = colonial_separatist
+# }
+# b_ishikawa = {
+	# culture = japanese_frontiersman
+	# religion = colonial_separatist
+# }
+# b_omosun = {
+	# culture = west_afro_frontiersman
+	# religion = colonial_separatist
+# }
 
 # Yeni Istanbul megacorps
-b_sarkar = {
-	culture = indo_tarkan
-	religion = cyberneticist
-}
-b_rathore = {
-	culture = indo_tarkan
-	religion = cyberneticist
-}
-b_tehrani = {
-	culture = iranian_tarkan
-	religion = cyberneticist
-}
-b_sinha = {
-	culture = indo_tarkan
-	religion = cyberneticist
-}
-b_iyer = {
-	culture = indo_tarkan
-	religion = cyberneticist
-}
+# b_sarkar = {
+	# culture = indo_tarkan
+	# religion = cyberneticist
+# }
+# b_rathore = {
+	# culture = indo_tarkan
+	# religion = cyberneticist
+# }
+# b_tehrani = {
+	# culture = iranian_tarkan
+	# religion = cyberneticist
+# }
+# b_sinha = {
+	# culture = indo_tarkan
+	# religion = cyberneticist
+# }
+# b_iyer = {
+	# culture = indo_tarkan
+	# religion = cyberneticist
+# }
 
 # Smuggler families of Freeport Principito
 b_mendoza = {

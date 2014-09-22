@@ -13,7 +13,4 @@ b_napata_observatory = temple
 culture = anglo_tengoku # Initial culture
 religion = space_pirate
 
-1.1.1 = {
-	b_napata_prime = ca_pirate_harbor
-	b_napata_observatory = tp_pirate_harbor
-}
+1.1.1 = { }

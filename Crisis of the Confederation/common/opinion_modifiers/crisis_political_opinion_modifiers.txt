@@ -1,3 +1,8 @@
+# Confederation congress modifiers
+opinion_confederation_founder = { opinion = 50 months = 360 inherit = yes }
+opinion_gave_confederation_concessions = { opinion = 20 months = 120 }
+opinion_denied_confederation_concessions = { opinion = -20 months = 120 }
+
 # Reactions to constitutional changes
 opinion_loves_reform = { opinion = 100 months = 240 }
 opinion_approves_of_reform = { opinion = 25 months = 240 }

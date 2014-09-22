@@ -46,3 +46,7 @@ var_devolve_local_government;Senators For Home Rule;;;;;;;;;;;;;x
 var_independence;Senators For Secession;;;;;;;;;;;;;x
 EVTDESCLAWS10000;As leader of the Anti-Centralization faction in the [Root.Liege.PrimaryTitle.GetAdjective] Senate, you have carefully crafted a bill that will reform the [Root.Liege.PrimaryTitle.GetFullName], weakening the central government and increasing the autonomy of the outlying sectors. You have enough support to get this bill passed in the Senate.;;;;;;;;;;;;;x
 EVTOPTBLAWS10000;And [Root.Liege.Regent.GetFullName] is already on our side!;;;;;;;;;;;;;x
+become_military_decision;Adopt Military Government;;;;;;;;;;;;;x
+become_military_decision_desc;The [Root.PrimaryTitle.GetFullName] suffers under its weak, civilian government. By declaring the military to be the backbone of the government, you will strengthen it, and your own rule.;;;;;;;;;;;;;x
+EVTDESCDECREES100;You have adopted a military government and officially proclaimed yourself [Root.GetTitle] of the [Root.PrimaryTitle.GetFullName].;;;;;;;;;;;;;x
+EVTDESCDECREES101;[From.GetFullName] has issued a decree, creating a new military government and proclaiming [From.GetHerselfHimself] [From.GetTitle] of the [From.PrimaryTitle.GetFullName].;;;;;;;;;;;;;x

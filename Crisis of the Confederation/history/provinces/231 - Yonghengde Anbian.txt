@@ -11,15 +11,4 @@ b_yonghende_anbian = castle
 culture = sino_bianjiangese # Initial culture
 religion = colonial_separatist
 
-# History
-1.1.1 = {
-	b_yonghende_anbian = ca_no_atmosphere
-	b_yonghende_anbian = ca_frozen
-	b_yonghende_anbian = ca_no_water
-	b_yonghende_anbian = ca_planet_survey	
-}
-2998.1.1 = {
-	b_yonghende_anbian = ca_no_atmosphere_domes
-	b_yonghende_anbian = ca_colony_0
-	b_yonghende_anbian = FL_01_ca
-}
+1.1.1 = { }

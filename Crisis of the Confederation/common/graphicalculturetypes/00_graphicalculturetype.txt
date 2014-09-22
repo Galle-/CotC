@@ -196,6 +196,65 @@ russoanganigfx = {
 sinoanganigfx = {
 	skin_tone = 1
 }
+# Mukta Duniya
+afromuktagfx = {
+	skin_tone = 3
+}
+amerimuktagfx = {
+	skin_tone = 1
+}
+anglomuktagfx = {
+	skin_tone = 0
+}
+hispanicmuktagfx = {
+	skin_tone = 1
+}
+indomuktagfx = {
+	skin_tone = 2
+}
+mideastmuktagfx = {
+	skin_tone = 2
+}
+persianmuktagfx = {
+	skin_tone = 0
+}
+russomuktagfx = {
+	skin_tone = 0
+}
+sinomuktagfx = {
+	skin_tone = 1
+}
+# Xingjie
+afroxingjiegfx = {
+	skin_tone = 3
+}
+amerixingjiegfx = {
+	skin_tone = 1
+}
+angloxingjiegfx = {
+	skin_tone = 0
+}
+hispanicxingjiegfx = {
+	skin_tone = 1
+}
+indoxingjiegfx = {
+	skin_tone = 2
+}
+mideastxingjiegfx = {
+	skin_tone = 2
+}
+persianxingjiegfx = {
+	skin_tone = 0
+}
+russoxingjiegfx = {
+	skin_tone = 0
+}
+sinoxingjiegfx = {
+	skin_tone = 1
+}
+
+# Skin tones are 0 (light), 1 (tan), 2 (dark) and 3 (black)
+
 # Western
 
 frankishgfx = {
@@ -223,9 +282,9 @@ norsegfx = {
 knightsgfx = {
 	skin_tone = 0
 }
-# republicsgfx = {
-	# skin_tone = 0
-# }
+republicsgfx = {
+	skin_tone = 0
+}
 saxongfx = {
 	skin_tone = 0
 }
@@ -264,6 +323,19 @@ slavicholygfx = {
 }
 orthodoxholygfx = {
 	skin_tone = 1
+}
+
+# Indian
+hindugfx = {
+	skin_tone = 2
+}
+
+jaingfx = {
+	skin_tone = 2
+}
+
+buddhistgfx = {
+	skin_tone = 2
 }
 
 # Muslim
@@ -333,20 +405,6 @@ aztecholygfx = {
 jewishholygfx = {
 	skin_tone = 1
 }
-
-# Indian
 indiangfx = {
-	skin_tone = 2
-}
-
-hindugfx = {
-	skin_tone = 2
-}
-
-jaingfx = {
-	skin_tone = 2
-}
-
-buddhistgfx = {
 	skin_tone = 2
 }

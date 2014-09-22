@@ -279,6 +279,7 @@ inbred = {
 	ai_rationality = -20
 }
 cloning_defects = {
+	potential = { trait = clone }
 	inherit_chance = 10
 	
 	fertility = -0.1

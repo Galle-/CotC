@@ -14,24 +14,4 @@ max_settlements = 4
 culture = sino_xingjie # Initial culture
 religion = colonial_separatist
 
-# History
-1.1.1 = {
-	b_anquan_gang = ca_no_atmosphere
-	b_anquan_gang = ca_no_water
-	b_anquan_gang = ca_frozen
-	b_anquan_gang = ca_cold
-
-	b_anquan_gang_b = ct_no_atmosphere
-	b_anquan_gang_b = ct_no_water
-	b_anquan_gang_b = ct_trace_water
-	b_anquan_gang_b = ct_frozen
-	b_anquan_gang_b = ct_cold
-	b_anquan_gang_b = ct_cool
-	}
-2998.1.1 = {
-	b_anquan_gang = ca_no_atmosphere_domes
-	b_anquan_gang = ca_colony_0
-	
-	b_anquan_gang_b = ct_no_atmosphere_domes
-	b_anquan_gang_b = ct_colony_0
-	}
+1.1.1 = { }

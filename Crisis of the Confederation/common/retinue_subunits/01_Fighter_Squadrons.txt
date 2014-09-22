@@ -23,17 +23,14 @@ RETTYPE_I2 = { # Fanatics Fighter Wing
 	first_amount = 50
 	
 	potential = {
-		capital_scope = {
-			OR = {
-				religion = orthodox
-				religion = xenoterran
-				religion = solarian
-				religion = machine_cultist
-				religion = neo_socialist
-				religion = astrist
-			}
+		OR = {
+			religion = orthodox
+			religion = xenoterran
+			religion = solarian
+			religion = machine_cultist
+			religion = neo_socialist
+			religion = astrist
 		}
-		any_current_enemy = { NOT = { religion = PREV } }
 	}
 	
 	modifier = { light_infantry_morale = 5 }
@@ -43,17 +40,14 @@ RETTYPE_B2 = { # Fanatics Bomber Wing
 	first_amount = 50
 	
 	potential = {
-		capital_scope = {
-			OR = {
-				religion = orthodox
-				religion = xenoterran
-				religion = solarian
-				religion = machine_cultist
-				religion = neo_socialist
-				religion = astrist
-			}
+		OR = {
+			religion = orthodox
+			religion = xenoterran
+			religion = solarian
+			religion = machine_cultist
+			religion = neo_socialist
+			religion = astrist
 		}
-		any_current_enemy = { NOT = { religion = PREV } }
 	}
 	
 	modifier = { heavy_infantry_morale = 5 }

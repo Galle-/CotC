@@ -127,7 +127,7 @@ bombing_run_tactic = {
 	heavy_infantry_offensive = 5
 	light_cavalry_offensive = -2
 	knights_offensive = -2
-	horse_archers_offensive = -10
+	dreadnoughts_offensive = -10
 	
 	trigger = {
 		phase = melee
@@ -153,7 +153,7 @@ cruiser_raid_tactic = {
 	
 	knights_offensive = 4
 	knights_defensive = 4
-	horse_archers_offensive = -3
+	dreadnoughts_offensive = -3
 	
 	trigger = {
 		phase = melee
@@ -177,12 +177,12 @@ wall_of_battle_tactic = {
 	sprite = 6
 	group = defensive
 	
-	horse_archers_offensive = 3
-	horse_archers_defensive = 5
+	dreadnoughts_offensive = 3
+	dreadnoughts_defensive = 5
 	
 	trigger = {
 		phase = melee
-		horse_archers = 0.01
+		dreadnoughts = 0.01
 	}
 	
 	mean_time_to_happen = {
@@ -226,6 +226,13 @@ no_siege_offense_tactic = {
 	trigger = {
 		always = no # never use unless set explicitly by code
 	}
+	
+	light_infantry_offensive = -100
+	heavy_infantry_offensive = -100
+	pikemen_offensive = -100
+	light_cavalry_offensive = -100
+	knights_offensive = -100
+	dreadnoughts_offensive = -100
 }
 
 default_siege_offense_tactic = {
@@ -241,6 +248,13 @@ default_siege_offense_tactic = {
 	mean_time_to_happen = {
 		days = 10
 	}
+	
+	light_infantry_offensive = -100
+	heavy_infantry_offensive = -100
+	pikemen_offensive = -100
+	light_cavalry_offensive = -100
+	knights_offensive = -100
+	dreadnoughts_offensive = -100
 }
 
 
@@ -256,6 +270,13 @@ no_siege_defense_tactic = {
 	trigger = {
 		always = no # never use unless set explicitly by code
 	}
+	
+	light_infantry_offensive = -100
+	heavy_infantry_offensive = -100
+	pikemen_offensive = -100
+	light_cavalry_offensive = -100
+	knights_offensive = -100
+	dreadnoughts_offensive = -100
 }
 
 default_siege_defense_tactic = {
@@ -271,6 +292,13 @@ default_siege_defense_tactic = {
 	mean_time_to_happen = {
 		days = 10
 	}
+	
+	light_infantry_offensive = -100
+	heavy_infantry_offensive = -100
+	pikemen_offensive = -100
+	light_cavalry_offensive = -100
+	knights_offensive = -100
+	dreadnoughts_offensive = -100
 }
 
 

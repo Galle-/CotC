@@ -1,0 +1,19 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+EVTTOOLTIPLEAVESCONGRESS;will withdraw from the congress.;;;;;;;;;;;;;x
+EVTDESCDIPLOMACY100;Given the current circumstances facing the [Root.PrimaryTitle.GetFullName], you are considering petitioning to become a part of the [Root.Capital.Empire.Holder.PrimaryTitle.GetFullName].;;;;;;;;;;;;;x
+EVTDESCDIPLOMACY101;[From.GetFullName], [From.GetTitle] of the [From.PrimaryTitle.GetFullName], is petitioning to become a member state of the [Root.PrimaryTitle.GetFullName].;;;;;;;;;;;;;x
+EVTDESCDIPLOMACY1000;You are making preparations for a grand congress. Its purpose will be to negotiate the reformation of the [Root.Capital.Empire.GetFullName].;;;;;;;;;;;;;x
+EVTTOOLTIPDIPLOMACY1001;is invited to the congress.;;;;;;;;;;;;;x
+EVTDESCDIPLOMACY1001;TO: [Root.GetFullName], [Root.GetTitle] of [Root.PrimaryTitle.GetName]\nFROM: [From.GetFullName];;;;;;;;;;;;;x
+EVTDESCDIPLOMACY1200;The preliminary negotiations are complete - all those remaining have agreed, in principle, to reforming the [Root.Capital.Empire.GetFullName]. However, there is still the matter of the new constitution. First is the matter of how new leaders will be selected.;;;;;;;;;;;;;x
+EVTOPTADIPLOMACY1200;Leaders will be elected by a federal council.;;;;;;;;;;;;;x
+EVTOPTBDIPLOMACY1200;We will use the traditional laws of [Root.PrimaryTitle.GetName].;;;;;;;;;;;;;x
+EVTDESCDIPLOMACY1201;The preliminary negotations are complete - all those remaining have agreed, in principle, to reforming the [Root.Capital.Empire.GetFullName], and you have begun discussing the matter of the new constitution. [From.GetFullName] has proposed the creation of a federal council, who will elect new leaders.;;;;;;;;;;;;;x
+EVTDESCDIPLOMACY1205;The preliminary negotations are complete - all those remaining have agreed, in principle, to reforming the [Root.Capital.Empire.GetFullName], and you have begun discussing the matter of the new constitution. [From.GetFullName] wishes to select leaders according to the traditional laws of [From.PrimaryTitle.GetName].;;;;;;;;;;;;;x
+EVTOPTADIPLOMACY1205;I have no objections.;;;;;;;;;;;;;x
+EVTOPTBDIPLOMACY1205;[Root.PrimaryTitle.GetName] demands elections by a federal council.;;;;;;;;;;;;;x
+EVTDESCDIPLOMACY1210;Your proposal has not gone over as well as you'd hoped - [From.GetFullName] of [From.PrimaryTitle.GetName] has demanded that leaders be elected by a federal council, and is threatening to withdraw from the congress if this demand is not met.;;;;;;;;;;;;;x
+EVTDESCDIPLOMACY1211;After objections raised by [FromFrom.GetFullName] of [FromFrom.PrimaryTitle.GetName], [From.FullName] has agreed that leaders will be elected by a federal council.;;;;;;;;;;;;;x
+EVTDESCDIPLOMACY1212;[From.GetFullName] has refused to agree to your entirely reasonable demands for an equal say in the leadership of the new federation. It is clear that [Root.PrimaryTitle.GetName] has no place in this congress.;;;;;;;;;;;;;x
+EVTDESCDIPLOMACY1213;[FromFrom.GetFullName] of [FromFrom.PrimaryTitle.GetName] and [From.GetFullName] of [From.PrimaryTitle.GetName] are at loggerheads over the issue of how the new federation's leadership will be selected. Infuriated, [FromFrom.PrimaryTitle.GetName] has withdrawn from the congress.;;;;;;;;;;;;;x
+EVTOPTADIPLOMACY1401;With the completion of a grand congress held in the [From.Capital.GetName] System, several major regional powers have united to reform the [From.PrimaryTitle.GetFullName], and selected [From.GetFullName] as its new [From.GetTitle].;;;;;;;;;;;;;x

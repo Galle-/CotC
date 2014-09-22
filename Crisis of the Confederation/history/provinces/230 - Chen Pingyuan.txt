@@ -11,17 +11,4 @@ b_chen_pingyuan = castle
 culture = sino_bianjiangese # Initial culture
 religion = colonial_separatist
 
-# History
-1.1.1 = {
-	b_chen_pingyuan = ca_planet_survey
-	b_chen_pingyuan = ca_toxic_atmosphere
-	b_chen_pingyuan = ca_frozen
-	b_chen_pingyuan = ca_lakes
-	b_chen_pingyuan = ca_seas
-	
-	}
-2998.1.1 = {
-	b_chen_pingyuan = ca_toxic_atmosphere_domes
-	b_chen_pingyuan = ca_colony_0
-	b_chen_pingyuan = FL_01_ca
-	}
+1.1.1 = { }

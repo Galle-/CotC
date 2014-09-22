@@ -12,19 +12,6 @@ spriteTypes = {
 		noOfFrames = 12
 		norefcount = yes
 	}
-	spriteType = {
-		name = "GFX_merchant_male_headgear_behind"
-		texturefile = "gfx\\characters\\confederate_male_headgear_behind.dds"
-		noOfFrames = 12
-		norefcount = yes
-	}
-
-	spriteType = {
-		name = "GFX_merchant_male_headgear"
-		texturefile = "gfx\\characters\\confederate_male_headgear.dds"
-		noOfFrames = 12
-		norefcount = yes
-	}
 	
 	### WESTERN FEMALE ####
 	spriteType = {
@@ -39,18 +26,4 @@ spriteTypes = {
 		noOfFrames = 12
 		norefcount = yes
 	}
-	spriteType = {
-		name = "GFX_merchant_female_headgear_behind"
-		texturefile = "gfx\\characters\\confederate_female_headgear_behind.dds"
-		noOfFrames = 12
-		norefcount = yes
-	}
-
-	spriteType = {
-		name = "GFX_merchant_female_headgear"
-		texturefile = "gfx\\characters\\confederate_female_headgear.dds"
-		noOfFrames = 12
-		norefcount = yes
-	}
-
 }

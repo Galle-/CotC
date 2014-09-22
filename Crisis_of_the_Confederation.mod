@@ -2,6 +2,11 @@ name = "Crisis of the Confederation"
 path = "mod/Crisis of the Confederation"
 user_dir = "Crisis of the Confederation"
 
+replace_path = "common/cb_types"
+replace_path = "common/objectives"
+replace_path = "common/on_actions"
+replace_path = "common/buildings"
+
 replace_path = "history/characters"
 replace_path = "history/diplomacy"
 replace_path = "history/provinces"

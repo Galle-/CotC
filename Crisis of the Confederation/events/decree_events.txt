@@ -1,0 +1,52 @@
+# Events informing vassals of a ruler's decrees
+namespace = decrees
+
+# Form of government changes
+character_event = {
+	id = decrees.100
+	desc = "EVTDESCDECREE100"
+	picture = GFX_evt_speech
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		hidden_tooltip = {
+			any_realm_character = {
+				limit = { NOT = { character = ROOT } }
+				character_event = { id = decrees.101 }
+			}
+		}
+	}
+}
+character_event = {
+	id = decrees.101
+	desc = "EVTDESCDECREES101"
+	picture = GFX_evt_speech
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+character_event = {
+	id = decrees.200
+	desc = "EVTDESCDECREE200"
+	picture = GFX_evt_speech
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		hidden_tooltip = {
+			any_realm_character = {
+				limit = { NOT = { character = ROOT } }
+				character_event = { id = decrees.201 }
+			}
+		}
+	}
+}
+character_event = {
+	id = decrees.201
+	desc = "EVTDESCDECREES201"
+	picture = GFX_evt_speech
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}

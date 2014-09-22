@@ -1,0 +1,68 @@
+#events that set what planet is which, currently random.
+
+namespace = planet_survey
+
+character_event = {
+	id = planet_survey.1
+	
+	hide_window = yes # This is a background event
+	
+	trigger = {
+		any_demesne_title = {
+			is_patrician = no
+			tier = baron
+			NOT = { has_building = ca_planet_basic_penalties }
+			is_feudal = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		random_demesne_title = {
+			limit = {
+				tier = baron
+				is_feudal = yes
+				NOT = { has_building = ca_planet_basic_penalties }
+			}
+			
+			add_building = ca_planet_basic_penalties
+			add_building = ca_planet_r000
+			random_list = {
+				60 = {
+					add_building = ca_planet_r111
+					random_list = {
+						30 = {
+							add_building = ca_planet_r222
+							random_list = {
+								10 = { add_building = ca_planet_r333 }
+								20 = {}
+							}
+						}
+						30 = {}
+					}
+				}
+				40 = {}
+			}
+			add_building = ca_volatiles_start0_level0
+			add_building = ca_volatiles_start1_level1
+			add_building = ca_volatiles_start2_level2
+			add_building = ca_volatiles_start3_level3
+			add_building = ca_launch_system_start0_level0
+			add_building = ca_launch_system_start1_level1
+			add_building = ca_launch_system_start2_level2
+			add_building = ca_launch_system_start3_level3
+			add_building = ca_metals_start0_level0
+			add_building = ca_metals_start1_level1
+			add_building = ca_metals_start2_level2
+			add_building = ca_metals_start3_level3
+			add_building = ca_primary_q_0
+		}
+	}
+	
+	option = {
+		name = "OK"
+	}
+}

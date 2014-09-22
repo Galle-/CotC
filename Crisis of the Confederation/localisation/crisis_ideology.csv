@@ -37,6 +37,7 @@ hiver_desc;The Hive is a wonder of modern engineering. By integrating a DNI impl
 bio_directionist;Bio-Directionist;;;;;;;;;;;;;x
 outlaw_group;Outlaw;;;;;;;;;;;;;x
 space_pirate;Space Pirate;;;;;;;;;;;;;x
+space_pirate_desc;Like regular pirates, but in space. This is not a complicated concept. Space pirates can freely raid non-pirate systems, and have the unique ability to navigate hyperspace within nebulas.;;;;;;;;;;;;;x
 PIRATE_ADVENTURE;[Root.GetFullName]'s Pirate Fleet;;;;;;;;;;;;;x
 STAT_PIETY_CREDIBILITY;Credibility;;;;;;;;;;;;;x
 STAT_PIETY_DESC_CREDIBILITY;Political credibility is respected by other followers of your ideology. Like Prestige, it is added to your score on the death of a ruler.;;;;;;;;;;;;;x
@@ -45,7 +46,7 @@ STAT_PIETY_LEGITIMACY;Legitimacy;;;;;;;;;;;;;x
 STAT_PIETY_DESC_LEGITIMACY;Political legitimacy is respected by other followers of your ideology. Like Prestige, it is added to your score on the death of a ruler.;;;;;;;;;;;;;x
 MONTHLY_PIETY_LEGITIMACY;Monthly Legitimacy Increase;;;;.;;;;;;;;;x
 STAT_PIETY_ASPIRATION;Aspiration;;;;;;;;;;;;;x
-STAT_PIETY_DESC_ASPIRATION;Courage and optimistic in pursuing the cause is respected by other followers of your ideology. Like Prestige, it is added to your score on the death of a ruler.;;;;;;;;;;;;;x
+STAT_PIETY_DESC_ASPIRATION;Courage and optimism in pursuing the cause is respected by other followers of your ideology. Like Prestige, it is added to your score on the death of a ruler.;;;;;;;;;;;;;x
 MONTHLY_PIETY_ASPIRATION;Monthly Aspiration Increase;;;;.;;;;;;;;;x
 STAT_PIETY_RESPECT;Respect;;;;;;;;;;;;;x
 STAT_PIETY_DESC_RESPECT;Respect is the measure of your standing in the eyes of your fellow criminals. Like Prestige, it is added to your score on the death of a ruler.;;;;;;;;;;;;;x
@@ -156,17 +157,19 @@ OP_NIRVANA;Nirvana;;;;;;;;;;;;;x
 OP_ASCENSION;Ascension;;;;;;;;;;;;;x
 OP_UTOPIA;Utopia;;;;;;;;;;;;;x
 OP_SINGULARITY;Singularity;;;;;;;;;;;;;x
+UNIFICATION;Unification War;;;;;;;;;;;;;x
+ASSIMILATION;Assimilation War;;;;;;;;;;;;;x
 title_ecumenical_councillor;Ecumenical Councillor;;;;;;;;;;;;;x
 title_ecumenical_councillor;Ecumenical Councillor;;;;;;;;;;;;;x
-EVTDESCCONVERSION5000;You are a firm believer in [Root.Religion.GetName], but one of your close friends is not. Perhaps it is time that they were persuaded to see things your way?;;;;;;;;;;;;;x
+EVTDESCCONVERSION5000;You are a firm [Root.GetReligion], but one of your close friends is not. Perhaps it is time that they were persuaded to see things your way?;;;;;;;;;;;;;x
 EVTOPTACONVERSION5000;I'm sure they'll listen to reason.;;;;;;;;;;;;;x
 EVTOPTBCONVERSION5000;No, I won't jeopardize our friendship.;;;;;;;;;;;;;x
-EVTDESCCONVERSION5001;Today, your friend [From.GetFullName] took you aside and tried to engage you in a philosophical debate. It appears that [From.GetSheHe] disagrees with your belief in [Root.Religion.GetName], and [From.GetSheHe] tried to persuade you to accept [From.Religion.GetName] instead.;;;;;;;;;;;;;x
+EVTDESCCONVERSION5001;Today, your friend [From.GetFullName] took you aside and tried to engage you in a philosophical debate. It appears that [From.GetSheHe] disagrees with your [Root.GetReligion] beliefs, and [From.GetSheHe] tried to persuade you to adopt a more [From.GetReligion] position.;;;;;;;;;;;;;x
 EVTOPTACONVERSION5001;[FROM.GetSheHeCap] actually made a very good case.;;;;;;;;;;;;;x
 EVTOPTBCONVERSION5001;I'm sorry, but you're still wrong about this.;;;;;;;;;;;;;x
 EVTDESCCONVERSION5002;It seems that your friend [From.GetFullName] was willing to listen to reason, after all. [From.GetSheHeCap] told you that [From.GetSheHe] would think about what you told [From.GetHerHim], and [From.GetSheHe] seems to be growing closer and closer to the truth every day.;;;;;;;;;;;;;x
 EVTOPTACONVERSION5002;A job well done.;;;;;;;;;;;;;x
-EVTDESCCONVERSION5003;You tried to explain to your friend [From.GetFullName] why [From.GetHerHis] belief in [From.Religion.GetName] was misguided, but [From.GetSheHe] refused to listen to reason.;;;;;;;;;;;;;x
+EVTDESCCONVERSION5003;You tried to explain to your friend [From.GetFullName] why [From.GetHerHis] [From.GetReligion] beliefs were misguided, but [From.GetSheHe] refused to listen to reason.;;;;;;;;;;;;;x
 EVTOPTACONVERSION5003;I suppose we'll have to agree to disagree.;;;;;;;;;;;;;x
 EVTOPTBCONVERSION5003;Then we can no longer be friends.;;;;;;;;;;;;;x
 EVTDESCCONVERSION100;The [This.GetName] System has traditionally been dominated by [This.GetReligion]s, but a series of major political upheavals have changed things, and the bulk of the system's population are now Terran Federalists.;;;;;;;;;;;;;x
@@ -186,3 +189,17 @@ EVTDESCCONVERSION113;The [This.GetName] System has traditionally been dominated 
 EVTDESCCONVERSION114;The [This.GetName] System has traditionally been dominated by [This.GetReligion]s, but a recent spiritual awakening has changed things, and the bulk of the system's population are now devout Adoptionists.;;;;;;;;;;;;;x
 EVTDESCCONVERSION114;The [This.GetName] System has traditionally been dominated by [This.GetReligion]s, but a recent spiritual awakening has changed things, and the bulk of the system's population are now devout Xenoterrans.;;;;;;;;;;;;;x
 EVTDESCCONVERSION10001;Your [GetFromRelation], [From.GetFullName], has fled [Root.Location.GetName] to become a space pirate in the [From.Liege.PrimaryTitle.GetFullName]!;;;;;;;;;;;;;x
+EVTDESCCONVERSION10100;The more you ponder political matters, the more you feel you have made a horrible mistake. You once considered yourself a proud [Root.GetReligion], but now you find yourself more and more swayed by the arguments of the Terran Republicans.;;;;;;;;;;;;;x
+EVTDESCCONVERSION10101;[From.GetFullName] has become a Terran Federalist.;;;;;;;;;;;;;x
+EVTDESCCONVERSION10200;The more you ponder political matters, the more you feel you have made a horrible mistake. You once considered yourself a proud [Root.GetReligion], but now you find yourself more and more swayed by the arguments of the Terran Republicans.;;;;;;;;;;;;;x
+EVTDESCCONVERSION10201;[From.GetFullName] has become a Terran Republican.;;;;;;;;;;;;;x
+EVTDESCCONVERSION10300;The more you ponder political matters, the more you feel you have made a horrible mistake. You once considered yourself a proud [Root.GetReligion], but now you find yourself more and more swayed by the arguments of the Terran Imperialists.;;;;;;;;;;;;;x
+EVTDESCCONVERSION10301;[From.GetFullName] has become a Terran Imperialist.;;;;;;;;;;;;;x
+EVTDESCCONVERSION10400;The more you ponder political matters, the more you feel you have made a horrible mistake. You once considered yourself a proud [Root.GetReligion], but now you find yourself more and more swayed by the arguments of the Colonial Separatists.;;;;;;;;;;;;;x
+EVTDESCCONVERSION10401;[From.GetFullName] has become a Colonial Separatist.;;;;;;;;;;;;;x
+EVTDESCCONVERSION10500;The more you ponder political matters, the more you feel you have made a horrible mistake. You once considered yourself a proud [Root.GetReligion], but now you find yourself more and more swayed by the arguments of the Astrists.;;;;;;;;;;;;;x
+EVTDESCCONVERSION10501;[From.GetFullName] has become an Astrist.;;;;;;;;;;;;;x
+EVTDESCCONVERSION10600;The more you ponder political matters, the more you feel you have made a horrible mistake. You once considered yourself a proud [Root.GetReligion], but now you find yourself more and more swayed by the arguments of the Neo-Feudalists.;;;;;;;;;;;;;x
+EVTDESCCONVERSION10601;[From.GetFullName] has become a Neo-Feudalist.;;;;;;;;;;;;;x
+EVTDESCCONVERSION10700;The more you ponder political matters, the more you feel you have made a horrible mistake. You once considered yourself a proud [Root.GetReligion], but now you find yourself more and more swayed by the arguments of the Neo-Socialists.;;;;;;;;;;;;;x
+EVTDESCCONVERSION10701;[From.GetFullName] has become a Neo-Socialist.;;;;;;;;;;;;;x

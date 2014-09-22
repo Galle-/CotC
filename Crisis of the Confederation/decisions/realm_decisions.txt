@@ -1,4 +1,72 @@
 decisions = {
+	host_confederation_congress = {
+		is_high_prio = yes
+		potential = {
+			# Eligible to host congress
+			independent = yes
+			tier = king
+			demesne_size = 1
+			capital_scope = { empire = { has_holder = no } }
+			NOT = { has_character_flag = flag_confederation_congress_host }
+		}
+		allow = {
+			# Can afford the prestige cost
+			prestige = 500
+			# Prevent spamming
+			custom_tooltip = {
+				text = "5YEARCOOLDOWN"
+				hidden_tooltip = {
+					OR = {
+						NOT = { has_character_flag = flag_confederation_congress_failed }
+						had_character_flag = { flag = flag_confederation_congress_failed days = 1825 }
+					}
+				}
+			}
+			# Not at war with anyone in the region
+			NOT = {
+				capital_scope = {
+					empire = {
+						any_independent_ruler = {
+							de_jure_liege_or_above = PREV
+							war_with = ROOT
+						}
+					}
+				}
+			}
+			# Nobody else is already hosting a congress
+			NOT = {
+				any_independent_ruler = {
+					capital_scope = { empire = { ROOT = { capital_scope = { empire = { title = PREVPREVPREV } } } } }
+					has_character_flag = flag_confederation_congress_host
+				}
+			}
+		}
+		effect = {
+			set_character_flag = flag_confederation_congress_host
+			character_event = { id = diplomacy.1000 tooltip = "EVTTOOLTIPDIPLOMACY1000" }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { has_ambition = obj_become_emperor }
+			}
+			# Must have SOME possibility of success
+			modifier = {
+				factor = 0
+				NOT = {
+					capital_scope = {
+						empire = {
+							any_independent_ruler = {
+								de_jure_liege_or_above = PREV
+								opinion = { who = ROOT value = 0 }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 	apply_to_join_empire = {
 		is_high_prio = yes
 		potential = {
@@ -23,7 +91,7 @@ decisions = {
 			}
 			# Can afford the prestige hit
 			OR = {
-				prestige = 500
+				prestige = 100
 				trait = humble
 			}
 			custom_tooltip = {

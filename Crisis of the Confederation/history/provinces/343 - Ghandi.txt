@@ -6,8 +6,8 @@ title = c_ghandi
 # Settlements
 max_settlements = 5
 
-b_ghandi_iii = city
 b_ghandi_iii_b = temple
+b_ghandi_iii = city
 
 # Misc
 culture = indo_mukta # Initial culture

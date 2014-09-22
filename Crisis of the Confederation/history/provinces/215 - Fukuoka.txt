@@ -15,9 +15,4 @@ b_fukuoka_prime = temple
 culture = japanese_tengoku # Initial culture
 religion = space_pirate
 
-1.1.1 = {
-	b_fukuoka_station_alpha = ca_pirate_harbor
-	b_fukuoka_station_beta = ca_pirate_harbor
-	b_fukuoka_station_gamma = ca_pirate_harbor
-	b_fukuoka_prime = tp_pirate_harbor
-}
+1.1.1 = { }

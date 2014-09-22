@@ -13,22 +13,21 @@ RETTYPE_DD1 = # Perseus-class Destroyer
 {
 	first_type = 3
 	first_amount = 1
-		
-	modifier = {
-		light_cavalry_offensive = -0.2
-		light_cavalry_defensive = -0.2
-	}
 }
 RETTYPE_BC1 = # Yamato-class Battlecruiser
 {
 	first_type = 4
 	first_amount = 1
 	
-	
-	modifier = {
-		knights_offensive = -0.2
-		knights_defensive = -0.2
-	}
+	# potential = {
+		# # Must have a battlecruiser or unique shipyard
+		# capital_holding = {
+			# OR = {
+				# has_building = ca_capital_factory_q_1
+				# has_building = ca_olympus_shipyards
+			# }
+		# }
+	# }
 }
 
 RETTYPE_DN1 = # Victory-class Dreadnought
@@ -38,10 +37,13 @@ RETTYPE_DN1 = # Victory-class Dreadnought
 	
 	special_troops = dreadnoughts
 	
-	modifier = {
-		dreadnoughts_offensive = -0.2
-		dreadnoughts_defensive = -0.2
-	}
+	# potential = {
+		# # Must have a dreadnought or unique shipyard
+		# capital_holding = {
+			# OR = {
+				# has_building = ca_capital_factory_q_1
+				# has_building = ca_olympus_shipyards
+			# }
+		# }
+	# }
 }
-
-

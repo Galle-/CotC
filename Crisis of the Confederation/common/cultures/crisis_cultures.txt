@@ -452,10 +452,11 @@ terran_group = {
 	}
 }
 xingjie_group = {
-	graphical_culture = angloconfederategfx
+	graphical_culture = sinoxingjiegfx
+	second_graphical_culture = mideastxingjiegfx
 	
 	anglo_xingjie = {
-		graphical_culture = angloconfederategfx
+		graphical_culture = angloxingjiegfx
 		color = { 0.95 0.5 0.5 }
 		
 		male_names = {
@@ -487,7 +488,7 @@ xingjie_group = {
 	}
 	
 	arab_xingjie = {
-		graphical_culture = mideastconfederategfx
+		graphical_culture = mideastxingjiegfx
 		
 		color = { 0.95 0.5 0.5 }
 		
@@ -526,8 +527,8 @@ xingjie_group = {
 	}
 
 	east_afro_xingjie = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afroxingjiegfx
+		second_graphical_culture = mideastxingjiegfx
 		
 		color = { 0.95 0.5 0.5 }
 		
@@ -564,8 +565,8 @@ xingjie_group = {
 		modifier = default_culture_modifier
 	}
 	ethiopian_xingjie = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afroxingjiegfx
+		second_graphical_culture = mideastxingjiegfx
 		
 		color = { 0.95 0.5 0.5 }
 		
@@ -602,8 +603,8 @@ xingjie_group = {
 		modifier = default_culture_modifier
 	}
 	hispanic_xingjie = {
-		graphical_culture = hispanicconfederategfx
-		second_graphical_culture = angloconfederategfx # Fallback type
+		graphical_culture = hispanicxingjiegfx
+		second_graphical_culture = angloxingjiegfx # Fallback type
 		
 		color = { 0.95 0.5 0.5 }
 		
@@ -639,8 +640,8 @@ xingjie_group = {
 	}
 	
 	indo_xingjie = {
-		graphical_culture = indoconfederategfx
-		second_graphical_culture = mideastconfederategfx # Fallback type
+		graphical_culture = indoxingjiegfx
+		second_graphical_culture = mideastxingjiegfx # Fallback type
 		color = { 0.95 0.5 0.5 }
 		
 		male_names = {
@@ -672,8 +673,8 @@ xingjie_group = {
 		modifier = default_culture_modifier
 	}
 	iranian_xingjie = {
-		graphical_culture = persianconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = persianxingjiegfx
+		second_graphical_culture = mideastxingjiegfx
 
 		color = { 0.95 0.5 0.5 }
 		
@@ -709,8 +710,8 @@ xingjie_group = {
 		modifier = default_culture_modifier
 	}
 	japanese_xingjie = {
-		graphical_culture = sinoconfederategfx
-		second_graphical_culture = mideastconfederategfx # Fallback type
+		graphical_culture = sinoxingjiegfx
+		second_graphical_culture = mideastxingjiegfx # Fallback type
 		
 		color = { 0.95 0.5 0.5 }
 		
@@ -743,8 +744,8 @@ xingjie_group = {
 		modifier = default_culture_modifier
 	}
 	mesoamerican_xingjie = {
-		graphical_culture = americonfederategfx
-		second_graphical_culture = mideastconfederategfx # Fallback type
+		graphical_culture = amerixingjiegfx
+		second_graphical_culture = mideastxingjiegfx # Fallback type
 		color = { 0.95 0.5 0.5 }
 		
 		male_names = {
@@ -778,8 +779,8 @@ xingjie_group = {
 		modifier = default_culture_modifier
 	}
 	russo_xingjie = {
-		graphical_culture = russoconfederategfx
-		second_graphical_culture = angloconfederategfx
+		graphical_culture = russoxingjiegfx
+		second_graphical_culture = angloxingjiegfx
 		
 		color = { 0.95 0.5 0.5 }
 		
@@ -818,8 +819,8 @@ xingjie_group = {
 		modifier = default_culture_modifier
 	}
 	sino_xingjie = {
-		graphical_culture = sinoconfederategfx
-		second_graphical_culture = mideastconfederategfx # Fallback type
+		graphical_culture = sinoxingjiegfx
+		second_graphical_culture = mideastxingjiegfx # Fallback type
 		color = { 0.95 0.5 0.5 }
 		
 		male_names = {
@@ -850,8 +851,8 @@ xingjie_group = {
 		modifier = default_culture_modifier
 	}
 	west_afro_xingjie = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx # Fallback type
+		graphical_culture = afroxingjiegfx
+		second_graphical_culture = mideastxingjiegfx # Fallback type
 		
 		color = { 0.95 0.5 0.5 }
 		
@@ -4047,10 +4048,11 @@ tengoku_group = {
 	}
 }
 bianjiangese_group = {
-	graphical_culture = angloconfederategfx
+	graphical_culture = sinoxingjiegfx
+	second_graphical_culture = mideastxingjiegfx
 	
 	anglo_bianjiangese = {
-		graphical_culture = angloconfederategfx
+		graphical_culture = angloxingjiegfx
 		color = { 0.5 0 0.5 }
 		
 		male_names = {
@@ -4082,7 +4084,7 @@ bianjiangese_group = {
 	}
 	
 	arab_bianjiangese = {
-		graphical_culture = mideastconfederategfx
+		graphical_culture = mideastxingjiegfx
 		color = { 0.5 0 0.5 }
 
 		
@@ -4121,8 +4123,8 @@ bianjiangese_group = {
 	}
 
 	east_afro_bianjiangese = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afroxingjiegfx
+		second_graphical_culture = mideastxingjiegfx
 		color = { 0.5 0 0.5 }
 		
 		male_names = {
@@ -4157,8 +4159,8 @@ bianjiangese_group = {
 		modifier = default_culture_modifier
 	}
 	ethiopian_bianjiangese = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afroxingjiegfx
+		second_graphical_culture = mideastxingjiegfx
 		color = { 0.5 0 0.5 }
 		male_names = {
 			An Bo Bin Cheng
@@ -4192,8 +4194,8 @@ bianjiangese_group = {
 		modifier = default_culture_modifier
 	}
 	hispanic_bianjiangese = {
-		graphical_culture = hispanicconfederategfx
-		second_graphical_culture = angloconfederategfx
+		graphical_culture = hispanicxingjiegfx
+		second_graphical_culture = angloxingjiegfx
 		color = { 0.5 0 0.5 }
 		
 		male_names = {
@@ -4227,8 +4229,8 @@ bianjiangese_group = {
 	}
 	
 	indo_bianjiangese = {
-		graphical_culture = indoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = indoxingjiegfx
+		second_graphical_culture = mideastxingjiegfx
 		color = { 0.5 0 0.5 }
 		
 		male_names = {
@@ -4259,8 +4261,8 @@ bianjiangese_group = {
 		modifier = default_culture_modifier
 	}
 	iranian_bianjiangese = {
-		graphical_culture = persianconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = persianxingjiegfx
+		second_graphical_culture = mideastxingjiegfx
 		color = { 0.5 0 0.5 }
 		
 		male_names = {
@@ -4294,8 +4296,8 @@ bianjiangese_group = {
 		modifier = default_culture_modifier
 	}
 	japanese_bianjiangese = {
-		graphical_culture = sinoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = sinoxingjiegfx
+		second_graphical_culture = mideastxingjiegfx
 		color = { 0.5 0 0.5 }
 		
 		male_names = {
@@ -4326,8 +4328,8 @@ bianjiangese_group = {
 		modifier = default_culture_modifier
 	}
 	mesoamerican_bianjiangese = {
-		graphical_culture = americonfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = amerixingjiegfx
+		second_graphical_culture = mideastxingjiegfx
 		color = { 0.5 0 0.5 }
 		
 		
@@ -4361,8 +4363,8 @@ bianjiangese_group = {
 		modifier = default_culture_modifier
 	}
 	russo_bianjiangese = {
-		graphical_culture = russoconfederategfx
-		second_graphical_culture = angloconfederategfx
+		graphical_culture = russoxingjiegfx
+		second_graphical_culture = angloxingjiegfx
 		color = { 0.5 0 0.5 }
 		
 		male_names = {
@@ -4399,8 +4401,8 @@ bianjiangese_group = {
 		modifier = default_culture_modifier
 	}
 	sino_bianjiangese = {
-		graphical_culture = sinoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = sinoxingjiegfx
+		second_graphical_culture = mideastxingjiegfx
 		color = { 0.5 0 0.5 }
 		
 		male_names = {
@@ -4431,8 +4433,8 @@ bianjiangese_group = {
 		modifier = default_culture_modifier
 	}
 	west_afro_bianjiangese = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afroxingjiegfx
+		second_graphical_culture = mideastxingjiegfx
 		color = { 0.5 0 0.5 }
 		
 		male_names = {
@@ -4906,10 +4908,11 @@ orion_group = {
 	}
 }
 mukta_group = {
-	graphical_culture = angloconfederategfx
+	graphical_culture = indomuktagfx
+	second_graphical_culture = mideastmuktagfx
 	
 	anglo_mukta = {
-		graphical_culture = angloconfederategfx
+		graphical_culture = anglomuktagfx
 		color = { 0.95 0.5 0.1 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -4946,7 +4949,7 @@ mukta_group = {
 	}
 	
 	arab_mukta = {
-		graphical_culture = mideastconfederategfx
+		graphical_culture = mideastmuktagfx
 		color = { 0.95 0.5 0.1 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -4989,8 +4992,8 @@ mukta_group = {
 	}
 
 	east_afro_mukta = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afromuktagfx
+		second_graphical_culture = mideastmuktagfx
 		color = { 0.95 0.5 0.1 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -5030,8 +5033,8 @@ mukta_group = {
 		modifier = default_culture_modifier
 	}
 	ethiopian_mukta = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afromuktagfx
+		second_graphical_culture = mideastmuktagfx
 		color = { 0.95 0.5 0.1 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -5071,8 +5074,8 @@ mukta_group = {
 		modifier = default_culture_modifier
 	}
 	hispanic_mukta = {
-		graphical_culture = hispanicconfederategfx
-		second_graphical_culture = angloconfederategfx
+		graphical_culture = hispanicmuktagfx
+		second_graphical_culture = anglomuktagfx
 		color = { 0.95 0.5 0.1 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -5111,8 +5114,8 @@ mukta_group = {
 	}
 	
 	indo_mukta = {
-		graphical_culture = indoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = indomuktagfx
+		second_graphical_culture = mideastmuktagfx
 		color = { 0.95 0.5 0.1 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -5148,8 +5151,8 @@ mukta_group = {
 		modifier = default_culture_modifier
 	}
 	iranian_mukta = {
-		graphical_culture = persianconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = persianmuktagfx
+		second_graphical_culture = mideastmuktagfx
 		color = { 0.95 0.5 0.1 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -5188,8 +5191,8 @@ mukta_group = {
 		modifier = default_culture_modifier
 	}
 	japanese_mukta = {
-		graphical_culture = sinoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = sinomuktagfx
+		second_graphical_culture = mideastmuktagfx
 		color = { 0.95 0.5 0.1 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -5225,8 +5228,8 @@ mukta_group = {
 		modifier = default_culture_modifier
 	}
 	mesoamerican_mukta = {
-		graphical_culture = americonfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = amerimuktagfx
+		second_graphical_culture = mideastmuktagfx
 		color = { 0.95 0.5 0.1 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -5265,8 +5268,8 @@ mukta_group = {
 		modifier = default_culture_modifier
 	}
 	russo_mukta = {
-		graphical_culture = russoconfederategfx
-		second_graphical_culture = angloconfederategfx
+		graphical_culture = russomuktagfx
+		second_graphical_culture = anglomuktagfx
 		color = { 0.95 0.5 0.1 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -5308,8 +5311,8 @@ mukta_group = {
 		modifier = default_culture_modifier
 	}
 	sino_mukta = {
-		graphical_culture = sinoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = sinomuktagfx
+		second_graphical_culture = mideastmuktagfx
 		color = { 0.95 0.5 0.1 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -5345,8 +5348,8 @@ mukta_group = {
 		modifier = default_culture_modifier
 	}
 	west_afro_mukta = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afromuktagfx
+		second_graphical_culture = mideastmuktagfx
 		color = { 0.95 0.5 0.1 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -5384,10 +5387,11 @@ mukta_group = {
 	}
 }
 tarkan_group = {
-	graphical_culture = angloconfederategfx
+	graphical_culture = indomuktagfx
+	second_graphical_culture = mideastmuktagfx
 	
 	anglo_tarkan = {
-		graphical_culture = angloconfederategfx
+		graphical_culture = anglomuktagfx
 		color = { 0.5 0.5 0.5 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -5424,7 +5428,7 @@ tarkan_group = {
 	}
 	
 	arab_tarkan = {
-		graphical_culture = mideastconfederategfx
+		graphical_culture = mideastmuktagfx
 		color = { 0.5 0.5 0.5 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -5467,8 +5471,8 @@ tarkan_group = {
 	}
 
 	east_afro_tarkan = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afromuktagfx
+		second_graphical_culture = mideastmuktagfx
 		color = { 0.5 0.5 0.5 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -5508,8 +5512,8 @@ tarkan_group = {
 		modifier = default_culture_modifier
 	}
 	ethiopian_tarkan = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afromuktagfx
+		second_graphical_culture = mideastmuktagfx
 		color = { 0.5 0.5 0.5 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -5549,8 +5553,8 @@ tarkan_group = {
 		modifier = default_culture_modifier
 	}
 	hispanic_tarkan = {
-		graphical_culture = hispanicconfederategfx
-		second_graphical_culture = angloconfederategfx
+		graphical_culture = hispanicmuktagfx
+		second_graphical_culture = anglomuktagfx
 		color = { 0.5 0.5 0.5 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -5589,8 +5593,8 @@ tarkan_group = {
 	}
 	
 	indo_tarkan = {
-		graphical_culture = indoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = indomuktagfx
+		second_graphical_culture = mideastmuktagfx
 		color = { 0.5 0.5 0.5 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -5626,8 +5630,8 @@ tarkan_group = {
 		modifier = default_culture_modifier
 	}
 	iranian_tarkan = {
-		graphical_culture = persianconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = persianmuktagfx
+		second_graphical_culture = mideastmuktagfx
 		color = { 0.5 0.5 0.5 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -5666,8 +5670,8 @@ tarkan_group = {
 		modifier = default_culture_modifier
 	}
 	japanese_tarkan = {
-		graphical_culture = sinoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = sinomuktagfx
+		second_graphical_culture = mideastmuktagfx
 		color = { 0.5 0.5 0.5 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -5703,8 +5707,8 @@ tarkan_group = {
 		modifier = default_culture_modifier
 	}
 	mesoamerican_tarkan = {
-		graphical_culture = americonfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = amerimuktagfx
+		second_graphical_culture = mideastmuktagfx
 		color = { 0.5 0.5 0.5 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -5743,8 +5747,8 @@ tarkan_group = {
 		modifier = default_culture_modifier
 	}
 	russo_tarkan = {
-		graphical_culture = russoconfederategfx
-		second_graphical_culture = angloconfederategfx
+		graphical_culture = russomuktagfx
+		second_graphical_culture = anglomuktagfx
 		color = { 0.5 0.5 0.5 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -5786,8 +5790,8 @@ tarkan_group = {
 		modifier = default_culture_modifier
 	}
 	sino_tarkan = {
-		graphical_culture = sinoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = sinomuktagfx
+		second_graphical_culture = mideastmuktagfx
 		color = { 0.5 0.5 0.5 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -5822,8 +5826,8 @@ tarkan_group = {
 		modifier = default_culture_modifier
 	}
 	west_afro_tarkan = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afromuktagfx
+		second_graphical_culture = mideastmuktagfx
 		color = { 0.5 0.5 0.5 }
 		male_names = {
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind

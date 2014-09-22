@@ -1,0 +1,17 @@
+# Unique bonuses for holding certain planets
+
+castle = {
+	ca_olympus_shipyards = { # The Confederate Space Command's primary shipyards
+		desc = ca_olympus_shipyards_desc
+		trigger = { always = yes }
+		potential = { FROMFROM = { title = b_mars } } # Unique to Mars
+		
+		# Reubuilding the Olympus Shipyards would take a long time
+		build_cost = 1000
+		build_time = 3000
+		
+		retinuesize = 200
+		
+		ai_creation_factor = 200
+	}
+}

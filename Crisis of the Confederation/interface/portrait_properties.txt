@@ -1089,85 +1089,109 @@
 5 = {
 	# Crown A
 	0 = {
-		factor = 32
+		factor = 1
 		modifier = {
 			factor = 0
-			NOT = {
-				AND = {
-					is_feudal = yes
-					OR = {
-						religion = neo_feudal
-						religion = terran_imperial
-					}
-					OR = {
-						any_demesne_title = { higher_tier_than = DUKE }
-						independent = yes
-					}
-				}
+			is_feudal = no
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion = neo_feudal }
+			NOT = { religion = terran_imperial }
+		}
+		modifier = {
+			factor = 0
+			is_landed = no
+			NOT = { spouse = { is_landed = yes } }
+		}
+		modifier = {
+			factor = 32
+			is_feudal = yes
+			OR = {
+				religion = neo_feudal
+				religion = terran_imperial
 			}
-		}
-		modifier = {
-			factor = 2
-			trait = proud
-		}
-		modifier = {
-			factor = 0.5
-			trait = humble
 		}
 	}
 	
 	# Crown B
 	1 = {
-		factor = 32
+		factor = 1
 		modifier = {
 			factor = 0
-			NOT = {
-				AND = {
-					is_feudal = yes
-					OR = {
-						religion = neo_feudal
-						religion = terran_imperial
-					}
-					OR = {
-						any_demesne_title = { higher_tier_than = DUKE }
-						independent = yes
-					}
-				}
+			is_feudal = no
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion = neo_feudal }
+			NOT = { religion = terran_imperial }
+		}
+		modifier = {
+			factor = 0
+			is_landed = no
+			NOT = { spouse = { is_landed = yes } }
+		}
+		modifier = {
+			factor = 32
+			is_feudal = yes
+			OR = {
+				religion = neo_feudal
+				religion = terran_imperial
 			}
-		}
-		modifier = {
-			factor = 2
-			trait = proud
-		}
-		modifier = {
-			factor = 0.5
-			trait = humble
 		}
 	}
 
-	# Casual Headgear A
+	# Casual Headgear A (eventually, right now another crown)
 	2 = {
 		factor = 1
 		modifier = {
-			factor = 0.5
-			trait = disciplined
+			factor = 0
+			is_feudal = no
 		}
 		modifier = {
-			factor = 2
-			trait = carefree
+			factor = 0
+			NOT = { religion = neo_feudal }
+			NOT = { religion = terran_imperial }
+		}
+		modifier = {
+			factor = 0
+			is_landed = no
+			NOT = { spouse = { is_landed = yes } }
+		}
+		modifier = {
+			factor = 32
+			is_feudal = yes
+			OR = {
+				religion = neo_feudal
+				religion = terran_imperial
+			}
 		}
 	}
 
-	# Casual Headgear B
+	# Casual Headgear B (eventually, right now another crown)
 	3 = {
 		factor = 1
 		modifier = {
-			factor = 0.5
-			trait = disciplined
+			factor = 0
+			is_feudal = no
 		}
 		modifier = {
-			factor = 2
-			trait = carefree
+			factor = 0
+			NOT = { religion = neo_feudal }
+			NOT = { religion = terran_imperial }
+		}
+		modifier = {
+			factor = 0
+			is_landed = no
+			NOT = { spouse = { is_landed = yes } }
+		}
+		modifier = {
+			factor = 32
+			is_feudal = yes
+			OR = {
+				religion = neo_feudal
+				religion = terran_imperial
+			}
 		}
 	}
 

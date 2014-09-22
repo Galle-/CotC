@@ -2,6 +2,7 @@
 # decisions and suchlike
 
 opinion_appointment_nominee = { opinion = 10 months = 2400 }
+opinion_attending_congress = { opinion = 0 months = 12 inherit = yes } # Congresses should never last longer than a year
 opinion_acting_plotter = {
 	opinion = 0
 	months = 1

@@ -13,7 +13,4 @@ b_alpha_sagitarii_prime_b = temple
 culture = japanese_frontiersman # Initial culture
 religion = space_pirate
 
-1.1.1 = {
-	b_alpha_sagitarii_prime = ca_pirate_harbor
-	b_alpha_sagitarii_prime_b = tp_pirate_harbor
-}
+1.1.1 = { }

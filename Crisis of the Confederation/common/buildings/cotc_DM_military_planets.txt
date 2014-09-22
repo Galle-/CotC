@@ -1,0 +1,658 @@
+###############################################################
+#
+#	Written by The Dark Master
+#
+###############################################################
+
+castle = {
+
+	###########################################################################################
+	#########################################Planets###########################################
+	###########################################################################################
+	
+	ca_planet_basic_penalties = {
+	desc = ca_planet_basic_penalties_desc
+		trigger = { always = no }
+		potential = {  }
+		
+		build_cost = 0
+		build_time = 0
+		ai_creation_factor = 0
+		
+		levy_size = -0.5
+		garrison_size = -0.8
+		extra_tech_building_start = 10.0
+	}
+	
+	# r = resources, first is volatiles, second is launch system, third is metals (r### - rVLM)
+	# Resources range from 0 to 3, this is what the planet starts with.
+	ca_planet_r000 = {	# Dense Dust Ball
+		desc = ca_planet_r000_desc
+		trigger = { always = no }
+		potential = {  }
+		upgrades_from = ca_planet_basic_penalties	#Make sure all planets upgrade from each other in order
+		build_cost = 0
+		build_time = 0
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	ca_planet_r111 = { # Haze World
+		desc = ca_planet_r111_desc
+		trigger = { always = no }
+		potential = {  }
+		upgrades_from = ca_planet_r000	#Make sure all planets upgrade from each other in order
+		build_cost = 0
+		build_time = 0
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	ca_planet_r222 = { # Dead Planet
+		desc = ca_planet_r222_desc
+		trigger = { always = no }
+		potential = {  }
+		upgrades_from = ca_planet_r111	#Make sure all planets upgrade from each other in order
+		build_cost = 0
+		build_time = 0
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	ca_planet_r333 = { # War Station
+		desc = ca_planet_r333_desc
+		trigger = { always = no }
+		potential = {  }
+		upgrades_from = ca_planet_r222	#Make sure all planets upgrade from each other in order
+		build_cost = 0
+		build_time = 0
+		ai_creation_factor = 0
+		extra_tech_building_start = 10.0
+	}
+	
+	###########################################################################################
+	#########################################Resources#########################################
+	###########################################################################################
+	
+	ca_volatiles_start0_level0 = {
+		desc = ca_volatiles_start0_level0_desc
+		
+		trigger = { TECH_LEGALISM = 0 }
+		potential = { 
+			FROMFROM = { 
+				OR = {
+					AND = { #All building options must be in pairs
+						has_building = ca_planet_r000			#First include the planet that allows it,
+						NOT = { has_building = ca_planet_r111 }	#then the planet that follows it in the list.
+					}
+				}
+			}
+		}
+		
+		build_cost = 0	#First resource upgrade in a list is always free and should be built immediately.
+		build_time = 0
+		ai_creation_factor = 100000000
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_volatiles_start0_level1 = {
+		desc = ca_volatiles_start0_level1_desc
+		
+		trigger = { TECH_LEGALISM = 1 }
+		potential = { }
+		
+		upgrades_from = ca_volatiles_start0_level0
+		
+		tax_income = 1
+		
+		build_cost = 150
+		build_time = 365
+		ai_creation_factor = 100 # Check to make sure this is good later
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_volatiles_start0_level2 = {
+		desc = ca_volatiles_start0_level2_desc
+		
+		trigger = { TECH_LEGALISM = 4 }
+		potential = { }
+		
+		upgrades_from = ca_volatiles_start0_level1
+		
+		tax_income = 2
+		
+		build_cost = 300
+		build_time = 730
+		ai_creation_factor = 100 # Check to make sure this is good later
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_volatiles_start0_level3 = {
+		desc = ca_volatiles_start0_level3_desc
+		
+		trigger = { TECH_LEGALISM = 7 }
+		potential = { }
+		
+		upgrades_from = ca_volatiles_start0_level2
+		
+		tax_income = 2
+		
+		build_cost = 450
+		build_time = 1095
+		ai_creation_factor = 100 # Check to make sure this is good later
+		extra_tech_building_start = 10.0
+	}
+	
+	###########################################################################################
+	
+	ca_volatiles_start1_level1 = {
+		desc = ca_volatiles_start1_level1_desc
+		
+		trigger = { TECH_LEGALISM = 0 }
+		potential = { 
+			FROMFROM = { 
+				OR = {
+					AND = { #All building options must be in pairs
+						has_building = ca_planet_r111			#First include the planet that allows it,
+						NOT = { has_building = ca_planet_r222}	#then the planet that follows it in the list.
+					}
+				}
+			}
+		}
+		
+		tax_income = 1
+		
+		build_cost = 0 #First resource upgrade in a list is always free and should be built immediately.
+		build_time = 0
+		ai_creation_factor = 100000000
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_volatiles_start1_level2 = {
+		desc = ca_volatiles_start1_level2_desc
+		
+		trigger = { TECH_LEGALISM = 1 }
+		potential = { }
+		
+		upgrades_from = ca_volatiles_start1_level1
+		
+		tax_income = 2
+		
+		build_cost = 150
+		build_time = 365
+		ai_creation_factor = 100 # Check to make sure this is good later
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_volatiles_start1_level3 = {
+		desc = ca_volatiles_start1_level3_desc
+		
+		trigger = { TECH_LEGALISM = 4 }
+		potential = { }
+		
+		upgrades_from = ca_volatiles_start1_level2
+		
+		tax_income = 2
+		
+		build_cost = 300
+		build_time = 720
+		ai_creation_factor = 100 # Check to make sure this is good later
+		extra_tech_building_start = 10.0
+	}
+	
+	###########################################################################################
+	
+	ca_volatiles_start2_level2 = {
+		desc = ca_volatiles_start2_level2_desc
+		
+		trigger = { TECH_LEGALISM = 0 }
+		potential = { 
+			FROMFROM = { 
+				OR = {
+					AND = { #All building options must be in pairs
+						has_building = ca_planet_r222			#First include the planet that allows it,
+						NOT = { has_building = ca_planet_r333 }	#then the planet that follows it in the list.
+					}
+				}
+			}
+		}
+		
+		tax_income = 3
+		
+		build_cost = 0 #First resource upgrade in a list is always free and should be built immediately.
+		build_time = 0
+		ai_creation_factor = 100000000
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_volatiles_start2_level3 = {
+		desc = ca_volatiles_start2_level3_desc
+		
+		trigger = { TECH_LEGALISM = 1 }
+		potential = { }
+		
+		upgrades_from = ca_volatiles_start2_level2
+		
+		tax_income = 2
+		
+		build_cost = 150
+		build_time = 365
+		ai_creation_factor = 100 # Check to make sure this is good later
+		extra_tech_building_start = 10.0
+	}
+	
+	###########################################################################################
+	
+	ca_volatiles_start3_level3 = {
+		desc = ca_volatiles_start3_level3_desc
+		
+		trigger = { TECH_LEGALISM = 0 }
+		potential = { 
+			FROMFROM = { 
+				OR = {
+					AND = { #All building options must be in pairs
+						has_building = ca_planet_r333				#First include the planet that allows it,
+						#NOT = { has_building = ca_planet_r333 }	#then the planet that follows it in the list.
+						#Last planet in the list, no NOT, for now.
+					}
+				}
+			}
+		}
+		
+		tax_income = 5
+		
+		build_cost = 0 #First resource upgrade in a list is always free and should be built immediately.
+		build_time = 0
+		ai_creation_factor = 100000000
+		extra_tech_building_start = 10.0
+	}
+	
+	###########################################################################################
+	###########################################################################################
+	
+	ca_launch_system_start0_level0 = {
+		desc = ca_launch_system_start0_level0_desc
+		
+		trigger = { TECH_LEGALISM = 0 }
+		potential = { 
+			FROMFROM = { 
+				OR = {
+					AND = { #All building options must be in pairs
+						has_building = ca_planet_r000			#First include the planet that allows it,
+						NOT = { has_building = ca_planet_r111 }	#then the planet that follows it in the list.
+					}
+				}
+			}
+		}
+		
+		build_cost = 0	#First resource upgrade in a list is always free and should be built immediately.
+		build_time = 0
+		ai_creation_factor = 100000000
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_launch_system_start0_level1 = {
+		desc = ca_launch_system_start0_level1_desc
+		
+		trigger = { TECH_LEGALISM = 2 }
+		potential = { }
+		
+		upgrades_from = ca_launch_system_start0_level0
+		
+		levy_size = 0.1
+		
+		build_cost = 150
+		build_time = 365
+		ai_creation_factor = 100 # Check to make sure this is good later
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_launch_system_start0_level2 = {
+		desc = ca_launch_system_start0_level2_desc
+		
+		trigger = { TECH_LEGALISM = 5 }
+		potential = { }
+		
+		upgrades_from = ca_launch_system_start0_level1
+		
+		levy_size = 0.2
+		
+		build_cost = 300
+		build_time = 730
+		ai_creation_factor = 100 # Check to make sure this is good later
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_launch_system_start0_level3 = {
+		desc = ca_launch_system_start0_level3_desc
+		
+		trigger = { TECH_LEGALISM = 8 }
+		potential = { }
+		
+		upgrades_from = ca_launch_system_start0_level2
+		
+		levy_size = 0.2
+		
+		build_cost = 450
+		build_time = 1095
+		ai_creation_factor = 100 # Check to make sure this is good later
+		extra_tech_building_start = 10.0
+	}
+	
+	###########################################################################################
+	
+	ca_launch_system_start1_level1 = {
+		desc = ca_launch_system_start1_level1_desc
+		
+		trigger = { TECH_LEGALISM = 0 }
+		potential = { 
+			FROMFROM = { 
+				OR = {
+					AND = { #All building options must be in pairs
+						has_building = ca_planet_r111			#First include the planet that allows it,
+						NOT = { has_building = ca_planet_r222}	#then the planet that follows it in the list.
+					}
+				}
+			}
+		}
+		
+		levy_size = 0.1
+		
+		build_cost = 0 #First resource upgrade in a list is always free and should be built immediately.
+		build_time = 0
+		ai_creation_factor = 100000000
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_launch_system_start1_level2 = {
+		desc = ca_launch_system_start1_level2_desc
+		
+		trigger = { TECH_LEGALISM = 2 }
+		potential = { }
+		
+		upgrades_from = ca_launch_system_start1_level1
+		
+		levy_size = 0.2
+		
+		build_cost = 150
+		build_time = 365
+		ai_creation_factor = 100 # Check to make sure this is good later
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_launch_system_start1_level3 = {
+		desc = ca_launch_system_start1_level3_desc
+		
+		trigger = { TECH_LEGALISM = 5 }
+		potential = { }
+		
+		upgrades_from = ca_launch_system_start1_level2
+		
+		levy_size = 0.2
+		
+		build_cost = 300
+		build_time = 720
+		ai_creation_factor = 100 # Check to make sure this is good later
+		extra_tech_building_start = 10.0
+	}
+	
+	###########################################################################################
+	
+	ca_launch_system_start2_level2 = {
+		desc = ca_launch_system_start2_level2_desc
+		
+		trigger = { TECH_LEGALISM = 0 }
+		potential = { 
+			FROMFROM = { 
+				OR = {
+					AND = { #All building options must be in pairs
+						has_building = ca_planet_r222			#First include the planet that allows it,
+						NOT = { has_building = ca_planet_r333 }	#then the planet that follows it in the list.
+					}
+				}
+			}
+		}
+		
+		levy_size = 0.3
+		
+		build_cost = 0 #First resource upgrade in a list is always free and should be built immediately.
+		build_time = 0
+		ai_creation_factor = 100000000
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_launch_system_start2_level3 = {
+		desc = ca_launch_system_start2_level3_desc
+		
+		trigger = { TECH_LEGALISM = 2 }
+		potential = { }
+		
+		upgrades_from = ca_launch_system_start2_level2
+		
+		levy_size = 0.2
+		
+		build_cost = 150
+		build_time = 365
+		ai_creation_factor = 100 # Check to make sure this is good later
+		extra_tech_building_start = 10.0
+	}
+	
+	###########################################################################################
+	
+	ca_launch_system_start3_level3 = {
+		desc = ca_launch_system_start3_level3_desc
+		
+		trigger = { TECH_LEGALISM = 0 }
+		potential = { 
+			FROMFROM = { 
+				OR = {
+					AND = { #All building options must be in pairs
+						has_building = ca_planet_r333				#First include the planet that allows it,
+						#NOT = { has_building = ca_planet_r333 }	#then the planet that follows it in the list.
+						#Last planet in the list, no NOT, for now.
+					}
+				}
+			}
+		}
+		
+		levy_size = 0.5
+		
+		build_cost = 0 #First resource upgrade in a list is always free and should be built immediately.
+		build_time = 0
+		ai_creation_factor = 100000000
+		extra_tech_building_start = 10.0
+	}
+	
+	###########################################################################################
+	###########################################################################################
+	
+	ca_metals_start0_level0 = {
+		desc = ca_metals_start0_level0_desc
+		
+		trigger = { TECH_LEGALISM = 0 }
+		potential = { 
+			FROMFROM = { 
+				OR = {
+					AND = { #All building options must be in pairs
+						has_building = ca_planet_r000			#First include the planet that allows it,
+						NOT = { has_building = ca_planet_r111 }	#then the planet that follows it in the list.
+					}
+				}
+			}
+		}
+		
+		build_cost = 0	#First resource upgrade in a list is always free and should be built immediately.
+		build_time = 0
+		ai_creation_factor = 100000000
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_metals_start0_level1 = {
+		desc = ca_metals_start0_level1_desc
+		
+		trigger = { TECH_LEGALISM = 3 }
+		potential = { }
+		
+		upgrades_from = ca_metals_start0_level0
+		
+		local_build_cost_modifier = -0.10
+		
+		build_cost = 150
+		build_time = 365
+		ai_creation_factor = 100 # Check to make sure this is good later
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_metals_start0_level2 = {
+		desc = ca_metals_start0_level2_desc
+		
+		trigger = { TECH_LEGALISM = 6 }
+		potential = { }
+		
+		upgrades_from = ca_metals_start0_level1
+		
+		local_build_cost_modifier = -0.20
+		
+		build_cost = 300
+		build_time = 730
+		ai_creation_factor = 100 # Check to make sure this is good later
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_metals_start0_level3 = {
+		desc = ca_metals_start0_level3_desc
+		
+		trigger = { TECH_LEGALISM = 8 }
+		potential = { }
+		
+		upgrades_from = ca_metals_start0_level2
+		
+		local_build_cost_modifier = -0.20
+		
+		build_cost = 450
+		build_time = 1095
+		ai_creation_factor = 100 # Check to make sure this is good later
+		extra_tech_building_start = 10.0
+	}
+	
+	###########################################################################################
+	
+	ca_metals_start1_level1 = {
+		desc = ca_metals_start1_level1_desc
+		
+		trigger = { TECH_LEGALISM = 0 }
+		potential = { 
+			FROMFROM = { 
+				OR = {
+					AND = { #All building options must be in pairs
+						has_building = ca_planet_r111			#First include the planet that allows it,
+						NOT = { has_building = ca_planet_r222}	#then the planet that follows it in the list.
+					}
+				}
+			}
+		}
+		
+		local_build_cost_modifier = -0.10
+		
+		build_cost = 0 #First resource upgrade in a list is always free and should be built immediately.
+		build_time = 0
+		ai_creation_factor = 100000000
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_metals_start1_level2 = {
+		desc = ca_metals_start1_level2_desc
+		
+		trigger = { TECH_LEGALISM = 3 }
+		potential = { }
+		
+		upgrades_from = ca_metals_start1_level1
+		
+		local_build_cost_modifier = -0.20
+		
+		build_cost = 150
+		build_time = 365
+		ai_creation_factor = 100 # Check to make sure this is good later
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_metals_start1_level3 = {
+		desc = ca_metals_start1_level3_desc
+		
+		trigger = { TECH_LEGALISM = 6 }
+		potential = { }
+		
+		upgrades_from = ca_metals_start1_level2
+		
+		local_build_cost_modifier = -0.20
+		
+		build_cost = 300
+		build_time = 720
+		ai_creation_factor = 100 # Check to make sure this is good later
+		extra_tech_building_start = 10.0
+	}
+	
+	###########################################################################################
+	
+	ca_metals_start2_level2 = {
+		desc = ca_metals_start2_level2_desc
+		
+		trigger = { TECH_LEGALISM = 0 }
+		potential = { 
+			FROMFROM = { 
+				OR = {
+					AND = { #All building options must be in pairs
+						has_building = ca_planet_r222			#First include the planet that allows it,
+						NOT = { has_building = ca_planet_r333 }	#then the planet that follows it in the list.
+					}
+				}
+			}
+		}
+		
+		local_build_cost_modifier = -0.30
+		
+		build_cost = 0 #First resource upgrade in a list is always free and should be built immediately.
+		build_time = 0
+		ai_creation_factor = 100000000
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_metals_start2_level3 = {
+		desc = ca_metals_start2_level3_desc
+		
+		trigger = { TECH_LEGALISM = 3 }
+		potential = { }
+		
+		upgrades_from = ca_metals_start2_level2
+		
+		local_build_cost_modifier = -0.20
+		
+		build_cost = 150
+		build_time = 365
+		ai_creation_factor = 100 # Check to make sure this is good later
+		extra_tech_building_start = 10.0
+	}
+	
+	###########################################################################################
+	
+	ca_metals_start3_level3 = {
+		desc = ca_metals_start3_level3_desc
+		
+		trigger = { TECH_LEGALISM = 0 }
+		potential = { 
+			FROMFROM = { 
+				OR = {
+					AND = { #All building options must be in pairs
+						has_building = ca_planet_r333				#First include the planet that allows it,
+						#NOT = { has_building = ca_planet_r333 }	#then the planet that follows it in the list.
+						#Last planet in the list, no NOT, for now.
+					}
+				}
+			}
+		}
+		
+		local_build_cost_modifier = -0.50
+		
+		build_cost = 0 #First resource upgrade in a list is always free and should be built immediately.
+		build_time = 0
+		ai_creation_factor = 100000000
+		extra_tech_building_start = 10.0
+	}
+}

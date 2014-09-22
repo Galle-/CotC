@@ -13,31 +13,4 @@ b_tletlioh_waystation = castle
 culture = mesoamerican_sexto_solar # Initial culture
 religion = adoptionist_cultist
 
-# History
-1.1.1 = {
-	b_tletlioh_iii = ct_toxic_atmosphere
-	b_tletlioh_iii = ct_no_water
-	b_tletlioh_iii = ct_trace_water
-	b_tletlioh_iii = ct_frozen
-	b_tletlioh_iii = ct_planet_survey
-	
-	b_tletlioh_iii_b = tp_no_atmosphere
-	b_tletlioh_iii_b = tp_no_water
-	b_tletlioh_iii_b = tp_frozen
-	b_tletlioh_iii_b = tp_planet_survey
-	
-	b_tletlioh_waystation = ca_space_station_0
-	b_tletlioh_waystation = ca_space_station_1
-	b_tletlioh_waystation = ca_space_station_2
-}
-
-2998.1.1 = {
-	b_tletlioh_iii = ct_colony_0
-	b_tletlioh_iii = ct_colony_1
-	
-	b_tletlioh_iii_b = tp_colony_0
-	
-	b_tletlioh_waystation = ca_colony_0
-	b_tletlioh_waystation = ca_colony_1
-	b_tletlioh_waystation = ca_colony_2
-}
+1.1.1 = { }

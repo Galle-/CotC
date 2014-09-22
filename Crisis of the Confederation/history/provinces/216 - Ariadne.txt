@@ -14,8 +14,4 @@ b_ariadne_iii = temple
 culture = japanese_strugatskite # Initial culture
 religion = space_pirate
 
-1.1.1 = {
-	b_port_ariadne = ca_pirate_harbor
-	b_ariadne_ii = tp_pirate_harbor
-	b_ariadne_iii = tp_pirate_harbor
-}
+1.1.1 = { }

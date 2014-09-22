@@ -1,0 +1,71 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+ca_planet_basic_penalties;Basic Penalties;;;;;;;;;;;;;x
+ca_planet_basic_penalties_desc;You should not be see this.;;;;;;;;;;;;;x
+ca_planet_r000;Dense Dust Ball;;;;;;;;;;;;;x
+ca_planet_r000_desc;A world that's pretty much the sum of all the worst aspects to put a military base on.  Resources are rare and to make matters worse, the gravity is very intense making launching spacecraft very expensive.  That said, it's better than putting an economic or scientific center here.;;;;;;;;;;;;;x
+ca_planet_r111;Haze World;;;;;;;;;;;;;x
+ca_planet_r111_desc;This super terrestrial world has a large hazy atmosphere of hydrogen, methane, and helium.  It has a number of useful resources in it, but most are hidden below the surface.  Its large size also gives it fairly strong gravity as well.;;;;;;;;;;;;;x
+ca_planet_r222;Dead Planet;;;;;;;;;;;;;x
+ca_planet_r222_desc;This world once harbored a significant amount of life, but some kind of disaster has torn it apart, or the planet became uninhabitable thanks to other reasons.  While there is minor scientific value to be found here, it's mostly been stripped away.  The otherwise barren world makes a very good site for a military base, it has good access to volatiles and metals while also being fairly easy to launch off of.;;;;;;;;;;;;;x
+ca_planet_r333;War Station;;;;;;;;;;;;;x
+ca_planet_r333_desc;Built nearby a large planetary ring, a rich debris field, or a massive collection of captured Lagrange asteroids, this military outpost is in a prime location. It has easy access to any resources it might need as well as the advantage of being in space, making launching any craft considerably cheaper and easier than surface bases.;;;;;;;;;;;;;x
+ca_volatiles_start0_level0;Volatiles Level 0;;;;;;;;;;;;;x
+ca_volatiles_start0_level0_desc;This area has access to little if any water or low density gases.  Without significant infrastructure improvements and investments, any military base here will be severely limited in size and power due to the need to rely on outside support.;;;;;;;;;;;;;x
+ca_volatiles_start0_level1;Volatiles Level 1;;;;;;;;;;;;;x
+ca_volatiles_start0_level1_desc;Advanced recycling techniques have made things much easier on this base.  It can grow beyond rudimentary size, but is still limited by the need to import volatiles to use as fuel.;;;;;;;;;;;;;x
+ca_volatiles_start0_level2;Volatiles Level 2;;;;;;;;;;;;;x
+ca_volatiles_start0_level2_desc;Nuclear fission and fusion has been implemented to fabricate the necessary Oxygen, Nitrogen, and other volatiles using other elements available in abundance.  The process isn't exactly efficient energy wise, preventing this base from reaching maximum size.;;;;;;;;;;;;;x
+ca_volatiles_start0_level3;Volatiles Level 3;;;;;;;;;;;;;x
+ca_volatiles_start0_level3_desc;A Prometheus Nexus has been constructed here, allowing the creation of plasma fuel.  This replaces the use of volatiles altogether in power generation and propulsion.  Even the most barren of rocks can support massive human military bases with one of these.;;;;;;;;;;;;;x
+ca_volatiles_start1_level1;Volatiles Level 1;;;;;;;;;;;;;x
+ca_volatiles_start1_level1_desc;Small amounts of water, ice, and other light gases are easily accessible in this location, but the size of any outpost or settlement here will be limited unless new sources are found or better consumption systems are developed.;;;;;;;;;;;;;x
+ca_volatiles_start1_level2;Volatiles Level 2;;;;;;;;;;;;;x
+ca_volatiles_start1_level2_desc;Improved mining and recycling technologies have been implemented here, greatly lessening the stress on the natural resources here.  The base is fully capable of reaching nearly maximum size now.;;;;;;;;;;;;;x
+ca_volatiles_start1_level3;Volatiles Level 3;;;;;;;;;;;;;x
+ca_volatiles_start1_level3_desc;With fusion and fission reactors now deployed here, the base no longer has any difficulties getting all the resources it needs to grow to full size.  While the process isn't exactly energy efficient, it isn't needed often enough to limit expansion.;;;;;;;;;;;;;x
+ca_volatiles_start2_level2;Volatiles Level 2;;;;;;;;;;;;;x
+ca_volatiles_start2_level2_desc;Lakes or significant amounts of frozen ice are available here in addition to light gasses that can be harvested from the atmosphere.  Anything short of a massive military works can be easily supported by the natural resources available.;;;;;;;;;;;;;x
+ca_volatiles_start2_level3;Volatiles Level 3;;;;;;;;;;;;;x
+ca_volatiles_start2_level3_desc;Thanks to the addition of several recycling plants and water treatment facilities, this military base is no longer limited in growth by its access to volatiles.;;;;;;;;;;;;;x
+ca_volatiles_start3_level3;Volatiles Level 3;;;;;;;;;;;;;x
+ca_volatiles_start3_level3_desc;Abundant volatiles are available on this planet in either frozen or gaseous form.  No special facilities or techniques are needed to harvest them and access to volatiles will not in any way limit this facility.;;;;;;;;;;;;;x
+ca_launch_system_start0_level0;Lunch System Level 0;;;;;;;;;;;;;x
+ca_launch_system_start0_level0_desc;;;;;;;;;;;;;;x
+ca_launch_system_start0_level1;Lunch System Level 1;;;;;;;;;;;;;x
+ca_launch_system_start0_level1_desc;;;;;;;;;;;;;;x
+ca_launch_system_start0_level2;Lunch System Level 2;;;;;;;;;;;;;x
+ca_launch_system_start0_level2_desc;;;;;;;;;;;;;;x
+ca_launch_system_start0_level3;Lunch System Level 3;;;;;;;;;;;;;x
+ca_launch_system_start0_level3_desc;;;;;;;;;;;;;;x
+ca_launch_system_start1_level1;Lunch System Level 1;;;;;;;;;;;;;x
+ca_launch_system_start1_level1_desc;;;;;;;;;;;;;;x
+ca_launch_system_start1_level2;Lunch System Level 2;;;;;;;;;;;;;x
+ca_launch_system_start1_level2_desc;;;;;;;;;;;;;;x
+ca_launch_system_start1_level3;Lunch System Level 3;;;;;;;;;;;;;x
+ca_launch_system_start1_level3_desc;;;;;;;;;;;;;;x
+ca_launch_system_start2_level2;Lunch System Level 2;;;;;;;;;;;;;x
+ca_launch_system_start2_level2_desc;;;;;;;;;;;;;;x
+ca_launch_system_start2_level3;Lunch System Level 3;;;;;;;;;;;;;x
+ca_launch_system_start2_level3_desc;;;;;;;;;;;;;;x
+ca_launch_system_start3_level3;Lunch System Level 3;;;;;;;;;;;;;x
+ca_launch_system_start3_level3_desc;There is little to no net G force in and around the mining areas and launch sites.  There is no need for launch vehicles or alternative launch systems at this location.;;;;;;;;;;;;;x
+ca_metals_start0_level0;Metals Level 0;;;;;;;;;;;;;x
+ca_metals_start0_level0_desc;;;;;;;;;;;;;;x
+ca_metals_start0_level1;Metals Level 1;;;;;;;;;;;;;x
+ca_metals_start0_level1_desc;;;;;;;;;;;;;;x
+ca_metals_start0_level2;Metals Level 2;;;;;;;;;;;;;x
+ca_metals_start0_level2_desc;;;;;;;;;;;;;;x
+ca_metals_start0_level3;Metals Level 3;;;;;;;;;;;;;x
+ca_metals_start0_level3_desc;;;;;;;;;;;;;;x
+ca_metals_start1_level1;Metals Level 1;;;;;;;;;;;;;x
+ca_metals_start1_level1_desc;;;;;;;;;;;;;;x
+ca_metals_start1_level2;Metals Level 2;;;;;;;;;;;;;x
+ca_metals_start1_level2_desc;;;;;;;;;;;;;;x
+ca_metals_start1_level3;Metals Level 3;;;;;;;;;;;;;x
+ca_metals_start1_level3_desc;;;;;;;;;;;;;;x
+ca_metals_start2_level2;Metals Level 2;;;;;;;;;;;;;x
+ca_metals_start2_level2_desc;;;;;;;;;;;;;;x
+ca_metals_start2_level3;Metals Level 3;;;;;;;;;;;;;x
+ca_metals_start2_level3_desc;;;;;;;;;;;;;;x
+ca_metals_start3_level3;Metals Level 3;;;;;;;;;;;;;x
+ca_metals_start3_level3_desc;;;;;;;;;;;;;;x
