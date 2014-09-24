@@ -909,6 +909,13 @@ crusade = {
 
 	is_valid_title = { FROM = { any_realm_title = { de_jure_liege_or_above = PREVPREV } } }
 
+	on_add = {
+		if = {
+			limit = { ROOT = { religion = hiver } }
+			FROM = { narrative_event = { id = hiver.3000 } }
+		}
+	}
+	
 	on_success_title = {
 		# Should we give the seized land to its current king?
 		if = {
@@ -1286,6 +1293,7 @@ religious_liberation = {
 		ROOT = {
 			NOT = { same_realm = FROM }
 			NOT = { religion = FROM }
+			NOT = { religion = space_pirate }
 			top_liege = {
 				religion_group = ROOT
 				NOT = { religion = FROM }
@@ -1456,6 +1464,7 @@ cultural_liberation = {
 		ROOT = {
 			NOT = { same_realm = FROM }
 			NOT = { culture_group = FROM }
+			NOT = { religion = space_pirate }
 		}
 	}
 	
@@ -2874,13 +2883,21 @@ county_conquest = {
 			}
 		}
 		
-		ROOT = { religion_authority = { modifier = won_county_conquest } }
+		ROOT = {
+			if = {
+				limit = { NOT = { religion = FROM } }
+				religion_authority = { modifier = won_county_conquest }
+			}
+		}
 	}
 
 	on_fail_title = {
 		ROOT = {
 			prestige = -100
-			religion_authority = { modifier = lost_county_conquest }
+			if = {
+				limit = { NOT = { religion = FROM } }
+				religion_authority = { modifier = lost_county_conquest }
+			}
 		}
 		any_defender = {
 			limit = { character = FROM }
@@ -2899,7 +2916,10 @@ county_conquest = {
 				to = FROM
 				value = 4.0
 			}
-			religion_authority = { modifier = lost_county_conquest }
+			if = {
+				limit = { NOT = { religion = FROM } }
+				religion_authority = { modifier = lost_county_conquest }
+			}
 		}
 		any_defender = {
 			limit = { character = FROM }

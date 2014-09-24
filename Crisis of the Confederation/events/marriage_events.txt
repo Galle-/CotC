@@ -12,6 +12,7 @@ character_event = {
 	
 	trigger = {
 		is_married = no
+		is_betrothed = no
 		NOT = { trait = not_ready_to_marry }
 		NOT = { has_character_flag = flag_ready_to_marry }
 	}
@@ -28,6 +29,8 @@ character_event = {
 	min_age = 18
 	only_capable = yes
 	prisoner = no
+	
+	trigger = { trait = not_ready_to_marry }
 	
 	mean_time_to_happen = {
 		months = 240

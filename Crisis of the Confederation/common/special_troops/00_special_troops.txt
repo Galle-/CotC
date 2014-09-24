@@ -1,13 +1,13 @@
 
 dreadnoughts = {
 	morale = 80
-	maintenance = 8
+	maintenance = 20
 	phase_skirmish_attack = 0.5
 	phase_melee_attack = 12
 	phase_pursue_attack = 15
-	phase_skirmish_defense = 10
-	phase_melee_defense = 7
-	phase_pursue_defense = 7
+	phase_skirmish_defense = 100
+	phase_melee_defense = 15
+	phase_pursue_defense = 15
 	base_type = heavy_cavalry
 	graphical_culture_type = westerngfx # For now, at least
 }

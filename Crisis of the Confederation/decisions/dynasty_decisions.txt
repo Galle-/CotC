@@ -2,6 +2,76 @@
 
 dynasty_decisions = {
 
+	force_arranged_marriage = {
+		potential = {
+			trait = not_ready_to_marry
+			is_close_relative = FROM
+			is_liege_or_above = FROM
+			is_playable = no
+			is_married = no
+		}
+		allow = {
+			FROM = {
+				OR = {
+					religion = terran_imperial
+					religion = neo_feudal
+					religion = bio_directionist
+					piety = 100
+				}
+				NOT = { trait = craven }
+				NOT = { trait = neurotic }
+			}
+		}
+		effect = {
+			remove_trait = not_ready_to_marry
+			opinion = { who = FROM modifier = opinion_forced_arranged_marriage }
+			FROM = {
+				limit = {
+					NOT = { religion = terran_imperial }
+					NOT = { religion = neo_feudal }
+					NOT = { religion = bio_directionist }
+				}
+				piety = -100
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				FROM = {
+					OR = {
+						trait = content
+						trait = friendly
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					NOT = { religion = terran_imperial }
+					NOT = { religion = neo_feudal }
+					NOT = { religion = bio_directionist }
+					religion_authority = 0.25
+					trait = radical
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					NOT = { religion = terran_imperial }
+					NOT = { religion = neo_feudal }
+					NOT = { religion = bio_directionist }
+					religion_authority = 0.5
+					NOT = { trait = pragmatic }
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = { fertility = 0.1 }
+			}
+		}
+	}
+
 	legitimize_bastard = {
 		from_potential = {
 			NOT = { religion_group = transhumanist_group }

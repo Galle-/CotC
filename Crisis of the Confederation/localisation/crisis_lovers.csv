@@ -1,6 +1,15 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
 not_ready_to_marry;Seeking Marriage of Love;;;;;;;;;;;;;x
-not_ready_to_marry_desc;This character wants to marriage someone of their own choice, and will currently not agree to a political marriage. Given time, they may change their mind.;;;;;;;;;;;;;x
+not_ready_to_marry_desc;This character wants to marry someone of their own choice, and will currently not agree to a political marriage. Given time, they may change their mind.;;;;;;;;;;;;;x
+force_arranged_marriage;Force [This.GetBestName] to Marry;;;;;;;;;;;;;x
+force_arranged_marriage_desc;[This.GetBestName] stubbornly refuses to accept an arranged marriage. You have the power to force [This.GetHerHim], if you so desire.;;;;;;;;;;;;;x
+not_having_babies_1;Has a Child;;;;;;;;;;;;;x
+not_having_babies_1_desc;This character has already had one child, and can consider their biological imperative satisfied.;;;;;;;;;;;;;x
+not_having_babies_2;Has Two Children;;;;;;;;;;;;;x
+not_having_babies_2_desc;This character already has two children, which is quite sufficient to maintain the galactic population.;;;;;;;;;;;;;x
+not_having_babies_3;Has Three Children;;;;;;;;;;;;;x
+not_having_babies_3_desc;This character already has three children. It's highly unlikely they'll ever want a fourth.;;;;;;;;;;;;;x
+opinion_forced_arranged_marriage;Forced Me Into an Arranged Marriage;;;;;;;;;;;;;x
 EVTDESCLOVERS0;You've been spending a lot of time in the company of [From.GetFullName] lately, and you're starting to think you might be developing romantic feelings for [From.GetHerHim].;;;;;;;;;;;;;x
 EVTOPTALOVERS0;I must confess my love!;;;;;;;;;;;;;x
 EVTOPTBLOVERS0;It's not appropriate.;;;;;;;;;;;;;x

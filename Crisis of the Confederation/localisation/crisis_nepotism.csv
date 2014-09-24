@@ -10,6 +10,10 @@ opinion_nominated_me_for_appointment;Nominated Me For Appointed Title;;;;;;;;;;;
 opinion_promised_relative_appointment;Promised a Relative an Appointed Title;;;;;;;;;;;;;x
 opinion_refused_relative_appointment;Refused a Relative an Appointed Title;;;;;;;;;;;;;x
 opinion_retracted_relative_appointment;Retracted a Relative's Promised Appointed Title;;;;;;;;;;;;;x
+open_appointment_nominations_menu;Show Appointment Nominations;;;;;;;;;;;;;x
+open_appointment_nominations_menu_desc;Access decisions allowing you to nominate either yourself or your relatives as the Expected Successors to various Appointed titles.;;;;;;;;;;;;;x
+close_appointment_nominations_menu;Hide Appointment Nominations;;;;;;;;;;;;;x
+close_appointment_nominations_menu_desc;Hide appointment nomination decisions to clear up some space on the decision list.;;;;;;;;;;;;;x
 nominate_self_for_appointment;Nominate Yourself as [Root.Liege.GetTitle] [Root.Liege.GetOnlyDynastyName]'s Successor;;;;;;;;;;;;;x
 nominate_self_for_appointment_desc;[Root.Liege.GetTitle] [Root.Liege.GetOnlyDynastyName] currently controls an appointed office. You could approach [Root.Liege.Liege.GetTitle] [Root.Liege.Liege.GetOnlyDynastyName] and suggest that [Root.Liege.Liege.GetSheHe] appoint you as [Root.Liege.GetHerHis] successor.;;;;;;;;;;;;;x
 nominate_relative_for_appointment;Nominate [Root.GetFullName] as [Root.Liege.GetTitle] [Root.Liege.GetOnlyDynastyName]'s Successor;;;;;;;;;;;;;x

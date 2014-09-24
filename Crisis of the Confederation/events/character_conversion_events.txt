@@ -976,11 +976,11 @@ character_event = {
 		religion = space_pirate
 		if = {
 			limit = { liege = { NOT = { religion = space_pirate } } }
+			liege = { character_event = { id = conversion.10001 } }
 			any_independent_ruler = {
 				limit = { religion = space_pirate }
 				reverse_banish = ROOT
 			}
-			liege = { character_event = { id = conversion.10001 } }
 		}
 		ai_chance = {
 			factor = 50

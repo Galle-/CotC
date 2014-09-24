@@ -252,6 +252,34 @@ russoxingjiegfx = {
 sinoxingjiegfx = {
 	skin_tone = 1
 }
+# Tierra Celeste
+afrocelesteangfx = {
+	skin_tone = 3
+}
+americelesteangfx = {
+	skin_tone = 1
+}
+anglocelesteangfx = {
+	skin_tone = 0
+}
+hispaniccelesteangfx = {
+	skin_tone = 1
+}
+indocelesteangfx = {
+	skin_tone = 2
+}
+mideastcelesteangfx = {
+	skin_tone = 2
+}
+persiancelesteangfx = {
+	skin_tone = 0
+}
+russocelesteangfx = {
+	skin_tone = 0
+}
+sinocelesteangfx = {
+	skin_tone = 1
+}
 
 # Skin tones are 0 (light), 1 (tan), 2 (dark) and 3 (black)
 

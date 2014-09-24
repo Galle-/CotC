@@ -2,6 +2,7 @@ castle = {
 	# Space Pirate Harbor
 	ca_pirate_harbor = {
 		trigger = { TECH_CONSTRUCTION = 0 }
+		extra_tech_building_start = -1
 		build_cost = 50
 		build_time = 180
 		potential = { religion = space_pirate }
@@ -12,6 +13,7 @@ city = {
 	# Space Pirate Harbor
 	ct_pirate_harbor = {
 		trigger = { TECH_CONSTRUCTION = 0 }
+		extra_tech_building_start = -1
 		build_cost = 50
 		build_time = 180
 		potential = { religion = space_pirate }
@@ -22,6 +24,7 @@ temple = {
 	# Space Pirate Harbor
 	tp_pirate_harbor = {
 		trigger = { TECH_CONSTRUCTION = 0 }
+		extra_tech_building_start = -1
 		build_cost = 50
 		build_time = 180
 		potential = { religion = space_pirate }

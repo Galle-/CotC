@@ -325,11 +325,58 @@ character_event = {
 		}
 	}
 }
+# MAKE ANTI-CENTRALIZATION DEMAND
+character_event = {
+	id = laws.10050
+	desc = "EVTDESCLAWS10050"
+	picture = GFX_evt_speech
+	is_triggered_only = yes
+	
+	# Liege has no regent
+	option = {
+		trigger = {
+			NOT = {
+				any_realm_character = {
+					has_minor_title = title_regent
+					same_liege = ROOT
+				}
+			}
+		}
+		name = "EVTOPTACONFIRM"
+		liege = { character_event = { id = laws.10060 tooltip = "EVTTOOLTIPLAWS10060" } }
+	}
+	
+	# Liege has a regent, who is in the faction and can pass the bill automatically
+	option = {
+		trigger = {
+			any_realm_character = {
+				has_minor_title = title_regent
+				same_liege = ROOT
+			}
+		}
+		name = "EVTOPTBLAWS10000"
+		random_realm_character = {
+			limit = {
+				has_minor_title = title_regent
+				same_liege = ROOT
+			}
+			character_event = { id = laws.10051 tooltip = "EVTTOOLTIPLAWS10051" }
+		}
+		clr_character_flag = flag_making_faction_ultimatum
+	}
+	
+	# Nevermind
+	option = {
+		name = "EVTOPTNEVERMIND"
+		clr_character_flag = flag_making_faction_ultimatum
+		ai_chance = { factor = 0 }
+	}
+}
 
 # You are the regent, and in the anti-centralization faction, and they want to decentralize
 character_event = {
 	id = laws.10051
-	desc = "EVTDESCLAWS10001"
+	desc = "EVTDESCLAWS10051"
 	picture = GFX_evt_speech
 	is_triggered_only = yes
 	
@@ -354,7 +401,7 @@ character_event = {
 				trait = carefree
 			}
 		}
-		name = "EVTOPTALAWS10052"
+		name = "EVTOPTALAWS10002"
 		FROM = {
 			FROM = {
 				faction_anti_centralization = {
@@ -393,7 +440,7 @@ character_event = {
 			NOT = { trait = content }
 			NOT = { trait = humble }
 		}
-		name = "EVTOPTBLAWS10052"
+		name = "EVTOPTBLAWS10002"
 		FROM = {
 			reverse_opinion = { who = ROOT modifier = opinion_disloyal_regent }
 			FROM = {
@@ -437,7 +484,7 @@ character_event = {
 				trait = humble
 			}
 		}
-		name = "EVTOPTCLAWS10052"
+		name = "EVTOPTCLAWS10002"
 		FROM = {
 			reverse_opinion = { who = ROOT modifier = opinion_loyal_regent }
 			FROM = {
@@ -1216,7 +1263,7 @@ character_event = {
 				trait = carefree
 			}
 		}
-		name = "EVTOPTALAWS10102"
+		name = "EVTOPTALAWS10002"
 		FROM = {
 			FROM = {
 				faction_pro_centralization = {
@@ -1260,7 +1307,7 @@ character_event = {
 				trait = pragmatic
 			}
 		}
-		name = "EVTOPTBLAWS10102"
+		name = "EVTOPTBLAWS10002"
 		FROM = {
 			reverse_opinion = { who = ROOT modifier = opinion_disloyal_regent }
 			FROM = {
@@ -1307,7 +1354,7 @@ character_event = {
 				}
 			}
 		}
-		name = "EVTOPTCLAWS10102"
+		name = "EVTOPTCLAWS10002"
 		FROM = {
 			reverse_opinion = { who = ROOT modifier = opinion_loyal_regent }
 			FROM = {
@@ -1551,7 +1598,7 @@ character_event = {
 				trait = carefree
 			}
 		}
-		name = "EVTOPTALAWS10152"
+		name = "EVTOPTALAWS10002"
 		FROM = {
 			FROM = {
 				faction_pro_centralization = {
@@ -1595,7 +1642,7 @@ character_event = {
 				trait = pragmatic
 			}
 		}
-		name = "EVTOPTBLAWS10152"
+		name = "EVTOPTBLAWS10002"
 		FROM = {
 			reverse_opinion = { who = ROOT modifier = opinion_disloyal_regent }
 			FROM = {
@@ -1642,7 +1689,7 @@ character_event = {
 				}
 			}
 		}
-		name = "EVTOPTCLAWS10152"
+		name = "EVTOPTCLAWS10002"
 		FROM = {
 			reverse_opinion = { who = ROOT modifier = opinion_loyal_regent }
 			FROM = {

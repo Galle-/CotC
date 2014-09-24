@@ -4,19 +4,19 @@ religious_liberation_desc;Many followers of the [Root.GetReligion] ideology labo
 WAR_NAME_RELIGIOUS_LIBERATION;$ORDER$[Actor.Religion.GetName] Liberation of the $OTHER_TITLE$ Sector;;;;;;;;;;;;;x
 political_group;Political;;;;;;;;;;;;;x
 terran_federalist;Terran Federalist;;;;;;;;;;;;;x
-terran_federalist_desc;The Federalist Party was one of the two primary political parties of the Terran Confederation throughout most of its history. Terran Federalists support the ideal of a single, united human state, a democratic federation with its capital on Earth.;;;;;;;;;;;;;x
+terran_federalist_DESC;The Federalist Party was one of the two primary political parties of the Terran Confederation throughout most of its history. Terran Federalists support the ideal of a single, united human state, a democratic federation with its capital on Earth.;;;;;;;;;;;;;x
 terran_republican;Terran Republican;;;;;;;;;;;;;x
-terran_republican_desc;The Republican Party was one of the two primary political parties of the Terran Confederation throughout most of its history. Terran Republicans support the ideal of a highly centralized, democratic, united republic governing all humanity, with its capital on Earth.;;;;;;;;;;;;;x
+terran_republican_DESC;The Republican Party was one of the two primary political parties of the Terran Confederation throughout most of its history. Terran Republicans support the ideal of a highly centralized, democratic, united republic governing all humanity, with its capital on Earth.;;;;;;;;;;;;;x
 terran_imperial;Terran Imperialist;;;;;;;;;;;;;x
-terran_imperial_desc;The disasters of the late 30th century caused many Terrans to lose their faith in democracy. Terran Imperialists seek to unite humanity under the rule of a strong, authoritarian government centered on Earth.;;;;;;;;;;;;;x
+terran_imperial_DESC;The disasters of the late 30th century caused many Terrans to lose their faith in democracy. Terran Imperialists seek to unite humanity under the rule of a strong, authoritarian government centered on Earth.;;;;;;;;;;;;;x
 colonial_separatist;Colonial Separatist;;;;;;;;;;;;;x
-colonial_separatist_desc;Colonial Separatists believe that the notion of a single pan-human government is inherently flawed, and that Earth's colonies should be allowed to seek their own futures. They support free and independent democracies.;;;;;;;;;;;;;x
+colonial_separatist_DESC;Colonial Separatists believe that the notion of a single pan-human government is inherently flawed, and that Earth's colonies should be allowed to seek their own futures. They support free and independent democracies.;;;;;;;;;;;;;x
 neo_feudal;Neo-Feudalist;;;;;;;;;;;;;x
-neo_feudal_desc;Neo-Feudalists are a diverse lot. Some believe that the failures of the Confederation have proved that the Enlightenment itself was a mistake. Others simply prefer the romance of feudal titles to stark military ranks. Either way, they support independent and decentralized but autocratic governments.;;;;;;;;;;;;;x
+neo_feudal_DESC;Neo-Feudalists are a diverse lot. Some believe that the failures of the Confederation have proved that the Enlightenment itself was a mistake. Others simply prefer the romance of feudal titles to stark military ranks. Either way, they support independent and decentralized but autocratic governments.;;;;;;;;;;;;;x
 astrist;Astrist;;;;;;;;;;;;;x
-astrist_desc;The Astrist movement began when the first great wave of space explorers returned to Earth and found themselves unable to integrate with ordinary life. Astrists support the imposition of spacer values - loyalty to your crew, honesty and integrity in your dealings with others, responsibility to your subordinates and absolute and unquestioning obedience to your superiors - over everyday life. They support highly centralized autocratic dictatorships, but possess a distaste for Terrans in particular.;;;;;;;;;;;;;x
+astrist_DESC;The Astrist movement began when the first great wave of space explorers returned to Earth and found themselves unable to integrate with ordinary life. Astrists support the imposition of spacer values - loyalty to your crew, honesty and integrity in your dealings with others, responsibility to your subordinates and absolute and unquestioning obedience to your superiors - over everyday life. They support highly centralized autocratic dictatorships, but possess a distaste for Terrans in particular.;;;;;;;;;;;;;x
 neo_socialist;Neo-Socialist;;;;;;;;;;;;;x
-neo_socialist_desc;When Russia first began settling the Centauri Reach, many Russian communists fled Earth for the one place not yet corrupted by capitalism: space. Neo-socialists the modern heirs to the various socialist and Communist movements of the 20th century. In theory, they support democracy and autonomy, but they are often willing to sacrifice these things in the name of the greater good.;;;;;;;;;;;;;x
+neo_socialist_DESC;When Russia first began settling the Centauri Reach, many Russian communists fled Earth for the one place not yet corrupted by capitalism: space. Neo-socialists the modern heirs to the various socialist and Communist movements of the 20th century. In theory, they support democracy and autonomy, but they are often willing to sacrifice these things in the name of the greater good.;;;;;;;;;;;;;x
 religious_group;Religious;;;;;;;;;;;;;x
 pilgrim;Pilgrim;;;;;;;;;;;;;x
 pilgrim_DESC;While humanity follows many different religions, nearly all of them share one vital commonality - they all originated on Old Earth. Across the galaxy are billions of colonists who find themselves compelled to travel to the holy places on Earth, and over time, an infrastructure has evolved to support them. The largest organization responsible for the transportation of pilgrims is known simply as "the Pilgrimage.";;;;;;;;;;;;;x
@@ -31,13 +31,16 @@ mother_gaia_cultist;Matriarch;;;;;;;;;;;;;x
 father_earth_cultist;Patriarch;;;;;;;;;;;;;x
 transhumanist_group;Transhumanist;;;;;;;;;;;;;x
 cyberneticist;Cyberneticist;;;;;;;;;;;;;x
+cyberneticist_DESC;Cyberneticists seek to transcend the limitations of their humanity by using cybernetics to become something greater than themselves.;;;;;;;;;;;;;x
 machine_cultist;Machine Cultist;;;;;;;;;;;;;x
+machine_cultist_DESC;Often derogatorily referred to as "Toaster Worshippers," the Machine Cult are a strange Cyberneticist sect who seem to regard the mechanical with outright religious reverence. They believe that the flesh is a physical manifestation of sin, and seek to convert as much of themselves as possible to metal.;;;;;;;;;;;;;x
 hiver;Hiver;;;;;;;;;;;;;x
-hiver_desc;The Hive is a wonder of modern engineering. By integrating a DNI implant into an ansible wireless network, it is possible to directly join your mind with hundreds of billions of others, allowing you to call instantly upon the sum knowledge of humanity. And when has hearing voices in your head ever been a bad sign?;;;;;;;;;;;;;x
+hiver_DESC;The Hive is a wonder of modern engineering. By integrating a DNI implant into an ansible wireless network, it is possible to directly join your mind with hundreds of billions of others, allowing you to call instantly upon the sum knowledge of humanity. And when has hearing voices in your head ever been a bad sign?;;;;;;;;;;;;;x
 bio_directionist;Bio-Directionist;;;;;;;;;;;;;x
+bio_directionist_DESC;The Bio-Directionists are the modern-day philosophical descendants of the early twentieth century Eugenicists, although they themselves would deny any such connection fiercely. Rather than directing human evolution by means of forced sterilization and genocide, they seek to improve the human genome through more humane means: cloning and genetic engineering.;;;;;;;;;;;;;x
 outlaw_group;Outlaw;;;;;;;;;;;;;x
 space_pirate;Space Pirate;;;;;;;;;;;;;x
-space_pirate_desc;Like regular pirates, but in space. This is not a complicated concept. Space pirates can freely raid non-pirate systems, and have the unique ability to navigate hyperspace within nebulas.;;;;;;;;;;;;;x
+space_pirate_DESC;Like regular pirates, but in space. This is not a complicated concept. Space pirates can freely raid non-pirate systems, and have the unique ability to navigate hyperspace within nebulas.;;;;;;;;;;;;;x
 PIRATE_ADVENTURE;[Root.GetFullName]'s Pirate Fleet;;;;;;;;;;;;;x
 STAT_PIETY_CREDIBILITY;Credibility;;;;;;;;;;;;;x
 STAT_PIETY_DESC_CREDIBILITY;Political credibility is respected by other followers of your ideology. Like Prestige, it is added to your score on the death of a ruler.;;;;;;;;;;;;;x

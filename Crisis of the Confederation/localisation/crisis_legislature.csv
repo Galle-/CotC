@@ -1,4 +1,8 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+open_decrees_menu;Show Decrees;;;;;;;;;;;;;x
+open_decrees_menu_desc;Show actions that you can take unilaterally as [Root.GetTitle] of the [Root.PrimaryTitle.GetFullName].;;;;;;;;;;;;;x
+close_decrees_menu;Hide Decrees;;;;;;;;;;;;;x
+close_decrees_menu_desc;Hide decrees to clear up some space on the decision list.;;;;;;;;;;;;;x
 var_senate_majority;Senators Required For Majority Vote;;;;;;;;;;;;;x
 var_senate_majority_liege;Senators Required For Majority Vote;;;;;;;;;;;;;x
 faction_anti_centralization_short;Anti-Centralization;;;;;;;;;;;;;x
@@ -36,16 +40,44 @@ dissolve_legislature_decision;Dissolve the Senate;;;;;;;;;;;;;x
 dissolve_legislature_decision_desc;Order that the Senate dissolve and claim the power to rule by decree. This action will trigger a constitutional crisis.;;;;;;;;;;;;;x
 faction_anti_centralization_bill;Pass Decentralization Act;;;;;;;;;;;;;x
 faction_anti_centralization_bill_desc;You are the leader of the Anti-Centralization faction in the [Root.Liege.PrimaryTitle.GetAdjective] Senate. With a majority in the Senate, and the support of the Prime Minister and Regent should either exist, you could pass a bill weakening the central government and giving more power to outlying sectors.;;;;;;;;;;;;;x
-var_anti_centralization;Senators Against Centralization;;;;;;;;;;;;;x
+var_anti_centralization;Senate Majority Against Centralization;;;;;;;;;;;;;x
 faction_pro_centralization_bill;Pass Centralization Act;;;;;;;;;;;;;x
 faction_pro_centralization_bill_desc;You are the leader of the Pro-Centralization faction in the [Root.Liege.PrimaryTitle.GetAdjective] Senate. With a majority in the Senate, and the support of the Prime Minister and Regent should either exist, you could pass a bill strengthening the central government and taking away the privileges of outlying sectors.;;;;;;;;;;;;;x
-var_pro_centralization;Senators For Centralization;;;;;;;;;;;;;x
+var_pro_centralization;Senate Majority For Centralization;;;;;;;;;;;;;x
 faction_devolve_local_government_bill;Pass Home Rule Act;;;;;;;;;;;;;x
 faction_devolve_local_government_bill_desc;You are the leader of a Home Rule faction in the [Root.Liege.PrimaryTitle.GetAdjective] Senate. With a majority in the Senate, and the support of the Prime Minister and Regent should either exist, you could pass a bill granting an autonomous government to your homeland.;;;;;;;;;;;;;x
-var_devolve_local_government;Senators For Home Rule;;;;;;;;;;;;;x
+var_devolve_local_government;Senate Majority For Home Rule;;;;;;;;;;;;;x
 var_independence;Senators For Secession;;;;;;;;;;;;;x
 EVTDESCLAWS10000;As leader of the Anti-Centralization faction in the [Root.Liege.PrimaryTitle.GetAdjective] Senate, you have carefully crafted a bill that will reform the [Root.Liege.PrimaryTitle.GetFullName], weakening the central government and increasing the autonomy of the outlying sectors. You have enough support to get this bill passed in the Senate.;;;;;;;;;;;;;x
 EVTOPTBLAWS10000;And [Root.Liege.Regent.GetFullName] is already on our side!;;;;;;;;;;;;;x
+EVTDESCLAWS10001;The Anti-Centralization faction of the [From.Liege.PrimaryTitle.GetAdjective] Senate has crafted a bill that will reform the [From.Liege.PrimaryTitle.GetFullName] by granting greater autonomy to local governments. As Executor, it falls to you sign this bill into law.;;;;;;;;;;;;;x
+EVTDESCLAWS10002;Your executor, [From.GetFullName], has signed a bill passed by the Anti-Centralization faction in the [Root.PrimaryTitle.GetAdjective] Senate, granting more autonomy to local governments.;;;;;;;;;;;;;x
+EVTOPTALAWS10002;Whatever.;;;;;;;;;;;;;x
+EVTOPTBLAWS10002;How dare [From.GetSheHe]?!;;;;;;;;;;;;;x
+EVTOPTCLAWS10002;[From.GetSheHeCap] did the right thing.;;;;;;;;;;;;;x
+EVTDESCLAWS10011;The [From.PrimaryTitle.GetAdjective] Senate has passed a new bill, granting greater autonomy to local governments and weakening the authority of the central government.;;;;;;;;;;;;;x
+EVTDESCLAWS10050;As leader of the Anti-Centralization faction, you have decided that the time is right. Together, you and your allies will demand that greater autonomy be granted to local governments.;;;;;;;;;;;;;x
+EVTDESCLAWS10051;A collection of regional governors - including yourself - wish to pass a new law granting greater autonomy to local governments within the [From.Liege.PrimaryTitle.GetFullName]. As Executor, you have the power to make this law a reality.;;;;;;;;;;;;;x
+EVTDESCLAWS10052;Your executor, [From.GetFullName], has enacted a new law in your name, granting greater autonomy to local governments.;;;;;;;;;;;;;x
+EVTDESCLAWS10060;[From.GetFullName], [From.GetTitle] of [From.PrimaryTitle.GetName] and leader of the Anti-Centralization faction, has presented you with a list of demands. [From.GetSheHeCap] and [From.GetHerHis] supporters are demanding that you grant more autonomy to your regional governors.;;;;;;;;;;;;;x
+EVTDESCLAWS10161;The [From.GetTitle], under the advice of the Anti-Centralization faction, has passed new laws curtailing the rights of local governors and strengthening the central government of the [From.PrimaryTitle.GetFullName].;;;;;;;;;;;;;x
+EVTDESCLAWS10162;The Anti-Centralization faction attempted to convince the [From.GetTitle] to strengthen the central government, but [From.GetSheHe] refused.;;;;;;;;;;;;;x
+EVTDESCLAWS10100;As leader of the Anti-Centralization faction in the [Root.Liege.PrimaryTitle.GetAdjective] Senate, you have carefully crafted a bill that will reform the [Root.Liege.PrimaryTitle.GetFullName], strengthening its central government and bringing an end to the corruption of sector governors. You have enough support to get this bill passed in the Senate.;;;;;;;;;;;;;x
+EVTDESCLAWS10101;The Anti-Centralization faction of the [From.Liege.PrimaryTitle.GetAdjective] Senate has crafted a bill that will reform the [From.Liege.PrimaryTitle.GetFullName] by granting greater authority to the central government. As Executor, it falls to you sign this bill into law.;;;;;;;;;;;;;x
+EVTDESCLAWS10102;Your executor, [From.GetFullName], has signed a bill passed by the Anti-Centralization faction in the [Root.PrimaryTitle.GetAdjective] Senate, granting more authority to the central government.;;;;;;;;;;;;;x
+EVTDESCLAWS10111;The [From.PrimaryTitle.GetAdjective] Senate has passed a new bill, granting greater more authority to the central government and curtailing the rights of local governors.;;;;;;;;;;;;;x
+EVTDESCLAWS10150;As leader of the Anti-Centralization faction, you have decided that the time is right. Together, you and your allies will demand that the corruption and excesses of the local governors be brought to an end.;;;;;;;;;;;;;x
+EVTDESCLAWS10151;A collection of regional governors - including yourself - wish to pass a new law granting greater strength to the central government of the [From.Liege.PrimaryTitle.GetFullName]. As Executor, you have the power to make this law a reality.;;;;;;;;;;;;;x
+EVTDESCLAWS10152;Your executor, [From.GetFullName], has enacted a new law in your name, granting greater autonomy to local governments.;;;;;;;;;;;;;x
+EVTDESCLAWS10161;The [From.GetTitle], under the advice of the Pro-Centralization faction, has passed new laws curtailing the rights of local governors and strengthening the central government of the [From.PrimaryTitle.GetFullName].;;;;;;;;;;;;;x
+EVTDESCLAWS10162;The Pro-Centralization faction attempted to convince the [From.GetTitle] to strengthen the central government, but [From.GetSheHe] refused.;;;;;;;;;;;;;x
+EVTDESCLAWS10162;The [From.GetTitle] has stubbornly resisted your demands, and refused to increase the centralization of the [From.PrimaryTitle.GetFullName]. Perhaps more drastic action will be necessary in the future.;;;;;;;;;;;;;x
+EVTDESCLAWS10250;As leader of the Parliamentarian faction, you have decided that the time is right. Together, you and your allies will demand that [Root.Liege.GetFullName]'s dictatorial reign end and a democratic Senate be established for the [Root.Liege.PrimaryTitle.GetFullName].;;;;;;;;;;;;;x
+EVTDESCLAWS10251;A collection of regional governors - including yourself - wish to pass a new law that would establish a democratic senate for the [From.Liege.PrimaryTitle.GetFullName]. As Executor, you have the power to make this law a reality.;;;;;;;;;;;;;x
+EVTDESCLAWS10252;Your executor, [From.GetFullName], has enacted a new law in your name, ending your ability to rule by decree and establishing a [Root.PrimaryTitle.GetAdjective] Senate.;;;;;;;;;;;;;x
+EVTDESCLAWS10260;[From.GetFullName], [From.GetTitle] of [From.PrimaryTitle.GetName] and leader of the Parliamentarian faction, has presented you with a list of demands. [From.GetSheHeCap] and [From.GetHerHis] supporters are demanding that you end your rule by decree and establish a democratically-elected Senate.;;;;;;;;;;;;;x
+EVTDESCLAWS10261;The [From.GetTitle], under the advice of the Parliamentarian faction, has founded a Senate for the [From.PrimaryTitle.GetFullName].;;;;;;;;;;;;;x
+EVTDESCLAWS10262;The Parliamentarian faction attempted to convince the [From.GetTitle] to establish a new Senate, but [From.GetSheHe] refused.;;;;;;;;;;;;;x
 become_military_decision;Adopt Military Government;;;;;;;;;;;;;x
 become_military_decision_desc;The [Root.PrimaryTitle.GetFullName] suffers under its weak, civilian government. By declaring the military to be the backbone of the government, you will strengthen it, and your own rule.;;;;;;;;;;;;;x
 EVTDESCDECREES100;You have adopted a military government and officially proclaimed yourself [Root.GetTitle] of the [Root.PrimaryTitle.GetFullName].;;;;;;;;;;;;;x

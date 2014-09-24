@@ -25,3 +25,19 @@ EVTDESCHIVER410;Hivers might hold absolute loyalty to the Hive, but they see no 
 EVTDESCHIVER411;The Hivers in the [Root.GetName] System have been either eliminated or pacified.;;;;;;;;;;;;;x
 EVTDESCHIVER420;You and the people of the [Root.GetName] System sing together in a twisted parody of harmony.;;;;;;;;;;;;;x
 EVTDESCHIVER421;Whatever madness previously drove the people of the [Root.GetName] System to their acts of extreme loyalty has passed.;;;;;;;;;;;;;x
+EVTTOOLTIPHIVER10;'s hiver implant will be surgically removed.;;;;;;;;;;;;;x
+EVTDESCHIVER10;You were barely even aware when the doctors came to take you from your cell, so frantic and despearate were the voices. You were in danger, you knew this, but no matter how you fought you could not escape. The voices shouted, louder and louder, drowned out only by the horrible shriek of a drill.\n\nAnd then there was silence.;;;;;;;;;;;;;x
+EVTOPTAHIVER10;...is anyone there?;;;;;;;;;;;;;x
+EVTDESCHIVER2000;It's quiet now, inside your head. Your old companions are gone. Sometimes you appreciate the calm, but still, you can no longer hear their wisdom. Your old skills are fading. Is this who you were before? You can't remember. You're not sure it matters.;;;;;;;;;;;;;x
+EVTDESCHIVER2300;You've spent so long in silence. You can no longer hear the old voices, but there is still one, loud and clear. In a way, it's better then it was. There is only one voice, but you can hear it with shocking clarity.;;;;;;;;;;;;;x
+EVTOPTAHIVER2300;What's happened to me?;;;;;;;;;;;;;x
+EVTDESCHIVER2301;Your ex-Hiver, [From.GetFullName], appears to be slowly recovering. Today [From.GetSheHe] was even able to carry out a conversation with you without gibbering about the voices in [From.GetHerHis] head, or lack thereof. It seems the worst of the madness has passed.;;;;;;;;;;;;;x
+EVTDESCHIVER2400;It was terrifying at first, the silence, but as time passes, you begin to recover. You are lonely, yes, but you are also calm, calmer than you remember being in a very long time indeed.;;;;;;;;;;;;;x
+EVTOPTAHIVER2400;So this is what peace feels like.;;;;;;;;;;;;;x
+EVTDESCHIVER2401;Your resident ex-Hiver, [From.GetFullName], appears to be slowly recovering. [From.GetSheHeCap] might have a long way to go yet, but at least the screaming has stopped.;;;;;;;;;;;;;x
+EVTDESCHIVER2500;It's all coming back to you now, the way things were before. What they did to you. How the voices drove you mad. You've come a long way, but you feel like you're becoming whole again. You're not sure if you're the person you were before. You're not sure it matters.;;;;;;;;;;;;;x
+EVTOPTAHIVER2500;Because at last, I am free.;;;;;;;;;;;;;x
+EVTDESCHIVER2501;Your resident ex-Hiver, [From.GetFullName], has finally made a full recovery from [From.GetHerHis] experience with the hiver implant. [From.GetSheHeCap] seems far more stable now, and has no more wish to have another implant injected.;;;;;;;;;;;;;x
+EVTTITLEHIVER3000;A Curious Transmission;;;;;;;;;;;;;x
+EVTDESCHIVER3000;All of your ships have just received a strange transmission. It was sent to millions of ansibles across the [Root.PrimaryTitle.GetFullName] simultaneously, saying the same thing in over a hundred different languages.\n\n"We are the Hive. We are the future of humanity. You will become one of us. Disable your weapons and prepare to be boarded."\n\n"Resistance is futile.";;;;;;;;;;;;;x
+EVTOPTAHIVER3000;May [Root.Religion.GetRandomGodName] have mercy on us all...;;;;;;;;;;;;;x

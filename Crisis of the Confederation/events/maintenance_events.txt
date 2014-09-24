@@ -399,3 +399,84 @@ character_event = {
 	
 	immediate = { remove_character_modifier = not_having_babies_3 }
 }
+
+# Capital ship construction requirements
+character_event = {
+	id = maintenance.500
+	hide_window = yes
+	
+	only_rulers = yes
+	
+	trigger = {
+		NOT = { has_character_flag = flag_battlecruiser_construction }
+		any_demesne_title = {
+			OR = {
+				has_building = ca_olympian_shipyards
+				has_building = ca_capital_factory_q_1
+			}
+		}
+	}
+	
+	immediate = { set_character_flag = flag_battlecruiser_construction }
+}
+character_event = {
+	id = maintenance.501
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = flag_battlecruiser_construction
+		NOT = {
+			AND = {
+				is_landed = yes
+				any_demesne_title = {
+					OR = {
+						has_building = ca_olympian_shipyards
+						has_building = ca_capital_factory_q_1
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = { clr_character_flag = flag_battlecruiser_construction }
+}
+character_event = {
+	id = maintenance.502
+	hide_window = yes
+	
+	only_rulers = yes
+	
+	trigger = {
+		NOT = { has_character_flag = flag_dreadnought_construction }
+		any_demesne_title = {
+			OR = {
+				has_building = ca_olympian_shipyards
+				has_building = ca_capital_factory_q_2
+			}
+		}
+	}
+	
+	immediate = { set_character_flag = flag_dreadnought_construction }
+}
+character_event = {
+	id = maintenance.503
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = flag_dreadnought_construction
+		NOT = {
+			AND = {
+				is_landed = yes
+				any_demesne_title = {
+					OR = {
+						has_building = ca_olympian_shipyards
+						has_building = ca_capital_factory_q_2
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = { clr_character_flag = flag_dreadnought_construction }
+}
+

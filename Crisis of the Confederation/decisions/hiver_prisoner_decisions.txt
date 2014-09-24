@@ -16,4 +16,23 @@ prisoner_decisions = {
 			}
 		}
 	}
+	remove_hiver_implant = {
+		potential = {
+			FROM = { NOT = { religion = hiver } }
+			trait = hiver_implant
+		}
+		allow = {
+			location = { TECH_POPULAR_CUSTOMS = 6 } # Necessary to safely remove implant
+		}
+		effect = {
+			character_event = { id = hiver.10 tooltip = "EVTTOOLTIPHIVER10" }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				any_current_enemy = { character = FROM }
+			}
+		}
+	}
 }

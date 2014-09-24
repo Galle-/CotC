@@ -1,34 +1,35 @@
-# This file contains data for portraits requiring the Mediterranean facepack
+# This file contains all graphical cultures which require the African facepack.
 
 spriteTypes = {
+	### CONFEDERATE MALE - AFRICAN #
 	# CULTURE_INDEX: 0 = clothes behind, 1 = headgear behind, 2 = clothes, 3 = headgear mid, 4 = clothes infront, 5 = headgear
-	# Young Confederate Hispanic Male
+	# Young
 	portraitType = {
-		name = "PORTRAIT_hispanicconfederategfx_male"
+		name = "PORTRAIT_afroconfederategfx_male"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_confederate_male_clothes_behind:p3:c0"
 			"GFX_confederate_male_headgear_behind:p5:c1"
-			"GFX_byzantine_male_hair_behind:p1:h:y"
-			"GFX_byzantine_male_beard_behind:p4:h:y"
-			"GFX_byzantine_male_base:p2"
-			"GFX_byzantine_male_neck:d0"
-			"GFX_byzantine_male_cheeks:d4"
-			"GFX_byzantine_male_chin:d1"
-			"GFX_byzantine_male_mouth:d2"
-			"GFX_byzantine_male_nose:d3"
-			"GFX_byzantine_male_eyes:d6"
-			"GFX_byzantine_male_eyes2:d6:e"
+			"GFX_african_male_hair_behind:p1:h:y"
+			"GFX_african_male_beard_behind:p4:h:y"
+			"GFX_african_male_base:p2"
+			"GFX_african_male_neck:d0"
+			"GFX_african_male_cheeks:d4"
+			"GFX_african_male_chin:d1"
+			"GFX_african_male_mouth:d2"
+			"GFX_african_male_nose:d3"
+			"GFX_african_male_eyes:d6"
+			"GFX_african_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_confederate_male_clothes:p3:c2"
 			"GFX_confederate_male_headgear_mid:p5:c3"
-			"GFX_byzantine_male_ear:d7"			
-			"GFX_byzantine_male_beard:p4:h:y"
+			"GFX_african_male_ear:d7"			
+			"GFX_african_male_beard:p4:h:y"
 			"GFX_character_implants:p10"
-		   	"GFX_byzantine_male_hair:p1:h:y"
+		   	"GFX_african_male_hair:p1:h:y"
 			"GFX_confederate_male_clothes_infront:p3:c4"
 			"GFX_confederate_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -37,48 +38,43 @@ spriteTypes = {
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
 			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
 	
-	# # Middle Aged Confederate Hispanic Male
+	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_hispanicconfederategfx_male1"
+		name = "PORTRAIT_afroconfederategfx_male1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"						#0
 			"GFX_confederate_male_clothes_behind:p3:c0"
 			"GFX_confederate_male_headgear_behind:p5:c1"
-			"GFX_byzantine_male_hair_behind_midage:p1:h:y"
-			"GFX_byzantine_male_beard_behind_midage:p4:h:y"
-			"GFX_byzantine_male_base_midage:p2"					#5
-			"GFX_byzantine_male_neck_midage:d0"
-			"GFX_byzantine_male_cheeks_midage:d4"
-			"GFX_byzantine_male_chin_midage:d1"
-			"GFX_byzantine_male_mouth_midage:d2"
-			"GFX_byzantine_male_nose_midage:d3"					#10
-			"GFX_byzantine_male_eyes_midage:d6"
-			"GFX_byzantine_male_eyes2:d6:e"
+			"GFX_african_male_hair_behind_midage:p1:h:y"
+			"GFX_african_male_beard_behind_midage:p4:h:y"
+			"GFX_african_male_base_midage:p2"					#5
+			"GFX_african_male_neck_midage:d0"
+			"GFX_african_male_cheeks_midage:d4"
+			"GFX_african_male_chin_midage:d1"
+			"GFX_african_male_mouth_midage:d2"
+			"GFX_african_male_nose_midage:d3"					#10
+			"GFX_african_male_eyes_midage:d6"
+			"GFX_african_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"							#20
 			"GFX_character_boils:p9"
 			"GFX_confederate_male_clothes:p3:c2"
 			"GFX_confederate_male_headgear_mid:p5:c3"
-			"GFX_byzantine_male_ear_midage:d7"					#15
-			"GFX_byzantine_male_beard_midage:p4:h:y"
+			"GFX_african_male_ear_midage:d7"					#15
+			"GFX_african_male_beard_midage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_male_hair_midage:p1:h:y"
+			"GFX_african_male_hair_midage:p1:h:y"
 			"GFX_confederate_male_clothes_infront:p3:c4"
 			"GFX_confederate_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -86,50 +82,45 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
+		
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
 	
-	# Old Confederate Hispanic Male
+	# Old Age
 	portraitType = {
-		name = "PORTRAIT_hispanicconfederategfx_male2"
+		name = "PORTRAIT_afroconfederategfx_male2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_confederate_male_clothes_behind:p3:c0"
 			"GFX_confederate_male_headgear_behind:p5:c1"
-			"GFX_byzantine_male_hair_behind_oldage:p1:h:y"
-			"GFX_byzantine_male_beard_behind_oldage:p4:h:y"
-			"GFX_byzantine_male_base_oldage:p2"
-			"GFX_byzantine_male_neck_oldage:d0"
-			"GFX_byzantine_male_cheeks_oldage:d4"
-			"GFX_byzantine_male_chin_oldage:d1"
-			"GFX_byzantine_male_mouth_oldage:d2"
-			"GFX_byzantine_male_nose_oldage:d3"
-			"GFX_byzantine_male_eyes_oldage:d6"
-			"GFX_byzantine_male_eyes2:d6:e"
+			"GFX_african_male_hair_behind_oldage:p1:h:y"
+			"GFX_african_male_beard_behind_oldage:p4:h:y"
+			"GFX_african_male_base_oldage:p2"
+			"GFX_african_male_neck_oldage:d0"
+			"GFX_african_male_cheeks_oldage:d4"
+			"GFX_african_male_chin_oldage:d1"
+			"GFX_african_male_mouth_oldage:d2"
+			"GFX_african_male_nose_oldage:d3"
+			"GFX_african_male_eyes_oldage:d6"
+			"GFX_african_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_confederate_male_clothes:p3:c2"
 			"GFX_confederate_male_headgear_mid:p5:c3"
-			"GFX_byzantine_male_ear_oldage:d7"
-			"GFX_byzantine_male_beard_oldage:p4:h:y"
+			"GFX_african_male_ear_oldage:d7"
+			"GFX_african_male_beard_oldage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_male_hair_oldage:p1:h:y"
+			"GFX_african_male_hair_oldage:p1:h:y"
 			"GFX_confederate_male_clothes_infront:p3:c4"
 			"GFX_confederate_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -137,143 +128,129 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
-			{ 10 10 10 } {  125 125 125 } { 255 255 255 }
+			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
-	# Young Confederate Hispanic Female
+	### CONFEDERATE FEMALE - WESTERN EUROPEAN ####
+	# Young
 	portraitType = {
-		name = "PORTRAIT_hispanicconfederategfx_female"
+		name = "PORTRAIT_afroconfederategfx_female"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_confederate_female_clothes_behind:p3:c0"              #1
 			"GFX_confederate_female_headgear_behind:p5:c1"             #2
-			"GFX_byzantine_female_hair_behind:p1:h:y"             #3
-			"GFX_byzantine_female_base:p2"                        #4
-			"GFX_byzantine_female_neck:d0"                        #5
-			"GFX_byzantine_female_cheeks:d4"                      #6
-			"GFX_byzantine_female_chin:d1"                        #7
-			"GFX_byzantine_female_mouth:d2"                       #8
-			"GFX_byzantine_female_nose:d3"                        #9
-			"GFX_byzantine_female_eyes:d6"                        #10
-			"GFX_byzantine_female_eyes2:d6:e"			            #11
+			"GFX_african_female_hair_behind:p1:h:y"             #3
+			"GFX_african_female_base:p2"                        #4
+			"GFX_african_female_neck:d0"                        #5
+			"GFX_african_female_cheeks:d4"                      #6
+			"GFX_african_female_chin:d1"                        #7
+			"GFX_african_female_mouth:d2"                       #8
+			"GFX_african_female_nose:d3"                        #9
+			"GFX_african_female_eyes:d6"                        #10
+			"GFX_african_female_eyes2:d6:e"			            #11
 			"GFX_character_scars:p7:y"                            #16
 			"GFX_character_reddots:p8"                          #17
 			"GFX_character_boils:p9"                            #18
 			"GFX_confederate_female_clothes:p3:c2"                  #12
-			"GFX_byzantine_female_ear:d7"                         #13
+			"GFX_african_female_ear:d7"                         #13
 			"GFX_empty:p3:c4"
 			"GFX_confederate_female_headgear_mid:p5:c3"             #14
 			"GFX_character_implants:p10"
-			"GFX_byzantine_female_hair:p1:h:y"                    #15
+			"GFX_african_female_hair:p1:h:y"                    #15
 			"GFX_confederate_female_headgear:p5:c5"                 #20
 			"GFX_character_imprisoned:p6"                       #21
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
 			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
 
-	# Middle Aged Confederate Hispanic Female
+	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_hispanicconfederategfx_female1"
+		name = "PORTRAIT_afroconfederategfx_female1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_confederate_female_clothes_behind:p3:c0"
 			"GFX_confederate_female_headgear_behind:p5:c1"
-			"GFX_byzantine_female_hair_behind_midage:p1:h:y"
-			"GFX_byzantine_female_base_midage:p2"
-			"GFX_byzantine_female_neck_midage:d0"
-			"GFX_byzantine_female_cheeks_midage:d4"
-			"GFX_byzantine_female_chin_midage:d1"
-			"GFX_byzantine_female_mouth_midage:d2"
-			"GFX_byzantine_female_nose_midage:d3"			
-			"GFX_byzantine_female_eyes_midage:d6"
-			"GFX_byzantine_female_eyes2:d6:e"
+			"GFX_african_female_hair_behind_midage:p1:h:y"
+			"GFX_african_female_base_midage:p2"
+			"GFX_african_female_neck_midage:d0"
+			"GFX_african_female_cheeks_midage:d4"
+			"GFX_african_female_chin_midage:d1"
+			"GFX_african_female_mouth_midage:d2"
+			"GFX_african_female_nose_midage:d3"			
+			"GFX_african_female_eyes_midage:d6"
+			"GFX_african_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_confederate_female_clothes:p3:c2"			
-			"GFX_byzantine_female_ear_midage:d7"
+			"GFX_african_female_ear_midage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_confederate_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_female_hair_midage:p1:h:y"
+			"GFX_african_female_hair_midage:p1:h:y"
 			"GFX_confederate_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
 			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
 
-	# Old Confederate Hispanic Female
+	# Old Age
 	portraitType = {
-		name = "PORTRAIT_hispanicconfederategfx_female2"
+		name = "PORTRAIT_afroconfederategfx_female2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_confederate_female_clothes_behind:p3:c0"
 			"GFX_confederate_female_headgear_behind:p5:c1"
-			"GFX_byzantine_female_hair_behind_oldage:p1:h:y"
-			"GFX_byzantine_female_base_oldage:p2"
-			"GFX_byzantine_female_neck_oldage:d0"
-			"GFX_byzantine_female_cheeks_oldage:d4"
-			"GFX_byzantine_female_chin_oldage:d1"
-			"GFX_byzantine_female_mouth_oldage:d2"
-			"GFX_byzantine_female_nose_oldage:d3"
-			"GFX_byzantine_female_eyes_oldage:d6"
-			"GFX_byzantine_female_eyes2:d6:e"
+			"GFX_african_female_hair_behind_oldage:p1:h:y"
+			"GFX_african_female_base_oldage:p2"
+			"GFX_african_female_neck_oldage:d0"
+			"GFX_african_female_cheeks_oldage:d4"
+			"GFX_african_female_chin_oldage:d1"
+			"GFX_african_female_mouth_oldage:d2"
+			"GFX_african_female_nose_oldage:d3"
+			"GFX_african_female_eyes_oldage:d6"
+			"GFX_african_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_confederate_female_clothes:p3:c2"			
-			"GFX_byzantine_female_ear_oldage:d7"
+			"GFX_african_female_ear_oldage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_confederate_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_female_hair_oldage:p1:h:y"
+			"GFX_african_female_hair_oldage:p1:h:y"
 			"GFX_confederate_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
@@ -281,48 +258,46 @@ spriteTypes = {
 		
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
-			{ 10 10 10 } {  125 125 125 } { 255 255 255 }
+			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
+	### FRONTIER MALE - AFRICAN #
 	# CULTURE_INDEX: 0 = clothes behind, 1 = headgear behind, 2 = clothes, 3 = headgear mid, 4 = clothes infront, 5 = headgear
-	# Young Frontier Hispanic Male
+	# Young
 	portraitType = {
-		name = "PORTRAIT_hispanicfrontiergfx_male"
+		name = "PORTRAIT_afrofrontiergfx_male"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_frontier_male_clothes_behind:p3:c0"
 			"GFX_frontier_male_headgear_behind:p5:c1"
-			"GFX_byzantine_male_hair_behind:p1:h:y"
-			"GFX_byzantine_male_beard_behind:p4:h:y"
-			"GFX_byzantine_male_base:p2"
-			"GFX_byzantine_male_neck:d0"
-			"GFX_byzantine_male_cheeks:d4"
-			"GFX_byzantine_male_chin:d1"
-			"GFX_byzantine_male_mouth:d2"
-			"GFX_byzantine_male_nose:d3"
-			"GFX_byzantine_male_eyes:d6"
-			"GFX_byzantine_male_eyes2:d6:e"
+			"GFX_african_male_hair_behind:p1:h:y"
+			"GFX_african_male_beard_behind:p4:h:y"
+			"GFX_african_male_base:p2"
+			"GFX_african_male_neck:d0"
+			"GFX_african_male_cheeks:d4"
+			"GFX_african_male_chin:d1"
+			"GFX_african_male_mouth:d2"
+			"GFX_african_male_nose:d3"
+			"GFX_african_male_eyes:d6"
+			"GFX_african_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_frontier_male_clothes:p3:c2"
 			"GFX_frontier_male_headgear_mid:p5:c3"
-			"GFX_byzantine_male_ear:d7"			
-			"GFX_byzantine_male_beard:p4:h:y"
-			"GFX_character_implants:p10"
-		   	"GFX_byzantine_male_hair:p1:h:y"
+			"GFX_african_male_ear:d7"			
+			"GFX_african_male_beard:p4:h:y"
+		   	"GFX_african_male_hair:p1:h:y"
 			"GFX_frontier_male_clothes_infront:p3:c4"
+			"GFX_character_implants:p10"
 			"GFX_frontier_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
@@ -330,48 +305,43 @@ spriteTypes = {
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
 			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
 	
-	# # Middle Aged Frontier Hispanic Male
+	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_hispanicfrontiergfx_male1"
+		name = "PORTRAIT_afrofrontiergfx_male1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"						#0
 			"GFX_frontier_male_clothes_behind:p3:c0"
 			"GFX_frontier_male_headgear_behind:p5:c1"
-			"GFX_byzantine_male_hair_behind_midage:p1:h:y"
-			"GFX_byzantine_male_beard_behind_midage:p4:h:y"
-			"GFX_byzantine_male_base_midage:p2"					#5
-			"GFX_byzantine_male_neck_midage:d0"
-			"GFX_byzantine_male_cheeks_midage:d4"
-			"GFX_byzantine_male_chin_midage:d1"
-			"GFX_byzantine_male_mouth_midage:d2"
-			"GFX_byzantine_male_nose_midage:d3"					#10
-			"GFX_byzantine_male_eyes_midage:d6"
-			"GFX_byzantine_male_eyes2:d6:e"
+			"GFX_african_male_hair_behind_midage:p1:h:y"
+			"GFX_african_male_beard_behind_midage:p4:h:y"
+			"GFX_african_male_base_midage:p2"					#5
+			"GFX_african_male_neck_midage:d0"
+			"GFX_african_male_cheeks_midage:d4"
+			"GFX_african_male_chin_midage:d1"
+			"GFX_african_male_mouth_midage:d2"
+			"GFX_african_male_nose_midage:d3"					#10
+			"GFX_african_male_eyes_midage:d6"
+			"GFX_african_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"							#20
 			"GFX_character_boils:p9"
 			"GFX_frontier_male_clothes:p3:c2"
 			"GFX_frontier_male_headgear_mid:p5:c3"
-			"GFX_byzantine_male_ear_midage:d7"					#15
-			"GFX_byzantine_male_beard_midage:p4:h:y"
+			"GFX_african_male_ear_midage:d7"					#15
+			"GFX_african_male_beard_midage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_male_hair_midage:p1:h:y"
+			"GFX_african_male_hair_midage:p1:h:y"
 			"GFX_frontier_male_clothes_infront:p3:c4"
 			"GFX_frontier_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -379,50 +349,45 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
+		
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
 	
-	# Old Frontier Hispanic Male
+	# Old Age
 	portraitType = {
-		name = "PORTRAIT_hispanicfrontiergfx_male2"
+		name = "PORTRAIT_afrofrontiergfx_male2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_frontier_male_clothes_behind:p3:c0"
 			"GFX_frontier_male_headgear_behind:p5:c1"
-			"GFX_byzantine_male_hair_behind_oldage:p1:h:y"
-			"GFX_byzantine_male_beard_behind_oldage:p4:h:y"
-			"GFX_byzantine_male_base_oldage:p2"
-			"GFX_byzantine_male_neck_oldage:d0"
-			"GFX_byzantine_male_cheeks_oldage:d4"
-			"GFX_byzantine_male_chin_oldage:d1"
-			"GFX_byzantine_male_mouth_oldage:d2"
-			"GFX_byzantine_male_nose_oldage:d3"
-			"GFX_byzantine_male_eyes_oldage:d6"
-			"GFX_byzantine_male_eyes2:d6:e"
+			"GFX_african_male_hair_behind_oldage:p1:h:y"
+			"GFX_african_male_beard_behind_oldage:p4:h:y"
+			"GFX_african_male_base_oldage:p2"
+			"GFX_african_male_neck_oldage:d0"
+			"GFX_african_male_cheeks_oldage:d4"
+			"GFX_african_male_chin_oldage:d1"
+			"GFX_african_male_mouth_oldage:d2"
+			"GFX_african_male_nose_oldage:d3"
+			"GFX_african_male_eyes_oldage:d6"
+			"GFX_african_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_frontier_male_clothes:p3:c2"
 			"GFX_frontier_male_headgear_mid:p5:c3"
-			"GFX_byzantine_male_ear_oldage:d7"
-			"GFX_byzantine_male_beard_oldage:p4:h:y"
+			"GFX_african_male_ear_oldage:d7"
+			"GFX_african_male_beard_oldage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_male_hair_oldage:p1:h:y"
+			"GFX_african_male_hair_oldage:p1:h:y"
 			"GFX_frontier_male_clothes_infront:p3:c4"
 			"GFX_frontier_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -430,143 +395,129 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
-			{ 10 10 10 } {  125 125 125 } { 255 255 255 }
+			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
-	# Young Frontier Hispanic Female
+	### FRONTIER FEMALE - WESTERN EUROPEAN ####
+	# Young
 	portraitType = {
-		name = "PORTRAIT_hispanicfrontiergfx_female"
+		name = "PORTRAIT_afrofrontiergfx_female"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_frontier_female_clothes_behind:p3:c0"              #1
 			"GFX_frontier_female_headgear_behind:p5:c1"             #2
-			"GFX_byzantine_female_hair_behind:p1:h:y"             #3
-			"GFX_byzantine_female_base:p2"                        #4
-			"GFX_byzantine_female_neck:d0"                        #5
-			"GFX_byzantine_female_cheeks:d4"                      #6
-			"GFX_byzantine_female_chin:d1"                        #7
-			"GFX_byzantine_female_mouth:d2"                       #8
-			"GFX_byzantine_female_nose:d3"                        #9
-			"GFX_byzantine_female_eyes:d6"                        #10
-			"GFX_byzantine_female_eyes2:d6:e"			            #11
+			"GFX_african_female_hair_behind:p1:h:y"             #3
+			"GFX_african_female_base:p2"                        #4
+			"GFX_african_female_neck:d0"                        #5
+			"GFX_african_female_cheeks:d4"                      #6
+			"GFX_african_female_chin:d1"                        #7
+			"GFX_african_female_mouth:d2"                       #8
+			"GFX_african_female_nose:d3"                        #9
+			"GFX_african_female_eyes:d6"                        #10
+			"GFX_african_female_eyes2:d6:e"			            #11
 			"GFX_character_scars:p7:y"                            #16
 			"GFX_character_reddots:p8"                          #17
 			"GFX_character_boils:p9"                            #18
 			"GFX_frontier_female_clothes:p3:c2"                  #12
-			"GFX_byzantine_female_ear:d7"                         #13
+			"GFX_african_female_ear:d7"                         #13
 			"GFX_empty:p3:c4"
 			"GFX_frontier_female_headgear_mid:p5:c3"             #14
 			"GFX_character_implants:p10"
-			"GFX_byzantine_female_hair:p1:h:y"                    #15
+			"GFX_african_female_hair:p1:h:y"                    #15
 			"GFX_frontier_female_headgear:p5:c5"                 #20
 			"GFX_character_imprisoned:p6"                       #21
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
 			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
 
-	# Middle Aged Frontier Hispanic Female
+	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_hispanicfrontiergfx_female1"
+		name = "PORTRAIT_afrofrontiergfx_female1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_frontier_female_clothes_behind:p3:c0"
 			"GFX_frontier_female_headgear_behind:p5:c1"
-			"GFX_byzantine_female_hair_behind_midage:p1:h:y"
-			"GFX_byzantine_female_base_midage:p2"
-			"GFX_byzantine_female_neck_midage:d0"
-			"GFX_byzantine_female_cheeks_midage:d4"
-			"GFX_byzantine_female_chin_midage:d1"
-			"GFX_byzantine_female_mouth_midage:d2"
-			"GFX_byzantine_female_nose_midage:d3"			
-			"GFX_byzantine_female_eyes_midage:d6"
-			"GFX_byzantine_female_eyes2:d6:e"
+			"GFX_african_female_hair_behind_midage:p1:h:y"
+			"GFX_african_female_base_midage:p2"
+			"GFX_african_female_neck_midage:d0"
+			"GFX_african_female_cheeks_midage:d4"
+			"GFX_african_female_chin_midage:d1"
+			"GFX_african_female_mouth_midage:d2"
+			"GFX_african_female_nose_midage:d3"			
+			"GFX_african_female_eyes_midage:d6"
+			"GFX_african_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_frontier_female_clothes:p3:c2"			
-			"GFX_byzantine_female_ear_midage:d7"
+			"GFX_african_female_ear_midage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_frontier_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_female_hair_midage:p1:h:y"
+			"GFX_african_female_hair_midage:p1:h:y"
 			"GFX_frontier_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
 			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
 
-	# Old Frontier Hispanic Female
+	# Old Age
 	portraitType = {
-		name = "PORTRAIT_hispanicfrontiergfx_female2"
+		name = "PORTRAIT_afrofrontiergfx_female2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_frontier_female_clothes_behind:p3:c0"
 			"GFX_frontier_female_headgear_behind:p5:c1"
-			"GFX_byzantine_female_hair_behind_oldage:p1:h:y"
-			"GFX_byzantine_female_base_oldage:p2"
-			"GFX_byzantine_female_neck_oldage:d0"
-			"GFX_byzantine_female_cheeks_oldage:d4"
-			"GFX_byzantine_female_chin_oldage:d1"
-			"GFX_byzantine_female_mouth_oldage:d2"
-			"GFX_byzantine_female_nose_oldage:d3"
-			"GFX_byzantine_female_eyes_oldage:d6"
-			"GFX_byzantine_female_eyes2:d6:e"
+			"GFX_african_female_hair_behind_oldage:p1:h:y"
+			"GFX_african_female_base_oldage:p2"
+			"GFX_african_female_neck_oldage:d0"
+			"GFX_african_female_cheeks_oldage:d4"
+			"GFX_african_female_chin_oldage:d1"
+			"GFX_african_female_mouth_oldage:d2"
+			"GFX_african_female_nose_oldage:d3"
+			"GFX_african_female_eyes_oldage:d6"
+			"GFX_african_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_frontier_female_clothes:p3:c2"			
-			"GFX_byzantine_female_ear_oldage:d7"
+			"GFX_african_female_ear_oldage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_frontier_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_female_hair_oldage:p1:h:y"
+			"GFX_african_female_hair_oldage:p1:h:y"
 			"GFX_frontier_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
@@ -574,47 +525,45 @@ spriteTypes = {
 		
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
-			{ 10 10 10 } {  125 125 125 } { 255 255 255 }
+			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
+	### SAMAWATI MALE - AFRICAN #
 	# CULTURE_INDEX: 0 = clothes behind, 1 = headgear behind, 2 = clothes, 3 = headgear mid, 4 = clothes infront, 5 = headgear
-	# Young Samawati Hispanic Male
+	# Young
 	portraitType = {
-		name = "PORTRAIT_hispanicsamawatigfx_male"
+		name = "PORTRAIT_afrosamawatigfx_male"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_samawati_male_clothes_behind:p3:c0"
 			"GFX_samawati_male_headgear_behind:p5:c1"
-			"GFX_byzantine_male_hair_behind:p1:h:y"
-			"GFX_byzantine_male_beard_behind:p4:h:y"
-			"GFX_byzantine_male_base:p2"
-			"GFX_byzantine_male_neck:d0"
-			"GFX_byzantine_male_cheeks:d4"
-			"GFX_byzantine_male_chin:d1"
-			"GFX_byzantine_male_mouth:d2"
-			"GFX_byzantine_male_nose:d3"
-			"GFX_byzantine_male_eyes:d6"
-			"GFX_byzantine_male_eyes2:d6:e"
+			"GFX_african_male_hair_behind:p1:h:y"
+			"GFX_african_male_beard_behind:p4:h:y"
+			"GFX_african_male_base:p2"
+			"GFX_african_male_neck:d0"
+			"GFX_african_male_cheeks:d4"
+			"GFX_african_male_chin:d1"
+			"GFX_african_male_mouth:d2"
+			"GFX_african_male_nose:d3"
+			"GFX_african_male_eyes:d6"
+			"GFX_african_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_samawati_male_clothes:p3:c2"
 			"GFX_samawati_male_headgear_mid:p5:c3"
-			"GFX_byzantine_male_ear:d7"			
-			"GFX_byzantine_male_beard:p4:h:y"
+			"GFX_african_male_ear:d7"			
+			"GFX_african_male_beard:p4:h:y"
 			"GFX_character_implants:p10"
-		   	"GFX_byzantine_male_hair:p1:h:y"
+		   	"GFX_african_male_hair:p1:h:y"
 			"GFX_samawati_male_clothes_infront:p3:c4"
 			"GFX_samawati_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -623,48 +572,43 @@ spriteTypes = {
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
 			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
 	
-	# # Middle Aged Samawati Hispanic Male
+	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_hispanicsamawatigfx_male1"
+		name = "PORTRAIT_afrosamawatigfx_male1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"						#0
 			"GFX_samawati_male_clothes_behind:p3:c0"
 			"GFX_samawati_male_headgear_behind:p5:c1"
-			"GFX_byzantine_male_hair_behind_midage:p1:h:y"
-			"GFX_byzantine_male_beard_behind_midage:p4:h:y"
-			"GFX_byzantine_male_base_midage:p2"					#5
-			"GFX_byzantine_male_neck_midage:d0"
-			"GFX_byzantine_male_cheeks_midage:d4"
-			"GFX_byzantine_male_chin_midage:d1"
-			"GFX_byzantine_male_mouth_midage:d2"
-			"GFX_byzantine_male_nose_midage:d3"					#10
-			"GFX_byzantine_male_eyes_midage:d6"
-			"GFX_byzantine_male_eyes2:d6:e"
+			"GFX_african_male_hair_behind_midage:p1:h:y"
+			"GFX_african_male_beard_behind_midage:p4:h:y"
+			"GFX_african_male_base_midage:p2"					#5
+			"GFX_african_male_neck_midage:d0"
+			"GFX_african_male_cheeks_midage:d4"
+			"GFX_african_male_chin_midage:d1"
+			"GFX_african_male_mouth_midage:d2"
+			"GFX_african_male_nose_midage:d3"					#10
+			"GFX_african_male_eyes_midage:d6"
+			"GFX_african_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"							#20
 			"GFX_character_boils:p9"
 			"GFX_samawati_male_clothes:p3:c2"
 			"GFX_samawati_male_headgear_mid:p5:c3"
-			"GFX_byzantine_male_ear_midage:d7"					#15
-			"GFX_byzantine_male_beard_midage:p4:h:y"
+			"GFX_african_male_ear_midage:d7"					#15
+			"GFX_african_male_beard_midage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_male_hair_midage:p1:h:y"
+			"GFX_african_male_hair_midage:p1:h:y"
 			"GFX_samawati_male_clothes_infront:p3:c4"
 			"GFX_samawati_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -672,50 +616,45 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
+		
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
 	
-	# Old Samawati Hispanic Male
+	# Old Age
 	portraitType = {
-		name = "PORTRAIT_hispanicsamawatigfx_male2"
+		name = "PORTRAIT_afrosamawatigfx_male2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_samawati_male_clothes_behind:p3:c0"
 			"GFX_samawati_male_headgear_behind:p5:c1"
-			"GFX_byzantine_male_hair_behind_oldage:p1:h:y"
-			"GFX_byzantine_male_beard_behind_oldage:p4:h:y"
-			"GFX_byzantine_male_base_oldage:p2"
-			"GFX_byzantine_male_neck_oldage:d0"
-			"GFX_byzantine_male_cheeks_oldage:d4"
-			"GFX_byzantine_male_chin_oldage:d1"
-			"GFX_byzantine_male_mouth_oldage:d2"
-			"GFX_byzantine_male_nose_oldage:d3"
-			"GFX_byzantine_male_eyes_oldage:d6"
-			"GFX_byzantine_male_eyes2:d6:e"
+			"GFX_african_male_hair_behind_oldage:p1:h:y"
+			"GFX_african_male_beard_behind_oldage:p4:h:y"
+			"GFX_african_male_base_oldage:p2"
+			"GFX_african_male_neck_oldage:d0"
+			"GFX_african_male_cheeks_oldage:d4"
+			"GFX_african_male_chin_oldage:d1"
+			"GFX_african_male_mouth_oldage:d2"
+			"GFX_african_male_nose_oldage:d3"
+			"GFX_african_male_eyes_oldage:d6"
+			"GFX_african_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_samawati_male_clothes:p3:c2"
 			"GFX_samawati_male_headgear_mid:p5:c3"
-			"GFX_byzantine_male_ear_oldage:d7"
-			"GFX_byzantine_male_beard_oldage:p4:h:y"
+			"GFX_african_male_ear_oldage:d7"
+			"GFX_african_male_beard_oldage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_male_hair_oldage:p1:h:y"
+			"GFX_african_male_hair_oldage:p1:h:y"
 			"GFX_samawati_male_clothes_infront:p3:c4"
 			"GFX_samawati_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -723,143 +662,129 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
-			{ 10 10 10 } {  125 125 125 } { 255 255 255 }
+			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
-	# Young Samawati Hispanic Female
+	### SAMAWATI FEMALE - WESTERN EUROPEAN ####
+	# Young
 	portraitType = {
-		name = "PORTRAIT_hispanicsamawatigfx_female"
+		name = "PORTRAIT_afrosamawatigfx_female"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_samawati_female_clothes_behind:p3:c0"              #1
 			"GFX_samawati_female_headgear_behind:p5:c1"             #2
-			"GFX_byzantine_female_hair_behind:p1:h:y"             #3
-			"GFX_byzantine_female_base:p2"                        #4
-			"GFX_byzantine_female_neck:d0"                        #5
-			"GFX_byzantine_female_cheeks:d4"                      #6
-			"GFX_byzantine_female_chin:d1"                        #7
-			"GFX_byzantine_female_mouth:d2"                       #8
-			"GFX_byzantine_female_nose:d3"                        #9
-			"GFX_byzantine_female_eyes:d6"                        #10
-			"GFX_byzantine_female_eyes2:d6:e"			            #11
+			"GFX_african_female_hair_behind:p1:h:y"             #3
+			"GFX_african_female_base:p2"                        #4
+			"GFX_african_female_neck:d0"                        #5
+			"GFX_african_female_cheeks:d4"                      #6
+			"GFX_african_female_chin:d1"                        #7
+			"GFX_african_female_mouth:d2"                       #8
+			"GFX_african_female_nose:d3"                        #9
+			"GFX_african_female_eyes:d6"                        #10
+			"GFX_african_female_eyes2:d6:e"			            #11
 			"GFX_character_scars:p7:y"                            #16
 			"GFX_character_reddots:p8"                          #17
 			"GFX_character_boils:p9"                            #18
 			"GFX_samawati_female_clothes:p3:c2"                  #12
-			"GFX_byzantine_female_ear:d7"                         #13
+			"GFX_african_female_ear:d7"                         #13
 			"GFX_empty:p3:c4"
 			"GFX_samawati_female_headgear_mid:p5:c3"             #14
 			"GFX_character_implants:p10"
-			"GFX_byzantine_female_hair:p1:h:y"                    #15
+			"GFX_african_female_hair:p1:h:y"                    #15
 			"GFX_samawati_female_headgear:p5:c5"                 #20
 			"GFX_character_imprisoned:p6"                       #21
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
 			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
 
-	# Middle Aged Samawati Hispanic Female
+	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_hispanicsamawatigfx_female1"
+		name = "PORTRAIT_afrosamawatigfx_female1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_samawati_female_clothes_behind:p3:c0"
 			"GFX_samawati_female_headgear_behind:p5:c1"
-			"GFX_byzantine_female_hair_behind_midage:p1:h:y"
-			"GFX_byzantine_female_base_midage:p2"
-			"GFX_byzantine_female_neck_midage:d0"
-			"GFX_byzantine_female_cheeks_midage:d4"
-			"GFX_byzantine_female_chin_midage:d1"
-			"GFX_byzantine_female_mouth_midage:d2"
-			"GFX_byzantine_female_nose_midage:d3"			
-			"GFX_byzantine_female_eyes_midage:d6"
-			"GFX_byzantine_female_eyes2:d6:e"
+			"GFX_african_female_hair_behind_midage:p1:h:y"
+			"GFX_african_female_base_midage:p2"
+			"GFX_african_female_neck_midage:d0"
+			"GFX_african_female_cheeks_midage:d4"
+			"GFX_african_female_chin_midage:d1"
+			"GFX_african_female_mouth_midage:d2"
+			"GFX_african_female_nose_midage:d3"			
+			"GFX_african_female_eyes_midage:d6"
+			"GFX_african_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_samawati_female_clothes:p3:c2"			
-			"GFX_byzantine_female_ear_midage:d7"
+			"GFX_african_female_ear_midage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_samawati_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_female_hair_midage:p1:h:y"
+			"GFX_african_female_hair_midage:p1:h:y"
 			"GFX_samawati_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
 			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
 
-	# Old Samawati Hispanic Female
+	# Old Age
 	portraitType = {
-		name = "PORTRAIT_hispanicsamawatigfx_female2"
+		name = "PORTRAIT_afrosamawatigfx_female2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_samawati_female_clothes_behind:p3:c0"
 			"GFX_samawati_female_headgear_behind:p5:c1"
-			"GFX_byzantine_female_hair_behind_oldage:p1:h:y"
-			"GFX_byzantine_female_base_oldage:p2"
-			"GFX_byzantine_female_neck_oldage:d0"
-			"GFX_byzantine_female_cheeks_oldage:d4"
-			"GFX_byzantine_female_chin_oldage:d1"
-			"GFX_byzantine_female_mouth_oldage:d2"
-			"GFX_byzantine_female_nose_oldage:d3"
-			"GFX_byzantine_female_eyes_oldage:d6"
-			"GFX_byzantine_female_eyes2:d6:e"
+			"GFX_african_female_hair_behind_oldage:p1:h:y"
+			"GFX_african_female_base_oldage:p2"
+			"GFX_african_female_neck_oldage:d0"
+			"GFX_african_female_cheeks_oldage:d4"
+			"GFX_african_female_chin_oldage:d1"
+			"GFX_african_female_mouth_oldage:d2"
+			"GFX_african_female_nose_oldage:d3"
+			"GFX_african_female_eyes_oldage:d6"
+			"GFX_african_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_samawati_female_clothes:p3:c2"			
-			"GFX_byzantine_female_ear_oldage:d7"
+			"GFX_african_female_ear_oldage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_samawati_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_female_hair_oldage:p1:h:y"
+			"GFX_african_female_hair_oldage:p1:h:y"
 			"GFX_samawati_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
@@ -867,46 +792,47 @@ spriteTypes = {
 		
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
-			{ 10 10 10 } {  125 125 125 } { 255 255 255 }
+			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
-	# Young Avalonian Hispanic Male
+	
+	### AVALONIAN MALE - AFRICAN #
+	# CULTURE_INDEX: 0 = clothes behind, 1 = headgear behind, 2 = clothes, 3 = headgear mid, 4 = clothes infront, 5 = headgear
+	# Young
+	
 	portraitType = {
-		name = "PORTRAIT_hispanicavalongfx_male"
+		name = "PORTRAIT_afroavalongfx_male"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_avalon_male_clothes_behind:p3:c0"
 			"GFX_avalon_male_headgear_behind:p5:c1"
-			"GFX_byzantine_male_hair_behind:p1:h:y"
-			"GFX_byzantine_male_beard_behind:p4:h:y"
-			"GFX_byzantine_male_base:p2"
-			"GFX_byzantine_male_neck:d0"
-			"GFX_byzantine_male_cheeks:d4"
-			"GFX_byzantine_male_chin:d1"
-			"GFX_byzantine_male_mouth:d2"
-			"GFX_byzantine_male_nose:d3"
-			"GFX_byzantine_male_eyes:d6"
-			"GFX_byzantine_male_eyes2:d6:e"
+			"GFX_african_male_hair_behind:p1:h:y"
+			"GFX_african_male_beard_behind:p4:h:y"
+			"GFX_african_male_base:p2"
+			"GFX_african_male_neck:d0"
+			"GFX_african_male_cheeks:d4"
+			"GFX_african_male_chin:d1"
+			"GFX_african_male_mouth:d2"
+			"GFX_african_male_nose:d3"
+			"GFX_african_male_eyes:d6"
+			"GFX_african_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_avalon_male_clothes:p3:c2"
 			"GFX_avalon_male_headgear_mid:p5:c3"
-			"GFX_byzantine_male_ear:d7"			
-			"GFX_byzantine_male_beard:p4:h:y"
+			"GFX_african_male_ear:d7"			
+			"GFX_african_male_beard:p4:h:y"
 			"GFX_character_implants:p10"
-		   	"GFX_byzantine_male_hair:p1:h:y"
+		   	"GFX_african_male_hair:p1:h:y"
 			"GFX_avalon_male_clothes_infront:p3:c4"
 			"GFX_avalon_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -915,48 +841,43 @@ spriteTypes = {
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
 			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
 	
-	# # Middle Aged Avalonian Hispanic Male
+	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_hispanicavalongfx_male1"
+		name = "PORTRAIT_afroavalongfx_male1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"						#0
 			"GFX_avalon_male_clothes_behind:p3:c0"
 			"GFX_avalon_male_headgear_behind:p5:c1"
-			"GFX_byzantine_male_hair_behind_midage:p1:h:y"
-			"GFX_byzantine_male_beard_behind_midage:p4:h:y"
-			"GFX_byzantine_male_base_midage:p2"					#5
-			"GFX_byzantine_male_neck_midage:d0"
-			"GFX_byzantine_male_cheeks_midage:d4"
-			"GFX_byzantine_male_chin_midage:d1"
-			"GFX_byzantine_male_mouth_midage:d2"
-			"GFX_byzantine_male_nose_midage:d3"					#10
-			"GFX_byzantine_male_eyes_midage:d6"
-			"GFX_byzantine_male_eyes2:d6:e"
+			"GFX_african_male_hair_behind_midage:p1:h:y"
+			"GFX_african_male_beard_behind_midage:p4:h:y"
+			"GFX_african_male_base_midage:p2"					#5
+			"GFX_african_male_neck_midage:d0"
+			"GFX_african_male_cheeks_midage:d4"
+			"GFX_african_male_chin_midage:d1"
+			"GFX_african_male_mouth_midage:d2"
+			"GFX_african_male_nose_midage:d3"					#10
+			"GFX_african_male_eyes_midage:d6"
+			"GFX_african_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"							#20
 			"GFX_character_boils:p9"
 			"GFX_avalon_male_clothes:p3:c2"
 			"GFX_avalon_male_headgear_mid:p5:c3"
-			"GFX_byzantine_male_ear_midage:d7"					#15
-			"GFX_byzantine_male_beard_midage:p4:h:y"
+			"GFX_african_male_ear_midage:d7"					#15
+			"GFX_african_male_beard_midage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_male_hair_midage:p1:h:y"
+			"GFX_african_male_hair_midage:p1:h:y"
 			"GFX_avalon_male_clothes_infront:p3:c4"
 			"GFX_avalon_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -964,50 +885,45 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
+		
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
 	
-	# Old Avalonian Hispanic Male
+	# Old Age
 	portraitType = {
-		name = "PORTRAIT_hispanicavalongfx_male2"
+		name = "PORTRAIT_afroavalongfx_male2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_avalon_male_clothes_behind:p3:c0"
 			"GFX_avalon_male_headgear_behind:p5:c1"
-			"GFX_byzantine_male_hair_behind_oldage:p1:h:y"
-			"GFX_byzantine_male_beard_behind_oldage:p4:h:y"
-			"GFX_byzantine_male_base_oldage:p2"
-			"GFX_byzantine_male_neck_oldage:d0"
-			"GFX_byzantine_male_cheeks_oldage:d4"
-			"GFX_byzantine_male_chin_oldage:d1"
-			"GFX_byzantine_male_mouth_oldage:d2"
-			"GFX_byzantine_male_nose_oldage:d3"
-			"GFX_byzantine_male_eyes_oldage:d6"
-			"GFX_byzantine_male_eyes2:d6:e"
+			"GFX_african_male_hair_behind_oldage:p1:h:y"
+			"GFX_african_male_beard_behind_oldage:p4:h:y"
+			"GFX_african_male_base_oldage:p2"
+			"GFX_african_male_neck_oldage:d0"
+			"GFX_african_male_cheeks_oldage:d4"
+			"GFX_african_male_chin_oldage:d1"
+			"GFX_african_male_mouth_oldage:d2"
+			"GFX_african_male_nose_oldage:d3"
+			"GFX_african_male_eyes_oldage:d6"
+			"GFX_african_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_avalon_male_clothes:p3:c2"
 			"GFX_avalon_male_headgear_mid:p5:c3"
-			"GFX_byzantine_male_ear_oldage:d7"
-			"GFX_byzantine_male_beard_oldage:p4:h:y"
+			"GFX_african_male_ear_oldage:d7"
+			"GFX_african_male_beard_oldage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_male_hair_oldage:p1:h:y"
+			"GFX_african_male_hair_oldage:p1:h:y"
 			"GFX_avalon_male_clothes_infront:p3:c4"
 			"GFX_avalon_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -1015,143 +931,129 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
-			{ 10 10 10 } {  125 125 125 } { 255 255 255 }
+			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
-	# Young Avalonian Hispanic Female
+	### AVALONIAN FEMALE - WESTERN EUROPEAN ####
+	# Young
 	portraitType = {
-		name = "PORTRAIT_hispanicavalongfx_female"
+		name = "PORTRAIT_afroavalongfx_female"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_avalon_female_clothes_behind:p3:c0"              #1
 			"GFX_avalon_female_headgear_behind:p5:c1"             #2
-			"GFX_byzantine_female_hair_behind:p1:h:y"             #3
-			"GFX_byzantine_female_base:p2"                        #4
-			"GFX_byzantine_female_neck:d0"                        #5
-			"GFX_byzantine_female_cheeks:d4"                      #6
-			"GFX_byzantine_female_chin:d1"                        #7
-			"GFX_byzantine_female_mouth:d2"                       #8
-			"GFX_byzantine_female_nose:d3"                        #9
-			"GFX_byzantine_female_eyes:d6"                        #10
-			"GFX_byzantine_female_eyes2:d6:e"			            #11
+			"GFX_african_female_hair_behind:p1:h:y"             #3
+			"GFX_african_female_base:p2"                        #4
+			"GFX_african_female_neck:d0"                        #5
+			"GFX_african_female_cheeks:d4"                      #6
+			"GFX_african_female_chin:d1"                        #7
+			"GFX_african_female_mouth:d2"                       #8
+			"GFX_african_female_nose:d3"                        #9
+			"GFX_african_female_eyes:d6"                        #10
+			"GFX_african_female_eyes2:d6:e"			            #11
 			"GFX_character_scars:p7:y"                            #16
 			"GFX_character_reddots:p8"                          #17
 			"GFX_character_boils:p9"                            #18
 			"GFX_avalon_female_clothes:p3:c2"                  #12
-			"GFX_byzantine_female_ear:d7"                         #13
+			"GFX_african_female_ear:d7"                         #13
 			"GFX_empty:p3:c4"
 			"GFX_avalon_female_headgear_mid:p5:c3"             #14
 			"GFX_character_implants:p10"
-			"GFX_byzantine_female_hair:p1:h:y"                    #15
+			"GFX_african_female_hair:p1:h:y"                    #15
 			"GFX_avalon_female_headgear:p5:c5"                 #20
 			"GFX_character_imprisoned:p6"                       #21
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
 			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
 
-	# Middle Aged Avalonian Hispanic Female
+	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_hispanicavalongfx_female1"
+		name = "PORTRAIT_afroavalongfx_female1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_avalon_female_clothes_behind:p3:c0"
 			"GFX_avalon_female_headgear_behind:p5:c1"
-			"GFX_byzantine_female_hair_behind_midage:p1:h:y"
-			"GFX_byzantine_female_base_midage:p2"
-			"GFX_byzantine_female_neck_midage:d0"
-			"GFX_byzantine_female_cheeks_midage:d4"
-			"GFX_byzantine_female_chin_midage:d1"
-			"GFX_byzantine_female_mouth_midage:d2"
-			"GFX_byzantine_female_nose_midage:d3"			
-			"GFX_byzantine_female_eyes_midage:d6"
-			"GFX_byzantine_female_eyes2:d6:e"
+			"GFX_african_female_hair_behind_midage:p1:h:y"
+			"GFX_african_female_base_midage:p2"
+			"GFX_african_female_neck_midage:d0"
+			"GFX_african_female_cheeks_midage:d4"
+			"GFX_african_female_chin_midage:d1"
+			"GFX_african_female_mouth_midage:d2"
+			"GFX_african_female_nose_midage:d3"			
+			"GFX_african_female_eyes_midage:d6"
+			"GFX_african_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_avalon_female_clothes:p3:c2"			
-			"GFX_byzantine_female_ear_midage:d7"
+			"GFX_african_female_ear_midage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_avalon_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_female_hair_midage:p1:h:y"
+			"GFX_african_female_hair_midage:p1:h:y"
 			"GFX_avalon_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
 			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
 
-	# Old Avalonian Hispanic Female
+	# Old Age
 	portraitType = {
-		name = "PORTRAIT_hispanicavalongfx_female2"
+		name = "PORTRAIT_afroavalongfx_female2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_avalon_female_clothes_behind:p3:c0"
 			"GFX_avalon_female_headgear_behind:p5:c1"
-			"GFX_byzantine_female_hair_behind_oldage:p1:h:y"
-			"GFX_byzantine_female_base_oldage:p2"
-			"GFX_byzantine_female_neck_oldage:d0"
-			"GFX_byzantine_female_cheeks_oldage:d4"
-			"GFX_byzantine_female_chin_oldage:d1"
-			"GFX_byzantine_female_mouth_oldage:d2"
-			"GFX_byzantine_female_nose_oldage:d3"
-			"GFX_byzantine_female_eyes_oldage:d6"
-			"GFX_byzantine_female_eyes2:d6:e"
+			"GFX_african_female_hair_behind_oldage:p1:h:y"
+			"GFX_african_female_base_oldage:p2"
+			"GFX_african_female_neck_oldage:d0"
+			"GFX_african_female_cheeks_oldage:d4"
+			"GFX_african_female_chin_oldage:d1"
+			"GFX_african_female_mouth_oldage:d2"
+			"GFX_african_female_nose_oldage:d3"
+			"GFX_african_female_eyes_oldage:d6"
+			"GFX_african_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_avalon_female_clothes:p3:c2"			
-			"GFX_byzantine_female_ear_oldage:d7"
+			"GFX_african_female_ear_oldage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_avalon_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_female_hair_oldage:p1:h:y"
+			"GFX_african_female_hair_oldage:p1:h:y"
 			"GFX_avalon_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
@@ -1159,46 +1061,45 @@ spriteTypes = {
 		
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
-			{ 10 10 10 } {  125 125 125 } { 255 255 255 }
+			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
-	# Young Jionese Hispanic Male
+	### JIONESE MALE - AFRICAN #
+	# CULTURE_INDEX: 0 = clothes behind, 1 = headgear behind, 2 = clothes, 3 = headgear mid, 4 = clothes infront, 5 = headgear
+	# Young
 	portraitType = {
-		name = "PORTRAIT_hispanicjiongfx_male"
+		name = "PORTRAIT_afrojiongfx_male"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_jion_male_clothes_behind:p3:c0"
 			"GFX_jion_male_headgear_behind:p5:c1"
-			"GFX_byzantine_male_hair_behind:p1:h:y"
-			"GFX_byzantine_male_beard_behind:p4:h:y"
-			"GFX_byzantine_male_base:p2"
-			"GFX_byzantine_male_neck:d0"
-			"GFX_byzantine_male_cheeks:d4"
-			"GFX_byzantine_male_chin:d1"
-			"GFX_byzantine_male_mouth:d2"
-			"GFX_byzantine_male_nose:d3"
-			"GFX_byzantine_male_eyes:d6"
-			"GFX_byzantine_male_eyes2:d6:e"
+			"GFX_african_male_hair_behind:p1:h:y"
+			"GFX_african_male_beard_behind:p4:h:y"
+			"GFX_african_male_base:p2"
+			"GFX_african_male_neck:d0"
+			"GFX_african_male_cheeks:d4"
+			"GFX_african_male_chin:d1"
+			"GFX_african_male_mouth:d2"
+			"GFX_african_male_nose:d3"
+			"GFX_african_male_eyes:d6"
+			"GFX_african_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_jion_male_clothes:p3:c2"
 			"GFX_jion_male_headgear_mid:p5:c3"
-			"GFX_byzantine_male_ear:d7"			
-			"GFX_byzantine_male_beard:p4:h:y"
+			"GFX_african_male_ear:d7"			
+			"GFX_african_male_beard:p4:h:y"
 			"GFX_character_implants:p10"
-		   	"GFX_byzantine_male_hair:p1:h:y"
+		   	"GFX_african_male_hair:p1:h:y"
 			"GFX_jion_male_clothes_infront:p3:c4"
 			"GFX_jion_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -1207,48 +1108,43 @@ spriteTypes = {
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
 			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
 	
-	# # Middle Aged Jionese Hispanic Male
+	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_hispanicjiongfx_male1"
+		name = "PORTRAIT_afrojiongfx_male1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"						#0
 			"GFX_jion_male_clothes_behind:p3:c0"
 			"GFX_jion_male_headgear_behind:p5:c1"
-			"GFX_byzantine_male_hair_behind_midage:p1:h:y"
-			"GFX_byzantine_male_beard_behind_midage:p4:h:y"
-			"GFX_byzantine_male_base_midage:p2"					#5
-			"GFX_byzantine_male_neck_midage:d0"
-			"GFX_byzantine_male_cheeks_midage:d4"
-			"GFX_byzantine_male_chin_midage:d1"
-			"GFX_byzantine_male_mouth_midage:d2"
-			"GFX_byzantine_male_nose_midage:d3"					#10
-			"GFX_byzantine_male_eyes_midage:d6"
-			"GFX_byzantine_male_eyes2:d6:e"
+			"GFX_african_male_hair_behind_midage:p1:h:y"
+			"GFX_african_male_beard_behind_midage:p4:h:y"
+			"GFX_african_male_base_midage:p2"					#5
+			"GFX_african_male_neck_midage:d0"
+			"GFX_african_male_cheeks_midage:d4"
+			"GFX_african_male_chin_midage:d1"
+			"GFX_african_male_mouth_midage:d2"
+			"GFX_african_male_nose_midage:d3"					#10
+			"GFX_african_male_eyes_midage:d6"
+			"GFX_african_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"							#20
 			"GFX_character_boils:p9"
 			"GFX_jion_male_clothes:p3:c2"
 			"GFX_jion_male_headgear_mid:p5:c3"
-			"GFX_byzantine_male_ear_midage:d7"					#15
-			"GFX_byzantine_male_beard_midage:p4:h:y"
+			"GFX_african_male_ear_midage:d7"					#15
+			"GFX_african_male_beard_midage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_male_hair_midage:p1:h:y"
+			"GFX_african_male_hair_midage:p1:h:y"
 			"GFX_jion_male_clothes_infront:p3:c4"
 			"GFX_jion_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -1256,50 +1152,45 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
+		
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
 	
-	# Old Jionese Hispanic Male
+	# Old Age
 	portraitType = {
-		name = "PORTRAIT_hispanicjiongfx_male2"
+		name = "PORTRAIT_afrojiongfx_male2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_jion_male_clothes_behind:p3:c0"
 			"GFX_jion_male_headgear_behind:p5:c1"
-			"GFX_byzantine_male_hair_behind_oldage:p1:h:y"
-			"GFX_byzantine_male_beard_behind_oldage:p4:h:y"
-			"GFX_byzantine_male_base_oldage:p2"
-			"GFX_byzantine_male_neck_oldage:d0"
-			"GFX_byzantine_male_cheeks_oldage:d4"
-			"GFX_byzantine_male_chin_oldage:d1"
-			"GFX_byzantine_male_mouth_oldage:d2"
-			"GFX_byzantine_male_nose_oldage:d3"
-			"GFX_byzantine_male_eyes_oldage:d6"
-			"GFX_byzantine_male_eyes2:d6:e"
+			"GFX_african_male_hair_behind_oldage:p1:h:y"
+			"GFX_african_male_beard_behind_oldage:p4:h:y"
+			"GFX_african_male_base_oldage:p2"
+			"GFX_african_male_neck_oldage:d0"
+			"GFX_african_male_cheeks_oldage:d4"
+			"GFX_african_male_chin_oldage:d1"
+			"GFX_african_male_mouth_oldage:d2"
+			"GFX_african_male_nose_oldage:d3"
+			"GFX_african_male_eyes_oldage:d6"
+			"GFX_african_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_jion_male_clothes:p3:c2"
 			"GFX_jion_male_headgear_mid:p5:c3"
-			"GFX_byzantine_male_ear_oldage:d7"
-			"GFX_byzantine_male_beard_oldage:p4:h:y"
+			"GFX_african_male_ear_oldage:d7"
+			"GFX_african_male_beard_oldage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_male_hair_oldage:p1:h:y"
+			"GFX_african_male_hair_oldage:p1:h:y"
 			"GFX_jion_male_clothes_infront:p3:c4"
 			"GFX_jion_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -1307,143 +1198,129 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
-			{ 10 10 10 } {  125 125 125 } { 255 255 255 }
+			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
-	# Young Jionese Hispanic Female
+	### JIONESE FEMALE - WESTERN EUROPEAN ####
+	# Young
 	portraitType = {
-		name = "PORTRAIT_hispanicjiongfx_female"
+		name = "PORTRAIT_afrojiongfx_female"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_jion_female_clothes_behind:p3:c0"              #1
 			"GFX_jion_female_headgear_behind:p5:c1"             #2
-			"GFX_byzantine_female_hair_behind:p1:h:y"             #3
-			"GFX_byzantine_female_base:p2"                        #4
-			"GFX_byzantine_female_neck:d0"                        #5
-			"GFX_byzantine_female_cheeks:d4"                      #6
-			"GFX_byzantine_female_chin:d1"                        #7
-			"GFX_byzantine_female_mouth:d2"                       #8
-			"GFX_byzantine_female_nose:d3"                        #9
-			"GFX_byzantine_female_eyes:d6"                        #10
-			"GFX_byzantine_female_eyes2:d6:e"			            #11
+			"GFX_african_female_hair_behind:p1:h:y"             #3
+			"GFX_african_female_base:p2"                        #4
+			"GFX_african_female_neck:d0"                        #5
+			"GFX_african_female_cheeks:d4"                      #6
+			"GFX_african_female_chin:d1"                        #7
+			"GFX_african_female_mouth:d2"                       #8
+			"GFX_african_female_nose:d3"                        #9
+			"GFX_african_female_eyes:d6"                        #10
+			"GFX_african_female_eyes2:d6:e"			            #11
 			"GFX_character_scars:p7:y"                            #16
 			"GFX_character_reddots:p8"                          #17
 			"GFX_character_boils:p9"                            #18
 			"GFX_jion_female_clothes:p3:c2"                  #12
-			"GFX_byzantine_female_ear:d7"                         #13
+			"GFX_african_female_ear:d7"                         #13
 			"GFX_empty:p3:c4"
 			"GFX_jion_female_headgear_mid:p5:c3"             #14
 			"GFX_character_implants:p10"
-			"GFX_byzantine_female_hair:p1:h:y"                    #15
+			"GFX_african_female_hair:p1:h:y"                    #15
 			"GFX_jion_female_headgear:p5:c5"                 #20
 			"GFX_character_imprisoned:p6"                       #21
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
 			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
 
-	# Middle Aged Jionese Hispanic Female
+	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_hispanicjiongfx_female1"
+		name = "PORTRAIT_afrojiongfx_female1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_jion_female_clothes_behind:p3:c0"
 			"GFX_jion_female_headgear_behind:p5:c1"
-			"GFX_byzantine_female_hair_behind_midage:p1:h:y"
-			"GFX_byzantine_female_base_midage:p2"
-			"GFX_byzantine_female_neck_midage:d0"
-			"GFX_byzantine_female_cheeks_midage:d4"
-			"GFX_byzantine_female_chin_midage:d1"
-			"GFX_byzantine_female_mouth_midage:d2"
-			"GFX_byzantine_female_nose_midage:d3"			
-			"GFX_byzantine_female_eyes_midage:d6"
-			"GFX_byzantine_female_eyes2:d6:e"
+			"GFX_african_female_hair_behind_midage:p1:h:y"
+			"GFX_african_female_base_midage:p2"
+			"GFX_african_female_neck_midage:d0"
+			"GFX_african_female_cheeks_midage:d4"
+			"GFX_african_female_chin_midage:d1"
+			"GFX_african_female_mouth_midage:d2"
+			"GFX_african_female_nose_midage:d3"			
+			"GFX_african_female_eyes_midage:d6"
+			"GFX_african_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_jion_female_clothes:p3:c2"			
-			"GFX_byzantine_female_ear_midage:d7"
+			"GFX_african_female_ear_midage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_jion_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_female_hair_midage:p1:h:y"
+			"GFX_african_female_hair_midage:p1:h:y"
 			"GFX_jion_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
 			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
 
-	# Old Jionese Hispanic Female
+	# Old Age
 	portraitType = {
-		name = "PORTRAIT_hispanicjiongfx_female2"
+		name = "PORTRAIT_afrojiongfx_female2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_jion_female_clothes_behind:p3:c0"
 			"GFX_jion_female_headgear_behind:p5:c1"
-			"GFX_byzantine_female_hair_behind_oldage:p1:h:y"
-			"GFX_byzantine_female_base_oldage:p2"
-			"GFX_byzantine_female_neck_oldage:d0"
-			"GFX_byzantine_female_cheeks_oldage:d4"
-			"GFX_byzantine_female_chin_oldage:d1"
-			"GFX_byzantine_female_mouth_oldage:d2"
-			"GFX_byzantine_female_nose_oldage:d3"
-			"GFX_byzantine_female_eyes_oldage:d6"
-			"GFX_byzantine_female_eyes2:d6:e"
+			"GFX_african_female_hair_behind_oldage:p1:h:y"
+			"GFX_african_female_base_oldage:p2"
+			"GFX_african_female_neck_oldage:d0"
+			"GFX_african_female_cheeks_oldage:d4"
+			"GFX_african_female_chin_oldage:d1"
+			"GFX_african_female_mouth_oldage:d2"
+			"GFX_african_female_nose_oldage:d3"
+			"GFX_african_female_eyes_oldage:d6"
+			"GFX_african_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_jion_female_clothes:p3:c2"			
-			"GFX_byzantine_female_ear_oldage:d7"
+			"GFX_african_female_ear_oldage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_jion_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_female_hair_oldage:p1:h:y"
+			"GFX_african_female_hair_oldage:p1:h:y"
 			"GFX_jion_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
@@ -1451,46 +1328,45 @@ spriteTypes = {
 		
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
-			{ 10 10 10 } {  125 125 125 } { 255 255 255 }
+			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
-	# Young Centauri Hispanic Male
+	### CENTAURI MALE - AFRICAN #
+	# CULTURE_INDEX: 0 = clothes behind, 1 = headgear behind, 2 = clothes, 3 = headgear mid, 4 = clothes infront, 5 = headgear
+	# Young
 	portraitType = {
-		name = "PORTRAIT_hispaniccentaurigfx_male"
+		name = "PORTRAIT_afrocentaurigfx_male"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_centauri_male_clothes_behind:p3:c0"
 			"GFX_centauri_male_headgear_behind:p5:c1"
-			"GFX_byzantine_male_hair_behind:p1:h:y"
-			"GFX_byzantine_male_beard_behind:p4:h:y"
-			"GFX_byzantine_male_base:p2"
-			"GFX_byzantine_male_neck:d0"
-			"GFX_byzantine_male_cheeks:d4"
-			"GFX_byzantine_male_chin:d1"
-			"GFX_byzantine_male_mouth:d2"
-			"GFX_byzantine_male_nose:d3"
-			"GFX_byzantine_male_eyes:d6"
-			"GFX_byzantine_male_eyes2:d6:e"
+			"GFX_african_male_hair_behind:p1:h:y"
+			"GFX_african_male_beard_behind:p4:h:y"
+			"GFX_african_male_base:p2"
+			"GFX_african_male_neck:d0"
+			"GFX_african_male_cheeks:d4"
+			"GFX_african_male_chin:d1"
+			"GFX_african_male_mouth:d2"
+			"GFX_african_male_nose:d3"
+			"GFX_african_male_eyes:d6"
+			"GFX_african_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_centauri_male_clothes:p3:c2"
 			"GFX_centauri_male_headgear_mid:p5:c3"
-			"GFX_byzantine_male_ear:d7"			
-			"GFX_byzantine_male_beard:p4:h:y"
+			"GFX_african_male_ear:d7"			
+			"GFX_african_male_beard:p4:h:y"
 			"GFX_character_implants:p10"
-		   	"GFX_byzantine_male_hair:p1:h:y"
+		   	"GFX_african_male_hair:p1:h:y"
 			"GFX_centauri_male_clothes_infront:p3:c4"
 			"GFX_centauri_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -1499,48 +1375,43 @@ spriteTypes = {
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
 			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
 	
-	# # Middle Aged Centauri Hispanic Male
+	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_hispaniccentaurigfx_male1"
+		name = "PORTRAIT_afrocentaurigfx_male1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"						#0
 			"GFX_centauri_male_clothes_behind:p3:c0"
 			"GFX_centauri_male_headgear_behind:p5:c1"
-			"GFX_byzantine_male_hair_behind_midage:p1:h:y"
-			"GFX_byzantine_male_beard_behind_midage:p4:h:y"
-			"GFX_byzantine_male_base_midage:p2"					#5
-			"GFX_byzantine_male_neck_midage:d0"
-			"GFX_byzantine_male_cheeks_midage:d4"
-			"GFX_byzantine_male_chin_midage:d1"
-			"GFX_byzantine_male_mouth_midage:d2"
-			"GFX_byzantine_male_nose_midage:d3"					#10
-			"GFX_byzantine_male_eyes_midage:d6"
-			"GFX_byzantine_male_eyes2:d6:e"
+			"GFX_african_male_hair_behind_midage:p1:h:y"
+			"GFX_african_male_beard_behind_midage:p4:h:y"
+			"GFX_african_male_base_midage:p2"					#5
+			"GFX_african_male_neck_midage:d0"
+			"GFX_african_male_cheeks_midage:d4"
+			"GFX_african_male_chin_midage:d1"
+			"GFX_african_male_mouth_midage:d2"
+			"GFX_african_male_nose_midage:d3"					#10
+			"GFX_african_male_eyes_midage:d6"
+			"GFX_african_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"							#20
 			"GFX_character_boils:p9"
 			"GFX_centauri_male_clothes:p3:c2"
 			"GFX_centauri_male_headgear_mid:p5:c3"
-			"GFX_byzantine_male_ear_midage:d7"					#15
-			"GFX_byzantine_male_beard_midage:p4:h:y"
+			"GFX_african_male_ear_midage:d7"					#15
+			"GFX_african_male_beard_midage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_male_hair_midage:p1:h:y"
+			"GFX_african_male_hair_midage:p1:h:y"
 			"GFX_centauri_male_clothes_infront:p3:c4"
 			"GFX_centauri_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -1548,50 +1419,45 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
+		
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
 	
-	# Old Centauri Hispanic Male
+	# Old Age
 	portraitType = {
-		name = "PORTRAIT_hispaniccentaurigfx_male2"
+		name = "PORTRAIT_afrocentaurigfx_male2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_centauri_male_clothes_behind:p3:c0"
 			"GFX_centauri_male_headgear_behind:p5:c1"
-			"GFX_byzantine_male_hair_behind_oldage:p1:h:y"
-			"GFX_byzantine_male_beard_behind_oldage:p4:h:y"
-			"GFX_byzantine_male_base_oldage:p2"
-			"GFX_byzantine_male_neck_oldage:d0"
-			"GFX_byzantine_male_cheeks_oldage:d4"
-			"GFX_byzantine_male_chin_oldage:d1"
-			"GFX_byzantine_male_mouth_oldage:d2"
-			"GFX_byzantine_male_nose_oldage:d3"
-			"GFX_byzantine_male_eyes_oldage:d6"
-			"GFX_byzantine_male_eyes2:d6:e"
+			"GFX_african_male_hair_behind_oldage:p1:h:y"
+			"GFX_african_male_beard_behind_oldage:p4:h:y"
+			"GFX_african_male_base_oldage:p2"
+			"GFX_african_male_neck_oldage:d0"
+			"GFX_african_male_cheeks_oldage:d4"
+			"GFX_african_male_chin_oldage:d1"
+			"GFX_african_male_mouth_oldage:d2"
+			"GFX_african_male_nose_oldage:d3"
+			"GFX_african_male_eyes_oldage:d6"
+			"GFX_african_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_centauri_male_clothes:p3:c2"
 			"GFX_centauri_male_headgear_mid:p5:c3"
-			"GFX_byzantine_male_ear_oldage:d7"
-			"GFX_byzantine_male_beard_oldage:p4:h:y"
+			"GFX_african_male_ear_oldage:d7"
+			"GFX_african_male_beard_oldage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_male_hair_oldage:p1:h:y"
+			"GFX_african_male_hair_oldage:p1:h:y"
 			"GFX_centauri_male_clothes_infront:p3:c4"
 			"GFX_centauri_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -1599,143 +1465,129 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
-			{ 10 10 10 } {  125 125 125 } { 255 255 255 }
+			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
-	# Young Centauri Hispanic Female
+	### CENTAURI FEMALE - WESTERN EUROPEAN ####
+	# Young
 	portraitType = {
-		name = "PORTRAIT_hispaniccentaurigfx_female"
+		name = "PORTRAIT_afrocentaurigfx_female"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_centauri_female_clothes_behind:p3:c0"              #1
 			"GFX_centauri_female_headgear_behind:p5:c1"             #2
-			"GFX_byzantine_female_hair_behind:p1:h:y"             #3
-			"GFX_byzantine_female_base:p2"                        #4
-			"GFX_byzantine_female_neck:d0"                        #5
-			"GFX_byzantine_female_cheeks:d4"                      #6
-			"GFX_byzantine_female_chin:d1"                        #7
-			"GFX_byzantine_female_mouth:d2"                       #8
-			"GFX_byzantine_female_nose:d3"                        #9
-			"GFX_byzantine_female_eyes:d6"                        #10
-			"GFX_byzantine_female_eyes2:d6:e"			            #11
+			"GFX_african_female_hair_behind:p1:h:y"             #3
+			"GFX_african_female_base:p2"                        #4
+			"GFX_african_female_neck:d0"                        #5
+			"GFX_african_female_cheeks:d4"                      #6
+			"GFX_african_female_chin:d1"                        #7
+			"GFX_african_female_mouth:d2"                       #8
+			"GFX_african_female_nose:d3"                        #9
+			"GFX_african_female_eyes:d6"                        #10
+			"GFX_african_female_eyes2:d6:e"			            #11
 			"GFX_character_scars:p7:y"                            #16
 			"GFX_character_reddots:p8"                          #17
 			"GFX_character_boils:p9"                            #18
 			"GFX_centauri_female_clothes:p3:c2"                  #12
-			"GFX_byzantine_female_ear:d7"                         #13
+			"GFX_african_female_ear:d7"                         #13
 			"GFX_empty:p3:c4"
 			"GFX_centauri_female_headgear_mid:p5:c3"             #14
 			"GFX_character_implants:p10"
-			"GFX_byzantine_female_hair:p1:h:y"                    #15
+			"GFX_african_female_hair:p1:h:y"                    #15
 			"GFX_centauri_female_headgear:p5:c5"                 #20
 			"GFX_character_imprisoned:p6"                       #21
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
 			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
 
-	# Middle Aged Centauri Hispanic Female
+	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_hispaniccentaurigfx_female1"
+		name = "PORTRAIT_afrocentaurigfx_female1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_centauri_female_clothes_behind:p3:c0"
 			"GFX_centauri_female_headgear_behind:p5:c1"
-			"GFX_byzantine_female_hair_behind_midage:p1:h:y"
-			"GFX_byzantine_female_base_midage:p2"
-			"GFX_byzantine_female_neck_midage:d0"
-			"GFX_byzantine_female_cheeks_midage:d4"
-			"GFX_byzantine_female_chin_midage:d1"
-			"GFX_byzantine_female_mouth_midage:d2"
-			"GFX_byzantine_female_nose_midage:d3"			
-			"GFX_byzantine_female_eyes_midage:d6"
-			"GFX_byzantine_female_eyes2:d6:e"
+			"GFX_african_female_hair_behind_midage:p1:h:y"
+			"GFX_african_female_base_midage:p2"
+			"GFX_african_female_neck_midage:d0"
+			"GFX_african_female_cheeks_midage:d4"
+			"GFX_african_female_chin_midage:d1"
+			"GFX_african_female_mouth_midage:d2"
+			"GFX_african_female_nose_midage:d3"			
+			"GFX_african_female_eyes_midage:d6"
+			"GFX_african_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_centauri_female_clothes:p3:c2"			
-			"GFX_byzantine_female_ear_midage:d7"
+			"GFX_african_female_ear_midage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_centauri_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_female_hair_midage:p1:h:y"
+			"GFX_african_female_hair_midage:p1:h:y"
 			"GFX_centauri_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
 			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
 
-	# Old Centauri Hispanic Female
+	# Old Age
 	portraitType = {
-		name = "PORTRAIT_hispaniccentaurigfx_female2"
+		name = "PORTRAIT_afrocentaurigfx_female2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_centauri_female_clothes_behind:p3:c0"
 			"GFX_centauri_female_headgear_behind:p5:c1"
-			"GFX_byzantine_female_hair_behind_oldage:p1:h:y"
-			"GFX_byzantine_female_base_oldage:p2"
-			"GFX_byzantine_female_neck_oldage:d0"
-			"GFX_byzantine_female_cheeks_oldage:d4"
-			"GFX_byzantine_female_chin_oldage:d1"
-			"GFX_byzantine_female_mouth_oldage:d2"
-			"GFX_byzantine_female_nose_oldage:d3"
-			"GFX_byzantine_female_eyes_oldage:d6"
-			"GFX_byzantine_female_eyes2:d6:e"
+			"GFX_african_female_hair_behind_oldage:p1:h:y"
+			"GFX_african_female_base_oldage:p2"
+			"GFX_african_female_neck_oldage:d0"
+			"GFX_african_female_cheeks_oldage:d4"
+			"GFX_african_female_chin_oldage:d1"
+			"GFX_african_female_mouth_oldage:d2"
+			"GFX_african_female_nose_oldage:d3"
+			"GFX_african_female_eyes_oldage:d6"
+			"GFX_african_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_centauri_female_clothes:p3:c2"			
-			"GFX_byzantine_female_ear_oldage:d7"
+			"GFX_african_female_ear_oldage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_centauri_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_female_hair_oldage:p1:h:y"
+			"GFX_african_female_hair_oldage:p1:h:y"
 			"GFX_centauri_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
@@ -1743,46 +1595,45 @@ spriteTypes = {
 		
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
-			{ 10 10 10 } {  125 125 125 } { 255 255 255 }
+			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
-	# Young Angani Hispanic Male
+	### ANGANI MALE - AFRICAN #
+	# CULTURE_INDEX: 0 = clothes behind, 1 = headgear behind, 2 = clothes, 3 = headgear mid, 4 = clothes infront, 5 = headgear
+	# Young
 	portraitType = {
-		name = "PORTRAIT_hispanicanganigfx_male"
+		name = "PORTRAIT_afroanganigfx_male"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_angani_male_clothes_behind:p3:c0"
 			"GFX_angani_male_headgear_behind:p5:c1"
-			"GFX_byzantine_male_hair_behind:p1:h:y"
-			"GFX_byzantine_male_beard_behind:p4:h:y"
-			"GFX_byzantine_male_base:p2"
-			"GFX_byzantine_male_neck:d0"
-			"GFX_byzantine_male_cheeks:d4"
-			"GFX_byzantine_male_chin:d1"
-			"GFX_byzantine_male_mouth:d2"
-			"GFX_byzantine_male_nose:d3"
-			"GFX_byzantine_male_eyes:d6"
-			"GFX_byzantine_male_eyes2:d6:e"
+			"GFX_african_male_hair_behind:p1:h:y"
+			"GFX_african_male_beard_behind:p4:h:y"
+			"GFX_african_male_base:p2"
+			"GFX_african_male_neck:d0"
+			"GFX_african_male_cheeks:d4"
+			"GFX_african_male_chin:d1"
+			"GFX_african_male_mouth:d2"
+			"GFX_african_male_nose:d3"
+			"GFX_african_male_eyes:d6"
+			"GFX_african_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_angani_male_clothes:p3:c2"
 			"GFX_angani_male_headgear_mid:p5:c3"
-			"GFX_byzantine_male_ear:d7"			
-			"GFX_byzantine_male_beard:p4:h:y"
+			"GFX_african_male_ear:d7"			
+			"GFX_african_male_beard:p4:h:y"
 			"GFX_character_implants:p10"
-		   	"GFX_byzantine_male_hair:p1:h:y"
+		   	"GFX_african_male_hair:p1:h:y"
 			"GFX_angani_male_clothes_infront:p3:c4"
 			"GFX_angani_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -1791,48 +1642,43 @@ spriteTypes = {
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
 			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
 	
-	# # Middle Aged Angani Hispanic Male
+	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_hispanicanganigfx_male1"
+		name = "PORTRAIT_afroanganigfx_male1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"						#0
 			"GFX_angani_male_clothes_behind:p3:c0"
 			"GFX_angani_male_headgear_behind:p5:c1"
-			"GFX_byzantine_male_hair_behind_midage:p1:h:y"
-			"GFX_byzantine_male_beard_behind_midage:p4:h:y"
-			"GFX_byzantine_male_base_midage:p2"					#5
-			"GFX_byzantine_male_neck_midage:d0"
-			"GFX_byzantine_male_cheeks_midage:d4"
-			"GFX_byzantine_male_chin_midage:d1"
-			"GFX_byzantine_male_mouth_midage:d2"
-			"GFX_byzantine_male_nose_midage:d3"					#10
-			"GFX_byzantine_male_eyes_midage:d6"
-			"GFX_byzantine_male_eyes2:d6:e"
+			"GFX_african_male_hair_behind_midage:p1:h:y"
+			"GFX_african_male_beard_behind_midage:p4:h:y"
+			"GFX_african_male_base_midage:p2"					#5
+			"GFX_african_male_neck_midage:d0"
+			"GFX_african_male_cheeks_midage:d4"
+			"GFX_african_male_chin_midage:d1"
+			"GFX_african_male_mouth_midage:d2"
+			"GFX_african_male_nose_midage:d3"					#10
+			"GFX_african_male_eyes_midage:d6"
+			"GFX_african_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"							#20
 			"GFX_character_boils:p9"
 			"GFX_angani_male_clothes:p3:c2"
 			"GFX_angani_male_headgear_mid:p5:c3"
-			"GFX_byzantine_male_ear_midage:d7"					#15
-			"GFX_byzantine_male_beard_midage:p4:h:y"
+			"GFX_african_male_ear_midage:d7"					#15
+			"GFX_african_male_beard_midage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_male_hair_midage:p1:h:y"
+			"GFX_african_male_hair_midage:p1:h:y"
 			"GFX_angani_male_clothes_infront:p3:c4"
 			"GFX_angani_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -1840,50 +1686,45 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
+		
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
 	
-	# Old Angani Hispanic Male
+	# Old Age
 	portraitType = {
-		name = "PORTRAIT_hispanicanganigfx_male2"
+		name = "PORTRAIT_afroanganigfx_male2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_angani_male_clothes_behind:p3:c0"
 			"GFX_angani_male_headgear_behind:p5:c1"
-			"GFX_byzantine_male_hair_behind_oldage:p1:h:y"
-			"GFX_byzantine_male_beard_behind_oldage:p4:h:y"
-			"GFX_byzantine_male_base_oldage:p2"
-			"GFX_byzantine_male_neck_oldage:d0"
-			"GFX_byzantine_male_cheeks_oldage:d4"
-			"GFX_byzantine_male_chin_oldage:d1"
-			"GFX_byzantine_male_mouth_oldage:d2"
-			"GFX_byzantine_male_nose_oldage:d3"
-			"GFX_byzantine_male_eyes_oldage:d6"
-			"GFX_byzantine_male_eyes2:d6:e"
+			"GFX_african_male_hair_behind_oldage:p1:h:y"
+			"GFX_african_male_beard_behind_oldage:p4:h:y"
+			"GFX_african_male_base_oldage:p2"
+			"GFX_african_male_neck_oldage:d0"
+			"GFX_african_male_cheeks_oldage:d4"
+			"GFX_african_male_chin_oldage:d1"
+			"GFX_african_male_mouth_oldage:d2"
+			"GFX_african_male_nose_oldage:d3"
+			"GFX_african_male_eyes_oldage:d6"
+			"GFX_african_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_angani_male_clothes:p3:c2"
 			"GFX_angani_male_headgear_mid:p5:c3"
-			"GFX_byzantine_male_ear_oldage:d7"
-			"GFX_byzantine_male_beard_oldage:p4:h:y"
+			"GFX_african_male_ear_oldage:d7"
+			"GFX_african_male_beard_oldage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_male_hair_oldage:p1:h:y"
+			"GFX_african_male_hair_oldage:p1:h:y"
 			"GFX_angani_male_clothes_infront:p3:c4"
 			"GFX_angani_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -1891,143 +1732,129 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
-			{ 10 10 10 } {  125 125 125 } { 255 255 255 }
+			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
-	# Young Angani Hispanic Female
+	### ANGANI FEMALE - WESTERN EUROPEAN ####
+	# Young
 	portraitType = {
-		name = "PORTRAIT_hispanicanganigfx_female"
+		name = "PORTRAIT_afroanganigfx_female"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_angani_female_clothes_behind:p3:c0"              #1
 			"GFX_angani_female_headgear_behind:p5:c1"             #2
-			"GFX_byzantine_female_hair_behind:p1:h:y"             #3
-			"GFX_byzantine_female_base:p2"                        #4
-			"GFX_byzantine_female_neck:d0"                        #5
-			"GFX_byzantine_female_cheeks:d4"                      #6
-			"GFX_byzantine_female_chin:d1"                        #7
-			"GFX_byzantine_female_mouth:d2"                       #8
-			"GFX_byzantine_female_nose:d3"                        #9
-			"GFX_byzantine_female_eyes:d6"                        #10
-			"GFX_byzantine_female_eyes2:d6:e"			            #11
+			"GFX_african_female_hair_behind:p1:h:y"             #3
+			"GFX_african_female_base:p2"                        #4
+			"GFX_african_female_neck:d0"                        #5
+			"GFX_african_female_cheeks:d4"                      #6
+			"GFX_african_female_chin:d1"                        #7
+			"GFX_african_female_mouth:d2"                       #8
+			"GFX_african_female_nose:d3"                        #9
+			"GFX_african_female_eyes:d6"                        #10
+			"GFX_african_female_eyes2:d6:e"			            #11
 			"GFX_character_scars:p7:y"                            #16
 			"GFX_character_reddots:p8"                          #17
 			"GFX_character_boils:p9"                            #18
 			"GFX_angani_female_clothes:p3:c2"                  #12
-			"GFX_byzantine_female_ear:d7"                         #13
+			"GFX_african_female_ear:d7"                         #13
 			"GFX_empty:p3:c4"
 			"GFX_angani_female_headgear_mid:p5:c3"             #14
 			"GFX_character_implants:p10"
-			"GFX_byzantine_female_hair:p1:h:y"                    #15
+			"GFX_african_female_hair:p1:h:y"                    #15
 			"GFX_angani_female_headgear:p5:c5"                 #20
 			"GFX_character_imprisoned:p6"                       #21
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
 			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
 
-	# Middle Aged Angani Hispanic Female
+	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_hispanicanganigfx_female1"
+		name = "PORTRAIT_afroanganigfx_female1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_angani_female_clothes_behind:p3:c0"
 			"GFX_angani_female_headgear_behind:p5:c1"
-			"GFX_byzantine_female_hair_behind_midage:p1:h:y"
-			"GFX_byzantine_female_base_midage:p2"
-			"GFX_byzantine_female_neck_midage:d0"
-			"GFX_byzantine_female_cheeks_midage:d4"
-			"GFX_byzantine_female_chin_midage:d1"
-			"GFX_byzantine_female_mouth_midage:d2"
-			"GFX_byzantine_female_nose_midage:d3"			
-			"GFX_byzantine_female_eyes_midage:d6"
-			"GFX_byzantine_female_eyes2:d6:e"
+			"GFX_african_female_hair_behind_midage:p1:h:y"
+			"GFX_african_female_base_midage:p2"
+			"GFX_african_female_neck_midage:d0"
+			"GFX_african_female_cheeks_midage:d4"
+			"GFX_african_female_chin_midage:d1"
+			"GFX_african_female_mouth_midage:d2"
+			"GFX_african_female_nose_midage:d3"			
+			"GFX_african_female_eyes_midage:d6"
+			"GFX_african_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_angani_female_clothes:p3:c2"			
-			"GFX_byzantine_female_ear_midage:d7"
+			"GFX_african_female_ear_midage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_angani_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_female_hair_midage:p1:h:y"
+			"GFX_african_female_hair_midage:p1:h:y"
 			"GFX_angani_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
 			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
 
-	# Old Angani Hispanic Female
+	# Old Age
 	portraitType = {
-		name = "PORTRAIT_hispanicanganigfx_female2"
+		name = "PORTRAIT_afroanganigfx_female2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_angani_female_clothes_behind:p3:c0"
 			"GFX_angani_female_headgear_behind:p5:c1"
-			"GFX_byzantine_female_hair_behind_oldage:p1:h:y"
-			"GFX_byzantine_female_base_oldage:p2"
-			"GFX_byzantine_female_neck_oldage:d0"
-			"GFX_byzantine_female_cheeks_oldage:d4"
-			"GFX_byzantine_female_chin_oldage:d1"
-			"GFX_byzantine_female_mouth_oldage:d2"
-			"GFX_byzantine_female_nose_oldage:d3"
-			"GFX_byzantine_female_eyes_oldage:d6"
-			"GFX_byzantine_female_eyes2:d6:e"
+			"GFX_african_female_hair_behind_oldage:p1:h:y"
+			"GFX_african_female_base_oldage:p2"
+			"GFX_african_female_neck_oldage:d0"
+			"GFX_african_female_cheeks_oldage:d4"
+			"GFX_african_female_chin_oldage:d1"
+			"GFX_african_female_mouth_oldage:d2"
+			"GFX_african_female_nose_oldage:d3"
+			"GFX_african_female_eyes_oldage:d6"
+			"GFX_african_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_angani_female_clothes:p3:c2"			
-			"GFX_byzantine_female_ear_oldage:d7"
+			"GFX_african_female_ear_oldage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_angani_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_female_hair_oldage:p1:h:y"
+			"GFX_african_female_hair_oldage:p1:h:y"
 			"GFX_angani_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
@@ -2035,47 +1862,45 @@ spriteTypes = {
 		
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
-			{ 10 10 10 } {  125 125 125 } { 255 255 255 }
+			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
+	### MUKTA MALE - AFRICAN #
 	# CULTURE_INDEX: 0 = clothes behind, 1 = headgear behind, 2 = clothes, 3 = headgear mid, 4 = clothes infront, 5 = headgear
-	# Young Mukta Hispanic Male
+	# Young
 	portraitType = {
-		name = "PORTRAIT_hispanicmuktagfx_male"
+		name = "PORTRAIT_afromuktagfx_male"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_mukta_male_clothes_behind:p3:c0"
 			"GFX_mukta_male_headgear_behind:p5:c1"
-			"GFX_byzantine_male_hair_behind:p1:h:y"
-			"GFX_byzantine_male_beard_behind:p4:h:y"
-			"GFX_byzantine_male_base:p2"
-			"GFX_byzantine_male_neck:d0"
-			"GFX_byzantine_male_cheeks:d4"
-			"GFX_byzantine_male_chin:d1"
-			"GFX_byzantine_male_mouth:d2"
-			"GFX_byzantine_male_nose:d3"
-			"GFX_byzantine_male_eyes:d6"
-			"GFX_byzantine_male_eyes2:d6:e"
+			"GFX_african_male_hair_behind:p1:h:y"
+			"GFX_african_male_beard_behind:p4:h:y"
+			"GFX_african_male_base:p2"
+			"GFX_african_male_neck:d0"
+			"GFX_african_male_cheeks:d4"
+			"GFX_african_male_chin:d1"
+			"GFX_african_male_mouth:d2"
+			"GFX_african_male_nose:d3"
+			"GFX_african_male_eyes:d6"
+			"GFX_african_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_mukta_male_clothes:p3:c2"
 			"GFX_mukta_male_headgear_mid:p5:c3"
-			"GFX_byzantine_male_ear:d7"			
-			"GFX_byzantine_male_beard:p4:h:y"
+			"GFX_african_male_ear:d7"			
+			"GFX_african_male_beard:p4:h:y"
 			"GFX_character_implants:p10"
-		   	"GFX_byzantine_male_hair:p1:h:y"
+		   	"GFX_african_male_hair:p1:h:y"
 			"GFX_mukta_male_clothes_infront:p3:c4"
 			"GFX_mukta_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -2084,48 +1909,43 @@ spriteTypes = {
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
 			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
 	
-	# # Middle Aged Mukta Hispanic Male
+	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_hispanicmuktagfx_male1"
+		name = "PORTRAIT_afromuktagfx_male1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"						#0
 			"GFX_mukta_male_clothes_behind:p3:c0"
 			"GFX_mukta_male_headgear_behind:p5:c1"
-			"GFX_byzantine_male_hair_behind_midage:p1:h:y"
-			"GFX_byzantine_male_beard_behind_midage:p4:h:y"
-			"GFX_byzantine_male_base_midage:p2"					#5
-			"GFX_byzantine_male_neck_midage:d0"
-			"GFX_byzantine_male_cheeks_midage:d4"
-			"GFX_byzantine_male_chin_midage:d1"
-			"GFX_byzantine_male_mouth_midage:d2"
-			"GFX_byzantine_male_nose_midage:d3"					#10
-			"GFX_byzantine_male_eyes_midage:d6"
-			"GFX_byzantine_male_eyes2:d6:e"
+			"GFX_african_male_hair_behind_midage:p1:h:y"
+			"GFX_african_male_beard_behind_midage:p4:h:y"
+			"GFX_african_male_base_midage:p2"					#5
+			"GFX_african_male_neck_midage:d0"
+			"GFX_african_male_cheeks_midage:d4"
+			"GFX_african_male_chin_midage:d1"
+			"GFX_african_male_mouth_midage:d2"
+			"GFX_african_male_nose_midage:d3"					#10
+			"GFX_african_male_eyes_midage:d6"
+			"GFX_african_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"							#20
 			"GFX_character_boils:p9"
 			"GFX_mukta_male_clothes:p3:c2"
 			"GFX_mukta_male_headgear_mid:p5:c3"
-			"GFX_byzantine_male_ear_midage:d7"					#15
-			"GFX_byzantine_male_beard_midage:p4:h:y"
+			"GFX_african_male_ear_midage:d7"					#15
+			"GFX_african_male_beard_midage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_male_hair_midage:p1:h:y"
+			"GFX_african_male_hair_midage:p1:h:y"
 			"GFX_mukta_male_clothes_infront:p3:c4"
 			"GFX_mukta_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -2133,50 +1953,45 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
+		
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
 	
-	# Old Mukta Hispanic Male
+	# Old Age
 	portraitType = {
-		name = "PORTRAIT_hispanicmuktagfx_male2"
+		name = "PORTRAIT_afromuktagfx_male2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_mukta_male_clothes_behind:p3:c0"
 			"GFX_mukta_male_headgear_behind:p5:c1"
-			"GFX_byzantine_male_hair_behind_oldage:p1:h:y"
-			"GFX_byzantine_male_beard_behind_oldage:p4:h:y"
-			"GFX_byzantine_male_base_oldage:p2"
-			"GFX_byzantine_male_neck_oldage:d0"
-			"GFX_byzantine_male_cheeks_oldage:d4"
-			"GFX_byzantine_male_chin_oldage:d1"
-			"GFX_byzantine_male_mouth_oldage:d2"
-			"GFX_byzantine_male_nose_oldage:d3"
-			"GFX_byzantine_male_eyes_oldage:d6"
-			"GFX_byzantine_male_eyes2:d6:e"
+			"GFX_african_male_hair_behind_oldage:p1:h:y"
+			"GFX_african_male_beard_behind_oldage:p4:h:y"
+			"GFX_african_male_base_oldage:p2"
+			"GFX_african_male_neck_oldage:d0"
+			"GFX_african_male_cheeks_oldage:d4"
+			"GFX_african_male_chin_oldage:d1"
+			"GFX_african_male_mouth_oldage:d2"
+			"GFX_african_male_nose_oldage:d3"
+			"GFX_african_male_eyes_oldage:d6"
+			"GFX_african_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_mukta_male_clothes:p3:c2"
 			"GFX_mukta_male_headgear_mid:p5:c3"
-			"GFX_byzantine_male_ear_oldage:d7"
-			"GFX_byzantine_male_beard_oldage:p4:h:y"
+			"GFX_african_male_ear_oldage:d7"
+			"GFX_african_male_beard_oldage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_male_hair_oldage:p1:h:y"
+			"GFX_african_male_hair_oldage:p1:h:y"
 			"GFX_mukta_male_clothes_infront:p3:c4"
 			"GFX_mukta_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -2184,143 +1999,129 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
-			{ 10 10 10 } {  125 125 125 } { 255 255 255 }
+			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
-	# Young Mukta Hispanic Female
+	### MUKTA FEMALE - WESTERN EUROPEAN ####
+	# Young
 	portraitType = {
-		name = "PORTRAIT_hispanicmuktagfx_female"
+		name = "PORTRAIT_afromuktagfx_female"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_mukta_female_clothes_behind:p3:c0"              #1
 			"GFX_mukta_female_headgear_behind:p5:c1"             #2
-			"GFX_byzantine_female_hair_behind:p1:h:y"             #3
-			"GFX_byzantine_female_base:p2"                        #4
-			"GFX_byzantine_female_neck:d0"                        #5
-			"GFX_byzantine_female_cheeks:d4"                      #6
-			"GFX_byzantine_female_chin:d1"                        #7
-			"GFX_byzantine_female_mouth:d2"                       #8
-			"GFX_byzantine_female_nose:d3"                        #9
-			"GFX_byzantine_female_eyes:d6"                        #10
-			"GFX_byzantine_female_eyes2:d6:e"			            #11
+			"GFX_african_female_hair_behind:p1:h:y"             #3
+			"GFX_african_female_base:p2"                        #4
+			"GFX_african_female_neck:d0"                        #5
+			"GFX_african_female_cheeks:d4"                      #6
+			"GFX_african_female_chin:d1"                        #7
+			"GFX_african_female_mouth:d2"                       #8
+			"GFX_african_female_nose:d3"                        #9
+			"GFX_african_female_eyes:d6"                        #10
+			"GFX_african_female_eyes2:d6:e"			            #11
 			"GFX_character_scars:p7:y"                            #16
 			"GFX_character_reddots:p8"                          #17
 			"GFX_character_boils:p9"                            #18
 			"GFX_mukta_female_clothes:p3:c2"                  #12
-			"GFX_byzantine_female_ear:d7"                         #13
+			"GFX_african_female_ear:d7"                         #13
 			"GFX_empty:p3:c4"
 			"GFX_mukta_female_headgear_mid:p5:c3"             #14
 			"GFX_character_implants:p10"
-			"GFX_byzantine_female_hair:p1:h:y"                    #15
+			"GFX_african_female_hair:p1:h:y"                    #15
 			"GFX_mukta_female_headgear:p5:c5"                 #20
 			"GFX_character_imprisoned:p6"                       #21
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
 			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
 
-	# Middle Aged Mukta Hispanic Female
+	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_hispanicmuktagfx_female1"
+		name = "PORTRAIT_afromuktagfx_female1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_mukta_female_clothes_behind:p3:c0"
 			"GFX_mukta_female_headgear_behind:p5:c1"
-			"GFX_byzantine_female_hair_behind_midage:p1:h:y"
-			"GFX_byzantine_female_base_midage:p2"
-			"GFX_byzantine_female_neck_midage:d0"
-			"GFX_byzantine_female_cheeks_midage:d4"
-			"GFX_byzantine_female_chin_midage:d1"
-			"GFX_byzantine_female_mouth_midage:d2"
-			"GFX_byzantine_female_nose_midage:d3"			
-			"GFX_byzantine_female_eyes_midage:d6"
-			"GFX_byzantine_female_eyes2:d6:e"
+			"GFX_african_female_hair_behind_midage:p1:h:y"
+			"GFX_african_female_base_midage:p2"
+			"GFX_african_female_neck_midage:d0"
+			"GFX_african_female_cheeks_midage:d4"
+			"GFX_african_female_chin_midage:d1"
+			"GFX_african_female_mouth_midage:d2"
+			"GFX_african_female_nose_midage:d3"			
+			"GFX_african_female_eyes_midage:d6"
+			"GFX_african_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_mukta_female_clothes:p3:c2"			
-			"GFX_byzantine_female_ear_midage:d7"
+			"GFX_african_female_ear_midage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_mukta_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_female_hair_midage:p1:h:y"
+			"GFX_african_female_hair_midage:p1:h:y"
 			"GFX_mukta_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
 			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
 
-	# Old Mukta Hispanic Female
+	# Old Age
 	portraitType = {
-		name = "PORTRAIT_hispanicmuktagfx_female2"
+		name = "PORTRAIT_afromuktagfx_female2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_mukta_female_clothes_behind:p3:c0"
 			"GFX_mukta_female_headgear_behind:p5:c1"
-			"GFX_byzantine_female_hair_behind_oldage:p1:h:y"
-			"GFX_byzantine_female_base_oldage:p2"
-			"GFX_byzantine_female_neck_oldage:d0"
-			"GFX_byzantine_female_cheeks_oldage:d4"
-			"GFX_byzantine_female_chin_oldage:d1"
-			"GFX_byzantine_female_mouth_oldage:d2"
-			"GFX_byzantine_female_nose_oldage:d3"
-			"GFX_byzantine_female_eyes_oldage:d6"
-			"GFX_byzantine_female_eyes2:d6:e"
+			"GFX_african_female_hair_behind_oldage:p1:h:y"
+			"GFX_african_female_base_oldage:p2"
+			"GFX_african_female_neck_oldage:d0"
+			"GFX_african_female_cheeks_oldage:d4"
+			"GFX_african_female_chin_oldage:d1"
+			"GFX_african_female_mouth_oldage:d2"
+			"GFX_african_female_nose_oldage:d3"
+			"GFX_african_female_eyes_oldage:d6"
+			"GFX_african_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_mukta_female_clothes:p3:c2"			
-			"GFX_byzantine_female_ear_oldage:d7"
+			"GFX_african_female_ear_oldage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_mukta_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_female_hair_oldage:p1:h:y"
+			"GFX_african_female_hair_oldage:p1:h:y"
 			"GFX_mukta_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
@@ -2328,46 +2129,45 @@ spriteTypes = {
 		
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
-			{ 10 10 10 } {  125 125 125 } { 255 255 255 }
+			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
-	# Young xingjie Hispanic Male
+	### XINGJIE MALE - AFRICAN #
+	# CULTURE_INDEX: 0 = clothes behind, 1 = headgear behind, 2 = clothes, 3 = headgear mid, 4 = clothes infront, 5 = headgear
+	# Young
 	portraitType = {
-		name = "PORTRAIT_hispanicxingjiegfx_male"
+		name = "PORTRAIT_afroxingjiegfx_male"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_xingjie_male_clothes_behind:p3:c0"
 			"GFX_xingjie_male_headgear_behind:p5:c1"
-			"GFX_byzantine_male_hair_behind:p1:h:y"
-			"GFX_byzantine_male_beard_behind:p4:h:y"
-			"GFX_byzantine_male_base:p2"
-			"GFX_byzantine_male_neck:d0"
-			"GFX_byzantine_male_cheeks:d4"
-			"GFX_byzantine_male_chin:d1"
-			"GFX_byzantine_male_mouth:d2"
-			"GFX_byzantine_male_nose:d3"
-			"GFX_byzantine_male_eyes:d6"
-			"GFX_byzantine_male_eyes2:d6:e"
+			"GFX_african_male_hair_behind:p1:h:y"
+			"GFX_african_male_beard_behind:p4:h:y"
+			"GFX_african_male_base:p2"
+			"GFX_african_male_neck:d0"
+			"GFX_african_male_cheeks:d4"
+			"GFX_african_male_chin:d1"
+			"GFX_african_male_mouth:d2"
+			"GFX_african_male_nose:d3"
+			"GFX_african_male_eyes:d6"
+			"GFX_african_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_xingjie_male_clothes:p3:c2"
 			"GFX_xingjie_male_headgear_mid:p5:c3"
-			"GFX_byzantine_male_ear:d7"			
-			"GFX_byzantine_male_beard:p4:h:y"
+			"GFX_african_male_ear:d7"			
+			"GFX_african_male_beard:p4:h:y"
 			"GFX_character_implants:p10"
-		   	"GFX_byzantine_male_hair:p1:h:y"
+		   	"GFX_african_male_hair:p1:h:y"
 			"GFX_xingjie_male_clothes_infront:p3:c4"
 			"GFX_xingjie_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -2376,48 +2176,43 @@ spriteTypes = {
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
 			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
 	
-	# # Middle Aged xingjie Hispanic Male
+	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_hispanicxingjiegfx_male1"
+		name = "PORTRAIT_afroxingjiegfx_male1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"						#0
 			"GFX_xingjie_male_clothes_behind:p3:c0"
 			"GFX_xingjie_male_headgear_behind:p5:c1"
-			"GFX_byzantine_male_hair_behind_midage:p1:h:y"
-			"GFX_byzantine_male_beard_behind_midage:p4:h:y"
-			"GFX_byzantine_male_base_midage:p2"					#5
-			"GFX_byzantine_male_neck_midage:d0"
-			"GFX_byzantine_male_cheeks_midage:d4"
-			"GFX_byzantine_male_chin_midage:d1"
-			"GFX_byzantine_male_mouth_midage:d2"
-			"GFX_byzantine_male_nose_midage:d3"					#10
-			"GFX_byzantine_male_eyes_midage:d6"
-			"GFX_byzantine_male_eyes2:d6:e"
+			"GFX_african_male_hair_behind_midage:p1:h:y"
+			"GFX_african_male_beard_behind_midage:p4:h:y"
+			"GFX_african_male_base_midage:p2"					#5
+			"GFX_african_male_neck_midage:d0"
+			"GFX_african_male_cheeks_midage:d4"
+			"GFX_african_male_chin_midage:d1"
+			"GFX_african_male_mouth_midage:d2"
+			"GFX_african_male_nose_midage:d3"					#10
+			"GFX_african_male_eyes_midage:d6"
+			"GFX_african_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"							#20
 			"GFX_character_boils:p9"
 			"GFX_xingjie_male_clothes:p3:c2"
 			"GFX_xingjie_male_headgear_mid:p5:c3"
-			"GFX_byzantine_male_ear_midage:d7"					#15
-			"GFX_byzantine_male_beard_midage:p4:h:y"
+			"GFX_african_male_ear_midage:d7"					#15
+			"GFX_african_male_beard_midage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_male_hair_midage:p1:h:y"
+			"GFX_african_male_hair_midage:p1:h:y"
 			"GFX_xingjie_male_clothes_infront:p3:c4"
 			"GFX_xingjie_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -2425,50 +2220,45 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
+		
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
 	
-	# Old xingjie Hispanic Male
+	# Old Age
 	portraitType = {
-		name = "PORTRAIT_hispanicxingjiegfx_male2"
+		name = "PORTRAIT_afroxingjiegfx_male2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_xingjie_male_clothes_behind:p3:c0"
 			"GFX_xingjie_male_headgear_behind:p5:c1"
-			"GFX_byzantine_male_hair_behind_oldage:p1:h:y"
-			"GFX_byzantine_male_beard_behind_oldage:p4:h:y"
-			"GFX_byzantine_male_base_oldage:p2"
-			"GFX_byzantine_male_neck_oldage:d0"
-			"GFX_byzantine_male_cheeks_oldage:d4"
-			"GFX_byzantine_male_chin_oldage:d1"
-			"GFX_byzantine_male_mouth_oldage:d2"
-			"GFX_byzantine_male_nose_oldage:d3"
-			"GFX_byzantine_male_eyes_oldage:d6"
-			"GFX_byzantine_male_eyes2:d6:e"
+			"GFX_african_male_hair_behind_oldage:p1:h:y"
+			"GFX_african_male_beard_behind_oldage:p4:h:y"
+			"GFX_african_male_base_oldage:p2"
+			"GFX_african_male_neck_oldage:d0"
+			"GFX_african_male_cheeks_oldage:d4"
+			"GFX_african_male_chin_oldage:d1"
+			"GFX_african_male_mouth_oldage:d2"
+			"GFX_african_male_nose_oldage:d3"
+			"GFX_african_male_eyes_oldage:d6"
+			"GFX_african_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_xingjie_male_clothes:p3:c2"
 			"GFX_xingjie_male_headgear_mid:p5:c3"
-			"GFX_byzantine_male_ear_oldage:d7"
-			"GFX_byzantine_male_beard_oldage:p4:h:y"
+			"GFX_african_male_ear_oldage:d7"
+			"GFX_african_male_beard_oldage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_male_hair_oldage:p1:h:y"
+			"GFX_african_male_hair_oldage:p1:h:y"
 			"GFX_xingjie_male_clothes_infront:p3:c4"
 			"GFX_xingjie_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -2476,143 +2266,129 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
-			{ 10 10 10 } {  125 125 125 } { 255 255 255 }
+			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
-	# Young xingjie Hispanic Female
+	### XINGJIE FEMALE - WESTERN EUROPEAN ####
+	# Young
 	portraitType = {
-		name = "PORTRAIT_hispanicxingjiegfx_female"
+		name = "PORTRAIT_afroxingjiegfx_female"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_xingjie_female_clothes_behind:p3:c0"              #1
 			"GFX_xingjie_female_headgear_behind:p5:c1"             #2
-			"GFX_byzantine_female_hair_behind:p1:h:y"             #3
-			"GFX_byzantine_female_base:p2"                        #4
-			"GFX_byzantine_female_neck:d0"                        #5
-			"GFX_byzantine_female_cheeks:d4"                      #6
-			"GFX_byzantine_female_chin:d1"                        #7
-			"GFX_byzantine_female_mouth:d2"                       #8
-			"GFX_byzantine_female_nose:d3"                        #9
-			"GFX_byzantine_female_eyes:d6"                        #10
-			"GFX_byzantine_female_eyes2:d6:e"			            #11
+			"GFX_african_female_hair_behind:p1:h:y"             #3
+			"GFX_african_female_base:p2"                        #4
+			"GFX_african_female_neck:d0"                        #5
+			"GFX_african_female_cheeks:d4"                      #6
+			"GFX_african_female_chin:d1"                        #7
+			"GFX_african_female_mouth:d2"                       #8
+			"GFX_african_female_nose:d3"                        #9
+			"GFX_african_female_eyes:d6"                        #10
+			"GFX_african_female_eyes2:d6:e"			            #11
 			"GFX_character_scars:p7:y"                            #16
 			"GFX_character_reddots:p8"                          #17
 			"GFX_character_boils:p9"                            #18
 			"GFX_xingjie_female_clothes:p3:c2"                  #12
-			"GFX_byzantine_female_ear:d7"                         #13
+			"GFX_african_female_ear:d7"                         #13
 			"GFX_empty:p3:c4"
 			"GFX_xingjie_female_headgear_mid:p5:c3"             #14
 			"GFX_character_implants:p10"
-			"GFX_byzantine_female_hair:p1:h:y"                    #15
+			"GFX_african_female_hair:p1:h:y"                    #15
 			"GFX_xingjie_female_headgear:p5:c5"                 #20
 			"GFX_character_imprisoned:p6"                       #21
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
 			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
 
-	# Middle Aged xingjie Hispanic Female
+	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_hispanicxingjiegfx_female1"
+		name = "PORTRAIT_afroxingjiegfx_female1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_xingjie_female_clothes_behind:p3:c0"
 			"GFX_xingjie_female_headgear_behind:p5:c1"
-			"GFX_byzantine_female_hair_behind_midage:p1:h:y"
-			"GFX_byzantine_female_base_midage:p2"
-			"GFX_byzantine_female_neck_midage:d0"
-			"GFX_byzantine_female_cheeks_midage:d4"
-			"GFX_byzantine_female_chin_midage:d1"
-			"GFX_byzantine_female_mouth_midage:d2"
-			"GFX_byzantine_female_nose_midage:d3"			
-			"GFX_byzantine_female_eyes_midage:d6"
-			"GFX_byzantine_female_eyes2:d6:e"
+			"GFX_african_female_hair_behind_midage:p1:h:y"
+			"GFX_african_female_base_midage:p2"
+			"GFX_african_female_neck_midage:d0"
+			"GFX_african_female_cheeks_midage:d4"
+			"GFX_african_female_chin_midage:d1"
+			"GFX_african_female_mouth_midage:d2"
+			"GFX_african_female_nose_midage:d3"			
+			"GFX_african_female_eyes_midage:d6"
+			"GFX_african_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_xingjie_female_clothes:p3:c2"			
-			"GFX_byzantine_female_ear_midage:d7"
+			"GFX_african_female_ear_midage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_xingjie_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_female_hair_midage:p1:h:y"
+			"GFX_african_female_hair_midage:p1:h:y"
 			"GFX_xingjie_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
 			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 15 8 0 } { 176 155 108 } { 255 255 255 }
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 }
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
 
-	# Old xingjie Hispanic Female
+	# Old Age
 	portraitType = {
-		name = "PORTRAIT_hispanicxingjiegfx_female2"
+		name = "PORTRAIT_afroxingjiegfx_female2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_xingjie_female_clothes_behind:p3:c0"
 			"GFX_xingjie_female_headgear_behind:p5:c1"
-			"GFX_byzantine_female_hair_behind_oldage:p1:h:y"
-			"GFX_byzantine_female_base_oldage:p2"
-			"GFX_byzantine_female_neck_oldage:d0"
-			"GFX_byzantine_female_cheeks_oldage:d4"
-			"GFX_byzantine_female_chin_oldage:d1"
-			"GFX_byzantine_female_mouth_oldage:d2"
-			"GFX_byzantine_female_nose_oldage:d3"
-			"GFX_byzantine_female_eyes_oldage:d6"
-			"GFX_byzantine_female_eyes2:d6:e"
+			"GFX_african_female_hair_behind_oldage:p1:h:y"
+			"GFX_african_female_base_oldage:p2"
+			"GFX_african_female_neck_oldage:d0"
+			"GFX_african_female_cheeks_oldage:d4"
+			"GFX_african_female_chin_oldage:d1"
+			"GFX_african_female_mouth_oldage:d2"
+			"GFX_african_female_nose_oldage:d3"
+			"GFX_african_female_eyes_oldage:d6"
+			"GFX_african_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_xingjie_female_clothes:p3:c2"			
-			"GFX_byzantine_female_ear_oldage:d7"
+			"GFX_african_female_ear_oldage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_xingjie_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_byzantine_female_hair_oldage:p1:h:y"
+			"GFX_african_female_hair_oldage:p1:h:y"
 			"GFX_xingjie_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
@@ -2620,15 +2396,279 @@ spriteTypes = {
 		
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			
-			{ 10 10 10 } {  125 125 125 } { 255 255 255 }
+			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 101 119 150}
 			{ 120 74 46 }
-			{ 56 80 57 }
+		}
+		
+		headgear_that_hides_hair = { }
+	}
+	### CELESTEAN MALE - AFRICAN #
+	# CULTURE_INDEX: 0 = clothes behind, 1 = headgear behind, 2 = clothes, 3 = headgear mid, 4 = clothes infront, 5 = headgear
+	# Young
+	portraitType = {
+		name = "PORTRAIT_afrocelesteangfx_male"
+		effectFile = "gfx/FX/portrait.lua"
+		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
+			"GFX_character_background:p0"
+			"GFX_celestean_male_clothes_behind:p3:c0"
+			"GFX_celestean_male_headgear_behind:p5:c1"
+			"GFX_african_male_hair_behind:p1:h:y"
+			"GFX_african_male_beard_behind:p4:h:y"
+			"GFX_african_male_base:p2"
+			"GFX_african_male_neck:d0"
+			"GFX_african_male_cheeks:d4"
+			"GFX_african_male_chin:d1"
+			"GFX_african_male_mouth:d2"
+			"GFX_african_male_nose:d3"
+			"GFX_african_male_eyes:d6"
+			"GFX_african_male_eyes2:d6:e"
+			"GFX_character_scars:p7:y"
+			"GFX_character_reddots:p8"
+			"GFX_character_boils:p9"
+			"GFX_celestean_male_clothes:p3:c2"
+			"GFX_celestean_male_headgear_mid:p5:c3"
+			"GFX_african_male_ear:d7"			
+			"GFX_african_male_beard:p4:h:y"
+			"GFX_character_implants:p10"
+		   	"GFX_african_male_hair:p1:h:y"
+			"GFX_celestean_male_clothes_infront:p3:c4"
+			"GFX_celestean_male_headgear:p5:c5"
+			"GFX_character_imprisoned:p6"
+		}
+
+		hair_color_index = 8
+		hair_color = { # dark, base, highlight
+			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
+		}
+
+		eye_color_index = 9
+		eye_color = {
+			{ 120 74 46 }
+		}
+		
+		headgear_that_hides_hair = { 10 }
+	}
+	
+	# Middle Age
+	portraitType = {
+		name = "PORTRAIT_afrocelesteangfx_male1"
+		effectFile = "gfx/FX/portrait.lua"
+		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
+			"GFX_character_background:p0"						#0
+			"GFX_celestean_male_clothes_behind:p3:c0"
+			"GFX_celestean_male_headgear_behind:p5:c1"
+			"GFX_african_male_hair_behind_midage:p1:h:y"
+			"GFX_african_male_beard_behind_midage:p4:h:y"
+			"GFX_african_male_base_midage:p2"					#5
+			"GFX_african_male_neck_midage:d0"
+			"GFX_african_male_cheeks_midage:d4"
+			"GFX_african_male_chin_midage:d1"
+			"GFX_african_male_mouth_midage:d2"
+			"GFX_african_male_nose_midage:d3"					#10
+			"GFX_african_male_eyes_midage:d6"
+			"GFX_african_male_eyes2:d6:e"
+			"GFX_character_scars:p7:y"
+			"GFX_character_reddots:p8"							#20
+			"GFX_character_boils:p9"
+			"GFX_celestean_male_clothes:p3:c2"
+			"GFX_celestean_male_headgear_mid:p5:c3"
+			"GFX_african_male_ear_midage:d7"					#15
+			"GFX_african_male_beard_midage:p4:h:y"
+			"GFX_character_implants:p10"
+			"GFX_african_male_hair_midage:p1:h:y"
+			"GFX_celestean_male_clothes_infront:p3:c4"
+			"GFX_celestean_male_headgear:p5:c5"
+			"GFX_character_imprisoned:p6"
+		}
+
+		hair_color_index = 8
+		hair_color = { # dark, base, highlight
+		
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+		}
+
+		eye_color_index = 9
+		eye_color = {
+			{ 120 74 46 }
+		}
+		
+		headgear_that_hides_hair = { 10 }
+	}
+	
+	# Old Age
+	portraitType = {
+		name = "PORTRAIT_afrocelesteangfx_male2"
+		effectFile = "gfx/FX/portrait.lua"
+		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
+			"GFX_character_background:p0"
+			"GFX_celestean_male_clothes_behind:p3:c0"
+			"GFX_celestean_male_headgear_behind:p5:c1"
+			"GFX_african_male_hair_behind_oldage:p1:h:y"
+			"GFX_african_male_beard_behind_oldage:p4:h:y"
+			"GFX_african_male_base_oldage:p2"
+			"GFX_african_male_neck_oldage:d0"
+			"GFX_african_male_cheeks_oldage:d4"
+			"GFX_african_male_chin_oldage:d1"
+			"GFX_african_male_mouth_oldage:d2"
+			"GFX_african_male_nose_oldage:d3"
+			"GFX_african_male_eyes_oldage:d6"
+			"GFX_african_male_eyes2:d6:e"
+			"GFX_character_scars:p7:y"
+			"GFX_character_reddots:p8"
+			"GFX_character_boils:p9"
+			"GFX_celestean_male_clothes:p3:c2"
+			"GFX_celestean_male_headgear_mid:p5:c3"
+			"GFX_african_male_ear_oldage:d7"
+			"GFX_african_male_beard_oldage:p4:h:y"
+			"GFX_character_implants:p10"
+			"GFX_african_male_hair_oldage:p1:h:y"
+			"GFX_celestean_male_clothes_infront:p3:c4"
+			"GFX_celestean_male_headgear:p5:c5"
+			"GFX_character_imprisoned:p6"
+		}
+
+		hair_color_index = 8
+		hair_color = { # dark, base, highlight
+			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
+		}
+
+		eye_color_index = 9
+		eye_color = {
+			{ 120 74 46 }
+		}
+		
+		headgear_that_hides_hair = { 10 }
+	}
+	### CELESTEAN FEMALE - WESTERN EUROPEAN ####
+	# Young
+	portraitType = {
+		name = "PORTRAIT_afrocelesteangfx_female"
+		effectFile = "gfx/FX/portrait.lua"
+		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
+			"GFX_character_background:p0"
+			"GFX_celestean_female_clothes_behind:p3:c0"              #1
+			"GFX_celestean_female_headgear_behind:p5:c1"             #2
+			"GFX_african_female_hair_behind:p1:h:y"             #3
+			"GFX_african_female_base:p2"                        #4
+			"GFX_african_female_neck:d0"                        #5
+			"GFX_african_female_cheeks:d4"                      #6
+			"GFX_african_female_chin:d1"                        #7
+			"GFX_african_female_mouth:d2"                       #8
+			"GFX_african_female_nose:d3"                        #9
+			"GFX_african_female_eyes:d6"                        #10
+			"GFX_african_female_eyes2:d6:e"			            #11
+			"GFX_character_scars:p7:y"                            #16
+			"GFX_character_reddots:p8"                          #17
+			"GFX_character_boils:p9"                            #18
+			"GFX_celestean_female_clothes:p3:c2"                  #12
+			"GFX_african_female_ear:d7"                         #13
+			"GFX_empty:p3:c4"
+			"GFX_celestean_female_headgear_mid:p5:c3"             #14
+			"GFX_character_implants:p10"
+			"GFX_african_female_hair:p1:h:y"                    #15
+			"GFX_celestean_female_headgear:p5:c5"                 #20
+			"GFX_character_imprisoned:p6"                       #21
+		}
+
+		hair_color_index = 8
+		hair_color = { # dark, base, highlight
+			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
+		}
+
+		eye_color_index = 9
+		eye_color = {
+			{ 120 74 46 }
+		}
+		
+		headgear_that_hides_hair = { }
+	}
+
+	# Middle Age
+	portraitType = {
+		name = "PORTRAIT_afrocelesteangfx_female1"
+		effectFile = "gfx/FX/portrait.lua"
+		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
+			"GFX_character_background:p0"
+			"GFX_celestean_female_clothes_behind:p3:c0"
+			"GFX_celestean_female_headgear_behind:p5:c1"
+			"GFX_african_female_hair_behind_midage:p1:h:y"
+			"GFX_african_female_base_midage:p2"
+			"GFX_african_female_neck_midage:d0"
+			"GFX_african_female_cheeks_midage:d4"
+			"GFX_african_female_chin_midage:d1"
+			"GFX_african_female_mouth_midage:d2"
+			"GFX_african_female_nose_midage:d3"			
+			"GFX_african_female_eyes_midage:d6"
+			"GFX_african_female_eyes2:d6:e"
+			"GFX_character_scars:p7:y"
+			"GFX_character_reddots:p8"
+			"GFX_character_boils:p9"
+			"GFX_celestean_female_clothes:p3:c2"			
+			"GFX_african_female_ear_midage:d7"
+			"GFX_empty:p3:c4"
+			"GFX_celestean_female_headgear_mid:p5:c3"
+			"GFX_character_implants:p10"
+			"GFX_african_female_hair_midage:p1:h:y"
+			"GFX_celestean_female_headgear:p5:c5"
+			"GFX_character_imprisoned:p6"
+		}
+
+		hair_color_index = 8
+		hair_color = { # dark, base, highlight
+			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
+		}
+
+		eye_color_index = 9
+		eye_color = {
+			{ 120 74 46 }
+		}
+		
+		headgear_that_hides_hair = { }
+	}
+
+	# Old Age
+	portraitType = {
+		name = "PORTRAIT_afrocelesteangfx_female2"
+		effectFile = "gfx/FX/portrait.lua"
+		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
+			"GFX_character_background:p0"
+			"GFX_celestean_female_clothes_behind:p3:c0"
+			"GFX_celestean_female_headgear_behind:p5:c1"
+			"GFX_african_female_hair_behind_oldage:p1:h:y"
+			"GFX_african_female_base_oldage:p2"
+			"GFX_african_female_neck_oldage:d0"
+			"GFX_african_female_cheeks_oldage:d4"
+			"GFX_african_female_chin_oldage:d1"
+			"GFX_african_female_mouth_oldage:d2"
+			"GFX_african_female_nose_oldage:d3"
+			"GFX_african_female_eyes_oldage:d6"
+			"GFX_african_female_eyes2:d6:e"
+			"GFX_character_scars:p7:y"
+			"GFX_character_reddots:p8"
+			"GFX_character_boils:p9"
+			"GFX_celestean_female_clothes:p3:c2"			
+			"GFX_african_female_ear_oldage:d7"
+			"GFX_empty:p3:c4"
+			"GFX_celestean_female_headgear_mid:p5:c3"
+			"GFX_character_implants:p10"
+			"GFX_african_female_hair_oldage:p1:h:y"
+			"GFX_celestean_female_headgear:p5:c5"
+			"GFX_character_imprisoned:p6"
+		}
+
+		
+		hair_color_index = 8
+		hair_color = { # dark, base, highlight
+			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
+		}
+
+		eye_color_index = 9
+		eye_color = {
+			{ 120 74 46 }
 		}
 		
 		headgear_that_hides_hair = { }

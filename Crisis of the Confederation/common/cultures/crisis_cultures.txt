@@ -886,10 +886,11 @@ xingjie_group = {
 	}
 }
 celestean_group = {
-	graphical_culture = angloconfederategfx
+	graphical_culture = hispaniccelesteangfx
+	second_graphical_culture = anglocelesteangfx
 	
 	anglo_celestean = {
-		graphical_culture = angloconfederategfx
+		graphical_culture = anglocelesteangfx
 		color = { 1.0 1.0 0 }
 
 		male_names = {
@@ -923,7 +924,7 @@ celestean_group = {
 	}
 	
 	arab_celestean = {
-		graphical_culture = mideastconfederategfx
+		graphical_culture = mideastcelesteangfx
 		color = { 1.0 1.0 0 }
 
 		male_names = {
@@ -963,8 +964,8 @@ celestean_group = {
 	}
 
 	east_afro_celestean = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afrocelesteangfx
+		second_graphical_culture = mideastcelesteangfx
 		color = { 1.0 1.0 0 }
 
 		male_names = {
@@ -1001,8 +1002,8 @@ celestean_group = {
 		modifier = default_culture_modifier
 	}
 	ethiopian_celestean = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afrocelesteangfx
+		second_graphical_culture = mideastcelesteangfx
 		color = { 1.0 1.0 0 }
 
 		male_names = {
@@ -1039,8 +1040,8 @@ celestean_group = {
 		modifier = default_culture_modifier
 	}
 	hispanic_celestean = {
-		graphical_culture = hispanicconfederategfx
-		second_graphical_culture = angloconfederategfx
+		graphical_culture = hispaniccelesteangfx
+		second_graphical_culture = anglocelesteangfx
 		color = { 1.0 1.0 0 }
 
 		male_names = {
@@ -1076,8 +1077,8 @@ celestean_group = {
 	}
 	
 	indo_celestean = {
-		graphical_culture = indoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = indocelesteangfx
+		second_graphical_culture = mideastcelesteangfx
 		color = { 1.0 1.0 0 }
 
 		male_names = {
@@ -1110,8 +1111,8 @@ celestean_group = {
 		modifier = default_culture_modifier
 	}
 	iranian_celestean = {
-		graphical_culture = persianconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = persiancelesteangfx
+		second_graphical_culture = mideastcelesteangfx
 		color = { 1.0 1.0 0 }
 
 		male_names = {
@@ -1147,8 +1148,8 @@ celestean_group = {
 		modifier = default_culture_modifier
 	}
 	japanese_celestean = {
-		graphical_culture = sinoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = sinocelesteangfx
+		second_graphical_culture = mideastcelesteangfx
 		color = { 1.0 1.0 0 }
 
 		male_names = {
@@ -1181,8 +1182,8 @@ celestean_group = {
 		modifier = default_culture_modifier
 	}
 	mesoamerican_celestean = {
-		graphical_culture = americonfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = americelesteangfx
+		second_graphical_culture = mideastcelesteangfx
 		color = { 1.0 1.0 0 }
 
 		male_names = {
@@ -1218,8 +1219,8 @@ celestean_group = {
 		modifier = default_culture_modifier
 	}
 	russo_celestean = {
-		graphical_culture = russoconfederategfx
-		second_graphical_culture = angloconfederategfx
+		graphical_culture = russocelesteangfx
+		second_graphical_culture = anglocelesteangfx
 		color = { 1.0 1.0 0 }
 
 		male_names = {
@@ -1258,8 +1259,8 @@ celestean_group = {
 		modifier = default_culture_modifier
 	}
 	sino_celestean = {
-		graphical_culture = sinoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = sinocelesteangfx
+		second_graphical_culture = mideastcelesteangfx
 		color = { 1.0 1.0 0 }
 
 		male_names = {
@@ -1292,8 +1293,8 @@ celestean_group = {
 		modifier = default_culture_modifier
 	}
 	west_afro_celestean = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afrocelesteangfx
+		second_graphical_culture = mideastcelesteangfx
 		color = { 1.0 1.0 0 }
 
 		male_names = {
@@ -1328,10 +1329,11 @@ celestean_group = {
 	}
 }
 sexto_solar_group = {
-	graphical_culture = angloconfederategfx
+	graphical_culture = americelesteangfx
+	second_graphical_culture = mideastcelesteangfx
 	
 	anglo_sexto_solar = {
-		graphical_culture = angloconfederategfx
+		graphical_culture = anglocelesteangfx
 		color = { 1.0 0.75 0 }
 		
 		male_names = {
@@ -1362,7 +1364,7 @@ sexto_solar_group = {
 	}
 	
 	arab_sexto_solar = {
-		graphical_culture = mideastconfederategfx
+		graphical_culture = mideastcelesteangfx
 		color = { 1.0 0.75 0 }
 		
 		male_names = {
@@ -1399,8 +1401,8 @@ sexto_solar_group = {
 	}
 
 	east_afro_sexto_solar = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afrocelesteangfx
+		second_graphical_culture = mideastcelesteangfx
 		color = { 1.0 0.75 0 }
 		
 		male_names = {
@@ -1434,8 +1436,8 @@ sexto_solar_group = {
 		modifier = default_culture_modifier
 	}
 	ethiopian_sexto_solar = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afrocelesteangfx
+		second_graphical_culture = mideastcelesteangfx
 		color = { 1.0 0.75 0 }
 		
 		male_names = {
@@ -1469,8 +1471,8 @@ sexto_solar_group = {
 		modifier = default_culture_modifier
 	}
 	hispanic_sexto_solar = {
-		graphical_culture = hispanicconfederategfx
-		second_graphical_culture = angloconfederategfx
+		graphical_culture = hispaniccelesteangfx
+		second_graphical_culture = anglocelesteangfx
 		color = { 1.0 0.75 0 }
 		
 		male_names = {
@@ -1503,8 +1505,8 @@ sexto_solar_group = {
 	}
 	
 	indo_sexto_solar = {
-		graphical_culture = indoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = indocelesteangfx
+		second_graphical_culture = mideastcelesteangfx
 		color = { 1.0 0.75 0 }
 		
 		male_names = {
@@ -1534,8 +1536,8 @@ sexto_solar_group = {
 		modifier = default_culture_modifier
 	}
 	iranian_sexto_solar = {
-		graphical_culture = persianconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = persiancelesteangfx
+		second_graphical_culture = mideastcelesteangfx
 		color = { 1.0 0.75 0 }
 		
 		male_names = {
@@ -1568,8 +1570,8 @@ sexto_solar_group = {
 		modifier = default_culture_modifier
 	}
 	japanese_sexto_solar = {
-		graphical_culture = sinoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = sinocelesteangfx
+		second_graphical_culture = mideastcelesteangfx
 		color = { 1.0 0.75 0 }
 		
 		male_names = {
@@ -1599,8 +1601,8 @@ sexto_solar_group = {
 		modifier = default_culture_modifier
 	}
 	mesoamerican_sexto_solar = {
-		graphical_culture = americonfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = americelesteangfx
+		second_graphical_culture = mideastcelesteangfx
 		color = { 1.0 0.75 0 }
 		
 		male_names = {
@@ -1633,8 +1635,8 @@ sexto_solar_group = {
 		modifier = default_culture_modifier
 	}
 	russo_sexto_solar = {
-		graphical_culture = russoconfederategfx
-		second_graphical_culture = angloconfederategfx
+		graphical_culture = russocelesteangfx
+		second_graphical_culture = anglocelesteangfx
 		color = { 1.0 0.75 0 }
 		
 		male_names = {
@@ -1670,8 +1672,8 @@ sexto_solar_group = {
 		modifier = default_culture_modifier
 	}
 	sino_sexto_solar = {
-		graphical_culture = sinoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = sinocelesteangfx
+		second_graphical_culture = mideastcelesteangfx
 		color = { 1.0 0.75 0 }
 		
 		male_names = {
@@ -1701,8 +1703,8 @@ sexto_solar_group = {
 		modifier = default_culture_modifier
 	}
 	west_afro_sexto_solar = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afrocelesteangfx
+		second_graphical_culture = mideastcelesteangfx
 		color = { 1.0 0.75 0 }
 		
 		male_names = {
@@ -4467,10 +4469,11 @@ bianjiangese_group = {
 	}
 }
 orion_group = {
-	graphical_culture = angloconfederategfx
+	graphical_culture = hispaniccelesteangfx
+	second_graphical_culture = anglocelesteangfx
 	
 	anglo_orion = {
-		graphical_culture = angloconfederategfx
+		graphical_culture = anglocelesteangfx
 		color = { 0.75 0.75 0.75 }
 
 		male_names = {
@@ -4504,7 +4507,7 @@ orion_group = {
 	}
 	
 	arab_orion = {
-		graphical_culture = mideastconfederategfx
+		graphical_culture = mideastcelesteangfx
 		color = { 0.75 0.75 0.75 }
 
 		male_names = {
@@ -4543,8 +4546,8 @@ orion_group = {
 	}
 
 	east_afro_orion = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afrocelesteangfx
+		second_graphical_culture = mideastcelesteangfx
 		color = { 0.75 0.75 0.75 }
 
 		male_names = {
@@ -4581,8 +4584,8 @@ orion_group = {
 		modifier = default_culture_modifier
 	}
 	ethiopian_orion = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afrocelesteangfx
+		second_graphical_culture = mideastcelesteangfx
 		color = { 0.75 0.75 0.75 }
 
 		male_names = {
@@ -4619,8 +4622,8 @@ orion_group = {
 		modifier = default_culture_modifier
 	}
 	hispanic_orion = {
-		graphical_culture = hispanicconfederategfx
-		second_graphical_culture = angloconfederategfx
+		graphical_culture = hispaniccelesteangfx
+		second_graphical_culture = anglocelesteangfx
 		color = { 0.75 0.75 0.75 }
 
 		male_names = {
@@ -4656,8 +4659,8 @@ orion_group = {
 	}
 	
 	indo_orion = {
-		graphical_culture = indoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = indocelesteangfx
+		second_graphical_culture = mideastcelesteangfx
 		color = { 0.75 0.75 0.75 }
 
 		male_names = {
@@ -4690,8 +4693,8 @@ orion_group = {
 		modifier = default_culture_modifier
 	}
 	iranian_orion = {
-		graphical_culture = persianconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = persiancelesteangfx
+		second_graphical_culture = mideastcelesteangfx
 		color = { 0.75 0.75 0.75 }
 
 		male_names = {
@@ -4727,8 +4730,8 @@ orion_group = {
 		modifier = default_culture_modifier
 	}
 	japanese_orion = {
-		graphical_culture = sinoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = sinocelesteangfx
+		second_graphical_culture = mideastcelesteangfx
 		color = { 0.75 0.75 0.75 }
 
 		male_names = {
@@ -4761,8 +4764,8 @@ orion_group = {
 		modifier = default_culture_modifier
 	}
 	mesoamerican_orion = {
-		graphical_culture = americonfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = americelesteangfx
+		second_graphical_culture = mideastcelesteangfx
 		color = { 0.75 0.75 0.75 }
 
 		male_names = {
@@ -4797,8 +4800,8 @@ orion_group = {
 		modifier = default_culture_modifier
 	}
 	russo_orion = {
-		graphical_culture = russoconfederategfx
-		second_graphical_culture = angloconfederategfx
+		graphical_culture = russocelesteangfx
+		second_graphical_culture = anglocelesteangfx
 		color = { 0.75 0.75 0.75 }
 
 
@@ -4837,8 +4840,8 @@ orion_group = {
 		modifier = default_culture_modifier
 	}
 	sino_orion = {
-		graphical_culture = sinoconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = sinocelesteangfx
+		second_graphical_culture = mideastcelesteangfx
 		color = { 0.75 0.75 0.75 }
 		
 
@@ -4872,8 +4875,8 @@ orion_group = {
 		modifier = default_culture_modifier
 	}
 	west_afro_orion = {
-		graphical_culture = afroconfederategfx
-		second_graphical_culture = mideastconfederategfx
+		graphical_culture = afrocelesteangfx
+		second_graphical_culture = mideastcelesteangfx
 		color = { 0.75 0.75 0.75 }
 
 		male_names = {

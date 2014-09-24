@@ -1,35 +1,35 @@
-# This file contains all graphical cultures which require the Mongol facepack.
+# This file contains graphical cultures which require Rajas of India
 
 spriteTypes = {
-	### CONFEDERATE MALE - EAST ASIAN #
+	### CONFEDERATE MALE - INDIAN #
 	# CULTURE_INDEX: 0 = clothes behind, 1 = headgear behind, 2 = clothes, 3 = headgear mid, 4 = clothes infront, 5 = headgear
 	# Young
 	portraitType = {
-		name = "PORTRAIT_sinoconfederategfx_male"
+		name = "PORTRAIT_indoconfederategfx_male"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_confederate_male_clothes_behind:p3:c0"
 			"GFX_confederate_male_headgear_behind:p5:c1"
-			"GFX_mongol_male_hair_behind:p1:h:y"
-			"GFX_mongol_male_beard_behind:p4:h:y"
-			"GFX_mongol_male_base:p2"
-			"GFX_mongol_male_neck:d0"
-			"GFX_mongol_male_cheeks:d4"
-			"GFX_mongol_male_chin:d1"
-			"GFX_mongol_male_mouth:d2"
-			"GFX_mongol_male_nose:d3"
-			"GFX_mongol_male_eyes:d6"
-			"GFX_mongol_male_eyes2:d6:e"
+			"GFX_indian_male_hair_behind:p1:h:y"
+			"GFX_indian_male_beard_behind:p4:h:y"
+			"GFX_indian_male_base:p2"
+			"GFX_indian_male_neck:d0"
+			"GFX_indian_male_cheeks:d4"
+			"GFX_indian_male_chin:d1"
+			"GFX_indian_male_mouth:d2"
+			"GFX_indian_male_nose:d3"
+			"GFX_indian_male_eyes:d6"
+			"GFX_indian_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_confederate_male_clothes:p3:c2"
 			"GFX_confederate_male_headgear_mid:p5:c3"
-			"GFX_mongol_male_ear:d7"			
-			"GFX_mongol_male_beard:p4:h:y"
+			"GFX_indian_male_ear:d7"			
+			"GFX_indian_male_beard:p4:h:y"
 			"GFX_character_implants:p10"
-		   	"GFX_mongol_male_hair:p1:h:y"
+		   	"GFX_indian_male_hair:p1:h:y"
 			"GFX_confederate_male_clothes_infront:p3:c4"
 			"GFX_confederate_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -37,13 +37,13 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 } 
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
@@ -51,31 +51,31 @@ spriteTypes = {
 	
 	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_sinoconfederategfx_male1"
+		name = "PORTRAIT_indoconfederategfx_male1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"						#0
 			"GFX_confederate_male_clothes_behind:p3:c0"
 			"GFX_confederate_male_headgear_behind:p5:c1"
-			"GFX_mongol_male_hair_behind_midage:p1:h:y"
-			"GFX_mongol_male_beard_behind_midage:p4:h:y"
-			"GFX_mongol_male_base_midage:p2"					#5
-			"GFX_mongol_male_neck_midage:d0"
-			"GFX_mongol_male_cheeks_midage:d4"
-			"GFX_mongol_male_chin_midage:d1"
-			"GFX_mongol_male_mouth_midage:d2"
-			"GFX_mongol_male_nose_midage:d3"					#10
-			"GFX_mongol_male_eyes_midage:d6"
-			"GFX_mongol_male_eyes2:d6:e"
+			"GFX_indian_male_hair_behind_midage:p1:h:y"
+			"GFX_indian_male_beard_behind_midage:p4:h:y"
+			"GFX_indian_male_base_midage:p2"					#5
+			"GFX_indian_male_neck_midage:d0"
+			"GFX_indian_male_cheeks_midage:d4"
+			"GFX_indian_male_chin_midage:d1"
+			"GFX_indian_male_mouth_midage:d2"
+			"GFX_indian_male_nose_midage:d3"					#10
+			"GFX_indian_male_eyes_midage:d6"
+			"GFX_indian_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"							#20
 			"GFX_character_boils:p9"
 			"GFX_confederate_male_clothes:p3:c2"
 			"GFX_confederate_male_headgear_mid:p5:c3"
-			"GFX_mongol_male_ear_midage:d7"					#15
-			"GFX_mongol_male_beard_midage:p4:h:y"
+			"GFX_indian_male_ear_midage:d7"					#15
+			"GFX_indian_male_beard_midage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_mongol_male_hair_midage:p1:h:y"
+			"GFX_indian_male_hair_midage:p1:h:y"
 			"GFX_confederate_male_clothes_infront:p3:c4"
 			"GFX_confederate_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -83,46 +83,46 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-		
 			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
+		
 		
 		headgear_that_hides_hair = { 10 }
 	}
 	
 	# Old Age
 	portraitType = {
-		name = "PORTRAIT_sinoconfederategfx_male2"
+		name = "PORTRAIT_indoconfederategfx_male2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_confederate_male_clothes_behind:p3:c0"
 			"GFX_confederate_male_headgear_behind:p5:c1"
-			"GFX_mongol_male_hair_behind_oldage:p1:h:y"
-			"GFX_mongol_male_beard_behind_oldage:p4:h:y"
-			"GFX_mongol_male_base_oldage:p2"
-			"GFX_mongol_male_neck_oldage:d0"
-			"GFX_mongol_male_cheeks_oldage:d4"
-			"GFX_mongol_male_chin_oldage:d1"
-			"GFX_mongol_male_mouth_oldage:d2"
-			"GFX_mongol_male_nose_oldage:d3"
-			"GFX_mongol_male_eyes_oldage:d6"
-			"GFX_mongol_male_eyes2:d6:e"
+			"GFX_indian_male_hair_behind_oldage:p1:h:y"
+			"GFX_indian_male_beard_behind_oldage:p4:h:y"
+			"GFX_indian_male_base_oldage:p2"
+			"GFX_indian_male_neck_oldage:d0"
+			"GFX_indian_male_cheeks_oldage:d4"
+			"GFX_indian_male_chin_oldage:d1"
+			"GFX_indian_male_mouth_oldage:d2"
+			"GFX_indian_male_nose_oldage:d3"
+			"GFX_indian_male_eyes_oldage:d6"
+			"GFX_indian_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_confederate_male_clothes:p3:c2"
 			"GFX_confederate_male_headgear_mid:p5:c3"
-			"GFX_mongol_male_ear_oldage:d7"
-			"GFX_mongol_male_beard_oldage:p4:h:y"
+			"GFX_indian_male_ear_oldage:d7"
+			"GFX_indian_male_beard_oldage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_mongol_male_hair_oldage:p1:h:y"
+			"GFX_indian_male_hair_oldage:p1:h:y"
 			"GFX_confederate_male_clothes_infront:p3:c4"
 			"GFX_confederate_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -131,56 +131,55 @@ spriteTypes = {
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
 			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
-			{ 30 22 18 } { 180 170 151 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
-	### CONFEDERATE FEMALE - WESTERN EUROPEAN ####
+	### CONFEDERATE FEMALE - INDIAN ####
 	# Young
 	portraitType = {
-		name = "PORTRAIT_sinoconfederategfx_female"
+		name = "PORTRAIT_indoconfederategfx_female"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_confederate_female_clothes_behind:p3:c0"              #1
 			"GFX_confederate_female_headgear_behind:p5:c1"             #2
-			"GFX_mongol_female_hair_behind:p1:h:y"             #3
-			"GFX_mongol_female_base:p2"                        #4
-			"GFX_mongol_female_neck:d0"                        #5
-			"GFX_mongol_female_cheeks:d4"                      #6
-			"GFX_mongol_female_chin:d1"                        #7
-			"GFX_mongol_female_mouth:d2"                       #8
-			"GFX_mongol_female_nose:d3"                        #9
-			"GFX_mongol_female_eyes:d6"                        #10
-			"GFX_mongol_female_eyes2:d6:e"			            #11
+			"GFX_indian_female_hair_behind:p1:h:y"             #3
+			"GFX_indian_female_base:p2"                        #4
+			"GFX_indian_female_neck:d0"                        #5
+			"GFX_indian_female_cheeks:d4"                      #6
+			"GFX_indian_female_chin:d1"                        #7
+			"GFX_indian_female_mouth:d2"                       #8
+			"GFX_indian_female_nose:d3"                        #9
+			"GFX_indian_female_eyes:d6"                        #10
+			"GFX_indian_female_eyes2:d6:e"			            #11
 			"GFX_character_scars:p7:y"                            #16
 			"GFX_character_reddots:p8"                          #17
 			"GFX_character_boils:p9"                            #18
 			"GFX_confederate_female_clothes:p3:c2"                  #12
-			"GFX_mongol_female_ear:d7"                         #13
+			"GFX_indian_female_ear:d7"                         #13
 			"GFX_empty:p3:c4"
 			"GFX_confederate_female_headgear_mid:p5:c3"             #14
 			"GFX_character_implants:p10"
-			"GFX_mongol_female_hair:p1:h:y"                    #15
+			"GFX_indian_female_hair:p1:h:y"                    #15
 			"GFX_confederate_female_headgear:p5:c5"                 #20
 			"GFX_character_imprisoned:p6"                       #21
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { }
@@ -188,43 +187,43 @@ spriteTypes = {
 
 	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_sinoconfederategfx_female1"
+		name = "PORTRAIT_indoconfederategfx_female1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_confederate_female_clothes_behind:p3:c0"
 			"GFX_confederate_female_headgear_behind:p5:c1"
-			"GFX_mongol_female_hair_behind_midage:p1:h:y"
-			"GFX_mongol_female_base_midage:p2"
-			"GFX_mongol_female_neck_midage:d0"
-			"GFX_mongol_female_cheeks_midage:d4"
-			"GFX_mongol_female_chin_midage:d1"
-			"GFX_mongol_female_mouth_midage:d2"
-			"GFX_mongol_female_nose_midage:d3"			
-			"GFX_mongol_female_eyes_midage:d6"
-			"GFX_mongol_female_eyes2:d6:e"
+			"GFX_indian_female_hair_behind_midage:p1:h:y"
+			"GFX_indian_female_base_midage:p2"
+			"GFX_indian_female_neck_midage:d0"
+			"GFX_indian_female_cheeks_midage:d4"
+			"GFX_indian_female_chin_midage:d1"
+			"GFX_indian_female_mouth_midage:d2"
+			"GFX_indian_female_nose_midage:d3"			
+			"GFX_indian_female_eyes_midage:d6"
+			"GFX_indian_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_confederate_female_clothes:p3:c2"			
-			"GFX_mongol_female_ear_midage:d7"
+			"GFX_indian_female_ear_midage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_confederate_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_mongol_female_hair_midage:p1:h:y"
+			"GFX_indian_female_hair_midage:p1:h:y"
 			"GFX_confederate_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { }
@@ -232,77 +231,76 @@ spriteTypes = {
 
 	# Old Age
 	portraitType = {
-		name = "PORTRAIT_sinoconfederategfx_female2"
+		name = "PORTRAIT_indoconfederategfx_female2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_confederate_female_clothes_behind:p3:c0"
 			"GFX_confederate_female_headgear_behind:p5:c1"
-			"GFX_mongol_female_hair_behind_oldage:p1:h:y"
-			"GFX_mongol_female_base_oldage:p2"
-			"GFX_mongol_female_neck_oldage:d0"
-			"GFX_mongol_female_cheeks_oldage:d4"
-			"GFX_mongol_female_chin_oldage:d1"
-			"GFX_mongol_female_mouth_oldage:d2"
-			"GFX_mongol_female_nose_oldage:d3"
-			"GFX_mongol_female_eyes_oldage:d6"
-			"GFX_mongol_female_eyes2:d6:e"
+			"GFX_indian_female_hair_behind_oldage:p1:h:y"
+			"GFX_indian_female_base_oldage:p2"
+			"GFX_indian_female_neck_oldage:d0"
+			"GFX_indian_female_cheeks_oldage:d4"
+			"GFX_indian_female_chin_oldage:d1"
+			"GFX_indian_female_mouth_oldage:d2"
+			"GFX_indian_female_nose_oldage:d3"
+			"GFX_indian_female_eyes_oldage:d6"
+			"GFX_indian_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_confederate_female_clothes:p3:c2"			
-			"GFX_mongol_female_ear_oldage:d7"
+			"GFX_indian_female_ear_oldage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_confederate_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_mongol_female_hair_oldage:p1:h:y"
+			"GFX_indian_female_hair_oldage:p1:h:y"
 			"GFX_confederate_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
 
-		
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
 			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
-			{ 30 22 18 } { 180 170 151 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
-	### FRONTIER MALE - EAST ASIAN #
+	
+	### FRONTIER MALE - INDIAN #
 	# CULTURE_INDEX: 0 = clothes behind, 1 = headgear behind, 2 = clothes, 3 = headgear mid, 4 = clothes infront, 5 = headgear
 	# Young
 	portraitType = {
-		name = "PORTRAIT_sinofrontiergfx_male"
+		name = "PORTRAIT_indofrontiergfx_male"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_frontier_male_clothes_behind:p3:c0"
 			"GFX_frontier_male_headgear_behind:p5:c1"
-			"GFX_mongol_male_hair_behind:p1:h:y"
-			"GFX_mongol_male_beard_behind:p4:h:y"
-			"GFX_mongol_male_base:p2"
-			"GFX_mongol_male_neck:d0"
-			"GFX_mongol_male_cheeks:d4"
-			"GFX_mongol_male_chin:d1"
-			"GFX_mongol_male_mouth:d2"
-			"GFX_mongol_male_nose:d3"
-			"GFX_mongol_male_eyes:d6"
-			"GFX_mongol_male_eyes2:d6:e"
+			"GFX_indian_male_hair_behind:p1:h:y"
+			"GFX_indian_male_beard_behind:p4:h:y"
+			"GFX_indian_male_base:p2"
+			"GFX_indian_male_neck:d0"
+			"GFX_indian_male_cheeks:d4"
+			"GFX_indian_male_chin:d1"
+			"GFX_indian_male_mouth:d2"
+			"GFX_indian_male_nose:d3"
+			"GFX_indian_male_eyes:d6"
+			"GFX_indian_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_frontier_male_clothes:p3:c2"
 			"GFX_frontier_male_headgear_mid:p5:c3"
-			"GFX_mongol_male_ear:d7"			
-			"GFX_mongol_male_beard:p4:h:y"
+			"GFX_indian_male_ear:d7"			
+			"GFX_indian_male_beard:p4:h:y"
 			"GFX_character_implants:p10"
-		   	"GFX_mongol_male_hair:p1:h:y"
+		   	"GFX_indian_male_hair:p1:h:y"
 			"GFX_frontier_male_clothes_infront:p3:c4"
 			"GFX_frontier_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -310,13 +308,13 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 } 
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
@@ -324,31 +322,31 @@ spriteTypes = {
 	
 	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_sinofrontiergfx_male1"
+		name = "PORTRAIT_indofrontiergfx_male1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"						#0
 			"GFX_frontier_male_clothes_behind:p3:c0"
 			"GFX_frontier_male_headgear_behind:p5:c1"
-			"GFX_mongol_male_hair_behind_midage:p1:h:y"
-			"GFX_mongol_male_beard_behind_midage:p4:h:y"
-			"GFX_mongol_male_base_midage:p2"					#5
-			"GFX_mongol_male_neck_midage:d0"
-			"GFX_mongol_male_cheeks_midage:d4"
-			"GFX_mongol_male_chin_midage:d1"
-			"GFX_mongol_male_mouth_midage:d2"
-			"GFX_mongol_male_nose_midage:d3"					#10
-			"GFX_mongol_male_eyes_midage:d6"
-			"GFX_mongol_male_eyes2:d6:e"
+			"GFX_indian_male_hair_behind_midage:p1:h:y"
+			"GFX_indian_male_beard_behind_midage:p4:h:y"
+			"GFX_indian_male_base_midage:p2"					#5
+			"GFX_indian_male_neck_midage:d0"
+			"GFX_indian_male_cheeks_midage:d4"
+			"GFX_indian_male_chin_midage:d1"
+			"GFX_indian_male_mouth_midage:d2"
+			"GFX_indian_male_nose_midage:d3"					#10
+			"GFX_indian_male_eyes_midage:d6"
+			"GFX_indian_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"							#20
 			"GFX_character_boils:p9"
 			"GFX_frontier_male_clothes:p3:c2"
 			"GFX_frontier_male_headgear_mid:p5:c3"
-			"GFX_mongol_male_ear_midage:d7"					#15
-			"GFX_mongol_male_beard_midage:p4:h:y"
+			"GFX_indian_male_ear_midage:d7"					#15
+			"GFX_indian_male_beard_midage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_mongol_male_hair_midage:p1:h:y"
+			"GFX_indian_male_hair_midage:p1:h:y"
 			"GFX_frontier_male_clothes_infront:p3:c4"
 			"GFX_frontier_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -356,46 +354,46 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-		
 			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
+		
 		
 		headgear_that_hides_hair = { 10 }
 	}
 	
 	# Old Age
 	portraitType = {
-		name = "PORTRAIT_sinofrontiergfx_male2"
+		name = "PORTRAIT_indofrontiergfx_male2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_frontier_male_clothes_behind:p3:c0"
 			"GFX_frontier_male_headgear_behind:p5:c1"
-			"GFX_mongol_male_hair_behind_oldage:p1:h:y"
-			"GFX_mongol_male_beard_behind_oldage:p4:h:y"
-			"GFX_mongol_male_base_oldage:p2"
-			"GFX_mongol_male_neck_oldage:d0"
-			"GFX_mongol_male_cheeks_oldage:d4"
-			"GFX_mongol_male_chin_oldage:d1"
-			"GFX_mongol_male_mouth_oldage:d2"
-			"GFX_mongol_male_nose_oldage:d3"
-			"GFX_mongol_male_eyes_oldage:d6"
-			"GFX_mongol_male_eyes2:d6:e"
+			"GFX_indian_male_hair_behind_oldage:p1:h:y"
+			"GFX_indian_male_beard_behind_oldage:p4:h:y"
+			"GFX_indian_male_base_oldage:p2"
+			"GFX_indian_male_neck_oldage:d0"
+			"GFX_indian_male_cheeks_oldage:d4"
+			"GFX_indian_male_chin_oldage:d1"
+			"GFX_indian_male_mouth_oldage:d2"
+			"GFX_indian_male_nose_oldage:d3"
+			"GFX_indian_male_eyes_oldage:d6"
+			"GFX_indian_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_frontier_male_clothes:p3:c2"
 			"GFX_frontier_male_headgear_mid:p5:c3"
-			"GFX_mongol_male_ear_oldage:d7"
-			"GFX_mongol_male_beard_oldage:p4:h:y"
+			"GFX_indian_male_ear_oldage:d7"
+			"GFX_indian_male_beard_oldage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_mongol_male_hair_oldage:p1:h:y"
+			"GFX_indian_male_hair_oldage:p1:h:y"
 			"GFX_frontier_male_clothes_infront:p3:c4"
 			"GFX_frontier_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -404,56 +402,55 @@ spriteTypes = {
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
 			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
-			{ 30 22 18 } { 180 170 151 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
-	### FRONTIER FEMALE - WESTERN EUROPEAN ####
+	### FRONTIER FEMALE - INDIAN ####
 	# Young
 	portraitType = {
-		name = "PORTRAIT_sinofrontiergfx_female"
+		name = "PORTRAIT_indofrontiergfx_female"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_frontier_female_clothes_behind:p3:c0"              #1
 			"GFX_frontier_female_headgear_behind:p5:c1"             #2
-			"GFX_mongol_female_hair_behind:p1:h:y"             #3
-			"GFX_mongol_female_base:p2"                        #4
-			"GFX_mongol_female_neck:d0"                        #5
-			"GFX_mongol_female_cheeks:d4"                      #6
-			"GFX_mongol_female_chin:d1"                        #7
-			"GFX_mongol_female_mouth:d2"                       #8
-			"GFX_mongol_female_nose:d3"                        #9
-			"GFX_mongol_female_eyes:d6"                        #10
-			"GFX_mongol_female_eyes2:d6:e"			            #11
+			"GFX_indian_female_hair_behind:p1:h:y"             #3
+			"GFX_indian_female_base:p2"                        #4
+			"GFX_indian_female_neck:d0"                        #5
+			"GFX_indian_female_cheeks:d4"                      #6
+			"GFX_indian_female_chin:d1"                        #7
+			"GFX_indian_female_mouth:d2"                       #8
+			"GFX_indian_female_nose:d3"                        #9
+			"GFX_indian_female_eyes:d6"                        #10
+			"GFX_indian_female_eyes2:d6:e"			            #11
 			"GFX_character_scars:p7:y"                            #16
 			"GFX_character_reddots:p8"                          #17
 			"GFX_character_boils:p9"                            #18
 			"GFX_frontier_female_clothes:p3:c2"                  #12
-			"GFX_mongol_female_ear:d7"                         #13
+			"GFX_indian_female_ear:d7"                         #13
 			"GFX_empty:p3:c4"
 			"GFX_frontier_female_headgear_mid:p5:c3"             #14
 			"GFX_character_implants:p10"
-			"GFX_mongol_female_hair:p1:h:y"                    #15
+			"GFX_indian_female_hair:p1:h:y"                    #15
 			"GFX_frontier_female_headgear:p5:c5"                 #20
 			"GFX_character_imprisoned:p6"                       #21
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { }
@@ -461,43 +458,43 @@ spriteTypes = {
 
 	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_sinofrontiergfx_female1"
+		name = "PORTRAIT_indofrontiergfx_female1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_frontier_female_clothes_behind:p3:c0"
 			"GFX_frontier_female_headgear_behind:p5:c1"
-			"GFX_mongol_female_hair_behind_midage:p1:h:y"
-			"GFX_mongol_female_base_midage:p2"
-			"GFX_mongol_female_neck_midage:d0"
-			"GFX_mongol_female_cheeks_midage:d4"
-			"GFX_mongol_female_chin_midage:d1"
-			"GFX_mongol_female_mouth_midage:d2"
-			"GFX_mongol_female_nose_midage:d3"			
-			"GFX_mongol_female_eyes_midage:d6"
-			"GFX_mongol_female_eyes2:d6:e"
+			"GFX_indian_female_hair_behind_midage:p1:h:y"
+			"GFX_indian_female_base_midage:p2"
+			"GFX_indian_female_neck_midage:d0"
+			"GFX_indian_female_cheeks_midage:d4"
+			"GFX_indian_female_chin_midage:d1"
+			"GFX_indian_female_mouth_midage:d2"
+			"GFX_indian_female_nose_midage:d3"			
+			"GFX_indian_female_eyes_midage:d6"
+			"GFX_indian_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_frontier_female_clothes:p3:c2"			
-			"GFX_mongol_female_ear_midage:d7"
+			"GFX_indian_female_ear_midage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_frontier_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_mongol_female_hair_midage:p1:h:y"
+			"GFX_indian_female_hair_midage:p1:h:y"
 			"GFX_frontier_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { }
@@ -505,77 +502,75 @@ spriteTypes = {
 
 	# Old Age
 	portraitType = {
-		name = "PORTRAIT_sinofrontiergfx_female2"
+		name = "PORTRAIT_indofrontiergfx_female2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_frontier_female_clothes_behind:p3:c0"
 			"GFX_frontier_female_headgear_behind:p5:c1"
-			"GFX_mongol_female_hair_behind_oldage:p1:h:y"
-			"GFX_mongol_female_base_oldage:p2"
-			"GFX_mongol_female_neck_oldage:d0"
-			"GFX_mongol_female_cheeks_oldage:d4"
-			"GFX_mongol_female_chin_oldage:d1"
-			"GFX_mongol_female_mouth_oldage:d2"
-			"GFX_mongol_female_nose_oldage:d3"
-			"GFX_mongol_female_eyes_oldage:d6"
-			"GFX_mongol_female_eyes2:d6:e"
+			"GFX_indian_female_hair_behind_oldage:p1:h:y"
+			"GFX_indian_female_base_oldage:p2"
+			"GFX_indian_female_neck_oldage:d0"
+			"GFX_indian_female_cheeks_oldage:d4"
+			"GFX_indian_female_chin_oldage:d1"
+			"GFX_indian_female_mouth_oldage:d2"
+			"GFX_indian_female_nose_oldage:d3"
+			"GFX_indian_female_eyes_oldage:d6"
+			"GFX_indian_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_frontier_female_clothes:p3:c2"			
-			"GFX_mongol_female_ear_oldage:d7"
+			"GFX_indian_female_ear_oldage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_frontier_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_mongol_female_hair_oldage:p1:h:y"
+			"GFX_indian_female_hair_oldage:p1:h:y"
 			"GFX_frontier_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
 
-		
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
 			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
-			{ 30 22 18 } { 180 170 151 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
-	### SAMAWATI MALE - EAST ASIAN #
+	### SAMAWATI MALE - INDIAN #
 	# CULTURE_INDEX: 0 = clothes behind, 1 = headgear behind, 2 = clothes, 3 = headgear mid, 4 = clothes infront, 5 = headgear
 	# Young
 	portraitType = {
-		name = "PORTRAIT_sinosamawatigfx_male"
+		name = "PORTRAIT_indosamawatigfx_male"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_samawati_male_clothes_behind:p3:c0"
 			"GFX_samawati_male_headgear_behind:p5:c1"
-			"GFX_mongol_male_hair_behind:p1:h:y"
-			"GFX_mongol_male_beard_behind:p4:h:y"
-			"GFX_mongol_male_base:p2"
-			"GFX_mongol_male_neck:d0"
-			"GFX_mongol_male_cheeks:d4"
-			"GFX_mongol_male_chin:d1"
-			"GFX_mongol_male_mouth:d2"
-			"GFX_mongol_male_nose:d3"
-			"GFX_mongol_male_eyes:d6"
-			"GFX_mongol_male_eyes2:d6:e"
+			"GFX_indian_male_hair_behind:p1:h:y"
+			"GFX_indian_male_beard_behind:p4:h:y"
+			"GFX_indian_male_base:p2"
+			"GFX_indian_male_neck:d0"
+			"GFX_indian_male_cheeks:d4"
+			"GFX_indian_male_chin:d1"
+			"GFX_indian_male_mouth:d2"
+			"GFX_indian_male_nose:d3"
+			"GFX_indian_male_eyes:d6"
+			"GFX_indian_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_samawati_male_clothes:p3:c2"
 			"GFX_samawati_male_headgear_mid:p5:c3"
-			"GFX_mongol_male_ear:d7"			
-			"GFX_mongol_male_beard:p4:h:y"
+			"GFX_indian_male_ear:d7"			
+			"GFX_indian_male_beard:p4:h:y"
 			"GFX_character_implants:p10"
-		   	"GFX_mongol_male_hair:p1:h:y"
+		   	"GFX_indian_male_hair:p1:h:y"
 			"GFX_samawati_male_clothes_infront:p3:c4"
 			"GFX_samawati_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -583,13 +578,13 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 } 
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
@@ -597,31 +592,31 @@ spriteTypes = {
 	
 	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_sinosamawatigfx_male1"
+		name = "PORTRAIT_indosamawatigfx_male1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"						#0
 			"GFX_samawati_male_clothes_behind:p3:c0"
 			"GFX_samawati_male_headgear_behind:p5:c1"
-			"GFX_mongol_male_hair_behind_midage:p1:h:y"
-			"GFX_mongol_male_beard_behind_midage:p4:h:y"
-			"GFX_mongol_male_base_midage:p2"					#5
-			"GFX_mongol_male_neck_midage:d0"
-			"GFX_mongol_male_cheeks_midage:d4"
-			"GFX_mongol_male_chin_midage:d1"
-			"GFX_mongol_male_mouth_midage:d2"
-			"GFX_mongol_male_nose_midage:d3"					#10
-			"GFX_mongol_male_eyes_midage:d6"
-			"GFX_mongol_male_eyes2:d6:e"
+			"GFX_indian_male_hair_behind_midage:p1:h:y"
+			"GFX_indian_male_beard_behind_midage:p4:h:y"
+			"GFX_indian_male_base_midage:p2"					#5
+			"GFX_indian_male_neck_midage:d0"
+			"GFX_indian_male_cheeks_midage:d4"
+			"GFX_indian_male_chin_midage:d1"
+			"GFX_indian_male_mouth_midage:d2"
+			"GFX_indian_male_nose_midage:d3"					#10
+			"GFX_indian_male_eyes_midage:d6"
+			"GFX_indian_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"							#20
 			"GFX_character_boils:p9"
 			"GFX_samawati_male_clothes:p3:c2"
 			"GFX_samawati_male_headgear_mid:p5:c3"
-			"GFX_mongol_male_ear_midage:d7"					#15
-			"GFX_mongol_male_beard_midage:p4:h:y"
+			"GFX_indian_male_ear_midage:d7"					#15
+			"GFX_indian_male_beard_midage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_mongol_male_hair_midage:p1:h:y"
+			"GFX_indian_male_hair_midage:p1:h:y"
 			"GFX_samawati_male_clothes_infront:p3:c4"
 			"GFX_samawati_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -629,46 +624,46 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-		
 			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
+		
 		
 		headgear_that_hides_hair = { 10 }
 	}
 	
 	# Old Age
 	portraitType = {
-		name = "PORTRAIT_sinosamawatigfx_male2"
+		name = "PORTRAIT_indosamawatigfx_male2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_samawati_male_clothes_behind:p3:c0"
 			"GFX_samawati_male_headgear_behind:p5:c1"
-			"GFX_mongol_male_hair_behind_oldage:p1:h:y"
-			"GFX_mongol_male_beard_behind_oldage:p4:h:y"
-			"GFX_mongol_male_base_oldage:p2"
-			"GFX_mongol_male_neck_oldage:d0"
-			"GFX_mongol_male_cheeks_oldage:d4"
-			"GFX_mongol_male_chin_oldage:d1"
-			"GFX_mongol_male_mouth_oldage:d2"
-			"GFX_mongol_male_nose_oldage:d3"
-			"GFX_mongol_male_eyes_oldage:d6"
-			"GFX_mongol_male_eyes2:d6:e"
+			"GFX_indian_male_hair_behind_oldage:p1:h:y"
+			"GFX_indian_male_beard_behind_oldage:p4:h:y"
+			"GFX_indian_male_base_oldage:p2"
+			"GFX_indian_male_neck_oldage:d0"
+			"GFX_indian_male_cheeks_oldage:d4"
+			"GFX_indian_male_chin_oldage:d1"
+			"GFX_indian_male_mouth_oldage:d2"
+			"GFX_indian_male_nose_oldage:d3"
+			"GFX_indian_male_eyes_oldage:d6"
+			"GFX_indian_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_samawati_male_clothes:p3:c2"
 			"GFX_samawati_male_headgear_mid:p5:c3"
-			"GFX_mongol_male_ear_oldage:d7"
-			"GFX_mongol_male_beard_oldage:p4:h:y"
+			"GFX_indian_male_ear_oldage:d7"
+			"GFX_indian_male_beard_oldage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_mongol_male_hair_oldage:p1:h:y"
+			"GFX_indian_male_hair_oldage:p1:h:y"
 			"GFX_samawati_male_clothes_infront:p3:c4"
 			"GFX_samawati_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -677,56 +672,55 @@ spriteTypes = {
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
 			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
-			{ 30 22 18 } { 180 170 151 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
-	### SAMAWATI FEMALE - WESTERN EUROPEAN ####
+	### SAMAWATI FEMALE - INDIAN ####
 	# Young
 	portraitType = {
-		name = "PORTRAIT_sinosamawatigfx_female"
+		name = "PORTRAIT_indosamawatigfx_female"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_samawati_female_clothes_behind:p3:c0"              #1
 			"GFX_samawati_female_headgear_behind:p5:c1"             #2
-			"GFX_mongol_female_hair_behind:p1:h:y"             #3
-			"GFX_mongol_female_base:p2"                        #4
-			"GFX_mongol_female_neck:d0"                        #5
-			"GFX_mongol_female_cheeks:d4"                      #6
-			"GFX_mongol_female_chin:d1"                        #7
-			"GFX_mongol_female_mouth:d2"                       #8
-			"GFX_mongol_female_nose:d3"                        #9
-			"GFX_mongol_female_eyes:d6"                        #10
-			"GFX_mongol_female_eyes2:d6:e"			            #11
+			"GFX_indian_female_hair_behind:p1:h:y"             #3
+			"GFX_indian_female_base:p2"                        #4
+			"GFX_indian_female_neck:d0"                        #5
+			"GFX_indian_female_cheeks:d4"                      #6
+			"GFX_indian_female_chin:d1"                        #7
+			"GFX_indian_female_mouth:d2"                       #8
+			"GFX_indian_female_nose:d3"                        #9
+			"GFX_indian_female_eyes:d6"                        #10
+			"GFX_indian_female_eyes2:d6:e"			            #11
 			"GFX_character_scars:p7:y"                            #16
 			"GFX_character_reddots:p8"                          #17
 			"GFX_character_boils:p9"                            #18
 			"GFX_samawati_female_clothes:p3:c2"                  #12
-			"GFX_mongol_female_ear:d7"                         #13
+			"GFX_indian_female_ear:d7"                         #13
 			"GFX_empty:p3:c4"
 			"GFX_samawati_female_headgear_mid:p5:c3"             #14
 			"GFX_character_implants:p10"
-			"GFX_mongol_female_hair:p1:h:y"                    #15
+			"GFX_indian_female_hair:p1:h:y"                    #15
 			"GFX_samawati_female_headgear:p5:c5"                 #20
 			"GFX_character_imprisoned:p6"                       #21
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { }
@@ -734,43 +728,43 @@ spriteTypes = {
 
 	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_sinosamawatigfx_female1"
+		name = "PORTRAIT_indosamawatigfx_female1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_samawati_female_clothes_behind:p3:c0"
 			"GFX_samawati_female_headgear_behind:p5:c1"
-			"GFX_mongol_female_hair_behind_midage:p1:h:y"
-			"GFX_mongol_female_base_midage:p2"
-			"GFX_mongol_female_neck_midage:d0"
-			"GFX_mongol_female_cheeks_midage:d4"
-			"GFX_mongol_female_chin_midage:d1"
-			"GFX_mongol_female_mouth_midage:d2"
-			"GFX_mongol_female_nose_midage:d3"			
-			"GFX_mongol_female_eyes_midage:d6"
-			"GFX_mongol_female_eyes2:d6:e"
+			"GFX_indian_female_hair_behind_midage:p1:h:y"
+			"GFX_indian_female_base_midage:p2"
+			"GFX_indian_female_neck_midage:d0"
+			"GFX_indian_female_cheeks_midage:d4"
+			"GFX_indian_female_chin_midage:d1"
+			"GFX_indian_female_mouth_midage:d2"
+			"GFX_indian_female_nose_midage:d3"			
+			"GFX_indian_female_eyes_midage:d6"
+			"GFX_indian_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_samawati_female_clothes:p3:c2"			
-			"GFX_mongol_female_ear_midage:d7"
+			"GFX_indian_female_ear_midage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_samawati_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_mongol_female_hair_midage:p1:h:y"
+			"GFX_indian_female_hair_midage:p1:h:y"
 			"GFX_samawati_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { }
@@ -778,77 +772,75 @@ spriteTypes = {
 
 	# Old Age
 	portraitType = {
-		name = "PORTRAIT_sinosamawatigfx_female2"
+		name = "PORTRAIT_indosamawatigfx_female2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_samawati_female_clothes_behind:p3:c0"
 			"GFX_samawati_female_headgear_behind:p5:c1"
-			"GFX_mongol_female_hair_behind_oldage:p1:h:y"
-			"GFX_mongol_female_base_oldage:p2"
-			"GFX_mongol_female_neck_oldage:d0"
-			"GFX_mongol_female_cheeks_oldage:d4"
-			"GFX_mongol_female_chin_oldage:d1"
-			"GFX_mongol_female_mouth_oldage:d2"
-			"GFX_mongol_female_nose_oldage:d3"
-			"GFX_mongol_female_eyes_oldage:d6"
-			"GFX_mongol_female_eyes2:d6:e"
+			"GFX_indian_female_hair_behind_oldage:p1:h:y"
+			"GFX_indian_female_base_oldage:p2"
+			"GFX_indian_female_neck_oldage:d0"
+			"GFX_indian_female_cheeks_oldage:d4"
+			"GFX_indian_female_chin_oldage:d1"
+			"GFX_indian_female_mouth_oldage:d2"
+			"GFX_indian_female_nose_oldage:d3"
+			"GFX_indian_female_eyes_oldage:d6"
+			"GFX_indian_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_samawati_female_clothes:p3:c2"			
-			"GFX_mongol_female_ear_oldage:d7"
+			"GFX_indian_female_ear_oldage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_samawati_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_mongol_female_hair_oldage:p1:h:y"
+			"GFX_indian_female_hair_oldage:p1:h:y"
 			"GFX_samawati_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
 
-		
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
 			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
-			{ 30 22 18 } { 180 170 151 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
-	### AVALONIAN MALE - EAST ASIAN #
+	### AVALONIAN MALE - INDIAN #
 	# CULTURE_INDEX: 0 = clothes behind, 1 = headgear behind, 2 = clothes, 3 = headgear mid, 4 = clothes infront, 5 = headgear
 	# Young
 	portraitType = {
-		name = "PORTRAIT_sinoavalongfx_male"
+		name = "PORTRAIT_indoavalongfx_male"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_avalon_male_clothes_behind:p3:c0"
 			"GFX_avalon_male_headgear_behind:p5:c1"
-			"GFX_mongol_male_hair_behind:p1:h:y"
-			"GFX_mongol_male_beard_behind:p4:h:y"
-			"GFX_mongol_male_base:p2"
-			"GFX_mongol_male_neck:d0"
-			"GFX_mongol_male_cheeks:d4"
-			"GFX_mongol_male_chin:d1"
-			"GFX_mongol_male_mouth:d2"
-			"GFX_mongol_male_nose:d3"
-			"GFX_mongol_male_eyes:d6"
-			"GFX_mongol_male_eyes2:d6:e"
+			"GFX_indian_male_hair_behind:p1:h:y"
+			"GFX_indian_male_beard_behind:p4:h:y"
+			"GFX_indian_male_base:p2"
+			"GFX_indian_male_neck:d0"
+			"GFX_indian_male_cheeks:d4"
+			"GFX_indian_male_chin:d1"
+			"GFX_indian_male_mouth:d2"
+			"GFX_indian_male_nose:d3"
+			"GFX_indian_male_eyes:d6"
+			"GFX_indian_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_avalon_male_clothes:p3:c2"
 			"GFX_avalon_male_headgear_mid:p5:c3"
-			"GFX_mongol_male_ear:d7"			
-			"GFX_mongol_male_beard:p4:h:y"
+			"GFX_indian_male_ear:d7"			
+			"GFX_indian_male_beard:p4:h:y"
 			"GFX_character_implants:p10"
-		   	"GFX_mongol_male_hair:p1:h:y"
+		   	"GFX_indian_male_hair:p1:h:y"
 			"GFX_avalon_male_clothes_infront:p3:c4"
 			"GFX_avalon_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -856,13 +848,13 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 } 
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
@@ -870,31 +862,31 @@ spriteTypes = {
 	
 	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_sinoavalongfx_male1"
+		name = "PORTRAIT_indoavalongfx_male1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"						#0
 			"GFX_avalon_male_clothes_behind:p3:c0"
 			"GFX_avalon_male_headgear_behind:p5:c1"
-			"GFX_mongol_male_hair_behind_midage:p1:h:y"
-			"GFX_mongol_male_beard_behind_midage:p4:h:y"
-			"GFX_mongol_male_base_midage:p2"					#5
-			"GFX_mongol_male_neck_midage:d0"
-			"GFX_mongol_male_cheeks_midage:d4"
-			"GFX_mongol_male_chin_midage:d1"
-			"GFX_mongol_male_mouth_midage:d2"
-			"GFX_mongol_male_nose_midage:d3"					#10
-			"GFX_mongol_male_eyes_midage:d6"
-			"GFX_mongol_male_eyes2:d6:e"
+			"GFX_indian_male_hair_behind_midage:p1:h:y"
+			"GFX_indian_male_beard_behind_midage:p4:h:y"
+			"GFX_indian_male_base_midage:p2"					#5
+			"GFX_indian_male_neck_midage:d0"
+			"GFX_indian_male_cheeks_midage:d4"
+			"GFX_indian_male_chin_midage:d1"
+			"GFX_indian_male_mouth_midage:d2"
+			"GFX_indian_male_nose_midage:d3"					#10
+			"GFX_indian_male_eyes_midage:d6"
+			"GFX_indian_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"							#20
 			"GFX_character_boils:p9"
 			"GFX_avalon_male_clothes:p3:c2"
 			"GFX_avalon_male_headgear_mid:p5:c3"
-			"GFX_mongol_male_ear_midage:d7"					#15
-			"GFX_mongol_male_beard_midage:p4:h:y"
+			"GFX_indian_male_ear_midage:d7"					#15
+			"GFX_indian_male_beard_midage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_mongol_male_hair_midage:p1:h:y"
+			"GFX_indian_male_hair_midage:p1:h:y"
 			"GFX_avalon_male_clothes_infront:p3:c4"
 			"GFX_avalon_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -902,46 +894,46 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-		
 			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
+		
 		
 		headgear_that_hides_hair = { 10 }
 	}
 	
 	# Old Age
 	portraitType = {
-		name = "PORTRAIT_sinoavalongfx_male2"
+		name = "PORTRAIT_indoavalongfx_male2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_avalon_male_clothes_behind:p3:c0"
 			"GFX_avalon_male_headgear_behind:p5:c1"
-			"GFX_mongol_male_hair_behind_oldage:p1:h:y"
-			"GFX_mongol_male_beard_behind_oldage:p4:h:y"
-			"GFX_mongol_male_base_oldage:p2"
-			"GFX_mongol_male_neck_oldage:d0"
-			"GFX_mongol_male_cheeks_oldage:d4"
-			"GFX_mongol_male_chin_oldage:d1"
-			"GFX_mongol_male_mouth_oldage:d2"
-			"GFX_mongol_male_nose_oldage:d3"
-			"GFX_mongol_male_eyes_oldage:d6"
-			"GFX_mongol_male_eyes2:d6:e"
+			"GFX_indian_male_hair_behind_oldage:p1:h:y"
+			"GFX_indian_male_beard_behind_oldage:p4:h:y"
+			"GFX_indian_male_base_oldage:p2"
+			"GFX_indian_male_neck_oldage:d0"
+			"GFX_indian_male_cheeks_oldage:d4"
+			"GFX_indian_male_chin_oldage:d1"
+			"GFX_indian_male_mouth_oldage:d2"
+			"GFX_indian_male_nose_oldage:d3"
+			"GFX_indian_male_eyes_oldage:d6"
+			"GFX_indian_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_avalon_male_clothes:p3:c2"
 			"GFX_avalon_male_headgear_mid:p5:c3"
-			"GFX_mongol_male_ear_oldage:d7"
-			"GFX_mongol_male_beard_oldage:p4:h:y"
+			"GFX_indian_male_ear_oldage:d7"
+			"GFX_indian_male_beard_oldage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_mongol_male_hair_oldage:p1:h:y"
+			"GFX_indian_male_hair_oldage:p1:h:y"
 			"GFX_avalon_male_clothes_infront:p3:c4"
 			"GFX_avalon_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -950,56 +942,55 @@ spriteTypes = {
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
 			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
-			{ 30 22 18 } { 180 170 151 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
-	### AVALONIAN FEMALE - WESTERN EUROPEAN ####
+	### AVALONIAN FEMALE - INDIAN ####
 	# Young
 	portraitType = {
-		name = "PORTRAIT_sinoavalongfx_female"
+		name = "PORTRAIT_indoavalongfx_female"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_avalon_female_clothes_behind:p3:c0"              #1
 			"GFX_avalon_female_headgear_behind:p5:c1"             #2
-			"GFX_mongol_female_hair_behind:p1:h:y"             #3
-			"GFX_mongol_female_base:p2"                        #4
-			"GFX_mongol_female_neck:d0"                        #5
-			"GFX_mongol_female_cheeks:d4"                      #6
-			"GFX_mongol_female_chin:d1"                        #7
-			"GFX_mongol_female_mouth:d2"                       #8
-			"GFX_mongol_female_nose:d3"                        #9
-			"GFX_mongol_female_eyes:d6"                        #10
-			"GFX_mongol_female_eyes2:d6:e"			            #11
+			"GFX_indian_female_hair_behind:p1:h:y"             #3
+			"GFX_indian_female_base:p2"                        #4
+			"GFX_indian_female_neck:d0"                        #5
+			"GFX_indian_female_cheeks:d4"                      #6
+			"GFX_indian_female_chin:d1"                        #7
+			"GFX_indian_female_mouth:d2"                       #8
+			"GFX_indian_female_nose:d3"                        #9
+			"GFX_indian_female_eyes:d6"                        #10
+			"GFX_indian_female_eyes2:d6:e"			            #11
 			"GFX_character_scars:p7:y"                            #16
 			"GFX_character_reddots:p8"                          #17
 			"GFX_character_boils:p9"                            #18
 			"GFX_avalon_female_clothes:p3:c2"                  #12
-			"GFX_mongol_female_ear:d7"                         #13
+			"GFX_indian_female_ear:d7"                         #13
 			"GFX_empty:p3:c4"
 			"GFX_avalon_female_headgear_mid:p5:c3"             #14
 			"GFX_character_implants:p10"
-			"GFX_mongol_female_hair:p1:h:y"                    #15
+			"GFX_indian_female_hair:p1:h:y"                    #15
 			"GFX_avalon_female_headgear:p5:c5"                 #20
 			"GFX_character_imprisoned:p6"                       #21
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { }
@@ -1007,43 +998,43 @@ spriteTypes = {
 
 	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_sinoavalongfx_female1"
+		name = "PORTRAIT_indoavalongfx_female1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_avalon_female_clothes_behind:p3:c0"
 			"GFX_avalon_female_headgear_behind:p5:c1"
-			"GFX_mongol_female_hair_behind_midage:p1:h:y"
-			"GFX_mongol_female_base_midage:p2"
-			"GFX_mongol_female_neck_midage:d0"
-			"GFX_mongol_female_cheeks_midage:d4"
-			"GFX_mongol_female_chin_midage:d1"
-			"GFX_mongol_female_mouth_midage:d2"
-			"GFX_mongol_female_nose_midage:d3"			
-			"GFX_mongol_female_eyes_midage:d6"
-			"GFX_mongol_female_eyes2:d6:e"
+			"GFX_indian_female_hair_behind_midage:p1:h:y"
+			"GFX_indian_female_base_midage:p2"
+			"GFX_indian_female_neck_midage:d0"
+			"GFX_indian_female_cheeks_midage:d4"
+			"GFX_indian_female_chin_midage:d1"
+			"GFX_indian_female_mouth_midage:d2"
+			"GFX_indian_female_nose_midage:d3"			
+			"GFX_indian_female_eyes_midage:d6"
+			"GFX_indian_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_avalon_female_clothes:p3:c2"			
-			"GFX_mongol_female_ear_midage:d7"
+			"GFX_indian_female_ear_midage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_avalon_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_mongol_female_hair_midage:p1:h:y"
+			"GFX_indian_female_hair_midage:p1:h:y"
 			"GFX_avalon_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { }
@@ -1051,77 +1042,75 @@ spriteTypes = {
 
 	# Old Age
 	portraitType = {
-		name = "PORTRAIT_sinoavalongfx_female2"
+		name = "PORTRAIT_indoavalongfx_female2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_avalon_female_clothes_behind:p3:c0"
 			"GFX_avalon_female_headgear_behind:p5:c1"
-			"GFX_mongol_female_hair_behind_oldage:p1:h:y"
-			"GFX_mongol_female_base_oldage:p2"
-			"GFX_mongol_female_neck_oldage:d0"
-			"GFX_mongol_female_cheeks_oldage:d4"
-			"GFX_mongol_female_chin_oldage:d1"
-			"GFX_mongol_female_mouth_oldage:d2"
-			"GFX_mongol_female_nose_oldage:d3"
-			"GFX_mongol_female_eyes_oldage:d6"
-			"GFX_mongol_female_eyes2:d6:e"
+			"GFX_indian_female_hair_behind_oldage:p1:h:y"
+			"GFX_indian_female_base_oldage:p2"
+			"GFX_indian_female_neck_oldage:d0"
+			"GFX_indian_female_cheeks_oldage:d4"
+			"GFX_indian_female_chin_oldage:d1"
+			"GFX_indian_female_mouth_oldage:d2"
+			"GFX_indian_female_nose_oldage:d3"
+			"GFX_indian_female_eyes_oldage:d6"
+			"GFX_indian_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_avalon_female_clothes:p3:c2"			
-			"GFX_mongol_female_ear_oldage:d7"
+			"GFX_indian_female_ear_oldage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_avalon_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_mongol_female_hair_oldage:p1:h:y"
+			"GFX_indian_female_hair_oldage:p1:h:y"
 			"GFX_avalon_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
 
-		
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
 			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
-			{ 30 22 18 } { 180 170 151 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
-	### JIONESE MALE - EAST ASIAN #
+	### JIONESE MALE - INDIAN #
 	# CULTURE_INDEX: 0 = clothes behind, 1 = headgear behind, 2 = clothes, 3 = headgear mid, 4 = clothes infront, 5 = headgear
 	# Young
 	portraitType = {
-		name = "PORTRAIT_sinojiongfx_male"
+		name = "PORTRAIT_indojiongfx_male"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_jion_male_clothes_behind:p3:c0"
 			"GFX_jion_male_headgear_behind:p5:c1"
-			"GFX_mongol_male_hair_behind:p1:h:y"
-			"GFX_mongol_male_beard_behind:p4:h:y"
-			"GFX_mongol_male_base:p2"
-			"GFX_mongol_male_neck:d0"
-			"GFX_mongol_male_cheeks:d4"
-			"GFX_mongol_male_chin:d1"
-			"GFX_mongol_male_mouth:d2"
-			"GFX_mongol_male_nose:d3"
-			"GFX_mongol_male_eyes:d6"
-			"GFX_mongol_male_eyes2:d6:e"
+			"GFX_indian_male_hair_behind:p1:h:y"
+			"GFX_indian_male_beard_behind:p4:h:y"
+			"GFX_indian_male_base:p2"
+			"GFX_indian_male_neck:d0"
+			"GFX_indian_male_cheeks:d4"
+			"GFX_indian_male_chin:d1"
+			"GFX_indian_male_mouth:d2"
+			"GFX_indian_male_nose:d3"
+			"GFX_indian_male_eyes:d6"
+			"GFX_indian_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_jion_male_clothes:p3:c2"
 			"GFX_jion_male_headgear_mid:p5:c3"
-			"GFX_mongol_male_ear:d7"			
-			"GFX_mongol_male_beard:p4:h:y"
+			"GFX_indian_male_ear:d7"			
+			"GFX_indian_male_beard:p4:h:y"
 			"GFX_character_implants:p10"
-		   	"GFX_mongol_male_hair:p1:h:y"
+		   	"GFX_indian_male_hair:p1:h:y"
 			"GFX_jion_male_clothes_infront:p3:c4"
 			"GFX_jion_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -1129,13 +1118,13 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 } 
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
@@ -1143,31 +1132,31 @@ spriteTypes = {
 	
 	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_sinojiongfx_male1"
+		name = "PORTRAIT_indojiongfx_male1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"						#0
 			"GFX_jion_male_clothes_behind:p3:c0"
 			"GFX_jion_male_headgear_behind:p5:c1"
-			"GFX_mongol_male_hair_behind_midage:p1:h:y"
-			"GFX_mongol_male_beard_behind_midage:p4:h:y"
-			"GFX_mongol_male_base_midage:p2"					#5
-			"GFX_mongol_male_neck_midage:d0"
-			"GFX_mongol_male_cheeks_midage:d4"
-			"GFX_mongol_male_chin_midage:d1"
-			"GFX_mongol_male_mouth_midage:d2"
-			"GFX_mongol_male_nose_midage:d3"					#10
-			"GFX_mongol_male_eyes_midage:d6"
-			"GFX_mongol_male_eyes2:d6:e"
+			"GFX_indian_male_hair_behind_midage:p1:h:y"
+			"GFX_indian_male_beard_behind_midage:p4:h:y"
+			"GFX_indian_male_base_midage:p2"					#5
+			"GFX_indian_male_neck_midage:d0"
+			"GFX_indian_male_cheeks_midage:d4"
+			"GFX_indian_male_chin_midage:d1"
+			"GFX_indian_male_mouth_midage:d2"
+			"GFX_indian_male_nose_midage:d3"					#10
+			"GFX_indian_male_eyes_midage:d6"
+			"GFX_indian_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"							#20
 			"GFX_character_boils:p9"
 			"GFX_jion_male_clothes:p3:c2"
 			"GFX_jion_male_headgear_mid:p5:c3"
-			"GFX_mongol_male_ear_midage:d7"					#15
-			"GFX_mongol_male_beard_midage:p4:h:y"
+			"GFX_indian_male_ear_midage:d7"					#15
+			"GFX_indian_male_beard_midage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_mongol_male_hair_midage:p1:h:y"
+			"GFX_indian_male_hair_midage:p1:h:y"
 			"GFX_jion_male_clothes_infront:p3:c4"
 			"GFX_jion_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -1175,46 +1164,46 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-		
 			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
+		
 		
 		headgear_that_hides_hair = { 10 }
 	}
 	
 	# Old Age
 	portraitType = {
-		name = "PORTRAIT_sinojiongfx_male2"
+		name = "PORTRAIT_indojiongfx_male2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_jion_male_clothes_behind:p3:c0"
 			"GFX_jion_male_headgear_behind:p5:c1"
-			"GFX_mongol_male_hair_behind_oldage:p1:h:y"
-			"GFX_mongol_male_beard_behind_oldage:p4:h:y"
-			"GFX_mongol_male_base_oldage:p2"
-			"GFX_mongol_male_neck_oldage:d0"
-			"GFX_mongol_male_cheeks_oldage:d4"
-			"GFX_mongol_male_chin_oldage:d1"
-			"GFX_mongol_male_mouth_oldage:d2"
-			"GFX_mongol_male_nose_oldage:d3"
-			"GFX_mongol_male_eyes_oldage:d6"
-			"GFX_mongol_male_eyes2:d6:e"
+			"GFX_indian_male_hair_behind_oldage:p1:h:y"
+			"GFX_indian_male_beard_behind_oldage:p4:h:y"
+			"GFX_indian_male_base_oldage:p2"
+			"GFX_indian_male_neck_oldage:d0"
+			"GFX_indian_male_cheeks_oldage:d4"
+			"GFX_indian_male_chin_oldage:d1"
+			"GFX_indian_male_mouth_oldage:d2"
+			"GFX_indian_male_nose_oldage:d3"
+			"GFX_indian_male_eyes_oldage:d6"
+			"GFX_indian_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_jion_male_clothes:p3:c2"
 			"GFX_jion_male_headgear_mid:p5:c3"
-			"GFX_mongol_male_ear_oldage:d7"
-			"GFX_mongol_male_beard_oldage:p4:h:y"
+			"GFX_indian_male_ear_oldage:d7"
+			"GFX_indian_male_beard_oldage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_mongol_male_hair_oldage:p1:h:y"
+			"GFX_indian_male_hair_oldage:p1:h:y"
 			"GFX_jion_male_clothes_infront:p3:c4"
 			"GFX_jion_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -1223,56 +1212,55 @@ spriteTypes = {
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
 			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
-			{ 30 22 18 } { 180 170 151 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
-	### JIONESE FEMALE - WESTERN EUROPEAN ####
+	### JIONESE FEMALE - INDIAN ####
 	# Young
 	portraitType = {
-		name = "PORTRAIT_sinojiongfx_female"
+		name = "PORTRAIT_indojiongfx_female"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_jion_female_clothes_behind:p3:c0"              #1
 			"GFX_jion_female_headgear_behind:p5:c1"             #2
-			"GFX_mongol_female_hair_behind:p1:h:y"             #3
-			"GFX_mongol_female_base:p2"                        #4
-			"GFX_mongol_female_neck:d0"                        #5
-			"GFX_mongol_female_cheeks:d4"                      #6
-			"GFX_mongol_female_chin:d1"                        #7
-			"GFX_mongol_female_mouth:d2"                       #8
-			"GFX_mongol_female_nose:d3"                        #9
-			"GFX_mongol_female_eyes:d6"                        #10
-			"GFX_mongol_female_eyes2:d6:e"			            #11
+			"GFX_indian_female_hair_behind:p1:h:y"             #3
+			"GFX_indian_female_base:p2"                        #4
+			"GFX_indian_female_neck:d0"                        #5
+			"GFX_indian_female_cheeks:d4"                      #6
+			"GFX_indian_female_chin:d1"                        #7
+			"GFX_indian_female_mouth:d2"                       #8
+			"GFX_indian_female_nose:d3"                        #9
+			"GFX_indian_female_eyes:d6"                        #10
+			"GFX_indian_female_eyes2:d6:e"			            #11
 			"GFX_character_scars:p7:y"                            #16
 			"GFX_character_reddots:p8"                          #17
 			"GFX_character_boils:p9"                            #18
 			"GFX_jion_female_clothes:p3:c2"                  #12
-			"GFX_mongol_female_ear:d7"                         #13
+			"GFX_indian_female_ear:d7"                         #13
 			"GFX_empty:p3:c4"
 			"GFX_jion_female_headgear_mid:p5:c3"             #14
 			"GFX_character_implants:p10"
-			"GFX_mongol_female_hair:p1:h:y"                    #15
+			"GFX_indian_female_hair:p1:h:y"                    #15
 			"GFX_jion_female_headgear:p5:c5"                 #20
 			"GFX_character_imprisoned:p6"                       #21
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { }
@@ -1280,43 +1268,43 @@ spriteTypes = {
 
 	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_sinojiongfx_female1"
+		name = "PORTRAIT_indojiongfx_female1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_jion_female_clothes_behind:p3:c0"
 			"GFX_jion_female_headgear_behind:p5:c1"
-			"GFX_mongol_female_hair_behind_midage:p1:h:y"
-			"GFX_mongol_female_base_midage:p2"
-			"GFX_mongol_female_neck_midage:d0"
-			"GFX_mongol_female_cheeks_midage:d4"
-			"GFX_mongol_female_chin_midage:d1"
-			"GFX_mongol_female_mouth_midage:d2"
-			"GFX_mongol_female_nose_midage:d3"			
-			"GFX_mongol_female_eyes_midage:d6"
-			"GFX_mongol_female_eyes2:d6:e"
+			"GFX_indian_female_hair_behind_midage:p1:h:y"
+			"GFX_indian_female_base_midage:p2"
+			"GFX_indian_female_neck_midage:d0"
+			"GFX_indian_female_cheeks_midage:d4"
+			"GFX_indian_female_chin_midage:d1"
+			"GFX_indian_female_mouth_midage:d2"
+			"GFX_indian_female_nose_midage:d3"			
+			"GFX_indian_female_eyes_midage:d6"
+			"GFX_indian_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_jion_female_clothes:p3:c2"			
-			"GFX_mongol_female_ear_midage:d7"
+			"GFX_indian_female_ear_midage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_jion_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_mongol_female_hair_midage:p1:h:y"
+			"GFX_indian_female_hair_midage:p1:h:y"
 			"GFX_jion_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { }
@@ -1324,77 +1312,76 @@ spriteTypes = {
 
 	# Old Age
 	portraitType = {
-		name = "PORTRAIT_sinojiongfx_female2"
+		name = "PORTRAIT_indojiongfx_female2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_jion_female_clothes_behind:p3:c0"
 			"GFX_jion_female_headgear_behind:p5:c1"
-			"GFX_mongol_female_hair_behind_oldage:p1:h:y"
-			"GFX_mongol_female_base_oldage:p2"
-			"GFX_mongol_female_neck_oldage:d0"
-			"GFX_mongol_female_cheeks_oldage:d4"
-			"GFX_mongol_female_chin_oldage:d1"
-			"GFX_mongol_female_mouth_oldage:d2"
-			"GFX_mongol_female_nose_oldage:d3"
-			"GFX_mongol_female_eyes_oldage:d6"
-			"GFX_mongol_female_eyes2:d6:e"
+			"GFX_indian_female_hair_behind_oldage:p1:h:y"
+			"GFX_indian_female_base_oldage:p2"
+			"GFX_indian_female_neck_oldage:d0"
+			"GFX_indian_female_cheeks_oldage:d4"
+			"GFX_indian_female_chin_oldage:d1"
+			"GFX_indian_female_mouth_oldage:d2"
+			"GFX_indian_female_nose_oldage:d3"
+			"GFX_indian_female_eyes_oldage:d6"
+			"GFX_indian_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_jion_female_clothes:p3:c2"			
-			"GFX_mongol_female_ear_oldage:d7"
+			"GFX_indian_female_ear_oldage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_jion_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_mongol_female_hair_oldage:p1:h:y"
+			"GFX_indian_female_hair_oldage:p1:h:y"
 			"GFX_jion_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
 
-		
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
 			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
-			{ 30 22 18 } { 180 170 151 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
-	### CENTAURI MALE - EAST ASIAN #
+	
+	### CENTAURI MALE - INDIAN #
 	# CULTURE_INDEX: 0 = clothes behind, 1 = headgear behind, 2 = clothes, 3 = headgear mid, 4 = clothes infront, 5 = headgear
 	# Young
 	portraitType = {
-		name = "PORTRAIT_sinocentaurigfx_male"
+		name = "PORTRAIT_indocentaurigfx_male"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_centauri_male_clothes_behind:p3:c0"
 			"GFX_centauri_male_headgear_behind:p5:c1"
-			"GFX_mongol_male_hair_behind:p1:h:y"
-			"GFX_mongol_male_beard_behind:p4:h:y"
-			"GFX_mongol_male_base:p2"
-			"GFX_mongol_male_neck:d0"
-			"GFX_mongol_male_cheeks:d4"
-			"GFX_mongol_male_chin:d1"
-			"GFX_mongol_male_mouth:d2"
-			"GFX_mongol_male_nose:d3"
-			"GFX_mongol_male_eyes:d6"
-			"GFX_mongol_male_eyes2:d6:e"
+			"GFX_indian_male_hair_behind:p1:h:y"
+			"GFX_indian_male_beard_behind:p4:h:y"
+			"GFX_indian_male_base:p2"
+			"GFX_indian_male_neck:d0"
+			"GFX_indian_male_cheeks:d4"
+			"GFX_indian_male_chin:d1"
+			"GFX_indian_male_mouth:d2"
+			"GFX_indian_male_nose:d3"
+			"GFX_indian_male_eyes:d6"
+			"GFX_indian_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_centauri_male_clothes:p3:c2"
 			"GFX_centauri_male_headgear_mid:p5:c3"
-			"GFX_mongol_male_ear:d7"			
-			"GFX_mongol_male_beard:p4:h:y"
+			"GFX_indian_male_ear:d7"			
+			"GFX_indian_male_beard:p4:h:y"
 			"GFX_character_implants:p10"
-		   	"GFX_mongol_male_hair:p1:h:y"
+		   	"GFX_indian_male_hair:p1:h:y"
 			"GFX_centauri_male_clothes_infront:p3:c4"
 			"GFX_centauri_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -1402,13 +1389,13 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 } 
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
@@ -1416,31 +1403,31 @@ spriteTypes = {
 	
 	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_sinocentaurigfx_male1"
+		name = "PORTRAIT_indocentaurigfx_male1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"						#0
 			"GFX_centauri_male_clothes_behind:p3:c0"
 			"GFX_centauri_male_headgear_behind:p5:c1"
-			"GFX_mongol_male_hair_behind_midage:p1:h:y"
-			"GFX_mongol_male_beard_behind_midage:p4:h:y"
-			"GFX_mongol_male_base_midage:p2"					#5
-			"GFX_mongol_male_neck_midage:d0"
-			"GFX_mongol_male_cheeks_midage:d4"
-			"GFX_mongol_male_chin_midage:d1"
-			"GFX_mongol_male_mouth_midage:d2"
-			"GFX_mongol_male_nose_midage:d3"					#10
-			"GFX_mongol_male_eyes_midage:d6"
-			"GFX_mongol_male_eyes2:d6:e"
+			"GFX_indian_male_hair_behind_midage:p1:h:y"
+			"GFX_indian_male_beard_behind_midage:p4:h:y"
+			"GFX_indian_male_base_midage:p2"					#5
+			"GFX_indian_male_neck_midage:d0"
+			"GFX_indian_male_cheeks_midage:d4"
+			"GFX_indian_male_chin_midage:d1"
+			"GFX_indian_male_mouth_midage:d2"
+			"GFX_indian_male_nose_midage:d3"					#10
+			"GFX_indian_male_eyes_midage:d6"
+			"GFX_indian_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"							#20
 			"GFX_character_boils:p9"
 			"GFX_centauri_male_clothes:p3:c2"
 			"GFX_centauri_male_headgear_mid:p5:c3"
-			"GFX_mongol_male_ear_midage:d7"					#15
-			"GFX_mongol_male_beard_midage:p4:h:y"
+			"GFX_indian_male_ear_midage:d7"					#15
+			"GFX_indian_male_beard_midage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_mongol_male_hair_midage:p1:h:y"
+			"GFX_indian_male_hair_midage:p1:h:y"
 			"GFX_centauri_male_clothes_infront:p3:c4"
 			"GFX_centauri_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -1448,46 +1435,46 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-		
 			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
+		
 		
 		headgear_that_hides_hair = { 10 }
 	}
 	
 	# Old Age
 	portraitType = {
-		name = "PORTRAIT_sinocentaurigfx_male2"
+		name = "PORTRAIT_indocentaurigfx_male2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_centauri_male_clothes_behind:p3:c0"
 			"GFX_centauri_male_headgear_behind:p5:c1"
-			"GFX_mongol_male_hair_behind_oldage:p1:h:y"
-			"GFX_mongol_male_beard_behind_oldage:p4:h:y"
-			"GFX_mongol_male_base_oldage:p2"
-			"GFX_mongol_male_neck_oldage:d0"
-			"GFX_mongol_male_cheeks_oldage:d4"
-			"GFX_mongol_male_chin_oldage:d1"
-			"GFX_mongol_male_mouth_oldage:d2"
-			"GFX_mongol_male_nose_oldage:d3"
-			"GFX_mongol_male_eyes_oldage:d6"
-			"GFX_mongol_male_eyes2:d6:e"
+			"GFX_indian_male_hair_behind_oldage:p1:h:y"
+			"GFX_indian_male_beard_behind_oldage:p4:h:y"
+			"GFX_indian_male_base_oldage:p2"
+			"GFX_indian_male_neck_oldage:d0"
+			"GFX_indian_male_cheeks_oldage:d4"
+			"GFX_indian_male_chin_oldage:d1"
+			"GFX_indian_male_mouth_oldage:d2"
+			"GFX_indian_male_nose_oldage:d3"
+			"GFX_indian_male_eyes_oldage:d6"
+			"GFX_indian_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_centauri_male_clothes:p3:c2"
 			"GFX_centauri_male_headgear_mid:p5:c3"
-			"GFX_mongol_male_ear_oldage:d7"
-			"GFX_mongol_male_beard_oldage:p4:h:y"
+			"GFX_indian_male_ear_oldage:d7"
+			"GFX_indian_male_beard_oldage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_mongol_male_hair_oldage:p1:h:y"
+			"GFX_indian_male_hair_oldage:p1:h:y"
 			"GFX_centauri_male_clothes_infront:p3:c4"
 			"GFX_centauri_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -1496,56 +1483,55 @@ spriteTypes = {
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
 			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
-			{ 30 22 18 } { 180 170 151 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
-	### CENTAURI FEMALE - WESTERN EUROPEAN ####
+	### CENTAURI FEMALE - INDIAN ####
 	# Young
 	portraitType = {
-		name = "PORTRAIT_sinocentaurigfx_female"
+		name = "PORTRAIT_indocentaurigfx_female"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_centauri_female_clothes_behind:p3:c0"              #1
 			"GFX_centauri_female_headgear_behind:p5:c1"             #2
-			"GFX_mongol_female_hair_behind:p1:h:y"             #3
-			"GFX_mongol_female_base:p2"                        #4
-			"GFX_mongol_female_neck:d0"                        #5
-			"GFX_mongol_female_cheeks:d4"                      #6
-			"GFX_mongol_female_chin:d1"                        #7
-			"GFX_mongol_female_mouth:d2"                       #8
-			"GFX_mongol_female_nose:d3"                        #9
-			"GFX_mongol_female_eyes:d6"                        #10
-			"GFX_mongol_female_eyes2:d6:e"			            #11
+			"GFX_indian_female_hair_behind:p1:h:y"             #3
+			"GFX_indian_female_base:p2"                        #4
+			"GFX_indian_female_neck:d0"                        #5
+			"GFX_indian_female_cheeks:d4"                      #6
+			"GFX_indian_female_chin:d1"                        #7
+			"GFX_indian_female_mouth:d2"                       #8
+			"GFX_indian_female_nose:d3"                        #9
+			"GFX_indian_female_eyes:d6"                        #10
+			"GFX_indian_female_eyes2:d6:e"			            #11
 			"GFX_character_scars:p7:y"                            #16
 			"GFX_character_reddots:p8"                          #17
 			"GFX_character_boils:p9"                            #18
 			"GFX_centauri_female_clothes:p3:c2"                  #12
-			"GFX_mongol_female_ear:d7"                         #13
+			"GFX_indian_female_ear:d7"                         #13
 			"GFX_empty:p3:c4"
 			"GFX_centauri_female_headgear_mid:p5:c3"             #14
 			"GFX_character_implants:p10"
-			"GFX_mongol_female_hair:p1:h:y"                    #15
+			"GFX_indian_female_hair:p1:h:y"                    #15
 			"GFX_centauri_female_headgear:p5:c5"                 #20
 			"GFX_character_imprisoned:p6"                       #21
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { }
@@ -1553,43 +1539,43 @@ spriteTypes = {
 
 	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_sinocentaurigfx_female1"
+		name = "PORTRAIT_indocentaurigfx_female1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_centauri_female_clothes_behind:p3:c0"
 			"GFX_centauri_female_headgear_behind:p5:c1"
-			"GFX_mongol_female_hair_behind_midage:p1:h:y"
-			"GFX_mongol_female_base_midage:p2"
-			"GFX_mongol_female_neck_midage:d0"
-			"GFX_mongol_female_cheeks_midage:d4"
-			"GFX_mongol_female_chin_midage:d1"
-			"GFX_mongol_female_mouth_midage:d2"
-			"GFX_mongol_female_nose_midage:d3"			
-			"GFX_mongol_female_eyes_midage:d6"
-			"GFX_mongol_female_eyes2:d6:e"
+			"GFX_indian_female_hair_behind_midage:p1:h:y"
+			"GFX_indian_female_base_midage:p2"
+			"GFX_indian_female_neck_midage:d0"
+			"GFX_indian_female_cheeks_midage:d4"
+			"GFX_indian_female_chin_midage:d1"
+			"GFX_indian_female_mouth_midage:d2"
+			"GFX_indian_female_nose_midage:d3"			
+			"GFX_indian_female_eyes_midage:d6"
+			"GFX_indian_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_centauri_female_clothes:p3:c2"			
-			"GFX_mongol_female_ear_midage:d7"
+			"GFX_indian_female_ear_midage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_centauri_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_mongol_female_hair_midage:p1:h:y"
+			"GFX_indian_female_hair_midage:p1:h:y"
 			"GFX_centauri_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { }
@@ -1597,77 +1583,75 @@ spriteTypes = {
 
 	# Old Age
 	portraitType = {
-		name = "PORTRAIT_sinocentaurigfx_female2"
+		name = "PORTRAIT_indocentaurigfx_female2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_centauri_female_clothes_behind:p3:c0"
 			"GFX_centauri_female_headgear_behind:p5:c1"
-			"GFX_mongol_female_hair_behind_oldage:p1:h:y"
-			"GFX_mongol_female_base_oldage:p2"
-			"GFX_mongol_female_neck_oldage:d0"
-			"GFX_mongol_female_cheeks_oldage:d4"
-			"GFX_mongol_female_chin_oldage:d1"
-			"GFX_mongol_female_mouth_oldage:d2"
-			"GFX_mongol_female_nose_oldage:d3"
-			"GFX_mongol_female_eyes_oldage:d6"
-			"GFX_mongol_female_eyes2:d6:e"
+			"GFX_indian_female_hair_behind_oldage:p1:h:y"
+			"GFX_indian_female_base_oldage:p2"
+			"GFX_indian_female_neck_oldage:d0"
+			"GFX_indian_female_cheeks_oldage:d4"
+			"GFX_indian_female_chin_oldage:d1"
+			"GFX_indian_female_mouth_oldage:d2"
+			"GFX_indian_female_nose_oldage:d3"
+			"GFX_indian_female_eyes_oldage:d6"
+			"GFX_indian_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_centauri_female_clothes:p3:c2"			
-			"GFX_mongol_female_ear_oldage:d7"
+			"GFX_indian_female_ear_oldage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_centauri_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_mongol_female_hair_oldage:p1:h:y"
+			"GFX_indian_female_hair_oldage:p1:h:y"
 			"GFX_centauri_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
 
-		
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
 			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
-			{ 30 22 18 } { 180 170 151 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
-	### ANGANI MALE - EAST ASIAN #
+	### ANGANI MALE - INDIAN #
 	# CULTURE_INDEX: 0 = clothes behind, 1 = headgear behind, 2 = clothes, 3 = headgear mid, 4 = clothes infront, 5 = headgear
 	# Young
 	portraitType = {
-		name = "PORTRAIT_sinoanganigfx_male"
+		name = "PORTRAIT_indoanganigfx_male"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_angani_male_clothes_behind:p3:c0"
 			"GFX_angani_male_headgear_behind:p5:c1"
-			"GFX_mongol_male_hair_behind:p1:h:y"
-			"GFX_mongol_male_beard_behind:p4:h:y"
-			"GFX_mongol_male_base:p2"
-			"GFX_mongol_male_neck:d0"
-			"GFX_mongol_male_cheeks:d4"
-			"GFX_mongol_male_chin:d1"
-			"GFX_mongol_male_mouth:d2"
-			"GFX_mongol_male_nose:d3"
-			"GFX_mongol_male_eyes:d6"
-			"GFX_mongol_male_eyes2:d6:e"
+			"GFX_indian_male_hair_behind:p1:h:y"
+			"GFX_indian_male_beard_behind:p4:h:y"
+			"GFX_indian_male_base:p2"
+			"GFX_indian_male_neck:d0"
+			"GFX_indian_male_cheeks:d4"
+			"GFX_indian_male_chin:d1"
+			"GFX_indian_male_mouth:d2"
+			"GFX_indian_male_nose:d3"
+			"GFX_indian_male_eyes:d6"
+			"GFX_indian_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_angani_male_clothes:p3:c2"
 			"GFX_angani_male_headgear_mid:p5:c3"
-			"GFX_mongol_male_ear:d7"			
-			"GFX_mongol_male_beard:p4:h:y"
+			"GFX_indian_male_ear:d7"			
+			"GFX_indian_male_beard:p4:h:y"
 			"GFX_character_implants:p10"
-		   	"GFX_mongol_male_hair:p1:h:y"
+		   	"GFX_indian_male_hair:p1:h:y"
 			"GFX_angani_male_clothes_infront:p3:c4"
 			"GFX_angani_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -1675,13 +1659,13 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 } 
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
@@ -1689,31 +1673,31 @@ spriteTypes = {
 	
 	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_sinoanganigfx_male1"
+		name = "PORTRAIT_indoanganigfx_male1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"						#0
 			"GFX_angani_male_clothes_behind:p3:c0"
 			"GFX_angani_male_headgear_behind:p5:c1"
-			"GFX_mongol_male_hair_behind_midage:p1:h:y"
-			"GFX_mongol_male_beard_behind_midage:p4:h:y"
-			"GFX_mongol_male_base_midage:p2"					#5
-			"GFX_mongol_male_neck_midage:d0"
-			"GFX_mongol_male_cheeks_midage:d4"
-			"GFX_mongol_male_chin_midage:d1"
-			"GFX_mongol_male_mouth_midage:d2"
-			"GFX_mongol_male_nose_midage:d3"					#10
-			"GFX_mongol_male_eyes_midage:d6"
-			"GFX_mongol_male_eyes2:d6:e"
+			"GFX_indian_male_hair_behind_midage:p1:h:y"
+			"GFX_indian_male_beard_behind_midage:p4:h:y"
+			"GFX_indian_male_base_midage:p2"					#5
+			"GFX_indian_male_neck_midage:d0"
+			"GFX_indian_male_cheeks_midage:d4"
+			"GFX_indian_male_chin_midage:d1"
+			"GFX_indian_male_mouth_midage:d2"
+			"GFX_indian_male_nose_midage:d3"					#10
+			"GFX_indian_male_eyes_midage:d6"
+			"GFX_indian_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"							#20
 			"GFX_character_boils:p9"
 			"GFX_angani_male_clothes:p3:c2"
 			"GFX_angani_male_headgear_mid:p5:c3"
-			"GFX_mongol_male_ear_midage:d7"					#15
-			"GFX_mongol_male_beard_midage:p4:h:y"
+			"GFX_indian_male_ear_midage:d7"					#15
+			"GFX_indian_male_beard_midage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_mongol_male_hair_midage:p1:h:y"
+			"GFX_indian_male_hair_midage:p1:h:y"
 			"GFX_angani_male_clothes_infront:p3:c4"
 			"GFX_angani_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -1721,46 +1705,46 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-		
 			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
+		
 		
 		headgear_that_hides_hair = { 10 }
 	}
 	
 	# Old Age
 	portraitType = {
-		name = "PORTRAIT_sinoanganigfx_male2"
+		name = "PORTRAIT_indoanganigfx_male2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_angani_male_clothes_behind:p3:c0"
 			"GFX_angani_male_headgear_behind:p5:c1"
-			"GFX_mongol_male_hair_behind_oldage:p1:h:y"
-			"GFX_mongol_male_beard_behind_oldage:p4:h:y"
-			"GFX_mongol_male_base_oldage:p2"
-			"GFX_mongol_male_neck_oldage:d0"
-			"GFX_mongol_male_cheeks_oldage:d4"
-			"GFX_mongol_male_chin_oldage:d1"
-			"GFX_mongol_male_mouth_oldage:d2"
-			"GFX_mongol_male_nose_oldage:d3"
-			"GFX_mongol_male_eyes_oldage:d6"
-			"GFX_mongol_male_eyes2:d6:e"
+			"GFX_indian_male_hair_behind_oldage:p1:h:y"
+			"GFX_indian_male_beard_behind_oldage:p4:h:y"
+			"GFX_indian_male_base_oldage:p2"
+			"GFX_indian_male_neck_oldage:d0"
+			"GFX_indian_male_cheeks_oldage:d4"
+			"GFX_indian_male_chin_oldage:d1"
+			"GFX_indian_male_mouth_oldage:d2"
+			"GFX_indian_male_nose_oldage:d3"
+			"GFX_indian_male_eyes_oldage:d6"
+			"GFX_indian_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_angani_male_clothes:p3:c2"
 			"GFX_angani_male_headgear_mid:p5:c3"
-			"GFX_mongol_male_ear_oldage:d7"
-			"GFX_mongol_male_beard_oldage:p4:h:y"
+			"GFX_indian_male_ear_oldage:d7"
+			"GFX_indian_male_beard_oldage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_mongol_male_hair_oldage:p1:h:y"
+			"GFX_indian_male_hair_oldage:p1:h:y"
 			"GFX_angani_male_clothes_infront:p3:c4"
 			"GFX_angani_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -1769,56 +1753,55 @@ spriteTypes = {
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
 			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
-			{ 30 22 18 } { 180 170 151 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
-	### ANGANI FEMALE - WESTERN EUROPEAN ####
+	### ANGANI FEMALE - INDIAN ####
 	# Young
 	portraitType = {
-		name = "PORTRAIT_sinoanganigfx_female"
+		name = "PORTRAIT_indoanganigfx_female"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_angani_female_clothes_behind:p3:c0"              #1
 			"GFX_angani_female_headgear_behind:p5:c1"             #2
-			"GFX_mongol_female_hair_behind:p1:h:y"             #3
-			"GFX_mongol_female_base:p2"                        #4
-			"GFX_mongol_female_neck:d0"                        #5
-			"GFX_mongol_female_cheeks:d4"                      #6
-			"GFX_mongol_female_chin:d1"                        #7
-			"GFX_mongol_female_mouth:d2"                       #8
-			"GFX_mongol_female_nose:d3"                        #9
-			"GFX_mongol_female_eyes:d6"                        #10
-			"GFX_mongol_female_eyes2:d6:e"			            #11
+			"GFX_indian_female_hair_behind:p1:h:y"             #3
+			"GFX_indian_female_base:p2"                        #4
+			"GFX_indian_female_neck:d0"                        #5
+			"GFX_indian_female_cheeks:d4"                      #6
+			"GFX_indian_female_chin:d1"                        #7
+			"GFX_indian_female_mouth:d2"                       #8
+			"GFX_indian_female_nose:d3"                        #9
+			"GFX_indian_female_eyes:d6"                        #10
+			"GFX_indian_female_eyes2:d6:e"			            #11
 			"GFX_character_scars:p7:y"                            #16
 			"GFX_character_reddots:p8"                          #17
 			"GFX_character_boils:p9"                            #18
 			"GFX_angani_female_clothes:p3:c2"                  #12
-			"GFX_mongol_female_ear:d7"                         #13
+			"GFX_indian_female_ear:d7"                         #13
 			"GFX_empty:p3:c4"
 			"GFX_angani_female_headgear_mid:p5:c3"             #14
 			"GFX_character_implants:p10"
-			"GFX_mongol_female_hair:p1:h:y"                    #15
+			"GFX_indian_female_hair:p1:h:y"                    #15
 			"GFX_angani_female_headgear:p5:c5"                 #20
 			"GFX_character_imprisoned:p6"                       #21
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { }
@@ -1826,43 +1809,43 @@ spriteTypes = {
 
 	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_sinoanganigfx_female1"
+		name = "PORTRAIT_indoanganigfx_female1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_angani_female_clothes_behind:p3:c0"
 			"GFX_angani_female_headgear_behind:p5:c1"
-			"GFX_mongol_female_hair_behind_midage:p1:h:y"
-			"GFX_mongol_female_base_midage:p2"
-			"GFX_mongol_female_neck_midage:d0"
-			"GFX_mongol_female_cheeks_midage:d4"
-			"GFX_mongol_female_chin_midage:d1"
-			"GFX_mongol_female_mouth_midage:d2"
-			"GFX_mongol_female_nose_midage:d3"			
-			"GFX_mongol_female_eyes_midage:d6"
-			"GFX_mongol_female_eyes2:d6:e"
+			"GFX_indian_female_hair_behind_midage:p1:h:y"
+			"GFX_indian_female_base_midage:p2"
+			"GFX_indian_female_neck_midage:d0"
+			"GFX_indian_female_cheeks_midage:d4"
+			"GFX_indian_female_chin_midage:d1"
+			"GFX_indian_female_mouth_midage:d2"
+			"GFX_indian_female_nose_midage:d3"			
+			"GFX_indian_female_eyes_midage:d6"
+			"GFX_indian_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_angani_female_clothes:p3:c2"			
-			"GFX_mongol_female_ear_midage:d7"
+			"GFX_indian_female_ear_midage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_angani_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_mongol_female_hair_midage:p1:h:y"
+			"GFX_indian_female_hair_midage:p1:h:y"
 			"GFX_angani_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { }
@@ -1870,78 +1853,75 @@ spriteTypes = {
 
 	# Old Age
 	portraitType = {
-		name = "PORTRAIT_sinoanganigfx_female2"
+		name = "PORTRAIT_indoanganigfx_female2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_angani_female_clothes_behind:p3:c0"
 			"GFX_angani_female_headgear_behind:p5:c1"
-			"GFX_mongol_female_hair_behind_oldage:p1:h:y"
-			"GFX_mongol_female_base_oldage:p2"
-			"GFX_mongol_female_neck_oldage:d0"
-			"GFX_mongol_female_cheeks_oldage:d4"
-			"GFX_mongol_female_chin_oldage:d1"
-			"GFX_mongol_female_mouth_oldage:d2"
-			"GFX_mongol_female_nose_oldage:d3"
-			"GFX_mongol_female_eyes_oldage:d6"
-			"GFX_mongol_female_eyes2:d6:e"
+			"GFX_indian_female_hair_behind_oldage:p1:h:y"
+			"GFX_indian_female_base_oldage:p2"
+			"GFX_indian_female_neck_oldage:d0"
+			"GFX_indian_female_cheeks_oldage:d4"
+			"GFX_indian_female_chin_oldage:d1"
+			"GFX_indian_female_mouth_oldage:d2"
+			"GFX_indian_female_nose_oldage:d3"
+			"GFX_indian_female_eyes_oldage:d6"
+			"GFX_indian_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_angani_female_clothes:p3:c2"			
-			"GFX_mongol_female_ear_oldage:d7"
+			"GFX_indian_female_ear_oldage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_angani_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_mongol_female_hair_oldage:p1:h:y"
+			"GFX_indian_female_hair_oldage:p1:h:y"
 			"GFX_angani_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
 
-		
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
 			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
-			{ 30 22 18 } { 180 170 151 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
-	
-	### MUKTA MALE - EAST ASIAN #
+	### MUKTA MALE - INDIAN #
 	# CULTURE_INDEX: 0 = clothes behind, 1 = headgear behind, 2 = clothes, 3 = headgear mid, 4 = clothes infront, 5 = headgear
 	# Young
 	portraitType = {
-		name = "PORTRAIT_sinomuktagfx_male"
+		name = "PORTRAIT_indomuktagfx_male"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_mukta_male_clothes_behind:p3:c0"
 			"GFX_mukta_male_headgear_behind:p5:c1"
-			"GFX_mongol_male_hair_behind:p1:h:y"
-			"GFX_mongol_male_beard_behind:p4:h:y"
-			"GFX_mongol_male_base:p2"
-			"GFX_mongol_male_neck:d0"
-			"GFX_mongol_male_cheeks:d4"
-			"GFX_mongol_male_chin:d1"
-			"GFX_mongol_male_mouth:d2"
-			"GFX_mongol_male_nose:d3"
-			"GFX_mongol_male_eyes:d6"
-			"GFX_mongol_male_eyes2:d6:e"
+			"GFX_indian_male_hair_behind:p1:h:y"
+			"GFX_indian_male_beard_behind:p4:h:y"
+			"GFX_indian_male_base:p2"
+			"GFX_indian_male_neck:d0"
+			"GFX_indian_male_cheeks:d4"
+			"GFX_indian_male_chin:d1"
+			"GFX_indian_male_mouth:d2"
+			"GFX_indian_male_nose:d3"
+			"GFX_indian_male_eyes:d6"
+			"GFX_indian_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_mukta_male_clothes:p3:c2"
 			"GFX_mukta_male_headgear_mid:p5:c3"
-			"GFX_mongol_male_ear:d7"			
-			"GFX_mongol_male_beard:p4:h:y"
+			"GFX_indian_male_ear:d7"			
+			"GFX_indian_male_beard:p4:h:y"
 			"GFX_character_implants:p10"
-		   	"GFX_mongol_male_hair:p1:h:y"
+		   	"GFX_indian_male_hair:p1:h:y"
 			"GFX_mukta_male_clothes_infront:p3:c4"
 			"GFX_mukta_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -1949,13 +1929,13 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 } 
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
@@ -1963,31 +1943,31 @@ spriteTypes = {
 	
 	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_sinomuktagfx_male1"
+		name = "PORTRAIT_indomuktagfx_male1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"						#0
 			"GFX_mukta_male_clothes_behind:p3:c0"
 			"GFX_mukta_male_headgear_behind:p5:c1"
-			"GFX_mongol_male_hair_behind_midage:p1:h:y"
-			"GFX_mongol_male_beard_behind_midage:p4:h:y"
-			"GFX_mongol_male_base_midage:p2"					#5
-			"GFX_mongol_male_neck_midage:d0"
-			"GFX_mongol_male_cheeks_midage:d4"
-			"GFX_mongol_male_chin_midage:d1"
-			"GFX_mongol_male_mouth_midage:d2"
-			"GFX_mongol_male_nose_midage:d3"					#10
-			"GFX_mongol_male_eyes_midage:d6"
-			"GFX_mongol_male_eyes2:d6:e"
+			"GFX_indian_male_hair_behind_midage:p1:h:y"
+			"GFX_indian_male_beard_behind_midage:p4:h:y"
+			"GFX_indian_male_base_midage:p2"					#5
+			"GFX_indian_male_neck_midage:d0"
+			"GFX_indian_male_cheeks_midage:d4"
+			"GFX_indian_male_chin_midage:d1"
+			"GFX_indian_male_mouth_midage:d2"
+			"GFX_indian_male_nose_midage:d3"					#10
+			"GFX_indian_male_eyes_midage:d6"
+			"GFX_indian_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"							#20
 			"GFX_character_boils:p9"
 			"GFX_mukta_male_clothes:p3:c2"
 			"GFX_mukta_male_headgear_mid:p5:c3"
-			"GFX_mongol_male_ear_midage:d7"					#15
-			"GFX_mongol_male_beard_midage:p4:h:y"
+			"GFX_indian_male_ear_midage:d7"					#15
+			"GFX_indian_male_beard_midage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_mongol_male_hair_midage:p1:h:y"
+			"GFX_indian_male_hair_midage:p1:h:y"
 			"GFX_mukta_male_clothes_infront:p3:c4"
 			"GFX_mukta_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -1995,46 +1975,46 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-		
 			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
+		
 		
 		headgear_that_hides_hair = { 10 }
 	}
 	
 	# Old Age
 	portraitType = {
-		name = "PORTRAIT_sinomuktagfx_male2"
+		name = "PORTRAIT_indomuktagfx_male2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_mukta_male_clothes_behind:p3:c0"
 			"GFX_mukta_male_headgear_behind:p5:c1"
-			"GFX_mongol_male_hair_behind_oldage:p1:h:y"
-			"GFX_mongol_male_beard_behind_oldage:p4:h:y"
-			"GFX_mongol_male_base_oldage:p2"
-			"GFX_mongol_male_neck_oldage:d0"
-			"GFX_mongol_male_cheeks_oldage:d4"
-			"GFX_mongol_male_chin_oldage:d1"
-			"GFX_mongol_male_mouth_oldage:d2"
-			"GFX_mongol_male_nose_oldage:d3"
-			"GFX_mongol_male_eyes_oldage:d6"
-			"GFX_mongol_male_eyes2:d6:e"
+			"GFX_indian_male_hair_behind_oldage:p1:h:y"
+			"GFX_indian_male_beard_behind_oldage:p4:h:y"
+			"GFX_indian_male_base_oldage:p2"
+			"GFX_indian_male_neck_oldage:d0"
+			"GFX_indian_male_cheeks_oldage:d4"
+			"GFX_indian_male_chin_oldage:d1"
+			"GFX_indian_male_mouth_oldage:d2"
+			"GFX_indian_male_nose_oldage:d3"
+			"GFX_indian_male_eyes_oldage:d6"
+			"GFX_indian_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_mukta_male_clothes:p3:c2"
 			"GFX_mukta_male_headgear_mid:p5:c3"
-			"GFX_mongol_male_ear_oldage:d7"
-			"GFX_mongol_male_beard_oldage:p4:h:y"
+			"GFX_indian_male_ear_oldage:d7"
+			"GFX_indian_male_beard_oldage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_mongol_male_hair_oldage:p1:h:y"
+			"GFX_indian_male_hair_oldage:p1:h:y"
 			"GFX_mukta_male_clothes_infront:p3:c4"
 			"GFX_mukta_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -2043,56 +2023,55 @@ spriteTypes = {
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
 			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
-			{ 30 22 18 } { 180 170 151 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
-	### MUKTA FEMALE - WESTERN EUROPEAN ####
+	### MUKTA FEMALE - INDIAN ####
 	# Young
 	portraitType = {
-		name = "PORTRAIT_sinomuktagfx_female"
+		name = "PORTRAIT_indomuktagfx_female"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_mukta_female_clothes_behind:p3:c0"              #1
 			"GFX_mukta_female_headgear_behind:p5:c1"             #2
-			"GFX_mongol_female_hair_behind:p1:h:y"             #3
-			"GFX_mongol_female_base:p2"                        #4
-			"GFX_mongol_female_neck:d0"                        #5
-			"GFX_mongol_female_cheeks:d4"                      #6
-			"GFX_mongol_female_chin:d1"                        #7
-			"GFX_mongol_female_mouth:d2"                       #8
-			"GFX_mongol_female_nose:d3"                        #9
-			"GFX_mongol_female_eyes:d6"                        #10
-			"GFX_mongol_female_eyes2:d6:e"			            #11
+			"GFX_indian_female_hair_behind:p1:h:y"             #3
+			"GFX_indian_female_base:p2"                        #4
+			"GFX_indian_female_neck:d0"                        #5
+			"GFX_indian_female_cheeks:d4"                      #6
+			"GFX_indian_female_chin:d1"                        #7
+			"GFX_indian_female_mouth:d2"                       #8
+			"GFX_indian_female_nose:d3"                        #9
+			"GFX_indian_female_eyes:d6"                        #10
+			"GFX_indian_female_eyes2:d6:e"			            #11
 			"GFX_character_scars:p7:y"                            #16
 			"GFX_character_reddots:p8"                          #17
 			"GFX_character_boils:p9"                            #18
 			"GFX_mukta_female_clothes:p3:c2"                  #12
-			"GFX_mongol_female_ear:d7"                         #13
+			"GFX_indian_female_ear:d7"                         #13
 			"GFX_empty:p3:c4"
 			"GFX_mukta_female_headgear_mid:p5:c3"             #14
 			"GFX_character_implants:p10"
-			"GFX_mongol_female_hair:p1:h:y"                    #15
+			"GFX_indian_female_hair:p1:h:y"                    #15
 			"GFX_mukta_female_headgear:p5:c5"                 #20
 			"GFX_character_imprisoned:p6"                       #21
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { }
@@ -2100,43 +2079,43 @@ spriteTypes = {
 
 	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_sinomuktagfx_female1"
+		name = "PORTRAIT_indomuktagfx_female1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_mukta_female_clothes_behind:p3:c0"
 			"GFX_mukta_female_headgear_behind:p5:c1"
-			"GFX_mongol_female_hair_behind_midage:p1:h:y"
-			"GFX_mongol_female_base_midage:p2"
-			"GFX_mongol_female_neck_midage:d0"
-			"GFX_mongol_female_cheeks_midage:d4"
-			"GFX_mongol_female_chin_midage:d1"
-			"GFX_mongol_female_mouth_midage:d2"
-			"GFX_mongol_female_nose_midage:d3"			
-			"GFX_mongol_female_eyes_midage:d6"
-			"GFX_mongol_female_eyes2:d6:e"
+			"GFX_indian_female_hair_behind_midage:p1:h:y"
+			"GFX_indian_female_base_midage:p2"
+			"GFX_indian_female_neck_midage:d0"
+			"GFX_indian_female_cheeks_midage:d4"
+			"GFX_indian_female_chin_midage:d1"
+			"GFX_indian_female_mouth_midage:d2"
+			"GFX_indian_female_nose_midage:d3"			
+			"GFX_indian_female_eyes_midage:d6"
+			"GFX_indian_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_mukta_female_clothes:p3:c2"			
-			"GFX_mongol_female_ear_midage:d7"
+			"GFX_indian_female_ear_midage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_mukta_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_mongol_female_hair_midage:p1:h:y"
+			"GFX_indian_female_hair_midage:p1:h:y"
 			"GFX_mukta_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { }
@@ -2144,77 +2123,75 @@ spriteTypes = {
 
 	# Old Age
 	portraitType = {
-		name = "PORTRAIT_sinomuktagfx_female2"
+		name = "PORTRAIT_indomuktagfx_female2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_mukta_female_clothes_behind:p3:c0"
 			"GFX_mukta_female_headgear_behind:p5:c1"
-			"GFX_mongol_female_hair_behind_oldage:p1:h:y"
-			"GFX_mongol_female_base_oldage:p2"
-			"GFX_mongol_female_neck_oldage:d0"
-			"GFX_mongol_female_cheeks_oldage:d4"
-			"GFX_mongol_female_chin_oldage:d1"
-			"GFX_mongol_female_mouth_oldage:d2"
-			"GFX_mongol_female_nose_oldage:d3"
-			"GFX_mongol_female_eyes_oldage:d6"
-			"GFX_mongol_female_eyes2:d6:e"
+			"GFX_indian_female_hair_behind_oldage:p1:h:y"
+			"GFX_indian_female_base_oldage:p2"
+			"GFX_indian_female_neck_oldage:d0"
+			"GFX_indian_female_cheeks_oldage:d4"
+			"GFX_indian_female_chin_oldage:d1"
+			"GFX_indian_female_mouth_oldage:d2"
+			"GFX_indian_female_nose_oldage:d3"
+			"GFX_indian_female_eyes_oldage:d6"
+			"GFX_indian_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_mukta_female_clothes:p3:c2"			
-			"GFX_mongol_female_ear_oldage:d7"
+			"GFX_indian_female_ear_oldage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_mukta_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_mongol_female_hair_oldage:p1:h:y"
+			"GFX_indian_female_hair_oldage:p1:h:y"
 			"GFX_mukta_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
 
-		
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
 			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
-			{ 30 22 18 } { 180 170 151 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
-	### xingjie MALE - EAST ASIAN #
+	### XINGJIE MALE - INDIAN #
 	# CULTURE_INDEX: 0 = clothes behind, 1 = headgear behind, 2 = clothes, 3 = headgear mid, 4 = clothes infront, 5 = headgear
 	# Young
 	portraitType = {
-		name = "PORTRAIT_sinoxingjiegfx_male"
+		name = "PORTRAIT_indoxingjiegfx_male"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_xingjie_male_clothes_behind:p3:c0"
 			"GFX_xingjie_male_headgear_behind:p5:c1"
-			"GFX_mongol_male_hair_behind:p1:h:y"
-			"GFX_mongol_male_beard_behind:p4:h:y"
-			"GFX_mongol_male_base:p2"
-			"GFX_mongol_male_neck:d0"
-			"GFX_mongol_male_cheeks:d4"
-			"GFX_mongol_male_chin:d1"
-			"GFX_mongol_male_mouth:d2"
-			"GFX_mongol_male_nose:d3"
-			"GFX_mongol_male_eyes:d6"
-			"GFX_mongol_male_eyes2:d6:e"
+			"GFX_indian_male_hair_behind:p1:h:y"
+			"GFX_indian_male_beard_behind:p4:h:y"
+			"GFX_indian_male_base:p2"
+			"GFX_indian_male_neck:d0"
+			"GFX_indian_male_cheeks:d4"
+			"GFX_indian_male_chin:d1"
+			"GFX_indian_male_mouth:d2"
+			"GFX_indian_male_nose:d3"
+			"GFX_indian_male_eyes:d6"
+			"GFX_indian_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_xingjie_male_clothes:p3:c2"
 			"GFX_xingjie_male_headgear_mid:p5:c3"
-			"GFX_mongol_male_ear:d7"			
-			"GFX_mongol_male_beard:p4:h:y"
+			"GFX_indian_male_ear:d7"			
+			"GFX_indian_male_beard:p4:h:y"
 			"GFX_character_implants:p10"
-		   	"GFX_mongol_male_hair:p1:h:y"
+		   	"GFX_indian_male_hair:p1:h:y"
 			"GFX_xingjie_male_clothes_infront:p3:c4"
 			"GFX_xingjie_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -2222,13 +2199,13 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 } 
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
@@ -2236,31 +2213,31 @@ spriteTypes = {
 	
 	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_sinoxingjiegfx_male1"
+		name = "PORTRAIT_indoxingjiegfx_male1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"						#0
 			"GFX_xingjie_male_clothes_behind:p3:c0"
 			"GFX_xingjie_male_headgear_behind:p5:c1"
-			"GFX_mongol_male_hair_behind_midage:p1:h:y"
-			"GFX_mongol_male_beard_behind_midage:p4:h:y"
-			"GFX_mongol_male_base_midage:p2"					#5
-			"GFX_mongol_male_neck_midage:d0"
-			"GFX_mongol_male_cheeks_midage:d4"
-			"GFX_mongol_male_chin_midage:d1"
-			"GFX_mongol_male_mouth_midage:d2"
-			"GFX_mongol_male_nose_midage:d3"					#10
-			"GFX_mongol_male_eyes_midage:d6"
-			"GFX_mongol_male_eyes2:d6:e"
+			"GFX_indian_male_hair_behind_midage:p1:h:y"
+			"GFX_indian_male_beard_behind_midage:p4:h:y"
+			"GFX_indian_male_base_midage:p2"					#5
+			"GFX_indian_male_neck_midage:d0"
+			"GFX_indian_male_cheeks_midage:d4"
+			"GFX_indian_male_chin_midage:d1"
+			"GFX_indian_male_mouth_midage:d2"
+			"GFX_indian_male_nose_midage:d3"					#10
+			"GFX_indian_male_eyes_midage:d6"
+			"GFX_indian_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"							#20
 			"GFX_character_boils:p9"
 			"GFX_xingjie_male_clothes:p3:c2"
 			"GFX_xingjie_male_headgear_mid:p5:c3"
-			"GFX_mongol_male_ear_midage:d7"					#15
-			"GFX_mongol_male_beard_midage:p4:h:y"
+			"GFX_indian_male_ear_midage:d7"					#15
+			"GFX_indian_male_beard_midage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_mongol_male_hair_midage:p1:h:y"
+			"GFX_indian_male_hair_midage:p1:h:y"
 			"GFX_xingjie_male_clothes_infront:p3:c4"
 			"GFX_xingjie_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -2268,46 +2245,46 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-		
 			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
+		
 		
 		headgear_that_hides_hair = { 10 }
 	}
 	
 	# Old Age
 	portraitType = {
-		name = "PORTRAIT_sinoxingjiegfx_male2"
+		name = "PORTRAIT_indoxingjiegfx_male2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_xingjie_male_clothes_behind:p3:c0"
 			"GFX_xingjie_male_headgear_behind:p5:c1"
-			"GFX_mongol_male_hair_behind_oldage:p1:h:y"
-			"GFX_mongol_male_beard_behind_oldage:p4:h:y"
-			"GFX_mongol_male_base_oldage:p2"
-			"GFX_mongol_male_neck_oldage:d0"
-			"GFX_mongol_male_cheeks_oldage:d4"
-			"GFX_mongol_male_chin_oldage:d1"
-			"GFX_mongol_male_mouth_oldage:d2"
-			"GFX_mongol_male_nose_oldage:d3"
-			"GFX_mongol_male_eyes_oldage:d6"
-			"GFX_mongol_male_eyes2:d6:e"
+			"GFX_indian_male_hair_behind_oldage:p1:h:y"
+			"GFX_indian_male_beard_behind_oldage:p4:h:y"
+			"GFX_indian_male_base_oldage:p2"
+			"GFX_indian_male_neck_oldage:d0"
+			"GFX_indian_male_cheeks_oldage:d4"
+			"GFX_indian_male_chin_oldage:d1"
+			"GFX_indian_male_mouth_oldage:d2"
+			"GFX_indian_male_nose_oldage:d3"
+			"GFX_indian_male_eyes_oldage:d6"
+			"GFX_indian_male_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_xingjie_male_clothes:p3:c2"
 			"GFX_xingjie_male_headgear_mid:p5:c3"
-			"GFX_mongol_male_ear_oldage:d7"
-			"GFX_mongol_male_beard_oldage:p4:h:y"
+			"GFX_indian_male_ear_oldage:d7"
+			"GFX_indian_male_beard_oldage:p4:h:y"
 			"GFX_character_implants:p10"
-			"GFX_mongol_male_hair_oldage:p1:h:y"
+			"GFX_indian_male_hair_oldage:p1:h:y"
 			"GFX_xingjie_male_clothes_infront:p3:c4"
 			"GFX_xingjie_male_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -2316,56 +2293,55 @@ spriteTypes = {
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
 			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
-			{ 30 22 18 } { 180 170 151 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
-	### xingjie FEMALE - WESTERN EUROPEAN ####
+	### XINGJIE FEMALE - INDIAN ####
 	# Young
 	portraitType = {
-		name = "PORTRAIT_sinoxingjiegfx_female"
+		name = "PORTRAIT_indoxingjiegfx_female"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_xingjie_female_clothes_behind:p3:c0"              #1
 			"GFX_xingjie_female_headgear_behind:p5:c1"             #2
-			"GFX_mongol_female_hair_behind:p1:h:y"             #3
-			"GFX_mongol_female_base:p2"                        #4
-			"GFX_mongol_female_neck:d0"                        #5
-			"GFX_mongol_female_cheeks:d4"                      #6
-			"GFX_mongol_female_chin:d1"                        #7
-			"GFX_mongol_female_mouth:d2"                       #8
-			"GFX_mongol_female_nose:d3"                        #9
-			"GFX_mongol_female_eyes:d6"                        #10
-			"GFX_mongol_female_eyes2:d6:e"			            #11
+			"GFX_indian_female_hair_behind:p1:h:y"             #3
+			"GFX_indian_female_base:p2"                        #4
+			"GFX_indian_female_neck:d0"                        #5
+			"GFX_indian_female_cheeks:d4"                      #6
+			"GFX_indian_female_chin:d1"                        #7
+			"GFX_indian_female_mouth:d2"                       #8
+			"GFX_indian_female_nose:d3"                        #9
+			"GFX_indian_female_eyes:d6"                        #10
+			"GFX_indian_female_eyes2:d6:e"			            #11
 			"GFX_character_scars:p7:y"                            #16
 			"GFX_character_reddots:p8"                          #17
 			"GFX_character_boils:p9"                            #18
 			"GFX_xingjie_female_clothes:p3:c2"                  #12
-			"GFX_mongol_female_ear:d7"                         #13
+			"GFX_indian_female_ear:d7"                         #13
 			"GFX_empty:p3:c4"
 			"GFX_xingjie_female_headgear_mid:p5:c3"             #14
 			"GFX_character_implants:p10"
-			"GFX_mongol_female_hair:p1:h:y"                    #15
+			"GFX_indian_female_hair:p1:h:y"                    #15
 			"GFX_xingjie_female_headgear:p5:c5"                 #20
 			"GFX_character_imprisoned:p6"                       #21
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { }
@@ -2373,43 +2349,43 @@ spriteTypes = {
 
 	# Middle Age
 	portraitType = {
-		name = "PORTRAIT_sinoxingjiegfx_female1"
+		name = "PORTRAIT_indoxingjiegfx_female1"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_xingjie_female_clothes_behind:p3:c0"
 			"GFX_xingjie_female_headgear_behind:p5:c1"
-			"GFX_mongol_female_hair_behind_midage:p1:h:y"
-			"GFX_mongol_female_base_midage:p2"
-			"GFX_mongol_female_neck_midage:d0"
-			"GFX_mongol_female_cheeks_midage:d4"
-			"GFX_mongol_female_chin_midage:d1"
-			"GFX_mongol_female_mouth_midage:d2"
-			"GFX_mongol_female_nose_midage:d3"			
-			"GFX_mongol_female_eyes_midage:d6"
-			"GFX_mongol_female_eyes2:d6:e"
+			"GFX_indian_female_hair_behind_midage:p1:h:y"
+			"GFX_indian_female_base_midage:p2"
+			"GFX_indian_female_neck_midage:d0"
+			"GFX_indian_female_cheeks_midage:d4"
+			"GFX_indian_female_chin_midage:d1"
+			"GFX_indian_female_mouth_midage:d2"
+			"GFX_indian_female_nose_midage:d3"			
+			"GFX_indian_female_eyes_midage:d6"
+			"GFX_indian_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_xingjie_female_clothes:p3:c2"			
-			"GFX_mongol_female_ear_midage:d7"
+			"GFX_indian_female_ear_midage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_xingjie_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_mongol_female_hair_midage:p1:h:y"
+			"GFX_indian_female_hair_midage:p1:h:y"
 			"GFX_xingjie_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } {  50 50 50 } { 255 255 255 }
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 }
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { }
@@ -2417,46 +2393,315 @@ spriteTypes = {
 
 	# Old Age
 	portraitType = {
-		name = "PORTRAIT_sinoxingjiegfx_female2"
+		name = "PORTRAIT_indoxingjiegfx_female2"
 		effectFile = "gfx/FX/portrait.lua"
 		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
 			"GFX_character_background:p0"
 			"GFX_xingjie_female_clothes_behind:p3:c0"
 			"GFX_xingjie_female_headgear_behind:p5:c1"
-			"GFX_mongol_female_hair_behind_oldage:p1:h:y"
-			"GFX_mongol_female_base_oldage:p2"
-			"GFX_mongol_female_neck_oldage:d0"
-			"GFX_mongol_female_cheeks_oldage:d4"
-			"GFX_mongol_female_chin_oldage:d1"
-			"GFX_mongol_female_mouth_oldage:d2"
-			"GFX_mongol_female_nose_oldage:d3"
-			"GFX_mongol_female_eyes_oldage:d6"
-			"GFX_mongol_female_eyes2:d6:e"
+			"GFX_indian_female_hair_behind_oldage:p1:h:y"
+			"GFX_indian_female_base_oldage:p2"
+			"GFX_indian_female_neck_oldage:d0"
+			"GFX_indian_female_cheeks_oldage:d4"
+			"GFX_indian_female_chin_oldage:d1"
+			"GFX_indian_female_mouth_oldage:d2"
+			"GFX_indian_female_nose_oldage:d3"
+			"GFX_indian_female_eyes_oldage:d6"
+			"GFX_indian_female_eyes2:d6:e"
 			"GFX_character_scars:p7:y"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
 			"GFX_xingjie_female_clothes:p3:c2"			
-			"GFX_mongol_female_ear_oldage:d7"
+			"GFX_indian_female_ear_oldage:d7"
 			"GFX_empty:p3:c4"
 			"GFX_xingjie_female_headgear_mid:p5:c3"
 			"GFX_character_implants:p10"
-			"GFX_mongol_female_hair_oldage:p1:h:y"
+			"GFX_indian_female_hair_oldage:p1:h:y"
 			"GFX_xingjie_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
 		}
 
-		
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
 			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
-			{ 30 22 18 } { 180 170 151 } { 255 255 255 }
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 }
+			{ 139 69 19 }
 		}
 		
 		headgear_that_hides_hair = { }
 	}
+	### CELESTEAN MALE - INDIAN #
+	# CULTURE_INDEX: 0 = clothes behind, 1 = headgear behind, 2 = clothes, 3 = headgear mid, 4 = clothes infront, 5 = headgear
+	# Young
+	portraitType = {
+		name = "PORTRAIT_indocelesteangfx_male"
+		effectFile = "gfx/FX/portrait.lua"
+		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
+			"GFX_character_background:p0"
+			"GFX_celestean_male_clothes_behind:p3:c0"
+			"GFX_celestean_male_headgear_behind:p5:c1"
+			"GFX_indian_male_hair_behind:p1:h:y"
+			"GFX_indian_male_beard_behind:p4:h:y"
+			"GFX_indian_male_base:p2"
+			"GFX_indian_male_neck:d0"
+			"GFX_indian_male_cheeks:d4"
+			"GFX_indian_male_chin:d1"
+			"GFX_indian_male_mouth:d2"
+			"GFX_indian_male_nose:d3"
+			"GFX_indian_male_eyes:d6"
+			"GFX_indian_male_eyes2:d6:e"
+			"GFX_character_scars:p7:y"
+			"GFX_character_reddots:p8"
+			"GFX_character_boils:p9"
+			"GFX_celestean_male_clothes:p3:c2"
+			"GFX_celestean_male_headgear_mid:p5:c3"
+			"GFX_indian_male_ear:d7"			
+			"GFX_indian_male_beard:p4:h:y"
+			"GFX_character_implants:p10"
+		   	"GFX_indian_male_hair:p1:h:y"
+			"GFX_celestean_male_clothes_infront:p3:c4"
+			"GFX_celestean_male_headgear:p5:c5"
+			"GFX_character_imprisoned:p6"
+		}
+
+		hair_color_index = 8
+		hair_color = { # dark, base, highlight
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 } 
+		}
+
+		eye_color_index = 9
+		eye_color = {
+			{ 139 69 19 }
+		}
+		
+		headgear_that_hides_hair = { 10 }
+	}
+	
+	# Middle Age
+	portraitType = {
+		name = "PORTRAIT_indocelesteangfx_male1"
+		effectFile = "gfx/FX/portrait.lua"
+		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
+			"GFX_character_background:p0"						#0
+			"GFX_celestean_male_clothes_behind:p3:c0"
+			"GFX_celestean_male_headgear_behind:p5:c1"
+			"GFX_indian_male_hair_behind_midage:p1:h:y"
+			"GFX_indian_male_beard_behind_midage:p4:h:y"
+			"GFX_indian_male_base_midage:p2"					#5
+			"GFX_indian_male_neck_midage:d0"
+			"GFX_indian_male_cheeks_midage:d4"
+			"GFX_indian_male_chin_midage:d1"
+			"GFX_indian_male_mouth_midage:d2"
+			"GFX_indian_male_nose_midage:d3"					#10
+			"GFX_indian_male_eyes_midage:d6"
+			"GFX_indian_male_eyes2:d6:e"
+			"GFX_character_scars:p7:y"
+			"GFX_character_reddots:p8"							#20
+			"GFX_character_boils:p9"
+			"GFX_celestean_male_clothes:p3:c2"
+			"GFX_celestean_male_headgear_mid:p5:c3"
+			"GFX_indian_male_ear_midage:d7"					#15
+			"GFX_indian_male_beard_midage:p4:h:y"
+			"GFX_character_implants:p10"
+			"GFX_indian_male_hair_midage:p1:h:y"
+			"GFX_celestean_male_clothes_infront:p3:c4"
+			"GFX_celestean_male_headgear:p5:c5"
+			"GFX_character_imprisoned:p6"
+		}
+
+		hair_color_index = 8
+		hair_color = { # dark, base, highlight
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
+		}
+
+		eye_color_index = 9
+		eye_color = {
+			{ 139 69 19 }
+		}
+		
+		
+		headgear_that_hides_hair = { 10 }
+	}
+	
+	# Old Age
+	portraitType = {
+		name = "PORTRAIT_indocelesteangfx_male2"
+		effectFile = "gfx/FX/portrait.lua"
+		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
+			"GFX_character_background:p0"
+			"GFX_celestean_male_clothes_behind:p3:c0"
+			"GFX_celestean_male_headgear_behind:p5:c1"
+			"GFX_indian_male_hair_behind_oldage:p1:h:y"
+			"GFX_indian_male_beard_behind_oldage:p4:h:y"
+			"GFX_indian_male_base_oldage:p2"
+			"GFX_indian_male_neck_oldage:d0"
+			"GFX_indian_male_cheeks_oldage:d4"
+			"GFX_indian_male_chin_oldage:d1"
+			"GFX_indian_male_mouth_oldage:d2"
+			"GFX_indian_male_nose_oldage:d3"
+			"GFX_indian_male_eyes_oldage:d6"
+			"GFX_indian_male_eyes2:d6:e"
+			"GFX_character_scars:p7:y"
+			"GFX_character_reddots:p8"
+			"GFX_character_boils:p9"
+			"GFX_celestean_male_clothes:p3:c2"
+			"GFX_celestean_male_headgear_mid:p5:c3"
+			"GFX_indian_male_ear_oldage:d7"
+			"GFX_indian_male_beard_oldage:p4:h:y"
+			"GFX_character_implants:p10"
+			"GFX_indian_male_hair_oldage:p1:h:y"
+			"GFX_celestean_male_clothes_infront:p3:c4"
+			"GFX_celestean_male_headgear:p5:c5"
+			"GFX_character_imprisoned:p6"
+		}
+
+		hair_color_index = 8
+		hair_color = { # dark, base, highlight
+			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
+		}
+
+		eye_color_index = 9
+		eye_color = {
+			{ 139 69 19 }
+		}
+		
+		headgear_that_hides_hair = { 10 }
+	}
+	### CELESTEAN FEMALE - INDIAN ####
+	# Young
+	portraitType = {
+		name = "PORTRAIT_indocelesteangfx_female"
+		effectFile = "gfx/FX/portrait.lua"
+		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
+			"GFX_character_background:p0"
+			"GFX_celestean_female_clothes_behind:p3:c0"              #1
+			"GFX_celestean_female_headgear_behind:p5:c1"             #2
+			"GFX_indian_female_hair_behind:p1:h:y"             #3
+			"GFX_indian_female_base:p2"                        #4
+			"GFX_indian_female_neck:d0"                        #5
+			"GFX_indian_female_cheeks:d4"                      #6
+			"GFX_indian_female_chin:d1"                        #7
+			"GFX_indian_female_mouth:d2"                       #8
+			"GFX_indian_female_nose:d3"                        #9
+			"GFX_indian_female_eyes:d6"                        #10
+			"GFX_indian_female_eyes2:d6:e"			            #11
+			"GFX_character_scars:p7:y"                            #16
+			"GFX_character_reddots:p8"                          #17
+			"GFX_character_boils:p9"                            #18
+			"GFX_celestean_female_clothes:p3:c2"                  #12
+			"GFX_indian_female_ear:d7"                         #13
+			"GFX_empty:p3:c4"
+			"GFX_celestean_female_headgear_mid:p5:c3"             #14
+			"GFX_character_implants:p10"
+			"GFX_indian_female_hair:p1:h:y"                    #15
+			"GFX_celestean_female_headgear:p5:c5"                 #20
+			"GFX_character_imprisoned:p6"                       #21
+		}
+
+		hair_color_index = 8
+		hair_color = { # dark, base, highlight
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
+		}
+
+		eye_color_index = 9
+		eye_color = {
+			{ 139 69 19 }
+		}
+		
+		headgear_that_hides_hair = { }
+	}
+
+	# Middle Age
+	portraitType = {
+		name = "PORTRAIT_indocelesteangfx_female1"
+		effectFile = "gfx/FX/portrait.lua"
+		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
+			"GFX_character_background:p0"
+			"GFX_celestean_female_clothes_behind:p3:c0"
+			"GFX_celestean_female_headgear_behind:p5:c1"
+			"GFX_indian_female_hair_behind_midage:p1:h:y"
+			"GFX_indian_female_base_midage:p2"
+			"GFX_indian_female_neck_midage:d0"
+			"GFX_indian_female_cheeks_midage:d4"
+			"GFX_indian_female_chin_midage:d1"
+			"GFX_indian_female_mouth_midage:d2"
+			"GFX_indian_female_nose_midage:d3"			
+			"GFX_indian_female_eyes_midage:d6"
+			"GFX_indian_female_eyes2:d6:e"
+			"GFX_character_scars:p7:y"
+			"GFX_character_reddots:p8"
+			"GFX_character_boils:p9"
+			"GFX_celestean_female_clothes:p3:c2"			
+			"GFX_indian_female_ear_midage:d7"
+			"GFX_empty:p3:c4"
+			"GFX_celestean_female_headgear_mid:p5:c3"
+			"GFX_character_implants:p10"
+			"GFX_indian_female_hair_midage:p1:h:y"
+			"GFX_celestean_female_headgear:p5:c5"
+			"GFX_character_imprisoned:p6"
+		}
+
+		hair_color_index = 8
+		hair_color = { # dark, base, highlight
+			{ 10 10 10 } { 50 50 50 } { 255 255 255 }
+			{ 10 10 10 } { 160 82 45 } { 222 184 135 }
+		}
+
+		eye_color_index = 9
+		eye_color = {
+			{ 139 69 19 }
+		}
+		
+		headgear_that_hides_hair = { }
+	}
+
+	# Old Age
+	portraitType = {
+		name = "PORTRAIT_indocelesteangfx_female2"
+		effectFile = "gfx/FX/portrait.lua"
+		layer = { # GFX_TYPE:[d|p]INDEX:COLOR_LINK:DONT_REFRESH_IF_VALID:CULTURE_INDEX
+			"GFX_character_background:p0"
+			"GFX_celestean_female_clothes_behind:p3:c0"
+			"GFX_celestean_female_headgear_behind:p5:c1"
+			"GFX_indian_female_hair_behind_oldage:p1:h:y"
+			"GFX_indian_female_base_oldage:p2"
+			"GFX_indian_female_neck_oldage:d0"
+			"GFX_indian_female_cheeks_oldage:d4"
+			"GFX_indian_female_chin_oldage:d1"
+			"GFX_indian_female_mouth_oldage:d2"
+			"GFX_indian_female_nose_oldage:d3"
+			"GFX_indian_female_eyes_oldage:d6"
+			"GFX_indian_female_eyes2:d6:e"
+			"GFX_character_scars:p7:y"
+			"GFX_character_reddots:p8"
+			"GFX_character_boils:p9"
+			"GFX_celestean_female_clothes:p3:c2"			
+			"GFX_indian_female_ear_oldage:d7"
+			"GFX_empty:p3:c4"
+			"GFX_celestean_female_headgear_mid:p5:c3"
+			"GFX_character_implants:p10"
+			"GFX_indian_female_hair_oldage:p1:h:y"
+			"GFX_celestean_female_headgear:p5:c5"
+			"GFX_character_imprisoned:p6"
+		}
+
+		hair_color_index = 8
+		hair_color = { # dark, base, highlight
+			{ 10 10 10 } {  200 200 200 } { 255 255 255 }
+		}
+
+		eye_color_index = 9
+		eye_color = {
+			{ 139 69 19 }
+		}
+		
+		headgear_that_hides_hair = { }
+	}
+	
 }

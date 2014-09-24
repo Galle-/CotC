@@ -33,7 +33,9 @@ RETTYPE_I2 = { # Fanatics Fighter Wing
 		}
 	}
 	
-	modifier = { light_infantry_morale = 5 }
+	modifier = {
+		light_infantry_morale = 5
+	}
 }
 RETTYPE_B2 = { # Fanatics Bomber Wing
 	first_type = 1
@@ -50,5 +52,7 @@ RETTYPE_B2 = { # Fanatics Bomber Wing
 		}
 	}
 	
-	modifier = { heavy_infantry_morale = 5 }
+	modifier = {
+		heavy_infantry_morale = 5
+	}
 }

@@ -12,7 +12,6 @@ RETTYPE_D1 = { # Standard drone cluster
 	first_amount = 50
 	
 	potential = {
-		capital_scope = { TECH_MAJESTY = 1 }
 		NOT = { religion_group = religious_group }
 	}
 }

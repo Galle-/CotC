@@ -15,6 +15,15 @@ EVTOPTACAMPAIGN5;I'm surrounded by IDIOTS!;;;;;;;;;;;;;x
 opinion_successful_military_campaign;Conducted Successful Military Campaign;;;;;;;;;;;;;x
 opinion_failed_military_campaign;Conducted Failed Military Campaign;;;;;;;;;;;;;x
 dreadnoughts;Dreadnoughts;Cuirass駸;;;;;;;;;;;x
+dreadnoughts_offensive;Dreadnought Attack;;;;;;;;;;;;x
+dreadnoughts_defensive;Dreadnought Defense;;;;;;;;;;;;x
+dreadnoughts_morale;Dreadnought Crew Morale;;;;;;;;;;;;x
+RETTYPE_I1;I-42 Fighter Wing;;;;;;;;;;;;x
+RETTYPE_I2;Fanatics Fighter Wing;;;;;;;;;;;;x
+RETTYPE_B1;B-2 Bomber Wing;;;;;;;;;;;;x
+RETTYPE_B2;Fanatics Bomber Wing;;;;;;;;;;;;x
+RETTYPE_D1;X1 Combat Drone Cluster;;;;;;;;;;;;x
+RETTYPE_DD1;Perseus-class Destroyer;;;;;;;;;;;;x
 RETTYPE_DD1;Perseus-class Destroyer;;;;;;;;;;;;x
 RETTYPE_BC1;Yamato-class Battlecruiser;;;;;;;;;;;;x
 RETTYPE_DN1;Victory-class Dreadnought;;;;;;;;;;;;x

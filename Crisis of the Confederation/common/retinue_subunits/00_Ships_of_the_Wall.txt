@@ -19,6 +19,8 @@ RETTYPE_BC1 = # Yamato-class Battlecruiser
 	first_type = 4
 	first_amount = 1
 	
+	potential = { has_character_flag = flag_battlecruiser_construction }
+	
 	# potential = {
 		# # Must have a battlecruiser or unique shipyard
 		# capital_holding = {
@@ -36,6 +38,8 @@ RETTYPE_DN1 = # Victory-class Dreadnought
 	first_amount = 1
 	
 	special_troops = dreadnoughts
+	
+	potential = { has_character_flag = flag_dreadnought_construction }
 	
 	# potential = {
 		# # Must have a dreadnought or unique shipyard
