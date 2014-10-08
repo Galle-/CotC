@@ -1,0 +1,33 @@
+########################################################
+# Political Alliance
+# ########################################################
+
+title_ally = {
+	grant_limit = 1
+	revoke_allowed = no
+	opinion_effect = 10
+	
+	allow = {
+		is_ruler = yes
+		is_independent = yes
+		prisoner = no
+		opinion = { who = ROOT value = 50 } )
+	}
+	
+	gain_effect = {
+	set_spouse = FROM
+	FROM = {
+	piety = -20
+	prestige = -100
+				}
+			}
+	}
+	lose_effect = {
+	}
+	
+	ai_will_do = {
+			factor = 1
+	}
+	
+	message = no
+}
